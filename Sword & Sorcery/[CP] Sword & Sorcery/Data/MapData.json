@@ -1,0 +1,308 @@
+{
+  "Changes": [
+    {
+      "Action": "Load",
+      "Target": "Maps/EastScarp_MateoHome, Maps/EastScarp_CoastalGuild, Maps/EastScarp_DruidTower, Maps/EastScarp_DruidGrove, Maps/EastScarp_RiverStage1, Maps/EastScarp_RiverStage2, Maps/EastScarp_RiverStage3, Maps/EastScarp_RiverStage4, Maps/EastScarp_DateMine, Maps/EastScarp_LavaMine, Maps/EastScarp_IntroMine, Maps/EastScarp_HectorForest, Maps/EastScarp_VanInterior",
+      "FromFile": "Assets/Maps/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "LogName": "Mateo's Tent",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_MateoHome": {
+          "DisplayName": "{{i18n:MapName.ESMateoHome}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_MateoHome"
+          },
+          "DefaultArrivalTile": {
+            "X": 4,
+            "Y": 8
+          },
+          "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
+      "LogName": "CoastalGuild",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_CoastalGuild": {
+          "DisplayName": "{{i18n:MapName.CoastalGuild}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_CoastalGuild"
+          },
+          "DefaultArrivalTile": {
+            "X": 10,
+            "Y": 18
+          },
+          "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
+      "LogName": "ESDruidTower",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_DruidTower": {
+          "DisplayName": "{{i18n:MapName.ESDruidTower}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_DruidTower"
+          },
+          "DefaultArrivalTile": {
+            "X": 6,
+            "Y": 28
+          },
+          "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
+      "LogName": "ESDruidGrove",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_DruidGrove": {
+          "DisplayName": "{{i18n:MapName.ESDruidGrove}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_DruidGrove"
+          },
+          "DefaultArrivalTile": {
+            "X": 16,
+            "Y": 70
+          },
+          "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
+      "LogName": "ESRiverStage1",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_RiverStage1": {
+          "DisplayName": "{{i18n:MapName.ESRiverStage1}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_RiverStage1"
+          },
+          "DefaultArrivalTile": {
+            "X": 8,
+            "Y": 48
+          },
+          "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
+      "LogName": "ESRiverStage2",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_RiverStage2": {
+          "DisplayName": "{{i18n:MapName.ESRiverStage2}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_RiverStage2"
+          },
+          "DefaultArrivalTile": {
+            "X": 8,
+            "Y": 48
+          },
+          "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
+      "LogName": "ESRiverStage3Maps",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_RiverStage3": {
+          "DisplayName": "{{i18n:MapName.ESRiverStage3}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_RiverStage3"
+          },
+          "DefaultArrivalTile": {
+            "X": 8,
+            "Y": 48
+          },
+          "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
+      "LogName": "ESRiverStage4Maps",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_RiverStage4": {
+          "DisplayName": "{{i18n:MapName.ESRiverStage4}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_RiverStage4"
+          },
+          "DefaultArrivalTile": {
+            "X": 8,
+            "Y": 48
+          },
+          "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
+      "LogName": "DateMine",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_DateMine": {
+          "DisplayName": "{{i18n:MapName.DateMine}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_DateMine"
+          },
+          "DefaultArrivalTile": {
+            "X": 12,
+            "Y": 10
+          },
+          "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
+      "LogName": "LavaMine",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_LavaMine": {
+          "DisplayName": "{{i18n:MapName.LavaMine}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_LavaMine"
+          },
+          "DefaultArrivalTile": {
+            "X": 12,
+            "Y": 10
+          },
+          "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
+      "LogName": "IntroMine",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_IntroMine": {
+          "DisplayName": "{{i18n:MapName.IntroMine}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_IntroMine"
+          },
+          "DefaultArrivalTile": {
+            "X": 12,
+            "Y": 10
+          },
+          "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
+      "LogName": "HectorForest",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_HectorForest": {
+          "DisplayName": "{{i18n:MapName.HectorForest}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_HectorForest"
+          },
+          "DefaultArrivalTile": {
+            "X": 21,
+            "Y": 32
+          },
+          "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
+      "LogName": "VanInterior",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_VanInterior": {
+          "DisplayName": "{{i18n:MapName.VanInterior}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_VanInterior"
+          },
+          "DefaultArrivalTile": {
+            "X": 2,
+            "Y": 6
+          },
+          "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+  ]
+}

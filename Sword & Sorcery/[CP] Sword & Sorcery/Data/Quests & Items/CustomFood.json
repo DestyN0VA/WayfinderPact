@@ -1,0 +1,365 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.salishburbon": {
+          "Name": "Salish Sea Burbon",
+          "DisplayName": "{{i18n: food.salishburbon.name}}",
+          "Description": "{{i18n: food.salishburbon.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": true,
+          "Buff": {
+            "Duration": 3,
+            "CustomAttributes": {
+              "FarmingLevel": 0,
+              "FishingLevel": 0,
+              "MiningLevel": 0,
+              "LuckLevel": 2,
+              "ForagingLevel": 0,
+              "MaxStamina": 0,
+              "MagneticRadius": 2,
+              "Speed": 2,
+              "Defense": 0,
+              "Attack": 0
+            }
+          },
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 17
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.ancientmushroomstew": {
+          "Name": "Hearty Mushroom Stew",
+          "DisplayName": "{{i18n: food.heartymushroomstew.name}}",
+          "Description": "{{i18n: food.heartymushroomstew.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "Buff": {
+            "Duration": 3,
+            "CustomAttributes": {
+              "FarmingLevel": 3,
+              "FishingLevel": 0,
+              "MiningLevel": 0,
+              "LuckLevel": 0,
+              "ForagingLevel": 2,
+              "MaxStamina": 0,
+              "MagneticRadius": 1,
+              "Speed": 0,
+              "Defense": 2,
+              "Attack": 0
+            }
+          },
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 18
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.dandeliongreens": {
+          "Name": "Sautéed Dandelion Greens with Eggs",
+          "DisplayName": "{{i18n: food.dandeliongreens.name}}",
+          "Description": "{{i18n: food.dandeliongreens.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "Buff": {
+            "Duration": 3,
+            "CustomAttributes": {
+              "FarmingLevel": 1,
+              "FishingLevel": 0,
+              "MiningLevel": 0,
+              "LuckLevel": 1,
+              "ForagingLevel": 1,
+              "MaxStamina": 1,
+              "MagneticRadius": 1,
+              "Speed": 0,
+              "Defense": 0,
+              "Attack": 0
+            }
+          },
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 19
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.portfiredrakesparkler": {
+          "Name": "Portfire Drake Sparkler",
+          "DisplayName": "{{i18n: food.portfiredrakesparkler.name}}",
+          "Description": "{{i18n: food.portfiredrakesparkler.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": true,
+          "Buff": {
+            "Duration": 3,
+            "CustomAttributes": {
+              "FarmingLevel": 0,
+              "FishingLevel": 3,
+              "MiningLevel": 0,
+              "LuckLevel": 3,
+              "ForagingLevel": 0,
+              "MaxStamina": 0,
+              "MagneticRadius": 0,
+              "Speed": 0,
+              "Defense": 0,
+              "Attack": 0
+            }
+          },
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 20
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.mushroomsredsauce": {
+          "Name": "Fried Mushrooms & Red Sauce",
+          "DisplayName": "{{i18n: food.mushroomsredsauce.name}}",
+          "Description": "{{i18n: food.mushroomsredsauce.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "Buff": {
+            "Duration": 3,
+            "CustomAttributes": {
+              "FarmingLevel": 2,
+              "FishingLevel": 0,
+              "MiningLevel": 0,
+              "LuckLevel": 0,
+              "ForagingLevel": 3,
+              "MaxStamina": 0,
+              "MagneticRadius": 0,
+              "Speed": 0,
+              "Defense": 0,
+              "Attack": 0
+            }
+          },
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 27
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.ferngreensandpineapple": {
+          "Name": "Fern Greens And Pineapple",
+          "DisplayName": "{{i18n: food.ferngreensandpineapple.name}}",
+          "Description": "{{i18n: food.ferngreensandpineapple.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "Buff": {
+            "Duration": 3,
+            "CustomAttributes": {
+              "FarmingLevel": 3,
+              "FishingLevel": 0,
+              "MiningLevel": 0,
+              "LuckLevel": 1,
+              "ForagingLevel": 4,
+              "MaxStamina": 0,
+              "MagneticRadius": 0,
+              "Speed": 0,
+              "Defense": 0,
+              "Attack": 0
+            }
+          },
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 28
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.ancienthuckleberryicecream": {
+          "Name": "Ancient HuckleBerry IceCream",
+          "DisplayName": "{{i18n: food.ancienthuckleberryicecream.name}}",
+          "Description": "{{i18n: food.ancienthuckleberryicecream.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "Buff": {
+            "Duration": 3,
+            "CustomAttributes": {
+              "FarmingLevel": 0,
+              "FishingLevel": 0,
+              "MiningLevel": 0,
+              "LuckLevel": 3,
+              "ForagingLevel": 0,
+              "MaxStamina": 0,
+              "MagneticRadius": 0,
+              "Speed": 3,
+              "Defense": 0,
+              "Attack": 0
+            }
+          },
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 29
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.lavaeelandstirfriedpolypore": {
+          "Name": "Lava Eel And Stir Fried Polypore",
+          "DisplayName": "{{i18n: food.lavaeelandstirfriedpolypore.name}}",
+          "Description": "{{i18n: food.lavaeelandstirfriedpolypore.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "Buff": {
+            "Duration": 3,
+            "CustomAttributes": {
+              "FarmingLevel": 0,
+              "FishingLevel": 0,
+              "MiningLevel": 5,
+              "LuckLevel": 0,
+              "ForagingLevel": 0,
+              "MaxStamina": 0,
+              "MagneticRadius": 0,
+              "Speed": 0,
+              "Defense": 0,
+              "Attack": 0
+            }
+          },
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 30
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.zuzustylepizza": {
+          "Name": "Zuzu City Style Pizza",
+          "DisplayName": "{{i18n: food.zuzustylepizza.name}}",
+          "Description": "{{i18n: food.zuzustylepizza.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "Buff": {
+            "Duration": 3,
+            "CustomAttributes": {
+              "FarmingLevel": 0,
+              "FishingLevel": 0,
+              "MiningLevel": 0,
+              "LuckLevel": 0,
+              "ForagingLevel": 0,
+              "MaxStamina": 0,
+              "MagneticRadius": 0,
+              "Speed": 0,
+              "Defense": 3,
+              "Attack": 5,
+            }
+          },
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 46
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.bagelwithlox": {
+          "Name": "Zuzu City Style Bagel with Lox",
+          "DisplayName": "{{i18n: food.bagelwithlox.name}}",
+          "Description": "{{i18n: food.bagelwithlox.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "Buff": {
+            "Duration": 3,
+            "CustomAttributes": {
+              "FarmingLevel": 0,
+              "FishingLevel": 0,
+              "MiningLevel": 0,
+              "LuckLevel": 3,
+              "ForagingLevel": 0,
+              "MaxStamina": 3,
+              "MagneticRadius": 0,
+              "Speed": 3,
+              "Defense": 0,
+              "Attack": 0,
+            }
+          },
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 47
+        },
+      },
+    },
+
+
+// CRAFTING RECIPES 
+
+{
+  "Action": "EditData",
+  "Target": "Data/CookingRecipes",
+  "Entries":
+  {
+  "swordandsorcery.salishburbon": "638 1 262 1 635 1/what is this for?/swordandsorcery.salishburbon 1/false/{{i18n:food.crafting.salishburbon}}",
+
+  "swordandsorcery.ancientmushroomstew": "swordandsorcery.glowingpolyporemushrooms 1 281 1 257 1/what is this for?/swordandsorcery.ancientmushroomstew 1/false/{{i18n:food.crafting.ancientmushroomstew}}",
+
+  "swordandsorcery.dandeliongreens": "22 1 -5 1 424 1/what is this for?/swordandsorcery.dandeliongreens 1/false/{{i18n:food.crafting.dandeliongreens}}",
+
+  "swordandsorcery.portfiredrakesparkler": "167 1 -79 -2/what is this for?/swordandsorcery.portfiredrakesparkler 1/false/{{i18n:food.crafting.portfiredrakesparkler}}",
+
+  "swordandsorcery.mushroomsredsauce": "swordandsorcery.glowingpolyporemushrooms 1 256 1 272 1/what is this for?/swordandsorcery.mushroomsredsauce 1/false/{{i18n:food.crafting.mushroomsredsauce}}",
+
+  "swordandsorcery.ferngreensandpineapple": "swordandsorcery.ancientepiphyticfern 1 832 1 259 1/what is this for?/swordandsorcery.ferngreensandpineapple 1/false/{{i18n:food.crafting.ferngreensandpineapple}}",
+
+  "swordandsorcery.ancienthuckleberryicecream": "swordandsorcery.ancientglowinghuckleberry 1 -6 2/what is this for?/swordandsorcery.ancienthuckleberryicecream 1/false/{{i18n:food.crafting.ancienthuckleberryicecream}}",
+
+  "swordandsorcery.lavaeelandstirfriedancientbottlegourd": "swordandsorcery.ancientbottlegourd 1 162 1/what is this for?/swordandsorcery.lavaeelandstirfriedancientbottlegourd 1/false/{{i18n:food.crafting.lavaeelandstirfriedancientbottlegourd}}",
+
+  "swordandsorcery.zuzustylepuzza": "216 1 256 1 424 1/what is this for?/swordandsorcery.zuzustylepuzza 1/false/{{i18n:food.crafting.zuzustylepuzza}}",
+
+  "swordandsorcery.bagelwithlox": "216 1 139 1 424 1/what is this for?/swordandsorcery.bagelwithlox 1/false/{{i18n:food.crafting.bagelwithlox}}",
+  
+  }
+},
+    ]
+}

@@ -1,0 +1,274 @@
+{
+    "Changes": [
+
+        // MATEO'S TENT 
+        {
+            "LogName": "Beach Tent Warp",
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_Village",
+            "FromFile": "assets/Maps/EastScarp_MateoTent1.tmx",
+            "ToArea": {
+                "X": 89,
+                "Y": 85,
+                "Width": 9,
+                "Height": 12
+            },
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 93,
+                        "Y": 93
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 4 9 EastScarp_MateoHome"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 94,
+                        "Y": 93
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 4 9 EastScarp_MateoHome"
+                    }
+                }
+            ],
+            "When": {
+                "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": false
+            }
+        },
+
+        // COASTAL GUILD STEP 1
+        {
+            "LogName": "Beach Guild Warp",
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_Village",
+            "FromFile": "Assets/Maps/EastScarp_CoastalGuild1.tmx",
+            "ToArea": {
+                "X": 89,
+                "Y": 85,
+                "Width": 9,
+                "Height": 12
+            },
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 93,
+                        "Y": 93
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "LockedDoorWarp 10 19 EastScarp_CoastalGuild 800 2200"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 94,
+                        "Y": 93
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "LockedDoorWarp 10 19 EastScarp_CoastalGuild 800 2200"
+                    }
+                }
+            ],
+            "When": {
+                "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+            }
+        },
+
+        /* // COASTAL GUILD STEP 2
+        {
+            "LogName": "Upgraded Guild Warp",
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_Village",
+            "FromFile": "Assets/Maps/EastScarp_GuildFull.tmx",
+            "ToArea": {
+                "X": 89,
+                "Y": 85,
+                "Width": 9,
+                "Height": 12
+            },
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 93,
+                        "Y": 93
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "LockedDoorWarp 10 19 EastScarp_CoastalGuild 800 2200"
+                    }
+                },
+            ],
+            "When": {
+                "HasFlag |contains=NEWFGUILDFLAG": true
+            }
+        }, */
+
+        // EAST SCARP SPECIAL ORDER BOARD
+        {
+            "LogName": "Guild Board",
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_Village",
+            "FromFile": "Assets/Maps/EastScarp_GuildBoard.tmx",
+            "ToArea": {
+                "X": 23,
+                "Y": 81,
+                "Width": 3,
+                "Height": 2
+            },
+            "When": {
+                "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+            }
+        },
+
+        // PATCHES THE DRUID'S TOWER
+        {
+            "LogName": "Tower Patch",
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepMountains",
+            "FromFile": "Assets/Maps/HectorTowerPatch.tmx",
+            "ToArea": {
+              "X": 7,
+              "Y": 0,
+              "Width": 9,
+              "Height": 18
+            },
+            "MapProperties": {
+              "DayTiles": "Buildings 10 14 129 Buildings 11 14 130 AlwaysFront 12 13 122 AlwaysFront 12 12 113 AlwaysFront 13 9 87 AlwaysFront 13 8 78 AlwaysFront 12 9 86 AlwaysFront 12 8 77 AlwaysFront 11 10 94 AlwaysFront 11 9 85 AlwaysFront 10 10 93 AlwaysFront 10 9 84 AlwaysFront 10 6 57 AlwaysFront 10 5 48 AlwaysFront 9 6 56 AlwaysFront 9 5 47",
+              "NightTiles": "Buildings 10 14 169 Buildings 11 14 170 AlwaysFront 12 13 177 AlwaysFront 12 12 168 AlwaysFront 13 9 176 AlwaysFront 13 8 167 AlwaysFront 12 9 175 AlwaysFront 12 8 166 AlwaysFront 11 10 174 AlwaysFront 11 9 165 AlwaysFront 10 10 173 AlwaysFront 10 9 164 AlwaysFront 10 6 172 AlwaysFront 10 5 163 AlwaysFront 9 6 171 AlwaysFront 9 5 162",
+              "Light": "10 14 1 11 14 1 12 13 1 12 12 1 13 9 1 13 8 1 12 9 1 12 8 1 11 10 1 11 9 1 10 10 1 10 9 1 10 6 1 10 5 1 9 6 1 9 5 1"
+            }
+        },
+
+        // ADDS THE TOWER DOOR WARP
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepMountains",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 11,
+                        "Y": 16
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 6 28 EastScarp_DruidTower"
+                    }
+                }
+            ],
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch2.Hector.1": true
+            }
+        },
+
+        // ADDS A LOCKED DOOR TO THE TOWER 
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepMountains",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 11,
+                        "Y": 16
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Message PassiveAggressiveDoor",
+                    }
+                }
+            ],
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch2.Hector.1": false
+            }
+        },
+
+        // DUMPSTER WARP
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Railroad",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 28,
+                        "Y": 36
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 6 28 EastScarp_DruidTower"
+                    }
+                }
+            ],
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch2.Hector.1": true,
+                "DumpsterWarp": true,
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Railroad",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 29,
+                        "Y": 36
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 6 28 EastScarp_DruidTower"
+                    }
+                }
+            ],
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch2.Hector.1": true,
+                "DumpsterWarp": true,
+            }
+        },
+
+        // PATCHES THE PIZZA VAN
+        {
+            "LogName": "Pizza Van",
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_Village",
+            "FromFile": "Assets/Maps/PizzaVanPatch.tmx",
+            "ToArea": {
+              "X": 88,
+              "Y": 67,
+              "Width": 11,
+              "Height": 16
+            },
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 89,
+                        "Y": 75
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "LockedDoorWarp 2 5 EastScarp_VanInterior 1000 2000"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 90,
+                        "Y": 75
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "LockedDoorWarp 2 5 EastScarp_VanInterior 1000 2000"
+                    }
+                }
+            ],
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+            }
+        },
+
+
+
+        
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "Changes": [
+        {
+            "LogName": "NPC Dispositions",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Hector": {
+                    "DisplayName": "{{TrueName}}",
+                    "Gender": "Male",
+                    "Age": "Adult",
+                    "Manner": "Rude",
+                    "SocialAnxiety": "Shy",
+                    "Optimism": "Negative",
+                    "BirthSeason": "Winter",
+                    "BirthDay": 21,
+                    "HomeRegion": "Town",
+                    "CanBeRomanced": "{{HectorRelationshipStatus}}",
+                    "LoveInterest": "Valerie",
+                    "ExcludeFromPerfectionScore": false,
+                    "EndSlideShow": "TrailingGroup",
+                    "SpawnIfMissing": true,
+                    "ExcludeFromIntroductionsQuest": true,
+                    "SocialTab": "HiddenUntilMet",
+                    "Calendar": "HiddenUntilMet",
+                    "ShakePortraits": [5, 19, 20, 27],
+                    "SpouseRoom": {
+                        "MapAsset": "DestyNova_Hector_SpouseRoom"
+                    },
+                    "SpousePatio": {
+                        "MapAsset": "DestyNova_Hector_SpousePatio"
+                    },
+                    "Home": [
+                        {
+                            "ID": "Hector - Tower",
+                            "Location": "EastScarp_DruidTower",
+                            "Tile": {
+                                "X": 6,
+                                "Y": 16
+                            },
+                            "Direction": "Down",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch2.Hector.1"
+                        },
+                        {
+                            "ID": "Hector - NPC Waiting Room",
+                            "Location": "EastScarp_TNPCWaitingWarpRoom",
+                            "Tile": {
+                                "X": 12,
+                                "Y": 5
+                            },
+                            "Direction": "Down",
+                        }
+                    ],
+                    "Appearance": [
+                        {
+                            "ID": "Spring Outfit",
+                            "Condition": "SEASON Spring",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Hector/{{TrueShape}}/spring_Hector.png}}",
+                            "Sprite": "{{InternalAssetKey: Assets/Characters/Hector/{{TrueShape}}/spring_Hector.png}}",
+                        },
+                        {
+                            "ID": "Summer Outfit",
+                            "Condition": "SEASON Summer",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Hector/{{TrueShape}}/summer_Hector.png}}",
+                            "Sprite": "{{InternalAssetKey: Assets/Characters/Hector/{{TrueShape}}/summer_Hector.png}}",
+                        },
+                        {
+                            "ID": "Fall Outfit",
+                            "Condition": "SEASON Fall",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Hector/{{TrueShape}}/fall_Hector.png}}",
+                            "Sprite": "{{InternalAssetKey: Assets/Characters/Hector/{{TrueShape}}/fall_Hector.png}}",
+                        },
+                        {
+                            "ID": "Winter Outfit",
+                            "Condition": "SEASON Winter",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Hector/{{TrueShape}}/winter_Hector.png}}",
+                            "Sprite": "{{InternalAssetKey: Assets/Characters/Hector/{{TrueShape}}/winter_Hector.png}}",
+                        },
+                        {
+                            "ID": "Spirit's Eve",
+                            "Condition": "EVENT_ID festival_fall27",
+                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Hector/{{TrueShape}}/Hector_hooddown.png}}",
+                            "Sprite": "{{InternalAssetKey: Assets/Characters/Hector/{{TrueShape}}/Hector_hooddown.png}}",   
+                            "Precedence": -20
+                        },
+                        {
+                            "ID": "Luau & Moonlight Jellies",
+                            "Condition": "ANY \"EVENT_ID festival_summer11\" \"EVENT_ID festival_summer28\"",
+                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Hector/{{TrueShape}}/Hector_beach.png}}",
+                            "Sprite": "{{InternalAssetKey: Assets/Characters/Hector/{{TrueShape}}/Hector_beach.png}}",
+                            "Precedence": -20
+                        },
+                        {
+                            "ID": "Beach",
+                            "IsIslandAttire": true,
+                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Hector/{{TrueShape}}/Hector_beach.png}}",
+                            "Sprite": "{{InternalAssetKey: Assets/Characters/Hector/{{TrueShape}}/Hector_beach.png}}",
+                            "Precedence": -20
+                        },
+                    ]
+                }
+            }
+        }
+    ]
+}
+    

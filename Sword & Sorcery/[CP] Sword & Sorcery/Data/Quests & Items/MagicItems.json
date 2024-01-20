@@ -1,0 +1,200 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.druidicessence": {
+          "Name": "Druidic Essence",
+          "DisplayName": "{{i18n: magicitem.druidicessence.name}}",
+          "Description": "{{i18n: magicitem.druidicessence.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 0,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 5
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.adventureguildbadge": {
+          "Name": "Adventurer's Guild Membership Badge",
+          "DisplayName": "{{i18n: magicitem.adventureguildbadge.name}}",
+          "Description": "{{i18n: magicitem.adventureguildbadge.description}}",
+          "Type": "Ring",
+          "Category": -96,
+          "Price": 0,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 6
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.styguimpendant": {
+          "Name": "Stygium-Forged Mermaid's Pendant",
+          "DisplayName": "{{i18n: magicitem.styguimpendant.name}}",
+          "Description": "{{i18n: magicitem.styguimpendant.description}}",
+          "Type": "Ring",
+          "Category": -96,
+          "Price": 0,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 7
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.brokenshield": {
+          "Name": "Broken Argentis Shield",
+          "DisplayName": "{{i18n: magicitem.brokenshield.name}}",
+          "Description": "{{i18n: magicitem.brokenshield.description}}",
+          "Type": "Basic",
+          "Price": 0,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 14
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.repairedshield": {
+          "Name": "Repaired Argentis Shield",
+          "DisplayName": "{{i18n: magicitem.repairedshield.name}}",
+          "Description": "{{i18n: magicitem.repairedshield.description}}",
+          "Type": "Basic",
+          "Price": 0,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 15
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.argentisshield": {
+          "Name": "Empowered Argentis Shield",
+          "DisplayName": "{{i18n: magicitem.argentisshield.name}}",
+          "Description": "{{i18n: magicitem.argentisshield.description}}",
+          "Type": "Basic",
+          "Price": 0,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 16
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.druidictotemfetish": {
+          "Name": "Druidic Totem Fetish",
+          "DisplayName": "{{i18n: magicitem.druidictotemfetish.name}}",
+          "Description": "{{i18n: magicitem.druidictotemfetish.description}}",
+          "Type": "Basic",
+          "Price": 0,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 31
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.stygiumstatuette": {
+          "Name": "Stygium Statuette",
+          "DisplayName": "{{i18n: magicitem.stygiumstatuette.name}}",
+          "Description": "{{i18n: magicitem.stygiumstatuette.description}}",
+          "Type": "Basic",
+          "Price": 0,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 32
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.druidiceldermask": {
+          "Name": "Mask of the Thorned Circle Elder",
+          "DisplayName": "{{i18n: magicitem.druidiceldermask.name}}",
+          "Description": "{{i18n: magicitem.druidiceldermask.description}}",
+          "Type": "Basic",
+          "Price": 0,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 33
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/ObjectExtensionData",
+      "Entries": {
+        "swordandsorcery.druidicessence": {
+          "CategoryTextOverride": "Druidic"
+        },
+        "swordandsorcery.druidictotemfetish": {
+          "CategoryTextOverride": "Druidic"
+        },
+        "swordandsorcery.druidiceldermask": {
+          "CategoryTextOverride": "Druidic"
+        },
+        "swordandsorcery.brokenshield": {
+          "CategoryTextOverride": "Shield",
+          "CanBeShipped": false,
+          "CanBeTrashed": false,
+          "HideFromShippingCollection": true,
+          "MaxStackSizeOverride": 1
+        },
+        "swordandsorcery.repairedshield": {
+          "CategoryTextOverride": "Shield",
+          "CanBeShipped": false,
+          "CanBeTrashed": false,
+          "HideFromShippingCollection": true,
+          "MaxStackSizeOverride": 1
+        },
+        "swordandsorcery.argentisshield": {
+          "CategoryTextOverride": "Shield",
+          "CanBeShipped": false,
+          "CanBeTrashed": false,
+          "HideFromShippingCollection": true,
+          "MaxStackSizeOverride": 1
+        },
+        "swordandsorcery.stygiumstatuette": {
+          "CategoryTextOverride": "Corrupted Object"
+        },
+        
+      }
+    },
+  ]
+}

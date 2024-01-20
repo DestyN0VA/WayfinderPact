@@ -1,0 +1,79 @@
+{
+    "Changes": [
+           {
+            "Action": "Load",
+            "Target": "Portraits/CGEmblem",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/CGEmblem.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/MateoMarlon, Portraits/MateoMarlon",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/MateoMarlon.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/MateoGunther, Portraits/MateoGunther",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/MateoGunther.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/MateoEmeritus, Portraits/MateoEmeritus",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/MateoEmeritus.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/MateoKrobus, Portraits/MateoKrobus",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/MateoKrobus.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/MateoFinale",
+            "FromFile": "assets/TemporaryActors/Characters/MateoFinale.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/StygiymPendant",
+            "FromFile": "assets/TemporaryActors/Characters/StygiymPendant.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/GuildBadge",
+            "FromFile": "assets/TemporaryActors/Characters/GuildBadge.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/SlimeyBoiJr, Characters/SlimeyBoiJr2, Characters/SlimeyBoiJr3, Characters/SlimeyBoiJr4, Characters/SlimeyBoiJr5",
+            "FromFile": "assets/TemporaryActors/Characters/SlimeyBoiJr.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/HectorBook, Portraits/HectorBook",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/HectorBook.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/HectorCast",
+            "FromFile": "assets/Characters/Hector/HectorCast/{{TrueShape}}/HectorCast.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/HectorWolf, Characters/HectorBadger, Characters/HectorOpossum, Characters/HectorRaccoon, Characters/HectorSkunk",
+            "FromFile": "assets/TemporaryActors/{{Target}}.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/ThornedCircletFragment",
+            "FromFile": "assets/TemporaryActors/Characters/ThornedCircletFragment.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/MysteryWolf",
+            "FromFile": "assets/TemporaryActors/Characters/MysteryWolf.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Portraits/MysteryWolf",
+            "FromFile": "assets/TemporaryActors/Portraits/HectorWolf.png"
+        },
+    ]
+}

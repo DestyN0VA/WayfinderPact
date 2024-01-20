@@ -1,0 +1,28 @@
+{
+    "Changes": [
+        {
+            "LogName": "Mateo's Gift Tastes",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "Mateo": "{{i18n:Gifts.Mateo.GiftReaction.Love}}/394 373 276 340 595 746 731 732 swordandsorcery.salishburbon swordandsorcery.ancientwildfairyroses swordandsorcery.zuzustylepizza swordandsorcery.bagelwithlox swordandsorcery.ancienthuckleberryicecream swordandsorcery.ancientazuredetura/{{i18n:Gifts.Mateo.GiftReaction.Like}}./224 372 446 797 421 578 236 608/{{i18n:Gifts.Mateo.GiftReaction.Dislike}}/-4/{{i18n:Gifts.Mateo.GiftReaction.Hate}}/96 97 98 99 100 101 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 717/{{i18n:Gifts.Mateo.GiftReaction.Neutral}}/-2 591 593 597 402 376 418/"
+            }
+        },
+        {
+            "LogName": "Hector's Gift Tastes",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "Hector": "{{i18n:Gifts.Hector.GiftReaction.Love}}/259 300 649 swordandsorcery.ancientmushroomstew swordandsorcery.mushroomsredsauce swordandsorcery.ferngreensandpineapple swordandsorcery.ancienthuckleberryicecream swordandsorcery.lavaeelandstirfriedpolypore swordandsorcery.ancientamaranth swordandsorcery.ancientepiphyticfern swordandsorcery.glowingpolyporemushrooms swordandsorcery.ancientwildfairyroses swordandsorcery.ancientelderberry swordandsorcery.ancientbottlegourd swordandsorcery.ancientgiantappleberry swordandsorcery.ancientazuredetura swordandsorcery.ancientglowinghuckleberry/{{i18n:Gifts.Hector.GiftReaction.Like}}/-80 -75 -79 -2 731 60 768 769/{{i18n:Gifts.Hector.GiftReaction.Dislike}}/-4/{{i18n:Gifts.Hector.GiftReaction.Hate}}/96 97 98 99 100 101 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 220 167 171 446/{{i18n:Gifts.Hector.GiftReaction.Neutral}}/-20 -5 -6 -7/"
+            }
+        },
+        {
+            "LogName": "Cirrus's Gift Tastes",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "Cirrus": "{{i18n:Gifts.Cirrus.GiftReaction.Love}}/206 212 213 214 614 swordandsorcery.ancientwildfairyroses swordandsorcery.bagelwithlox swordandsorcery.zuzustylepizza swordandsorcery.portfiredrakesparkler swordandsorcery.ancienthuckleberryicecream swordandsorcery.ancientazuredetura/{{i18n:Gifts.Cirrus.GiftReaction.Like}}/-2 -7 -80 167 225 226 227 228 219 731/{{i18n:Gifts.Cirrus.GiftReaction.Dislike}}/-4 -28/{{i18n:Gifts.Cirrus.GiftReaction.Hate}}/346 303 348 304 459 -20/{{i18n:Gifts.Cirrus.GiftReaction.Neutral}}/-4/"
+            }
+        },
+    ]
+}

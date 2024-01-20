@@ -1,0 +1,22 @@
+{
+	"Name": "[CP] Sword & Sorcery",
+	"Author": "DestyNova & MadDog",
+	"Version": "1.0.0",
+	"Description": "Adds NPCs & new content to East Scarp!",
+	  "UniqueID": "DN.SnS.CP",
+	  "MinimumApiVersion": "3.15.0",
+	  "ContentPackFor": {
+	  "UniqueID": "Pathoschild.ContentPatcher"
+	  },
+	  "UpdateKeys": ["Nexus:18210"],
+	  "Dependencies": [  
+		{
+		  "UniqueID": "LemurKat.EastScarpe.CP",
+		  "IsRequired": true
+		},   
+		{
+		  "UniqueID": "spacechase0.SpaceCore",
+		  "IsRequired": true
+		}
+	 ]
+  }

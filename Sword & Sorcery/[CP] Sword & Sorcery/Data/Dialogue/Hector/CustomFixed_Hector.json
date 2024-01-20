@@ -1,0 +1,85 @@
+{
+    "Changes":
+[
+        //EDITS TO CSFILES.JSON
+
+        {
+            "LogName": "Hector - Custom Wedding Strings",
+            "Action": "EditData",
+            "Target": "strings/StringsFromCSFiles",
+            "Entries": {
+
+                "Utility.cs.5371":"{{i18n:CFD.Hector.Utility.cs.5371}}",
+                "Utility.cs.5373":"{{i18n:CFD.Hector.Utility.cs.5373}}",
+                "Utility.cs.5375":"{{i18n:CFD.Hector.Utility.cs.5375}}",
+                "Utility.cs.5377":"{{i18n:CFD.Hector.Utility.cs.5377}}",
+                "Utility.cs.5367":"{{i18n:CFD.Hector.Utility.cs.5367}}",
+                "Utility.cs.5369":"{{i18n:CFD.Hector.Utility.cs.5369}}",
+
+            }, 
+            
+            "When":
+            {
+                "Relationship:Hector": "Engaged",
+            }
+
+        },
+                
+        {
+            "LogName": "Hector - Gender Neutral Social Page Fix",
+            "Action": "EditData",
+            "Target": "strings/StringsFromCSFiles",
+            "Entries": {
+        
+                "SocialPage.cs.11635":"{{i18n:CFD.Hector.SocialPage.cs.11635}}",
+                "SocialPage.cs.11636":"{{i18n:CFD.Hector.SocialPage.cs.11636}}",
+                "SocialPage.cs.11637":"{{i18n:CFD.Hector.SocialPage.cs.11637}}",
+                "SocialPage.cs.11639":"{{i18n:CFD.Hector.SocialPage.cs.11639}}",
+                "SocialPage.cs.11640":"{{i18n:CFD.Hector.SocialPage.cs.11640}}",
+                "SocialPage.cs.11642":"{{i18n:CFD.Hector.SocialPage.cs.11642}}",
+                "SocialPage.cs.11643":"{{i18n:CFD.Hector.SocialPage.cs.11643}}",
+        
+            }, 
+                    
+            "When":
+            {
+            "HasSeenEvent |contains=SnS.Ch1.Mateo.14": true,
+            }
+        
+        },
+
+
+          //EDITS TO EXTRADIALOGUE.JSON
+          {
+            "LogName": "Hector - Custom Summit Dialogue",
+            "Action": "EditData",
+            "Target": "strings/ExtraDialogue",
+            "Entries": {
+
+                "ExtraDialogue_SummitEvent_Intro_Spouse":"{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Intro_Spouse}}",
+                "ExtraDialogue_SummitEvent_Intro2_Spouse":"{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Intro2_Spouse}}",
+                "ExtraDialogue_SummitEvent_Dialogue1_Spouse":"{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Dialogue1_Spouse}}",
+                "ExtraDialogue_SummitEvent_Dialogue2_Spouse":"{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Dialogue2_Spouse}}",
+                "ExtraDialogue_SummitEvent_closingmessage":"{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_closingmessage}}"
+            },
+            
+            "When":
+            {
+                "Relationship:Hector": "Married",
+            }
+
+            
+
+        },
+
+        { // EDITS TO CHARACTERS.JSON
+            "Logname": "Hector - Spouse Movie Invitation",
+            "Action": "EditData",
+            "Target": "Strings/Characters",
+            "Entries": {
+                "MovieInvite.Spouse.Hector":"{{i18n:MovieInvite_Spouse_Hector}}",
+            }
+        }
+    ]
+}
+

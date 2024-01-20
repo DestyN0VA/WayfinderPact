@@ -1,0 +1,454 @@
+{
+    "Changes": [
+        // EGG FESTIVAL
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring13",
+            "TextOperations": [
+                {   // LOCATION: SET UP (VANILLA)
+                    "Operation": "Append",
+                    "Target": [  "Entries", "Set-Up_additionalCharacters" ],
+                    "Value": "Cirrus 43 78 2",
+                    "Delimiter": "/"
+                },
+                {   // LOCATION: MAIN EVENT (VANILLA)
+                    "Operation": "Append",
+                    "Target": [  "Entries",  "MainEvent_additionalCharacters"  ],
+                    "Value": "Cirrus 43 78 2",
+                    "Delimiter": "/"
+                },
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+			  },	  
+        },
+
+	{
+		"LogName": "EggFestival",
+		"Action": "EditData",
+		"Target": "Data/Festivals/spring13",
+		"Entries": { //EGG FESTIVAL DIALOGUE: GENERIC
+		
+			"Cirrus":"{{i18n:Festivals.Cirrus.EggFestival.1}}",
+			"Cirrus_2":"{{i18n:Festivals.Cirrus.EggFestival.2}}",
+			
+		}
+	},
+			
+				{
+					"LogName": "EggFestival",
+					"Action": "EditData",
+					"Target": "Data/Festivals/spring13",
+					"Entries": { //EGG FESTIVAL DIALOGUE: MARRIED
+					
+						"Cirrus":"{{i18n:Festivals.Cirrus.EggFestival.Married}}",
+				
+					},
+					"When":
+						{ "Relationship:Cirrus": "Married"}
+		
+				},
+	
+
+        // FLOWER DANCE
+
+        {   
+    
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "TextOperations": [
+                {	// LOCATION: SET UP (VANILLA)
+                    "Operation": "Append",
+                    "Target": [ "Entries","Set-Up_additionalCharacters" ],
+                    "Value": "Cirrus 16 33 2",
+                    "Delimiter": "/"
+                },
+                {	// LOCATION: MAIN EVENT (VANILLA)
+                    "Operation": "Append",
+                    "Target": [ "Entries","MainEvent_additionalCharacters"  ],
+                    "Value": "Cirrus 25 35 3",
+                    "Delimiter": "/"
+                },
+            ],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+			  },  
+        },
+
+		{
+			"LogName": "FlowerDance",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring24",
+			"Entries": { // FLOWER DANCE DIALOGUE: GENERIC 
+			
+				"Cirrus":"{{i18n:Festivals.Cirrus.FlowerDance.1}}",
+				"Cirrus_2":"{{i18n:Festivals.Cirrus.FlowerDance.2}}",
+			  
+			},
+		},
+				
+				{ // FLOWER DANCE DIALOGUE: MARRIED
+					"LogName": "FlowerDance",
+					"Action": "EditData",
+					"Target": "Data/Festivals/spring24",
+					"Entries": {
+					
+						"Cirrus":"{{i18n:Festivals.Cirrus.FlowerDance.Married}}",                       
+					
+					},
+					
+					"When":
+							{ "Relationship:Cirrus": "Married"}
+					
+				},
+
+				{
+					"LogName": "Marriage Flower Dance Accept",
+					"Action": "EditData",
+					"Target": "Strings/Events",
+					"Entries": {
+						"SpouseFlowerDanceAccept_Cirrus":"{{i18n:Festivals.Cirrus.FlowerDance.Accept}}",
+					}
+				},
+
+        // LUAU
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"TextOperations": [
+				{	// LOCATION: SET UP (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Cirrus 24 25 3",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": [ "Fields", "set-up", 5],
+					"Value": "/animate Cirrus false true 100 30 31 32 33"
+				}
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+			  },
+		},
+
+		{
+			"LogName": "Luau",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"Entries": { // LUAU DIALOGUE: GENERIC 
+			
+				"Cirrus":"{{i18n:Festivals.Cirrus.Luau.1}}",
+				"Cirrus_2":"{{i18n:Festivals.Cirrus.Luau.2}}",
+			
+			},
+		},
+				{ // 
+				"LogName": "Luau",
+					"Action": "EditData",
+					"Target": "Data/Festivals/summer11",
+					"Entries": {
+						
+							"Cirrus":"{{i18n:Festivals.Cirrus.Luau.Married}}",                 
+					 },
+					"When":
+					{ "Relationship:Cirrus": "Married"}
+
+			},
+
+
+        // DANCE OF THE MOONLIGHT JELLIES
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"TextOperations": [
+				{   // LOCATION: SET UP & MAIN EVENT
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Cirrus 41 24 2",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+
+			  },
+		},
+		{
+			"LogName": "Jellies",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"Entries": { // DANCE OF THE MOONLIGHT JELLIES: GENERIC
+
+				"Cirrus":"{{i18n:Festivals.Cirrus.MoonlightJellies.1}}",
+				"Cirrus_2":"{{i18n:Festivals.Cirrus.MoonlightJellies.2}}",
+				
+
+			}
+		},
+				{
+					"LogName": "Jellies",
+					"Action": "EditData",
+					"Target": "Data/Festivals/summer28",
+					"Entries": { // DANCE OF THE MOONLIGHT JELLIES: MARRIED
+
+						"Cirrus":"{{i18n:Festivals.Cirrus.MoonlightJellies.Married}}",
+						
+				},
+					"When":
+					{ "Relationship:Cirrus": "Married"}
+				},
+
+        // STARDEW VALLEY FAIR
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"TextOperations": [
+				{	// LOCATION: SET UP & MAIN EVENT (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Cirrus 46 74 0",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+			  },
+		},
+		{
+			"LogName": "SVFair",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"Entries": { // STARDEW VALLEY FAIR DIALOGUE: GENERIC
+			
+				  "Cirrus":"{{i18n:Festivals.Cirrus.SDVFair.1}}",
+				  "Cirrus_2":"{{i18n:Festivals.Cirrus.SDVFair.2}}",
+
+			}
+		},
+				{
+					"LogName": "SVFair",
+					"Action": "EditData",
+					"Target": "Data/Festivals/fall16",
+					"Entries": { // STARDEW VALLEY FAIR DIALOGUE: MARRIED
+					
+						"Cirrus":"{{i18n:Festivals.Cirrus.SDVFair.Married}}",
+						
+					},
+					"When":
+					{ "Relationship:Cirrus": "Married"}
+				},
+
+        // SPIRIT'S EVE
+
+       {
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"TextOperations": [
+				{	// LOCATION: SET UP & MAIN EVENT (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries",	"Set-Up_additionalCharacters"],
+					"Value": "Cirrus 39 81 2",
+					"Delimiter": "/"
+				},
+				],
+				"When": {
+					"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+				  },
+		},
+		{
+			"LogName": "SpiritsEve",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"Entries": {
+			
+				  "Cirrus":"{{i18n:Festivals.Cirrus.SpiritsEve.1}}",
+				  "Cirrus_2":"{{i18n:Festivals.Cirrus.SpiritsEve.2}}", 
+
+			}
+		},
+				{
+					"LogName": "SpiritsEve",
+					"Action": "EditData",
+					"Target": "Data/Festivals/fall27",
+					"Entries": {
+					
+						"Cirrus":"{{i18n:Festivals.Cirrus.SpiritsEve.Married}}",
+						
+					},
+					"When":
+					{ "Relationship:Cirrus": "Married"}
+				},
+
+        // ICE FESTIVAL 
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"TextOperations": [
+				{	// LOCATION: SET UP (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Cirrus 68 12 3",
+					"Delimiter": "/"
+				},
+                {   // LOCATION: MAIN EVENT (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Main-Event_additionalCharacters"],
+					"Value": "Cirrus 68 12 3",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+			  },
+		},
+
+		{
+			"LogName": "IceFest",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"Entries": { // ICE FESTIVAL DIALOGUE: GENERIC
+			
+				  "Cirrus":"{{i18n:Festivals.Cirrus.IceFestival.1}}",
+				  "Cirrus_2":"{{i18n:Festivals.Cirrus.IceFestival.2}}",
+
+			}
+		},
+				{
+					"LogName": "IceFest",
+					"Action": "EditData",
+					"Target": "Data/Festivals/winter8",
+					"Entries": { // ICE FESTIVAL DIALOGUE: MARRIED 
+					
+						"Cirrus":"{{i18n:Festivals.Cirrus.IceFestival.Married}}",
+					
+
+					},
+						"When":
+						{ "Relationship:Cirrus": "Married"}
+				},
+
+        // WINTER STAR
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"TextOperations": [
+				{	// LOCATION: SET UP (VANILLA)
+					"Operation": "Append",
+					"Target": [	"Entries","Set-Up_additionalCharacters"	],
+					"Value": "Cirrus 44 57 2",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+			  },
+        },
+
+		{
+			"LogName": "WinterStar",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"Entries": { // WINTER STAR DIALOGUE: GENERIC 
+			
+				  "Cirrus":"{{i18n:Festivals.Cirrus.WinterStar.1}}",
+				  "Cirrus_2":"{{i18n:Festivals.Cirrus.WinterStar.2}}",
+				
+			},
+		},
+				{
+					"LogName": "WinterStar",
+					"Action": "EditData",
+					"Target": "Data/Festivals/winter25",
+					"Entries": { // WINTER STAR DIALOGUE: MARRIED 
+					
+						"Cirrus":"{{i18n:Festivals.Cirrus.WinterStar.Married}}",
+					},
+						"When":
+							{ "Relationship:Cirrus": "Married"}
+				},
+
+		// RSV GATHERING FESTIVAL 
+
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall20",
+			"TextOperations": [
+					{ // LOCATION: SET UP
+					  "Operation": "Append",
+					  "Target": ["Entries", "Set-Up_additionalCharacters"],
+					  "Value": "Cirrus 62 47 1",
+					  "Delimiter": "/"
+					 },
+					 { // LOCATION: MAIN EVENT
+					  "Operation": "Append",
+					  "Target": ["Entries", "MainEvent_additionalCharacters"],
+					  "Value": "Cirrus 70 49 0",
+					  "Delimiter": "/"
+					 },
+				],
+				"When": {
+					"HasMod |contains=Rafseazz.RSVCP": true,
+					"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+				  },
+		},
+
+		{
+			"LogName": "RSV Gathering Festival Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall20",
+			"Entries": { // RSV GATHERING FESTIVAL DIALOGUE: GENERIC 
+			
+				"Cirrus":"{{i18n:Festivals.Cirrus.RSVG}}",
+			},
+			"When":
+			{ "HasMod":"Rafseazz.RSVCP"}
+
+		},
+
+		// RSV EMBER OF RESOLUTIONS 		
+
+		{
+
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter28",
+			"TextOperations": [
+				 { // LOCATION: SET UP 
+				  "Operation": "Append",
+				  "Target": ["Entries", "Set-Up_additionalCharacters"],
+				  "Value": "Cirrus 49 37 2",
+				  "Delimiter": "/"
+				 },
+				 { // LOCATION: MAIN EVENT
+				  "Operation": "Append",
+				  "Target": ["Entries", "MainEvent_additionalCharacters"],
+				  "Value": "Cirrus 29 48 1",
+				  "Delimiter": "/"
+				 },
+		 	],
+				"When": {
+					"HasMod |contains=Rafseazz.RSVCP": true,
+					"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+				  },
+		},
+
+		{
+			"LogName": "RSV Ember of Resolutions Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter28",
+			"Entries": { // RSV EMBER OF RESOLUTIONS DIALOGUE: GENERIC 
+			
+				"Cirrus":"{{i18n:Festivals.Cirrus.EmberOfResolutions}}",
+			},
+			"When":
+			{ "HasMod":"Rafseazz.RSVCP"}
+		}
+    ]
+}

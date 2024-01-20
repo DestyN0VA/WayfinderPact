@@ -1,0 +1,160 @@
+{
+    "Changes": [
+        {
+            "LogName": "Mateo Theme",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.MateoTheme": {
+                    "ID": "SnS.MateoTheme",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/MateoTheme.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
+        {
+            "LogName": "Hector Theme",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.HectorTheme": {
+                    "ID": "SnS.HectorTheme",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/HectorTheme.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
+        {
+            "LogName": "Cirrus Theme",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.CirrusTheme": {
+                    "ID": "SnS.CirrusTheme",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/CirrusTheme.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
+        {
+            "LogName": "Cirrus' Keytar Solo'",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.KeytarSolo": {
+                    "ID": "SnS.KeytarSolo",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/KeytarSolo.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
+        {
+            "LogName": "Dandelion Theme",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.DandelionTheme": {
+                    "ID": "SnS.DandelionTheme",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/DandelionTheme.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
+        {
+            "LogName": "Roslin Theme",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.RoslinTheme": {
+                    "ID": "SnS.RoslinTheme",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/RoslinTheme.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
+        {
+            "LogName": "Lonely Theme",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.LonelyTheme": {
+                    "ID": "SnS.LonelyTheme",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/LonelyTheme.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
+        {
+            "LogName": "Lonely Theme: Reprise",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.LonelyThemeReprise": {
+                    "ID": "SnS.LonelyThemeReprise",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/LonelyReprise.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
+        {
+            "LogName": "Despair Theme",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.DespairTheme": {
+                    "ID": "SnS.DespairTheme",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/DespairTheme.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
+        {
+            "LogName": "Hope Theme",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.HopeTheme": {
+                    "ID": "SnS.HopeTheme",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/HopeTheme.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
+        {
+            "LogName": "Vulnerable Theme",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.VulnerableTheme": {
+                    "ID": "SnS.VulnerableTheme",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/VulnerableTheme.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        }
+        
+     ]
+
+}

@@ -1,0 +1,96 @@
+{
+    "Changes": [
+
+        // PORTRAIT & SPRITE DEFAULT LOAD
+        {
+            "LogName": "Default Sprites - Mateo",
+            "Action": "Load",
+            "Target": "Characters/Mateo",
+            "FromFile": "Assets/{{Target}}/Seasonal/Seasonal_1.png"
+        },
+        {
+            "LogName": "Default Portraits - Mateo",
+            "Action": "Load",
+            "Target": "Portraits/Mateo",
+            "FromFile": "Assets/{{Target}}/Seasonal/Mateo_Seasonal_1.png"
+        },
+        {
+            "LogName": "Beach Portraits for Events - Mateo",
+            "Action": "Load",
+            "Target": "Portraits/Mateo_beach",
+            "FromFile": "Assets/Portraits/Mateo/{{MateoBeach}}",
+        },
+        {
+            "LogName": "Beach Sprites for Events - Mateo",
+            "Action": "Load",
+            "Target": "Characters/Mateo_beach",
+            "FromFile": "Assets/Characters/Mateo/Beach_Mateo.png",
+        },
+        {
+            "LogName": "Mateo's Scar Overlay",
+            "Action": "EditImage",
+            "Target": "Portraits/Mateo/Festivals/EggFair_Mateo.png, Portraits/Mateo/Festivals/FlowerDance_Mateo.png, Portraits/Mateo/Festivals/IceFestWinterStar_Mateo.png, Portraits/Mateo/Seasonal/Seasonal_1.png, Portraits/Mateo/Seasonal/Seasonal_2.png, Portraits/Mateo/Seasonal/Seasonal_3.png, Portraits/Mateo/Seasonal/Seasonal_4.png, Portraits/Mateo/Seasonal/Seasonal_5.png, Portraits/Mateo/Seasonal/Seasonal_6.png, Portraits/Mateo/Seasonal/Seasonal_7.png, Portraits/Mateo/Seasonal/Seasonal_8.png, Portraits/Mateo/Seasonal/Seasonal_9.png,",
+            "FromFile": "Assets/{{Target}}/scar_overlay_mateo.png",
+            "PatchMode": "Overlay",
+            "When": {"HasSeenEvent |contains=SnS.Ch1.Mateo.9": true},
+            "Update": "OnTimeChange, OnLocationChange",
+        },
+        {
+            "LogName": "Mermaid Pendant Earring",
+            "Action": "EditImage",
+            "Target": "Portraits/Mateo",
+            "FromFile": "Assets/{{Target}}/pendant_overlay_mateo.png",
+            "PatchMode": "Overlay",
+            "When": {"Relationship:Mateo |contains=Married": true, "MermaidPendantEarring": true},
+            "Update": "OnTimeChange, OnLocationChange",
+        },
+
+
+        // OVERLAYS
+        {
+            "Action": "Load",
+            "Target": "Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7,Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9",
+            "FromFile": "Assets/Portraits/Mateo/Seasonal/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Portraits/EggFair_Mateo",
+            "FromFile": "Assets/Portraits/Mateo/Festivals/EggFair_Mateo.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Portraits/FlowerDance_Mateo",
+            "FromFile": "Assets/Portraits/Mateo/Festivals/FlowerDance_Mateo.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Portraits/IceFestWinterStar_Mateo",
+            "FromFile": "Assets/Portraits/Mateo/Festivals/IceFestWinterStar_Mateo.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Portraits/LuauMoonlight_Mateo",
+            "FromFile": "Assets/Portraits/Mateo/Festivals/LuauMoonlight_Mateo.png"
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7,Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/portraits/Mateo/scar_overlay_mateo.png",
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true
+            }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7,Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/portraits/Mateo/pendant_overlay_mateo.png",
+            "When": {
+                "Relationship:Mateo |contains=Married": true,
+                "MermaidPendantEarring": true
+            }
+        },
+
+    ]
+}

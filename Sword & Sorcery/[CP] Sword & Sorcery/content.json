@@ -1,0 +1,556 @@
+{
+  "Format": "2.0.0",
+
+  // INCLUDES
+
+  "Changes": [
+
+    {
+      "Logname": "Sword & Sorcery - Mateo Includes",
+      "Action": "Include",
+      "FromFile": "Data/Appearances/AppearanceData_Mateo.json, Data/Dialogue/Mateo/Dialogue_Mateo.json, Data/Dialogue/Mateo/ConcessionTastes_Mateo.json, Data/Dialogue/Mateo/ConversationTopics_Mateo.json, Data/Dialogue/Mateo/CustomFixed_Mateo.json,Data/Dialogue/Mateo/CustomGiftDialogue_Mateo.json,Data/Dialogue/Mateo/MarriageDialogue_Mateo.json, Data/Dispositions/Dispositions_Mateo.json, Data/Festival Data/FestivalData_Mateo.json, Data/Schedules/Schedule_Mateo.json, Data/Strings/Strings_Mateo.json, Data/Spouse Extras/SpouseExtras_Mateo.json",
+    },
+    {
+      "Logname": "Sword & Sorcery - Hector Includes",
+      "Action": "Include",
+      "FromFile": "Data/Appearances/AppearanceData_Hector.json, Data/Dialogue/Hector/Dialogue_Hector.json, Data/Dialogue/Hector/ConcessionTastes_Hector.json, Data/Dialogue/Hector/ConversationTopics_Hector.json, Data/Dialogue/Hector/CustomFixed_Hector.json,Data/Dialogue/Hector/CustomGiftDialogue_Hector.json, Data/Dispositions/Dispositions_Hector.json, Data/Festival Data/FestivalData_Hector.json, Data/Schedules/Schedule_Hector.json, Data/Strings/Strings_Hector.json, Data/Spouse Extras/SpouseExtras_Hector.json",
+    },
+    {
+      "Logname": "Sword & Sorcery - Cirrus Includes",
+      "Action": "Include",
+      "FromFile": "Data/Appearances/AppearanceData_Cirrus.json, Data/Dialogue/Cirrus/Dialogue_Cirrus.json, Data/Dialogue/Cirrus/ConcessionTastes_Cirrus.json, Data/Dialogue/Cirrus/ConversationTopics_Cirrus.json, Data/Dialogue/Cirrus/CustomFixed_Cirrus.json,Data/Dialogue/Cirrus/CustomGiftDialogue_Cirrus.json, Data/Dispositions/Dispositions_Cirrus.json, Data/Festival Data/FestivalData_Cirrus.json, Data/Schedules/Schedule_Cirrus.json, Data/Strings/Strings_Cirrus.json, Data/Spouse Extras/SpouseExtras_Cirrus.json",
+    },
+    {
+      "Logname": "Sword & Sorcery - Quest Includes",
+      "Action": "Include",
+      "FromFile": "Data/Quests & Items/BuildQuest.json, Data/Quests & Items/CGSpecialOrders.json, Data/Quests & Items/PentacleQuest.json, Data/Quests & Items/RiverQuest.json",
+    },
+    {
+      "Logname": "Sword & Sorcery - Custom Companions Includes",
+      "Action": "Include",
+      "FromFile": "Data/Custom Companions/BookPathing.json, Data/Custom Companions/DinoPathing.json,",
+    },
+    {
+      "Logname": "Sword & Sorcery - Data Includes",
+      "Action": "Include",
+      "FromFile": "Data/MapData.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json",
+    },
+
+  ],
+  // CONFIG OPTIONS
+
+  "ConfigSchema": {
+    "CustomMateoSoren": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Turns on male toddler sprites that look like Mateo."
+    },
+    "CustomMateoDinah": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Turns on female toddler sprites that look like Mateo."
+    },
+    "MermaidPendantEarring": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Adds the Mermaid Pendant earring when married."
+    },
+    "MermaidPendantHairclip": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Adds the Mermaid Pendant hairclip when married."
+    },
+    "MateoSpouseRoomConfig": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Adds a spouse room when married."
+    },
+    "MateoSpousePatioConfig": 
+    {
+        "AllowValues": "true, false",
+        "Default": "true",
+        "AllowBlank": false,
+        "Description": "Adds a spouse patio when married."
+    },
+    "HectorSpouseRoomConfig": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Adds a spouse room when married."
+    },
+    "HectorSpousePatioConfig": 
+    {
+        "AllowValues": "true, false",
+        "Default": "true",
+        "AllowBlank": false,
+        "Description": "Adds a spouse patio when married."
+    },
+    "CirrusSpouseRoomConfig": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Adds a spouse room when married."
+    },
+    "CirrusSpousePatioConfig": 
+    {
+        "AllowValues": "true, false",
+        "Default": "true",
+        "AllowBlank": false,
+        "Description": "Adds a spouse patio when married."
+    },
+    "SkipIntroQuest": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "Description": "Removes the quest requirements from Hector's intro event in case you've already completed Never Ending Adventure."
+    },
+    "DumpsterWarp": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "Description": "May cause some pathing shananagins, but is kinda funny?"
+    },
+  },
+
+  // DYNAMIC TOKENS
+
+  "DynamicTokens": [
+    {
+      "Name": "MateoRomance",
+      "Value": "Romantic",
+      "When": {
+        "Relationship:Mateo |contains=Dating, Engaged, Married": true
+      }
+    },
+    {
+      "Name": "MateoRomance",
+      "Value": "Platonic",
+      "When": {
+        "Relationship:Mateo |contains=Dating, Engaged, Married": false
+      }
+    },
+    {
+      "Name": "MateoArmor",
+      "Value": "Armor_Mateo.png",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": false
+      }
+    },
+    {
+      "Name": "MateoArmor",
+      "Value": "Armor_ScarredMateo.png",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true
+      }
+    },
+    {
+      "Name": "MateoBeach",
+      "Value": "Beach_Mateo.png",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": false
+      }
+    },
+    {
+      "Name": "MateoBeach",
+      "Value": "Beach_ScarredMateo.png",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true
+      }
+    },
+    {
+      "Name": "TenHeartRivalHeartsToggle",
+      "Value": "stopMusic/quickQuestion \"Is there anything I can do to help you carry that weight?#You've got responsibilities of your own now, Mateo. Don't forget them!#Just keep being my friend, Mateo! That's the kind of support I need.(break)speak Mateo \"I could never, @! Don't worry. $1\"(break)speak Mateo \"Of course, @! I've got your back.$1\"",
+      "When": {
+        "HasFlag |contains=RivalHearts_AideenMateo": true
+      }
+    },
+    {
+      "Name": "TenHeartRivalHeartsToggle",
+      "Value": "stopMusic/question fork0 \"Is there anything I can do to help you carry that weight?#Actually, there was something I wanted to talk to you about. (ROMANTIC)#Just keep being my friend, Mateo! That's the kind of support I need. (PLATONIC)\"/fork MateoRomantic",
+      "When": {
+        "HasFlag |contains=RivalHearts_AideenMateo": false
+      }
+    },
+    {
+      "Name": "MateoSpawn",
+      "Value": "EastScarp_MateoHome 5 6",
+      "When": {
+        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": false
+      }
+    },
+    {
+      "Name": "MateoSpawn",
+      "Value": "EastScarp_CoastalGuild 8 5",
+      "When": {
+        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+      }
+    },
+    {
+      "Name": "MateoSpawnMap",
+      "Value": "EastScarp_MateoHome",
+      "When": {
+        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": false
+      }
+    },
+    {
+      "Name": "MateoSpawnMap",
+      "Value": "EastScarp_CoastalGuild",
+      "When": {
+        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+      }
+    },
+    {
+      "Name": "MateoSpawnTilesX",
+      "Value": "5",
+      "When": {
+        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": false
+      }
+    },
+    {
+      "Name": "MateoSpawnTilesX",
+      "Value": "8",
+      "When": {
+        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+      }
+    },
+    {
+      "Name": "MateoSpawnTilesY",
+      "Value": "6",
+      "When": {
+        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": false
+      }
+    },
+    {
+      "Name": "MateoSpawnTilesY",
+      "Value": "5",
+      "When": {
+        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+      }
+    },
+    {
+      "Name": "MateoSpawn",
+      "Value": "EastScarp_CoastalGuild 8 5",
+      "When": {
+        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+      }
+    },
+    {
+      "Name": "MateoRelationshipStatus",
+      "Value": "false",
+      "When": {
+        "Query: {{HasFlag |contains=RivalHearts_AideenMateo}} OR NOT {{HasFlag |contains=MateoRomanticFlag}}": true
+      }
+    },
+    {
+      "Name": "MateoRelationshipStatus",
+      "Value": "true",
+      "When": {
+        "HasFlag": "MateoRomanticFlag"
+      }
+    },
+    {
+      "Name": "MateoHospitalScene_Setup",
+      "Value": "farmer 10 19 0 Mateo 21 11 2 Harvey 20 11 1"
+    },
+    {
+      "Name": "MateoHospitalScene_Setup",
+      "Value": "{{MateoHospitalScene_Setup}} Nova.Eli -999 -999 2",
+      "When": {
+        "HasMod: |contains=TenebrousNova.EliDylan.CP": true
+      }
+    },
+    {
+      "Name": "MateoHospitalScene",
+      "Value": "message \"{{i18n:Events.S&S.Ch1.7H1.Message.1}}\"/changeLocation Town/warp farmer 36 57/faceDirection farmer 2/addTemporaryActor MateoKrobus 16 32 39 62 1 true Character/changeName MateoKrobus Krobus/pause 500/playSound doorClose/globalFadeToClear/viewport 35 59/playsound leafrustle/advancedMove MateoKrobus false -3 0 0 -3 4 10/emote farmer 40/pause 100/jump farmer 5 true/emote farmer 16/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.1}}\"/pause 250/emote farmer 32/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.2}}\"pause 250/emote farmer 36/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.3}}\"/fade/viewport -999 -999/mail MateoHospital/end invisible Mateo"
+    },
+    {
+      "Name": "MateoHospitalScene",
+      "Value": "speak Harvey \"{{i18n:Events.S&S.Ch1.7H1.Harvey.6}}\"/pause 1000/warp Harvey -999 -999/warp farmer -999 -999/warp Mateo 20 11/showFrame Mateo 50/changeLocation EastScarp_LavaMine/bgColor 0 0 0/ambientLight 0 0 0/viewport 17 12/playMusic Upper_Ambient/pause 1000/showFrame Mateo 51/shake Mateo 1000/pause 500/showFrame Mateo 50/playSound stairsdown/pause 300/warp Nova.Eli 6 10/advancedMove Nova.Eli false 0 1 2 10/pause 500/showFrame Nova.Eli 56/pause 750/showFrame Nova.Eli 57/pause 500/emote Nova.Eli 16 true/showFrame Nova.Eli 87/pause 750/showFrame Nova.Eli 0/faceDirection Nova.Eli 1/speed Nova.Eli 5/advancedMove Nova.Eli false 13 0 1 10/textAboveHead Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.1}}\"/pause 1000/textAboveHead Mateo \"{{i18n:Events.S&S.Ch1.7H1.Mateo.9}}\"/pause 3000/showFrame Nova.Eli 20/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.2}}\"/showFrame Mateo 0/pause 1000/shake Mateo 1000/pause 1000/showFrame Mateo 51/shake Mateo 1000/pause 1000/showFrame Mateo 50/emote Nova.Eli 28/showFrame Nova.Eli 21/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.3}}\"/globalFade/viewport 1000 1000/pause 1000/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.4}}\"/pause 100/playSound throw/stopMusic/changeLocation Town/warp farmer 36 57/faceDirection Nova.Eli 2/showFrame Nova.Eli 0/warp Nova.Eli 33 57/showFrame Nova.Eli 67/faceDirection farmer 2/addTemporaryActor MateoKrobus 16 32 39 62 1 true Character/changeName MateoKrobus Krobus/pause 500/playSound doorClose/globalFadeToClear/viewport 35 59/playsound leafrustle/advancedMove MateoKrobus false -3 0 0 -3 4 10/emote farmer 40/pause 100/jump farmer 5 true/emote farmer 16/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.1.2}}\"/speed Nova.Eli 2/advancedMove Nova.Eli false 0 2 2 0 4 10/pause 750/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.5}}\"/pause 250/emote farmer 32/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.2}}\"/faceDirection Nova.Eli 1/emote Nova.Eli 28/faceDirection Nova.Eli 0/pause 250/emote farmer 36/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.3}}\"/fade/viewport 1000 1000/message \"{{i18n:Events.S&S.Ch1.7H1.Message.1}}\"/mail MateoHospital/end invisible Mateo",
+      "When": {
+        "HasMod: |contains=TenebrousNova.EliDylan.CP": true
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "farmer 10 19 0 Hector 14 17 0 Eloise 15 17 0 Jacob 16 17 0 Mateo 15 14 2 OliverK 8 13 3 Aideen 16 14 2 Krobus 7 6 1"
+    },
+    {
+      "Name": "HectorIntroRequirement",
+      "Value": "SnS.Ch2.Hector.1/e SnS.Ch1.Mateo.14/t 0800 2200/n Hector_SpecialOrders_Pentacle1/n Hector_SpecialOrders_Pentacle2/n Hector_SpecialOrders_Pentacle3/n Hector_SpecialOrders_Pentacle4/F",
+      "When": {
+        "SkipIntroQuest": false
+      }
+    },
+    {
+      "Name": "HectorIntroRequirement",
+      "Value": "SnS.Ch2.Hector.1/e SnS.Ch1.Mateo.14/t 0800 2200/F",
+      "When": {
+        "SkipIntroQuest": true
+      }
+    },
+    {
+      "Name": "HectorRomance",
+      "Value": "Romantic",
+      "When": {
+        "Relationship:Hector |contains=Dating": true
+      }
+    },
+    {
+      "Name": "HectorRomance",
+      "Value": "Platonic",
+      "When": {
+        "Relationship:Hector |contains=Dating, Engaged, Married": false
+      }
+    },
+    {
+      "Name": "HectorRelationshipStatus",
+      "Value": "false",
+      "When": {
+        "HasFlag |contains=HectorRomanticFlag": false
+      }
+    },
+    {
+      "Name": "HectorRelationshipStatus",
+      "Value": "true",
+      "When": {
+        "HasFlag |contains=HectorRomanticFlag": true
+      }
+    },
+    {
+      "Name": "CirrusRelationshipStatus",
+      "Value": "false",
+      "When": {
+        "HasFlag |contains=CirrusRomanticFlag": false
+      }
+    },
+    {
+      "Name": "CirrusRelationshipStatus",
+      "Value": "true",
+      "When": {
+        "HasFlag |contains= CirrusRomanticFlag": true
+      }
+    },
+    {
+      "Name": "CirrusRomance",
+      "Value": "Romantic",
+      "When": {
+        "Relationship:Cirrus |contains=Dating": true
+      }
+    },
+    {
+      "Name": "CirrusRomance",
+      "Value": "Platonic",
+      "When": {
+        "Relationship:Cirrus |contains=Dating, Engaged, Married": false
+      }
+    },
+    {
+      "Name": "TrueName",
+      "Value": "{{i18n:Core.Hector.Name}}",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": false
+      }
+    },
+    {
+      "Name": "TrueName",
+      "Value": "{{i18n:Core.Biróg.Name}}",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true
+      }
+    },
+    {
+      "Name": "TrueShape",
+      "Value": "{{Random: male, female|key=hector-gender}}",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": false
+      }
+    },
+    {
+      "Name": "TrueShape",
+      "Value": "{{Random: male, female, trueshape|key=hector-gender}}",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true
+      }
+    },
+    {
+      "Name": "MateoNickname",
+      "Value": "@",
+      "When": {
+        "Relationship:Mateo |contains=Dating, Engaged, Married": false
+      }
+    },
+    {
+      "Name": "MateoNickname",
+      "Value": "Sunshine",
+      "When": {
+        "Relationship:Mateo |contains=Dating, Engaged, Married": true
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} Sterling 12 15 1 Mia 15 12 0 Henry 3 18 0",
+      "When": {
+        "HasMod": "Himetarts.ARV.CP"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} Trace 14 12 0 Anew 13 12 0",
+      "When": {
+        "HasMod": "CreatorKami.TYRSA.CP"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} RodneyOBrien 8 12 3",
+      "When": {
+        "HasMod": "TheFrenchDodo.RodneyOBrien"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} Jasper 12 16 1",
+      "When": {
+        "HasMod": "Lemurkat.NPCJasper"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} Nova.Dylan 5 17 3 Nova.Eli 18 16 3",
+      "When": {
+        "HasMod": "TenebrousNova.EliDylan.CP"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} Cambria 5 16 3",
+      "When": {
+        "HasMod": "Squeaks.MGC.CP"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} SenS 8 5 2",
+      "When": {
+        "HasMod": "7thAxis.DiTR.CP"
+      }
+    },
+    {
+      "Name": "MateoDND_SenWiggleSit",
+      "Value": "pause 1"
+    },
+    {
+      "Name": "MateoDND_SenWiggleSit",
+      "Value": "animate SenS false true 200 20 20 21 21 22 22 23 23 20 20",
+      "When": {
+        "HasMod": "7thAxis.DiTR.CP"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} MisterGinger 24 15 0",
+      "When": {
+        "HasMod": "Lemurkat.Tristan.CP",
+        "HasSeenEvent": "5295000"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} Lavril 14 14 2 Void 9 5 3",
+      "When": {
+        "HasMod": "Arknir27.Lavril"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} RinnyAro 19 14 2",
+      "When": {
+        "HasMod": "Rinny.Aro.CP"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} Gunnar 18 13 3",
+      "When": {
+        "HasMod": "MadDog.HashtagBearFam"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} PlumForrest 2 19 0",
+      "When": {
+        "HasMod": "AgentPhoenixCupcake.cp.PlumForrest"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} Juliet 18 15 3",
+      "When": {
+        "HasMod": "LemurKat.JulietHouse.NPC"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} Lyell 25 15 0",
+      "When": {
+        "HasMod": "Fellowclown.Lyell"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} Barron 9 14 2",
+      "When": {
+        "HasMod": "Fellowclown.TravelingDreamer"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} Yri 20 15 0 Charles 21 14 3",
+      "When": {
+        "HasMod": "yri.yri"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} DialaSBV 19 17 3 DeryaSBV 18 18 0",
+      "When": {
+        "HasMod": "skellady.SBVCP"
+      }
+    },
+    {
+      "Name": "MateoDND_Setup",
+      "Value": "{{MateoDND_Setup}} Jio 27 16 3 Lance 26 16 1",
+      "When": {
+        "HasMod |contains=Rafseazz.RSVCC": "true",
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": "true"
+      }
+    },
+    {
+      "Name": "CirrusIntro_EnD_Setup",
+      "Value": "farmer 23 18 2 Hector 24 19 3 Mateo 22 19 1 Cirrus 33 18 2 Sam 33 20 0 Abigail 34 19 0 Sebastian 32 19 0 Gus 13 18 2 Emily 17 17 0 Willy 17 22 2 Clint 19 23 3 Pierre 11 20 0 Shane 21 17 2 Pam 7 18 1 Leah 2 20 1 Elliott 4 19 2 Harvey 18 20 0 Marnie 8 22 3 Lewis 9 22 1",
+    },
+    {
+      "Name": "CirrusIntro_EnD_Setup",
+      "Value": "{{CirrusIntro_EnD_Setup}} Nova.Eli -999 -999 0 Nova.Dylan -999 -999 0",
+      "When": {
+        "HasMod: |contains=TenebrousNova.EliDylan.CP": true
+      }
+    },
+    {
+      "Name": "CirrusIntro_EnD",
+      "Value": "pause 200/emote Cirrus 40/pause 200/speak Cirrus \"Sure! I'm actually staying in East Scarp...$1\"/globalFade/viewport -999 -999/speak Hector \"Excellent! An excuse to get out of here!$9\"/speak Mateo \"Oh, come on, Biróg. Be nice.\"/speak Cirrus \"No, actually, I agree with them.$6\"/message \"Cirrus seemed a little nervous at first, but warmed up in the company of you, Mateo & Biróg. You walk her safely back to her van, parked near one of East Scarp's gardens, and part ways for the night.\"/end"
+    },
+    {
+      "Name": "CirrusIntro_EnD",
+      "Value": "pause 200/playSound doorClose/warp Nova.Eli 14 23/speed Nova.Eli 5/advancedMove Nova.Eli false 0 -2 12 0 0 -2 5 0 0 -1 1 10/pause 1000/textAboveHead Nova.Eli \"SHE'S HERE!! Come on Dylan!\" true/faceDirection Clint 0/emote Clint 16 true/playSound doorClose/faceDirection Harvey 1/warp Nova.Dylan 14 23/speed Nova.Dylan 4/advancedMove Nova.Dylan false 0 -2 12 0 0 -2 5 0 1 10/faceDirection Cirrus 3/emote Cirrus 16 true/pause 250/textAboveHead Nova.Dylan \"Slow down, idiot!\" true/faceDirection Mateo 3/emote Mateo 8/faceDirection Harvey 0/advancedMove Mateo false 0 1 4 10/faceDirection Clint 3/pause 2000/shake Nova.Eli 1000/pause 1000/speak Nova.Eli \"Holy shit. It's really you!$7\"/speak Cirrus \"In the flesh!$1\"/pause 500/playSound throw true/positionOffset Nova.Eli 110 0/showFrame Nova.Eli 28/showFrame Cirrus 28/emote Nova.Eli 20 true/pause 500/emote Nova.Dylan 32/shake Nova.Eli 1000 true/shake Cirrus 1000/pause 1000/speak Nova.Eli \"I've missed you SO much! You're looking fantastic!$3\"/showFrame Nova.Eli 4 true/playSound dwop/shake Nova.Eli 200/warp Nova.Eli 32 18/pause 500/speak Mateo \"You two know each other?$36\"/faceDirection Cirrus 2 true/faceDirection Nova.Eli 2/emote Cirrus 60/speak Nova.Eli \"You could say that! Cirrus is our best mate, we go way back.$12#$b#We were meant to be waiting for her but Dylan slowed us down.$10\"/emote Nova.Dylan 16 true/jump Nova.Dylan/speak Nova.Dylan \"Excuse me? *I* slowed us down?? You're the one who was so anxious that you spilled coffee everywhere, which I had to mop up!$7\"/textAboveHead Hector \"Ehehehe!\"/advancedMove Cirrus false 0 1 -1 0 3 10/faceDirection farmer 3/pause 1500/speak Cirrus \"I missed you too, Dylan! Can I get a hug from you as well?$1\"/speak Nova.Dylan \"Oh go on then, if you must... it's good to see you again, Cirrus.$3\"/pause 250/positionOffset Cirrus -40 0/showFrame Nova.Dylan 28/showFrame Cirrus 28/shake Nova.Dylan 1000 true/shake Cirrus 1000 true/emote Nova.Eli 32 true/pause 250/emote farmer 32/showFrame Nova.Dylan 4 true/playSound dwop/shake Cirrus 200/warp Cirrus 32 19/250/speak Hector \"I guess we don't need to walk you to the Scarp after all, then?$0\"/faceDirection Cirrus 1/faceDirection farmer 0/speak Cirrus \"I should be good! Eli and Dylan offered to bring me to their place.$0\"/speak Nova.Dylan \"You and Mateo can feel free to join us, though. It sounded like you were getting on well with Cirrus before we showed up.$1\"/jump Nova.Eli/speak Nova.Eli \"Yeah! We can ask Gus for a few pizzas to go and put on a movie when we get home. How does that sound?$1\"/emote Hector 32 true/speak Mateo \"That sounds nice, actually. I'm game for it.$1\"/jump Hector/speak Hector \"Excellent! An excuse to get out of here!$9\"/speak Mateo \"Oh, come on, Biróg. Be nice.\"/speak Cirrus \"No, actually, I agree with them.$6\"/globalFade/viewport -999 -999/playSound doorClose/pause 1000/speak Sam \"No way! How come THEY get to hug her?!$8\"/speak Abigail \"Right?? Eli never told me he's besties with THE Cirrus!$7\"/speak Sebastian \"...$2\"/message \"Cirrus seemed a little nervous at first, but warmed up in the company of you, Mateo, Biróg and her best friends. Her van is parked in front of the Moray brother's house, and you have a fun time at the impromptu party.\"/end",
+      "When": {
+        "HasMod: |contains=TenebrousNova.EliDylan.CP": true
+      }
+    }
+  ]
+}

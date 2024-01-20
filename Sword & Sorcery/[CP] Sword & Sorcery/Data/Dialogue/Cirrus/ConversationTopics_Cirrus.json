@@ -1,0 +1,127 @@
+{
+    "Changes": [
+{
+    "LogName": "Conversation Topics - Cirrus",
+    "Action": "EditData",
+    "Target": "Characters/Dialogue/Cirrus",
+    "Entries": // Cirrus
+    {
+
+        //Cirrus's 0 Heart Event
+        "CirrusIntro":"{{i18n:CT.Cirrus.CirrusIntro}}",
+
+        // Cirrus's 1 Heart Event
+        "CirrusBookIntro":"{{i18n:CT.Cirrus.CirrusBookIntro}}",
+
+        // Cirrus's 2 Heart Event
+        "CirrusShapeshift":"{{i18n:CT.Cirrus.CirrusShapeshift}}",
+
+        // Cirrus's 3 Heart Event Pt1
+        "CirrusBookQuest": "{{i18n:CT.Cirrus.CirrusBookQuest}}",
+        
+        // Cirrus's 3 Heart Event Pt2
+        "CirrusVet": "{{i18n:CT.Cirrus.CirrusVet}}",
+
+        // Cirrus's 4 Heart Event
+        "CirrusVet2":"{{i18n:CT.Cirrus.CirrusVet2}}",
+
+        // Cirrus's 5 Heart Event Pt1
+        "CirrusGender": "{{i18n:CT.Cirrus.CirrusGender}}",
+
+        // Cirrus's 5 Heart Event Pt2
+        "CirrusVet3": "{{i18n:CT.Cirrus.CirrusVet3}}",
+
+        // Cirrus's 5 Heart Event Pt3
+        "CirrusDND": "{{i18n:CT.Cirrus.CirrusDND}}",
+
+        // Cirrus's 6 Heart Event
+        "CirrusRiver1": "{{i18n:CT.Cirrus.CirrusRiver1}}",
+
+        // Cirrus's 7 Heart Event
+        "CirrusDinner": "{{i18n:CT.Cirrus.CirrusDinner}}",
+
+        // Cirrus's 7 Heart Event Pt2
+        "CirrusRiver2": "{{i18n:CT.Cirrus.CirrusRiver2}}",
+
+        // Cirrus's 8 Heart Event
+        "CirrusRiver3": "{{i18n:CT.Cirrus.CirrusRiver3}}",
+
+        // Cirrus's 9 Heart Event 
+        "CirrusHeal": "{{i18n:CT.Cirrus.CirrusHeal}}",
+
+        // Cirrus's 10 Heart Event 
+        "CirrusHeal2": "{{i18n:CT.Cirrus.CirrusHeal2}}",
+
+        // Cirrus's 10 Heart Event Pt2
+        "CirrusTrueGrove": "{{i18n:CT.Cirrus.CirrusTrueGrove}}",
+
+        // Cirrus's 10 Heart Event Pt2
+        "CirrusEngaged": "{{i18n:CT.Cirrus.CirrusEngaged}}"
+
+    }
+},
+
+{
+    "LogName": "Conversation Topics - Mateo",
+    "Action": "EditData",
+    "Target": "Characters/Dialogue/Mateo",
+    "Entries": // Mateo
+    {
+
+        //Cirrus's 0 Heart Event
+        "CirrusIntro":"{{i18n:CT.Mateo.CirrusIntro}}",
+
+        // Cirrus's 1 Heart Event
+        "CirrusBookIntro":"{{i18n:CT.Mateo.CirrusBookIntro}}",
+
+        // Cirrus's 2 Heart Event
+        "CirrusShapeshift":"{{i18n:CT.Mateo.CirrusShapeshift}}",
+
+        // Cirrus's 3 Heart Event Pt1
+        "CirrusBookQuest": "{{i18n:CT.Mateo.CirrusBookQuest}}",
+        
+        // Cirrus's 3 Heart Event Pt2
+        "CirrusVet": "{{i18n:CT.Mateo.CirrusVet}}",
+
+        // Cirrus's 4 Heart Event
+        "CirrusVet2":"{{i18n:CT.Mateo.CirrusVet2}}",
+
+        // Cirrus's 5 Heart Event Pt1
+        "CirrusGender": "{{i18n:CT.Mateo.CirrusGender}}",
+
+        // Cirrus's 5 Heart Event Pt2
+        "CirrusVet3": "{{i18n:CT.Mateo.CirrusVet3}}",
+
+        // Cirrus's 5 Heart Event Pt3
+        "CirrusDND": "{{i18n:CT.Mateo.CirrusDND}}",
+
+        // Cirrus's 6 Heart Event
+        "CirrusRiver1": "{{i18n:CT.Mateo.CirrusRiver1}}",
+
+        // Cirrus's 7 Heart Event
+        "CirrusDinner": "{{i18n:CT.Mateo.CirrusDinner}}",
+
+        // Cirrus's 7 Heart Event Pt2
+        "CirrusRiver2": "{{i18n:CT.Mateo.CirrusRiver2}}",
+
+        // Cirrus's 8 Heart Event
+        "CirrusRiver3": "{{i18n:CT.Mateo.CirrusRiver3}}",
+
+        // Cirrus's 9 Heart Event 
+        "CirrusHeal": "{{i18n:CT.Mateo.CirrusHeal}}",
+
+        // Cirrus's 10 Heart Event 
+        "CirrusHeal2": "{{i18n:CT.Mateo.CirrusHeal2}}",
+
+        // Cirrus's 10 Heart Event Pt2
+        "CirrusTrueGrove": "{{i18n:CT.Mateo.CirrusTrueGrove}}",
+
+        // Cirrus's 10 Heart Event Pt2
+        "CirrusEngaged": "{{i18n:CT.Mateo.CirrusEngaged}}"
+
+    }
+},
+
+
+    ]
+}

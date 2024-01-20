@@ -1,0 +1,20 @@
+{
+    "Changes": [
+        {
+            "LogName": "Letter from the Hospital",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "MateoHospital":"{{i18n:Mail.Mateo.Letter1}}",
+            }
+        },
+        {
+            "LogName": "Date in the Mines",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "MineDateInvite":"{{i18n:Mail.Mateo.Letter2}}"
+            }
+        }
+    ]
+}

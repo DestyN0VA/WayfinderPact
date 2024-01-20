@@ -1,0 +1,113 @@
+{
+    "Changes": [
+        {
+            "LogName": "NPC Dispositions",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Cirrus": {
+                    "DisplayName": "Cirrus",
+                    "Gender": "Female",
+                    "Age": "Adult",
+                    "Manner": "Polite",
+                    "SocialAnxiety": "Outgoing",
+                    "Optimism": "Positive",
+                    "BirthSeason": "Summer",
+                    "BirthDay": 18,
+                    "HomeRegion": "Town",
+                    "CanBeRomanced": "{{CirrusRelationshipStatus}}",
+                    "ExcludeFromPerfectionScore": false,
+                    "EndSlideShow": "TrailingGroup",
+                    "SpawnIfMissing": true,
+                    "ExcludeFromIntroductionsQuest": true,
+                    "SocialTab": "HiddenUntilMet",
+                    "Calendar": "HiddenUntilMet",
+                    "ShakePortraits": [9, 15],
+                    "SpouseRoom": {
+                        "MapAsset": "DestyNova_Cirrus_SpouseRoom"
+                    },
+                    "SpousePatio": {
+                        "MapAsset": "DestyNova_Cirrus_SpousePatio"
+                    },
+                    "Home": [
+                        {
+                            "ID": "Cirrus - Van",
+                            "Location": "EastScarp_VanInterior",
+                            "Tile": {
+                                "X": 10,
+                                "Y": 3
+                            },
+                            "Direction": "Down",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch3.Cirrus.1"
+                        },
+                        {
+                            "ID": "Cirrus - NPC Waiting Room",
+                            "Location": "EastScarp_TNPCWaitingWarpRoom",
+                            "Tile": {
+                                "X": 13,
+                                "Y": 5
+                            },
+                            "Direction": "Down",
+                        }
+                    ],
+                    "Appearance": [
+                        {
+                            "ID": "Spring Outfit",
+                            "Condition": "SEASON Spring",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Cirrus/spring_Cirrus.png}}",
+                            "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/spring_Cirrus.png}}",
+                        },
+                        {
+                            "ID": "Summer Outfit",
+                            "Condition": "SEASON Summer",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Cirrus/summer_Cirrus.png}}",
+                            "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/summer_Cirrus.png}}",
+                        },
+                        {
+                            "ID": "Fall Outfit",
+                            "Condition": "SEASON Fall",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Cirrus/fall_Cirrus.png}}",
+                            "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/fall_Cirrus.png}}",
+                        },
+                        {
+                            "ID": "Winter Outfit",
+                            "Condition": "SEASON Winter",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Cirrus/winter_Cirrus.png}}",
+                            "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/winter_Cirrus.png}}",
+                        },
+                        {
+                            "ID": "Spirit's Eve",
+                            "Condition": "EVENT_ID festival_fall27",
+                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Cirrus/Cirrus_Glamrock.png}}",
+                            "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/Cirrus_Glamrock.png}}",   
+                            "Precedence": -20
+                        },
+                        {
+                            "ID": "Luau & Moonlight Jellies",
+                            "Condition": "ANY \"EVENT_ID festival_summer11\" \"EVENT_ID festival_summer28\"",
+                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Cirrus/Cirrus_Beach.png}}",
+                            "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/Cirrus_Beach.png}}",
+                            "Precedence": -20
+                        },
+                        {
+                            "ID": "Beach",
+                            "IsIslandAttire": true,
+                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Cirrus/Cirrus_Beach.png}}",
+                            "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/Cirrus_Beach.png}}",
+                            "Precedence": -20
+                        },
+                    ]
+                }
+            }
+        }
+    ]
+}
+    

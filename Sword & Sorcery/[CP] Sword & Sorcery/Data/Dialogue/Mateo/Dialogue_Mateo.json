@@ -1,0 +1,359 @@
+{ "Changes": 
+[
+
+/*
+   _____ ______ _   _ ______ _____  _____ _____   _____ _____          _      ____   _____ _    _ ______ 
+  / ____|  ____| \ | |  ____|  __ \|_   _/ ____| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
+ | |  __| |__  |  \| | |__  | |__) | | || |      | |  | || |    /  \  | |   | |  | | |  __| |  | | |__   
+ | | |_ |  __| | . ` |  __| |  _  /  | || |      | |  | || |   / /\ \ | |   | |  | | | |_ | |  | |  __|  
+ | |__| | |____| |\  | |____| | \ \ _| || |____  | |__| || |_ / ____ \| |___| |__| | |__| | |__| | |____ 
+  \_____|______|_| \_|______|_|  \_\_____\_____| |_____/_____/_/    \_\______\____/ \_____|\____/|______|
+
+*/
+
+{
+        "LogName": "Mateo's Heart Dialogue 1-8",
+        "Action": "EditData",
+        "Target": "Characters/Dialogue/Mateo",
+        "Entries": 
+
+        {
+
+        // NAME & INTRO
+        "Name:":"{{i18n:Core.Mateo.Name}}",
+        "Introduction":"{{i18n:Core.Mateo.Introduction}}",
+
+        // COMMUNITY CENTER BUNDLES
+        "joja_Begin":"{{i18n:Core.Mateo.JojaBegin}}",
+        "cc_Begin":"{{i18n:Core.Mateo.CCBegin}}",
+        "cc_Bus":"{{i18n:Core.Mateo.CCBus}}",
+        "cc_Minecart":"{{i18n:Core.Mateo.CCMinecart}}",
+        "cc_Complete":"{{i18n:Core.Mateo.CCComplete}}",
+        "movieTheater":"{{i18n:Core.Mateo.MovieTheater}}",
+
+        // BIRTHDAYS
+        "winter_12":"{{i18n:Core.Mateo.Winter12}}",
+        "winter_19":"{{i18n:Core.Mateo.Winter19}}",
+
+        // END OF SEASON
+        "spring_28":"{{i18n:Core.Mateo.SpringEnd}}",
+        "summer_28":"{{i18n:Core.Mateo.SummerEnd}}",
+        "fall_28":"{{i18n:Core.Mateo.FallEnd}}",
+        "winter_28":"{{i18n:Core.Mateo.WinterEnd}}",
+
+        // SVE COMMUNITY DAY
+        "CommunityCenter4":"{{i18n:Core.Mateo.CommunityCenter4}}",
+        "CommunityCenter6":"{{i18n:Core.Mateo.CommunityCenter6}}",
+        "CommunityCenter8":"{{i18n:Core.Mateo.CommunityCenter8}}",
+        "CommunityCenter10":"{{i18n:Core.Mateo.CommunityCenter10}}",
+
+        // FESTIVALS
+        "spring_12":"{{i18n:Core.Mateo.EggFestival}}",
+        "spring_23":"{{i18n:Core.Mateo.FlowerDance}}",
+        "summer_10":"{{i18n:Core.Mateo.Luau}}",
+        "summer_27":"{{i18n:Core.Mateo.MoonlightJelly}}",
+        "fall_15":"{{i18n:Core.Mateo.SDVFair}}",
+        "fall_26":"{{i18n:Core.Mateo.SpiritsEve}}",
+        "winter_7":"{{i18n:Core.Mateo.IceFestival}}",
+        "winter_16":"{{i18n:Core.Mateo.NightMarket}}",
+        "winter_24":"{{i18n:Core.Mateo.WinterStar}}",
+
+        // ROMANTIC (POSITIVE)
+        "give_flowersA":"{{i18n:Core.Mateo.GiveFlowersA}}",
+        "give_flowersB":"{{i18n:Core.Mateo.GiveFlowersB}}",
+        "give_pendant":"{{i18n:Core.Mateo.GivePendant}}",
+        "stardrop_giftA":"{{i18n:Core.Mateo.StardropGiftA}}",
+        "stardrop_giftB":"{{i18n:Core.Mateo.StardropGiftB}}",
+
+        // ROMANTIC (NEGATIVE)
+        "danceRejection":"{{i18n:Core.Mateo.DanceRejection}}",
+        "divorced":"{{i18n:Core.Mateo.Divorced}}",
+        "breakUp":"{{i18n:Core.Mateo.BreakUp}}",
+        "dumped_Girls":"{{i18n:Core.Mateo.DumpedGirls}}",
+        "secondChance_Girls":"{{i18n:Core.Mateo.SecondChanceGirls}}",
+        "reject_two_heartA":"{{i18n:Core.Mateo.Reject2HA}}",
+        "reject_two_heartB":"{{i18n:Core.Mateo.Reject2HB}}",
+        "reject_four_heartA":"{{i18n:Core.Mateo.Reject4HA}}",
+        "reject_four_heartB":"{{i18n:Core.Mateo.Reject4HB}}",
+        "engageA":"{{i18n:Core.Mateo.EngageA}}",
+        "engageB":"{{i18n:Core.Mateo.EngageB}}",
+        "marriedA":"{{i18n:Core.Mateo.MarriedA}}",
+        "marriedB":"{{i18n:Core.Mateo.MarriedB}}",
+        "refusal_no_heartsA":"{{i18n:Core.Mateo.RefusalNoHeartsA}}",
+        "refusal_no_heartsB":"{{i18n:Core.Mateo.RefusalNoHeartsB}}",
+        "refusal_knownA":"{{i18n:Core.Mateo.RefusalKnownA}}",
+        "refusal_knownB":"{{i18n:Core.Mateo.RefusalKnownB}}",
+        "refusal_botherA":"{{i18n:Core.Mateo.RefusalBotherA}}",
+        "refusal_botherB":"{{i18n:Core.Mateo.RefusalBotherB}}",
+
+        // RESORT
+        "Resort_Entering":"{{i18n:Core.Mateo.ResortEntering}}",
+        "Resort_Leaving":"{{i18n:Core.Mateo.ResortLeaving}}",
+        "Resort_Shore":"{{i18n:Core.Mateo.ResortShore}}",
+        "Resort_Umbrella":"{{i18n:Core.Mateo.ResortUmbrella}}",
+        "Resort_Wander":"{{i18n:Core.Mateo.ResortWander}}",
+        "Resort_Wander_2":"{{i18n:Core.Mateo.ResortWander.2}}",
+        "Resort_Chair":"{{i18n:Core.Mateo.ResortChair}}",
+        "Resort_Bar":"{{i18n:Core.Mateo.ResortBar}}",
+        "Resort_Towel":"{{i18n:Core.MateoResortTowel}}",
+        "Resort_Towel_2":"{{i18n:Core.Mateo.ResortTowel.2}}",
+        "Resort_Towel_3":"{{i18n:Core.Mateo.Resort_Towel.3}}",
+        "Resort":"{{i18n:Core.Mateo.Resort}}",
+
+        // ADDITIONAL LOCATION DIALOGUE 
+        "Saloon4":"{{i18n:Core.Mateo.Saloon.4h}}",
+        "Saloon6":"{{i18n:Core.Mateo.Saloon.6h}}",
+        "Saloon8":"{{i18n:Core.Mateo.Saloon.8h}}",
+        "Saloon10":"{{i18n:Core.Mateo.Saloon.10h.{{MateoRomance}}}}",
+              
+        "ArchaeologyHouse4":"{{i18n:Core.Mateo.ArchaeologyHouse.4h}}",
+        "ArchaeologyHouse6":"{{i18n:Core.Mateo.ArchaeologyHouse.6h}}",
+        "ArchaeologyHouse8":"{{i18n:Core.Mateo.ArchaeologyHouse.8h}}",
+        "ArchaeologyHouse10":"{{i18n:Core.Mateo.ArchaeologyHouse.10h.{{MateoRomance}}}}",
+        
+        "AdventureGuild4":"{{i18n:Core.Mateo.AdventureGuild.4h}}",
+        "AdventureGuild6":"{{i18n:Core.Mateo.AdventureGuild.6h}}",
+        "AdventureGuild8":"{{i18n:Core.Mateo.AdventureGuild.8h}}",
+        "AdventureGuild10":"{{i18n:Core.Mateo.AdventureGuild.10h.{{MateoRomance}}}}",
+
+/*
+  _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
+ | |  | |  ____|   /\   |  __ \__   __| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
+ | |__| | |__     /  \  | |__) | | |    | |  | || |    /  \  | |   | |  | | |  __| |  | | |__   
+ |  __  |  __|   / /\ \ |  _  /  | |    | |  | || |   / /\ \ | |   | |  | | | |_ | |  | |  __|  
+ | |  | | |____ / ____ \| | \ \  | |    | |__| || |_ / ____ \| |___| |__| | |__| | |__| | |____ 
+ |_|  |_|______/_/    \_\_|  \_\ |_|    |_____/_____/_/    \_\______\____/ \_____|\____/|______|
+
+*/
+
+        // 0 HEARTS - SPRING
+        "spring_Mon":"{{i18n:Core.Mateo.Spring.Monday.0h}}",
+        "spring_Tue":"{{i18n:Core.Mateo.Spring.Tuesday.0h}}",
+        "spring_Wed":"{{i18n:Core.Mateo.Spring.Wednesday.0h}}",
+        "spring_Thu":"{{i18n:Core.Mateo.Spring.Thursday.0h}}",
+        "spring_Fri":"{{i18n:Core.Mateo.Spring.Friday.0h}}",
+        "spring_Sat":"{{i18n:Core.Mateo.Spring.Saturday.0h}}",
+        "spring_Sun":"{{i18n:Core.Mateo.Spring.Sunday.0h}}",
+
+        // 0 HEARTS - SUMMER
+        "summer_Mon":"{{i18n:Core.Mateo.Summer.Monday.0h}}",
+        "summer_Tue":"{{i18n:Core.Mateo.Summer.Tuesday.0h}}",
+        "summer_Wed":"{{i18n:Core.Mateo.Summer.Wednesday.0h}}", 
+        "summer_Thu":"{{i18n:Core.Mateo.Summer.Thursday.0h}}",
+        "summer_Fri":"{{i18n:Core.Mateo.Summer.Friday.0h}}",
+        "summer_Sat":"{{i18n:Core.Mateo.Summer.Saturday.0h}}",
+        "summer_Sun":"{{i18n:Core.Mateo.Summer.Sunday.0h}}",
+
+        // 0 HEARTS - FALL
+        "fall_Mon":"{{i18n:Core.Mateo.Fall.Monday.0h}}",
+        "fall_Tue":"{{i18n:Core.Mateo.Fall.Tuesday.0h}}",
+        "fall_Wed":"{{i18n:Core.Mateo.Fall.Wednesday.0h}}",
+        "fall_Thu":"{{i18n:Core.Mateo.Fall.Thursday.0h}}",
+        "fall_Fri":"{{i18n:Core.Mateo.Fall.Friday.0h}}",
+        "fall_Sat":"{{i18n:Core.Mateo.Fall.Saturday.0h}}",
+        "fall_Sun":"{{i18n:Core.Mateo.Fall.Sunday.0h}}",
+
+        // 0 HEARTS - WINTER
+        "winter_Mon":"{{i18n:Core.Mateo.Winter.Monday.0h}}",
+        "winter_Tue":"{{i18n:Core.Mateo.Winter.Tuesday.0h}}",
+        "winter_Wed":"{{i18n:Core.Mateo.Winter.Wednesday.0h}}",
+        "winter_Thu":"{{i18n:Core.Mateo.Winter.Thursday.0h}}",
+        "winter_Fri":"{{i18n:Core.Mateo.Winter.Friday.0h}}",
+        "winter_Sat":"{{i18n:Core.Mateo.Winter.Saturday.0h}}",
+        "winter_Sun":"{{i18n:Core.Mateo.Winter.Sunday.0h}}",
+
+        // 2 HEARTS  - SPRING
+        "spring_Mon2":"{{i18n:Core.Mateo.Spring.Monday.2h}}",
+        "spring_Tue2":"{{i18n:Core.Mateo.Spring.Tuesday.2h}}",
+        "spring_Wed2":"{{i18n:Core.Mateo.Spring.Wednesday.2h}}",
+        "spring_Thu2":"{{i18n:Core.Mateo.Spring.Thursday.2h}}",
+        "spring_Fri2":"{{i18n:Core.Mateo.Spring.Friday.2h}}",
+        "spring_Sat2":"{{i18n:Core.Mateo.Spring.Saturday.2h}}",
+        "spring_Sun2":"{{i18n:Core.Mateo.Spring.Sunday.2h}}",
+
+        // 2 HEARTS - SUMMER
+        "summer_Mon2":"{{i18n:Core.Mateo.Summer.Monday.2h}}",
+        "summer_Tue2":"{{i18n:Core.Mateo.Summer.Tuesday.2h}}",
+        "summer_Wed2":"{{i18n:Core.Mateo.Summer.Wednesday.2h}}",
+        "summer_Thu2":"{{i18n:Core.Mateo.Summer.Thursday.2h}}",
+        "summer_Fri2":"{{i18n:Core.Mateo.Summer.Friday.2h}}",
+        "summer_Sat2":"{{i18n:Core.Mateo.Summer.Saturday.2h}}",
+        "summer_Sun2":"{{i18n:Core.Mateo.Summer.Sunday.2h}}",
+
+        // 2 HEARTS - FALL
+        "fall_Mon2":"{{i18n:Core.Mateo.Fall.Monday.2h}}",
+        "fall_Tue2":"{{i18n:Core.Mateo.Fall.Tuesday.2h}}",
+        "fall_Wed2":"{{i18n:Core.Mateo.Fall.Wednesday.2h}}",
+        "fall_Thu2":"{{i18n:Core.Mateo.Fall.Thursday.2h}}",
+        "fall_Fri2":"{{i18n:Core.Mateo.Fall.Friday.2h}}",
+        "fall_Sat2":"{{i18n:Core.Mateo.Fall.Saturday.2h}}",
+        "fall_Sun2":"{{i18n:Core.Mateo.Fall.Sunday.2h}}",
+
+        // 2 HEARTS - WINTER 
+        "winter_Mon2":"{{i18n:Core.Mateo.Winter.Monday.2h}}",
+        "winter_Tue2":"{{i18n:Core.Mateo.Winter.Tuesday.2h}}",
+        "winter_Wed2":"{{i18n:Core.Mateo.Winter.Wednesday.2h}}",
+        "winter_Thu2":"{{i18n:Core.Mateo.Winter.Thursday.2h}}",
+        "winter_Fri2":"{{i18n:Core.Mateo.Winter.Friday.2h}}",
+        "winter_Sat2":"{{i18n:Core.Mateo.Winter.Saturday.2h}}",
+        "winter_Sun2":"{{i18n:Core.Mateo.Winter.Sunday.2h}}",
+
+        // 4 HEARTS - SPRING 
+        "spring_Mon4":"{{i18n:Core.Mateo.Spring.Monday.4h}}",
+        "spring_Tue4":"{{i18n:Core.Mateo.Spring.Tuesday.4h}}",
+        "spring_Wed4":"{{i18n:Core.Mateo.Spring.Wednesday.4h}}",
+        "spring_Thu4":"{{i18n:Core.Mateo.Spring.Thursday.4h}}",
+        "spring_Fri4":"{{i18n:Core.Mateo.Spring.Friday.4h}}",	
+        "spring_Sat4":"{{i18n:Core.Mateo.Spring.Saturday.4h}}",
+        "spring_Sun4":"{{i18n:Core.Mateo.Spring.Sunday.4h}}",
+
+        // 4 HEARTS - SPRING
+        "summer_Mon4":"{{i18n:Core.Mateo.Summer.Monday.4h}}",
+        "summer_Tue4":"{{i18n:Core.Mateo.Summer.Tuesday.4h}}",
+        "summer_Wed4":"{{i18n:Core.Mateo.Summer.Wednesday.4h}}",
+        "summer_Thu4":"{{i18n:Core.Mateo.Summer.Thursday.4h}}",
+        "summer_Fri4":"{{i18n:Core.Mateo.Summer.Friday.4h}}",
+        "summer_Sat4":"{{i18n:Core.Mateo.Summer.Saturday.4h}}",
+        "summer_Sun4":"{{i18n:Core.Mateo.Summer.Sunday.4h}}",
+
+        // 4 HEARTS - FALL
+        "fall_Mon4":"{{i18n:Core.Mateo.Fall.Monday.4h}}",
+        "fall_Tue4":"{{i18n:Core.Mateo.Fall.Tuesday.4h}}",
+        "fall_Wed4":"{{i18n:Core.Mateo.Fall.Wednesday.4h}}",
+        "fall_Thu4":"{{i18n:Core.Mateo.Fall.Thursday.4h}}",
+        "fall_Fri4":"{{i18n:Core.Mateo.Fall.Friday.4h}}",
+        "fall_Sat4":"{{i18n:Core.Mateo.Fall.Saturday.4h}}",
+        "fall_Sun4":"{{i18n:Core.Mateo.Fall.Sunday.4h}}",
+
+        //4 HEARTS - WINTER
+        "winter_Mon4":"{{i18n:Core.Mateo.Winter.Monday.4h}}",
+        "winter_Tue4":"{{i18n:Core.Mateo.Winter.Tuesday.4h}}",
+        "winter_Wed4":"{{i18n:Core.Mateo.Winter.Wednesday.4h}}",
+        "winter_Thu4":"{{i18n:Core.Mateo.Winter.Thursday.4h}}",
+        "winter_Fri4":"{{i18n:Core.Mateo.Winter.Friday.4h}}",
+        "winter_Sat4":"{{i18n:Core.Mateo.Winter.Saturday.4h}}",
+        "winter_Sun4":"{{i18n:Core.Mateo.Winter.Sunday.4h}}",
+        
+        // 6 HEARTS - SPRING
+        "spring_Mon6":"{{i18n:Core.Mateo.Spring.Monday.6h}}",
+        "spring_Tue6":"{{i18n:Core.Mateo.Spring.Tuesday.6h}}",
+        "spring_Wed6":"{{i18n:Core.Mateo.Spring.Wednesday.6h}}",
+        "spring_Thu6":"{{i18n:Core.Mateo.Spring.Thursday.6h}}",
+        "spring_Fri6":"{{i18n:Core.Mateo.Spring.Friday.6h}}",
+        "spring_Sat6":"{{i18n:Core.Mateo.Spring.Saturday.6h}}",
+        "spring_Sun6":"{{i18n:Core.Mateo.Spring.Sunday.6h}}",
+
+        // 6 HEARTS - SUMMER
+        "summer_Mon6":"{{i18n:Core.Mateo.Summer.Monday.6h}}",
+        "summer_Tue6":"{{i18n:Core.Mateo.Summer.Tuesday.6h}}",
+        "summer_Wed6":"{{i18n:Core.Mateo.Summer.Wednesday.6h}}",
+        "summer_Thu6":"{{i18n:Core.Mateo.Summer.Thursday.6h}}",
+        "summer_Fri6":"{{i18n:Core.Mateo.Summer.Friday.6h}}",
+        "summer_Sat6":"{{i18n:Core.Mateo.Summer.Saturday.6h}}",
+        "summer_Sun6":"{{i18n:Core.Mateo.Summer.Sunday.6h}}",
+
+        // 6 HEARTS - FALL
+        "fall_Mon6":"{{i18n:Core.Mateo.Fall.Monday.6h}}",
+        "fall_Tue6":"{{i18n:Core.Mateo.Fall.Tuesday.6h}}",
+        "fall_Wed6":"{{i18n:Core.Mateo.Fall.Wednesday.6h}}",
+        "fall_Thu6":"{{i18n:Core.Mateo.Fall.Thursday.6h}}",
+        "fall_Fri6":"{{i18n:Core.Mateo.Fall.Friday.6h}}",
+        "fall_Sat6":"{{i18n:Core.Mateo.Fall.Saturday.6h}}",
+        "fall_Sun6":"{{i18n:Core.Mateo.Fall.Sunday.6h}}",
+
+        // 6 HEARTS - WINTER
+        "winter_Mon6":"{{i18n:Core.Mateo.Winter.Monday.6h}}",
+        "winter_Tue6":"{{i18n:Core.Mateo.Winter.Tuesday.6h}}",
+        "winter_Wed6":"{{i18n:Core.Mateo.Winter.Wednesday.6h}}",
+        "winter_Thu6":"{{i18n:Core.Mateo.Winter.Thursday.6h}}",
+        "winter_Fri6":"{{i18n:Core.Mateo.Winter.Friday.6h}}",
+        "winter_Sat6":"{{i18n:Core.Mateo.Winter.Saturday.6h}}",
+        "winter_Sun6":"{{i18n:Core.Mateo.Winter.Sunday.6h}}",
+
+        // 8 HEARTS - SPRING
+        "spring_Mon8":"{{i18n:Core.Mateo.Spring.Monday.8h}}",
+        "spring_Tue8":"{{i18n:Core.Mateo.Spring.Tuesday.8h}}",
+        "spring_Wed8":"{{i18n:Core.Mateo.Spring.Wednesday.8h}}",
+        "spring_Thu8":"{{i18n:Core.Mateo.Spring.Thursday.8h}}",
+        "spring_Fri8":"{{i18n:Core.Mateo.Spring.Friday.8h}}",
+        "spring_Sat8":"{{i18n:Core.Mateo.Spring.Saturday.8h}}",
+        "spring_Sun8":"{{i18n:Core.Mateo.Spring.Sunday.8h}}",
+
+        // 8 HEARTS - SUMMER
+        "summer_Mon8":"{{i18n:Core.Mateo.Summer.Monday.8h}}",
+        "summer_Tue8":"{{i18n:Core.Mateo.Summer.Tuesday.8h}}",
+        "summer_Wed8":"{{i18n:Core.Mateo.Summer.Wednesday.8h}}",
+        "summer_Thu8":"{{i18n:Core.Mateo.Summer.Thursday.8h}}",
+        "summer_Fri8":"{{i18n:Core.Mateo.Summer.Friday.8h}}",
+        "summer_Sat8":"{{i18n:Core.Mateo.Summer.Saturday.8h}}",
+        "summer_Sun8":"{{i18n:Core.Mateo.Summer.Sunday.8h}}",
+
+        // 8 HEARTS - FALL
+        "fall_Mon8":"{{i18n:Core.Mateo.Fall.Monday.8h}}",
+        "fall_Tue8":"{{i18n:Core.Mateo.Fall.Tuesday.8h}}",
+        "fall_Wed8":"{{i18n:Core.Mateo.Fall.Wednesday.8h}}", 
+        "fall_Thu8":"{{i18n:Core.Mateo.Fall.Thursday.8h}}",
+        "fall_Fri8":"{{i18n:Core.Mateo.Fall.Friday.8h}}",
+        "fall_Sat8":"{{i18n:Core.Mateo.Fall.Saturday.8h}}",
+        "fall_Sun8":"{{i18n:Core.Mateo.Fall.Sunday.8h}}",
+
+        // 8 HEARTS - WINTER 
+        "winter_Mon8":"{{i18n:Core.Mateo.Winter.Monday.8h}}",
+        "winter_Tue8":"{{i18n:Core.Mateo.Winter.Tuesday.8h}}", 
+        "winter_Wed8":"{{i18n:Core.Mateo.Winter.Wednesday.8h}}",
+        "winter_Thu8":"{{i18n:Core.Mateo.Winter.Thursday.8h}}",
+        "winter_Fri8":"{{i18n:Core.Mateo.Winter.Friday.8h}}",
+        "winter_Sat8":"{{i18n:Core.Mateo.Winter.Saturday.8h}}",
+        "winter_Sun8":"{{i18n:Core.Mateo.Winter.Sunday.8h}}", 
+        
+        }
+        },
+
+        {
+        "LogName": "Mateo's 10 Heart Dialogue",
+        "Action": "EditData",
+        "Target": "Characters/Dialogue/Mateo",
+        "Entries": 
+        {
+
+        // 10 HEARTS - SPRING
+        "spring_Mon10":"{{i18n:Core.Mateo.Spring.Monday.10h.{{MateoRomance}}}}",
+        "spring_Tue10":"{{i18n:Core.Mateo.Spring.Tuesday.10h.{{MateoRomance}}}}",
+        "spring_Wed10":"{{i18n:Core.Mateo.Spring.Wednesday.10h.{{MateoRomance}}}}", 
+        "spring_Thu10":"{{i18n:Core.Mateo.Spring.Thursday.10h.{{MateoRomance}}}}",
+        "spring_Fri10":"{{i18n:Core.Mateo.Spring.Friday.10h.{{MateoRomance}}}}",
+        "spring_Sat10":"{{i18n:Core.Mateo.Spring.Saturday.10h.{{MateoRomance}}}}",
+        "spring_Sun10":"{{i18n:Core.Mateo.Spring.Sunday.10h.{{MateoRomance}}}}",
+
+        // 10 HEARTS - SUMMER
+        "summer_Mon10":"{{i18n:Core.Mateo.Summer.Monday.10h.{{MateoRomance}}}}",
+        "summer_Tue10":"{{i18n:Core.Mateo.Summer.Tuesday.10h.{{MateoRomance}}}}",
+        "summer_Wed10":"{{i18n:Core.Mateo.Summer.Wednesday.10h.{{MateoRomance}}}}",
+        "summer_Thu10":"{{i18n:Core.Mateo.Summer.Thursday.10h.{{MateoRomance}}}}",
+        "summer_Fri10":"{{i18n:Core.Mateo.Summer.Friday.10h.{{MateoRomance}}}}",
+        "summer_Sat10":"{{i18n:Core.Mateo.Summer.Saturday.10h.{{MateoRomance}}}}",
+        "summer_Sun10":"{{i18n:Core.Mateo.Summer.Sunday.10h.{{MateoRomance}}}}",
+
+        // 10 HEARTS - FALL 
+        "fall_Mon10":"{{i18n:Core.Mateo.Fall.Monday.10h.{{MateoRomance}}}}",
+        "fall_Tue10":"{{i18n:Core.Mateo.Fall.Tuesday.10h.{{MateoRomance}}}}",
+        "fall_Wed10":"{{i18n:Core.Mateo.Fall.Wednesday.10h.{{MateoRomance}}}}", 
+        "fall_Thu10":"{{i18n:Core.Mateo.Fall.Thursday.10h.{{MateoRomance}}}}",
+        "fall_Fri10":"{{i18n:Core.Mateo.Fall.Friday.10h.{{MateoRomance}}}}",
+        "fall_Sat10":"{{i18n:Core.Mateo.Fall.Saturday.10h.{{MateoRomance}}}}",
+        "fall_Sun10":"{{i18n:Core.Mateo.Fall.Sunday.10h.{{MateoRomance}}}}",
+
+        // 10 HEARTS - WINTER 
+        "winter_Mon10":"{{i18n:Core.Mateo.Winter.Monday.10h.{{MateoRomance}}}}",
+        "winter_Tue10":"{{i18n:Core.Mateo.Winter.Tuesday.10h.{{MateoRomance}}}}", 
+        "winter_Wed10":"{{i18n:Core.Mateo.Winter.Wednesday.10h.{{MateoRomance}}}}",
+        "winter_Thu10":"{{i18n:Core.Mateo.Winter.Thursday.10h.{{MateoRomance}}}}",
+        "winter_Fri10":"{{i18n:Core.Mateo.Winter.Friday.10h.{{MateoRomance}}}}",
+        "winter_Sat10":"{{i18n:Core.Mateo.Winter.Saturday.10h.{{MateoRomance}}}}",
+        "winter_Sun10":"{{i18n:Core.Mateo.Winter.Sunday.10h.{{MateoRomance}}}}",
+
+        },
+        "When": { "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true }
+   }
+  ]
+ }

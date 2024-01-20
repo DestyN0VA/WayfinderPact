@@ -1,0 +1,240 @@
+{
+    "Changes": [
+      {
+        "Action": "EditData",
+        "Target": "Data/Weapons",
+        "Entries": {
+      "swordandsorcery.keytoscarp": {
+      "Name": "Key to Scarp",
+      "DisplayName": "{{i18n: weapon.keytoscarp.name}}",
+      "Description": "{{i18n: weapon.keytoscarp.description}}",
+      "MinDamage": 70,
+      "MaxDamage": 100,
+      "Knockback": 1,
+      "Speed": 4,
+      "Precision": 90,
+      "Defense": 2,
+      "CritChance": 0.07,
+      "CritMultiplier": 3.0,
+      "Type": 3,
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 21,
+      "CanBeLostOnDeath": false
+      },
+      }
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/Weapons",
+        "Entries": {
+      "swordandsorcery.twobecomeone": {
+      "Name": "Two Become One",
+      "DisplayName": "{{i18n: weapon.twobecomeone.name}}",
+      "Description": "{{i18n: weapon.twobecomeone.description}}",
+      "MinDamage": 100,
+      "MaxDamage": 130,
+      "Knockback": 1,
+      "Speed": 6,
+      "Precision": 100,
+      "Defense": 3,
+      "CritChance": 0.07,
+      "CritMultiplier": 3.0,
+      "Type": 3,
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 22,
+      "CanBeLostOnDeath": false
+      },
+      }
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/Weapons",
+        "Entries": {
+      "swordandsorcery.savethequeen": {
+      "Name": "Save the Queen",
+      "DisplayName": "{{i18n: weapon.savethequeen.name}}",
+      "Description": "{{i18n: weapon.savethequeen.description}}",
+      "MinDamage": 60,
+      "MaxDamage": 90,
+      "Knockback": 0.5,
+      "Speed": 8,
+      "Precision": 100,
+      "Defense": 1,
+      "CritChance": 0.1,
+      "CritMultiplier": 3.0,
+      "Type": 1,
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 23,
+      "CanBeLostOnDeath": false
+      },
+      }
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/Weapons",
+        "Entries": {
+      "swordandsorcery.oathkeeper": {
+      "Name": "Oathkeeper",
+      "DisplayName": "{{i18n: weapon.oathkeeper.name}}",
+      "Description": "{{i18n: weapon.oathkeeper.description}}",
+      "MinDamage": 80,
+      "MaxDamage": 110,
+      "Knockback": 0.5,
+      "Speed": 10,
+      "Precision": 100,
+      "Defense": 2,
+      "CritChance": 0.1,
+      "CritMultiplier": 4.0,
+      "Type": 1,
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 24,
+      "CanBeLostOnDeath": false
+      },
+      }
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/Weapons",
+        "Entries": {
+      "swordandsorcery.savetheking": {
+      "Name": "Save the King",
+      "DisplayName": "{{i18n: weapon.savetheking.name}}",
+      "Description": "{{i18n: weapon.savetheking.description}}",
+      "MinDamage": 100,
+      "MaxDamage": 130,
+      "Knockback": 2,
+      "Speed": 2,
+      "Precision": 80,
+      "Defense": 3,
+      "CritChance": 0.03,
+      "CritMultiplier": 3.0,
+      "Type": 2,
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 25,
+      "CanBeLostOnDeath": false
+      },
+      }
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/Weapons",
+        "Entries": {
+      "swordandsorcery.waytothedawn": {
+      "Name": "Way to the Dawn",
+      "DisplayName": "{{i18n: weapon.waytothedawn.name}}",
+      "Description": "{{i18n: weapon.waytothedawn.description}}",
+      "MinDamage": 130,
+      "MaxDamage": 160,
+      "Knockback": 2,
+      "Speed": 4,
+      "Precision": 90,
+      "Defense": 4,
+      "CritChance": 0.03,
+      "CritMultiplier": 3.0,
+      "Type": 2,
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 26,
+      "CanBeLostOnDeath": false
+      },
+      }
+      },
+           {
+        "Action": "EditData",
+        "Target": "Data/Weapons",
+        "Entries": {
+      "swordandsorcery.eldadagordagger": {
+      "Name": "Eldadagor Dagger",
+      "DisplayName": "{{i18n: weapon.eldadagordagger.name}}",
+      "Description": "{{i18n: weapon.eldadagordagger.description}}",
+      "MinDamage": 30,
+      "MaxDamage": 50,
+      "Knockback": 1,
+      "Speed": 2,
+      "Precision": 70,
+      "Defense": 2,
+      "CritChance": 0.02,
+      "CritMultiplier": 2.0,
+      "Type": 2,
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 34,
+      "MineBaseLevel": 60,
+      "MineMinLevel": 60,
+      "CanBeLostOnDeath": true
+      },
+      }
+      }, 
+            {
+        "Action": "EditData",
+        "Target": "Data/Weapons",
+        "Entries": {
+      "swordandsorcery.glaewndilsword": {
+      "Name": "Glaewndil Sword",
+      "DisplayName": "{{i18n: weapon.glaewndilsword.name}}",
+      "Description": "{{i18n: weapon.glaewndilsword.description}}",
+      "MinDamage": 40,
+      "MaxDamage": 60,
+      "Knockback": 1,
+      "Speed": 2,
+      "Precision": 90,
+      "Defense": 2,
+      "CritChance": 0.02,
+      "CritMultiplier": 3.0,
+      "Type": 2,
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 35,
+      "MineBaseLevel": 60,
+      "MineMinLevel": 60,
+      "CanBeLostOnDeath": true
+      },
+      }
+      },
+            {
+        "Action": "EditData",
+        "Target": "Data/Weapons",
+        "Entries": {
+      "swordandsorcery.thondrondhammer": {
+      "Name": "Thondrond Hammer",
+      "DisplayName": "{{i18n: weapon.thondrondhammer.name}}",
+      "Description": "{{i18n: weapon.thondrondhammer.description}}",
+      "MinDamage": 50,
+      "MaxDamage": 70,
+      "Knockback": 1,
+      "Speed": -1,
+      "Precision": 50,
+      "Defense": 3,
+      "CritChance": 0.03,
+      "CritMultiplier": 3.0,
+      "Type": 2,
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 36,
+      "MineBaseLevel": 60,
+      "MineMinLevel": 60,
+      "CanBeLostOnDeath": true
+      },
+      }
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/Weapons",
+        "Entries": {
+      "swordandsorcery.longlivetheking": {
+      "Name": "Long Live The King",
+      "DisplayName": "{{i18n: weapon.longlivetheking.name}}",
+      "Description": "{{i18n: weapon.longlivetheking.description}}",
+      "MinDamage": 125,
+      "MaxDamage": 150,
+      "Knockback": 1,
+      "Speed": 6,
+      "Precision": 100,
+      "Defense": 3,
+      "CritChance": 0.1,
+      "CritMultiplier": 3.0,
+      "Type": 3,
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 45,
+      "CanBeLostOnDeath": false
+      },
+      }
+      },
+    ]
+}

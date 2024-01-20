@@ -1,0 +1,192 @@
+{
+ "Changes": [
+  {
+"Action": "EditData",
+"Target": "Data/Shops",
+"Entries": {
+"swordandsorcery.CAGArtifactLedger": {
+"Owners": [
+ {
+"Name": "AnyOrNone",
+"Portrait": "{{InternalAssetKey:Assets/TemporaryActors/Portraits/CGEmblem.png}}",
+"Dialogues": [
+ {
+  "Id": "swordandsorcery.CAGArtifactLedger",
+  "Dialogue": "{{i18n:miscellaneous.CAGArtifactLedger.message}}"
+ }
+]
+},
+  ],
+  "Items": [
+  {
+"Id": "swordandsorcery.Group1",
+"AvaliableStock": 3,
+"TradeItemId": "881",
+"TradeItemAmount": 100,
+"AvailableStockLimit": "Player",
+"RandomItemId": [
+"(O)538",
+"(O)539",
+"(O)540",
+"(O)541",
+"(O)542",
+"(O)543",
+"(O)544",
+"(O)102",
+"(O)103",
+"(O)104",
+"(O)105",
+"(O)106",
+"(O)107",
+]
+},
+  {
+"Id": "swordandsorcery.Group2",
+"AvaliableStock": 3,
+"TradeItemId": "881",
+"TradeItemAmount": 100,
+"AvailableStockLimit": "Player",
+"RandomItemId": [
+"(O)545",
+"(O)546",
+"(O)547",
+"(O)548",
+"(O)549",
+"(O)550",
+"(O)551",
+"(O)552",
+"(O)553",
+"(O)554",
+]
+},
+  {
+"Id": "swordandsorcery.Group3",
+"AvaliableStock": 3,
+"TradeItemId": "881",
+"TradeItemAmount": 100,
+"AvailableStockLimit": "Player",
+"RandomItemId": [
+"(O)555",
+"(O)556",
+"(O)557",
+"(O)558",
+"(O)559",
+"(O)560",
+"(O)561",
+"(O)562",
+"(O)563",
+"(O)564",
+"(O)565",
+"(O)566",
+"(O)567",
+"(O)568",
+"(O)569",
+"(O)570",
+"(O)571",
+]
+},
+  {
+"Id": "swordandsorcery.Group4",
+"AvaliableStock": 3,
+"TradeItemId": "881",
+"TradeItemAmount": 100,
+"AvailableStockLimit": "Player",
+"RandomItemId": [
+"(O)555",
+"(O)556",
+"(O)557",
+"(O)558",
+"(O)559",
+"(O)560",
+"(O)561",
+"(O)562",
+"(O)108",
+"(O)109",
+"(O)110",
+"(O)111",
+"(O)112",
+"(O)113",
+"(O)114",
+]
+},
+  {
+"Id": "swordandsorcery.Group5",
+"AvaliableStock": 3,
+"TradeItemId": "881",
+"TradeItemAmount": 100,
+"AvailableStockLimit": "Player",
+"RandomItemId": [
+
+"(O)563",
+"(O)564",
+"(O)565",
+"(O)566",
+"(O)567",
+"(O)568",
+"(O)569",
+"(O)570",
+"(O)571", 
+"(O)115",
+"(O)116",
+"(O)117",
+"(O)118",
+"(O)119",
+"(O)120",
+"(O)121",
+
+]
+},
+ {
+"Id": "swordandsorcery.Group6",
+"AvaliableStock": 3,
+"TradeItemId": "881",
+"TradeItemAmount": 100,
+"AvailableStockLimit": "Player",
+"RandomItemId": [
+"(O)572",
+"(O)573",
+"(O)574",
+"(O)575",
+"(O)576",
+"(O)577",
+"(O)578",
+"(O)579",
+"(O)122",
+"(O)123",
+"(O)124",
+"(O)124",
+"(O)126",
+"(O)127",
+]
+},
+ {
+"Id": "swordandsorcery.Group7",
+"AvaliableStock": 3,
+"TradeItemId": "881",
+"TradeItemAmount": 100,
+"AvailableStockLimit": "Player",
+"RandomItemId": [
+"(O)580",
+"(O)581",
+"(O)582",
+"(O)583",
+"(O)584",
+"(O)585",
+"(O)586",
+"(O)587",
+"(O)588",
+"(O)589",
+"(O)96",
+"(O)97", 
+"(O)98",
+"(O)99",
+"(O)100",
+"(O)101",
+]
+},
+  ]
+ }
+}
+  },
+ ]
+}

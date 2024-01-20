@@ -1,0 +1,14 @@
+{
+  "CustomMateoSoren": "true",
+  "CustomMateoDinah": "true",
+  "MermaidPendantEarring": "true",
+  "MermaidPendantHairclip": "true",
+  "MateoSpouseRoomConfig": "true",
+  "MateoSpousePatioConfig": "true",
+  "HectorSpouseRoomConfig": "true",
+  "HectorSpousePatioConfig": "true",
+  "CirrusSpouseRoomConfig": "true",
+  "CirrusSpousePatioConfig": "true",
+  "SkipIntroQuest": "false",
+  "DumpsterWarp": "false"
+}

@@ -1,0 +1,325 @@
+{
+    "Changes": [// EGG FESTIVAL
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring13",
+            "TextOperations": [
+                {   // LOCATION: SET UP
+                    "Operation": "Append",
+                    "Target": [  "Entries", "Set-Up_additionalCharacters" ],
+                    "Value": "Hector 8 62 2",
+                    "Delimiter": "/"
+                },
+                {   // LOCATION: MAIN EVENT
+                    "Operation": "Append",
+                    "Target": [  "Entries",  "MainEvent_additionalCharacters"  ],
+                    "Value": "Hector 36 68 3",
+                    "Delimiter": "/"
+                },
+			],
+			"When": {"HasSeenEvent |contains=SnS.Ch2.Hector.6": "true"},	  
+        },
+
+		{
+			"LogName": "EggFestival",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring13",
+			"Entries": {"Hector":"{{i18n:Festivals.Hector.EggFestival}}"}
+		},
+
+        // FLOWER DANCE
+
+        {   
+    
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "TextOperations": [
+                {	// LOCATION: SET UP (VANILLA)
+                    "Operation": "Append",
+                    "Target": [ "Entries","Set-Up_additionalCharacters" ],
+                    "Value": "Hector 1 15 1",
+                    "Delimiter": "/"
+                },
+                {	// LOCATION: MAIN EVENT (VANILLA)
+                    "Operation": "Append",
+                    "Target": [ "Entries","MainEvent_additionalCharacters"  ],
+                    "Value": "Hector 1 15 1",
+                    "Delimiter": "/"
+                },
+            ],
+			"When": {"HasSeenEvent |contains=SnS.Ch2.Hector.6": true},  
+        },
+
+		{
+			"LogName": "FlowerDance",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring24",
+			"Entries": {"Hector":"{{i18n:Festivals.Hector.FlowerDance}}"},
+		},		
+		{
+			"LogName": "Marriage Flower Dance Accept",
+			"Action": "EditData",
+			"Target": "Strings/Events",
+			"Entries": {"SpouseFlowerDanceAccept_Hector":"{{i18n:Festivals.Hector.FlowerDance.Accept}}"}
+		},
+
+        // LUAU
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"TextOperations": [
+				{	// LOCATION: SET UP
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Hector 13 13 0",
+					"Delimiter": "/"
+				},
+				{	// LOCATION: SET UP 
+					"Operation": "Append",
+					"Target": ["Entries","MainEvent_additionalCharacters"],
+					"Value": "Hector 22 23 0",
+					"Delimiter": "/"
+				},
+			],
+			"When": {"HasSeenEvent |contains=SnS.Ch2.Hector.6": true},
+		},
+
+		{
+			"LogName": "Luau",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"Entries": {"Hector":"{{i18n:Festivals.Hector.Luau}}"},
+		},
+
+        // DANCE OF THE MOONLIGHT JELLIES
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"TextOperations": [
+				{   // LOCATION: SET UP & MAIN EVENT
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Hector 89 25 2",
+					"Delimiter": "/"
+				},
+			],
+			"When": {"HasSeenEvent |contains=SnS.Ch2.Hector.6": true},
+		},
+		{
+			"LogName": "Jellies",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"Entries": {"Hector":"{{i18n:Festivals.Hector.MoonlightJellies}}"}
+		},
+
+        // STARDEW VALLEY FAIR
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"TextOperations": [
+				{	// LOCATION: SET UP & MAIN EVENT
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Hector 26 74 2",
+					"Delimiter": "/"
+				},
+			],
+			"When": {"HasSeenEvent |contains=SnS.Ch2.Hector.6": true},
+		},
+		{
+			"LogName": "SVFair",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"Entries": { // STARDEW VALLEY FAIR DIALOGUE: GENERIC
+			
+				  "Hector":"{{i18n:Festivals.Hector.SDVFair}}",
+
+			}
+		},
+
+        // SPIRIT'S EVE
+
+       {
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"TextOperations": [
+				{	// LOCATION: SET UP & MAIN EVENT
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Hector 25 58 1",
+					"Delimiter": "/"},
+				],
+				"When": {"HasSeenEvent |contains=SnS.Ch2.Hector.6": true},
+		},
+		{
+			"LogName": "SpiritsEve",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"Entries": {"Hector":"{{i18n:Festivals.Hector.SpiritsEve}}",}
+		},
+
+        // ICE FESTIVAL 
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"TextOperations": [
+				{	// LOCATION: SET UP
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Hector 54 50 2",
+					"Delimiter": "/"
+				},
+                {   // LOCATION: MAIN EVENT
+					"Operation": "Append",
+					"Target": ["Entries","Main-Event_additionalCharacters"],
+					"Value": "Hector 84 35 3",
+					"Delimiter": "/"
+				},
+			],
+			"When": {"HasSeenEvent |contains=SnS.Ch2.Hector.6": true}
+		},
+
+		{
+			"LogName": "IceFest",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"Entries": {"Hector":"{{i18n:Festivals.Hector.IceFestival}}"}
+		},
+
+        // WINTER STAR
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"TextOperations": [
+				{	// LOCATION: SET UP
+					"Operation": "Append",
+					"Target": [	"Entries","Set-Up_additionalCharacters"	],
+					"Value": "Hector 37 70 3",
+					"Delimiter": "/"
+				},
+			],
+			"When": {"HasSeenEvent |contains=SnS.Ch2.Hector.6": true}
+		},
+
+		{
+			"LogName": "WinterStar",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"Entries": {"Hector":"{{i18n:Festivals.Hector.WinterStar}}"},
+		},
+
+		// RSV GATHERING FESTIVAL 
+
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall20",
+			"TextOperations": [
+					{ // LOCATION: SET UP
+					  "Operation": "Append",
+					  "Target": ["Entries", "Set-Up_additionalCharacters"],
+					  "Value": "Hector 114 43 2",
+					  "Delimiter": "/"
+					 },
+					 { // LOCATION: MAIN EVENT
+					  "Operation": "Append",
+					  "Target": ["Entries", "MainEvent_additionalCharacters"],
+					  "Value": "Hector 76 50 0",
+					  "Delimiter": "/"
+					 },
+				],
+				"When": {
+					"HasMod |contains=Rafseazz.RSVCP": true,
+					"HasSeenEvent |contains=SnS.Ch2.Hector.6": true,
+				  		},
+		},
+
+		{
+			"LogName": "RSV Gathering Festival Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall20",
+			"Entries": { // RSV GATHERING FESTIVAL DIALOGUE: GENERIC 
+			
+				"Hector":"{{i18n:Festivals.Hector.RSVG}}",
+			},
+			"When":
+			{ "HasMod":"Rafseazz.RSVCP"}
+
+		},
+
+		// RSV EMBER OF RESOLUTIONS 		
+
+		{
+
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter28",
+			"TextOperations": [
+				 { // LOCATION: SET UP 
+				  "Operation": "Append",
+				  "Target": ["Entries", "Set-Up_additionalCharacters"],
+				  "Value": "Hector 53 42 3",
+				  "Delimiter": "/"
+				 },
+				 { // LOCATION: MAIN EVENT
+				  "Operation": "Append",
+				  "Target": ["Entries", "MainEvent_additionalCharacters"],
+				  "Value": "Hector 49 41 3",
+				  "Delimiter": "/"
+				 },
+		 	],
+				"When": {
+					"HasMod |contains=Rafseazz.RSVCP": true,
+					"HasSeenEvent |contains=SnS.Ch2.Hector.6": true,
+				  		},
+		},
+
+		{
+			"LogName": "RSV Ember of Resolutions Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter28",
+			"Entries": {"Hector":"{{i18n:Festivals.Hector.EmberOfResolutions}}"},
+			"When": { "HasMod":"Rafseazz.RSVCP"}
+		},
+
+		// OUTFIT CHANGES
+
+		{
+			"LogName": "Flower Dance Sprites/Portraits",
+			"Action": "EditImage",
+			"Target": "Portraits/Hector_HoodUp, Characters/Hector_HoodUp",
+			"FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_hoodup.png",  
+			"Update": "OnLocationChange",
+			"When": {
+			"DayEvent": "flower dance",
+			"LocationName": "Temp"
+			}
+		},
+		{
+			"LogName": "Luau Sprites/Portraits",
+			"Action": "EditImage",
+			"Target": "Portraits/Hector, Characters/Hector",
+			"FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_beach.png",
+			"Update": "OnLocationChange",
+			"When": {
+			"DayEvent": "luau",
+			"LocationName": "Temp"
+			}
+		},
+		{
+			"LogName": "Spirit's Eve Sprites/Portraits",
+			"Action": "EditImage",
+			"Target": "Portraits/Hector_HoodUp, Characters/Hector_HoodUp",
+			"FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_hoodup.png",  
+			"Update": "OnLocationChange",
+			"When": {
+			"DayEvent": "spirit's eve",
+			"LocationName": "Temp"
+			}
+		},
+    ]
+}

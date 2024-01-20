@@ -1,0 +1,564 @@
+{
+    "Changes": [
+        // EGG FESTIVAL
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring13",
+            "TextOperations": [
+                {   // LOCATION: SET UP (VANILLA)
+                    "Operation": "Append",
+                    "Target": [  "Entries", "Set-Up_additionalCharacters" ],
+                    "Value": "Mateo 28 54 2",
+                    "Delimiter": "/"
+                },
+                {   // LOCATION: MAIN EVENT (VANILLA)
+                    "Operation": "Append",
+                    "Target": [  "Entries",  "MainEvent_additionalCharacters"  ],
+                    "Value": "Mateo 36 64 3",
+                    "Delimiter": "/"
+                },
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": "true",
+				"HasConversationTopic |contains=MateoPain": false,
+			  },	  
+        },
+
+	{
+		"LogName": "EggFestival",
+		"Action": "EditData",
+		"Target": "Data/Festivals/spring13",
+		"Entries": { //EGG FESTIVAL DIALOGUE: GENERIC
+		
+			"Mateo":"{{i18n:Festivals.Mateo.EggFestival.1}}",
+			"Mateo_2":"{{i18n:Festivals.Mateo.EggFestival.2}}",
+			
+		}
+	},
+			
+				{
+					"LogName": "EggFestival",
+					"Action": "EditData",
+					"Target": "Data/Festivals/spring13",
+					"Entries": { //EGG FESTIVAL DIALOGUE: MARRIED
+					
+						"Mateo":"{{i18n:Festivals.Mateo.EggFestival.Married}}",
+				
+					},
+					"When":
+						{ "Relationship:Mateo": "Married"}
+		
+				},
+	
+
+        // FLOWER DANCE
+
+        {   
+    
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "TextOperations": [
+                {	// LOCATION: SET UP (VANILLA)
+                    "Operation": "Append",
+                    "Target": [ "Entries","Set-Up_additionalCharacters" ],
+                    "Value": "Mateo 20 21 2",
+                    "Delimiter": "/"
+                },
+                {	// LOCATION: MAIN EVENT (VANILLA)
+                    "Operation": "Append",
+                    "Target": [ "Entries","MainEvent_additionalCharacters"  ],
+                    "Value": "Mateo 23 24 3",
+                    "Delimiter": "/"
+                },
+            ],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasConversationTopic |contains=MateoPain": false,
+			  },  
+        },
+
+		{
+			"LogName": "FlowerDance",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring24",
+			"Entries": { // FLOWER DANCE DIALOGUE: GENERIC 
+			
+				"Mateo":"{{i18n:Festivals.Mateo.FlowerDance.1}}",
+				"Mateo_2":"{{i18n:Festivals.Mateo.FlowerDance.2}}",
+			  
+			},
+		},
+				
+				{ // FLOWER DANCE DIALOGUE: MARRIED
+					"LogName": "FlowerDance",
+					"Action": "EditData",
+					"Target": "Data/Festivals/spring24",
+					"Entries": {
+					
+						"Mateo":"{{i18n:Festivals.Mateo.FlowerDance.Married}}",                       
+					
+					},
+					
+					"When":
+							{ "Relationship:Mateo": "Married"}
+					
+				},
+
+				{
+					"LogName": "Marriage Flower Dance Accept",
+					"Action": "EditData",
+					"Target": "Strings/Events",
+					"Entries": {
+						"SpouseFlowerDanceAccept_Mateo":"{{i18n:Festivals.Mateo.FlowerDance.Accept}}",
+					}
+				},
+
+        // LUAU
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"TextOperations": [
+				{	// LOCATION: SET UP (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Mateo 13 5 2",
+					"Delimiter": "/"
+				},
+				{	// LOCATION: SET UP (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","MainEvent_additionalCharacters"],
+					"Value": "Mateo 13 5 2",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasConversationTopic |contains=MateoPain": false,
+			  },
+		},
+
+		{
+			"LogName": "Luau",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"Entries": { // LUAU DIALOGUE: GENERIC 
+			
+				"Mateo":"{{i18n:Festivals.Mateo.Luau.1}}",
+				"Mateo_2":"{{i18n:Festivals.Mateo.Luau.2}}",
+			
+			},
+		},
+				{ // 
+				"LogName": "Luau",
+					"Action": "EditData",
+					"Target": "Data/Festivals/summer11",
+					"Entries": {
+						
+							"Mateo":"{{i18n:Festivals.Mateo.Luau.Married}}",                 
+					 },
+					"When":
+					{ "Relationship:Mateo": "Married"}
+
+			},
+
+
+        // DANCE OF THE MOONLIGHT JELLIES
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"TextOperations": [
+				{   // LOCATION: SET UP & MAIN EVENT (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Mateo 13 27 1",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasConversationTopic |contains=MateoPain": false,
+			  },
+		},
+
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"TextOperations": [
+				{   // LOCATION: SET UP & MAIN EVENT (SVE)
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Mateo 13 27 1",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasConversationTopic |contains=MateoPain": false,
+			  },
+		},
+
+		{
+			"LogName": "Jellies",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"Entries": { // DANCE OF THE MOONLIGHT JELLIES: GENERIC
+
+				"Mateo":"{{i18n:Festivals.Mateo.MoonlightJellies.1}}",
+				"Mateo_2":"{{i18n:Festivals.Mateo.MoonlightJellies.2}}",
+				
+
+			}
+		},
+				{
+					"LogName": "Jellies",
+					"Action": "EditData",
+					"Target": "Data/Festivals/summer28",
+					"Entries": { // DANCE OF THE MOONLIGHT JELLIES: MARRIED
+
+						"Mateo":"{{i18n:Festivals.Mateo.MoonlightJellies.Married}}",
+						
+				},
+					"When":
+					{ "Relationship:Mateo": "Married"}
+				},
+
+        // STARDEW VALLEY FAIR
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"TextOperations": [
+				{	// LOCATION: SET UP & MAIN EVENT (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Mateo 37 81 0",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasConversationTopic |contains=MateoPain": false,
+			  },
+		},
+
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"TextOperations": [
+				{	// LOCATION: SET UP & MAIN EVENT (SVE)
+					"Operation": "Append",
+					"Target": [	"Entries","Set-Up_additionalCharacters"],
+					"Value": "Mateo 33 81 0",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasConversationTopic |contains=MateoPain": false,
+			  },
+		},
+
+		{
+			"LogName": "SVFair",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"Entries": { // STARDEW VALLEY FAIR DIALOGUE: GENERIC
+			
+				  "Mateo":"{{i18n:Festivals.Mateo.SDVFair.1}}",
+				  "Mateo_2":"{{i18n:Festivals.Mateo.SDVFair.2}}",
+
+			}
+		},
+				{
+					"LogName": "SVFair",
+					"Action": "EditData",
+					"Target": "Data/Festivals/fall16",
+					"Entries": { // STARDEW VALLEY FAIR DIALOGUE: MARRIED
+					
+						"Mateo":"{{i18n:Festivals.Mateo.SDVFair.Married}}",
+						
+					},
+					"When":
+					{ "Relationship:Mateo": "Married"}
+				},
+
+        // SPIRIT'S EVE
+
+       {
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"TextOperations": [
+				{	// LOCATION: SET UP & MAIN EVENT (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries",	"Set-Up_additionalCharacters"],
+					"Value": "Mateo 14 17 2",
+					"Delimiter": "/"
+				},
+				],
+				"When": {
+					"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+					"HasConversationTopic |contains=MateoPain": false,
+				  },
+		},
+
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"TextOperations": [
+				{	// LOCATION: SET UP & MAIN EVENT (SVE)
+					"Operation": "Append",
+					"Target": ["Entries",	"Set-Up_additionalCharacters"],
+					"Value": "Mateo 25 57 1",
+					"Delimiter": "/"
+				},
+				],
+				"When": {
+					"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+					"HasConversationTopic |contains=MateoPain": false,
+				  },
+		},
+
+		{
+			"LogName": "SpiritsEve",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"Entries": {
+			
+				  "Mateo":"{{i18n:Festivals.Mateo.SpiritsEve.1}}",
+				  "Mateo_2":"{{i18n:Festivals.Mateo.SpiritsEve.2}}", 
+
+			}
+		},
+				{
+					"LogName": "SpiritsEve",
+					"Action": "EditData",
+					"Target": "Data/Festivals/fall27",
+					"Entries": {
+					
+						"Mateo":"{{i18n:Festivals.Mateo.SpiritsEve.Married}}",
+						
+					},
+					"When":
+					{ "Relationship:Mateo": "Married"}
+				},
+
+        // ICE FESTIVAL 
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"TextOperations": [
+				{	// LOCATION: SET UP (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Mateo 48 29 3",
+					"Delimiter": "/"
+				},
+                {   // LOCATION: MAIN EVENT (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Main-Event_additionalCharacters"],
+					"Value": "Mateo 71 42 0",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasConversationTopic |contains=MateoPain": false,
+			  },
+		},
+
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"TextOperations": [
+				{	// LOCATION: SET UP (SVE)
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Mateo 99 40 2",
+					"Delimiter": "/"
+				},
+                {   // LOCATION: MAIN EVENT (SVE)
+					"Operation": "Append",
+					"Target": [	"Entries","Main-Event_additionalCharacters"	],
+					"Value": "Mateo 52 42 2",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasConversationTopic |contains=MateoPain": false,
+			  },
+		},
+
+		{
+			"LogName": "IceFest",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"Entries": { // ICE FESTIVAL DIALOGUE: GENERIC
+			
+				  "Mateo":"{{i18n:Festivals.Mateo.IceFestival.1}}",
+				  "Mateo_2":"{{i18n:Festivals.Mateo.IceFestival.2}}",
+
+			}
+		},
+				{
+					"LogName": "IceFest",
+					"Action": "EditData",
+					"Target": "Data/Festivals/winter8",
+					"Entries": { // ICE FESTIVAL DIALOGUE: MARRIED 
+					
+						"Mateo":"{{i18n:Festivals.Mateo.IceFestival.Married}}",
+					
+
+					},
+						"When":
+						{ "Relationship:Mateo": "Married"}
+				},
+
+        // WINTER STAR
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"TextOperations": [
+				{	// LOCATION: SET UP (VANILLA)
+					"Operation": "Append",
+					"Target": [	"Entries","Set-Up_additionalCharacters"	],
+					"Value": "Mateo 22 58 1",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasConversationTopic |contains=MateoPain": false,
+			  },
+        },
+
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"TextOperations": [
+				{	// LOCATION: SET UP (SVE)
+					"Operation": "Append",
+					"Target": [	"Entries","Set-Up_additionalCharacters"	],
+					"Value": "Mateo 22 58 1",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasConversationTopic |contains=MateoPain": false,
+			  },
+        },
+
+		{
+			"LogName": "WinterStar",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"Entries": { // WINTER STAR DIALOGUE: GENERIC 
+			
+				  "Mateo":"{{i18n:Festivals.Mateo.WinterStar.1}}",
+				  "Mateo_2":"{{i18n:Festivals.Mateo.WinterStar.2}}",
+				
+			},
+		},
+				{
+					"LogName": "WinterStar",
+					"Action": "EditData",
+					"Target": "Data/Festivals/winter25",
+					"Entries": { // WINTER STAR DIALOGUE: MARRIED 
+					
+						"Mateo":"{{i18n:Festivals.Mateo.WinterStar.Married}}",
+					},
+						"When":
+							{ "Relationship:Mateo": "Married"}
+				},
+
+		// RSV GATHERING FESTIVAL 
+
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall20",
+			"TextOperations": [
+					{ // LOCATION: SET UP
+					  "Operation": "Append",
+					  "Target": ["Entries", "Set-Up_additionalCharacters"],
+					  "Value": "Mateo 100 49 2",
+					  "Delimiter": "/"
+					 },
+					 { // LOCATION: MAIN EVENT
+					  "Operation": "Append",
+					  "Target": ["Entries", "MainEvent_additionalCharacters"],
+					  "Value": "Mateo 77 50 0",
+					  "Delimiter": "/"
+					 },
+				],
+				"When": {
+					"HasMod |contains=Rafseazz.RSVCP": true,
+					"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+					"HasConversationTopic |contains=MateoPain": false,
+				  },
+		},
+
+		{
+			"LogName": "RSV Gathering Festival Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall20",
+			"Entries": { // RSV GATHERING FESTIVAL DIALOGUE: GENERIC 
+			
+				"Mateo":"{{i18n:Festivals.Mateo.RSVG}}",
+			},
+			"When":
+			{ "HasMod":"Rafseazz.RSVCP"}
+
+		},
+
+		// RSV EMBER OF RESOLUTIONS 		
+
+		{
+
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter28",
+			"TextOperations": [
+				 { // LOCATION: SET UP 
+				  "Operation": "Append",
+				  "Target": ["Entries", "Set-Up_additionalCharacters"],
+				  "Value": "Mateo 53 43 3",
+				  "Delimiter": "/"
+				 },
+				 { // LOCATION: MAIN EVENT
+				  "Operation": "Append",
+				  "Target": ["Entries", "MainEvent_additionalCharacters"],
+				  "Value": "Mateo 49 42 3",
+				  "Delimiter": "/"
+				 },
+		 	],
+				"When": {
+					"HasMod |contains=Rafseazz.RSVCP": true,
+					"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+					"HasConversationTopic |contains=MateoPain": false,
+				  },
+		},
+
+		{
+			"LogName": "RSV Ember of Resolutions Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter28",
+			"Entries": { // RSV EMBER OF RESOLUTIONS DIALOGUE: GENERIC 
+			
+				"Mateo":"{{i18n:Festivals.Mateo.EmberOfResolutions}}",
+			},
+			"When":
+			{ "HasMod":"Rafseazz.RSVCP"}
+		}
+    ]
+}

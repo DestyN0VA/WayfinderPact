@@ -1,0 +1,88 @@
+{
+    "Changes": [
+	{
+        "Action": "EditData",
+        "Target": "Characters/Dialogue/Cirrus",
+        "Entries": { // CUSTOM GIFT DIALOGUE
+
+            // FISH
+            "AcceptGift_category_fish":"{{i18n:Gifts.Cirrus.GiftReaction.CategoryFish}}",
+            "AcceptGift_(O)397":"{{i18n:Gifts.Cirrus.GiftReaction.SeaUrchin}}",
+            "AcceptGift_(O)717":"{{i18n:Gifts.Cirrus.GiftReaction.Crab}}",
+            "AcceptGift_(O)732":"{{i18n:Gifts.Cirrus.GiftReaction.CrabCakes}}",
+
+            // ARTISANAL GOODS
+            "AcceptGift_category_artisan_goods":"{{i18n:Gifts.Cirrus.GiftReaction.CategoryArtisanalGoods}}",
+
+            // TRASH
+            "AcceptGiftCategory_trash":"{{i18n:Gifts.Cirrus.GiftReaction.CategoryTrash}}",
+
+            // MINERALS & GEMS
+            "AcceptGiftCategory_minerals":"{{i18n:Gifts.Cirrus.GiftReaction.CategoryGemsMinerals}}",
+            
+            // LOVES
+            "AcceptGift_(O)74":"{{i18n:Gifts.Cirrus.GiftReaction.PrismaticShard}}",
+            "AcceptGift_(O)614":"{{i18n:Gifts.Cirrus.GiftReaction.GreenTea}}",
+            "AcceptGift_(O)206":"{{i18n:Gifts.Cirrus.GiftReaction.Pizza}}",
+            "AcceptGift_(O)213":"{{i18n:Gifts.Cirrus.GiftReaction.SalmonDinner}}",
+            "AcceptGift_(O)214":"{{i18n:Gifts.Cirrus.GiftReaction.FishTaco}}",
+            "AcceptGift_(O)215":"{{i18n:Gifts.Cirrus.GiftReaction.CrispyBass}}",
+            "AcceptGift_(O)swordandsorcery.bagelwithlox":"{{i18n:Gifts.Cirrus.GiftReaction.BagelWithLox}}",
+            "AcceptGift_(O)swordandsorcery.zuzustylepizza":"{{i18n:Gifts.Cirrus.GiftReaction.ZuzuStylePizza}}",
+            "AcceptGift_(O)swordandsorcery.portfiredrakesparkler":"{{i18n:Gifts.Cirrus.GiftReaction.PortfireDrakeSparkler}}",
+                   
+            // LIKES
+            "AcceptGift_(O)731":"{{i18n:Gifts.Cirrus.GiftReaction.MapleBar}}",
+            "AcceptGift_(O)225":"{{i18n:Gifts.Cirrus.GiftReaction.FriedEel}}",
+            "AcceptGift_(O)226":"{{i18n:Gifts.Cirrus.GiftReaction.SpicyEel}}",
+            "AcceptGift_(O)227":"{{i18n:Gifts.Cirrus.GiftReaction.Sashimi}}",
+            "AcceptGift_(O)228":"{{i18n:Gifts.Cirrus.GiftReaction.MakiRoll}}",
+            "AcceptGift_(O)219":"{{i18n:Gifts.Cirrus.GiftReaction.TroutSoup}}",
+            "AcceptGift_(O)167":"{{i18n:Gifts.Cirrus.GiftReaction.JojaCola}}",
+
+
+
+            // ALCOHOL 
+            "RejectItem_(O)346":"{{i18n:Gifts.Cirrus.GiftReaction.Beer}}",  
+            "RejectItem_(O)303":"{{i18n:Gifts.Cirrus.GiftReaction.PaleAle}}",
+            "RejectItem_(O)348":"{{i18n:Gifts.Cirrus.GiftReaction.Wine}}", 
+            "RejectItem_(O)304":"{{i18n:Gifts.Cirrus.GiftReaction.Hops}}", 
+            "RejectItem_(O)459":"{{i18n:Gifts.Cirrus.GiftReaction.Mead}}", 
+
+            // HATES 
+            "AcceptGift_(O)446":"{{i18n:Gifts.Cirrus.GiftReaction.RabbitsFoot}}",  
+            "AcceptGift_(O)220":"{{i18n:Gifts.Cirrus.GiftReaction.ChocolateCake}}",
+
+            // ANCIENT CROPS
+            "AcceptGift_(O)swordandsorcery.ancientwildfairyroses":"{{i18n:Gifts.Cirrus.GiftReaction.AncientRose}}",
+
+
+            // ITEM REJECTIONS 
+            "RejectItem_(O)458": "{{i18n:Gifts.Cirrus.GiftReject.Bouquet}}",
+      }
+	},
+
+  {
+    "Action": "EditData",
+    "Target": "Characters/Dialogue/Cirrus",
+    "Entries": { // CUSTOM GIFT DIALOGUE - BIRTHDAY
+
+              // BIRTHDAY
+              "AcceptGift_(O)74":"{{i18n:Gifts.Cirrus.GiftReaction.PrismaticShard.Birthday}}",
+              "AcceptGift_(O)614":"{{i18n:Gifts.Cirrus.GiftReaction.GreenTea.Birthday}}",
+              "AcceptGift_(O)206":"{{i18n:Gifts.Cirrus.GiftReaction.Pizza.Birthday}}",
+              "AcceptGift_(O)213":"{{i18n:Gifts.Cirrus.GiftReaction.SalmonDinner.Birthday}}",
+              "AcceptGift_(O)214":"{{i18n:Gifts.Cirrus.GiftReaction.FishTaco.Birthday}}",
+              "AcceptGift_(O)215":"{{i18n:Gifts.Cirrus.GiftReaction.CrispyBass.Birthday}}",
+              "AcceptGift_(O)swordandsorcery.bagelwithlox":"{{i18n:Gifts.Cirrus.GiftReaction.BagelWithLox.Birthday}}",
+              "AcceptGift_(O)swordandsorcery.zuzustylepizza":"{{i18n:Gifts.Cirrus.GiftReaction.ZuzuStylePizza.Birthday}}",
+  },
+  "When": {
+    "Season": "winter",
+    "Day": "21"
+}
+
+  }
+
+  ]
+}

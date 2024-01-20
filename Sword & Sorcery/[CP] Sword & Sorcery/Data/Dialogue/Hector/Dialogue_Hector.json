@@ -1,0 +1,451 @@
+{ "Changes": 
+[
+
+/*
+   _____ ______ _   _ ______ _____  _____ _____   _____ _____          _      ____   _____ _    _ ______ 
+  / ____|  ____| \ | |  ____|  __ \|_   _/ ____| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
+ | |  __| |__  |  \| | |__  | |__) | | || |      | |  | || |    /  \  | |   | |  | | |  __| |  | | |__   
+ | | |_ |  __| | . ` |  __| |  _  /  | || |      | |  | || |   / /\ \ | |   | |  | | | |_ | |  | |  __|  
+ | |__| | |____| |\  | |____| | \ \ _| || |____  | |__| || |_ / ____ \| |___| |__| | |__| | |__| | |____ 
+  \_____|______|_| \_|______|_|  \_\_____\_____| |_____/_____/_/    \_\______\____/ \_____|\____/|______|
+
+*/
+
+{
+        "LogName": "Hector Dialogue - Platonic",
+        "Action": "EditData",
+        "Target": "Characters/Dialogue/Hector",
+        "Entries": 	
+        {
+
+        // NAME & INTRO
+        "Name:":"{{i18n:Core.Hector.Name}}",
+        "Introduction":"{{i18n:Core.Hector.Introduction}}",
+
+        // COMMUNITY CENTER BUNDLES
+        "joja_Begin":"{{i18n:Core.Hector.JojaBegin}}",
+        "cc_Begin":"{{i18n:Core.Hector.CCBegin}}",
+        "cc_Bus":"{{i18n:Core.Hector.CCBus}}",
+        "cc_Minecart":"{{i18n:Core.Hector.CCMinecart}}",
+        "cc_Complete":"{{i18n:Core.Hector.CCComplete}}",
+        "movieTheater":"{{i18n:Core.Hector.MovieTheater}}",
+
+        // BIRTHDAYS
+        "fall_25":"{{i18n:Core.Hector.Fall25}}",
+
+        // END OF SEASON
+        "spring_28":"{{i18n:Core.Hector.SpringEnd}}",
+        "summer_28":"{{i18n:Core.Hector.SummerEnd}}",
+        "fall_28":"{{i18n:Core.Hector.FallEnd}}",
+        "winter_28":"{{i18n:Core.Hector.WinterEnd}}",
+
+        // SVE COMMUNITY DAY
+        "CommunityCenter4":"{{i18n:Core.Hector.CommunityCenter4}}",
+        "CommunityCenter6":"{{i18n:Core.Hector.CommunityCenter6}}",
+        "CommunityCenter8":"{{i18n:Core.Hector.CommunityCenter8}}",
+        "CommunityCenter10":"{{i18n:Core.Hector.CommunityCenter10}}",
+
+        // FESTIVALS
+        "spring_12":"{{i18n:Core.Hector.EggFestival}}",
+        "spring_23":"{{i18n:Core.Hector.FlowerDance}}",
+        "summer_10":"{{i18n:Core.Hector.Luau}}",
+        "summer_27":"{{i18n:Core.Hector.MoonlightJelly}}",
+        "fall_15":"{{i18n:Core.Hector.SDVFair}}",
+        "fall_26":"{{i18n:Core.Hector.SpiritsEve}}",
+        "winter_7":"{{i18n:Core.Hector.IceFestival}}",
+        "winter_16":"{{i18n:Core.Hector.NightMarket}}",
+        "winter_24":"{{i18n:Core.Hector.WinterStar}}",
+
+        // ROMANTIC (POSITIVE)
+        "give_flowersA":"{{i18n:Core.Hector.GiveFlowersA}}",
+        "give_flowersB":"{{i18n:Core.Hector.GiveFlowersB}}",
+        "give_pendant":"{{i18n:Core.Hector.GivePendant}}",
+        "stardrop_giftA":"{{i18n:Core.Hector.StardropGiftA}}",
+        "stardrop_giftB":"{{i18n:Core.Hector.StardropGiftB}}",
+
+        // ROMANTIC (NEGATIVE)
+        "danceRejection":"{{i18n:Core.Hector.DanceRejection}}",
+        "divorced":"{{i18n:Core.Hector.Divorced}}",
+        "breakUp":"{{i18n:Core.Hector.BreakUp}}",
+        "dumped_Guys":"{{i18n:Core.Hector.DumpedGuys}}",
+        "secondChance_Guys":"{{i18n:Core.Hector.SecondChanceGuys}}",
+        "reject_two_heartA":"{{i18n:Core.Hector.Reject2HA}}",
+        "reject_two_heartB":"{{i18n:Core.Hector.Reject2HB}}",
+        "reject_four_heartA":"{{i18n:Core.Hector.Reject4HA}}",
+        "reject_four_heartB":"{{i18n:Core.Hector.Reject4HB}}",
+        "engageA":"{{i18n:Core.Hector.EngageA}}",
+        "engageB":"{{i18n:Core.Hector.EngageB}}",
+        "marriedA":"{{i18n:Core.Hector.MarriedA}}",
+        "marriedB":"{{i18n:Core.Hector.MarriedB}}",
+        "refusal_no_heartsA":"{{i18n:Core.Hector.RefusalNoHeartsA}}",
+        "refusal_no_heartsB":"{{i18n:Core.Hector.RefusalNoHeartsB}}",
+        "refusal_knownA":"{{i18n:Core.Hector.RefusalKnownA}}",
+        "refusal_knownB":"{{i18n:Core.Hector.RefusalKnownB}}",
+        "refusal_botherA":"{{i18n:Core.Hector.RefusalBotherA}}",
+        "refusal_botherB":"{{i18n:Core.Hector.RefusalBotherB}}",
+
+        // RESORT
+        "Resort_Entering":"{{i18n:Core.Hector.ResortEntering}}",
+        "Resort_Leaving":"{{i18n:Core.Hector.ResortLeaving}}",
+        "Resort_Shore":"{{i18n:Core.Hector.ResortShore}}",
+        "Resort_Umbrella":"{{i18n:Core.Hector.ResortUmbrella}}",
+        "Resort_Wander":"{{i18n:Core.Hector.ResortWander}}",
+        "Resort_Wander_2":"{{i18n:Core.Hector.ResortWander.2}}",
+        "Resort_Chair":"{{i18n:Core.Hector.ResortChair}}",
+        "Resort_Bar":"{{i18n:Core.Hector.ResortBar}}",
+        "Resort_Towel":"{{i18n:Core.HectorResortTowel.}}",
+        "Resort_Towel_2":"{{i18n:Core.Hector.ResortTowel.2}}",
+        "Resort_Towel_3":"{{i18n:Core.Hector.Resort_Towel.3}}",
+        "Resort":"{{i18n:Core.Hector.Resort}}",
+
+        // ADDITIONAL LOCATION DIALOGUE 
+        "Saloon4":"{{i18n:Core.Hector.Saloon.4h}}",
+        "Saloon6":"{{i18n:Core.Hector.Saloon.6h}}",
+        "Saloon8":"{{i18n:Core.Hector.Saloon.8h}}",
+        "Saloon10":"{{i18n:Core.Hector.Saloon.10h}}",
+              
+        "ArchaeologyHouse4":"{{i18n:Core.Hector.ArchaeologyHouse.4h}}",
+        "ArchaeologyHouse6":"{{i18n:Core.Hector.ArchaeologyHouse.6h}}",
+        "ArchaeologyHouse8":"{{i18n:Core.Hector.ArchaeologyHouse.8h}}",
+        "ArchaeologyHouse10":"{{i18n:Core.Hector.ArchaeologyHouse}}",
+        
+        "AdventureGuild4":"{{i18n:Core.Hector.AdventureGuild.4h}}",
+        "AdventureGuild6":"{{i18n:Core.Hector.AdventureGuild.6h}}",
+        "AdventureGuild8":"{{i18n:Core.Hector.AdventureGuild.8h}}",
+        "AdventureGuild10":"{{i18n:Core.Hector.AdventureGuild.10h}}",
+
+/*
+  _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
+ | |  | |  ____|   /\   |  __ \__   __| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
+ | |__| | |__     /  \  | |__) | | |    | |  | || |    /  \  | |   | |  | | |  __| |  | | |__   
+ |  __  |  __|   / /\ \ |  _  /  | |    | |  | || |   / /\ \ | |   | |  | | | |_ | |  | |  __|  
+ | |  | | |____ / ____ \| | \ \  | |    | |__| || |_ / ____ \| |___| |__| | |__| | |__| | |____ 
+ |_|  |_|______/_/    \_\_|  \_\ |_|    |_____/_____/_/    \_\______\____/ \_____|\____/|______|
+
+*/
+
+        // 0 HEARTS - SPRING
+        "spring_Mon":"{{i18n:Core.Hector.Spring.Monday.0h}}",
+        "spring_Tue":"{{i18n:Core.Hector.Spring.Tuesday.0h}}",
+        "spring_Wed":"{{i18n:Core.Hector.Spring.Wednesday.0h}}",
+        "spring_Thu":"{{i18n:Core.Hector.Spring.Thursday.0h}}",
+        "spring_Fri":"{{i18n:Core.Hector.Spring.Friday.0h}}",
+        "spring_Sat":"{{i18n:Core.Hector.Spring.Saturday.0h}}",
+        "spring_Sun":"{{i18n:Core.Hector.Spring.Sunday.0h}}",
+
+        // 0 HEARTS - SUMMER
+        "summer_Mon":"{{i18n:Core.Hector.Summer.Monday.0h}}",
+        "summer_Tue":"{{i18n:Core.Hector.Summer.Tuesday.0h}}",
+        "summer_Wed":"{{i18n:Core.Hector.Summer.Wednesday.0h}}", 
+        "summer_Thu":"{{i18n:Core.Hector.Summer.Thursday.0h}}",
+        "summer_Fri":"{{i18n:Core.Hector.Summer.Friday.0h}}",
+        "summer_Sat":"{{i18n:Core.Hector.Summer.Saturday.0h}}",
+        "summer_Sun":"{{i18n:Core.Hector.Summer.Sunday.0h}}",
+
+        // 0 HEARTS - FALL
+        "fall_Mon":"{{i18n:Core.Hector.Fall.Monday.0h}}",
+        "fall_Tue":"{{i18n:Core.Hector.Fall.Tuesday.0h}}",
+        "fall_Wed":"{{i18n:Core.Hector.Fall.Wednesday.0h}}",
+        "fall_Thu":"{{i18n:Core.Hector.Fall.Thursday.0h}}",
+        "fall_Fri":"{{i18n:Core.Hector.Fall.Friday.0h}}",
+        "fall_Sat":"{{i18n:Core.Hector.Fall.Saturday.0h}}",
+        "fall_Sun":"{{i18n:Core.Hector.Fall.Sunday.0h}}",
+
+        // 0 HEARTS - WINTER
+        "winter_Mon":"{{i18n:Core.Hector.Winter.Monday.0h}}",
+        "winter_Tue":"{{i18n:Core.Hector.Winter.Tuesday.0h}}",
+        "winter_Wed":"{{i18n:Core.Hector.Winter.Wednesday.0h}}",
+        "winter_Thu":"{{i18n:Core.Hector.Winter.Thursday.0h}}",
+        "winter_Fri":"{{i18n:Core.Hector.Winter.Friday.0h}}",
+        "winter_Sat":"{{i18n:Core.Hector.Winter.Saturday.0h}}",
+        "winter_Sun":"{{i18n:Core.Hector.Winter.Sunday.0h}}",
+
+        // 2 HEARTS  - SPRING
+        "spring_Mon2":"{{i18n:Core.Hector.Spring.Monday.2h}}",
+        "spring_Tue2":"{{i18n:Core.Hector.Spring.Tuesday.2h}}",
+        "spring_Wed2":"{{i18n:Core.Hector.Spring.Wednesday.2h}}",
+        "spring_Thu2":"{{i18n:Core.Hector.Spring.Thursday.2h}}",
+        "spring_Fri2":"{{i18n:Core.Hector.Spring.Friday.2h}}",
+        "spring_Sat2":"{{i18n:Core.Hector.Spring.Saturday.2h}}",
+        "spring_Sun2":"{{i18n:Core.Hector.Spring.Sunday.2h}}",
+
+        // 2 HEARTS - SUMMER
+        "summer_Mon2":"{{i18n:Core.Hector.Summer.Monday.2h}}",
+        "summer_Tue2":"{{i18n:Core.Hector.Summer.Tuesday.2h}}",
+        "summer_Wed2":"{{i18n:Core.Hector.Summer.Wednesday.2h}}",
+        "summer_Thu2":"{{i18n:Core.Hector.Summer.Thursday.2h}}",
+        "summer_Fri2":"{{i18n:Core.Hector.Summer.Friday.2h}}",
+        "summer_Sat2":"{{i18n:Core.Hector.Summer.Saturday.2h}}",
+        "summer_Sun2":"{{i18n:Core.Hector.Summer.Sunday.2h}}",
+
+        // 2 HEARTS - FALL
+        "fall_Mon2":"{{i18n:Core.Hector.Fall.Monday.2h}}",
+        "fall_Tue2":"{{i18n:Core.Hector.Fall.Tuesday.2h}}",
+        "fall_Wed2":"{{i18n:Core.Hector.Fall.Wednesday.2h}}",
+        "fall_Thu2":"{{i18n:Core.Hector.Fall.Thursday.2h}}",
+        "fall_Fri2":"{{i18n:Core.Hector.Fall.Friday.2h}}",
+        "fall_Sat2":"{{i18n:Core.Hector.Fall.Saturday.2h}}",
+        "fall_Sun2":"{{i18n:Core.Hector.Fall.Sunday.2h}}",
+
+        // 2 HEARTS - WINTER 
+        "winter_Mon2":"{{i18n:Core.Hector.Winter.Monday.2h}}",
+        "winter_Tue2":"{{i18n:Core.Hector.Winter.Tuesday.2h}}",
+        "winter_Wed2":"{{i18n:Core.Hector.Winter.Wednesday.2h}}",
+        "winter_Thu2":"{{i18n:Core.Hector.Winter.Thursday.2h}}",
+        "winter_Fri2":"{{i18n:Core.Hector.Winter.Friday.2h}}",
+        "winter_Sat2":"{{i18n:Core.Hector.Winter.Saturday.2h}}",
+        "winter_Sun2":"{{i18n:Core.Hector.Winter.Sunday.2h}}",
+
+        // 4 HEARTS - SPRING 
+        "spring_Mon4":"{{i18n:Core.Hector.Spring.Monday.4h}}",
+        "spring_Tue4":"{{i18n:Core.Hector.Spring.Tuesday.4h}}",
+        "spring_Wed4":"{{i18n:Core.Hector.Spring.Wednesday.4h}}",
+        "spring_Thu4":"{{i18n:Core.Hector.Spring.Thursday.4h}}",
+        "spring_Fri4":"{{i18n:Core.Hector.Spring.Friday.4h}}",	
+        "spring_Sat4":"{{i18n:Core.Hector.Spring.Saturday.4h}}",
+        "spring_Sun4":"{{i18n:Core.Hector.Spring.Sunday.4h}}",
+
+        // 4 HEARTS - SPRING
+        "summer_Mon4":"{{i18n:Core.Hector.Summer.Monday.4h}}",
+        "summer_Tue4":"{{i18n:Core.Hector.Summer.Tuesday.4h}}",
+        "summer_Wed4":"{{i18n:Core.Hector.Summer.Wednesday.4h}}",
+        "summer_Thu4":"{{i18n:Core.Hector.Summer.Thursday.4h}}",
+        "summer_Fri4":"{{i18n:Core.Hector.Summer.Friday.4h}}",
+        "summer_Sat4":"{{i18n:Core.Hector.Summer.Saturday.4h}}",
+        "summer_Sun4":"{{i18n:Core.Hector.Summer.Sunday.4h}}",
+
+        // 4 HEARTS - FALL
+        "fall_Mon4":"{{i18n:Core.Hector.Fall.Monday.4h}}",
+        "fall_Tue4":"{{i18n:Core.Hector.Fall.Tuesday.4h}}",
+        "fall_Wed4":"{{i18n:Core.Hector.Fall.Wednesday.4h}}",
+        "fall_Thu4":"{{i18n:Core.Hector.Fall.Thursday.4h}}",
+        "fall_Fri4":"{{i18n:Core.Hector.Fall.Friday.4h}}",
+        "fall_Sat4":"{{i18n:Core.Hector.Fall.Saturday.4h}}",
+        "fall_Sun4":"{{i18n:Core.Hector.Fall.Sunday.4h}}",
+
+        //4 HEARTS - WINTER
+        "winter_Mon4":"{{i18n:Core.Hector.Winter.Monday.4h}}",
+        "winter_Tue4":"{{i18n:Core.Hector.Winter.Tuesday.4h}}",
+        "winter_Wed4":"{{i18n:Core.Hector.Winter.Wednesday.4h}}",
+        "winter_Thu4":"{{i18n:Core.Hector.Winter.Thursday.4h}}",
+        "winter_Fri4":"{{i18n:Core.Hector.Winter.Friday.4h}}",
+        "winter_Sat4":"{{i18n:Core.Hector.Winter.Saturday.4h}}",
+        "winter_Sun4":"{{i18n:Core.Hector.Winter.Sunday.4h}}",
+        
+        // 6 HEARTS - SPRING
+        "spring_Mon6":"{{i18n:Core.Hector.Spring.Monday.6h}}",
+        "spring_Tue6":"{{i18n:Core.Hector.Spring.Tuesday.6h}}",
+        "spring_Wed6":"{{i18n:Core.Hector.Spring.Wednesday.6h}}",
+        "spring_Thu6":"{{i18n:Core.Hector.Spring.Thursday.6h}}",
+        "spring_Fri6":"{{i18n:Core.Hector.Spring.Friday.6h}}",
+        "spring_Sat6":"{{i18n:Core.Hector.Spring.Saturday.6h}}",
+        "spring_Sun6":"{{i18n:Core.Hector.Spring.Sunday.6h}}",
+
+        // 6 HEARTS - SUMMER
+        "summer_Mon6":"{{i18n:Core.Hector.Summer.Monday.6h}}",
+        "summer_Tue6":"{{i18n:Core.Hector.Summer.Tuesday.6h}}",
+        "summer_Wed6":"{{i18n:Core.Hector.Summer.Wednesday.6h}}",
+        "summer_Thu6":"{{i18n:Core.Hector.Summer.Thursday.6h}}",
+        "summer_Fri6":"{{i18n:Core.Hector.Summer.Friday.6h}}",
+        "summer_Sat6":"{{i18n:Core.Hector.Summer.Saturday.6h}}",
+        "summer_Sun6":"{{i18n:Core.Hector.Summer.Sunday.6h}}",
+
+        // 6 HEARTS - FALL
+        "fall_Mon6":"{{i18n:Core.Hector.Fall.Monday.6h}}",
+        "fall_Tue6":"{{i18n:Core.Hector.Fall.Tuesday.6h}}",
+        "fall_Wed6":"{{i18n:Core.Hector.Fall.Wednesday.6h}}",
+        "fall_Thu6":"{{i18n:Core.Hector.Fall.Thursday.6h}}",
+        "fall_Fri6":"{{i18n:Core.Hector.Fall.Friday.6h}}",
+        "fall_Sat6":"{{i18n:Core.Hector.Fall.Saturday.6h}}",
+        "fall_Sun6":"{{i18n:Core.Hector.Fall.Sunday.6h}}",
+
+        // 6 HEARTS - WINTER
+        "winter_Mon6":"{{i18n:Core.Hector.Winter.Monday.6h}}",
+        "winter_Tue6":"{{i18n:Core.Hector.Winter.Tuesday.6h}}",
+        "winter_Wed6":"{{i18n:Core.Hector.Winter.Wednesday.6h}}",
+        "winter_Thu6":"{{i18n:Core.Hector.Winter.Thursday.6h}}",
+        "winter_Fri6":"{{i18n:Core.Hector.Winter.Friday.6h}}",
+        "winter_Sat6":"{{i18n:Core.Hector.Winter.Saturday.6h}}",
+        "winter_Sun6":"{{i18n:Core.Hector.Winter.Sunday.6h}}",
+
+        // 8 HEARTS - SPRING
+        "spring_Mon8":"{{i18n:Core.Hector.Spring.Monday.8h}}",
+        "spring_Tue8":"{{i18n:Core.Hector.Spring.Tuesday.8h}}",
+        "spring_Wed8":"{{i18n:Core.Hector.Spring.Wednesday.8h}}",
+        "spring_Thu8":"{{i18n:Core.Hector.Spring.Thursday.8h}}",
+        "spring_Fri8":"{{i18n:Core.Hector.Spring.Friday.8h}}",
+        "spring_Sat8":"{{i18n:Core.Hector.Spring.Saturday.8h}}",
+        "spring_Sun8":"{{i18n:Core.Hector.Spring.Sunday.8h}}",
+
+        // 8 HEARTS - SUMMER
+        "summer_Mon8":"{{i18n:Core.Hector.Summer.Monday.8h}}",
+        "summer_Tue8":"{{i18n:Core.Hector.Summer.Tuesday.8h}}",
+        "summer_Wed8":"{{i18n:Core.Hector.Summer.Wednesday.8h}}",
+        "summer_Thu8":"{{i18n:Core.Hector.Summer.Thursday.8h}}",
+        "summer_Fri8":"{{i18n:Core.Hector.Summer.Friday.8h}}",
+        "summer_Sat8":"{{i18n:Core.Hector.Summer.Saturday.8h}}",
+        "summer_Sun8":"{{i18n:Core.Hector.Summer.Sunday.8h}}",
+
+        // 8 HEARTS - FALL
+        "fall_Mon8":"{{i18n:Core.Hector.Fall.Monday.8h}}",
+        "fall_Tue8":"{{i18n:Core.Hector.Fall.Tuesday.8h}}",
+        "fall_Wed8":"{{i18n:Core.Hector.Fall.Wednesday.8h}}", 
+        "fall_Thu8":"{{i18n:Core.Hector.Fall.Thursday.8h}}",
+        "fall_Fri8":"{{i18n:Core.Hector.Fall.Friday.8h}}",
+        "fall_Sat8":"{{i18n:Core.Hector.Fall.Saturday.8h}}",
+        "fall_Sun8":"{{i18n:Core.Hector.Fall.Sunday.8h}}",
+
+        // 8 HEARTS - WINTER 
+        "winter_Mon8":"{{i18n:Core.Hector.Winter.Monday.8h}}",
+        "winter_Tue8":"{{i18n:Core.Hector.Winter.Tuesday.8h}}", 
+        "winter_Wed8":"{{i18n:Core.Hector.Winter.Wednesday.8h}}",
+        "winter_Thu8":"{{i18n:Core.Hector.Winter.Thursday.8h}}",
+        "winter_Fri8":"{{i18n:Core.Hector.Winter.Friday.8h}}",
+        "winter_Sat8":"{{i18n:Core.Hector.Winter.Saturday.8h}}",
+        "winter_Sun8":"{{i18n:Core.Hector.Winter.Sunday.8h}}", 
+
+        // 10 HEARTS - SPRING
+        "spring_Mon10":"{{i18n:Core.Hector.Spring.Monday.10h.{{HectorRomance}}}}",
+        "spring_Tue10":"{{i18n:Core.Hector.Spring.Tuesday.10h.{{HectorRomance}}}}",
+        "spring_Wed10":"{{i18n:Core.Hector.Spring.Wednesday.10h.{{HectorRomance}}}}", 
+        "spring_Thu10":"{{i18n:Core.Hector.Spring.Thursday.10h.{{HectorRomance}}}}",
+        "spring_Fri10":"{{i18n:Core.Hector.Spring.Friday.10h.{{HectorRomance}}}}",
+        "spring_Sat10":"{{i18n:Core.Hector.Spring.Saturday.10h.{{HectorRomance}}}}}",
+        "spring_Sun10":"{{i18n:Core.Hector.Spring.Sunday.10h.{{HectorRomance}}}}",
+
+        // 10 HEARTS - SUMMER
+        "summer_Mon10":"{{i18n:Core.Hector.Summer.Monday.10h.{{HectorRomance}}}}",
+        "summer_Tue10":"{{i18n:Core.Hector.Summer.Tuesday.10h.{{HectorRomance}}}}",
+        "summer_Wed10":"{{i18n:Core.Hector.Summer.Wednesday.10h.{{HectorRomance}}}}",
+        "summer_Thu10":"{{i18n:Core.Hector.Summer.Thursday.10h.{{HectorRomance}}}}",
+        "summer_Fri10":"{{i18n:Core.Hector.Summer.Friday.10h.{{HectorRomance}}}}",
+        "summer_Sat10":"{{i18n:Core.Hector.Summer.Saturday.10h.{{HectorRomance}}}}",
+        "summer_Sun10":"{{i18n:Core.Hector.Summer.Sunday.10h.{{HectorRomance}}}}",
+
+        // 10 HEARTS - FALL 
+        "fall_Mon10":"{{i18n:Core.Hector.Fall.Monday.10h.{{HectorRomance}}}}",
+        "fall_Tue10":"{{i18n:Core.Hector.Fall.Tuesday.10h.{{HectorRomance}}}}",
+        "fall_Wed10":"{{i18n:Core.Hector.Fall.Wednesday.10h.{{HectorRomance}}}}", 
+        "fall_Thu10":"{{i18n:Core.Hector.Fall.Thursday.10h.{{HectorRomance}}}}",
+        "fall_Fri10":"{{i18n:Core.Hector.Fall.Friday.10h.{{HectorRomance}}}}",
+        "fall_Sat10":"{{i18n:Core.Hector.Fall.Saturday.10h.{{HectorRomance}}}}",
+        "fall_Sun10":"{{i18n:Core.Hector.Fall.Sunday.10h.{{HectorRomance}}}}",
+
+        // 10 HEARTS - WINTER 
+        "winter_Mon10":"{{i18n:Core.Hector.Winter.Monday.10h.{{HectorRomance}}}}",
+        "winter_Tue10":"{{i18n:Core.Hector.Winter.Tuesday.10h.{{HectorRomance}}}}", 
+        "winter_Wed10":"{{i18n:Core.Hector.Winter.Wednesday.10h.{{HectorRomance}}}}",
+        "winter_Thu10":"{{i18n:Core.Hector.Winter.Thursday.10h.{{HectorRomance}}}}",
+        "winter_Fri10":"{{i18n:Core.Hector.Winter.Friday.10h.{{HectorRomance}}}}",
+        "winter_Sat10":"{{i18n:Core.Hector.Winter.Saturday.10h.{{HectorRomance}}}}",
+        "winter_Sun10":"{{i18n:Core.Hector.Winter.Sunday.10h.{{HectorRomance}}}}",
+
+      },
+      "When": {"Relationship:Hector |contains=Married": false}
+      }, 
+
+   // ENGAGEMENT DIALOGUE
+   {
+        "LogName": "Engagement Dialogue",
+        "Action": "EditData",
+        "Target": "Data/EngagementDialogue",
+        "Entries": {
+                        
+        "Hector0":"{{i18n:Marriage.Hector.Engagement.Hector0}}",
+        "Hector1":"{{i18n:Marriage.Hector.Engagement.Hector1}}",
+        "Hector2":"{{i18n:Marriage.Hector.Engagement.Hector2}}"                       
+   }
+   },
+
+      {
+        "LogName": "Hector Dialogue - Married/Good Weather",
+        "Action": "EditData",
+        "Target": "Characters/Dialogue/Hector",
+        "Entries": 	
+        {
+
+        // MARRIED - SPRING
+        "spring_Mon10":"{{i18n:Marriage.Hector.GoodWeather.Spring.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "spring_Tue10":"{{i18n:Marriage.Hector.GoodWeather.Spring.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "spring_Wed10":"{{i18n:Marriage.Hector.GoodWeather.Spring.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "spring_Thu10":"{{i18n:Marriage.Hector.GoodWeather.Spring.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "spring_Fri10":"{{i18n:Marriage.Hector.GoodWeather.Spring.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "spring_Sat10":"{{i18n:Marriage.Hector.GoodWeather.Spring.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "spring_Sun10":"{{i18n:Marriage.Hector.GoodWeather.Spring.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "spring_1":"{{i18n:Marriage.Hector.Spring1}}",
+	     "spring_13":"{{i18n:Marriage.Hector.Spring13}}",
+        "spring_23":"{{i18n:Marriage.Hector.Spring23}}",
+        "spring_24":"{{i18n:Marriage.Hector.Spring24}}",   
+        "spring_28":"{{i18n:Marriage.Hector.Spring28}}",
+
+        // MARRIED - SUMMER
+        "summer_Mon10":"{{i18n:Marriage.Hector.GoodWeather.Summer.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++|inputSeparator=++}}}}",
+        "summer_Tue10":"{{i18n:Marriage.Hector.GoodWeather.Summer.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "summer_Wed10":"{{i18n:Marriage.Hector.GoodWeather.Summer.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "summer_Thu10":"{{i18n:Marriage.Hector.GoodWeather.Summer.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "summer_Fri10":"{{i18n:Marriage.Hector.GoodWeather.Summer.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "summer_Sat10":"{{i18n:Marriage.Hector.GoodWeather.Summer.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "summer_Sun10":"{{i18n:Marriage.Hector.GoodWeather.Summer.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "summer_1":"{{i18n:Marriage.Hector.Summer1}}",
+        "summer_11":"{{i18n:Marriage.Hector.Summer11}}",
+        "summer_28":"{{i18n:Marriage.Hector.Summer28}}",
+
+        // MARRIED - FALL 
+        "fall_Mon10":"{{i18n:Marriage.Hector.GoodWeather.Fall.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "fall_Tue10":"{{i18n:Marriage.Hector.GoodWeather.Fall.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "fall_Wed10":"{{i18n:Marriage.Hector.GoodWeather.Fall.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "fall_Thu10":"{{i18n:Marriage.Hector.GoodWeather.Fall.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "fall_Fri10":"{{i18n:Marriage.Hector.GoodWeather.Fall.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "fall_Sat10":"{{i18n:Marriage.Hector.GoodWeather.Fall.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "fall_Sun10":"{{i18n:Marriage.Hector.GoodWeather.Fall.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "fall_1":"{{i18n:Marriage.Hector.Fall1}}",
+        "fall_15":"{{i18n:Marriage.Hector.Fall15}}",
+        "fall_16":"{{i18n:Marriage.Hector.Fall16}}",
+        "fall_25":"{{i18n:Marriage.Hector.Fall25}}",
+        "fall_26":"{{i18n:Marriage.Hector.Fall26}}",
+        "fall_27":"{{i18n:Marriage.Hector.Fall27}}",
+
+        // MARRIED - WINTER 
+        "winter_Mon10":"{{i18n:Marriage.Hector.GoodWeather.Winter.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "winter_Tue10":"{{i18n:Marriage.Hector.GoodWeather.Winter.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "winter_Wed10":"{{i18n:Marriage.Hector.GoodWeather.Winter.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "winter_Thu10":"{{i18n:Marriage.Hector.GoodWeather.Winter.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "winter_Fri10":"{{i18n:Marriage.Hector.GoodWeather.Winter.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "winter_Sat10":"{{i18n:Marriage.Hector.GoodWeather.Winter.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "winter_Sun10":"{{i18n:Marriage.Hector.GoodWeather.Winter.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15++16++17++18++19++20++21++22++23++24++25++26++27++28++29++30++31++32++33++34++35++36++37++38++39++40++41++42++43++44|inputSeparator=++}}}}",
+        "winter_1":"{{i18n:Marriage.Hector.Winter1}}",
+        "winter_8":"{{i18n:Marriage.Hector.Winter8}}",
+        "winter_14":"{{i18n:Marriage.Hector.Winter14}}",
+        "winter_24":"{{i18n:Marriage.Hector.Winter24}}",
+        "winter_25":"{{i18n:Marriage.Hector.Winter25}}",
+        "winter_28":"{{i18n:Marriage.Hector.Winter28}}",
+        
+   },
+"When": {"Relationship:Hector |contains=Married": true, "Weather":"Sun"}
+
+   }, 
+
+   {
+        "LogName": "Hector Dialogue - Married/Bad Weather",
+        "Action": "EditData",
+        "Target": "Characters/Dialogue/Hector",
+        "Entries": 	
+        {
+
+        // MARRIED - BAD WEATHER
+        "Mon10":"{{i18n:Marriage.Hector.BadWeather.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15|inputSeparator=++}}}}",
+        "Tue10":"{{i18n:Marriage.Hector.BadWeather.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15|inputSeparator=++}}}}",
+        "Wed10":"{{i18n:Marriage.Hector.BadWeather.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15|inputSeparator=++}}}}",
+        "Thu10":"{{i18n:Marriage.Hector.BadWeather.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15|inputSeparator=++}}}}",
+        "Fri10":"{{i18n:Marriage.Hector.BadWeather.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15|inputSeparator=++}}}}",
+        "Sat10":"{{i18n:Marriage.Hector.BadWeather.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15|inputSeparator=++}}}}",
+        "Sun10":"{{i18n:Marriage.Hector.BadWeather.{{Random:1++2++3++4++5++6++7++8++9++10++11++12++13++14++15|inputSeparator=++}}}}",
+
+
+        
+   },
+"When": {"Relationship:Hector |contains=Married": true, "Weather":"Rain, Storm, Wind, Snow"}
+
+   }, 
+  ]
+ }
