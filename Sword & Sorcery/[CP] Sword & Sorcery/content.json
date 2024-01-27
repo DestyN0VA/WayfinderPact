@@ -437,8 +437,8 @@
       "Name": "MateoDND_Setup",
       "Value": "{{MateoDND_Setup}} SenS 8 5 2",
       "When": {
-        "HasMod": "7thAxis.DiTR.CP"
-      }
+        "HasMod": "7thAxis.DitR.CP, 7thAxis.LitD.CP"
+     }
     },
     {
       "Name": "MateoDND_SenWiggleSit",
@@ -448,8 +448,8 @@
       "Name": "MateoDND_SenWiggleSit",
       "Value": "animate SenS false true 200 20 20 21 21 22 22 23 23 20 20",
       "When": {
-        "HasMod": "7thAxis.DiTR.CP"
-      }
+        "HasMod": "7thAxis.DitR.CP, 7thAxis.LitD.CP"
+     }
     },
     {
       "Name": "MateoDND_Setup",
