@@ -336,8 +336,8 @@
       "Entries": {
         "swordandsorcery.zuzustylecheesecake": {
           "Name": "Zuzu City Style Cheesecake",
-          "DisplayName": "{{i18n: food.cheesecake.name}}",
-          "Description": "{{i18n: food.cheesecake.description}}",
+          "DisplayName": "{{i18n: food.zuzustylecheesecake.name}}",
+          "Description": "{{i18n: food.zuzustylecheesecake.description}}",
           "Type": "Cooking",
           "Category": -7,
           "Price": 100,

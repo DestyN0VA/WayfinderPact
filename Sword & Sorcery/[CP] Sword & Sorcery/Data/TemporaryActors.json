@@ -75,5 +75,10 @@
             "Target": "Portraits/MysteryWolf",
             "FromFile": "assets/TemporaryActors/Portraits/HectorWolf.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Characters/LumisteriaCloset",
+            "FromFile": "assets/TemporaryActors/Characters/LumisteriaCloset.png"
+        },
     ]
 }
