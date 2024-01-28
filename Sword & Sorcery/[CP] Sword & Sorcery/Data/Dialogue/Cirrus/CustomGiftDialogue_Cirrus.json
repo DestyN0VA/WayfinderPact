@@ -27,8 +27,9 @@
             "AcceptGift_(O)213":"{{i18n:Gifts.Cirrus.GiftReaction.SalmonDinner}}",
             "AcceptGift_(O)214":"{{i18n:Gifts.Cirrus.GiftReaction.FishTaco}}",
             "AcceptGift_(O)215":"{{i18n:Gifts.Cirrus.GiftReaction.CrispyBass}}",
-            "AcceptGift_(O)swordandsorcery.bagelwithlox":"{{i18n:Gifts.Cirrus.GiftReaction.BagelWithLox}}",
+            "AcceptGift_(O)swordandsorcery.zuzustylebagelwithlox":"{{i18n:Gifts.Cirrus.GiftReaction.zuzustylebagelwithlox}}",
             "AcceptGift_(O)swordandsorcery.zuzustylepizza":"{{i18n:Gifts.Cirrus.GiftReaction.ZuzuStylePizza}}",
+            "AcceptGift_(O)swordandsorcery.zuzustylecheesecake":"{{i18n:Gifts.Cirrus.GiftReaction.ZuzuStyleCheesecake}}",
             "AcceptGift_(O)swordandsorcery.portfiredrakesparkler":"{{i18n:Gifts.Cirrus.GiftReaction.PortfireDrakeSparkler}}",
                    
             // LIKES
@@ -74,7 +75,7 @@
               "AcceptGift_(O)213":"{{i18n:Gifts.Cirrus.GiftReaction.SalmonDinner.Birthday}}",
               "AcceptGift_(O)214":"{{i18n:Gifts.Cirrus.GiftReaction.FishTaco.Birthday}}",
               "AcceptGift_(O)215":"{{i18n:Gifts.Cirrus.GiftReaction.CrispyBass.Birthday}}",
-              "AcceptGift_(O)swordandsorcery.bagelwithlox":"{{i18n:Gifts.Cirrus.GiftReaction.BagelWithLox.Birthday}}",
+              "AcceptGift_(O)swordandsorcery.zuzustylebagelwithlox":"{{i18n:Gifts.Cirrus.GiftReaction.zuzustylebagelwithlox.Birthday}}",
               "AcceptGift_(O)swordandsorcery.zuzustylepizza":"{{i18n:Gifts.Cirrus.GiftReaction.ZuzuStylePizza.Birthday}}",
   },
   "When": {

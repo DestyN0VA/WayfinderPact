@@ -5,7 +5,7 @@
             "Action": "EditData",
             "Target": "Data/NPCGiftTastes",
             "Entries": {
-                "Mateo": "{{i18n:Gifts.Mateo.GiftReaction.Love}}/394 373 276 340 595 746 731 732 swordandsorcery.salishburbon swordandsorcery.ancientwildfairyroses swordandsorcery.zuzustylepizza swordandsorcery.bagelwithlox swordandsorcery.ancienthuckleberryicecream swordandsorcery.ancientazuredetura/{{i18n:Gifts.Mateo.GiftReaction.Like}}./224 372 446 797 421 578 236 608/{{i18n:Gifts.Mateo.GiftReaction.Dislike}}/-4/{{i18n:Gifts.Mateo.GiftReaction.Hate}}/96 97 98 99 100 101 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 717/{{i18n:Gifts.Mateo.GiftReaction.Neutral}}/-2 591 593 597 402 376 418/"
+                "Mateo": "{{i18n:Gifts.Mateo.GiftReaction.Love}}/394 373 276 340 595 746 731 732 swordandsorcery.salishburbon swordandsorcery.ancientwildfairyroses swordandsorcery.zuzustylepizza swordandsorcery.zuzustylebagelwithlox swordandsorcery.ancienthuckleberryicecream swordandsorcery.ancientazuredetura/{{i18n:Gifts.Mateo.GiftReaction.Like}}./224 372 446 797 421 578 236 608/{{i18n:Gifts.Mateo.GiftReaction.Dislike}}/-4/{{i18n:Gifts.Mateo.GiftReaction.Hate}}/96 97 98 99 100 101 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 717/{{i18n:Gifts.Mateo.GiftReaction.Neutral}}/-2 591 593 597 402 376 418/"
             }
         },
         {
@@ -21,7 +21,7 @@
             "Action": "EditData",
             "Target": "Data/NPCGiftTastes",
             "Entries": {
-                "Cirrus": "{{i18n:Gifts.Cirrus.GiftReaction.Love}}/206 212 213 214 614 swordandsorcery.ancientwildfairyroses swordandsorcery.bagelwithlox swordandsorcery.zuzustylepizza swordandsorcery.portfiredrakesparkler swordandsorcery.ancienthuckleberryicecream swordandsorcery.ancientazuredetura/{{i18n:Gifts.Cirrus.GiftReaction.Like}}/-2 -7 -80 167 225 226 227 228 219 731/{{i18n:Gifts.Cirrus.GiftReaction.Dislike}}/-4 -28/{{i18n:Gifts.Cirrus.GiftReaction.Hate}}/346 303 348 304 459 -20/{{i18n:Gifts.Cirrus.GiftReaction.Neutral}}/-4/"
+                "Cirrus": "{{i18n:Gifts.Cirrus.GiftReaction.Love}}/206 212 213 214 614 swordandsorcery.ancientwildfairyroses swordandsorcery.zuzustylebagelwithlox swordandsorcery.zuzustylepizza swordandsorcery.portfiredrakesparkler swordandsorcery.ancienthuckleberryicecream swordandsorcery.ancientazuredetura/{{i18n:Gifts.Cirrus.GiftReaction.Like}}/-2 -7 -80 167 225 226 227 228 219 731/{{i18n:Gifts.Cirrus.GiftReaction.Dislike}}/-4 -28/{{i18n:Gifts.Cirrus.GiftReaction.Hate}}/346 303 348 304 459 -20/{{i18n:Gifts.Cirrus.GiftReaction.Neutral}}/-4/"
             }
         },
     ]

@@ -3444,8 +3444,9 @@ ________      ________ _   _ _______ _____
 "Gifts.Cirrus.GiftReaction.SalmonDinner": "I've had a lot of fish before, but the salmon here is UNMATCHED compared to elsewhere!$1",
 "Gifts.Cirrus.GiftReaction.FishTaco": "This is the best kind of fusion out there. Thanks, @!$1",
 "Gifts.Cirrus.GiftReaction.CrispyBass": "Honestly, the seafood here is ALMOST as good as it was in Port Drake! Thanks, @!$1",
-"Gifts.Cirrus.GiftReaction.BagelWithLox": "@, this is BOMB. Classic Zuzu city fare. Love it. I'm so glad you made it and decided to share!$1",
+"Gifts.Cirrus.GiftReaction.zuzustylebagelwithlox": "@, this is BOMB. Classic Zuzu city fare. Love it. I'm so glad you made it and decided to share!$1",
 "Gifts.Cirrus.GiftReaction.ZuzuStylePizza": "@! This tastes as good as the real thing! Did you ship in water from the city? Oh my gosh! Thank you!$1",
+"Gifts.Cirrus.GiftReaction.ZuzuStyleCheesecake": "Oh my gosh, @! This takes like home, looks like you got it perfect - thank you for sharing with me!$1",
 "Gifts.Cirrus.GiftReaction.PortfireDrakeSparkler": "Honestly, I love a good mocktail. I feel less left out, because I love going to bars but I don't drink anymore.$6#$b#Thanks, @. This is very thoughtful of you to have made.$4",
 
 // LOVES - ROMANTIC 
@@ -3467,7 +3468,7 @@ ________      ________ _   _ _______ _____
 "Gifts.Cirrus.GiftReaction.SalmonDinner.Birthday": "Yesssss, a birthday seafood dinner! Thank you, @!$1",
 "Gifts.Cirrus.GiftReaction.FishTaco.Birthday": "Yesssss, a birthday seafood dinner! Thank you, @!$1",
 "Gifts.Cirrus.GiftReaction.CrispyBass.Birthday": "Yesssss, a birthday seafood dinner! Thank you, @!$1",
-"Gifts.Cirrus.GiftReaction.BagelWithLox.Birthday": "You boiled a bagel just for me on my birthday? Thank you, @!$1",
+"Gifts.Cirrus.GiftReaction.zuzustylebagelwithlox.Birthday": "You boiled a bagel just for me on my birthday? Thank you, @!$1",
 "Gifts.Cirrus.GiftReaction.ZuzuStylePizza.Birthday": "You got REAL 'za for my birthday? Thank you @, this is the good stuff!$1", 
 
 
@@ -3827,10 +3828,16 @@ ________      ________ _   _ _______ _____
 "food.portfiredrakesparkler.description": "A popular mocktail recipe from Port Drake, involving different fruits and soda.",
 
 "food.zuzustylepizza.name": "Zuzu City Style Pizza",
-"food.zuzustylepizza.description": "If you can't fold it, it's not real pizza.",
+"food.zuzustylepizza.description": "If you can't fold it, it's not real pizza. An on-the-go lunch for a busy day.",
 
-"food.bagelwithlox.name": "Zuzu City Style Bagel with Lox",
-"food.bagelwithlox.description": "A fresh bagel, boiled, with raw salmon and a smear of cream cheese.",
+"food.zuzustylebagelwithlox.name": "Zuzu City Style Bagel with Lox",
+"food.zuzustylebagelwithlox.description": "A fresh bagel, boiled, with raw salmon and a smear of cream cheese.",
+
+"food.cheesecake.name": "Zuzu City Style Cheesecake",
+"food.cheesecake.description": "A slice of plain cheesecake, adorned with a single accessory strawberry.",
+
+"food.zuzustyleclamchowder.name": "Zuzu City Style Clam Chowder",
+"food.zuzustyleclamchowder.description": "Made with clams, starches, and a hearty dose of care and nostalgia.",
 
 "weapon.keytoscarp.name": "Key to Scarp",
 "weapon.keytoscarp.description": "A scattered dream is like a far-off memory. A far-off memory is like a scattered dream.",
@@ -3891,6 +3898,10 @@ ________      ________ _   _ _______ _____
 "food.crafting.ferngreensandpineapple":  "Fern Greens & Pineapple",
 "food.crafting.ancienthuckleberryicecream": "Ancient Huckleberry Ice Cream",
 "food.crafting.lavaeelandstirfriedancientbottlegourd": "Lava Eel & Fried Bottle Gourd", 
+"food.crafting.zuzustylepizza": "ZuZu Style Pizza",
+"food.crafting.zuzustylebagelwithlox": "ZuZu Style Bagel With Lox",
+"food.crafting.zuzustylecheesecake": "ZuZu Style Cheesecake",
+"food.crafting.zuzustyleclamchowder": "ZuZu Style Clam Chowder",
 
 /*
   __  __ _____  _____  _____ ______ _      _               _   _ ______ ____  _    _  _____ 

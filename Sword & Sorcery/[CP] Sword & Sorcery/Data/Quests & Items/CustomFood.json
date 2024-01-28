@@ -301,10 +301,10 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.bagelwithlox": {
+        "swordandsorcery.zuzustylebagelwithlox": {
           "Name": "Zuzu City Style Bagel with Lox",
-          "DisplayName": "{{i18n: food.bagelwithlox.name}}",
-          "Description": "{{i18n: food.bagelwithlox.description}}",
+          "DisplayName": "{{i18n: food.zuzustylebagelwithlox.name}}",
+          "Description": "{{i18n: food.zuzustylebagelwithlox.description}}",
           "Type": "Cooking",
           "Category": -7,
           "Price": 100,
@@ -330,7 +330,72 @@
         },
       },
     },
-
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.zuzustylecheesecake": {
+          "Name": "Zuzu City Style Cheesecake",
+          "DisplayName": "{{i18n: food.cheesecake.name}}",
+          "Description": "{{i18n: food.cheesecake.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "Buff": {
+            "Duration": 3,
+            "CustomAttributes": {
+              "FarmingLevel": 0,
+              "FishingLevel": 0,
+              "MiningLevel": 0,
+              "LuckLevel": 0,
+              "ForagingLevel": 0,
+              "MaxStamina": 3,
+              "MagneticRadius": 0,
+              "Speed": 1,
+              "Defense": 1,
+              "Attack": 1,
+            }
+          },
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 48
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.zuzustyleclamchowder": {
+          "Name": "Zuzu City Style Clam Chowder",
+          "DisplayName": "{{i18n: food.clamchowder.name}}",
+          "Description": "{{i18n: food.clamchowder.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "Buff": {
+            "Duration": 3,
+            "CustomAttributes": {
+              "FarmingLevel": 3,
+              "FishingLevel": 3,
+              "MiningLevel": 3,
+              "LuckLevel": 0,
+              "ForagingLevel": 0,
+              "MaxStamina": 0,
+              "MagneticRadius": 0,
+              "Speed": 0,
+              "Defense": 0,
+              "Attack": 0,
+            }
+          },
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 49
+        },
+      },
+    },
 
 // CRAFTING RECIPES 
 
@@ -355,9 +420,13 @@
 
   "swordandsorcery.lavaeelandstirfriedancientbottlegourd": "swordandsorcery.ancientbottlegourd 1 162 1/what is this for?/swordandsorcery.lavaeelandstirfriedancientbottlegourd 1/false/{{i18n:food.crafting.lavaeelandstirfriedancientbottlegourd}}",
 
-  "swordandsorcery.zuzustylepuzza": "216 1 256 1 424 1/what is this for?/swordandsorcery.zuzustylepuzza 1/false/{{i18n:food.crafting.zuzustylepuzza}}",
+  "swordandsorcery.zuzustylepizza": "216 1 256 1 424 1/what is this for?/swordandsorcery.zuzustylepizza 1/e SnS.Ch3.Cirrus.4/{{i18n:food.crafting.zuzustylepizza}}",
 
-  "swordandsorcery.bagelwithlox": "216 1 139 1 424 1/what is this for?/swordandsorcery.bagelwithlox 1/false/{{i18n:food.crafting.bagelwithlox}}",
+  "swordandsorcery.zuzustylezuzustylebagelwithlox": "216 1 139 1 424 1/what is this for?/swordandsorcery.zuzustylebagelwithlox 1/EVENTIDHERE/{{i18n:food.crafting.zuzustylebagelwithlox}}",
+
+  "swordandsorcery.zuzustylecheesecake": "245 1 -6 1 -26 1 400 1/what is this for?/swordandsorcery.zuzustylecheesecake 1/EVENTIDHERE/{{i18n:food.crafting.zuzustylecheesecake}}",
+
+  "swordandsorcery.zuzustyleclamchowder": "372 1 -6 1 192 1/what is this for?/swordandsorcery.zuzustyleclamchowder 1/EVENTIDHERE/{{i18n:food.crafting.zuzustyleclamchowder}}",
   
   }
 },

@@ -22,7 +22,7 @@
                     "ExcludeFromIntroductionsQuest": true,
                     "SocialTab": "HiddenUntilMet",
                     "Calendar": "HiddenUntilMet",
-                    "ShakePortraits": [9, 15],
+                    "ShakePortraits": [9, 15, 19, 21],
                     "SpouseRoom": {
                         "MapAsset": "DestyNova_Cirrus_SpouseRoom"
                     },
