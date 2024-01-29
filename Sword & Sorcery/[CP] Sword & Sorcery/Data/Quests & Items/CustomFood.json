@@ -369,8 +369,8 @@
       "Entries": {
         "swordandsorcery.zuzustyleclamchowder": {
           "Name": "Zuzu City Style Clam Chowder",
-          "DisplayName": "{{i18n: food.clamchowder.name}}",
-          "Description": "{{i18n: food.clamchowder.description}}",
+          "DisplayName": "{{i18n: food.zuzustyleclamchowder.name}}",
+          "Description": "{{i18n: food.zuzustyleclamchowder.description}}",
           "Type": "Cooking",
           "Category": -7,
           "Price": 100,
@@ -426,7 +426,7 @@
 
   "swordandsorcery.zuzustylecheesecake": "245 1 -6 1 -26 1 400 1/what is this for?/swordandsorcery.zuzustylecheesecake 1/EVENTIDHERE/{{i18n:food.crafting.zuzustylecheesecake}}",
 
-  "swordandsorcery.zuzustyleclamchowder": "372 1 -6 1 192 1/what is this for?/swordandsorcery.zuzustyleclamchowder 1/EVENTIDHERE/{{i18n:food.crafting.zuzustyleclamchowder}}",
+  "swordandsorcery.zuzustyleclamchowder": "372 1 256 1 192 1/what is this for?/swordandsorcery.zuzustyleclamchowder 1/SnS.Ch3.Cirrus.5/{{i18n:food.crafting.zuzustyleclamchowder}}",
   
   }
 },
