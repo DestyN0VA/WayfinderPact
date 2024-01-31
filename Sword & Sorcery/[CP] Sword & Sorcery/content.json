@@ -40,86 +40,132 @@
   // CONFIG OPTIONS
 
   "ConfigSchema": {
+    "Player Pronouns 1": {
+      "Default": "they",
+      "AllowBlank": false,
+      "Description": "Sets the player's desired pronouns.",
+      "Section": "Pronouns"
+  }, 
+  "Player Pronouns 2": {
+      "Default": "them",
+      "AllowBlank": false,
+      "Description": "Sets the player's desired pronouns.",
+      "Section": "Pronouns"
+  },
+  "Player Pronouns 3": {
+      "Default": "theirs",
+      "AllowBlank": false,
+      "Description": "Sets the player's desired pronouns.",
+      "Section": "Pronouns"
+  },
+  "Player Pronouns 4": {
+      "Default": "themself",
+      "AllowBlank": false,
+      "Description": "Sets the player's desired pronouns.",
+      "Section": "Pronouns"
+  },
+  "Player Pronoun Identifier": {
+      "Default": "are",
+      "AllowBlank": false,
+      "Description": "Would usually be \"is\" or \"are\", depending on context. Example: She IS so cool! VS. They ARE so cool!",
+      "Section": "Pronouns"
+  }, 
     "CustomMateoSoren": {
       "AllowValues": "true, false",
       "Default": "true",
       "AllowBlank": false,
-      "Description": "Turns on male toddler sprites that look like Mateo."
+      "Description": "Turns on male toddler sprites that look like Mateo.",
+      "Section": "Custom Kids"
     },
     "CustomMateoDinah": {
       "AllowValues": "true, false",
       "Default": "true",
       "AllowBlank": false,
-      "Description": "Turns on female toddler sprites that look like Mateo."
+      "Description": "Turns on female toddler sprites that look like Mateo.",
+      "Section": "Custom Kids"
     },
     "MermaidPendantEarring": {
       "AllowValues": "true, false",
       "Default": "true",
       "AllowBlank": false,
-      "Description": "Adds the Mermaid Pendant earring when married."
+      "Description": "Adds the Mermaid Pendant earring for Mateo when married.",
+      "Section": "Mermaid Pendant Overlays"
     },
     "MermaidPendantHairclip": {
       "AllowValues": "true, false",
       "Default": "true",
       "AllowBlank": false,
-      "Description": "Adds the Mermaid Pendant hairclip when married."
+      "Description": "Adds the Mermaid Pendant hairclip for Hector when married.",
+      "Section": "Mermaid Pendant Overlays"
     },
     "MateoSpouseRoomConfig": {
       "AllowValues": "true, false",
       "Default": "true",
       "AllowBlank": false,
-      "Description": "Adds a spouse room when married."
+      "Description": "Adds a spouse room when married.",
+      "Section": "Spouse Rooms"
     },
     "MateoSpousePatioConfig": 
     {
         "AllowValues": "true, false",
         "Default": "true",
         "AllowBlank": false,
-        "Description": "Adds a spouse patio when married."
+        "Description": "Adds a spouse patio when married.",
+        "Section": "Spouse Patios"
     },
     "HectorSpouseRoomConfig": {
       "AllowValues": "true, false",
       "Default": "true",
       "AllowBlank": false,
-      "Description": "Adds a spouse room when married."
+      "Description": "Adds a spouse room when married.",
+      "Section": "Spouse Rooms"
     },
     "HectorSpousePatioConfig": 
     {
         "AllowValues": "true, false",
         "Default": "true",
         "AllowBlank": false,
-        "Description": "Adds a spouse patio when married."
+        "Description": "Adds a spouse patio when married.",
+        "Section": "Spouse Patios"
     },
     "CirrusSpouseRoomConfig": {
       "AllowValues": "true, false",
       "Default": "true",
       "AllowBlank": false,
-      "Description": "Adds a spouse room when married."
+      "Description": "Adds a spouse room when married.",
+      "Section": "Spouse Rooms"
     },
     "CirrusSpousePatioConfig": 
     {
         "AllowValues": "true, false",
         "Default": "true",
         "AllowBlank": false,
-        "Description": "Adds a spouse patio when married."
+        "Description": "Adds a spouse patio when married.",
+        "Section": "Spouse Patios"
     },
     "SkipIntroQuest": {
       "AllowValues": "true, false",
       "Default": "false",
       "AllowBlank": false,
-      "Description": "Removes the quest requirements from Hector's intro event in case you've already completed Never Ending Adventure."
+      "Description": "Removes the quest requirements from Hector's intro event in case you've already completed Never Ending Adventure.",
+      "Section": "Miscellaneous"
     },
     "DumpsterWarp": {
       "AllowValues": "true, false",
       "Default": "false",
       "AllowBlank": false,
-      "Description": "May cause some pathing shananagins, but is kinda funny?"
+      "Description": "May cause some pathing shananagins, but is kinda funny?",
+      "Section": "Miscellaneous"
     },
   },
 
   // DYNAMIC TOKENS
 
   "DynamicTokens": [
+    {
+      "Name": "PlayerPronouns",
+      "Value": "|PPN1={{Player Pronouns 1}} |PPN2={{Player Pronouns 2}}|PPN3={{Player Pronouns 3}}  |PPN4={{Player Pronouns 4}} |PPNI={{Player Pronoun Identifier}}"
+    },
     {
       "Name": "MateoRomance",
       "Value": "Romantic",
@@ -551,6 +597,94 @@
       "When": {
         "HasMod: |contains=TenebrousNova.EliDylan.CP": true
       }
-    }
+    },
+    {
+      "Name": "CirrusSong1",
+      "Value": "Try looking at the sun. Keep your head high, and everything is alright.",
+      "When": {
+        "HasFlag |contains=CirrusSong1A": true
+      }
+    },
+    {
+      "Name": "CirrusSong1",
+      "Value": "Look into the blue sky, and your feelings might be soaked up in it's vastness.",
+      "When": {
+        "HasFlag |contains=CirrusSong1B": true
+      }
+    },
+    {
+      "Name": "CirrusSong2",
+      "Value": "You might be able to find the answers that you want above the clouds.",
+      "When": {
+        "HasFlag |contains=CirrusSong2A": true
+      }
+    },
+    {
+      "Name": "CirrusSong2",
+      "Value": "You might find that answers you want in the light of the moon.",
+      "When": {
+        "HasFlag |contains=CirrusSong2B": true
+      }
+    },
+    {
+      "Name": "CirrusSong3",
+      "Value": "Be free of your mind, and let it flow.",
+      "When": {
+        "HasFlag |contains=CirrusSong3A": true
+      }
+    },
+    {
+      "Name": "CirrusSong3",
+      "Value": "Open up your heart, and let things go.",
+      "When": {
+        "HasFlag |contains=CirrusSong3B": true
+      }
+    },
+     //TRUESHAPE: FALSE
+     {
+      "Name": "HectorPN1", // He | She
+      "Value": "{{Random: {{i18n:Core.HectorPN.M.1}}, {{i18n:Core.HectorPN.F.1}}|key=hector-gender}}",
+      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": false }
+    },
+    {
+      "Name": "HectorPN2", // Him | Her
+      "Value": "{{Random: {{i18n:Core.HectorPN.M.2}}, {{i18n:Core.HectorPN.F.2}}|key=hector-gender}}",
+      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": false }
+    },
+    {
+      "Name": "HectorPN3", // His | Hers
+      "Value": "{{Random: {{i18n:Core.HectorPN.M.3}}, {{i18n:Core.HectorPN.F.3}}|key=hector-gender}}",
+      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": false }
+    },
+    {
+      "Name": "HectorPN4", // Himself | Herself
+      "Value": "{{Random: {{i18n:Core.HectorPN.M.4}}, {{i18n:Core.HectorPN.F.4}}|key=hector-gender}}",
+      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": false }
+    },
+    //TRUESHAPE: TRUE
+    {
+      "Name": "HectorPN1", // He | She
+      "Value": "{{Random: {{i18n:Core.HectorPN.M.1}}, {{i18n:Core.HectorPN.F.1}}, {{i18n:Core.HectorPN.F.1}}|key=hector-gender}}",
+      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": true }
+    },
+    {
+      "Name": "HectorPN2", // Him | Her
+      "Value": "{{Random: {{i18n:Core.HectorPN.M.2}}, {{i18n:Core.HectorPN.F.2}}, {{i18n:Core.HectorPN.F.2}}|key=hector-gender}}",
+      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": true }
+    },
+    {
+      "Name": "HectorPN3", // His | Hers
+      "Value": "{{Random: {{i18n:Core.HectorPN.M.3}}, {{i18n:Core.HectorPN.F.3}}, {{i18n:Core.HectorPN.F.3}}|key=hector-gender}}",
+      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": true }
+    },
+    {
+      "Name": "HectorPN4", // Himself | Herself
+      "Value": "{{Random: {{i18n:Core.HectorPN.M.4}}, {{i18n:Core.HectorPN.F.4}}, {{i18n:Core.HectorPN.F.4}}|key=hector-gender}}",
+      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": true }
+    },
+    {
+      "Name": "HectorPronouns",
+      "Value": "|HPN1={{HectorPN1}} |HPN2={{HectorPN2}} |HPN3={{HectorPN3}} |HPN4={{HectorPN4}}"
+    },
   ]
 }

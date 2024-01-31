@@ -129,8 +129,8 @@
 "Core.Mateo.PlayerKilled.Skull.02": "Easy, now... take it slow.",
 "Core.Mateo.PlayerKilled.Skull.03": "You're awake! Thank goodness. Mateo found you all bent out of shape in the Skull Cave!$2",
 "Core.Mateo.PlayerKilled.Skull.04": "Sunshine!$18#$b#I was so worried, you getting hurt is my worst nightmare!$19",
-"Core.Mateo.PlayerKilled.Skull.05": "Are they going to be alright, Harv?$29",
-"Core.Mateo.PlayerKilled.Skull.06": "They'll be fine, but they need to be a little more careful next time.$2",
+"Core.Mateo.PlayerKilled.Skull.05": "Are {{PPN1}} going to be alright, Harv?$29",
+"Core.Mateo.PlayerKilled.Skull.06": "{{PPN1}}'ll be fine, but {{PPN1}} need to be a little more careful next time.$2",
 "Core.Mateo.PlayerKilled.Skull.07": "I'll leave you two to talk; let me know if you need anything.$2",
 "Core.Mateo.PlayerKilled.Skull.08": "I was so afraid of losing you, @. I don't know what I'd do without my best friend, the love of my life.$17#$b#Please ask for help if you need it next time, Sunshine! I'd rather be in danger with you than have you go at the Skull Cave alone!$19",
 
@@ -299,7 +299,7 @@
 
 //8 HEARTS - SUMMER
 "Core.Mateo.Summer.Monday.8h":"It feels like my scars get really swollen when it gets hot out like this, though it could be my imagination. I try not to let it put me in a bad mood, it's just very uncomfortable. I'd take that over still being self-conscious, though.$37#$b#I've always thought myself roguish, but 'scarred from ankle to forehead' was not on my bingo card.$36",
-"Core.Mateo.Summer.Tuesday.8h":"All I can think about right now is laying out on a towel, listening to the waves crash against the cove's cliffs. Maybe toss a frizbee or something.$0#$b#Do you think I can get Marlon and Gunther to join me? They need a bit of R&R, honestly. They work too hard and too often. So do you.$32",
+"Core.Mateo.Summer.Tuesday.8h":"All I can think about right now is laying out on a towel, listening to the waves crash against the cove's cliffs. Maybe toss a frisbee or something.$0#$b#Do you think I can get Marlon and Gunther to join me? They need a bit of R&R, honestly. They work too hard and too often. So do you.$32",
 "Core.Mateo.Summer.Wednesday.8h":"Hey, @! I dug up a fossil, check it out. Feel free to pass it along to Gunther for me, I'm not sure if we've found this particular one yet. [586 587 588 589]$14",
 "Core.Mateo.Summer.Thursday.8h": "I can't imagine going into the Volcano this time of year. Between the various Magma creatures and the Tiger Slimes, I'll just stick to the more frigid spots in the Pelican Town mine.$9#$b#The best part of Ginger Island is just hanging out at the beach. One of my old professors works out there, I wonder how he's been doing.$37",
 "Core.Mateo.Summer.Friday.8h":"There are way too many bugs down in the mines. Big ol' Spiders, Stick Bugs, and more variants of Cave Flies and Grubs than we can count - it's gross.$17#$b#I guess it's a good thing that, for the most part, they stay down below. Well, that's due largely to the Adventurer's Guild, huh?$1",
@@ -812,7 +812,7 @@
 "CFD.Mateo.Utility.cs.5375": "@, Mateo... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you partners in crime, haha!$h",
 "CFD.Mateo.Utility.cs.5377": "@, Mateo... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you partners in crime, haha!$h",
 "CFD.Mateo.Utility.cs.5367": "There comes a time in everyone's life when we cross paths with someone unexpectedly.#$b#And yet today, I find myself uniting two people who've decided to see their paths converge into one.$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Mateo in the bonds of marriage.",
-"CFD.Mateo.Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if they'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Mateo in the bonds of marriage.",
+"CFD.Mateo.Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if {{PPN1}}'d fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Mateo in the bonds of marriage.",
 
 
 // GENDER NEUTRAL PARENTAL EDITS 
@@ -1512,6 +1512,17 @@ ________      ________ _   _ _______ _____
 "Core.Biróg.Name": "Biróg",
 "Core.Hector.Introduction": "You have no idea what I'm capable of, farmer. Nor of what I've got in mind for you.", 
 
+// DYNAMIC PRONOUNS 
+"Core.HectorPN.M.1": "he",
+"Core.HectorPN.M.2": "him",
+"Core.HectorPN.M.3": "his",
+"Core.HectorPN.M.4": "himself",
+
+"Core.HectorPN.F.1": "she",
+"Core.HectorPN.F.2": "her",
+"Core.HectorPN.F.3": "hers",
+"Core.HectorPN.F.4": "herself",
+
 // COMMUNITY CENTER BUNDLES  
 "Core.Hector.JojaBegin": "You're a traitor! I needed you, and you've gone and given in to Morris? Of course I know it was you, everyone else who would've bought a membership already!$27#$b#You're not who I thought you were! I can't trust you, get out of my face.$21",
 "Core.Hector.CCBegin": "Good job, @! Morris and his warehouse can go eat some rocks.$1#$b#What? You want help with the community center? Nah. I'm confident you can handle it.$8#$b#Besides, I've got OTHER plans for us.$9",
@@ -2175,7 +2186,7 @@ ________      ________ _   _ _______ _____
  "Movies.Hector.Wumbus.1": "Space. Space. Gonna go to space.$0",
  "Movies.Hector.Wumbus.2": "Are we in space yet? What's the hold-up? Gotta go to space. Gotta go to SPACE.$1", 
  "Movies.Hector.Wumbus.3": "SPAAACCCCCE!$9" , 
- "Movies.Hector.Mysterium.1": "This is Mateo's favorite! I know because they don't shut up about it when I asked them.$8", 
+ "Movies.Hector.Mysterium.1": "This is one of Mateo's favorite! I know because they don't shut up about it when I asked them.$8", 
  "Movies.Hector.Mysterium.2": "What's going on? What's this weird occult nonsense? How are you supposed to know what's happening?$16",
  "Movies.Hector.Mysterium.3":"What do you mean, there's a whole show to go with this? Now I've got to go binge it for context. See you later!$9",
  "Movies.Hector.ItHowlsInTheRain.1": "It won't be that scary, right?$8",
@@ -2274,7 +2285,7 @@ ________      ________ _   _ _______ _____
 "CFD.Hector.Utility.cs.5375": "@, strange person I've never met before... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you partners! Congratulations!$h",
 "CFD.Hector.Utility.cs.5377": "@, strange person I've never met before... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you partners! Congratulations!$h",
 "CFD.Hector.Utility.cs.5367": "There comes a time in everyone's life when we cross paths with someone unexpectedly.#$b#In this case, it seems to be EXTREMELY unexpectedly.$h#$b#It is my great? Honor on this day {0} of {1}, to unite @ and - what was their name again? - in the bonds of marriage.",
-"CFD.Hector.Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if they'd fit in with our community...#$b#And I suppose we're about to learn how this OTHER new person fits into the community.$h#$b#It is my great honor on this day {0} of {1}, to unite @ and uh, whatstheirname, in the bonds of marriage.",
+"CFD.Hector.Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if {{PPN1}}'d fit in with our community...#$b#And I suppose we're about to learn how this OTHER new person fits into the community.$h#$b#It is my great honor on this day {0} of {1}, to unite @ and uh, whatstheirname, in the bonds of marriage.",
 
 // GENDER NEUTRAL SOCIAL PAGE EDITS 
 "CFD.Hector.SocialPage.cs.11635": "(single)",
@@ -2445,7 +2456,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch2.2H.Hector.14": "Now, I'm not telling you this JUST to brag. Though I did want to, just a little bit. Being proud of your accomplishments is okay.$2#$b#But...my river is in danger now, @. And I needed someone trustworthy to help me address it. I'll be keeping you updated as I plan things out.$1",
 "Events.S&S.Ch2.2H.Hector.15": "OH!",
 "Events.S&S.Ch2.2H.Hector.16": "I think I left the stove on. So that's all for today!$5",
-"Events.S&S.Ch2.2H.Message.1": "Hector walks back with you to the tower. When you're safely back in the Deep Mountains, they kick you out.",
+"Events.S&S.Ch2.2H.Message.1": "Hector walks back with you to the tower. When you're safely back in the Deep Mountains, {{HPN1}} kicks you out.",
 "Events.S&S.Ch2.2H.Hector.17": "That was WAY too much shifting. I'm not even sure showing off like that was worthwhile or necessary. I think it mostly just scared @.$18#$b#This isn't good. Gotta be more careful...$19",
 "Events.S&S.Ch2.2H.Book.1": "...$2",
 
@@ -2457,18 +2468,18 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch2.3H1.Q1.Response.2": "...$2",
 "Events.S&S.Ch2.3H1.Message.1": "Text scrawls before you, across blank pages.",
 "Events.S&S.Ch2.3H1.Book.1": "I'm okay, but thank you for asking!!! I'm glad for your company. Hector is out in the woods. I'm worried, though.",
-"Events.S&S.Ch2.3H1.Book.2": "Hector been isolated for so long, I fear for the state of their mind. They need socialization, like any other creature.",
+"Events.S&S.Ch2.3H1.Book.2": "Hector been isolated for so long, I fear for the state of their mind. {{HPN1}} needs socialization, like any other creature.",
 "Events.S&S.Ch2.3H1.Q2.Answer.1": "Do you need socialization, too?",
 "Events.S&S.Ch2.3H1.Q2.Answer.2": "What can I do about Hector?",
 "Events.S&S.Ch2.3H1.Q2.Response.1": "I do have Hector's company most of the time, but I do appreciate when you stop by to visit!$1",
 "Events.S&S.Ch2.3H1.Q2.Response.2": "Well, you see, I actually had an idea! So I'm happy to catch you alone.",
-"Events.S&S.Ch2.3H1.Book.3": "Could you, perhaps, dearest @, consider bringing Hector along on one of your trips into town? They do quite love the Scarp.",
-"Events.S&S.Ch2.3H1.Book.4": "Terribly afraid of people, though. Well, they're afraid of people being afraid - it's gauche. Either way, their tail is between their legs about it.",
+"Events.S&S.Ch2.3H1.Book.3": "Could you, perhaps, dearest @, consider bringing Hector along on one of your trips into town? {{HPN1}} does quite love the Scarp.",
+"Events.S&S.Ch2.3H1.Book.4": "Terribly afraid of people, though. Well, {{HPN1}} is afraid of people being afraid - it's gauche. Either way, their tail is between their legs about it.",
 "Events.S&S.Ch2.3H1.Q3.Answer.1": "What do you suggest I do?",
 "Events.S&S.Ch2.3H1.Q3.Answer.2": "You think *I* can get them out and about?",
 "Events.S&S.Ch2.3H1.Q3.Response.1": "Sometimes, someone just needs a gentle push out of their shell! In this case, it may be quite literal.",
 "Events.S&S.Ch2.3H1.Q3.Response.2": "You've accomplished so much, @. I'm sure this is within the realms of what you can handle.",
-"Events.S&S.Ch2.3H1.Q3.Book.5": "Now, I'm sure they'll be very begrudging about it. But I promise; it's a ruse. They'll appreciate it terribly! I know they will.$1",
+"Events.S&S.Ch2.3H1.Q3.Book.5": "Now, I'm sure {{HPN1}}'ll be very begrudging about it. But I promise; it's a ruse. {{HPN1}}'ll appreciate it terribly! I know {{HPN1}} will.$1",
 "Events.S&S.Ch2.3H1.Q3.Book.6": "Thank you, @. This means more than you know.",
 
 //3 HEARTS PART 2
@@ -2481,7 +2492,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch2.3H2.Hector.5": "...Is that a barn?",
 "Events.S&S.Ch2.3H2.Hector.6": "I wanted to make sure the animals kept here were well cared for.$12#$b#Seems like Lord Sherbet thinks so, and he's singing the praises of someone named-$12",
 "Events.S&S.Ch2.3H2.Question.1": "Who's this, farmer?",
-"Events.S&S.Ch2.3H2.Q1.Answer.1": "This is Hector. They wanted to to meet the animals.",
+"Events.S&S.Ch2.3H2.Q1.Answer.1": "This is Hector. {{HPN1}} wanted to to meet the animals.",
 "Events.S&S.Ch2.3H2.Q1.Answer.2": "This is Hector, a good friend of mine.",
 "Events.S&S.Ch2.3H2.Q1.Response.1": "I see. Well, it's not like they don't enjoy the company.$0",
 "Events.S&S.Ch2.3H2.Q1.Response.2": "Nice to meet you, Hector. Welcome to East Scarp.$1",
@@ -2513,7 +2524,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch2.4H.Eloise.6": "...$2",
 "Events.S&S.Ch2.4H.Hector.8": "You know what? Sure, I'll do it.$14#$b#Just tell me when you need me around, and what you need help with.$13",
 "Events.S&S.Ch2.4H.Jacob.3": "If you're free a few days a week, I could use some help in the office, and keeping the barn clean...",
-"Events.S&S.Ch2.4H.Message.1": "Hector will be at the Vet's Office three days a week! They'll also start begrudgingly visiting festivals.",
+"Events.S&S.Ch2.4H.Message.1": "Hector will be at the Vet's Office three days a week! {{HPN1}}'ll also start begrudgingly visiting festivals.",
 
 //5 HEARTS PART 1
 
@@ -2603,7 +2614,7 @@ ________      ________ _   _ _______ _____
 //7 HEARTS PART 1
 
 "Events.S&S.Ch2.7H1.Mateo.1": "-so I just picked the lock. I ribbed Lewis about it a little, but it made @ laugh, and that was worth it.$1",
-"Events.S&S.Ch2.7H1.Eloise.1": "I'm sure they're around somewhere!",
+"Events.S&S.Ch2.7H1.Eloise.1": "I'm sure {{HPN1}}'s around somewhere!",
 "Events.S&S.Ch2.7H1.Hector.1": "Mateo, you- you make me real self-conscious, you know?$22",
 "Events.S&S.Ch2.7H1.Mateo.2": "What do you mean?",
 "Events.S&S.Ch2.7H1.Hector.2": "I mean, you do these things - you help people, and it all comes naturally. Everything that comes out of your mouth is poetic.$16#$b#I compare myself to you, and then I get... upset. It feels unfair. I have to try very hard not to be unkind, and even then-$19#$b#I still fail. I lie when I get nervous. I say rude things. I don't mean it, I'm just - I'm still learning.$21",
@@ -2638,7 +2649,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch2.7H2.Hector.3": "Let me share something beautiful with you.$29",
 "Events.S&S.Ch2.7H2.Hector.4": "In order to pull this off, I need the very essence of nature itself in a pretty substantial amount.$22#$b#You're a farmer before anything else, @. There's no better person to collect it.$8",
 "Events.S&S.Ch2.7H2.Hector.5": "Now, I hate to ritualistically empower you and then kick you out, but I've still got stuff to prepare for when we finally fire this off for real.$9#$b#Thank you for your help! Now, get goin'! Shoo!$9",
-"Events.S&S.Ch2.7H2.Hector.6": "There they go...",
+"Events.S&S.Ch2.7H2.Hector.6": "{{PPN1}} {{PPNI}} gone...",
 "Events.S&S.Ch2.7H2.Hector.7": "I'm so tired... I can't...$19",
 
 //8 HEARTS
@@ -2670,7 +2681,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch2.9H.Q1.Answer.1": "Something's been off since the beginning.",
 "Events.S&S.Ch2.9H.Q1.Answer.2": "It has gotten pretty bad, hasn't it?",
 "Events.S&S.Ch2.9H.Q1.Response.1": "Yeah, but I don't think it's necessarily something bad. Maybe if you and I approach them about it together, we can figure out what's going on. I'm worried.$16",
-"Events.S&S.Ch2.9H.Q1.Response.2": "Yeah. If we approach them about it together, maybe they'll be a little more receptive. We're just trying to help, after all.$21",
+"Events.S&S.Ch2.9H.Q1.Response.2": "Yeah. If we approach them about it together, maybe {{HPN1}}'ll be a little more receptive. We're just trying to help, after all.$21",
 "Events.S&S.Ch2.9H.Q2.Answer.1": "Are you approaching this as the Guild Master, or as a friend?",
 "Events.S&S.Ch2.9H.Q2.Answer.2": "What if Hector doesn't want to talk?",
 "Events.S&S.Ch2.9H.Q2.Response.1": "Having a little empathy for someone you care about doesn't require a title.$78",
@@ -2878,7 +2889,7 @@ ________      ________ _   _ _______ _____
 "CT.Mateo.HectorDND": "I was surprised by Hector's choice. Don't worry, I've got really big plans for their next character. It'll be awesome.$32",
 "CT.Mateo.HectorRiver1": "Woah, Hector has you doing what-? That's amazing!$26",
 "CT.Mateo.HectorDinner": "Jacob's a big huge sweetheart, isn't he? It's no wonder, with how Eloise is.$78",
-"CT.Mateo.HectorRiver2": "I know Hector's very skilled, but they seem... I don't know, so worn down lately.$37",
+"CT.Mateo.HectorRiver2": "I know Hector's very skilled, but {{HPN1}} seems... I don't know, so worn down lately.$37",
 "CT.Mateo.HectorRiver3": "@, Hector doesn't seem to be doing so well. I'm worried.$21",
 "CT.Mateo.HectorHeal": "I'm so glad Hector's on the road to recovery. I really empathize with their situation, but a little familial love goes a long way.$32",
 "CT.Mateo.HectorHeal2": "Hector seemed in really good spirits, much better than recently. I'm so glad.$32",

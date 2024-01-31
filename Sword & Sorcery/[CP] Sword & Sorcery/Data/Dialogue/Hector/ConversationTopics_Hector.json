@@ -102,7 +102,7 @@
         "HectorDinner": "{{i18n:CT.Mateo.HectorDinner}}",
 
         // Hector's 7 Heart Event Pt2
-        "HectorRiver2": "{{i18n:CT.Mateo.HectorRiver2}}",
+        "HectorRiver2": "{{i18n:CT.Mateo.HectorRiver2{{HectorPronouns}}}}",
 
         // Hector's 8 Heart Event
         "HectorRiver3": "{{i18n:CT.Mateo.HectorRiver3}}",
