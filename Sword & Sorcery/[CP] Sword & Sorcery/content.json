@@ -322,10 +322,6 @@
       }
     },
     {
-      "Name": "MateoDND_Setup",
-      "Value": "farmer 10 19 0 Hector 14 17 0 Eloise 15 17 0 Jacob 16 17 0 Mateo 15 14 2 OliverK 8 13 3 Aideen 16 14 2 Krobus 7 6 1"
-    },
-    {
       "Name": "HectorIntroRequirement",
       "Value": "SnS.Ch2.Hector.1/e SnS.Ch1.Mateo.14/t 0800 2200/n Hector_SpecialOrders_Pentacle1/n Hector_SpecialOrders_Pentacle2/n Hector_SpecialOrders_Pentacle3/n Hector_SpecialOrders_Pentacle4/F",
       "When": {
@@ -438,145 +434,6 @@
       }
     },
     {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} Sterling 12 15 1 Mia 15 12 0 Henry 3 18 0",
-      "When": {
-        "HasMod": "Himetarts.ARV.CP"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} Trace 14 12 0 Anew 13 12 0",
-      "When": {
-        "HasMod": "CreatorKami.TYRSA.CP"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} RodneyOBrien 8 12 3",
-      "When": {
-        "HasMod": "TheFrenchDodo.RodneyOBrien"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} Jasper 12 16 1",
-      "When": {
-        "HasMod": "Lemurkat.NPCJasper"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} Nova.Dylan 5 17 3 Nova.Eli 18 16 3",
-      "When": {
-        "HasMod": "TenebrousNova.EliDylan.CP"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} Cambria 5 16 3",
-      "When": {
-        "HasMod": "Squeaks.MGC.CP"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} SenS 8 5 2",
-      "When": {
-        "HasMod": "7thAxis.DitR.CP, 7thAxis.LitD.CP"
-     }
-    },
-    {
-      "Name": "MateoDND_SenWiggleSit",
-      "Value": "pause 1"
-    },
-    {
-      "Name": "MateoDND_SenWiggleSit",
-      "Value": "animate SenS false true 200 20 20 21 21 22 22 23 23 20 20",
-      "When": {
-        "HasMod": "7thAxis.DitR.CP, 7thAxis.LitD.CP"
-     }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} MisterGinger 24 15 0",
-      "When": {
-        "HasMod": "Lemurkat.Tristan.CP",
-        "HasSeenEvent": "5295000"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} Lavril 14 14 2 Void 9 5 3",
-      "When": {
-        "HasMod": "Arknir27.Lavril"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} RinnyAro 19 14 2",
-      "When": {
-        "HasMod": "Rinny.Aro.CP"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} Gunnar 18 13 3",
-      "When": {
-        "HasMod": "MadDog.HashtagBearFam"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} PlumForrest 2 19 0",
-      "When": {
-        "HasMod": "AgentPhoenixCupcake.cp.PlumForrest"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} Juliet 18 15 3",
-      "When": {
-        "HasMod": "LemurKat.JulietHouse.NPC"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} Lyell 25 15 0",
-      "When": {
-        "HasMod": "Fellowclown.Lyell"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} Barron 9 14 2",
-      "When": {
-        "HasMod": "Fellowclown.TravelingDreamer"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} Yri 20 15 0 Charles 21 14 3",
-      "When": {
-        "HasMod": "yri.yri"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} DialaSBV 19 17 3 DeryaSBV 18 18 0",
-      "When": {
-        "HasMod": "skellady.SBVCP"
-      }
-    },
-    {
-      "Name": "MateoDND_Setup",
-      "Value": "{{MateoDND_Setup}} Jio 27 16 3 Lance 26 16 1",
-      "When": {
-        "HasMod |contains=Rafseazz.RSVCC": "true",
-        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": "true"
-      }
-    },
-    {
       "Name": "CirrusIntro_EnD_Setup",
       "Value": "farmer 23 18 2 Hector 24 19 3 Mateo 22 19 1 Cirrus 33 18 2 Sam 33 20 0 Abigail 34 19 0 Sebastian 32 19 0 Gus 13 18 2 Emily 17 17 0 Willy 17 22 2 Clint 19 23 3 Pierre 11 20 0 Shane 21 17 2 Pam 7 18 1 Leah 2 20 1 Elliott 4 19 2 Harvey 18 20 0 Marnie 8 22 3 Lewis 9 22 1",
     },
@@ -685,6 +542,48 @@
     {
       "Name": "HectorPronouns",
       "Value": "|HPN1={{HectorPN1}} |HPN2={{HectorPN2}} |HPN3={{HectorPN3}} |HPN4={{HectorPN4}}"
+    },
+    {
+      "Name": "DynamicDnDClass",
+      "Value": "Wizard",
+      "When": {
+        "HasMail |contains=DnDWizard": true
+      }
+    },
+    {
+      "Name": "DynamicDnDClass",
+      "Value": "Ranger",
+      "When": {
+        "HasMail |contains=DnDRanger": true
+      }
+    },
+    {
+      "Name": "DynamicDnDClass",
+      "Value": "Paladin",
+      "When": {
+        "HasMail |contains=Paladin": true
+      }
+    },
+    {
+      "Name": "DynamicDnDClass",
+      "Value": "Bard",
+      "When": {
+        "HasMail |contains=DnDBard": true
+      }
+    },
+    {
+      "Name": "DynamicDnDClass",
+      "Value": "Cleric",
+      "When": {
+        "HasMail |contains=DnDCleric": true
+      }
+    },
+    {
+      "Name": "DynamicDnDClass",
+      "Value": "Rogue",
+      "When": {
+        "HasMail |contains=DnDRogue": true
+      }
     },
   ]
 }

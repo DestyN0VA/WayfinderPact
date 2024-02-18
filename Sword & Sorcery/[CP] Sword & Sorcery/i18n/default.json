@@ -1585,6 +1585,20 @@ ________      ________ _   _ _______ _____
 "Core.Hector.RefusalBotherA":"No means no, @.",
 "Core.Hector.RefusalBotherB":"I said no! I'd threaten to eat you, but I feel like you'd make it weird.$18",
 
+// RESORT
+"Core.Hector.ResortEntering":"",
+"Core.Hector.ResortLeaving":"",
+"Core.Hector.ResortShore":"",
+"Core.Hector.ResortUmbrella":"",
+"Core.Hector.ResortWander":"",
+"Core.Hector.ResortWander.2":"",
+"Core.Hector.ResortChair":"",
+"Core.Hector.ResortBar":"",
+"Core.Hector.ResortTowel":"",
+"Core.Hector.ResortTowel.2":"",
+"Core.Hector.Resort_Towel.3":"",
+"Core.Hector.Resort":"",
+
 // PLAYER DEATH
 "Core.Hector.PlayerKilled.Mines.01": "@!",
 "Core.Hector.PlayerKilled.Mines.02": "@, Why would you put yourself in danger like this?!",
