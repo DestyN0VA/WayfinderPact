@@ -1586,18 +1586,18 @@ ________      ________ _   _ _______ _____
 "Core.Hector.RefusalBotherB":"I said no! I'd threaten to eat you, but I feel like you'd make it weird.$18",
 
 // RESORT
-"Core.Hector.ResortEntering":"",
-"Core.Hector.ResortLeaving":"",
-"Core.Hector.ResortShore":"",
-"Core.Hector.ResortUmbrella":"",
-"Core.Hector.ResortWander":"",
-"Core.Hector.ResortWander.2":"",
-"Core.Hector.ResortChair":"",
-"Core.Hector.ResortBar":"",
-"Core.Hector.ResortTowel":"",
-"Core.Hector.ResortTowel.2":"",
-"Core.Hector.Resort_Towel.3":"",
-"Core.Hector.Resort":"",
+"Core.Hector.ResortEntering":"It's so hot out, how do people enjoy this?$2",
+"Core.Hector.ResortLeaving":"Oh thank goodness. I've had enough 'fun in the sun' to last me a lifetime.$9",
+"Core.Hector.ResortShore":"The ocean, I love. Why can't I get ocean sans beach? Design flaw, for sure.$8",
+"Core.Hector.ResortUmbrella":"I think I'll just hide under here for the rest of this trip, thanks.$6",
+"Core.Hector.ResortWander":"I don't like sand. It's coarse and rough and irritating and gets everywhere.$16",
+"Core.Hector.ResortWander.2":"I don't like sand. It's coarse and rough and irritating and gets everywhere.$16",
+"Core.Hector.ResortChair":"Can I go home yet without looking like a weirdo?$23",
+"Core.Hector.ResortBar":"Why do people drink shit that tastes like bread when they can have delicious stuff made with fruits?$4",
+"Core.Hector.ResortTowel":"I'm so boooooooored, I want to go hoooooooooooooooome.$16",
+"Core.Hector.ResortTowel.2":"Four thousand, three hundred, nintey six. Four thousand, three hundred, nintey se- Oh, hey @. Just counting the grains of sand.$16",
+"Core.Hector.Resort_Towel.3":"%Hector has fallen asleep without sunscreen. Oh, no!",
+"Core.Hector.Resort":"Well, now I can officially say I've braved the island. Is it time to go home, yet?$9",
 
 // PLAYER DEATH
 "Core.Hector.PlayerKilled.Mines.01": "@!",
@@ -2318,7 +2318,7 @@ ________      ________ _   _ _______ _____
 "CFD.Hector.ExtraDialogue_SummitEvent_closingmessage": "It's been a long road for you and Biróg...",
 
 // MOVIE INVITATION - SPOUSE 
-"MovieInvite.Spouse.Hector": "I'm always happy to see a flick with you, Sunshine.$19",
+"MovieInvite.Spouse.Hector": "Sure! I'm always happy to spend time with you in a dark, cold place...$9",
 
 
 /*
@@ -3841,10 +3841,10 @@ ________      ________ _   _ _______ _____
 "magicitem.argentisshield.description": "Fully restored to it's former power, this shield empowers you to protect your friends and loved ones.", 
 
 "food.salishburbon.name": "Salish Sea Burbon",
-"food.salishburbon.description": "Mateo's favorite drink, made in a small brewery in the Fern Islands.",
+"food.salishburbon.description": "Mateo's favorite drink, made at a small brewery in the Fern Islands.",
 
-"food.heartymushroomstew.name": "Hearty Mushroom Stew",
-"food.heartymushroomstew.description": "Earthy and warm, with lots of flavors. Invokes a sense of nostalgia when you eat it.",
+"food.autumnalstew.name": "Autumnal Stew",
+"food.hautumnalstew.description": "Earthy and warm, with lots of seasonal flavors. It tastes how friendship feels.",
 
 "food.dandeliongreens.name": "Sautéed Dandelion Greens with Eggs",
 "food.dandeliongreens.description": "A little bit of forage and some eggs can go a long way for a tasty meal.",
@@ -3939,4 +3939,5 @@ ________      ________ _   _ _______ _____
 */
 
 "miscellaneous.CAGArtifactLedger.message": "Use the ledger to trade monster bones for artifacts & minerals.", 
+"Strings.Dandelion.BoardedDoor": "This building looks abandoned. Best leave it be."
 }

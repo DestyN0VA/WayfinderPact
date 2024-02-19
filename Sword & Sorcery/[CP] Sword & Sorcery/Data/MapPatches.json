@@ -267,8 +267,92 @@
             }
         },
 
+        // PATCHES THE BROKEN DOWN LION'S MANE 
+        {
+            "LogName": "Lion's Mane (Broken) Patch",
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_Village",
+            "FromFile": "Assets/Maps/LionsManeBrokenPatch.tmx",
+            "ToArea": {
+                "X": 50,
+                "Y": 0,
+                "Width": 12,
+                "Height": 9
+            },
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch4.Dandelion.PENDING": false
+            }
+        },
 
+        // ADDS SHUDDERS TO THE BROKEN DOWN LION'S MANE
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_Village",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 57,
+                        "Y": 4
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Message BoardedDoor",
+                    }
+                }
+            ],
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch4.Dandelion.PENDING": false
+            }
+        },
 
-        
+        // PATCHES THE REPAIRED DOWN LION'S MANE 
+        {
+            "LogName": "Lion's Mane (Repaired) Patch",
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_Village",
+            "FromFile": "Assets/Maps/LionsManeRepairedPatch.tmx",
+            "ToArea": {
+                "X": 50,
+                "Y": 0,
+                "Width": 12,
+                "Height": 9
+            },
+            "MapTiles": [
+                {
+                    "Position": { // RIGHT HAND DOOR
+                        "X": 7,
+                        "Y": 4
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "LockedDoorWarp 2 5 EastScarp_VanInterior 1000 2000"
+                    }
+                },
+                {
+                    "Position": { // LEFT HAND DOOR
+                        "X": 5,
+                        "Y": 4
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "LockedDoorWarp 2 5 EastScarp_VanInterior 1000 2000"
+                    }
+                },
+                {
+                    "Position": { // LEFT HAND DOOR
+                        "X": 4,
+                        "Y": 4
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "LockedDoorWarp 2 5 EastScarp_VanInterior 1000 2000"
+                    }
+                }
+            ],
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch4.Dandelion.PENDING": true
+            }
+        },
+
     ]
 }

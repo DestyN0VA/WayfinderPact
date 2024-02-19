@@ -547,42 +547,42 @@
       "Name": "DynamicDnDClass",
       "Value": "Wizard",
       "When": {
-        "HasMail |contains=DnDWizard": true
+        "HasFlag |contains=DnDWizard": true
       }
     },
     {
       "Name": "DynamicDnDClass",
       "Value": "Ranger",
       "When": {
-        "HasMail |contains=DnDRanger": true
+        "HasFlag |contains=DnDRanger": true
       }
     },
     {
       "Name": "DynamicDnDClass",
       "Value": "Paladin",
       "When": {
-        "HasMail |contains=Paladin": true
+        "HasFlag |contains=Paladin": true
       }
     },
     {
       "Name": "DynamicDnDClass",
       "Value": "Bard",
       "When": {
-        "HasMail |contains=DnDBard": true
+        "HasFlag |contains=DnDBard": true
       }
     },
     {
       "Name": "DynamicDnDClass",
       "Value": "Cleric",
       "When": {
-        "HasMail |contains=DnDCleric": true
+        "HasFlag |contains=DnDCleric": true
       }
     },
     {
       "Name": "DynamicDnDClass",
       "Value": "Rogue",
       "When": {
-        "HasMail |contains=DnDRogue": true
+        "HasFlag |contains=DnDRogue": true
       }
     },
   ]
