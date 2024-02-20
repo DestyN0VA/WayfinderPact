@@ -41,28 +41,28 @@
 
   "ConfigSchema": {
     "Player Pronouns 1": {
-      "Default": "they",
+      "Default": "They",
       "AllowBlank": false,
       "AllowMultiple": true,
       "Description": "Sets the player's desired pronouns.",
       "Section": "Pronouns"
   }, 
   "Player Pronouns 2": {
-      "Default": "them",
+      "Default": "Them",
       "AllowBlank": false,
       "AllowMultiple": true,
       "Description": "Sets the player's desired pronouns.",
       "Section": "Pronouns"
   },
   "Player Pronouns 3": {
-      "Default": "theirs",
+      "Default": "Theirs",
       "AllowBlank": false,
       "AllowMultiple": true,
       "Description": "Sets the player's desired pronouns.",
       "Section": "Pronouns"
   },
   "Player Pronouns 4": {
-      "Default": "themself",
+      "Default": "Themselves",
       "AllowBlank": false,
       "AllowMultiple": true,
       "Description": "Sets the player's desired pronouns.",
