@@ -129,8 +129,8 @@
 "Core.Mateo.PlayerKilled.Skull.02": "Easy, now... take it slow.",
 "Core.Mateo.PlayerKilled.Skull.03": "You're awake! Thank goodness. Mateo found you all bent out of shape in the Skull Cave!$2",
 "Core.Mateo.PlayerKilled.Skull.04": "Sunshine!$18#$b#I was so worried, you getting hurt is my worst nightmare!$19",
-"Core.Mateo.PlayerKilled.Skull.05": "Are {{PPN1}} going to be alright, Harv?$29",
-"Core.Mateo.PlayerKilled.Skull.06": "{{PPN1}}'ll be fine, but {{PPN1}} need to be a little more careful next time.$2",
+"Core.Mateo.PlayerKilled.Skull.05": "Are {{Lowercase: {{PPN1}}}} going to be alright, Harv?$29",
+"Core.Mateo.PlayerKilled.Skull.06": "{{PPN1}}'ll be fine, but {{Lowercase: {{PPN1}}}}'ll need to be a little more careful next time.$2",
 "Core.Mateo.PlayerKilled.Skull.07": "I'll leave you two to talk; let me know if you need anything.$2",
 "Core.Mateo.PlayerKilled.Skull.08": "I was so afraid of losing you, @. I don't know what I'd do without my best friend, the love of my life.$17#$b#Please ask for help if you need it next time, Sunshine! I'd rather be in danger with you than have you go at the Skull Cave alone!$19",
 
@@ -812,7 +812,7 @@
 "CFD.Mateo.Utility.cs.5375": "@, Mateo... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you partners in crime, haha!$h",
 "CFD.Mateo.Utility.cs.5377": "@, Mateo... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you partners in crime, haha!$h",
 "CFD.Mateo.Utility.cs.5367": "There comes a time in everyone's life when we cross paths with someone unexpectedly.#$b#And yet today, I find myself uniting two people who've decided to see their paths converge into one.$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Mateo in the bonds of marriage.",
-"CFD.Mateo.Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if {{PPN1}}'d fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Mateo in the bonds of marriage.",
+"CFD.Mateo.Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if {{Lowercase: {{PPN1}}}}'d fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Mateo in the bonds of marriage.",
 
 
 // GENDER NEUTRAL PARENTAL EDITS 
@@ -2299,7 +2299,7 @@ ________      ________ _   _ _______ _____
 "CFD.Hector.Utility.cs.5375": "@, strange person I've never met before... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you partners! Congratulations!$h",
 "CFD.Hector.Utility.cs.5377": "@, strange person I've never met before... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you partners! Congratulations!$h",
 "CFD.Hector.Utility.cs.5367": "There comes a time in everyone's life when we cross paths with someone unexpectedly.#$b#In this case, it seems to be EXTREMELY unexpectedly.$h#$b#It is my great? Honor on this day {0} of {1}, to unite @ and - what was their name again? - in the bonds of marriage.",
-"CFD.Hector.Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if {{PPN1}}'d fit in with our community...#$b#And I suppose we're about to learn how this OTHER new person fits into the community.$h#$b#It is my great honor on this day {0} of {1}, to unite @ and uh, whatstheirname, in the bonds of marriage.",
+"CFD.Hector.Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if {{Lowercase: {{PPN1}}}}'d fit in with our community...#$b#And I suppose we're about to learn how this OTHER new person fits into the community.$h#$b#It is my great honor on this day {0} of {1}, to unite @ and uh, whatstheirname, in the bonds of marriage.",
 
 // GENDER NEUTRAL SOCIAL PAGE EDITS 
 "CFD.Hector.SocialPage.cs.11635": "(single)",
@@ -2663,7 +2663,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch2.7H2.Hector.3": "Let me share something beautiful with you.$29",
 "Events.S&S.Ch2.7H2.Hector.4": "In order to pull this off, I need the very essence of nature itself in a pretty substantial amount.$22#$b#You're a farmer before anything else, @. There's no better person to collect it.$8",
 "Events.S&S.Ch2.7H2.Hector.5": "Now, I hate to ritualistically empower you and then kick you out, but I've still got stuff to prepare for when we finally fire this off for real.$9#$b#Thank you for your help! Now, get goin'! Shoo!$9",
-"Events.S&S.Ch2.7H2.Hector.6": "{{PPN1}} {{PPNI}} gone...",
+"Events.S&S.Ch2.7H2.Hector.6": "{{PPN1}} {{Lowercase: {{PPNI}}}} gone...",
 "Events.S&S.Ch2.7H2.Hector.7": "I'm so tired... I can't...$19",
 
 //8 HEARTS
