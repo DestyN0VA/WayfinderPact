@@ -556,8 +556,36 @@
       }
     },
     {
+      "Name": "DnDClassQQ",
+      "Value": "It's Wizard time. I cast FIREBALL!",
+      "When": {
+        "HasFlag |contains=DnDWizard": true
+      }
+    },
+    {
+      "Name": "DnDClassResponse",
+      "Value": "The Count's side of the room is engulfed in flames. Thankfully, it's large enough that your party members aren't impacted.$13",
+      "When": {
+        "HasFlag |contains=DnDWizard": true
+      }
+    },
+    {
       "Name": "DynamicDnDClass",
       "Value": "Ranger",
+      "When": {
+        "HasFlag |contains=DnDRanger": true
+      }
+    },
+    {
+      "Name": "DnDClassQQ",
+      "Value": "I send my miniature giant space hamster after Brahd, then nock an arrow and shoot it at him while he's distracted!",
+      "When": {
+        "HasFlag |contains=DnDRanger": true
+      }
+    },
+    {
+      "Name": "DnDClassResponse",
+      "Value": "The Count is distracted by the absurdity of your animal companion, and takes your arrow straight to the chest.$13",
       "When": {
         "HasFlag |contains=DnDRanger": true
       }
@@ -570,8 +598,36 @@
       }
     },
     {
+      "Name": "DnDClassQQ",
+      "Value": "I charge at Brahd, bashing him with my shield for the first attack and smiting him for the second!",
+      "When": {
+        "HasFlag |contains=DnDPaladin": true
+      }
+    },
+    {
+      "Name": "DnDClassResponse",
+      "Value": "He reels back! You got him right in the eye with the corner of the shield, and slashed his chest real good citing the power of your oath.$13",
+      "When": {
+        "HasFlag |contains=DnDPaladin": true
+      }
+    },
+    {
       "Name": "DynamicDnDClass",
       "Value": "Bard",
+      "When": {
+        "HasFlag |contains=DnDBard": true
+      }
+    },
+    {
+      "Name": "DnDClassQQ",
+      "Value": "I open by viciously mocking Brahd: 'I hate to judge a book by its cover, but you look all cover and no pages.'",
+      "When": {
+        "HasFlag |contains=DnDBard": true
+      }
+    },
+    {
+      "Name": "DnDClassResponse",
+      "Value": "The Count, who's basically never had his feelings hurt by a mere mortal, is so flabbergasted that he's unable to do anything but process what you just said.$13",
       "When": {
         "HasFlag |contains=DnDBard": true
       }
@@ -584,10 +640,38 @@
       }
     },
     {
+      "Name": "DnDClassQQ",
+      "Value": "I point my mace at Brahd, calling on my patron, The God of Light, to intervene!",
+      "When": {
+        "HasFlag |contains=DnDCleric": true
+      }
+    },
+    {
+      "Name": "DnDClassResponse",
+      "Value": "Your God completely reinvigorates your entire party, and newly lent strength courses through everyone.$13",
+      "When": {
+        "HasFlag |contains=DnDCleric": true
+      }
+    },
+    {
       "Name": "DynamicDnDClass",
       "Value": "Rogue",
       "When": {
         "HasFlag |contains=DnDRogue": true
+      }
+    },
+    {
+      "Name": "DnDClassQQ",
+      "Value": "I meld with the darkness and move from shadow to shadow to sneak around Brahd, and attack him from behind!",
+      "When": {
+        "HasFlag |contains=DnDRogue": true
+      }
+    },
+    {
+      "Name": "DnDClassResponse",
+      "Value": "You're able to step from the shadows right behind Brahd, getting him clean in the ribs with your daggers.$13",
+      "When": {
+        "HasFlag |contains=DnDRanger": true
       }
     },
   ]
