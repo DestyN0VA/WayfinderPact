@@ -23,7 +23,7 @@
     {
       "Logname": "Sword & Sorcery - Quest Includes",
       "Action": "Include",
-      "FromFile": "Data/Quests & Items/BuildQuest.json, Data/Quests & Items/CGSpecialOrders.json, Data/Quests & Items/PentacleQuest.json, Data/Quests & Items/RiverQuest.json",
+      "FromFile": "Data/Quests & Items/BuildQuest.json, Data/Quests & Items/BuildQuest2.json, Data/Quests & Items/CGSpecialOrders.json, Data/Quests & Items/PentacleQuest.json, Data/Quests & Items/RiverQuest.json",
     },
     {
       "Logname": "Sword & Sorcery - Custom Companions Includes",

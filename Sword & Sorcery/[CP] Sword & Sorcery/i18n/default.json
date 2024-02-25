@@ -901,9 +901,9 @@
 // BUILDING THE COASTAL GUILD & ES SPECIAL ORDER BOARD 
 "Quests.Mateo.SpecialOrders.BuildGuild.Name": "Mateo's Request",
 "Quests.Mateo.SpecialOrders.BuildGuild.Text": "Marlon and I need some supplies for the building and order board!", 
-"Quests.Mateo.SpecialOrders.BuildGuild.Objective.0.Text": "Deposit 500 pieces of wood into the stockpile in Robin's house.",
-"Quests.Mateo.SpecialOrders.BuildGuild.Objective.1.Text": "Deposit 300 stones into the stockpile in Robin's house.",
-"Quests.Mateo.SpecialOrders.BuildGuild.Objective.2.Text": "Deposit 100 pieces of hardwood into the stockpile in Robin's house.",
+"Quests.Mateo.SpecialOrders.BuildGuild.Objective.0.Text": "Deposit 500 pieces of wood into the barrel in front of the building..",
+"Quests.Mateo.SpecialOrders.BuildGuild.Objective.1.Text": "Deposit 300 stones into the barrel in front of the building..",
+"Quests.Mateo.SpecialOrders.BuildGuild.Objective.2.Text": "Deposit 100 pieces of hardwood into the barrel in front of the building..",
 
 // COASTAL GUILD SPECIAL ORDERS - MONSTER NAMES
 "Quests.Mateo.SpecialOrders.AQ1.0.LocalizedName": "Serpents",
@@ -3604,8 +3604,9 @@ ________      ________ _   _ _______ _____
 */
 
 "Strings.Cirrus.IncrediWoman": "This mural is very carefully painted on, but it's seen better days. The van is worse for wear.",
-"Strings.Cirrus.FreddyFlamingo": "Freddy the Flamingo is Cirrus' good friend. Treat him with respect.",
-"Strings.Cirrus.PlasticLunch": "Freddy's got his own little lunch and everything. Like him, it's made of plastic.",
+"Strings.Cirrus.MaritaFlamingo": "Marita the Flamingo is Cirrus' good friend. Treat her kindly.",
+"Strings.Cirrus.PlasticLunch": "Marita's got her own little lunch and everything. Looks delectable, despite being made of plastic.",
+"Strings.Cirrus.BoardedDoor": "This building looks abandoned. Best leave it be.",
 
 /*
    _____ _    _  _____ _______ ____  __  __   ______ _______   ________ _____   
@@ -3651,10 +3652,16 @@ ________      ________ _   _ _______ _____
 
 */
 
-"Quests.Cirrus.SpecialOrders.Example": "",
+// BUILDING THE LION'S MANE 
+"Quests.CAGQuest.UntimedSpecialOrder.LionsMane.Name": "Cirrus's Request",
+"Quests.CAGQuest.UntimedSpecialOrder.LionsMane.Text": "Help Cirrus out by gathering supplies for her to build with!", 
+"Quests.CAGQuest.UntimedSpecialOrder.LionsMane.Objective.0.Text": "Deposit 900 pieces of wood into the barrel in front of the building.",
+"Quests.CAGQuest.UntimedSpecialOrder.LionsMane.Objective.1.Text": "Deposit 500 stones into the barrel in front of the building.",
+"Quests.CAGQuest.UntimedSpecialOrder.LionsMane.Objective.2.Text": "Deposit 200 pieces of hardwood into the barrel in front of the building.",
+"Quests.CAGQuest.UntimedSpecialOrder.LionsMane.Objective.3.Text": "Deposit 25 iron bars into the barrel in front of the building.",
 
 /*
-________      ________ _   _ _______ _____ 
+ ________      ________ _   _ _______ _____ 
 |  ____\ \    / /  ____| \ | |__   __/ ____|
 | |__   \ \  / /| |__  |  \| |  | | | (___  
 |  __|   \ \/ / |  __| | . ` |  | |  \___ \ 
@@ -3939,5 +3946,4 @@ ________      ________ _   _ _______ _____
 */
 
 "miscellaneous.CAGArtifactLedger.message": "Use the ledger to trade monster bones for artifacts & minerals.", 
-"Strings.Dandelion.BoardedDoor": "This building looks abandoned. Best leave it be."
 }

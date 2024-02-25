@@ -80,5 +80,15 @@
             "Target": "Characters/LumisteriaCloset",
             "FromFile": "assets/TemporaryActors/Characters/LumisteriaCloset.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Characters/BookDryad, Portraits/BookDryad",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/BookDryad.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/PizzaVan",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/PizzaVan.png"
+        },
     ]
 }

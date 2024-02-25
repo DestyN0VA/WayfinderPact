@@ -9,7 +9,7 @@
         {
             //DANDELION'S STRINGS 
     
-            "BoardedDoor":"{{i18n:Strings.Dandelion.BoardedDoor}}",
+            "EXAMPLE":"{{i18n:Strings.Dandelion.EXAMPLE}}",
     
         }
        }
