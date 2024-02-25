@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <Name>Sword and Sorcery (SMAPI Component)</Name>
+	  <Description>...</Description>
+	  <UniqueId>DestyNova.SwordAndSorcery.SMAPI</UniqueId>
+	  <Authors>DestyNova, spacechase0</Authors>
+	  <Version>1.0</Version>
+    <TargetFramework>net6.0</TargetFramework>
+	  <EnableHarmony>true</EnableHarmony>
+	  <LangVersion>latest</LangVersion>
+	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	  <EnableNETAnalyzers>true</EnableNETAnalyzers>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Leclair.Stardew.ModManifestBuilder" Version="2.1.0" />
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
+    <PackageReference Include="Pathoschild.Stardew.ModTranslationClassBuilder" Version="2.0.1" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<SMAPIDependency Include="spacechase0.SpaceCore" Version="1.13" Reference="true" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="NEA\HarmonyPatches\" />
+	</ItemGroup>
+
+</Project>

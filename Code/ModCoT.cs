@@ -1,0 +1,780 @@
+﻿using HarmonyLib;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Netcode;
+using SpaceCore.Events;
+using SpaceCore.Interface;
+using SpaceShared.APIs;
+using StardewModdingAPI;
+using StardewModdingAPI.Utilities;
+using StardewValley;
+using StardewValley.Characters;
+using StardewValley.Menus;
+using StardewValley.TerrainFeatures;
+using StardewValley.Tools;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+
+using SwordAndSorcerySMAPI;
+using SpaceCore;
+
+namespace CircleOfThornsSMAPI
+{
+    public class FarmerExtData
+    {
+        public readonly NetInt form = new(0);
+        public readonly NetBool transformed = new(false);
+        public readonly NetFloat expRemainder = new(0);
+        public double noMovementTimer = 0;
+
+        public bool isResting => noMovementTimer >= 3;
+
+        public static int FormGetter(Farmer farmer)
+        {
+            return farmer.GetFarmerExtData().form.Value;
+        }
+        public static void FormSetter(Farmer farmer, int val)
+        {
+            farmer.GetFarmerExtData().form.Value = val;
+        }
+        public static float ExpRemainderGetter(Farmer farmer)
+        {
+            return farmer.GetFarmerExtData().expRemainder.Value;
+        }
+        public static void ExpRemainderSetter(Farmer farmer, float val)
+        {
+            farmer.GetFarmerExtData().expRemainder.Value = val;
+        }
+    }
+
+    public static class Extensions
+    {
+        public static FarmerExtData GetFarmerExtData(this Farmer instance)
+        {
+            return ModCoT.farmerData.GetOrCreateValue(instance);
+        }
+    }
+
+    public class Configuration
+    {
+        public KeybindList ShapeshiftKeybinding { get; set; } = new(SButton.Tab);
+    }
+
+    public class ModCoT
+    {
+        public static ModCoT Instance;
+
+        public static ConditionalWeakTable<Farmer, FarmerExtData> farmerData = new();
+        public static Configuration Config { get; set; }
+
+        public static Texture2D[][] formTexs;
+
+        public static Texture2D huckleberryTex;
+
+        public static Texture2D walletItemTex;
+
+        public static IJsonAssetsApi ja;
+
+        public const string ShapeshiftingEventId = "SnS.Ch2.Hector.16";
+        public const string DropEssencesEventId = "SnS.Ch2.Hector.12";
+        public const string WalletItemEventID = "SnS.Ch2.Hector.19";
+
+
+        internal static Skill Skill;
+
+        public IMonitor Monitor;
+        public IManifest ModManifest;
+        public IModHelper Helper;
+        public ModCoT(IMonitor monitor, IManifest manifest, IModHelper helper)
+        {
+            Instance = this;
+            Monitor = monitor;
+            ModManifest = manifest;
+            Helper = helper;
+        }
+
+        public void Entry()
+        {
+            //I18n.Init(helper.Translation);
+
+            Config = Helper.ReadConfig<Configuration>();
+            formTexs = new Texture2D[3][]
+                {
+                    new Texture2D[] { Helper.ModContent.Load<Texture2D>("assets/doe.png"), Helper.ModContent.Load<Texture2D>("assets/doeeyes.png") },
+                    new Texture2D[] { Helper.ModContent.Load<Texture2D>("assets/buck.png"), Helper.ModContent.Load<Texture2D>("assets/buckeyes.png") },
+                    new Texture2D[] { Helper.ModContent.Load<Texture2D>("assets/wolf.png"), Helper.ModContent.Load<Texture2D>("assets/wolfeyes.png") }
+                };
+            huckleberryTex = Helper.ModContent.Load<Texture2D>("assets/huckleberry.png");
+            walletItemTex = Helper.ModContent.Load<Texture2D>("assets/wallet-item.png");
+
+            Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
+            Helper.Events.GameLoop.UpdateTicking += GameLoop_UpdateTicking;
+            Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
+
+            Skill = new Skill();
+        }
+
+        private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
+        {
+            string[][] recipes =
+                new string[][]
+                {
+                    null,
+                    new string[] { "Ancient Amaranth Seeds", "Ancient Epiphytic Fern Seeds" },
+                    new string[] { "Ancient Glowing Polypore Mushroom Spores" },
+                    new string[] { "Ancient Wild Fairy Rose Seeds" },
+                    new string[] { "Ancient Elderberry Seeds" },
+                    null,
+                    new string[] { "Ancient Bottle Gourd Seeds", "swordandsorcery.lavaeelandstirfriedancientbottlegourd" },
+                    new string[] { "Ancient Giant Apple Berry Seeds", "swordandsorcery.mushroomsredsauce" },
+                    new string[] { "Ancient Azure Detura", "swordandsorcery.ferngreensandpineapple" },
+                    new string[] { "Ancient Glowing Huckleberry Seeds", "swordandsorcery.ancienthuckleberryicecream" },
+                    null,
+                };
+            for (int level = 1; level <= Game1.player.GetCustomSkillLevel(Skill); ++level)
+            {
+                if (recipes[level] != null)
+                {
+                    Game1.player.craftingRecipes.TryAdd(recipes[level][0], 0);
+                    if (recipes[level].Length == 2)
+                    {
+                        if (level == 1)
+                        {
+                            Game1.player.craftingRecipes.TryAdd(recipes[level][1], 0);
+                        }
+                        else
+                        {
+                            Game1.player.cookingRecipes.TryAdd(recipes[level][1], 0);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)
+        {
+            var gmcm = Helper.ModRegistry.GetApi<SpaceShared.APIs.IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
+            if (gmcm != null)
+            {
+                gmcm.Register(ModManifest, () => Config = new(), () => Helper.WriteConfig(Config));
+                gmcm.AddKeybindList(ModManifest, () => Config.ShapeshiftKeybinding, (kl) => Config.ShapeshiftKeybinding = kl, () => I18n.Keybind_Shapeshift_Name(), () => I18n.Keybind_Shapeshift_Description());
+            }
+
+            var sc = Helper.ModRegistry.GetApi<SpaceShared.APIs.ISpaceCoreApi>("spacechase0.SpaceCore");
+            sc.RegisterCustomProperty(typeof(Farmer), "shapeshiftFormId", typeof(bool), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.FormGetter)), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.FormSetter)));
+            sc.RegisterCustomProperty(typeof(Farmer), "druidicsExpRemainder", typeof(float), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderGetter)), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderSetter)));
+            Skills.RegisterSkill(Skill);
+        }
+
+        private double shapeshiftPressedTimer = 0;
+        private int regenTimer = 0;
+        private void GameLoop_UpdateTicking(object sender, StardewModdingAPI.Events.UpdateTickingEventArgs e)
+        {
+            if (!Context.IsWorldReady|| Game1.player.currentLocation != null && Game1.player.currentLocation.currentEvent != null && !Game1.player.currentLocation.currentEvent.isFestival)
+                return;
+            if (//false&&
+                !Game1.player.eventsSeen.Contains(ShapeshiftingEventId))
+                return;
+
+            var data = Game1.player.GetFarmerExtData();
+
+            if (Config.ShapeshiftKeybinding.IsDown())
+            {
+                shapeshiftPressedTimer += Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
+            }
+            else
+            {
+                if (shapeshiftPressedTimer > 0)
+                {
+                    if (shapeshiftPressedTimer > 2)
+                    {
+                        data.transformed.Value = true;
+                        data.form.Value = (data.form.Value + 1) % (Game1.player.HasCustomProfession(Skill.ProfessionShapeshiftWolf) ? 3 : 2);
+                    }
+                    else
+                        data.transformed.Value = !data.transformed.Value;
+
+                    data.noMovementTimer = 0;
+                    for (int i = 0; i < 8; ++i)
+                    {
+                        Vector2 diff = new Vector2(Game1.random.Next(96) - 48, Game1.random.Next(96) - 48);
+                        Game1.player.currentLocation.TemporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Rectangle(0, 320, 64, 64), 50f, 8, 0, Game1.player.getStandingPosition() - new Vector2(32, 48) + diff, flicker: false, flipped: false));
+                    }
+
+                    Game1.player.currentLocation.playSound("coldSpell", Game1.player.Position);
+                }
+                shapeshiftPressedTimer = 0;
+            }
+
+            if (data.transformed.Value)
+            {
+                var b = Game1.player.buffs.AppliedBuffs.FirstOrDefault(pair => pair.Key == "shapeshifted").Value;
+                if (b == null)
+                {
+                    b = new Buff(
+                        "shapeshifted",
+                        duration: 250,
+                        effects: new()
+                        {
+                            Speed = { 0.5f + Game1.player.GetCustomBuffedSkillLevel( ModCoT.Skill ) * 0.05f },
+                            ForagingLevel = { 1 },
+                        },
+                        displayName: I18n.Shapeshifted(),
+                        iconTexture: ModCoT.Skill.Icon,
+                        iconSheetIndex: 0);
+                    if (Game1.player.HasCustomProfession(Skill.ProfessionShapeshiftWolf))
+                    {
+                        b.effects.AttackMultiplier.Value = 1.10f;
+                        b.effects.Defense.Value = 3;
+                    }
+                    Game1.player.applyBuff(b);
+                }
+                else
+                {
+                    b.millisecondsDuration = 250;
+                }
+
+                if (data.isResting)
+                {
+                    regenTimer += Game1.currentGameTime.ElapsedGameTime.Milliseconds;
+                    int timerCap = 200 - Game1.player.GetCustomBuffedSkillLevel(ModCoT.Skill) * 10;
+                    if (regenTimer >= timerCap)
+                    {
+                        regenTimer -= timerCap;
+                        if (Game1.player.Stamina < Game1.player.MaxStamina)
+                            ++Game1.player.Stamina;
+                        if (Game1.player.health < Game1.player.maxHealth)
+                            ++Game1.player.health;
+                    }
+                }
+            }
+        }
+    }
+
+    // Engagement event
+    [HarmonyPatch(typeof(NPC), "engagementResponse")]
+    public static class NpcEngagementResponseButForHectorPatch
+    {
+        public static void Postfix(NPC __instance, Farmer who, bool asRoommate)
+        {
+            if (__instance.Name != "Hector")
+                return;
+
+            if (Game1.activeClickableMenu is DialogueBox db)
+            {
+                db.dialogueFinished = true;
+                db.closeDialogue();
+                Game1.activeClickableMenu = null;
+                Game1.dialogueUp = false;
+            }
+
+            Game1.PlayEvent("SnS.Ch2.Hector.17", false, false);
+        }
+    }
+
+    // No kids
+    [HarmonyPatch(typeof(NPC), nameof(NPC.canGetPregnant))]
+    public static class NPCCanGetPregnantNotHectorPatch
+    {
+        public static bool Prefix(NPC __instance, ref bool __result)
+        {
+            if (__instance.Name == "Hector")
+            {
+                __result = false;
+                return false;
+            }
+
+            return true;
+        }
+    }
+
+    // Fruit tree stuff
+    [HarmonyPatch(typeof(FruitTree), nameof(FruitTree.IsInSeasonHere))]
+    public static class FruitTreeHuckleberrySeasonPatch
+    {
+        public static bool Prefix(FruitTree __instance, ref bool __result)
+        {
+            if (__instance.treeId.Value != "swordandsorcery.ancientglowinghuckleberry")
+                return true;
+
+            var season = Game1.GetSeasonForLocation(__instance.Location);
+            __result = season is Season.Summer or Season.Fall;
+
+            return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(FruitTree), nameof(FruitTree.draw))]
+    public static class FruitTreeDrawHuckleberryPatch
+    {
+        public static bool Prefix(FruitTree __instance, SpriteBatch spriteBatch, NetBool ___falling, float ___shakeTimer, float ___shakeRotation, List<Leaf> ___leaves, float ___alpha )
+        {
+            if (__instance.treeId.Value != "swordandsorcery.ancientglowinghuckleberry")
+                return true;
+
+            Season season = Game1.GetSeasonForLocation(__instance.Location);
+            if ((bool)__instance.greenHouseTileTree)
+            {
+                spriteBatch.Draw(Game1.mouseCursors, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f, __instance.Tile.Y * 64f)), new Rectangle(669, 1957, 16, 16), Color.White, 0f, Vector2.Zero, 4f, SpriteEffects.None, 1E-08f);
+            }
+            if ((int)__instance.growthStage < 4)
+            {
+                Vector2 positionOffset = new Vector2((float)Math.Max(-8.0, Math.Min(64.0, Math.Sin((double)(__instance.Tile.X * 200f) / (Math.PI * 2.0)) * -16.0)), (float)Math.Max(-8.0, Math.Min(64.0, Math.Sin((double)(__instance.Tile.X * 200f) / (Math.PI * 2.0)) * -16.0))) / 2f;
+                Rectangle sourceRect = Rectangle.Empty;
+                sourceRect = (int)__instance.growthStage switch
+                {
+                    0 => new Rectangle(0, (int)__instance.GetSpriteRowNumber() * 5 * 16, 48, 80),
+                    1 => new Rectangle(48, (int)__instance.GetSpriteRowNumber() * 5 * 16, 48, 80),
+                    2 => new Rectangle(96, (int)__instance.GetSpriteRowNumber() * 5 * 16, 48, 80),
+                    _ => new Rectangle(144, (int)__instance.GetSpriteRowNumber() * 5 * 16, 48, 80),
+                };
+                spriteBatch.Draw(__instance.texture, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f + positionOffset.X, __instance.Tile.Y * 64f - (float)sourceRect.Height + 128f + positionOffset.Y)), sourceRect, Color.White, ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (float)__instance.getBoundingBox().Bottom / 10000f - __instance.Tile.X / 1000000f);
+            }
+            else
+            {
+                if (!__instance.stump || (bool)___falling)
+                {
+                    Texture2D tex = ModCoT.huckleberryTex;
+                    Rectangle rect = new(Math.Min(__instance.fruit.Count, 3) * 48, 0, 48, 80);
+
+                    /*
+                    if (!___falling)
+                    {
+                        spriteBatch.Draw(FruitTree.texture, Game1.GlobalToLocal(Game1.viewport, new Vector2(tileLocation.X * 64f + 32f, tileLocation.Y * 64f + 64f)), new Rectangle((12 + (__instance.greenHouseTree ? 1 : Utility.getSeasonNumber(season)) * 3) * 16, (int)__instance.treeType * 5 * 16 + 64, 48, 16), ((int)__instance.struckByLightningCountdown > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), 0f, new Vector2(24f, 16f), 4f, __instance.flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 1E-07f);
+                    }
+                    */
+                    //spriteBatch.Draw(FruitTree.texture, Game1.GlobalToLocal(Game1.viewport, new Vector2(tileLocation.X * 64f + 32f, tileLocation.Y * 64f + 64f)), new Rectangle((12 + (__instance.greenHouseTree ? 1 : Utility.getSeasonNumber(season)) * 3) * 16, (int)__instance.treeType * 5 * 16, 48, 64), ((int)__instance.struckByLightningCountdown > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (float)__instance.getBoundingBox(tileLocation).Bottom / 10000f + 0.001f - tileLocation.X / 1000000f);
+                    spriteBatch.Draw(tex, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f, __instance.Tile.Y * 64f + 64f)), rect, ((int)__instance.struckByLightningCountdown > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (float)(__instance.getBoundingBox().Bottom-16) / 10000f + 0.001f - __instance.Tile.X / 1000000f);
+                }
+                else if ((float)__instance.health.Value >= 1f || (!___falling && (float)__instance.health.Value > -99f))
+                {
+                    spriteBatch.Draw(__instance.texture, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f + ((___shakeTimer > 0f) ? ((float)Math.Sin(Math.PI * 2.0 / (double)___shakeTimer) * 2f) : 0f), __instance.Tile.Y * 64f + 64f)), new Rectangle(384, (int)__instance.GetSpriteRowNumber() * 5 * 16 + 48, 48, 32), ((int)__instance.struckByLightningCountdown > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), 0f, new Vector2(24f, 32f), 4f, __instance.flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, ((bool)__instance.stump && !___falling) ? ((float)__instance.getBoundingBox().Bottom / 10000f) : ((float)__instance.getBoundingBox().Bottom / 10000f - 0.001f - __instance.Tile.X / 1000000f));
+                }
+                /*
+                for (int i = 0; i < (int)__instance.fruitsOnTree; i++)
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            spriteBatch.Draw(Game1.objectSpriteSheet, Game1.GlobalToLocal(Game1.viewport, new Vector2(tileLocation.X * 64f - 64f + tileLocation.X * 200f % 64f / 2f, tileLocation.Y * 64f - 192f - tileLocation.X % 64f / 3f)), Game1.getSourceRectForStandardTileSheet(Game1.objectSpriteSheet, ((int)__instance.struckByLightningCountdown > 0) ? 382 : ((int)__instance.indexOfFruit), 16, 16), Color.White, 0f, Vector2.Zero, 4f, SpriteEffects.None, (float)__instance.getBoundingBox(tileLocation).Bottom / 10000f + 0.002f - tileLocation.X / 1000000f);
+                            break;
+                        case 1:
+                            spriteBatch.Draw(Game1.objectSpriteSheet, Game1.GlobalToLocal(Game1.viewport, new Vector2(tileLocation.X * 64f + 32f, tileLocation.Y * 64f - 256f + tileLocation.X * 232f % 64f / 3f)), Game1.getSourceRectForStandardTileSheet(Game1.objectSpriteSheet, ((int)__instance.struckByLightningCountdown > 0) ? 382 : ((int)__instance.indexOfFruit), 16, 16), Color.White, 0f, Vector2.Zero, 4f, SpriteEffects.None, (float)__instance.getBoundingBox(tileLocation).Bottom / 10000f + 0.002f - tileLocation.X / 1000000f);
+                            break;
+                        case 2:
+                            spriteBatch.Draw(Game1.objectSpriteSheet, Game1.GlobalToLocal(Game1.viewport, new Vector2(tileLocation.X * 64f + tileLocation.X * 200f % 64f / 3f, tileLocation.Y * 64f - 160f + tileLocation.X * 200f % 64f / 3f)), Game1.getSourceRectForStandardTileSheet(Game1.objectSpriteSheet, ((int)__instance.struckByLightningCountdown > 0) ? 382 : ((int)__instance.indexOfFruit), 16, 16), Color.White, 0f, Vector2.Zero, 4f, SpriteEffects.FlipHorizontally, (float)__instance.getBoundingBox(tileLocation).Bottom / 10000f + 0.002f - tileLocation.X / 1000000f);
+                            break;
+                    }
+                }
+                */
+            }
+            foreach (Leaf j in ___leaves)
+            {
+                spriteBatch.Draw(__instance.texture, Game1.GlobalToLocal(Game1.viewport, j.position), new Rectangle((24 + Game1.seasonIndex) * 16, (int)__instance.GetSpriteRowNumber() * 5 * 16, 8, 8), Color.White, j.rotation, Vector2.Zero, 4f, SpriteEffects.None, (float)__instance.getBoundingBox().Bottom / 10000f + 0.01f);
+            }
+
+            return false;
+        }
+    }
+    
+    // Shapeshift stuff
+    [HarmonyPatch(typeof(Farmer), "farmerInit")]
+    public static class FarmerInitPatch
+    {
+        public static void Postfix(Farmer __instance)
+        {
+            __instance.NetFields.AddField(__instance.GetFarmerExtData().form);
+            __instance.NetFields.AddField(__instance.GetFarmerExtData().transformed);
+        }
+    }
+
+    [HarmonyPatch(typeof(Farmer), "updateCommon")]
+    public static class FarmerUpdatePatch
+    {
+        public static void Postfix(Farmer __instance, GameTime time)
+        {
+            var data = __instance.GetFarmerExtData();
+
+            if (__instance.movementDirections.Count > 0)
+                data.noMovementTimer = 0;
+            else
+                data.noMovementTimer += time.ElapsedGameTime.TotalSeconds;
+        }
+    }
+
+    [HarmonyPatch(typeof(Farmer), nameof(Farmer.gainExperience))]
+    public static class FarmerExpInterceptPatch
+    {
+        public static void Postfix(Farmer __instance, int which, int howMuch)
+        {
+            if (!__instance.eventsSeen.Contains("SnS.Ch2.Hector.16"))
+                return;
+            if (which != Farmer.farmingSkill && which != Farmer.foragingSkill)
+                return;
+
+            var data = __instance.GetFarmerExtData();
+            float exp = data.expRemainder.Value + howMuch / 2f;
+            __instance.AddCustomSkillExperience(ModCoT.Skill, (int)MathF.Truncate( exp ));
+            data.expRemainder.Value = exp - MathF.Truncate(exp);
+        }
+    }
+
+    /*
+    [HarmonyPatch(typeof(Farmer), nameof(Farmer.GetBoundingBox))]
+    public static class FarmerBoundingBoxPatch
+    {
+        public static void Postfix(Farmer __instance, ref Rectangle __result)
+        {
+            if (__instance.GetFarmerExtData().transformed.Value)
+            {
+                __result = new(__result.X - 16, __result.Y - 32, __result.Width + 32, __result.Height + 32);
+            }
+        }
+    }
+    */
+
+    [HarmonyPatch(typeof(Farmer), nameof(Farmer.useTool))]
+    public static class FarmerUseToolPatch1
+    {
+        public static bool Prefix(Farmer who)
+        {
+            if (who.GetFarmerExtData().transformed.Value)
+            {
+                if (Game1.player.HasCustomProfession(Skill.ProfessionShapeshiftWolf) && who.CurrentTool is not MeleeWeapon)
+                    return true;
+                return false;
+            }
+            return true;
+
+        }
+    }
+    [HarmonyPatch(typeof(Farmer), "performBeginUsingTool")]
+    public static class FarmerUseToolPatch2
+    {
+        public static bool Prefix(Farmer __instance)
+        {
+            if (__instance.GetFarmerExtData().transformed.Value)
+            {
+                if (Game1.player.HasCustomProfession(Skill.ProfessionShapeshiftWolf) && __instance.CurrentTool is not MeleeWeapon)
+                    return true;
+                return false;
+            }
+            return true;
+
+        }
+    }
+
+    [HarmonyPatch(typeof(FarmerRenderer), nameof(FarmerRenderer.draw), new Type[] { typeof(SpriteBatch), typeof(FarmerSprite), typeof(Rectangle), typeof(Vector2), typeof(Vector2), typeof(float), typeof(Color), typeof(float), typeof(Farmer) } )]
+    public static class FarmerRendererPatch
+    {
+        public static bool Prefix(SpriteBatch b, FarmerSprite farmerSprite, Rectangle sourceRect, Vector2 position, Vector2 origin, float layerDepth, Color overrideColor, float rotation, Farmer who)
+        {
+            if (Game1.player.currentLocation.currentEvent != null && !Game1.player.currentLocation.currentEvent.isFestival)
+                return true;
+
+            //b.Draw(Game1.staminaRect, Game1.GlobalToLocal(Game1.viewport, who.GetBoundingBox()), null, Color.Red);
+
+            var data = who.GetFarmerExtData();
+            if (!data.transformed.Value)
+                return true;
+
+            int[] offsetHatX = new int[5] { 6, 13, 6, -4, -1 };
+            int[][] offsetHatY = new int[5][]
+                {
+                    new int[ 7 ] { 8, 8, 9, 9, 8, 8, 8 }, // up
+                    new int[ 7 ] { 7, 7, 8, 8, 7, 7, 7 }, // right
+                    new int[ 7 ] { 15, 15, 15, 16, 15, 15, 15 }, // down
+                    new int[ 7 ] { 7, 7, 8, 8, 7, 7, 7 }, // left
+                    new int[ 7 ] { 7, 8, 10, 12, 12, 10, 8 }, // rest
+                };
+
+            Texture2D tex = ModCoT.formTexs[data.form.Value][0];
+            Texture2D eyeTex = ModCoT.formTexs[data.form.Value][1];
+
+            Rectangle frame = default( Rectangle );
+            SpriteEffects fx = SpriteEffects.None;
+            int f = 0;
+            if (data.isResting)
+            {
+                if (data.noMovementTimer > 3 && data.noMovementTimer < 3.375)
+                {
+                    f = (int)((data.noMovementTimer - 3) / 0.125f);
+                    frame = new Rectangle(f * 32, 128, 32, 32);
+                }
+                else
+                {
+                    f = 3;
+                    frame = new Rectangle(3 * 32, 128, 32, 32);
+                }
+            }
+            else
+            {
+                switch (who.FacingDirection)
+                {
+                    case Game1.down : frame = new(0,  0, 32, 32); break;
+                    case Game1.right: frame = new(0, 32, 32, 32); break;
+                    case Game1.up   : frame = new(0, 64, 32, 32); break;
+                    case Game1.left : frame = new(0, 96, 32, 32); break;
+                }
+
+                if (data.noMovementTimer == 0)
+                {
+                    f = Game1.currentGameTime.TotalGameTime.Milliseconds % 700 / 100;
+                    frame = new(frame.X + 32 * f, frame.Y, frame.Width, frame.Height);
+                }
+            }
+            b.Draw(tex, position + new Vector2( 0, 24 ), frame, overrideColor, rotation, origin + new Vector2( 8, 0 ), Vector2.One * Game1.pixelZoom, fx, layerDepth);
+            b.Draw(eyeTex, position + new Vector2( 0, 24 ), frame, who.newEyeColor.Value, rotation, origin + new Vector2( 8, 0 ), Vector2.One * Game1.pixelZoom, fx, layerDepth + 0.001f);
+
+            if (who.hat.Value != null)
+            {
+                var hatData = ItemRegistry.GetData(who.hat.Value.QualifiedItemId);
+                var hatRect = new Rectangle(20 * (int)hatData.SpriteIndex % hatData.GetTexture().Width, 20 * (int)hatData.SpriteIndex / hatData.GetTexture().Width * 20 * 4, 20, 20);
+
+                if (!data.isResting)
+                {
+                    switch (who.FacingDirection)
+                    {
+                        case Game1.down: break;
+                        case Game1.right: hatRect.Offset(0, 20); break;
+                        case Game1.up: hatRect.Offset(0, 60); break;
+                        case Game1.left: hatRect.Offset(0, 40); break;
+                    }
+                }
+                else hatRect.Offset(0, 40);
+
+                int offsetInd = who.FacingDirection;
+                if (data.isResting) offsetInd = 4;
+
+                Vector2 offset = new(offsetHatX[offsetInd], offsetHatY[offsetInd][f]);
+                Vector2 p = position + new Vector2(0, 24) + offset * Game1.pixelZoom + new Vector2(0, -10) * Game1.pixelZoom;
+                b.Draw(FarmerRenderer.hatsTexture, p, hatRect, Color.White, rotation, origin + new Vector2(8, 0), Vector2.One * Game1.pixelZoom, fx, layerDepth + 0.002f);
+            }
+
+            return false;
+        }
+    }
+
+    // Essence drop stuff
+    [HarmonyPatch(typeof(Crop), nameof(Crop.harvest))]
+    public static class CropHarvestDropEssencesPatch
+    {
+        public static void Postfix(Crop __instance, int xTile, int yTile, JunimoHarvester junimoHarvester, bool __result)
+        {
+            if (!Game1.player.eventsSeen.Contains(ModCoT.DropEssencesEventId))
+                return;
+            if (!__result)
+                return;
+
+            float mult = Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
+            if (Game1.player.eventsSeen.Contains(ModCoT.WalletItemEventID))
+                mult += 0.01f;
+            if (Game1.player.HasCustomProfession(Skill.ProfessionAgricultureYggdrasil))
+                mult += 0.01f;
+            if (junimoHarvester == null && Game1.random.NextDouble() < 8 * mult)
+            {
+                Game1.createItemDebris(new StardewValley.Object("swordandsorcery.druidicessence", 1), new Vector2(xTile, yTile) * Game1.tileSize, -1);
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(GameLocation), nameof(GameLocation.makeHoeDirt))]
+    public static class HoeDirtCreationDropEssencesPatch1
+    {
+        public static void Postfix(GameLocation __instance, Vector2 tileLocation)
+        {
+            if (!Game1.player.eventsSeen.Contains(ModCoT.DropEssencesEventId))
+                return;
+            if (!__instance.IsFarm)
+                return;
+
+            float mult = Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
+            if (Game1.player.eventsSeen.Contains(ModCoT.WalletItemEventID))
+                mult += 0.01f;
+            if (Game1.player.HasCustomProfession(Skill.ProfessionAgricultureYggdrasil))
+                mult += 0.01f;
+            if (Game1.random.NextDouble() < 4 * mult)
+            {
+                Game1.createItemDebris(new StardewValley.Object("swordandsorcery.druidicessence", 1), tileLocation * Game1.tileSize, -1);
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(HoeDirt), nameof(HoeDirt.performToolAction))]
+    public static class HoeDirtCreationDropEssencesPatch2
+    {
+        public static void Prefix(HoeDirt __instance, Tool t)
+        {
+            if (!Game1.player.eventsSeen.Contains(ModCoT.DropEssencesEventId))
+                return;
+            if (!__instance.Location.IsFarm || t is not WateringCan || __instance.state.Value == HoeDirt.watered)
+                return;
+
+            float mult = Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
+            if (Game1.player.eventsSeen.Contains(ModCoT.WalletItemEventID))
+                mult += 0.01f;
+            if (Game1.player.HasCustomProfession(Skill.ProfessionAgricultureYggdrasil))
+                mult += 0.01f;
+            if (Game1.random.NextDouble() < 4 * mult)
+            {
+                Game1.createItemDebris(new StardewValley.Object("swordandsorcery.druidicessence", 1), __instance.Tile * Game1.tileSize, -1);
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Grass), nameof(Grass.performToolAction))]
+    public static class ScytheDropEssencesPatch
+    {
+        public static void Prefix(Grass __instance, Tool t)
+        {
+            if (!Game1.player.eventsSeen.Contains(ModCoT.DropEssencesEventId))
+                return;
+            if (!__instance.Location.IsFarm || t is not MeleeWeapon mw || !mw.isScythe())
+                return;
+
+            float mult = Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
+            if (Game1.player.eventsSeen.Contains(ModCoT.WalletItemEventID))
+                mult += 0.01f;
+            if (Game1.player.HasCustomProfession(Skill.ProfessionAgricultureYggdrasil))
+                mult += 0.01f;
+            if (Game1.random.NextDouble() < 2 * mult)
+            {
+                Game1.createItemDebris(new StardewValley.Object("swordandsorcery.druidicessence", 1), __instance.Tile * Game1.tileSize, -1);
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(GameLocation), nameof(GameLocation.DayUpdate))]
+    public static class GameLocationDayUpdateCropsWaterPatch
+    {
+        public static void Postfix(GameLocation __instance)
+        {
+            bool hasProfession = false;
+            foreach (var player in Game1.getAllFarmers())
+            {
+                if (player.HasCustomProfession(Skill.ProfessionAgricultureYggdrasil))
+                {
+                    hasProfession = true;
+                    break;
+                }
+            }
+
+            if (!hasProfession)
+                return;
+
+            foreach (var tf in __instance.terrainFeatures.Values)
+            {
+                if (tf is HoeDirt hd && hd.crop != null && !hd.crop.dead.Value)
+                {
+                    for (int ix = -1; ix <= 1; ix += 1)
+                    {
+                        for (int iy = -1; iy <= 1; iy += 1)
+                        {
+                            if (__instance.terrainFeatures.TryGetValue(hd.Tile + new Vector2(ix, iy), out TerrainFeature toWater))
+                            {
+                                if (toWater is HoeDirt twhd && twhd.state.Value == HoeDirt.dry)
+                                    hd.state.Value = HoeDirt.watered;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(StardewValley.Object), "getPriceAfterMultipliers")]
+    public static class ObjectPriceMultiplierForMidgardPatch
+    {
+        public static void Postfix(StardewValley.Object __instance, float startPrice, long specificPlayerID, ref float __result)
+        {
+            float saleMultiplier = 1f;
+            foreach (Farmer player in Game1.getAllFarmers())
+            {
+                if (Game1.player.useSeparateWallets)
+                {
+                    if (specificPlayerID == -1)
+                    {
+                        if (player.UniqueMultiplayerID != Game1.player.UniqueMultiplayerID || !player.isActive())
+                        {
+                            continue;
+                        }
+                    }
+                    else if (player.UniqueMultiplayerID != specificPlayerID)
+                    {
+                        continue;
+                    }
+                }
+                else if (!player.isActive())
+                {
+                    continue;
+                }
+                float multiplier = 1f;
+                if (player.HasCustomProfession(Skill.ProfessionAgricultureMidgard) && __instance.Category == -26)
+                {
+                    string[] ids = new string[]
+                    {
+                        "swordandsorcery.ancientamaranth.object",
+                        "swordandsorcery.ancientepiphyticfern.object",
+                        "swordandsorcery.glowingpolyporemushrooms.object",
+                        "swordandsorcery.ancientwildfairyroses.object",
+                        "swordandsorcery.ancientelderberry.object",
+                        "swordandsorcery.ancientbottlegourd.object",
+                        "swordandsorcery.ancientgiantappleberry.object",
+                        "swordandsorcery.ancientazuredetura.object"
+                    };
+                    if (ids.Contains(__instance.preservedParentSheetIndex.Value))
+                    {
+                        multiplier *= 1.1f;
+                    }
+                }
+                saleMultiplier = Math.Max(saleMultiplier, multiplier);
+            }
+            __result = __result * saleMultiplier;
+        }
+    }
+
+
+    [HarmonyPatch(typeof(HoeDirt), nameof(HoeDirt.applySpeedIncreases))]
+    public static class HoeDirtMidgardSpeedIncreasePatch
+    {
+        public static void Postfix(HoeDirt __instance, Farmer who)
+        {
+            if (!who.HasCustomProfession(Skill.ProfessionAgricultureMidgard))
+                return;
+
+            if (__instance.crop == null)
+            {
+                return;
+            }
+
+            int totalDaysOfCropGrowth = 0;
+            for (int j = 0; j < __instance.crop.phaseDays.Count - 1; j++)
+            {
+                totalDaysOfCropGrowth += __instance.crop.phaseDays[j];
+            }
+            float speedIncrease = 0.1f;
+            int daysToRemove = (int)Math.Ceiling((float)totalDaysOfCropGrowth * speedIncrease);
+            int tries = 0;
+            while (daysToRemove > 0 && tries < 3)
+            {
+                for (int i = 0; i < __instance.crop.phaseDays.Count; i++)
+                {
+                    if ((i > 0 || __instance.crop.phaseDays[i] > 1) && __instance.crop.phaseDays[i] != 99999)
+                    {
+                        __instance.crop.phaseDays[i]--;
+                        daysToRemove--;
+                    }
+                    if (daysToRemove <= 0)
+                    {
+                        break;
+                    }
+                }
+                tries++;
+            }
+        }
+    }
+}
