@@ -56,7 +56,7 @@
                             "Condition": "SEASON Spring",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Cirrus/spring_Cirrus.png}}",
+                            "Portrait": "Portraits/spring_Cirrus.png",
                             "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/spring_Cirrus.png}}",
                         },
                         {
@@ -64,7 +64,7 @@
                             "Condition": "SEASON Summer",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Cirrus/summer_Cirrus.png}}",
+                            "Portrait": "Portraits/summer_Cirrus.png",
                             "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/summer_Cirrus.png}}",
                         },
                         {
@@ -72,7 +72,7 @@
                             "Condition": "SEASON Fall",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Cirrus/fall_Cirrus.png}}",
+                            "Portrait": "Portraits/fall_Cirrus.png",
                             "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/fall_Cirrus.png}}",
                         },
                         {
@@ -80,27 +80,27 @@
                             "Condition": "SEASON Winter",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Cirrus/winter_Cirrus.png}}",
+                            "Portrait": "Portraits/winter_Cirrus.png",
                             "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/winter_Cirrus.png}}",
                         },
                         {
                             "ID": "Spirit's Eve",
                             "Condition": "EVENT_ID festival_fall27",
-                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Cirrus/Cirrus_Glamrock.png}}",
+                            "Portrait": "Portraits/Cirrus_Glamrock.png",
                             "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/Cirrus_Glamrock.png}}",   
                             "Precedence": -20
                         },
                         {
                             "ID": "Luau & Moonlight Jellies",
                             "Condition": "ANY \"EVENT_ID festival_summer11\" \"EVENT_ID festival_summer28\"",
-                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Cirrus/Cirrus_Beach.png}}",
+                            "Portrait": "Portraits/Cirrus_Beach.png",
                             "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/Cirrus_Beach.png}}",
                             "Precedence": -20
                         },
                         {
                             "ID": "Beach",
                             "IsIslandAttire": true,
-                            "Portrait": "{{InternalAssetKey: Assets/Portraits/Cirrus/Cirrus_Beach.png}}",
+                            "Portrait": "Portraits/Cirrus_Beach.png",
                             "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/Cirrus_Beach.png}}",
                             "Precedence": -20
                         },

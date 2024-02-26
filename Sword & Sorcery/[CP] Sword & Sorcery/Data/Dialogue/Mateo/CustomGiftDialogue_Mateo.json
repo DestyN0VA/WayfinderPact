@@ -29,7 +29,7 @@
             "AcceptGift_(O)340":"{{i18n:Gifts.Mateo.GiftReaction.Honey.{{MateoRomance}}}}",
             "AcceptGift_(O)394":"{{i18n:Gifts.Mateo.GiftReaction.RainbowShell}}",
             "AcceptGift_(O)731":"{{i18n:Gifts.Mateo.GiftReaction.MapleBar}}",
-            //"AcceptGift_(O)An_(O)autographed_(O)photo":"{{i18n:Gifts.Mateo.GiftReaction.AutographedPhoto}}",
+            "AcceptGift_(O)WWWA.AutographedPhoto":"{{i18n:Gifts.Mateo.GiftReaction.AutographedPhoto}}",
 
                    
             // LIKES

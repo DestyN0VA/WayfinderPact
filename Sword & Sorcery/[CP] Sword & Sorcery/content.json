@@ -8,34 +8,74 @@
     {
       "Logname": "Sword & Sorcery - Mateo Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Mateo.json, Data/Dialogue/Mateo/Dialogue_Mateo.json, Data/Dialogue/Mateo/ConcessionTastes_Mateo.json, Data/Dialogue/Mateo/ConversationTopics_Mateo.json, Data/Dialogue/Mateo/CustomFixed_Mateo.json,Data/Dialogue/Mateo/CustomGiftDialogue_Mateo.json,Data/Dialogue/Mateo/MarriageDialogue_Mateo.json, Data/Dispositions/Dispositions_Mateo.json, Data/Festival Data/FestivalData_Mateo.json, Data/Schedules/Schedule_Mateo.json, Data/Strings/Strings_Mateo.json, Data/Spouse Extras/SpouseExtras_Mateo.json",
+      "FromFile": "Data/Appearances/AppearanceData_Mateo.json, Data/Dialogue/Mateo/Dialogue_Mateo.json, Data/Dialogue/Mateo/ConcessionTastes_Mateo.json, Data/Dialogue/Mateo/ConversationTopics_Mateo.json, Data/Dialogue/Mateo/CustomFixed_Mateo.json,Data/Dialogue/Mateo/CustomGiftDialogue_Mateo.json,Data/Dialogue/Mateo/MarriageDialogue_Mateo.json, Data/Dispositions/Dispositions_Mateo.json, Data/Festival Data/FestivalData_Mateo.json, Data/Schedules/Schedule_Mateo.json, Data/Strings/Strings_Mateo.json, Data/Spouse Extras/SpouseExtras_Mateo.json"
     },
     {
       "Logname": "Sword & Sorcery - Hector Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Hector.json, Data/Dialogue/Hector/Dialogue_Hector.json, Data/Dialogue/Hector/ConcessionTastes_Hector.json, Data/Dialogue/Hector/ConversationTopics_Hector.json, Data/Dialogue/Hector/CustomFixed_Hector.json,Data/Dialogue/Hector/CustomGiftDialogue_Hector.json, Data/Dispositions/Dispositions_Hector.json, Data/Festival Data/FestivalData_Hector.json, Data/Schedules/Schedule_Hector.json, Data/Strings/Strings_Hector.json, Data/Spouse Extras/SpouseExtras_Hector.json",
+      "FromFile": "Data/Appearances/AppearanceData_Hector.json, Data/Dialogue/Hector/Dialogue_Hector.json, Data/Dialogue/Hector/ConcessionTastes_Hector.json, Data/Dialogue/Hector/ConversationTopics_Hector.json, Data/Dialogue/Hector/CustomFixed_Hector.json,Data/Dialogue/Hector/CustomGiftDialogue_Hector.json, Data/Dispositions/Dispositions_Hector.json, Data/Festival Data/FestivalData_Hector.json, Data/Schedules/Schedule_Hector.json, Data/Strings/Strings_Hector.json, Data/Spouse Extras/SpouseExtras_Hector.json"
     },
     {
       "Logname": "Sword & Sorcery - Cirrus Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Cirrus.json, Data/Dialogue/Cirrus/Dialogue_Cirrus.json, Data/Dialogue/Cirrus/ConcessionTastes_Cirrus.json, Data/Dialogue/Cirrus/ConversationTopics_Cirrus.json, Data/Dialogue/Cirrus/CustomFixed_Cirrus.json,Data/Dialogue/Cirrus/CustomGiftDialogue_Cirrus.json, Data/Dispositions/Dispositions_Cirrus.json, Data/Festival Data/FestivalData_Cirrus.json, Data/Schedules/Schedule_Cirrus.json, Data/Strings/Strings_Cirrus.json, Data/Spouse Extras/SpouseExtras_Cirrus.json",
+      "FromFile": "Data/Appearances/AppearanceData_Cirrus.json, Data/Dialogue/Cirrus/Dialogue_Cirrus.json, Data/Dialogue/Cirrus/ConcessionTastes_Cirrus.json, Data/Dialogue/Cirrus/ConversationTopics_Cirrus.json, Data/Dialogue/Cirrus/CustomFixed_Cirrus.json,Data/Dialogue/Cirrus/CustomGiftDialogue_Cirrus.json, Data/Dispositions/Dispositions_Cirrus.json, Data/Festival Data/FestivalData_Cirrus.json, Data/Schedules/Schedule_Cirrus.json, Data/Strings/Strings_Cirrus.json, Data/Spouse Extras/SpouseExtras_Cirrus.json"
     },
     {
       "Logname": "Sword & Sorcery - Quest Includes",
       "Action": "Include",
-      "FromFile": "Data/Quests & Items/BuildQuest.json, Data/Quests & Items/BuildQuest2.json, Data/Quests & Items/CGSpecialOrders.json, Data/Quests & Items/PentacleQuest.json, Data/Quests & Items/RiverQuest.json",
+      "FromFile": "Data/Quests & Items/BuildQuest.json, Data/Quests & Items/BuildQuest2.json, Data/Quests & Items/CGSpecialOrders.json, Data/Quests & Items/PentacleQuest.json, Data/Quests & Items/RiverQuest.json"
     },
     {
       "Logname": "Sword & Sorcery - Custom Companions Includes",
       "Action": "Include",
-      "FromFile": "Data/Custom Companions/BookPathing.json, Data/Custom Companions/DinoPathing.json,",
+      "FromFile": "Data/Custom Companions/BookPathing.json, Data/Custom Companions/DinoPathing.json,"
     },
     {
       "Logname": "Sword & Sorcery - Data Includes",
       "Action": "Include",
-      "FromFile": "Data/MapData.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json",
+      "FromFile": "Data/MapData.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json"
     },
 
+// TRIGGER ACTIONS
+
+    {
+      "LogName": "Overrides Seen Today Flag Removal", 
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+
+          "SnS.TriggerActions.OverrideSeenToday.Removal.1": {
+              "Id": "SnS.TriggerActions.OverrideSeenToday.Removal.1",
+              "Trigger": "DayStarted",
+              "Condition": "Any \"PLAYER_HAS_MAIL Current SnS_M_Mateo_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Hector_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Cirrus_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Roslin_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Dandelion_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Stan_OverrideSeenToday Any\"",
+              "Actions": [
+                  "RemoveMail Current SnS_M_Mateo_OverrideSeenToday",
+                  "RemoveMail Current SnS_M_Hector_OverrideSeenToday",
+                  "RemoveMail Current SnS_M_Cirrus_OverrideSeenToday",
+                  "RemoveMail Current SnS_M_Roslin_OverrideSeenToday",
+                  "RemoveMail Current SnS_M_Dandelion_OverrideSeenToday",
+                  "RemoveMail Current SnS_M_Stan_OverrideSeenToday",
+                  "MarkActionApplied Current SnS.TriggerActions.OverrideSeenToday.Removal.2 false"
+              ]
+          },
+
+          "SnS.TriggerActions.OverrideSeenToday.Removal.2": {
+              "Id": "SnS.TriggerActions.OverrideSeenToday.Removal.2",
+              "Trigger": "DayStarted",
+              "Condition": "Any \"PLAYER_HAS_MAIL Current SnS_M_Mateo_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Hector_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Cirrus_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Roslin_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Dandelion_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Stan_OverrideSeenToday Any\"",
+              "Actions": [
+                  "RemoveMail Current SnS_M_Mateo_OverrideSeenToday",
+                  "RemoveMail Current SnS_M_Hector_OverrideSeenToday",
+                  "RemoveMail Current SnS_M_Cirrus_OverrideSeenToday",
+                  "RemoveMail Current SnS_M_Roslin_OverrideSeenToday",
+                  "RemoveMail Current SnS_M_Dandelion_OverrideSeenToday",
+                  "RemoveMail Current SnS_M_Stan_OverrideSeenToday",
+                  "MarkActionApplied Current SnS.TriggerActions.OverrideSeenToday.Removal.1 false"
+              ]
+          }
+      }
+  }
+  
   ],
   // CONFIG OPTIONS
 
@@ -103,6 +143,13 @@
       "Description": "Adds the Mermaid Pendant hairclip for Hector when married.",
       "Section": "Mermaid Pendant Overlays"
     },
+    "MermaidPendantChoker": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Adds the Mermaid Pendant choker for Cirrus when married.",
+      "Section": "Mermaid Pendant Overlays"
+    },
     "MateoSpouseRoomConfig": {
       "AllowValues": "true, false",
       "Default": "true",
@@ -162,6 +209,13 @@
       "Description": "May cause some pathing shananagins, but is kinda funny?",
       "Section": "Miscellaneous"
     },
+    "HectorHeterochromatic": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "Description": "Gives Hector Blue/Green heterochromatic eyes.",
+      "Section": "Miscellaneous"
+    }
   },
 
   // DYNAMIC TOKENS
@@ -170,6 +224,14 @@
     {
       "Name": "PlayerPronouns",
       "Value": "|PPN1={{Random: {{Player Pronouns 1}} |key=PlayerPronouns}} |PPN2={{Random: {{Player Pronouns 2}} |key=PlayerPronouns}} |PPN3={{Random: {{Player Pronouns 3}} |key=PlayerPronouns}} |PPN4={{Random: {{Player Pronouns 4}} |key=PlayerPronouns}} |PPNI={{Random: {{Player Pronoun Identifier}} |key=PlayerPronouns}}"
+    },
+    {
+      "Name": "WeekDayList",
+      "Value": "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+    },
+    {
+      "Name": "WeekDay",
+      "Value": "{{WeekDayList |valueAt={{Query: {{Day}}%7}}}}"
     },
     {
       "Name": "MateoRomance",
@@ -440,7 +502,7 @@
     },
     {
       "Name": "CirrusIntro_EnD_Setup",
-      "Value": "farmer 23 18 2 Hector 24 19 3 Mateo 22 19 1 Cirrus 33 18 2 Sam 33 20 0 Abigail 34 19 0 Sebastian 32 19 0 Gus 13 18 2 Emily 17 17 0 Willy 17 22 2 Clint 19 23 3 Pierre 11 20 0 Shane 21 17 2 Pam 7 18 1 Leah 2 20 1 Elliott 4 19 2 Harvey 18 20 0 Marnie 8 22 3 Lewis 9 22 1",
+      "Value": "farmer 23 18 2 Hector 24 19 3 Mateo 22 19 1 Cirrus 33 18 2 Sam 33 20 0 Abigail 34 19 0 Sebastian 32 19 0 Gus 13 18 2 Emily 17 17 0 Willy 17 22 2 Clint 19 23 3 Pierre 11 20 0 Shane 21 17 2 Pam 7 18 1 Leah 2 20 1 Elliott 4 19 2 Harvey 18 20 0 Marnie 8 22 3 Lewis 9 22 1"
     },
     {
       "Name": "CirrusIntro_EnD_Setup",
@@ -673,6 +735,6 @@
       "When": {
         "HasFlag |contains=DnDRanger": true
       }
-    },
+    }
   ]
 }
