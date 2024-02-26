@@ -56,7 +56,7 @@
                             "Condition": "SEASON Spring",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Portrait": "Portraits/spring_Cirrus.png",
+                            "Portrait": "Portraits/spring_Cirrus",
                             "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/spring_Cirrus.png}}",
                         },
                         {
@@ -64,7 +64,7 @@
                             "Condition": "SEASON Summer",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Portrait": "Portraits/summer_Cirrus.png",
+                            "Portrait": "Portraits/summer_Cirrus",
                             "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/summer_Cirrus.png}}",
                         },
                         {
@@ -72,7 +72,7 @@
                             "Condition": "SEASON Fall",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Portrait": "Portraits/fall_Cirrus.png",
+                            "Portrait": "Portraits/fall_Cirrus",
                             "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/fall_Cirrus.png}}",
                         },
                         {
@@ -80,7 +80,7 @@
                             "Condition": "SEASON Winter",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Portrait": "Portraits/winter_Cirrus.png",
+                            "Portrait": "Portraits/winter_Cirrus",
                             "Sprite": "{{InternalAssetKey: Assets/Characters/Cirrus/winter_Cirrus.png}}",
                         },
                         {
