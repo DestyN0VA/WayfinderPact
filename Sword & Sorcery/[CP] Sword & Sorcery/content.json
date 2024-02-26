@@ -524,28 +524,28 @@
     },
     {
       "Name": "CirrusSong1",
-      "Value": "Try looking at the sun. Keep your head high, and everything is alright.",
+      "Value": "try looking at the sun. Keep your head high, and everything is alright.",
       "When": {
         "HasFlag |contains=CirrusSong1A": true
       }
     },
     {
       "Name": "CirrusSong1",
-      "Value": "Look into the blue sky, and your feelings might be soaked up in it's vastness.",
+      "Value": "look into the blue sky, and your feelings might be soaked up in it's vastness.",
       "When": {
         "HasFlag |contains=CirrusSong1B": true
       }
     },
     {
       "Name": "CirrusSong2",
-      "Value": "You might be able to find the answers that you want above the clouds.",
+      "Value": "you might be able to find the answers that you want above the clouds.",
       "When": {
         "HasFlag |contains=CirrusSong2A": true
       }
     },
     {
       "Name": "CirrusSong2",
-      "Value": "You might find that answers you want in the light of the moon.",
+      "Value": "you might find that answers you want in the light of the moon.",
       "When": {
         "HasFlag |contains=CirrusSong2B": true
       }
@@ -735,6 +735,6 @@
       "When": {
         "HasFlag |contains=DnDRanger": true
       }
-    }
+    },
   ]
 }
