@@ -248,6 +248,22 @@
       }
     },
     {
+      "Name": "MateoSAD",
+      "Value": "Struggling"
+    },
+    {
+      "Name": "MateoSAD",
+      "Value": "Recovery",
+      "When": {
+        "Hearts:Mateo": "10",
+        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+      }
+    },
+    {
+      "Name": "MateoSADDialogue",
+      "Value": "|MLHW1={{i18n:Core.Mateo.Winter.LateHeart.1.{{MateoSAD}}}} |MLHW3={{i18n:Core.Mateo.Winter.LateHeart.3.{{MateoSAD}}}} |MLHW7={{i18n:Core.Mateo.Winter.LateHeart.7.{{MateoSAD}}}} |MLHW8={{i18n:Core.Mateo.Winter.LateHeart.8.{{MateoSAD}}}} |MLHW9={{i18n:Core.Mateo.Winter.LateHeart.9.{{MateoSAD}}}} |MLHW11={{i18n:Core.Mateo.Winter.LateHeart.11.{{MateoSAD}}}} |MLHW13={{i18n:Core.Mateo.Winter.LateHeart.13.{{MateoSAD}}}} |MLHW14={{i18n:Core.Mateo.Winter.LateHeart.14.{{MateoSAD}}}} |MLHW16={{i18n:Core.Mateo.Winter.LateHeart.16.{{MateoSAD}}}}"
+    },
+    {
       "Name": "MateoArmor",
       "Value": "Armor_Mateo.png",
       "When": {
