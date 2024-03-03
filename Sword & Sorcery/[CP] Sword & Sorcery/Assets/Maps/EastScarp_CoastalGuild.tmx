@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="29" height="21" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="35">
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="29" height="21" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="35">
  <properties>
   <property name="AmbientLight" value="120 140 30"/>
   <property name="DayTiles" value="Front 7 1 256 Front 7 2 288"/>
   <property name="Doors" value="4 9 1 120"/>
   <property name="Light" value="9 10 4 10 10 4"/>
   <property name="Music" value="SnS.MateoTheme"/>
-  <property name="NightTiles" value="Front 7 1 1253 Front 7 2 1285"/>
   <property name="Warp" value="10 20 EastScarp_Village 94 94"/>
  </properties>
  <tileset firstgid="1" name="Paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">

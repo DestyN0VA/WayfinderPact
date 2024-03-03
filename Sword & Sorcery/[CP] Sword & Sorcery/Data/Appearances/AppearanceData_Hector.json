@@ -52,6 +52,24 @@
             "Update": "OnLocationChange",
             "When": {"LocationName": "IslandSouth, IslandWest, IslandEast, IslandNorth, Beach"}
         },
+        {
+            "LogName": "Mermaid Pendant Hairclip",
+            "Action": "EditImage",
+            "Target": "Portraits/Hector",
+            "FromFile": "assets/portraits/Hector/pendant_overlay_hector.png",
+            "PatchMode": "Overlay",
+            "When": {"Relationship:Hector |contains=Married": true, "MermaidPendantHairclip": true},
+            "Update": "OnTimeChange, OnLocationChange",
+        },
+        {
+            "LogName": "Heterochromatic Eyes",
+            "Action": "EditImage",
+            "Target": "Portraits/Hector",
+            "FromFile": "assets/portraits/Hector/eye_overlay_hector.png",
+            "PatchMode": "Overlay",
+            "When": {"HectorHeterochromatic": true},
+            "Update": "OnTimeChange, OnLocationChange",
+        },
 
         // OVERLAYS
         {
@@ -64,14 +82,26 @@
             "Target": "Portraits/Hector_beach",
             "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_beach.png",
         },
-        {
+        {   
+            "LogName": "Mermaid Pendant Hairclip",
             "Action": "EditImage",
             "Target": "Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach",
             "PatchMode": "Overlay",
             "FromFile": "assets/portraits/Hector/pendant_overlay_hector.png",
+            "Update": "OnTimeChange, OnLocationChange",
             "When": {
-                "Relationship:Hector |contains=Married": true,
-                "MermaidPendantHairclip": true
+                "Relationship:Hector |contains=Married": true, "MermaidPendantHairclip": true}
+            
+        },
+        {   
+            "LogName": "Heterochromatic Eyes",
+            "Action": "EditImage",
+            "Target": "Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach, Hector_HoodUp, Hector_HoodDown, Hector_TrueDown, Hector_TrueUp",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/portraits/Hector/eye_overlay_hector.png",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": {
+                "HectorHeterochromatic": true
             }
         },
     ]

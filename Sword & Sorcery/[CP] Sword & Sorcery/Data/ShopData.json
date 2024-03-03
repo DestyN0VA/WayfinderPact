@@ -20,7 +20,7 @@
   "Items": [
   {
 "Id": "swordandsorcery.Group1",
-"AvaliableStock": 3,
+"AvailableStock": 3,
 "TradeItemId": "881",
 "TradeItemAmount": 100,
 "AvailableStockLimit": "Player",
@@ -42,7 +42,7 @@
 },
   {
 "Id": "swordandsorcery.Group2",
-"AvaliableStock": 3,
+"AvailableStock": 3,
 "TradeItemId": "881",
 "TradeItemAmount": 100,
 "AvailableStockLimit": "Player",
@@ -61,7 +61,7 @@
 },
   {
 "Id": "swordandsorcery.Group3",
-"AvaliableStock": 3,
+"AvailableStock": 3,
 "TradeItemId": "881",
 "TradeItemAmount": 100,
 "AvailableStockLimit": "Player",
@@ -87,7 +87,7 @@
 },
   {
 "Id": "swordandsorcery.Group4",
-"AvaliableStock": 3,
+"AvailableStock": 3,
 "TradeItemId": "881",
 "TradeItemAmount": 100,
 "AvailableStockLimit": "Player",
@@ -111,7 +111,7 @@
 },
   {
 "Id": "swordandsorcery.Group5",
-"AvaliableStock": 3,
+"AvailableStock": 3,
 "TradeItemId": "881",
 "TradeItemAmount": 100,
 "AvailableStockLimit": "Player",
@@ -138,7 +138,7 @@
 },
  {
 "Id": "swordandsorcery.Group6",
-"AvaliableStock": 3,
+"AvailableStock": 3,
 "TradeItemId": "881",
 "TradeItemAmount": 100,
 "AvailableStockLimit": "Player",
@@ -161,7 +161,7 @@
 },
  {
 "Id": "swordandsorcery.Group7",
-"AvaliableStock": 3,
+"AvailableStock": 3,
 "TradeItemId": "881",
 "TradeItemAmount": 100,
 "AvailableStockLimit": "Player",

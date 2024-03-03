@@ -8,6 +8,7 @@
   "CustomMateoDinah": "true",
   "MermaidPendantEarring": "true",
   "MermaidPendantHairclip": "true",
+  "MermaidPendantChoker": "true",
   "MateoSpouseRoomConfig": "true",
   "MateoSpousePatioConfig": "true",
   "HectorSpouseRoomConfig": "true",
@@ -15,5 +16,6 @@
   "CirrusSpouseRoomConfig": "true",
   "CirrusSpousePatioConfig": "true",
   "SkipIntroQuest": "false",
-  "DumpsterWarp": "false"
+  "DumpsterWarp": "false",
+  "HectorHeterochromatic": "true"
 }

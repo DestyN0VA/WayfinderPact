@@ -22,8 +22,17 @@
             "Update": "OnLocationChange",
             "When": {"LocationName": "IslandSouth, IslandWest, IslandEast, IslandNorth, Beach"}
         },
+        {
+            "LogName": "Mermaid Pendant Choker",
+            "Action": "EditImage",
+            "Target": "Portraits/Cirrus",
+            "FromFile": "Assets/{{Target}}/{{season}}_pendant_overlay_cirrus.png",
+            "PatchMode": "Overlay",
+            "When": {"Relationship:Cirrus |contains=Married": true, "MermaidPendantEarring": true},
+            "Update": "OnTimeChange, OnLocationChange",
+        },
 
-    /*
+    
         // OVERLAYS
         {
             "Action": "Load",
@@ -35,17 +44,16 @@
             "Target": "Portraits/Cirrus_beach",
             "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Cirrus_beach.png",
         },
-        {
+        {   
+            "LogName": "Mermaid Pendant Choker",
             "Action": "EditImage",
             "Target": "Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/winter_Cirrus, Portraits/Cirrus_beach",
             "PatchMode": "Overlay",
-            "FromFile": "assets/portraits/Cirrus/pendant_overlay_Cirrus.png",
-            "When": {
-                "Relationship:Cirrus |contains=Married": true,
-                "MermaidPendantHairclip": true
-            }
+            "FromFile": "assets/portraits/Cirrus/{{season}}_pendant_overlay_Cirrus.png",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": {"Relationship:Cirrus |contains=Married": true, "MermaidPendantChoker": true}
         },
-    */
+    
     
     ]
 }
