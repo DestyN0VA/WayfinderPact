@@ -1,0 +1,41 @@
+CREDITS: 
+
+➜ Lemurkat: For East Scarp, for guiding along, and maintaining an incredible little community
+➜ KittyCatCasey: C# Component, the Sorcery to my Sword 
+➜ MADDOGOFBLANK: Assets throughout the mod, help w/ code
+➜ TenebrousNova: Help w/ event code, i18n, and the majority of new maps 
+➜ TheFrenchDodo: Emeritus' sprite, books seen throughout the guild, majority of music 
+➜ 7thAxis: Dialogue code overhaul/additional optimization code, Stan portraits/sprites 
+➜ FellowClown: Help with the V2 Mateo portraits and majority of additional assets/portraits/sprites
+➜ TheLoreSeeker: Emeritus' and Book's portraits 
+➜ Tiara: Tent interior background
+➜ EnderTendi: Additional Hector portriats, overlay assets, help w/ code 
+➜ Poltergeister: Gunther's portraits, help w/ Mateo V2 portraits 
+➜ Arknir27﻿﻿: Mateo's sprites, help w/ event code 
+➜ WerewolfMaster: Gunther's sprites & Marlon's portraits/sprites
+➜ Harvz:﻿ Mateo & Hector's themes
+➜ AgentLyoko: Framework for S&S NPCA builds
+➜ MedicSun: Hector's sprites, touch-ups on portraits for aesthetic consistency 
+➜ Atravita: Mentoring, help with C# 
+➜ Rinnyboi﻿: Armored Mateo sprites 
+➜ CreatorKami: Hector portraits
+➜ Yri: Druid tower, giant tree, and Book's sprites
+➜ HimeTarts: Original Mateo portrait assets, Spirit's Eve costume 
+➜ PetiteWarlock: Logo 
+➜ Logophile: Rugs
+➜ Pokeinalover: Book's Human design 
+➜ SmolHuman: Additional animal sprites 
+➜ SunStream7, Gnadi, Mareetz: Extensive playtesting
+➜ JayJayDub: Help w/ compatibility and i18n 
+➜ FlashShifter: For being a friend and mentor
+➜ Sword & Sorcery Discord Channel: All the regulars out there, the fan artists, the bugtesters, the supporters - thank you. I likely wouldn't have expanded past Never Ending Adventure without your kindness and appreciation. 
+
+INSPIRATIONS: 
+
+There are tons of song lyrics hidden throughout the mod, from the following artists: 
+Fall Out Boy, Ghost, Sleep Token, Nightwish, Nadia Grifford 
+
+Chapter 1 is inspired by/references/quotes: The Great Gatsby, Treasure Planet, Undertale 
+Chapter 2 is inspired by/references/quotes: Take Me Back to Eden, The Secret of Kells, Princess Mononoke
+Chapter 3 is inspired by/references/quotes: Queen/David Bowie/Elvis, Steambot Chronicles, Bojack Horseman 
+Chapter 4 is inspired by/references/quotes: Dungeons and Dragons, Stranger Things, Baulder's Gate 3, Wicked
