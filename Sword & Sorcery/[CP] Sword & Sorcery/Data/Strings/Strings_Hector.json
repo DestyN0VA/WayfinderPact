@@ -16,7 +16,7 @@
         "HomemadeTea":"{{i18n:Strings.Hector.HomemadeTea}}",
         "OSHAViolation":"{{i18n:Strings.Hector.OSHAViolation}}",
         "FashionTaste":"{{i18n:Strings.Hector.FashionTaste}}",
-        "LovedAltar":"{{i18n:Strings.Hector.LovedAltar}}",
+        "LovedAltar":"{{i18n:Strings.Hector.LovedAltar.{{HectorRomance}}.{{Random:1++2++3++4++5++6++7++8++9|inputSeparator=++}}}}",
         "WeirdPlants1":"{{i18n:Strings.Hector.WeirdPlants1}}",
         "WeirdPlants2":"{{i18n:Strings.Hector.WeirdPlants2}}",
         "WeirdPlants3":"{{i18n:Strings.Hector.WeirdPlants3}}",

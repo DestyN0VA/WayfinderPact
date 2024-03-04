@@ -151,6 +151,19 @@
       },
             
     },
+
+    {
+      "LogName": "Cirrus's 9 Heart Event", 
+      "Action": "EditData",                                           
+      "Target": "Data/Events/EastScarp_Village",
+      "Entries": {
+    
+        "SnS.Ch3.Cirrus.13/e SnS.Ch3.Cirrus.12/f Cirrus 2250/t 800 1700/A CirrusDnD/w sunny/F": "continue/-100 -100/farmer 63 21 0 Cirrus 57 6 0 Jessie 56 6 0/skippable/viewport 57 6 clamp true/pause 1000/advancedMove farmer false 0 -7 -2 0 0 -8 -3 0 4 10/speak Jessie \"It's been abandoned for years. This building has been boarded up since the the mining days.$0\"/addConversationTopic CirrusLionsMane 2/emote farmer 8/pause 250/speak Cirrus \"Wouldn't I need, like, some kind of permit-?$2\"/pause 250/speak Jessie \"Mateo, @ and Marlon built a guild on stilts in the sand. I'm sure you'll be fine.$1\"/waitForAllStationary/textAboveHead Jessie \"Hello, dear.\"/pause 1000/speak Cirrus \"Jessie and I have talked a bunch since the game. I think I'm going to refurbish this old place, and make a home out of it!$14\"/jump farmer 5 true/emote farmer 16/quickQuestion #So you've decided to stay in town? #But what about your music career?(break)speak Cirrus \"Yup. For the first time in my life, I'm going to do something that's for me.$15\"(break)speak Cirrus \"I don't care about the career aspect of it anymore. It doesn't make me happy.$18#$b#I'll find my passion again in my own time, not on someone else's.$14\"/emote farmer 20 true/emote Jessie 32 true/pause 250/speak Cirrus \"I bought the pizza van from my first boss, when I still lived in Port Drake.$16#$b#I gutted the damn thing myself. Mostly learned from videos and internet tutorials, like on forums and stuff.$17\"/pause 250/quickQuestion #Did you enjoy figuring that all out? #You're got a lot of different skills!(break)speak Cirrus \"Yeah! I like tactical things. I'm good with my hands, so I enjoy hobbies like cooking, crafting, and making music.$6\"(break)speak Cirrus \"I've got an approximate knowledge of many things. That's just how life being broke on the road goes.$1\"/pause 250/speak Jessie \"There's not really an easy way to get your van up here, sweetheart.$2\"/pause 250/emote Cirrus 40/pause 250/speak Cirrus \"That's alright. I'd scrap it, and use the money to build stuff inside.$28\"/pause 250/faceDirection Jessie 1 true/emote Jessie 16 true/faceDirection farmer 3 true/emote farmer 16/pause 250/speak Cirrus \"The van's a symbol from an era of my life I'd like to move past.$6\"/pause 250/quickQuestion #Would you like any help with the repairs? #Do you have a way to get supplies?(break)speak Cirrus \"Only if you're not busy! I know you're doing a thousand and one things all the time, I'd hate to impose.$17\"(break)speak Cirrus \"I hadn't thought that through yet. You helped with The Guild, right? Got any ideas?\"/emote farmer 32/pause 250/emote Cirrus 20/pause 250/speak Cirrus \"Thanks, @! You're a lifesaver!$6#$b#Once I wrap my last show and have all the supplies, I'll put all my focus on this.$1\"/fade/viewport -1000 -1000/addSpecialOrder CAGQuest.UntimedSpecialOrder.LionsMane/speak Cirrus \"I can do this! I'm responsible for my own happiness!$15\"/end"
+      
+
+      },
+            
+    },
   ] 
 
 }

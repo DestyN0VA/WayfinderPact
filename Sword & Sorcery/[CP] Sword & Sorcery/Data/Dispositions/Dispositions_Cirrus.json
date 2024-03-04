@@ -34,8 +34,8 @@
                             "ID": "Cirrus - Van",
                             "Location": "EastScarp_VanInterior",
                             "Tile": {
-                                "X": 10,
-                                "Y": 3
+                                "X": 11,
+                                "Y": 4
                             },
                             "Direction": "Down",
                             "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch3.Cirrus.1"

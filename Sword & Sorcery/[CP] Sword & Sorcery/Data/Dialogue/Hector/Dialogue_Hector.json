@@ -10,7 +10,7 @@
  |_|  |_|______/_/    \_\_|  \_\ |_|    |_____/_____/_/    \_\______\____/ \_____|\____/|______|
 
 */
-//Generic Pools
+// GENERIC POOL
 {
    "LogName": "Hector Dialogue - 0-4",
    "Action": "EditData",
@@ -29,7 +29,7 @@
    "When": { "Hearts:Hector": "{{Range: 6, 10}}" }
 },
 
-//Seasonal pool
+// SEASONAL POOL
 {
    "LogName": "Dialogue - Hector Seasonal Override",
    "Action": "EditData",
@@ -44,7 +44,7 @@
     }
 },
 
-//10h override pool
+// 10H OVERRIDE POOL
 {
    "LogName": "Dialogue - Hector 10h Override",
    "Action": "EditData",
@@ -60,7 +60,7 @@
     }
 },
 
-//Marriage stuff
+// MARRIAGE POOL
 {
    "LogName": "Dialogue - Marriage Override Good Weather",
    "Action": "EditData",

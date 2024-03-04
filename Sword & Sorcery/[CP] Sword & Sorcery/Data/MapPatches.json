@@ -248,7 +248,7 @@
                     },
                     "Layer": "Buildings",
                     "SetProperties": {
-                        "Action": "LockedDoorWarp 2 5 EastScarp_VanInterior 1000 2000"
+                        "Action": "LockedDoorWarp 2 7 EastScarp_VanInterior 1000 2000"
                     }
                 },
                 {
@@ -258,12 +258,13 @@
                     },
                     "Layer": "Buildings",
                     "SetProperties": {
-                        "Action": "LockedDoorWarp 2 5 EastScarp_VanInterior 1000 2000"
+                        "Action": "LockedDoorWarp 2 7 EastScarp_VanInterior 1000 2000"
                     }
                 }
             ],
             "When": {
                 "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+                "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": false,
             }
         },
 
@@ -301,11 +302,11 @@
                 }
             ],
             "When": {
-                "HasSeenEvent |contains=SnS.Ch4.Dandelion.PENDING": false
+                "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": false
             }
         },
 
-        // PATCHES THE REPAIRED DOWN LION'S MANE 
+        // PATCHES THE REPAIRED LION'S MANE 
         {
             "LogName": "Lion's Mane (Repaired) Patch",
             "Action": "EditMap",
@@ -320,37 +321,37 @@
             "MapTiles": [
                 {
                     "Position": { // RIGHT HAND DOOR
-                        "X": 7,
+                        "X": 57,
                         "Y": 4
                     },
                     "Layer": "Buildings",
                     "SetProperties": {
-                        "Action": "LockedDoorWarp 2 5 EastScarp_VanInterior 1000 2000"
+                        "Action": "LockedDoorWarp 26 35 EastScarp_LionsMane 800 2400"
                     }
                 },
                 {
                     "Position": { // LEFT HAND DOOR
-                        "X": 5,
+                        "X": 55,
                         "Y": 4
                     },
                     "Layer": "Buildings",
                     "SetProperties": {
-                        "Action": "LockedDoorWarp 2 5 EastScarp_VanInterior 1000 2000"
+                        "Action": "LockedDoorWarp 8 34 EastScarp_LionsMane 800 2400"
                     }
                 },
                 {
                     "Position": { // LEFT HAND DOOR
-                        "X": 4,
+                        "X": 54,
                         "Y": 4
                     },
                     "Layer": "Buildings",
                     "SetProperties": {
-                        "Action": "LockedDoorWarp 2 5 EastScarp_VanInterior 1000 2000"
+                        "Action": "LockedDoorWarp 8 34 EastScarp_LionsMane 800 2400"
                     }
                 }
             ],
             "When": {
-                "HasSeenEvent |contains=SnS.Ch4.Dandelion.PENDING": true
+                "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true
             }
         },
 

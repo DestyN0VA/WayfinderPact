@@ -2276,7 +2276,7 @@
   </object>
   <object id="230" name="TileData" x="96" y="176" width="16" height="16">
    <properties>
-    <property name="Action" value="Message FreddyFlamingo"/>
+    <property name="Action" value="Message MaritaFlamingo"/>
    </properties>
   </object>
   <object id="231" name="TileData" x="80" y="176" width="16" height="16">
