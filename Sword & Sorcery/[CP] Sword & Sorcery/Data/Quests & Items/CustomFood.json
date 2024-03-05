@@ -235,10 +235,10 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.lavaeelandstirfriedpolypore": {
+        "swordandsorcery.lavaeelandstirfriedancientbottlegourd": {
           "Name": "Lava Eel And Stir Fried Polypore",
-          "DisplayName": "{{i18n: food.lavaeelandstirfriedpolypore.name}}",
-          "Description": "{{i18n: food.lavaeelandstirfriedpolypore.description}}",
+          "DisplayName": "{{i18n: food.lavaeelandstirfriedancientbottlegourd.name}}",
+          "Description": "{{i18n: food.lavaeelandstirfriedancientbottlegourd.description}}",
           "Type": "Cooking",
           "Category": -7,
           "Price": 100,

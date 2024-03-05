@@ -14,7 +14,7 @@ CREDITS:
 ➜ Arknir27﻿﻿: Mateo's sprites, help w/ event code 
 ➜ WerewolfMaster: Gunther's sprites & Marlon's portraits/sprites
 ➜ Harvz:﻿ Mateo & Hector's themes
-➜ AgentLyoko: Framework for S&S NPCA builds
+➜ AgentLyoko: Framework for S&S NPCA builds, help w/ code, playtesting
 ➜ MedicSun: Hector's sprites, touch-ups on portraits for aesthetic consistency 
 ➜ Atravita: Mentoring, help with C# 
 ➜ Rinnyboi﻿: Armored Mateo sprites 
@@ -32,7 +32,7 @@ CREDITS:
 
 INSPIRATIONS: 
 
-➜ Dungeons & Dragons, Baulder's Gate 3
+➜ Dungeons & Dragons, Baldur's Gate 3
 
 There are tons of song lyrics hidden throughout the mod, from the following artists: 
 Fall Out Boy, Ghost, Sleep Token, Nightwish, Nadia Grifford, Queen, David Bowie, Elvis
