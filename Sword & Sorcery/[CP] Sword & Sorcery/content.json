@@ -441,7 +441,7 @@
       "Name": "CirrusRelationshipStatus",
       "Value": "true",
       "When": {
-        "HasFlag |contains= CirrusRomanticFlag": true
+        "HasFlag |contains=CirrusRomanticFlag": true
       }
     },
     {
@@ -733,8 +733,64 @@
       "Name": "DnDClassResponse",
       "Value": "You're able to step from the shadows right behind Brahd, getting him clean in the ribs with your daggers.$13",
       "When": {
-        "HasFlag |contains=DnDRanger": true
+        "HasFlag |contains=DnDRogue": true
       }
-    }
+    },
+    {
+      "Name": "CirrusFlirt1",
+      "Value": "Hey, @!$1",
+      "When": {
+        "HasFlag |contains=CirrusFlirt": false
+      }
+    },
+    {
+      "Name": "CirrusFlirt1",
+      "Value": "Hey, sweet thing!$24",
+      "When": {
+        "HasFlag |contains=CirrusFlirt": true
+      }
+    },
+    {
+      "Name": "CirrusFlirt2",
+      "Value": "Thanks for everything, @. Really. This wouldn't be the same without you.$6",
+      "When": {
+        "HasFlag |contains=CirrusFlirt": false
+      }
+    },
+    {
+      "Name": "CirrusFlirt2",
+      "Value": "Thanks for everything, @. Maybe I can show my appreciation once everyone clears out.$24",
+      "When": {
+        "HasFlag |contains=CirrusFlirt": true
+      }
+    },
+    {
+      "Name": "CirrusFlirt3",
+      "Value": "It means a lot, coming from you. You packed up and moved here, completely starting over... it was inspiring, really. Gave me the courage to do something similar.$1",
+      "When": {
+        "HasFlag |contains=CirrusFlirt": false
+      }
+    },
+    {
+      "Name": "CirrusFlirt3",
+      "Value": "I'm proud of myself, too. But, ya'know, happiness is starting to look pretty you-shaped...$23",
+      "When": {
+        "HasFlag |contains=CirrusFlirt": true
+      }
+    },
+    {
+      "Name": "CirrusFlirt4",
+      "Value": "fade/viewport -1000 -1000/message \"Half of The Lion's Mane is open for business, and everyone involved seems in good spirits!\"",
+      "When": {
+        "HasFlag |contains=CirrusFlirt": false
+      }
+    },
+    {
+      "Name": "CirrusFlirt4",
+      "Value": "I'm proud of myself, too. But, ya'know, hapiness is starting to look pretty you-shaped...$23",
+      "When": {
+        "HasFlag |contains=CirrusFlirt": true
+      }
+    },
   ]
 }
