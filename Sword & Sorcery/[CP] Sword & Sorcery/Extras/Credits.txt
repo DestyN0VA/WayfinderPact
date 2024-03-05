@@ -9,7 +9,7 @@ CREDITS:
 ➜ FellowClown: Help with the V2 Mateo portraits and majority of additional assets/portraits/sprites
 ➜ TheLoreSeeker: Emeritus' and Book's portraits 
 ➜ Tiara: Tent interior background
-➜ EnderTendi: Additional Hector portriats, overlay assets, help w/ code 
+➜ EnderTedi: Additional Hector portraits, overlay assets, help w/ code 
 ➜ Poltergeister: Gunther's portraits, help w/ Mateo V2 portraits 
 ➜ Arknir27﻿﻿: Mateo's sprites, help w/ event code 
 ➜ WerewolfMaster: Gunther's sprites & Marlon's portraits/sprites
