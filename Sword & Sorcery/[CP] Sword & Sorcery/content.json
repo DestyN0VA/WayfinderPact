@@ -92,8 +92,8 @@
               "RemoveMail Current SnS.Flag.MateoTrollHeritage all",
               "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.True false"
             ]
-          },
-    }      
+          }
+      }
   }
   
   ],
