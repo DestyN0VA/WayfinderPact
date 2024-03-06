@@ -22,7 +22,7 @@ namespace StardewValley.Tools // Required to spawn properly
                 new FarmerSprite.AnimationFrame(98, 150, secondaryArm: false, flip: false),
             });
             Game1.player.FarmerSprite.PauseForSingleAnimation = true;
-            Game1.activeClickableMenu = new WarpHarpMenu();
+            Game1.activeClickableMenu = null; // TODO
             return base.beginUsing(location, x, y, who);
         }
 

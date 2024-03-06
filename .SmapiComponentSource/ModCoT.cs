@@ -84,7 +84,7 @@ namespace CircleOfThornsSMAPI
         public const string WalletItemEventID = "SnS.Ch2.Hector.19";
 
 
-        internal static Skill Skill;
+        internal static DruidicsSkill Skill;
 
         public IMonitor Monitor;
         public IManifest ModManifest;
@@ -115,7 +115,7 @@ namespace CircleOfThornsSMAPI
             Helper.Events.GameLoop.UpdateTicking += GameLoop_UpdateTicking;
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
 
-            Skill = new Skill();
+            Skill = new DruidicsSkill();
         }
 
         private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
@@ -193,7 +193,7 @@ namespace CircleOfThornsSMAPI
                     if (shapeshiftPressedTimer > 2)
                     {
                         data.transformed.Value = true;
-                        data.form.Value = (data.form.Value + 1) % (Game1.player.HasCustomProfession(Skill.ProfessionShapeshiftWolf) ? 3 : 2);
+                        data.form.Value = (data.form.Value + 1) % (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftWolf) ? 3 : 2);
                     }
                     else
                         data.transformed.Value = !data.transformed.Value;
@@ -226,7 +226,7 @@ namespace CircleOfThornsSMAPI
                         displayName: I18n.Shapeshifted(),
                         iconTexture: ModCoT.Skill.Icon,
                         iconSheetIndex: 0);
-                    if (Game1.player.HasCustomProfession(Skill.ProfessionShapeshiftWolf))
+                    if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftWolf))
                     {
                         b.effects.AttackMultiplier.Value = 1.10f;
                         b.effects.Defense.Value = 3;
@@ -444,7 +444,7 @@ namespace CircleOfThornsSMAPI
         {
             if (who.GetFarmerExtData().transformed.Value)
             {
-                if (Game1.player.HasCustomProfession(Skill.ProfessionShapeshiftWolf) && who.CurrentTool is not MeleeWeapon)
+                if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftWolf) && who.CurrentTool is not MeleeWeapon)
                     return true;
                 return false;
             }
@@ -459,7 +459,7 @@ namespace CircleOfThornsSMAPI
         {
             if (__instance.GetFarmerExtData().transformed.Value)
             {
-                if (Game1.player.HasCustomProfession(Skill.ProfessionShapeshiftWolf) && __instance.CurrentTool is not MeleeWeapon)
+                if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftWolf) && __instance.CurrentTool is not MeleeWeapon)
                     return true;
                 return false;
             }
@@ -573,7 +573,7 @@ namespace CircleOfThornsSMAPI
             float mult = Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
             if (Game1.player.eventsSeen.Contains(ModCoT.WalletItemEventID))
                 mult += 0.01f;
-            if (Game1.player.HasCustomProfession(Skill.ProfessionAgricultureYggdrasil))
+            if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
                 mult += 0.01f;
             if (junimoHarvester == null && Game1.random.NextDouble() < 8 * mult)
             {
@@ -595,7 +595,7 @@ namespace CircleOfThornsSMAPI
             float mult = Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
             if (Game1.player.eventsSeen.Contains(ModCoT.WalletItemEventID))
                 mult += 0.01f;
-            if (Game1.player.HasCustomProfession(Skill.ProfessionAgricultureYggdrasil))
+            if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
                 mult += 0.01f;
             if (Game1.random.NextDouble() < 4 * mult)
             {
@@ -617,7 +617,7 @@ namespace CircleOfThornsSMAPI
             float mult = Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
             if (Game1.player.eventsSeen.Contains(ModCoT.WalletItemEventID))
                 mult += 0.01f;
-            if (Game1.player.HasCustomProfession(Skill.ProfessionAgricultureYggdrasil))
+            if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
                 mult += 0.01f;
             if (Game1.random.NextDouble() < 4 * mult)
             {
@@ -639,7 +639,7 @@ namespace CircleOfThornsSMAPI
             float mult = Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
             if (Game1.player.eventsSeen.Contains(ModCoT.WalletItemEventID))
                 mult += 0.01f;
-            if (Game1.player.HasCustomProfession(Skill.ProfessionAgricultureYggdrasil))
+            if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
                 mult += 0.01f;
             if (Game1.random.NextDouble() < 2 * mult)
             {
@@ -656,7 +656,7 @@ namespace CircleOfThornsSMAPI
             bool hasProfession = false;
             foreach (var player in Game1.getAllFarmers())
             {
-                if (player.HasCustomProfession(Skill.ProfessionAgricultureYggdrasil))
+                if (player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
                 {
                     hasProfession = true;
                     break;
@@ -713,7 +713,7 @@ namespace CircleOfThornsSMAPI
                     continue;
                 }
                 float multiplier = 1f;
-                if (player.HasCustomProfession(Skill.ProfessionAgricultureMidgard) && __instance.Category == -26)
+                if (player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureMidgard) && __instance.Category == -26)
                 {
                     string[] ids = new string[]
                     {
@@ -743,7 +743,7 @@ namespace CircleOfThornsSMAPI
     {
         public static void Postfix(HoeDirt __instance, Farmer who)
         {
-            if (!who.HasCustomProfession(Skill.ProfessionAgricultureMidgard))
+            if (!who.HasCustomProfession(DruidicsSkill.ProfessionAgricultureMidgard))
                 return;
 
             if (__instance.crop == null)
