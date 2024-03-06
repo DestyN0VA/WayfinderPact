@@ -17,6 +17,18 @@
 		{
 		  "UniqueID": "spacechase0.SpaceCore",
 		  "IsRequired": true
-		}
+		},
+		{
+            "UniqueID": "DaisyNiko.Tilesheets",
+			"IsRequired": true
+        },
+        {
+            "UniqueID": "Lumisteria.LumiTilesheetsIndoor",
+			"IsRequired": true
+        },
+        {
+            "UniqueID": "Lumisteria.TtilesheetsOutdoor",
+			"IsRequired": true
+        },
 	 ]
   }
