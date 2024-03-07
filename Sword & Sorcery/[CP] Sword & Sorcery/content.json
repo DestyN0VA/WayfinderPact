@@ -6,32 +6,32 @@
   "Changes": [
 
     {
-      "Logname": "Sword & Sorcery - Mateo Includes",
+      "LogName": "Sword & Sorcery - Mateo Includes",
       "Action": "Include",
       "FromFile": "Data/Appearances/AppearanceData_Mateo.json, Data/Dialogue/Mateo/Dialogue_Mateo.json, Data/Dialogue/Mateo/ConcessionTastes_Mateo.json, Data/Dialogue/Mateo/ConversationTopics_Mateo.json, Data/Dialogue/Mateo/CustomFixed_Mateo.json,Data/Dialogue/Mateo/CustomGiftDialogue_Mateo.json,Data/Dialogue/Mateo/MarriageDialogue_Mateo.json, Data/Dispositions/Dispositions_Mateo.json, Data/Festival Data/FestivalData_Mateo.json, Data/Schedules/Schedule_Mateo.json, Data/Strings/Strings_Mateo.json, Data/Spouse Extras/SpouseExtras_Mateo.json"
     },
     {
-      "Logname": "Sword & Sorcery - Hector Includes",
+      "LogName": "Sword & Sorcery - Hector Includes",
       "Action": "Include",
       "FromFile": "Data/Appearances/AppearanceData_Hector.json, Data/Dialogue/Hector/Dialogue_Hector.json, Data/Dialogue/Hector/ConcessionTastes_Hector.json, Data/Dialogue/Hector/ConversationTopics_Hector.json, Data/Dialogue/Hector/CustomFixed_Hector.json,Data/Dialogue/Hector/CustomGiftDialogue_Hector.json, Data/Dispositions/Dispositions_Hector.json, Data/Festival Data/FestivalData_Hector.json, Data/Schedules/Schedule_Hector.json, Data/Strings/Strings_Hector.json, Data/Spouse Extras/SpouseExtras_Hector.json"
     },
     {
-      "Logname": "Sword & Sorcery - Cirrus Includes",
+      "LogName": "Sword & Sorcery - Cirrus Includes",
       "Action": "Include",
       "FromFile": "Data/Appearances/AppearanceData_Cirrus.json, Data/Dialogue/Cirrus/Dialogue_Cirrus.json, Data/Dialogue/Cirrus/ConcessionTastes_Cirrus.json, Data/Dialogue/Cirrus/ConversationTopics_Cirrus.json, Data/Dialogue/Cirrus/CustomFixed_Cirrus.json,Data/Dialogue/Cirrus/CustomGiftDialogue_Cirrus.json, Data/Dispositions/Dispositions_Cirrus.json, Data/Festival Data/FestivalData_Cirrus.json, Data/Schedules/Schedule_Cirrus.json, Data/Strings/Strings_Cirrus.json, Data/Spouse Extras/SpouseExtras_Cirrus.json"
     },
     {
-      "Logname": "Sword & Sorcery - Quest Includes",
+      "LogName": "Sword & Sorcery - Quest Includes",
       "Action": "Include",
       "FromFile": "Data/Quests & Items/BuildQuest.json, Data/Quests & Items/BuildQuest2.json, Data/Quests & Items/CGSpecialOrders.json, Data/Quests & Items/PentacleQuest.json, Data/Quests & Items/RiverQuest.json"
     },
     {
-      "Logname": "Sword & Sorcery - Custom Companions Includes",
+      "LogName": "Sword & Sorcery - Custom Companions Includes",
       "Action": "Include",
-      "FromFile": "Data/Custom Companions/BookPathing.json, Data/Custom Companions/DinoPathing.json,"
+      "FromFile": "Data/Custom Companions/BookPathing.json, Data/Custom Companions/DinoPathing.json"
     },
     {
-      "Logname": "Sword & Sorcery - Data Includes",
+      "LogName": "Sword & Sorcery - Data Includes",
       "Action": "Include",
       "FromFile": "Data/MapData.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json"
     },
@@ -317,6 +317,17 @@
       "Value": "Beach_ScarredMateo_Horns.png",
       "When": {
         "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true,
+        "MateoTrollHeritage": true
+      }
+    },
+    {
+      "Name": "MateoHorns",
+      "Value": ""
+    },
+    {
+      "Name": "MateoHorns",
+      "Value": "_Horns",
+      "When": {
         "MateoTrollHeritage": true
       }
     },
