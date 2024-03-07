@@ -60,6 +60,7 @@
 
             // ITEM REJECTIONS 
             "RejectItem_(O)458": "{{i18n:Gifts.Cirrus.GiftReject.Bouquet}}",
+            "RejectItem_(O)460": "{{i18n:Gifts.Cirrus.GiftReject.MermaidPendant}}",
       }
 	},
 

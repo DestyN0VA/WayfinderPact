@@ -2174,7 +2174,7 @@ ________      ________ _   _ _______ _____
 "Strings.Hector.LovedAltar.Platonic.5": "There's a message carved in this homemade candle...:# 'Reset my patient violence along both lines of a pathway higher. Grow back my sharpest teeth, you know my desire. I will travel far beyond the path of reason, take me back to Eden.'",
 "Strings.Hector.LovedAltar.Platonic.6": "There's a message carved in this homemade candle...:# 'White roses, black doves. Godmother, rise up; I need you to see me for what I have become.'",
 "Strings.Hector.LovedAltar.Platonic.7": "There's a message carved in this homemade candle...:# 'And just like the rain, you cast the dust into nothing and wash the salt from my hands. So touch me again, I feel my shadow dissolving-'",
-"Strings.Hector.LovedAltar.Platonic.8": "There's a message carved in this homemade candle...:# 'When I open my eyes to the future, I can hear @ say my name.'",
+"Strings.Hector.LovedAltar.Platonic.8": "There's a message carved in this homemade candle...:# 'When I open my eyes to the future, I can hear you say my name.'",
 "Strings.Hector.LovedAltar.Platonic.9": "There's a message carved in this homemade candle...:# 'I cannot fix your wounds this time, but I don't believe you when you tell me you are fine.'",
 
 "Strings.Hector.LovedAltar.Romantic.1": "There's a message carved in this homemade candle...:# 'Sugar, I've developed a taste for you, now. My arms keep you in the room, barely let you move. Show me what you do.'",
@@ -2871,13 +2871,12 @@ ________      ________ _   _ _______ _____
 "Core.Cirrus.NightMarket": "I wonder if I can find any knickknacks from ZuZu or Port Drake at the Night Market. I love a good trinket.$1",
 "Core.Cirrus.WinterStar": "I might have gone a little overboard with gift giving. I've been cooking NON. STOP.$15",
 
-
 // ROMANTIC (POSITIVE) 
-"Core.Cirrus.GiveFlowersA":"",
-"Core.Cirrus.GiveFlowersB":"",
-"Core.Cirrus.GivePendant":"",
-"Core.Cirrus.StardropGiftA":"",
-"Core.Cirrus.StardropGiftB":"",
+"Core.Cirrus.GiveFlowersA":"Oh, @! These are very sweet, is this a Pelican Town thing?$1",
+"Core.Cirrus.GiveFlowersB":"Oh, interesting! In Port Drake, we do something completely different. Good luck in your endevors, @!",
+"Core.Cirrus.GivePendant":"Oh, interesting! In Port Drake, propose with 'Phoenix' feathers. Good luck in your endevors, @!",
+"Core.Cirrus.StardropGiftA":"I found this for you, @ - I wanted to show my love in something of a grand gesture. I hope you'll accept it!$23",
+"Core.Cirrus.StardropGiftB":"I've had this for a long time, @ - But I think you and the farm need it more than I do.$23",
 
 // ROMANTIC (NEGATIVE)
 "Core.Cirrus.DanceRejection":"",
@@ -2901,7 +2900,7 @@ ________      ________ _   _ _______ _____
 "Core.Cirrus.RefusalBotherB":"",
 
 // RESORT
-"Core.Cirrus.ResortEntering":"",
+"Core.Cirrus.ResortEntering":"Time for a beach daaaay!$15",
 "Core.Cirrus.ResortLeaving":"",
 "Core.Cirrus.ResortShore":"",
 "Core.Cirrus.ResortUmbrella":"",
@@ -3370,6 +3369,11 @@ ________      ________ _   _ _______ _____
 "Gifts.Cirrus.GiftReaction.CrispyBass.Birthday": "Yesssss, a birthday seafood dinner! Thank you, @!$1",
 "Gifts.Cirrus.GiftReaction.zuzustylebagelwithlox.Birthday": "You boiled a bagel just for me on my birthday? Thank you, @!$1",
 "Gifts.Cirrus.GiftReaction.ZuzuStylePizza.Birthday": "You got REAL 'za for my birthday? Thank you @, this is the good stuff!$1", 
+
+// ITEM REJECTIONS 
+
+"Gifts.Cirrus.GiftReject.Bouquet": "Oh! Is this a Pelican Town tradition? Good luck in your pursuits, @!$1",
+"Gifts.Cirrus.GiftReject.MermaidPendant": "Oooh, in Port Drake, we do something completely different. Good luck in your pursuits, @!",
 
 
 // BIRTHDAY - ROMANTIC

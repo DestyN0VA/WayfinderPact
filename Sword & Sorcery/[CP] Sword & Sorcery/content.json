@@ -33,68 +33,50 @@
     {
       "Logname": "Sword & Sorcery - Data Includes",
       "Action": "Include",
-      "FromFile": "Data/MapData.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json"
+      "FromFile": "Data/MapData.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json"
     },
 
 // TRIGGER ACTIONS
 
-    {
-      "LogName": "Overrides Seen Today Flag Removal", 
-      "Action": "EditData",
-      "Target": "Data/TriggerActions",
-      "Entries": {
-
-          "SnS.TriggerActions.OverrideSeenToday.Removal.1": {
-              "Id": "SnS.TriggerActions.OverrideSeenToday.Removal.1",
-              "Trigger": "DayStarted",
-              "Condition": "Any \"PLAYER_HAS_MAIL Current SnS_M_Mateo_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Hector_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Cirrus_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Roslin_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Dandelion_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Stan_OverrideSeenToday Any\"",
-              "Actions": [
-                  "RemoveMail Current SnS_M_Mateo_OverrideSeenToday",
-                  "RemoveMail Current SnS_M_Hector_OverrideSeenToday",
-                  "RemoveMail Current SnS_M_Cirrus_OverrideSeenToday",
-                  "RemoveMail Current SnS_M_Roslin_OverrideSeenToday",
-                  "RemoveMail Current SnS_M_Dandelion_OverrideSeenToday",
-                  "RemoveMail Current SnS_M_Stan_OverrideSeenToday",
-                  "MarkActionApplied Current SnS.TriggerActions.OverrideSeenToday.Removal.2 false"
-              ]
-          },
-
-          "SnS.TriggerActions.OverrideSeenToday.Removal.2": {
-              "Id": "SnS.TriggerActions.OverrideSeenToday.Removal.2",
-              "Trigger": "DayStarted",
-              "Condition": "Any \"PLAYER_HAS_MAIL Current SnS_M_Mateo_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Hector_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Cirrus_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Roslin_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Dandelion_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Stan_OverrideSeenToday Any\"",
-              "Actions": [
-                  "RemoveMail Current SnS_M_Mateo_OverrideSeenToday",
-                  "RemoveMail Current SnS_M_Hector_OverrideSeenToday",
-                  "RemoveMail Current SnS_M_Cirrus_OverrideSeenToday",
-                  "RemoveMail Current SnS_M_Roslin_OverrideSeenToday",
-                  "RemoveMail Current SnS_M_Dandelion_OverrideSeenToday",
-                  "RemoveMail Current SnS_M_Stan_OverrideSeenToday",
-                  "MarkActionApplied Current SnS.TriggerActions.OverrideSeenToday.Removal.1 false"
-              ]
-          },
-
-          "SnS.TriggerActions.MateoTrollHeritage.True": {
-            "Id": "Sns.TriggerActions.MateoTrollHeritage.True",
-            "Trigger": "DayStarted",
-            "Condition": "{{MateoTrollHeritage}}",
-            "Actions": [
-              "AddMail Current SnS.Flag.MateoTrollHeritage received",
-              "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.False false"
-            ]
-          },
-
-          "Sns.TriggerActions.MateoTrollHeritage.False": {
-            "Id": "Sns.TriggerActions.MateoTrollHeritage.False",
-            "Trigger": "DayStarted",
-            "Condition": "!{{MateoTrollHeritage}}",
-            "Actions": [
-              "RemoveMail Current SnS.Flag.MateoTrollHeritage all",
-              "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.True false"
-            ]
-          }
-      }
+{
+  "LogName": "Overrides Seen Today Flag Removal",
+  "Action": "EditData",
+  "Target": "Data/TriggerActions",
+  "Entries": {
+    "SnS.TriggerActions.OverrideSeenTodayRemoval": {
+      "Id": "SnS.TriggerActions.OverrideSeenTodayRemoval",
+      "Trigger": "DayStarted",
+      "MarkActionApplied": false,
+      "Condition": "Any \"PLAYER_HAS_MAIL Current SnS_M_Mateo_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Hector_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Cirrus_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Roslin_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Dandelion_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Stan_OverrideSeenToday Any\"",
+      "Actions": [
+        "RemoveMail Current SnS_M_Mateo_OverrideSeenToday",
+        "RemoveMail Current SnS_M_Hector_OverrideSeenToday",
+        "RemoveMail Current SnS_M_Cirrus_OverrideSeenToday",
+        "RemoveMail Current SnS_M_Roslin_OverrideSeenToday",
+        "RemoveMail Current SnS_M_Dandelion_OverrideSeenToday",
+        "RemoveMail Current SnS_M_Stan_OverrideSeenToday"
+      ]
+    },
+    "SnS.TriggerActions.MateoTrollHeritage.True": {
+      "Id": "Sns.TriggerActions.MateoTrollHeritage.True",
+      "Trigger": "DayStarted",
+      "Condition": "{{MateoTrollHeritage}}",
+      "Actions": [
+        "AddMail Current SnS.Flag.MateoTrollHeritage received",
+        "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.False false"
+      ]
+    },
+    "Sns.TriggerActions.MateoTrollHeritage.False": {
+      "Id": "Sns.TriggerActions.MateoTrollHeritage.False",
+      "Trigger": "DayStarted",
+      "Condition": "!{{MateoTrollHeritage}}",
+      "Actions": [
+        "RemoveMail Current SnS.Flag.MateoTrollHeritage all",
+        "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.True false"
+      ]
+    }
   }
+},
   
   ],
   // CONFIG OPTIONS
@@ -850,7 +832,7 @@
     },
     {
       "Name": "CirrusFlirt4",
-      "Value": "I'm proud of myself, too. But, ya'know, hapiness is starting to look pretty you-shaped...$23",
+      "Value": "I'm proud of myself, too. But, ya'know, happiness is starting to look pretty you-shaped...$23",
       "When": {
         "HasFlag |contains=CirrusFlirt": true
       }

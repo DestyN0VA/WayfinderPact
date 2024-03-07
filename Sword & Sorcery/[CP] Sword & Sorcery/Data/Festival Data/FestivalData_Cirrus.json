@@ -1,5 +1,6 @@
 {
     "Changes": [
+		
         // EGG FESTIVAL
 
         {
@@ -23,18 +24,6 @@
 				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
 			  },	  
         },
-
-	{
-		"LogName": "EggFestival",
-		"Action": "EditData",
-		"Target": "Data/Festivals/spring13",
-		"Entries": { //EGG FESTIVAL DIALOGUE: GENERIC
-		
-			"Cirrus":"{{i18n:Festivals.Cirrus.EggFestival.1}}",
-			"Cirrus_2":"{{i18n:Festivals.Cirrus.EggFestival.2}}",
-			
-		}
-	},
 			
 				{
 					"LogName": "EggFestival",
@@ -76,41 +65,15 @@
 			  },  
         },
 
-		{
-			"LogName": "FlowerDance",
-			"Action": "EditData",
-			"Target": "Data/Festivals/spring24",
-			"Entries": { // FLOWER DANCE DIALOGUE: GENERIC 
-			
-				"Cirrus":"{{i18n:Festivals.Cirrus.FlowerDance.1}}",
-				"Cirrus_2":"{{i18n:Festivals.Cirrus.FlowerDance.2}}",
-			  
-			},
-		},
-				
-				{ // FLOWER DANCE DIALOGUE: MARRIED
-					"LogName": "FlowerDance",
-					"Action": "EditData",
-					"Target": "Data/Festivals/spring24",
-					"Entries": {
-					
-						"Cirrus":"{{i18n:Festivals.Cirrus.FlowerDance.Married}}",                       
-					
-					},
-					
-					"When":
-							{ "Relationship:Cirrus": "Married"}
-					
-				},
 
-				{
-					"LogName": "Marriage Flower Dance Accept",
-					"Action": "EditData",
-					"Target": "Strings/Events",
-					"Entries": {
-						"SpouseFlowerDanceAccept_Cirrus":"{{i18n:Festivals.Cirrus.FlowerDance.Accept}}",
-					}
-				},
+		{
+			"LogName": "Marriage Flower Dance Accept",
+			"Action": "EditData",
+			"Target": "Strings/Events",
+			"Entries": {
+				"SpouseFlowerDanceAccept_Cirrus":"{{i18n:Festivals.Cirrus.FlowerDance.Accept}}",
+			}
+		},
 
         // LUAU
 
@@ -135,30 +98,6 @@
 			  },
 		},
 
-		{
-			"LogName": "Luau",
-			"Action": "EditData",
-			"Target": "Data/Festivals/summer11",
-			"Entries": { // LUAU DIALOGUE: GENERIC 
-			
-				"Cirrus":"{{i18n:Festivals.Cirrus.Luau.1}}",
-				"Cirrus_2":"{{i18n:Festivals.Cirrus.Luau.2}}",
-			
-			},
-		},
-				{ // 
-				"LogName": "Luau",
-					"Action": "EditData",
-					"Target": "Data/Festivals/summer11",
-					"Entries": {
-						
-							"Cirrus":"{{i18n:Festivals.Cirrus.Luau.Married}}",                 
-					 },
-					"When":
-					{ "Relationship:Cirrus": "Married"}
-
-			},
-
 
         // DANCE OF THE MOONLIGHT JELLIES
 
@@ -178,30 +117,6 @@
 
 			  },
 		},
-		{
-			"LogName": "Jellies",
-			"Action": "EditData",
-			"Target": "Data/Festivals/summer28",
-			"Entries": { // DANCE OF THE MOONLIGHT JELLIES: GENERIC
-
-				"Cirrus":"{{i18n:Festivals.Cirrus.MoonlightJellies.1}}",
-				"Cirrus_2":"{{i18n:Festivals.Cirrus.MoonlightJellies.2}}",
-				
-
-			}
-		},
-				{
-					"LogName": "Jellies",
-					"Action": "EditData",
-					"Target": "Data/Festivals/summer28",
-					"Entries": { // DANCE OF THE MOONLIGHT JELLIES: MARRIED
-
-						"Cirrus":"{{i18n:Festivals.Cirrus.MoonlightJellies.Married}}",
-						
-				},
-					"When":
-					{ "Relationship:Cirrus": "Married"}
-				},
 
         // STARDEW VALLEY FAIR
 
