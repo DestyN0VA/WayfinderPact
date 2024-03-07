@@ -5,7 +5,7 @@ using SwordAndSorcerySMAPI;
 
 namespace CircleOfThornsSMAPI
 {
-    internal class Skill : SpaceCore.Skills.Skill
+    internal class DruidicsSkill : SpaceCore.Skills.Skill
     {
         public static GenericProfession ProfessionShapeshift;
         public static GenericProfession ProfessionAgriculture;
@@ -14,60 +14,60 @@ namespace CircleOfThornsSMAPI
         public static GenericProfession ProfessionAgricultureMidgard;
         public static GenericProfession ProfessionAgricultureYggdrasil;
 
-        public Skill()
+        public DruidicsSkill()
             : base("DestyNova.SwordAndSorcery.Druidics")
         {
-            this.Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/skill/Druid.png");
-            this.SkillsPageIcon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/skill/Druid1.png");
+            this.Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/Druid.png");
+            this.SkillsPageIcon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/Druid1.png");
 
             this.ExperienceCurve = new[] { 100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000 };
 
             this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(196, 76, 255);
 
             // Level 5
-            Skill.ProfessionShapeshift = new GenericProfession(skill: this, id: "SkilledShapeshifter", name: I18n.Druidics_Profession_Shapeshifting_Name, description: I18n.Druidics_Profession_Shapeshifting_Description)
+            DruidicsSkill.ProfessionShapeshift = new GenericProfession(skill: this, id: "SkilledShapeshifter", name: I18n.Druidics_Profession_Shapeshifting_Name, description: I18n.Druidics_Profession_Shapeshifting_Description)
             {
-                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/skill/SkilledShapeshifter.png")
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/SkilledShapeshifter.png")
             };
-            this.Professions.Add(Skill.ProfessionShapeshift);
+            this.Professions.Add(DruidicsSkill.ProfessionShapeshift);
 
-            Skill.ProfessionAgriculture = new GenericProfession(skill: this, id: "AncientAgronomist", name: I18n.Druidics_Profession_Agriculture_Name, description: I18n.Druidics_Profession_Agriculture_Description)
+            DruidicsSkill.ProfessionAgriculture = new GenericProfession(skill: this, id: "AncientAgronomist", name: I18n.Druidics_Profession_Agriculture_Name, description: I18n.Druidics_Profession_Agriculture_Description)
             {
-                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/skill/AncientAgronomist.png")
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/AncientAgronomist.png")
             };
-            this.Professions.Add(Skill.ProfessionAgriculture);
+            this.Professions.Add(DruidicsSkill.ProfessionAgriculture);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(5, Skill.ProfessionShapeshift, Skill.ProfessionAgriculture));
+            this.ProfessionsForLevels.Add(new ProfessionPair(5, DruidicsSkill.ProfessionShapeshift, DruidicsSkill.ProfessionAgriculture));
 
             // Level 10 - track A
-            Skill.ProfessionShapeshiftStag = new GenericProfession(skill: this, id: "StagPath", name: I18n.Druidics_Profession_ShapeshiftingStag_Name, description: I18n.Druidics_Profession_ShapeshiftingStag_Description)
+            DruidicsSkill.ProfessionShapeshiftStag = new GenericProfession(skill: this, id: "StagPath", name: I18n.Druidics_Profession_ShapeshiftingStag_Name, description: I18n.Druidics_Profession_ShapeshiftingStag_Description)
             {
-                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/skill/StagPath.png")
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/StagPath.png")
             };
-            this.Professions.Add(Skill.ProfessionShapeshiftStag);
+            this.Professions.Add(DruidicsSkill.ProfessionShapeshiftStag);
 
-            Skill.ProfessionShapeshiftWolf = new GenericProfession(skill: this, id: "WolfPath", name: I18n.Druidics_Profession_ShapeshiftingWolf_Name, description: I18n.Druidics_Profession_ShapeshiftingWolf_Description)
+            DruidicsSkill.ProfessionShapeshiftWolf = new GenericProfession(skill: this, id: "WolfPath", name: I18n.Druidics_Profession_ShapeshiftingWolf_Name, description: I18n.Druidics_Profession_ShapeshiftingWolf_Description)
             {
-                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/skill/WolfPath.png")
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/WolfPath.png")
             };
-            this.Professions.Add(Skill.ProfessionShapeshiftWolf);
+            this.Professions.Add(DruidicsSkill.ProfessionShapeshiftWolf);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(10, Skill.ProfessionShapeshiftStag, Skill.ProfessionShapeshiftWolf, Skill.ProfessionShapeshift));
+            this.ProfessionsForLevels.Add(new ProfessionPair(10, DruidicsSkill.ProfessionShapeshiftStag, DruidicsSkill.ProfessionShapeshiftWolf, DruidicsSkill.ProfessionShapeshift));
 
             // Level 10 - track B
-            Skill.ProfessionAgricultureMidgard = new GenericProfession(skill: this, id: "BranchOfMidgard", name: I18n.Druidics_Profession_AgricultureMidgard_Name, description: I18n.Druidics_Profession_AgricultureMidgard_Description)
+            DruidicsSkill.ProfessionAgricultureMidgard = new GenericProfession(skill: this, id: "BranchOfMidgard", name: I18n.Druidics_Profession_AgricultureMidgard_Name, description: I18n.Druidics_Profession_AgricultureMidgard_Description)
             {
-                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/skill/BranchOfMidgard.png")
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/BranchOfMidgard.png")
             };
-            this.Professions.Add(Skill.ProfessionAgricultureMidgard);
+            this.Professions.Add(DruidicsSkill.ProfessionAgricultureMidgard);
 
-            Skill.ProfessionAgricultureYggdrasil = new GenericProfession(skill: this, id: "BranchOfYggdrasil", name: I18n.Druidics_Profession_AgricultureYggdrasil_Name, description: I18n.Druidics_Profession_AgricultureYggdrasil_Description)
+            DruidicsSkill.ProfessionAgricultureYggdrasil = new GenericProfession(skill: this, id: "BranchOfYggdrasil", name: I18n.Druidics_Profession_AgricultureYggdrasil_Name, description: I18n.Druidics_Profession_AgricultureYggdrasil_Description)
             {
-                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/skill/BranchOfYggdrasil.png")
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/BranchOfYggdrasil.png")
             };
-            this.Professions.Add(Skill.ProfessionAgricultureYggdrasil);
+            this.Professions.Add(DruidicsSkill.ProfessionAgricultureYggdrasil);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(10, Skill.ProfessionAgricultureMidgard, Skill.ProfessionAgricultureYggdrasil, Skill.ProfessionAgriculture));
+            this.ProfessionsForLevels.Add(new ProfessionPair(10, DruidicsSkill.ProfessionAgricultureMidgard, DruidicsSkill.ProfessionAgricultureYggdrasil, DruidicsSkill.ProfessionAgriculture));
         }
 
         public override string GetName()
@@ -97,6 +97,10 @@ namespace CircleOfThornsSMAPI
             {
                 I18n.Druidics_Level_Generic(bonus: 1)
             };
+
+            if (level % 5 == 0)
+                ret.Add(I18n.Level_Manacap());
+
             if (recipes[level] != null)
             {
                 ret.Add(I18n.Recipe_Crafting(new CraftingRecipe(recipes[level][0], false).DisplayName));

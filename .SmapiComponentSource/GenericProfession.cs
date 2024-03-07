@@ -35,7 +35,7 @@ namespace CircleOfThornsSMAPI
         /// <param name="id">The unique profession ID.</param>
         /// <param name="name">The translated profession name.</param>
         /// <param name="description">The translated profession description.</param>
-        public GenericProfession(Skill skill, string id, Func<string> name, Func<string> description)
+        public GenericProfession(SpaceCore.Skills.Skill skill, string id, Func<string> name, Func<string> description)
             : base(skill, id)
         {
             this.GetNameImpl = name;

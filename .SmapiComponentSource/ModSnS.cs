@@ -18,6 +18,7 @@ using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using xTile.Tiles;
 
@@ -114,10 +115,11 @@ namespace SwordAndSorcerySMAPI
             });
 
             var harmony = new Harmony(ModManifest.UniqueID);
-            harmony.PatchAll();
+            harmony.PatchAll( Assembly.GetExecutingAssembly() );
 
             new ModCoT(Monitor, ModManifest, Helper).Entry();
             new ModNEA(Monitor, ModManifest, Helper).Entry(harmony);
+            new ModUP(Monitor, ModManifest, Helper).Entry();
         }
 
         private void Input_ButtonPressed(object sender, StardewModdingAPI.Events.ButtonPressedEventArgs e)
