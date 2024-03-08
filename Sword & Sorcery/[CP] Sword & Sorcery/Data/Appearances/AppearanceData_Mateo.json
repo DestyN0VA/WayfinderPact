@@ -6,7 +6,7 @@
             "LogName": "Default Sprites - Mateo",
             "Action": "Load",
             "Target": "Characters/Mateo",
-            "FromFile": "Assets/{{Target}}/Seasonal/Seasonal_1.png"
+            "FromFile": "Assets/{{Target}}/Seasonal/Mateo_Seasonal_1.png"
         },
         {
             "LogName": "Default Portraits - Mateo",
@@ -14,48 +14,51 @@
             "Target": "Portraits/Mateo",
             "FromFile": "Assets/{{Target}}/Seasonal/Mateo_Seasonal_1.png"
         },
+
+
+        // LOADS
         {
-            "LogName": "Beach Portraits for Events - Mateo",
+            "LogName": "Beach Portraits - Mateo",
             "Action": "Load",
             "Target": "Portraits/Mateo_beach",
-            "FromFile": "Assets/Portraits/Mateo/{{MateoBeach}}",
+            "FromFile": "Assets/Portraits/Mateo/{{MateoBeach}}"
         },
         {
-            "LogName": "Beach Sprites for Events - Mateo",
+            "LogName": "Beach Sprites - Mateo",
             "Action": "Load",
             "Target": "Characters/Mateo_beach",
-            "FromFile": "Assets/Characters/Mateo/Beach_Mateo.png",
+            "FromFile": "Assets/Characters/Mateo/Beach_Mateo{{MateoHorns}}.png"
         },
         {
-            "LogName": "Mateo's Scar Overlay",
-            "Action": "EditImage",
-            "Target": "Portraits/Mateo/Festivals/EggFair_Mateo.png, Portraits/Mateo/Festivals/FlowerDance_Mateo.png, Portraits/Mateo/Festivals/IceFestWinterStar_Mateo.png, Portraits/Mateo/Seasonal/Seasonal_1.png, Portraits/Mateo/Seasonal/Seasonal_2.png, Portraits/Mateo/Seasonal/Seasonal_3.png, Portraits/Mateo/Seasonal/Seasonal_4.png, Portraits/Mateo/Seasonal/Seasonal_5.png, Portraits/Mateo/Seasonal/Seasonal_6.png, Portraits/Mateo/Seasonal/Seasonal_7.png, Portraits/Mateo/Seasonal/Seasonal_8.png, Portraits/Mateo/Seasonal/Seasonal_9.png,",
-            "FromFile": "Assets/{{Target}}/scar_overlay_mateo.png",
-            "PatchMode": "Overlay",
-            "When": {"HasSeenEvent |contains=SnS.Ch1.Mateo.9": true},
-            "Update": "OnTimeChange, OnLocationChange",
+            "LogName": "Date Night Portraits - Mateo",
+            "Action": "Load",
+            "Target": "Portraits/DateNight_Mateo",
+            "FromFile": "Assets/Portraits/Mateo/DateNight_Mateo.png"
         },
         {
-            "LogName": "Mermaid Pendant Earring",
-            "Action": "EditImage",
-            "Target": "Portraits/Mateo",
-            "FromFile": "Assets/{{Target}}/pendant_overlay_mateo.png",
-            "PatchMode": "Overlay",
-            "When": {"Relationship:Mateo |contains=Married": true, "MermaidPendantEarring": true},
-            "Update": "OnTimeChange, OnLocationChange",
+            "LogName": "Date Night Sprites - Mateo",
+            "Action": "Load",
+            "Target": "Characters/DateNight_Mateo",
+            "FromFile": "Assets/Characters/Mateo/DateNight_Mateo{{MateoHorns}}.png"
         },
         {
-            "LogName": "Mateo's Troll Heritage Overlay",
-            "Action": "EditImage",
-            "Target": "Portraits/Mateo",
-            "FromFile": "Assets/{{Target}}/horn_overlay_mateo.png",
-            "PatchMode": "Overlay",
-            "When": {"MateoTrollHeritage": true},
-            "Update": "OnTimeChange, OnLocationChange",
+            "LogName": "Armor Portraits - Mateo",
+            "Action": "Load",
+            "Target": "Portraits/Armor_Mateo",
+            "FromFile": "Assets/Portraits/Mateo/{{MateoArmor}}"
         },
-
-
-        // OVERLAYS
+        {
+            "LogName": "Armor Sprites - Mateo",
+            "Action": "Load",
+            "Target": "Characters/Armor_Mateo",
+            "FromFile": "Assets/Characters/Mateo/Armor_Mateo.png"
+        },
+        {
+            "LogName": "Flower Dance Sprites - Mateo",
+            "Action": "Load",
+            "Target": "Characters/FlowerDance_Mateo",
+            "FromFile": "Assets/Characters/Mateo/Festivals/FlowerDance_Mateo{{MateoHorns}}.png"
+        },
         {
             "Action": "Load",
             "Target": "Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7,Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9",
@@ -63,51 +66,75 @@
         },
         {
             "Action": "Load",
-            "Target": "Portraits/EggFair_Mateo",
-            "FromFile": "Assets/Portraits/Mateo/Festivals/EggFair_Mateo.png"
+            "Target": "Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo",
+            "FromFile": "Assets/Portraits/Mateo/Festivals/{{TargetWithoutPath}}.png"
         },
         {
             "Action": "Load",
-            "Target": "Portraits/FlowerDance_Mateo",
-            "FromFile": "Assets/Portraits/Mateo/Festivals/FlowerDance_Mateo.png"
+            "Target": "Characters/Mateo_Seasonal_1, Characters/Mateo_Seasonal_2, Characters/Mateo_Seasonal_3, Characters/Mateo_Seasonal_4, Characters/Mateo_Seasonal_5, Characters/Mateo_Seasonal_6, Characters/Mateo_Seasonal_7,Characters/Mateo_Seasonal_8, Characters/Mateo_Seasonal_9",
+            "FromFile": "Assets/Characters/Mateo/Seasonal/{{TargetWithoutPath}}.png"
         },
         {
             "Action": "Load",
-            "Target": "Portraits/IceFestWinterStar_Mateo",
-            "FromFile": "Assets/Portraits/Mateo/Festivals/IceFestWinterStar_Mateo.png"
+            "Target": "Characters/EggFair_Mateo, Characters/IceFestWinterStar_Mateo, Characters/LuauMoonlight_Mateo, Characters/SpiritsEve_Mateo",
+            "FromFile": "Assets/Characters/Mateo/Festivals/{{TargetWithoutPath}}.png"
         },
-        {
-            "Action": "Load",
-            "Target": "Portraits/LuauMoonlight_Mateo",
-            "FromFile": "Assets/Portraits/Mateo/Festivals/LuauMoonlight_Mateo.png"
-        },
+
+
+        //OVERLAYS
         {
             "LogName": "Mateo's Scar Overlay",
             "Action": "EditImage",
-            "Target": "Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7,Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo",
+            "Target": "Portraits/Mateo, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
             "PatchMode": "Overlay",
             "FromFile": "assets/portraits/Mateo/scar_overlay_mateo.png",
             "Update": "OnTimeChange, OnLocationChange",
-            "When": {"HasSeenEvent |contains=SnS.Ch1.Mateo.9": true}
+            "When": { "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true }
         },
         {   
             "LogName": "Mermaid Pendant Earring",
             "Action": "EditImage",
-            "Target": "Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7,Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo",
+            "Target": "Portraits/Mateo, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
             "PatchMode": "Overlay",
             "FromFile": "assets/portraits/Mateo/pendant_overlay_mateo.png",
             "Update": "OnTimeChange, OnLocationChange",
-            "When": {"Relationship:Mateo |contains=Married": true, "MermaidPendantEarring": true}
+            "When": { "Relationship:Mateo |contains=Married": true, "MermaidPendantEarring": true }
         },
         {   
-            "LogName": "Mateo's Troll Heritage Overlay",
+            "LogName": "Mateo's Troll Heritage Portrait Overlay",
             "Action": "EditImage",
-            "Target": "Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7,Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo",
+            "Target": "Portraits/Mateo, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
             "PatchMode": "Overlay",
             "FromFile": "assets/portraits/Mateo/horn_overlay_mateo.png",
             "Update": "OnTimeChange, OnLocationChange",
-            "When": {"MateoTrollHeritage": true}
+            "When": { "MateoTrollHeritage": true, "HasSeenEvent |Contains=SnS.Ch1.Mateo.9": false }
         },
-
+        {   
+            "LogName": "Mateo's Troll Heritage Broken Horn Portrait Overlay",
+            "Action": "EditImage",
+            "Target": "Portraits/Mateo, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/portraits/Mateo/broken_horn_overlay_mateo.png",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": { "MateoTrollHeritage": true, "HasSeenEvent |Contains=SnS.Ch1.Mateo.9": true }
+        },
+        {   
+            "LogName": "Mateo's Troll Heritage Sprite Overlay",
+            "Action": "EditImage",
+            "Target": "Characters/Mateo, Characters/Mateo_Seasonal_1, Characters/Mateo_Seasonal_2, Characters/Mateo_Seasonal_3, Characters/Mateo_Seasonal_4, Characters/Mateo_Seasonal_5, Characters/Mateo_Seasonal_6, Characters/Mateo_Seasonal_7,Characters/Mateo_Seasonal_8, Characters/Mateo_Seasonal_9, Characters/EggFair_Mateo, Characters/IceFestWinterStar_Mateo, Characters/LuauMoonlight_Mateo, Characters/Armor_Mateo",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Mateo/horn_overlay_mateo.png",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": { "MateoTrollHeritage": true }
+        },
+        {
+            "LogName": "Mateo's Scar Overlay",
+            "Action": "EditImage",
+            "Target": "Portraits/Mateo/Festivals/EggFair_Mateo.png, Portraits/Mateo/Festivals/FlowerDance_Mateo.png, Portraits/Mateo/Festivals/IceFestWinterStar_Mateo.png, Portraits/Mateo/Seasonal/Seasonal_1.png, Portraits/Mateo/Seasonal/Seasonal_2.png, Portraits/Mateo/Seasonal/Seasonal_3.png, Portraits/Mateo/Seasonal/Seasonal_4.png, Portraits/Mateo/Seasonal/Seasonal_5.png, Portraits/Mateo/Seasonal/Seasonal_6.png, Portraits/Mateo/Seasonal/Seasonal_7.png, Portraits/Mateo/Seasonal/Seasonal_8.png, Portraits/Mateo/Seasonal/Seasonal_9.png,",
+            "FromFile": "Assets/{{Target}}/scar_overlay_mateo.png",
+            "PatchMode": "Overlay",
+            "When": { "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true },
+            "Update": "OnTimeChange, OnLocationChange"
+        }
     ]
 }

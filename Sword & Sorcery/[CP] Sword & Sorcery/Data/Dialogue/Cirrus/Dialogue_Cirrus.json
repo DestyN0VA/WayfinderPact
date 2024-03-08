@@ -17,7 +17,7 @@
   "Action": "EditData",
   "Target": "Characters/Dialogue/Cirrus",
   "Entries": 	{ 
-      "{{WeekDay}}": "{{i18n:Core.Cirrus.Generic.EarlyHeart.{{Random:{{Range: 1, 31}}}}}}"
+      "{{WeekDay}}": "{{i18n:Core.Cirrus.Generic.EarlyHeart.{{Random:{{Range: 1, 30}}}}}}"
   }
 },
 {
@@ -25,7 +25,7 @@
   "Action": "EditData",
   "Target": "Characters/Dialogue/Cirrus",
   "Entries": 	{ 
-      "{{WeekDay}}": "{{i18n:Core.Cirrus.Generic.LateHeart.{{Random:{{Range: 1, 43}}}}}}"
+      "{{WeekDay}}": "{{i18n:Core.Cirrus.Generic.LateHeart.{{Random:{{Range: 1, 50}}}}}}"
   },
   "When": { "Hearts:Cirrus": "{{Range: 6, 10}}" }
 },
