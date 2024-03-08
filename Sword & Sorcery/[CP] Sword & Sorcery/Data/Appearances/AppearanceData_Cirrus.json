@@ -1,59 +1,32 @@
 {
     "Changes": [
-        // PORTRAIT & SPRITE LOADS
-        
+
+        // PORTRAIT & SPRITE DEFAULT LOAD
         {
             "LogName": "Default Portraits & Sprites - Cirrus",
             "Action": "Load",
             "Target": "Portraits/Cirrus, Characters/Cirrus",
-            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/spring_Cirrus.png",
+            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/spring_Cirrus.png"
         },
+
+
+        // LOADS
         {
-            "LogName": "Glamrock Outfit for Events - Cirrus",
             "Action": "Load",
-            "Target": "Portraits/Cirrus_Glamrock, Characters/Cirrus_Glamrock",
-            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Cirrus_Glamrock.png",
-        },
-        {
-            "LogName": "Cirrus Beach Portrait/Sprite Load",
-            "Action": "EditImage",
-            "Target": "Portraits/Cirrus, Characters/Cirrus",
-            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Cirrus_beach.png",
-            "Update": "OnLocationChange",
-            "When": {"LocationName": "IslandSouth, IslandWest, IslandEast, IslandNorth, Beach"}
-        },
-        {
-            "LogName": "Mermaid Pendant Choker",
-            "Action": "EditImage",
-            "Target": "Portraits/Cirrus",
-            "FromFile": "Assets/{{Target}}/{{season}}_pendant_overlay_cirrus.png",
-            "PatchMode": "Overlay",
-            "When": {"Relationship:Cirrus |contains=Married": true, "MermaidPendantEarring": true},
-            "Update": "OnTimeChange, OnLocationChange",
+            "Target": "Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/winter_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock, Characters/spring_Cirrus, Characters/summer_Cirrus, Characters/fall_Cirrus, Characters/winter_Cirrus, Characters/Cirrus_beach, Characters/Cirrus_Glamrock",
+            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/{{TargetWithoutPath}}.png"
         },
 
     
         // OVERLAYS
-        {
-            "Action": "Load",
-            "Target": "Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/winter_Cirrus",
-            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/{{TargetWithoutPath}}.png",
-        },
-        {
-            "Action": "Load",
-            "Target": "Portraits/Cirrus_beach",
-            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Cirrus_beach.png",
-        },
         {   
             "LogName": "Mermaid Pendant Choker",
             "Action": "EditImage",
-            "Target": "Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/winter_Cirrus, Portraits/Cirrus_beach",
+            "Target": "Portraits/Cirrus, Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/winter_Cirrus, Portraits/Cirrus_beach",
             "PatchMode": "Overlay",
             "FromFile": "assets/portraits/Cirrus/{{season}}_pendant_overlay_Cirrus.png",
             "Update": "OnTimeChange, OnLocationChange",
             "When": {"Relationship:Cirrus |contains=Married": true, "MermaidPendantChoker": true}
-        },
-    
-    
+        }
     ]
 }

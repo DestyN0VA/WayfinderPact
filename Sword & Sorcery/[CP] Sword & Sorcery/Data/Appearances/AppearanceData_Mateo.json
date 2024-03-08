@@ -3,15 +3,9 @@
 
         // PORTRAIT & SPRITE DEFAULT LOAD
         {
-            "LogName": "Default Sprites - Mateo",
+            "LogName": "Default Portraits & Sprites - Mateo",
             "Action": "Load",
-            "Target": "Characters/Mateo",
-            "FromFile": "Assets/{{Target}}/Seasonal/Mateo_Seasonal_1.png"
-        },
-        {
-            "LogName": "Default Portraits - Mateo",
-            "Action": "Load",
-            "Target": "Portraits/Mateo",
+            "Target": "Characters/Mateo, Portraits/Mateo",
             "FromFile": "Assets/{{Target}}/Seasonal/Mateo_Seasonal_1.png"
         },
 
@@ -61,23 +55,13 @@
         },
         {
             "Action": "Load",
-            "Target": "Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7,Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9",
-            "FromFile": "Assets/Portraits/Mateo/Seasonal/{{TargetWithoutPath}}.png"
+            "Target": "Characters/Mateo_Seasonal_1, Characters/Mateo_Seasonal_2, Characters/Mateo_Seasonal_3, Characters/Mateo_Seasonal_4, Characters/Mateo_Seasonal_5, Characters/Mateo_Seasonal_6, Characters/Mateo_Seasonal_7, Characters/Mateo_Seasonal_8, Characters/Mateo_Seasonal_9, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9",
+            "FromFile": "Assets/{{TargetPathOnly}}/Mateo/Seasonal/{{TargetWithoutPath}}.png"
         },
         {
             "Action": "Load",
-            "Target": "Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo",
-            "FromFile": "Assets/Portraits/Mateo/Festivals/{{TargetWithoutPath}}.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/Mateo_Seasonal_1, Characters/Mateo_Seasonal_2, Characters/Mateo_Seasonal_3, Characters/Mateo_Seasonal_4, Characters/Mateo_Seasonal_5, Characters/Mateo_Seasonal_6, Characters/Mateo_Seasonal_7,Characters/Mateo_Seasonal_8, Characters/Mateo_Seasonal_9",
-            "FromFile": "Assets/Characters/Mateo/Seasonal/{{TargetWithoutPath}}.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/EggFair_Mateo, Characters/IceFestWinterStar_Mateo, Characters/LuauMoonlight_Mateo, Characters/SpiritsEve_Mateo",
-            "FromFile": "Assets/Characters/Mateo/Festivals/{{TargetWithoutPath}}.png"
+            "Target": "Characters/EggFair_Mateo, Characters/IceFestWinterStar_Mateo, Characters/LuauMoonlight_Mateo, Characters/SpiritsEve_Mateo, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo",
+            "FromFile": "Assets/{{TargetPathOnly}}/Mateo/Festivals/{{TargetWithoutPath}}.png"
         },
 
 
