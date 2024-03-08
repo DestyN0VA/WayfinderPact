@@ -48,7 +48,7 @@
                                 "X": 12,
                                 "Y": 5
                             },
-                            "Direction": "Down",
+                            "Direction": "Down"
                         }
                     ],
                     "Appearance": [
@@ -58,7 +58,7 @@
                             "Precedence": -10, 
                             "Weight": 1,
                             "Portrait": "Portraits/spring_Hector",
-                            "Sprite": "{{InternalAssetKey: Assets/Characters/Hector/{{TrueShape}}/spring_Hector.png}}",
+                            "Sprite": "Characters/spring_Hector"
                         },
                         {
                             "ID": "Summer Outfit",
@@ -66,7 +66,7 @@
                             "Precedence": -10, 
                             "Weight": 1,
                             "Portrait": "Portraits/summer_Hector",
-                            "Sprite": "{{InternalAssetKey: Assets/Characters/Hector/{{TrueShape}}/summer_Hector.png}}",
+                            "Sprite": "Characters/summer_Hector"
                         },
                         {
                             "ID": "Fall Outfit",
@@ -74,7 +74,7 @@
                             "Precedence": -10, 
                             "Weight": 1,
                             "Portrait": "Portraits/fall_Hector",
-                            "Sprite": "{{InternalAssetKey: Assets/Characters/Hector/{{TrueShape}}/fall_Hector.png}}",
+                            "Sprite": "Characters/fall_Hector"
                         },
                         {
                             "ID": "Winter Outfit",
@@ -82,29 +82,29 @@
                             "Precedence": -10, 
                             "Weight": 1,
                             "Portrait": "Portraits/winter_Hector",
-                            "Sprite": "{{InternalAssetKey: Assets/Characters/Hector/{{TrueShape}}/winter_Hector.png}}",
+                            "Sprite": "Characters/winter_Hector"
                         },
                         {
                             "ID": "Spirit's Eve",
                             "Condition": "EVENT_ID festival_fall27",
-                            "Portrait": "Portraits//Hector_hooddown.png",
-                            "Sprite": "{{InternalAssetKey: Assets/Characters/Hector/{{TrueShape}}/Hector_hooddown.png}}",   
+                            "Portrait": "Portraits/Hector_HoodDown",
+                            "Sprite": "Characters/Hector_HoodDown",   
                             "Precedence": -20
                         },
                         {
                             "ID": "Luau & Moonlight Jellies",
                             "Condition": "ANY \"EVENT_ID festival_summer11\" \"EVENT_ID festival_summer28\"",
-                            "Portrait": "Portraits/Hector_beach.png",
-                            "Sprite": "{{InternalAssetKey: Assets/Characters/Hector/{{TrueShape}}/Hector_beach.png}}",
+                            "Portrait": "Portraits/Hector_beach",
+                            "Sprite": "Characters/Hector_beach",
                             "Precedence": -20
                         },
                         {
                             "ID": "Beach",
                             "IsIslandAttire": true,
-                            "Portrait": "Portraits/Hector_beach.png",
-                            "Sprite": "{{InternalAssetKey: Assets/Characters/Hector/{{TrueShape}}/Hector_beach.png}}",
+                            "Portrait": "Portraits/Hector_beach",
+                            "Sprite": "Characters/Hector_beach",
                             "Precedence": -20
-                        },
+                        }
                     ]
                 }
             }
