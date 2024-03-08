@@ -10,6 +10,8 @@ using StardewValley;
 using StardewValley.Buffs;
 using StardewValley.Buildings;
 using StardewValley.Characters;
+using StardewValley.Locations;
+using StardewValley.Menus;
 using StardewValley.Monsters;
 using StardewValley.TerrainFeatures;
 using System;
@@ -264,6 +266,48 @@ namespace SwordAndSorcerySMAPI
                 Game1.addHUDMessage(new HUDMessage(I18n.Bardics_Song_Crops_Message(grewCount)));
             }
         }
+
+        internal static void ObeliskSong()
+        {
+            List<string> opts = new();
+            if (Game1.IsBuildingConstructed("Desert Obelisk"))
+                opts.Add("Desert Obelisk");
+            if (Game1.IsBuildingConstructed("Water Obelisk"))
+                opts.Add("Water Obelisk");
+            if (Game1.IsBuildingConstructed("Earth Obelisk"))
+                opts.Add("Earth Obelisk");
+            if (Game1.IsBuildingConstructed("Island Obelisk"))
+                opts.Add("Island Obelisk");
+            if (Game1.player.mailReceived.Contains("ReturnScepter"))
+                opts.Add("Return Scepter");
+
+            List<Response> responses = new();
+            foreach ( var entry in opts )
+            {
+                responses.Add(new(entry, I18n.GetByKey($"bardics.song.obelisk.{entry.Replace(" ", "")}")));
+            }
+            responses.Add(new("cancel", I18n.Cancel()));
+            Game1.drawObjectQuestionDialogue(I18n.Bardics_Song_Obelisk_Name(), responses.ToArray());
+            Game1.currentLocation.afterQuestion = (Farmer who, string key) =>
+            {
+                if ( opts.Contains( key ) )
+                {
+                    if ( key == "Return Scepter" )
+                    {
+                        FarmHouse home = Utility.getHomeOfFarmer(Game1.player);
+                        if (home != null)
+                        {
+                            Point position = home.getFrontDoorSpot();
+                            Game1.warpFarmer("Farm", position.X, position.Y, flip: false);
+                        }
+                    }
+                    else
+                    {
+                        Building.TryPerformObeliskWarp(key, who);
+                    }
+                }
+            };
+        }
     }
 
     public class MonsterKnockbackMessage
@@ -318,7 +362,7 @@ namespace SwordAndSorcerySMAPI
                 new() { new SongEntry() { Name = I18n.Bardics_Song_Time_Name, Function = SongEntry.TimeSong } }, 
                 new() { new SongEntry() { Name = () => I18n.Bardics_Song_Horse_Name( Game1.player.horseName.Value ), Function = SongEntry.HorseSong } },
                 new() { new SongEntry() { Name = I18n.Bardics_Song_Crops_Name, Function = SongEntry.CropSong } },
-                new() { null }, // obelisk
+                new() { new SongEntry() { Name = I18n.Bardics_Song_Obelisk_Name, Function = SongEntry.ObeliskSong } },
                 new() {},
             };
 

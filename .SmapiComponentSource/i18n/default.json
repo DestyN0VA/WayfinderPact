@@ -17,6 +17,8 @@
 
   "level.manacap": "+25 max aether",
 
+  "cancel": "Cancel",
+
   // NEA
   "Mateo.RejectBouquet": "Did Aideen help you put that bouquet together, @? It looks beautiful.",
 
@@ -73,6 +75,11 @@
   "bardics.song.crops.message": "Affected {{count}} crops.",
   "bardics.song.obelisk.name": "A Walk in Adante",
   "bardics.song.obelisk.description": "Allows remote use of any obelisks you've acquired.",
+  "bardics.song.obelisk.DesertObelisk": "Desert",
+  "bardics.song.obelisk.WaterObelisk": "Beach",
+  "bardics.song.obelisk.EarthObelisk": "Mountain",
+  "bardics.song.obelisk.IslandObelisk": "Ginger Island",
+  "bardics.song.obelisk.ReturnScepter": "Farm",
   "bardics.profession.npcbuff": "College of Eloquence",
   "bardics.profession.npcbuff.strength.name": "Animated Performance",
   "bardics.profession.npcbuff.strength.description": "Strength of Bardic buffs are doubled.",
