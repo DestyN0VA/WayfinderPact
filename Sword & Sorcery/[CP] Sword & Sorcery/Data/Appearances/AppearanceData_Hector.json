@@ -1,108 +1,87 @@
 {
     "Changes": [
-        // PORTRAIT & SPRITE LOADS
         
+        // PORTRAIT & SPRITE DEFAULT LOAD
         {
             "LogName": "Default Portraits & Sprites - Hector",
             "Action": "Load",
             "Target": "Portraits/Hector, Characters/Hector",
-            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/spring_Hector.png",
+            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/spring_Hector.png"
         },
+
+
+        // LOADS
         {
             "LogName": "Druid Outfit (Hood Up) for Events - Hector",
             "Action": "Load",
             "Target": "Portraits/Hector_HoodUp, Characters/Hector_HoodUp",
-            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_hoodup.png",
+            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_hoodup.png"
         },
         {
             "LogName": "Druid Outfit (Hood Down) for Events - Hector",
             "Action": "Load",
             "Target": "Portraits/Hector_HoodDown, Characters/Hector_HoodDown",
-            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_hooddown.png",
+            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_hooddown.png"
         },
         {
             "LogName": "Hector Wolf Portraits Load",
             "Action": "Load",
             "Target": "Portraits/Hector_wolf",
-            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_wolf.png",
+            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_wolf.png"
         },
         {
             "LogName": "Hector Temp Portrait Load",
             "Action": "Load",
             "Target": "Portraits/HectorWolf",
-            "FromFile": "assets/TemporaryActors/Portraits/HectorWolf.png",
+            "FromFile": "assets/TemporaryActors/Portraits/HectorWolf.png"
         },
         {
             "LogName": "TrueShape (Hood Down) for Events - Hector",
             "Action": "Load",
             "Target": "Characters/Hector_TrueDown, Portraits/Hector_TrueDown",
-            "FromFile": "Assets/{{TargetPathOnly}}/Hector/Hector_TrueDown.png",
+            "FromFile": "Assets/{{TargetPathOnly}}/Hector/Hector_TrueDown.png"
         },
         {
             "LogName": "TrueShape (Hood Up) for Events - Hector",
             "Action": "Load",
             "Target": "Characters/Hector_TrueUp, Portraits/Hector_TrueUp",
-            "FromFile": "Assets/{{TargetPathOnly}}/Hector/Hector_TrueUp.png",
+            "FromFile": "Assets/{{TargetPathOnly}}/Hector/Hector_TrueUp.png"
         },
         {
-            "LogName": "Hector Beach Portrait/Sprite Load",
-            "Action": "EditImage",
-            "Target": "Portraits/Hector, Characters/Hector",
-            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_beach.png",
-            "Update": "OnLocationChange",
-            "When": {"LocationName": "IslandSouth, IslandWest, IslandEast, IslandNorth, Beach"}
+            "Action": "Load",
+            "Target": "Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Characters/spring_Hector, Characters/summer_Hector, Characters/fall_Hector, Characters/winter_Hector",
+            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/{{TargetWithoutPath}}.png"
         },
         {
-            "LogName": "Mermaid Pendant Hairclip",
-            "Action": "EditImage",
-            "Target": "Portraits/Hector",
-            "FromFile": "assets/portraits/Hector/pendant_overlay_hector.png",
-            "PatchMode": "Overlay",
-            "When": {"Relationship:Hector |contains=Married": true, "MermaidPendantHairclip": true},
-            "Update": "OnTimeChange, OnLocationChange",
+            "Action": "Load",
+            "Target": "Portraits/Hector_beach, Characters/Hector_beach",
+            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_beach.png"
         },
-        {
-            "LogName": "Heterochromatic Eyes",
-            "Action": "EditImage",
-            "Target": "Portraits/Hector",
-            "FromFile": "assets/portraits/Hector/eye_overlay_hector.png",
-            "PatchMode": "Overlay",
-            "When": {"HectorHeterochromatic": true},
-            "Update": "OnTimeChange, OnLocationChange",
-        },
+
 
         // OVERLAYS
         {
-            "Action": "Load",
-            "Target": "Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector",
-            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/{{TargetWithoutPath}}.png",
-        },
-        {
-            "Action": "Load",
-            "Target": "Portraits/Hector_beach",
-            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_beach.png",
-        },
-        {   
             "LogName": "Mermaid Pendant Hairclip",
             "Action": "EditImage",
-            "Target": "Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach",
+            "Target": "Portraits/Hector, Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach",
             "PatchMode": "Overlay",
             "FromFile": "assets/portraits/Hector/pendant_overlay_hector.png",
             "Update": "OnTimeChange, OnLocationChange",
             "When": {
-                "Relationship:Hector |contains=Married": true, "MermaidPendantHairclip": true}
-            
+                "Relationship:Hector |contains=Married": true,
+                "MermaidPendantHairclip": true
+            }
         },
-        {   
+        {
             "LogName": "Heterochromatic Eyes",
             "Action": "EditImage",
-            "Target": "Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach, Hector_HoodUp, Hector_HoodDown, Hector_TrueDown, Hector_TrueUp",
+            "Target": "Portraits/Hector, Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach, Portraits/Hector_HoodUp, Portraits/Hector_HoodDown, Portraits/Hector_TrueDown, Portraits/Hector_TrueUp, Characters/Hector, Characters/spring_Hector, Characters/summer_Hector, Characters/fall_Hector, Characters/winter_Hector, Characters/Hector_beach, Characters/Hector_HoodUp, Characters/Hector_HoodDown, Characters/Hector_TrueDown, Characters/Hector_TrueUp",
             "PatchMode": "Overlay",
-            "FromFile": "assets/portraits/Hector/eye_overlay_hector.png",
+            "FromFile": "assets/{{TargetPathOnly}}/Hector/eye_overlay_hector.png",
             "Update": "OnTimeChange, OnLocationChange",
             "When": {
                 "HectorHeterochromatic": true
             }
-        },
+        }
     ]
 }
