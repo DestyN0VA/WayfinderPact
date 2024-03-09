@@ -318,8 +318,6 @@ namespace SwordAndSorcerySMAPI
 
             if (Game1.player.eventsSeen.Contains(ModSnS.ShadowstepEventReq))
             {
-                ModSnS.State.InShadows = true;
-
                 var b = Game1.player.buffs.AppliedBuffs.FirstOrDefault(pair => pair.Key == "shadowstep").Value;
                 if (b == null)
                 {
@@ -349,7 +347,7 @@ namespace SwordAndSorcerySMAPI
 
             if (Game1.player.eventsSeen.Contains(ModSnS.ShadowstepEventReq))
             {
-                ModSnS.State.InShadows = true;
+                //ModSnS.State.InShadows = true;
             }
         }
 
