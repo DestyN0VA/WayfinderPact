@@ -38,46 +38,45 @@
 
 // TRIGGER ACTIONS
 
-{
-  "LogName": "Overrides Seen Today Flag Removal",
-  "Action": "EditData",
-  "Target": "Data/TriggerActions",
-  "Entries": {
-    "SnS.TriggerActions.OverrideSeenTodayRemoval": {
-      "Id": "SnS.TriggerActions.OverrideSeenTodayRemoval",
-      "Trigger": "DayStarted",
-      "MarkActionApplied": false,
-      "Condition": "Any \"PLAYER_HAS_MAIL Current SnS_M_Mateo_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Hector_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Cirrus_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Roslin_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Dandelion_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Stan_OverrideSeenToday Any\"",
-      "Actions": [
-        "RemoveMail Current SnS_M_Mateo_OverrideSeenToday",
-        "RemoveMail Current SnS_M_Hector_OverrideSeenToday",
-        "RemoveMail Current SnS_M_Cirrus_OverrideSeenToday",
-        "RemoveMail Current SnS_M_Roslin_OverrideSeenToday",
-        "RemoveMail Current SnS_M_Dandelion_OverrideSeenToday",
-        "RemoveMail Current SnS_M_Stan_OverrideSeenToday"
-      ]
+    {
+     "LogName": "Overrides Seen Today Flag Removal",
+      "Action": "EditData",
+     "Target": "Data/TriggerActions",
+     "Entries": {
+       "SnS.TriggerActions.OverrideSeenTodayRemoval": {
+         "Id": "SnS.TriggerActions.OverrideSeenTodayRemoval",
+         "Trigger": "DayStarted",
+         "MarkActionApplied": false,
+         "Condition": "Any \"PLAYER_HAS_MAIL Current SnS_M_Mateo_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Hector_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Cirrus_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Roslin_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Dandelion_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Stan_OverrideSeenToday Any\"",
+         "Actions": [
+           "RemoveMail Current SnS_M_Mateo_OverrideSeenToday",
+           "RemoveMail Current SnS_M_Hector_OverrideSeenToday",
+           "RemoveMail Current SnS_M_Cirrus_OverrideSeenToday",
+           "RemoveMail Current SnS_M_Roslin_OverrideSeenToday",
+           "RemoveMail Current SnS_M_Dandelion_OverrideSeenToday",
+            "RemoveMail Current SnS_M_Stan_OverrideSeenToday"
+          ]
+        },
+        "SnS.TriggerActions.MateoTrollHeritage.True": {
+          "Id": "Sns.TriggerActions.MateoTrollHeritage.True",
+          "Trigger": "DayStarted",
+          "Condition": "{{MateoTrollHeritage}}",
+         "Actions": [
+            "AddMail Current SnS.Flag.MateoTrollHeritage received",
+            "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.False false"
+          ]
+        },
+        "Sns.TriggerActions.MateoTrollHeritage.False": {
+          "Id": "Sns.TriggerActions.MateoTrollHeritage.False",
+          "Trigger": "DayStarted",
+          "Condition": "!{{MateoTrollHeritage}}",
+          "Actions": [
+            "RemoveMail Current SnS.Flag.MateoTrollHeritage all",
+            "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.True false"
+          ]
+       }
+      }
     },
-    "SnS.TriggerActions.MateoTrollHeritage.True": {
-      "Id": "Sns.TriggerActions.MateoTrollHeritage.True",
-      "Trigger": "DayStarted",
-      "Condition": "{{MateoTrollHeritage}}",
-      "Actions": [
-        "AddMail Current SnS.Flag.MateoTrollHeritage received",
-        "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.False false"
-      ]
-    },
-    "Sns.TriggerActions.MateoTrollHeritage.False": {
-      "Id": "Sns.TriggerActions.MateoTrollHeritage.False",
-      "Trigger": "DayStarted",
-      "Condition": "!{{MateoTrollHeritage}}",
-      "Actions": [
-        "RemoveMail Current SnS.Flag.MateoTrollHeritage all",
-        "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.True false"
-      ]
-    }
-  }
-},
-  
   ],
   // CONFIG OPTIONS
 
@@ -856,5 +855,48 @@
         "HasFlag |contains=CirrusFlirt": true
       }
     },
+    /*"CirrusRainbowHair": {
+      "AllowValues": "Random, Red, Orange, Yellow, Blue",
+      "Default": "Blue",
+      "AllowBlank": false,
+      "AllowMultiple": false,
+      "Description": "Gives Cirrus a variety of dyed hair colors, or optionally choose a static one.",
+      "Section": "Overlays"
+    }*/
+    {
+      "Name": "CirrusHairColor",
+      "Value": "{{Random: Red, Orange, Yellow, Blue |key=CirrusHair}}",
+      "When": {
+        "CirrusRainbowHair": "random"
+      }
+    },
+    {
+      "Name": "CirrusHairColor",
+      "Value": "Red",
+      "When": {
+        "CirrusRainbowHair": "red"
+      }
+    },
+    {
+      "Name": "CirrusHairColor",
+      "Value": "Orange",
+      "When": {
+        "CirrusRainbowHair": "Orange"
+      }
+    },
+    {
+      "Name": "CirrusHairColor",
+      "Value": "Yellow",
+      "When": {
+        "CirrusRainbowHair": "Yellow"
+      }
+    },
+    {
+      "Name": "CirrusHairColor",
+      "Value": "Blue",
+      "When": {
+        "CirrusRainbowHair": "Blue"
+      }
+    }
   ]
 }

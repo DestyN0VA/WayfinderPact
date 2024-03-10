@@ -26,7 +26,25 @@
             "PatchMode": "Overlay",
             "FromFile": "assets/portraits/Cirrus/{{season}}_pendant_overlay_Cirrus.png",
             "Update": "OnTimeChange, OnLocationChange",
-            "When": {"Relationship:Cirrus |contains=Married": true, "MermaidPendantChoker": true}
+            "When": { "Relationship:Cirrus |contains=Married": true, "MermaidPendantChoker": true }
+        },
+        {
+            "LogName": "Cirrus Hair Color",
+            "Action": "EditImage",
+            "Target": "Portraits/Cirrus, Characters/Cirrus, Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/winter_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock, Characters/spring_Cirrus, Characters/summer_Cirrus, Characters/fall_Cirrus, Characters/winter_Cirrus, Characters/Cirrus_beach, Characters/Cirrus_Glamrock",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/cirrus_{{CirrusHairColor}}_hair_overlay.png",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": { "HasFile": "{{FromFile}}" }
+        },
+        {
+            "LogName": "Cirrus Hair Color Winter",
+            "Action": "EditImage",
+            "Target": "Portraits/winter_Cirrus, Characters/winter_Cirrus",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/cirrus_{{CirrusHairColor}}_winter_hair_overlay.png",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": { "HasFile": "{{FromFile}}" }
         }
     ]
 }
