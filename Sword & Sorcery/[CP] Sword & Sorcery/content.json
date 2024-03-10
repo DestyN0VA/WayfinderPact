@@ -201,14 +201,14 @@
       "AllowValues": "true, false",
       "Default": "false",
       "AllowBlank": false,
-      "Description": "Removes the quest requirements from Hector's intro event in case you've already completed Never Ending Adventure.",
+      "Description": "Removes the quest requirements for Hector's intro quest, in case of bugs or other issues.",
       "Section": "Miscellaneous"
     },
     "DumpsterWarp": {
       "AllowValues": "true, false",
       "Default": "false",
       "AllowBlank": false,
-      "Description": "May cause some pathing shananagins, but is kinda funny?",
+      "Description": "May cause some pathing issues, but offers a shortcut to the Druid Tower.",
       "Section": "Miscellaneous"
     },
     "HectorHeterochromatic": {
@@ -216,14 +216,22 @@
       "Default": "false",
       "AllowBlank": false,
       "Description": "Gives Hector Blue/Green heterochromatic eyes.",
-      "Section": "Miscellaneous"
+      "Section": "Overlays"
     },
     "MateoTrollHeritage": {
       "AllowValues": "true, false",
       "Default": "false",
       "AllowBlank": false,
       "Description": "Gives Mateo horns and unique eye color based on their parentage.",
-      "Section": "Miscellaneous"
+      "Section": "Overlays"
+    },
+    "CirrusRainbowHair": {
+      "AllowValues": "Random, Red, Orange, Yellow, Blue",
+      "Default": "Blue",
+      "AllowBlank": false,
+      "AllowMultiple": false,
+      "Description": "Gives Cirrus a variety of dyed hair colors, or optionally choose a static one.",
+      "Section": "Overlays"
     }
   },
 

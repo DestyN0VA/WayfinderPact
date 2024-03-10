@@ -178,20 +178,6 @@
         "Resort":"{{i18n:Core.Cirrus.Resort}}",
 
         // ADDITIONAL LOCATION DIALOGUE 
-        "Saloon4":"{{i18n:Core.Cirrus.Saloon.4h}}",
-        "Saloon6":"{{i18n:Core.Cirrus.Saloon.6h}}",
-        "Saloon8":"{{i18n:Core.Cirrus.Saloon.8h}}",
-        "Saloon10":"{{i18n:Core.Cirrus.Saloon.10h}}",
-              
-        "ArchaeologyHouse4":"{{i18n:Core.Cirrus.ArchaeologyHouse.4h}}",
-        "ArchaeologyHouse6":"{{i18n:Core.Cirrus.ArchaeologyHouse.6h}}",
-        "ArchaeologyHouse8":"{{i18n:Core.Cirrus.ArchaeologyHouse.8h}}",
-        "ArchaeologyHouse10":"{{i18n:Core.Cirrus.ArchaeologyHouse}}",
-        
-        "AdventureGuild4":"{{i18n:Core.Cirrus.AdventureGuild.4h}}",
-        "AdventureGuild6":"{{i18n:Core.Cirrus.AdventureGuild.6h}}",
-        "AdventureGuild8":"{{i18n:Core.Cirrus.AdventureGuild.8h}}",
-        "AdventureGuild10":"{{i18n:Core.Cirrus.AdventureGuild.10h}}",
       
       },
     }, 
