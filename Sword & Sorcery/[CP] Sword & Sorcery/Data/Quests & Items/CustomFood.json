@@ -13,24 +13,26 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": true,
-          "Buff": {
-            "Duration": 3,
-            "CustomAttributes": {
-              "FarmingLevel": 0,
-              "FishingLevel": 0,
-              "MiningLevel": 0,
-              "LuckLevel": 2,
-              "ForagingLevel": 0,
-              "MaxStamina": 0,
-              "MagneticRadius": 2,
-              "Speed": 2,
-              "Defense": 0,
-              "Attack": 0
-            }
-          },
+          "Buffs": [
+            {
+              "Duration": 3,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 2,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 2,
+                "Speed": 2,
+                "Defense": 0,
+                "Attack": 0
+              }
+            },
+          ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 17
-        },
+        }
       }
     },
     {
@@ -46,24 +48,26 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "Buff": {
-            "Duration": 3,
-            "CustomAttributes": {
-              "FarmingLevel": 3,
-              "FishingLevel": 0,
-              "MiningLevel": 0,
-              "LuckLevel": 0,
-              "ForagingLevel": 2,
-              "MaxStamina": 0,
-              "MagneticRadius": 1,
-              "Speed": 0,
-              "Defense": 2,
-              "Attack": 0
+          "Buffs": [
+            {
+              "Duration": 3,
+              "CustomAttributes": {
+                "FarmingLevel": 3,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 2,
+                "MaxStamina": 0,
+                "MagneticRadius": 1,
+                "Speed": 0,
+                "Defense": 2,
+                "Attack": 0
+              }
             }
-          },
+          ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 18
-        },
+        }
       }
     },
     {
@@ -79,21 +83,23 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "Buff": {
-            "Duration": 3,
-            "CustomAttributes": {
-              "FarmingLevel": 1,
-              "FishingLevel": 0,
-              "MiningLevel": 0,
-              "LuckLevel": 1,
-              "ForagingLevel": 1,
-              "MaxStamina": 1,
-              "MagneticRadius": 1,
-              "Speed": 0,
-              "Defense": 0,
-              "Attack": 0
+          "Buffs": [
+            {
+              "Duration": 3,
+              "CustomAttributes": {
+                "FarmingLevel": 1,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 1,
+                "ForagingLevel": 1,
+                "MaxStamina": 1,
+                "MagneticRadius": 1,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
             }
-          },
+          ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 19
         },
@@ -112,21 +118,23 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": true,
-          "Buff": {
-            "Duration": 3,
-            "CustomAttributes": {
-              "FarmingLevel": 0,
-              "FishingLevel": 3,
-              "MiningLevel": 0,
-              "LuckLevel": 3,
-              "ForagingLevel": 0,
-              "MaxStamina": 0,
-              "MagneticRadius": 0,
-              "Speed": 0,
-              "Defense": 0,
-              "Attack": 0
+          "Buffs": [
+            {
+              "Duration": 3,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 3,
+                "MiningLevel": 0,
+                "LuckLevel": 3,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
             }
-          },
+          ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 20
         },
@@ -145,21 +153,23 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "Buff": {
-            "Duration": 3,
-            "CustomAttributes": {
-              "FarmingLevel": 2,
-              "FishingLevel": 0,
-              "MiningLevel": 0,
-              "LuckLevel": 0,
-              "ForagingLevel": 3,
-              "MaxStamina": 0,
-              "MagneticRadius": 0,
-              "Speed": 0,
-              "Defense": 0,
-              "Attack": 0
+          "Buffs": [
+            {
+              "Duration": 3,
+              "CustomAttributes": {
+                "FarmingLevel": 2,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 3,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
             }
-          },
+          ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 27
         },
@@ -178,21 +188,23 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "Buff": {
-            "Duration": 3,
-            "CustomAttributes": {
-              "FarmingLevel": 3,
-              "FishingLevel": 0,
-              "MiningLevel": 0,
-              "LuckLevel": 1,
-              "ForagingLevel": 4,
-              "MaxStamina": 0,
-              "MagneticRadius": 0,
-              "Speed": 0,
-              "Defense": 0,
-              "Attack": 0
-            }
-          },
+          "Buffs": [
+            {
+              "Duration": 3,
+              "CustomAttributes": {
+                "FarmingLevel": 3,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 1,
+                "ForagingLevel": 4,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            },
+          ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 28
         },
@@ -211,21 +223,23 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "Buff": {
-            "Duration": 3,
-            "CustomAttributes": {
-              "FarmingLevel": 0,
-              "FishingLevel": 0,
-              "MiningLevel": 0,
-              "LuckLevel": 3,
-              "ForagingLevel": 0,
-              "MaxStamina": 0,
-              "MagneticRadius": 0,
-              "Speed": 3,
-              "Defense": 0,
-              "Attack": 0
-            }
-          },
+          "Buffs": [
+            {
+              "Duration": 3,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 3,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 3,
+                "Defense": 0,
+                "Attack": 0
+              }
+            },
+          ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 29
         },
@@ -244,21 +258,23 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "Buff": {
-            "Duration": 3,
-            "CustomAttributes": {
-              "FarmingLevel": 0,
-              "FishingLevel": 0,
-              "MiningLevel": 5,
-              "LuckLevel": 0,
-              "ForagingLevel": 0,
-              "MaxStamina": 0,
-              "MagneticRadius": 0,
-              "Speed": 0,
-              "Defense": 0,
-              "Attack": 0
+          "Buffs": [
+            {
+              "Duration": 3,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 5,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
             }
-          },
+          ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 30
         },
@@ -277,21 +293,23 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "Buff": {
-            "Duration": 3,
-            "CustomAttributes": {
-              "FarmingLevel": 0,
-              "FishingLevel": 0,
-              "MiningLevel": 0,
-              "LuckLevel": 0,
-              "ForagingLevel": 0,
-              "MaxStamina": 0,
-              "MagneticRadius": 0,
-              "Speed": 0,
-              "Defense": 3,
-              "Attack": 5,
+          "Buffs": [
+            {
+              "Duration": 3,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 3,
+                "Attack": 5,
+              }
             }
-          },
+          ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 46
         },
@@ -310,21 +328,23 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "Buff": {
-            "Duration": 3,
-            "CustomAttributes": {
-              "FarmingLevel": 0,
-              "FishingLevel": 0,
-              "MiningLevel": 0,
-              "LuckLevel": 3,
-              "ForagingLevel": 0,
-              "MaxStamina": 3,
-              "MagneticRadius": 0,
-              "Speed": 3,
-              "Defense": 0,
-              "Attack": 0,
+          "Buffs": [
+            {
+              "Duration": 3,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 3,
+                "ForagingLevel": 0,
+                "MaxStamina": 3,
+                "MagneticRadius": 0,
+                "Speed": 3,
+                "Defense": 0,
+                "Attack": 0,
+              }
             }
-          },
+          ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 47
         },
@@ -343,21 +363,23 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "Buff": {
-            "Duration": 3,
-            "CustomAttributes": {
-              "FarmingLevel": 0,
-              "FishingLevel": 0,
-              "MiningLevel": 0,
-              "LuckLevel": 0,
-              "ForagingLevel": 0,
-              "MaxStamina": 3,
-              "MagneticRadius": 0,
-              "Speed": 1,
-              "Defense": 1,
-              "Attack": 1,
+          "Buffs": [
+            {
+              "Duration": 3,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 3,
+                "MagneticRadius": 0,
+                "Speed": 1,
+                "Defense": 1,
+                "Attack": 1,
+              }
             }
-          },
+          ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 48
         },
@@ -376,21 +398,23 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "Buff": {
-            "Duration": 3,
-            "CustomAttributes": {
-              "FarmingLevel": 3,
-              "FishingLevel": 3,
-              "MiningLevel": 3,
-              "LuckLevel": 0,
-              "ForagingLevel": 0,
-              "MaxStamina": 0,
-              "MagneticRadius": 0,
-              "Speed": 0,
-              "Defense": 0,
-              "Attack": 0,
+          "Buffs": [
+            {
+              "Duration": 3,
+              "CustomAttributes": {
+                "FarmingLevel": 3,
+                "FishingLevel": 3,
+                "MiningLevel": 3,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0,
+              }
             }
-          },
+          ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 49
         },

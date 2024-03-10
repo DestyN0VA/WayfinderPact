@@ -1,5 +1,7 @@
 {
     "Changes": [
+
+        // AUDIO DATA
         {
             "LogName": "Mateo Theme",
             "Action": "EditData",
@@ -153,7 +155,121 @@
                     "Looped": true
                 }
             }
-        }
+        },
+
+        // JUKEBOX DATA 
+        {
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "SnS.MateoTheme": {
+                    "Name": "Mateo's Theme (Never Ending Adventure)",
+                    "Available": null
+                }
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "SnS.HectorTheme": {
+                    "Name": "{{TrueName}}'s Theme (Circle of Thorns)",
+                    "Available": null
+                }
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "SnS.CirrusTheme": {
+                    "Name": "Cirrus' Theme (Peace and Love on the Planet Earth)",
+                    "Available": null
+                }
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "SnS.KeytarSolo": {
+                    "Name": "Cirrus' Keytar Solo",
+                    "Available": null
+                }
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "SnS.DandelionTheme": {
+                    "Name": "Dandelion's Theme (Giant Woman)",
+                    "Available": null
+                }
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "SnS.RoslinTheme": {
+                    "Name": "Roslin's Theme (It's Over, Isn't It?)",
+                    "Available": null
+                }
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "SnS.LonelyTheme": {
+                    "Name": "S&S: Lonely Theme (To Zanarkand)",
+                    "Available": null
+                }
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "SnS.LonelyThemeReprise": {
+                    "Name": "S&S: Lonely Theme Reprised (To Zanarkand)",
+                    "Available": null
+                }
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "SnS.DespairTheme": {
+                    "Name": "S&S: Despair Theme",
+                    "Available": null
+                }
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "SnS.HopeTheme": {
+                    "Name": "S&S: Hope Theme",
+                    "Available": null
+                }
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "SnS.VulnerableTheme": {
+                    "Name": "S&S: Vulnerable Theme (Dearly Beloved)",
+                    "Available": null
+                }
+            },
+        },
+        
+        
         
      ]
 
