@@ -40,24 +40,41 @@
       "{{WeekDay}}": "{{i18n:Core.Cirrus.{{Season}}.{{Random:{{Range: 1, 15}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Cirrus_OverrideSeenToday received"
   },
   "When": { 
-          "Query: {{Random: {{Range: 1, 10}}|key=HSO}} = 1": true,
+          "Query: {{Random: {{Range: 1, 10}}|key=CSO}} = 1": true,
           "HasFlag |contains=SnS_M_Cirrus_OverrideSeenToday": false
    }
 },
 
 // 10H OVERRIDE POOL
 {
-  "LogName": "Dialogue - Cirrus 10h Override",
+  "LogName": "Dialogue - Cirrus 10h Ending Override",
   "Action": "EditData",
   "Update": "OnLocationChange",
   "Target": "Characters/Dialogue/Cirrus",
   "Entries": 	{ 
-      "{{WeekDay}}": "{{i18n:Core.Cirrus.{{Season}}.Relationship.{{CirrusRomance}}.{{Random:{{Range: 1, 7}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Cirrus_OverrideSeenToday received"
+      "{{WeekDay}}": "{{i18n:Core.Cirrus.LionsMane.{{Random:{{Range: 1, 10}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Cirrus_OverrideSeenToday received"
   },
   "When": { 
           "Hearts:Cirrus": "10",
-          "Query: {{Random: {{Range: 1, 5}}|key=HDO}} = 1": true,
+          "Query: {{Random: {{Range: 1, 30}}|key=CLMO}} = 1": true,
           "HasFlag |contains=SnS_M_Cirrus_OverrideSeenToday": false
+   }
+},
+
+// DATING POOL
+{
+  "LogName": "Dialogue - Cirrus 10h Dating Override",
+  "Action": "EditData",
+  "Update": "OnLocationChange",
+  "Target": "Characters/Dialogue/Cirrus",
+  "Entries": 	{ 
+      "{{WeekDay}}": "{{i18n:Core.Cirrus.Dating.{{Random:{{Range: 1, 30}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Cirrus_OverrideSeenToday received"
+  },
+  "When": { 
+          "Hearts:Cirrus": "10",
+          "Query: {{Random: {{Range: 1, 10}}|key=CDO}} = 1": true,
+          "HasFlag |contains=SnS_M_Cirrus_OverrideSeenToday": false,
+          "Relationship:Cirrus |contains=Dating": true
    }
 },
 
