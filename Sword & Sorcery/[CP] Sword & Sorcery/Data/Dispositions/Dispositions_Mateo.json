@@ -22,7 +22,8 @@
                     "SpawnIfMissing": true,
                     "SocialTab": "UnknownUntilMet",
                     "Calendar": "HiddenUntilMet",
-                    "FlowerDanceCanDance": "true",
+                    "FlowerDanceCanDance": true,
+                    "WinterStarParticipant": false,
                     "ShakePortraits": [
                         18,
                         19,

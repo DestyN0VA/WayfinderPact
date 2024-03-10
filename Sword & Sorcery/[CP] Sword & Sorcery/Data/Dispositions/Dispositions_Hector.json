@@ -23,7 +23,8 @@
                     "ExcludeFromIntroductionsQuest": true,
                     "SocialTab": "HiddenUntilMet",
                     "Calendar": "HiddenUntilMet",
-                    "FlowerDanceCanDance": "true",
+                    "FlowerDanceCanDance": true,
+                    "WinterStarParticipant": false,
                     "ShakePortraits": [5, 19, 20, 27],
                     "SpouseRoom": {
                         "MapAsset": "DestyNova_Hector_SpouseRoom"

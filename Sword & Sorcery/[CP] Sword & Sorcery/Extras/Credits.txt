@@ -1,8 +1,8 @@
 CREDITS: 
 
 ➜ Lemurkat: For East Scarp, for guiding along, and maintaining an incredible little community
-➜ KittyCatCasey: C# Component, the Sorcery to my Sword 
-➜ MADDOGOFBLANK: Assets throughout the mod, help w/ code
+➜ KittyCatCasey: C# Component, being my Sorcerer
+➜ MADDOGOFBLANK: Assets throughout the mod, help w/ code, maps, being my Sword
 ➜ TenebrousNova: Help w/ event code, i18n, and the majority of new maps 
 ➜ TheFrenchDodo: Emeritus' sprite, books seen throughout the guild, majority of music 
 ➜ 7thAxis: Dialogue code overhaul/additional optimization code, pronoun code, Stan portraits/sprites 
@@ -11,15 +11,15 @@ CREDITS:
 ➜ Tiara: Tent interior background
 ➜ EnderTedi: Additional Hector portraits, overlay assets, help w/ code 
 ➜ Poltergeister: Gunther's portraits, help w/ Mateo V2 portraits 
-➜ Arknir27﻿﻿: Mateo's sprites, help w/ event code 
+➜ Arknir27: Mateo's sprites, help w/ event code 
 ➜ WerewolfMaster: Gunther's sprites & Marlon's portraits/sprites
-➜ Harvz:﻿ Mateo & Hector's themes
+➜ Harvz: Mateo & Hector's themes
 ➜ AgentLyoko: Framework for S&S NPCA builds, help w/ code, playtesting
 ➜ MedicSun: Hector's sprites, touch-ups on portraits for aesthetic consistency 
-➜ Atravita: Mentoring, help with C# 
-➜ Rinnyboi﻿: Armored Mateo sprites 
+➜ Rinnyboi: Armored Mateo sprites 
 ➜ CreatorKami: Hector portraits
 ➜ Yri: Druid tower, giant tree, and Book's sprites
+➜ NinTheCactus69: Some of the druid crops 
 ➜ HimeTarts: Original Mateo portrait
 ➜ PetiteWarlock: Logo 
 ➜ Logophile: Rugs
@@ -27,6 +27,7 @@ CREDITS:
 ➜ SmolHuman: Additional animal sprites 
 ➜ SunStream7, Gnadi, Mareetz: Extensive playtesting
 ➜ JayJayDub: Help w/ compatibility and i18n 
+➜ Atravita: Mentoring, help with C# 
 ➜ FlashShifter: For being a friend and mentor
 ➜ Sword & Sorcery Discord Channel: All the regulars out there, the fan artists, the bugtesters, the supporters - thank you. I likely wouldn't have expanded past Never Ending Adventure without your kindness and appreciation. 
 

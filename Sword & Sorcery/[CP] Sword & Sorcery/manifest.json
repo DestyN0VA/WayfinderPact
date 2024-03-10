@@ -1,9 +1,9 @@
 {
 	"Name": "[CP] Sword & Sorcery",
-	"Author": "DestyNova & MadDog",
+	"Author": "DestyNova",
 	"Version": "1.0.0",
 	"Description": "Adds NPCs & new content to East Scarp!",
-	  "UniqueID": "DN.SnS.CP",
+	  "UniqueID": "DN.SnS",
 	  "MinimumApiVersion": "3.15.0",
 	  "ContentPackFor": {
 	  "UniqueID": "Pathoschild.ContentPatcher"
