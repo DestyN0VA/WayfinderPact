@@ -35,6 +35,38 @@ namespace SwordAndSorcerySMAPI
         {
             return farmer.GetFarmerExtData().hasTakenLoreWeapon;
         }
+
+        public readonly NetBool inShadows = new(false);
+
+        public readonly NetArray<string, NetString> adventureBar = new(8 * 2);
+        public static void SetAdventureBar(Farmer farmer, NetArray<string, NetString> val)
+        {
+        }
+
+        public static NetArray<string, NetString> GetAdventureBar(Farmer farmer)
+        {
+            return farmer.GetFarmerExtData().adventureBar;
+        }
+
+        public readonly NetInt mana = new();
+        public readonly NetInt maxMana = new();
+        public static void SetMaxMana(Farmer farmer, NetInt val)
+        {
+        }
+
+        public static NetInt GetMaxMana(Farmer farmer)
+        {
+            return farmer.GetFarmerExtData().maxMana;
+        }
+
+        public readonly NetFloat expRemainderRogue = new(0);
+        public static NetFloat ExpRemainderRogueGetter(Farmer farmer)
+        {
+            return farmer.GetFarmerExtData().expRemainderRogue;
+        }
+        public static void ExpRemainderRogueSetter(Farmer farmer, NetFloat val)
+        {
+        }
     }
 
     [HarmonyPatch(typeof(Farmer), "initNetFields")]
@@ -43,6 +75,8 @@ namespace SwordAndSorcerySMAPI
         public static void Postfix(Farmer __instance)
         {
             __instance.NetFields.AddField(__instance.GetFarmerExtData().hasTakenLoreWeapon);
+            __instance.NetFields.AddField(__instance.GetFarmerExtData().inShadows);
+            __instance.NetFields.AddField(__instance.GetFarmerExtData().adventureBar);
         }
     }
 
@@ -60,12 +94,29 @@ namespace SwordAndSorcerySMAPI
         public float ThrowCooldown { get; set; } = 0;
 
         public float BlockCooldown { get; set; } = 0;
-
-        public bool InShadows { get; set; } = false;
     }
 
     public class Configuration
     {
+        public KeybindList ConfigureAdventureBar = new(SButton.Y);
+
+        public KeybindList AbilityBar1Slot1 = new(new Keybind(SButton.LeftControl, SButton.D1));
+        public KeybindList AbilityBar1Slot2 = new(new Keybind(SButton.LeftControl, SButton.D2));
+        public KeybindList AbilityBar1Slot3 = new(new Keybind(SButton.LeftControl, SButton.D3));
+        public KeybindList AbilityBar1Slot4 = new(new Keybind(SButton.LeftControl, SButton.D4));
+        public KeybindList AbilityBar1Slot5 = new(new Keybind(SButton.LeftControl, SButton.D5));
+        public KeybindList AbilityBar1Slot6 = new(new Keybind(SButton.LeftControl, SButton.D6));
+        public KeybindList AbilityBar1Slot7 = new(new Keybind(SButton.LeftControl, SButton.D7));
+        public KeybindList AbilityBar1Slot8 = new(new Keybind(SButton.LeftControl, SButton.D8));
+        public KeybindList AbilityBar2Slot1 = new(new Keybind(SButton.LeftShift, SButton.D1));
+        public KeybindList AbilityBar2Slot2 = new(new Keybind(SButton.LeftShift, SButton.D2));
+        public KeybindList AbilityBar2Slot3 = new(new Keybind(SButton.LeftShift, SButton.D3));
+        public KeybindList AbilityBar2Slot4 = new(new Keybind(SButton.LeftShift, SButton.D4));
+        public KeybindList AbilityBar2Slot5 = new(new Keybind(SButton.LeftShift, SButton.D5));
+        public KeybindList AbilityBar2Slot6 = new(new Keybind(SButton.LeftShift, SButton.D6));
+        public KeybindList AbilityBar2Slot7 = new(new Keybind(SButton.LeftShift, SButton.D7));
+        public KeybindList AbilityBar2Slot8 = new(new Keybind(SButton.LeftShift, SButton.D8));
+
         public KeybindList ThrowShieldKey = new(SButton.R);
     }
 
@@ -82,6 +133,8 @@ namespace SwordAndSorcerySMAPI
 
         public static ConditionalWeakTable<Farmer, FarmerExtData> farmerData = new();
 
+        public static RogueSkill RogueSkill;
+
         public const string ShadowstepEventReq = "SnS.Ch1.Mateo.18";
 
         public override void Entry(IModHelper helper)
@@ -97,6 +150,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.Content.AssetRequested += Content_AssetRequested;
             Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
             Helper.Events.GameLoop.UpdateTicking += GameLoop_UpdateTicking;
+            Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
             Helper.Events.Player.Warped += Player_Warped;
             Helper.Events.Display.RenderedHud += Display_RenderedHud;
             Helper.Events.Display.RenderedWorld += Display_RenderedWorld;
@@ -114,12 +168,35 @@ namespace SwordAndSorcerySMAPI
                 return true;
             });
 
+            Ability.Abilities.Add("shadowstep", new Ability("shadowstep")
+            {
+                Name = I18n.Ability_Shadowstep_Name,
+                Description = I18n.Ability_Shadowstep_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
+                SpriteIndex = 0,
+                KnownCondition = $"PLAYER_HAS_SEEN_EVENT Current {ShadowstepEventReq}",
+                HiddenIfLocked = true,
+                ManaCost = () => 15,
+                Function = () =>
+                {
+                    Game1.player.GetFarmerExtData().inShadows.Value = true;
+                }
+            });
+
+            Helper.ConsoleCommands.Add("sns_setmaxaether", "...", (cmd, args) => Game1.player.GetFarmerExtData().maxMana.Value = int.Parse(args[0]));
+            Helper.ConsoleCommands.Add("sns_refillaether", "...", (cmd, args) => Game1.player.GetFarmerExtData().mana.Value = Game1.player.GetFarmerExtData().maxMana.Value);
+
             var harmony = new Harmony(ModManifest.UniqueID);
             harmony.PatchAll( Assembly.GetExecutingAssembly() );
 
             new ModCoT(Monitor, ModManifest, Helper).Entry();
             new ModNEA(Monitor, ModManifest, Helper).Entry(harmony);
             new ModUP(Monitor, ModManifest, Helper).Entry();
+        }
+
+        private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
+        {
+            Game1.player.GetFarmerExtData().mana.Value = Game1.player.GetFarmerExtData().maxMana.Value;
         }
 
         private void Input_ButtonPressed(object sender, StardewModdingAPI.Events.ButtonPressedEventArgs e)
@@ -268,10 +345,39 @@ namespace SwordAndSorcerySMAPI
 
         private void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)
         {
+            var gmcm = Helper.ModRegistry.GetApi<SpaceShared.APIs.IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
+            if (gmcm != null)
+            {
+                gmcm.Register(ModManifest, () => Config = new(), () => Helper.WriteConfig(Config));
+                gmcm.AddKeybindList(ModManifest, () => Config.ConfigureAdventureBar, (val) => Config.ConfigureAdventureBar = val, I18n.Keybind_ConfigureBar_Name, I18n.Keybind_ConfigureBar_Description);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar1Slot1, (val) => Config.AbilityBar1Slot1 = val, I18n.Keybind_Ability_1_1, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar1Slot2, (val) => Config.AbilityBar1Slot2 = val, I18n.Keybind_Ability_1_2, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar1Slot3, (val) => Config.AbilityBar1Slot3 = val, I18n.Keybind_Ability_1_3, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar1Slot4, (val) => Config.AbilityBar1Slot4 = val, I18n.Keybind_Ability_1_4, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar1Slot5, (val) => Config.AbilityBar1Slot5 = val, I18n.Keybind_Ability_1_5, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar1Slot6, (val) => Config.AbilityBar1Slot6 = val, I18n.Keybind_Ability_1_6, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar1Slot7, (val) => Config.AbilityBar1Slot7 = val, I18n.Keybind_Ability_1_7, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar1Slot8, (val) => Config.AbilityBar1Slot8 = val, I18n.Keybind_Ability_1_8, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar2Slot1, (val) => Config.AbilityBar2Slot1 = val, I18n.Keybind_Ability_2_1, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar2Slot2, (val) => Config.AbilityBar2Slot2 = val, I18n.Keybind_Ability_2_2, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar2Slot3, (val) => Config.AbilityBar2Slot3 = val, I18n.Keybind_Ability_2_3, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar2Slot4, (val) => Config.AbilityBar2Slot4 = val, I18n.Keybind_Ability_2_4, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar2Slot5, (val) => Config.AbilityBar2Slot5 = val, I18n.Keybind_Ability_2_5, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar2Slot6, (val) => Config.AbilityBar2Slot6 = val, I18n.Keybind_Ability_2_6, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar2Slot7, (val) => Config.AbilityBar2Slot7 = val, I18n.Keybind_Ability_2_7, I18n.Keybind_Ability_Desc);
+                gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar2Slot8, (val) => Config.AbilityBar2Slot8 = val, I18n.Keybind_Ability_2_8, I18n.Keybind_Ability_Desc);
+                // shield throw is going away
+            }
+
+            Skills.RegisterSkill(RogueSkill = new RogueSkill());
+
             var sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
             sc.RegisterSerializerType(typeof(ThrownShield));
             sc.RegisterCustomProperty(typeof(Farmer), "shieldSlot", typeof(NetRef<Item>), AccessTools.Method(typeof(Farmer_ShieldSlot), nameof(Farmer_ShieldSlot.get_shieldSlot)), AccessTools.Method(typeof(Farmer_ShieldSlot), nameof(Farmer_ShieldSlot.set_shieldSlot)));
             sc.RegisterCustomProperty(typeof(Farmer), "takenLoreWeapon", typeof(NetBool), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.HasTakenLoreWeapon)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetHasTakenLoreWeapon)));
+            sc.RegisterCustomProperty(typeof(Farmer), "adventureBar", typeof(NetArray<string,NetString>), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.GetAdventureBar)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetAdventureBar)));
+            sc.RegisterCustomProperty(typeof(Farmer), "maxMana", typeof(NetInt), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.GetMaxMana)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetMaxMana)));
+            sc.RegisterCustomProperty(typeof(Farmer), "expRemainderRogue", typeof(NetFloat), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderRogueGetter)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderRogueSetter)));
         }
 
         private void GameLoop_UpdateTicking(object sender, StardewModdingAPI.Events.UpdateTickingEventArgs e)
@@ -315,24 +421,74 @@ namespace SwordAndSorcerySMAPI
 
             // ---
 
-
-            if (Game1.player.eventsSeen.Contains(ModSnS.ShadowstepEventReq))
+            if (/*Game1.player.eventsSeen.Contains(ModSnS.ShadowstepEventReq) &&*/ Game1.player.GetFarmerExtData().inShadows.Value)
             {
                 var b = Game1.player.buffs.AppliedBuffs.FirstOrDefault(pair => pair.Key == "shadowstep").Value;
                 if (b == null)
                 {
                     b = new Buff(
                         "shadowstep",
-                        duration: 100,
-                        displayName: I18n.Shadowstep(),
+                        duration: 250,
+                        displayName: I18n.Ability_Shadowstep_Name(),
                         effects: new() { CriticalChanceMultiplier = { 999f } },
-                        iconTexture: ModCoT.Skill.Icon,
+                        iconTexture: Game1.content.Load<Texture2D>(Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name ),
                         iconSheetIndex: 0);
                     Game1.player.applyBuff(b);
                 }
                 else
                 {
-                    b.millisecondsDuration = 100;
+                    b.millisecondsDuration = 250;
+                }
+            }
+
+            // ---
+
+            
+            if ( Config.ConfigureAdventureBar.JustPressed() && Game1.activeClickableMenu == null &&
+                 Game1.player.hasOrWillReceiveMail("SnS_AdventureBar") )
+            {
+                Game1.activeClickableMenu = new AdventureBarConfigureMenu();
+            }
+
+            var ext = Game1.player.GetFarmerExtData();
+            var hasBar = Game1.onScreenMenus.Any(m => m is AdventureBar);
+            if ( e.IsOneSecond && !hasBar && Game1.player.hasOrWillReceiveMail( "SnS_AdventureBar" ) )
+            {
+                Game1.onScreenMenus.Add(new AdventureBar(editing: false));
+            }
+            else if (hasBar)
+            {
+                KeybindList[][] binds = new KeybindList[8][]
+                {
+                    new KeybindList[2] { Config.AbilityBar1Slot1, Config.AbilityBar2Slot1 },
+                    new KeybindList[2] { Config.AbilityBar1Slot2, Config.AbilityBar2Slot2 },
+                    new KeybindList[2] { Config.AbilityBar1Slot3, Config.AbilityBar2Slot3 },
+                    new KeybindList[2] { Config.AbilityBar1Slot4, Config.AbilityBar2Slot4 },
+                    new KeybindList[2] { Config.AbilityBar1Slot5, Config.AbilityBar2Slot5 },
+                    new KeybindList[2] { Config.AbilityBar1Slot6, Config.AbilityBar2Slot6 },
+                    new KeybindList[2] { Config.AbilityBar1Slot7, Config.AbilityBar2Slot7 },
+                    new KeybindList[2] { Config.AbilityBar1Slot8, Config.AbilityBar2Slot8 },
+                };
+
+                for ( int islot = 0; islot < 8; ++islot )
+                {
+                    string abilId = null;
+                    if (binds[islot][1].JustPressed() )
+                    {
+                        Helper.Input.SuppressActiveKeybinds(binds[islot][1]);
+                        abilId = ext.adventureBar[8 + islot];
+                    }
+                    else if (binds[ islot ][ 0 ].JustPressed() )
+                    {
+                        Helper.Input.SuppressActiveKeybinds(binds[islot][0]);
+                        abilId = ext.adventureBar[islot];
+                    }
+
+                    if ( abilId != null && Ability.Abilities.TryGetValue( abilId ?? "", out var abil ) && abil.ManaCost() <= ext.mana.Value && abil.CanUse() )
+                    {
+                        ext.mana.Value -= abil.ManaCost();
+                        abil.Function();
+                    }
                 }
             }
         }
@@ -377,7 +533,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Postfix(NPC __instance, int threshold, ref bool __result )
         {
-            if ( __instance is Monster && ModSnS.State.InShadows )
+            if ( __instance is Monster && Game1.player.GetFarmerExtData().inShadows.Value)
                 __result = false;
         }
     }
@@ -385,11 +541,9 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(MeleeWeapon), nameof(MeleeWeapon.leftClick))]
     public static class WeaponSwingShadowstepPatch
     {
-        public static void Postfix(NPC __instance)
+        public static void Postfix(Farmer who, NPC __instance)
         {
-            ModSnS.State.InShadows = false;
-            if (Game1.player.buffs.HasBuffWithNameContaining("shadowstep"))
-                Game1.player.buffs.Remove("shadowstep");
+            who.GetFarmerExtData().inShadows.Value = false;
         }
     }
 

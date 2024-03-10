@@ -77,6 +77,12 @@ namespace SwordAndSorcerySMAPI
         {
             return I18n.Bardics_Name();
         }
+        public override void DoLevelPerk(int level)
+        {
+            base.DoLevelPerk(level);
+            Game1.player.GetFarmerExtData().maxMana.Value += 10;
+        }
+
 
         public override List<string> GetExtraLevelUpInfo(int level)
         {
@@ -95,8 +101,8 @@ namespace SwordAndSorcerySMAPI
             };
 
             List<string> ret = new List<string>();
-            if (level % 5 == 0)
-                ret.Add(I18n.Level_Manacap());
+            if (level % 5 != 0)
+                ret.Add(I18n.Level_Manacap(10));
 
             ret.Add(songMapping[level - 1]);
 
@@ -105,7 +111,7 @@ namespace SwordAndSorcerySMAPI
 
         public override string GetSkillPageHoverText(int level)
         {
-            return I18n.Druidics_Level_Generic(bonus: level);
+            return I18n.Level_Manacap(level * 5);
         }
     }
 }

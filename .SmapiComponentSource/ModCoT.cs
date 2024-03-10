@@ -59,11 +59,6 @@ namespace CircleOfThornsSMAPI
         }
     }
 
-    public class Configuration
-    {
-        public KeybindList ShapeshiftKeybinding { get; set; } = new(SButton.Tab);
-    }
-
     public class ModCoT
     {
         public static ModCoT Instance;
@@ -97,6 +92,18 @@ namespace CircleOfThornsSMAPI
             Helper = helper;
         }
 
+        private static void PostTransform()
+        {
+            Game1.player.GetFarmerExtData().noMovementTimer = 0;
+            for (int i = 0; i < 8; ++i)
+            {
+                Vector2 diff = new Vector2(Game1.random.Next(96) - 48, Game1.random.Next(96) - 48);
+                Game1.player.currentLocation.TemporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Rectangle(0, 320, 64, 64), 50f, 8, 0, Game1.player.getStandingPosition() - new Vector2(32, 48) + diff, flicker: false, flipped: false));
+            }
+
+            Game1.player.currentLocation.playSound("coldSpell", Game1.player.Position);
+        }
+
         public void Entry()
         {
             //I18n.Init(helper.Translation);
@@ -110,6 +117,63 @@ namespace CircleOfThornsSMAPI
                 };
             huckleberryTex = Helper.ModContent.Load<Texture2D>("assets/huckleberry.png");
             walletItemTex = Helper.ModContent.Load<Texture2D>("assets/wallet-item.png");
+
+            GameStateQuery.Register("PLAYER_HAS_WOLF_FORM", (args, ctx) =>
+            {
+            return GameStateQuery.Helpers.WithPlayer(ctx.Player, args[1], (f) => f.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftWolf));
+            });
+
+            Ability.Abilities.Add("shapeshift_doe", new Ability("shapeshift_doe")
+            {
+                Name = I18n.Ability_Shapeshift_Name_Doe,
+                Description = I18n.Ability_Shapeshift_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
+                SpriteIndex = 1,
+                ManaCost = () => Game1.player.GetFarmerExtData().transformed.Value ? 0 : 5,
+                KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.DRUIDICS_LEVEL Current 1",
+                UnlockHint = I18n.Ability_Shapeshift_UnlockHint,
+                Function = () =>
+                {
+                    var ext = Game1.player.GetFarmerExtData();
+                    ext.form.Value = 0;
+                    ext.transformed.Value = !ext.transformed.Value;
+                    PostTransform();
+                }
+            });
+            Ability.Abilities.Add("shapeshift_buck", new Ability("shapeshift_buck")
+            {
+                Name = I18n.Ability_Shapeshift_Name_Buck,
+                Description = I18n.Ability_Shapeshift_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
+                SpriteIndex = 1,
+                ManaCost = () => Game1.player.GetFarmerExtData().transformed.Value ? 0 : 5,
+                KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.DRUIDICS_LEVEL Current 1",
+                UnlockHint = I18n.Ability_Shapeshift_UnlockHint,
+                Function = () =>
+                {
+                    var ext = Game1.player.GetFarmerExtData();
+                    ext.form.Value = 1;
+                    ext.transformed.Value = !ext.transformed.Value;
+                    PostTransform();
+                }
+            });
+            Ability.Abilities.Add("shapeshift_wolf", new Ability("shapeshift_wolf")
+            {
+                Name = I18n.Ability_Shapeshift_Name_Wolf,
+                Description = I18n.Ability_Shapeshift_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
+                SpriteIndex = 1,
+                ManaCost = () => Game1.player.GetFarmerExtData().transformed.Value ? 0 : 5,
+                KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.DRUIDICS_LEVEL Current 1, PLAYER_HAS_WOLF_FORM Current",
+                HiddenIfLocked = true,
+                Function = () =>
+                {
+                    var ext = Game1.player.GetFarmerExtData();
+                    ext.form.Value = 2;
+                    ext.transformed.Value = !ext.transformed.Value;
+                    PostTransform();
+                }
+            });
 
             Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
             Helper.Events.GameLoop.UpdateTicking += GameLoop_UpdateTicking;
@@ -157,13 +221,6 @@ namespace CircleOfThornsSMAPI
 
         private void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)
         {
-            var gmcm = Helper.ModRegistry.GetApi<SpaceShared.APIs.IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
-            if (gmcm != null)
-            {
-                gmcm.Register(ModManifest, () => Config = new(), () => Helper.WriteConfig(Config));
-                gmcm.AddKeybindList(ModManifest, () => Config.ShapeshiftKeybinding, (kl) => Config.ShapeshiftKeybinding = kl, () => I18n.Keybind_Shapeshift_Name(), () => I18n.Keybind_Shapeshift_Description());
-            }
-
             var sc = Helper.ModRegistry.GetApi<SpaceShared.APIs.ISpaceCoreApi>("spacechase0.SpaceCore");
             sc.RegisterCustomProperty(typeof(Farmer), "shapeshiftFormId", typeof(bool), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.FormGetter)), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.FormSetter)));
             sc.RegisterCustomProperty(typeof(Farmer), "druidicsExpRemainder", typeof(float), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderGetter)), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderSetter)));
@@ -172,46 +229,30 @@ namespace CircleOfThornsSMAPI
 
         private double shapeshiftPressedTimer = 0;
         private int regenTimer = 0;
+        private int transformTimer = 0;
         private void GameLoop_UpdateTicking(object sender, StardewModdingAPI.Events.UpdateTickingEventArgs e)
         {
             if (!Context.IsWorldReady|| Game1.player.currentLocation != null && Game1.player.currentLocation.currentEvent != null && !Game1.player.currentLocation.currentEvent.isFestival)
                 return;
-            if (//false&&
-                !Game1.player.eventsSeen.Contains(ShapeshiftingEventId))
-                return;
 
             var data = Game1.player.GetFarmerExtData();
 
-            if (Config.ShapeshiftKeybinding.IsDown())
-            {
-                shapeshiftPressedTimer += Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
-            }
-            else
-            {
-                if (shapeshiftPressedTimer > 0)
-                {
-                    if (shapeshiftPressedTimer > 2)
-                    {
-                        data.transformed.Value = true;
-                        data.form.Value = (data.form.Value + 1) % (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftWolf) ? 3 : 2);
-                    }
-                    else
-                        data.transformed.Value = !data.transformed.Value;
-
-                    data.noMovementTimer = 0;
-                    for (int i = 0; i < 8; ++i)
-                    {
-                        Vector2 diff = new Vector2(Game1.random.Next(96) - 48, Game1.random.Next(96) - 48);
-                        Game1.player.currentLocation.TemporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Rectangle(0, 320, 64, 64), 50f, 8, 0, Game1.player.getStandingPosition() - new Vector2(32, 48) + diff, flicker: false, flipped: false));
-                    }
-
-                    Game1.player.currentLocation.playSound("coldSpell", Game1.player.Position);
-                }
-                shapeshiftPressedTimer = 0;
-            }
-
             if (data.transformed.Value)
             {
+                transformTimer += (int)Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds;
+                if ( transformTimer >= 3000 )
+                {
+                    transformTimer -= 3000;
+                    var ext = SwordAndSorcerySMAPI.Extensions.GetFarmerExtData(Game1.player);
+                    ext.mana.Value = Math.Max( ext.mana.Value - 1, 0 );
+                    if ( ext.mana.Value <= 0 )
+                    {
+                        data.transformed.Value = false;
+                        PostTransform();
+                        return;
+                    }
+                }
+
                 var b = Game1.player.buffs.AppliedBuffs.FirstOrDefault(pair => pair.Key == "shapeshifted").Value;
                 if (b == null)
                 {

@@ -75,6 +75,48 @@ namespace CircleOfThornsSMAPI
             return I18n.Druidics_Name();
         }
 
+        public override void DoLevelPerk(int level)
+        {
+            base.DoLevelPerk(level);
+            string[][] recipes =
+                new string[][]
+                {
+                    null,
+                    new string[] { "Ancient Amaranth Seeds", "Ancient Epiphytic Fern Seeds" },
+                    new string[] { "Ancient Glowing Polypore Mushroom Spores" },
+                    new string[] { "Ancient Wild Fairy Rose Seeds" },
+                    new string[] { "Ancient Elderberry Seeds" },
+                    null,
+                    new string[] { "Ancient Bottle Gourd Seeds", "swordandsorcery.lavaeelandstirfriedancientbottlegourd" },
+                    new string[] { "Ancient Giant Apple Berry Seeds", "swordandsorcery.mushroomsredsauce" },
+                    new string[] { "Ancient Azure Detura", "swordandsorcery.ferngreensandpineapple" },
+                    new string[] { "Ancient Glowing Huckleberry Seeds", "swordandsorcery.ancienthuckleberryicecream" },
+                    null,
+                };
+
+            var ext = SwordAndSorcerySMAPI.Extensions.GetFarmerExtData(Game1.player);
+            ext.maxMana.Value += 5;
+
+            if (recipes[level] != null)
+            {
+                //ret.Add(I18n.Recipe_Crafting(new CraftingRecipe(recipes[level][0], false).DisplayName));
+                Game1.player.craftingRecipes.TryAdd(recipes[level][0], 0);
+                if (recipes[level].Length == 2)
+                {
+                    if (level == 1)
+                    {
+                        Game1.player.craftingRecipes.TryAdd(recipes[level][1], 0);
+                        //ret.Add(I18n.Recipe_Crafting(new CraftingRecipe(recipes[level][1], false).DisplayName));
+                    }
+                    else
+                    {
+                        Game1.player.cookingRecipes.TryAdd(recipes[level][1], 0);
+                        //ret.Add(I18n.Recipe_Cooking(new CraftingRecipe(recipes[level][1], true).DisplayName));
+                    }
+                }
+            }
+        }
+
         public override List<string> GetExtraLevelUpInfo(int level)
         {
             string[][] recipes =
@@ -98,23 +140,23 @@ namespace CircleOfThornsSMAPI
                 I18n.Druidics_Level_Generic(bonus: 1)
             };
 
-            if (level % 5 == 0)
-                ret.Add(I18n.Level_Manacap());
+            if (level % 5 != 0)
+                ret.Add(I18n.Level_Manacap(5));
 
             if (recipes[level] != null)
             {
                 ret.Add(I18n.Recipe_Crafting(new CraftingRecipe(recipes[level][0], false).DisplayName));
-                Game1.player.craftingRecipes.TryAdd(recipes[level][0], 0);
+                //Game1.player.craftingRecipes.TryAdd(recipes[level][0], 0);
                 if (recipes[level].Length == 2)
                 {
                     if (level == 1)
                     {
-                        Game1.player.craftingRecipes.TryAdd(recipes[level][1], 0);
+                        //Game1.player.craftingRecipes.TryAdd(recipes[level][1], 0);
                         ret.Add(I18n.Recipe_Crafting(new CraftingRecipe(recipes[level][1], false).DisplayName));
                     }
                     else
                     {
-                        Game1.player.cookingRecipes.TryAdd(recipes[level][1], 0);
+                        //Game1.player.cookingRecipes.TryAdd(recipes[level][1], 0);
                         ret.Add(I18n.Recipe_Cooking(new CraftingRecipe(recipes[level][1], true).DisplayName));
                     }
                 }
