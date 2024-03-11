@@ -23,6 +23,7 @@ CREDITS:
 ➜ HimeTarts: Mateo portrait base
 ➜ PetiteWarlock: Logo 
 ➜ Logophile: Rugs
+➜ 6480: Crop tweaks, lots of pixel art mentoring
 ➜ Pokeinalover: Book's Human design 
 ➜ SmolHuman: Additional animal sprites 
 ➜ SunStream7, Gnadi, Mareetz: Extensive playtesting
