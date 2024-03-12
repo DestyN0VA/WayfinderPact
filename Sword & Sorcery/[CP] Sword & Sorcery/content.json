@@ -225,7 +225,7 @@
       "Section": "Overlays"
     },
     "CirrusRainbowHair": {
-      "AllowValues": "Random, Red, Orange, Yellow, Blue",
+      "AllowValues": "Random, Brown, Red, Orange, Yellow, Blue",
       "Default": "Blue",
       "AllowBlank": false,
       "AllowMultiple": false,
@@ -865,9 +865,16 @@
     }*/
     {
       "Name": "CirrusHairColor",
-      "Value": "{{Random: Red, Orange, Yellow, Blue |key=CirrusHair}}",
+      "Value": "{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}}",
       "When": {
         "CirrusRainbowHair": "random"
+      }
+    },
+    {
+      "Name": "CirrusHairColor",
+      "Value": "Brown",
+      "When": {
+        "CirrusRainbowHair": "brown"
       }
     },
     {
