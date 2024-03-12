@@ -3,7 +3,7 @@ using SpaceCore;
 
 namespace CircleOfThornsSMAPI
 {
-    internal class GenericProfession : Skills.Skill.Profession
+    public class GenericProfession : Skills.Skill.Profession
     {
         /*********
         ** Fields

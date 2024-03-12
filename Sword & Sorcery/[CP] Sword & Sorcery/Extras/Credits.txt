@@ -20,9 +20,10 @@ CREDITS:
 ➜ CreatorKami: Hector portraits
 ➜ Yri: Druid tower, giant tree, and Book's sprites
 ➜ NinTheCactus69: Some of the druid crops 
-➜ HimeTarts: Original Mateo portrait
+➜ HimeTarts: Mateo portrait base
 ➜ PetiteWarlock: Logo 
 ➜ Logophile: Rugs
+➜ 6480: Crop tweaks, lots of pixel art mentoring
 ➜ Pokeinalover: Book's Human design 
 ➜ SmolHuman: Additional animal sprites 
 ➜ SunStream7, Gnadi, Mareetz: Extensive playtesting
@@ -37,6 +38,7 @@ INSPIRATIONS:
 
 There are tons of song lyrics hidden throughout the mod, from the following artists: 
 Fall Out Boy, Ghost, Sleep Token, Nightwish, Nadia Grifford, Queen, David Bowie, Elvis
+Featuring SDV-style covers of music from: Final Fantasy X, Steven Universe, Kingdom Hearts
 
 Chapter 1 is inspired by/references/quotes: The Great Gatsby, Dark Cloud 2, Undertale 
 Chapter 2 is inspired by/references/quotes: Agent of Asgard, The Secret of Kells, Princess Mononoke

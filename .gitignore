@@ -1,5 +1,6 @@
 .DS_Store
 .idea/
+config.json
 
 # user-specific files
 *.suo

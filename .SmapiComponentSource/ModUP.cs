@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using CircleOfThornsSMAPI;
+using HarmonyLib;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -10,10 +11,12 @@ using StardewValley;
 using StardewValley.Buffs;
 using StardewValley.Buildings;
 using StardewValley.Characters;
+using StardewValley.Enchantments;
 using StardewValley.Locations;
 using StardewValley.Menus;
 using StardewValley.Monsters;
 using StardewValley.TerrainFeatures;
+using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,10 +36,12 @@ namespace SwordAndSorcerySMAPI
             usedBuffToday = false;
             usedBattleToday = false;
             usedRestorationToday = false;
+            usedTimeToday = false;
             usedCropsToday = false;
+            usedNpcSong = false;
         }
 
-        private static bool usedBuffToday = false;
+        internal static bool usedBuffToday = false;
         internal static void BuffSong()
         {
             if (usedBuffToday)
@@ -47,10 +52,10 @@ namespace SwordAndSorcerySMAPI
             usedBuffToday = true;
 
             int strMult = Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffStrength) ? 2 : 1;
-            int duration = Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffDuration) ? Buff.ENDLESS : (7 * 60 * 1000);
+            int duration = Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffDuration) ? Buff.ENDLESS : (7 * 6 * 6 * 1000);
 
             BuffEffects effects = new();
-            switch (Utility.CreateRandom((double)Game1.startingGameSeed * 3, Game1.player.UniqueMultiplayerID * 5, Game1.stats.DaysPlayed * 7).Next(4))
+            switch (Utility.CreateRandom((double)Game1.uniqueIDForThisGame * 3, Game1.player.UniqueMultiplayerID * 5, Game1.stats.DaysPlayed * 7).Next(4))
             {
                 case 0: effects.LuckLevel.Value = 1 * strMult; break;
                 case 1: effects.FarmingLevel.Value = 1 * strMult; break;
@@ -61,7 +66,7 @@ namespace SwordAndSorcerySMAPI
             Game1.player.applyBuff(new Buff("bardics.buff", "bardics.buff", I18n.Bardics_Song_Buff_Name(), duration, effects: effects));
         }
 
-        private static bool usedBattleToday = false;
+        internal static bool usedBattleToday = false;
         internal static void BattleSong()
         {
             if (usedBattleToday)
@@ -72,10 +77,10 @@ namespace SwordAndSorcerySMAPI
             usedBattleToday = true;
 
             int strMult = Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffStrength) ? 2 : 1;
-            int duration = Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffDuration) ? Buff.ENDLESS : (7 * 60 * 1000);
+            int duration = Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffDuration) ? Buff.ENDLESS : (7 * 6 * 6 * 1000);
 
             BuffEffects effects = new();
-            switch (Utility.CreateRandom((double)Game1.startingGameSeed * 3, Game1.player.UniqueMultiplayerID * 5, Game1.stats.DaysPlayed * 7).Next(2))
+            switch (Utility.CreateRandom((double)Game1.uniqueIDForThisGame * 3, Game1.player.UniqueMultiplayerID * 5, Game1.stats.DaysPlayed * 7).Next(2))
             {
                 case 0: effects.AttackMultiplier.Value = 1 + 0.1f * strMult; break;
                 case 1: effects.Defense.Value = 3 * strMult; break;
@@ -84,7 +89,7 @@ namespace SwordAndSorcerySMAPI
             Game1.player.applyBuff(new Buff("bardics.battle", "bardics.battle", I18n.Bardics_Song_Battle_Name(), duration, effects: effects));
         }
 
-        private static bool usedRestorationToday = false;
+        internal static bool usedRestorationToday = false;
         internal static void RestorationSong()
         {
             if (usedRestorationToday)
@@ -142,7 +147,7 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        private static bool usedTimeToday = false;
+        internal static bool usedTimeToday = false;
         private static int timeTimer = -1;
         internal static void TimeSong()
         {
@@ -198,7 +203,7 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        private static bool usedCropsToday = false;
+        internal static bool usedCropsToday = false;
         internal static void CropSong()
         {
             if (usedCropsToday)
@@ -308,6 +313,143 @@ namespace SwordAndSorcerySMAPI
                 }
             };
         }
+
+        internal static void AttackSong()
+        {
+            int damage = (int)(Game1.player.Items.Where(i => i is MeleeWeapon).Max(i => (i as MeleeWeapon).getItemLevel()) * 2.5f);
+            if (Game1.player.HasCustomProfession(BardicsSkill.ProfessionAttackDamage))
+                damage *= 2;
+
+            float dist = Game1.tileSize * 5;
+            if (Game1.player.HasCustomProfession(BardicsSkill.ProfessionAttackRange))
+                dist = float.MaxValue;
+
+            foreach ( var monster_ in Game1.player.currentLocation.characters.Where( c => c is Monster ) )
+            {
+                var monster = monster_ as Monster;
+                if ( Vector2.Distance( monster.StandingPixel.ToVector2(), Game1.player.StandingPixel.ToVector2() ) <= dist )
+                {
+                    Vector2 traj = (monster.StandingPixel.ToVector2() - Game1.player.StandingPixel.ToVector2());
+                    traj.Normalize();
+                    traj *= 5;
+                    int dmg = monster.takeDamage(damage, (int)traj.X, (int)traj.Y, false, 0, Game1.player);
+
+                    Rectangle monsterBox = monster.GetBoundingBox();
+                    if (dmg == -1)
+                    {
+                        string missText = Game1.content.LoadString("Strings\\StringsFromCSFiles:Attack_Miss");
+                        Game1.player.currentLocation.debris.Add(new Debris(missText, 1, new Vector2(monsterBox.Center.X, monsterBox.Center.Y), Color.LightGray, 1f, 0f));
+                    }
+                    else
+                    {
+                        Game1.player.currentLocation.removeDamageDebris(monster);
+                        Game1.player.currentLocation.debris.Add(new Debris(dmg, new Vector2(monsterBox.Center.X + 16, monsterBox.Center.Y), false ? Color.Yellow : new Color(255, 130, 0), false ? (1f + (float)dmg / 300f) : 1f, monster));
+                    }
+                }
+            }
+        }
+
+        internal static bool usedNpcSong = false;
+        internal static void NpcSong()
+        {
+            if (usedNpcSong)
+            {
+                Game1.drawObjectDialogue(I18n.Harp_BadSong());
+                return;
+            }
+            usedNpcSong = true;
+
+            int duration = 7000 * 6 * 6;
+            if (Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffDuration))
+                duration = Buff.ENDLESS;
+
+            // TODO: Convert to data asset so mods can add their own NPCs
+            Dictionary<string, Func<BuffEffects>> buffs = new()
+            {
+                { "Elliot", () => new BuffEffects() { FishingLevel = { 1 } } },
+                { "Harvey", () => new BuffEffects() { MaxStamina = { 30 } } },
+                { "Sam", () => new BuffEffects() { CriticalChanceMultiplier = { 1.1f } } },
+                { "Sebastian", () => new BuffEffects() { Defense = { 2 } } },
+                { "Shane", () => new BuffEffects() { FarmingLevel = { 1 } } },
+                { "Abigail", () => new BuffEffects() { AttackMultiplier = { 1.1f } } },
+                { "Emily", () => new BuffEffects() { LuckLevel = { 1 } } },
+                { "Haley", () => new BuffEffects() { Speed = { 1 } } },
+                { "Leah", () => new BuffEffects() { ForagingLevel = { 1 } } },
+                { "Maru", () => new BuffEffects() { MagneticRadius = { 48 } } },
+                //exp gain//{ "Penny", () => new BuffEffects() { FishingLevel = { 1 } } },
+                { "Caroline", () => new BuffEffects() { FarmingLevel = { 1 } } },
+                { "Clint", () => new BuffEffects() { MiningLevel = { 1 } } },
+                { "Demetrius", () => new BuffEffects() { MagneticRadius = { 48 } } },
+                { "Dwarf", () => new BuffEffects() { MiningLevel = { 1 } } },
+                { "Evelyn", () => new BuffEffects() { FarmingLevel = { 1 } } },
+                { "George", () => new BuffEffects() { MiningLevel = { 1 } } },
+                { "Gus", () => new BuffEffects() { ForagingLevel = { 1 } } },
+                { "Jas", () => new BuffEffects() { Speed = { 1 } } },
+                { "Jodi", () => new BuffEffects() { Defense = { 2 } } },
+                { "Kent", () => new BuffEffects() { AttackMultiplier = { 1.1f } } },
+                //squid ink ravioli//{ "Krobus", () => new BuffEffects() { FishingLevel = { 1 } } },
+                { "Leo", () => new BuffEffects() { ForagingLevel = { 1 } } },
+                { "Lewis", () => new BuffEffects() { Speed = { 1 } } },
+                { "Linus", () => new BuffEffects() { ForagingLevel = { 1 } } },
+                { "Marnie", () => new BuffEffects() { FarmingLevel = { 1 } } },
+                { "Pam", () => new BuffEffects() { Speed = { 1 } } },
+                { "Pierre", () => new BuffEffects() { FarmingLevel = { 1 } } },
+                { "Robin", () => new BuffEffects() { ForagingLevel = { 1 } } },
+                //oil of garlic//{ "Sandy", () => new BuffEffects() { FishingLevel = { 1 } } },
+                { "Vincent", () => new BuffEffects() { Speed = { 1 } } },
+                { "Willy", () => new BuffEffects() { FishingLevel = { 1 } } },
+                //arcana//{ "Wizard", () => new BuffEffects() { FishingLevel = { 1 } } },
+                //monstermusk//{ "MarlonFey", () => new BuffEffects() { FishingLevel = { 1 } } },
+                { "GuntherSilvian", () => new BuffEffects() { MiningLevel = { 1 } } },
+                //exp gain//{ "Cirrus", () => new BuffEffects() { ForagingLevel = { 1 } } },
+                { "Mateo", () => new BuffEffects() { AttackMultiplier = { 1.1f } } },
+                //druidics//{ "Hector", () => new BuffEffects() { FarmingLevel = { 1 } } },
+            };
+
+            NPC target = null;
+            float distSoFar = float.MaxValue;
+            foreach (var npc in Game1.currentLocation.characters.Where(c => c.isVillager()))
+            {
+                float dist = Vector2.Distance(npc.StandingPixel.ToVector2(), Game1.player.StandingPixel.ToVector2());
+                if ( dist < distSoFar )
+                {
+                    target = npc;
+                    distSoFar = dist;
+                }
+            }
+
+            if (!buffs.ContainsKey(target?.Name ?? "" ))
+            {
+                Game1.drawObjectDialogue(I18n.Harp_BadSong());
+                return;
+            }
+            BuffEffects effects = buffs[target.Name]();
+            if ( Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffStrength ) )
+            {
+                effects.CombatLevel.Value *= 2;
+                effects.FarmingLevel.Value *= 2;
+                effects.FishingLevel.Value *= 2;
+                effects.MiningLevel.Value *= 2;
+                effects.LuckLevel.Value *= 2;
+                effects.ForagingLevel.Value *= 2;
+                effects.MaxStamina.Value *= 2;
+                effects.MagneticRadius.Value *= 2;
+                effects.Speed.Value *= 2;
+                effects.Defense.Value *= 2;
+                effects.Attack.Value *= 2;
+                effects.Immunity.Value *= 2;
+                effects.AttackMultiplier.Value = 1 + (effects.AttackMultiplier.Value - 1) * 2;
+                effects.KnockbackMultiplier.Value = 1 + (effects.KnockbackMultiplier.Value - 1) * 2;
+                effects.WeaponSpeedMultiplier.Value = 1 + (effects.WeaponSpeedMultiplier.Value - 1) * 2;
+                effects.CriticalChanceMultiplier.Value = 1 + (effects.CriticalChanceMultiplier.Value - 1) * 2;
+                effects.CriticalPowerMultiplier.Value = 1 + (effects.CriticalPowerMultiplier.Value - 1) * 2;
+                effects.WeaponPrecisionMultiplier.Value = 1 + (effects.WeaponPrecisionMultiplier.Value - 1) * 2;
+            }
+
+            // TODO: Icon
+            Game1.player.applyBuff(new Buff("npcsong", "npcsong", I18n.Bardics_Song_Npcbuff_Buff(target.Name), duration, effects: effects));
+            usedNpcSong = true;
+        }
     }
 
     public class MonsterKnockbackMessage
@@ -345,6 +487,12 @@ namespace SwordAndSorcerySMAPI
             Helper = helper;
         }
 
+        private static void SongPreamble(Action songStuff)
+        {
+            Game1.player.performPlayerEmote("music");
+            Game1.player.FarmerSprite.endOfAnimationFunction = (f) => songStuff();
+        }
+
         public void Entry()
         {
             Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
@@ -365,6 +513,160 @@ namespace SwordAndSorcerySMAPI
                 new() { new SongEntry() { Name = I18n.Bardics_Song_Obelisk_Name, Function = SongEntry.ObeliskSong } },
                 new() {},
             };
+
+            GameStateQuery.Register("PLAYER_IS_COLLEGE_ELOQUENCE", (args, ctx) =>
+            {
+                return GameStateQuery.Helpers.WithPlayer(ctx.Player, args[1], (f) => f.HasCustomProfession(BardicsSkill.ProfessionBuff));
+            });
+            GameStateQuery.Register("PLAYER_IS_COLLEGE_VALOR", (args, ctx) =>
+            {
+                return GameStateQuery.Helpers.WithPlayer(ctx.Player, args[1], (f) => f.HasCustomProfession(BardicsSkill.ProfessionAttack));
+            });
+
+            Ability.Abilities.Add("song_buff", new Ability("song_buff")
+            {
+                Name = I18n.Bardics_Song_Buff_Name,
+                Description = I18n.Bardics_Song_Buff_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
+                SpriteIndex = 2,
+                ManaCost = () => 20,
+                KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.BARDICS_LEVEL Current 1",
+                UnlockHint = () => I18n.Ability_Bardics_UnlockHint(1),
+                CanUse = () => !SongEntry.usedBuffToday,
+                Function = () =>
+                {
+                    SongPreamble(() => SongEntry.BuffSong());
+                }
+            });
+            Ability.Abilities.Add("song_battle", new Ability("song_battle")
+            {
+                Name = I18n.Bardics_Song_Battle_Name,
+                Description = I18n.Bardics_Song_Battle_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
+                SpriteIndex = 3,
+                ManaCost = () => 20,
+                KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.BARDICS_LEVEL Current 2",
+                UnlockHint = () => I18n.Ability_Bardics_UnlockHint(2),
+                CanUse = () => !SongEntry.usedBattleToday,
+                Function = () =>
+                {
+                    SongPreamble(() => SongEntry.BattleSong());
+                }
+            });
+            Ability.Abilities.Add("song_restoration", new Ability("song_restoration")
+            {
+                Name = I18n.Bardics_Song_Restoration_Name,
+                Description = I18n.Bardics_Song_Restoration_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
+                SpriteIndex = 4,
+                ManaCost = () => 10,
+                KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.BARDICS_LEVEL Current 3",
+                UnlockHint = () => I18n.Ability_Bardics_UnlockHint(3),
+                CanUse = () => !SongEntry.usedRestorationToday,
+                Function = () =>
+                {
+                    SongPreamble(() => SongEntry.RestorationSong());
+                }
+            });
+            Ability.Abilities.Add("song_protection", new Ability("song_protection")
+            {
+                Name = I18n.Bardics_Song_Protection_Name,
+                Description = I18n.Bardics_Song_Protection_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
+                SpriteIndex = 5,
+                ManaCost = () => 10,
+                KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.BARDICS_LEVEL Current 4",
+                UnlockHint = () => I18n.Ability_Bardics_UnlockHint(4),
+                Function = () =>
+                {
+                    SongPreamble(() => SongEntry.ProtectionSong());
+                }
+            });
+            Ability.Abilities.Add("song_npcbuff", new Ability("song_npcbuff")
+            {
+                Name = I18n.Bardics_Song_Npcbuff_Name,
+                Description = I18n.Bardics_Song_Npcbuff_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
+                SpriteIndex = 6,
+                ManaCost = () => 25,
+                CanUse = () => !SongEntry.usedNpcSong,
+                KnownCondition = $"PLAYER_IS_COLLEGE_ELOQUENCE Current",
+                HiddenIfLocked = true,
+                Function = () =>
+                {
+                    SongPreamble(() => SongEntry.NpcSong());
+                }
+            });
+            Ability.Abilities.Add("song_attack", new Ability("song_attack")
+            {
+                Name = I18n.Bardics_Song_Attack_Name,
+                Description = I18n.Bardics_Song_Attack_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
+                SpriteIndex = 7,
+                ManaCost = () => 20,
+                KnownCondition = $"PLAYER_IS_COLLEGE_VALOR Current",
+                HiddenIfLocked = true,
+                Function = () =>
+                {
+                    SongPreamble(() => SongEntry.AttackSong());
+                }
+            });
+            Ability.Abilities.Add("song_time", new Ability("song_time")
+            {
+                Name = I18n.Bardics_Song_Time_Name,
+                Description = I18n.Bardics_Song_Time_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
+                SpriteIndex = 8,
+                ManaCost = () => 35,
+                KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.BARDICS_LEVEL Current 6",
+                UnlockHint = () => I18n.Ability_Bardics_UnlockHint(6),
+                Function = () =>
+                {
+                    SongPreamble(() => SongEntry.TimeSong());
+                }
+            });
+            Ability.Abilities.Add("song_horse", new Ability("song_horse")
+            {
+                Name = () => I18n.Bardics_Song_Horse_Name( Game1.player.horseName.Value ),
+                Description = I18n.Bardics_Song_Horse_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
+                SpriteIndex = 9,
+                ManaCost = () => 10,
+                KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.BARDICS_LEVEL Current 7",
+                UnlockHint = () => I18n.Ability_Bardics_UnlockHint(7),
+                Function = () =>
+                {
+                    SongPreamble(() => SongEntry.HorseSong());
+                }
+            });
+            Ability.Abilities.Add("song_crop", new Ability("song_crop")
+            {
+                Name = I18n.Bardics_Song_Crops_Name,
+                Description = I18n.Bardics_Song_Crops_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
+                SpriteIndex = 10,
+                ManaCost = () => 30,
+                KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.BARDICS_LEVEL Current 8",
+                UnlockHint = () => I18n.Ability_Bardics_UnlockHint(8),
+                Function = () =>
+                {
+                    SongPreamble(() => SongEntry.CropSong());
+                }
+            });
+            Ability.Abilities.Add("song_obelisk", new Ability("song_obelisk")
+            {
+                Name = I18n.Bardics_Song_Obelisk_Name,
+                Description = I18n.Bardics_Song_Obelisk_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
+                SpriteIndex = 11,
+                ManaCost = () => 15,
+                KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.BARDICS_LEVEL Current 9",
+                UnlockHint = () => I18n.Ability_Bardics_UnlockHint( 9 ),
+                Function = () =>
+                {
+                    SongPreamble(() => SongEntry.ObeliskSong());
+                }
+            });
 
             Helper.ConsoleCommands.Add("sns_playsong", "...", (cmd, args) =>
             {

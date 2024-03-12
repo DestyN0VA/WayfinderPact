@@ -1,0 +1,163 @@
+using System;
+using System.Collections.Generic;
+using CircleOfThornsSMAPI;
+using HarmonyLib;
+using Microsoft.Xna.Framework.Graphics;
+using SpaceCore;
+using StardewValley;
+using StardewValley.Menus;
+using SwordAndSorcerySMAPI;
+
+namespace SwordAndSorcerySMAPI
+{
+    public class RogueSkill : SpaceCore.Skills.Skill
+    {
+        public static GenericProfession ProfessionArmorRecovery;
+        public static GenericProfession ProfessionBowSecondShot;
+        public static GenericProfession ProfessionCrafting;
+        public static GenericProfession ProfessionArmorCap;
+        public static GenericProfession ProfessionShadowStep;
+        public static GenericProfession ProfessionHuntersMark;
+
+        public RogueSkill()
+            : base("DestyNova.SwordAndSorcery.Rogue")
+        {
+            // TODO: Change icons to bardics
+
+            this.Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png");
+            this.SkillsPageIcon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png");
+
+            this.ExperienceCurve = new[] { 100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000 };
+
+            this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(137, 76, 255);
+
+            // Level 5
+            RogueSkill.ProfessionArmorRecovery = new GenericProfession(skill: this, id: "ArmorRecovery", name: I18n.Bardics_Profession_Npcbuff, description: () => I18n.Bardics_Level_Song(I18n.Bardics_Song_Npcbuff_Name())+"\n" + I18n.Bardics_Song_Npcbuff_Description())
+            {
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png")
+            };
+            this.Professions.Add(RogueSkill.ProfessionArmorRecovery);
+
+            RogueSkill.ProfessionBowSecondShot = new GenericProfession(skill: this, id: "BowSecondShot", name: I18n.Bardics_Profession_Attack, description: () => I18n.Bardics_Level_Song(I18n.Bardics_Song_Attack_Name()) + "\n" + I18n.Bardics_Song_Attack_Description())
+            {
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png")
+            };
+            this.Professions.Add(RogueSkill.ProfessionBowSecondShot);
+
+            this.ProfessionsForLevels.Add(new ProfessionPair(5, RogueSkill.ProfessionArmorRecovery, RogueSkill.ProfessionBowSecondShot));
+
+            // Level 10 - track A
+            RogueSkill.ProfessionCrafting = new GenericProfession(skill: this, id: "Crafting", name: I18n.Bardics_Profession_Npcbuff_Strength_Name, description: I18n.Bardics_Profession_Npcbuff_Strength_Description)
+            {
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png")
+            };
+            this.Professions.Add(RogueSkill.ProfessionCrafting);
+
+            RogueSkill.ProfessionArmorCap = new GenericProfession(skill: this, id: "ArmorCap", name: I18n.Bardics_Profession_Npcbuff_Duration_Name, description: I18n.Bardics_Profession_Npcbuff_Duration_Description)
+            {
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png")
+            };
+            this.Professions.Add(RogueSkill.ProfessionArmorCap);
+
+            this.ProfessionsForLevels.Add(new ProfessionPair(10, RogueSkill.ProfessionCrafting, RogueSkill.ProfessionArmorCap, RogueSkill.ProfessionArmorRecovery));
+
+            // Level 10 - track B
+            RogueSkill.ProfessionShadowStep = new GenericProfession(skill: this, id: "ShadowStep", name: I18n.Bardics_Profession_Attack_Strength_Name, description: I18n.Bardics_Profession_Attack_Strength_Description)
+            {
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png")
+            };
+            this.Professions.Add(RogueSkill.ProfessionShadowStep);
+
+            RogueSkill.ProfessionHuntersMark = new GenericProfession(skill: this, id: "HuntersMark", name: I18n.Bardics_Profession_Attack_Range_Name, description: I18n.Bardics_Profession_Attack_Range_Description)
+            {
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png")
+            };
+            this.Professions.Add(RogueSkill.ProfessionHuntersMark);
+
+            this.ProfessionsForLevels.Add(new ProfessionPair(10, RogueSkill.ProfessionShadowStep, RogueSkill.ProfessionHuntersMark, RogueSkill.ProfessionBowSecondShot));
+        }
+
+        public override string GetName()
+        {
+            return I18n.RogueSkill_Name();
+        }
+        public override void DoLevelPerk(int level)
+        {
+            base.DoLevelPerk(level);
+            Game1.player.maxHealth += 3;
+        }
+
+        public override List<string> GetExtraLevelUpInfo(int level)
+        {
+            List<string> ret = new List<string>();
+
+            switch ( level )
+            {
+                case 1:
+                    ret.Add(I18n.RogueSkill_Unlock_1());
+                    break;
+                case 2:
+                    ret.Add(I18n.RogueSkill_Unlock_2());
+                    break;
+                case 3:
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("meow.firestorm-arrow", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("meow.icicle-arrow", false).DisplayName));
+                    break;
+                case 4:
+                    ret.Add(I18n.RogueSkill_Unlock_4());
+                    break;
+                case 6:
+                    ret.Add(I18n.RogueSkill_Unlock_6());
+                    break;
+                case 7:
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("meow.windwaker-arrow", false).DisplayName));
+                    break;
+                case 8:
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("meow.ricochet-arrow", false).DisplayName));
+                    break;
+                case 9:
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("meow.lightbringer-arrow", false).DisplayName));
+                    break;
+            }
+
+            if (level % 5 != 0)
+                ret.Add(I18n.Level_Health(3));
+
+            return ret;
+        }
+
+        public override string GetSkillPageHoverText(int level)
+        {
+            return I18n.Level_Health(3 * level);
+        }
+    }
+
+    [HarmonyPatch(typeof(LevelUpMenu), nameof(LevelUpMenu.RevalidateHealth))]
+    public static class LevelUpMenuRevalidateHealthPatch
+    {
+        public static void Postfix(Farmer farmer)
+        {
+            int amt = farmer.GetCustomSkillLevel(ModSnS.RogueSkill) * 3;
+            farmer.maxHealth += amt;
+            if (farmer.health == amt)
+                farmer.health += amt;
+        }
+    }
+
+    [HarmonyPatch(typeof(Farmer), nameof(Farmer.gainExperience))]
+    public static class FarmerExpInterceptPatch
+    {
+        public static void Postfix(Farmer __instance, int which, int howMuch)
+        {
+            if (!__instance.eventsSeen.Contains("SnS.Ch1.Mateo.18")) // TODO: Change event
+                return;
+            if (which != Farmer.combatSkill)
+                return;
+
+            var data = __instance.GetFarmerExtData();
+            float exp = data.expRemainderRogue.Value + howMuch / 2f;
+            __instance.AddCustomSkillExperience(ModCoT.Skill, (int)MathF.Truncate(exp));
+            data.expRemainderRogue.Value = exp - MathF.Truncate(exp);
+        }
+    }
+}
