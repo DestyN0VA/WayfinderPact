@@ -3034,16 +3034,16 @@ ________      ________ _   _ _______ _____
 "Core.Cirrus.Winter.10": "Hey, @! So, I wanted to try something different, something a little festive - I've never really tried doing jams or preserves or anything like that. But wanted to give cranberry sauce a try. Here you go![238]$1",
 
 // 10H LION'S MANE
-"Core.Cirrus.LionsMane.1": "TEST",
-"Core.Cirrus.LionsMane.2": "",
-"Core.Cirrus.LionsMane.3": "",
-"Core.Cirrus.LionsMane.4": "",
-"Core.Cirrus.LionsMane.5": "",
-"Core.Cirrus.LionsMane.6": "",
-"Core.Cirrus.LionsMane.7": "",
-"Core.Cirrus.LionsMane.8": "",
-"Core.Cirrus.LionsMane.9": "",
-"Core.Cirrus.LionsMane.10": "",
+"Core.Cirrus.LionsMane.1": "Hey, @! Don't worry about the menu at the Lion's Mane, okay? If you've got a craving, let me handle it. It's the least I can do after you've been such a good friend.$17",
+"Core.Cirrus.LionsMane.2": "I've got a system to keep everything at the Lion's Mane clean. I'd rather get anxious from not doing a routine, than not have one at all.47$20#$b#Whatever works, works. Such a big is hard to keep tidy, but I'm working really hard to keep everything up and running.$1",
+"Core.Cirrus.LionsMane.3": "You're more than welcome to stop by whenever, @. I'll cook, you can bring that lyre of yours, and we'll jam out.$1#$b#It's really nice having a living space that I can actually host in. I've never lived in a building that large before.$17",
+"Core.Cirrus.LionsMane.4": "Hungry, @? Stop by the Lion's Mane, I'll make sure you're taken care of. You helped restore the place, after all. I'll return the favor with a full belly!$1",
+"Core.Cirrus.LionsMane.5": "I've never had a bedroom before, @. My mother and I lived in a mobile home, and then I was living out of the van to save money.$16#$b#The Lion's Mane means the world to me. Thanks for helping make it happen, @. This town wouldn't be the same without you.$17",
+"Core.Cirrus.LionsMane.6": "It's wild to actually have customers! I'm not really relying on the Lion's Mane's finances for like, anything more than maintaining the building, but...$1#$b#It sure is nice to have a bit of extra pocket money once in a while, doing something that's way less stressful than touring.$1",
+"Core.Cirrus.LionsMane.7": "One of my favorite things about the restoration was being able to decorate the space myself without any input or commentary from anyone else.$17#$b#It was a really big deal, kind of like a step forward. And things can only get better and better from here!$1",
+"Core.Cirrus.LionsMane.8": "I hadn't played on a full piano in ages before getting one for the Lion's Mane. I'm a little self-concious because I'm out of practice on actual keys, but...$17#$b#Gosh, @. I'm so happy. ",
+"Core.Cirrus.LionsMane.9": "It feels like I stopped doing music professionally, and then suddenly, and without warning, I got hit with a rush of musical inspiration.$22#$b#It's great. I play so much more NOW than I did prior! I thought I'd lose interest, but I think I just needed a break.$1",
+"Core.Cirrus.LionsMane.10": "After the Lion's Mane was built, I thought I'd step back from music. But it's been quite the opposite; I've been playing and writing more than I have in years.$4#$b#Thank you, @. Maybe one day I'll write a song for you, and for everything you've done. I know you're carrying the entire Valley on your back.$6",
 
 // 10H DATING 
 "Core.Cirrus.Dating.1": "TEST",
@@ -3264,9 +3264,6 @@ ________      ________ _   _ _______ _____
 "Gifts.Cirrus.GiftReaction.ZuzuStylePizza": "@! This tastes as good as the real thing! Did you ship in water from the city? Oh my gosh! Thank you!$1",
 "Gifts.Cirrus.GiftReaction.ZuzuStyleCheesecake": "Oh my gosh, @! This takes like home, looks like you got it perfect - thank you for sharing with me!$1",
 "Gifts.Cirrus.GiftReaction.PortfireDrakeSparkler": "Honestly, I love a good mocktail. I feel less left out, because I love going to bars but I don't drink anymore.$6#$b#Thanks, @. This is very thoughtful of you to have made.$4",
-
-// LOVES - ROMANTIC 
-"Gifts.Cirrus.GiftReaction.Object.Romantic": "",
    
 // LIKES
 "Gifts.Cirrus.GiftReaction.MapleBar": "Mateo said these were a local thing, and made me try one. And then I tried two. Then three...$1",
@@ -3288,12 +3285,13 @@ ________      ________ _   _ _______ _____
 "Gifts.Cirrus.GiftReaction.ZuzuStylePizza.Birthday": "You got REAL 'za for my birthday? Thank you @, this is the good stuff!$1", 
 
 // ITEM REJECTIONS 
-
 "Gifts.Cirrus.GiftReject.Bouquet": "Oh! Is this a Pelican Town tradition? Good luck in your pursuits, @!$1",
 "Gifts.Cirrus.GiftReject.MermaidPendant": "Oooh, in Port Drake, we do something completely different. Good luck in your pursuits, @!",
-
-
-// BIRTHDAY - ROMANTIC
+"Gifts.Cirrus.GiftReaction.Mead": "No thanks, @! I'm sober. But I appreciate being thought of!$1",
+"Gifts.Cirrus.GiftReaction.Beer": "No thanks, @! I'm sober. But I appreciate being thought of!$1",
+"Gifts.Cirrus.GiftReaction.PaleAle": "No thanks, @! I'm sober. But I appreciate being thought of!$1",
+"Gifts.Cirrus.GiftReaction.Wine": "No thanks, @! I'm sober. But I appreciate being thought of!$1",
+"Gifts.Cirrus.GiftReaction.Hops": "No thanks, @! I'm sober, so I wouldn't make anything with this.$1",
 
 
 /*
