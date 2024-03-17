@@ -4,11 +4,10 @@
    | when the project is compiled.
    | 
    | Changes made to this file may be overwritten.
-   | 
    */
   "$schema": "https://smapi.io/schemas/manifest.json",
-  "UniqueID": "DestyNova.SwordAndSorcery.SMAPI",
-  "Name": "Sword and Sorcery (SMAPI Component)",
+  "UniqueID": "KCC.SnS",
+  "Name": "Sword and Sorcery [SMAPI]",
   "Author": "DestyNova, spacechase0",
   "Version": "1.0.0-Debug",
   "Description": "...",

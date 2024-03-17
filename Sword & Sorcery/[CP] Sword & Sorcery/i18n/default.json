@@ -144,8 +144,8 @@
 
 */
 
-//Seasonal Early Heart 0-4
-  //Spring
+// SEASONAL EARLY HEART 
+// SPRING
 "Core.Mateo.Spring.EarlyHeart.1": "Hey, farmer. What do you call an emergency in the Spring? May Day.$14",
 "Core.Mateo.Spring.EarlyHeart.2": "It's getting warmer out. You can tell by the Spring in folks' step.$14",
 "Core.Mateo.Spring.EarlyHeart.3": "What do you grow, anyway? Parsnips, potatoes, what else? I'm not the agricultural sort.$0",
@@ -163,7 +163,7 @@
 "Core.Mateo.Spring.EarlyHeart.15": "The trader out in the desert has these artifact troves; they've got things like Dwarven Gadgets and other relics inside.$34#$b#I'm not sure how it's all being sourced, though. I know the woman in the traveling cart gets her goods from Gotoro, which is...extremely risky.$37",
 "Core.Mateo.Spring.EarlyHeart.16": "Hope you're doing alright since that little encounter with those slimes.$32",
 
-  //Summer
+// SUMMER
 "Core.Mateo.Summer.EarlyHeart.1": "Hey, farmer. It's really humid out... be careful, stay hydrated.$0",
 "Core.Mateo.Summer.EarlyHeart.2": "When the sun pervades through the tent flap in the morning, it's always worth getting up and watching it rise. There's just something about it in the summer that's particularly magical - maybe it's the way the light hits the water.$4",
 "Core.Mateo.Summer.EarlyHeart.3": "Howdy, farmer. Will I sea you on the beach this season?$14",
@@ -181,7 +181,7 @@
 "Core.Mateo.Summer.EarlyHeart.15": "Hey, @. Here's my latest find. Monsters drop the strangest things sometimes, don't they? [104 105 106]$14",
 "Core.Mateo.Summer.EarlyHeart.16": "I want to get more involved in the community, but I haven't worked out how yet. Maybe Marnie needs some help around the ranch.$8",
 
-  //Fall
+// FALL
 "Core.Mateo.Fall.EarlyHeart.1": "Nothing beats a brisk mountain walk in the Fall. Don't you just love that crispness in the air?$4",
 "Core.Mateo.Fall.EarlyHeart.2": "I need a few more pumpkins for the tent... Once you harvest, I might buy a bunch off you.$13",
 "Core.Mateo.Fall.EarlyHeart.3": "I try to minimize how much time I spend down below during this time of year, but I did find this.[96 97 98 99 100 101 103]$14",
@@ -199,7 +199,7 @@
 "Core.Mateo.Fall.EarlyHeart.15": "I pulled this up from a Duggy den. And now it's yours! [104 105 106]$15",
 "Core.Mateo.Fall.EarlyHeart.16": "I pulled this up from a Duggy den. And now it's yours! [113 115 116]$15",
 
-  //Winter
+// WINTER
 "Core.Mateo.Winter.EarlyHeart.1": "Winter is the worst season, but don't coat me on that.$23",
 "Core.Mateo.Winter.EarlyHeart.2": "It's a good time of year for adventuring, farmer. Found this; can you pass it along? [96 97 98 99 100 101 103].$14",
 "Core.Mateo.Winter.EarlyHeart.3": "Do you spend a lot of time down below during the Winter? Keep your wits about you, farmer.$10",
@@ -217,8 +217,8 @@
 "Core.Mateo.Winter.EarlyHeart.15": "What I wouldn't do to be but a humble little Pepper Rex. Warm, safely isolated in prehistoric cave systems, and without emotional baggage and student loans.$16",
 "Core.Mateo.Winter.EarlyHeart.16": "I found this while exploring. Be sure to pass it along to Gunther for me, okay? [96 97 98 99 100 101 103]$15",
 
-//Seasonal Late Heart 5-10
-  //Spring
+// SEASONAL LATE HEART
+// SPRING
 "Core.Mateo.Spring.LateHeart.1": "When I was still in school, Spring was always stressful. The start of a new semester had me wanting to do my best. I'm glad it's over. My liver was probably about as grateful for graduation as I was.$9",
 "Core.Mateo.Spring.LateHeart.2": "Did you know that skeletons can do magic? I didn't either, until one of them froze my feet to the floor.$7#$b#He even had a cape on. It billowed dramatically behind him as he charged at me.$9#$b#Goes to show it's always worth approaching the mines with caution. Stay safe, @.$24",
 "Core.Mateo.Spring.LateHeart.3": "We don't know much about how Mummies animate, since the only way to incapacitate them is with bombs and that doesn't leave much to study.$9#$b#Capturing a live Mummy seems needlessly cruel, so unfortunately the best we can do is study the strange tombs they tend to wander after they've been dealt with.$8#$b#I'd love to take it a step further than that, but I don't want to get cursed.$34",
@@ -238,7 +238,7 @@
 "Core.Mateo.Spring.LateHeart.17": "I'm not sold on it yet, but there's a substantial amount of anthropological evidence supporting the hypothesis that Goblins and Dwarves are related.$34#$b#I think it's interesting but a lot of it's circumstantial. Personally, lean into the idea that they cohabited before the Elemental Wars rather than stem from the same exact ancestor.$36#$b#It's just a theory, though. Speaking of Dwarves, @, here you go! [122]$35",
 "Core.Mateo.Spring.LateHeart.18": "I'm going to try and keep busy today - go places, talk to people. That sort of thing. Changing is just making a series of different little choices, so consider this me putting in the effort.$1#$b#Thanks for being in my corner, @. I wouldn't even be attempting if it wasn't for you.$4",
 
-  //Summer
+// SUMMER
 "Core.Mateo.Summer.LateHeart.1": "Hey, @. Would you want to grab some ice cream sometime? I mean, there's that stand right by the library, and an afternoon of eating and reading sounds pretty fantastic to me.$0#$b#Although, maybe not at the same time - we'll get chased out of town with torches and pitchforks for turning pages sticky-handed.$1",
 "Core.Mateo.Summer.LateHeart.2": "Hey, @. I've got a bunch of scars and in the heat they itch something terrible. Kind of like wearing a cast, I guess. Some of these are really old, I'm not sure why they still feel like this. Harvey says they're fine, though.$16",
 "Core.Mateo.Summer.LateHeart.3": "It feels like my scars get really swollen when it gets hot out like this, though it could be my imagination. I try not to let it put me in a bad mood, it's just very uncomfortable. I'd take that over still being self-conscious, though.$37#$b#I've always thought myself roguish, but 'scarred from ankle to forehead' was not on my bingo card.$36",
@@ -258,7 +258,7 @@
 "Core.Mateo.Summer.LateHeart.17": "I spent some time at Marnie's, just doing some chores. It's messy work, but at least it's outside, and I get to pet as many of the animals as I want. I might ask Jacob if he needs a volunteer, too.$32",
 "Core.Mateo.Summer.LateHeart.18": "Hey, @. I found this in the sand pretty far down in the mines - get it to Gunther for me, will you?$0 [108]",
 
-  //Fall
+// FALL
 "Core.Mateo.Fall.LateHeart.1": "It's that time of the year again, when everything starts to change. Be respectful of your surroundings, @, especially this season. You never know what spirits may or may not be looking over your shoulder.$15",
 "Core.Mateo.Fall.LateHeart.2": "I wonder what everyone's doing for Spirit's Eve this season. I'm used to it being kind of a big deal. I'm sure some of the younger kids have pranks planned...Maybe I should show them up.$36",
 "Core.Mateo.Fall.LateHeart.3": "You're looking a little cold, @. Do you want to borrow my coat?$0#$b#I could just pick it back up from you the next time we hang out, it's not a big deal. You need to take care of yourself, people depend on you and your farm.$32",
@@ -278,23 +278,23 @@
 "Core.Mateo.Fall.LateHeart.17": "Don't blow a Jack o' Lantern out before midnight, @. They're to keep away creatures of the night. I think that myth stems all the way back from when we had to contend with monsters on the surface more often.$35#$b#It was a practice to keep them away because we naturally fear the unknown.$36",
 "Core.Mateo.Fall.LateHeart.18": "I don't think anyone ever really ages out of Spirit's Eve. It's the one time of year where you can express yourself with a costume, and I think that's good for the soul.$1#$b#It's a tradition that has existed in some form for over a thousand years, across multiple different cultures. I could babble on about it for days.$32",
 
-  //Winter
-"Core.Mateo.Winter.LateHeart.1": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#In the case you spend time in the mines this Winter, be really careful with the Shadow Snipers. I don't know where those Shadow Brutes are getting crossbows, but I took a bolt to the hip and it was pretty terrible.$37|Maybe it was all the time spent out on digs, or in exceptionally warm climates, but the frigid weather really gets me down.$8#$b#The cove gets really lonely this time of year, too. Moreso than normal. It's a little difficult to deal with, so thank you for being around.$0",
+// WINTER
+"Core.Mateo.Winter.LateHeart.1": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#In the case you spend time in the mines this Winter, be really careful with the Shadow Snipers. I don't know where those Shadow Brutes are getting crossbows, but I took a bolt to the hip and it was pretty terrible.$37#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received|Maybe it was all the time spent out on digs, or in exceptionally warm climates, but the frigid weather really gets me down.$8#$b#The cove gets really lonely this time of year, too. Moreso than normal. It's a little difficult to deal with, so thank you for being around.$0",
 "Core.Mateo.Winter.LateHeart.2": "In the case you spend time in the mines this Winter, be really careful with the Shadow Snipers. I don't know where those Shadow Brutes are getting crossbows, but I took a bolt to the hip and it was pretty terrible.$37",
-"Core.Mateo.Winter.LateHeart.3": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#Metal blades usually aren't embrittled by the cold, just be careful with how you store the tools you aren't using over the Winter.$7#$b#Nothing would be worse than something going wrong when it's too tumultuous to fix.$10|Winter bothers me because it's so desolate. There's no color, everyone's more prone to being emotionally exhausted - I don't know, it makes me feel manic.$16#$b#Being in the mines all the time probably doesn't really...help with this. Don't fall into this trap, @. Keep your mind busy, but be good to your body. You only get one of each.$8",
+"Core.Mateo.Winter.LateHeart.3": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#Metal blades usually aren't embrittled by the cold, just be careful with how you store the tools you aren't using over the Winter.$7#$b#Nothing would be worse than something going wrong when it's too tumultuous to fix.$10#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received|Winter bothers me because it's so desolate. There's no color, everyone's more prone to being emotionally exhausted - I don't know, it makes me feel manic.$16#$b#Being in the mines all the time probably doesn't really...help with this. Don't fall into this trap, @. Keep your mind busy, but be good to your body. You only get one of each.$8",
 "Core.Mateo.Winter.LateHeart.4": "Metal blades usually aren't embrittled by the cold, just be careful with how you store the tools you aren't using over the Winter.$7#$b#Nothing would be worse than something going wrong when it's too tumultuous to fix.$10",
 "Core.Mateo.Winter.LateHeart.5": "When was the last time you saw the doctor for a routine visit, @? You can't keep checking in on me without expecting me to do the same for you.$37#$b#Stay hydrated, dress warm, eat well, and don't hurt yourself working through the mines. I know you're probably spending a lot of time down there because you've got no crops to tend to. I understand, but just be careful, alright?$16",
 "Core.Mateo.Winter.LateHeart.6": "All I wanted to do today was lay around and read. And yet, here we are, on another dreary day. Things will get better, it's just a matter of waiting it out and finding things to do to stay busy.$8",
-"Core.Mateo.Winter.LateHeart.7": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#When was the last time you saw the doctor for a routine visit, @? You can't keep checking in on me without expecting me to do the same for you.$37#$b#Stay hydrated, dress warm, eat well, and don't hurt yourself working through the mines. I know you're probably spending a lot of time down there because you've got no crops to tend to. I understand, but just be careful, alright?$16|Hey, @. Sorry, it feels like the cold is getting to me already this week. Getting up this morning was a challenge I wasn't ready for. But hey, you've just gotta push through, right? Some days just wind up being better than others, and that's okay.$10",
-"Core.Mateo.Winter.LateHeart.8": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#All I wanted to do today was lay around and read. And yet, here we are, on another dreary day. Things will get better, it's just a matter of waiting it out and finding things to do to stay busy.$8|Thanks for sticking around and checking in on me, @. I know I'm a little more difficult to get along with when the frost sets in, but I really appreciate your efforts to keep me grounded. I owe you a dinner sometime in the near future, okay? When I'm in less of a bitey mood.$21",
-"Core.Mateo.Winter.LateHeart.9": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#In this weather, Frost Jellies would have no trouble surviving on the surface and causing mischief. I actually love the little things, but they're difficult when you're trying to explore and they make every effort to slow you down.$8|Howdy, @. Are you keeping busy? I feel like I'm losing my mind. My mood just completely sours when everything ices over.$17#$b#We should hang out, soon. Your company always cheers me up. Thanks for checking in - keep your spirits up, alright?$0",
+"Core.Mateo.Winter.LateHeart.7": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#When was the last time you saw the doctor for a routine visit, @? You can't keep checking in on me without expecting me to do the same for you.$37#$b#Stay hydrated, dress warm, eat well, and don't hurt yourself working through the mines. I know you're probably spending a lot of time down there because you've got no crops to tend to. I understand, but just be careful, alright?$16#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received|Hey, @. Sorry, it feels like the cold is getting to me already this week. Getting up this morning was a challenge I wasn't ready for. But hey, you've just gotta push through, right? Some days just wind up being better than others, and that's okay.$10",
+"Core.Mateo.Winter.LateHeart.8": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#All I wanted to do today was lay around and read. And yet, here we are, on another dreary day. Things will get better, it's just a matter of waiting it out and finding things to do to stay busy.$8#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received|Thanks for sticking around and checking in on me, @. I know I'm a little more difficult to get along with when the frost sets in, but I really appreciate your efforts to keep me grounded. I owe you a dinner sometime in the near future, okay? When I'm in less of a bitey mood.$21",
+"Core.Mateo.Winter.LateHeart.9": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#In this weather, Frost Jellies would have no trouble surviving on the surface and causing mischief. I actually love the little things, but they're difficult when you're trying to explore and they make every effort to slow you down.$8#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received|Howdy, @. Are you keeping busy? I feel like I'm losing my mind. My mood just completely sours when everything ices over.$17#$b#We should hang out, soon. Your company always cheers me up. Thanks for checking in - keep your spirits up, alright?$0",
 "Core.Mateo.Winter.LateHeart.10": "In this weather, Frost Jellies would have no trouble surviving on the surface and causing mischief. I actually love the little things, but they're difficult when you're trying to explore and they make every effort to slow you down.$8",
-"Core.Mateo.Winter.LateHeart.11": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#One of the only species we know less about than the Elves are the Fae - merpeople, fairies - those sorts. I tend to think that they're more likely to show themselves around this time of year.$35#$b#Could've sworn I saw a sea creature by the cove recently, but that could've been my imagination.$34|Hey, @. Thanks for checking up on me all the time, I really appreciate you, and I hope you're keeping busy. I'm trying, but some days are harder than others.$16#$b#Be sure to reach out if you're not feeling your best, alright? There's a bunch of people in this town who care about you, myself included.$0",
+"Core.Mateo.Winter.LateHeart.11": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#One of the only species we know less about than the Elves are the Fae - merpeople, fairies - those sorts. I tend to think that they're more likely to show themselves around this time of year.$35#$b#Could've sworn I saw a sea creature by the cove recently, but that could've been my imagination.$34#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received|Hey, @. Thanks for checking up on me all the time, I really appreciate you, and I hope you're keeping busy. I'm trying, but some days are harder than others.$16#$b#Be sure to reach out if you're not feeling your best, alright? There's a bunch of people in this town who care about you, myself included.$0",
 "Core.Mateo.Winter.LateHeart.12": "One of the only species we know less about than the Elves are the Fae - merpeople, fairies - those sorts. I tend to think that they're more likely to show themselves around this time of year.$35#$b#Could've sworn I saw a sea creature by the cove recently, but that could've been my imagination.$34",
-"Core.Mateo.Winter.LateHeart.13": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#I've been reading a lot of good books lately, now that I'm spending so much time in the library again. I can make some suggestions, if you've got the time.$0#$b#What kind of stuff do you like to read, @? Action, sci-fi, adventure?$1|I'm seeing Dr. Harvey a lot more around this time of year. Not just for injuries, but... to get a handle on the seasonal depression.$8#$b#Thanks for being patient with me, though. I know it's not easy to deal with, but I appreciate that you've stuck with me for this long.$21",
-"Core.Mateo.Winter.LateHeart.14": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#I want to go to the museum, but I think my library card is about ten years expired. I might have to twist Gunther's arm a little to let me have a new one. At least I don't owe any overdue book fees - those I could never convince him to waive.$8|I'm trying to appreciate the Winter the same way I do the Fall. It's not working. But I'm trying to make the effort to see beauty in the dismal.$8#$b#Sorry if I seem a little irate; I'm not trying to give you the cold shoulder on purpose.$16",
+"Core.Mateo.Winter.LateHeart.13": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#I've been reading a lot of good books lately, now that I'm spending so much time in the library again. I can make some suggestions, if you've got the time.$0#$b#What kind of stuff do you like to read, @? Action, sci-fi, adventure?$1#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received|I'm seeing Dr. Harvey a lot more around this time of year. Not just for injuries, but... to get a handle on the seasonal depression.$8#$b#Thanks for being patient with me, though. I know it's not easy to deal with, but I appreciate that you've stuck with me for this long.$21",
+"Core.Mateo.Winter.LateHeart.14": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#I want to go to the museum, but I think my library card is about ten years expired. I might have to twist Gunther's arm a little to let me have a new one. At least I don't owe any overdue book fees - those I could never convince him to waive.$8#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received|I'm trying to appreciate the Winter the same way I do the Fall. It's not working. But I'm trying to make the effort to see beauty in the dismal.$8#$b#Sorry if I seem a little irate; I'm not trying to give you the cold shoulder on purpose.$16",
 "Core.Mateo.Winter.LateHeart.15": "I've been reading a lot of good books lately, now that I'm spending so much time in the library again. I can make some suggestions, if you've got the time.$0#$b#What kind of stuff do you like to read, @? Action, sci-fi, adventure?$1",
-"Core.Mateo.Winter.LateHeart.16": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#Back in college, it was pretty common to lose your keys on the way back to the dorm or leave them at the bar when you were tipsy. I made a lot of friends just by knowing how to pick locks.$13|As it turns out, Dr. Harvey thinks I have a Vitamin D deficiency because I spent too much time in the mines and don't get enough sun. It gets worse in the winter because there's even less natural light than normal.$16#$b#It makes me prone to shitty moods, so he suggested some supplements and spending more time outside and around other people... I think I can handle that now.$4",
+"Core.Mateo.Winter.LateHeart.16": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#Back in college, it was pretty common to lose your keys on the way back to the dorm or leave them at the bar when you were tipsy. I made a lot of friends just by knowing how to pick locks.$13#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received|As it turns out, Dr. Harvey thinks I have a Vitamin D deficiency because I spent too much time in the mines and don't get enough sun. It gets worse in the winter because there's even less natural light than normal.$16#$b#It makes me prone to shitty moods, so he suggested some supplements and spending more time outside and around other people... I think I can handle that now.$4",
 "Core.Mateo.Winter.LateHeart.17": "I want to go to the museum, but I think my library card is about ten years expired. I might have to twist Gunther's arm a little to let me have a new one. At least I don't owe any overdue book fees - those I could never convince him to waive.$8",
 "Core.Mateo.Winter.LateHeart.18": "Back in college, it was pretty common to lose your keys on the way back to the dorm or leave them at the bar when you were tipsy. I made a lot of friends just by knowing how to pick locks.$13",
 
@@ -1718,7 +1718,7 @@ ________      ________ _   _ _______ _____
 "Core.Hector.Spring.7": "If Spring is the season of renewal, Summer is the season of abundance.$12#$b#I have a bad relationship with the heat, but I can acknowledge the harshness is beautiful in it's own way.$14",
 "Core.Hector.Spring.8": "Spring is the season of renewal. As much as I love Winter, I can't deny feeling rejuvenated when the snow clears.$12#$b#I'm sure it's less romantic for you, you've got to go back to farm work.$9",
 "Core.Hector.Spring.9": "I have a private celebration twice a year, when the sun is at either it's highest or lowest point in the sky for the year.$12#$b#Would you be interested in joining-? It's a pretty important thing for me, actually.$4",
-"Core.Hector.Spring.10": "$query DAY_OF_WEEK Sat Sun#It's the weekend! You know what that means! That's right! Doing the same thing I do every other day because I'm not a slave to capitalism.$1|Here you go, @. %farm deserves some pretty flowers.$13[597]",
+"Core.Hector.Spring.10": "$query DAY_OF_WEEK Sat Sun#It's the weekend! You know what that means! That's right! Doing the same thing I do every other day because I'm not a slave to capitalism.$1#$action AddMail Current SnS_M_Hector_OverrideSeenToday received|Here you go, @. %farm deserves some pretty flowers.$13[597]",
 "Core.Hector.Spring.11": "Here you go, @. %farm deserves some pretty flowers.$13[427]",
 "Core.Hector.Spring.12": "If Spring is the season of renewal, Summer is the season of abundance.$12#$b#I have a bad relationship with the heat, but I can acknowledge the harshness is beautiful in it's own way.$14",
 "Core.Hector.Spring.13": "Why do people cut the grass in front of their houses? Just let it get big and wild, who cares.$8#$b#If there's an insistence on keeping it short, grow moss instead. Moss stays little.$22",
@@ -1726,9 +1726,9 @@ ________      ________ _   _ _______ _____
 "Core.Hector.Spring.15": "I have a private celebration twice a year, when the sun is at either it's highest or lowest point in the sky for the year.$12#$b#Would you be interested in joining-? It's a pretty important thing for me, actually.$4",
 
   // SUMMER
-"Core.Hector.Summer.1": "$query RANDOM 0.5#Who conceptualized humidity, anyway? What a scam.$18|I really need to install air conditioning in this tower, otherwise I'm going to melt. Yikes.$16",
-"Core.Hector.Summer.2": "$query RANDOM 0.5#For the love of all that's good and holy, I wish it would rain. That way, the heat would pass.$19|Any amount is a normal amount of ice cream! Even if it's four cones.$1",
-"Core.Hector.Summer.3": "$query RANDOM 0.5#Wait, too much ice cream is BAD for you? What even is the point of Summer, then?$20|What if I just shape-shifted into a naked mole rat for the whole summer? Then I'd be less uncomfortable.$18",
+"Core.Hector.Summer.1": "$query RANDOM 0.5#Who conceptualized humidity, anyway? What a scam.$18#$action AddMail Current SnS_M_Hector_OverrideSeenToday received|I really need to install air conditioning in this tower, otherwise I'm going to melt. Yikes.$16",
+"Core.Hector.Summer.2": "$query RANDOM 0.5#For the love of all that's good and holy, I wish it would rain. That way, the heat would pass.$19#$action AddMail Current SnS_M_Hector_OverrideSeenToday received|Any amount is a normal amount of ice cream! Even if it's four cones.$1",
+"Core.Hector.Summer.3": "$query RANDOM 0.5#Wait, too much ice cream is BAD for you? What even is the point of Summer, then?$20#$action AddMail Current SnS_M_Hector_OverrideSeenToday received|What if I just shape-shifted into a naked mole rat for the whole summer? Then I'd be less uncomfortable.$18",
 "Core.Hector.Summer.4": "Nice, melons! You know what's terrible, though? Honeydew.$0[479]",
 "Core.Hector.Summer.8": "It's awful outside. I hate this, thanks. Don't know how you put up with actually working in this weather.$18",
 "Core.Hector.Summer.5": "Sunflowers are intelligent, you know? They follow the sun's path during the day, but face eastward at night.$14#$b#Their seeds are also very tasty, roasted with some salt!$9[431]",
@@ -1761,14 +1761,14 @@ ________      ________ _   _ _______ _____
 "Core.Hector.Fall.15": "I try not to let on to the folks in Pelican Town that's I'm actually a wolf-in-questionable-clothing, but I like wearing my armor to Spirit's Eve.$12#$b#That circlet means the world to me. Too bad it's been broken.$14",
 
   // WINTER
-"Core.Hector.Winter.1": "$query RANDOM 0.5#Go throw a snowball at the Mayor's head. Do it, you won't!$9|It sucks that a lot of stuff doesn't grow in the Winter, but that's okay. The earth needs a break, too.$0",
-"Core.Hector.Winter.2": "$query RANDOM 0.5#It's so quiet! I love the quiet, unless it's the sound of my own voice - in which case, keep it coming.$7|I could do without the summer heat. Makes my bits and pieces feel all rusted. Not a problem now, though.$24",
-"Core.Hector.Winter.3": "$query RANDOM 0.5#I love when it gets cold! Everything feels so refreshing!$1|I'm sure you've heard it a bunch of times - 'do you want to build a snowman?'. Well, do you?$12",
-"Core.Hector.Winter.4": "$query RANDOM 0.5#Maybe not everyone is such a fanatic for the cold. That's fine, I guess. Just uh. Take care of yourself, and whatever. Don't get sick.$6|Do you think anyone would be upset if I staged like, some kind of horrific snowman massacre?$6",
-"Core.Hector.Winter.5": "$query RANDOM 0.5#I can only change into what I already am. I'm certainly not a bear, and yet, nothing beats a nice long nap during Winter.$6|Winter nights are like a canvas splashed with stars. I'm looking forward to spending some time out and about to appreciate it.$12",
-"Core.Hector.Winter.6": "$query RANDOM 0.5#Take care of yourself, okay? Don't get sick. Drink water and dress warm. Whatever it takes. Put on a scarf or something.$7|Want to help me build a small army of snowmen? I figure, it'll look real spooky if we splatter red food dye all over them.$8",
-"Core.Hector.Winter.7": "$query RANDOM 0.5#The earth sleeps. Nature's cycles mirror our own, don't you think?$23|I guess with nothing to grow, you go down into those mines a lot. I don't need to tell you to be careful, you're your own person.$25",
-"Core.Hector.Winter.8": "$query RANDOM 0.5#It gets dark very early, which is fine. That leaves more time to cause problems for folks on purpose.$9|My plants don't get a lot of sunlight this time of year, so I have to be careful and do a lil' extra magic to keep them alive.$23",
+"Core.Hector.Winter.1": "$query RANDOM 0.5#Go throw a snowball at the Mayor's head. Do it, you won't!$9#$action AddMail Current SnS_M_Hector_OverrideSeenToday received|It sucks that a lot of stuff doesn't grow in the Winter, but that's okay. The earth needs a break, too.$0",
+"Core.Hector.Winter.2": "$query RANDOM 0.5#It's so quiet! I love the quiet, unless it's the sound of my own voice - in which case, keep it coming.$7#$action AddMail Current SnS_M_Hector_OverrideSeenToday received|I could do without the summer heat. Makes my bits and pieces feel all rusted. Not a problem now, though.$24",
+"Core.Hector.Winter.3": "$query RANDOM 0.5#I love when it gets cold! Everything feels so refreshing!$1#$action AddMail Current SnS_M_Hector_OverrideSeenToday received|I'm sure you've heard it a bunch of times - 'do you want to build a snowman?'. Well, do you?$12",
+"Core.Hector.Winter.4": "$query RANDOM 0.5#Maybe not everyone is such a fanatic for the cold. That's fine, I guess. Just uh. Take care of yourself, and whatever. Don't get sick.$6#$action AddMail Current SnS_M_Hector_OverrideSeenToday received|Do you think anyone would be upset if I staged like, some kind of horrific snowman massacre?$6",
+"Core.Hector.Winter.5": "$query RANDOM 0.5#I can only change into what I already am. I'm certainly not a bear, and yet, nothing beats a nice long nap during Winter.$6#$action AddMail Current SnS_M_Hector_OverrideSeenToday received|Winter nights are like a canvas splashed with stars. I'm looking forward to spending some time out and about to appreciate it.$12",
+"Core.Hector.Winter.6": "$query RANDOM 0.5#Take care of yourself, okay? Don't get sick. Drink water and dress warm. Whatever it takes. Put on a scarf or something.$7#$action AddMail Current SnS_M_Hector_OverrideSeenToday received|Want to help me build a small army of snowmen? I figure, it'll look real spooky if we splatter red food dye all over them.$8",
+"Core.Hector.Winter.7": "$query RANDOM 0.5#The earth sleeps. Nature's cycles mirror our own, don't you think?$23#$action AddMail Current SnS_M_Hector_OverrideSeenToday received|I guess with nothing to grow, you go down into those mines a lot. I don't need to tell you to be careful, you're your own person.$25",
+"Core.Hector.Winter.8": "$query RANDOM 0.5#It gets dark very early, which is fine. That leaves more time to cause problems for folks on purpose.$9#$action AddMail Current SnS_M_Hector_OverrideSeenToday received|My plants don't get a lot of sunlight this time of year, so I have to be careful and do a lil' extra magic to keep them alive.$23",
 "Core.Hector.Winter.9": "Winter brings a certain darkness - I can understand how that impacts people who tend toward the light.$14#$b#I don't mind it at all, though.$13",
 "Core.Hector.Winter.10": "When you get the chance, take a moment to appreciate the stillness of the earth. It's quiet out in a unique way right now.$8#$b#She's dormant right now, but she won't be for long.$7",
 "Core.Hector.Winter.11": "Holly will make you sick if you eat it. Not sure why you would, but like..$8#$b#I've seen you pick stuff right up off the floor, or out of the garbage. So figured I'd give you the heads up.$9",
@@ -2808,8 +2808,8 @@ ________      ________ _   _ _______ _____
 "Core.Cirrus.MovieTheater": "Oh! I love the movies, we should go! My treat! [809]",
 
 // BIRTHDAYS
+"Core.Cirrus.Fall25": "It's Mateo's birthday today! Some home-cooked food will do them some good. I'll get right on that!$1",
 "Core.Cirrus.Winter21":"It's Biróg's birthday today! I bet {{HectorPN1}} would appreciate some love today, even if {{HectorPN1}}  pretends not to want the attention.$1",
-"Core.Cirrus.Winter19": "It's Mateo's birthday today! Some home-cooked food will do them some good. I'll get right on that!$1",
 
 // END OF SEASON
 "Core.Cirrus.SpringEnd":"I won't pretend to know anything about farming, but I can say I'm looking forward to cooking stuff up with your Summer stock.$4",
@@ -3087,145 +3087,136 @@ ________      ________ _   _ _______ _____
 
 */ 
 
-// PATIO   
-"Marriage.Cirrus.Patio.1": "",
-"Marriage.Cirrus.Patio.2": "",
-"Marriage.Cirrus.Patio.3": "",
-"Marriage.Cirrus.Patio.4": "",
-"Marriage.Cirrus.Patio.5": "",
-"Marriage.Cirrus.Patio.6": "",
+// PATIO
+"Marriage.Cirrus.Patio.1": "Don't forget to take a little snack with you, Rockstar! Have a wonderful day, okay? I'll see you later. [634 635 636 637 638]",
+"Marriage.Cirrus.Patio.2": "You know, if you eat too many poppy seeds, you'll start feeling a little funky. Don't worry, I put just the right amount of them on this muffin for you.[651]",
+"Marriage.Cirrus.Patio.3": "Good morning, sweet thing! I made you an extra thermos of coffee to go. Have fun storming the castle...! or, watering crops, or petting cows...[253]",
+"Marriage.Cirrus.Patio.4": "Hello, Rockstar~ Figured I'd send you off with a nice warm thermos of tea for on the go. Enjoy your day, I'll see you tonight![614]",
+"Marriage.Cirrus.Patio.5": "@! I packed you a lunch. The secret ingredient was love~ Have an amazing day out there! [204]$1",
+"Marriage.Cirrus.Patio.6": "Morning, Rockstar! I've got an extra little treat for your lunch bag today just in case you're feeling adventerous. Have an excellent day today, I love you![243]$4",
 
 // SPOUSE ROOM 
-"Marriage.Cirrus.SpouseRoom.1":"",
-"Marriage.Cirrus.SpouseRoom.2":"",
-"Marriage.Cirrus.SpouseRoom.3":"",
-"Marriage.Cirrus.SpouseRoom.4":"",
-"Marriage.Cirrus.SpouseRoom.5":"",
+"Marriage.Cirrus.SpouseRoom.1":"I hope you don't mind the occasional jam session, Rockstar. You're welcome to join me, of course!$14",
+"Marriage.Cirrus.SpouseRoom.2":"I really appreciate having an extra room here, despite having the entireity of the Lion's Mane. It makes me feel like I have all sorts of places to feel welcome and comfortable.$17",
+"Marriage.Cirrus.SpouseRoom.3":"Are my decorations too chaotic? I really hope you don't mind. I have a system to keep things tidy, but if anything gets too out of hand please let me know.$17",
+"Marriage.Cirrus.SpouseRoom.4":"I was planning to do some crafting and tidying today, Rockstar~ care to join?$17",
+"Marriage.Cirrus.SpouseRoom.5":"%Cirrus is looking at a picture of you two on her phone. It's from the day she moved in, when you put this room together with her. She's smiling softly.",
 
 // FUN LEAVE & FUN RETURN
-"Marriage.Cirrus.funLeave.1":"",
-"Marriage.Cirrus.funLeave.2": "",
-"Marriage.Cirrus.funLeave.3": "",
+"Marriage.Cirrus.funLeave.1": "I'm heading out to the Lion's Mane for my shift, @! I'll see you later, okay? Text me if you want something specific for dinner.$4",
+"Marriage.Cirrus.funLeave.2": "I'm going to go visit Mateo and friends today, Rockstar! You should come hang out if you're able to make the time.$1",
+"Marriage.Cirrus.funLeave.3": "I'm going to head to the Lion's Mane, to work and maybe get some crafting done. I'd love for you to stop by if you've got the time, Rockstar.$6",
 
-"Marriage.Cirrus.funReturn.1": "",
-"Marriage.Cirrus.funReturn.2": "",
-"Marriage.Cirrus.funReturn.3": "",
+"Marriage.Cirrus.funReturn.1": "Rockstaaar! I missed you today, I'm glad we're both home. Why don't we settle in, have some dinner, be lazy?$4",
+"Marriage.Cirrus.funReturn.2": "Today felt like it was going on forever without you. But now we're home, so let's try to spend some time together.$6",
+"Marriage.Cirrus.funReturn.3": "Hey, sweet thing. Glad you're home... you're looking pretty hot, why don't you let me do something about that?$24",
 
 // SPECIAL DATES - SPRING
-"Marriage.Cirrus.Spring": "",
-"Marriage.Cirrus.Spring1": "",
-"Marriage.Cirrus.Spring13": "",
-"Marriage.Cirrus.Spring23": "",
-"Marriage.Cirrus.Spring24": "", 
-"Marriage.Cirrus.Spring28": "",
+"Marriage.Cirrus.Spring": "It's a beautiful day outside. The birds are singing, the flowers are blooming... on days like these, we should really be taking advantage of the the weather and scenery.$25",
+"Marriage.Cirrus.Spring1": "I'm so excited to have the opprotunity to start fresh with you, Rockstar. Let's continue pursuing the best for ourselves and each other in this new year.$24",
+"Marriage.Cirrus.Spring13": "Are you excited for the Egg Festival, Rockstar? I'm going to help Gus cook for it. He always works so hard for festivals, I bet he could use a hand!$1",
+"Marriage.Cirrus.Spring23": "The Flower Dance is tomorrow! I'm so excited to spend it with you, @. Looking forward to after the festival, too. Hopefully we'll both still be in a jovial mood.$25",
+"Marriage.Cirrus.Spring24": "I'm so exciiiited! I get to wear my pretty dress, I get to see everyone else all dressed up - and, oh, of COURSE I get to see my favorite person getting {{Lowercase:{{PPN1}}}} groove on!$23", 
+"Marriage.Cirrus.Spring28": "Are you all ready for Summer, @? I know it's a big planting season for you. I'm excited to see how colorful the field is gonna be!$1",
 
 // SPECIAL DATES - SUMMER
-"Marriage.Cirrus.Summer": "",
-"Marriage.Cirrus.Summer1": "",
-"Marriage.Cirrus.Summer11":"",
-"Marriage.Cirrus.Summer28": "",
+"Marriage.Cirrus.Summer": "Gosh darn, it's really hot out today. Or is that just you, Rockstar?$23",
+"Marriage.Cirrus.Summer1": "I'm so excited to see all the stuff you're going to plant! I'm also very excited to offer some lemonaid specials at The Lion's Mane.$1",
+"Marriage.Cirrus.Summer11":"To be honest, I think the wisest thing to put in the soup is garlic. You can't go wrong with more garlic in any context, it only makes everything better. So what's the harm?$1",
+"Marriage.Cirrus.Summer28": "I'm really excited to go see the Lunaloos with you tonight, Rockstar. Just you, me...$23#$b#The entire rest of the town, I guess...$25#$b#Getting to hang out and see something really beautiful.$23",
 
 // SPECIAL DATES - FALL
-"Marriage.Cirrus.Fall": "",
-"Marriage.Cirrus.Fall1": "",
-"Marriage.Cirrus.Fall15": "",
-"Marriage.Cirrus.Fall16": "",
-"Marriage.Cirrus.Fall25": "",
-"Marriage.Cirrus.Fall26": "",
-"Marriage.Cirrus.Fall27":"",
+"Marriage.Cirrus.Fall": "First day of Fall, you know what that means!$1#$b#Pumpkin and mulled spices in EVERYTHING!$15",
+"Marriage.Cirrus.Fall1": "It's amazing how drastically everything changes. The city and port both felt very stagnant by comparison to the seasons here.$1",
+"Marriage.Cirrus.Fall16": "I'm! Gonna! Eat! So! Much! Delicious! Food!$26#$b#I love the fair, it's the one time of year where you can fry just about anything and nobody will judge you.$25#$b#...I wonder if they'd let me do a short performance.$25",
+"Marriage.Cirrus.Fall25": "It's Mateo's birthday today! No wonder they love Spirit's Eve so much. We should get them something really nice.$1",
+"Marriage.Cirrus.Fall27":"Oh no, ahhh, I'm gonna be so scared tonight... totally, definitely scared. Hey, you should, maybe, hold my hand through the festival. You know. For safety.$25",
 
 // SPECIAL DATES - WINTER 
-"Marriage.Cirrus.Winter": "",
-"Marriage.Cirrus.Winter1": "",
-"Marriage.Cirrus.Winter8": "",
-"Marriage.Cirrus.Winter12": "",
-"Marriage.Cirrus.Winter14": "",
-"Marriage.Cirrus.Winter19": "",
-"Marriage.Cirrus.Winter24": "",
-"Marriage.Cirrus.Winter25": "",
-"Marriage.Cirrus.Winter28": "",
+"Marriage.Cirrus.Winter": "It's cold enough out that I can have the oven on pretty much whenever I want! Which means, an excess of delicious comfort foods just for you.$24",
+"Marriage.Cirrus.Winter1": "It's so nice to see everything covered in snow. I'm used to everything immediately becoming sleet, and it generally being kind of a hassle.$1",
+"Marriage.Cirrus.Winter8": "Today's gonna be so fun - make sure you dress well, @. Don't worry, I'll help you peel it all back off later.$23",
+"Marriage.Cirrus.Winter14": "Rockstaaar~ Can we go visit the Night Market? They've always got such good stuff. Especially the coffee - I love a good pour over.$1",
+"Marriage.Cirrus.Winter25": "Happy Winter Star, @! I'm grateful to be able to celebrate with you. I uh, made some cake for the festivities later - but I made extra for you.[221]",
+"Marriage.Cirrus.Winter28": "As the year comes to a close, I'm grateful to have been able to spend it with you. I love you, Rockstar, more than all the music and words in the world could express.$23",
 
 // GENERIC DIALOGUE - RAINY
-"Marriage.Cirrus.Rainy.Day.0": "",
-"Marriage.Cirrus.Rainy.Day.1": "",
-"Marriage.Cirrus.Rainy.Day.2": "",
-"Marriage.Cirrus.Rainy.Day.3": "",
-"Marriage.Cirrus.Rainy.Day.4":"",
-"Marriage.Cirrus.Rainy.Day.5": "",
-"Marriage.Cirrus.Rainy.Day.6": "",
-"Marriage.Cirrus.Rainy.Night.0": "",
-"Marriage.Cirrus.Rainy.Night.1": "",
-"Marriage.Cirrus.Rainy.Night.2":"",
-"Marriage.Cirrus.Rainy.Night.3": "",
-"Marriage.Cirrus.Rainy.Night.4": "",
-"Marriage.Cirrus.Rainy.Night.5": "",
-"Marriage.Cirrus.Rainy.Night.6": "",
-"Marriage.Cirrus.Rainy.Night.Cirrus": "",
+"Marriage.Cirrus.Rainy.Day.0": "I hope the storm stays mild. I'm better about it now than I used to be, but I do still get nervous.$20",
+"Marriage.Cirrus.Rainy.Day.1": "When I was a kid, lightning hit the trailer and caused a fire.$18#$b#I can't help but think that something like that will happen again. Sometimes, logic just doesn't prevail.$16",
+"Marriage.Cirrus.Rainy.Day.2": "Do you have lightning rods out in the fields? Do you think it'll keep the lightning away from the house? Everything's made of wood, I get nervous...$18",
+"Marriage.Cirrus.Rainy.Day.3": "Today might just have to be a headphones-and-distractions day. Sometimes I handle the weather well, other days I don't. Today's not a good day. Sorry, Rockstar.$20",
+"Marriage.Cirrus.Rainy.Day.4": "One of the things I'm trying to tell myself is that the rain is good for the plants, and that makes me feel a little less scared.$17",
+"Marriage.Cirrus.Rainy.Day.5": "If! I! Sing! Louder! Than! The rain! I! Can't! Be! Frightened!$26",
+"Marriage.Cirrus.Rainy.Day.6": "%Cirrus has earbuds in. Looks like she's having a tough time with the rain.",
+"Marriage.Cirrus.Rainy.Night.0": "Hey, Rockstar, I'm glad you're home ... you up for something getting up to something distracting together? This rain is really getting to me.$23",
+"Marriage.Cirrus.Rainy.Night.1": "You know what's louder than the storm? Me, in the right circumstances - let's make it happen, @, I could use a distraction.$24",
+"Marriage.Cirrus.Rainy.Night.2": "I'm so glad you're back, @ - can we watch TV or something? Anything to get my mind off the storm.$20",
+"Marriage.Cirrus.Rainy.Night.3": "I've been jamming out all day to try and drown out the rain sounds. Hope it didn't bother you too much, Rockstar.$20",
+"Marriage.Cirrus.Rainy.Night.4": "I really envy the people who turn on rain sounds to help them sleep. I'm not as afraid as I used to be, but I'm not quite there on my healing journey yet.$20",
+"Marriage.Cirrus.Rainy.Night.5": "If I keep reminding myself that lightning rods exist to protect the house, maybe eventually I'll be less afraid of storms like this.$17",
+"Marriage.Cirrus.Rainy.Night.6": "Everything's gonna be fine. Everything's gonna be fine. I don't need to go in the closet, the rain can't hurt me, the thunder and lightning can't hurt me...$29",
+"Marriage.Cirrus.Rainy.Night.Cirrus": "%Cirrus has earbuds in. Looks like she's having a tough time with the rain.",
 
 // GENERIC DIALOGUE - INDOOR & OUTDOOR
-"Marriage.Cirrus.Indoor.Day.0":"",
-"Marriage.Cirrus.Indoor.Day.1": "",
-"Marriage.Cirrus.Indoor.Day.2": "",
-"Marriage.Cirrus.Indoor.Day.3": "",
-"Marriage.Cirrus.Indoor.Day.4": "",
-"Marriage.Cirrus.Indoor.Day.5":"",
-"Marriage.Cirrus.Indoor.Night.0":"",
-"Marriage.Cirrus.Indoor.Night.1":"",
-"Marriage.Cirrus.Indoor.Night.2":"",
-"Marriage.Cirrus.Indoor.Night.3": "",
-"Marriage.Cirrus.Indoor.Night.4": "",
-"Marriage.Cirrus.Indoor.Night.5": "",
-"Marriage.Cirrus.Indoor.Night.6":"",
-"Marriage.Cirrus.Outdoor.0": "",
-"Marriage.Cirrus.Outdoor.1":"",
-"Marriage.Cirrus.Outdoor.2":"",
-"Marriage.Cirrus.Outdoor.3": "",
-"Marriage.Cirrus.Outdoor.4":"",
-"Marriage.Cirrus.Outdoor": "",
+"Marriage.Cirrus.Indoor.Day.1": "I did a deep clean of the Lion's Mane this week, and it was a really good hit of dopamine so now I'm going to give the house the same treatment.$17",
+"Marriage.Cirrus.Indoor.Day.2": "If I wrote a song about you, what would you want me to highlight? Our relationship? All of the trials you've overcome since you've come to The Valley?$23",
+"Marriage.Cirrus.Indoor.Day.3": "It's beautiful out!~ I hope you're able to finish up your chores early so that you can enjoy the day - and me, if you're feeling up for it.$23",
+"Marriage.Cirrus.Indoor.Day.4": "This week I've painted a pair of sneakers, purchased hair dye supplies, read a book on editing videos, studded an old leather belt, and cooked two new recipes!$1",
+"Marriage.Cirrus.Indoor.Day.5": "I promise, the tub will never be left with hair dye stains. Amateur cosmotologist I may be, I've messed up enough bathrooms that I know better by now.$1",
+"Marriage.Cirrus.Indoor.Night.1":"I've been having fun pushing my wardrobe recently, since I'm stationary and financially stable. I have so much space now, between here and the Lion's Mane.$17",
+"Marriage.Cirrus.Indoor.Night.2":"I'm feeling a little... what's the word, salacious? Yeah, salacious. Care to indulge me, Rockstar?$23",
+"Marriage.Cirrus.Indoor.Night.3": "Hey, Rockstar. I'll give you one guess as to what's under my clothes right now - or, you could just take them off and find out.$24",
+"Marriage.Cirrus.Indoor.Night.4": "The braid? Oh, it's because I have a lot of hair and want to keep it that way but don't wanna wear it down.$25#$b#It's also pretty good for holding onto - in case you wanted to give it a try.$24",
+"Marriage.Cirrus.Indoor.Night.5": "Are you busy, @? I'd love to make you a cocktail - and me a mocktail. We can settle in, watch a movie, eat an unnecessary amount of snacks...$25",
+"Marriage.Cirrus.Indoor.Night.6":"Have you considered doing your hair, @? If you ever wanted to do something new and funky, I'd love to help you.$1",
+"Marriage.Cirrus.Outdoor.0": "It's beautiful out here, @. There's nothing like looking on, watching you do your thing with your empire that you built back up from nothing.$23",
+"Marriage.Cirrus.Outdoor.1":"%pet is the cutest little nugget I've ever seen, and it's a joy to watch them live their very best life. You're such a good pet parent.$23",
+"Marriage.Cirrus.Outdoor.2":"You said Marnie just showed up with %pet and you took them in on a whim? That's so sweet of you, Rockstar. This is why you're my favorite person.$23",
+"Marriage.Cirrus.Outdoor.3": "The landscape here is incredible. You look south and there's an endless forest, you look north and there's an entire range of mountains... I've never seen anything like it.$23",
+"Marriage.Cirrus.Outdoor.4":"%Cirrus grabs you for a selfie with your fields in the background. She presses her lips to your cheek for the shot.",
+"Marriage.Cirrus.Outdoor": "%Cirrus is taking in the surroundings. Her eyes are a bit wet; she's entranced by the scenery.",
 
 // GENERIC DIALOGUE - KIDS 
-"Marriage.Cirrus.OneKid.0": "",
-"Marriage.Cirrus.OneKid.1": "",
-"Marriage.Cirrus.OneKid.2": "",
-"Marriage.Cirrus.OneKid.3":"",
-"Marriage.Cirrus.TwoKids.0": "",
-"Marriage.Cirrus.TwoKids.1":"",
-"Marriage.Cirrus.TwoKids.2": "",
-"Marriage.Cirrus.TwoKids.3": "",
-"Marriage.Cirrus.TwoKids.4": "",
+"Marriage.Cirrus.OneKid.0": "I want %kid1 to have every single privilage I never did. No food scarcity, no trailer, nothing - we're gonna raise them right, give them the upbringing that I never had.$23",
+"Marriage.Cirrus.OneKid.1": "To be honest, I wasn't sure I'd be ready for kids. But thinking about giving a chance to a little human to have a better childhood than I did is really fufilling to me.$23",
+"Marriage.Cirrus.OneKid.2": "%kid1 enjoyed some fingerpainting today! They're a natural, of course. Got everything hung up on the fridge. Tomorrow I'll have them play keyboard a little bit.$1",
+"Marriage.Cirrus.OneKid.3": "%kid1 is picking up on activities really quick! Puzzles, movies, art, music... they're interested in all of it, and I couldn't be happier.$17",
+"Marriage.Cirrus.OneKid.4": "%kid1 and I went to the Lion's Mane today to go bake a bunch of cookies! These were made with love from your wife and child.$23[223]",
+"Marriage.Cirrus.TwoKids.0": "%kid1 showed %kid2 how to do watercolors today! Well, watercolors as best they can. I'm so proud of them for having such a good relationship.$17",
+"Marriage.Cirrus.TwoKids.1": "I think %kid1 and %kid2 are planning to start a tiny little band. %kid1 is stellar on the kiddie keyboard and %kid2 is a triangle expert already.$1",
+"Marriage.Cirrus.TwoKids.2": "I'm trying to teach %kid1 and %kid2 all the good habits I struggled with - healthy eating, getting to sleep on time. That kind of stuff. I'm determined to do better than my own mom did.$23",
+"Marriage.Cirrus.TwoKids.3": "I think finding a balance between not spoiling the kids and raising them might be tough. My instinct is to just give %kid1 and %kid2 everything I didn't have, you know?$23#$b#And I don't want them to go through what I did in order to get it.$20",
+"Marriage.Cirrus.TwoKids.4": "I kind of thought I'd be making a lot of plain foods, but %kid1 and %kid2 have been really good about trying new foods. I'm so proud of them, they're doing their best.$23",
 
 // AFFECTION DIALOGUE
-"Marriage.Cirrus.Good.0": "",
-"Marriage.Cirrus.Good.1": "",
-"Marriage.Cirrus.Good.2":"",
-"Marriage.Cirrus.Good.3": "",
-"Marriage.Cirrus.Good.4": "",
-"Marriage.Cirrus.Good.5": "",
-"Marriage.Cirrus.Good.6": "",
-"Marriage.Cirrus.Good.7": "",
-"Marriage.Cirrus.Good.8": "",
-"Marriage.Cirrus.Neutral.0": "",
-"Marriage.Cirrus.Neutral.1":"",
-"Marriage.Cirrus.Neutral.2":"",
-"Marriage.Cirrus.Neutral.3":"",
-"Marriage.Cirrus.Neutral.4":"",
-"Marriage.Cirrus.Neutral.5": "",
-"Marriage.Cirrus.Neutral.6": "",
-"Marriage.Cirrus.Neutral.7":"",
-"Marriage.Cirrus.Bad.0":"",
-"Marriage.Cirrus.Bad.1": "",
-"Marriage.Cirrus.Bad.2":"",
-"Marriage.Cirrus.Bad.3":"",
-"Marriage.Cirrus.Bad.4":"",
-"Marriage.Cirrus.Bad.5":"",
-"Marriage.Cirrus.Bad.6": "",
-"Marriage.Cirrus.Bad.7": "",
-"Marriage.Cirrus.Bad.8":"",
+"Marriage.Cirrus.Good.3": "You're incredible. You showed up here, built up this old farm, single-handedly resolved like half the town's problems, and stole my heart. I love you, Rockstar.$23",
+"Marriage.Cirrus.Good.4": "I love my Rockstar soooo much~$26#$b#@, you bring me an infinite cycle of joy.$23",
+"Marriage.Cirrus.Good.5": "@, I hope you've had an amazing day today. I have, and that's just because I'm lucky enough to have you in my life.$24#$b#Though, for what it's worth, I'd be happy to have you other ways. Maybe horizontally, or bent over, or pushed up against something-$25",
+"Marriage.Cirrus.Good.6": "We should go birdwatching today! Oh, or maybe we can do some painting together? Maybe we can have a jam session, or, oh! Dye our hair- wait, you should let me do your makeup!$24",
+"Marriage.Cirrus.Good.7": "I found a pattern for work gloves, so if I could trace your hands I could make you a custom pair... it'd be my first dive into proper leatherworking, I've always wanted to try it.$1",
+"Marriage.Cirrus.Good.8": "Well you're looking lovely as ever, @! You've got the best face - I'd give it a twenty-three thousand and seven out of ten.$24",
+"Marriage.Cirrus.Neutral.0": "Hey, @. Have you been having a good day today? Hope you got a bunch of stuff off your to-do list, that's always satisfying.$1",
+"Marriage.Cirrus.Neutral.1": "@! How are you doing? Did you eat today? Need me to make something?$17",
+"Marriage.Cirrus.Neutral.2": "Hope you're taking good care of yourself, @. If you need anything, just let me know...$0",
+"Marriage.Cirrus.Neutral.3": "You look tired, @. Is there anything I can do for you?$17",
+"Marriage.Cirrus.Neutral.4": "Are you doing okay, @? You seem a little off.$16",
+"Marriage.Cirrus.Neutral.5": "@? You've been a little cold lately, is something going on?$2",
+"Marriage.Cirrus.Neutral.6": "@, I'd really appreciate it if we could spend a bit more time together. If something's wrong, or you need space, we can talk about it...$2",
+"Marriage.Cirrus.Neutral.7": "Is it just me being anxious, or have the vibes been off? Are you okay, Rockstar? I need you to communicate with me, we can't resolve anything otherwise...$2",
+"Marriage.Cirrus.Bad.0": "%Cirrus is scrolling the comments of her music videos, ignoring you.",
+"Marriage.Cirrus.Bad.1": "%Cirrus is looking at old concert pictures, ignoring you.",
+"Marriage.Cirrus.Bad.2": "%Cirrus is thumbing through her photos of you and her, but she doesn't look up at you.",
+"Marriage.Cirrus.Bad.3": "%Cirrus is lingering over her mother's contact information in her phone.",
+"Marriage.Cirrus.Bad.4": "%Cirrus is reading negative, sensationalist articles covering her retirement on her phone.",
+"Marriage.Cirrus.Bad.5": "%Cirrus is scrolling through pictures she's taken of %pet and the other farm animals, ignoring you.",
+"Marriage.Cirrus.Bad.6": "%Cirrus is looking up hair dye removal methods on her phone. She looks very dejected.",
+"Marriage.Cirrus.Bad.7": "%Cirrus hasn't cooked anything in several days. She's just scrolling aimlessly on her phone.",
+"Marriage.Cirrus.Bad.8": "%Cirrus is fidgeting with the volume buttons on her phone, staring at the locked screen, ignoring you.",
 
 // ENGAGEMENT DIALOGUE 
-"Marriage.Cirrus.Engagement.Cirrus0":"",
-"Marriage.Cirrus.Engagement.Cirrus1":"",
-"Marriage.Cirrus.Engagement.Cirrus2":"",
+"Marriage.Cirrus.Engagement.Cirrus0":"I'm so excited, Rockstar! I've got my dress and everything. Doesn't matter if the ceremony isn't fancy, it'll be a dream come true no matter what.$23",
+"Marriage.Cirrus.Engagement.Cirrus1":"@, I'm so nervous. I feel like I can't think straight. The strands of our life are about to entertwine and I couldn't be happier for it.$23",
+"Marriage.Cirrus.Engagement.Cirrus2":"We're going to spend the rest of our lives together, Rockstar. We'll share in the messes, the chaos, the love... are you ready?$23",
 
 /*
    _____ _____ ______ _______   _______        _____ _______ ______  _____ 
@@ -3490,7 +3481,7 @@ ________      ________ _   _ _______ _____
 "CFD.Cirrus.ExtraDialogue_SummitEvent_closingmessage": "It's been a long road for you and Cirrus...",
 
 // MOVIE INVITATION - SPOUSE 
-"MovieInvite.Spouse.Cirrus": "",
+"MovieInvite.Spouse.Cirrus": "Of course, Rockstar! I hope you picked something good. If not, I'm sure we can figure out something else to do in the dark.$24",
 
 /*
   __  __          _____ _      

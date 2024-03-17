@@ -33,20 +33,15 @@
     // SPECIAL DATES - FALL
     "fall_Cirrus":"{{i18n:Marriage.Cirrus.Fall}}",
     "fall_1":"{{i18n:Marriage.Cirrus.Fall1}}",
-	"fall_15":"{{i18n:Marriage.Cirrus.Fall15}}",
     "fall_16":"{{i18n:Marriage.Cirrus.Fall16}}",
     "fall_25":"{{i18n:Marriage.Cirrus.Fall25}}",
-	"fall_26":"{{i18n:Marriage.Cirrus.Fall26}}",
     "fall_27":"{{i18n:Marriage.Cirrus.Fall27}}",
 
     // SPECIAL DATES - WINTER 
     "winter_Cirrus":"{{i18n:Marriage.Cirrus.Winter}}",
     "winter_1":"{{i18n:Marriage.Cirrus.Winter1}}",
 	"winter_8":"{{i18n:Marriage.Cirrus.Winter8}}",
-    "winter_12":"{{i18n:Marriage.Cirrus.Winter12}}",
     "winter_14":"{{i18n:Marriage.Cirrus.Winter14}}",
-    "winter_19":"{{i18n:Marriage.Cirrus.Winter19}}",
-  	"winter_24":"{{i18n:Marriage.Cirrus.Winter24}}",
     "winter_25":"{{i18n:Marriage.Cirrus.Winter25}}",
 	"winter_28":"{{i18n:Marriage.Cirrus.Winter28}}",
     
@@ -82,9 +77,10 @@
     "Indoor_Night_5":"{{i18n:Marriage.Cirrus.Indoor.Night.5}}",
     "Indoor_Night_6":"{{i18n:Marriage.Cirrus.Indoor.Night.6}}",
     "Outdoor_0":"{{i18n:Marriage.Cirrus.Outdoor.0}}",
-    "Outdoor_2":"{{i18n:Marriage.Cirrus.Outdoor.1}}",
-    "Outdoor_3":"{{i18n:Marriage.Cirrus.Outdoor.2}}",
-    "Outdoor_4":"{{i18n:Marriage.Cirrus.Outdoor.3}}",
+    "Outdoor_1":"{{i18n:Marriage.Cirrus.Outdoor.1}}",
+    "Outdoor_2":"{{i18n:Marriage.Cirrus.Outdoor.2}}",
+    "Outdoor_3":"{{i18n:Marriage.Cirrus.Outdoor.3}}",
+    "Outdoor_4":"{{i18n:Marriage.Cirrus.Outdoor.4}}",
     "Outdoor_Cirrus":"{{i18n:Marriage.Cirrus.Outdoor}}",
 
     // GENERIC DIALOGUE - KIDS 
@@ -92,6 +88,7 @@
     "OneKid_1":"{{i18n:Marriage.Cirrus.OneKid.1}}",
     "OneKid_2":"{{i18n:Marriage.Cirrus.OneKid.2}}",
     "OneKid_3":"{{i18n:Marriage.Cirrus.OneKid.3}}",
+    "OneKid_4":"{{i18n:Marriage.Cirrus.OneKid.4}}",
     "TwoKids_0":"{{i18n:Marriage.Cirrus.TwoKids.0}}",
     "TwoKids_1":"{{i18n:Marriage.Cirrus.TwoKids.1}}",
     "TwoKids_2":"{{i18n:Marriage.Cirrus.TwoKids.2}}",
@@ -101,7 +98,7 @@
     // AFFECTION DIALOGUE
     "Good_0":"{{i18n:Core.Cirrus.Dating.{{Random:{{Range: 1, 30}}}}}}",
     "Good_1":"{{i18n:Core.Cirrus.Dating.{{Random:{{Range: 1, 30}}}}}}",
-    "Good_2":"{{i18n:Marriage.Cirrus.Good.2}}",
+    "Good_2":"{{i18n:Core.Cirrus.Dating.{{Random:{{Range: 1, 30}}}}}}",
     "Good_3":"{{i18n:Marriage.Cirrus.Good.3}}",
     "Good_4":"{{i18n:Marriage.Cirrus.Good.4}}",
     "Good_5":"{{i18n:Marriage.Cirrus.Good.5}}",

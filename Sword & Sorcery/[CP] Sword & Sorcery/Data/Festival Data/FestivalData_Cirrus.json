@@ -24,20 +24,6 @@
 				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
 			  },	  
         },
-			
-				{
-					"LogName": "EggFestival",
-					"Action": "EditData",
-					"Target": "Data/Festivals/spring13",
-					"Entries": { //EGG FESTIVAL DIALOGUE: MARRIED
-					
-						"Cirrus":"{{i18n:Festivals.Cirrus.EggFestival.Married}}",
-				
-					},
-					"When":
-						{ "Relationship:Cirrus": "Married"}
-		
-				},
 	
 
         // FLOWER DANCE
@@ -135,29 +121,6 @@
 				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
 			  },
 		},
-		{
-			"LogName": "SVFair",
-			"Action": "EditData",
-			"Target": "Data/Festivals/fall16",
-			"Entries": { // STARDEW VALLEY FAIR DIALOGUE: GENERIC
-			
-				  "Cirrus":"{{i18n:Festivals.Cirrus.SDVFair.1}}",
-				  "Cirrus_2":"{{i18n:Festivals.Cirrus.SDVFair.2}}",
-
-			}
-		},
-				{
-					"LogName": "SVFair",
-					"Action": "EditData",
-					"Target": "Data/Festivals/fall16",
-					"Entries": { // STARDEW VALLEY FAIR DIALOGUE: MARRIED
-					
-						"Cirrus":"{{i18n:Festivals.Cirrus.SDVFair.Married}}",
-						
-					},
-					"When":
-					{ "Relationship:Cirrus": "Married"}
-				},
 
         // SPIRIT'S EVE
 
@@ -176,29 +139,6 @@
 					"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
 				  },
 		},
-		{
-			"LogName": "SpiritsEve",
-			"Action": "EditData",
-			"Target": "Data/Festivals/fall27",
-			"Entries": {
-			
-				  "Cirrus":"{{i18n:Festivals.Cirrus.SpiritsEve.1}}",
-				  "Cirrus_2":"{{i18n:Festivals.Cirrus.SpiritsEve.2}}", 
-
-			}
-		},
-				{
-					"LogName": "SpiritsEve",
-					"Action": "EditData",
-					"Target": "Data/Festivals/fall27",
-					"Entries": {
-					
-						"Cirrus":"{{i18n:Festivals.Cirrus.SpiritsEve.Married}}",
-						
-					},
-					"When":
-					{ "Relationship:Cirrus": "Married"}
-				},
 
         // ICE FESTIVAL 
 
@@ -224,31 +164,6 @@
 			  },
 		},
 
-		{
-			"LogName": "IceFest",
-			"Action": "EditData",
-			"Target": "Data/Festivals/winter8",
-			"Entries": { // ICE FESTIVAL DIALOGUE: GENERIC
-			
-				  "Cirrus":"{{i18n:Festivals.Cirrus.IceFestival.1}}",
-				  "Cirrus_2":"{{i18n:Festivals.Cirrus.IceFestival.2}}",
-
-			}
-		},
-				{
-					"LogName": "IceFest",
-					"Action": "EditData",
-					"Target": "Data/Festivals/winter8",
-					"Entries": { // ICE FESTIVAL DIALOGUE: MARRIED 
-					
-						"Cirrus":"{{i18n:Festivals.Cirrus.IceFestival.Married}}",
-					
-
-					},
-						"When":
-						{ "Relationship:Cirrus": "Married"}
-				},
-
         // WINTER STAR
 
         {
@@ -266,29 +181,6 @@
 				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
 			  },
         },
-
-		{
-			"LogName": "WinterStar",
-			"Action": "EditData",
-			"Target": "Data/Festivals/winter25",
-			"Entries": { // WINTER STAR DIALOGUE: GENERIC 
-			
-				  "Cirrus":"{{i18n:Festivals.Cirrus.WinterStar.1}}",
-				  "Cirrus_2":"{{i18n:Festivals.Cirrus.WinterStar.2}}",
-				
-			},
-		},
-				{
-					"LogName": "WinterStar",
-					"Action": "EditData",
-					"Target": "Data/Festivals/winter25",
-					"Entries": { // WINTER STAR DIALOGUE: MARRIED 
-					
-						"Cirrus":"{{i18n:Festivals.Cirrus.WinterStar.Married}}",
-					},
-						"When":
-							{ "Relationship:Cirrus": "Married"}
-				},
 
 		// RSV GATHERING FESTIVAL 
 
@@ -313,19 +205,6 @@
 					"HasMod |contains=Rafseazz.RSVCP": true,
 					"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
 				  },
-		},
-
-		{
-			"LogName": "RSV Gathering Festival Dialogue",
-			"Action": "EditData",
-			"Target": "Data/Festivals/fall20",
-			"Entries": { // RSV GATHERING FESTIVAL DIALOGUE: GENERIC 
-			
-				"Cirrus":"{{i18n:Festivals.Cirrus.RSVG}}",
-			},
-			"When":
-			{ "HasMod":"Rafseazz.RSVCP"}
-
 		},
 
 		// RSV EMBER OF RESOLUTIONS 		
@@ -354,16 +233,6 @@
 				  },
 		},
 
-		{
-			"LogName": "RSV Ember of Resolutions Dialogue",
-			"Action": "EditData",
-			"Target": "Data/Festivals/winter28",
-			"Entries": { // RSV EMBER OF RESOLUTIONS DIALOGUE: GENERIC 
-			
-				"Cirrus":"{{i18n:Festivals.Cirrus.EmberOfResolutions}}",
-			},
-			"When":
-			{ "HasMod":"Rafseazz.RSVCP"}
-		}
+
     ]
 }

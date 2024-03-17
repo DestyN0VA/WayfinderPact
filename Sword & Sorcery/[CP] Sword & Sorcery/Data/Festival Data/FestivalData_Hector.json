@@ -33,13 +33,13 @@
                 {	// LOCATION: SET UP (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","Set-Up_additionalCharacters" ],
-                    "Value": "Hector 1 15 1",
+                    "Value": "Hector 0 15 1",
                     "Delimiter": "/"
                 },
                 {	// LOCATION: MAIN EVENT (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters"  ],
-                    "Value": "Hector 1 15 1",
+                    "Value": "Hector 0 15 1",
                     "Delimiter": "/"
                 },
             ],
@@ -74,6 +74,29 @@
 				},
 			],
 			"When": {"HasSeenEvent |contains=SnS.Ch2.Hector.6": true},
+		},
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"TextOperations": [
+				{	// LOCATION: SET UP
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Hector 19 9 0",
+					"Delimiter": "/"
+				},
+				{	// LOCATION: SET UP 
+					"Operation": "Append",
+					"Target": ["Entries","MainEvent_additionalCharacters"],
+					"Value": "Hector 22 23 0",
+					"Delimiter": "/"
+				},
+			],
+			"When": 
+			{
+				"HasSeenEvent |contains=SnS.Ch2.Hector.6": true,
+				"Query: {{Year}} % 2 = 0": true,
+			},
 		},
 
         // DANCE OF THE MOONLIGHT JELLIES

@@ -68,7 +68,7 @@
     "Rainy_Night_Mateo":"{{i18n:Marriage.Mateo.Rainy.Night.Mateo}}",
 
     // GENERIC DIALOGUE - INDOOR & OUTDOOR
-    "Indoor_Day_0":"{{i18n:Core.Mateo.{{season}}.Relationship.Romantic.{{Random:{{Range: 1, 7}}}}}}}}",
+    "Indoor_Day_0":"{{i18n:Core.Mateo.{{season}}.Relationship.Romantic.{{Random:{{Range: 1, 7}}}}}}",
     "Indoor_Day_1":"{{i18n:Marriage.Mateo.Indoor.Day.1}}",
     "Indoor_Day_2":"{{i18n:Marriage.Mateo.Indoor.Day.2}}",
     "Indoor_Day_3":"{{i18n:Marriage.Mateo.Indoor.Day.3}}",
@@ -99,7 +99,7 @@
     "TwoKids_4":"{{i18n:Marriage.Mateo.TwoKids.4}}",
 
     // AFFECTION DIALOGUE
-    "Good_0":"{{i18n:Core.Mateo.{{season}}.Relationship.Romantic.{{Random:{{Range: 1, 7}}}}}}}}",
+    "Good_0":"{{i18n:Core.Mateo.{{season}}.Relationship.Romantic.{{Random:{{Range: 1, 7}}}}}}",
     "Good_1":"{{i18n:Marriage.Mateo.Good.1}}",
     "Good_2":"{{i18n:Marriage.Mateo.Good.2}}",
     "Good_3":"{{i18n:Marriage.Mateo.Good.3}}",

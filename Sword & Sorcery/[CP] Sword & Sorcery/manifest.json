@@ -1,8 +1,8 @@
 {
-	"Name": "[CP] Sword & Sorcery",
+	"Name": "Sword & Sorcery [CP]",
 	"Author": "DestyNova",
 	"Version": "1.0.0",
-	"Description": "Adds NPCs & new content to East Scarp!",
+	"Description": "A fantasy expansion for East Scarp that includes NPCs, Skills, Crops, Weapons, Items & More!",
 	  "UniqueID": "DN.SnS",
 	  "MinimumApiVersion": "3.15.0",
 	  "ContentPackFor": {

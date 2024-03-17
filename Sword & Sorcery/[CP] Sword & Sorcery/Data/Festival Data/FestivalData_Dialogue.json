@@ -12,7 +12,7 @@
                 "Cirrus": "{{i18n:Festivals.Cirrus.{{TargetWithoutPath}}.{{Relationship:Cirrus |contains=Married}}.{{Random:{{Range: 1, 3}}}}}}",
                 //"Roslin": "{{i18n:Festivals.Roslin.{{TargetWithoutPath}}.{{Relationship:Roslin |contains=Married}}.{{Random:{{Range: 1, 3}}}}}}",
 				//"Dandelion": "{{i18n:Festivals.Dandelion.{{TargetWithoutPath}}.{{Relationship:Dandelion |contains=Married}}.{{Random:{{Range: 1, 3}}}}}}",
-				//"Stan": "{{i18n:Festivals.Stan.{{TargetWithoutPath}}.{{Relationship:Stan |contains=Married}}.{{Random:{{Range: 1, 3}}}}}}",
+				//"Solomon": "{{i18n:Festivals.Stan.{{TargetWithoutPath}}.{{Relationship:Solomon |contains=Married}}.{{Random:{{Range: 1, 3}}}}}}",
             }
         },
 

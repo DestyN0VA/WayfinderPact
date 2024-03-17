@@ -5,7 +5,7 @@ CREDITS:
 ➜ MADDOGOFBLANK: Assets throughout the mod, help w/ code, maps, being my Sword
 ➜ TenebrousNova: Help w/ event code, i18n, and the majority of new maps 
 ➜ TheFrenchDodo: Emeritus' sprite, books seen throughout the guild, majority of music 
-➜ 7thAxis: Dialogue code overhaul/additional optimization code, pronoun code, Stan portraits/sprites 
+➜ 7thAxis: Dialogue code overhaul/additional optimization code, pronoun code, Solomon portraits/sprites 
 ➜ FellowClown: Help with the V2 Mateo portraits and majority of additional assets/portraits/sprites
 ➜ TheLoreSeeker: Emeritus' and Book's portraits 
 ➜ Tiara: Tent interior background

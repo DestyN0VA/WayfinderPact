@@ -69,19 +69,42 @@
 				{	// LOCATION: SET UP (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters"],
-					"Value": "Mateo 13 5 2",
+					"Value": "Mateo 15 5 2",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","MainEvent_additionalCharacters"],
-					"Value": "Mateo 13 5 2",
+					"Value": "Mateo 15 5 2",
 					"Delimiter": "/"
 				},
 			],
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
 				"HasConversationTopic |contains=MateoPain": false,
+			  },
+		},
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"TextOperations": [
+				{	// LOCATION: SET UP (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Mateo 17 5 2",
+					"Delimiter": "/"
+				},
+				{	// LOCATION: SET UP (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","MainEvent_additionalCharacters"],
+					"Value": "Mateo 17 5 2",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasConversationTopic |contains=MateoPain": false,
+				"Query: {{Year}} % 2 = 0": true,
 			  },
 		},
 
@@ -99,7 +122,6 @@
 				},
 			],
 			"When": {
-				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
 				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
 				"HasConversationTopic |contains=MateoPain": false,
 			  },
@@ -119,7 +141,6 @@
 				},
 			],
 			"When": {
-				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
 				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
 				"HasConversationTopic |contains=MateoPain": false,
 			  },
@@ -139,10 +160,42 @@
 				},
 				],
 				"When": {
-					"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
 					"HasConversationTopic |contains=MateoPain": false,
 				  },
 		},
+		{
+			 "Action": "EditData",
+			 "Target": "Data/Festivals/fall27",
+			 "TextOperations": [
+				 {	// LOCATION: SET UP & MAIN EVENT (VANILLA)
+					 "Operation": "Append",
+					 "Target": ["Entries",	"Set-Up_additionalCharacters"],
+					 "Value": "Mateo 14 15 2",
+					 "Delimiter": "/"
+				 },
+				 ],
+				 "When": {
+					 "HasConversationTopic |contains=MateoPain": false,
+					 "Query: {{Year}} % 2 = 0": true,
+				   },
+		 },
+		 {
+			  "Action": "EditData",
+			  "Target": "Data/Festivals/fall27",
+			  "TextOperations": [
+				  {	// LOCATION: SET UP & MAIN EVENT (VANILLA)
+					  "Operation": "Append",
+					  "Target": ["Entries",	"Set-Up_additionalCharacters"],
+					  "Value": "Mateo 37 57 2",
+					  "Delimiter": "/"
+				  },
+				  ],
+				  "When": {
+					  "HasConversationTopic |contains=MateoPain": false,
+					  "HasMod": "FlashShifter.StardewValleyExpandedCP",
+					  "Query: {{Year}} % 4 = 3": true,
+					},
+		  },
 
         // ICE FESTIVAL 
 
@@ -164,7 +217,6 @@
 				},
 			],
 			"When": {
-				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
 				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
 				"HasConversationTopic |contains=MateoPain": false,
 			  },
@@ -184,8 +236,23 @@
 				},
 			],
 			"When": {
-				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
 				"HasConversationTopic |contains=MateoPain": false,
+			  },
+        },
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"TextOperations": [
+				{	// LOCATION: SET UP (VANILLA)
+					"Operation": "Append",
+					"Target": [	"Entries","Set-Up_additionalCharacters"	],
+					"Value": "Mateo 23 58 1",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasConversationTopic |contains=MateoPain": false,
+				"Query: {{Year}} % 2 = 0": true
 			  },
         },
 
