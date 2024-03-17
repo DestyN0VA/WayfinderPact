@@ -668,6 +668,81 @@ namespace SwordAndSorcerySMAPI
                 }
             });
 
+            Event.RegisterCommand("sns_bardicsunlock", (Event @event, string[] args, EventContext context) =>
+            {
+                // This implementation is incredibly lazy
+                ArgUtility.TryGetVector2(args, 1, out Vector2 center, out string error);
+                center.Y -= 0.5f;
+
+                List<TemporaryAnimatedSprite> tass = new();
+
+                @event.aboveMapSprites ??= new();
+
+                Color[] cols = [Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Cyan, Color.Blue, Color.Purple, Color.Magenta];
+
+                int soFar = 0;
+                void makeNote()
+                {
+                    TemporaryAnimatedSprite tas = new(Helper.ModContent.GetInternalAssetName("assets/notes.png").Name, new Rectangle(Game1.random.Next(2) * 16, 0, 16, 16), center * Game1.tileSize + new Vector2(0, -96), false, 0, cols[soFar])
+                    {
+                        layerDepth = 1,
+                        scale = 4,
+                    };
+                    tass.Add(tas);
+                    @event.aboveMapSprites.Add(tas);
+                    Game1.playSound("miniharp_note", soFar * 175);
+                    ++soFar;
+                }
+                for ( int i = 0; i < cols.Length; ++i )
+                {
+                    DelayedAction.functionAfterDelay(() =>
+                    {
+                        makeNote();
+                    }, i * 429 );
+                }
+                for (int i_ = 0; i_ < 8000; i_ += 16)
+                {
+                    int i = i_;
+                    float getSpeed()
+                    {
+                        if (tass.Count < 7) return 100;
+                        return Math.Min(100 + (i - 3000) / 16, 720);
+                    }
+                    float getLength()
+                    {
+                        if (tass.Count < 7 || i < 4000) return 96;
+                        if (i <= 6000) return 96 + (i - 4000) / 16;
+                        return (96 + 2000 / 16) - (i - 6000) / 4;
+                    }
+
+                    DelayedAction.functionAfterDelay(() =>
+                    {
+                        Console.WriteLine(i + " " + getSpeed() + " " + getLength());
+                        foreach ( var tas in tass )
+                        {
+                            var p = tas.Position - center * Game1.tileSize;
+                            float angle = MathF.Atan2(p.Y, p.X);
+                            angle += getSpeed() / 180 * MathF.PI * (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
+                            tas.Position = center * Game1.tileSize + new Vector2(MathF.Cos(angle) * getLength(), MathF.Sin(angle) * getLength());
+
+                            if (i >= 4000 && i <= 6000)
+                                tas.scaleChange = 0.025f;
+                            else if ( i >= 6000 && i <= 8000 )
+                            {
+                                tas.scaleChange = -0.1f;
+                            }
+
+                            if ( tas.scale < 0 || getLength() < 0 )
+                            {
+                                @event.aboveMapSprites.Remove(tas);
+                            }
+                        }
+                    }, i);
+                }
+
+                @event.CurrentCommand++;
+            });
+
             Helper.ConsoleCommands.Add("sns_playsong", "...", (cmd, args) =>
             {
                 var songlist = Songs[int.Parse(args[0])];
