@@ -18,7 +18,8 @@
         "Edibility": 50,
         "IsDrink": false,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-        "SpriteIndex": 0
+        "SpriteIndex": 0,
+        "ContextTags": [ "color_cyan", "category_vegetable" ],
       }
     }
   },
@@ -75,7 +76,8 @@
         "Edibility": 50,
         "IsDrink": false,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-        "SpriteIndex": 2
+        "SpriteIndex": 2,
+        "ContextTags": [ "color_cyan", "category_vegetable" ],
       }
     }
   },
@@ -134,7 +136,8 @@
           "Edibility": 50,
           "IsDrink": false,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 4
+          "SpriteIndex": 4,
+          "ContextTags": [ "color_cyan", "category_vegetable" ],
         }
       }
     },
@@ -181,7 +184,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.ancientwildfairyroses": {
+        "swordandsorcery.ancientwildfairyrose": {
           "Name": "Ancient Wild Fairy Rose",
           "DisplayName": "{{i18n: crop.ancientwildfairyrose.name}}",
           "Description": "{{i18n: crop.ancientwildfairyrose.description}}",
@@ -191,7 +194,8 @@
           "Edibility": 50,
           "IsDrink": false,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 1
+          "SpriteIndex": 1,
+          "ContextTags": [ "color_cyan", "category_flowers" ],
         }
       }
     },
@@ -248,7 +252,8 @@
         "Edibility": 50,
         "IsDrink": false,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-        "SpriteIndex": 37
+        "SpriteIndex": 37,
+        "ContextTags": [ "color_cyan", "category_fruits" ],
       }
     }
   },
@@ -305,7 +310,8 @@
         "Edibility": 50,
         "IsDrink": false,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-        "SpriteIndex": 39
+        "SpriteIndex": 39,
+        "ContextTags": [ "color_cyan", "category_fruits" ],
       }
     }
   },
@@ -361,7 +367,8 @@
         "Edibility": 50,
         "IsDrink": false,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-        "SpriteIndex": 41
+        "SpriteIndex": 41,
+        "ContextTags": [ "color_cyan", "category_fruits" ],
       }
     }
   },
@@ -417,7 +424,8 @@
           "Edibility": 50,
           "IsDrink": false,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 43
+          "SpriteIndex": 43,
+          "ContextTags": [ "color_cyan", "category_flowers" ],
         }
       }
     },
@@ -473,7 +481,8 @@
             "Edibility": 50,
             "IsDrink": false,
             "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-            "SpriteIndex": 3
+            "SpriteIndex": 3,
+            "ContextTags": [ "color_cyan", "category_fruits" ],
           }
         }
       },
@@ -543,12 +552,12 @@
           "swordandsorcery.ancientamaranth": {"CategoryTextOverride": "Druidic"},
           "swordandsorcery.ancientepiphyticfern": {"CategoryTextOverride": "Druidic"},
           "swordandsorcery.glowingpolyporemushrooms": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientwildfairyroses": {"CategoryTextOverride": "Druidic"},
+          "swordandsorcery.ancientwildfairyrose": {"CategoryTextOverride": "Druidic"},
           "swordandsorcery.ancientglowinghuckleberry": {"CategoryTextOverride": "Druidic"},
           "swordandsorcery.ancientamaranth.seed": {"CategoryTextOverride": "Druidic"},
           "swordandsorcery.ancientepiphyticfern.seed": {"CategoryTextOverride": "Druidic"},
           "swordandsorcery.glowingpolyporemushrooms.seed": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientwildfairyroses.seed": {"CategoryTextOverride": "Druidic"},
+          "swordandsorcery.ancientwildfairyrose.seed": {"CategoryTextOverride": "Druidic"},
           "swordandsorcery.ancientglowinghuckleberry.seed": {"CategoryTextOverride": "Druidic"},
           "swordandsorcery.ancientelderberry": {"CategoryTextOverride": "Druidic"},
           "swordandsorcery.ancientelderberry.seed": {"CategoryTextOverride": "Druidic"},

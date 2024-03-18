@@ -41,8 +41,8 @@
       "Entries": {
         "swordandsorcery.autumnalstew": {
           "Name": "Autumnal Stew",
-          "DisplayName": "{{i18n: food.heartymushroomstew.name}}",
-          "Description": "{{i18n: food.heartymushroomstew.description}}",
+          "DisplayName": "{{i18n: food.autumnalstew.name}}",
+          "Description": "{{i18n: food.autumnalstew.description}}",
           "Type": "Cooking",
           "Category": -7,
           "Price": 100,
@@ -250,7 +250,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "swordandsorcery.lavaeelandstirfriedancientbottlegourd": {
-          "Name": "Lava Eel And Stir Fried Polypore",
+          "Name": "Lava Eel And Stir Fried Bottlegourd",
           "DisplayName": "{{i18n: food.lavaeelandstirfriedancientbottlegourd.name}}",
           "Description": "{{i18n: food.lavaeelandstirfriedancientbottlegourd.description}}",
           "Type": "Cooking",
