@@ -338,8 +338,8 @@
             "MapPath": "Maps/EastScarp_Planetarium"
           },
           "DefaultArrivalTile": {
-            "X": 10,
-            "Y": 4
+            "X": 1,
+            "Y": 15
           },
           "ExcludeFromNpcPathfinding": false,
           "ArtifactSpots": [],
