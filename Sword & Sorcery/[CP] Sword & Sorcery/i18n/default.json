@@ -868,6 +868,20 @@
 "CFD.Mateo.SocialPage.cs.11642": "(ex-spouse)",
 "CFD.Mateo.SocialPage.cs.11643": "(ex-spouse)",
 
+// MISC EDITS
+"CFD.Mateo.Event.cs.1815": "{0} thought everyone forgot, but then you show up with a nice gift. What a good friend.",
+"CFD.Mateo.Event.cs.1816": "{0} thought everyone forgot, but then you show up with a nice gift. What a good friend.",
+"CFD.Mateo.Event.cs.1831": "Ooo... It's dark, and I see you and a certain special someone. {0} looks a little bashful, but happy to be with you.",
+"CFD.Mateo.Event.cs.1832": "Ooo... It's dark, and I see you and a certain special someone. {0} looks quite hopeful, and eager to spend time with you.",
+"CFD.Mateo.Event.cs.1833": "Ooo... It's dark, and I see you and a certain special someone. {0} looks a little bashful, but happy to be with you.",
+"CFD.Mateo.Event.cs.1834": "Ooo... It's dark, and I see you and a certain special someone. {0} looks quite hopeful, and eager to spend time with you.",
+"CFD.Mateo.MovieTheater_LoveConcession_Female": "{0} is really enjoying their {1}!",
+"CFD.Mateo.MovieTheater_LikeConcession_Female": "{0} is enjoying their {1}.",
+"CFD.Mateo.MovieTheater_DislikeConcession_Female": "{0} hasn't touched their {1} at all...",
+"CFD.Mateo.MovieTheater_LoveConcession_Male": "{0} is really enjoying their {1}!",
+"CFD.Mateo.MovieTheater_LikeConcession_Male": "{0} is enjoying their {1}.",
+"CFD.Mateo.MovieTheater_DislikeConcession_Male": "{0} hasn't touched their {1} at all...",
+
 // SUMMIT DIALOGUE 
 "CFD.Mateo.ExtraDialogue_SummitEvent_Intro_Spouse": "Hey, Sunshine.$4",
 "CFD.Mateo.ExtraDialogue_SummitEvent_Intro2_Spouse": "Have you ever seen such splendor?$1",

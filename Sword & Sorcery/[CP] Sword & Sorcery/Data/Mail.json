@@ -15,6 +15,30 @@
             "Entries": {
                 "MineDateInvite":"{{i18n:Mail.Mateo.Letter2}}"
             }
-        }
+        },
+        {
+            "LogName": "From the mysterious 'B'",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "HectorIntroLetter":"{{i18n:Mail.Hector.Letter0}}"
+            }
+        },
+        {
+            "LogName": "From the mysterious 'B'",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "AetherQuest":"{{i18n:Mail.Hector.Letter1}}"
+            }
+        },
+        {
+            "LogName": "From the mysterious 'B'",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "AetherQuest2":"{{i18n:Mail.Hector.Letter2}}"
+            }
+        },
     ]
 }

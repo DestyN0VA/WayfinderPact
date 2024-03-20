@@ -19,7 +19,7 @@
                     "ExcludeFromPerfectionScore": false,
                     "EndSlideShow": "TrailingGroup",
                     "SpawnIfMissing": true,
-                    "ExcludeFromIntroductionsQuest": true,
+                    "IntroductionsQuest": false,
                     "SocialTab": "HiddenUntilMet",
                     "Calendar": "HiddenUntilMet",
                     "FlowerDanceCanDance": true,
