@@ -905,6 +905,20 @@
       "When": {
         "CirrusRainbowHair": "Blue"
       }
-    }
+    },
+    {
+      "Name": "Cirrus10HEnding",
+      "Value": "speak Cirrus \"Thank you for everything, @. If it was for you and your friends - sorry, our friends - I don't think any of this would've fallen into place.$17#$b#For the first time in ages, I feel passionate about music again... genuinely! Not just performatively for my job, or because of expectations I set for myself...$11#$b#I'm going to make good on these powers. Hone them to a sharp point! And you too, @! We'll do this together!$10\"/end",
+      "When": {
+        "Relationship:Cirrus |contains=Dating, Engaged, Married": false
+      }
+    },
+    {
+      "Name": "Cirrus10HEnding",
+      "Value": "message \"Mateo and Biróg bid you both farewell for the evening.\"/warp Mateo -100 -100 true/warp Hector -100 -100 true/warp Cirrus 26 30 true/showFrame Cirrus 0 true/faceDirection Cirrus 2 true/warp farmer 26 31 true/faceDirection farmer 2 true/stopAnimation Cirrus/viewport 26 27/advancedMove farmer false 0 2 2 10/textAboveHead Cirrus \"Wait, Rockstar-\"/emote farmer 8/waitForAllStationary/advancedMove farmer false 0 -2 4 10/pause 500/speak Cirrus \"Kiss me before you go.$23\"/pause 500/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/showFrame farmer 15/specificTemporarySprite heart 26 28/showFrame Cirrus 39/pause 2000/fade/viewport -1000 -1000/speak Cirrus \"Now that I've got you, I don't want to let you go...$25\"/quickQuestion Stay the night? #Yes! (End the day). #I wish I could, but... (End the event).(break)\\warp farmer 18 5 true\\faceDirection farmer 1 true\\warp Cirrus 20 5 true\\faceDirection Cirrus 3 true\\positionOffset farmer 40 0 true\\positionOffset farmer 0 20 true\\positionOffset Cirrus -40 0 true\\changePortrait Cirrus beach\\changeSprite Cirrus beach\\globalFadeToClear\\viewport 27 14\\speak Cirrus \"@, you're very easy to love. Your actions speak so loudly, and they're always so kind.$4#$b#We'll master Bardics together. And that's not all - I see a future with you, @. You make me really happy, and I hope you feel the same.$23\"\\animate Cirrus false true 100 28 28\\animate farmer false true 100 101 101\\specificTemporarySprite heart 19 3\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 100\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 2500\\fade\\viewport -1000 -1000\\end newDay(break)speak Cirrus \"That's okay, babe. I know you're busy - there's always, always gonna be a next time. Good night, get home safe. Love you.$23\"\\end",
+      "When": {
+        "Relationship:Cirrus |contains=Dating, Engaged, Married": true
+      }
+    },
   ]
 }

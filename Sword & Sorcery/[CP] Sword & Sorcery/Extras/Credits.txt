@@ -1,15 +1,17 @@
 CREDITS: 
 
+➜ DestyN0VA, the Shield: Content Patcher component, narrative design, mechanical design, character design, assets, maps, 
+➜ KittyCatCasey, the Sorcerer: C# Component, mechanical design
+➜ MADDOGOFBLANK, the Sword: Assets throughout the mod, help w/ code, maps, emotional support
 ➜ Lemurkat: For East Scarp, for guiding along, and maintaining an incredible little community
-➜ KittyCatCasey: C# Component, being my Sorcerer
-➜ MADDOGOFBLANK: Assets throughout the mod, help w/ code, maps, being my Sword
 ➜ TenebrousNova: Help w/ event code, i18n, and the majority of new maps 
 ➜ TheFrenchDodo: Emeritus' sprite, books seen throughout the guild, majority of music 
 ➜ 7thAxis: Dialogue code overhaul/additional optimization code, pronoun code, Solomon portraits/sprites 
 ➜ FellowClown: Help with the V2 Mateo portraits and majority of additional assets/portraits/sprites
 ➜ TheLoreSeeker: Emeritus' and Book's portraits 
-➜ Tiara: Tent interior background
+➜ FlashShifter: Use of Stardew Valley Expanded's assets, lots of mentoring 
 ➜ EnderTedi: Additional Hector portraits, overlay assets, help w/ code 
+➜ Tiara: Tent interior background
 ➜ Poltergeister: Gunther's portraits, help w/ Mateo V2 portraits 
 ➜ Arknir27: Mateo's sprites, help w/ event code 
 ➜ WerewolfMaster: Gunther's sprites & Marlon's portraits/sprites
@@ -20,16 +22,15 @@ CREDITS:
 ➜ CreatorKami: Hector portraits
 ➜ Yri: Druid tower, giant tree, and Book's sprites
 ➜ NinTheCactus69: Some of the druid crops 
-➜ HimeTarts: Mateo portrait base
+➜ HimeTarts: Mateo portrait base and Spirit's Eve costume 
 ➜ PetiteWarlock: Logo 
 ➜ Logophile: Rugs
-➜ 6480: Crop tweaks, lots of pixel art mentoring
+➜ 6480: Crop tweaks, LLTK blade, lots of pixel art mentoring
 ➜ Pokeinalover: Book's Human design 
-➜ SmolHuman: Additional animal sprites 
+➜ SmolHuman: Animal sprites 
 ➜ SunStream7, Gnadi, Mareetz: Extensive playtesting
 ➜ JayJayDub: Help w/ compatibility and i18n 
-➜ Atravita: Mentoring, help with C# 
-➜ FlashShifter: For being a friend and mentor
+➜ Atravita: Mentoring, help w/ C# 
 ➜ Sword & Sorcery Discord Channel: All the regulars out there, the fan artists, the bugtesters, the supporters - thank you. I likely wouldn't have expanded past Never Ending Adventure without your kindness and appreciation. 
 
 INSPIRATIONS: 

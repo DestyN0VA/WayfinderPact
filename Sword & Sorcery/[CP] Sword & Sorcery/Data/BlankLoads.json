@@ -42,13 +42,19 @@
             "Target": "data/events/AdventureGuild",
             "FromFile": "assets/blank.json",
             "When": {
-              "HasMod: |contains=FlashShifter.StardewValleyExpandedCP, Wolf.Marlon, supert.adventureguildexpanded, Rafseazz.RSVCP, BlatantDecoy.BugmeatRecipes-CP, purrplingcat.npcadventure, SiTheGreat.AdventurerAbigail": false,
+              "HasMod: |contains=FlashShifter.StardewValleyExpandedCP, Wolf.Marlon, supert.adventureguildexpanded, Rafseazz.RSVCP, BlatantDecoy.BugmeatRecipes-CP, purrplingcat.npcadventure, SiTheGreat.AdventurerAbigail, MadDog.HashtagBearFam": false
             }
           },
           {
             "LogName": "Van Events Blank",
             "Action": "Load",
             "Target": "data/events/EastScarp_VanInterior",
+            "FromFile": "assets/blank.json",
+          },
+          {
+            "LogName": "Lion's Mane Events Blank",
+            "Action": "Load",
+            "Target": "data/events/EastScarp_LionsMane",
             "FromFile": "assets/blank.json",
           },
     ]
