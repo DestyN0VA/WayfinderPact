@@ -10,7 +10,7 @@
 					"Trigger": "DayEnding",
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112",
 					"Actions": [
-						"Addmail Current HectorIntroLetter",
+						"AddMail Current HectorIntroLetter tomorrow",
 					]
 				}
 			}
@@ -23,7 +23,7 @@
 				"SnS.Id_PentacleQuest.1": {
 					"Id": "SnS.Id_PentacleQuest.1",
 					"Trigger": "DayEnding",
-					"Condition": "PLAYER_HAS_MAIL Current SnS.Id_PentacleQuestIntro, SEASON spring",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON spring",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle1",
 					]
@@ -38,7 +38,7 @@
 				"SnS.Id_PentacleQuest.2": {
 					"Id": "SnS.Id_PentacleQuest.2",
 					"Trigger": "DayEnding",
-					"Condition": "PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle1, SEASON summer",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON summer",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle2",
 					]
@@ -53,7 +53,7 @@
 				"SnS.Id_PentacleQuest.3": {
 					"Id": "SnS.Id_PentacleQuest.3",
 					"Trigger": "DayEnding",
-					"Condition": "PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle2, SEASON fall",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON fall",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle3",
 					]
@@ -68,7 +68,7 @@
 				"SnS.Id_PentacleQuest.4": {
 					"Id": "SnS.Id_PentacleQuest.4",
 					"Trigger": "DayEnding",
-					"Condition": "PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle3, SEASON winter",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON winter",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle4",
 					]
@@ -85,7 +85,7 @@
 					"Trigger": "DayEnding",
 					"Condition": "PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle4",
 					"Actions": [
-						"Addmail Current AetherQuest",
+						"AddMail Current AetherQuest tomorrow",
 					]
 				}
 			}
@@ -100,7 +100,7 @@
 					"Trigger": "DayEnding",
 					"Condition": "PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle4, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail",
 					"Actions": [
-						"Addmail Current AetherQuest2",
+						"AddMail Current AetherQuest2 tomorrow",
 					]
 				}
 			}
