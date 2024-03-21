@@ -221,7 +221,7 @@
 
     },
 
-    {
+    /*{
 			"LogName": "Shadowstep Test",
 			"Action": "EditData",
 			"Target": "Data/Events/FarmHouse",
@@ -231,6 +231,7 @@
 			}
 	  
 		},
+    */
 
   ]
 

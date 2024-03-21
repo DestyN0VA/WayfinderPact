@@ -13,6 +13,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": true,
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 3,
@@ -48,6 +49,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 3,
@@ -83,6 +85,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 3,
@@ -118,6 +121,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": true,
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 3,
@@ -153,6 +157,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 3,
@@ -188,6 +193,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 3,
@@ -223,6 +229,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 3,
@@ -258,6 +265,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 3,
@@ -293,6 +301,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 3,
@@ -328,6 +337,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 3,
@@ -363,6 +373,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 3,
@@ -398,6 +409,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 3,
@@ -448,7 +460,7 @@
 
   "swordandsorcery.zuzustylebagelwithlox": "216 1 139 1 424 1/what is this for?/swordandsorcery.zuzustylebagelwithlox 1/e SnS.Ch3.Cirrus.6/{{i18n:food.crafting.zuzustylebagelwithlox}}",
 
-  "swordandsorcery.zuzustylecheesecake": "245 1 -6 1 -26 1 400 1/what is this for?/swordandsorcery.zuzustylecheesecake 1/e SnS.Ch3.Cirrus.9/{{i18n:food.crafting.zuzustylecheesecake}}",
+  "swordandsorcery.zuzustylecheesecake": "245 1 -6 1 -5 1 400 1/what is this for?/swordandsorcery.zuzustylecheesecake 1/e SnS.Ch3.Cirrus.9/{{i18n:food.crafting.zuzustylecheesecake}}",
 
   "swordandsorcery.zuzustyleclamchowder": "372 1 256 1 192 1/what is this for?/swordandsorcery.zuzustyleclamchowder 1/e SnS.Ch3.Cirrus.5/{{i18n:food.crafting.zuzustyleclamchowder}}",
   

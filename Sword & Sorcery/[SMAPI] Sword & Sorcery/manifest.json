@@ -13,10 +13,4 @@
   "Version": "1.0.0-Debug",
   "Description": "...",
   "EntryDll": "SwordAndSorcerySMAPI.dll",
-  "Dependencies": [
-    {
-      "UniqueID": "spacechase0.SpaceCore",
-      "MinimumVersion": "1.18.0"
-    }
-  ]
 }

@@ -31,6 +31,7 @@ CREDITS:
 ➜ SunStream7, Gnadi, Mareetz: Extensive playtesting
 ➜ JayJayDub: Help w/ compatibility and i18n 
 ➜ Atravita: Mentoring, help w/ C# 
+➜ Lumisteria: Mentoring, help w/ code
 ➜ Sword & Sorcery Discord Channel: All the regulars out there, the fan artists, the bugtesters, the supporters - thank you. I likely wouldn't have expanded past Never Ending Adventure without your kindness and appreciation. 
 
 INSPIRATIONS: 
