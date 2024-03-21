@@ -350,7 +350,7 @@
     "Entries": {
       "swordandsorcery.ancientbottlegourd.seed": {
         "Seasons": [ "fall" ],
-        "DaysInPhase": [ 1, 2, 3, 3, 3],
+        "DaysInPhase": [ 1, 2, 2, 2, 3, 3],
         "HarvestItemId": "swordandsorcery.ancientbottlegourd",
         "HarvestMinStack": 1,
         "HarvestMaxStack": 2,
