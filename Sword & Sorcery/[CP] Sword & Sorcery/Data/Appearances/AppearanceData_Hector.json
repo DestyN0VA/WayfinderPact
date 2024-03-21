@@ -82,6 +82,17 @@
             "When": {
                 "HectorHeterochromatic": true
             }
+        },
+        {
+            "LogName": "Heterochromatic Eyes - Wolf",
+            "Action": "EditImage",
+            "Target": "Portraits/Hector_wolf",
+            "PatchMode": "Overlay",
+            "FromFile": "Assets/Portraits/Hector/eye_overlay_wolf_hector.png",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": {
+                "HectorHeterochromatic": true
+            }
         }
     ]
 }
