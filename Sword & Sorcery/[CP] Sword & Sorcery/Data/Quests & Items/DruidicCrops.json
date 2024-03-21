@@ -55,7 +55,6 @@
         "HarvestMethod": "Scythe",
         "HarvestMinStack": 1,
         "HarvestMaxStack": 2,
-        "HarvestMaxIncreasePerFarmingLevel": 31,
         "ExtraHarvestChance": 0.03,
         "ExcludeFromShippingCollection": true,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
@@ -118,11 +117,10 @@
         "HarvestMinStack": 1,
         "HarvestMaxStack": 1,
         "ExcludeFromShippingCollection": true,
-        "HarvestMaxIncreasePerFarmingLevel": 40,
         "ExtraHarvestChance": 0.03,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
         
-        "SpriteIndex": 8
+        "SpriteIndex": 2
       }
     }
   },
@@ -179,11 +177,9 @@
           "HarvestItemId": "swordandsorcery.glowingpolyporemushrooms",
           "HarvestMinStack": 1,
           "HarvestMaxStack": 1,
-          "HarvestMaxIncreasePerFarmingLevel": 40,
-          "ExtraHarvestChance": 0.03,
           "ExcludeFromShippingCollection": true,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
-          "SpriteIndex": 8
+          "SpriteIndex": 4
         }
       }
     },
@@ -240,11 +236,9 @@
           "HarvestItemId": "swordandsorcery.ancientwildfairyrose",
           "HarvestMinStack": 1,
           "HarvestMaxStack": 3,
-          "HarvestMaxIncreasePerFarmingLevel": 40,
-          "ExtraHarvestChance": 0.03,
           "ExcludeFromShippingCollection": true,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
-          "SpriteIndex": 24
+          "SpriteIndex": 6
         }
       }
     },
@@ -301,11 +295,10 @@
         "HarvestItemId": "swordandsorcery.ancientelderberry",
         "HarvestMinStack": 1,
         "HarvestMaxStack": 3,
-        "HarvestMaxIncreasePerFarmingLevel": 40,
         "ExtraHarvestChance": 0.03,
         "ExcludeFromShippingCollection": true,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
-        "SpriteIndex": 32
+        "SpriteIndex": 8
       }
     }
   },
@@ -361,11 +354,10 @@
         "HarvestItemId": "swordandsorcery.ancientbottlegourd",
         "HarvestMinStack": 1,
         "HarvestMaxStack": 2,
-        "HarvestMaxIncreasePerFarmingLevel": 31,
         "ExtraHarvestChance": 0.03,
         "ExcludeFromShippingCollection": true,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
-        "SpriteIndex": 40
+        "SpriteIndex": 10
       }
     }
   },
@@ -421,11 +413,10 @@
         "HarvestItemId": "swordandsorcery.ancientgiantappleberry",
         "HarvestMinStack": 1,
         "HarvestMaxStack": 2,
-        "HarvestMaxIncreasePerFarmingLevel": 31,
         "ExtraHarvestChance": 0.03,
         "ExcludeFromShippingCollection": true,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
-        "SpriteIndex": 48
+        "SpriteIndex": 12
       }
     }
   },
@@ -481,11 +472,9 @@
           "HarvestItemId": "swordandsorcery.ancientazuredetura",
           "HarvestMinStack": 1,
           "HarvestMaxStack": 2,
-          "HarvestMaxIncreasePerFarmingLevel": 31,
-          "ExtraHarvestChance": 0.03,
           "ExcludeFromShippingCollection": true,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
-          "SpriteIndex": 56
+          "SpriteIndex": 14
         }
       }
     },
@@ -538,7 +527,6 @@
           "swordandsorcery.ancientglowinghuckleberry.seed": {
             "Seasons": [ "summer" ],
             "HarvestItemId": "swordandsorcery.ancientglowinghuckleberry",
-            "ExtraHarvestChance": 0.03,
             "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSTrees.png}}",
             "ExcludeFromShippingCollection": true,
             "SpriteIndex": 0
