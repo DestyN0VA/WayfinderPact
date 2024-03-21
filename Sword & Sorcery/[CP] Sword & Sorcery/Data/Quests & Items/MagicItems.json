@@ -169,10 +169,10 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.drakescale": {
-          "Name": "Drake Scale Necklace",
-          "DisplayName": "{{i18n: magicitem.drakescalenecklace.name}}",
-          "Description": "{{i18n: magicitem.drakescalenecklace.description}}",
+        "swordandsorcery.drakescalecharm": {
+          "Name": "Aether-Infused Drake Scale Charm",
+          "DisplayName": "{{i18n: magicitem.drakescalecharm.name}}",
+          "Description": "{{i18n: magicitem.drakescalecharm.description}}",
           "Type": "Ring",
           "Category": -96,
           "Price": 0,

@@ -479,8 +479,8 @@
       }
     },
     
-       // ANCIENT GLOWING HUCKLEBERRY VINE
-       {
+      // ANCIENT GLOWING HUCKLEBERRY VINE
+      {
         "Action": "EditData",
         "Target": "Data/Objects",
         "Entries": {
@@ -506,7 +506,7 @@
         "Target": "Data/Objects",
         "Entries": {
           "swordandsorcery.ancientglowinghuckleberry.seed": {
-            "Name": "Ancient Glowing Huckleberry Seeds",
+            "Name": "Ancient Wild Fairy Rose Seeds",
             "DisplayName": "{{i18n: crop.ancientglowinghuckleberry.seed.name}}",
             "Description": "{{i18n: crop.ancientglowinghuckleberry.seed.description}}",
             "Type": "Seeds",
@@ -526,7 +526,7 @@
         "Entries": {
           "swordandsorcery.ancientglowinghuckleberry.seed": {
             "Seasons": [ "summer" ],
-            "HarvestItemId": "swordandsorcery.ancientglowinghuckleberry",
+            "Fruit": [ { "Id": "N/A", "ItemId": "swordandsorcery.ancientglowinghuckleberry" } ],
             "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSTrees.png}}",
             "ExcludeFromShippingCollection": true,
             "SpriteIndex": 0
