@@ -506,7 +506,7 @@
         "Target": "Data/Objects",
         "Entries": {
           "swordandsorcery.ancientglowinghuckleberry.seed": {
-            "Name": "Ancient Wild Fairy Rose Seeds",
+            "Name": "Ancient Glowing Huckleberry Seeds",
             "DisplayName": "{{i18n: crop.ancientglowinghuckleberry.seed.name}}",
             "Description": "{{i18n: crop.ancientglowinghuckleberry.seed.description}}",
             "Type": "Seeds",
