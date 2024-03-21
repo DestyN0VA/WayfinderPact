@@ -28,7 +28,7 @@ CREDITS:
 ➜ 6480: Crop tweaks, LLTK blade, lots of pixel art mentoring
 ➜ Pokeinalover: Book's Human design 
 ➜ SmolHuman: Animal sprites 
-➜ SunStream7, Gnadi, Mareetz: Extensive playtesting
+➜ SunStream7, Gnadi, Mareetz, Daine: Extensive playtesting, additional assets
 ➜ JayJayDub: Help w/ compatibility and i18n 
 ➜ Atravita: Mentoring, help w/ C# 
 ➜ Lumisteria: Mentoring, help w/ code

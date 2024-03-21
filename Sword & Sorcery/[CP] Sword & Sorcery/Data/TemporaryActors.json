@@ -90,5 +90,10 @@
             "Target": "Characters/PizzaVan",
             "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/PizzaVan.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Characters/AetherdrakeScale",
+            "FromFile": "assets/TemporaryActors/Characters/AetherdrakeScale.png"
+        },
     ]
 }
