@@ -32,6 +32,7 @@
       "Action": "Include",
       "FromFile": "Data/MapData.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json"
     },
+
     // TRIGGER ACTIONS
     {
       "LogName": "Overrides Seen Today Flag Removal",
@@ -81,7 +82,7 @@
             "RemoveMail Current SnS.Flag.CirrusHairColor.brown all",
             "RemoveMail Current SnS.Flag.CirrusHairColor.red all",
             "RemoveMail Current SnS.Flag.CirrusHairColor.orange all",
-            "RemoveMail Current SnS.Flag.CirrusHairColor.rellow all",
+            "RemoveMail Current SnS.Flag.CirrusHairColor.yellow all",
             "RemoveMail Current SnS.Flag.CirrusHairColor.Blue all",
           ]
         },

@@ -61,12 +61,12 @@
         // MAKES CIRRUS' BED SLEEPABLE WHEN MARRIED
         {
             "Action": "EditMap",
-            "Target": "Maps/EastScarp_CoastalGuild",
+            "Target": "Maps/EastScarp_LionsMane",
             "MapTiles": [
                 {
                     "Position": {
-                        "X": 13,
-                        "Y": 4
+                        "X": 20,
+                        "Y": 5
                     },
                     "Layer": "Back",
                     "SetProperties": {
