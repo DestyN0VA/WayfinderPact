@@ -42,25 +42,6 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.styguimpendant": {
-          "Name": "Stygium-Forged Mermaid's Pendant",
-          "DisplayName": "{{i18n: magicitem.styguimpendant.name}}",
-          "Description": "{{i18n: magicitem.styguimpendant.description}}",
-          "Type": "Ring",
-          "Category": -96,
-          "Price": 0,
-          "Edibility": -300,
-          "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 7
-        },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
         "swordandsorcery.brokenshield": {
           "Name": "Broken Argentis Shield",
           "DisplayName": "{{i18n: magicitem.brokenshield.name}}",
@@ -162,24 +143,6 @@
           "ExcludeFromShippingCollection": true,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 33
-        },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
-        "swordandsorcery.drakescalecharm": {
-          "Name": "Aether-Infused Drake Scale Charm",
-          "DisplayName": "{{i18n: magicitem.drakescalecharm.name}}",
-          "Description": "{{i18n: magicitem.drakescalecharm.description}}",
-          "Type": "Ring",
-          "Category": -96,
-          "Price": 0,
-          "Edibility": -300,
-          "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 52
         },
       }
     },

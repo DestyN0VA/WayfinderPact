@@ -3,7 +3,7 @@
 
 		{
 			"Action": "EditData",
-			"TargetFile": "Data/Powers",
+			"Target": "Data/Powers",
 			"Entries": {
 				"StygiumPendantPower": {
 					"DisplayName": "{{i18n: power.stygium-pendant.name}}",
@@ -11,13 +11,14 @@
 					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
 					"TexturePosition": { "X": 112, "Y": 0 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current StygiumPendantPower",
+					"Update": "OnTimeChange, OnLocationChange",
 				}
 			},
 			"When": { "HasFlag": "StygiumPendantPower" }
 		},
 		{
 			"Action": "EditData",
-			"TargetFile": "Data/Powers",
+			"Target": "Data/Powers",
 			"Entries": {
 				"SnS.Ch2.Hector.19": {
 					"DisplayName": "{{i18n: power.broken-circlet.name}}",
@@ -25,13 +26,14 @@
 					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
 					"TexturePosition": { "X": 128, "Y": 0 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current BrokenCircletPower",
+					"Update": "OnTimeChange, OnLocationChange",
 				}
 			},
 			"When": { "HasFlag": "BrokenCircletPower" }
 		},
 		{
 			"Action": "EditData",
-			"TargetFile": "Data/Powers",
+			"Target": "Data/Powers",
 			"Entries": {
 				"DrakeScalePower": {
 					"DisplayName": "{{i18n: power.drake-scale.name}}",
@@ -39,6 +41,7 @@
 					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
 					"TexturePosition": { "X": 112, "Y": 80 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current DrakeScalePower",
+					"Update": "OnTimeChange, OnLocationChange",
 				}
 			},
 			"When": { "HasFlag": "DrakeScalePower" }

@@ -1354,11 +1354,12 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.14H.Q1.Answers": "Is there something on your mind?#You've been busy lately. Is there something you've been looking for?#You've been spending a lot of time dungeoneering. Have you caught onto something new?",
 "Events.S&S.Ch1.14H.Q1.Response.1": "Actually, yes!$51",
 "Events.S&S.Ch1.14H.Message.1": "Mateo tips your chin up with the edge of their blade, smiling, meeting your gaze.",
+"Events.S&S.Ch1.14H.Message.2": "The Stygium Pendant has been added to your Power Menu.",
 "Events.S&S.Ch1.14H.Mateo.2": "I found something underneath East Scarp. I've been fixated on it.$52#$b#It's a beautiful new material, imbued with power. Unlike anything I've ever seen before.$53",
 "Events.S&S.Ch1.14H.Mateo.3": "I've been sharpening my smithing skills, and excavating what little I could of this stuff; I was inspired, Sunshine.$39#$b#I made you this, because I want you to be safe no matter where your adventures take you.$42",
 "Events.S&S.Ch1.14H.Mateo.4": "You know, I never would have expected to make this much of a positive impact on the Valley.$38#$b#I feel like I've accomplished a lot that I thought I wouldn't be able to, like patch things up with Marlon and Gunther, or develop a friendship with Krobus.$70#$b#Even having the privilege of being married to you, @.$42#$b#It's been my greatest adventure, and I hope it never ends. I love you.$65",
 "Events.S&S.Ch1.14H.Mateo.5": "The sun'll shine on us again tomorrow, and we'll work harder, stretch our arms out further.$70#$b#We'll beat on against the current and move ceaselessly into the future, together.$39",
-"Events.S&S.Ch1.14H.Message.2": "I hope you enjoyed Mateo's story; I had a great time telling it! This mod and my future works are dedicated to the memory of TheLoreSeeker. May your adventures be never ending. Signed with love, Desty Nova.",
+"Events.S&S.Ch1.14H.Message.3": "I hope you enjoyed Mateo's story; I had a great time telling it! This mod and my future works are dedicated to the memory of TheLoreSeeker. May your adventures be never ending. Signed with love, Desty Nova.",
 
 /*
    _____ ____  _   _     _______ ____  _____ _____ _____  _____ 
@@ -2748,7 +2749,7 @@ ________      ________ _   _ _______ _____
 //14 HEARTS
 "Events.S&S.Ch2.14H.Hector.1": "@, as always. Your timing's impeccable.$8",
 "Events.S&S.Ch2.14H.Hector.2": "I wanted to share something with you. Another part of me that I haven't yet.$12",
-"Events.S&S.Ch2.14H.Hector.Message.1": "This fragment of Hector's circlet will double the drop rate of Druidic Essences.",
+"Events.S&S.Ch2.14H.Hector.Message.1": "This fragment of Hector's circlet will double the drop rate of Druidic Essences. It's stored in your Powers menu.",
 "Events.S&S.Ch2.14H.Hector.3": "It broke during a conflict long ago - it's of no consequence, now. But I've held onto it out of sentiment...$12#$b#I'd like you to have it. This way, you'll think of me when we're apart. Like how I wear your pendant, and think of you.$13#$b#Maybe it's not the grandest thing, but-$15",
 "Events.S&S.Ch2.14H.Hector.4": "I love you, @. If you reach for the sky and can't quite make it, I'll bring it down for you. You are the parallel I'd lay my life on.$13", 
 "Events.S&S.Ch2.14H.Hector.Message.2": "I hope you enjoyed Hector's story as much as I loved telling it! This and my future works are dedicated to LoreSeeker's memory. May your heart swell with mischief and mayhem. Signed with love, Desty Nova.",
@@ -3700,11 +3701,14 @@ ________      ________ _   _ _______ _____
 "magicitem.adventureguildbadge.name": "Adventurer's Guild Membership Badge",
 "magicitem.adventureguildbadge.description": "The shield-shaped, hand-forged symbol of your guild membership. The number 23 is carved into the back.",
 
-"magicitem.styguimpendant.name": "Stygium-Forged Mermaid's Pendant",
-"magicitem.styguimpendant.description": "Made from an unseen material, this lovingly hand-forged pendant radiates with power.",
+"power.stygium-pendant.name": "Stygium-Forged Mermaid's Pendant",
+"power.stygium-pendant.description": "Mateo made this for you with love. Adds +2 Magnetic Radius, +10% damage, +3 Defense, and +1 Luck.",
 
-"magicitem.brokencirclet.name": "Thorned Circlet Fragment",
-"magicitem.brokencirclet.description": "The broken horn off Hector's circlet. Radiates with Druidic power.",
+"power.broken-circlet.name": "Thorned Circlet Fragment",
+"power.broken-circlet.description": "The broken horn off Hector's circlet. Radiates with Druidic power, doubling your Druidic Essence drops.",
+
+"power.drake-scale.name": "Aetherdrake Scale",
+"power.drake-scale.description": "An heirloom from Cirrus that's warm to the touch. Gives +25 Aether, +1 Magnetic Radius, +3 Defense and +1 Luck. ",
 
 "magicitem.brokenshield.name": "Broken Argentis Shield",
 "magicitem.brokenshield.description": "Dandelion's well-worn shield. It's broken, but useable.",
