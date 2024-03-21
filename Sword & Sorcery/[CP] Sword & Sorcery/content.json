@@ -1,10 +1,7 @@
 {
   "Format": "2.0.0",
-
   // INCLUDES
-
   "Changes": [
-
     {
       "LogName": "Sword & Sorcery - Mateo Includes",
       "Action": "Include",
@@ -35,52 +32,83 @@
       "Action": "Include",
       "FromFile": "Data/MapData.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json"
     },
-
-// TRIGGER ACTIONS
-
+    // TRIGGER ACTIONS
     {
-     "LogName": "Overrides Seen Today Flag Removal",
+      "LogName": "Overrides Seen Today Flag Removal",
       "Action": "EditData",
-     "Target": "Data/TriggerActions",
-     "Entries": {
-       "SnS.TriggerActions.OverrideSeenTodayRemoval": {
-         "Id": "SnS.TriggerActions.OverrideSeenTodayRemoval",
-         "Trigger": "DayStarted",
-         "MarkActionApplied": false,
-         "Condition": "Any \"PLAYER_HAS_MAIL Current SnS_M_Mateo_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Hector_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Cirrus_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Roslin_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Dandelion_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Solomon_OverrideSeenToday Any\"",
-         "Actions": [
-           "RemoveMail Current SnS_M_Mateo_OverrideSeenToday",
-           "RemoveMail Current SnS_M_Hector_OverrideSeenToday",
-           "RemoveMail Current SnS_M_Cirrus_OverrideSeenToday",
-           "RemoveMail Current SnS_M_Roslin_OverrideSeenToday",
-           "RemoveMail Current SnS_M_Dandelion_OverrideSeenToday",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "SnS.TriggerActions.OverrideSeenTodayRemoval": {
+          "Id": "SnS.TriggerActions.OverrideSeenTodayRemoval",
+          "Trigger": "DayStarted",
+          "MarkActionApplied": false,
+          "Condition": "Any \"PLAYER_HAS_MAIL Current SnS_M_Mateo_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Hector_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Cirrus_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Roslin_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Dandelion_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Solomon_OverrideSeenToday Any\"",
+          "Actions": [
+            "RemoveMail Current SnS_M_Mateo_OverrideSeenToday",
+            "RemoveMail Current SnS_M_Hector_OverrideSeenToday",
+            "RemoveMail Current SnS_M_Cirrus_OverrideSeenToday",
+            "RemoveMail Current SnS_M_Roslin_OverrideSeenToday",
+            "RemoveMail Current SnS_M_Dandelion_OverrideSeenToday",
             "RemoveMail Current SnS_M_Solomon_OverrideSeenToday"
           ]
         },
         "SnS.TriggerActions.MateoTrollHeritage.True": {
-          "Id": "Sns.TriggerActions.MateoTrollHeritage.True",
+          "Id": "SnS.TriggerActions.MateoTrollHeritage.True",
           "Trigger": "DayStarted",
           "Condition": "{{MateoTrollHeritage}}",
-         "Actions": [
+          "Actions": [
             "AddMail Current SnS.Flag.MateoTrollHeritage received",
             "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.False false"
           ]
         },
-        "Sns.TriggerActions.MateoTrollHeritage.False": {
-          "Id": "Sns.TriggerActions.MateoTrollHeritage.False",
+        "SnS.TriggerActions.MateoTrollHeritage.False": {
+          "Id": "SnS.TriggerActions.MateoTrollHeritage.False",
           "Trigger": "DayStarted",
           "Condition": "!{{MateoTrollHeritage}}",
           "Actions": [
             "RemoveMail Current SnS.Flag.MateoTrollHeritage all",
             "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.True false"
           ]
-       }
+        },
+        //{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}}
+        "SnS.TriggerActions.SetPersistentHairColor": {
+          "Id": "SnS.TriggerActions.SetPersistentHairColor",
+          "Trigger": "DayStarted",
+          "MarkActionApplied": false,
+          "Condition": "{{CirrusHealthyHairHabits}}, {{CirrusRainbowHair |contains=random}}, PLAYER_STAT Current CirrusHairColor 0 0",
+          "Actions":  [ "IncrementStat CirrusHairColor", "AddMail Current SnS.Flag.CirrusHairColor.{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}} recieved" ]
+        },
+        "SnS.TriggerActions.SetHairColorCoolDown": {
+          "Id": "SnS.TriggerActions.SetHairColorCoolDown",
+          "Trigger": "DayStarted",
+          "MarkActionApplied": false,
+          "Condition": "{{CirrusHealthyHairHabits}}, {{CirrusRainbowHair |contains=random}}, PLAYER_STAT Current CirrusHairCooldown 0 0",
+          "Actions": [
+            "IncrementStat CirrusHairCooldown {{Random: {{range: 3, 4}}}}",
+            "RemoveMail Current Flag.CirrusHairColor.Brown",
+            "RemoveMail Current Flag.CirrusHairColor.Red",
+            "RemoveMail Current Flag.CirrusHairColor.Orange",
+            "RemoveMail Current Flag.CirrusHairColor.Yellow",
+            "RemoveMail Current Flag.CirrusHairColor.Blue"
+          ]
+        },
+        "SnS.TriggerActions.CooldownCountdown": {
+          "Id": "SnS.TriggerActions.CooldownCountdown",
+          "Trigger": "DayEnding",
+          "MarkActionApplied": false,
+          "Condition": "{{CirrusHealthyHairHabits}}, {{CirrusRainbowHair |contains=random}}, PLAYER_STAT Current CirrusHairCooldown 1",
+          "Action": "IncrementStat CirrusHairCooldown -1"
+        },
+        "SnS.TriggerActions.CooldownOver": {
+          "Id": "SnS.TriggerActions.CooldownOver",
+          "Trigger": "DayEnding",
+          "Condition": "{{CirrusHealthyHairHabits}}, {{CirrusRainbowHair |contains=random}}, PLAYER_STAT Current CirrusHairCooldown 0 0",
+          "Action": "IncrementStat CirrusHairColor -1",
+        }
       }
     },
   ],
-  
   // CONFIG OPTIONS
-
   "ConfigSchema": {
     "Player Pronouns 1": {
       "Default": "They",
@@ -88,35 +116,35 @@
       "AllowMultiple": true,
       "Description": "Sets the player's desired pronouns.",
       "Section": "Pronouns"
-  }, 
-  "Player Pronouns 2": {
+    },
+    "Player Pronouns 2": {
       "Default": "Them",
       "AllowBlank": false,
       "AllowMultiple": true,
       "Description": "Sets the player's desired pronouns.",
       "Section": "Pronouns"
-  },
-  "Player Pronouns 3": {
+    },
+    "Player Pronouns 3": {
       "Default": "Theirs",
       "AllowBlank": false,
       "AllowMultiple": true,
       "Description": "Sets the player's desired pronouns.",
       "Section": "Pronouns"
-  },
-  "Player Pronouns 4": {
+    },
+    "Player Pronouns 4": {
       "Default": "Themselves",
       "AllowBlank": false,
       "AllowMultiple": true,
       "Description": "Sets the player's desired pronouns.",
       "Section": "Pronouns"
-  },
-  "Player Pronoun Identifier": {
+    },
+    "Player Pronoun Identifier": {
       "Default": "are",
       "AllowBlank": false,
       "AllowMultiple": true,
       "Description": "Would usually be \"is\" or \"are\", depending on context. Example: She IS so cool! VS. They ARE so cool!",
       "Section": "Pronouns"
-  }, 
+    },
     "CustomMateoSoren": {
       "AllowValues": "true, false",
       "Default": "true",
@@ -159,13 +187,12 @@
       "Description": "Adds a spouse room when married.",
       "Section": "Spouse Rooms"
     },
-    "MateoSpousePatioConfig": 
-    {
-        "AllowValues": "true, false",
-        "Default": "true",
-        "AllowBlank": false,
-        "Description": "Adds a spouse patio when married.",
-        "Section": "Spouse Patios"
+    "MateoSpousePatioConfig": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Adds a spouse patio when married.",
+      "Section": "Spouse Patios"
     },
     "HectorSpouseRoomConfig": {
       "AllowValues": "true, false",
@@ -174,13 +201,12 @@
       "Description": "Adds a spouse room when married.",
       "Section": "Spouse Rooms"
     },
-    "HectorSpousePatioConfig": 
-    {
-        "AllowValues": "true, false",
-        "Default": "true",
-        "AllowBlank": false,
-        "Description": "Adds a spouse patio when married.",
-        "Section": "Spouse Patios"
+    "HectorSpousePatioConfig": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Adds a spouse patio when married.",
+      "Section": "Spouse Patios"
     },
     "CirrusSpouseRoomConfig": {
       "AllowValues": "true, false",
@@ -189,13 +215,12 @@
       "Description": "Adds a spouse room when married.",
       "Section": "Spouse Rooms"
     },
-    "CirrusSpousePatioConfig": 
-    {
-        "AllowValues": "true, false",
-        "Default": "true",
-        "AllowBlank": false,
-        "Description": "Adds a spouse patio when married.",
-        "Section": "Spouse Patios"
+    "CirrusSpousePatioConfig": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Adds a spouse patio when married.",
+      "Section": "Spouse Patios"
     },
     "SkipIntroQuest": {
       "AllowValues": "true, false",
@@ -232,11 +257,17 @@
       "AllowMultiple": false,
       "Description": "Gives Cirrus a variety of dyed hair colors, or optionally choose a static one.",
       "Section": "Overlays"
+    },
+    "CirrusHealthyHairHabits": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "AllowMultiple": false,
+      "Description": "Adds an optional cooldown between Cirrus's hair color changes.\nFor use with CirrusRainbowHair: \"Random\"",
+      "Section": "Overlays"
     }
   },
-
   // DYNAMIC TOKENS
-
   "DynamicTokens": [
     {
       "Name": "PlayerPronouns",
@@ -284,7 +315,7 @@
       "Name": "MateoArmor",
       "Value": "Armor_Mateo_Horns.png",
       "When": {
-        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": false, 
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": false,
         "MateoTrollHeritage": true
       }
     },
@@ -628,47 +659,63 @@
         "HasFlag |contains=CirrusSong3B": true
       }
     },
-     //TRUESHAPE: FALSE
-     {
+    //TRUESHAPE: FALSE
+    {
       "Name": "HectorPN1", // He | She
       "Value": "{{Random: {{i18n:Core.HectorPN.M.1}}, {{i18n:Core.HectorPN.F.1}}|key=hector-gender}}",
-      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": false }
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": false
+      }
     },
     {
       "Name": "HectorPN2", // Him | Her
       "Value": "{{Random: {{i18n:Core.HectorPN.M.2}}, {{i18n:Core.HectorPN.F.2}}|key=hector-gender}}",
-      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": false }
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": false
+      }
     },
     {
       "Name": "HectorPN3", // His | Hers
       "Value": "{{Random: {{i18n:Core.HectorPN.M.3}}, {{i18n:Core.HectorPN.F.3}}|key=hector-gender}}",
-      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": false }
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": false
+      }
     },
     {
       "Name": "HectorPN4", // Himself | Herself
       "Value": "{{Random: {{i18n:Core.HectorPN.M.4}}, {{i18n:Core.HectorPN.F.4}}|key=hector-gender}}",
-      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": false }
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": false
+      }
     },
     //TRUESHAPE: TRUE
     {
       "Name": "HectorPN1", // He | She
       "Value": "{{Random: {{i18n:Core.HectorPN.M.1}}, {{i18n:Core.HectorPN.F.1}}, {{i18n:Core.HectorPN.F.1}}|key=hector-gender}}",
-      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": true }
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true
+      }
     },
     {
       "Name": "HectorPN2", // Him | Her
       "Value": "{{Random: {{i18n:Core.HectorPN.M.2}}, {{i18n:Core.HectorPN.F.2}}, {{i18n:Core.HectorPN.F.2}}|key=hector-gender}}",
-      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": true }
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true
+      }
     },
     {
       "Name": "HectorPN3", // His | Hers
       "Value": "{{Random: {{i18n:Core.HectorPN.M.3}}, {{i18n:Core.HectorPN.F.3}}, {{i18n:Core.HectorPN.F.3}}|key=hector-gender}}",
-      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": true }
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true
+      }
     },
     {
       "Name": "HectorPN4", // Himself | Herself
       "Value": "{{Random: {{i18n:Core.HectorPN.M.4}}, {{i18n:Core.HectorPN.F.4}}, {{i18n:Core.HectorPN.F.4}}|key=hector-gender}}",
-      "When": { "HasSeenEvent |contains=SnS.Ch2.Hector.16": true }
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true
+      }
     },
     {
       "Name": "HectorPronouns",
@@ -856,6 +903,20 @@
         "HasFlag |contains=CirrusFlirt": true
       }
     },
+    {
+      "Name": "Cirrus10HEnding",
+      "Value": "speak Cirrus \"Thank you for everything, @. If it was for you and your friends - sorry, our friends - I don't think any of this would've fallen into place.$17#$b#For the first time in ages, I feel passionate about music again... genuinely! Not just performatively for my job, or because of expectations I set for myself...$11#$b#I'm going to make good on these powers. Hone them to a sharp point! And you too, @! We'll do this together!$10\"/end",
+      "When": {
+        "Relationship:Cirrus |contains=Dating, Engaged, Married": false
+      }
+    },
+    {
+      "Name": "Cirrus10HEnding",
+      "Value": "message \"Mateo and Biróg bid you both farewell for the evening.\"/warp Mateo -100 -100 true/warp Hector -100 -100 true/warp Cirrus 26 30 true/showFrame Cirrus 0 true/faceDirection Cirrus 2 true/warp farmer 26 31 true/faceDirection farmer 2 true/stopAnimation Cirrus/viewport 26 27/advancedMove farmer false 0 2 2 10/textAboveHead Cirrus \"Wait, Rockstar-\"/emote farmer 8/waitForAllStationary/advancedMove farmer false 0 -2 4 10/pause 500/speak Cirrus \"Kiss me before you go.$23\"/pause 500/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/showFrame farmer 15/specificTemporarySprite heart 26 28/showFrame Cirrus 39/pause 2000/fade/viewport -1000 -1000/speak Cirrus \"Now that I've got you, I don't want to let you go...$25\"/quickQuestion Stay the night? #Yes! (End the day). #I wish I could, but... (End the event).(break)\\warp farmer 18 5 true\\faceDirection farmer 1 true\\warp Cirrus 20 5 true\\faceDirection Cirrus 3 true\\positionOffset farmer 40 0 true\\positionOffset farmer 0 20 true\\positionOffset Cirrus -40 0 true\\changePortrait Cirrus beach\\changeSprite Cirrus beach\\globalFadeToClear\\viewport 27 14\\speak Cirrus \"@, you're very easy to love. Your actions speak so loudly, and they're always so kind.$4#$b#We'll master Bardics together. And that's not all - I see a future with you, @. You make me really happy, and I hope you feel the same.$23\"\\animate Cirrus false true 100 28 28\\animate farmer false true 100 101 101\\specificTemporarySprite heart 19 3\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 100\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 2500\\fade\\viewport -1000 -1000\\end newDay(break)speak Cirrus \"That's okay, babe. I know you're busy - there's always, always gonna be a next time. Good night, get home safe. Love you.$23\"\\end",
+      "When": {
+        "Relationship:Cirrus |contains=Dating, Engaged, Married": true
+      }
+    },
     /*"CirrusRainbowHair": {
       "AllowValues": "Random, Red, Orange, Yellow, Blue",
       "Default": "Blue",
@@ -872,53 +933,51 @@
       }
     },
     {
+      "Name": "CirrusHairColor1",
+      "Value": "{{CirrusRainbowHair}}",
+      "When": {
+        "CirrusRainbowHair |contains=random": false
+      }
+    },
+    {
       "Name": "CirrusHairColor",
       "Value": "Brown",
       "When": {
-        "CirrusRainbowHair": "brown"
+        "CirrusHealthyHairHabits": true,
+        "HasFlag": "SnS.Flag.CirrusHairColor.Brown"
       }
     },
     {
       "Name": "CirrusHairColor",
       "Value": "Red",
       "When": {
-        "CirrusRainbowHair": "red"
+        "CirrusHealthyHairHabits": true,
+        "HasFlag": "SnS.Flag.CirrusHairColor.Red"
       }
     },
     {
       "Name": "CirrusHairColor",
       "Value": "Orange",
       "When": {
-        "CirrusRainbowHair": "Orange"
+        "CirrusHealthyHairHabits": true,
+        "HasFlag": "SnS.Flag.CirrusHairColor.Orange"
       }
     },
     {
       "Name": "CirrusHairColor",
       "Value": "Yellow",
       "When": {
-        "CirrusRainbowHair": "Yellow"
+        "CirrusHealthyHairHabits": true,
+        "HasFlag": "SnS.Flag.CirrusHairColor.Yellow"
       }
     },
     {
       "Name": "CirrusHairColor",
       "Value": "Blue",
       "When": {
-        "CirrusRainbowHair": "Blue"
+        "CirrusHealthyHairHabits": true,
+        "HasFlag": "SnS.Flag.CirrusHairColor.Blue"
       }
-    },
-    {
-      "Name": "Cirrus10HEnding",
-      "Value": "speak Cirrus \"Thank you for everything, @. If it was for you and your friends - sorry, our friends - I don't think any of this would've fallen into place.$17#$b#For the first time in ages, I feel passionate about music again... genuinely! Not just performatively for my job, or because of expectations I set for myself...$11#$b#I'm going to make good on these powers. Hone them to a sharp point! And you too, @! We'll do this together!$10\"/end",
-      "When": {
-        "Relationship:Cirrus |contains=Dating, Engaged, Married": false
-      }
-    },
-    {
-      "Name": "Cirrus10HEnding",
-      "Value": "message \"Mateo and Biróg bid you both farewell for the evening.\"/warp Mateo -100 -100 true/warp Hector -100 -100 true/warp Cirrus 26 30 true/showFrame Cirrus 0 true/faceDirection Cirrus 2 true/warp farmer 26 31 true/faceDirection farmer 2 true/stopAnimation Cirrus/viewport 26 27/advancedMove farmer false 0 2 2 10/textAboveHead Cirrus \"Wait, Rockstar-\"/emote farmer 8/waitForAllStationary/advancedMove farmer false 0 -2 4 10/pause 500/speak Cirrus \"Kiss me before you go.$23\"/pause 500/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/showFrame farmer 15/specificTemporarySprite heart 26 28/showFrame Cirrus 39/pause 2000/fade/viewport -1000 -1000/speak Cirrus \"Now that I've got you, I don't want to let you go...$25\"/quickQuestion Stay the night? #Yes! (End the day). #I wish I could, but... (End the event).(break)\\warp farmer 18 5 true\\faceDirection farmer 1 true\\warp Cirrus 20 5 true\\faceDirection Cirrus 3 true\\positionOffset farmer 40 0 true\\positionOffset farmer 0 20 true\\positionOffset Cirrus -40 0 true\\changePortrait Cirrus beach\\changeSprite Cirrus beach\\globalFadeToClear\\viewport 27 14\\speak Cirrus \"@, you're very easy to love. Your actions speak so loudly, and they're always so kind.$4#$b#We'll master Bardics together. And that's not all - I see a future with you, @. You make me really happy, and I hope you feel the same.$23\"\\animate Cirrus false true 100 28 28\\animate farmer false true 100 101 101\\specificTemporarySprite heart 19 3\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 100\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 2500\\fade\\viewport -1000 -1000\\end newDay(break)speak Cirrus \"That's okay, babe. I know you're busy - there's always, always gonna be a next time. Good night, get home safe. Love you.$23\"\\end",
-      "When": {
-        "Relationship:Cirrus |contains=Dating, Engaged, Married": true
-      }
-    },
+    }
   ]
 }
