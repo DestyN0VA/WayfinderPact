@@ -70,14 +70,6 @@
             "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.True false"
           ]
         },
-        //{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}}
-        "SnS.TriggerActions.SetPersistentHairColor": {
-          "Id": "SnS.TriggerActions.SetPersistentHairColor",
-          "Trigger": "DayStarted",
-          "MarkActionApplied": false,
-          "Condition": "{{CirrusHealthyHairHabits}}, {{CirrusRainbowHair |contains=random}}, PLAYER_STAT Current CirrusHairColor 0 0",
-          "Actions":  [ "IncrementStat CirrusHairColor", "AddMail Current SnS.Flag.CirrusHairColor.{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}} recieved" ]
-        },
         "SnS.TriggerActions.SetHairColorCoolDown": {
           "Id": "SnS.TriggerActions.SetHairColorCoolDown",
           "Trigger": "DayStarted",
@@ -85,11 +77,12 @@
           "Condition": "{{CirrusHealthyHairHabits}}, {{CirrusRainbowHair |contains=random}}, PLAYER_STAT Current CirrusHairCooldown 0 0",
           "Actions": [
             "IncrementStat CirrusHairCooldown {{Random: {{range: 3, 4}}}}",
-            "RemoveMail Current Flag.CirrusHairColor.Brown",
-            "RemoveMail Current Flag.CirrusHairColor.Red",
-            "RemoveMail Current Flag.CirrusHairColor.Orange",
-            "RemoveMail Current Flag.CirrusHairColor.Yellow",
-            "RemoveMail Current Flag.CirrusHairColor.Blue"
+            "IncrementStat CirrusHairColor -1",
+            "RemoveMail Current SnS.Flag.CirrusHairColor.brown all",
+            "RemoveMail Current SnS.Flag.CirrusHairColor.red all",
+            "RemoveMail Current SnS.Flag.CirrusHairColor.orange all",
+            "RemoveMail Current SnS.Flag.CirrusHairColor.rellow all",
+            "RemoveMail Current SnS.Flag.CirrusHairColor.Blue all",
           ]
         },
         "SnS.TriggerActions.CooldownCountdown": {
@@ -99,11 +92,17 @@
           "Condition": "{{CirrusHealthyHairHabits}}, {{CirrusRainbowHair |contains=random}}, PLAYER_STAT Current CirrusHairCooldown 1",
           "Action": "IncrementStat CirrusHairCooldown -1"
         },
-        "SnS.TriggerActions.CooldownOver": {
-          "Id": "SnS.TriggerActions.CooldownOver",
-          "Trigger": "DayEnding",
-          "Condition": "{{CirrusHealthyHairHabits}}, {{CirrusRainbowHair |contains=random}}, PLAYER_STAT Current CirrusHairCooldown 0 0",
-          "Action": "IncrementStat CirrusHairColor -1",
+        
+        //{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}}
+        "SnS.TriggerActions.SetPersistentHairColor": {
+          "Id": "SnS.TriggerActions.SetPersistentHairColor",
+          "Trigger": "DayStarted",
+          "MarkActionApplied": false,
+          "Condition": "{{CirrusHealthyHairHabits}}, {{CirrusRainbowHair |contains=random}}, PLAYER_STAT Current CirrusHairColor 0 0",
+          "Actions":  [ 
+            "IncrementStat CirrusHairColor",
+            "AddMail Current SnS.Flag.CirrusHairColor.{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}} received"
+          ]
         }
       }
     },
