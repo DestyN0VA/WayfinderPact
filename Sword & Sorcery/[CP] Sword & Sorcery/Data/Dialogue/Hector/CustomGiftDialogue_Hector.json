@@ -1,75 +1,71 @@
 {
-    "Changes": [
-	{
-        "Action": "EditData",
-        "Target": "Characters/Dialogue/Hector",
-        "Entries": { // CUSTOM GIFT DIALOGUE
-
-            // FISH
-            "AcceptGift_category_fish":"{{i18n:Gifts.Hector.GiftReaction.CategoryFish}}",
-            "AcceptGift_(O)397":"{{i18n:Gifts.Hector.GiftReaction.SeaUrchin}}",
-            "AcceptGift_(O)717":"{{i18n:Gifts.Hector.GiftReaction.Crab}}",
-            "AcceptGift_(O)732":"{{i18n:Gifts.Hector.GiftReaction.CrabCakes}}",
-
-            // ARTISANAL GOODS
-            "AcceptGift_category_artisan_goods":"{{i18n:Gifts.Hector.GiftReaction.CategoryArtisanalGoods}}",
-
-            // TRASH
-            "AcceptGiftCategory_trash":"{{i18n:Gifts.Hector.GiftReaction.CategoryTrash}}",
-
-            // MINERALS & GEMS
-            "AcceptGiftCategory_minerals":"{{i18n:Gifts.Hector.GiftReaction.CategoryGemsMinerals}}",
-            
-            // LOVES
-            "AcceptGift_(O)74":"{{i18n:Gifts.Hector.GiftReaction.PrismaticShard}}",
-            "AcceptGift_(O)259":"{{i18n:Gifts.Hector.GiftReaction.FiddleheadFern}}",
-            "AcceptGift_(O)649":"{{i18n:Gifts.Hector.GiftReaction.FiddleheadRisotto}}",
-            "AcceptGift_(O)300":"{{i18n:Gifts.Hector.GiftReaction.Amaranth}}",
-                   
-            // LIKES
-            "AcceptGift_(O)731":"{{i18n:Gifts.Hector.GiftReaction.MapleBar}}",
-            "AcceptGift_(O)768":"{{i18n:Gifts.Hector.GiftReaction.SolarEssence}}",
-            "AcceptGift_(O)769":"{{i18n:Gifts.Hector.GiftReaction.VoidEssence}}",  
-
-            // ALCOHOL 
-            "AcceptGift_(O)346":"{{i18n:Gifts.Hector.GiftReaction.Beer}}",  
-            "AcceptGift_(O)303":"{{i18n:Gifts.Hector.GiftReaction}}",
-            "AcceptGift_(O)348":"{{i18n:Gifts.Hector.GiftReaction.Wine}}", 
-
-            // HATES 
-            "AcceptGift_(O)446":"{{i18n:Gifts.Hector.GiftReaction.RabbitsFoot}}",  
-            "AcceptGift_(O)220":"{{i18n:Gifts.Hector.GiftReaction.ChocolateCake}}",
-
-            // ANCIENT CROPS
-            "AcceptGift_(O)swordandsorcery.ancientamaranth": "{{i18n:Gifts.Hector.GiftReaction.AncientAmaranth}}",
-            "AcceptGift_(O)swordandsorcery.ancientepiphyticfern": "{{i18n:Gifts.Hector.GiftReaction.AncientFern}}",
-            "AcceptGift_(O)swordandsorcery.ancientglowinghuckleberry":"{{i18n:Gifts.Hector.GiftReaction.AncientHuckleberry}}",
-            "AcceptGift_(O)swordandsorcery.glowingpolyporemushrooms":"{{i18n:Gifts.Hector.GiftReaction.AncientMushroom}}",
-            "AcceptGift_(O)swordandsorcery.ancientwildfairyroses":"{{i18n:Gifts.Hector.GiftReaction.AncientRose}}",
-
-            // ITEM REJECTIONS 
-            "RejectItem_(O)458": "{{i18n:Gifts.Hector.GiftReject.Bouquet}}",
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Hector",
+      "Entries": { // CUSTOM GIFT DIALOGUE
+        // FISH
+        "AcceptGift_category_fish": "{{i18n:Gifts.Hector.GiftReaction.CategoryFish}}",
+        "AcceptGift_(O)397": "{{i18n:Gifts.Hector.GiftReaction.SeaUrchin}}",
+        "AcceptGift_(O)717": "{{i18n:Gifts.Hector.GiftReaction.Crab}}",
+        "AcceptGift_(O)732": "{{i18n:Gifts.Hector.GiftReaction.CrabCakes}}",
+        // ARTISANAL GOODS
+        "AcceptGift_category_artisan_goods": "{{i18n:Gifts.Hector.GiftReaction.CategoryArtisanalGoods}}",
+        // TRASH
+        "AcceptGiftCategory_trash": "{{i18n:Gifts.Hector.GiftReaction.CategoryTrash}}",
+        // MINERALS & GEMS
+        "AcceptGiftCategory_minerals": "{{i18n:Gifts.Hector.GiftReaction.CategoryGemsMinerals}}",
+        // LOVES
+        "AcceptGift_(O)74": "{{i18n:Gifts.Hector.GiftReaction.PrismaticShard}}",
+        "AcceptGift_(O)259": "{{i18n:Gifts.Hector.GiftReaction.FiddleheadFern}}",
+        "AcceptGift_(O)649": "{{i18n:Gifts.Hector.GiftReaction.FiddleheadRisotto}}",
+        "AcceptGift_(O)300": "{{i18n:Gifts.Hector.GiftReaction.Amaranth}}",
+        // LIKES
+        "AcceptGift_(O)731": "{{i18n:Gifts.Hector.GiftReaction.MapleBar}}",
+        "AcceptGift_(O)768": "{{i18n:Gifts.Hector.GiftReaction.SolarEssence}}",
+        "AcceptGift_(O)769": "{{i18n:Gifts.Hector.GiftReaction.VoidEssence}}",
+        // ALCOHOL 
+        "AcceptGift_(O)346": "{{i18n:Gifts.Hector.GiftReaction.Beer}}",
+        "AcceptGift_(O)303": "{{i18n:Gifts.Hector.GiftReaction}}",
+        "AcceptGift_(O)348": "{{i18n:Gifts.Hector.GiftReaction.Wine}}",
+        // HATES 
+        "AcceptGift_(O)446": "{{i18n:Gifts.Hector.GiftReaction.RabbitsFoot}}",
+        "AcceptGift_(O)220": "{{i18n:Gifts.Hector.GiftReaction.ChocolateCake}}",
+        // ANCIENT CROPS
+        "AcceptGift_(O)swordandsorcery.ancientamaranth": "{{i18n:Gifts.Hector.GiftReaction.AncientAmaranth}}",
+        "AcceptGift_(O)swordandsorcery.ancientepiphyticfern": "{{i18n:Gifts.Hector.GiftReaction.AncientFern}}",
+        "AcceptGift_(O)swordandsorcery.ancientglowinghuckleberry": "{{i18n:Gifts.Hector.GiftReaction.AncientHuckleberry}}",
+        "AcceptGift_(O)swordandsorcery.glowingpolyporemushrooms": "{{i18n:Gifts.Hector.GiftReaction.AncientMushroom}}",
+        "AcceptGift_(O)swordandsorcery.ancientwildfairyroses": "{{i18n:Gifts.Hector.GiftReaction.AncientRose}}",
+        // ITEM REJECTIONS 
+        "RejectItem_(O)458": "{{i18n:Gifts.Hector.GiftReject.Bouquet}}",
       }
-	},
-
-  {
-    "Action": "EditData",
-    "Target": "Characters/Dialogue/Hector",
-    "Entries": { // CUSTOM GIFT DIALOGUE - BIRTHDAY
-
-              // BIRTHDAY
-              "AcceptGift_(O)259":"{{i18n:Gifts.Hector.GiftReaction.FiddleheadFern.Birthday}}",
-              "AcceptGift_(O)649":"{{i18n:Gifts.Hector.GiftReaction.FiddleheadRisotto.Birthday}}",
-              "AcceptGift_(O)731":"{{i18n:Gifts.Hector.GiftReaction.MapleBar.Birthday}}",
-              "AcceptGift_(O)768":"{{i18n:Gifts.Hector.GiftReaction.SolarEssence.Birthday}}",
-              "AcceptGift_(O)769":"{{i18n:Gifts.Hector.GiftReaction.VoidEssence.Birthday}}",  
-  },
-  "When": {
-    "Season": "winter",
-    "Day": "21"
-}
-
-  }
-
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Hector",
+      "Entries": { // CUSTOM GIFT DIALOGUE - BIRTHDAY
+        // BIRTHDAY
+        "AcceptGift_(O)259": "{{i18n:Gifts.Hector.GiftReaction.FiddleheadFern.Birthday}}",
+        "AcceptGift_(O)649": "{{i18n:Gifts.Hector.GiftReaction.FiddleheadRisotto.Birthday}}",
+        "AcceptGift_(O)731": "{{i18n:Gifts.Hector.GiftReaction.MapleBar.Birthday}}",
+        "AcceptGift_(O)768": "{{i18n:Gifts.Hector.GiftReaction.SolarEssence.Birthday}}",
+        "AcceptGift_(O)769": "{{i18n:Gifts.Hector.GiftReaction.VoidEssence.Birthday}}",
+      },
+      "When": {
+        "Season": "winter",
+        "Day": "21"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Hector",
+      "Entries": { // DATING COOLDOWN
+        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantCooldown}}",
+      },
+      "When": {
+        "HasConversationTopic |contains=HectorMarriageCountdown": true
+      }
+    },
   ]
 }

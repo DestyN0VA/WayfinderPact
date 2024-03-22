@@ -60,7 +60,6 @@
 
             // ITEM REJECTIONS 
             "RejectItem_(O)458": "{{i18n:Gifts.Cirrus.GiftReject.Bouquet}}",
-            "RejectItem_(O)460": "{{i18n:Gifts.Cirrus.GiftReject.MermaidPendant}}",
       }
 	},
 
@@ -69,22 +68,31 @@
     "Target": "Characters/Dialogue/Cirrus",
     "Entries": { // CUSTOM GIFT DIALOGUE - BIRTHDAY
 
-              // BIRTHDAY
-              "AcceptGift_(O)74":"{{i18n:Gifts.Cirrus.GiftReaction.PrismaticShard.Birthday}}",
-              "AcceptGift_(O)614":"{{i18n:Gifts.Cirrus.GiftReaction.GreenTea.Birthday}}",
-              "AcceptGift_(O)206":"{{i18n:Gifts.Cirrus.GiftReaction.Pizza.Birthday}}",
-              "AcceptGift_(O)213":"{{i18n:Gifts.Cirrus.GiftReaction.SalmonDinner.Birthday}}",
-              "AcceptGift_(O)214":"{{i18n:Gifts.Cirrus.GiftReaction.FishTaco.Birthday}}",
-              "AcceptGift_(O)215":"{{i18n:Gifts.Cirrus.GiftReaction.CrispyBass.Birthday}}",
-              "AcceptGift_(O)swordandsorcery.zuzustylebagelwithlox":"{{i18n:Gifts.Cirrus.GiftReaction.zuzustylebagelwithlox.Birthday}}",
-              "AcceptGift_(O)swordandsorcery.zuzustylepizza":"{{i18n:Gifts.Cirrus.GiftReaction.ZuzuStylePizza.Birthday}}",
+      "AcceptGift_(O)74": "{{i18n:Gifts.Cirrus.GiftReaction.PrismaticShard.Birthday}}",
+      "AcceptGift_(O)614": "{{i18n:Gifts.Cirrus.GiftReaction.GreenTea.Birthday}}",
+      "AcceptGift_(O)206": "{{i18n:Gifts.Cirrus.GiftReaction.Pizza.Birthday}}",
+      "AcceptGift_(O)213": "{{i18n:Gifts.Cirrus.GiftReaction.SalmonDinner.Birthday}}",
+      "AcceptGift_(O)214": "{{i18n:Gifts.Cirrus.GiftReaction.FishTaco.Birthday}}",
+      "AcceptGift_(O)215": "{{i18n:Gifts.Cirrus.GiftReaction.CrispyBass.Birthday}}",
+      "AcceptGift_(O)swordandsorcery.zuzustylebagelwithlox": "{{i18n:Gifts.Cirrus.GiftReaction.zuzustylebagelwithlox.Birthday}}",
+      "AcceptGift_(O)swordandsorcery.zuzustylepizza": "{{i18n:Gifts.Cirrus.GiftReaction.ZuzuStylePizza.Birthday}}",
+    },
+    "When": {
+      "Season": "winter",
+      "Day": "21"
+    }
+  },
+
+{
+  "Action": "EditData",
+  "Target": "Characters/Dialogue/Cirrus",
+  "Entries": { // DATING COOLDOWN
+    "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantCooldown}}",
   },
   "When": {
-    "Season": "winter",
-    "Day": "21"
-}
-
+    "HasConversationTopic |contains=CirrusMarriageCountdown": true
   }
+},
 
   ]
 }

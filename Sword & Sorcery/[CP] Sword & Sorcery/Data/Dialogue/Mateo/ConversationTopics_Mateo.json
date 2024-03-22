@@ -159,7 +159,7 @@
             
         },
         "When": {
-            "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+            "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
           }	
 },
 

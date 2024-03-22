@@ -95,5 +95,15 @@
             "Target": "Characters/AetherdrakeScale",
             "FromFile": "assets/TemporaryActors/Characters/AetherdrakeScale.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Characters/PlanetariumBus",
+            "FromFile": "assets/TemporaryActors/Characters/PlanetariumBus.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/PlanetariumScreen",
+            "FromFile": "assets/TemporaryActors/Characters/PlanetariumScreen.png"
+        },
     ]
 }

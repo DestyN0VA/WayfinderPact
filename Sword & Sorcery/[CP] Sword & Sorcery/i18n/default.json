@@ -1310,13 +1310,12 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.10H1.Krobus.9": "Mateo? ... I'm sorry about your injuries.$2",
 "Events.S&S.Ch1.10H1.Mateo.9": "It's alright, Krobus. I'm sorry for misjudging you. But things can only get better from here.$32",
 "Events.S&S.Ch1.10H1.Krobus.10": "Goodnight - both of you!",
-"Events.S&S.Ch1.10H1.Mateo.10": "Goodnight.$10",
+"Events.S&S.Ch1.10H1.Mateo.10": "Goodnight.$1",
 "Events.S&S.Ch1.10H1.Mateo.11": "There's a lot of work to be done to mend the relationship between us and the Shadow Folk... but it's work worth doing, for sure...$12",
-"Events.S&S.Ch1.10H1.Mateo.12": "We just started talking and the time just flew by. Vulnerability can do that, I guess.$32",
-"Events.S&S.Ch1.10H1.Mateo.13": "Speaking of vulnerability. How've you been, @? Are you doing alright?$37#$b#I know you're shouldering a lot of people's problems on top of maintaining your farm.$21",
-"Events.S&S.Ch1.10H1.Mateo.14": "Well, @. I've got your back. If you ever need anything, just call me, alright?$1#$b#There will always be a seat at the table for you in the guild, and Emeritus will be eagerly expecting visits. Oh, and don't worry - I've got something for you, too!$32",
+"Events.S&S.Ch1.10H1.Mateo.12": "Oh, @ - I've got a badge for you, too. You were the first person I thought of when I started making these.$32",
+"Events.S&S.Ch1.10H1.Mateo.13": "Krobus and I were talking and the time just flew by. Vulnerability can do that, I guess.$32#$b#Speaking of vulnerability. How've you been, @? Are you doing alright?$37#$b#I know you're shouldering a lot of people's problems on top of maintaining your farm.$21",
+"Events.S&S.Ch1.10H1.Mateo.14": "Well, @. I've got your back. If you ever need anything, just call me, alright?$1#$b#There will always be a seat at the table for you in the guild, and Emeritus will be eagerly expecting visits.$32",
 "Events.S&S.Ch1.10H1.Mateo.15": "Thank you for everything, @. May your sword always be sharp, and your adventures never ending.$1",
-"Events.S&S.Ch1.10H1.Message.2": "I hope you enjoyed Mateo's story; I had a great time telling it! This mod and my future works are dedicated to the memory of TheLoreSeeker. May your adventures be never ending. Signed with love, Desty Nova.",
 
 // 10 HEARTS PT 1 (ROMANTIC FORK)
 "Events.S&S.Ch1.10H1.Mateo.16": "What do you need, @? I'm all ears.$32",
@@ -1359,7 +1358,6 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.14H.Mateo.3": "I've been sharpening my smithing skills, and excavating what little I could of this stuff; I was inspired, Sunshine.$39#$b#I made you this, because I want you to be safe no matter where your adventures take you.$42",
 "Events.S&S.Ch1.14H.Mateo.4": "You know, I never would have expected to make this much of a positive impact on the Valley.$38#$b#I feel like I've accomplished a lot that I thought I wouldn't be able to, like patch things up with Marlon and Gunther, or develop a friendship with Krobus.$70#$b#Even having the privilege of being married to you, @.$42#$b#It's been my greatest adventure, and I hope it never ends. I love you.$65",
 "Events.S&S.Ch1.14H.Mateo.5": "The sun'll shine on us again tomorrow, and we'll work harder, stretch our arms out further.$70#$b#We'll beat on against the current and move ceaselessly into the future, together.$39",
-"Events.S&S.Ch1.14H.Message.3": "I hope you enjoyed Mateo's story; I had a great time telling it! This mod and my future works are dedicated to the memory of TheLoreSeeker. May your adventures be never ending. Signed with love, Desty Nova.",
 
 /*
    _____ ____  _   _     _______ ____  _____ _____ _____  _____ 
@@ -2714,7 +2712,6 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch2.10H2.Response.2": "I'm happy to explore that with you, @.$10",
 "Events.S&S.Ch2.10H2.Hector.15": "Actually, I'd be happy to explore... you.$11",
 "Events.S&S.Ch2.10H2.Hector.16": "Exactly. Eloise has been right this whole time. Wolves are pack animals - they need socialization. Family, friends. Things to care for.$14#$b#I'm so thankful she, and you, taught me that. I look back on where I started, when we'd met... everything feels so differently.$12#$b#You're something else, @. I hope you know that.$7",
-"Events.S&S.Ch2.10H2.Message.2": "I hope you enjoyed Hector's story as much as I loved telling it! This and my future works are dedicated to LoreSeeker's memory. May your heart swell with mischief and mayhem. Signed with love, Desty Nova.",
 
 //HECTOR'S PENDANT RESPONSE
 
@@ -2752,7 +2749,6 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch2.14H.Hector.Message.1": "This fragment of Hector's circlet will double the drop rate of Druidic Essences. It's stored in your Powers menu.",
 "Events.S&S.Ch2.14H.Hector.3": "It broke during a conflict long ago - it's of no consequence, now. But I've held onto it out of sentiment...$12#$b#I'd like you to have it. This way, you'll think of me when we're apart. Like how I wear your pendant, and think of you.$13#$b#Maybe it's not the grandest thing, but-$15",
 "Events.S&S.Ch2.14H.Hector.4": "I love you, @. If you reach for the sky and can't quite make it, I'll bring it down for you. You are the parallel I'd lay my life on.$13", 
-"Events.S&S.Ch2.14H.Hector.Message.2": "I hope you enjoyed Hector's story as much as I loved telling it! This and my future works are dedicated to LoreSeeker's memory. May your heart swell with mischief and mayhem. Signed with love, Desty Nova.",
 
 
 /*
@@ -3817,5 +3813,6 @@ ________      ________ _   _ _______ _____
                                                                                             
 */
 
-"miscellaneous.CAGArtifactLedger.message": "Use the ledger to trade monster bones for artifacts & minerals."
+"miscellaneous.CAGArtifactLedger.message": "Use the ledger to trade monster bones for artifacts & minerals.",
+"miscellaneous.MermaidPendantCooldown": "%You haven't been dating very long - wait a while before you propose!",
 }

@@ -5,10 +5,10 @@
   <property name="Warp" value="1 16 MovieTheater 10 4"/>
  </properties>
  <tileset firstgid="1" name="movieScreen_TileSheet" tilewidth="16" tileheight="16" tilecount="320" columns="20">
-  <image source="MovieTheaterScreen_TileSheet.png" width="320" height="256"/>
+  <image source="PlanetariumCustomInterior.png" width="320" height="256"/>
  </tileset>
- <tileset firstgid="321" name="paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
-  <image source="paths.png" width="64" height="256"/>
+ <tileset firstgid="321" name="paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
+  <image source="paths.png" width="64" height="144"/>
  </tileset>
  <layer id="1" name="Back" width="14" height="17">
   <data encoding="csv">
@@ -65,7 +65,7 @@
 161,0,0,0,0,0,0,0,0,0,0,0,0,174,
 181,0,0,197,197,197,0,0,197,197,197,0,0,194,
 201,0,0,0,0,0,0,0,0,0,0,0,0,214,
-221,0,197,197,197,197,0,0,197,197,197,197,0,234,
+221,0,0,0,0,0,0,0,197,197,197,197,0,234,
 241,0,0,0,0,0,0,0,0,0,0,0,0,254,
 261,0,0,0,0,0,0,0,0,0,0,0,0,274,
 281,0,0,0,0,0,0,0,0,0,0,0,0,294,
@@ -86,7 +86,7 @@
 0,0,0,177,177,177,0,0,177,177,177,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,177,177,177,177,0,0,177,177,177,177,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,197,197,197,197,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,216,217,218,219,220,235,236,237,238,239,240,0,
