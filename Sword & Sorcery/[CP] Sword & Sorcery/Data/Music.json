@@ -10,7 +10,7 @@
                 "SnS.MateoTheme": {
                     "ID": "SnS.MateoTheme",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/MateoTheme.ogg}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/MateoTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
@@ -24,7 +24,7 @@
                 "SnS.HectorTheme": {
                     "ID": "SnS.HectorTheme",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/HectorTheme.ogg}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/HectorTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
@@ -38,7 +38,7 @@
                 "SnS.CirrusTheme": {
                     "ID": "SnS.CirrusTheme",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/CirrusTheme.ogg}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/CirrusTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
@@ -52,7 +52,7 @@
                 "SnS.KeytarSolo": {
                     "ID": "SnS.KeytarSolo",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/KeytarSolo.ogg}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/KeytarSolo.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
@@ -66,7 +66,7 @@
                 "SnS.DandelionTheme": {
                     "ID": "SnS.DandelionTheme",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/DandelionTheme.ogg}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DandelionTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
@@ -80,7 +80,7 @@
                 "SnS.RoslinTheme": {
                     "ID": "SnS.RoslinTheme",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/RoslinTheme.ogg}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/RoslinTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
@@ -94,7 +94,7 @@
                 "SnS.LonelyTheme": {
                     "ID": "SnS.LonelyTheme",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/LonelyTheme.ogg}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/LonelyTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
@@ -108,7 +108,7 @@
                 "SnS.LonelyThemeReprise": {
                     "ID": "SnS.LonelyThemeReprise",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/LonelyReprise.ogg}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/LonelyReprise.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
@@ -122,7 +122,7 @@
                 "SnS.DespairTheme": {
                     "ID": "SnS.DespairTheme",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/DespairTheme.ogg}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DespairTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
@@ -136,7 +136,7 @@
                 "SnS.HopeTheme": {
                     "ID": "SnS.HopeTheme",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/HopeTheme.ogg}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/HopeTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
@@ -150,7 +150,7 @@
                 "SnS.VulnerableTheme": {
                     "ID": "SnS.VulnerableTheme",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: assets/Music/VulnerableTheme.ogg}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/VulnerableTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
@@ -166,7 +166,7 @@
                     "Name": "Mateo's Theme (Never Ending Adventure)",
                     "Available": null
                 }
-            },
+            }
         },
         {
             "Action": "EditData",
@@ -176,7 +176,7 @@
                     "Name": "{{TrueName}}'s Theme (Circle of Thorns)",
                     "Available": null
                 }
-            },
+            }
         },
         {
             "Action": "EditData",
@@ -186,7 +186,7 @@
                     "Name": "Cirrus' Theme (Peace and Love on the Planet Earth)",
                     "Available": null
                 }
-            },
+            }
         },
         {
             "Action": "EditData",
@@ -196,7 +196,7 @@
                     "Name": "Cirrus' Keytar Solo",
                     "Available": null
                 }
-            },
+            }
         },
         {
             "Action": "EditData",
@@ -206,7 +206,7 @@
                     "Name": "Dandelion's Theme (Giant Woman)",
                     "Available": null
                 }
-            },
+            }
         },
         {
             "Action": "EditData",
@@ -216,7 +216,7 @@
                     "Name": "Roslin's Theme (It's Over, Isn't It?)",
                     "Available": null
                 }
-            },
+            }
         },
         {
             "Action": "EditData",
@@ -226,7 +226,7 @@
                     "Name": "S&S: Lonely Theme (To Zanarkand)",
                     "Available": null
                 }
-            },
+            }
         },
         {
             "Action": "EditData",
@@ -236,7 +236,7 @@
                     "Name": "S&S: Lonely Theme Reprised (To Zanarkand)",
                     "Available": null
                 }
-            },
+            }
         },
         {
             "Action": "EditData",
@@ -246,7 +246,7 @@
                     "Name": "S&S: Despair Theme",
                     "Available": null
                 }
-            },
+            }
         },
         {
             "Action": "EditData",
@@ -256,7 +256,7 @@
                     "Name": "S&S: Hope Theme",
                     "Available": null
                 }
-            },
+            }
         },
         {
             "Action": "EditData",
@@ -266,11 +266,7 @@
                     "Name": "S&S: Vulnerable Theme (Dearly Beloved)",
                     "Available": null
                 }
-            },
-        },
-        
-        
-        
+            }
+        }
      ]
-
 }
