@@ -123,15 +123,15 @@ namespace CircleOfThornsSMAPI
                 new string[][]
                 {
                     null,
-                    new string[] { "Ancient Amaranth Seeds", "Ancient Epiphytic Fern Seeds" },
-                    new string[] { "Ancient Glowing Polypore Mushroom Spores" },
+                    new string[] { "Ancient Amaranth Seeds" },
+                    new string[] { "Ancient Glowing Polypore Mushroom Spores", "Ancient Epiphytic Fern Seeds" },
                     new string[] { "Ancient Wild Fairy Rose Seeds" },
                     new string[] { "Ancient Elderberry Seeds" },
                     null,
                     new string[] { "Ancient Bottle Gourd Seeds", "swordandsorcery.lavaeelandstirfriedancientbottlegourd" },
                     new string[] { "Ancient Giant Apple Berry Seeds", "swordandsorcery.mushroomsredsauce" },
                     new string[] { "Ancient Azure Detura", "swordandsorcery.ferngreensandpineapple" },
-                    new string[] { "Ancient Glowing Huckleberry Seeds", "swordandsorcery.ancienthuckleberryicecream" },
+                    new string[] { "Ancient Glowing Huckleberry Seeds", "swordandsorcery.ancienthuckleberryicecream", "Druidic Totem Fetish" },
                     null,
                 };
 
@@ -147,9 +147,9 @@ namespace CircleOfThornsSMAPI
             {
                 ret.Add(I18n.Recipe_Crafting(new CraftingRecipe(recipes[level][0], false).DisplayName));
                 //Game1.player.craftingRecipes.TryAdd(recipes[level][0], 0);
-                if (recipes[level].Length == 2)
+                if (recipes[level].Length >= 2)
                 {
-                    if (level == 1)
+                    if (level == 2)
                     {
                         //Game1.player.craftingRecipes.TryAdd(recipes[level][1], 0);
                         ret.Add(I18n.Recipe_Crafting(new CraftingRecipe(recipes[level][1], false).DisplayName));
@@ -160,6 +160,10 @@ namespace CircleOfThornsSMAPI
                         ret.Add(I18n.Recipe_Cooking(new CraftingRecipe(recipes[level][1], true).DisplayName));
                     }
                 }
+                if (recipes[level].Length == 3)
+                {
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe(recipes[level][2], false).DisplayName));
+                }
             }
 
             return ret;
@@ -169,5 +173,7 @@ namespace CircleOfThornsSMAPI
         {
             return I18n.Druidics_Level_Generic(bonus: level);
         }
+
+        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains("SnS.Ch2.Hector.16");
     }
 }

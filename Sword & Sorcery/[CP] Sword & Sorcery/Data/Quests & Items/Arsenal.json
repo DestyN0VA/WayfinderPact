@@ -1,0 +1,136 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "swordandsorcery.ExquisiteEmerald": {
+          "Name": "Exquisite Emerald",
+          "DisplayName": "{{i18n: arsenal.exquisite-emerald.name}}",
+          "Description": "{{i18n: arsenal.exquisite-emerald.description}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Price": 2500,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/arsenal_1.png}}",
+          "SpriteIndex": 0,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "exquisite_gem"
+          ],
+      
+        },
+        "swordandsorcery.ExquisiteRuby": {
+          "Name": "Exquisite Ruby",
+          "DisplayName": "{{i18n: arsenal.exquisite-ruby.name}}",
+          "Description": "{{i18n: arsenal.exquisite-ruby.description}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Price": 2500,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/arsenal_1.png}}",
+          "SpriteIndex": 2,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "exquisite_gem"
+          ],
+        },
+        "swordandsorcery.ExquisiteTopaz": {
+          "Name": "Exquisite Topaz",
+          "DisplayName": "{{i18n: arsenal.exquisite-topaz.name}}",
+          "Description": "{{i18n: arsenal.exquisite-topaz.description}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Price": 800,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/arsenal_1.png}}",
+          "SpriteIndex": 1,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "exquisite_gem"
+          ],
+        },
+        "swordandsorcery.ExquisiteJade": {
+          "Name": "Exquisite Jade",
+          "DisplayName": "{{i18n: arsenal.exquisite-jade.name}}",
+          "Description": "{{i18n: arsenal.exquisite-jade.description}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Price": 2000,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/arsenal_1.png}}",
+          "SpriteIndex": 3,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "exquisite_gem"
+          ],
+        },
+        "swordandsorcery.ExquisiteAquamarine": {
+          "Name": "Exquisite Aquamarine",
+          "DisplayName": "{{i18n: arsenal.exquisite-aquamarine.name}}",
+          "Description": "{{i18n: arsenal.exquisite-aquamarine.description}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Price": 1800,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/arsenal_1.png}}",
+          "SpriteIndex": 6,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "exquisite_gem"
+          ],
+        },
+        "swordandsorcery.ExquisiteAmethyst": {
+          "Name": "Exquisite Amethyst",
+          "DisplayName": "{{i18n: arsenal.exquisite-amethyst.name}}",
+          "Description": "{{i18n: arsenal.exquisite-amethyst.description}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Price": 1000,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/arsenal_1.png}}",
+          "SpriteIndex": 4,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "exquisite_gem"
+          ],
+        },
+        "swordandsorcery.ExquisiteDiamond": {
+          "Name": "Exquisite Diamond",
+          "DisplayName": "{{i18n: arsenal.exquisite-diamond.name}}",
+          "Description": "{{i18n: arsenal.exquisite-diamond.description}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Price": 7500,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/arsenal_1.png}}",
+          "SpriteIndex": 5,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "exquisite_gem"
+          ],
+        },
+        "swordandsorcery.ArcanePrimer": {
+          "Name": "Arcane Primer",
+          "DisplayName": "{{i18n: arsenal.arcane-primer.name}}",
+          "Description": "{{i18n: arsenal.arcane-primer.description}}",
+          "Type": "Crafting",
+          "Category": -8,
+          "Price": 10000,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/arsenal_1.png}}",
+          "SpriteIndex": 7,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+        },
+      }
+    },
+    // CRAFTING RECIPES 
+    {
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "swordandsorcery.ExquisiteEmerald": "60 50 74 1/meow/swordandsorcery.ExquisiteEmerald 1/false/null/{{i18n:arsenal.exquisite-emerald.name}}/{{i18n:arsenal.exquisite-emerald.description}}",
+        "swordandsorcery.ExquisiteRuby": "64 50 74 1/meow/swordandsorcery.ExquisiteRuby 1/false/null/{{i18n:arsenal.exquisite-ruby.name}}/{{i18n:arsenal.exquisite-ruby.description}}",
+        "swordandsorcery.ExquisiteTopaz": "68 50 74 1/meow/swordandsorcery.ExquisiteTopaz 1/false/null/Exquisite Topaz/{{i18n:arsenal.exquisite-topaz.name}}/{{i18n:arsenal.exquisite-topaz.description}}",
+        "swordandsorcery.ExquisiteAquamarine": "62 50 74 1/meow/swordandsorcery.ExquisiteAquamarine 1/false/null/{{i18n:arsenal.exquisite-aquamarine.name}}/{{i18n:arsenal.exquisite-aquamarine.description}}",
+        "swordandsorcery.ExquisiteAmethyst": "66 50 74 1/meow/swordandsorcery.ExquisiteAmethyst 1/false/null/{{i18n:arsenal.exquisite-amethyst.name}}/{{i18n:arsenal.exquisite-amethyst.description}}",
+        "swordandsorcery.ExquisiteJade": "70 50 74 1/meow/swordandsorcery.ExquisiteJade 1/false/null/{{i18n:arsenal.exquisite-jade.name}}/{{i18n:arsenal.exquisite-jade.description}}",
+        "swordandsorcery.ExquisiteDiamond": "72 50 74 1/meow/swordandsorcery.ExquisiteDiamond 1/false/null/{{i18n:arsenal.exquisite-diamond.name}}/{{i18n:arsenal.exquisite-diamond.description}}",
+        "swordandsorcery.ArcanePrimer": "797 1 896 1/meow/swordandsorcery.ArcanePrimer 1/false/null/{{i18n:arsenal.arcane-primer.name}}/{{i18n:arsenal.arcane-primer.description}}",
+      }
+    },
+  ]
+}

@@ -4,18 +4,19 @@
    | when the project is compiled.
    | 
    | Changes made to this file may be overwritten.
+   | 
    */
   "$schema": "https://smapi.io/schemas/manifest.json",
   "UniqueID": "KCC.SnS",
-  "Name": "Sword and Sorcery [SMAPI]",
+  "Name": "Sword and Sorcery (SMAPI Component)",
   "Author": "DestyNova, spacechase0",
-  "Version": "1.0.0-Debug",
+  "Version": "1.0.1-Debug",
   "Description": "...",
   "EntryDll": "SwordAndSorcerySMAPI.dll",
   "Dependencies": [
     {
       "UniqueID": "spacechase0.SpaceCore",
-      "MinimumVersion": "1.18.0"
+      "MinimumVersion": "1.19.1"
     }
   ]
 }

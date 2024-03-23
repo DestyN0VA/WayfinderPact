@@ -3,9 +3,9 @@
   <PropertyGroup>
 	  <Name>Sword and Sorcery (SMAPI Component)</Name>
 	  <Description>...</Description>
-	  <UniqueId>DestyNova.SwordAndSorcery.SMAPI</UniqueId>
+	  <UniqueId>KCC.SnS</UniqueId>
 	  <Authors>DestyNova, spacechase0</Authors>
-	  <Version>1.0</Version>
+	  <Version>1.0.1</Version>
     <TargetFramework>net6.0</TargetFramework>
 	  <EnableHarmony>true</EnableHarmony>
 	  <LangVersion>latest</LangVersion>

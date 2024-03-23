@@ -100,8 +100,8 @@ namespace SwordAndSorcerySMAPI
                     ret.Add(I18n.RogueSkill_Unlock_2());
                     break;
                 case 3:
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("meow.firestorm-arrow", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("meow.icicle-arrow", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("swordandsorcery.firestorm-arrow", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("swordandsorcery.icicle-arrow", false).DisplayName));
                     break;
                 case 4:
                     ret.Add(I18n.RogueSkill_Unlock_4());
@@ -110,13 +110,13 @@ namespace SwordAndSorcerySMAPI
                     ret.Add(I18n.RogueSkill_Unlock_6());
                     break;
                 case 7:
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("meow.windwaker-arrow", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("swordandsorcery.windwaker-arrow", false).DisplayName));
                     break;
                 case 8:
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("meow.ricochet-arrow", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("swordandsorcery.ricochet-arrow", false).DisplayName));
                     break;
                 case 9:
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("meow.lightbringer-arrow", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("swordandsorcery.lightbringer-arrow", false).DisplayName));
                     break;
             }
 
@@ -130,6 +130,7 @@ namespace SwordAndSorcerySMAPI
         {
             return I18n.Level_Health(3 * level);
         }
+        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains("SnS.Ch1.Mateo.18");
     }
 
     [HarmonyPatch(typeof(LevelUpMenu), nameof(LevelUpMenu.RevalidateHealth))]
@@ -156,7 +157,7 @@ namespace SwordAndSorcerySMAPI
 
             var data = __instance.GetFarmerExtData();
             float exp = data.expRemainderRogue.Value + howMuch / 2f;
-            __instance.AddCustomSkillExperience(ModCoT.Skill, (int)MathF.Truncate(exp));
+            __instance.AddCustomSkillExperience(ModUP.Skill, (int)MathF.Truncate(exp));
             data.expRemainderRogue.Value = exp - MathF.Truncate(exp);
         }
     }

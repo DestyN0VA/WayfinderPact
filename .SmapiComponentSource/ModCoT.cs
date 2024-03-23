@@ -21,6 +21,8 @@ using System.Runtime.CompilerServices;
 
 using SwordAndSorcerySMAPI;
 using SpaceCore;
+using StardewValley.GameData.HomeRenovations;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CircleOfThornsSMAPI
 {
@@ -339,11 +341,12 @@ namespace CircleOfThornsSMAPI
     {
         public static bool Prefix(FruitTree __instance, ref bool __result)
         {
-            if (__instance.treeId.Value != "swordandsorcery.ancientglowinghuckleberry")
+            if (__instance.treeId.Value != "swordandsorcery.ancientglowinghuckleberry.seed")
                 return true;
 
             var season = Game1.GetSeasonForLocation(__instance.Location);
             __result = season is Season.Summer or Season.Fall;
+            __result = __result || __instance.IgnoresSeasonsHere();
 
             return false;
         }
@@ -354,7 +357,7 @@ namespace CircleOfThornsSMAPI
     {
         public static bool Prefix(FruitTree __instance, SpriteBatch spriteBatch, NetBool ___falling, float ___shakeTimer, float ___shakeRotation, List<Leaf> ___leaves, float ___alpha )
         {
-            if (__instance.treeId.Value != "swordandsorcery.ancientglowinghuckleberry")
+            if (__instance.treeId.Value != "swordandsorcery.ancientglowinghuckleberry.seed")
                 return true;
 
             Season season = Game1.GetSeasonForLocation(__instance.Location);
@@ -364,6 +367,7 @@ namespace CircleOfThornsSMAPI
             }
             if ((int)__instance.growthStage < 4)
             {
+                /*
                 Vector2 positionOffset = new Vector2((float)Math.Max(-8.0, Math.Min(64.0, Math.Sin((double)(__instance.Tile.X * 200f) / (Math.PI * 2.0)) * -16.0)), (float)Math.Max(-8.0, Math.Min(64.0, Math.Sin((double)(__instance.Tile.X * 200f) / (Math.PI * 2.0)) * -16.0))) / 2f;
                 Rectangle sourceRect = Rectangle.Empty;
                 sourceRect = (int)__instance.growthStage switch
@@ -374,12 +378,16 @@ namespace CircleOfThornsSMAPI
                     _ => new Rectangle(144, (int)__instance.GetSpriteRowNumber() * 5 * 16, 48, 80),
                 };
                 spriteBatch.Draw(__instance.texture, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f + positionOffset.X, __instance.Tile.Y * 64f - (float)sourceRect.Height + 128f + positionOffset.Y)), sourceRect, Color.White, ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (float)__instance.getBoundingBox().Bottom / 10000f - __instance.Tile.X / 1000000f);
+                */
+                Texture2D tex = __instance.texture;
+                Rectangle rect = new(Math.Min(0, 3) * 48, 0, 48, 80);
+                spriteBatch.Draw(tex, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f, __instance.Tile.Y * 64f + 64f)), rect, ((int)__instance.struckByLightningCountdown > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (float)(__instance.getBoundingBox().Bottom - 16) / 10000f + 0.001f - __instance.Tile.X / 1000000f);
             }
             else
             {
                 if (!__instance.stump || (bool)___falling)
                 {
-                    Texture2D tex = ModCoT.huckleberryTex;
+                    Texture2D tex = __instance.texture;
                     Rectangle rect = new(Math.Min(__instance.fruit.Count, 3) * 48, 0, 48, 80);
 
                     /*

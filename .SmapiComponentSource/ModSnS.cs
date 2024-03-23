@@ -120,7 +120,7 @@ namespace SwordAndSorcerySMAPI
         public KeybindList ThrowShieldKey = new(SButton.R);
     }
 
-    public class ModSnS : StardewModdingAPI.Mod
+    public partial class ModSnS : StardewModdingAPI.Mod
     {
         public static ModSnS instance;
         public static Configuration Config { get; set; }
@@ -564,7 +564,7 @@ namespace SwordAndSorcerySMAPI
     }
 
     [HarmonyPatch(typeof(SpecialOrder), nameof(SpecialOrder.IsTimedQuest))]
-    public static class SpecialOrderUntimedQuestsPatch
+    public static class SpecialOrderUntimedQuestsPatch1
     {
         public static void Postfix(SpecialOrder __instance, ref bool __result)
         {
@@ -572,6 +572,21 @@ namespace SwordAndSorcerySMAPI
             {
                 __result = false;
             }
+        }
+    }
+
+    [HarmonyPatch(typeof(SpecialOrder), nameof(SpecialOrder.SetDuration))]
+    public static class SpecialOrderUntimedQuestsPatch2
+    {
+        public static bool Prefix(SpecialOrder __instance)
+        {
+            // I don't know why this is necessary
+            if (__instance.questKey.Value.StartsWith("CAGQuest.UntimedSpecialOrder") || __instance.questKey.Value == "Mateo.SpecialOrders.BuildGuild")
+            {
+                __instance.dueDate.Value = Game1.Date.TotalDays + 999;
+                return false;
+            }
+            return true;
         }
     }
 

@@ -38,6 +38,7 @@
   "keybind.ability.2.7": "Ability (Bar 2, Slot 7)",
   "keybind.ability.2.8": "Ability (Bar 2, Slot 8)",
 
+
   // Abiltiies
   "ability.shadowstep.name": "Shadowstep",
   "ability.shadowstep.description": "Hide in the shadows, making your next strike a critical.^Aether Cost: 15",
@@ -52,7 +53,7 @@
 
   // NEA
   "Mateo.RejectBouquet": "Did Aideen help you put that bouquet together, @? It looks beautiful.",
-  "rogue-skill.name": "Rogue",
+  "rogue-skill.name": "Artificer",
   "rogue-skill.unlock.1": "Adds an armor slot and a bow tool, craftable at the Underforge.",
   "rogue-skill.unlock.2": "Purified ore now has a chance of dropping from their respective nodes, to be used at the Underforge.",
   "rogue-skill.unlock.4": "Exquisite gems now have a chance of dropping from their respective nodes, to be used at the Underforge.",
@@ -69,6 +70,41 @@
   "rogue-skill.profession.shadowstep.description": "Ability: Shadowstep^Become hidden, reducing most monster aggro until you attack.^Your first attack is a critical.",
   "rogue-skill.profession.hunters-mark.name": "Hunter's Mark'",
   "rogue-skill.profession.hunters-mark.description": "Once a creature is attacked, consecutive hits on the same creature do more damage.",
+
+  "anvil.valid-options": "Valid Options:",
+  "anvil.gem-socket": "Exquisite Gem Socket",
+  "anvil.coating": "Weapon Coating",
+  "anvil.alloying": "Blade Alloying",
+  "anvil.not-here": "That can't go here.",
+  "anvil.not-enough": "You need {{qty}} of that for this effect.",
+  "anvil.locked": "Locked until Artificer {{level}}",
+  "tooltip.gem.(O)swordandsorcery.ExquisiteEmerald": "Evasive",
+  "tooltip.gem.(Oswordandsorcery.ExquisiteRuby": "Harming",
+  "tooltip.gem.(O)swordandsorcery.ExquisiteTopaz": "Defensive",
+  "tooltip.gem.(O)swordandsorcery.ExquisiteAquamarine": "Critical",
+  "tooltip.gem.(O)swordandsorcery.ExquisiteAmethyst": "Freezing",
+  "tooltip.gem.(O)swordandsorcery.ExquisiteJade": "Restful",
+  "tooltip.gem.(O)swordandsorcery.ExquisiteDiamond": "Healthy",
+  "tooltip.coating.(O)766": "Slimy",
+  "description.coating.(O)766": "Slots down enemies upon hit.",
+  "tooltip.coating.(O)769": "Shadow Duplicates",
+  "description.coating.(O)769": "Basic attacks affect all four cardinal directions. (Invisible)",
+  "tooltip.coating.(O)768": "Explosive Demise",
+  "description.coating.(O)768": "Upon killing a mob, they blow up. (No damage to farmer.)",
+  "tooltip.coating.(O)684": "Greedy",
+  "description.coating.(O)684": "Mob drops are rolled twice.",
+  "tooltip.coating.(O)767": "Floating",
+  "description.coating.(O)767": "You can attack across stones and other objects.",
+  "tooltip.alloying.(O)swordandsorcery.PureCopperOre": "Copper Alloy",
+  "description.alloying.(O)swordandsorcery.PureCopperOre": "+5% damage",
+  "tooltip.alloying.(O)swordandsorcery.PureIronOre": "Iron Alloy",
+  "description.alloying.(O)swordandsorcery.PureIronOre": "+10% damage",
+  "tooltip.alloying.(O)swordandsorcery.PureGoldOre": "Gold Alloy",
+  "description.alloying.(O)swordandsorcery.PureGoldOre": "+15% damage",
+  "tooltip.alloying.(O)swordandsorcery.PureIridiumOre": "Iridium Alloy",
+  "description.alloying.(O)swordandsorcery.PureIridiumOre": "+20% damage",
+  "tooltip.alloying.(O)swordandsorcery.PureRadioactiveOre": "Radioactive Alloy",
+  "description.alloying.(O)swordandsorcery.PureRadioactiveOre": "+25% damage",
 
   // COT
   "shapeshifted": "Shapeshifted",
