@@ -24,7 +24,7 @@
             "Action": "EditImage",
             "Target": "Portraits/Cirrus, Characters/Cirrus, Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock, Characters/spring_Cirrus, Characters/summer_Cirrus, Characters/fall_Cirrus, Characters/Cirrus_beach, Characters/Cirrus_Glamrock",
             "PatchMode": "Overlay",
-            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Hair Overlays/cirrus_{{CirrusHairColor}}_hair_overlay.png",
+            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Hair/{{CirrusHairColor}}.png",
             "Update": "OnTimeChange, OnLocationChange",
             "When": { "HasFile:{{FromFile}}": true }
         },
@@ -33,7 +33,7 @@
             "Action": "EditImage",
             "Target": "Portraits/winter_Cirrus, Characters/winter_Cirrus",
             "PatchMode": "Overlay",
-            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Hair Overlays/cirrus_{{CirrusHairColor}}_winter_hair_overlay.png",
+            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Hair/{{CirrusHairColor}}_winter.png",
             "Update": "OnTimeChange, OnLocationChange",
             "When": { "HasFile:{{FromFile}}": true }
         },
