@@ -10,7 +10,9 @@
         //CIRRUS' STRINGS 
 
         "IncrediWoman": "{{i18n:Strings.Cirrus.IncrediWoman}}",
+        "SnackStash": "{{i18n:Strings.Cirrus.SnackStash}}",
         "MaritaFlamingo": "{{i18n:Strings.Cirrus.MaritaFlamingo}}",
+        "CirrusStars": "{{i18n:Strings.Cirrus.CirrusStars}}",
         "PlasticLunch": "{{i18n:Strings.Cirrus.PlasticLunch}}",
         "BoardedDoor":"{{i18n:Strings.Cirrus.BoardedDoor}}",
         "CirrusPoolTable": "{{i18n:Strings.Cirrus.PoolTable}}",
@@ -30,6 +32,7 @@
         "PosterShrine": "{{i18n:Strings.Cirrus.PosterShrine}}",
         "SignedGuitar": "{{i18n:Strings.Cirrus.SignedGuitar}}",
         "DumpItTable": "{{i18n:Strings.Cirrus.DumpItTable}}",
+        "DumpItTable2": "{{i18n:Strings.Cirrus.DumpItTable2}}",
         "FavoriteMug": "{{i18n:Strings.Cirrus.FavoriteMug}}",
     }
    }

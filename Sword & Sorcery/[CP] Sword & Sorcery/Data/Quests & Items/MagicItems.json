@@ -146,6 +146,14 @@
         },
       }
     },
+    // CRAFTING RECIPES 
+    {
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "Druidic Totem Fetish": "swordandsorcery.druidicessence 50/what is this for?/swordandsorcery.druidictotemfetish 1/false/null/{{i18n:magicitem.druidictotemfetish.name}}",
+      }
+    },
     {
       "Action": "EditData",
       "Target": "spacechase0.SpaceCore/ObjectExtensionData",
@@ -183,7 +191,6 @@
         "swordandsorcery.stygiumstatuette": {
           "CategoryTextOverride": "Corrupted Object"
         },
-        
       }
     },
   ]

@@ -234,31 +234,33 @@
             "Action": "EditMap",
             "Target": "Maps/EastScarp_Village",
             "FromFile": "Assets/Maps/PizzaVanPatch.tmx",
+            "Priority": "Late",
+            "PatchMode": "Overlay",
             "ToArea": {
               "X": 88,
-              "Y": 67,
+              "Y": 77,
               "Width": 11,
-              "Height": 16
+              "Height": 6
             },
             "MapTiles": [
                 {
                     "Position": {
-                        "X": 89,
-                        "Y": 75
+                        "X": 90,
+                        "Y": 81
                     },
                     "Layer": "Buildings",
                     "SetProperties": {
-                        "Action": "LockedDoorWarp 2 7 EastScarp_VanInterior 1000 2000"
+                        "Action": "LockedDoorWarp 2 4 EastScarp_VanInterior 1000 2000"
                     }
                 },
                 {
                     "Position": {
-                        "X": 90,
-                        "Y": 75
+                        "X": 89,
+                        "Y": 81
                     },
                     "Layer": "Buildings",
                     "SetProperties": {
-                        "Action": "LockedDoorWarp 2 7 EastScarp_VanInterior 1000 2000"
+                        "Action": "LockedDoorWarp 2 4 EastScarp_VanInterior 1000 2000"
                     }
                 }
             ],
@@ -281,7 +283,7 @@
                 "Height": 9
             },
             "When": {
-                "HasSeenEvent |contains=SnS.Ch4.Dandelion.PENDING": false
+                "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": false
             }
         },
 

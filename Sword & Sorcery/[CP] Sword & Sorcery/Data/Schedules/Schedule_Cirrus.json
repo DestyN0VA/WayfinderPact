@@ -16,20 +16,33 @@
 		},
 
 		{
-		"LogName":"Cirrus's Schedule - Unlocked",
+		"LogName":"Cirrus's Schedule - Unlocked (Van)",
 		"Action":"EditData",
 		"Target":"Characters/Schedules/Cirrus",
 		"Entries":
 		{
 			// Prior to Cirrus moving out of the van.
-			"spring": "0 EastScarp_DruidTower 1 27 2 Cirrus_loaf/1000 {{Random:EastScarp_DruidTower 4 24 2 Cirrus_kickysit++EastScarp_DruidTower 8 26 2 Cirrus_staticsit++EastScarp_DruidTower 9 7 2 Cirrus_kickysit++EastScarp_DruidTower 9 25 2 Cirrus_drink++ EastScarp_DruidTower 10 16 2 Cirrus_hip++EastScarp_DruidTower 6 5 2 Cirrus_loaf++EastScarp_DruidTower 6 5 2 Cirrus_gurdy++EastScarp_DruidTower 4 15 2 Cirrus_scritch|inputSeparator=++}}/1230 EastScarp_DruidTower 7 25 0/1300 {{Random:EastScarp_DruidTower 8 26 2 Cirrus_staticsit++EastScarp_DruidTower 10 16 2 Cirrus_hip++EastScarp_DruidTower 9 25 2 Cirrus_drink++EastScarp_DruidTower 9 7 2 Cirrus_kickysit++EastScarp_DruidTower 6 5 2 Cirrus_loaf++EastScarp_DruidTower 6 5 2 Cirrus_gurdy++EastScarp_DruidTower 4 15 2 Cirrus_scritch++EastScarp_DruidTower 4 24 2 Cirrus_kickysit|inputSeparator=++}}/1530 EastScarp_DruidTower 6 6 3/1600 {{Random:EastScarp_DruidTower 6 5 2 Cirrus_gurdy++EastScarp_DruidTower 4 15 2 Cirrus_scritch++EastScarp_DruidTower 4 24 2 Cirrus_kickysit++EastScarp_DruidTower 8 26 2 Cirrus_staticsit++EastScarp_DruidTower 9 7 2 Cirrus_kickysit++EastScarp_DruidTower 6 5 2 Cirrus_loaf++EastScarp_DruidTower 10 16 2 Cirrus_hip++EastScarp_DruidTower 9 25 2 Cirrus_drink|inputSeparator=++}}/1830 EastScarp_DruidTower 2 15 0/1900 {{Random:EastScarp_DruidTower 9 7 2 Cirrus_kickysit++EastScarp_DruidTower 4 24 2 Cirrus_kickysit++EastScarp_DruidTower 8 26 2 Cirrus_staticsit++EastScarp_DruidTower 10 16 2 Cirrus_hip++EastScarp_DruidTower 9 25 2 Cirrus_drink++EastScarp_DruidTower 4 15 2 Cirrus_scritch++EastScarp_DruidTower 6 5 2 Cirrus_loaf++EastScarp_DruidTower 6 5 2 Cirrus_gurdy|inputSeparator=++}}/2300 EastScarp_DruidTower 1 27 2 Cirrus_loaf",
+			"rain": "0 EastScarp_VanInterior 11 4 2 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}/1200 EastScarp_VanInterior 5 4 0/1400 EastScarp_VanInterior 11 4 2 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}/1900 EastScarp_VanInterior 5 4 0/2200 EastScarp_VanInterior 11 4 2 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}",
+			"spring": "0 EastScarp_VanInterior 11 4 2 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}/1000 EastScarp_VanInterior 5 4 0/1200 EastScarp_Village 82 80 Cirrus_sidesit/1400 EastScarp_Village 26 61 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}/1600 EastScarp_Village 54 40 2 Cirrus_phonesit/1800 EastScarp_Village 97 80 1/2200 EastScarp_VanInterior 11 4 2 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}",
 		},
-			"When": { "HasSeenEvent |contains=SnS.Ch4.Cirrus.1": true }	
+			"When": { "HasSeenEvent |contains=SnS.Ch4.Cirrus.1": true, "HasSeenEvent |contains=SnS.Ch4.Cirrus.13": false }	
+		},
+		{
+			"LogName": "Cirrus's Schedule - Unlocked (Lion's Mane)",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Cirrus",
+			"Entries": {
+				// After moving into the Lion's Mane.
+				"rain": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1500 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1800 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
+				"spring": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1500 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1800 EastScarp_Village 26 61 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle|inputSeparator=++}}/2000 EastScarp_Village 54 6 3/2200 EastScarp_LionsMane 18 5 1",
+				"spring_Sat": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1500 EastScarp_CoastalGuild {{Random:8 13 3++15 12 0++26 15 3|inputSeparator=++}}/1800 EastScarp_Village 26 61 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle|inputSeparator=++}}/2000 EastScarp_Village 54 6 3/2200 EastScarp_LionsMane 18 5 1",
+				"spring_Sun": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1500 EastScarp_CoastalGuild {{Random:8 13 3++15 12 0++26 15 3|inputSeparator=++}}/1800 EastScarp_Village 26 61 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle|inputSeparator=++}}/2000 EastScarp_Village 54 6 3/2200 EastScarp_LionsMane 18 5 1",
+				"fall_Tue": "0 Mountain 65 14 2/610 65 14 2 Cirrus_keytar/1300 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1500 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1800 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
+				"fall_Thu": "0 Mountain 65 14 2/610 65 14 2 Cirrus_keytar/1300 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1500 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1800 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
+			},
+			"When": {"HasSeenEvent |contains=SnS.Ch4.Cirrus.1": true, "HasSeenEvent |contains=SnS.Ch4.Cirrus.13": true}
 		},
 
-	
-
-		/*
 		{
 		"LogName":"Cirrus's Schedule - Night Market ",
 		"Action":"EditData",
@@ -37,28 +50,39 @@
 		"Entries":
 			{
 			// Cirrus will attend the Night Market.
-			"winter_15": "0 EastScarp_DruidTower 1 27 2 Cirrus_loaf/630 {{Random:EastScarp_VetHouse 3 23 2 Cirrus_hip++EastScarp_VetHouse 6 12 1++EastScarp_VetHouse 7 5 0++EastScarp_VetHouse 33 13 0|inputSeparator=++}}/1300 Beach 65 25 2 Cirrus_hip/2200 EastScarp_DruidTower 1 27 2 Cirrus_loaf",
-			"winter_16": "0 EastScarp_DruidTower 1 27 2 Cirrus_loaf/630 {{Random:EastScarp_VetHouse 3 23 2 Cirrus_hip++EastScarp_VetHouse 6 12 1++EastScarp_VetHouse 7 5 0++EastScarp_VetHouse 33 13 0|inputSeparator=++}}/1300 Beach 65 25 2 Cirrus_hip/2200 EastScarp_DruidTower 1 27 2 Cirrus_loaf",
-			"winter_17": "0 EastScarp_DruidTower 1 27 2 Cirrus_loaf/630 {{Random:EastScarp_VetHouse 3 23 2 Cirrus_hip++EastScarp_VetHouse 6 12 1++EastScarp_VetHouse 7 5 0++EastScarp_VetHouse 33 13 0|inputSeparator=++}}/1300 Beach 65 25 2 Cirrus_hip/2200 EastScarp_DruidTower 1 27 2 Cirrus_loaf",
+			"winter_15": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1300 Beach 66 25 2 Cirrus_wiggleidle/2200 EastScarp_LionsMane 18 5 1",
+			"winter_16": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1300 Beach 66 25 2 Cirrus_wiggleidle/2200 EastScarp_LionsMane 18 5 1",
+			"winter_17": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1300 Beach 66 25 2 Cirrus_wiggleidle/2200 EastScarp_LionsMane 18 5 1",
 			},
-				"When": {"HasSeenEvent |contains=SnS.Ch3.Cirrus.6": true }		
+				"When": {"HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true }		
 		},
 
 		{
-		"LogName":"Mateo's Schedule - SVE Community Day",
+		"LogName":"Cirrus's Schedule - SVE Community Day",
 		"Action":"EditData",
-		"Target":"Characters/Schedules/Mateo",
+		"Target":"Characters/Schedules/Cirrus",
 		"Entries":
 			{
 			// Will attend Community Day if Stardew Valley Expanded is installed.
-			"spring_22": "0 EastScarp_DruidTower 1 27 2 Cirrus_loaf/630 {{Random:EastScarp_VetHouse 3 23 2 Cirrus_hip++EastScarp_VetHouse 6 12 1++EastScarp_VetHouse 7 5 0++EastScarp_VetHouse 33 13 0|inputSeparator=++}}/1030 CommunityCenter 56 13 2 Cirrus_hip/1700 {{Random:EastScarp_DruidTower 9 7 2 Cirrus_kickysit++EastScarp_DruidTower 4 24 2 Cirrus_kickysit++EastScarp_DruidTower 8 26 2 Cirrus_staticsit++EastScarp_DruidTower 10 16 2 Cirrus_hip++EastScarp_DruidTower 9 25 2 Cirrus_drink++EastScarp_DruidTower 4 15 2 Cirrus_scritch++EastScarp_DruidTower 6 5 2 Cirrus_loaf++EastScarp_DruidTower 6 5 2 Cirrus_gurdy|inputSeparator=++}}/2300 EastScarp_DruidTower 1 27 2 Cirrus_loaf",
-			"summer_22": "0 EastScarp_DruidTower 1 27 2 Cirrus_loaf/630 {{Random:EastScarp_VetHouse 3 23 2 Cirrus_hip++EastScarp_VetHouse 6 12 1++EastScarp_VetHouse 7 5 0++EastScarp_VetHouse 33 13 0|inputSeparator=++}}/1030 CommunityCenter 56 13 2 Cirrus_hip/1700 {{Random:EastScarp_DruidTower 9 7 2 Cirrus_kickysit++EastScarp_DruidTower 4 24 2 Cirrus_kickysit++EastScarp_DruidTower 8 26 2 Cirrus_staticsit++EastScarp_DruidTower 10 16 2 Cirrus_hip++EastScarp_DruidTower 9 25 2 Cirrus_drink++EastScarp_DruidTower 4 15 2 Cirrus_scritch++EastScarp_DruidTower 6 5 2 Cirrus_loaf++EastScarp_DruidTower 6 5 2 Cirrus_gurdy|inputSeparator=++}}/2300 EastScarp_DruidTower 1 27 2 Cirrus_loaf",
-			"fall_22": "0 EastScarp_DruidTower 1 27 2 Cirrus_loaf/630 {{Random:EastScarp_VetHouse 3 23 2 Cirrus_hip++EastScarp_VetHouse 6 12 1++EastScarp_VetHouse 7 5 0++EastScarp_VetHouse 33 13 0|inputSeparator=++}}/1030 CommunityCenter 56 13 2 Cirrus_hip/1700 {{Random:EastScarp_DruidTower 9 7 2 Cirrus_kickysit++EastScarp_DruidTower 4 24 2 Cirrus_kickysit++EastScarp_DruidTower 8 26 2 Cirrus_staticsit++EastScarp_DruidTower 10 16 2 Cirrus_hip++EastScarp_DruidTower 9 25 2 Cirrus_drink++EastScarp_DruidTower 4 15 2 Cirrus_scritch++EastScarp_DruidTower 6 5 2 Cirrus_loaf++EastScarp_DruidTower 6 5 2 Cirrus_gurdy|inputSeparator=++}}/2300 EastScarp_DruidTower 1 27 2 Cirrus_loaf",
-			"winter_22": "0 EastScarp_DruidTower 1 27 2 Cirrus_loaf/630 {{Random:EastScarp_VetHouse 3 23 2 Cirrus_hip++EastScarp_VetHouse 6 12 1++EastScarp_VetHouse 7 5 0++EastScarp_VetHouse 33 13 0|inputSeparator=++}}/1030 CommunityCenter 56 13 2 Cirrus_hip/1700 {{Random:EastScarp_DruidTower 9 7 2 Cirrus_kickysit++EastScarp_DruidTower 4 24 2 Cirrus_kickysit++EastScarp_DruidTower 8 26 2 Cirrus_staticsit++EastScarp_DruidTower 10 16 2 Cirrus_hip++EastScarp_DruidTower 9 25 2 Cirrus_drink++EastScarp_DruidTower 4 15 2 Cirrus_scritch++EastScarp_DruidTower 6 5 2 Cirrus_loaf++EastScarp_DruidTower 6 5 2 Cirrus_gurdy|inputSeparator=++}}/2300 EastScarp_DruidTower 1 27 2 Cirrus_loaf",
+			"spring_22": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/800 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1030 CommunityCenter 8 7 3/1700 EastScarp_LionsMane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
+			"summer_22": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/800 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1030 CommunityCenter 8 7 3/1700 EastScarp_LionsMane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
+			"fall_22": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/800 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1030 CommunityCenter 8 7 3/1700 EastScarp_LionsMane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
+			"winter_22": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/800 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1030 CommunityCenter 8 7 3/1700 EastScarp_LionsMane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
 			},
-				"When": {"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true, "HasSeenEvent |contains=SnS.Ch3.Cirrus.6": true }			
+				"When": {"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true, "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true}			
 		},
-		*/
+
+		{
+			"LogName": "Cirrus's Schedule - Marriage",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Cirrus",
+			"Entries": {
+				// For when Cirrus is married.
+				"marriage_Mon": "800 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1700 BusStop -1 23 3",
+				"marriage_Wed": "800 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1700 BusStop -1 23 3",
+				"marriage_Fri": "800 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1700 BusStop -1 23 3",
+			}
+		}
 
 		
 

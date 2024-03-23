@@ -33,6 +33,16 @@
                     },
                     "Home": [
                         {
+                            "ID": "Cirrus - Lion's Mane",
+                            "Location": "EastScarp_LionsMane",
+                            "Tile": {
+                                "X": 18,
+                                "Y": 5
+                            },
+                            "Direction": "Down",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch3.Cirrus.13"
+                        },
+                        {
                             "ID": "Cirrus - Van",
                             "Location": "EastScarp_VanInterior",
                             "Tile": {

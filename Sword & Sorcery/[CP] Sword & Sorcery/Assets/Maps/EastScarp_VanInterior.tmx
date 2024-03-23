@@ -2,7 +2,7 @@
 <map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="13" height="9" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="39">
  <properties>
   <property name="Music" value="SnS.CirrusTheme"/>
-  <property name="Warp" value="2 7 EastScarp_Village 89 76"/>
+  <property name="Warp" value="2 7 EastScarp_Village 90 82"/>
  </properties>
  <tileset firstgid="1" name="PizzaVanInterior" tilewidth="16" tileheight="16" tilecount="304" columns="19">
   <image source="PizzaVanInterior.png" width="304" height="256"/>
