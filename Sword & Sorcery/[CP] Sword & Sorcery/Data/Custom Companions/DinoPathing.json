@@ -11,9 +11,9 @@
                         "Y": "17"
                     },
                     "Layer": "Back",
-                    "SetProperties": {
-                        "CustomCompanions": "Spawn 1 DN.SnS.EmeritusInside"
-                    }
+                  "SetProperties": {
+                    "CustomCompanions": "Spawn 1 SnS.CC.DN.SnS.EmeritusInside"
+                  }
                 }
             ],
             "Update": "OnLocationChange",
@@ -34,15 +34,15 @@
                         "Y": "100"
                     },
                     "Layer": "Back",
-                    "SetProperties": {
-                        "CustomCompanions": "Spawn 1 DN.SnS.EmeritusOutside"
-                    }
+                  "SetProperties": {
+                    "CustomCompanions": "Spawn 1 SnS.CC.DN.SnS.EmeritusOutside"
+                  }
                 }
             ],
             "Update": "OnLocationChange",
             "When": {
               "Weather": "Sun",
-              "HasSeenEvent |contains=SnS.Ch1.Mateo.12": true,
+              "HasSeenEvent |contains=SnS.Ch1.Mateo.12": true
             }
         }
     ]

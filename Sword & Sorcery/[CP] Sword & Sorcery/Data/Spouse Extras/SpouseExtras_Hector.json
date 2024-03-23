@@ -5,62 +5,18 @@
         {
             "Action": "Load",
             "Target": "Maps/HectorSpouseRoom",
-            "FromFile": "Assets/Maps/{{TargetWithoutPath}}.tmx",
+            "FromFile": "Assets/Maps/HectorSpouseRoom.tmx",
             "When": {
-                "Relationship:Hector |contains=Married": true,
                 "HectorSpouseRoomConfig": true
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/SpouseRooms",
-            "When": {
-                "Relationship:Hector |contains=Married": true,
-                "HectorSpouseRoomConfig": true
-            },
-            "Entries": {
-                "Hector": "HectorSpouseRoom/0",
             }
         },
 
-        // HECTOR'S SPOUSE PATIO
+        // HECTOR'S SPOUSE PATIO 
         {
             "Action": "Load",
-            "Target": "Maps/Hector_OutsideArea",
-            "FromFile": "assets/Maps/spousePatiosHector.tmx",
+            "Target": "Maps/HectorSpousePatio",
+            "FromFile": "assets/Maps/HectorSpousePatio.tmx",
             "When": {
-                "Relationship:Hector |contains=Married": true,
-                "HectorSpousePatioConfig": true
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/SpousePatios",
-            "Entries": {
-                "Hector": "Hector_OutsideArea/0"
-            },
-            "When": {
-                "Relationship:Hector |contains=Married": true,
-                "HectorSpousePatioConfig": true
-            }
-        },
-        {
-            "Action": "EditMap",
-            "Target": "Maps/Hector_OutsideArea",
-            "MapTiles": [
-                {
-                    "Position": {
-                        "X": 2,
-                        "Y": 2
-                    },
-                    "Layer": "Buildings",
-                    "SetProperties": {
-                        "Action": "MagicWarp 6 28 EastScarp_DruidTower"
-                    }
-                }
-            ],
-            "When": {
-                "Relationship:Hector |contains=Married": true,
                 "HectorSpousePatioConfig": true
             }
         },

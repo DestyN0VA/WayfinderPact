@@ -26,10 +26,10 @@
                     "WinterStarParticipant": false,
                     "ShakePortraits": [5, 19, 20, 27],
                     "SpouseRoom": {
-                        "MapAsset": "DestyNova_Hector_SpouseRoom"
+                        "MapAsset": "HectorSpouseRoom"
                     },
                     "SpousePatio": {
-                        "MapAsset": "DestyNova_Hector_SpousePatio"
+                        "MapAsset": "HectorSpousePatio"
                     },
                     "Home": [
                         {

@@ -32,14 +32,11 @@
                         57
                     ],
                     "SpouseRoom": {
-                        "MapAsset": "DestyNova_Mateo_SpouseRoom"
+                        "MapAsset": "MateoSpouseRoom"
                     },
                     "SpousePatio": {
-                        "MapAsset": "DestyNova_Mateo_SpousePatio"
+                        "MapAsset": "MateoSpousePatio"
                     },
-                    "SpriteAnimationFrames": [
-                        [ 26 ]
-                    ],
                     "Home": [
                         {
                             "ID": "Mateo - Tent/Guild",
@@ -210,7 +207,7 @@
                         },
                         {
                             "ID": "Armor",
-                            "Condition": "Any \"LOCATION_NAME Target Mine\" \"EVENT_ID SnS.Ch1.Mateo.1\" \"EVENT_ID SnS.Ch1.Mateo.4\" \"EVENT_ID SnS.Ch1.Mateo.9\" \"EVENT_ID SnS.Ch1.Mateo.10\" \"EVENT_ID SnS.Ch1.Mateo.16\" \"EVENT_ID SnS.Ch1.Mateo.17\"",
+                            "Condition": "Any \"LOCATION_NAME Target Mine\" \"EVENT_ID SnS.Ch1.Mateo.0\" \"EVENT_ID SnS.Ch1.Mateo.4\" \"EVENT_ID SnS.Ch1.Mateo.9\" \"EVENT_ID SnS.Ch1.Mateo.10\" \"EVENT_ID SnS.Ch1.Mateo.16\" \"EVENT_ID SnS.Ch1.Mateo.17\"",
                             "Portrait": "Portraits/Armor_Mateo",
                             "Sprite": "Characters/Armor_Mateo",
                             "Precedence": -20

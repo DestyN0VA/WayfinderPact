@@ -922,9 +922,9 @@
 // BUILDING THE COASTAL GUILD & ES SPECIAL ORDER BOARD 
 "Quests.Mateo.SpecialOrders.BuildGuild.Name": "Mateo's Request",
 "Quests.Mateo.SpecialOrders.BuildGuild.Text": "Marlon and I need some supplies for the building and order board!", 
-"Quests.Mateo.SpecialOrders.BuildGuild.Objective.0.Text": "Deposit 500 pieces of wood into the barrel in front of the building..",
-"Quests.Mateo.SpecialOrders.BuildGuild.Objective.1.Text": "Deposit 300 stones into the barrel in front of the building..",
-"Quests.Mateo.SpecialOrders.BuildGuild.Objective.2.Text": "Deposit 100 pieces of hardwood into the barrel in front of the building..",
+"Quests.Mateo.SpecialOrders.BuildGuild.Objective.0.Text": "Deposit 500 pieces of wood onto the shelf in Robin's workshop.",
+"Quests.Mateo.SpecialOrders.BuildGuild.Objective.1.Text": "Deposit 300 stones onto the shelf in Robin's workshop.",
+"Quests.Mateo.SpecialOrders.BuildGuild.Objective.2.Text": "Deposit 100 pieces of hardwood onto the shelf in Robin's workshop.",
 
 // COASTAL GUILD SPECIAL ORDERS - MONSTER NAMES
 "Quests.Mateo.SpecialOrders.AQ1.0.LocalizedName": "Serpents",

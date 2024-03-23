@@ -5,55 +5,18 @@
         {
             "Action": "Load",
             "Target": "Maps/CirrusSpouseRoom",
-            "FromFile": "Assets/Maps/{{TargetWithoutPath}}.tmx",
+            "FromFile": "Assets/Maps/CirrusSpouseRoom.tmx",
             "When": {
-                "Relationship:Cirrus |contains=Married": true,
                 "CirrusSpouseRoomConfig": true
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/SpouseRooms",
-            "When": {
-                "Relationship:Cirrus |contains=Married": true,
-                "CirrusSpouseRoomConfig": true
-            },
-            "Entries": {
-                "Cirrus": "CirrusSpouseRoom/0",
             }
         },
 
         // CIRRUS' SPOUSE PATIO 
         {
-            "Action": "EditData",
-            "Target": "Data/SpousePatios",
-            "Entries": {
-                "Cirrus": "Cirrus_OutsideArea/0/40/0 0"
-            },
-            "When": {
-                "season": "winter, fall",
-                "Relationship:Cirrus |contains=Married": true,
-                "CirrusSpousePatioConfig": true
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/SpousePatios",
-            "Entries": {
-                "Cirrus": "Cirrus_OutsideArea/0/26/0 0"
-            },
-            "When": {
-                "season": "summer, spring",
-                "Relationship:Cirrus |contains=Married": true,
-                "CirrusSpousePatioConfig": true
-            }
-        },
-        {
             "Action": "Load",
-            "Target": "Maps/Cirrus_OutsideArea",
-            "FromFile": "assets/Maps/spousePatiosCirrus.tmx",
+            "Target": "Maps/CirrusSpousePatio",
+            "FromFile": "assets/Maps/CirrusSpousePatio.tmx",
             "When": {
-                "Relationship:Cirrus |contains=Married": true,
                 "CirrusSpousePatioConfig": true
             }
         },

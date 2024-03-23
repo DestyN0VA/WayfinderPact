@@ -5,55 +5,18 @@
         {
             "Action": "Load",
             "Target": "Maps/MateoSpouseRoom",
-            "FromFile": "Assets/Maps/{{TargetWithoutPath}}.tmx",
+            "FromFile": "Assets/Maps/MateoSpouseRoom.tmx",
             "When": {
-                "Relationship:Mateo |contains=Married": true,
                 "MateoSpouseRoomConfig": true
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/SpouseRooms",
-            "When": {
-                "Relationship:Mateo |contains=Married": true,
-                "MateoSpouseRoomConfig": true
-            },
-            "Entries": {
-                "Mateo": "MateoSpouseRoom/0",
             }
         },
 
         // MATEO'S SPOUSE PATIO 
         {
-            "Action": "EditData",
-            "Target": "Data/SpousePatios",
-            "Entries": {
-                "Mateo": "Mateo_OutsideArea/0/40/0 0"
-            },
-            "When": {
-                "season": "winter, fall",
-                "Relationship:Mateo |contains=Married": true,
-                "MateoSpousePatioConfig": true
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/SpousePatios",
-            "Entries": {
-                "Mateo": "Mateo_OutsideArea/0/26/0 0"
-            },
-            "When": {
-                "season": "summer, spring",
-                "Relationship:Mateo |contains=Married": true,
-                "MateoSpousePatioConfig": true
-            }
-        },
-        {
             "Action": "Load",
-            "Target": "Maps/Mateo_OutsideArea",
-            "FromFile": "assets/Maps/spousePatiosMateo.tmx",
+            "Target": "Maps/MateoSpousePatio",
+            "FromFile": "assets/Maps/MateoSpousePatio.tmx",
             "When": {
-                "Relationship:Mateo |contains=Married": true,
                 "MateoSpousePatioConfig": true
             }
         },

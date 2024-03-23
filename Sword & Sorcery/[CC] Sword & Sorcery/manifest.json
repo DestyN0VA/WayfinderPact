@@ -1,0 +1,17 @@
+{
+    "Name": "Emeritus & Book [CC]",
+    "Author": "DestyNova",
+    "Version": "1.0.0",
+    "Description": "The guild's mascot, Emeritus, and a silly little grimoire, Book.",
+    "UniqueID": "SnS.CC",
+    "UpdateKeys": [ "Nexus:???" ],
+    "ContentPackFor": {
+      "UniqueID": "PeacefulEnd.CustomCompanions"
+    },
+    "Dependencies": [
+       {
+          "UniqueID": "PeacefulEnd.CustomCompanions",
+          "IsRequired": true,
+       }
+    ]
+  }
