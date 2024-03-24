@@ -2,7 +2,7 @@
   "Changes": [
     {
       "Action": "Load",
-      "Target": "Maps/EastScarp_MateoHome, Maps/EastScarp_CoastalGuild, Maps/EastScarp_DruidTower, Maps/EastScarp_DruidGrove, Maps/EastScarp_RiverStage1, Maps/EastScarp_RiverStage2, Maps/EastScarp_RiverStage3, Maps/EastScarp_RiverStage4, Maps/EastScarp_DateMine, Maps/EastScarp_LavaMine, Maps/EastScarp_IntroMine, Maps/EastScarp_HectorForest, Maps/EastScarp_VanInterior, Maps/EastScarp_LionsMane, Maps/EastScarp_Planetarium",
+      "Target": "Maps/EastScarp_MateoHome, Maps/EastScarp_CoastalGuild, Maps/EastScarp_DruidTower, Maps/EastScarp_DruidGrove, Maps/EastScarp_RiverStage1, Maps/EastScarp_RiverStage2, Maps/EastScarp_RiverStage3, Maps/EastScarp_RiverStage4, Maps/EastScarp_DateMine, Maps/EastScarp_LavaMine, Maps/EastScarp_IntroMine, Maps/EastScarp_HectorForest, Maps/EastScarp_VanInterior, Maps/EastScarp_LionsMane, Maps/EastScarp_Planetarium, Maps/EastScarp_Underforge",
       "FromFile": "Assets/Maps/{{TargetWithoutPath}}.tmx"
     },
     {
@@ -342,6 +342,29 @@
             "Y": 15
           },
           "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
+      "LogName": "Underforge",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_Underforge": {
+          "DisplayName": "{{i18n:MapName.Underforge}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_Underforge"
+          },
+          "DefaultArrivalTile": {
+            "X": 24,
+            "Y": 5
+          },
+          "ExcludeFromNpcPathfinding": true,
           "ArtifactSpots": [],
           "FishAreas": {},
           "Fish": [],

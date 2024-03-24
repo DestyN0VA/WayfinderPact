@@ -357,5 +357,44 @@
             }
         },
 
+        // ADDS THE UNDERFORGE WARP FROM GUILD
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_CoastalGuild",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 20,
+                        "Y": 13
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 24 5 EastScarp_Underforge"
+                    }
+                }
+            ],
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch1.Mateo.PENDING": true
+            }
+        },
+
+        // ADDS THE UNDERFORGE WARP TO GUILD
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_Underforge",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 24,
+                        "Y": 3
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 20 14 EastScarp_CoastalGuild"
+                    }
+                }
+            ],
+        },
+
     ]
 }
