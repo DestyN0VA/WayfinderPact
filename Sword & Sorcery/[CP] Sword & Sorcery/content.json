@@ -80,7 +80,7 @@
           "Id": "SnS.TriggerActions.SetHairColorCoolDown",
           "Trigger": "DayStarted",
           "MarkActionApplied": false,
-          "Condition": "{{CirrusHealthyHairHabits}}, {{CirrusRainbowHair |contains=random}}, PLAYER_STAT Current CirrusHairCooldown 0 0",
+          "Condition": "{{CirrusRainbowHair |contains=RealisticRandom}}, PLAYER_STAT Current CirrusHairCooldown 0 0",
           "Actions": [
             "IncrementStat CirrusHairCooldown {{Random: {{range: 3, 4}}}}",
             "IncrementStat CirrusHairColor -1",
@@ -95,7 +95,7 @@
           "Id": "SnS.TriggerActions.CooldownCountdown",
           "Trigger": "DayEnding",
           "MarkActionApplied": false,
-          "Condition": "{{CirrusHealthyHairHabits}}, {{CirrusRainbowHair |contains=random}}, PLAYER_STAT Current CirrusHairCooldown 1",
+          "Condition": "{{CirrusRainbowHair |contains=RealisticRandom}}, PLAYER_STAT Current CirrusHairCooldown 1",
           "Action": "IncrementStat CirrusHairCooldown -1"
         },
         
@@ -104,7 +104,7 @@
           "Id": "SnS.TriggerActions.SetPersistentHairColor",
           "Trigger": "DayStarted",
           "MarkActionApplied": false,
-          "Condition": "{{CirrusHealthyHairHabits}}, {{CirrusRainbowHair |contains=random}}, PLAYER_STAT Current CirrusHairColor 0 0",
+          "Condition": "{{CirrusRainbowHair |contains=RealisticRandom}}, PLAYER_STAT Current CirrusHairColor 0 0",
           "Actions":  [ 
             "IncrementStat CirrusHairColor",
             "AddMail Current SnS.Flag.CirrusHairColor.{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}} received"
@@ -256,19 +256,11 @@
       "Section": "Overlays"
     },
     "CirrusRainbowHair": {
-      "AllowValues": "Random, Brown, Red, Orange, Yellow, Blue",
+      "AllowValues": "RealisticRandom, DailyRandom, Brown, Red, Orange, Yellow, Blue",
       "Default": "Blue",
       "AllowBlank": false,
       "AllowMultiple": false,
-      "Description": "Gives Cirrus a variety of dyed hair colors, or optionally choose a static one.",
-      "Section": "Overlays"
-    },
-    "CirrusHealthyHairHabits": {
-      "AllowValues": "true, false",
-      "Default": "false",
-      "AllowBlank": false,
-      "AllowMultiple": false,
-      "Description": "Adds an optional cooldown between Cirrus's hair color changes.\nFor use with CirrusRainbowHair: \"Random\"",
+      "Description": "Gives Cirrus a variety of dyed hair colors, or optionally choose a static one.\nRealisticRandom gives a delay between hair color changes",
       "Section": "Overlays"
     }
   },
@@ -932,23 +924,20 @@
     }*/
     {
       "Name": "CirrusHairColor",
-      "Value": "{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}}",
-      "When": {
-        "CirrusRainbowHair": "random"
-      }
+      "Value": "{{CirrusRainbowHair}}"
     },
     {
-      "Name": "CirrusHairColor1",
-      "Value": "{{CirrusRainbowHair}}",
+      "Name": "CirrusHairColor",
+      "Value": "{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}}",
       "When": {
-        "CirrusRainbowHair |contains=random": false
+        "CirrusRainbowHair": "DailyRandom"
       }
     },
     {
       "Name": "CirrusHairColor",
       "Value": "Brown",
       "When": {
-        "CirrusHealthyHairHabits": true,
+        "CirrusRainbowHair |contains=RealisticRandom": true,
         "HasFlag": "SnS.Flag.CirrusHairColor.Brown"
       }
     },
@@ -956,7 +945,7 @@
       "Name": "CirrusHairColor",
       "Value": "Red",
       "When": {
-        "CirrusHealthyHairHabits": true,
+        "CirrusRainbowHair |contains=RealisticRandom": true,
         "HasFlag": "SnS.Flag.CirrusHairColor.Red"
       }
     },
@@ -964,7 +953,7 @@
       "Name": "CirrusHairColor",
       "Value": "Orange",
       "When": {
-        "CirrusHealthyHairHabits": true,
+        "CirrusRainbowHair |contains=RealisticRandom": true,
         "HasFlag": "SnS.Flag.CirrusHairColor.Orange"
       }
     },
@@ -972,7 +961,7 @@
       "Name": "CirrusHairColor",
       "Value": "Yellow",
       "When": {
-        "CirrusHealthyHairHabits": true,
+        "CirrusRainbowHair |contains=RealisticRandom": true,
         "HasFlag": "SnS.Flag.CirrusHairColor.Yellow"
       }
     },
@@ -980,7 +969,7 @@
       "Name": "CirrusHairColor",
       "Value": "Blue",
       "When": {
-        "CirrusHealthyHairHabits": true,
+        "CirrusRainbowHair |contains=RealisticRandom": true,
         "HasFlag": "SnS.Flag.CirrusHairColor.Blue"
       }
     },

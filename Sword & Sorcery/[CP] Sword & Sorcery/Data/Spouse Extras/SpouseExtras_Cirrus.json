@@ -33,15 +33,17 @@
                     "Actions": [
                         "AddMail Current {{ModId}}_GaveDailySnack",
                         "AddItem swordandsorcery.freshpopcorn"
-                    ]
+                    ],
+                    "MarkActionApplied": false
                 },
                 "{{ModId}}_ResetDailySnack": {
                     "Id": "{{ModId}}_ResetDailySnack",
-                    "Trigger": "Manual",
+                    "Trigger": "DayEnding",
                     "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_GaveDailySnack",
                     "Actions": [
                         "RemoveMail Current {{ModId}}_GaveDailySnack"
-                    ]
+                    ],
+                    "MarkActionApplied": false
                 }
             }
         },
@@ -56,15 +58,17 @@
                     "Actions": [
                         "AddMail Current {{ModId}}_GaveDailyDrink",
                         "AddItem swordandsorcery.fountainsoda"
-                    ]
+                    ],
+                    "MarkActionApplied": false
                 },
                 "{{ModId}}_ResetDailyDrink": {
                     "Id": "{{ModId}}_ResetDailyDrink",
-                    "Trigger": "Manual",
+                    "Trigger": "DayEnding",
                     "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_GaveDailyDrink",
                     "Actions": [
                         "RemoveMail Current {{ModId}}_GaveDailyDrink"
-                    ]
+                    ],
+                    "MarkActionApplied": false
                 }
             }
         },

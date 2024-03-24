@@ -143,9 +143,20 @@ public partial class ModSnS
     public const string DataKey_BladeCoating = "swordandsorcery/BladeCoating";
     public const string DataKey_BladeAlloying = "swordandsorcery/BladeAlloying";
 
-    public static string SpriteSheetPath = "SMAPI/dn.sns/assets/Items & Crops/arsenal_1.png";
+    public static string SpriteSheetPath = "SMAPI/dn.sns/assets/Items & Crops/SnSArsenal.png";
 
     public static Dictionary<string, string> ExquisiteGemMappings = new()
+    {
+        { StardewValley.Object.emeraldQID, "(O)swordandsorcery.ExquisiteEmerald" },
+        { StardewValley.Object.rubyQID, "(O)swordandsorcery.ExquisiteRuby" },
+        { StardewValley.Object.topazQID, "(O)swordandsorcery.ExquisiteTopaz" },
+        { StardewValley.Object.aquamarineQID, "(O)swordandsorcery.ExquisiteAquamarine" },
+        { StardewValley.Object.amethystClusterQID, "(O)swordandsorcery.ExquisiteAmethyst" },
+        { StardewValley.Object.sapphireQID /* WHAT? */, "(O)swordandsorcery.ExquisiteJade" },
+        { StardewValley.Object.diamondQID, "(O)swordandsorcery.ExquisiteDiamond" },
+    };
+
+    public static Dictionary<string, string> PureOreMappings = new()
     {
         { StardewValley.Object.emeraldQID, "(O)swordandsorcery.ExquisiteEmerald" },
         { StardewValley.Object.rubyQID, "(O)swordandsorcery.ExquisiteRuby" },
@@ -704,7 +715,6 @@ public static class MonsterTakeDamagePatch
     }
     public static void Postfix(Monster __instance, int damage, Farmer who, int __result)
     {
-        Console.WriteLine("meow! " + __result + " " + __instance.Health);
         if (__result <= 0 || !(who.CurrentTool is MeleeWeapon mw))
             return;
 
@@ -809,7 +819,8 @@ public static class Game1ChangeGemToExquisitePatch
 {
     public static void Prefix(ref string id, int xTile, int yTile, long whichPlayer, GameLocation location)
     {
-        if (GameLocationBreakingStoneFlagPatch.IsBreakingStone > 0 &&
+        if (Game1.player.GetCustomSkillLevel(ModSnS.RogueSkill) >= 2 &&
+            GameLocationBreakingStoneFlagPatch.IsBreakingStone > 0 &&
             ModSnS.ExquisiteGemMappings.TryGetValue(id, out string newId) &&
             Game1.random.NextDouble() < 0.02)
             id = newId;
