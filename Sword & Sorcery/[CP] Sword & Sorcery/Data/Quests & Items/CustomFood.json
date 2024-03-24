@@ -512,9 +512,9 @@
   "Target": "Data/CookingRecipes",
   "Entries":
   {
-  "swordandsorcery.salishburbon": "638 1 262 1 635 1/what is this for?/swordandsorcery.salishburbon 1/false/{{i18n:food.crafting.salishburbon}}",
+  "swordandsorcery.salishburbon": "638 1 262 1 635 1/what is this for?/swordandsorcery.salishburbon 1/f Mateo/{{i18n:food.crafting.salishburbon}}",
 
-  "swordandsorcery.autumnalstew": "276 1 -6 1 272 1 281 1/what is this for?/swordandsorcery.autumnalstew 1/false/{{i18n:food.crafting.autumnalstew}}",
+  "swordandsorcery.autumnalstew": "276 1 -6 1 272 1 281 1/what is this for?/swordandsorcery.autumnalstew 1/f Mateo/{{i18n:food.crafting.autumnalstew}}",
 
   "swordandsorcery.dandeliongreens": "22 1 -5 1 424 1/what is this for?/swordandsorcery.dandeliongreens 1/false/{{i18n:food.crafting.dandeliongreens}}",
 

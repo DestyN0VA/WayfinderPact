@@ -1,0 +1,198 @@
+{ "Changes": 
+[
+
+/*
+  _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
+ | |  | |  ____|   /\   |  __ \__   __| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
+ | |__| | |__     /  \  | |__) | | |    | |  | || |    /  \  | |   | |  | | |  __| |  | | |__   
+ |  __  |  __|   / /\ \ |  _  /  | |    | |  | || |   / /\ \ | |   | |  | | | |_ | |  | |  __|  
+ | |  | | |____ / ____ \| | \ \  | |    | |__| || |_ / ____ \| |___| |__| | |__| | |__| | |____ 
+ |_|  |_|______/_/    \_\_|  \_\ |_|    |_____/_____/_/    \_\______\____/ \_____|\____/|______|
+
+*/
+
+// GENERIC POOL
+{
+  "LogName": "Roslin Dialogue - 0-4",
+  "Action": "EditData",
+  "Target": "Characters/Dialogue/Roslin",
+  "Entries": 	{ 
+      "{{WeekDay}}": "{{i18n:Core.Roslin.Generic.EarlyHeart.{{Random:{{Range: 1, 30}}}}}}"
+  }
+},
+{
+  "LogName": "Dialogue - 6-10",
+  "Action": "EditData",
+  "Target": "Characters/Dialogue/Roslin",
+  "Entries": 	{ 
+      "{{WeekDay}}": "{{i18n:Core.Roslin.Generic.LateHeart.{{Random:{{Range: 1, 50}}}}}}"
+  },
+  "When": { "Hearts:Roslin": "{{Range: 6, 10}}" }
+},
+
+// SEASONAL POOL
+{
+  "LogName": "Dialogue - Roslin Seasonal Override",
+  "Action": "EditData",
+  "Update": "OnLocationChange",
+  "Target": "Characters/Dialogue/Roslin",
+  "Entries": 	{ 
+      "{{WeekDay}}": "{{i18n:Core.Roslin.{{Season}}.{{Random:{{Range: 1, 15}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Roslin_OverrideSeenToday received"
+  },
+  "When": { 
+          "Query: {{Random: {{Range: 1, 10}}|key=CSO}} = 1": true,
+          "HasFlag |contains=SnS_M_Roslin_OverrideSeenToday": false
+   }
+},
+
+// 10H OVERRIDE POOL
+{
+  "LogName": "Dialogue - Roslin 10h Ending Override",
+  "Action": "EditData",
+  "Update": "OnLocationChange",
+  "Target": "Characters/Dialogue/Roslin",
+  "Entries": 	{ 
+      "{{WeekDay}}": "{{i18n:Core.Roslin.LionsMane.{{Random:{{Range: 1, 10}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Roslin_OverrideSeenToday received"
+  },
+  "When": { 
+          "Hearts:Roslin": "10",
+          "Query: {{Random: {{Range: 1, 30}}|key=CLMO}} = 1": true,
+          "HasFlag |contains=SnS_M_Roslin_OverrideSeenToday": false
+   }
+},
+
+// DATING POOL
+{
+  "LogName": "Dialogue - Roslin 10h Dating Override",
+  "Action": "EditData",
+  "Update": "OnLocationChange",
+  "Target": "Characters/Dialogue/Roslin",
+  "Entries": 	{ 
+      "{{WeekDay}}": "{{i18n:Core.Roslin.Dating.{{Random:{{Range: 1, 30}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Roslin_OverrideSeenToday received"
+  },
+  "When": { 
+          "Hearts:Roslin": "10",
+          "Query: {{Random: {{Range: 1, 10}}|key=CDO}} = 1": true,
+          "HasFlag |contains=SnS_M_Roslin_OverrideSeenToday": false,
+          "Relationship:Roslin |contains=Dating": true
+   }
+},
+
+/*
+   _____ ______ _   _ ______ _____  _____ _____   _____ _____          _      ____   _____ _    _ ______ 
+  / ____|  ____| \ | |  ____|  __ \|_   _/ ____| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
+ | |  __| |__  |  \| | |__  | |__) | | || |      | |  | || |    /  \  | |   | |  | | |  __| |  | | |__   
+ | | |_ |  __| | . ` |  __| |  _  /  | || |      | |  | || |   / /\ \ | |   | |  | | | |_ | |  | |  __|  
+ | |__| | |____| |\  | |____| | \ \ _| || |____  | |__| || |_ / ____ \| |___| |__| | |__| | |__| | |____ 
+  \_____|______|_| \_|______|_|  \_\_____\_____| |_____/_____/_/    \_\______\____/ \_____|\____/|______|
+
+*/
+
+{
+        "LogName": "Roslin Dialogue - Platonic",
+        "Action": "EditData",
+        "Target": "Characters/Dialogue/Roslin",
+        "Entries": 	
+        {
+
+        // NAME & INTRO
+        "Name:":"{{i18n:Core.Roslin.Name}}",
+        "Introduction":"{{i18n:Core.Roslin.Introduction}}",
+
+        // COMMUNITY CENTER BUNDLES
+        "joja_Begin":"{{i18n:Core.Roslin.JojaBegin}}",
+        "cc_Begin":"{{i18n:Core.Roslin.CCBegin}}",
+        "cc_Bus":"{{i18n:Core.Roslin.CCBus}}",
+        "cc_Minecart":"{{i18n:Core.Roslin.CCMinecart}}",
+        "cc_Complete":"{{i18n:Core.Roslin.CCComplete}}",
+        "movieTheater":"{{i18n:Core.Roslin.MovieTheater}}",
+
+        // BIRTHDAYS
+        "fall_25":"{{i18n:Core.Roslin.Fall25}}",
+        "winter_21":"{{i18n:Core.Roslin.Winter21}}",
+        
+
+        // END OF SEASON
+        "spring_28":"{{i18n:Core.Roslin.SpringEnd}}",
+        "summer_28":"{{i18n:Core.Roslin.SummerEnd}}",
+        "fall_28":"{{i18n:Core.Roslin.FallEnd}}",
+        "winter_28":"{{i18n:Core.Roslin.WinterEnd}}",
+
+        // SVE COMMUNITY DAY
+        "CommunityCenter4":"{{i18n:Core.Roslin.CommunityCenter4}}",
+        "CommunityCenter6":"{{i18n:Core.Roslin.CommunityCenter6}}",
+        "CommunityCenter8":"{{i18n:Core.Roslin.CommunityCenter8}}",
+        "CommunityCenter10":"{{i18n:Core.Roslin.CommunityCenter10}}",
+
+        // FESTIVALS
+        "spring_12":"{{i18n:Core.Roslin.EggFestival}}",
+        "spring_23":"{{i18n:Core.Roslin.FlowerDance}}",
+        "summer_10":"{{i18n:Core.Roslin.Luau}}",
+        "summer_27":"{{i18n:Core.Roslin.MoonlightJelly}}",
+        "fall_15":"{{i18n:Core.Roslin.SDVFair}}",
+        "fall_26":"{{i18n:Core.Roslin.SpiritsEve}}",
+        "winter_7":"{{i18n:Core.Roslin.IceFestival}}",
+        "winter_16":"{{i18n:Core.Roslin.NightMarket}}",
+        "winter_24":"{{i18n:Core.Roslin.WinterStar}}",
+
+        // ROMANTIC (POSITIVE)
+        "give_flowersA":"{{i18n:Core.Roslin.GiveFlowersA}}",
+        "give_flowersB":"{{i18n:Core.Roslin.GiveFlowersB}}",
+        "give_pendant":"{{i18n:Core.Roslin.GivePendant}}",
+        "stardrop_giftA":"{{i18n:Core.Roslin.StardropGiftA}}",
+        "stardrop_giftB":"{{i18n:Core.Roslin.StardropGiftB}}",
+
+        // ROMANTIC (NEGATIVE)
+        "danceRejection":"{{i18n:Core.Roslin.DanceRejection}}",
+        "divorced":"{{i18n:Core.Roslin.Divorced}}",
+        "breakUp":"{{i18n:Core.Roslin.BreakUp}}",
+        "dumped_Guys":"{{i18n:Core.Roslin.DumpedGuys}}",
+        "secondChance_Guys":"{{i18n:Core.Roslin.SecondChanceGuys}}",
+        "reject_two_heartA":"{{i18n:Core.Roslin.Reject2HA}}",
+        "reject_two_heartB":"{{i18n:Core.Roslin.Reject2HB}}",
+        "reject_four_heartA":"{{i18n:Core.Roslin.Reject4HA}}",
+        "reject_four_heartB":"{{i18n:Core.Roslin.Reject4HB}}",
+        "engageA":"{{i18n:Core.Roslin.EngageA}}",
+        "engageB":"{{i18n:Core.Roslin.EngageB}}",
+        "marriedA":"{{i18n:Core.Roslin.MarriedA}}",
+        "marriedB":"{{i18n:Core.Roslin.MarriedB}}",
+        "refusal_no_heartsA":"{{i18n:Core.Roslin.RefusalNoHeartsA}}",
+        "refusal_no_heartsB":"{{i18n:Core.Roslin.RefusalNoHeartsB}}",
+        "refusal_knownA":"{{i18n:Core.Roslin.RefusalKnownA}}",
+        "refusal_knownB":"{{i18n:Core.Roslin.RefusalKnownB}}",
+        "refusal_botherA":"{{i18n:Core.Roslin.RefusalBotherA}}",
+        "refusal_botherB":"{{i18n:Core.Roslin.RefusalBotherB}}",
+
+        // RESORT
+        "Resort_Entering":"{{i18n:Core.Roslin.ResortEntering}}",
+        "Resort_Leaving":"{{i18n:Core.Roslin.ResortLeaving}}",
+        "Resort_Shore":"{{i18n:Core.Roslin.ResortShore}}",
+        "Resort_Umbrella":"{{i18n:Core.Roslin.ResortUmbrella}}",
+        "Resort_Wander":"{{i18n:Core.Roslin.ResortWander}}",
+        "Resort_Wander_2":"{{i18n:Core.Roslin.ResortWander.2}}",
+        "Resort_Chair":"{{i18n:Core.Roslin.ResortChair}}",
+        "Resort_Bar":"{{i18n:Core.Roslin.ResortBar}}",
+        "Resort_Towel":"{{i18n:Core.RoslinResortTowel.}}",
+        "Resort_Towel_2":"{{i18n:Core.Roslin.ResortTowel.2}}",
+        "Resort_Towel_3":"{{i18n:Core.Roslin.Resort_Towel.3}}",
+        "Resort":"{{i18n:Core.Roslin.Resort}}",
+
+        // ADDITIONAL LOCATION DIALOGUE 
+      
+      },
+    }, 
+
+   // ENGAGEMENT DIALOGUE
+   {
+        "LogName": "Engagement Dialogue",
+        "Action": "EditData",
+        "Target": "Data/EngagementDialogue",
+        "Entries": {
+                        
+        "Roslin0":"{{i18n:Marriage.Roslin.Engagement.Roslin0}}",
+        "Roslin1":"{{i18n:Marriage.Roslin.Engagement.Roslin1}}",
+        "Roslin2":"{{i18n:Marriage.Roslin.Engagement.Roslin2}}"                       
+   }
+   }
+  ]
+ }

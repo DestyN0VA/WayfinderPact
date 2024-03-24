@@ -18,6 +18,11 @@
       "FromFile": "Data/Appearances/AppearanceData_Cirrus.json, Data/Dialogue/Cirrus/Dialogue_Cirrus.json, Data/Dialogue/Cirrus/ConcessionTastes_Cirrus.json, Data/Dialogue/Cirrus/ConversationTopics_Cirrus.json, Data/Dialogue/Cirrus/CustomFixed_Cirrus.json,Data/Dialogue/Cirrus/CustomGiftDialogue_Cirrus.json, Data/Dialogue/Cirrus/MarriageDialogue_Cirrus.json, Data/Dispositions/Dispositions_Cirrus.json, Data/Festival Data/FestivalData_Cirrus.json, Data/Schedules/Schedule_Cirrus.json, Data/Strings/Strings_Cirrus.json, Data/Spouse Extras/SpouseExtras_Cirrus.json"
     },
     {
+      "LogName": "Sword & Sorcery - Roslin Includes",
+      "Action": "Include",
+      "FromFile": "Data/Appearances/AppearanceData_Roslin.json, Data/Dialogue/Roslin/Dialogue_Roslin.json, Data/Dialogue/Roslin/ConcessionTastes_Roslin.json, Data/Dialogue/Roslin/ConversationTopics_Roslin.json, Data/Dialogue/Roslin/CustomGiftDialogue_Roslin.json, Data/Dispositions/Dispositions_Roslin.json, Data/Festival Data/FestivalData_Roslin.json, Data/Schedules/Schedule_Roslin.json, Data/Strings/Strings_Roslin.json"
+    },
+    {
       "LogName": "Sword & Sorcery - Quest Includes",
       "Action": "Include",
       "FromFile": "Data/Quests & Items/BuildQuest.json, Data/Quests & Items/BuildQuest2.json, Data/Quests & Items/CGSpecialOrders.json, Data/Quests & Items/PentacleQuest.json, Data/Quests & Items/RiverQuest.json"
@@ -978,6 +983,6 @@
         "CirrusHealthyHairHabits": true,
         "HasFlag": "SnS.Flag.CirrusHairColor.Blue"
       }
-    }
+    },
   ]
 }

@@ -1,0 +1,127 @@
+{
+    "Changes": [
+{
+    "LogName": "Conversation Topics - Roslin",
+    "Action": "EditData",
+    "Target": "Characters/Dialogue/Roslin",
+    "Entries": // Roslin
+    {
+
+        //Roslin's 0 Heart Event
+        "RoslinIntro":"{{i18n:CT.Roslin.RoslinIntro}}",
+
+        // Roslin's 1 Heart Event
+        "RoslinBookIntro":"{{i18n:CT.Roslin.RoslinBookIntro}}",
+
+        // Roslin's 2 Heart Event
+        "RoslinShapeshift":"{{i18n:CT.Roslin.RoslinShapeshift}}",
+
+        // Roslin's 3 Heart Event Pt1
+        "RoslinBookQuest": "{{i18n:CT.Roslin.RoslinBookQuest}}",
+        
+        // Roslin's 3 Heart Event Pt2
+        "RoslinVet": "{{i18n:CT.Roslin.RoslinVet}}",
+
+        // Roslin's 4 Heart Event
+        "RoslinVet2":"{{i18n:CT.Roslin.RoslinVet2}}",
+
+        // Roslin's 5 Heart Event Pt1
+        "RoslinGender": "{{i18n:CT.Roslin.RoslinGender}}",
+
+        // Roslin's 5 Heart Event Pt2
+        "RoslinVet3": "{{i18n:CT.Roslin.RoslinVet3}}",
+
+        // Roslin's 5 Heart Event Pt3
+        "RoslinDND": "{{i18n:CT.Roslin.RoslinDND}}",
+
+        // Roslin's 6 Heart Event
+        "RoslinRiver1": "{{i18n:CT.Roslin.RoslinRiver1}}",
+
+        // Roslin's 7 Heart Event
+        "RoslinDinner": "{{i18n:CT.Roslin.RoslinDinner}}",
+
+        // Roslin's 7 Heart Event Pt2
+        "RoslinRiver2": "{{i18n:CT.Roslin.RoslinRiver2}}",
+
+        // Roslin's 8 Heart Event
+        "RoslinRiver3": "{{i18n:CT.Roslin.RoslinRiver3}}",
+
+        // Roslin's 9 Heart Event 
+        "RoslinHeal": "{{i18n:CT.Roslin.RoslinHeal}}",
+
+        // Roslin's 10 Heart Event 
+        "RoslinHeal2": "{{i18n:CT.Roslin.RoslinHeal2}}",
+
+        // Roslin's 10 Heart Event Pt2
+        "RoslinTrueGrove": "{{i18n:CT.Roslin.RoslinTrueGrove}}",
+
+        // Roslin's 10 Heart Event Pt2
+        "RoslinEngaged": "{{i18n:CT.Roslin.RoslinEngaged}}"
+
+    }
+},
+
+{
+    "LogName": "Conversation Topics - Mateo",
+    "Action": "EditData",
+    "Target": "Characters/Dialogue/Mateo",
+    "Entries": // Mateo
+    {
+
+        //Roslin's 0 Heart Event
+        "RoslinIntro":"{{i18n:CT.Mateo.RoslinIntro}}",
+
+        // Roslin's 1 Heart Event
+        "RoslinBookIntro":"{{i18n:CT.Mateo.RoslinBookIntro}}",
+
+        // Roslin's 2 Heart Event
+        "RoslinShapeshift":"{{i18n:CT.Mateo.RoslinShapeshift}}",
+
+        // Roslin's 3 Heart Event Pt1
+        "RoslinBookQuest": "{{i18n:CT.Mateo.RoslinBookQuest}}",
+        
+        // Roslin's 3 Heart Event Pt2
+        "RoslinVet": "{{i18n:CT.Mateo.RoslinVet}}",
+
+        // Roslin's 4 Heart Event
+        "RoslinVet2":"{{i18n:CT.Mateo.RoslinVet2}}",
+
+        // Roslin's 5 Heart Event Pt1
+        "RoslinGender": "{{i18n:CT.Mateo.RoslinGender}}",
+
+        // Roslin's 5 Heart Event Pt2
+        "RoslinVet3": "{{i18n:CT.Mateo.RoslinVet3}}",
+
+        // Roslin's 5 Heart Event Pt3
+        "RoslinDND": "{{i18n:CT.Mateo.RoslinDND}}",
+
+        // Roslin's 6 Heart Event
+        "RoslinRiver1": "{{i18n:CT.Mateo.RoslinRiver1}}",
+
+        // Roslin's 7 Heart Event
+        "RoslinDinner": "{{i18n:CT.Mateo.RoslinDinner}}",
+
+        // Roslin's 7 Heart Event Pt2
+        "RoslinRiver2": "{{i18n:CT.Mateo.RoslinRiver2}}",
+
+        // Roslin's 8 Heart Event
+        "RoslinRiver3": "{{i18n:CT.Mateo.RoslinRiver3}}",
+
+        // Roslin's 9 Heart Event 
+        "RoslinHeal": "{{i18n:CT.Mateo.RoslinHeal}}",
+
+        // Roslin's 10 Heart Event 
+        "RoslinHeal2": "{{i18n:CT.Mateo.RoslinHeal2}}",
+
+        // Roslin's 10 Heart Event Pt2
+        "RoslinTrueGrove": "{{i18n:CT.Mateo.RoslinTrueGrove}}",
+
+        // Roslin's 10 Heart Event Pt2
+        "RoslinEngaged": "{{i18n:CT.Mateo.RoslinEngaged}}"
+
+    }
+},
+
+
+    ]
+}

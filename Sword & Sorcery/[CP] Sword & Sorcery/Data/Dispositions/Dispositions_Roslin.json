@@ -1,0 +1,128 @@
+{
+    "Changes": [
+        {
+            "LogName": "NPC Dispositions",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Roslin": {
+                    "DisplayName": "Roslin",
+                    "Gender": "Female",
+                    "Age": "Adult",
+                    "Manner": "Rude",
+                    "SocialAnxiety": "Neutral",
+                    "Optimism": "Negative",
+                    "BirthSeason": "Spring",
+                    "BirthDay": 26,
+                    "HomeRegion": "Town",
+                    "CanBeRomanced": false,
+                    "CanGreetNearbyCharacters": false,
+                    "ExcludeFromPerfectionScore": false,
+                    "EndSlideShow": "TrailingGroup",
+                    "SpawnIfMissing": true,
+                    "IntroductionsQuest": false,
+                    "LoveInterest": "Dandelion", 
+                    "SocialTab": "HiddenUntilMet",
+                    "Calendar": "HiddenUntilMet",
+                    "FlowerDanceCanDance": true,
+                    "WinterStarParticipant": false,
+                    "ShakePortraits": [9, 15, 19, 21],
+                    "Home": [
+                        {
+                            "ID": "Roslin - NPC Waiting Room",
+                            "Location": "EastScarp_TNPCWaitingWarpRoom",
+                            "Tile": {
+                                "X": 14,
+                                "Y": 5
+                            },
+                            "Direction": "Down"
+                        }
+                    ],
+                    "Appearance": [
+                        {
+                            "ID": "Spring Outfit",
+                            "Condition": "SEASON Spring",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Indoors": true,
+                            "Outdoors": false,
+                            "Portrait": "Portraits/Roslin/HoodDown/spring_Roslin",
+                            "Sprite": "Characters/Roslin/HoodDown/spring_Roslin"
+                        },
+                        {
+                            "ID": "Summer Outfit",
+                            "Condition": "SEASON Summer",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Indoors": true,
+                            "Outdoors": false,
+                            "Portrait": "Portraits/Roslin/HoodDown/summer_Roslin",
+                            "Sprite": "Characters/Roslin/HoodDown/summer_Roslin"
+                        },
+                        {
+                            "ID": "Fall Outfit",
+                            "Condition": "SEASON Fall",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Indoors": true,
+                            "Outdoors": false,
+                            "Portrait": "Portraits/Roslin/HoodDown/fall_Roslin",
+                            "Sprite": "Characters/Roslin/HoodDown/fall_Roslin"
+                        },
+                        {
+                            "ID": "Winter Outfit",
+                            "Condition": "SEASON Winter",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Indoors": true,
+                            "Outdoors": false,
+                            "Portrait": "Portraits/Roslin/HoodDown/winter_Roslin",
+                            "Sprite": "Characters/Roslin/HoodDown/winter_Roslin"
+                        },
+                        {
+                            "ID": "Spring Outfit",
+                            "Condition": "SEASON Spring",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Indoors": false,
+                            "Outdoors": true,
+                            "Portrait": "Portraits/Roslin/HoodUp/spring_Roslin",
+                            "Sprite": "Characters/Roslin/HoodUp/spring_Roslin"
+                        },
+                        {
+                            "ID": "Summer Outfit",
+                            "Condition": "SEASON Summer",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Indoors": false,
+                            "Outdoors": true,
+                            "Portrait": "Portraits/Roslin/HoodUp/summer_Roslin",
+                            "Sprite": "Characters/Roslin/HoodUp/summer_Roslin"
+                        },
+                        {
+                            "ID": "Fall Outfit",
+                            "Condition": "SEASON Fall",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Indoors": false,
+                            "Outdoors": true,
+                            "Portrait": "Portraits/Roslin/HoodUp/fall_Roslin",
+                            "Sprite": "Characters/Roslin/HoodUp/fall_Roslin"
+                        },
+                        {
+                            "ID": "Winter Outfit",
+                            "Condition": "SEASON Winter",
+                            "Precedence": -10, 
+                            "Weight": 1,
+                            "Indoors": false,
+                            "Outdoors": true,
+                            "Portrait": "Portraits/Roslin/HoodUp/winter_Roslin",
+                            "Sprite": "Characters/Roslin/HoodUp/winter_Roslin"
+                        },
+                    ]
+                }
+            }
+        }
+    ]
+}
+    

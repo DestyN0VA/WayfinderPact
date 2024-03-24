@@ -1,0 +1,13 @@
+{
+    "Changes": [
+
+        // PORTRAIT & SPRITE DEFAULT LOAD
+        {
+            "LogName": "Default Portraits & Sprites - Roslin",
+            "Action": "Load",
+            "Target": "Portraits/Roslin, Characters/Roslin",
+            "FromFile": "assets/{{TargetPathOnly}}/Roslin/HoodDown/fall_Roslin.png"
+        },
+
+    ]
+}

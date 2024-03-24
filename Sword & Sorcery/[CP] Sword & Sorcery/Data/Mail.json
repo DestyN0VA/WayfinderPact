@@ -1,5 +1,6 @@
 {
     "Changes": [
+        // LETTERS
         {
             "LogName": "Letter from the Hospital",
             "Action": "EditData",
@@ -14,6 +15,22 @@
             "Target": "Data/Mail",
             "Entries": {
                 "MineDateInvite":"{{i18n:Mail.Mateo.Letter2}}"
+            }
+        },
+        {
+            "LogName": "Autumnal Stew Recipe",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "MateoAutumnalStew":"{{i18n:Mail.Mateo.Letter3}}"
+            }
+        },
+        {
+            "LogName": "Salish Burbon Recipe",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "MateoSalishBurbon":"{{i18n:Mail.Mateo.Letter4}}"
             }
         },
         {
@@ -40,5 +57,35 @@
                 "AetherQuest2":"{{i18n:Mail.Hector.Letter2}}"
             }
         },
+
+        // TRIGGER ACTIONS
+        {
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"SnS.Id_AutumnalStew": {
+					"Id": "SnS.Id_AutumnalStew",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.4",
+					"Actions": [
+						"AddMail Current MateoAutumnalStew tomorrow",
+					]
+				}
+			}
+		},
+        {
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"SnS.Id_SalishBurbon": {
+					"Id": "SnS.Id_SalishBurbon",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.11",
+					"Actions": [
+						"AddMail Current MateoSalishBurbon tomorrow",
+					]
+				}
+			}
+		},
     ]
 }
