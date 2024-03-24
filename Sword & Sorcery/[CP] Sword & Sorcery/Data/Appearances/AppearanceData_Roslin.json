@@ -8,6 +8,31 @@
             "Target": "Portraits/Roslin, Characters/Roslin",
             "FromFile": "assets/{{TargetPathOnly}}/Roslin/HoodDown/fall_Roslin.png"
         },
-
+        
+        //Loads
+        {
+            "LogName": "Indoor Portraits - Roslin",
+            "Action": "Load",
+            "Target": "Portraits/HoodDown/spring_Roslin, Portraits/HoodDown/summer_Roslin, Portraits/HoodDown/fall_Roslin, Portraits/HoodDown/winter_Roslin",
+            "FromFile": "assets/Portraits/Roslin/HoodDown/{{TargetWithoutPath}}.png"
+        },
+        {
+            "LogName": "Indoor Characters - Roslin",
+            "Action": "Load",
+            "Target": "Characters/HoodDown/spring_Roslin, Characters/HoodDown/summer_Roslin, Characters/HoodDown/fall_Roslin, Characters/HoodDown/winter_Roslin",
+            "FromFile": "assets/Characters/Roslin/HoodDown/{{TargetWithoutPath}}.png"
+        }
+        {
+            "LogName": "Outdoors Portraits - Roslin",
+            "Action": "Load",
+            "Target": "Portraits/HoodUp/spring_Roslin, Portraits/HoodUp/summer_Roslin, Portraits/HoodUp/fall_Roslin, Portraits/HoodUp/winter_Roslin",
+            "FromFile": "assets/Portraits/Roslin/HoodUp/{{TargetWithoutPath}}.png"
+        },
+        {
+            "LogName": "Outdoors Characters - Roslin",
+            "Action": "Load",
+            "Target": "Characters/HoodUp/spring_Roslin, Characters/HoodUp/summer_Roslin, Characters/HoodUp/fall_Roslin, Characters/HoodUp/winter_Roslin",
+            "FromFile": "assets/Characters/Roslin/HoodUp/{{TargetWithoutPath}}.png"
+        }
     ]
 }

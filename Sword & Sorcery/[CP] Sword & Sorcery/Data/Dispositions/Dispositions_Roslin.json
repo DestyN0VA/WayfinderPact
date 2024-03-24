@@ -46,8 +46,8 @@
                             "Weight": 1,
                             "Indoors": true,
                             "Outdoors": false,
-                            "Portrait": "Portraits/Roslin/HoodDown/spring_Roslin",
-                            "Sprite": "Characters/Roslin/HoodDown/spring_Roslin"
+                            "Portrait": "Portraits/HoodDown/spring_Roslin",
+                            "Sprite": "Characters/HoodDown/spring_Roslin"
                         },
                         {
                             "ID": "Summer Outfit",
@@ -56,8 +56,8 @@
                             "Weight": 1,
                             "Indoors": true,
                             "Outdoors": false,
-                            "Portrait": "Portraits/Roslin/HoodDown/summer_Roslin",
-                            "Sprite": "Characters/Roslin/HoodDown/summer_Roslin"
+                            "Portrait": "Portraits/HoodDown/summer_Roslin",
+                            "Sprite": "Characters/HoodDown/summer_Roslin"
                         },
                         {
                             "ID": "Fall Outfit",
@@ -66,8 +66,8 @@
                             "Weight": 1,
                             "Indoors": true,
                             "Outdoors": false,
-                            "Portrait": "Portraits/Roslin/HoodDown/fall_Roslin",
-                            "Sprite": "Characters/Roslin/HoodDown/fall_Roslin"
+                            "Portrait": "Portraits/HoodDown/fall_Roslin",
+                            "Sprite": "Characters/HoodDown/fall_Roslin"
                         },
                         {
                             "ID": "Winter Outfit",
@@ -76,8 +76,8 @@
                             "Weight": 1,
                             "Indoors": true,
                             "Outdoors": false,
-                            "Portrait": "Portraits/Roslin/HoodDown/winter_Roslin",
-                            "Sprite": "Characters/Roslin/HoodDown/winter_Roslin"
+                            "Portrait": "Portraits/HoodDown/winter_Roslin",
+                            "Sprite": "Characters/HoodDown/winter_Roslin"
                         },
                         {
                             "ID": "Spring Outfit",
@@ -86,8 +86,8 @@
                             "Weight": 1,
                             "Indoors": false,
                             "Outdoors": true,
-                            "Portrait": "Portraits/Roslin/HoodUp/spring_Roslin",
-                            "Sprite": "Characters/Roslin/HoodUp/spring_Roslin"
+                            "Portrait": "Portraits/HoodUp/spring_Roslin",
+                            "Sprite": "Characters/HoodUp/spring_Roslin"
                         },
                         {
                             "ID": "Summer Outfit",
@@ -96,8 +96,8 @@
                             "Weight": 1,
                             "Indoors": false,
                             "Outdoors": true,
-                            "Portrait": "Portraits/Roslin/HoodUp/summer_Roslin",
-                            "Sprite": "Characters/Roslin/HoodUp/summer_Roslin"
+                            "Portrait": "Portraits/HoodUp/summer_Roslin",
+                            "Sprite": "Characters/HoodUp/summer_Roslin"
                         },
                         {
                             "ID": "Fall Outfit",
@@ -106,8 +106,8 @@
                             "Weight": 1,
                             "Indoors": false,
                             "Outdoors": true,
-                            "Portrait": "Portraits/Roslin/HoodUp/fall_Roslin",
-                            "Sprite": "Characters/Roslin/HoodUp/fall_Roslin"
+                            "Portrait": "Portraits/HoodUp/fall_Roslin",
+                            "Sprite": "Characters/HoodUp/fall_Roslin"
                         },
                         {
                             "ID": "Winter Outfit",
@@ -116,9 +116,9 @@
                             "Weight": 1,
                             "Indoors": false,
                             "Outdoors": true,
-                            "Portrait": "Portraits/Roslin/HoodUp/winter_Roslin",
-                            "Sprite": "Characters/Roslin/HoodUp/winter_Roslin"
-                        },
+                            "Portrait": "Portraits/HoodUp/winter_Roslin",
+                            "Sprite": "Characters/HoodUp/winter_Roslin"
+                        }
                     ]
                 }
             }

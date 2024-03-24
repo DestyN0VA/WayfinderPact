@@ -24,12 +24,6 @@
             "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_hooddown.png"
         },
         {
-            "LogName": "Hector Wolf Portraits Load",
-            "Action": "Load",
-            "Target": "Portraits/Hector_wolf",
-            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_wolf.png"
-        },
-        {
             "LogName": "Hector Temp Portrait Load",
             "Action": "Load",
             "Target": "Portraits/HectorWolf",
@@ -86,7 +80,7 @@
         {
             "LogName": "Heterochromatic Eyes - Wolf",
             "Action": "EditImage",
-            "Target": "Portraits/Hector_wolf",
+            "Target": "Portaits/HectorWolf",
             "PatchMode": "Overlay",
             "FromFile": "Assets/Portraits/Hector/eye_overlay_wolf_hector.png",
             "Update": "OnTimeChange, OnLocationChange",
