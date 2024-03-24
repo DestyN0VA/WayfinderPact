@@ -71,7 +71,7 @@
         {
             "Action": "EditImage",
             "Target": "Characters/Toddler, Characters/Toddler_dark",
-            "FromFile": "assets/Characters/Mateo/Kids/mateo_soren.png",
+            "FromFile": "assets/Characters/Mateo/Kids/mateo_soren{{MateoHorns}}.png",
             "When": {
                 "Relationship:Mateo": "Married",
                 "CustomMateoSoren": "true"
@@ -82,7 +82,7 @@
         {
             "Action": "EditImage",
             "Target": "Characters/Toddler_girl, Characters/Toddler_girl_dark",
-            "FromFile": "assets/Characters/Mateo/Kids/mateo_dinah.png",
+            "FromFile": "assets/Characters/Mateo/Kids/mateo_dinah{{MateoHorns}}.png",
             "When": {
                 "Relationship:Mateo": "Married",
                 "CustomMateoDinah": "true"
