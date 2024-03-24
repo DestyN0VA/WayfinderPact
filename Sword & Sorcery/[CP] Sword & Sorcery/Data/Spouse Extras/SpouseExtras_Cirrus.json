@@ -21,6 +21,54 @@
             }
         },
 
+        // SPOUSE ROOM SNACK MACHINES 
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "{{ModId}}_GiveDailySnack": {
+                    "Id": "{{ModId}}_GiveDailySnack",
+                    "Trigger": "Manual",
+                    "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_GaveDailySnack",
+                    "Actions": [
+                        "AddMail Current {{ModId}}_GaveDailySnack",
+                        "AddItem swordandsorcery.freshpopcorn"
+                    ]
+                },
+                "{{ModId}}_ResetDailySnack": {
+                    "Id": "{{ModId}}_ResetDailySnack",
+                    "Trigger": "Manual",
+                    "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_GaveDailySnack",
+                    "Actions": [
+                        "RemoveMail Current {{ModId}}_GaveDailySnack"
+                    ]
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "{{ModId}}_GiveDailyDrink": {
+                    "Id": "{{ModId}}_GiveDailyDrink",
+                    "Trigger": "Manual",
+                    "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_GaveDailyDrink",
+                    "Actions": [
+                        "AddMail Current {{ModId}}_GaveDailyDrink",
+                        "AddItem swordandsorcery.fountainsoda"
+                    ]
+                },
+                "{{ModId}}_ResetDailyDrink": {
+                    "Id": "{{ModId}}_ResetDailyDrink",
+                    "Trigger": "Manual",
+                    "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_GaveDailyDrink",
+                    "Actions": [
+                        "RemoveMail Current {{ModId}}_GaveDailyDrink"
+                    ]
+                }
+            }
+        },
+
         // MAKES CIRRUS' BED SLEEPABLE WHEN MARRIED
         {
             "Action": "EditMap",
