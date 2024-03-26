@@ -1066,6 +1066,16 @@
         "MateoTrollHeritage": true,
       }
     },
-    
+    {
+      "Name": "10HSVEBushRemovalServices",
+      "Value": "pause 1",
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+      }
+    },
+    {
+      "Name": "10HSVEBushRemovalServices",
+      "Value": "removeTile 43 26 AlwaysFront/removeTile 44 26 AlwaysFront/removeTile 45 26 AlwaysFront/removeTile 43 27 Front/removeTile 44 27 Front/removeTile 45 27 Front/removeTile 43 28 Buildings/removeTile 44 28 Buildings/removeTile 45 28 Buildings"
+    }
   ]
 }
