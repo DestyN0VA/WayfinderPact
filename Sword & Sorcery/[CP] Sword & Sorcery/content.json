@@ -1019,7 +1019,7 @@
     },
     {
       "Name": "MateoFlirt1",
-      "Value": "{{i18n:Events.S&S.Ch1.8H1.Mateo.7.Flirty}}",
+      "Value": "{{i18n:Events.S&S.Ch1.8H1.Mateo.7.Flirty{{PlayerPronouns}}}}",
       "When": {
         "HasFlag |contains=MateoFlirt": true
       }
@@ -1047,7 +1047,7 @@
     },
     {
       "Name": "MateoFlirt3",
-      "Value": "{{i18n:Events.S&S.Ch1.B1.Mateo.4.Flirty{{PlayerPronouns}}}}",
+      "Value": "{{i18n:Events.S&S.Ch1.B1.Mateo.4.Flirty}}",
       "When": {
         "HasFlag |contains=MateoFlirt": true
       }
