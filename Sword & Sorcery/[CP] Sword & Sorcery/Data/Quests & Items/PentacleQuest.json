@@ -8,7 +8,7 @@
 				"SnS.Id_PentacleQuestIntro": {
 					"Id": "SnS.Id_PentacleQuestIntro",
 					"Trigger": "DayEnding",
-					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddMail Current HectorIntroLetter tomorrow",
 					]
@@ -23,7 +23,7 @@
 				"SnS.Id_PentacleQuest.1": {
 					"Id": "SnS.Id_PentacleQuest.1",
 					"Trigger": "DayEnding",
-					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON spring",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON spring, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle1",
 					]
@@ -38,7 +38,7 @@
 				"SnS.Id_PentacleQuest.2": {
 					"Id": "SnS.Id_PentacleQuest.2",
 					"Trigger": "DayEnding",
-					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON summer",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON summer, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle2",
 					]
@@ -53,7 +53,7 @@
 				"SnS.Id_PentacleQuest.3": {
 					"Id": "SnS.Id_PentacleQuest.3",
 					"Trigger": "DayEnding",
-					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON fall",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON fall, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle3",
 					]
@@ -68,7 +68,7 @@
 				"SnS.Id_PentacleQuest.4": {
 					"Id": "SnS.Id_PentacleQuest.4",
 					"Trigger": "DayEnding",
-					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON winter",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON winter, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle4",
 					]
@@ -83,7 +83,7 @@
 				"SnS.Id_PentacleQuestIntro.1": {
 					"Id": "SnS.Id_PentacleQuestIntro.1",
 					"Trigger": "DayEnding",
-					"Condition": "PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle4",
+					"Condition": "PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle4, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddMail Current AetherQuest tomorrow",
 					]
@@ -98,7 +98,7 @@
 				"SnS.Id_PentacleQuestIntro.2": {
 					"Id": "SnS.Id_PentacleQuestIntro.2",
 					"Trigger": "DayEnding",
-					"Condition": "PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle4, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail",
+					"Condition": "PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle4, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddMail Current AetherQuest2 tomorrow",
 					]

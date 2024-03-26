@@ -1,0 +1,238 @@
+{
+    "Changes": [
+		
+        // EGG FESTIVAL
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring13",
+            "TextOperations": [
+                {   // LOCATION: SET UP (VANILLA)
+                    "Operation": "Append",
+                    "Target": [  "Entries", "Set-Up_additionalCharacters" ],
+                    "Value": "Dandelion 43 78 2",
+                    "Delimiter": "/"
+                },
+                {   // LOCATION: MAIN EVENT (VANILLA)
+                    "Operation": "Append",
+                    "Target": [  "Entries",  "MainEvent_additionalCharacters"  ],
+                    "Value": "Dandelion 43 78 2",
+                    "Delimiter": "/"
+                },
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Dandelion.1": true,
+			  },	  
+        },
+	
+
+        // FLOWER DANCE
+
+        {   
+    
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "TextOperations": [
+                {	// LOCATION: SET UP (VANILLA)
+                    "Operation": "Append",
+                    "Target": [ "Entries","Set-Up_additionalCharacters" ],
+                    "Value": "Dandelion 16 33 2",
+                    "Delimiter": "/"
+                },
+                {	// LOCATION: MAIN EVENT (VANILLA)
+                    "Operation": "Append",
+                    "Target": [ "Entries","MainEvent_additionalCharacters"  ],
+                    "Value": "Dandelion 25 35 3",
+                    "Delimiter": "/"
+                },
+            ],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Dandelion.1": true,
+			  },  
+        },
+
+
+		{
+			"LogName": "Marriage Flower Dance Accept",
+			"Action": "EditData",
+			"Target": "Strings/Events",
+			"Entries": {
+				"SpouseFlowerDanceAccept_Dandelion":"{{i18n:Festivals.Dandelion.FlowerDance.Accept}}",
+			}
+		},
+
+        // LUAU
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"TextOperations": [
+				{	// LOCATION: SET UP (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Dandelion 24 25 3",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": [ "Fields", "set-up", 5],
+					"Value": "/animate Dandelion false true 100 30 31 32 33"
+				}
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Dandelion.1": true,
+			  },
+		},
+
+
+        // DANCE OF THE MOONLIGHT JELLIES
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"TextOperations": [
+				{   // LOCATION: SET UP & MAIN EVENT
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Dandelion 41 24 2",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Dandelion.1": true,
+
+			  },
+		},
+
+        // STARDEW VALLEY FAIR
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"TextOperations": [
+				{	// LOCATION: SET UP & MAIN EVENT (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Dandelion 46 74 0",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Dandelion.1": true,
+			  },
+		},
+
+        // SPIRIT'S EVE
+
+       {
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"TextOperations": [
+				{	// LOCATION: SET UP & MAIN EVENT (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries",	"Set-Up_additionalCharacters"],
+					"Value": "Dandelion 39 81 2",
+					"Delimiter": "/"
+				},
+				],
+				"When": {
+					"HasSeenEvent |contains=SnS.Ch3.Dandelion.1": true,
+				  },
+		},
+
+        // ICE FESTIVAL 
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"TextOperations": [
+				{	// LOCATION: SET UP (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Value": "Dandelion 68 12 3",
+					"Delimiter": "/"
+				},
+                {   // LOCATION: MAIN EVENT (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Main-Event_additionalCharacters"],
+					"Value": "Dandelion 68 12 3",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Dandelion.1": true,
+			  },
+		},
+
+        // WINTER STAR
+
+        {
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"TextOperations": [
+				{	// LOCATION: SET UP (VANILLA)
+					"Operation": "Append",
+					"Target": [	"Entries","Set-Up_additionalCharacters"	],
+					"Value": "Dandelion 44 57 2",
+					"Delimiter": "/"
+				},
+			],
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Dandelion.1": true,
+			  },
+        },
+
+		// RSV GATHERING FESTIVAL 
+
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall20",
+			"TextOperations": [
+					{ // LOCATION: SET UP
+					  "Operation": "Append",
+					  "Target": ["Entries", "Set-Up_additionalCharacters"],
+					  "Value": "Dandelion 62 47 1",
+					  "Delimiter": "/"
+					 },
+					 { // LOCATION: MAIN EVENT
+					  "Operation": "Append",
+					  "Target": ["Entries", "MainEvent_additionalCharacters"],
+					  "Value": "Dandelion 70 49 0",
+					  "Delimiter": "/"
+					 },
+				],
+				"When": {
+					"HasMod |contains=Rafseazz.RSVCP": true,
+					"HasSeenEvent |contains=SnS.Ch3.Dandelion.1": true,
+				  },
+		},
+
+		// RSV EMBER OF RESOLUTIONS 		
+
+		{
+
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter28",
+			"TextOperations": [
+				 { // LOCATION: SET UP 
+				  "Operation": "Append",
+				  "Target": ["Entries", "Set-Up_additionalCharacters"],
+				  "Value": "Dandelion 49 37 2",
+				  "Delimiter": "/"
+				 },
+				 { // LOCATION: MAIN EVENT
+				  "Operation": "Append",
+				  "Target": ["Entries", "MainEvent_additionalCharacters"],
+				  "Value": "Dandelion 29 48 1",
+				  "Delimiter": "/"
+				 },
+		 	],
+				"When": {
+					"HasMod |contains=Rafseazz.RSVCP": true,
+					"HasSeenEvent |contains=SnS.Ch3.Dandelion.1": true,
+				  },
+		},
+
+
+    ]
+}

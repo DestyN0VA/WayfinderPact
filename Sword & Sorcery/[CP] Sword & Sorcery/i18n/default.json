@@ -996,22 +996,23 @@ ________      ________ _   _ _______ _____
 */
 
 // 0 HEARTS PT 1 
-"Events.S&S.Ch1.0H1.Gunther.1": "...the entire collection, Marlon! I don't believe you can write that off for sake of fondness.$5",
-"Events.S&S.Ch1.0H1.Marlon.2": "We don't know what happened, Gunther-$5",
-"Events.S&S.Ch1.0H1.Marlon.3": "Hmn.",
-"Events.S&S.Ch1.0H1.Gunther.4": "We were just... discussing another newcomer.$0#$b#There's been quite a few fresh faces over in East Scarp.", 
-"Events.S&S.Ch1.0H1.Marlon.5": "That there have.$0#$b#I may go pay them a visit.$3",
-"Events.S&S.Ch1.0H1.Gunther.6": "...Oh, dear...$2", 
-
-// 0 HEARTS PT 2 
 "Events.S&S.Ch1.0H2.Mateo.1": "Watch out!",
 "Events.S&S.Ch1.0H2.Mateo.2": "Hail and well met! Haven't seen you around. My name's Mateo, and you are...$0",
 "Events.S&S.Ch1.0H2.Mateo.3": "You're new to town too, huh? Good to know.$32",
+"Events.S&S.Ch1.0H2.Mateo.3.TrollHeritage": "You're new to town too, huh? Good to know.$32#$b#And pay no mind to the extra appendages - my smile's just a bit sharper than most other townsfolk.$32",
 "Events.S&S.Ch1.0H2.Mateo.4": "It gets a little wild down here. Are you prepared for a bit of dungeon delving? If you're just getting started, take one of these.[349]",
 "Events.S&S.Ch1.0H2.Mateo.5": "The upper levels aren't too bad, but you're going to want to be more cautious the deeper you go.$0#$b#I spend most of my time here, though I live over in East Scarp in case you decide to visit. Tent on the beach, can't miss it.$1#$b#Speaking of, I'd best get going. Good luck. Be well. And watch the ceiling.$15",
 "Events.S&S.Ch1.0H2.Mateo.6": "Oh, and farmer?$14", 
 "Events.S&S.Ch1.0H2.Mateo.7": "What do you call a party of dedicated archaeologists?$35", 
 "Events.S&S.Ch1.0H2.Mateo.8": "A real shindig.$36", 
+
+// 0 HEARTS PT 2 
+"Events.S&S.Ch1.0H1.Gunther.1": "...the entire collection, Marlon! I don't believe you can write that off for sake of fondness.$5",
+"Events.S&S.Ch1.0H1.Marlon.2": "We don't know what happened, Gunther-$5",
+"Events.S&S.Ch1.0H1.Marlon.3": "Ah, it's the new blood.",
+"Events.S&S.Ch1.0H1.Gunther.4": "We were just... discussing another newcomer.$0#$b#There's been quite a few fresh faces over in East Scarp.", 
+"Events.S&S.Ch1.0H1.Marlon.5": "That there have. I may go pay them a visit.$0#$b#Good luck in your adventures, @.",
+"Events.S&S.Ch1.0H1.Gunther.6": "...Oh, dear...$2", 
 
 // 2 HEARTS 
 "Events.S&S.Ch1.2H.Mateo.1": "Evenin', farmer. You a night owl? $16", 
@@ -1032,32 +1033,27 @@ ________      ________ _   _ _______ _____
 // 4 HEARTS 
 "Events.S&S.Ch1.4H.Mateo.1": "Hey, there!", 
 "Events.S&S.Ch1.4H.Mateo.2": "Care to join me?", 
-"Events.S&S.Ch1.4H.Mateo.3": "I know I tend toward the scarce.$6#$b#I'm sorry for that, @. You're a good friend, and I shouldn't be so avoidant.$22", 
+"Events.S&S.Ch1.4H.Mateo.3": "I know I tend toward the scarce.$16#$b#I'm sorry for that, @. You're a good friend, and I shouldn't be so avoidant.$22", 
 "Events.S&S.Ch1.4H.Mateo.4": "I've just...I've got something of a louche history with Pelican Town.$10#$b#Gunther may have mentioned there was a curator prior to him; and I'm sure the townsfolk have mentioned it by now - his name was Wyatt.$8#$b#He and I are responsible for the museum being empty when you got here.$17", 
 "Events.S&S.Ch1.4H.Mateo.5": "I was his mentee, and I spent every waking moment in either the library or the mines.$16#$b#He was trusted and respected by everyone in town, because he fostered a love for academia in just about anyone who sought him out.$10", 
 "Events.S&S.Ch1.4H.Mateo.6": "Red flags are just flags through rose-tinted glasses, I guess. I was much too young to realize I was wearing them, besides.$16", 
 "Events.S&S.Ch1.4H.Mateo.7": "It was the middle of the summer; Wyatt and I packed up everything really abruptly one night, and had it carted off by morning.$21#$b#We stole everything Pelican Town had - every relic, scroll, gem and bone. He'd traded away the entire collection to Joja for a lifetime of creature comforts.$17#$b#Boxed and sold the symbols of his intellectual integrity, with my help.$16", 
 "Events.S&S.Ch1.4H.Mateo.8": "We retreated to the Fern Islands, but parted ways after that. I was left to fend for myself, so that's when I enrolled in school.$8#$b#I was lacking in other options, but that's something I don't regret.$23", 
-"Events.S&S.Ch1.4H.Mateo.Q1.Answer.1": "You know that wasn't your fault. You were just a kid.",
-"Events.S&S.Ch1.4H.Mateo.Q1.Answer.2": "That's in the past, though. Don't get caught in the tide.",
-"Events.S&S.Ch1.4H.Mateo.Q1.Answer.3": "None of this means you have to keep looking backwards; you're not irredeemable.",
-"Events.S&S.Ch1.4H.Mateo.Q1.Response.1": "It was my fault, @. I made that choice. It was the wrong one, I own that.$16",
-"Events.S&S.Ch1.4H.Mateo.Q1.Response.2": "But...!$18#$b#It feels like I'm already drowning!$19",
-"Events.S&S.Ch1.4H.Mateo.Q1.Response.3": "But it feels that way.$17#$b#I look back on what I did, as the person I am now... Nobody's more disappointed in me, than me.$16#$b#Blame doesn't matter. Everything's still gone. All I can do now is help restore it.$24",
-"Events.S&S.Ch1.4H.Mateo.10":"I can't face Pelican Town. I'm a thief and I owe them all an apology, but they have no reason not to expect an ulterior motive.$17#$b#You're the only person that's approached me so far, but you didn't know who I was.$8", 
-"Events.S&S.Ch1.4H.Mateo.Question.2": "Though, gossip flows like wine from a cask, doesn't it?",
-"Events.S&S.Ch1.4H.Mateo.Q2.Answer.1": "You're self-imposing your loneliness. Nobody deserves that.",
-"Events.S&S.Ch1.4H.Mateo.Q2.Answer.2": "You can't predict how everyone will feel about you. Being emotionally unavailable is self-sabotage.", 
-"Events.S&S.Ch1.4H.Mateo.Q2.Answer.3": "Stop punishing yourself just because Wyatt never faced any consequences.",
-"Events.S&S.Ch1.4H.Mateo.Q2.Response.1": "It feels like getting weighed down by chains I can't unravel. I don't want to be this way, but I can't help it.$19",
-"Events.S&S.Ch1.4H.Mateo.Q2.Response.2": "You're right, but it's easier than the alternative. I'm afraid, @.$16", 
-"Events.S&S.Ch1.4H.Mateo.Q2.Response.3": "You see right through me... you make me feel like a piece of glass, almost. Like I can be safely vulnerable.$21#$b#That doesn't make the truth any more difficult to swallow, though.$16",
-"Events.S&S.Ch1.4H.Mateo.12":"You're a great friend. For hearing me out, for being patient with me.$4", 
-"Events.S&S.Ch1.4H.Mateo.Question.3": "It feels like a lot to unload on someone, but I really appreciate you lending an ear.",
-"Events.S&S.Ch1.4H.Mateo.Q3.Answer.1": "The best way to help yourself is to get back out there, and re-integrate with the community. This isn't sustainable behavior.",
-"Events.S&S.Ch1.4H.Mateo.Q3.Answer.2": "Continuing to self-isolate won't do you any good. Show them all who you really are, like you've shown me.",
-"Events.S&S.Ch1.4H.Mateo.Q3.Response.1": "You're right, @. I can't stew in this forever. I've got to take my chances and let people make judgments on their own.$24",
+"Events.S&S.Ch1.4H.Mateo.Q1.Answer.1": "You know that wasn't your fault. You were just a kid, you said it yourself.",
+"Events.S&S.Ch1.4H.Mateo.Q1.Answer.2": "That's in the past, though. Don't get caught in the riptide or you'll drown.",
+"Events.S&S.Ch1.4H.Mateo.Q1.Response.1": "It was my fault, @. I made that choice. It was the wrong one, I own that.$16#$b#I look back on what I did, as the person I am now... Nobody's more disappointed in me, than me.$16#$b#Blame doesn't matter. Everything's still gone. All I can do now is help restore it.$24",
+"Events.S&S.Ch1.4H.Mateo.Q1.Response.2": "But...!$18#$b#It feels like I'm already drowning!$19#$b#I'm afraid, @. Of what they'll think, of how they'll react. I'm not sure I deserve their acknowledgement, much less their forgiveness.$2",
+"Events.S&S.Ch1.4H.Mateo.10":"I can't face Pelican Town. I'm a thief and I owe them all an apology, but they have no reason not to expect an ulterior motive.$17#$b#You're the only person that's approached me so far, but you didn't know who I was.$8", //
+"Events.S&S.Ch1.4H.Mateo.Q2.Answer.1": "You're isolating yourself as punishment for something you didn't have control over.",
+"Events.S&S.Ch1.4H.Mateo.Q2.Answer.2": "Just because something bad happened in the past, doesn't mean amends can't be made in the future.", 
+"Events.S&S.Ch1.4H.Mateo.Q2.Response.1": "It feels like getting weighed down by chains I can't unravel. I don't want to be this way.$17#$b#Or maybe I can help it... Do you think I have the strength to change, @?$21",
+"Events.S&S.Ch1.4H.Mateo.Q2.Response.2": "You're right, but it's easier than the alternative. I'm afraid, @.$16#$b#But the space to be vulnerable about it all helps. It makes facing this all a lot easier.$12", 
+"Events.S&S.Ch1.4H.Mateo.12":"You're a great friend. For hearing me out, for being patient with me.$4#$b#It feels like a lot to unload on someone, but I really appreciate you lending an ear.", 
+"Events.S&S.Ch1.4H.Mateo.Q3.Answer.1": "The best way to help yourself is to get back out there, and re-integrate with the community.",
+"Events.S&S.Ch1.4H.Mateo.Q3.Answer.2": "Show them all the person you've become, rather than being afraid of who you were. Just like you've shown me.",
+"Events.S&S.Ch1.4H.Mateo.Q3.Response.1": "You're right, @. I can't stew in this forever. I've got to take my chances and let people make judgments on their own.$1",
 "Events.S&S.Ch1.4H.Mateo.Q3.Response.2": "You're right, @. Thank you for trusting me, and seeing me through this... I'll make an effort, I promise.$12",
+"Events.S&S.Ch1.4H.Mateo.13":"I'll do better. Not just for you, but for myself, too.$32",
 "Events.S&S.Ch1.4H.Message.1":"Mateo will now attend festivals, and you can expect to see them around town more often!", 
 
 // 5 HEARTS PT 1
@@ -1082,7 +1078,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.5H1.Mateo.19": "I understand what I did was wrong, now. But I didn't then. $16#$b#I trusted Wyatt, and he failed me just the same as he did everyone else. $17#$b#That's no excuse, though. And I know that.$18#$b#And I know I owe you an apology, I just hadn't figured out where to start yet...$16",
 "Events.S&S.Ch1.5H1.Marlon.20": "You just did, kid. We just shouldn't have had to corner you to talk about it. $1",
 "Events.S&S.Ch1.5H1.Gunther.21": "Mateo, we don't hold you responsible for Wyatt's choices.$2#$b#Marlon and I just wanted to make sure you didn't continue down his path.$0",
-"Events.S&S.Ch1.5H1.Mateo.Q1.Answer.1": "You can't change the past, but you can turn towards the future.",
+"Events.S&S.Ch1.5H1.Mateo.Q1.Answer.1": "Remember: you can't change the past, but you can turn towards the future.",
 "Events.S&S.Ch1.5H1.Mateo.Q1.Answer.2": "You said you were going to make the effort to be better, this is your chance.",
 "Events.S&S.Ch1.5H1.Mateo.Q1.Response.1": "You're right, @. Thank you for seeing this through with me.$4", 
 "Events.S&S.Ch1.5H1.Mateo.Q1.Response.2": "You're right, @. Thanks for holding me accountable.$4",
@@ -1090,7 +1086,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.5H1.Marlon.24": "How about tomorrow, at the saloon. First round's on me, aye? $1",
 "Events.S&S.Ch1.5H1.Mateo.25": "That sounds great. $1",
 "Events.S&S.Ch1.5H1.Mateo.26": "You're more than welcome to come along, @. We won't wait up forever, though!$32",
-"Events.S&S.Ch1.5H1.Mateo.27": "In the case you're not able to meet us, thank you again, for everything. $0#$b# And...stay safe down there, alright? I meant what I said earlier.$32",
+"Events.S&S.Ch1.5H1.Mateo.27": "Thanks for that talk at the pier, @. I think it really made a difference here today.$0#$b# And...stay safe down there, alright? I meant what I said before.$32",
 
 // 5 HEARTS PT 2
 "Events.S&S.Ch1.5H2.Gus.1": "Hey, farmer!",
@@ -1128,14 +1124,16 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.5H2.Marlon.9": "Does that mean you'll be coming with us on patrols, Gunther?$3",
 "Events.S&S.Ch1.5H2.Gunther.9": "Absolutely not. I'm perfectly fine behind my counter, thank you.$1",
 "Events.S&S.Ch1.5H2.Mateo.12": "%You spend some time with Marlon, Gunther and Mateo before heading out for the evening. Everyone seems to be in relaxed spirits after a few drinks and a heartfelt chat.#$b#Thank you for coming along, @. You didn't have to, but it meant a lot to me to have your company.$4",
+"Events.S&S.Ch1.5H2.Dandelion.1": "They really don't believe us...",
+"Events.S&S.Ch1.5H2.Roslin.1": "I'm not sure why we expected any different.",
 
 // 5 HEARTS PT 3
 "Events.S&S.Ch1.5H3.Marlon.1": "You're just in time, @.$1",
 "Events.S&S.Ch1.5H3.Mateo.1": "I'm glad you're here.$1",
 "Events.S&S.Ch1.5H3.Marlon.2": "Gunther and I spent some time talkin' things out, and working on a way to deal with the guilt that Mateo's carryin' around. $3",
 "Events.S&S.Ch1.5H3.Gunther.1": "A little bit of extra validation to quell an anxious mind never hurt anyone.$1",
-"Events.S&S.Ch1.5H3.Marlon.3": "This is exactly why we've decided to have a formal ceremony to renew Mateo's membership, good n' proper.$1",
-"Events.S&S.Ch1.5H3.Gunther.2": "That way, they'll be able to feel like they're part of something again. Something good.$1",
+"Events.S&S.Ch1.5H3.Marlon.3": "This is exactly why we've decided to have a formal ceremony to renew Mateo's membership, good n' proper.$1#$b#They were just a teenager the first time around. Quite a bit of adventuring experience under your belt these days.$0",
+"Events.S&S.Ch1.5H3.Gunther.2": "This way, they'll be able to feel like they're part of something again. Something truly good.$1",
 "Events.S&S.Ch1.5H3.Marlon.4": "Now, let's get this underway.#$b#Do you swear under oath...#$b#to protect humanity from monsters and to do everything in your power to uphold the traditions, values, and ideology of the Adventurer's Guild?",
 "Events.S&S.Ch1.5H3.Mateo.2": "I do!",
 "Events.S&S.Ch1.5H3.Marlon.5": "On behalf of Stardew Valley, I officially reinstate you as the 13th Adventurer's Guild member!$1",
@@ -1184,6 +1182,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.7H1.Mateo.2": "It's not that bad, Harv... besides, it's my own f-$38",
 "Events.S&S.Ch1.7H1.Harvey.3": "That's not true and you know it, Mateo.$5",
 "Events.S&S.Ch1.7H1.Mateo.3": "You don't understand... There were so many Shadow Folk, and they all looked like they were scared of me.$42",
+"Events.S&S.Ch1.7H1.Mateo.3.TrollHeritage": "You don't understand... There were so many Shadow Folk!$42#$b#They must've thought I was some kind of monster. Or worse, they knew I was human but I still frightened them!$42",
 "Events.S&S.Ch1.7H1.Mateo.4": "I've never seen them like that before, I feel like I was invading their home, I-$40#$b#I hesitated, I can't - I can't say they were wrong to defend themselves, I-$41",
 "Events.S&S.Ch1.7H1.Mateo.5": "Fuck.",
 "Events.S&S.Ch1.7H1.Harvey.4": "Mateo, you've taken too much of a beating. You need to lay down!$7",
@@ -1191,7 +1190,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.7H1.Q1": "You have to believe me, the Shadow Folk... they're not just monsters, they're sentient.",
 "Events.S&S.Ch1.7H1.Q1.Answers": "#Mateo, what's important right now is that you listen to Harvey and rest.#You won't be able to investigate anything if you don't take the time to recover.",
 "Events.S&S.Ch1.7H1.Q1.Response.1": "...Thank you for caring about me, @, but...$40#$b#I'm just worried, like I've made another big mistake-$41",
-"Events.S&S.Ch1.7H1.Mateo.7": "Yeah, I'm... I'm not alright. ...I'm sorry...$41",
+"Events.S&S.Ch1.7H1.Mateo.7": "I'm...not sure I can stay conscious anymore...I'm sorry...$41",
 "Events.S&S.Ch1.7H1.Harvey.5": "It's okay, Mateo - we'll get you fixed up, I just need you to cooperate with me.$2",
 "Events.S&S.Ch1.7H1.Mateo.8": "You've got it, Harv...$39",
 "Events.S&S.Ch1.7H1.Harvey.6": "It was lucky that somebody found you in time.$2",
@@ -1224,16 +1223,16 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.7H2.Mateo.8": "I'll come find you, then. Just give me a few days to start getting back to routine...$21",
 "Events.S&S.Ch1.7H2.Krobus.7": "Of course - Oh, I didn't get your name...$3",
 "Events.S&S.Ch1.7H2.Mateo.9": "Mateo. It was good to meet you, Krobus.$0",
-"Events.S&S.Ch1.7H2.Krobus.8": "Good to meet you, too!$1#$b#I'm going to get going, though, so you and @ can catch up!$7",
+"Events.S&S.Ch1.7H2.Krobus.8": "Good to meet you, too!$1#$b#I'm going to get going, though, so you and @ can catch up! We can hang out another time.$7",
 "Events.S&S.Ch1.7H2.Mateo.10": "...I wasn't ready for that so soon after...$37",
 "Events.S&S.Ch1.7H2.Q1": "How's my face looking? Is it as bad as I think it is?",
-"Events.S&S.Ch1.7H2.Q1.Answers": "#All you need now is a cape, mask, and musical aptitude. #You're just being self-concious; they healed well, and don't look bad at all. #Lots of folks find scars attractive, you know!",
+"Events.S&S.Ch1.7H2.Q1.Answers": "#All you need now is a cape, mask, and musical aptitude. (PLATONIC)#You're just being self-concious; they healed well, and don't look bad at all. (PLATONIC)#Lots of folks find scars attractive, you know! Myself included.(FLIRTY)",
 "Events.S&S.Ch1.7H2.Q1.Response.1": "The first thing I thought when I looked in the mirror was, 'Oh, I should move into the basement of an opera house.'$1#$b#Thanks for easing my nerves, @. Laughing always does the trick.$32",
 "Events.S&S.Ch1.7H2.Q1.Response.2": "Thank you, @. I have bunch of scars, but I'd managed to keep my face clear until now.$37#$b#Aw, well. If you're saying they aren't bad, they really must not be.$36",
-"Events.S&S.Ch1.7H2.Q1.Response.3": "Is that so? Guess I've lucked out then, huh?$36",
-"Events.S&S.Ch1.7H2.Mateo.11": "Your reassurance means a lot. And, if you hadn't been around... I don't know how that would've gone. I felt more at ease with you here.$32",
-"Events.S&S.Ch1.7H2.Mateo.12": "Anyway, @, let me get you where you need to be. We can catch up on a few things - tell me what life's been like for you...$1",
-"Events.S&S.Ch1.7H2.Mateo.13": "Hey, @? Thanks for being an incredible friend.$80",
+"Events.S&S.Ch1.7H2.Q1.Response.3": "Is that so? Guess I've lucked out then, huh? That's an extra weighty statement, coming from you...$30",
+"Events.S&S.Ch1.7H2.Mateo.11": "...Your reassurance means a lot. And, if you hadn't been around... I don't know how that would've gone. I felt more at ease with you here.$32",
+"Events.S&S.Ch1.7H2.Mateo.12": "Anyway, let me get you where you need to be. We can catch up on a few things - tell me what life's been like for you. How's %pet doing?...$1",
+"Events.S&S.Ch1.7H2.Mateo.13": "You're an incredible person, @. Entirely unmatched. I hope you know that by now.$80",
 
 // 8 HEARTS PT 1
 "Events.S&S.Ch1.8H1.Marlon.1": "You live like this?$6",
@@ -1252,7 +1251,8 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.8H1.Mateo.4": "Thanks for helping, @. It really does mean a lot.$78",
 "Events.S&S.Ch1.8H1.Mateo.5": "Don't worry, though. I'm not turning my back on Krobus. I'm going to focus just as much attention on research.$32#$b#Thing is, there's still plenty of monsters out there who aren't sentient like they are, and it's our job to protect the Valley from them.$10",
 "Events.S&S.Ch1.8H1.Mateo.6": "You, Gunther and Marlon have all put faith in me, and I acknowledge that. So I'm going to make good on it.$32",
-"Events.S&S.Ch1.8H1.Mateo.7": "I can't believe this is really happening...$32",
+"Events.S&S.Ch1.8H1.Mateo.7": "I can't believe this is really happening... Never in my wildest dreams has any of this felt possible before.$32",
+"Events.S&S.Ch1.8H1.Mateo.7.Flirty": "I can't believe this is really happening... I'm becoming the best version of myself I could be, all because of @.$4#$b#I feel so strongly like I want to protect {{Lowercase: {{PPN2}}}}... but {{Lowercase: {{PPN1}}}} can protect {{Lowercase: {{PPN4}}}}, can't {{Lowercase: {{PPN1}}}}?$29",
 
 // 8 HEARTS PT 2
 "Events.S&S.Ch1.8H2.Robin.1": "Looks like we're just about finished up here, folks.$1",
@@ -1282,7 +1282,8 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.8H2.Message.1": "You spend some time in The Guild with Marlon, Gunther, and Mateo. After some good times and some bad laughs, the former two head off.",
 "Events.S&S.Ch1.8H2.Mateo.11": "Yeah, he hatched shortly after I set up the new incubator. No idea how he's this big already, though.$34",
 "Events.S&S.Ch1.8H2.Mateo.12": "@, listen. I know I've said it a lot. You're probably sick of it. But, thank you.$0#$b#This is everything I've ever dreamed of, you know? I feel fulfilled for the first time in so long.$12#$b#I can finally contribute to East Scarp in a big way. Make a difference. Help people, be a leader. That sort of thing.$80",
-"Events.S&S.Ch1.8H2.Mateo.13": "You know, @, I-$82",
+"Events.S&S.Ch1.8H2.Mateo.13": "Speaking of leadership, I-$82",
+"Events.S&S.Ch1.8H2.Mateo.13.Flirty": "You know, @, since our discussion about my scars I've been feeling like-$82",
 "Events.S&S.Ch1.8H2.Mateo.14": "Emeritus! No fire in the house!$26",
 "Events.S&S.Ch1.8H2.Emeritus.1": "Huuuuuurr?",
 "Events.S&S.Ch1.8H2.Mateo.15": "He almost burned down the brand new building...$17",
@@ -1292,6 +1293,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.B1.Mateo.2": "This was meant for you, I knew it when I found it.[74]$1",
 "Events.S&S.Ch1.B1.Mateo.3": "Since you went through the trouble of fixing up the bus, I figured you might be headed into the Skull Cave soon.$0#$b#It's dangerous, @. But this should help. You see, there are these pillars in the desert - offer that shard to them, and they'll judge you.$32#$b#It sounds ominous. I don't doubt your worthiness for a second. You're the kindest, most well-intended person I know.$0#$b#Trust me on this one, alright?$78",
 "Events.S&S.Ch1.B1.Mateo.4": "Stay safe in your travels, @. And good luck! This is only the beginning of your career as an adventurer!$1",
+"Events.S&S.Ch1.B1.Mateo.4.Flirty": "Stay safe in your adventures, @. I don't know what I'd do without you.$27",
 
 // 10 HEARTS PT 1
 "Events.S&S.Ch1.10H1.Krobus.1": "So, uhm... I believe that, perhaps, part of the reason some of my people have gotten agitated...$2",
@@ -1325,7 +1327,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.10H1.Mateo.16": "What do you need, @? I'm all ears.$32",
 "Events.S&S.Ch1.10H1.Q1.Answers": "#You, actually. I need you.#I don't need anything, but I want... you.",
 "Events.S&S.Ch1.10H1.Q1.Response.1": "@? I'm flattered. I feel the same way, but I didn't want to chance our friendship. It means everything to me.$29",
-"Events.S&S.Ch1.10H1.Mateo.17": "I have an idea. Meet me in the Deep Mountains, north of East Scarp. Late at night, in a day or so.$28",
+"Events.S&S.Ch1.10H1.Mateo.17": "I have an idea. It's a bit of a trek, but there's somewhere I want to take you.$28",
 "Events.S&S.Ch1.10H1.Mateo.18": "Just trust me.$31",
 
 // 10 HEARTS PT 2
@@ -3622,6 +3624,1334 @@ ________      ________ _   _ _______ _____
 "CT.Cirrus.JohnsArrival":"",
 "CT.Cirrus.keahi_prank": "",
 "CT.Cirrus.AfterProposal":"",
+
+/*
+  _____   ____   _____ _      _____ _   _ 
+ |  __ \ / __ \ / ____| |    |_   _| \ | |
+ | |__) | |  | | (___ | |      | | |  \| |
+ |  _  /| |  | |\___ \| |      | | | . ` |
+ | | \ \| |__| |____) | |____ _| |_| |\  |
+ |_|  \_\\____/|_____/|______|_____|_| \_|                                          
+
+   _____ ______ _   _ ______ _____  _____ _____   _____ _____          _      ____   _____ _    _ ______ 
+  / ____|  ____| \ | |  ____|  __ \|_   _/ ____| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
+ | |  __| |__  |  \| | |__  | |__) | | || |      | |  | || |    /  \  | |   | |  | | |  __| |  | | |__   
+ | | |_ |  __| | . ` |  __| |  _  /  | || |      | |  | || |   / /\ \ | |   | |  | | | |_ | |  | |  __|  
+ | |__| | |____| |\  | |____| | \ \ _| || |____  | |__| || |_ / ____ \| |___| |__| | |__| | |__| | |____ 
+  \_____|______|_| \_|______|_|  \_\_____\_____| |_____/_____/_/    \_\______\____/ \_____|\____/|______|
+
+*/
+
+// NAME & INTRO 
+"Core.Roslin.Name": "Roslin",
+"Core.Roslin.Introduction": "TEST DIALOGUE",
+
+// COMMUNITY CENTER BUNDLES  
+"Core.Roslin.JojaBegin": "",
+"Core.Roslin.CCBegin": "",
+"Core.Roslin.CCBus": "",
+"Core.Roslin.CCMinecart": "",
+"Core.Roslin.CCComplete": "",
+"Core.Roslin.MovieTheater": "",
+
+// BIRTHDAYS
+"Core.Roslin.Fall25": "", // Mateo
+"Core.Roslin.Winter21": "", //Hector
+
+// END OF SEASON
+"Core.Roslin.SpringEnd": "",
+"Core.Roslin.SummerEnd": "",
+"Core.Roslin.FallEnd": "",
+"Core.Roslin.WinterEnd": "",
+
+// SVE COMMUNITY DAY
+"Core.Roslin.CommunityCenter4": "",
+"Core.Roslin.CommunityCenter6": "",
+"Core.Roslin.CommunityCenter8": "",
+"Core.Roslin.CommunityCenter10": "",
+
+// FESTIVALS
+"Core.Roslin.EggFestival": "",
+"Core.Roslin.FlowerDance": "",
+"Core.Roslin.Luau": "",
+"Core.Roslin.MoonlightJelly": "",
+"Core.Roslin.SDVFair": "",
+"Core.Roslin.SpiritsEve": "",
+"Core.Roslin.IceFestival": "",
+"Core.Roslin.NightMarket": "",
+"Core.Roslin.WinterStar": "",
+
+// RESORT
+"Core.Roslin.ResortEntering": "",
+"Core.Roslin.ResortLeaving": "",
+"Core.Roslin.ResortShore": "",
+"Core.Roslin.ResortUmbrella": "",
+"Core.Roslin.ResortWander": "",
+"Core.Roslin.ResortWander.2": "",
+"Core.Roslin.ResortChair": "",
+"Core.Roslin.ResortBar": "",
+"Core.Roslin.ResortTowel": "",
+"Core.Roslin.ResortTowel.2": "",
+"Core.Roslin.Resort_Towel.3": "",
+"Core.Roslin.Resort": "",
+
+// ADDITIONAL LOCATIONAL DIALOGUE
+
+/*
+  _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
+ | |  | |  ____|   /\   |  __ \__   __| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
+ | |__| | |__     /  \  | |__) | | |    | |  | || |    /  \  | |   | |  | | |  __| |  | | |__   
+ |  __  |  __|   / /\ \ |  _  /  | |    | |  | || |   / /\ \ | |   | |  | | | |_ | |  | |  __|  
+ | |  | | |____ / ____ \| | \ \  | |    | |__| || |_ / ____ \| |___| |__| | |__| | |__| | |____ 
+ |_|  |_|______/_/    \_\_|  \_\ |_|    |_____/_____/_/    \_\______\____/ \_____|\____/|______|
+
+*/
+
+// GENERIC 0-4
+"Core.Roslin.Generic.EarlyHeart.1": "",
+"Core.Roslin.Generic.EarlyHeart.2": "",
+"Core.Roslin.Generic.EarlyHeart.3": "",
+"Core.Roslin.Generic.EarlyHeart.4": "",
+"Core.Roslin.Generic.EarlyHeart.5": "",
+"Core.Roslin.Generic.EarlyHeart.6": "",
+"Core.Roslin.Generic.EarlyHeart.7": "",
+"Core.Roslin.Generic.EarlyHeart.8": "",
+"Core.Roslin.Generic.EarlyHeart.9": "",
+"Core.Roslin.Generic.EarlyHeart.10": "",
+"Core.Roslin.Generic.EarlyHeart.11": "",
+"Core.Roslin.Generic.EarlyHeart.12": "",
+"Core.Roslin.Generic.EarlyHeart.13": "",
+"Core.Roslin.Generic.EarlyHeart.14": "",
+"Core.Roslin.Generic.EarlyHeart.15": "",
+
+// GENERIC 5-10
+"Core.Roslin.Generic.LateHeart.1": "",
+"Core.Roslin.Generic.LateHeart.2": "",
+"Core.Roslin.Generic.LateHeart.3": "",
+"Core.Roslin.Generic.LateHeart.4": "",
+"Core.Roslin.Generic.LateHeart.5": "",
+"Core.Roslin.Generic.LateHeart.6": "",
+"Core.Roslin.Generic.LateHeart.7": "",
+"Core.Roslin.Generic.LateHeart.8": "",
+"Core.Roslin.Generic.LateHeart.9": "",
+"Core.Roslin.Generic.LateHeart.10": "",
+"Core.Roslin.Generic.LateHeart.11": "",
+"Core.Roslin.Generic.LateHeart.12": "",
+"Core.Roslin.Generic.LateHeart.13": "",
+"Core.Roslin.Generic.LateHeart.14": "",
+"Core.Roslin.Generic.LateHeart.15": "",
+"Core.Roslin.Generic.LateHeart.16": "",
+"Core.Roslin.Generic.LateHeart.17": "",
+"Core.Roslin.Generic.LateHeart.18": "",
+"Core.Roslin.Generic.LateHeart.19": "",
+"Core.Roslin.Generic.LateHeart.20": "",
+"Core.Roslin.Generic.LateHeart.21": "",
+"Core.Roslin.Generic.LateHeart.22": "",
+"Core.Roslin.Generic.LateHeart.23": "",
+"Core.Roslin.Generic.LateHeart.24": "",
+"Core.Roslin.Generic.LateHeart.25": "",
+"Core.Roslin.Generic.LateHeart.26": "",
+"Core.Roslin.Generic.LateHeart.27": "",
+"Core.Roslin.Generic.LateHeart.28": "",
+"Core.Roslin.Generic.LateHeart.29": "",
+"Core.Roslin.Generic.LateHeart.30": "",
+
+// SPRING
+"Core.Roslin.Spring.1": "",
+"Core.Roslin.Spring.2": "",
+"Core.Roslin.Spring.3": "",
+"Core.Roslin.Spring.4": "",
+"Core.Roslin.Spring.5": "",
+
+// SUMMER
+"Core.Roslin.Summer.1": "",
+"Core.Roslin.Summer.2": "",
+"Core.Roslin.Summer.3": "",
+"Core.Roslin.Summer.4": "",
+"Core.Roslin.Summer.5": "",
+
+// FALL
+"Core.Roslin.Fall.1": "",
+"Core.Roslin.Fall.2": "",
+"Core.Roslin.Fall.3": "",
+"Core.Roslin.Fall.4": "",
+"Core.Roslin.Fall.5": "",
+
+// WINTER
+"Core.Roslin.Winter.1": "",
+"Core.Roslin.Winter.2": "",
+"Core.Roslin.Winter.3": "",
+"Core.Roslin.Winter.4": "",
+"Core.Roslin.Winter.5": "",
+
+// 10H SITUATIONAL
+"Core.Roslin.EXAMPLE.1": "",
+"Core.Roslin.EXAMPLE.2": "",
+"Core.Roslin.EXAMPLE.3": "",
+"Core.Roslin.EXAMPLE.4": "",
+"Core.Roslin.EXAMPLE.5": "",
+"Core.Roslin.EXAMPLE.6": "",
+"Core.Roslin.EXAMPLE.7": "",
+"Core.Roslin.EXAMPLE.8": "",
+"Core.Roslin.EXAMPLE.9": "",
+"Core.Roslin.EXAMPLE.10": "",
+
+/*
+   _____ _____ ______ _______   _______        _____ _______ ______  _____ 
+  / ____|_   _|  ____|__   __| |__   __|/\    / ____|__   __|  ____|/ ____|
+ | |  __  | | | |__     | |       | |  /  \  | (___    | |  | |__  | (___  
+ | | |_ | | | |  __|    | |       | | / /\ \  \___ \   | |  |  __|  \___ \ 
+ | |__| |_| |_| |       | |       | |/ ____ \ ____) |  | |  | |____ ____) |
+  \_____|_____|_|       |_|       |_/_/    \_\_____/   |_|  |______|_____/ 
+
+*/
+
+// BASIC GIFT RESPONSES 
+"Gifts.Roslin.GiftReaction.Love": "",
+"Gifts.Roslin.GiftReaction.Like": "",
+"Gifts.Roslin.GiftReaction.Dislike": "",
+"Gifts.Roslin.GiftReaction.Hate": "",
+"Gifts.Roslin.GiftReaction.Neutral": "",
+
+// ARTISANAL GOODS
+"Gifts.Roslin.GiftReaction.CategoryArtisanalGoods": "",
+
+// TRASH
+"Gifts.Roslin.GiftReaction.CategoryTrash": "",
+
+// MINERALS & GEMS
+"Gifts.Roslin.GiftReaction.CategoryGemsMinerals": "",
+
+// LOVES - PLATONIC
+"Gifts.Roslin.GiftReaction.EXAMPLE1": "",
+   
+// LIKES
+"Gifts.Roslin.GiftReaction.EXAMPLE2": "",
+
+// BIRTHDAY - PLATONIC
+"Gifts.Roslin.GiftReaction.EXAMPLE.Birthday": "",
+
+// ITEM REJECTIONS 
+"Gifts.Roslin.GiftReject.Bouquet": "",
+"Gifts.Roslin.GiftReject.MermaidPendant": "",
+
+
+/*
+  __  __  ______      _______ ______  _____ 
+ |  \/  |/ __ \ \    / /_   _|  ____|/ ____|
+ | \  / | |  | \ \  / /  | | | |__  | (___  
+ | |\/| | |  | |\ \/ /   | | |  __|  \___ \ 
+ | |  | | |__| | \  /   _| |_| |____ ____) |
+ |_|  |_|\____/   \/   |_____|______|_____/ 
+
+ */                                           
+
+ "Movies.Roslin.BraveLittleSapling.1": "",
+ "Movies.Roslin.BraveLittleSapling.2": "",
+ "Movies.Roslin.BraveLittleSapling.3": "",
+ "Movies.Roslin.NaturalWonders.1": "",
+ "Movies.Roslin.NaturalWonders.2": "",
+ "Movies.Roslin.NaturalWonders.3": "",
+ "Movies.Roslin.PrairieKing.1": "",
+ "Movies.Roslin.PrairieKing.2": "",
+ "Movies.Roslin.PrairieKing.3": "",
+ "Movies.Roslin.Wumbus.1": "",
+ "Movies.Roslin.Wumbus.2": "", 
+ "Movies.Roslin.Wumbus.3": "",
+ "Movies.Roslin.Mysterium.1": "",
+ "Movies.Roslin.Mysterium.2": "",
+ "Movies.Roslin.Mysterium.3": "",
+ "Movies.Roslin.ItHowlsInTheRain.1": "",
+ "Movies.Roslin.ItHowlsInTheRain.2": "",
+ "Movies.Roslin.ItHowlsInTheRain.3": "",
+ "Movies.Roslin.MiracleAtColdstarRanch.1": "",
+ "Movies.Roslin.MiracleAtColdstarRanch.2": "",
+ "Movies.Roslin.MiracleAtColdstarRanch.3": "",
+ "Movies.Roslin.ZuzuCityExpress.1": "",
+ "Movies.Roslin.ZuzuCityExpress.2": "",
+ "Movies.Roslin.ZuzuCityExpress.3": "",
+
+/*
+  ______ ______  _____ _______ _______      __     _       _____ 
+ |  ____|  ____|/ ____|__   __|_   _\ \    / /\   | |     / ____|
+ | |__  | |__  | (___    | |    | |  \ \  / /  \  | |    | (___  
+ |  __| |  __|  \___ \   | |    | |   \ \/ / /\ \ | |     \___ \ 
+ | |    | |____ ____) |  | |   _| |_   \  / ____ \| |____ ____) |
+ |_|    |______|_____/   |_|  |_____|   \/_/    \_\______|_____/
+
+ */
+
+ // EGG FESTIVAL 
+"Festivals.Roslin.spring13.1": "",
+"Festivals.Roslin.spring13.2": "",
+"Festivals.Roslin.spring13.3": "",
+
+// FLOWER DANCE 
+"Festivals.Roslin.spring24.1": "",
+"Festivals.Roslin.spring24.2": "",
+"Festivals.Roslin.spring24.3": "",
+
+// LUAU 
+"Festivals.Roslin.summer11.1": "",
+"Festivals.Roslin.summer11.2": "",
+"Festivals.Roslin.summer11.3": "",
+
+// MOONLIGHT JELLIES
+"Festivals.Roslin.MoonlightJelly.1": "",
+"Festivals.Roslin.MoonlightJelly.2": "",
+"Festivals.Roslin.MoonlightJelly.3": "",
+
+// SDV FAIR
+"Festivals.Roslin.fall16.1": "",
+"Festivals.Roslin.fall16.2": "",
+"Festivals.Roslin.fall16.3": "",
+
+// SPIRIT'S EVE
+"Festivals.Roslin.fall27.1": "",
+"Festivals.Roslin.fall27.2": "",
+"Festivals.Roslin.fall27.3": "",
+
+// ICE FESTIVAL 
+"Festivals.Roslin.winter8.1": "",
+"Festivals.Roslin.winter8.2": "",
+"Festivals.Roslin.winter8.3": "",
+
+// WINTER STAR 
+"Festivals.Roslin.winter25.1": "",
+"Festivals.Roslin.winter25.2": "",
+"Festivals.Roslin.winter25.3": "",
+
+// RSV GATHERING 
+"Festivals.Roslin.fall20.1": "",
+"Festivals.Roslin.fall20.2": "",
+"Festivals.Roslin.fall20.3": "",
+
+// RSV EMBER OF RESOLUTIONS 
+"Festivals.Roslin.winter28.1": "",
+"Festivals.Roslin.winter28.2": "",
+"Festivals.Roslin.winter28.3": "",
+
+
+
+ /*
+   _____ _______ _____  _____ _   _  _____  _____ 
+  / ____|__   __|  __ \|_   _| \ | |/ ____|/ ____|
+ | (___    | |  | |__) | | | |  \| | |  __| (___  
+  \___ \   | |  |  _  /  | | | . ` | | |_ |\___ \ 
+  ____) |  | |  | | \ \ _| |_| |\  | |__| |____) |
+ |_____/   |_|  |_|  \_\_____|_| \_|\_____|_____/ 
+                                                                                                   
+*/
+
+"Strings.Roslin.EXAMPLE": "",
+
+/*
+  __  __          _____ _      
+ |  \/  |   /\   |_   _| |     
+ | \  / |  /  \    | | | |     
+ | |\/| | / /\ \   | | | |     
+ | |  | |/ ____ \ _| |_| |____ 
+ |_|  |_/_/    \_\_____|______|
+                               
+*/
+
+"Mail.Roslin.Letter1": "",
+
+
+/*
+   ____  _    _ ______  _____ _______ _____ 
+  / __ \| |  | |  ____|/ ____|__   __/ ____|
+ | |  | | |  | | |__  | (___    | | | (___  
+ | |  | | |  | |  __|  \___ \   | |  \___ \ 
+ | |__| | |__| | |____ ____) |  | |  ____) |
+  \___\_\\____/|______|_____/   |_| |_____/ 
+
+*/
+
+// BUILDING THE LION'S MANE 
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE.Name": "",
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE.Text": "", 
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE.Objective.0.Text": "",
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE.Objective.1.Text": "",
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE.Objective.2.Text": "",
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE.Objective.3.Text": "",
+
+/*
+ ________      ________ _   _ _______ _____ 
+|  ____\ \    / /  ____| \ | |__   __/ ____|
+| |__   \ \  / /| |__  |  \| |  | | | (___  
+|  __|   \ \/ / |  __| | . ` |  | |  \___ \ 
+| |____   \  /  | |____| |\  |  | |  ____) |
+|______|   \/   |______|_| \_|  |_| |_____/ 
+
+*/
+
+"Events.SnS.0H1.Roslin.1": "",
+
+/*
+   _____ ____  _   _     _______ ____  _____ _____ _____  _____ 
+  / ____/ __ \| \ | |   |__   __/ __ \|  __ \_   _/ ____|/ ____|
+ | |   | |  | |  \| |      | | | |  | | |__) || || |    | (___  
+ | |   | |  | | . ` |      | | | |  | |  ___/ | || |     \___ \ 
+ | |___| |__| | |\  |_     | | | |__| | |    _| || |____ ____) |
+  \_____\____/|_| \_(_)    |_|  \____/|_|   |_____\_____|_____/ 
+
+*/
+
+"CT.Roslin.Example": "",
+
+// Roslin' REACTIONS
+"CT.Roslin.SterlingDrugs": "",
+"CT.Roslin.SterlingRelapse": "",
+"CT.Roslin.SterlingApology": "",
+"CT.Roslin.JunaBeachBallet": "",
+"CT.Roslin.LucikielArrives": "",
+"CT.Roslin.ReputationIncreased": "",
+"CT.Roslin.JasperGone2": "",
+"CT.Roslin.JasperHomeA": "",
+"CT.Roslin.PTJ03": "",
+"CT.Roslin.MeetTheCats": "",
+"CT.Roslin.ButteredJorts": "",
+"CT.Roslin.JortsZoomies": "",
+"CT.Roslin.wedding": "",
+"CT.Roslin.luauBest": "",
+"CT.Roslin.Baby": "",
+"CT.Roslin.jojaMartStruckByLightning": "",
+"CT.Roslin.willyBoatRepaired": "",
+"CT.Roslin.islandResortUnlocked":"",
+"CT.Roslin.leoValleyArrival": "",
+"CT.Roslin.railroadEarthquake": "",
+"CT.Roslin.AnewCoupleInTown": "",
+"CT.Roslin.AnewBookClub": "",
+"CT.Roslin.EliIntro": "",
+"CT.Roslin.MeetDND": "",
+"CT.Roslin.AideenGarden": "",
+"CT.Roslin.DiTR_CT_ShadowPlay": "",
+"CT.Roslin.DiTR_CT_SensFlowers": "",
+"CT.Roslin.BearFamTimeForBees":"",
+"CT.Roslin.SigLowBattery":"",
+"CT.Roslin.SigAndCigarettes":"",
+"CT.Roslin.SigHatesCrowds":"",
+"CT.Roslin.SigVersusCrabs":"",
+"CT.Roslin.SondraAgingGracefully":"",
+"CT.Roslin.SondraRememberWulfram":"",
+"CT.Roslin.GunnarOpenForBusiness":"",
+"CT.Roslin.GunnarBuildsaBomb":"",
+"CT.Roslin.GunnarBreaksaSword":"",
+"CT.Roslin.GunnarGuildTryout":"",
+"CT.Roslin.GunnarGetsaLecture":"",
+"CT.Roslin.GudrunQinstagram":"",
+"CT.Roslin.GudrunEcoFriendly":"",
+"CT.Roslin.BearFamFullHouse":"",
+"CT.Roslin.BearFamFireDrill":"",
+"CT.Roslin.BearFamAttacked":"",
+"CT.Roslin.WelcomeSergeantBarnes":"",
+"CT.Roslin.NoraIntro":"",
+"CT.Roslin.NoraClass":"",
+"CT.Roslin.NoraFear:":"",
+"CT.Roslin.NoraSad":"",
+"CT.Roslin.NoraBusy":"",
+"CT.Roslin.JulietGremlin":"",
+"CT.Roslin.LavrilUnlocked":"",
+"CT.Roslin.DwarfStory":"",
+"CT.Roslin.ShadowfolkStory":"",
+"CT.Roslin.MeetingMeredith":"",
+"CT.Roslin.BookLaunchParty":"",
+"CT.Roslin.RodneyPoetryReading":"",
+"CT.Roslin.EliJunimo2":"",
+"CT.Roslin.DylanIntro":"",
+"CT.Roslin.DylanBeach":"",
+"CT.Roslin.DylanTown": "",
+"CT.Roslin.DylanSaloon":"",
+"CT.Roslin.JohnsArrival":"",
+"CT.Roslin.keahi_prank": "",
+"CT.Roslin.AfterProposal":"",
+
+/*
+  _____          _   _ _____  ______ _      _____ ____  _   _ 
+ |  __ \   /\   | \ | |  __ \|  ____| |    |_   _/ __ \| \ | |
+ | |  | | /  \  |  \| | |  | | |__  | |      | || |  | |  \| |
+ | |  | |/ /\ \ | . ` | |  | |  __| | |      | || |  | | . ` |
+ | |__| / ____ \| |\  | |__| | |____| |____ _| || |__| | |\  |
+ |_____/_/    \_\_| \_|_____/|______|______|_____\____/|_| \_|
+                                                                                                                                                                  
+   _____ ______ _   _ ______ _____  _____ _____   _____ _____          _      ____   _____ _    _ ______ 
+  / ____|  ____| \ | |  ____|  __ \|_   _/ ____| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
+ | |  __| |__  |  \| | |__  | |__) | | || |      | |  | || |    /  \  | |   | |  | | |  __| |  | | |__   
+ | | |_ |  __| | . ` |  __| |  _  /  | || |      | |  | || |   / /\ \ | |   | |  | | | |_ | |  | |  __|  
+ | |__| | |____| |\  | |____| | \ \ _| || |____  | |__| || |_ / ____ \| |___| |__| | |__| | |__| | |____ 
+  \_____|______|_| \_|______|_|  \_\_____\_____| |_____/_____/_/    \_\______\____/ \_____|\____/|______|
+
+*/
+
+// NAME & INTRO 
+"Core.Dandelion.Name": "Dandelion",
+"Core.Dandelion.Introduction": "TEST DIALOGUE",
+
+// COMMUNITY CENTER BUNDLES  
+"Core.Dandelion.JojaBegin": "",
+"Core.Dandelion.CCBegin": "",
+"Core.Dandelion.CCBus": "",
+"Core.Dandelion.CCMinecart": "",
+"Core.Dandelion.CCComplete": "",
+"Core.Dandelion.MovieTheater": "",
+
+// BIRTHDAYS
+"Core.Dandelion.Fall25": "", //Mateo
+"Core.Dandelion.Winter21": "", //Hector
+
+// END OF SEASON
+"Core.Dandelion.SpringEnd": "",
+"Core.Dandelion.SummerEnd": "",
+"Core.Dandelion.FallEnd": "",
+"Core.Dandelion.WinterEnd": "",
+
+// SVE COMMUNITY DAY
+"Core.Dandelion.CommunityCenter4": "",
+"Core.Dandelion.CommunityCenter6": "",
+"Core.Dandelion.CommunityCenter8": "",
+"Core.Dandelion.CommunityCenter10": "",
+
+// FESTIVALS
+"Core.Dandelion.EggFestival": "",
+"Core.Dandelion.FlowerDance": "",
+"Core.Dandelion.Luau": "",
+"Core.Dandelion.MoonlightJelly": "",
+"Core.Dandelion.SDVFair": "",
+"Core.Dandelion.SpiritsEve": "",
+"Core.Dandelion.IceFestival": "",
+"Core.Dandelion.NightMarket": "",
+"Core.Dandelion.WinterStar": "",
+
+// RESORT
+"Core.Dandelion.ResortEntering": "",
+"Core.Dandelion.ResortLeaving": "",
+"Core.Dandelion.ResortShore": "",
+"Core.Dandelion.ResortUmbrella": "",
+"Core.Dandelion.ResortWander": "",
+"Core.Dandelion.ResortWander.2": "",
+"Core.Dandelion.ResortChair": "",
+"Core.Dandelion.ResortBar": "",
+"Core.Dandelion.ResortTowel": "",
+"Core.Dandelion.ResortTowel.2": "",
+"Core.Dandelion.Resort_Towel.3": "",
+"Core.Dandelion.Resort": "",
+
+// ADDITIONAL LOCATIONAL DIALOGUE
+
+/*
+  _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
+ | |  | |  ____|   /\   |  __ \__   __| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
+ | |__| | |__     /  \  | |__) | | |    | |  | || |    /  \  | |   | |  | | |  __| |  | | |__   
+ |  __  |  __|   / /\ \ |  _  /  | |    | |  | || |   / /\ \ | |   | |  | | | |_ | |  | |  __|  
+ | |  | | |____ / ____ \| | \ \  | |    | |__| || |_ / ____ \| |___| |__| | |__| | |__| | |____ 
+ |_|  |_|______/_/    \_\_|  \_\ |_|    |_____/_____/_/    \_\______\____/ \_____|\____/|______|
+
+*/
+
+// GENERIC 0-4
+"Core.Dandelion.Generic.EarlyHeart.1": "",
+"Core.Dandelion.Generic.EarlyHeart.2": "",
+"Core.Dandelion.Generic.EarlyHeart.3": "",
+"Core.Dandelion.Generic.EarlyHeart.4": "",
+"Core.Dandelion.Generic.EarlyHeart.5": "",
+"Core.Dandelion.Generic.EarlyHeart.6": "",
+"Core.Dandelion.Generic.EarlyHeart.7": "",
+"Core.Dandelion.Generic.EarlyHeart.8": "",
+"Core.Dandelion.Generic.EarlyHeart.9": "",
+"Core.Dandelion.Generic.EarlyHeart.10": "",
+"Core.Dandelion.Generic.EarlyHeart.11": "",
+"Core.Dandelion.Generic.EarlyHeart.12": "",
+"Core.Dandelion.Generic.EarlyHeart.13": "",
+"Core.Dandelion.Generic.EarlyHeart.14": "",
+"Core.Dandelion.Generic.EarlyHeart.15": "",
+
+// GENERIC 5-10
+"Core.Dandelion.Generic.LateHeart.1": "",
+"Core.Dandelion.Generic.LateHeart.2": "",
+"Core.Dandelion.Generic.LateHeart.3": "",
+"Core.Dandelion.Generic.LateHeart.4": "",
+"Core.Dandelion.Generic.LateHeart.5": "",
+"Core.Dandelion.Generic.LateHeart.6": "",
+"Core.Dandelion.Generic.LateHeart.7": "",
+"Core.Dandelion.Generic.LateHeart.8": "",
+"Core.Dandelion.Generic.LateHeart.9": "",
+"Core.Dandelion.Generic.LateHeart.10": "",
+"Core.Dandelion.Generic.LateHeart.11": "",
+"Core.Dandelion.Generic.LateHeart.12": "",
+"Core.Dandelion.Generic.LateHeart.13": "",
+"Core.Dandelion.Generic.LateHeart.14": "",
+"Core.Dandelion.Generic.LateHeart.15": "",
+"Core.Dandelion.Generic.LateHeart.16": "",
+"Core.Dandelion.Generic.LateHeart.17": "",
+"Core.Dandelion.Generic.LateHeart.18": "",
+"Core.Dandelion.Generic.LateHeart.19": "",
+"Core.Dandelion.Generic.LateHeart.20": "",
+"Core.Dandelion.Generic.LateHeart.21": "",
+"Core.Dandelion.Generic.LateHeart.22": "",
+"Core.Dandelion.Generic.LateHeart.23": "",
+"Core.Dandelion.Generic.LateHeart.24": "",
+"Core.Dandelion.Generic.LateHeart.25": "",
+"Core.Dandelion.Generic.LateHeart.26": "",
+"Core.Dandelion.Generic.LateHeart.27": "",
+"Core.Dandelion.Generic.LateHeart.28": "",
+"Core.Dandelion.Generic.LateHeart.29": "",
+"Core.Dandelion.Generic.LateHeart.30": "",
+
+// SPRING
+"Core.Dandelion.Spring.1": "",
+"Core.Dandelion.Spring.2": "",
+"Core.Dandelion.Spring.3": "",
+"Core.Dandelion.Spring.4": "",
+"Core.Dandelion.Spring.5": "",
+
+// SUMMER
+"Core.Dandelion.Summer.1": "",
+"Core.Dandelion.Summer.2": "",
+"Core.Dandelion.Summer.3": "",
+"Core.Dandelion.Summer.4": "",
+"Core.Dandelion.Summer.5": "",
+
+// FALL
+"Core.Dandelion.Fall.1": "",
+"Core.Dandelion.Fall.2": "",
+"Core.Dandelion.Fall.3": "",
+"Core.Dandelion.Fall.4": "",
+"Core.Dandelion.Fall.5": "",
+
+// WINTER
+"Core.Dandelion.Winter.1": "",
+"Core.Dandelion.Winter.2": "",
+"Core.Dandelion.Winter.3": "",
+"Core.Dandelion.Winter.4": "",
+"Core.Dandelion.Winter.5": "",
+
+// 10H SITUATIONAL
+"Core.Dandelion.EXAMPLE.1": "",
+"Core.Dandelion.EXAMPLE.2": "",
+"Core.Dandelion.EXAMPLE.3": "",
+"Core.Dandelion.EXAMPLE.4": "",
+"Core.Dandelion.EXAMPLE.5": "",
+"Core.Dandelion.EXAMPLE.6": "",
+"Core.Dandelion.EXAMPLE.7": "",
+"Core.Dandelion.EXAMPLE.8": "",
+"Core.Dandelion.EXAMPLE.9": "",
+"Core.Dandelion.EXAMPLE.10": "",
+
+
+/*
+   _____ _____ ______ _______   _______        _____ _______ ______  _____ 
+  / ____|_   _|  ____|__   __| |__   __|/\    / ____|__   __|  ____|/ ____|
+ | |  __  | | | |__     | |       | |  /  \  | (___    | |  | |__  | (___  
+ | | |_ | | | |  __|    | |       | | / /\ \  \___ \   | |  |  __|  \___ \ 
+ | |__| |_| |_| |       | |       | |/ ____ \ ____) |  | |  | |____ ____) |
+  \_____|_____|_|       |_|       |_/_/    \_\_____/   |_|  |______|_____/ 
+
+*/
+
+// BASIC GIFT RESPONSES 
+"Gifts.Dandelion.GiftReaction.Love": "",
+"Gifts.Dandelion.GiftReaction.Like": "",
+"Gifts.Dandelion.GiftReaction.Dislike": "",
+"Gifts.Dandelion.GiftReaction.Hate": "",
+"Gifts.Dandelion.GiftReaction.Neutral": "",
+
+// ARTISANAL GOODS
+"Gifts.Dandelion.GiftReaction.CategoryArtisanalGoods": "",
+
+// TRASH
+"Gifts.Dandelion.GiftReaction.CategoryTrash": "",
+
+// MINERALS & GEMS
+"Gifts.Dandelion.GiftReaction.CategoryGemsMinerals": "",
+
+// LOVES - PLATONIC
+"Gifts.Dandelion.GiftReaction.EXAMPLE1": "",
+   
+// LIKES
+"Gifts.Dandelion.GiftReaction.EXAMPLE2": "",
+
+// BIRTHDAY - PLATONIC
+"Gifts.Dandelion.GiftReaction.EXAMPLE.Birthday": "",
+
+// ITEM REJECTIONS 
+"Gifts.Dandelion.GiftReject.Bouquet": "",
+"Gifts.Dandelion.GiftReject.MermaidPendant": "",
+
+
+/*
+  __  __  ______      _______ ______  _____ 
+ |  \/  |/ __ \ \    / /_   _|  ____|/ ____|
+ | \  / | |  | \ \  / /  | | | |__  | (___  
+ | |\/| | |  | |\ \/ /   | | |  __|  \___ \ 
+ | |  | | |__| | \  /   _| |_| |____ ____) |
+ |_|  |_|\____/   \/   |_____|______|_____/ 
+
+ */                                           
+
+ "Movies.Dandelion.BraveLittleSapling.1": "",
+ "Movies.Dandelion.BraveLittleSapling.2": "",
+ "Movies.Dandelion.BraveLittleSapling.3": "",
+ "Movies.Dandelion.NaturalWonders.1": "",
+ "Movies.Dandelion.NaturalWonders.2": "",
+ "Movies.Dandelion.NaturalWonders.3": "",
+ "Movies.Dandelion.PrairieKing.1": "",
+ "Movies.Dandelion.PrairieKing.2": "",
+ "Movies.Dandelion.PrairieKing.3": "",
+ "Movies.Dandelion.Wumbus.1": "",
+ "Movies.Dandelion.Wumbus.2": "", 
+ "Movies.Dandelion.Wumbus.3": "",
+ "Movies.Dandelion.Mysterium.1": "",
+ "Movies.Dandelion.Mysterium.2": "",
+ "Movies.Dandelion.Mysterium.3": "",
+ "Movies.Dandelion.ItHowlsInTheRain.1": "",
+ "Movies.Dandelion.ItHowlsInTheRain.2": "",
+ "Movies.Dandelion.ItHowlsInTheRain.3": "",
+ "Movies.Dandelion.MiracleAtColdstarRanch.1": "",
+ "Movies.Dandelion.MiracleAtColdstarRanch.2": "",
+ "Movies.Dandelion.MiracleAtColdstarRanch.3": "",
+ "Movies.Dandelion.ZuzuCityExpress.1": "",
+ "Movies.Dandelion.ZuzuCityExpress.2": "",
+ "Movies.Dandelion.ZuzuCityExpress.3": "",
+
+/*
+  ______ ______  _____ _______ _______      __     _       _____ 
+ |  ____|  ____|/ ____|__   __|_   _\ \    / /\   | |     / ____|
+ | |__  | |__  | (___    | |    | |  \ \  / /  \  | |    | (___  
+ |  __| |  __|  \___ \   | |    | |   \ \/ / /\ \ | |     \___ \ 
+ | |    | |____ ____) |  | |   _| |_   \  / ____ \| |____ ____) |
+ |_|    |______|_____/   |_|  |_____|   \/_/    \_\______|_____/
+
+ */
+
+ // EGG FESTIVAL 
+"Festivals.Dandelion.spring13.1": "",
+"Festivals.Dandelion.spring13.2": "",
+"Festivals.Dandelion.spring13.3": "",
+
+// FLOWER DANCE 
+"Festivals.Dandelion.spring24.1": "",
+"Festivals.Dandelion.spring24.2": "",
+"Festivals.Dandelion.spring24.3": "",
+
+// LUAU 
+"Festivals.Dandelion.summer11.1": "",
+"Festivals.Dandelion.summer11.2": "",
+"Festivals.Dandelion.summer11.3": "",
+
+// MOONLIGHT JELLIES
+"Festivals.Dandelion.MoonlightJelly.1": "",
+"Festivals.Dandelion.MoonlightJelly.2": "",
+"Festivals.Dandelion.MoonlightJelly.3": "",
+
+// SDV FAIR
+"Festivals.Dandelion.fall16.1": "",
+"Festivals.Dandelion.fall16.2": "",
+"Festivals.Dandelion.fall16.3": "",
+
+// SPIRIT'S EVE
+"Festivals.Dandelion.fall27.1": "",
+"Festivals.Dandelion.fall27.2": "",
+"Festivals.Dandelion.fall27.3": "",
+
+// ICE FESTIVAL 
+"Festivals.Dandelion.winter8.1": "",
+"Festivals.Dandelion.winter8.2": "",
+"Festivals.Dandelion.winter8.3": "",
+
+// WINTER STAR 
+"Festivals.Dandelion.winter25.1": "",
+"Festivals.Dandelion.winter25.2": "",
+"Festivals.Dandelion.winter25.3": "",
+
+// RSV GATHERING 
+"Festivals.Dandelion.fall20.1": "",
+"Festivals.Dandelion.fall20.2": "",
+"Festivals.Dandelion.fall20.3": "",
+
+// RSV EMBER OF RESOLUTIONS 
+"Festivals.Dandelion.winter28.1": "",
+"Festivals.Dandelion.winter28.2": "",
+"Festivals.Dandelion.winter28.3": "",
+
+
+
+ /*
+   _____ _______ _____  _____ _   _  _____  _____ 
+  / ____|__   __|  __ \|_   _| \ | |/ ____|/ ____|
+ | (___    | |  | |__) | | | |  \| | |  __| (___  
+  \___ \   | |  |  _  /  | | | . ` | | |_ |\___ \ 
+  ____) |  | |  | | \ \ _| |_| |\  | |__| |____) |
+ |_____/   |_|  |_|  \_\_____|_| \_|\_____|_____/ 
+                                                                                                   
+*/
+
+"Strings.Dandelion.EXAMPLE": "",
+
+/*
+  __  __          _____ _      
+ |  \/  |   /\   |_   _| |     
+ | \  / |  /  \    | | | |     
+ | |\/| | / /\ \   | | | |     
+ | |  | |/ ____ \ _| |_| |____ 
+ |_|  |_/_/    \_\_____|______|
+                               
+*/
+
+"Mail.Dandelion.Letter1": "",
+
+
+/*
+   ____  _    _ ______  _____ _______ _____ 
+  / __ \| |  | |  ____|/ ____|__   __/ ____|
+ | |  | | |  | | |__  | (___    | | | (___  
+ | |  | | |  | |  __|  \___ \   | |  \___ \ 
+ | |__| | |__| | |____ ____) |  | |  ____) |
+  \___\_\\____/|______|_____/   |_| |_____/ 
+
+*/
+
+// BUILDING THE LION'S MANE 
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE1.Name": "",
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE1.Text": "", 
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE1.Objective.0.Text": "",
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE1.Objective.1.Text": "",
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE1.Objective.2.Text": "",
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE1.Objective.3.Text": "",
+
+/*
+ ________      ________ _   _ _______ _____ 
+|  ____\ \    / /  ____| \ | |__   __/ ____|
+| |__   \ \  / /| |__  |  \| |  | | | (___  
+|  __|   \ \/ / |  __| | . ` |  | |  \___ \ 
+| |____   \  /  | |____| |\  |  | |  ____) |
+|______|   \/   |______|_| \_|  |_| |_____/ 
+
+*/
+
+"Events.SnS.0H1.Dandelion.1": "",
+
+/*
+   _____ ____  _   _     _______ ____  _____ _____ _____  _____ 
+  / ____/ __ \| \ | |   |__   __/ __ \|  __ \_   _/ ____|/ ____|
+ | |   | |  | |  \| |      | | | |  | | |__) || || |    | (___  
+ | |   | |  | | . ` |      | | | |  | |  ___/ | || |     \___ \ 
+ | |___| |__| | |\  |_     | | | |__| | |    _| || |____ ____) |
+  \_____\____/|_| \_(_)    |_|  \____/|_|   |_____\_____|_____/ 
+
+*/
+
+"CT.Dandelion.Example": "",
+
+// Dandelion' REACTIONS
+"CT.Dandelion.SterlingDrugs": "",
+"CT.Dandelion.SterlingRelapse": "",
+"CT.Dandelion.SterlingApology": "",
+"CT.Dandelion.JunaBeachBallet": "",
+"CT.Dandelion.LucikielArrives": "",
+"CT.Dandelion.ReputationIncreased": "",
+"CT.Dandelion.JasperGone2": "",
+"CT.Dandelion.JasperHomeA": "",
+"CT.Dandelion.PTJ03": "",
+"CT.Dandelion.MeetTheCats": "",
+"CT.Dandelion.ButteredJorts": "",
+"CT.Dandelion.JortsZoomies": "",
+"CT.Dandelion.wedding": "",
+"CT.Dandelion.luauBest": "",
+"CT.Dandelion.Baby": "",
+"CT.Dandelion.jojaMartStruckByLightning": "",
+"CT.Dandelion.willyBoatRepaired": "",
+"CT.Dandelion.islandResortUnlocked":"",
+"CT.Dandelion.leoValleyArrival": "",
+"CT.Dandelion.railroadEarthquake": "",
+"CT.Dandelion.AnewCoupleInTown": "",
+"CT.Dandelion.AnewBookClub": "",
+"CT.Dandelion.EliIntro": "",
+"CT.Dandelion.MeetDND": "",
+"CT.Dandelion.AideenGarden": "",
+"CT.Dandelion.DiTR_CT_ShadowPlay": "",
+"CT.Dandelion.DiTR_CT_SensFlowers": "",
+"CT.Dandelion.BearFamTimeForBees":"",
+"CT.Dandelion.SigLowBattery":"",
+"CT.Dandelion.SigAndCigarettes":"",
+"CT.Dandelion.SigHatesCrowds":"",
+"CT.Dandelion.SigVersusCrabs":"",
+"CT.Dandelion.SondraAgingGracefully":"",
+"CT.Dandelion.SondraRememberWulfram":"",
+"CT.Dandelion.GunnarOpenForBusiness":"",
+"CT.Dandelion.GunnarBuildsaBomb":"",
+"CT.Dandelion.GunnarBreaksaSword":"",
+"CT.Dandelion.GunnarGuildTryout":"",
+"CT.Dandelion.GunnarGetsaLecture":"",
+"CT.Dandelion.GudrunQinstagram":"",
+"CT.Dandelion.GudrunEcoFriendly":"",
+"CT.Dandelion.BearFamFullHouse":"",
+"CT.Dandelion.BearFamFireDrill":"",
+"CT.Dandelion.BearFamAttacked":"",
+"CT.Dandelion.WelcomeSergeantBarnes":"",
+"CT.Dandelion.NoraIntro":"",
+"CT.Dandelion.NoraClass":"",
+"CT.Dandelion.NoraFear:":"",
+"CT.Dandelion.NoraSad":"",
+"CT.Dandelion.NoraBusy":"",
+"CT.Dandelion.JulietGremlin":"",
+"CT.Dandelion.LavrilUnlocked":"",
+"CT.Dandelion.DwarfStory":"",
+"CT.Dandelion.ShadowfolkStory":"",
+"CT.Dandelion.MeetingMeredith":"",
+"CT.Dandelion.BookLaunchParty":"",
+"CT.Dandelion.RodneyPoetryReading":"",
+"CT.Dandelion.EliJunimo2":"",
+"CT.Dandelion.DylanIntro":"",
+"CT.Dandelion.DylanBeach":"",
+"CT.Dandelion.DylanTown": "",
+"CT.Dandelion.DylanSaloon":"",
+"CT.Dandelion.JohnsArrival":"",
+"CT.Dandelion.keahi_prank": "",
+"CT.Dandelion.AfterProposal":"",
+
+/*
+   _____  ____  _      ____  __  __  ____  _   _ 
+  / ____|/ __ \| |    / __ \|  \/  |/ __ \| \ | |
+ | (___ | |  | | |   | |  | | \  / | |  | |  \| |
+  \___ \| |  | | |   | |  | | |\/| | |  | | . ` |
+  ____) | |__| | |___| |__| | |  | | |__| | |\  |
+ |_____/ \____/|______\____/|_|  |_|\____/|_| \_|
+                                                                                                                                                                  
+   _____ ______ _   _ ______ _____  _____ _____   _____ _____          _      ____   _____ _    _ ______ 
+  / ____|  ____| \ | |  ____|  __ \|_   _/ ____| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
+ | |  __| |__  |  \| | |__  | |__) | | || |      | |  | || |    /  \  | |   | |  | | |  __| |  | | |__   
+ | | |_ |  __| | . ` |  __| |  _  /  | || |      | |  | || |   / /\ \ | |   | |  | | | |_ | |  | |  __|  
+ | |__| | |____| |\  | |____| | \ \ _| || |____  | |__| || |_ / ____ \| |___| |__| | |__| | |__| | |____ 
+  \_____|______|_| \_|______|_|  \_\_____\_____| |_____/_____/_/    \_\______\____/ \_____|\____/|______|
+
+*/
+
+// NAME & INTRO 
+"Core.Solomon.Name": "Solomon",
+"Core.Solomon.Introduction": "TEST DIALOGUE",
+
+// COMMUNITY CENTER BUNDLES  
+"Core.Solomon.JojaBegin": "",
+"Core.Solomon.CCBegin": "",
+"Core.Solomon.CCBus": "",
+"Core.Solomon.CCMinecart": "",
+"Core.Solomon.CCComplete": "",
+"Core.Solomon.MovieTheater": "",
+
+// BIRTHDAYS
+"Core.Solomon.Fall25": "", //Mateo
+"Core.Solomon.Winter21": "", //Hector
+
+// END OF SEASON
+"Core.Solomon.SpringEnd": "",
+"Core.Solomon.SummerEnd": "",
+"Core.Solomon.FallEnd": "",
+"Core.Solomon.WinterEnd": "",
+
+// SVE COMMUNITY DAY
+"Core.Solomon.CommunityCenter4": "",
+"Core.Solomon.CommunityCenter6": "",
+"Core.Solomon.CommunityCenter8": "",
+"Core.Solomon.CommunityCenter10": "",
+
+// FESTIVALS
+"Core.Solomon.EggFestival": "",
+"Core.Solomon.FlowerDance": "",
+"Core.Solomon.Luau": "",
+"Core.Solomon.MoonlightJelly": "",
+"Core.Solomon.SDVFair": "",
+"Core.Solomon.SpiritsEve": "",
+"Core.Solomon.IceFestival": "",
+"Core.Solomon.NightMarket": "",
+"Core.Solomon.WinterStar": "",
+
+// RESORT
+"Core.Solomon.ResortEntering": "",
+"Core.Solomon.ResortLeaving": "",
+"Core.Solomon.ResortShore": "",
+"Core.Solomon.ResortUmbrella": "",
+"Core.Solomon.ResortWander": "",
+"Core.Solomon.ResortWander.2": "",
+"Core.Solomon.ResortChair": "",
+"Core.Solomon.ResortBar": "",
+"Core.Solomon.ResortTowel": "",
+"Core.Solomon.ResortTowel.2": "",
+"Core.Solomon.Resort_Towel.3": "",
+"Core.Solomon.Resort": "",
+
+// ADDITIONAL LOCATIONAL DIALOGUE
+
+/*
+  _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
+ | |  | |  ____|   /\   |  __ \__   __| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
+ | |__| | |__     /  \  | |__) | | |    | |  | || |    /  \  | |   | |  | | |  __| |  | | |__   
+ |  __  |  __|   / /\ \ |  _  /  | |    | |  | || |   / /\ \ | |   | |  | | | |_ | |  | |  __|  
+ | |  | | |____ / ____ \| | \ \  | |    | |__| || |_ / ____ \| |___| |__| | |__| | |__| | |____ 
+ |_|  |_|______/_/    \_\_|  \_\ |_|    |_____/_____/_/    \_\______\____/ \_____|\____/|______|
+
+*/
+
+// GENERIC 0-4
+"Core.Solomon.Generic.EarlyHeart.1": "",
+"Core.Solomon.Generic.EarlyHeart.2": "",
+"Core.Solomon.Generic.EarlyHeart.3": "",
+"Core.Solomon.Generic.EarlyHeart.4": "",
+"Core.Solomon.Generic.EarlyHeart.5": "",
+"Core.Solomon.Generic.EarlyHeart.6": "",
+"Core.Solomon.Generic.EarlyHeart.7": "",
+"Core.Solomon.Generic.EarlyHeart.8": "",
+"Core.Solomon.Generic.EarlyHeart.9": "",
+"Core.Solomon.Generic.EarlyHeart.10": "",
+"Core.Solomon.Generic.EarlyHeart.11": "",
+"Core.Solomon.Generic.EarlyHeart.12": "",
+"Core.Solomon.Generic.EarlyHeart.13": "",
+"Core.Solomon.Generic.EarlyHeart.14": "",
+"Core.Solomon.Generic.EarlyHeart.15": "",
+
+// GENERIC 5-10
+"Core.Solomon.Generic.LateHeart.1": "",
+"Core.Solomon.Generic.LateHeart.2": "",
+"Core.Solomon.Generic.LateHeart.3": "",
+"Core.Solomon.Generic.LateHeart.4": "",
+"Core.Solomon.Generic.LateHeart.5": "",
+"Core.Solomon.Generic.LateHeart.6": "",
+"Core.Solomon.Generic.LateHeart.7": "",
+"Core.Solomon.Generic.LateHeart.8": "",
+"Core.Solomon.Generic.LateHeart.9": "",
+"Core.Solomon.Generic.LateHeart.10": "",
+"Core.Solomon.Generic.LateHeart.11": "",
+"Core.Solomon.Generic.LateHeart.12": "",
+"Core.Solomon.Generic.LateHeart.13": "",
+"Core.Solomon.Generic.LateHeart.14": "",
+"Core.Solomon.Generic.LateHeart.15": "",
+"Core.Solomon.Generic.LateHeart.16": "",
+"Core.Solomon.Generic.LateHeart.17": "",
+"Core.Solomon.Generic.LateHeart.18": "",
+"Core.Solomon.Generic.LateHeart.19": "",
+"Core.Solomon.Generic.LateHeart.20": "",
+"Core.Solomon.Generic.LateHeart.21": "",
+"Core.Solomon.Generic.LateHeart.22": "",
+"Core.Solomon.Generic.LateHeart.23": "",
+"Core.Solomon.Generic.LateHeart.24": "",
+"Core.Solomon.Generic.LateHeart.25": "",
+"Core.Solomon.Generic.LateHeart.26": "",
+"Core.Solomon.Generic.LateHeart.27": "",
+"Core.Solomon.Generic.LateHeart.28": "",
+"Core.Solomon.Generic.LateHeart.29": "",
+"Core.Solomon.Generic.LateHeart.30": "",
+
+// SPRING
+"Core.Solomon.Spring.1": "",
+"Core.Solomon.Spring.2": "",
+"Core.Solomon.Spring.3": "",
+"Core.Solomon.Spring.4": "",
+"Core.Solomon.Spring.5": "",
+
+// SUMMER
+"Core.Solomon.Summer.1": "",
+"Core.Solomon.Summer.2": "",
+"Core.Solomon.Summer.3": "",
+"Core.Solomon.Summer.4": "",
+"Core.Solomon.Summer.5": "",
+
+// FALL
+"Core.Solomon.Fall.1": "",
+"Core.Solomon.Fall.2": "",
+"Core.Solomon.Fall.3": "",
+"Core.Solomon.Fall.4": "",
+"Core.Solomon.Fall.5": "",
+
+// WINTER
+"Core.Solomon.Winter.1": "",
+"Core.Solomon.Winter.2": "",
+"Core.Solomon.Winter.3": "",
+"Core.Solomon.Winter.4": "",
+"Core.Solomon.Winter.5": "",
+
+// 10H SITUATIONAL
+"Core.Solomon.EXAMPLE.1": "",
+"Core.Solomon.EXAMPLE.2": "",
+"Core.Solomon.EXAMPLE.3": "",
+"Core.Solomon.EXAMPLE.4": "",
+"Core.Solomon.EXAMPLE.5": "",
+"Core.Solomon.EXAMPLE.6": "",
+"Core.Solomon.EXAMPLE.7": "",
+"Core.Solomon.EXAMPLE.8": "",
+"Core.Solomon.EXAMPLE.9": "",
+"Core.Solomon.EXAMPLE.10": "",
+
+
+/*
+   _____ _____ ______ _______   _______        _____ _______ ______  _____ 
+  / ____|_   _|  ____|__   __| |__   __|/\    / ____|__   __|  ____|/ ____|
+ | |  __  | | | |__     | |       | |  /  \  | (___    | |  | |__  | (___  
+ | | |_ | | | |  __|    | |       | | / /\ \  \___ \   | |  |  __|  \___ \ 
+ | |__| |_| |_| |       | |       | |/ ____ \ ____) |  | |  | |____ ____) |
+  \_____|_____|_|       |_|       |_/_/    \_\_____/   |_|  |______|_____/ 
+
+*/
+
+// BASIC GIFT RESPONSES 
+"Gifts.Solomon.GiftReaction.Love": "",
+"Gifts.Solomon.GiftReaction.Like": "",
+"Gifts.Solomon.GiftReaction.Dislike": "",
+"Gifts.Solomon.GiftReaction.Hate": "",
+"Gifts.Solomon.GiftReaction.Neutral": "",
+
+// ARTISANAL GOODS
+"Gifts.Solomon.GiftReaction.CategoryArtisanalGoods": "",
+
+// TRASH
+"Gifts.Solomon.GiftReaction.CategoryTrash": "",
+
+// MINERALS & GEMS
+"Gifts.Solomon.GiftReaction.CategoryGemsMinerals": "",
+
+// LOVES - PLATONIC
+"Gifts.Solomon.GiftReaction.EXAMPLE1": "",
+   
+// LIKES
+"Gifts.Solomon.GiftReaction.EXAMPLE2": "",
+
+// BIRTHDAY - PLATONIC
+"Gifts.Solomon.GiftReaction.EXAMPLE.Birthday": "",
+
+// ITEM REJECTIONS 
+"Gifts.Solomon.GiftReject.Bouquet": "",
+"Gifts.Solomon.GiftReject.MermaidPendant": "",
+
+
+/*
+  __  __  ______      _______ ______  _____ 
+ |  \/  |/ __ \ \    / /_   _|  ____|/ ____|
+ | \  / | |  | \ \  / /  | | | |__  | (___  
+ | |\/| | |  | |\ \/ /   | | |  __|  \___ \ 
+ | |  | | |__| | \  /   _| |_| |____ ____) |
+ |_|  |_|\____/   \/   |_____|______|_____/ 
+
+ */                                           
+
+ "Movies.Solomon.BraveLittleSapling.1": "",
+ "Movies.Solomon.BraveLittleSapling.2": "",
+ "Movies.Solomon.BraveLittleSapling.3": "",
+ "Movies.Solomon.NaturalWonders.1": "",
+ "Movies.Solomon.NaturalWonders.2": "",
+ "Movies.Solomon.NaturalWonders.3": "",
+ "Movies.Solomon.PrairieKing.1": "",
+ "Movies.Solomon.PrairieKing.2": "",
+ "Movies.Solomon.PrairieKing.3": "",
+ "Movies.Solomon.Wumbus.1": "",
+ "Movies.Solomon.Wumbus.2": "", 
+ "Movies.Solomon.Wumbus.3": "",
+ "Movies.Solomon.Mysterium.1": "",
+ "Movies.Solomon.Mysterium.2": "",
+ "Movies.Solomon.Mysterium.3": "",
+ "Movies.Solomon.ItHowlsInTheRain.1": "",
+ "Movies.Solomon.ItHowlsInTheRain.2": "",
+ "Movies.Solomon.ItHowlsInTheRain.3": "",
+ "Movies.Solomon.MiracleAtColdstarRanch.1": "",
+ "Movies.Solomon.MiracleAtColdstarRanch.2": "",
+ "Movies.Solomon.MiracleAtColdstarRanch.3": "",
+ "Movies.Solomon.ZuzuCityExpress.1": "",
+ "Movies.Solomon.ZuzuCityExpress.2": "",
+ "Movies.Solomon.ZuzuCityExpress.3": "",
+
+/*
+  ______ ______  _____ _______ _______      __     _       _____ 
+ |  ____|  ____|/ ____|__   __|_   _\ \    / /\   | |     / ____|
+ | |__  | |__  | (___    | |    | |  \ \  / /  \  | |    | (___  
+ |  __| |  __|  \___ \   | |    | |   \ \/ / /\ \ | |     \___ \ 
+ | |    | |____ ____) |  | |   _| |_   \  / ____ \| |____ ____) |
+ |_|    |______|_____/   |_|  |_____|   \/_/    \_\______|_____/
+
+ */
+
+ // EGG FESTIVAL 
+"Festivals.Solomon.spring13.1": "",
+"Festivals.Solomon.spring13.2": "",
+"Festivals.Solomon.spring13.3": "",
+
+// FLOWER DANCE 
+"Festivals.Solomon.spring24.1": "",
+"Festivals.Solomon.spring24.2": "",
+"Festivals.Solomon.spring24.3": "",
+
+// LUAU 
+"Festivals.Solomon.summer11.1": "",
+"Festivals.Solomon.summer11.2": "",
+"Festivals.Solomon.summer11.3": "",
+
+// MOONLIGHT JELLIES
+"Festivals.Solomon.MoonlightJelly.1": "",
+"Festivals.Solomon.MoonlightJelly.2": "",
+"Festivals.Solomon.MoonlightJelly.3": "",
+
+// SDV FAIR
+"Festivals.Solomon.fall16.1": "",
+"Festivals.Solomon.fall16.2": "",
+"Festivals.Solomon.fall16.3": "",
+
+// SPIRIT'S EVE
+"Festivals.Solomon.fall27.1": "",
+"Festivals.Solomon.fall27.2": "",
+"Festivals.Solomon.fall27.3": "",
+
+// ICE FESTIVAL 
+"Festivals.Solomon.winter8.1": "",
+"Festivals.Solomon.winter8.2": "",
+"Festivals.Solomon.winter8.3": "",
+
+// WINTER STAR 
+"Festivals.Solomon.winter25.1": "",
+"Festivals.Solomon.winter25.2": "",
+"Festivals.Solomon.winter25.3": "",
+
+// RSV GATHERING 
+"Festivals.Solomon.fall20.1": "",
+"Festivals.Solomon.fall20.2": "",
+"Festivals.Solomon.fall20.3": "",
+
+// RSV EMBER OF RESOLUTIONS 
+"Festivals.Solomon.winter28.1": "",
+"Festivals.Solomon.winter28.2": "",
+"Festivals.Solomon.winter28.3": "",
+
+
+
+ /*
+   _____ _______ _____  _____ _   _  _____  _____ 
+  / ____|__   __|  __ \|_   _| \ | |/ ____|/ ____|
+ | (___    | |  | |__) | | | |  \| | |  __| (___  
+  \___ \   | |  |  _  /  | | | . ` | | |_ |\___ \ 
+  ____) |  | |  | | \ \ _| |_| |\  | |__| |____) |
+ |_____/   |_|  |_|  \_\_____|_| \_|\_____|_____/ 
+                                                                                                   
+*/
+
+"Strings.Solomon.EXAMPLE": "",
+
+/*
+  __  __          _____ _      
+ |  \/  |   /\   |_   _| |     
+ | \  / |  /  \    | | | |     
+ | |\/| | / /\ \   | | | |     
+ | |  | |/ ____ \ _| |_| |____ 
+ |_|  |_/_/    \_\_____|______|
+                               
+*/
+
+"Mail.Solomon.Letter1": "",
+
+
+/*
+   ____  _    _ ______  _____ _______ _____ 
+  / __ \| |  | |  ____|/ ____|__   __/ ____|
+ | |  | | |  | | |__  | (___    | | | (___  
+ | |  | | |  | |  __|  \___ \   | |  \___ \ 
+ | |__| | |__| | |____ ____) |  | |  ____) |
+  \___\_\\____/|______|_____/   |_| |_____/ 
+
+*/
+
+// BUILDING THE LION'S MANE 
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE2.Name": "",
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE2.Text": "", 
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE2.Objective.0.Text": "",
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE2.Objective.1.Text": "",
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE2.Objective.2.Text": "",
+"Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE2.Objective.3.Text": "",
+
+/*
+ ________      ________ _   _ _______ _____ 
+|  ____\ \    / /  ____| \ | |__   __/ ____|
+| |__   \ \  / /| |__  |  \| |  | | | (___  
+|  __|   \ \/ / |  __| | . ` |  | |  \___ \ 
+| |____   \  /  | |____| |\  |  | |  ____) |
+|______|   \/   |______|_| \_|  |_| |_____/ 
+
+*/
+
+"Events.SnS.0H1.Solomon.1": "",
+
+/*
+   _____ ____  _   _     _______ ____  _____ _____ _____  _____ 
+  / ____/ __ \| \ | |   |__   __/ __ \|  __ \_   _/ ____|/ ____|
+ | |   | |  | |  \| |      | | | |  | | |__) || || |    | (___  
+ | |   | |  | | . ` |      | | | |  | |  ___/ | || |     \___ \ 
+ | |___| |__| | |\  |_     | | | |__| | |    _| || |____ ____) |
+  \_____\____/|_| \_(_)    |_|  \____/|_|   |_____\_____|_____/ 
+
+*/
+
+"CT.Solomon.Example": "",
+
+// Solomon' REACTIONS
+"CT.Solomon.SterlingDrugs": "",
+"CT.Solomon.SterlingRelapse": "",
+"CT.Solomon.SterlingApology": "",
+"CT.Solomon.JunaBeachBallet": "",
+"CT.Solomon.LucikielArrives": "",
+"CT.Solomon.ReputationIncreased": "",
+"CT.Solomon.JasperGone2": "",
+"CT.Solomon.JasperHomeA": "",
+"CT.Solomon.PTJ03": "",
+"CT.Solomon.MeetTheCats": "",
+"CT.Solomon.ButteredJorts": "",
+"CT.Solomon.JortsZoomies": "",
+"CT.Solomon.wedding": "",
+"CT.Solomon.luauBest": "",
+"CT.Solomon.Baby": "",
+"CT.Solomon.jojaMartStruckByLightning": "",
+"CT.Solomon.willyBoatRepaired": "",
+"CT.Solomon.islandResortUnlocked":"",
+"CT.Solomon.leoValleyArrival": "",
+"CT.Solomon.railroadEarthquake": "",
+"CT.Solomon.AnewCoupleInTown": "",
+"CT.Solomon.AnewBookClub": "",
+"CT.Solomon.EliIntro": "",
+"CT.Solomon.MeetDND": "",
+"CT.Solomon.AideenGarden": "",
+"CT.Solomon.DiTR_CT_ShadowPlay": "",
+"CT.Solomon.DiTR_CT_SensFlowers": "",
+"CT.Solomon.BearFamTimeForBees":"",
+"CT.Solomon.SigLowBattery":"",
+"CT.Solomon.SigAndCigarettes":"",
+"CT.Solomon.SigHatesCrowds":"",
+"CT.Solomon.SigVersusCrabs":"",
+"CT.Solomon.SondraAgingGracefully":"",
+"CT.Solomon.SondraRememberWulfram":"",
+"CT.Solomon.GunnarOpenForBusiness":"",
+"CT.Solomon.GunnarBuildsaBomb":"",
+"CT.Solomon.GunnarBreaksaSword":"",
+"CT.Solomon.GunnarGuildTryout":"",
+"CT.Solomon.GunnarGetsaLecture":"",
+"CT.Solomon.GudrunQinstagram":"",
+"CT.Solomon.GudrunEcoFriendly":"",
+"CT.Solomon.BearFamFullHouse":"",
+"CT.Solomon.BearFamFireDrill":"",
+"CT.Solomon.BearFamAttacked":"",
+"CT.Solomon.WelcomeSergeantBarnes":"",
+"CT.Solomon.NoraIntro":"",
+"CT.Solomon.NoraClass":"",
+"CT.Solomon.NoraFear:":"",
+"CT.Solomon.NoraSad":"",
+"CT.Solomon.NoraBusy":"",
+"CT.Solomon.JulietGremlin":"",
+"CT.Solomon.LavrilUnlocked":"",
+"CT.Solomon.DwarfStory":"",
+"CT.Solomon.ShadowfolkStory":"",
+"CT.Solomon.MeetingMeredith":"",
+"CT.Solomon.BookLaunchParty":"",
+"CT.Solomon.RodneyPoetryReading":"",
+"CT.Solomon.EliJunimo2":"",
+"CT.Solomon.DylanIntro":"",
+"CT.Solomon.DylanBeach":"",
+"CT.Solomon.DylanTown": "",
+"CT.Solomon.DylanSaloon":"",
+"CT.Solomon.JohnsArrival":"",
+"CT.Solomon.keahi_prank": "",
+"CT.Solomon.AfterProposal":"",
 
 /*
    _______          ______  _____  _____              _____  ____  _____   _____ ______ _______     __

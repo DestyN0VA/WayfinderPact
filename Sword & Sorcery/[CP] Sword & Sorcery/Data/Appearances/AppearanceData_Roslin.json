@@ -21,7 +21,7 @@
             "Action": "Load",
             "Target": "Characters/HoodDown/spring_Roslin, Characters/HoodDown/summer_Roslin, Characters/HoodDown/fall_Roslin, Characters/HoodDown/winter_Roslin",
             "FromFile": "assets/Characters/Roslin/HoodDown/{{TargetWithoutPath}}.png"
-        }
+        },
         {
             "LogName": "Outdoors Portraits - Roslin",
             "Action": "Load",

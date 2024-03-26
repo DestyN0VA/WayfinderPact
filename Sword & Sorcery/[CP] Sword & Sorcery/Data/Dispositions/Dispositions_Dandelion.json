@@ -5,15 +5,15 @@
             "Action": "EditData",
             "Target": "Data/Characters",
             "Entries": {
-                "Roslin": {
-                    "DisplayName": "Roslin",
+                "Dandelion": {
+                    "DisplayName": "Dandelion",
                     "Gender": "Female",
                     "Age": "Adult",
-                    "Manner": "Rude",
-                    "SocialAnxiety": "Neutral",
-                    "Optimism": "Negative",
-                    "BirthSeason": "Spring",
-                    "BirthDay": 26,
+                    "Manner": "Polite",
+                    "SocialAnxiety": "Shy",
+                    "Optimism": "Positive",
+                    "BirthSeason": "Summer",
+                    "BirthDay": 16,
                     "HomeRegion": "Town",
                     "CanBeRomanced": false,
                     "CanGreetNearbyCharacters": false,
@@ -21,7 +21,7 @@
                     "EndSlideShow": "TrailingGroup",
                     "SpawnIfMissing": true,
                     "IntroductionsQuest": false,
-                    "LoveInterest": "Dandelion", 
+                    "LoveInterest": "Roslin", 
                     "SocialTab": "HiddenUntilMet",
                     "Calendar": "HiddenUntilMet",
                     "FlowerDanceCanDance": false,
@@ -29,10 +29,10 @@
                     "ShakePortraits": [9, 15, 19, 21],
                     "Home": [
                         {
-                            "ID": "Roslin - NPC Waiting Room",
+                            "ID": "Dandelion - NPC Waiting Room",
                             "Location": "EastScarp_TNPCWaitingWarpRoom",
                             "Tile": {
-                                "X": 14,
+                                "X": 15,
                                 "Y": 5
                             },
                             "Direction": "Down"
@@ -44,80 +44,64 @@
                             "Condition": "SEASON Spring",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Indoors": true,
-                            "Outdoors": false,
-                            "Portrait": "Portraits/HoodDown/spring_Roslin",
-                            "Sprite": "Characters/HoodDown/spring_Roslin"
+                            "Portrait": "Portraits/spring_Dandelion",
+                            "Sprite": "Characters/spring_Dandelion"
                         },
                         {
                             "ID": "Summer Outfit",
                             "Condition": "SEASON Summer",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Indoors": true,
-                            "Outdoors": false,
-                            "Portrait": "Portraits/HoodDown/summer_Roslin",
-                            "Sprite": "Characters/HoodDown/summer_Roslin"
+                            "Portrait": "Portraits/summer_Dandelion",
+                            "Sprite": "Characters/summer_Dandelion"
                         },
                         {
                             "ID": "Fall Outfit",
                             "Condition": "SEASON Fall",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Indoors": true,
-                            "Outdoors": false,
-                            "Portrait": "Portraits/HoodDown/fall_Roslin",
-                            "Sprite": "Characters/HoodDown/fall_Roslin"
+                            "Portrait": "Portraits/fall_Dandelion",
+                            "Sprite": "Characters/fall_Dandelion"
                         },
                         {
                             "ID": "Winter Outfit",
                             "Condition": "SEASON Winter",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Indoors": true,
-                            "Outdoors": false,
-                            "Portrait": "Portraits/HoodDown/winter_Roslin",
-                            "Sprite": "Characters/HoodDown/winter_Roslin"
+                            "Portrait": "Portraits/winter_Dandelion",
+                            "Sprite": "Characters/winter_Dandelion"
                         },
                         {
                             "ID": "Spring Outfit",
                             "Condition": "SEASON Spring",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Indoors": false,
-                            "Outdoors": true,
-                            "Portrait": "Portraits/HoodUp/spring_Roslin",
-                            "Sprite": "Characters/HoodUp/spring_Roslin"
+                            "Portrait": "Portraits/spring_Dandelion",
+                            "Sprite": "Characters/spring_Dandelion"
                         },
                         {
                             "ID": "Summer Outfit",
                             "Condition": "SEASON Summer",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Indoors": false,
-                            "Outdoors": true,
-                            "Portrait": "Portraits/HoodUp/summer_Roslin",
-                            "Sprite": "Characters/HoodUp/summer_Roslin"
+                            "Portrait": "Portraits/summer_Dandelion",
+                            "Sprite": "Characters/summer_Dandelion"
                         },
                         {
                             "ID": "Fall Outfit",
                             "Condition": "SEASON Fall",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Indoors": false,
-                            "Outdoors": true,
-                            "Portrait": "Portraits/HoodUp/fall_Roslin",
-                            "Sprite": "Characters/HoodUp/fall_Roslin"
+                            "Portrait": "Portraits/fall_Dandelion",
+                            "Sprite": "Characters/fall_Dandelion"
                         },
                         {
                             "ID": "Winter Outfit",
                             "Condition": "SEASON Winter",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Indoors": false,
-                            "Outdoors": true,
-                            "Portrait": "Portraits/HoodUp/winter_Roslin",
-                            "Sprite": "Characters/HoodUp/winter_Roslin"
+                            "Portrait": "Portraits/winter_Dandelion",
+                            "Sprite": "Characters/winter_Dandelion"
                         }
                     ]
                 }

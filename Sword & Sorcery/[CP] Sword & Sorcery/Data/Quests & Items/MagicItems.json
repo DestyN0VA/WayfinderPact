@@ -13,7 +13,7 @@
           "Price": 0,
           "Edibility": -300,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 5
         },
@@ -32,7 +32,7 @@
           "Price": 0,
           "Edibility": -300,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 6
         },
@@ -50,7 +50,7 @@
           "Price": 0,
           "Edibility": -300,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 14
         },
@@ -68,7 +68,7 @@
           "Price": 0,
           "Edibility": -300,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 15
         },
@@ -86,7 +86,7 @@
           "Price": 0,
           "Edibility": -300,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 16
         },
@@ -104,7 +104,7 @@
           "Price": 0,
           "Edibility": -300,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 31
         },
@@ -122,7 +122,7 @@
           "Price": 0,
           "Edibility": -300,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 32
         },
@@ -140,7 +140,7 @@
           "Price": 0,
           "Edibility": -300,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 33
         },

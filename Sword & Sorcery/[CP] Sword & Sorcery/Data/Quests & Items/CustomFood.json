@@ -13,7 +13,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": true,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 3,
@@ -49,7 +49,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 3,
@@ -85,7 +85,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 3,
@@ -121,7 +121,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": true,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 3,
@@ -157,7 +157,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 3,
@@ -193,7 +193,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 3,
@@ -229,7 +229,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 3,
@@ -265,7 +265,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 3,
@@ -301,7 +301,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 3,
@@ -337,7 +337,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 3,
@@ -373,7 +373,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 3,
@@ -409,7 +409,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 3,
@@ -445,7 +445,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 3,
@@ -481,7 +481,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 3,

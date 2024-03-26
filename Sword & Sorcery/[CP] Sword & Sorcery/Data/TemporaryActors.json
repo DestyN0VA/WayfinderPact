@@ -105,5 +105,15 @@
             "Target": "Characters/PlanetariumScreen",
             "FromFile": "assets/TemporaryActors/Characters/PlanetariumScreen.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Characters/FakeDandelion, Portraits/FakeDandelion",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/FakeDandelion.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/FakeRoslin, Portraits/FakeRoslin",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/FakeRoslin.png"
+        },
     ]
 }

@@ -1,0 +1,96 @@
+{ 
+	"Changes":
+	[		
+
+		{
+		"LogName":"Dandelion's Schedule - Not Unlocked",
+		"Action":"EditData",
+		"Target":"Characters/Schedules/Dandelion",
+		"Entries":
+		{
+			// Prior to Dandelion being unlocked.
+			"spring": "0 EastScarp_TNPCWaitingWarpRoom 13 5 2/1200 EastScarp_TNPCWaitingWarpRoom 13 6 2/1800 EastScarp_TNPCWaitingWarpRoom 13 5 2",
+	
+		},
+			"When": { "HasSeenEvent |contains=SnS.Ch3.Dandelion.1": false }			
+		},
+
+		{
+		"LogName":"Dandelion's Schedule - Unlocked (Van)",
+		"Action":"EditData",
+		"Target":"Characters/Schedules/Dandelion",
+		"Entries":
+		{
+			// Prior to Dandelion moving out of the van.
+			"rain": "0 EastScarp_VanInterior 11 4 2 {{Random:Dandelion_keyar++Dandelion_sing++Dandelion_wiggleidle++Dandelion_phone|inputSeparator=++}}/1200 EastScarp_VanInterior 5 4 0/1400 EastScarp_VanInterior 11 4 2 {{Random:Dandelion_keyar++Dandelion_sing++Dandelion_wiggleidle++Dandelion_phone|inputSeparator=++}}/1900 EastScarp_VanInterior 5 4 0/2200 EastScarp_VanInterior 11 4 2 {{Random:Dandelion_keyar++Dandelion_sing++Dandelion_wiggleidle++Dandelion_phone|inputSeparator=++}}",
+			"spring": "0 EastScarp_VanInterior 11 4 2 {{Random:Dandelion_keyar++Dandelion_sing++Dandelion_wiggleidle++Dandelion_phone|inputSeparator=++}}/1000 EastScarp_VanInterior 5 4 0/1200 EastScarp_Village 82 80 Dandelion_sidesit/1400 EastScarp_Village 26 61 {{Random:Dandelion_keyar++Dandelion_sing++Dandelion_wiggleidle++Dandelion_phone|inputSeparator=++}}/1600 EastScarp_Village 54 40 2 Dandelion_phonesit/1800 EastScarp_Village 97 80 1/2200 EastScarp_VanInterior 11 4 2 {{Random:Dandelion_keyar++Dandelion_sing++Dandelion_wiggleidle++Dandelion_phone|inputSeparator=++}}",
+		},
+			"When": { "HasSeenEvent |contains=SnS.Ch4.Dandelion.1": true, "HasSeenEvent |contains=SnS.Ch4.Dandelion.13": false }	
+		},
+		{
+			"LogName": "Dandelion's Schedule - Unlocked (Lion's Mane)",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Dandelion",
+			"Entries": {
+				// After moving into the Lion's Mane.
+				"rain": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1500 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1800 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
+				"spring": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1500 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1800 EastScarp_Village 26 61 {{Random:Dandelion_keyar++Dandelion_sing++Dandelion_wiggleidle|inputSeparator=++}}/2000 EastScarp_Village 54 6 3/2200 EastScarp_LionsMane 18 5 1",
+				"spring_Sat": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1500 EastScarp_CoastalGuild {{Random:8 13 3++15 12 0++26 15 3|inputSeparator=++}}/1800 EastScarp_Village 26 61 {{Random:Dandelion_keyar++Dandelion_sing++Dandelion_wiggleidle|inputSeparator=++}}/2000 EastScarp_Village 54 6 3/2200 EastScarp_LionsMane 18 5 1",
+				"spring_Sun": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1500 EastScarp_CoastalGuild {{Random:8 13 3++15 12 0++26 15 3|inputSeparator=++}}/1800 EastScarp_Village 26 61 {{Random:Dandelion_keyar++Dandelion_sing++Dandelion_wiggleidle|inputSeparator=++}}/2000 EastScarp_Village 54 6 3/2200 EastScarp_LionsMane 18 5 1",
+				"fall_Tue": "0 Mountain 65 14 2/610 65 14 2 Dandelion_keytar/1300 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1500 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1800 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
+				"fall_Thu": "0 Mountain 65 14 2/610 65 14 2 Dandelion_keytar/1300 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1500 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1800 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
+			},
+			"When": {"HasSeenEvent |contains=SnS.Ch4.Dandelion.1": true, "HasSeenEvent |contains=SnS.Ch4.Dandelion.13": true}
+		},
+
+		{
+		"LogName":"Dandelion's Schedule - Night Market ",
+		"Action":"EditData",
+		"Target":"Characters/Schedules/Dandelion",
+		"Entries":
+			{
+			// Dandelion will attend the Night Market.
+			"winter_15": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1300 Beach 66 25 2 Dandelion_wiggleidle/2200 EastScarp_LionsMane 18 5 1",
+			"winter_16": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1300 Beach 66 25 2 Dandelion_wiggleidle/2200 EastScarp_LionsMane 18 5 1",
+			"winter_17": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1300 Beach 66 25 2 Dandelion_wiggleidle/2200 EastScarp_LionsMane 18 5 1",
+			},
+				"When": {"HasSeenEvent |contains=SnS.Ch3.Dandelion.13": true }		
+		},
+
+		{
+		"LogName":"Dandelion's Schedule - SVE Community Day",
+		"Action":"EditData",
+		"Target":"Characters/Schedules/Dandelion",
+		"Entries":
+			{
+			// Will attend Community Day if Stardew Valley Expanded is installed.
+			"spring_22": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/800 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1030 CommunityCenter 8 7 3/1700 EastScarp_LionsMane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
+			"summer_22": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/800 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1030 CommunityCenter 8 7 3/1700 EastScarp_LionsMane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
+			"fall_22": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/800 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1030 CommunityCenter 8 7 3/1700 EastScarp_LionsMane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
+			"winter_22": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/800 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1030 CommunityCenter 8 7 3/1700 EastScarp_LionsMane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
+			},
+				"When": {"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true, "HasSeenEvent |contains=SnS.Ch3.Dandelion.13": true}			
+		},
+
+		{
+			"LogName": "Dandelion's Schedule - Marriage",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Dandelion",
+			"Entries": {
+				// For when Dandelion is married.
+				"marriage_Mon": "800 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1700 BusStop -1 23 3",
+				"marriage_Wed": "800 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1700 BusStop -1 23 3",
+				"marriage_Fri": "800 EastScarp_Lionsmane {{Random:21 26 2 Dandelion_wiggleidle++32 24 2 Dandelion_sing++21 16 0++30 13 3++33 6 3 Dandelion_sidesit|inputSeparator=++}}/1700 BusStop -1 23 3",
+			}
+		}
+
+		
+
+	]
+}
+
+//(0 = up, 1 = right, 2 = down, 3 = left)
+
+
+
+

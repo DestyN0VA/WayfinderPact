@@ -1,0 +1,17 @@
+{
+    "Changes": 
+    [
+    {
+        "LogName": "Map Strings",
+        "Action": "EditData",
+        "Target": "strings/StringsFromMaps",
+        "Entries": 
+        {
+            //DANDELION'S STRINGS 
+    
+            "EXAMPLE":"{{i18n:Strings.Dandelion.EXAMPLE}}",
+    
+        }
+       }
+    ]
+}

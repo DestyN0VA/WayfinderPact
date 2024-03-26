@@ -112,7 +112,7 @@
           "Price": 10000,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/arsenal_1.png}}",
           "SpriteIndex": 7,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "ExcludeFromRandomSale": true,
         },
       }

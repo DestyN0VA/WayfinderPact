@@ -1,0 +1,127 @@
+{
+    "Changes": [
+{
+    "LogName": "Conversation Topics - Dandelion",
+    "Action": "EditData",
+    "Target": "Characters/Dialogue/Dandelion",
+    "Entries": // Dandelion
+    {
+
+        //Dandelion's 0 Heart Event
+        "DandelionIntro":"{{i18n:CT.Dandelion.DandelionIntro}}",
+
+        // Dandelion's 1 Heart Event
+        "DandelionBookIntro":"{{i18n:CT.Dandelion.DandelionBookIntro}}",
+
+        // Dandelion's 2 Heart Event
+        "DandelionShapeshift":"{{i18n:CT.Dandelion.DandelionShapeshift}}",
+
+        // Dandelion's 3 Heart Event Pt1
+        "DandelionBookQuest": "{{i18n:CT.Dandelion.DandelionBookQuest}}",
+        
+        // Dandelion's 3 Heart Event Pt2
+        "DandelionVet": "{{i18n:CT.Dandelion.DandelionVet}}",
+
+        // Dandelion's 4 Heart Event
+        "DandelionVet2":"{{i18n:CT.Dandelion.DandelionVet2}}",
+
+        // Dandelion's 5 Heart Event Pt1
+        "DandelionGender": "{{i18n:CT.Dandelion.DandelionGender}}",
+
+        // Dandelion's 5 Heart Event Pt2
+        "DandelionVet3": "{{i18n:CT.Dandelion.DandelionVet3}}",
+
+        // Dandelion's 5 Heart Event Pt3
+        "DandelionDND": "{{i18n:CT.Dandelion.DandelionDND}}",
+
+        // Dandelion's 6 Heart Event
+        "DandelionRiver1": "{{i18n:CT.Dandelion.DandelionRiver1}}",
+
+        // Dandelion's 7 Heart Event
+        "DandelionDinner": "{{i18n:CT.Dandelion.DandelionDinner}}",
+
+        // Dandelion's 7 Heart Event Pt2
+        "DandelionRiver2": "{{i18n:CT.Dandelion.DandelionRiver2}}",
+
+        // Dandelion's 8 Heart Event
+        "DandelionRiver3": "{{i18n:CT.Dandelion.DandelionRiver3}}",
+
+        // Dandelion's 9 Heart Event 
+        "DandelionHeal": "{{i18n:CT.Dandelion.DandelionHeal}}",
+
+        // Dandelion's 10 Heart Event 
+        "DandelionHeal2": "{{i18n:CT.Dandelion.DandelionHeal2}}",
+
+        // Dandelion's 10 Heart Event Pt2
+        "DandelionTrueGrove": "{{i18n:CT.Dandelion.DandelionTrueGrove}}",
+
+        // Dandelion's 10 Heart Event Pt2
+        "DandelionEngaged": "{{i18n:CT.Dandelion.DandelionEngaged}}"
+
+    }
+},
+
+{
+    "LogName": "Conversation Topics - Mateo",
+    "Action": "EditData",
+    "Target": "Characters/Dialogue/Mateo",
+    "Entries": // Mateo
+    {
+
+        //Dandelion's 0 Heart Event
+        "DandelionIntro":"{{i18n:CT.Mateo.DandelionIntro}}",
+
+        // Dandelion's 1 Heart Event
+        "DandelionBookIntro":"{{i18n:CT.Mateo.DandelionBookIntro}}",
+
+        // Dandelion's 2 Heart Event
+        "DandelionShapeshift":"{{i18n:CT.Mateo.DandelionShapeshift}}",
+
+        // Dandelion's 3 Heart Event Pt1
+        "DandelionBookQuest": "{{i18n:CT.Mateo.DandelionBookQuest}}",
+        
+        // Dandelion's 3 Heart Event Pt2
+        "DandelionVet": "{{i18n:CT.Mateo.DandelionVet}}",
+
+        // Dandelion's 4 Heart Event
+        "DandelionVet2":"{{i18n:CT.Mateo.DandelionVet2}}",
+
+        // Dandelion's 5 Heart Event Pt1
+        "DandelionGender": "{{i18n:CT.Mateo.DandelionGender}}",
+
+        // Dandelion's 5 Heart Event Pt2
+        "DandelionVet3": "{{i18n:CT.Mateo.DandelionVet3}}",
+
+        // Dandelion's 5 Heart Event Pt3
+        "DandelionDND": "{{i18n:CT.Mateo.DandelionDND}}",
+
+        // Dandelion's 6 Heart Event
+        "DandelionRiver1": "{{i18n:CT.Mateo.DandelionRiver1}}",
+
+        // Dandelion's 7 Heart Event
+        "DandelionDinner": "{{i18n:CT.Mateo.DandelionDinner}}",
+
+        // Dandelion's 7 Heart Event Pt2
+        "DandelionRiver2": "{{i18n:CT.Mateo.DandelionRiver2}}",
+
+        // Dandelion's 8 Heart Event
+        "DandelionRiver3": "{{i18n:CT.Mateo.DandelionRiver3}}",
+
+        // Dandelion's 9 Heart Event 
+        "DandelionHeal": "{{i18n:CT.Mateo.DandelionHeal}}",
+
+        // Dandelion's 10 Heart Event 
+        "DandelionHeal2": "{{i18n:CT.Mateo.DandelionHeal2}}",
+
+        // Dandelion's 10 Heart Event Pt2
+        "DandelionTrueGrove": "{{i18n:CT.Mateo.DandelionTrueGrove}}",
+
+        // Dandelion's 10 Heart Event Pt2
+        "DandelionEngaged": "{{i18n:CT.Mateo.DandelionEngaged}}"
+
+    }
+},
+
+
+    ]
+}

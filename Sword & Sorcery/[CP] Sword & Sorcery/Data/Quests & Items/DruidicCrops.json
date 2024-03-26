@@ -17,7 +17,7 @@
         "Price": 400,
         "Edibility": 50,
         "IsDrink": false,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 0,
         "ContextTags": [ "color_cyan", "category_vegetable" ],
@@ -37,7 +37,7 @@
         "Category": -74,
         "Price": 2,
         "IsDrink": false,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 9
       }
@@ -56,7 +56,7 @@
         "HarvestMinStack": 1,
         "HarvestMaxStack": 2,
         "ExtraHarvestChance": 0.03,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
         "SpriteIndex": 0
       }
@@ -76,7 +76,7 @@
         "Category": -75,
         "Price": 300,
         "Edibility": 50,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "IsDrink": false,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 2,
@@ -96,7 +96,7 @@
         "Type": "Seeds",
         "Category": -74,
         "Price": 2,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "IsDrink": false,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 11
@@ -116,7 +116,7 @@
         "HarvestMethod": "Scythe",
         "HarvestMinStack": 1,
         "HarvestMaxStack": 1,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "ExtraHarvestChance": 0.03,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
         
@@ -138,7 +138,7 @@
           "Category": -75,
           "Price": 300,
           "Edibility": 50,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "IsDrink": false,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 4,
@@ -157,7 +157,7 @@
           "Description": "{{i18n: crop.ancientglowingpolyporemushrooms.seed.description}}",
           "Type": "Seeds",
           "Category": -74,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Price": 2,
           "IsDrink": false,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
@@ -177,7 +177,7 @@
           "HarvestItemId": "swordandsorcery.glowingpolyporemushrooms",
           "HarvestMinStack": 1,
           "HarvestMaxStack": 1,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
           "SpriteIndex": 4
         }
@@ -198,7 +198,7 @@
           "Price": 300,
           "Edibility": 50,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 1,
           "ContextTags": [ "color_cyan", "category_flowers" ],
@@ -218,7 +218,7 @@
           "Category": -74,
           "Price": 2,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 10
         }
@@ -236,7 +236,7 @@
           "HarvestItemId": "swordandsorcery.ancientwildfairyrose",
           "HarvestMinStack": 1,
           "HarvestMaxStack": 3,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
           "SpriteIndex": 6
         }
@@ -257,7 +257,7 @@
         "Price": 100,
         "Edibility": 50,
         "IsDrink": false,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 37,
         "ContextTags": [ "color_cyan", "category_fruits" ],
@@ -276,7 +276,7 @@
         "Type": "Seeds",
         "Category": -74,
         "Price": 2,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "IsDrink": false,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 38
@@ -296,7 +296,7 @@
         "HarvestMinStack": 1,
         "HarvestMaxStack": 3,
         "ExtraHarvestChance": 0.03,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
         "SpriteIndex": 8
       }
@@ -319,7 +319,7 @@
         "IsDrink": false,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 39,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "ContextTags": [ "color_cyan", "category_fruits" ],
       }
     }
@@ -337,7 +337,7 @@
         "Category": -74,
         "Price": 2,
         "IsDrink": false,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 40
       }
@@ -355,7 +355,7 @@
         "HarvestMinStack": 1,
         "HarvestMaxStack": 2,
         "ExtraHarvestChance": 0.03,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
         "SpriteIndex": 10
       }
@@ -376,7 +376,7 @@
         "Price": 150,
         "Edibility": 50,
         "IsDrink": false,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 41,
         "ContextTags": [ "color_cyan", "category_fruits" ],
@@ -395,7 +395,7 @@
         "Type": "Seeds",
         "Category": -74,
         "Price": 2,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "IsDrink": false,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 42
@@ -414,7 +414,7 @@
         "HarvestMinStack": 1,
         "HarvestMaxStack": 2,
         "ExtraHarvestChance": 0.03,
-        "ExcludeFromShippingCollection": true,
+        "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
         "SpriteIndex": 12
       }
@@ -435,7 +435,7 @@
           "Price": 150,
           "Edibility": 50,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 43,
           "ContextTags": [ "color_cyan", "category_flowers" ],
@@ -454,7 +454,7 @@
           "Type": "Seeds",
           "Category": -74,
           "Price": 2,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "IsDrink": false,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 44
@@ -472,7 +472,7 @@
           "HarvestItemId": "swordandsorcery.ancientazuredetura",
           "HarvestMinStack": 1,
           "HarvestMaxStack": 2,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
           "SpriteIndex": 14
         }
@@ -492,7 +492,7 @@
             "Category": -79,
             "Price": 400,
             "Edibility": 50,
-            "ExcludeFromShippingCollection": true,
+            "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
             "IsDrink": false,
             "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
             "SpriteIndex": 3,
@@ -513,7 +513,7 @@
             "Category": -74,
             "Price": 2,
             "IsDrink": false,
-            "ExcludeFromShippingCollection": true,
+            "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
             "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
             "SpriteIndex": 12
           }
@@ -528,7 +528,7 @@
             "Seasons": [ "summer" ],
             "Fruit": [ { "Id": "N/A", "ItemId": "swordandsorcery.ancientglowinghuckleberry" } ],
             "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSTrees.png}}",
-            "ExcludeFromShippingCollection": true,
+            "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
             "SpriteIndex": 0
             
           }

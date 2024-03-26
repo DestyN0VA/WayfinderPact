@@ -1,0 +1,19 @@
+{
+    "Changes": [
+
+        // PORTRAIT & SPRITE DEFAULT LOAD
+        {
+            "LogName": "Default Portraits & Sprites - Dandelion",
+            "Action": "Load",
+            "Target": "Portraits/Dandelion, Characters/Dandelion",
+            "FromFile": "assets/{{TargetPathOnly}}/Dandelion/spring_Dandelion.png"
+        },
+
+        // LOADS
+        {
+            "Action": "Load",
+            "Target": "Portraits/spring_Dandelion, Portraits/summer_Dandelion, Portraits/fall_Dandelion, Portraits/winter_Dandelion, Portraits/Dandelion_beach, Portraits/Dandelion_armored, Characters/spring_Dandelion, Characters/summer_Dandelion, Characters/fall_Dandelion, Characters/winter_Dandelion, Characters/Dandelion_beach, Characters/Dandelion_armored",
+            "FromFile": "assets/{{TargetPathOnly}}/Dandelion/{{TargetWithoutPath}}.png"
+        },
+    ]
+}
