@@ -388,7 +388,7 @@
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
-      "Value": "stopMusic/question fork0 \"Is there anything I can do to help you carry that weight?#Just keep being my friend, Mateo! That's the kind of support I need. (PLATONIC)#Actually, there was something I wanted to talk to you about. (ROMANTIC)\"/fork SnS.Ch1.Mateo.15",
+      "Value": "stopMusic/question fork0 \"Is there anything I can do to help you carry that weight?#Actually, there was something I wanted to talk to you about. (ROMANTIC)#Just keep being my friend, Mateo! That's the kind of support I need. (PLATONIC)\"/fork MateoRomantic",
       "When": {
         "HasFlag |contains=RivalHearts_AideenMateo": false
       }
@@ -1052,5 +1052,20 @@
         "HasFlag |contains=MateoFlirt": true
       }
     },
+    {
+      "Name": "TrollHeritageDialogue3",
+      "Value": "{{i18n:i18n:Events.S&S.Ch1.12H.Mateo.8}}",
+      "When": {
+        "MateoTrollHeritage": false,
+      }
+    },
+    {
+      "Name": "TrollHeritageDialogue3",
+      "Value": "{{i18n:i18n:Events.S&S.Ch1.12H.Mateo.8.TrollHeritage}}",
+      "When": {
+        "MateoTrollHeritage": true,
+      }
+    },
+    
   ]
 }

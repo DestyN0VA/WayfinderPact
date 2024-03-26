@@ -29,7 +29,7 @@
 
 		},
 		"When": 
-			{ "HasSeenEvent |contains=SnS.Ch1.Mateo.1": true, "HasConversationTopic |contains=MateoPain": false }	
+			{ "HasSeenEvent |contains=SnS.Ch1.Mateo.0": true, "HasConversationTopic |contains=MateoPain": false }	
 		},	
 
 		{
