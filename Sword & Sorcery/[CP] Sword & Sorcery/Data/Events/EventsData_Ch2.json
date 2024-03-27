@@ -3,6 +3,19 @@
   "Changes": [
 
     {
+			"LogName": "Hector's 0 Heart Event",
+			"Action": "EditData",
+			"Target": "Data/Events/Forest",
+      "Entries": {
+    
+        "SnS.Ch2.Hector.0/t 600 1800/n Hector_SpecialOrders_Pentacle1/n Hector_SpecialOrders_Pentacle2/F": "SnS.HectorTheme/-100 -100/farmer 68 1 0/addTemporaryActor HectorWolf 32 32 73 9 3 true Character/skippable/changeName HectorWolf 'B'?/viewport 68 8 clamp true/advancedMove farmer false 0 12 2 10/waitForAllStationary/emote farmer 8/faceDirection farmer 0/playSound leafrustle/advancedMove HectorWolf false -5 0 2 10/jump farmer 5 true/emote farmer 16 true/startJittering/pause 1000/speak HectorWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest.Hector.1}}\"/stopJittering/pause 250/emote farmer 12/pause 250/showFrame HectorWolf 28/animate HectorWolf false false 200 28 28 29 29 30 30 31 31 32 32 33 33 34 34 35/pause 3000/animate HectorWolf false true 200 35 35/speak HectorWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest.Hector.2}}\"/pause 250/emote farmer 40/pause 250/speak HectorWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest.Hector.3}}\"/fade/viewport -1000 -1000/speak HectorWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest.Hector.4}}\"/end",
+      }, 
+      
+      "When": { "SkipIntroQuest": false }
+        
+			},
+
+    {
       "LogName": "Hector's 0 Heart Event",
       "Action": "EditData",                                           
       "Target": "Data/Events/Railroad",
@@ -219,9 +232,19 @@
         "SnS.Ch2.Hector.19/e SnS.Ch2.Hector.18/f Hector 3500/t 0800 2200/F": "SnS.HectorTheme/-100 -100/farmer 6 14 0 Hector 6 5 0/removeTile 6 15 Buildings/removeTile 6 14 Front/changePortrait Hector hooddown/changeSprite Hector hooddown/addTemporaryActor HectorBook 32 32 6 15 2 true Character/ignoreCollisions HectorBook/positionOffset HectorBook -20 0/animate HectorBook false true 500 32 33 34 35/changeName HectorBook Book/skippable/viewport 6 10/addConversationTopic HectorVet 2/playSound doorOpen/globalFadeToClear/advancedMove farmer false 0 -6 4 10/pause 500/speak Hector \"{{i18n:Events.S&S.Ch2.14H.Hector.1}}\"/jump farmer 5 true/emote farmer 20/pause 250/speak Hector \"{{i18n:Events.S&S.Ch2.14H.Hector.2}}\"/faceDirection Hector 2/faceDirection farmer 2/showFrame farmer 57/playSound discoverMineral/addTemporaryActor ThornedCircletFragment 16 16 6 6 2 false/hideShadow ThornedCircletFragment true/ignoreCollisions ThornedCircletFragment/pause 2000/message \"{{i18n:Events.S&S.Ch2.14H.Hector.Message.1}}\"/warp ThornedCircletFragment -999 -999/showFrame farmer 0/pause 250/faceDirection farmer 0/speak Hector \"{{i18n:Events.S&S.Ch2.14H.Hector.3}}\"/advancedMove farmer false 0 -2 4 10/pause 1500/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/showFrame farmer 15/specificTemporarySprite heart 6 4/emote Hector 16/pause 1500/showFrame Hector 60/pause 1500/fade/viewport -100 -100/speak Hector \"{{i18n:Events.S&S.Ch2.14H.Hector.4}}\"/pause 250/addMailReceived BrokenCircletPower/stopAdvancedMoves/end"
 			}
 	  
-		}
+		},
 
-    
+    {
+      "LogName": "Roslin and Dandelion Event #2",
+      "Action": "EditData",
+      "Target": "Data/Events/EastScarp_VillageInn",
+      "Entries": {
+
+        "SnS.Ch1.Roslin.2/e SnS.Ch2.Hector.8/t 900 1800/F": "SnS.LonelyTheme/-100 -100/farmer 12 19 0 Rosa 43 10 0/skippable/addConversationTopic QuestionableAdventurers 2/removeTile 11 33 Buildings/addTemporaryActor FakeDandelion 16 32 12 33 0 true Character/addTemporaryActor FakeRoslin 16 32 11 31 0 true Character/changeName FakeRoslin ???/changeName FakeDandelion ???/fade/viewport 20 28/pause 1000/advancedMove farmer false 6 0 0 13 3 10/speak FakeDandelion \"{{i18n:Events.SnS.Ch2.Dandelion.1}}\"/pause 1000/speak FakeRoslin \"{{i18n:Events.SnS.Ch2.Roslin.1}}\"/faceDirection FakeRoslin 2/pause 250/playSound thudStep/addObject 11 31 346 3/faceDirection FakeDandelion 1/emote FakeDandelion 16/speak FakeDandelion \"{{i18n:Events.SnS.Ch2.Dandelion.2}}\"/changeName FakeDandelion Dandelion/changeName FakeRoslin Roslin/textAboveHead FakeRoslin \"{{i18n:Events.SnS.Ch2.Roslin.2}}\"/pause 250/speak FakeDandelion \"{{i18n:Events.SnS.Ch2.Dandelion.3}}\"/quickQuestion {{i18n:Events.SnS.Ch2.Question}}(break)speak FakeRoslin \"{{i18n:Events.SnS.Ch2.Answer1.1}}\"\\speak Dandelion \"{{i18n:Events.SnS.Ch2.Answer1.2}}\"\\jump FakeRoslin 5\\textAboveHead FakeRoslin \"{{i18n:Events.SnS.Ch2.Answer1.3}}\"(break)speak FakeDandelion \"{{i18n:Events.SnS.Ch2.Answer2.1}}\"\\textAboveHead FakeRoslin\"{{i18n:Events.SnS.Ch2.Answer2.2}}\"\\speak FakeDandelion \"{{i18n:Events.SnS.Ch2.Answer2.3}}\"/speak FakeRoslin \"{{i18n:Events.SnS.Ch2.Roslin.3}}\"/speak FakeDandelion \"{{i18n:Events.SnS.Ch2.Dandelion.4}}\"/speak FakeRoslin \"{{i18n:Events.SnS.Ch2.Roslin.4}}\"/pause 250/emote farmer 40/pause 250/fade/viewport -1000 -1000/speak FakeDandelion \"{{i18n:Events.SnS.Ch2.Dandelion.5}}\"/speak FakeRoslin \"{{i18n:Events.SnS.Ch2.Roslin.5}}\"/speak FakeDandelion \"{{i18n:Events.SnS.Ch2.Dandelion.6}}\"/pause 250/end",
+
+      }
+
+    },
 
   ]
 

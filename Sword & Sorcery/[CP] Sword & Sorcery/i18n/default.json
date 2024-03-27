@@ -1366,6 +1366,17 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.14H.Mateo.4": "You know, I never would have expected to make this much of a positive impact on the Valley.$38#$b#I feel like I've accomplished a lot that I thought I wouldn't be able to, like patch things up with Marlon and Gunther, or develop a friendship with Krobus.$70#$b#Even having the privilege of being married to you, @.$42#$b#It's been my greatest adventure, and I hope it never ends. I love you.$65",
 "Events.S&S.Ch1.14H.Mateo.5": "The sun'll shine on us again tomorrow, and we'll work harder, stretch our arms out further.$70#$b#We'll beat on against the current and move ceaselessly into the future, together.$39",
 
+// ARTIFICER UNLOCK EVENT
+"Events.S&S.Ch1.18.Mateo.1": "Just the person I wanted to see. I'll get right into it, I know you're busy. And besides, I'm very excited.$36#$b#When Robin built this place, some boulders behind the foundation collapsed to reveal a cave. I've been excavating as best I can, and I've made some interesting finds.$14#$b#C'mon, I want to show you.$1",
+"Events.S&S.Ch1.18.Mateo.2": "I built up this forge with Clint's help, and I've been learning with him a bit. But I like doing some stuff on my own.$12#$b#I had some leatherworking experience, but there's a ton of other types of armor to make. Fancy arrows, too... all sorts of things suited for adventuring.$1",
+"Events.S&S.Ch1.18.Message.1": "The forge burns hot. Too hot, almost.",
+"Events.S&S.Ch1.18.Message.2": "You've unlocked the power of The Artificer. Will you sharpen your blade, or your guile? The choice is yours!",
+"Events.S&S.Ch1.18.Message.3": "Interact with the forge to see what new items you can craft.",
+"Events.S&S.Ch1.18.Mateo.3": "You're full of surprises, aren't you,",
+"Events.S&S.Ch1.18.Mateo.4": "Looks like you're more in-tune with this kind of stuff than you expected!$13",
+"Events.S&S.Ch1.18.Mateo.5": "There's something else, too. Robin and I uncovered some sort of mural. No idea what it is, but we tried our best to keep it in tact.$32",
+"Events.S&S.Ch1.18.Mateo.6": "I can't wait to see what the future holds for us,",
+
 /*
    _____ ____  _   _     _______ ____  _____ _____ _____  _____ 
   / ____/ __ \| \ | |   |__   __/ __ \|  __ \_   _/ ____|/ ____|
@@ -2176,7 +2187,7 @@ ________      ________ _   _ _______ _____
 "Strings.Hector.BookRest": "This is where Book sleeps! Hector keeps it nicely polished for her.",
 "Strings.Hector.MundaneKitchen": "Considering how chaotic Hector is, you're surprised how tidy the kitchen is.",
 "Strings.Hector.HomemadeTea": "The tea is hot, and smells brilliantly earthy. You wonder if it's made with stuff from upstairs.",
-"Strings.Hector.OSHAViolation": "You question the architecture of this place for a few seconds before realizing it's a bad idea to think too hard about it.",
+"Strings.Hector.OSHAViolation": "You question the architecture of this place for a few seconds before getting distracted by a massive goldfish in the pond. He seems very loved, cared for, and enriched.",
 "Strings.Hector.FashionTaste": "These boots are quite a fashion faux pas, yet, here they proudly sit.",
 "Strings.Hector.WeirdPlants1": "You've seen giant crops before, but this one is new and has a sweet smell to it.",
 "Strings.Hector.WeirdPlants2": "It looks like a fern, but it's growing straight out of a rock.",
@@ -2339,6 +2350,13 @@ ________      ________ _   _ _______ _____
 
 // PENTACLE QUESTS EVENTS
 "Events.S&S.Ch2.Pentacle1.Message": "Something has been added to your journal.",
+
+// QUEST EXCLUSIVE EVENT
+
+"Events.S&S.Ch2.PentacleQuest.Hector.1": "If it isn't the mysterious new farmer. What an entirely unplanned little coincidence.$3",
+"Events.S&S.Ch2.PentacleQuest.Hector.2": "I expected a reaction far more fearful from you, though I suppose you're cut from a different cloth.$9#$B#Keep doing what you're doing. With those requests, I mean. You're proving yourself very helpful.$3",
+"Events.S&S.Ch2.PentacleQuest.Hector.3": "Who am I? All in due time, @.$2",
+"Events.S&S.Ch2.PentacleQuest.Hector.4": "All in due time...$0",
 
 // 0 HEARTS PT 1 
 "Events.S&S.Ch2.0H.Mateo.1": "I swear, the skeleton had a cape-",
@@ -3987,7 +4005,40 @@ ________      ________ _   _ _______ _____
 
 */
 
-"Events.SnS.0H1.Roslin.1": "",
+// ROSLIN & DANDELION INTRO
+"Events.SnS.Intro.Lewis.1": "I'm sorry, ladies. But I have no funding to divert to a hunch. Hiring adventurers is expensive.$2",
+"Events.SnS.Intro.Roslin.1": "Sure you don't, you old bastard. You'll come to reg-$17",
+"Events.SnS.Intro.Dandelion.1": "I didn't realize you were expecting a guest, Mr. Mayor.$2",
+"Events.SnS.Intro.Lewis.2": "I wasn't. This is @, who-$1",
+"Events.SnS.Intro.Roslin.2": "Yeah. New farmer. Great economical decision. I know. Whatever. Look, listen.",
+"Events.SnS.Intro.Roslin.3": "If you're willing to turn your back on the town, that's fine.#$b#But you're an ignorant old fool if you think there's nothing lingering after that mining disaster over in the Scarp.$9",
+"Events.SnS.Intro.Dandelion.2": "We only have the best interest of the locals at heart. We wouldn't be risking our lives to decieve you.$15",
+"Events.SnS.Intro.Lewis.3": "My apologies again, however - as I said earlier, it's just not in the cards without definitive proof. I can't put down coin for the sake of a ghost story.$2",
+"Events.SnS.Intro.Dandelion.3": "You're not going to believe us until someone's in danger.$17",
+"Events.SnS.Intro.Lewis.4": "That's not what I said-",
+"Events.SnS.Intro.Roslin.4": "C'mon. Let's stop wasting our time. We can handle this ourselves.$14",
+"Events.SnS.Intro.Lewis.5": "Don't worry about them, @. They're just... frustrated adventurers, is all. Pay the pair no mind.",
+"Events.SnS.Intro.Message.1": "That conversation was intense... and the adventurers are nowhere to be seen. Who are they?",
+
+// ROSLIN & DANDELION CH 2
+"Events.SnS.Ch2.Dandelion.1": "Isn't that stealing?",
+"Events.SnS.Ch2.Roslin.1": "Nobody's around to notice.",
+"Events.SnS.Ch2.Dandelion.2": "Ah, you're that farmer - I do owe you an apology for our prior engagement. You'd caught us in the middle of a tense conversation, indeed.$2#$b#This is my companion, Roslin-$6",
+"Events.SnS.Ch2.Roslin.2": "'Companion'? Really, that's what you're going with?",
+"Events.SnS.Ch2.Dandelion.3": "And my name is Dandelion. I've heard a bit about you since our last encounter. You've made quite a name for yourself since your arrival.$14",
+"Events.SnS.Ch2.Question": "#Enough of a name for you to tell me what you two have been investigating? #What were you arguing about with Lewis, and is there anything I can do to help?",
+"Events.SnS.Ch2.Answer1.1": "Hah! Very slick. But no.$1",
+"Events.SnS.Ch2.Answer1.2": "...What she means to say is that we're not really 'up' to anything. Her and I are investigating something here in town.$2",
+"Events.SnS.Ch2.Answer1.3": "I did mean what I said!",
+"Events.SnS.Ch2.Answer2.1": "Perhaps... you are one of Marlon's flock, aren't you? You might be able to lend a hand.$17#$b#Although, I do think we should minimize the potential collateral damage.$16",
+"Events.SnS.Ch2.Answer2.2": "Dandelion! That's enough. Don't go frightening the townsfolk.$5",
+"Events.SnS.Ch2.Answer2.3": "Oh! You're right. I'm terribly sorry.$3",
+"Events.SnS.Ch2.Roslin.3": "Look, listen. It's the responsibility of your leaders to be dealing with this shit, not yours.$5",
+"Events.SnS.Ch2.Dandelion.4": "Abrasive as Roslin may be, I do fear she's correct. If it brings you comfort, know we'll seek you out of things get dire. I hope that's a good compromise.$6",
+"Events.SnS.Ch2.Roslin.4": "...If you never see either of us again, consider it a good thing. I uh, really mean that.$2",
+"Events.SnS.Ch2.Dandelion.5": "I'm worried for this town, Roslin. The prospect of what lurks beneath deeply frightens me.$2",
+"Events.SnS.Ch2.Roslin.5": "Don't get your chainmail in a twist, Paladin. We'll get this figured out, just like we always do.$3",
+"Events.SnS.Ch2.Dandelion.6": "I sincerely hope you're right.$16",
 
 /*
    _____ ____  _   _     _______ ____  _____ _____ _____  _____ 

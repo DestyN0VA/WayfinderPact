@@ -20,7 +20,7 @@
         "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 0,
-        "ContextTags": [ "color_cyan", "category_vegetable" ],
+        "ContextTags": [ "color_cyan", "category_vegetable", "seedmaker_banned" ],
       }
     }
   },
@@ -80,7 +80,7 @@
         "IsDrink": false,
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 2,
-        "ContextTags": [ "color_cyan", "category_vegetable" ],
+        "ContextTags": [ "color_cyan", "category_vegetable", "seedmaker_banned" ],
       }
     }
   },
@@ -142,7 +142,7 @@
           "IsDrink": false,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 4,
-          "ContextTags": [ "color_cyan", "category_vegetable" ],
+          "ContextTags": [ "color_cyan", "category_vegetable", "seedmaker_banned" ],
         }
       }
     },
@@ -201,7 +201,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 1,
-          "ContextTags": [ "color_cyan", "category_flowers" ],
+          "ContextTags": [ "color_cyan", "category_flowers", "seedmaker_banned" ],
         }
       }
     },
@@ -260,7 +260,7 @@
         "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 37,
-        "ContextTags": [ "color_cyan", "category_fruits" ],
+        "ContextTags": [ "color_cyan", "category_fruits", "seedmaker_banned" ],
       }
     }
   },
@@ -320,7 +320,7 @@
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 39,
         "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
-        "ContextTags": [ "color_cyan", "category_fruits" ],
+        "ContextTags": [ "color_cyan", "category_fruits", "seedmaker_banned" ],
       }
     }
   },
@@ -379,7 +379,7 @@
         "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
         "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
         "SpriteIndex": 41,
-        "ContextTags": [ "color_cyan", "category_fruits" ],
+        "ContextTags": [ "color_cyan", "category_fruits", "seedmaker_banned" ],
       }
     }
   },
@@ -438,7 +438,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 43,
-          "ContextTags": [ "color_cyan", "category_flowers" ],
+          "ContextTags": [ "color_cyan", "category_flowers", "seedmaker_banned" ],
         }
       }
     },
@@ -496,7 +496,7 @@
             "IsDrink": false,
             "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
             "SpriteIndex": 3,
-            "ContextTags": [ "color_cyan", "category_fruits" ],
+            "ContextTags": [ "color_cyan", "category_fruits", "seedmaker_banned" ],
           }
         }
       },
@@ -562,30 +562,176 @@
       }
     },
 
+    // CUSTOM DRUIDIC CATEGORY 
+
     {
       "Action": "EditData",
       "Target": "spacechase0.SpaceCore/ObjectExtensionData",
       "Entries": {
-          "swordandsorcery.ancientamaranth": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientepiphyticfern": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.glowingpolyporemushrooms": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientwildfairyrose": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientglowinghuckleberry": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientamaranth.seed": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientepiphyticfern.seed": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.glowingpolyporemushrooms.seed": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientwildfairyrose.seed": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientglowinghuckleberry.seed": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientelderberry": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientelderberry.seed": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientbottlegourd": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientbottlegourd.seed": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientgiantappleberry": {"CategoryTextOverride": "Druidic"}, 
-          "swordandsorcery.ancientgiantappleberry.seed": {"CategoryTextOverride": "Druidic"},
-          "swordandsorcery.ancientazuredetura": {"CategoryTextOverride": "Druidic"}, 
-          "swordandsorcery.ancientazuredetura.seed": {"CategoryTextOverride": "Druidic"},
+        "swordandsorcery.ancientamaranth": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientepiphyticfern": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.glowingpolyporemushrooms": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientwildfairyrose": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientglowinghuckleberry": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientamaranth.seed": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientepiphyticfern.seed": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.glowingpolyporemushrooms.seed": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientwildfairyrose.seed": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientglowinghuckleberry.seed": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientelderberry": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientelderberry.seed": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientbottlegourd": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientbottlegourd.seed": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientgiantappleberry": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientgiantappleberry.seed": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientazuredetura": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
+        "swordandsorcery.ancientazuredetura.seed": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
       }
-  },
+    },
   
         
     ]
