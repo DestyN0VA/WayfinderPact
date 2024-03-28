@@ -1,17 +1,15 @@
 {
   "Changes": [
     {
-      "LogName": "NO SVE",
+      "LogName": "NO SVE - Mateo's Tent, Guild, Lion's Mane",
       "Action": "EditData",
       "Target": "Data/WorldMap",
       "When": {
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
       },
-      "TargetField": [
-        "EastScarp",
-        "MapAreas"
-      ],
+      "TargetField": [ "EastScarp", "MapAreas" ],
       "Entries": {
+
         "MateoHome": {
           "Id": "MateoHome",
           "PixelArea": {
@@ -58,6 +56,9 @@
             }
           ]
         },
+
+
+
         "LionsMane": {
           "Id": "LionsMane",
           "PixelArea": {
@@ -93,13 +94,32 @@
             }
           ]
         }
-        /*"MagicalPizzaVan": {
+      }
+    },
+
+
+
+
+    //Pizza van gets it's own patch because of conditions
+    {
+      "LogName": "NO SVE - Cirrus Van Patch",
+      "Action": "EditData",
+      "Target": "Data/WorldMap",
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": false
+      },
+      "TargetField": [ "EastScarp", "MapAreas" ],
+      "Entries": {
+
+        "MagicalPizzaVan": {
           "Id": "MagicalPizzaVan",
           "PixelArea": {
-            "X": 133,
-            "Y": 6,
-            "Width": 19,
-            "Height": 10
+            "X": 213,
+            "Y": 104,
+            "Width": 8,
+            "Height": 7
           },
           "Tooltips": [
             {
@@ -113,10 +133,10 @@
               "LocationName": "EastScarp_VanInterior",
               "ExtendedTileArea": null,
               "MapPixelArea": {
-                "X": 133,
-                "Y": 6,
-                "Width": 19,
-                "Height": 10
+                "X": 213,
+                "Y": 104,
+                "Width": 8,
+                "Height": 7
               },
               "ScrollText": "{{i18n:MapName.VanInterior}}"
             },
@@ -127,9 +147,11 @@
               "ScrollText": null
             }
           ]
-        }*/
+        }
       }
     },
+
+    //Puts the Tent on the Map
     {
       "LogName": "Edit ES World Map NO SVE Mateo Tent",
       "Action": "EditImage",
@@ -153,6 +175,8 @@
         "Height": 222
       }
     },
+
+    //Puts the Guild on the Map when conditions are met
     {
       "LogName": "Edit ES World Map NO SVE Guild",
       "Action": "EditImage",
@@ -177,6 +201,8 @@
         "Height": 222
       }
     },
+
+    //Puts the improved Guild on the Map when conditions are met
     {
       "LogName": "Edit ES World Map NO SVE Guild Improved",
       "Action": "EditImage",
@@ -201,6 +227,8 @@
         "Height": 222
       }
     },
+
+    //Puts the Lion's Mane on the Map
     {
       "LogName": "Edit ES World Map NO SVE Lion's Mane",
       "Action": "EditImage",
@@ -224,18 +252,20 @@
         "Height": 222
       }
     },
-    /*{
+
+    //Puts the Pizza Van on the Map when conditions are met
+    {
       "LogName": "Edit ES World Map NO SVE Pizza Van",
       "Action": "EditImage",
       "When": {
         //"Season": "spring, summer, fall, winter",
-        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
-                    "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
-                "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": false,
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": false
       },
       "Target": "Mods/Lemurkat.EastScarp/ESWorldMap",
       "PatchMode": "Overlay",
-      "FromFile": "assets/WorldMaps/ESmap_????.png",
+      "FromFile": "assets/WorldMaps/ESmap_MagicPizzaVan.png",
       "FromArea": {
         "X": 0,
         "Y": 0,
@@ -248,7 +278,9 @@
         "Width": 304,
         "Height": 222
       }
-    },*/
+    },
+
+    //Changes the Tooltip text from Mateo's Tent to the Coastal Guild when conditions are met
     {
       "LogName": "NO SVE",
       "Action": "EditData",
@@ -257,17 +289,13 @@
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
         "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
       },
-      "TargetField": [
-        "EastScarp",
-        "MapAreas",
-        "MainScarp",
-        "ToolTips",
-        "MateoHome"
-      ],
+      "TargetField": [ "EastScarp", "MapAreas", "MainScarp", "ToolTips", "MateoHome" ],
       "Entries": {
         "Text": "{{i18n:MapName.CoastalGuild}}"
       }
     },
+
+    //Changes the Tooltip text from whatever Desty sets it as while rundown to the Lion's Mane when conditions are met
     {
       "LogName": "NO SVE",
       "Action": "EditData",
@@ -276,29 +304,33 @@
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
         "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true
       },
-      "TargetField": [
-        "EastScarp",
-        "MapAreas",
-        "MainScarp",
-        "ToolTips",
-        "LionsMane"
-      ],
+      "TargetField": [ "EastScarp", "MapAreas", "MainScarp", "ToolTips", "LionsMane" ],
       "Entries": {
         "Text": "{{i18n:MapName.LionsMane}}"
       }
     },
+
+
+
+
+
+
+
+
+
+
+
+
     {
-      "LogName": "YES SVE",
+      "LogName": "YES SVE - Mateo's Tent, Guild, Lion's Mane",
       "Action": "EditData",
       "Target": "Data/WorldMap",
       "When": {
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
       },
-      "TargetField": [
-        "EastScarp",
-        "MapAreas"
-      ],
+      "TargetField": [ "EastScarp", "MapAreas" ],
       "Entries": {
+
         "MateoHome": {
           "Id": "MateoHome",
           "PixelArea": {
@@ -345,6 +377,9 @@
             }
           ]
         },
+
+
+
         "LionsMane": {
           "Id": "LionsMane",
           "PixelArea": {
@@ -380,13 +415,29 @@
             }
           ]
         }
-        /*"MagicalPizzaVan": {
+      }
+    },
+
+    //Pizza van gets it's own patch because of conditions
+    {
+      "LogName": "YES SVE - Cirrus Van Patch",
+      "Action": "EditData",
+      "Target": "Data/WorldMap",
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": false
+      },
+      "TargetField": [ "EastScarp", "MapAreas" ],
+      "Entries": {
+
+        "MagicalPizzaVan": {
           "Id": "MagicalPizzaVan",
           "PixelArea": {
             "X": 133,
-            "Y": 6,
-            "Width": 19,
-            "Height": 10
+            "Y": 104,
+            "Width": 8,
+            "Height": 7
           },
           "Tooltips": [
             {
@@ -401,9 +452,9 @@
               "ExtendedTileArea": null,
               "MapPixelArea": {
                 "X": 133,
-                "Y": 6,
-                "Width": 19,
-                "Height": 10
+                "Y": 104,
+                "Width": 8,
+                "Height": 7
               },
               "ScrollText": "{{i18n:MapName.VanInterior}}"
             },
@@ -414,9 +465,11 @@
               "ScrollText": null
             }
           ]
-        }*/
+        }
       }
     },
+
+    //Puts the Tent on the Map
     {
       "LogName": "Edit ES World Map YES SVE Mateo Tent",
       "Action": "EditImage",
@@ -440,6 +493,8 @@
         "Height": 222
       }
     },
+
+    //Puts the Guild on the Map when conditions are met
     {
       "LogName": "Edit ES World Map YES SVE Guild",
       "Action": "EditImage",
@@ -464,6 +519,8 @@
         "Height": 222
       }
     },
+
+    //Puts the improved Guild on the Map when conditions are met
     {
       "LogName": "Edit ES World Map YES SVE Guild Improved",
       "Action": "EditImage",
@@ -488,6 +545,8 @@
         "Height": 222
       }
     },
+
+    //Puts the Lion's Mane on the Map
     {
       "LogName": "Edit ES World Map YES SVE Lion's Mane",
       "Action": "EditImage",
@@ -511,31 +570,35 @@
         "Height": 222
       }
     },
-    /*{
+
+    //Puts the Pizza Van on the Map when conditions are met
+    {
       "LogName": "Edit ES World Map YES SVE Pizza Van",
       "Action": "EditImage",
       "When": {
         //"Season": "spring, summer, fall, winter",
-        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
-                    "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
-                "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": false,
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": false
       },
       "Target": "Mods/Lemurkat.EastScarp/ESWorldMap",
       "PatchMode": "Overlay",
-      "FromFile": "assets/WorldMaps/ESmap_????.png",
+      "FromFile": "assets/WorldMaps/ESmap_MagicPizzaVanSVE.png",
       "FromArea": {
         "X": 0,
         "Y": 0,
-        "Width": 304,
+        "Width": 224,
         "Height": 222
       },
       "ToArea": {
         "X": 0,
         "Y": 0,
-        "Width": 304,
+        "Width": 224,
         "Height": 222
       }
-    },*/
+    },
+
+    //Changes the Tooltip text from Mateo's Tent to the Coastal Guild when conditions are met
     {
       "LogName": "YES SVE",
       "Action": "EditData",
@@ -544,17 +607,13 @@
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
         "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
       },
-      "TargetField": [
-        "EastScarp",
-        "MapAreas",
-        "MainScarp",
-        "ToolTips",
-        "MateoHome"
-      ],
+      "TargetField": [ "EastScarp", "MapAreas", "MainScarp", "ToolTips", "MateoHome" ],
       "Entries": {
         "Text": "{{i18n:MapName.CoastalGuild}}"
       }
     },
+
+    //Changes the Tooltip text from whatever Desty sets it as while rundown to the Lion's Mane when conditions are met
     {
       "LogName": "YES SVE",
       "Action": "EditData",
@@ -563,16 +622,11 @@
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
         "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true
       },
-      "TargetField": [
-        "EastScarp",
-        "MapAreas",
-        "MainScarp",
-        "ToolTips",
-        "LionsMane"
-      ],
+      "TargetField": [ "EastScarp", "MapAreas", "MainScarp", "ToolTips", "LionsMane" ],
       "Entries": {
         "Text": "{{i18n:MapName.LionsMane}}"
       }
     }
+
   ]
 }

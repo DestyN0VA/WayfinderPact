@@ -115,5 +115,10 @@
             "Target": "Characters/FakeRoslin, Portraits/FakeRoslin",
             "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/FakeRoslin.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Characters/FakeSolomon, Portraits/FakeSolomon", // UNIQUE SIZE: 43 X 45
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/FakeSolomon.png"
+        },
     ]
 }
