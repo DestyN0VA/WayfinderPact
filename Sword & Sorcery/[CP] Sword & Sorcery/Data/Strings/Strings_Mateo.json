@@ -28,6 +28,12 @@
         "LongLiveTheKing":"{{i18n:Strings.Mateo.LongLiveTheKing}}",
         "UnderScarpe":"{{i18n:Strings.Mateo.UnderScarpe}}",
         "BlahajBlast":"{{i18n:Strings.Mateo.BlahajBlast}}",
+        "GooniesBoat":"{{i18n:Strings.Mateo.GooniesBoat}}",
+        "Underforge":"{{i18n:Strings.Mateo.Underforge}}",
+        "MasteryWall":"{{i18n:Strings.Mateo.MasteryWall}}",
+        "SmithSupplies":"{{i18n:Strings.Mateo.SmithSupplies}}",
+        "WornChainmail":"{{i18n:Strings.Mateo.WornChainmail}}",
+        "MysteryCaveExit":"{{i18n:Strings.Mateo.MysteryCaveExit}}",
 
     }
    }

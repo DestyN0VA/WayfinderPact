@@ -61,7 +61,7 @@
 {
     "LogName": "Conversation Topics - Marlon Vanilla",
     "Action": "EditData",
-    "Target": "Characters/Dialogue/Marlon",
+    "Target": "Characters/Dialogue/{{SVEMarlon}}",
     "Entries":
         {
             "MateoCaution":"{{i18n:CT.Marlon.MateoCaution}}",
@@ -79,43 +79,13 @@
             "MateoDeclaration": "{{i18n:CT.Marlon.MateoDeclaration}}"
             
         },
-        "When": {
-            "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
-          }	
 },
 
-    // MARLON (SVE)
-    {
-        "LogName": "Conversation Topics - Marlon SVE",
-        "Action": "EditData",
-        "Target": "Characters/Dialogue/MarlonFey",
-        "Entries":
-        {
-            "MateoCaution":"{{i18n:CT.Marlon.MateoCaution}}",
-            "MateoLibrary":"{{i18n:CT.Marlon.MateoLibrary}}",
-            "MateoAdmission":"{{i18n:CT.Marlon.MateoAdmission}}",
-            "MateoConfrontation": "{{i18n:CT.Marlon.MateoConfrontation}}",
-            "MateoWyatt": "{{i18n:CT.Marlon.MateoWyatt}}",
-            "MateoAcceptance": "{{i18n:CT.Marlon.MateoAcceptance}}", 
-            "MateoPain": "{{i18n:CT.Marlon.MateoPain}}",
-            "MateoRecovery": "{{i18n:CT.Marlon.MateoRecovery}}",
-            "CGuildConstruction": "{{i18n:CT.Marlon.CGuildConstruction}}",
-            "CGuildComplete": "{{i18n:CT.Marlon.CGuildComplete}}",
-            "MateoDate": "{{i18n:CT.Marlon.MateoDate}}",
-            "MateoIntegrity": "{{i18n:CT.Marlon.MateoIntegrity}}",
-            "MateoDeclaration": "{{i18n:CT.Marlon.MateoDeclaration}}"
-                
-        },
-		"When": {
-			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
-		  }	
-    },
-
-    // Gunther 
+    // GUNTHER
     {
         "LogName": "Conversation Topics - Gunther",
         "Action": "EditData",
-        "Target": "Characters/Dialogue/Gunther",
+        "Target": "Characters/Dialogue/{{SVEGunther}}",
         "Entries":
         {
             "MateoCaution":"{{i18n:CT.Gunther.MateoCaution}}",
@@ -132,36 +102,7 @@
             "MateoDeclaration": "{{i18n:CT.Gunther.MateoDeclaration}}"
                 
         },
-		"When": {
-			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
-		  }	
     },
-
-    // Gunther (SVE)
-    {
-        "LogName": "Conversation Topics - Gunther",
-        "Action": "EditData",
-        "Target": "Characters/Dialogue/GuntherSilvian",
-        "Entries":
-        {
-            "MateoCaution":"{{i18n:CT.Gunther.MateoCaution}}",
-            "MateoLibrary":"{{i18n:CT.Gunther.MateoLibrary}}",
-            "MateoAdmission":"{{i18n:CT.Gunther.MateoAdmission}}",
-            "MateoConfrontation": "{{i18n:CT.Gunther.MateoConfrontation}}",
-            "MateoAcceptance": "{{i18n:CT.Gunther.MateoAcceptance}}", 
-            "MateoPain": "{{i18n:CT.Gunther.MateoPain}}",
-            "MateoRecovery": "{{i18n:CT.Gunther.MateoRecovery}}",
-            "CGuildConstruction": "{{i18n:CT.Gunther.CGuildConstruction}}",
-            "CGuildComplete": "{{i18n:CT.Gunther.CGuildComplete}}",
-            "MateoDate": "{{i18n:CT.Gunther.MateoDate}}",
-            "MateoIntegrity": "{{i18n:CT.Gunther.MateoIntegrity}}",
-            "MateoDeclaration": "{{i18n:CT.Gunther.MateoDeclaration}}"
-            
-        },
-        "When": {
-            "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
-          }	
-},
 
     {
         "LogName": "Conversation Topics - Krobus",

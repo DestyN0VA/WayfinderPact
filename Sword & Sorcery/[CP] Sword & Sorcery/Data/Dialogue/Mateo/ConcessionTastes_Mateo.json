@@ -19,7 +19,6 @@
                     "DislikedTags": [
                         "JojaCorn",
                         "Joja Cola"
-                    
                     ]
                 }
             }
@@ -53,7 +52,6 @@
                                 }
                             },
                             "ID": "reaction_0"
-
                         },
                         {
                             "Tag": "spring_movie_1",
@@ -73,7 +71,7 @@
                                 "AfterMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Mateo.BraveLittleSapling.3}}",
+                                    "Text": "{{i18n:Movies.Mateo.BraveLittleSapling.3}}",
                                 }
                             },
                             "ID": "reaction_1"
@@ -86,18 +84,18 @@
                                 "BeforeMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Mateo.PrairieKing.1}}",
+                                    "Text": "{{i18n:Movies.Mateo.PrairieKing.1}}",
                                 },
                                 "DuringMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Mateo.PrairieKing.2}}",
+                                    "Text": "{{i18n:Movies.Mateo.PrairieKing.2}}",
                                 },
                                 "AfterMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Mateo.PrairieKing.3}}",
-                                } 
+                                    "Text": "{{i18n:Movies.Mateo.PrairieKing.3}}",
+                                }
                             },
                             "ID": "reaction_2"
                         },
@@ -109,19 +107,18 @@
                                 "BeforeMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Mateo.Wumbus.1}}",
+                                    "Text": "{{i18n:Movies.Mateo.Wumbus.1}}",
                                 },
                                 "DuringMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Mateo.Wumbus.2}}",
+                                    "Text": "{{i18n:Movies.Mateo.Wumbus.2}}",
                                 },
                                 "AfterMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Mateo.Wumbus.3}}", 
+                                    "Text": "{{i18n:Movies.Mateo.Wumbus.3}}",
                                 }
-
                             },
                             "ID": "reaction_3"
                         },
@@ -133,40 +130,40 @@
                                 "BeforeMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Mateo.Mysterium.1}}",
+                                    "Text": "{{i18n:Movies.Mateo.Mysterium.1}}",
                                 },
                                 "DuringMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Mateo.Mysterium.2}}",
+                                    "Text": "{{i18n:Movies.Mateo.Mysterium.2}}",
                                 },
                                 "AfterMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Mateo.Mysterium.3}}",
+                                    "Text": "{{i18n:Movies.Mateo.Mysterium.3}}",
                                 }
                             },
                             "ID": "reaction_4"
                         },
                         {
                             "Tag": "fall_movie_1",
-                            "Response": "like", 
+                            "Response": "like",
                             "Whitelist": [],
                             "SpecialResponses": {
                                 "BeforeMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Mateo.ItHowlsInTheRain.1}}",
+                                    "Text": "{{i18n:Movies.Mateo.ItHowlsInTheRain.1}}",
                                 },
                                 "DuringMovie": {
                                     "ResponsePoint": null,
-                                    "Script": null, 
-                                    "Text":"{{i18n:Movies.Mateo.ItHowlsInTheRain.2}}",
+                                    "Script": null,
+                                    "Text": "{{i18n:Movies.Mateo.ItHowlsInTheRain.2}}",
                                 },
                                 "AfterMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Mateo.ItHowlsInTheRain.3}}",
+                                    "Text": "{{i18n:Movies.Mateo.ItHowlsInTheRain.3}}",
                                 }
                             },
                             "ID": "reaction_5"
@@ -179,49 +176,47 @@
                                 "BeforeMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Mateo.MiracleAtColdstarRanch.1}}",
+                                    "Text": "{{i18n:Movies.Mateo.MiracleAtColdstarRanch.1}}",
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": null,
+                                    "Text": "{{i18n:Movies.Mateo.MiracleAtColdstarRanch.2}}",
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": null,
+                                    "Text": "{{i18n:Movies.Mateo.MiracleAtColdstarRanch.3}}",
+                                }
                             },
-                            "DuringMovie": {
-                                "ResponsePoint": null,
-                                "Script": null,
-                                "Text":"{{i18n:Movies.Mateo.MiracleAtColdstarRanch.2}}",
-                            },
-                            "AfterMovie": {
-                                "ResponsePoint": null,
-                                "Script": null,
-                                "Text":"{{i18n:Movies.Mateo.MiracleAtColdstarRanch.3}}",
-                            }
+                            "ID": "reaction_6"
                         },
-                        "ID": "reaction_6"
-                    },
-                    {
-                        "Tag": "winter_movie_1",
-                        "Response": "love",
-                        "Whitelist": [],
-                        "SpecialResponses": {
-                            "BeforeMovie": {
-                                "ResponsePoint": null,
-                                "Script": null,
-                                "Text":"{{i18n:Movies.Mateo.ZuzuCityExpress.1}}",
+                        {
+                            "Tag": "winter_movie_1",
+                            "Response": "love",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": null,
+                                    "Text": "{{i18n:Movies.Mateo.ZuzuCityExpress.1}}",
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": null,
+                                    "Text": "{{i18n:Movies.Mateo.ZuzuCityExpress.2}}",
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": null,
+                                    "Text": "{{i18n:Movies.Mateo.ZuzuCityExpress.3}}",
+                                }
                             },
-                            "DuringMovie": {
-                                "ResponsePoint": null,
-                                "Script": null,
-                                "Text":"{{i18n:Movies.Mateo.ZuzuCityExpress.2}}",
-                            },
-                            "AfterMovie": {
-                                "ResponsePoint": null,
-                                "Script": null,
-                                "Text":"{{i18n:Movies.Mateo.ZuzuCityExpress.3}}",
-                            }
-                        },
-                        "ID": "reaction_7"
-                    }
-
+                            "ID": "reaction_7"
+                        }
                     ]
                 }
             }
         }
     ]
 }
-    

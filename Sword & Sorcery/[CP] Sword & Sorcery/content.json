@@ -1061,7 +1061,7 @@
     },
     {
       "Name": "TrollHeritageDialogue3",
-      "Value": "{{i18n:i18n:Events.S&S.Ch1.12H.Mateo.8.TrollHeritage}}",
+      "Value": "{{i18n:Events.S&S.Ch1.12H.Mateo.8.TrollHeritage}}",
       "When": {
         "MateoTrollHeritage": true,
       }
@@ -1076,6 +1076,70 @@
     {
       "Name": "10HSVEBushRemovalServices",
       "Value": "removeTile 43 26 AlwaysFront/removeTile 44 26 AlwaysFront/removeTile 45 26 AlwaysFront/removeTile 43 27 Front/removeTile 44 27 Front/removeTile 45 27 Front/removeTile 43 28 Buildings/removeTile 44 28 Buildings/removeTile 45 28 Buildings"
-    }
+    },
+    {
+      "Name": "HectorFlirt1",
+      "Value": "{{i18n:Events.S&S.Ch2.9H.Hector.14.7}}",
+      "When": {
+        "HasFlag |contains=HectorFlirt": false
+      }
+    },
+    {
+      "Name": "HectorFlirt1",
+      "Value": "{{i18n:Events.S&S.Ch2.9H.Hector.14.Flirty}}",
+      "When": {
+        "HasFlag |contains=HectorFlirt": true
+      }
+    },
+    {
+      "Name": "HectorFlirt2",
+      "Value": "{{i18n:Events.S&S.Ch2.10H1.Hector.9}}",
+      "When": {
+        "HasFlag |contains=HectorFlirt": false
+      }
+    },
+    {
+      "Name": "HectorFlirt2",
+      "Value": "{{i18n:Events.S&S.Ch2.10H1.Hector.9.Flirty}}",
+      "When": {
+        "HasFlag |contains=HectorFlirt": true
+      }
+    },
+    {
+      "Name": "HectorFlirt3",
+      "Value": "{{i18n:Events.S&S.Ch2.10H2.Hector.6}}",
+      "When": {
+        "HasFlag |contains=HectorFlirt": false
+      }
+    },
+    {
+      "Name": "HectorFlirt3",
+      "Value": "{{i18n:Events.S&S.Ch2.10H2.Hector.6.Flirty}}",
+      "When": {
+        "HasFlag |contains=HectorFlirt": true
+      }
+    },
+    {
+      "Name": "SVEMarlon",
+      "Value": "MarlonFey",
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+      }
+    },
+    {
+      "Name": "SVEMarlon",
+      "Value": "Marlon",
+    },
+    {
+      "Name": "SVEGunther",
+      "Value": "GuntherSilvian",
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+      }
+    },
+    {
+      "Name": "SVEGunther",
+      "Value": "Gunther",
+    },
   ]
 }

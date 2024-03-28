@@ -17,6 +17,12 @@
             "FromFile": "Assets/Portraits/Mateo/{{MateoBeach}}"
         },
         {
+            "LogName": "Shirtless Sprites - Mateo",
+            "Action": "Load",
+            "Target": "Characters/Shirtless_Mateo",
+            "FromFile": "Assets/Characters/Mateo/Shirtless_Mateo.png"
+        },
+        {
             "LogName": "Beach Sprites - Mateo",
             "Action": "Load",
             "Target": "Characters/Mateo_beach",
@@ -104,7 +110,7 @@
         {   
             "LogName": "Mateo's Troll Heritage Sprite Overlay",
             "Action": "EditImage",
-            "Target": "Characters/Mateo, Characters/Mateo_Seasonal_1, Characters/Mateo_Seasonal_2, Characters/Mateo_Seasonal_3, Characters/Mateo_Seasonal_4, Characters/Mateo_Seasonal_5, Characters/Mateo_Seasonal_6, Characters/Mateo_Seasonal_7,Characters/Mateo_Seasonal_8, Characters/Mateo_Seasonal_9, Characters/EggFair_Mateo, Characters/IceFestWinterStar_Mateo, Characters/LuauMoonlight_Mateo, Characters/Armor_Mateo",
+            "Target": "Characters/Mateo, Characters/Mateo_Seasonal_1, Characters/Mateo_Seasonal_2, Characters/Mateo_Seasonal_3, Characters/Mateo_Seasonal_4, Characters/Mateo_Seasonal_5, Characters/Mateo_Seasonal_6, Characters/Mateo_Seasonal_7,Characters/Mateo_Seasonal_8, Characters/Mateo_Seasonal_9, Characters/EggFair_Mateo, Characters/IceFestWinterStar_Mateo, Characters/LuauMoonlight_Mateo, Characters/Armor_Mateo, Characters/Shirtless_Mateo",
             "PatchMode": "Overlay",
             "FromFile": "assets/Characters/Mateo/horn_overlay_mateo.png",
             "Update": "OnTimeChange, OnLocationChange",

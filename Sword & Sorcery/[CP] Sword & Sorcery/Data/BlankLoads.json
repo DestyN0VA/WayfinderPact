@@ -57,5 +57,11 @@
             "Target": "data/events/EastScarp_LionsMane",
             "FromFile": "assets/blank.json",
           },
+          {
+            "LogName": "Lion's Mane Events Blank",
+            "Action": "Load",
+            "Target": "data/events/EastScarp_Underforge",
+            "FromFile": "assets/blank.json",
+          },
     ]
 }
