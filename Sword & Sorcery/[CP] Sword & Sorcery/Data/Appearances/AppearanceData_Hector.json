@@ -122,17 +122,6 @@
             }
         },
         {
-            "LogName": "Heterochromatic Eyes - Hooded TF",
-            "Action": "EditImage",
-            "Target": "Portraits/Hector_HoodUp",
-            "PatchMode":"Overlay",
-            "FromFile": "assets/Portraits/Hector/heterochromia_tf_hooded.png",
-            "Update": "OnTimeChange, OnLocationChange",
-            "When": {
-                "HectorHeterochromatic": true
-            }
-        },
-        {
             "LogName": "Heterochromatic Eyes - TrueUp Portrait",
             "Action": "EditImage",
             "Target": "Portraits/Hector_TrueUp",
