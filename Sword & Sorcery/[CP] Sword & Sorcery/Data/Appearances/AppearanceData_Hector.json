@@ -72,12 +72,94 @@
                 "MermaidPendantHairclip": true
             }
         },
+            // Heterochromia Overlays
         {
-            "LogName": "Heterochromatic Eyes",
+            "LogName": "Heterochromatic Eyes - M&F Portraits",
             "Action": "EditImage",
-            "Target": "Portraits/Hector, Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach, Portraits/Hector_HoodUp, Portraits/Hector_HoodDown, Portraits/Hector_TrueDown, Portraits/Hector_TrueUp, Characters/Hector, Characters/spring_Hector, Characters/summer_Hector, Characters/fall_Hector, Characters/winter_Hector, Characters/Hector_beach, Characters/Hector_HoodUp, Characters/Hector_HoodDown, Characters/Hector_TrueDown, Characters/Hector_TrueUp",
+            "Target": "Portraits/Hector, Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach, Portraits/Hector_HoodDown",
             "PatchMode": "Overlay",
-            "FromFile": "assets/{{TargetPathOnly}}/Hector/eye_overlay_hector.png",
+            "FromFile": "assets/{{TargetPathOnly}}/Hector/heterochromia_mf.png",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": {
+                "HectorHeterochromatic": true,
+                "TrueShape |contains=trueshape": false
+            }
+        },
+        {
+            "LogName": "Heterochromatic Eyes - TF",
+            "Action": "EditImage",
+            "Target": "Portraits/Hector, Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach, Portraits/Hector_HoodDown",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/{{TargetPathOnly}}/Hector/heterochromia_tf.png",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": {
+                "HectorHeterochromatic": true,
+                "TrueShape": "trueshape"
+            }
+        },
+        {
+            "LogName": "Heterochromatic Eyes - Hooded M&F",
+            "Action": "EditImage",
+            "Target": "Portraits/Hector_HoodUp",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Portraits/Hector/heterochromia_mf_hooded.png",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": {
+                "HectorHeterochromatic": true,
+                "TrueShape |contains=trueshape": false
+            }
+        },
+        {
+            "LogName": "Heterochromatic Eyes - Hooded TF",
+            "Action": "EditImage",
+            "Target": "Portraits/Hector_HoodUp",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Portraits/Hector/heterochromia_tf_hooded.png",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": {
+                "HectorHeterochromatic": true,
+                "TrueShape": "trueshape"
+            }
+        },
+        {
+            "LogName": "Heterochromatic Eyes - Hooded TF",
+            "Action": "EditImage",
+            "Target": "Portraits/Hector_HoodUp",
+            "PatchMode":"Overlay",
+            "FromFile": "assets/Portraits/Hector/heterochromia_tf_hooded.png",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": {
+                "HectorHeterochromatic": true
+            }
+        },
+        {
+            "LogName": "Heterochromatic Eyes - TrueUp Portrait",
+            "Action": "EditImage",
+            "Target": "Portraits/Hector_TrueUp",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Portraits/Hector/heterochromia_tf_hooded.png",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": {
+                "HectorHeterochromatic": true
+            }
+        },
+        {
+            "LogName": "Heterochromatic Eyes - TrueDown Portrait",
+            "Action": "EditImage",
+            "Target": "Portraits/Hector_TrueDown",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Portraits/Hector/heterochromia_tf.png",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": {
+                "HectorHeterochromatic": true
+            }
+        },
+        {
+            "LogName": "Heterochromatic Eyes - Characters",
+            "Action": "EditImage",
+            "Target": "Characters/Hector, Characters/spring_Hector, Characters/summer_Hector, Characters/fall_Hector, Characters/winter_Hector, Characters/Hector_beach, Characters/Hector_HoodUp, Characters/Hector_HoodDown, Characters/Hector_TrueDown, Characters/Hector_TrueUp",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Hector/heterochromia.png",
             "Update": "OnTimeChange, OnLocationChange",
             "When": {
                 "HectorHeterochromatic": true
@@ -88,7 +170,7 @@
             "Action": "EditImage",
             "Target": "Portaits/HectorWolf, Portraits/Hector_wolf",
             "PatchMode": "Overlay",
-            "FromFile": "Assets/Portraits/Hector/eye_overlay_wolf_hector.png",
+            "FromFile": "Assets/Portraits/Hector/heterochromia_wolf.png",
             "Update": "OnTimeChange, OnLocationChange",
             "When": {
                 "HectorHeterochromatic": true
