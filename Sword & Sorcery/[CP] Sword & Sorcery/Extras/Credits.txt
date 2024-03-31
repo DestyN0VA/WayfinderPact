@@ -19,7 +19,9 @@ CREDITS:
 ➜ AgentLyoko: Framework for S&S NPCA builds, help w/ code, playtesting
 ➜ MedicSun: Hector's sprites, touch-ups on portraits for aesthetic consistency 
 ➜ Rinnyboi: Armored Mateo sprites 
+➜ Daine: Skill books, skill icons, EXP icons, additional assets, extensive playtesting
 ➜ CreatorKami: Hector portraits
+➜ SunStream7: Extensive playtesting, additional assets 
 ➜ Yri: Druid tower, giant tree, and Book's sprites
 ➜ NinTheCactus69: Some of the druid crops 
 ➜ HimeTarts: Mateo portrait base and Spirit's Eve costume 
@@ -28,7 +30,7 @@ CREDITS:
 ➜ 6480: Crop tweaks, LLTK blade, lots of pixel art mentoring
 ➜ Pokeinalover: Book's Human design 
 ➜ SmolHuman: Animal sprites 
-➜ SunStream7, Gnadi, Mareetz, Daine: Extensive playtesting, additional assets
+➜ Gnadi, Mareetz: Extensive playtesting
 ➜ JayJayDub: Help w/ compatibility and i18n 
 ➜ Atravita: Mentoring, help w/ C# 
 ➜ Lumisteria: Mentoring, help w/ code
@@ -41,8 +43,10 @@ INSPIRATIONS:
 There are tons of song lyrics hidden throughout the mod, from the following artists: 
 Fall Out Boy, Ghost, Sleep Token, Nightwish, Nadia Grifford, Queen, David Bowie, Elvis
 Featuring SDV-style covers of music from: Final Fantasy X, Steven Universe, Kingdom Hearts
+References Big Fish, in TheLoreSeeker's memory
 
 Chapter 1 is inspired by/references/quotes: The Great Gatsby, Dark Cloud 2, Undertale 
 Chapter 2 is inspired by/references/quotes: Agent of Asgard, The Secret of Kells, Princess Mononoke
 Chapter 3 is inspired by/references/quotes: Ouran High School Host Club, Steambot Chronicles, Bojack Horseman 
 Chapter 4 is inspired by/references/quotes: Stranger Things, Wicked, Good Omens
+
