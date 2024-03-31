@@ -22,7 +22,7 @@ namespace CircleOfThornsSMAPI
 
             this.ExperienceCurve = new[] { 100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000 };
 
-            this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(196, 76, 255);
+            this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(48, 162, 218);
 
             // Level 5
             DruidicsSkill.ProfessionShapeshift = new GenericProfession(skill: this, id: "SkilledShapeshifter", name: I18n.Druidics_Profession_Shapeshifting_Name, description: I18n.Druidics_Profession_Shapeshifting_Description)

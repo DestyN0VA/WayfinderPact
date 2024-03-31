@@ -497,6 +497,7 @@ namespace SwordAndSorcerySMAPI
         {
             Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
+            Helper.Events.GameLoop.UpdateTicked += GameLoop_UpdateTicked;
             Helper.Events.Multiplayer.ModMessageReceived += Multiplayer_ModMessageReceived;
 
             Skill = new BardicsSkill();
@@ -755,6 +756,12 @@ namespace SwordAndSorcerySMAPI
 
                 toPlay.Function();
             });
+        }
+
+        private void GameLoop_UpdateTicked(object sender, UpdateTickedEventArgs e)
+        {
+            if (!Context.IsWorldReady || !Game1.shouldTimePass())
+                return;
         }
 
         private void Multiplayer_ModMessageReceived(object sender, StardewModdingAPI.Events.ModMessageReceivedEventArgs e)

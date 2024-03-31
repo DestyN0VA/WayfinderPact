@@ -11,20 +11,20 @@ using StardewValley.Menus;
 namespace SwordAndSorcerySMAPI
 {
 
-    public static class Farmer_ShieldSlot
+    public static class Farmer_ArmorSlot
     {
         internal class Holder { public readonly NetRef<Item> Value = new(); }
 
         internal static ConditionalWeakTable< Farmer, Holder > values = new();
 
-        public static void set_shieldSlot( this Farmer farmer, NetRef<Item> newVal )
+        public static void set_armorSlot( this Farmer farmer, NetRef<Item> newVal )
         {
             // We don't actually want a setter for this one, since it should be readonly
             // Net types are weird
             // Or do we? Serialization
         }
 
-        public static NetRef<Item> get_shieldSlot( this Farmer farmer )
+        public static NetRef<Item> get_armorSlot( this Farmer farmer )
         {
             var holder = values.GetOrCreateValue( farmer );
             return holder.Value;
@@ -36,25 +36,27 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Postfix(Farmer __instance)
         {
-            __instance.NetFields.AddField(__instance.get_shieldSlot(), "shieldSlot");
+            __instance.NetFields.AddField(__instance.get_armorSlot());
         }
     }
 
 
     [HarmonyPatch(typeof(InventoryPage), MethodType.Constructor, new Type[] { typeof(int), typeof(int), typeof(int), typeof(int) })]
-    public static class InventoryPageShieldConstructorPatch
+    public static class InventoryPageArmorConstructorPatch
     {
         public static void Postfix(InventoryPage __instance)
         {
             __instance.equipmentIcons.Add(
                 new ClickableComponent(
-                    new Rectangle(__instance.xPositionOnScreen + 48 + 208 - 80 - (ModSnS.instance.Helper.ModRegistry.IsLoaded("bcmpinc.WearMoreRings") ? 208 : -144),
-                        __instance.yPositionOnScreen + IClickableMenu.borderWidth + IClickableMenu.spaceToClearTopBorder + 4 + 256 - 12 + 64,
+                    new Rectangle(__instance.equipmentIcons.First( cc => cc.myID == InventoryPage.region_trinkets ).bounds.Right + 16 + 2,
+                        __instance.equipmentIcons.First(cc => cc.myID == InventoryPage.region_trinkets).bounds.Top,
                         64, 64),
-                    "Shield")
+                    "Armor")
                 {
                     myID = 123450102, // TODO: Replace with Nexus mod id prefix
-                    leftNeighborID = 102,
+                    upNeighborID = Game1.player.MaxItems - 7,
+                    leftNeighborID = InventoryPage.region_trinkets,
+                    rightNeighborID = InventoryPage.region_trashCan,
                     fullyImmutable = true,
                 });
         }
@@ -70,9 +72,9 @@ namespace SwordAndSorcerySMAPI
             if (shieldSlot is null)
                 return;
 
-            if (shieldSlot.containsPoint(x, y) && Game1.player.get_shieldSlot().Value != null)
+            if (shieldSlot.containsPoint(x, y) && Game1.player.get_armorSlot().Value != null)
             {
-                var shieldItem = Game1.player.get_shieldSlot().Value;
+                var shieldItem = Game1.player.get_armorSlot().Value;
                 ___hoveredItem = shieldItem;
                 ___hoverText = shieldItem.getDescription();
                 ___hoverTitle = shieldItem.DisplayName;
@@ -90,8 +92,8 @@ namespace SwordAndSorcerySMAPI
                 return true;
             if (shieldSlot.containsPoint(x, y))
             {
-                var shieldItem = Game1.player.get_shieldSlot();
-                if (Game1.player.CursorSlotItem == null || Game1.player.CursorSlotItem.IsShield())
+                var shieldItem = Game1.player.get_armorSlot();
+                if (Game1.player.CursorSlotItem == null || Game1.player.CursorSlotItem.IsArmorItem())
                 {
                     Item tmp = ModSnS.instance.Helper.Reflection.GetMethod(__instance, "takeHeldItem").Invoke<Item>();
                     Item held = shieldItem.Value;
@@ -120,7 +122,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Postfix(InventoryPage __instance, SpriteBatch b, Item ___hoveredItem)
         {
-            if (___hoveredItem != null && ___hoveredItem != Game1.player.get_shieldSlot().Value)
+            if (___hoveredItem != null && ___hoveredItem != Game1.player.get_armorSlot().Value)
                 return;
 
             var shieldSlot = __instance.equipmentIcons.FirstOrDefault(cc => cc.myID == 123450102);
@@ -128,14 +130,14 @@ namespace SwordAndSorcerySMAPI
             if (shieldSlot is null)
                 return;
 
-            if (Game1.player.get_shieldSlot().Value != null)
+            if (Game1.player.get_armorSlot().Value != null)
             {
                 b.Draw(Game1.menuTexture, shieldSlot.bounds, Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, 10), Color.White);
-                Game1.player.get_shieldSlot().Value.drawInMenu(b, new Vector2(shieldSlot.bounds.X, shieldSlot.bounds.Y), shieldSlot.scale, 1f, 0.866f, StackDrawType.Hide);
+                Game1.player.get_armorSlot().Value.drawInMenu(b, new Vector2(shieldSlot.bounds.X, shieldSlot.bounds.Y), shieldSlot.scale, 1f, 0.866f, StackDrawType.Hide);
             }
             else
             {
-                b.Draw(ModSnS.ShieldSlotBackground, shieldSlot.bounds, null, Color.White);
+                b.Draw(ModSnS.ArmorSlotBackground, shieldSlot.bounds, null, Color.White);
             }
         }
     }

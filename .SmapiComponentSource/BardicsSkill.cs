@@ -25,7 +25,7 @@ namespace SwordAndSorcerySMAPI
 
             this.ExperienceCurve = new[] { 100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000 };
 
-            this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(137, 76, 255);
+            this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(85, 33, 145);
 
             // Level 5
             BardicsSkill.ProfessionBuff = new GenericProfession(skill: this, id: "BuffSong", name: I18n.Bardics_Profession_Npcbuff, description: () => I18n.Bardics_Level_Song(I18n.Bardics_Song_Npcbuff_Name())+"\n" + I18n.Bardics_Song_Npcbuff_Description())

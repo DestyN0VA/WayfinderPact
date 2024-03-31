@@ -620,7 +620,7 @@ namespace CircleOfThornsSMAPI
                 return;
 
             float mult = Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
-            if (Game1.player.eventsSeen.Contains(ModCoT.WalletItemEventID))
+            if (Game1.player.hasOrWillReceiveMail("BrokenCircletPower"))
                 mult += 0.01f;
             if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
                 mult += 0.01f;
@@ -642,7 +642,7 @@ namespace CircleOfThornsSMAPI
                 return;
 
             float mult = Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
-            if (Game1.player.eventsSeen.Contains(ModCoT.WalletItemEventID))
+            if (Game1.player.hasOrWillReceiveMail("BrokenCircletPower"))
                 mult += 0.01f;
             if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
                 mult += 0.01f;
@@ -664,7 +664,7 @@ namespace CircleOfThornsSMAPI
                 return;
 
             float mult = Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
-            if (Game1.player.eventsSeen.Contains(ModCoT.WalletItemEventID))
+            if (Game1.player.hasOrWillReceiveMail("BrokenCircletPower"))
                 mult += 0.01f;
             if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
                 mult += 0.01f;
@@ -686,7 +686,7 @@ namespace CircleOfThornsSMAPI
                 return;
 
             float mult = Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
-            if (Game1.player.eventsSeen.Contains(ModCoT.WalletItemEventID))
+            if (Game1.player.hasOrWillReceiveMail("BrokenCircletPower"))
                 mult += 0.01f;
             if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
                 mult += 0.01f;

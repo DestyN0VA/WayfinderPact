@@ -22,14 +22,12 @@ namespace SwordAndSorcerySMAPI
         public RogueSkill()
             : base("DestyNova.SwordAndSorcery.Rogue")
         {
-            // TODO: Change icons to bardics
-
             this.Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png");
             this.SkillsPageIcon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png");
 
             this.ExperienceCurve = new[] { 100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000 };
 
-            this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(137, 76, 255);
+            this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(252, 121, 27);
 
             // Level 5
             RogueSkill.ProfessionArmorRecovery = new GenericProfession(skill: this, id: "ArmorRecovery", name: I18n.Bardics_Profession_Npcbuff, description: () => I18n.Bardics_Level_Song(I18n.Bardics_Song_Npcbuff_Name())+"\n" + I18n.Bardics_Song_Npcbuff_Description())
@@ -85,6 +83,25 @@ namespace SwordAndSorcerySMAPI
         {
             base.DoLevelPerk(level);
             Game1.player.maxHealth += 3;
+
+            string[][] craftingRecipes =
+            [
+                [],
+                ["DN.SnS_ClothArmor", "DN.SnS_Bow"],
+                ["DN.SnS_CopperArmor", "DN.SnS_IronArmor", "DN.SnS_GoldArmor", "DN.SnS_IridiumArmor", "DN.SnS_RadioactiveArmor"],
+                ["DN.SnS_FirestormArrow", "DN.SnS_IcicleArrow"],
+                ["DN.SnS_ExquisiteEmerald", "DN.SnS_ExquisiteRuby", "DN.SnS_ExquisiteTopaz", "DN.SnS_ExquisiteAquamarine", "DN.SnS_ExquisiteAmethyst", "DN.SnS_ExquisiteJade", "DN.SnS_ExquisiteDiamond"],
+                [],
+                ["DN.SnS_WindwakerArrow"],
+                ["DN.SnS_RicochetArrow"],
+                ["DN.SnS_LightbringerArrow"],
+                [],
+            ];
+
+            foreach (var recipe in craftingRecipes[level])
+            {
+                Game1.player.craftingRecipes.Add(recipe, 0);
+            }
         }
 
         public override List<string> GetExtraLevelUpInfo(int level)
@@ -95,28 +112,41 @@ namespace SwordAndSorcerySMAPI
             {
                 case 1:
                     ret.Add(I18n.RogueSkill_Unlock_1());
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ClothArmor", false).DisplayName));
                     break;
                 case 2:
                     ret.Add(I18n.RogueSkill_Unlock_2());
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_CopperArmor", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_IronArmor", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_GoldArmor", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_IridiumArmor", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_RadioactiveArmor", false).DisplayName));
                     break;
                 case 3:
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("swordandsorcery.firestorm-arrow", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("swordandsorcery.icicle-arrow", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_FirestormArrow", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_IcicleArrow", false).DisplayName));
                     break;
                 case 4:
                     ret.Add(I18n.RogueSkill_Unlock_4());
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteEmerald", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteRuby", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteTopaz", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteAquamarine", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteAmethyst", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteJade", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteDiamond", false).DisplayName));
                     break;
                 case 6:
                     ret.Add(I18n.RogueSkill_Unlock_6());
                     break;
                 case 7:
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("swordandsorcery.windwaker-arrow", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_WindwakerArrow", false).DisplayName));
                     break;
                 case 8:
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("swordandsorcery.ricochet-arrow", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_RicochetArrow", false).DisplayName));
                     break;
                 case 9:
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("swordandsorcery.lightbringer-arrow", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_LightbringerArrow", false).DisplayName));
                     break;
             }
 
@@ -140,7 +170,7 @@ namespace SwordAndSorcerySMAPI
         {
             int amt = farmer.GetCustomSkillLevel(ModSnS.RogueSkill) * 3;
             farmer.maxHealth += amt;
-            if (farmer.health == amt)
+            if (farmer.health == farmer.maxHealth - amt)
                 farmer.health += amt;
         }
     }

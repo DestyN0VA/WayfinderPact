@@ -147,24 +147,22 @@ public partial class ModSnS
 
     public static Dictionary<string, string> ExquisiteGemMappings = new()
     {
-        { StardewValley.Object.emeraldQID, "(O)swordandsorcery.ExquisiteEmerald" },
-        { StardewValley.Object.rubyQID, "(O)swordandsorcery.ExquisiteRuby" },
-        { StardewValley.Object.topazQID, "(O)swordandsorcery.ExquisiteTopaz" },
-        { StardewValley.Object.aquamarineQID, "(O)swordandsorcery.ExquisiteAquamarine" },
-        { StardewValley.Object.amethystClusterQID, "(O)swordandsorcery.ExquisiteAmethyst" },
-        { StardewValley.Object.sapphireQID /* WHAT? */, "(O)swordandsorcery.ExquisiteJade" },
-        { StardewValley.Object.diamondQID, "(O)swordandsorcery.ExquisiteDiamond" },
+        { StardewValley.Object.emeraldQID, "(O)DN.SnS.ExquisiteEmerald" },
+        { StardewValley.Object.rubyQID, "(O)DN.SnS.ExquisiteRuby" },
+        { StardewValley.Object.topazQID, "(O)DN.SnS.ExquisiteTopaz" },
+        { StardewValley.Object.aquamarineQID, "(O)DN.SnS.ExquisiteAquamarine" },
+        { StardewValley.Object.amethystClusterQID, "(O)DN.SnS.ExquisiteAmethyst" },
+        { StardewValley.Object.sapphireQID /* WHAT? */, "(O)DN.SnS.ExquisiteJade" },
+        { StardewValley.Object.diamondQID, "(O)DN.SnS.ExquisiteDiamond" },
     };
 
     public static Dictionary<string, string> PureOreMappings = new()
     {
-        { StardewValley.Object.emeraldQID, "(O)swordandsorcery.ExquisiteEmerald" },
-        { StardewValley.Object.rubyQID, "(O)swordandsorcery.ExquisiteRuby" },
-        { StardewValley.Object.topazQID, "(O)swordandsorcery.ExquisiteTopaz" },
-        { StardewValley.Object.aquamarineQID, "(O)swordandsorcery.ExquisiteAquamarine" },
-        { StardewValley.Object.amethystClusterQID, "(O)swordandsorcery.ExquisiteAmethyst" },
-        { StardewValley.Object.sapphireQID /* WHAT? */, "(O)swordandsorcery.ExquisiteJade" },
-        { StardewValley.Object.diamondQID, "(O)swordandsorcery.ExquisiteDiamond" },
+        { StardewValley.Object.copperQID, "(O)DN.SnS.PureCopperOre" },
+        { StardewValley.Object.ironQID, "(O)DN.SnS.PureIronOre" },
+        { StardewValley.Object.goldQID, "(O)DN.SnS.PureGoldOre" },
+        { StardewValley.Object.iridiumQID, "(O)DN.SnS.PureIridiumOre" },
+        { "(O)909", "(O)DN.SnS.PureRadioactiveOre" },
     };
 
     public static Dictionary<string, int> CoatingIconMapping = new()
@@ -177,11 +175,11 @@ public partial class ModSnS
     };
     public static Dictionary<string, int> AlloyIconMapping = new()
     {
-        { "(O)swordandsorcery.PureCopperOre",  8 },
-        { "(O)swordandsorcery.PureIronOre",  9 },
-        { "(O)swordandsorcery.PureGoldOre", 10 },
-        { "(O)swordandsorcery.PureIridiumOre", 11 },
-        { "(O)swordandsorcery.PureRadioactiveOre", 12 },
+        { "(O)DN.SnS.PureCopperOre",  8 },
+        { "(O)DN.SnS.PureIronOre",  9 },
+        { "(O)DN.SnS.PureGoldOre", 10 },
+        { "(O)DN.SnS.PureIridiumOre", 11 },
+        { "(O)DN.SnS.PureRadioactiveOre", 12 },
     };
 
     public static Dictionary<string, int> CoatingQuantities = new()
@@ -197,9 +195,9 @@ public partial class ModSnS
     {
         Helper.Events.Player.Warped += PlayerOnWarped;
 
-        Helper.ConsoleCommands.Add("player_encrustweapon", "...", (cmd, args) => (Game1.player.CurrentTool as MeleeWeapon)?.SetExquisiteGemstone(args[0]));
-        Helper.ConsoleCommands.Add("player_coatweapon", "...", (cmd, args) => (Game1.player.CurrentTool as MeleeWeapon)?.SetBladeCoating(args[0]));
-        Helper.ConsoleCommands.Add("player_alloyweapon", "...", (cmd, args) => (Game1.player.CurrentTool as MeleeWeapon)?.SetBladeAlloying(args[0]));
+        Helper.ConsoleCommands.Add("sns_encrustweapon", "...", (cmd, args) => (Game1.player.CurrentTool as MeleeWeapon)?.SetExquisiteGemstone(args[0]));
+        Helper.ConsoleCommands.Add("sns_coatweapon", "...", (cmd, args) => (Game1.player.CurrentTool as MeleeWeapon)?.SetBladeCoating(args[0]));
+        Helper.ConsoleCommands.Add("sns_alloyweapon", "...", (cmd, args) => (Game1.player.CurrentTool as MeleeWeapon)?.SetBladeAlloying(args[0]));
         Helper.ConsoleCommands.Add("sns_arsenal", "...", (cmd, args) => Game1.activeClickableMenu = new ArsenalMenu());
 
         SpaceCore.CustomForgeRecipe.Recipes.Add(new SecondEnchantmentForgeRecipe());
@@ -711,6 +709,19 @@ public static class MonsterTakeDamagePatch
                 break;
         }
 
+        if (who == Game1.player)
+        {
+            if (ModSnS.State.LastAttacked == __instance)
+            {
+                mult += 0.1f * ++ModSnS.State.LastAttackedCounter;
+            }
+            else
+            {
+                ModSnS.State.LastAttacked = __instance;
+                ModSnS.State.LastAttackedCounter = 0;
+            }
+        }
+
         damage = (int)(damage * mult);
     }
     public static void Postfix(Monster __instance, int damage, Farmer who, int __result)
@@ -819,10 +830,19 @@ public static class Game1ChangeGemToExquisitePatch
 {
     public static void Prefix(ref string id, int xTile, int yTile, long whichPlayer, GameLocation location)
     {
-        if (Game1.player.GetCustomSkillLevel(ModSnS.RogueSkill) >= 2 &&
+        double chanceMult = 1;
+        if (Game1.player.hasOrWillReceiveMail("StygiumPendantPower"))
+            chanceMult = 2;
+
+        if (Game1.player.GetCustomSkillLevel(ModSnS.RogueSkill) >= 4 &&
             GameLocationBreakingStoneFlagPatch.IsBreakingStone > 0 &&
             ModSnS.ExquisiteGemMappings.TryGetValue(id, out string newId) &&
-            Game1.random.NextDouble() < 0.02)
+            Game1.random.NextDouble() < 0.02 * chanceMult)
+            id = newId;
+        if (Game1.player.GetCustomSkillLevel(ModSnS.RogueSkill) >= 2 &&
+            GameLocationBreakingStoneFlagPatch.IsBreakingStone > 0 &&
+            ModSnS.PureOreMappings.TryGetValue(id, out newId) &&
+            Game1.random.NextDouble() < 0.1 * chanceMult)
             id = newId;
     }
 }

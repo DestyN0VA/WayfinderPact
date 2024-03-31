@@ -4,13 +4,16 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
 using NeverEndingAdventure;
+using NeverEndingAdventure.Utils;
 using SpaceCore;
 using SpaceCore.VanillaAssetExpansion;
 using StardewModdingAPI;
 using StardewModdingAPI.Utilities;
 using StardewValley;
+using StardewValley.Extensions;
 using StardewValley.GameData.Objects;
 using StardewValley.GameData.Tools;
+using StardewValley.GameData.Weapons;
 using StardewValley.Menus;
 using StardewValley.Monsters;
 using StardewValley.SpecialOrders;
@@ -20,6 +23,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using xTile.Tiles;
 
 namespace SwordAndSorcerySMAPI
@@ -67,6 +71,8 @@ namespace SwordAndSorcerySMAPI
         public static void ExpRemainderRogueSetter(Farmer farmer, NetFloat val)
         {
         }
+
+        public readonly NetInt armorUsed = new(0);
     }
 
     [HarmonyPatch(typeof(Farmer), "initNetFields")]
@@ -77,6 +83,10 @@ namespace SwordAndSorcerySMAPI
             __instance.NetFields.AddField(__instance.GetFarmerExtData().hasTakenLoreWeapon);
             __instance.NetFields.AddField(__instance.GetFarmerExtData().inShadows);
             __instance.NetFields.AddField(__instance.GetFarmerExtData().adventureBar);
+            __instance.NetFields.AddField(__instance.GetFarmerExtData().mana);
+            __instance.NetFields.AddField(__instance.GetFarmerExtData().maxMana);
+            __instance.NetFields.AddField(__instance.GetFarmerExtData().expRemainderRogue);
+            __instance.NetFields.AddField(__instance.GetFarmerExtData().armorUsed);
         }
     }
 
@@ -86,6 +96,21 @@ namespace SwordAndSorcerySMAPI
         {
             return ModSnS.farmerData.GetOrCreateValue(instance);
         }
+
+        public static bool IsArmorItem(this Item item)
+        {
+            return (item.GetArmorAmount() ?? -1) > 0;
+        }
+
+        public static int? GetArmorAmount(this Item item)
+        {
+            if (item != null && ItemRegistry.GetDataOrErrorItem(item.QualifiedItemId).RawData is ObjectData data &&
+                ( data.CustomFields?.TryGetValue("ArmorValue", out string valStr) ?? false ) && int.TryParse(valStr, out int val))
+            {
+                return (int)( val * ( Game1.player.HasCustomProfession( RogueSkill.ProfessionArmorCap ) ? 1.5f : 1));
+            }
+            return null;
+        }
     }
 
     public class State
@@ -94,6 +119,11 @@ namespace SwordAndSorcerySMAPI
         public float ThrowCooldown { get; set; } = 0;
 
         public float BlockCooldown { get; set; } = 0;
+        public bool CanRepairArmor { get; set; } = true;
+        public bool HasCraftedFree { get; set; } = false;
+
+        public Monster LastAttacked { get; set; } = null;
+        public int LastAttackedCounter { get; set; } = 0;
     }
 
     public class Configuration
@@ -127,6 +157,7 @@ namespace SwordAndSorcerySMAPI
         private static PerScreen<State> _state = new(() => new State());
         public static State State => _state.Value;
 
+        public static Texture2D ArmorSlotBackground;
         public static Texture2D ShieldSlotBackground;
         public static Texture2D ShieldItemTexture;
         public static Texture2D SwordOverlay;
@@ -143,6 +174,93 @@ namespace SwordAndSorcerySMAPI
             I18n.Init(Helper.Translation);
             Config = Helper.ReadConfig<Configuration>();
 
+            Event.RegisterCommand("sns_rogueunlock", (Event @event, string[] args, EventContext context) =>
+            {
+                // This implementation is incredibly lazy
+                ArgUtility.TryGetVector2(args, 1, out Vector2 center, out string error);
+                center.Y -= 0.5f;
+
+                List<TemporaryAnimatedSprite> tass = new();
+
+                @event.aboveMapSprites ??= new();
+
+                Color[] cols = [Color.White, Color.White, Color.White, Color.White, Color.White, Color.White, Color.White, Color.White];
+
+                Rectangle[] srcRects =
+                [
+                    Game1.getSquareSourceRectForNonStandardTileSheet( Game1.objectSpriteSheet, 16, 16, StardewValley.Object.sapphireIndex ),
+                    Game1.getSquareSourceRectForNonStandardTileSheet( Game1.objectSpriteSheet, 16, 16, StardewValley.Object.amethystClusterIndex ),
+                    Game1.getSquareSourceRectForNonStandardTileSheet( Game1.objectSpriteSheet, 16, 16, StardewValley.Object.rubyIndex ),
+                    Game1.getSquareSourceRectForNonStandardTileSheet( Game1.objectSpriteSheet, 16, 16, StardewValley.Object.diamondIndex ),
+                    Game1.getSquareSourceRectForNonStandardTileSheet( Game1.objectSpriteSheet, 16, 16, StardewValley.Object.emeraldIndex ),
+                    Game1.getSquareSourceRectForNonStandardTileSheet( Game1.objectSpriteSheet, 16, 16, StardewValley.Object.aquamarineIndex ),
+                    Game1.getSquareSourceRectForNonStandardTileSheet( Game1.objectSpriteSheet, 16, 16, StardewValley.Object.topazIndex ),
+                    Game1.getSquareSourceRectForNonStandardTileSheet( Game1.objectSpriteSheet, 16, 16, 80 ),
+                ];
+
+                int soFar = 0;
+                void makeNote()
+                {
+                    TemporaryAnimatedSprite tas = new(Game1.objectSpriteSheetName, srcRects[soFar], center * Game1.tileSize + new Vector2(0, -96), false, 0, cols[soFar])
+                    {
+                        layerDepth = 1,
+                        scale = 4,
+                    };
+                    tass.Add(tas);
+                    @event.aboveMapSprites.Add(tas);
+                    Game1.playSound("miniharp_note", soFar * 175);
+                    ++soFar;
+                }
+                for (int i = 0; i < cols.Length; ++i)
+                {
+                    DelayedAction.functionAfterDelay(() =>
+                    {
+                        makeNote();
+                    }, i * 429);
+                }
+                for (int i_ = 0; i_ < 8000; i_ += 16)
+                {
+                    int i = i_;
+                    float getSpeed()
+                    {
+                        if (tass.Count < 7) return 100;
+                        return Math.Min(100 + (i - 3000) / 16, 720);
+                    }
+                    float getLength()
+                    {
+                        if (tass.Count < 7 || i < 4000) return 96;
+                        if (i <= 6000) return 96 + (i - 4000) / 16;
+                        return (96 + 2000 / 16) - (i - 6000) / 4;
+                    }
+
+                    DelayedAction.functionAfterDelay(() =>
+                    {
+                        foreach (var tas in tass)
+                        {
+                            var p = tas.Position - center * Game1.tileSize;
+                            float angle = MathF.Atan2(p.Y, p.X);
+                            angle += getSpeed() / 180 * MathF.PI * (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
+                            tas.Position = center * Game1.tileSize + new Vector2(MathF.Cos(angle) * getLength(), MathF.Sin(angle) * getLength());
+
+                            if (i >= 4000 && i <= 6000)
+                                tas.scaleChange = 0.025f;
+                            else if (i >= 6000 && i <= 8000)
+                            {
+                                tas.scaleChange = -0.1f;
+                            }
+
+                            if (tas.scale < 0 || getLength() < 0)
+                            {
+                                @event.aboveMapSprites.Remove(tas);
+                            }
+                        }
+                    }, i);
+                }
+
+                @event.CurrentCommand++;
+            });
+
+            ArmorSlotBackground = Helper.ModContent.Load<Texture2D>("assets/armor-bg.png");
             ShieldSlotBackground = Helper.ModContent.Load<Texture2D>("assets/shield-bg.png");
             ShieldItemTexture = Helper.ModContent.Load<Texture2D>("assets/shield-item.png");
             SwordOverlay = Helper.ModContent.Load<Texture2D>("assets/SwordOverlay.png");
@@ -151,6 +269,9 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
             Helper.Events.GameLoop.UpdateTicking += GameLoop_UpdateTicking;
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
+            Helper.Events.GameLoop.TimeChanged += GameLoop_TimeChanged;
+            Helper.Events.GameLoop.SaveCreated += GameLoop_SaveCreated; ;
+            Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
             Helper.Events.Player.Warped += Player_Warped;
             Helper.Events.Display.RenderedHud += Display_RenderedHud;
             Helper.Events.Display.RenderedWorld += Display_RenderedWorld;
@@ -168,13 +289,19 @@ namespace SwordAndSorcerySMAPI
                 return true;
             });
 
+
+            GameStateQuery.Register("PLAYER_HAS_SHADOWSTEP", (args, ctx) =>
+            {
+                return GameStateQuery.Helpers.WithPlayer(ctx.Player, args[1], (f) => f.HasCustomProfession(RogueSkill.ProfessionShadowStep));
+            });
+
             Ability.Abilities.Add("shadowstep", new Ability("shadowstep")
             {
                 Name = I18n.Ability_Shadowstep_Name,
                 Description = I18n.Ability_Shadowstep_Description,
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
                 SpriteIndex = 0,
-                KnownCondition = $"PLAYER_HAS_SEEN_EVENT Current {ShadowstepEventReq}",
+                KnownCondition = $"PLAYER_HAS_SHADOWSTEP Current",
                 HiddenIfLocked = true,
                 ManaCost = () => 15,
                 Function = () =>
@@ -185,6 +312,7 @@ namespace SwordAndSorcerySMAPI
 
             Helper.ConsoleCommands.Add("sns_setmaxaether", "...", (cmd, args) => Game1.player.GetFarmerExtData().maxMana.Value = int.Parse(args[0]));
             Helper.ConsoleCommands.Add("sns_refillaether", "...", (cmd, args) => Game1.player.GetFarmerExtData().mana.Value = Game1.player.GetFarmerExtData().maxMana.Value);
+            Helper.ConsoleCommands.Add("sns_repairarmor", "...", (cmd, args) => Game1.player.GetFarmerExtData().armorUsed.Value = 0);
 
             var harmony = new Harmony(ModManifest.UniqueID);
             harmony.PatchAll( Assembly.GetExecutingAssembly() );
@@ -194,9 +322,37 @@ namespace SwordAndSorcerySMAPI
             new ModUP(Monitor, ModManifest, Helper).Entry();
         }
 
+        private void GameLoop_SaveCreated(object sender, StardewModdingAPI.Events.SaveCreatedEventArgs e)
+        {
+            Game1.player.mailReceived.OnValueAdded += OnMailReceived;
+        }
+
+        private void GameLoop_SaveLoaded(object sender, StardewModdingAPI.Events.SaveLoadedEventArgs e)
+        {
+            Game1.player.mailReceived.OnValueAdded += OnMailReceived;
+        }
+
+        private void OnMailReceived(string value)
+        {
+            // I hope this doesn't multi trigger...
+            if (value == "DrakeScalePower")
+                Game1.player.GetFarmerExtData().maxMana.Value += 25;
+        }
+
+        private void GameLoop_TimeChanged(object sender, StardewModdingAPI.Events.TimeChangedEventArgs e)
+        {
+            if (e.NewTime % 100 == 0)
+            {
+                State.CanRepairArmor = true;
+            }
+        }
+
         private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
         {
-            Game1.player.GetFarmerExtData().mana.Value = Game1.player.GetFarmerExtData().maxMana.Value;
+            var ext = Game1.player.GetFarmerExtData();
+            ext.mana.Value = ext.maxMana.Value;
+            ext.armorUsed.Value = 0;
+            ModSnS.State.HasCraftedFree = false;
         }
 
         private void Input_ButtonPressed(object sender, StardewModdingAPI.Events.ButtonPressedEventArgs e)
@@ -370,10 +526,11 @@ namespace SwordAndSorcerySMAPI
             }
 
             Skills.RegisterSkill(RogueSkill = new RogueSkill());
+            SpaceCore.CustomCraftingRecipe.CraftingRecipes.Add("DN.SnS_Bow", new BowCraftingRecipe());
 
             var sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
             sc.RegisterSerializerType(typeof(ThrownShield));
-            sc.RegisterCustomProperty(typeof(Farmer), "shieldSlot", typeof(NetRef<Item>), AccessTools.Method(typeof(Farmer_ShieldSlot), nameof(Farmer_ShieldSlot.get_shieldSlot)), AccessTools.Method(typeof(Farmer_ShieldSlot), nameof(Farmer_ShieldSlot.set_shieldSlot)));
+            sc.RegisterCustomProperty(typeof(Farmer), "shieldSlot", typeof(NetRef<Item>), AccessTools.Method(typeof(Farmer_ArmorSlot), nameof(Farmer_ArmorSlot.get_armorSlot)), AccessTools.Method(typeof(Farmer_ArmorSlot), nameof(Farmer_ArmorSlot.set_armorSlot)));
             sc.RegisterCustomProperty(typeof(Farmer), "takenLoreWeapon", typeof(NetBool), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.HasTakenLoreWeapon)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetHasTakenLoreWeapon)));
             sc.RegisterCustomProperty(typeof(Farmer), "adventureBar", typeof(NetArray<string,NetString>), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.GetAdventureBar)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetAdventureBar)));
             sc.RegisterCustomProperty(typeof(Farmer), "maxMana", typeof(NetInt), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.GetMaxMana)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetMaxMana)));
@@ -406,7 +563,7 @@ namespace SwordAndSorcerySMAPI
                 if (State.ThrowCooldown > 0)
                     State.ThrowCooldown = MathF.Max(0, State.ThrowCooldown - (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds);
 
-                if (Game1.player.get_shieldSlot().Value?.QualifiedItemId == "(O)DestyNova.SwordAndSorcery_LegendaryHeroRelic")
+                if (Game1.player.get_armorSlot().Value?.QualifiedItemId == "(O)DestyNova.SwordAndSorcery_LegendaryHeroRelic")
                 {
                     if (Config.ThrowShieldKey.JustPressed())
                     {
@@ -505,6 +662,14 @@ namespace SwordAndSorcerySMAPI
             {
                 //ModSnS.State.InShadows = true;
             }
+
+            var ext = Game1.player.GetFarmerExtData();
+            int? armorAmount = Game1.player.get_armorSlot().Value.GetArmorAmount();
+            if (State.CanRepairArmor && Game1.player.HasCustomProfession(RogueSkill.ProfessionArmorRecovery) && armorAmount.HasValue)
+            {
+                State.CanRepairArmor = false;
+                ext.armorUsed.Value = Math.Max(0, ext.armorUsed.Value - armorAmount.Value / 5);
+            }
         }
 
         private void Display_RenderedHud(object sender, StardewModdingAPI.Events.RenderedHudEventArgs e)
@@ -524,6 +689,35 @@ namespace SwordAndSorcerySMAPI
                 e.SpriteBatch.DrawString(Game1.smallFont, I18n.ShieldBlockText(State.BlockCooldown), new Vector2(toolbar.xPositionOnScreen + 64, y) + new Vector2(-2, -2), Color.Black);
                 e.SpriteBatch.DrawString(Game1.smallFont, I18n.ShieldBlockText(State.BlockCooldown), new Vector2(toolbar.xPositionOnScreen + 64, y) + new Vector2(2, -2), Color.Black);
                 e.SpriteBatch.DrawString(Game1.smallFont, I18n.ShieldBlockText(State.BlockCooldown), new Vector2(toolbar.xPositionOnScreen + 64, y), Color.White);
+            }
+
+            var armorAmt = Game1.player.get_armorSlot().Value.GetArmorAmount();
+            if ((armorAmt ?? -1) >= 0 && Game1.showingHealth)
+            {
+                float modifier = 0.625f;
+                Vector2 topOfBar = new Vector2(Game1.graphics.GraphicsDevice.Viewport.GetTitleSafeArea().Right - 48 - 8, Game1.graphics.GraphicsDevice.Viewport.GetTitleSafeArea().Bottom - 224 - 16 - (int)((float)(Game1.player.MaxStamina - 270) * modifier));
+                if (Game1.isOutdoorMapSmallerThanViewport())
+                {
+                    topOfBar.X = Math.Min(topOfBar.X, -Game1.viewport.X + Game1.currentLocation.map.Layers[0].LayerWidth * 64 - 48);
+                }
+                if (Game1.staminaShakeTimer > 0)
+                {
+                    topOfBar.X += Game1.random.Next(-3, 4);
+                    topOfBar.Y += Game1.random.Next(-3, 4);
+                }
+                topOfBar.X -= 56 + ((Game1.hitShakeTimer > 0) ? Game1.random.Next(-3, 4) : 0);
+                topOfBar.Y = Game1.graphics.GraphicsDevice.Viewport.GetTitleSafeArea().Bottom - 224 - 16 - (Game1.player.maxHealth - 100);
+
+                Vector2 spot = topOfBar + new Vector2(24, -40);
+                e.SpriteBatch.Draw(ShieldItemTexture, spot, new Rectangle(16, 0, 16, 16), Color.White, 0, new Vector2(8, 8), 4, SpriteEffects.None, 1);
+
+                string str = (armorAmt - Game1.player.GetFarmerExtData().armorUsed.Value) + $"/{armorAmt}";
+                Vector2 size = Game1.smallFont.MeasureString(str);
+                e.SpriteBatch.DrawString(Game1.smallFont, str, spot - new Vector2(-2, 0), Color.Black, 0, size / 2, 1, SpriteEffects.None, 1);
+                e.SpriteBatch.DrawString(Game1.smallFont, str, spot - new Vector2(2, 0), Color.Black, 0, size / 2, 1, SpriteEffects.None, 1);
+                e.SpriteBatch.DrawString(Game1.smallFont, str, spot - new Vector2(0, -2), Color.Black, 0, size / 2, 1, SpriteEffects.None, 1);
+                e.SpriteBatch.DrawString(Game1.smallFont, str, spot - new Vector2(0, 2), Color.Black, 0, size / 2, 1, SpriteEffects.None, 1);
+                e.SpriteBatch.DrawString(Game1.smallFont, str, spot - new Vector2(0, 0), Color.White, 0, size / 2, 1, SpriteEffects.None, 1);
             }
         }
     }
@@ -601,6 +795,40 @@ namespace SwordAndSorcerySMAPI
                 return;
 
             __result = new KeyValuePair<Texture2D, Rectangle>(Game1.content.Load<Texture2D>("LooseSprites/CAGemojis"), new Rectangle(x * 9, 0, 9, 9));
+        }
+    }
+
+    [HarmonyPatch(typeof(Farmer), nameof(Farmer.takeDamage))]
+    public static class FarmerArmorBlocksDamagePatch
+    {
+        public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry)
+        {
+            var ext = Game1.player.GetFarmerExtData();
+            if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||
+                Game1.player.get_armorSlot().Value == null ||
+                ext.armorUsed.Value >= (Game1.player.get_armorSlot().Value.GetArmorAmount() ?? -1))
+                return true;
+
+            __instance.playNearbySoundAll("parry");
+
+            ext.armorUsed.Value = Math.Min(Game1.player.get_armorSlot().Value.GetArmorAmount().Value, ext.armorUsed.Value + damage);
+            damage = 0;
+
+            return true;
+        }
+    }
+
+    [HarmonyPatch(typeof(CraftingRecipe), nameof(CraftingRecipe.consumeIngredients))]
+    public static class CraftingRecipeFlashOfGeniusPatch
+    {
+        public static bool Prefix()
+        {
+            if (!ModSnS.State.HasCraftedFree && Game1.player.HasCustomProfession(RogueSkill.ProfessionCrafting))
+            {
+                ModSnS.State.HasCraftedFree = true;
+                return false;
+            }
+            return true;
         }
     }
 }

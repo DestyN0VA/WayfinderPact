@@ -11,6 +11,7 @@ using static StardewValley.FarmerRenderer;
 
 namespace SwordAndSorcerySMAPI
 {
+    /*
     public static partial class Extensions
     {
         public static bool IsShield(this Item __instance)
@@ -65,11 +66,11 @@ namespace SwordAndSorcerySMAPI
         public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry)
         {
             if (__instance != Game1.player || overrideParry ||
-                Game1.player.get_shieldSlot().Value == null ||
+                Game1.player.get_armorSlot().Value == null ||
                 ModSnS.State.BlockCooldown > 0 || ModSnS.State.MyThrown != null)
                 return true;
 
-            var shield = Game1.player.get_shieldSlot().Value;
+            var shield = Game1.player.get_armorSlot().Value;
 
             ModSnS.State.BlockCooldown = shield.GetBlockCooldown();
 
@@ -80,4 +81,5 @@ namespace SwordAndSorcerySMAPI
             return true;
         }
     }
+    */
 }
