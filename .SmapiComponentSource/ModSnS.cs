@@ -831,4 +831,14 @@ namespace SwordAndSorcerySMAPI
             return true;
         }
     }
+
+    [HarmonyPatch(typeof(Farmer), nameof(Farmer.GetEffectsOfRingMultiplier))]
+    public static class FarmerRingEffectsMultiplierPatch
+    {
+        public static void Postfix(Farmer __instance, string ringId, ref int __result)
+        {
+            if (ringId == "863" && __instance.eventsSeen.Contains("SnS.Ch3.Cirrus.9"))
+                ++__result;
+        }
+    }
 }
