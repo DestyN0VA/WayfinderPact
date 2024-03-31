@@ -134,6 +134,11 @@
 "Core.Mateo.PlayerKilled.Skull.07": "I'll leave you two to talk; let me know if you need anything.$2",
 "Core.Mateo.PlayerKilled.Skull.08": "I was so afraid of losing you, @. I don't know what I'd do without my best friend, the love of my life.$17#$b#Please ask for help if you need it next time, Sunshine! I'd rather be in danger with you than have you go at the Skull Cave alone!$19",
 
+// GREEN RAIN
+"Core.Mateo.GreenRain": "I've never seen rain like this before, even with all the time I spent in Pelican Town as a kid. I hope it's a good omen.$37",
+"Core.Mateo.GreenRainFinished": "The rain was pretty intense, but it didn't seem to have any negative side effects. Everything is so lush right now!$1",
+"Core.Mateo.GreenRain2": "Something tells me Hector has something to do with the weird rain. What do you think, @?$14", 
+
 /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
  | |  | |  ____|   /\   |  __ \__   __| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
@@ -530,6 +535,9 @@
 
 */
 
+// STARDROP TEA 
+"Gifts.Mateo.GiftReaction.StardropTea": "Wow, @! This is amazing! It smells so good, what's it made of? Thank you for sharing this with me.$1", 
+
 // BASIC GIFT RESPONSES 
 "Gifts.Mateo.GiftReaction.Love":"Wow, I feel like you really thought of me. Thank you.",
 "Gifts.Mateo.GiftReaction.Like":"You got this for me? Thanks so much, how sweet of you.",
@@ -736,7 +744,7 @@
 "Festivals.Mateo.winter8.False.2": "There's an old movie I really like, about how the snow came to be. $32#$b#A man with shears for hands carves ice sculptures, and the flurries result in our storms. This festival reminds me of that.$1",
 "Festivals.Mateo.winter8.False.3": "It's pretty tough to be out in the cold like this sometimes, but being around friends does make it a lot easier.$27",
 "Festivals.Mateo.winter8.True.1": "I was going to selfishly suggest sneaking off, but I know you're having a good time. I'll just have to warm up with you later.$30",
-"Festivals.Mateo.winter8.True.2": "",
+"Festivals.Mateo.winter8.True.2": "On a scale of 'no longer married' to 'strengthened marriage', how mad would you be if I tried to get Lewis to have a snowball fight competition instead of a fishing competition?$15",
 "Festivals.Mateo.winter8.True.3": "I love you enough to let you know that you're not free of potentially getting hit with a snowball just because we're married.$14#$b#The conditions were 'till death do us part', not 'until my darling partner pelts me with snow'. Watch out.$15",
 
 // WINTER STAR 
@@ -779,7 +787,9 @@
 "Strings.Mateo.NotFlowey": "There's something about this flower that makes you uneasy...",
 "Strings.Mateo.VoidCreatures": "Notes on Void Creatures. They've gotten very extensive. There's a little drawing of Krobus in the margins.",
 "Strings.Mateo.FeelingCrabby": "Mateo's way of dealing with unwanted guests is neither clean nor pleasant.",
-"Strings.Mateo.OverwhelmingBooks": "The collection gathered here is just short of being it's own library. Most of the books are on ethics, morals, and soft science - not on swordplay.",
+"Strings.Mateo.OverwhelmingBooks": "An entire shelf dedicated to the study of ethics, morals, and soft science.",
+"Strings.Mateo.OverwhelmingBooks2": "There are numerous supplements for the tabletop game Mateo likes to play.",
+"Strings.Mateo.OverwhelmingBooks3": "Mateo's textbooks, they look well-loved. On cracking one open, there appears to be tons of annotations.",
 "Strings.Mateo.DungeonsDragons": "Evidently, Mateo is running a medieval fantasy tabletop game for the local nerds. It's called 'Dark Chronicle'.", 
 "Strings.Mateo.NotADigimon": "How many Pepper Rexes is Mateo planning to hatch..?",
 "Strings.Mateo.Chewtoy": "A stuffie as snuggled as often as it's nibbled on.",
@@ -798,6 +808,8 @@
 "Strings.Mateo.SmithSupplies": "This chest is full of tools and supplies for blacksmithing and leatherworking!",
 "Strings.Mateo.WornChainmail": "Mateo wears chainmail underneath their leathers. It looks like they're in the process of repairing it.",
 "Strings.Mateo.MysteryCaveExit": "The water does lead out somewhere... but you've got no idea where, or how.",
+"Strings.Mateo.GuildEmblem": "The symbol of the Coastal Adventurer's Guild, a brilliant shield, hands proudly over a chest of adventuring supplies.",
+"Strings.Mateo.HawthornLetter": "An opened letter, signed by Linden Hawthorn: 'It was nigh that I discovered most things that you consider evil or wicked are simply lonely...'",
 
 // GHOST RADIO
 "Strings.Mateo.GhostRadio.1": "When you turn the radio on, you catch it in the middle of a song:# 'I can feel the thunder that's breaking in your heart, I can see through the scars inside you...!'",
@@ -917,7 +929,7 @@
 
 "Mail.Mateo.Letter3": "Good morning, @!^^This is the recipe for my favorite stew. Figured you might like it as much as I do! I hope it brings you the joy and comfort that you bring me.^^Sincerely,^Mateo.%item cookingRecipe %%[#]swordandsorcery.autumnalstew",
 
-"Mail.Mateo.Letter4": "Good morning, @!^^I had a friend who owned a brewrey back in the Fern Islands. Best booze that side of the Salish Sea.^^Here's the recipe for their special burbon. It's a well-kept secret.^^Sincerely,^Mateo.%item cookingRecipe %%[#]swordandsorcery.salishburbon",
+"Mail.Mateo.Letter4": "Good morning, @!^^I had a friend who owned a brewrey back in the Fern Islands. Best booze that side of the Salish Sea.^^Here's the recipe for their special Bourbon. It's a well-kept secret.^^Sincerely,^Mateo.%item cookingRecipe %%[#]swordandsorcery.salishbourbon",
 
 /*
    ____  _    _ ______  _____ _______ _____ 
@@ -1333,7 +1345,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.10H1.Mateo.16": "What do you need, @? I'm all ears.$32",
 "Events.S&S.Ch1.10H1.Q1.Answers": "#You, actually. I need you.#I don't need anything, but I want... you.",
 "Events.S&S.Ch1.10H1.Q1.Response.1": "@? I'm flattered. I feel the same way, but I didn't want to chance our friendship. It means everything to me.$29",
-"Events.S&S.Ch1.10H1.Mateo.17": "I have an idea. It's a bit of a trek, but there's somewhere I want to take you.$28",
+"Events.S&S.Ch1.10H1.Mateo.17": "I have an idea. It's a bit of a trek, but there's somewhere I want to take you. Let's meet in the Deep Mountains tomorrow night.$28",
 "Events.S&S.Ch1.10H1.Mateo.18": "Just trust me.$31",
 
 // 10 HEARTS PT 2
@@ -1359,7 +1371,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.12H.Mateo.6": "I think a bit of intimacy is warranted, don't you? To celebrate everything we've been through together.$68#$b#You've helped me grow, helped me change, helped me reconnect.$66#$b#You've been great to me, Sunshine. Let me be great to you.$68",
 "Events.S&S.Ch1.12H.Mateo.7": "...I'm sorry, @. Is the water too cold?$66#$b#Don't worry, I'll keep us plenty warm.$69",
 "Events.S&S.Ch1.12H.Mateo.8": "@? Being the guildmaster doesn't compare to being yours.$42",
-"Events.S&S.Ch1.12H.Mateo.8.TrollHeritage": "@? Being the guildmaster doesn't compare to being yours.$42#$b#And, hey. At least you've still got one good horn to hold onto, huh?$82",
+"Events.S&S.Ch1.12H.Mateo.8.TrollHeritage": "@? Being the guildmaster doesn't compare to being yours.$42#$b#And, hey. At least you've still got one good horn to hold onto, huh?$83",
 
 // 14 HEARTS
 "Events.S&S.Ch1.14H.Mateo.1": "Hey, Sunshine. I was just collecting my thoughts. There's something humbling about the rain, isn't there?$39",
@@ -1436,6 +1448,23 @@ ________      ________ _   _ _______ _____
 "CT.Mateo.EliIntro": "That Eli sounds like quite a fella. Wonder how he got up on the roof... did he climb? You could hear Lewis shouting from the beach.$36",
 "CT.Mateo.MeetDND": "Have you visited the Cat Cafe? Those are some of the best treats I've ever had - and the residents are so cute!$1",
 "CT.Mateo.AideenGarden": "Aideen really outdid herself, didn't she? The garden looks amazing. She's brilliant, everything she touches winds up so... radiant.$4",
+"CT.Mateo.HectorIntro": "I went and checked on Linus. He's alright, just very shaken.$78",
+"CT.Mateo.HectorBookIntro": "Book is something else, huh? I've never seen anything like her.$1",
+"CT.Mateo.HectorShapeshift": "Doesn't rapidly changing your body seem like it would be... I don't know, taxing somehow?$37",
+"CT.Mateo.HectorBookQuest": "I love how much Book obviously cares about Hector.$80",
+"CT.Mateo.HectorVet": "I'm so glad you got Hector out and about. But I wouldn't expect anything less of you.$82",
+"CT.Mateo.HectorVet2": "Jacob and Eloise are going to be really good for Hector. I've just got a gut feeling.$76",
+"CT.Mateo.HectorGender": "I don't talk about my presentation much. It was nice to have the chance with Hector.$78",
+"CT.Mateo.HectorVet3": "I'm glad Hector's happy, but have the seemed a little... off, to you? No?$34",
+"CT.Mateo.HectorDND": "I was surprised by Hector's choice. Don't worry, I've got really big plans for their next character. It'll be awesome.$32",
+"CT.Mateo.HectorRiver1": "Woah, Hector has you doing what-? That's amazing!$26",
+"CT.Mateo.HectorDinner": "Jacob's a big huge sweetheart, isn't he? It's no wonder, with how Eloise is.$78",
+"CT.Mateo.HectorRiver2": "I know Hector's very skilled, but they seem... I don't know, so worn down lately.$37",
+"CT.Mateo.HectorRiver3": "@, Hector doesn't seem to be doing so well. I'm worried.$21",
+"CT.Mateo.HectorHeal": "I'm so glad Hector's on the road to recovery. I really empathize with their situation, but a little familial love goes a long way.$32",
+"CT.Mateo.HectorHeal2": "Hector seemed in really good spirits, much better than recently. I'm so glad.$32",
+"CT.Mateo.HectorTrueGrove": "Oh, deer! We've got another shapeshifter in the valley!$82",
+"CT.Mateo.HectorEngaged": "Congratulations, @! I'm so happy for you both!$1",
 
 // MARLON
 "CT.Marlon.MateoCaution": "Hm... I suppose you've met the folks down in East Scarp then, aye?",
@@ -1656,6 +1685,10 @@ ________      ________ _   _ _______ _____
 "Core.Hector.PlayerKilled.Skull.06": "Yes, but they need to be a little more careful next time.$2",
 "Core.Hector.PlayerKilled.Skull.07": "I'll leave you two to talk; let me know if you need anything.$2",
 "Core.Hector.PlayerKilled.Skull.08": "I don't know what I would've done if something more permanent had happened to you, @.#$b#Jaws first, questions later. Please protect yourself better, alright?$17",
+
+"Core.Hector.GreenRain": "Druidic Rain. Take some time to stand in it, if you can. Just meditate. Enjoy it.$14",
+"Core.Hector.GreenRainFinished": "Everything is so beautiful right now, isn't it? Druidic Rain is an ancient sort of ritual, one performed by the earth herself.$13",
+"Core.Hector.GreenRain2": "Did you summon this, @? I'm sure you're skilled enough to do so. If not, don't worry. You'll master druidics in time.$12",
 
 /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
@@ -1987,6 +2020,9 @@ ________      ________ _   _ _______ _____
 
 */
 
+// STARDROP TEA 
+"Gifts.Hector.GiftReaction.StardropTea": "How the heck did you get a Stardrop to make this with, @? That's wild. And you're sharing with ME? I'm FLATTERED!$1", 
+
 // BASIC GIFT RESPONSES 
 "Gifts.Hector.GiftReaction.Love":"You... actually put some effort into this, huh? Wowie. Thank you, I mean that.",
 "Gifts.Hector.GiftReaction.Like":"Aw, that's nice of you. Thanks!",
@@ -2126,7 +2162,7 @@ ________      ________ _   _ _______ _____
 "Festivals.Hector.summer28.False.2": "I guess you can explain the Lunaloos with science, but it's more fun to explain them with magic.$13",
 "Festivals.Hector.summer28.False.3": "Nature's beauty is entirely unmatched.$13",
 "Festivals.Hector.summer28.True.1": "Yo, I heard that jellyfish was talking shit about you, do you want me to fight it for you?$11",
-"Festivals.Hector.summer28.True.2": "Holy my hand, @.$10",
+"Festivals.Hector.summer28.True.2": "Hold my hand, @.$10",
 "Festivals.Hector.summer28.True.3": "Maybe we can go for a dip after the Lunaloos are gone.$15",
 
 // SDV FAIR
@@ -2220,7 +2256,7 @@ ________      ________ _   _ _______ _____
 "Strings.Hector.LovedAltar.Romantic.4": "There's a message carved in this homemade candle...:# 'And I know the angels tonight are as lost for words as I am, to merely behold you as we lie down together. Drag me under again.'",
 "Strings.Hector.LovedAltar.Romantic.5": "There's a message carved in this homemade candle...:# 'My love is an animal call. Cutting through the darkness, bouncing off the walls. Between teeth on a broken jaw, following a bloodtrail, frothing at the maw.'",
 "Strings.Hector.LovedAltar.Romantic.6": "There's a message carved in this homemade candle...:# 'I want to roll the numbers, I want to feel my stars align again. Even if the earth breaks like burnt skin, and the heavens just won't open up for me.'",
-"Strings.Hector.LovedAltar.Romantic.7": "There's a message carved in this homemade candle...:# 'Would you invite me in again? Let me pay for my arrogance. Won't you show me your weakness? I made loving you a blood spot I can't win.'",
+"Strings.Hector.LovedAltar.Romantic.7": "There's a message carved in this homemade candle...:# 'Would you invite me in again? Let me pay for my arrogance. Won't you show me your weakness? I made loving you a blood sport I can't win.'",
 "Strings.Hector.LovedAltar.Romantic.8": "There's a message carved in this homemade candle...:# 'We were tangled up like branches in a flood. I come as a blade; a sacred guardian. So you keep me sharp and test my worth in blood.",
 "Strings.Hector.LovedAltar.Romantic.9": "There's a message carved in this homemade candle...:# 'I finally think I can say that the vicious cycle was over the moment you smiled at me.'",
 
@@ -2795,6 +2831,23 @@ ________      ________ _   _ _______ _____
 
 */
 
+"CT.Hector.HectorIntro": "I sure hope that other guy's alright. Someone should check on him. Not me, though.$0",
+"CT.Hector.HectorBookIntro": "If you don't come visit Book on the regular, she'll be really upset.$9",
+"CT.Hector.HectorShapeshift": "Is it just me, or are you really tired for no reason? ... No, it IS just me? Okay.$18",
+"CT.Hector.HectorBookQuest": "Have you ever seen a book cry? I don't know how Book does it, either.$23",
+"CT.Hector.HectorVet": "Eloise is a smart cookie, isn't she?$8",
+"CT.Hector.HectorVet2": "Jacob's got a real good head on his shoulders. Must be tough, raising a kid by himself.$24",
+"CT.Hector.HectorGender": "I saw you eavesdropping on the bridge, you stinker.$9",
+"CT.Hector.HectorVet3": "Hey, having a work ethic is just as surprising to you as it is to me.$8",
+"CT.Hector.HectorDND": "Maybe I'll play a bard next. Think Mateo will let me have a keytar?",
+"CT.Hector.HectorRiver1": "Don't let me down, @. I'm counting on you, no pressure.$9",
+"CT.Hector.HectorDinner": "Jacob sure cooks well, huh?$12",
+"CT.Hector.HectorRiver2": "Thanks for all your help so far, @... sorry, I'm really tired today.$18",
+"CT.Hector.HectorRiver3": "Did you say something? Sorry, I need a nap.$19",
+"CT.Hector.HectorHeal": "Thank you again, for... you know.$13",
+"CT.Hector.HectorHeal2": "I don't know what I'd do without you, Jacob, Eloise, and Mateo...$13",
+"CT.Hector.HectorTrueGrove": "Don't overdo it on the shapeshifting, okay? You've seen the consequences.$22",
+"CT.Hector.HectorEngaged": "Holy shit, holy shit, holy shit, holy shit, holy sh-$4",
 "CT.Hector.SterlingDrugs": "Sterling's been off. If you're close with him, you should check in on him, @.$17",
 "CT.Hector.SterlingRelapse": "I haven't seen Sterling at the market. I hope everything is alright. He's not been having an easy time of things, by the sounds of it.$17",
 "CT.Hector.SterlingApology": "Saw Sterling back at work. Good for him! Poor guy really went through the wringer.$11",
@@ -2822,6 +2875,7 @@ ________      ________ _   _ _______ _____
 "CT.Hector.MeetDND": "I wandered too far west once and ended up in the woods surrounding a town called Sunberry.$8",
 "CT.Hector.AideenGarden": "I think Aideen's a druid. She just hasn't noticed yet.$23",
 
+"": "",
 
 /*
    _____ _____ _____  _____  _    _  _____ 
@@ -2921,8 +2975,6 @@ ________      ________ _   _ _______ _____
 "Core.Cirrus.Resort_Towel.3":"I wonder if I could learn to surf. Would it be hard? Maybe. I'd probably get really committed for a month and then forget I started learning.$15",
 "Core.Cirrus.Resort":"Is that a mountain back there? Or a volcano? I wonder if it's safe to explore, I kind of want to get closer...$14",
 
-// ADDITIONAL LOCATIONAL DIALOGUE
-
 // PLAYER DEATH
 "Core.Cirrus.PlayerKilled.Mines.01": "@!",
 "Core.Cirrus.PlayerKilled.Mines.02": "No, no, no, no, no, no, NO-!$12",
@@ -2936,6 +2988,10 @@ ________      ________ _   _ _______ _____
 "Core.Cirrus.PlayerKilled.Skull.06": "{{CPPN1}}'ll be fine, but {{LPPN1}}'ll have to be more careful next time.",
 "Core.Cirrus.PlayerKilled.Skull.07": "I'll leave you two to talk; let me know if you need anything.$2",
 "Core.Cirrus.PlayerKilled.Skull.08": "Don't make me go on without you, @. Don't you fucking dare.$21",
+
+"Core.Cirrus.GreenRain": "I've got enough issues with rain, why is it GREEN now?$19",
+"Core.Cirrus.GreenRainFinished": "Oh thank goodness it's over. At least there was no thunder...$18",
+"Core.Cirrus.GreenRain2": "I guess since there's no thunder, the weird weather isn't so bad. And all the plants looks really nice afterward.$17",
 
 /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
@@ -3166,7 +3222,7 @@ ________      ________ _   _ _______ _____
 
 // SPECIAL DATES - SUMMER
 "Marriage.Cirrus.Summer": "Gosh darn, it's really hot out today. Or is that just you, Rockstar?$23",
-"Marriage.Cirrus.Summer1": "I'm so excited to see all the stuff you're going to plant! I'm also very excited to offer some lemonaid specials at The Lion's Mane.$1",
+"Marriage.Cirrus.Summer1": "I'm so excited to see all the stuff you're going to plant! I'm also very excited to offer some lemonade specials at The Lion's Mane.$1",
 "Marriage.Cirrus.Summer11":"To be honest, I think the wisest thing to put in the soup is garlic. You can't go wrong with more garlic in any context, it only makes everything better. So what's the harm?$1",
 "Marriage.Cirrus.Summer28": "I'm really excited to go see the Lunaloos with you tonight, Rockstar. Just you, me...$23#$b#The entire rest of the town, I guess...$25#$b#Getting to hang out and see something really beautiful.$23",
 
@@ -3272,6 +3328,9 @@ ________      ________ _   _ _______ _____
   \_____|_____|_|       |_|       |_/_/    \_\_____/   |_|  |______|_____/ 
 
 */
+
+// STARDROP TEA 
+"Gifts.Cirrus.GiftReaction.StardropTea": "@! This is the best tasting tea I've ever had! How'd you even come across something like this? The flavor profile is amazing!$1", 
 
 // BASIC GIFT RESPONSES 
 "Gifts.Cirrus.GiftReaction.Love":"Thank you, @! This is bloody brilliant!",
@@ -3723,7 +3782,10 @@ ________      ________ _   _ _______ _____
 "Core.Roslin.Resort_Towel.3": "",
 "Core.Roslin.Resort": "",
 
-// ADDITIONAL LOCATIONAL DIALOGUE
+// GREEN RAIN
+"Core.Roslin.GreenRain": "",
+"Core.Roslin.GreenRainFinished": "",
+"Core.Roslin.GreenRain2": "",
 
 /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
@@ -3833,6 +3895,9 @@ ________      ________ _   _ _______ _____
   \_____|_____|_|       |_|       |_/_/    \_\_____/   |_|  |______|_____/ 
 
 */
+
+// STARDROP TEA 
+"Gifts.Roslin.GiftReaction.StardropTea": "", 
 
 // BASIC GIFT RESPONSES 
 "Gifts.Roslin.GiftReaction.Love": "",
@@ -4198,7 +4263,10 @@ ________      ________ _   _ _______ _____
 "Core.Dandelion.Resort_Towel.3": "",
 "Core.Dandelion.Resort": "",
 
-// ADDITIONAL LOCATIONAL DIALOGUE
+// GREEN RAIN
+"Core.Dandelion.GreenRain": "",
+"Core.Dandelion.GreenRainFinished": "",
+"Core.Dandelion.GreenRain2": "",
 
 /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
@@ -4309,6 +4377,9 @@ ________      ________ _   _ _______ _____
   \_____|_____|_|       |_|       |_/_/    \_\_____/   |_|  |______|_____/ 
 
 */
+
+// STARDROP TEA 
+"Gifts.Dandelion.GiftReaction.StardropTea": "", 
 
 // BASIC GIFT RESPONSES 
 "Gifts.Dandelion.GiftReaction.Love": "",
@@ -4641,7 +4712,10 @@ ________      ________ _   _ _______ _____
 "Core.Solomon.Resort_Towel.3": "",
 "Core.Solomon.Resort": "",
 
-// ADDITIONAL LOCATIONAL DIALOGUE
+// GREEN RAIN
+"Core.Solomon.GreenRain": "",
+"Core.Solomon.GreenRainFinished": "",
+"Core.Solomon.GreenRain2": "",
 
 /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
@@ -4752,6 +4826,9 @@ ________      ________ _   _ _______ _____
   \_____|_____|_|       |_|       |_/_/    \_\_____/   |_|  |______|_____/ 
 
 */
+
+// STARDROP TEA 
+"Gifts.Solomon.GiftReaction.StardropTea": "", 
 
 // BASIC GIFT RESPONSES 
 "Gifts.Solomon.GiftReaction.Love": "",
@@ -5113,8 +5190,8 @@ ________      ________ _   _ _______ _____
 "magicitem.argentisshield.name": "Empowered Argentis Shield",
 "magicitem.argentisshield.description": "Fully restored to it's former power, this shield empowers you to protect your friends and loved ones.", 
 
-"food.salishburbon.name": "Salish Sea Burbon",
-"food.salishburbon.description": "Mateo's favorite drink, made at a small brewery in the Fern Islands.",
+"food.salishbourbon.name": "Salish Sea Bourbon",
+"food.salishbourbon.description": "Mateo's favorite drink, made at a small brewery in the Fern Islands.",
 
 "food.autumnalstew.name": "Autumnal Stew",
 "food.autumnalstew.description": "Earthy and warm, with lots of seasonal flavors. It tastes how friendship feels.",
@@ -5194,7 +5271,7 @@ ________      ________ _   _ _______ _____
 "magicitem.druidiceldermask.name": "Mask of the Thorned Circle Elder",
 "magicitem.druidiceldermask.description": "It's a very heavy, uncomfortable mask made out of wood and copper. However, you feel more connected to the earth with it in your possession.",
 
-"food.crafting.salishburbon": "Salish Burbon", 
+"food.crafting.salishbourbon": "Salish Bourbon", 
 "food.crafting.ancientmushroomstew": "Ancient Mushroom Stew",
 "food.crafting.dandeliongreens": "Dandelion Greens",
 "food.crafting.portfiredrakesparkler":  "Portfire Drake Sparkler",
@@ -5246,4 +5323,5 @@ ________      ________ _   _ _______ _____
 
 "miscellaneous.CAGArtifactLedger.message": "Use the ledger to trade monster bones for artifacts & minerals.",
 "miscellaneous.MermaidPendantCooldown": "%You haven't been dating very long - wait a while before you propose!",
+"miscellaneous.PendantResponse": "%It's finally the right time!..."
 }

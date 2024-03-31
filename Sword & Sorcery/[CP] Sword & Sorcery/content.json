@@ -103,18 +103,28 @@
           "Condition": "{{CirrusRainbowHair |contains=RealisticRandom}}, PLAYER_STAT Current CirrusHairCooldown 1",
           "Action": "IncrementStat CirrusHairCooldown -1"
         },
-        
         //{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}}
         "SnS.TriggerActions.SetPersistentHairColor": {
           "Id": "SnS.TriggerActions.SetPersistentHairColor",
           "Trigger": "DayStarted",
           "MarkActionApplied": false,
           "Condition": "{{CirrusRainbowHair |contains=RealisticRandom}}, PLAYER_STAT Current CirrusHairColor 0 0",
-          "Actions":  [ 
+          "Actions": [
             "IncrementStat CirrusHairColor",
             "AddMail Current SnS.Flag.CirrusHairColor.{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}} received"
           ]
-        }
+        },
+        "{{ModId}}_MigrateIds": {
+          "Id": "{{ModId}}_MigrateIds",
+          "Trigger": "DayStarted",
+          "Actions": [
+            "Pathoschild.ContentPatcher_MigrateIds Items (O)swordandsorcery.ancientamaranth (O){{ModId}}_ancientamaranth (O)swordandsorcery.ancientamaranth.seed (O){{ModId}}_ancientamaranth.seed (O)swordandsorcery.ancientepiphyticfern (O){{ModId}}_ancientepiphyticfern (O)swordandsorcery.ancientepiphyticfern.seed (O){{ModId}}_ancientepiphyticfern.seed (O)swordandsorcery.glowingpolyporemushrooms (O){{ModId}}_glowingpolyporemushrooms (O)swordandsorcery.glowingpolyporemushrooms.seed (O){{ModId}}_glowingpolyporemushrooms.seed (O)swordandsorcery.ancientwildfairyrose (O){{ModId}}_ancientwildfairyrose (O)swordandsorcery.ancientwildfairyrose.seed (O){{ModId}}_ancientwildfairyrose.seed (O)swordandsorcery.ancientelderberry (O){{ModId}}_ancientelderberry (O)swordandsorcery.ancientelderberry.seed (O){{ModId}}_ancientelderberry.seed (O)swordandsorcery.ancientbottlegourd (O){{ModId}}_ancientbottlegourd (O)swordandsorcery.ancientbottlegourd.seed (O){{ModId}}_ancientbottlegourd.seed (O)swordandsorcery.ancientgiantappleberry (O){{ModId}}_ancientgiantappleberry (O)swordandsorcery.ancientgiantappleberry.seed (O){{ModId}}_ancientgiantappleberry.seed (O)swordandsorcery.ancientazuredetura (O){{ModId}}_ancientazuredetura (O)swordandsorcery.ancientazuredetura.seed (O){{ModId}}_ancientazuredetura.seed (O)swordandsorcery.ancientglowinghuckleberry (O){{ModId}}_ancientglowinghuckleberry (O)swordandsorcery.ancientglowinghuckleberry.seed (O){{ModId}}_ancientglowinghuckleberry.seed (O)swordandsorcery.druidicessence (O){{ModId}}_druidicessence (O)swordandsorcery.adventureguildbadge (O){{ModId}}_adventureguildbadge (O)swordandsorcery.brokenshield (O){{ModId}}_brokenshield (O)swordandsorcery.repairedshield (O){{ModId}}_repairedshield (O)swordandsorcery.argentisshield (O){{ModId}}_argentisshield (O)swordandsorcery.druidictotemfetish (O){{ModId}}_druidictotemfetish (O)swordandsorcery.stygiumstatuette (O){{ModId}}_stygiumstatuette (O)swordandsorcery.druidiceldermask (O){{ModId}}_druidiceldermask (O)swordandsorcery.salishburbon (O){{ModId}}_salishbourbon (O)swordandsorcery.autumnalstew (O){{ModId}}_autumnalstew (O)swordandsorcery.dandeliongreens (O){{ModId}}_dandeliongreens (O)swordandsorcery.portfiredrakesparkler (O){{ModId}}_portfiredrakesparkler (O)swordandsorcery.mushroomsredsauce (O){{ModId}}_mushroomsredsauce (O)swordandsorcery.ferngreensandpineapple (O){{ModId}}_ferngreensandpineapple (O)swordandsorcery.ancienthuckleberryicecream (O){{ModId}}_ancienthuckleberryicecream (O)swordandsorcery.lavaeelandstirfriedancientbottlegourd (O){{ModId}}_lavaeelandstirfriedancientbottlegourd (O)swordandsorcery.zuzustylepizza (O){{ModId}}_zuzustylepizza (O)swordandsorcery.zuzustylebagelwithlox (O){{ModId}}_zuzustylebagelwithlox (O)swordandsorcery.zuzustylecheesecake (O){{ModId}}_zuzustylecheesecake (O)swordandsorcery.zuzustyleclamchowder (O){{ModId}}_zuzustyleclamchowder (O)swordandsorcery.fountainsoda (O){{ModId}}_fountainsoda (O)swordandsorcery.freshpopcorn (O){{ModId}}_freshpopcorn",
+            "Pathoschild.ContentPatcher_MigrateIds Items (W)swordandsorcery.keytoscarp (W){{ModId}}_keytoscarp (W)swordandsorcery.twobecomeone (W){{ModId}}_twobecomeone (W)swordandsorcery.savethequeen (W){{ModId}}_savethequeen (W)swordandsorcery.oathkeeper (W){{ModId}}_oathkeeper (W)swordandsorcery.savetheking (W){{ModId}}_savetheking (W)swordandsorcery.waytothedawn (W){{ModId}}_waytothedawn (W)swordandsorcery.eldadagordagger (W){{ModId}}_eldadagordagger (W)swordandsorcery.glaewndilsword (W){{ModId}}_glaewndilsword (W)swordandsorcery.thondrondhammer (W){{ModId}}_thondrondhammer (W)swordandsorcery.longlivetheking (W){{ModId}}_longlivetheking",
+            "Pathoschild.ContentPatcher_MigrateIds CraftingRecipes swordandsorcery.ExquisiteEmerald {{ModId}}_ExquisiteEmerald swordandsorcery.ExquisiteRuby {{ModId}}_ExquisiteRuby swordandsorcery.ExquisiteTopaz {{ModId}}_ExquisiteTopaz swordandsorcery.ExquisiteAquamarine {{ModId}}_ExquisiteAquamarine swordandsorcery.ExquisiteAmethyst {{ModId}}_ExquisiteAmethyst swordandsorcery.ExquisiteJade {{ModId}}_ExquisiteJade swordandsorcery.ExquisiteDiamond {{ModId}}_ExquisiteDiamond swordandsorcery.ArcanePrimer {{ModId}}_ArcanePrimer",
+            "Pathoschild.ContentPatcher_MigrateIds CookingRecipes swordandsorcery.salishburbon {{ModId}}_salishbourbon swordandsorcery.autumnalstew {{ModId}}_autumnalstew swordandsorcery.dandeliongreens {{ModId}}_dandeliongreens swordandsorcery.portfiredrakesparkler {{ModId}}_portfiredrakesparkler swordandsorcery.mushroomsredsauce {{ModId}}_mushroomsredsauce swordandsorcery.ferngreensandpineapple {{ModId}}_ferngreensandpineapple swordandsorcery.ancienthuckleberryicecream {{ModId}}_ancienthuckleberryicecream swordandsorcery.lavaeelandstirfriedancientbottlegourd {{ModId}}_lavaeelandstirfriedancientbottlegourd swordandsorcery.zuzustylepizza {{ModId}}_zuzustylepizza swordandsorcery.zuzustylebagelwithlox {{ModId}}_zuzustylebagelwithlox swordandsorcery.zuzustylecheesecake {{ModId}}_zuzustylecheesecake swordandsorcery.zuzustyleclamchowder {{ModId}}_zuzustyleclamchowder"
+          ],
+          "HostOnly": true
+        },
       }
     },
   ],
@@ -1079,7 +1089,7 @@
     },
     {
       "Name": "HectorFlirt1",
-      "Value": "{{i18n:Events.S&S.Ch2.9H.Hector.14.7}}",
+      "Value": "{{i18n:Events.S&S.Ch2.9H.Hector.14}}",
       "When": {
         "HasFlag |contains=HectorFlirt": false
       }

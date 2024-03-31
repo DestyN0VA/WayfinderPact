@@ -4,7 +4,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.druidicessence": {
+        "{{ModID}}_druidicessence": {
           "Name": "Druidic Essence",
           "DisplayName": "{{i18n: magicitem.druidicessence.name}}",
           "Description": "{{i18n: magicitem.druidicessence.description}}",
@@ -23,7 +23,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.adventureguildbadge": {
+        "{{ModID}}_adventureguildbadge": {
           "Name": "Adventurer's Guild Membership Badge",
           "DisplayName": "{{i18n: magicitem.adventureguildbadge.name}}",
           "Description": "{{i18n: magicitem.adventureguildbadge.description}}",
@@ -42,7 +42,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.brokenshield": {
+        "{{ModID}}_brokenshield": {
           "Name": "Broken Argentis Shield",
           "DisplayName": "{{i18n: magicitem.brokenshield.name}}",
           "Description": "{{i18n: magicitem.brokenshield.description}}",
@@ -60,7 +60,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.repairedshield": {
+        "{{ModID}}_repairedshield": {
           "Name": "Repaired Argentis Shield",
           "DisplayName": "{{i18n: magicitem.repairedshield.name}}",
           "Description": "{{i18n: magicitem.repairedshield.description}}",
@@ -78,7 +78,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.argentisshield": {
+        "{{ModID}}_argentisshield": {
           "Name": "Empowered Argentis Shield",
           "DisplayName": "{{i18n: magicitem.argentisshield.name}}",
           "Description": "{{i18n: magicitem.argentisshield.description}}",
@@ -96,7 +96,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.druidictotemfetish": {
+        "{{ModID}}_druidictotemfetish": {
           "Name": "Druidic Totem Fetish",
           "DisplayName": "{{i18n: magicitem.druidictotemfetish.name}}",
           "Description": "{{i18n: magicitem.druidictotemfetish.description}}",
@@ -114,7 +114,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.stygiumstatuette": {
+        "{{ModID}}_stygiumstatuette": {
           "Name": "Stygium Statuette",
           "DisplayName": "{{i18n: magicitem.stygiumstatuette.name}}",
           "Description": "{{i18n: magicitem.stygiumstatuette.description}}",
@@ -132,7 +132,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.druidiceldermask": {
+        "{{ModID}}_druidiceldermask": {
           "Name": "Mask of the Thorned Circle Elder",
           "DisplayName": "{{i18n: magicitem.druidiceldermask.name}}",
           "Description": "{{i18n: magicitem.druidiceldermask.description}}",
@@ -151,44 +151,44 @@
       "Action": "EditData",
       "Target": "Data/CraftingRecipes",
       "Entries": {
-        "Druidic Totem Fetish": "swordandsorcery.druidicessence 50/what is this for?/swordandsorcery.druidictotemfetish 1/false/null/{{i18n:magicitem.druidictotemfetish.name}}",
+        "Druidic Totem Fetish": "{{ModID}}_druidicessence 50/what is this for?/{{ModID}}_druidictotemfetish 1/false/null/{{i18n:magicitem.druidictotemfetish.name}}",
       }
     },
     {
       "Action": "EditData",
       "Target": "spacechase0.SpaceCore/ObjectExtensionData",
       "Entries": {
-        "swordandsorcery.druidicessence": {
+        "{{ModID}}_druidicessence": {
           "CategoryTextOverride": "Druidic"
         },
-        "swordandsorcery.druidictotemfetish": {
+        "{{ModID}}_druidictotemfetish": {
           "CategoryTextOverride": "Druidic"
         },
-        "swordandsorcery.druidiceldermask": {
+        "{{ModID}}_druidiceldermask": {
           "CategoryTextOverride": "Druidic"
         },
-        "swordandsorcery.brokenshield": {
+        "{{ModID}}_brokenshield": {
           "CategoryTextOverride": "Shield",
           "CanBeShipped": false,
           "CanBeTrashed": false,
           "HideFromShippingCollection": true,
           "MaxStackSizeOverride": 1
         },
-        "swordandsorcery.repairedshield": {
+        "{{ModID}}_repairedshield": {
           "CategoryTextOverride": "Shield",
           "CanBeShipped": false,
           "CanBeTrashed": false,
           "HideFromShippingCollection": true,
           "MaxStackSizeOverride": 1
         },
-        "swordandsorcery.argentisshield": {
+        "{{ModID}}_argentisshield": {
           "CategoryTextOverride": "Shield",
           "CanBeShipped": false,
           "CanBeTrashed": false,
           "HideFromShippingCollection": true,
           "MaxStackSizeOverride": 1
         },
-        "swordandsorcery.stygiumstatuette": {
+        "{{ModID}}_stygiumstatuette": {
           "CategoryTextOverride": "Corrupted Object"
         },
       }

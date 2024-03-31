@@ -4,7 +4,7 @@
         "Action": "EditData",
         "Target": "Data/Weapons",
         "Entries": {
-      "swordandsorcery.keytoscarp": {
+      "{{ModID}}_keytoscarp": {
       "Name": "Key to Scarp",
       "DisplayName": "{{i18n: weapon.keytoscarp.name}}",
       "Description": "{{i18n: weapon.keytoscarp.description}}",
@@ -27,7 +27,7 @@
         "Action": "EditData",
         "Target": "Data/Weapons",
         "Entries": {
-      "swordandsorcery.twobecomeone": {
+      "{{ModID}}_twobecomeone": {
       "Name": "Two Become One",
       "DisplayName": "{{i18n: weapon.twobecomeone.name}}",
       "Description": "{{i18n: weapon.twobecomeone.description}}",
@@ -50,7 +50,7 @@
         "Action": "EditData",
         "Target": "Data/Weapons",
         "Entries": {
-      "swordandsorcery.savethequeen": {
+      "{{ModID}}_savethequeen": {
       "Name": "Save the Queen",
       "DisplayName": "{{i18n: weapon.savethequeen.name}}",
       "Description": "{{i18n: weapon.savethequeen.description}}",
@@ -73,7 +73,7 @@
         "Action": "EditData",
         "Target": "Data/Weapons",
         "Entries": {
-      "swordandsorcery.oathkeeper": {
+      "{{ModID}}_oathkeeper": {
       "Name": "Oathkeeper",
       "DisplayName": "{{i18n: weapon.oathkeeper.name}}",
       "Description": "{{i18n: weapon.oathkeeper.description}}",
@@ -96,7 +96,7 @@
         "Action": "EditData",
         "Target": "Data/Weapons",
         "Entries": {
-      "swordandsorcery.savetheking": {
+      "{{ModID}}_savetheking": {
       "Name": "Save the King",
       "DisplayName": "{{i18n: weapon.savetheking.name}}",
       "Description": "{{i18n: weapon.savetheking.description}}",
@@ -119,7 +119,7 @@
         "Action": "EditData",
         "Target": "Data/Weapons",
         "Entries": {
-      "swordandsorcery.waytothedawn": {
+      "{{ModID}}_waytothedawn": {
       "Name": "Way to the Dawn",
       "DisplayName": "{{i18n: weapon.waytothedawn.name}}",
       "Description": "{{i18n: weapon.waytothedawn.description}}",
@@ -142,7 +142,7 @@
         "Action": "EditData",
         "Target": "Data/Weapons",
         "Entries": {
-      "swordandsorcery.eldadagordagger": {
+      "{{ModID}}_eldadagordagger": {
       "Name": "Eldadagor Dagger",
       "DisplayName": "{{i18n: weapon.eldadagordagger.name}}",
       "Description": "{{i18n: weapon.eldadagordagger.description}}",
@@ -167,7 +167,7 @@
         "Action": "EditData",
         "Target": "Data/Weapons",
         "Entries": {
-      "swordandsorcery.glaewndilsword": {
+      "{{ModID}}_glaewndilsword": {
       "Name": "Glaewndil Sword",
       "DisplayName": "{{i18n: weapon.glaewndilsword.name}}",
       "Description": "{{i18n: weapon.glaewndilsword.description}}",
@@ -192,7 +192,7 @@
         "Action": "EditData",
         "Target": "Data/Weapons",
         "Entries": {
-      "swordandsorcery.thondrondhammer": {
+      "{{ModID}}_thondrondhammer": {
       "Name": "Thondrond Hammer",
       "DisplayName": "{{i18n: weapon.thondrondhammer.name}}",
       "Description": "{{i18n: weapon.thondrondhammer.description}}",
@@ -217,7 +217,7 @@
         "Action": "EditData",
         "Target": "Data/Weapons",
         "Entries": {
-      "swordandsorcery.longlivetheking": {
+      "{{ModID}}_longlivetheking": {
       "Name": "Long Live The King",
       "DisplayName": "{{i18n: weapon.longlivetheking.name}}",
       "Description": "{{i18n: weapon.longlivetheking.description}}",

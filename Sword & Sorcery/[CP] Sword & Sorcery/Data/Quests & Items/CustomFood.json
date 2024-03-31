@@ -4,10 +4,10 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.salishburbon": {
-          "Name": "Salish Sea Burbon",
-          "DisplayName": "{{i18n: food.salishburbon.name}}",
-          "Description": "{{i18n: food.salishburbon.description}}",
+        "{{ModID}}_salishbourbon": {
+          "Name": "Salish Sea Bourbon",
+          "DisplayName": "{{i18n: food.salishbourbon.name}}",
+          "Description": "{{i18n: food.salishbourbon.description}}",
           "Type": "Cooking",
           "Category": -7,
           "Price": 100,
@@ -40,7 +40,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.autumnalstew": {
+        "{{ModID}}_autumnalstew": {
           "Name": "Autumnal Stew",
           "DisplayName": "{{i18n: food.autumnalstew.name}}",
           "Description": "{{i18n: food.autumnalstew.description}}",
@@ -76,7 +76,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.dandeliongreens": {
+        "{{ModID}}_dandeliongreens": {
           "Name": "Sautéed Dandelion Greens with Eggs",
           "DisplayName": "{{i18n: food.dandeliongreens.name}}",
           "Description": "{{i18n: food.dandeliongreens.description}}",
@@ -112,7 +112,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.portfiredrakesparkler": {
+        "{{ModID}}_portfiredrakesparkler": {
           "Name": "Portfire Drake Sparkler",
           "DisplayName": "{{i18n: food.portfiredrakesparkler.name}}",
           "Description": "{{i18n: food.portfiredrakesparkler.description}}",
@@ -148,7 +148,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.mushroomsredsauce": {
+        "{{ModID}}_mushroomsredsauce": {
           "Name": "Fried Mushrooms & Red Sauce",
           "DisplayName": "{{i18n: food.mushroomsredsauce.name}}",
           "Description": "{{i18n: food.mushroomsredsauce.description}}",
@@ -184,7 +184,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.ferngreensandpineapple": {
+        "{{ModID}}_ferngreensandpineapple": {
           "Name": "Fern Greens And Pineapple",
           "DisplayName": "{{i18n: food.ferngreensandpineapple.name}}",
           "Description": "{{i18n: food.ferngreensandpineapple.description}}",
@@ -220,7 +220,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.ancienthuckleberryicecream": {
+        "{{ModID}}_ancienthuckleberryicecream": {
           "Name": "Ancient HuckleBerry IceCream",
           "DisplayName": "{{i18n: food.ancienthuckleberryicecream.name}}",
           "Description": "{{i18n: food.ancienthuckleberryicecream.description}}",
@@ -256,7 +256,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.lavaeelandstirfriedancientbottlegourd": {
+        "{{ModID}}_lavaeelandstirfriedancientbottlegourd": {
           "Name": "Lava Eel And Stir Fried Bottlegourd",
           "DisplayName": "{{i18n: food.lavaeelandstirfriedancientbottlegourd.name}}",
           "Description": "{{i18n: food.lavaeelandstirfriedancientbottlegourd.description}}",
@@ -292,7 +292,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.zuzustylepizza": {
+        "{{ModID}}_zuzustylepizza": {
           "Name": "Zuzu City Style Pizza",
           "DisplayName": "{{i18n: food.zuzustylepizza.name}}",
           "Description": "{{i18n: food.zuzustylepizza.description}}",
@@ -328,7 +328,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.zuzustylebagelwithlox": {
+        "{{ModID}}_zuzustylebagelwithlox": {
           "Name": "Zuzu City Style Bagel with Lox",
           "DisplayName": "{{i18n: food.zuzustylebagelwithlox.name}}",
           "Description": "{{i18n: food.zuzustylebagelwithlox.description}}",
@@ -364,7 +364,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.zuzustylecheesecake": {
+        "{{ModID}}_zuzustylecheesecake": {
           "Name": "Zuzu City Style Cheesecake",
           "DisplayName": "{{i18n: food.zuzustylecheesecake.name}}",
           "Description": "{{i18n: food.zuzustylecheesecake.description}}",
@@ -400,7 +400,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.zuzustyleclamchowder": {
+        "{{ModID}}_zuzustyleclamchowder": {
           "Name": "Zuzu City Style Clam Chowder",
           "DisplayName": "{{i18n: food.zuzustyleclamchowder.name}}",
           "Description": "{{i18n: food.zuzustyleclamchowder.description}}",
@@ -436,7 +436,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.fountainsoda": {
+        "{{ModID}}_fountainsoda": {
           "Name": "Fountain Soda",
           "DisplayName": "{{i18n: food.fountainsoda.name}}",
           "Description": "{{i18n: food.fountainsoda.description}}",
@@ -472,7 +472,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.freshpopcorn": {
+        "{{ModID}}_freshpopcorn": {
           "Name": "Fountain Soda",
           "DisplayName": "{{i18n: food.freshpopcorn.name}}",
           "Description": "{{i18n: food.freshpopcorn.description}}",
@@ -512,29 +512,29 @@
   "Target": "Data/CookingRecipes",
   "Entries":
   {
-  "swordandsorcery.salishburbon": "638 1 262 1 635 1/what is this for?/swordandsorcery.salishburbon 1/f Mateo/{{i18n:food.crafting.salishburbon}}",
+  "{{ModID}}_salishbourbon": "638 1 262 1 635 1/what is this for?/{{ModID}}_salishbourbon 1/f Mateo/{{i18n:food.crafting.salishbourbon}}",
 
-  "swordandsorcery.autumnalstew": "276 1 -6 1 272 1 281 1/what is this for?/swordandsorcery.autumnalstew 1/f Mateo/{{i18n:food.crafting.autumnalstew}}",
+  "{{ModID}}_autumnalstew": "276 1 -6 1 272 1 281 1/what is this for?/{{ModID}}_autumnalstew 1/f Mateo/{{i18n:food.crafting.autumnalstew}}",
 
-  "swordandsorcery.dandeliongreens": "22 1 -5 1 424 1/what is this for?/swordandsorcery.dandeliongreens 1/false/{{i18n:food.crafting.dandeliongreens}}",
+  "{{ModID}}_dandeliongreens": "22 1 -5 1 424 1/what is this for?/{{ModID}}_dandeliongreens 1/false/{{i18n:food.crafting.dandeliongreens}}",
 
-  "swordandsorcery.portfiredrakesparkler": "167 1 -79 -2/what is this for?/swordandsorcery.portfiredrakesparkler 1/false/{{i18n:food.crafting.portfiredrakesparkler}}",
+  "{{ModID}}_portfiredrakesparkler": "167 1 88 1 -79 1/what is this for?/{{ModID}}_portfiredrakesparkler 1/false/{{i18n:food.crafting.portfiredrakesparkler}}",
 
-  "swordandsorcery.mushroomsredsauce": "swordandsorcery.glowingpolyporemushrooms 1 256 1 272 1/what is this for?/swordandsorcery.mushroomsredsauce 1/false/{{i18n:food.crafting.mushroomsredsauce}}",
+  "{{ModID}}_mushroomsredsauce": "{{ModID}}_glowingpolyporemushrooms 1 256 1 272 1/what is this for?/{{ModID}}_mushroomsredsauce 1/false/{{i18n:food.crafting.mushroomsredsauce}}",
 
-  "swordandsorcery.ferngreensandpineapple": "swordandsorcery.ancientepiphyticfern 1 832 1 259 1/what is this for?/swordandsorcery.ferngreensandpineapple 1/false/{{i18n:food.crafting.ferngreensandpineapple}}",
+  "{{ModID}}_ferngreensandpineapple": "{{ModID}}_ancientepiphyticfern 1 832 1 259 1/what is this for?/{{ModID}}_ferngreensandpineapple 1/false/{{i18n:food.crafting.ferngreensandpineapple}}",
 
-  "swordandsorcery.ancienthuckleberryicecream": "swordandsorcery.ancientglowinghuckleberry 1 -6 2/what is this for?/swordandsorcery.ancienthuckleberryicecream 1/false/{{i18n:food.crafting.ancienthuckleberryicecream}}",
+  "{{ModID}}_ancienthuckleberryicecream": "{{ModID}}_ancientglowinghuckleberry 1 -6 2/what is this for?/{{ModID}}_ancienthuckleberryicecream 1/false/{{i18n:food.crafting.ancienthuckleberryicecream}}",
 
-  "swordandsorcery.lavaeelandstirfriedancientbottlegourd": "swordandsorcery.ancientbottlegourd 1 162 1/what is this for?/swordandsorcery.lavaeelandstirfriedancientbottlegourd 1/false/{{i18n:food.crafting.lavaeelandstirfriedancientbottlegourd}}",
+  "{{ModID}}_lavaeelandstirfriedancientbottlegourd": "{{ModID}}_ancientbottlegourd 1 162 1/what is this for?/{{ModID}}_lavaeelandstirfriedancientbottlegourd 1/false/{{i18n:food.crafting.lavaeelandstirfriedancientbottlegourd}}",
 
-  "swordandsorcery.zuzustylepizza": "216 1 256 1 424 1/what is this for?/swordandsorcery.zuzustylepizza 1/e SnS.Ch3.Cirrus.4/{{i18n:food.crafting.zuzustylepizza}}",
+  "{{ModID}}_zuzustylepizza": "216 1 256 1 424 1/what is this for?/{{ModID}}_zuzustylepizza 1/e SnS.Ch3.Cirrus.4/{{i18n:food.crafting.zuzustylepizza}}",
 
-  "swordandsorcery.zuzustylebagelwithlox": "216 1 139 1 424 1/what is this for?/swordandsorcery.zuzustylebagelwithlox 1/e SnS.Ch3.Cirrus.6/{{i18n:food.crafting.zuzustylebagelwithlox}}",
+  "{{ModID}}_zuzustylebagelwithlox": "216 1 139 1 424 1/what is this for?/{{ModID}}_zuzustylebagelwithlox 1/e SnS.Ch3.Cirrus.6/{{i18n:food.crafting.zuzustylebagelwithlox}}",
 
-  "swordandsorcery.zuzustylecheesecake": "245 1 -6 1 -5 1 400 1/what is this for?/swordandsorcery.zuzustylecheesecake 1/e SnS.Ch3.Cirrus.9/{{i18n:food.crafting.zuzustylecheesecake}}",
+  "{{ModID}}_zuzustylecheesecake": "245 1 -6 1 -5 1 400 1/what is this for?/{{ModID}}_zuzustylecheesecake 1/e SnS.Ch3.Cirrus.9/{{i18n:food.crafting.zuzustylecheesecake}}",
 
-  "swordandsorcery.zuzustyleclamchowder": "372 1 256 1 192 1/what is this for?/swordandsorcery.zuzustyleclamchowder 1/e SnS.Ch3.Cirrus.5/{{i18n:food.crafting.zuzustyleclamchowder}}",
+  "{{ModID}}_zuzustyleclamchowder": "372 1 256 1 192 1/what is this for?/{{ModID}}_zuzustyleclamchowder 1/e SnS.Ch3.Cirrus.5/{{i18n:food.crafting.zuzustyleclamchowder}}",
   
   }
 },

@@ -8,7 +8,7 @@
     "Action": "EditData",
     "Target": "Data/Objects",
     "Entries": {
-      "swordandsorcery.ancientamaranth": {
+      "{{ModID}}_ancientamaranth": {
         "Name": "Ancient Amaranth",
         "DisplayName": "{{i18n: crop.ancientamaranth.name}}",
         "Description": "{{i18n: crop.ancientamaranth.description}}",
@@ -29,7 +29,7 @@
     "Action": "EditData",
     "Target": "Data/Objects",
     "Entries": {
-      "swordandsorcery.ancientamaranth.seed": {
+      "{{ModID}}_ancientamaranth.seed": {
         "Name": "Ancient Amaranth Seeds",
         "DisplayName": "{{i18n: crop.ancientamaranth.seed.name}}",
         "Description": "{{i18n: crop.ancientamaranth.seed.description}}",
@@ -48,10 +48,10 @@
     "Action": "EditData",
     "Target": "Data/Crops",
     "Entries": {
-      "swordandsorcery.ancientamaranth.seed": {
+      "{{ModID}}_ancientamaranth.seed": {
         "Seasons": [ "summer", "fall" ],
         "DaysInPhase": [ 1, 2, 2, 2 ],
-        "HarvestItemId": "swordandsorcery.ancientamaranth",
+        "HarvestItemId": "{{ModID}}_ancientamaranth",
         "HarvestMethod": "Scythe",
         "HarvestMinStack": 1,
         "HarvestMaxStack": 2,
@@ -68,7 +68,7 @@
     "Action": "EditData",
     "Target": "Data/Objects",
     "Entries": {
-      "swordandsorcery.ancientepiphyticfern": {
+      "{{ModID}}_ancientepiphyticfern": {
         "Name": "Ancient Epiphytic Fern",
         "DisplayName": "{{i18n: crop.ancientepiphyticfern.name}}",
         "Description": "{{i18n: crop.ancientepiphyticfern.description}}",
@@ -89,7 +89,7 @@
     "Action": "EditData",
     "Target": "Data/Objects",
     "Entries": {
-      "swordandsorcery.ancientepiphyticfern.seed": {
+      "{{ModID}}_ancientepiphyticfern.seed": {
         "Name": "Ancient Amaranth Seeds",
         "DisplayName": "{{i18n: crop.ancientepiphyticfern.seed.name}}",
         "Description": "{{i18n: crop.ancientepiphyticfern.seed.description}}",
@@ -108,11 +108,11 @@
     "Action": "EditData",
     "Target": "Data/Crops",
     "Entries": {
-      "swordandsorcery.ancientepiphyticfern.seed": {
+      "{{ModID}}_ancientepiphyticfern.seed": {
         "Seasons": [ "spring", "summer" ],
         "DaysInPhase": [ 1, 3, 3, 4, 3 ],
         "RegrowDays": 3,
-        "HarvestItemId": "swordandsorcery.ancientepiphyticfern",
+        "HarvestItemId": "{{ModID}}_ancientepiphyticfern",
         "HarvestMethod": "Scythe",
         "HarvestMinStack": 1,
         "HarvestMaxStack": 1,
@@ -130,7 +130,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.glowingpolyporemushrooms": {
+        "{{ModID}}_glowingpolyporemushrooms": {
           "Name": "Ancient Glowing Polypore Mushroom",
           "DisplayName": "{{i18n: crop.ancientglowingpolyporemushrooms.name}}",
           "Description": "{{i18n: crop.ancientglowingpolyporemushrooms.description}}",
@@ -151,7 +151,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.glowingpolyporemushrooms.seed": {
+        "{{ModID}}_glowingpolyporemushrooms.seed": {
           "Name": "Ancient Glowing Polypore Mushroom Spores",
           "DisplayName": "{{i18n: crop.ancientglowingpolyporemushrooms.seed.name}}",
           "Description": "{{i18n: crop.ancientglowingpolyporemushrooms.seed.description}}",
@@ -170,11 +170,11 @@
       "Action": "EditData",
       "Target": "Data/Crops",
       "Entries": {
-        "swordandsorcery.glowingpolyporemushrooms.seed": {
+        "{{ModID}}_glowingpolyporemushrooms.seed": {
           "Seasons": [ "fall", "winter" ],
           "DaysInPhase": [ 2, 7, 7, 7, 5 ],
           "RegrowDays": 3,
-          "HarvestItemId": "swordandsorcery.glowingpolyporemushrooms",
+          "HarvestItemId": "{{ModID}}_glowingpolyporemushrooms",
           "HarvestMinStack": 1,
           "HarvestMaxStack": 1,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
@@ -189,7 +189,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.ancientwildfairyrose": {
+        "{{ModID}}_ancientwildfairyrose": {
           "Name": "Ancient Wild Fairy Rose",
           "DisplayName": "{{i18n: crop.ancientwildfairyrose.name}}",
           "Description": "{{i18n: crop.ancientwildfairyrose.description}}",
@@ -210,7 +210,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.ancientwildfairyrose.seed": {
+        "{{ModID}}_ancientwildfairyrose.seed": {
           "Name": "Ancient Wild Fairy Rose Seeds",
           "DisplayName": "{{i18n: crop.ancientwildfairyrose.seed.name}}",
           "Description": "{{i18n: crop.ancientwildfairyrose.seed.description}}",
@@ -229,11 +229,11 @@
       "Action": "EditData",
       "Target": "Data/Crops",
       "Entries": {
-        "swordandsorcery.ancientwildfairyrose.seed": {
+        "{{ModID}}_ancientwildfairyrose.seed": {
           "Seasons": [ "spring", "summer", "fall" ],
           "DaysInPhase": [ 2, 7, 7, 7, 5 ],
           "RegrowDays": 3,
-          "HarvestItemId": "swordandsorcery.ancientwildfairyrose",
+          "HarvestItemId": "{{ModID}}_ancientwildfairyrose",
           "HarvestMinStack": 1,
           "HarvestMaxStack": 3,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
@@ -248,7 +248,7 @@
     "Action": "EditData",
     "Target": "Data/Objects",
     "Entries": {
-      "swordandsorcery.ancientelderberry": {
+      "{{ModID}}_ancientelderberry": {
         "Name": "Ancient Elderberry",
         "DisplayName": "{{i18n: crop.ancientelderberry.name}}",
         "Description": "{{i18n: crop.ancientelderberry.description}}",
@@ -269,7 +269,7 @@
     "Action": "EditData",
     "Target": "Data/Objects",
     "Entries": {
-      "swordandsorcery.ancientelderberry.seed": {
+      "{{ModID}}_ancientelderberry.seed": {
         "Name": "Ancient Elderberry Seeds",
         "DisplayName": "{{i18n: crop.ancientelderberry.seed.name}}",
         "Description": "{{i18n: crop.ancientelderberry.seed.description}}",
@@ -288,11 +288,11 @@
     "Action": "EditData",
     "Target": "Data/Crops",
     "Entries": {
-      "swordandsorcery.ancientelderberry.seed": {
+      "{{ModID}}_ancientelderberry.seed": {
         "Seasons": [ "spring", "summer" ],
         "DaysInPhase": [ 1, 1, 1, 3, 4 ],
         "RegrowDays": 3,
-        "HarvestItemId": "swordandsorcery.ancientelderberry",
+        "HarvestItemId": "{{ModID}}_ancientelderberry",
         "HarvestMinStack": 1,
         "HarvestMaxStack": 3,
         "ExtraHarvestChance": 0.03,
@@ -308,7 +308,7 @@
     "Action": "EditData",
     "Target": "Data/Objects",
     "Entries": {
-      "swordandsorcery.ancientbottlegourd": {
+      "{{ModID}}_ancientbottlegourd": {
         "Name": "Ancient Bottle Gourd",
         "DisplayName": "{{i18n: crop.ancientbottlegourd.name}}",
         "Description": "{{i18n: crop.ancientbottlegourd.description}}",
@@ -329,7 +329,7 @@
     "Action": "EditData",
     "Target": "Data/Objects",
     "Entries": {
-      "swordandsorcery.ancientbottlegourd.seed": {
+      "{{ModID}}_ancientbottlegourd.seed": {
         "Name": "Ancient Bottle Gourd",
         "DisplayName": "{{i18n: crop.ancientbottlegourd.seed.name}}",
         "Description": "{{i18n: crop.ancientbottlegourd.seed.description}}",
@@ -348,10 +348,10 @@
     "Action": "EditData",
     "Target": "Data/Crops",
     "Entries": {
-      "swordandsorcery.ancientbottlegourd.seed": {
+      "{{ModID}}_ancientbottlegourd.seed": {
         "Seasons": [ "fall" ],
         "DaysInPhase": [ 1, 2, 2, 2, 3, 3],
-        "HarvestItemId": "swordandsorcery.ancientbottlegourd",
+        "HarvestItemId": "{{ModID}}_ancientbottlegourd",
         "HarvestMinStack": 1,
         "HarvestMaxStack": 2,
         "ExtraHarvestChance": 0.03,
@@ -367,7 +367,7 @@
     "Action": "EditData",
     "Target": "Data/Objects",
     "Entries": {
-      "swordandsorcery.ancientgiantappleberry": {
+      "{{ModID}}_ancientgiantappleberry": {
         "Name": "Ancient Giant Apple Berry",
         "DisplayName": "{{i18n: crop.ancientgiantappleberry.name}}",
         "Description": "{{i18n: crop.ancientgiantappleberry.description}}",
@@ -388,7 +388,7 @@
     "Action": "EditData",
     "Target": "Data/Objects",
     "Entries": {
-      "swordandsorcery.ancientgiantappleberry.seed": {
+      "{{ModID}}_ancientgiantappleberry.seed": {
         "Name": "Ancient Giant Apple Berry",
         "DisplayName": "{{i18n: crop.ancientgiantappleberry.seed.name}}",
         "Description": "{{i18n: crop.ancientgiantappleberry.seed.description}}",
@@ -407,10 +407,10 @@
     "Action": "EditData",
     "Target": "Data/Crops",
     "Entries": {
-      "swordandsorcery.ancientgiantappleberry.seed": {
+      "{{ModID}}_ancientgiantappleberry.seed": {
         "Seasons": [ "spring", "summer", "fall" ],
         "DaysInPhase": [ 1, 2, 3, 4],
-        "HarvestItemId": "swordandsorcery.ancientgiantappleberry",
+        "HarvestItemId": "{{ModID}}_ancientgiantappleberry",
         "HarvestMinStack": 1,
         "HarvestMaxStack": 2,
         "ExtraHarvestChance": 0.03,
@@ -426,7 +426,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.ancientazuredetura": {
+        "{{ModID}}_ancientazuredetura": {
           "Name": "Ancient Azure Detura Flower",
           "DisplayName": "{{i18n: crop.ancientazuredetura.name}}",
           "Description": "{{i18n: crop.ancientazuredetura.description}}",
@@ -447,7 +447,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.ancientazuredetura.seed": {
+        "{{ModID}}_ancientazuredetura.seed": {
           "Name": "Ancient Azure Detura Flower",
           "DisplayName": "{{i18n: crop.ancientazuredetura.seed.name}}",
           "Description": "{{i18n: crop.ancientazuredetura.seed.description}}",
@@ -466,10 +466,10 @@
       "Action": "EditData",
       "Target": "Data/Crops",
       "Entries": {
-        "swordandsorcery.ancientazuredetura.seed": {
+        "{{ModID}}_ancientazuredetura.seed": {
           "Seasons": [ "fall", "winter" ],
           "DaysInPhase": [ 1, 2, 3, 2],
-          "HarvestItemId": "swordandsorcery.ancientazuredetura",
+          "HarvestItemId": "{{ModID}}_ancientazuredetura",
           "HarvestMinStack": 1,
           "HarvestMaxStack": 2,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
@@ -484,7 +484,7 @@
         "Action": "EditData",
         "Target": "Data/Objects",
         "Entries": {
-          "swordandsorcery.ancientglowinghuckleberry": {
+          "{{ModID}}_ancientglowinghuckleberry": {
             "Name": "Ancient Glowing Huckleberry",
             "DisplayName": "{{i18n: crop.ancientglowinghuckleberry.name}}",
             "Description": "{{i18n: crop.ancientglowinghuckleberry.description}}",
@@ -505,7 +505,7 @@
         "Action": "EditData",
         "Target": "Data/Objects",
         "Entries": {
-          "swordandsorcery.ancientglowinghuckleberry.seed": {
+          "{{ModID}}_ancientglowinghuckleberry.seed": {
             "Name": "Ancient Wild Fairy Rose Seeds",
             "DisplayName": "{{i18n: crop.ancientglowinghuckleberry.seed.name}}",
             "Description": "{{i18n: crop.ancientglowinghuckleberry.seed.description}}",
@@ -524,9 +524,9 @@
         "Action": "EditData",
         "Target": "Data/fruitTrees",
         "Entries": {
-          "swordandsorcery.ancientglowinghuckleberry.seed": {
+          "{{ModID}}_ancientglowinghuckleberry.seed": {
             "Seasons": [ "summer" ],
-            "Fruit": [ { "Id": "N/A", "ItemId": "swordandsorcery.ancientglowinghuckleberry" } ],
+            "Fruit": [ { "Id": "N/A", "ItemId": "{{ModID}}_ancientglowinghuckleberry" } ],
             "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSTrees.png}}",
             "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
             "SpriteIndex": 0
@@ -541,23 +541,23 @@
       "Target": "Data/CraftingRecipes",
       "Entries":
       {
-      "Ancient Amaranth Seeds": "swordandsorcery.druidicessence 4/what is this for?/swordandsorcery.ancientamaranth.seed 1/false/null/{{i18n:AncientSeed.Hector.Amaranth}}",
+      "Ancient Amaranth Seeds": "{{ModID}}_druidicessence 4/what is this for?/{{ModID}}_ancientamaranth.seed 1/false/null/{{i18n:AncientSeed.Hector.Amaranth}}",
 
-      "Ancient Epiphytic Fern Seeds": "swordandsorcery.druidicessence 6/what is this for?/swordandsorcery.ancientepiphyticfern.seed 1/false/null/{{i18n:AncientSeed.Hector.Fern}}",
+      "Ancient Epiphytic Fern Seeds": "{{ModID}}_druidicessence 6/what is this for?/{{ModID}}_ancientepiphyticfern.seed 1/false/null/{{i18n:AncientSeed.Hector.Fern}}",
 
-      "Ancient Glowing Huckleberry Seeds": "swordandsorcery.druidicessence 8/what is this for?/swordandsorcery.ancientglowinghuckleberry.seed 1/false/null/{{i18n:AncientSeed.Hector.Huckleberry}}",
+      "Ancient Glowing Huckleberry Seeds": "{{ModID}}_druidicessence 8/what is this for?/{{ModID}}_ancientglowinghuckleberry.seed 1/false/null/{{i18n:AncientSeed.Hector.Huckleberry}}",
 
-      "Ancient Glowing Polypore Mushroom Spores": "swordandsorcery.druidicessence 6/what is this for?/swordandsorcery.glowingpolyporemushrooms.seed 1/false/null/{{i18n:AncientSeed.Hector.Mushroom}}",
+      "Ancient Glowing Polypore Mushroom Spores": "{{ModID}}_druidicessence 6/what is this for?/{{ModID}}_glowingpolyporemushrooms.seed 1/false/null/{{i18n:AncientSeed.Hector.Mushroom}}",
 
-      "Ancient Wild Fairy Rose Seeds": "swordandsorcery.druidicessence 5/what is this for?/swordandsorcery.ancientwildfairyrose.seed 1/false/null/{{i18n:AncientSeed.Hector.FairyRose}}",
+      "Ancient Wild Fairy Rose Seeds": "{{ModID}}_druidicessence 5/what is this for?/{{ModID}}_ancientwildfairyrose.seed 1/false/null/{{i18n:AncientSeed.Hector.FairyRose}}",
 
-      "Ancient Elderberry Seeds": "swordandsorcery.druidicessence 6/what is this for?/swordandsorcery.ancientelderberry.seed 1/false/null/{{i18n:AncientSeed.Hector.Elderberry}}",
+      "Ancient Elderberry Seeds": "{{ModID}}_druidicessence 6/what is this for?/{{ModID}}_ancientelderberry.seed 1/false/null/{{i18n:AncientSeed.Hector.Elderberry}}",
 
-      "Ancient Bottle Gourd Seeds": "swordandsorcery.druidicessence 4/what is this for?/swordandsorcery.ancientbottlegourd.seed 1/false/null/{{i18n:AncientSeed.Hector.BottleGourd}}",
+      "Ancient Bottle Gourd Seeds": "{{ModID}}_druidicessence 4/what is this for?/{{ModID}}_ancientbottlegourd.seed 1/false/null/{{i18n:AncientSeed.Hector.BottleGourd}}",
 
-      "Ancient Giant Apple Berry Seeds": "swordandsorcery.druidicessence 6/what is this for?/swordandsorcery.ancientgiantappleberry.seed 1/false/null/{{i18n:AncientSeed.Hector.AppleBerry}}",
+      "Ancient Giant Apple Berry Seeds": "{{ModID}}_druidicessence 6/what is this for?/{{ModID}}_ancientgiantappleberry.seed 1/false/null/{{i18n:AncientSeed.Hector.AppleBerry}}",
 
-      "Ancient Azure Detura": "swordandsorcery.druidicessence 4/what is this for?/swordandsorcery.ancientazuredetura.seed 1/false/null/{{i18n:AncientSeed.Hector.Detura}}",
+      "Ancient Azure Detura": "{{ModID}}_druidicessence 4/what is this for?/{{ModID}}_ancientazuredetura.seed 1/false/null/{{i18n:AncientSeed.Hector.Detura}}",
       
       }
     },
@@ -568,7 +568,7 @@
       "Action": "EditData",
       "Target": "spacechase0.SpaceCore/ObjectExtensionData",
       "Entries": {
-        "swordandsorcery.ancientamaranth": {
+        "{{ModID}}_ancientamaranth": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -577,7 +577,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientepiphyticfern": {
+        "{{ModID}}_ancientepiphyticfern": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -586,7 +586,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.glowingpolyporemushrooms": {
+        "{{ModID}}_glowingpolyporemushrooms": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -595,7 +595,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientwildfairyrose": {
+        "{{ModID}}_ancientwildfairyrose": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -604,7 +604,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientglowinghuckleberry": {
+        "{{ModID}}_ancientglowinghuckleberry": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -613,7 +613,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientamaranth.seed": {
+        "{{ModID}}_ancientamaranth.seed": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -622,7 +622,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientepiphyticfern.seed": {
+        "{{ModID}}_ancientepiphyticfern.seed": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -631,7 +631,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.glowingpolyporemushrooms.seed": {
+        "{{ModID}}_glowingpolyporemushrooms.seed": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -640,7 +640,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientwildfairyrose.seed": {
+        "{{ModID}}_ancientwildfairyrose.seed": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -649,7 +649,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientglowinghuckleberry.seed": {
+        "{{ModID}}_ancientglowinghuckleberry.seed": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -658,7 +658,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientelderberry": {
+        "{{ModID}}_ancientelderberry": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -667,7 +667,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientelderberry.seed": {
+        "{{ModID}}_ancientelderberry.seed": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -676,7 +676,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientbottlegourd": {
+        "{{ModID}}_ancientbottlegourd": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -685,7 +685,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientbottlegourd.seed": {
+        "{{ModID}}_ancientbottlegourd.seed": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -694,7 +694,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientgiantappleberry": {
+        "{{ModID}}_ancientgiantappleberry": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -703,7 +703,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientgiantappleberry.seed": {
+        "{{ModID}}_ancientgiantappleberry.seed": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -712,7 +712,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientazuredetura": {
+        "{{ModID}}_ancientazuredetura": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,
@@ -721,7 +721,7 @@
             "A": 255
           },
         },
-        "swordandsorcery.ancientazuredetura.seed": {
+        "{{ModID}}_ancientazuredetura.seed": {
           "CategoryTextOverride": "Druidic",
           "CategoryColorOverride": {
             "R": 48,

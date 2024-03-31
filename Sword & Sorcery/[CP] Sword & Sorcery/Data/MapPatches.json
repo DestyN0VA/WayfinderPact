@@ -357,6 +357,27 @@
             }
         },
 
+        // ADDS A LOCKED DOOR TO THE UNDERFORGE
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_CoastalGuild",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 20,
+                        "Y": 13
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Message UnderScarpe",
+                    }
+                }
+            ],
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch1.Mateo.18": false
+            }
+        },
+
         // ADDS THE UNDERFORGE WARP FROM GUILD
         {
             "Action": "EditMap",
@@ -374,7 +395,7 @@
                 }
             ],
             "When": {
-                "HasSeenEvent |contains=SnS.Ch1.Mateo.PENDING": true
+                "HasSeenEvent |contains=SnS.Ch1.Mateo.18": true
             }
         },
 

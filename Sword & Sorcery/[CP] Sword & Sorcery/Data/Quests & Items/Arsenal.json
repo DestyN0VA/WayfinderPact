@@ -4,7 +4,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "swordandsorcery.ExquisiteEmerald": {
+        "{{ModID}}_ExquisiteEmerald": {
           "Name": "Exquisite Emerald",
           "DisplayName": "{{i18n: arsenal.exquisite-emerald.name}}",
           "Description": "{{i18n: arsenal.exquisite-emerald.description}}",
@@ -19,7 +19,7 @@
           ],
       
         },
-        "swordandsorcery.ExquisiteRuby": {
+        "{{ModID}}_ExquisiteRuby": {
           "Name": "Exquisite Ruby",
           "DisplayName": "{{i18n: arsenal.exquisite-ruby.name}}",
           "Description": "{{i18n: arsenal.exquisite-ruby.description}}",
@@ -33,7 +33,7 @@
             "exquisite_gem"
           ],
         },
-        "swordandsorcery.ExquisiteTopaz": {
+        "{{ModID}}_ExquisiteTopaz": {
           "Name": "Exquisite Topaz",
           "DisplayName": "{{i18n: arsenal.exquisite-topaz.name}}",
           "Description": "{{i18n: arsenal.exquisite-topaz.description}}",
@@ -47,7 +47,7 @@
             "exquisite_gem"
           ],
         },
-        "swordandsorcery.ExquisiteJade": {
+        "{{ModID}}_ExquisiteJade": {
           "Name": "Exquisite Jade",
           "DisplayName": "{{i18n: arsenal.exquisite-jade.name}}",
           "Description": "{{i18n: arsenal.exquisite-jade.description}}",
@@ -61,7 +61,7 @@
             "exquisite_gem"
           ],
         },
-        "swordandsorcery.ExquisiteAquamarine": {
+        "{{ModID}}_ExquisiteAquamarine": {
           "Name": "Exquisite Aquamarine",
           "DisplayName": "{{i18n: arsenal.exquisite-aquamarine.name}}",
           "Description": "{{i18n: arsenal.exquisite-aquamarine.description}}",
@@ -75,7 +75,7 @@
             "exquisite_gem"
           ],
         },
-        "swordandsorcery.ExquisiteAmethyst": {
+        "{{ModID}}_ExquisiteAmethyst": {
           "Name": "Exquisite Amethyst",
           "DisplayName": "{{i18n: arsenal.exquisite-amethyst.name}}",
           "Description": "{{i18n: arsenal.exquisite-amethyst.description}}",
@@ -89,7 +89,7 @@
             "exquisite_gem"
           ],
         },
-        "swordandsorcery.ExquisiteDiamond": {
+        "{{ModID}}_ExquisiteDiamond": {
           "Name": "Exquisite Diamond",
           "DisplayName": "{{i18n: arsenal.exquisite-diamond.name}}",
           "Description": "{{i18n: arsenal.exquisite-diamond.description}}",
@@ -103,7 +103,7 @@
             "exquisite_gem"
           ],
         },
-        "swordandsorcery.ArcanePrimer": {
+        "{{ModID}}_ArcanePrimer": {
           "Name": "Arcane Primer",
           "DisplayName": "{{i18n: arsenal.arcane-primer.name}}",
           "Description": "{{i18n: arsenal.arcane-primer.description}}",
@@ -122,14 +122,14 @@
       "Action": "EditData",
       "Target": "Data/CraftingRecipes",
       "Entries": {
-        "swordandsorcery.ExquisiteEmerald": "60 50 74 1/meow/swordandsorcery.ExquisiteEmerald 1/false/null/{{i18n:arsenal.exquisite-emerald.name}}/{{i18n:arsenal.exquisite-emerald.description}}",
-        "swordandsorcery.ExquisiteRuby": "64 50 74 1/meow/swordandsorcery.ExquisiteRuby 1/false/null/{{i18n:arsenal.exquisite-ruby.name}}/{{i18n:arsenal.exquisite-ruby.description}}",
-        "swordandsorcery.ExquisiteTopaz": "68 50 74 1/meow/swordandsorcery.ExquisiteTopaz 1/false/null/Exquisite Topaz/{{i18n:arsenal.exquisite-topaz.name}}/{{i18n:arsenal.exquisite-topaz.description}}",
-        "swordandsorcery.ExquisiteAquamarine": "62 50 74 1/meow/swordandsorcery.ExquisiteAquamarine 1/false/null/{{i18n:arsenal.exquisite-aquamarine.name}}/{{i18n:arsenal.exquisite-aquamarine.description}}",
-        "swordandsorcery.ExquisiteAmethyst": "66 50 74 1/meow/swordandsorcery.ExquisiteAmethyst 1/false/null/{{i18n:arsenal.exquisite-amethyst.name}}/{{i18n:arsenal.exquisite-amethyst.description}}",
-        "swordandsorcery.ExquisiteJade": "70 50 74 1/meow/swordandsorcery.ExquisiteJade 1/false/null/{{i18n:arsenal.exquisite-jade.name}}/{{i18n:arsenal.exquisite-jade.description}}",
-        "swordandsorcery.ExquisiteDiamond": "72 50 74 1/meow/swordandsorcery.ExquisiteDiamond 1/false/null/{{i18n:arsenal.exquisite-diamond.name}}/{{i18n:arsenal.exquisite-diamond.description}}",
-        "swordandsorcery.ArcanePrimer": "797 1 896 1/meow/swordandsorcery.ArcanePrimer 1/false/null/{{i18n:arsenal.arcane-primer.name}}/{{i18n:arsenal.arcane-primer.description}}",
+        "{{ModID}}_ExquisiteEmerald": "60 50 74 1/meow/{{ModID}}_ExquisiteEmerald 1/false/null/{{i18n:arsenal.exquisite-emerald.name}}/{{i18n:arsenal.exquisite-emerald.description}}",
+        "{{ModID}}_ExquisiteRuby": "64 50 74 1/meow/{{ModID}}_ExquisiteRuby 1/false/null/{{i18n:arsenal.exquisite-ruby.name}}/{{i18n:arsenal.exquisite-ruby.description}}",
+        "{{ModID}}_ExquisiteTopaz": "68 50 74 1/meow/{{ModID}}_ExquisiteTopaz 1/false/null/Exquisite Topaz/{{i18n:arsenal.exquisite-topaz.name}}/{{i18n:arsenal.exquisite-topaz.description}}",
+        "{{ModID}}_ExquisiteAquamarine": "62 50 74 1/meow/{{ModID}}_ExquisiteAquamarine 1/false/null/{{i18n:arsenal.exquisite-aquamarine.name}}/{{i18n:arsenal.exquisite-aquamarine.description}}",
+        "{{ModID}}_ExquisiteAmethyst": "66 50 74 1/meow/{{ModID}}_ExquisiteAmethyst 1/false/null/{{i18n:arsenal.exquisite-amethyst.name}}/{{i18n:arsenal.exquisite-amethyst.description}}",
+        "{{ModID}}_ExquisiteJade": "70 50 74 1/meow/{{ModID}}_ExquisiteJade 1/false/null/{{i18n:arsenal.exquisite-jade.name}}/{{i18n:arsenal.exquisite-jade.description}}",
+        "{{ModID}}_ExquisiteDiamond": "72 50 74 1/meow/{{ModID}}_ExquisiteDiamond 1/false/null/{{i18n:arsenal.exquisite-diamond.name}}/{{i18n:arsenal.exquisite-diamond.description}}",
+        "{{ModID}}_ArcanePrimer": "797 1 896 1/meow/{{ModID}}_ArcanePrimer 1/false/null/{{i18n:arsenal.arcane-primer.name}}/{{i18n:arsenal.arcane-primer.description}}",
       }
     },
   ]

@@ -26,11 +26,11 @@
             }
         },
         {
-            "LogName": "Salish Burbon Recipe",
+            "LogName": "Salish Bourbon Recipe",
             "Action": "EditData",
             "Target": "Data/Mail",
             "Entries": {
-                "MateoSalishBurbon":"{{i18n:Mail.Mateo.Letter4}}"
+                "MateoSalishBourbon":"{{i18n:Mail.Mateo.Letter4}}"
             }
         },
         {
@@ -77,12 +77,12 @@
 			"Action": "EditData",
 			"Target": "Data/TriggerActions",
 			"Entries": {
-				"SnS.Id_SalishBurbon": {
-					"Id": "SnS.Id_SalishBurbon",
+				"SnS.Id_SalishBourbon": {
+					"Id": "SnS.Id_SalishBourbon",
 					"Trigger": "DayEnding",
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.11",
 					"Actions": [
-						"AddMail Current MateoSalishBurbon tomorrow",
+						"AddMail Current MateoSalishBourbon tomorrow",
 					]
 				}
 			}

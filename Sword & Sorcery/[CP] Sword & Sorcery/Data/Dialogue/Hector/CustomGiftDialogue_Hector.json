@@ -4,6 +4,8 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Hector",
       "Entries": { // CUSTOM GIFT DIALOGUE
+        // STARDROP TEA 
+        "AcceptGift_(O)StardropTea": "{{i18n:Gifts.Hector.GiftReaction.StardropTea}}",
         // FISH
         "AcceptGift_category_fish": "{{i18n:Gifts.Hector.GiftReaction.CategoryFish}}",
         "AcceptGift_(O)397": "{{i18n:Gifts.Hector.GiftReaction.SeaUrchin}}",
@@ -65,6 +67,17 @@
       },
       "When": {
         "HasConversationTopic |contains=HectorMarriageCountdown": true
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Hector",
+      "Entries": { // MARRIAGE PENDANT REACT
+        "RejectItem_(O)460": "{{i18n:miscellaneous.PendantResponse}}#$action spacechase0.SpaceCore_PlayEvent SnS.Ch2.Hector.17 false"
+      },
+      "When": {
+        "HasConversationTopic |contains=HectorMarriageCountdown": false,
+        "Relationship:Hector |contains=Dating": true
       }
     },
   ]
