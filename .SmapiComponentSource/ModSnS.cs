@@ -12,6 +12,7 @@ using StardewModdingAPI.Utilities;
 using StardewValley;
 using StardewValley.Extensions;
 using StardewValley.GameData.Objects;
+using StardewValley.GameData.SpecialOrders;
 using StardewValley.GameData.Tools;
 using StardewValley.GameData.Weapons;
 using StardewValley.Menus;
@@ -765,6 +766,72 @@ namespace SwordAndSorcerySMAPI
             if (__instance.questKey.Value.StartsWith("CAGQuest.UntimedSpecialOrder") || __instance.questKey.Value == "Mateo.SpecialOrders.BuildGuild")
             {
                 __result = false;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(SpecialOrder), nameof(SpecialOrder.UpdateAvailableSpecialOrders))]
+    public static class SpecialOrderAvailabilityPatch
+    {
+        public static void Postfix(string orderType, bool forceRefresh)
+        {
+            if (orderType == "" && forceRefresh)
+            {
+                SNSUpdateAvailability();
+            }
+        }
+
+        private static void SNSUpdateAvailability()
+        {
+            string orderType = "SwordSorcery";
+            bool forceRefresh = true;
+
+            foreach (SpecialOrder order in Game1.player.team.availableSpecialOrders)
+            {
+                if ((order.questDuration.Value == QuestDuration.TwoDays || order.questDuration.Value == QuestDuration.ThreeDays) && !Game1.player.team.acceptedSpecialOrderTypes.Contains(order.orderType.Value))
+                {
+                    order.SetDuration(order.questDuration.Value);
+                }
+            }
+            if (!forceRefresh)
+            {
+                foreach (SpecialOrder availableSpecialOrder in Game1.player.team.availableSpecialOrders)
+                {
+                    if (availableSpecialOrder.orderType.Value == orderType)
+                    {
+                        return;
+                    }
+                }
+            }
+            SpecialOrder.RemoveAllSpecialOrders(orderType);
+            List<string> keyQueue = new List<string>();
+            foreach (KeyValuePair<string, SpecialOrderData> pair in DataLoader.SpecialOrders(Game1.content))
+            {
+                if (pair.Value.OrderType == orderType && SpecialOrder.CanStartOrderNow(pair.Key, pair.Value))
+                {
+                    keyQueue.Add(pair.Key);
+                }
+            }
+            List<string> keysIncludingCompleted = new List<string>(keyQueue);
+            //if (orderType == "")
+            {
+                keyQueue.RemoveAll((string id) => Game1.player.team.completedSpecialOrders.Contains(id));
+            }
+            Random r = Utility.CreateRandom(Game1.uniqueIDForThisGame, (double)Game1.stats.DaysPlayed * 1.3);
+            for (int i = 0; i < 2; i++)
+            {
+                if (keyQueue.Count == 0)
+                {
+                    if (keysIncludingCompleted.Count == 0)
+                    {
+                        break;
+                    }
+                    keyQueue = new List<string>(keysIncludingCompleted);
+                }
+                string key = r.ChooseFrom(keyQueue);
+                Game1.player.team.availableSpecialOrders.Add(SpecialOrder.GetSpecialOrder(key, r.Next()));
+                keyQueue.Remove(key);
+                keysIncludingCompleted.Remove(key);
             }
         }
     }
