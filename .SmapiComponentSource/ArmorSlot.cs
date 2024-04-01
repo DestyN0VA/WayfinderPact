@@ -48,7 +48,7 @@ namespace SwordAndSorcerySMAPI
         {
             var nextTo = __instance.equipmentIcons.FirstOrDefault(cc => cc.myID == InventoryPage.region_trinkets);
             if ( nextTo == null )
-                __instance.equipmentIcons.FirstOrDefault(cc => cc.myID == InventoryPage.region_hat);
+                nextTo = __instance.equipmentIcons.FirstOrDefault(cc => cc.myID == InventoryPage.region_hat);
             if (nextTo == null)
             {
                 ModSnS.instance.Monitor.Log("Failed to find place to put armor slot?", StardewModdingAPI.LogLevel.Warn);
