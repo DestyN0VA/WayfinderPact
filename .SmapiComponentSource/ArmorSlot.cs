@@ -46,16 +46,21 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Postfix(InventoryPage __instance)
         {
+            var nextTo = __instance.equipmentIcons.FirstOrDefault(cc => cc.myID == InventoryPage.region_trinkets);
+            if ( nextTo == null )
+                __instance.equipmentIcons.FirstOrDefault(cc => cc.myID == InventoryPage.region_hat);
+            if (nextTo == null)
+            {
+                ModSnS.instance.Monitor.Log("Failed to find place to put armor slot?", StardewModdingAPI.LogLevel.Warn);
+                return;
+            }
+
             __instance.equipmentIcons.Add(
-                new ClickableComponent(
-                    new Rectangle(__instance.equipmentIcons.First( cc => cc.myID == InventoryPage.region_trinkets ).bounds.Right + 16 + 2,
-                        __instance.equipmentIcons.First(cc => cc.myID == InventoryPage.region_trinkets).bounds.Top,
-                        64, 64),
-                    "Armor")
+                new ClickableComponent( new Rectangle(nextTo.bounds.Right + 16 + 2, nextTo.bounds.Top, 64, 64), "Armor")
                 {
                     myID = 123450102, // TODO: Replace with Nexus mod id prefix
-                    upNeighborID = Game1.player.MaxItems - 7,
-                    leftNeighborID = InventoryPage.region_trinkets,
+                    upNeighborID = Game1.player.MaxItems - (nextTo.myID == InventoryPage.region_trinkets ? 7 : 8),
+                    leftNeighborID = nextTo.myID,
                     rightNeighborID = InventoryPage.region_trashCan,
                     fullyImmutable = true,
                 });
