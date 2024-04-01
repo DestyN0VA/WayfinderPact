@@ -1151,5 +1151,19 @@
       "Name": "SVEGunther",
       "Value": "Gunther",
     },
+    {
+      "Name": "MateoFlirt4",
+      "Value": "the love of my life, and all else.$4",
+      "When": {
+        "Relationship:Mateo |contains=Dating, Engaged, Married": true
+      }
+    },
+    {
+      "Name": "MateoFlirt4",
+      "Value": "my best friend and all!$12",
+      "When": {
+        "Relationship:Mateo |contains=Dating, Engaged, Married": false
+      }
+    },
   ]
 }

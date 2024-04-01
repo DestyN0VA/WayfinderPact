@@ -46,5 +46,20 @@
 			},
 			"When": { "HasFlag": "DrakeScalePower" }
 		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Powers",
+			"Entries": {
+				"DrakeScalePower": {
+					"DisplayName": "{{i18n: power.forgedd20.name}}",
+					"Description": "{{i18n: power.forgedd20.description}}",
+					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
+					"TexturePosition": { "X": 80, "Y": 80 },
+					"UnlockedCondition": "PLAYER_HAS_MAIL Current ForgedD20Power",
+					"Update": "OnTimeChange, OnLocationChange",
+				}
+			},
+			"When": { "HasFlag": "ForgedD20Power" }
+		},
 	]
 }

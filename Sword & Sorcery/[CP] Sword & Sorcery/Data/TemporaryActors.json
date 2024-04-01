@@ -120,5 +120,10 @@
             "Target": "Characters/FakeSolomon, Portraits/FakeSolomon", // UNIQUE SIZE: 43 X 45
             "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/FakeSolomon.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Characters/ForgedD20",
+            "FromFile": "assets/TemporaryActors/Characters/ForgedD20.png"
+        },
     ]
 }

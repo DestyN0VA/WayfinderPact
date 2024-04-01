@@ -257,7 +257,7 @@
 "Core.Mateo.Summer.LateHeart.11": "I'm not sold on it yet, but there's a substantial amount of anthropological evidence supporting the hypothesis that Goblins and Dwarves are related.$34#$b#I think it's interesting but a lot of it's circumstantial. Personally, lean into the idea that they cohabited before the Elemental Wars rather than stem from the same exact ancestor.$36#$b#It's just a theory, though. Speaking of Dwarves, @, here you go! [121]$35",
 "Core.Mateo.Summer.LateHeart.12": "Back in college, it was pretty common to lose your keys on the way back to the dorm or leave them at the bar when you were tipsy. I made a lot of friends just by knowing how to pick locks.$13",
 "Core.Mateo.Summer.LateHeart.13": "Hey, @! I met with the desert trader - I had some unusual minerals they were looking for, so we did a little exchange. This is an excellent study piece! [125]$14",
-"Core.Mateo.Summer.LateHeart.14": "Hey, @! I've got a bone to pick with- nah, just kidding. Just found something down below you might need for the museum. [443 444 445]$0",
+"Core.Mateo.Summer.LateHeart.14": "Hey, @! I found something weird on Ginger Island, think it might be of use to you? [579 580 581 582 583 584 585]$0",
 "Core.Mateo.Summer.LateHeart.15": "I really want to know how a Treasure Chest can wind up in a Ghost Fish pond. Ponds are man-made, so where are they getting them from? They can't go treasure hunting, fish don't even have thumbs.$9#$b#Am I overthinking? I might be overthinking.$9",
 "Core.Mateo.Summer.LateHeart.16": "Hey, @. I found this pretty deep in the mines. It might've belonged to someone Marlon knew, but I'm not sure. It does look pretty familiar. Take it to Gunther with great care, okay?[109]$8",
 "Core.Mateo.Summer.LateHeart.17": "I spent some time at Marnie's, just doing some chores. It's messy work, but at least it's outside, and I get to pet as many of the animals as I want. I might ask Jacob if he needs a volunteer, too.$32",
@@ -5179,7 +5179,10 @@ ________      ________ _   _ _______ _____
 "power.broken-circlet.description": "The broken horn off Hector's circlet. Radiates with Druidic power, doubling your Druidic Essence drops.",
 
 "power.drake-scale.name": "Aetherdrake Scale",
-"power.drake-scale.description": "An heirloom from Cirrus that's warm to the touch. Gives +25 Aether, +1 Magnetic Radius, +3 Defense and +1 Luck. ",
+"power.drake-scale.description": "An heirloom from Cirrus that's warm to the touch. Gives +25 Aether, +1 Magnetic Radius, +3 Defense and +1 Luck.",
+
+"power.forgedd20.name": "Handmade D20",
+"power.forgedd20.description": "A gift from Mateo. Once a day, if you pass out with the D20 in your possession, you will revive with half of your max health.",
 
 "magicitem.brokenshield.name": "Broken Argentis Shield",
 "magicitem.brokenshield.description": "Dandelion's well-worn shield. It's broken, but useable.",
