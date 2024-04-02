@@ -5352,5 +5352,9 @@ ________      ________ _   _ _______ _____
 
 "miscellaneous.CAGArtifactLedger.message": "Use the ledger to trade monster bones for artifacts & minerals.",
 "miscellaneous.MermaidPendantCooldown": "%You haven't been dating very long - wait a while before you propose!",
-"miscellaneous.PendantResponse": "%It's finally the right time!..."
+"miscellaneous.PendantResponse": "%It's finally the right time!...",
+"miscellaneous.mapname.ESMateoHome": "Mateo's Tent",
+"miscellaneous.mapname.CoastalGuild": "Coastal Adventurer's Guild",
+"miscellaneous.mapname.LionsMane1": "The Lion's Mane",
+"miscellaneous.mapname.VanInterior": "Cirrus' Pizza Van",
 }
