@@ -783,7 +783,7 @@
       "Name": "DynamicDnDClass",
       "Value": "Paladin",
       "When": {
-        "HasFlag |contains=Paladin": true
+        "HasFlag |contains=DnDPaladin": true
       }
     },
     {
