@@ -87,10 +87,10 @@ namespace CircleOfThornsSMAPI
                     new string[] { "Ancient Wild Fairy Rose Seeds" },
                     new string[] { "Ancient Elderberry Seeds" },
                     null,
-                    new string[] { "Ancient Bottle Gourd Seeds", "swordandsorcery.lavaeelandstirfriedancientbottlegourd" },
-                    new string[] { "Ancient Giant Apple Berry Seeds", "swordandsorcery.mushroomsredsauce" },
-                    new string[] { "Ancient Azure Detura", "swordandsorcery.ferngreensandpineapple" },
-                    new string[] { "Ancient Glowing Huckleberry Seeds", "swordandsorcery.ancienthuckleberryicecream" },
+                    new string[] { "Ancient Bottle Gourd Seeds", "DN.SnS_lavaeelandstirfriedancientbottlegourd" },
+                    new string[] { "Ancient Giant Apple Berry Seeds", "DN.SnS_mushroomsredsauce" },
+                    new string[] { "Ancient Azure Detura", "DN.SnS_ferngreensandpineapple" },
+                    new string[] { "Ancient Glowing Huckleberry Seeds", "DN.SnS_ancienthuckleberryicecream" },
                     null,
                 };
 
@@ -128,10 +128,10 @@ namespace CircleOfThornsSMAPI
                     new string[] { "Ancient Wild Fairy Rose Seeds" },
                     new string[] { "Ancient Elderberry Seeds" },
                     null,
-                    new string[] { "Ancient Bottle Gourd Seeds", "swordandsorcery.lavaeelandstirfriedancientbottlegourd" },
-                    new string[] { "Ancient Giant Apple Berry Seeds", "swordandsorcery.mushroomsredsauce" },
-                    new string[] { "Ancient Azure Detura", "swordandsorcery.ferngreensandpineapple" },
-                    new string[] { "Ancient Glowing Huckleberry Seeds", "swordandsorcery.ancienthuckleberryicecream", "Druidic Totem Fetish" },
+                    new string[] { "Ancient Bottle Gourd Seeds", "DN.SnS_lavaeelandstirfriedancientbottlegourd" },
+                    new string[] { "Ancient Giant Apple Berry Seeds", "DN.SnS_mushroomsredsauce" },
+                    new string[] { "Ancient Azure Detura", "DN.SnS_ferngreensandpineapple" },
+                    new string[] { "Ancient Glowing Huckleberry Seeds", "DN.SnS_ancienthuckleberryicecream", "Druidic Totem Fetish" },
                     null,
                 };
 

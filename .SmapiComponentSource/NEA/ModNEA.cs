@@ -31,8 +31,8 @@ namespace NeverEndingAdventure
         public static Mod Instance { get; private set; }
 
         /// <summary>The item ID for the Ring of Wide Nets.</summary>
-        public static string MateoGuildBadge => "swordandsorcery.adventureguildbadge";
-        public static string MateoStygiumPendant => "swordandsorcery.styguimpendant";
+        public static string MateoGuildBadge => "DN.SnS_adventureguildbadge";
+        public static string MateoStygiumPendant => "DN.SnS_styguimpendant";
 
         public bool HasWearMoreRings => this.WearMoreRings != null;
 
