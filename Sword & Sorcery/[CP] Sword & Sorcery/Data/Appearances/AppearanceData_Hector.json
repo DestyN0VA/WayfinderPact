@@ -30,9 +30,21 @@
             "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_wolf.png"
         },
         {
-            "LogName": "Hector Temp Portrait Load",
+            "LogName": "Hector Wolf Temp Portrait Load",
             "Action": "Load",
             "Target": "Portraits/HectorWolf",
+            "FromFile": "assets/TemporaryActors/Portraits/HectorWolf.png"
+        },
+        {
+            "LogName": "Hector Wolf Tempactor Character Load",
+            "Action": "Load",
+            "Target": "Characters/MysteryWolf",
+            "FromFile": "assets/TemporaryActors/Characters/MysteryWolf.{{HectorHeterochromatic}}.png"
+        },
+        {
+            "LogName": "Hector WOlf Tempactor Portrait Load",
+            "Action": "Load",
+            "Target": "Portraits/MysteryWolf",
             "FromFile": "assets/TemporaryActors/Portraits/HectorWolf.png"
         },
         {
@@ -157,7 +169,7 @@
         {
             "LogName": "Heterochromatic Eyes - Wolf",
             "Action": "EditImage",
-            "Target": "Portaits/HectorWolf, Portraits/Hector_wolf",
+            "Target": "Portaits/HectorWolf, Portraits/MysteryWolf, Portraits/Hector_wolf",
             "PatchMode": "Overlay",
             "FromFile": "Assets/Portraits/Hector/heterochromia_wolf.png",
             "Update": "OnTimeChange, OnLocationChange",
