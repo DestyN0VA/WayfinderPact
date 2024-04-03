@@ -307,7 +307,7 @@
   </object>
   <object id="23" name="TileData" x="144" y="240" width="16" height="16">
    <properties>
-    <property name="Action" value="OpenShop {{ModID}}_CAGArtifactLedger"/>
+    <property name="Action" value="OpenShop DN.SnS_CAGArtifactLedger"/>
    </properties>
   </object>
   <object id="26" name="TileData" x="208" y="176" width="16" height="16">
