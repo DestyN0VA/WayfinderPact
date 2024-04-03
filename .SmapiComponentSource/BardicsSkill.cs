@@ -6,7 +6,7 @@ using SwordAndSorcerySMAPI;
 
 namespace SwordAndSorcerySMAPI
 {
-    internal class BardicsSkill : SpaceCore.Skills.Skill
+    public class BardicsSkill : SpaceCore.Skills.Skill
     {
         public static GenericProfession ProfessionBuff;
         public static GenericProfession ProfessionAttack;

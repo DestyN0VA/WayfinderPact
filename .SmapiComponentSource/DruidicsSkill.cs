@@ -5,7 +5,7 @@ using SwordAndSorcerySMAPI;
 
 namespace CircleOfThornsSMAPI
 {
-    internal class DruidicsSkill : SpaceCore.Skills.Skill
+    public class DruidicsSkill : SpaceCore.Skills.Skill
     {
         public static GenericProfession ProfessionShapeshift;
         public static GenericProfession ProfessionAgriculture;
