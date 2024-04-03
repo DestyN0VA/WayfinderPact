@@ -4,14 +4,14 @@
 "Action": "EditData",
 "Target": "Data/Shops",
 "Entries": {
-"swordandsorcery.CAGArtifactLedger": {
+"{{ModID}}_CAGArtifactLedger": {
 "Owners": [
  {
 "Name": "AnyOrNone",
 "Portrait": "{{InternalAssetKey:Assets/TemporaryActors/Portraits/CGEmblem.png}}",
 "Dialogues": [
  {
-  "Id": "swordandsorcery.CAGArtifactLedger",
+  "Id": "{{ModID}}_CAGArtifactLedger",
   "Dialogue": "{{i18n:miscellaneous.CAGArtifactLedger.message}}"
  }
 ]
@@ -19,7 +19,7 @@
   ],
   "Items": [
   {
-"Id": "swordandsorcery.Group1",
+"Id": "{{ModID}}_Group1",
 "AvailableStock": 3,
 "TradeItemId": "881",
 "TradeItemAmount": 100,
@@ -41,7 +41,7 @@
 ]
 },
   {
-"Id": "swordandsorcery.Group2",
+"Id": "{{ModID}}_Group2",
 "AvailableStock": 3,
 "TradeItemId": "881",
 "TradeItemAmount": 100,
@@ -60,7 +60,7 @@
 ]
 },
   {
-"Id": "swordandsorcery.Group3",
+"Id": "{{ModID}}_Group3",
 "AvailableStock": 3,
 "TradeItemId": "881",
 "TradeItemAmount": 100,
@@ -86,7 +86,7 @@
 ]
 },
   {
-"Id": "swordandsorcery.Group4",
+"Id": "{{ModID}}_Group4",
 "AvailableStock": 3,
 "TradeItemId": "881",
 "TradeItemAmount": 100,
@@ -110,7 +110,7 @@
 ]
 },
   {
-"Id": "swordandsorcery.Group5",
+"Id": "{{ModID}}_Group5",
 "AvailableStock": 3,
 "TradeItemId": "881",
 "TradeItemAmount": 100,
@@ -137,7 +137,7 @@
 ]
 },
  {
-"Id": "swordandsorcery.Group6",
+"Id": "{{ModID}}_Group6",
 "AvailableStock": 3,
 "TradeItemId": "881",
 "TradeItemAmount": 100,
@@ -160,7 +160,7 @@
 ]
 },
  {
-"Id": "swordandsorcery.Group7",
+"Id": "{{ModID}}_Group7",
 "AvailableStock": 3,
 "TradeItemId": "881",
 "TradeItemAmount": 100,

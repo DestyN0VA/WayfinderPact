@@ -34,11 +34,11 @@
         "AcceptGift_(O)446": "{{i18n:Gifts.Hector.GiftReaction.RabbitsFoot}}",
         "AcceptGift_(O)220": "{{i18n:Gifts.Hector.GiftReaction.ChocolateCake}}",
         // ANCIENT CROPS
-        "AcceptGift_(O)swordandsorcery.ancientamaranth": "{{i18n:Gifts.Hector.GiftReaction.AncientAmaranth}}",
-        "AcceptGift_(O)swordandsorcery.ancientepiphyticfern": "{{i18n:Gifts.Hector.GiftReaction.AncientFern}}",
-        "AcceptGift_(O)swordandsorcery.ancientglowinghuckleberry": "{{i18n:Gifts.Hector.GiftReaction.AncientHuckleberry}}",
-        "AcceptGift_(O)swordandsorcery.glowingpolyporemushrooms": "{{i18n:Gifts.Hector.GiftReaction.AncientMushroom}}",
-        "AcceptGift_(O)swordandsorcery.ancientwildfairyroses": "{{i18n:Gifts.Hector.GiftReaction.AncientRose}}",
+        "AcceptGift_(O){{ModID}}_ancientamaranth": "{{i18n:Gifts.Hector.GiftReaction.AncientAmaranth}}",
+        "AcceptGift_(O){{ModID}}_ancientepiphyticfern": "{{i18n:Gifts.Hector.GiftReaction.AncientFern}}",
+        "AcceptGift_(O){{ModID}}_ancientglowinghuckleberry": "{{i18n:Gifts.Hector.GiftReaction.AncientHuckleberry}}",
+        "AcceptGift_(O){{ModID}}_glowingpolyporemushrooms": "{{i18n:Gifts.Hector.GiftReaction.AncientMushroom}}",
+        "AcceptGift_(O){{ModID}}_ancientwildfairyroses": "{{i18n:Gifts.Hector.GiftReaction.AncientRose}}",
         // ITEM REJECTIONS 
         "RejectItem_(O)458": "{{i18n:Gifts.Hector.GiftReject.Bouquet}}",
       }
