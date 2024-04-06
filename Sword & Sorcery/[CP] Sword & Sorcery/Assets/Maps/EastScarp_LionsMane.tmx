@@ -303,7 +303,7 @@
   </object>
   <object id="107" name="TileData" x="352" y="432" width="16" height="16">
    <properties>
-    <property name="Action" value="OpenShop swordandsorcery.LMCafe down 1200 2000"/>
+    <property name="Action" value="OpenShop DN.SnS_LMCafe down 1200 2000"/>
    </properties>
   </object>
   <object id="108" name="TileData" x="288" y="432" width="16" height="16">

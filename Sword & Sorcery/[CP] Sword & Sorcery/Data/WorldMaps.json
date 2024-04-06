@@ -21,7 +21,7 @@
           "Tooltips": [
             {
               "Id": "MateoHome",
-              "Text": "{{i18n:MapName.ESMateoHome}}"
+              "Text": "{{i18n:miscellaneous.mapname.ESMateoHome}}"
             }
           ],
           "WorldPositions": [
@@ -35,7 +35,7 @@
                 "Width": 9,
                 "Height": 11
               },
-              "ScrollText": "{{i18n:MapName.ESMateoHome}}"
+              "ScrollText": "{{i18n:miscellaneous.mapname.ESMateoHome}}"
             },
             {
               "Id": "CoastalGuild",
@@ -46,7 +46,7 @@
                 "Width": 9,
                 "Height": 11
               },
-              "ScrollText": "{{i18n:MapName.CoastalGuild}}"
+              "ScrollText": "{{i18n:miscellaneous.mapname.CoastalGuild}}"
             },
             {
               "ScrollTextZones": [],
@@ -70,7 +70,7 @@
           "Tooltips": [
             {
               "Id": "LionsMane",
-              "Text": "{{i18n:MapName.LionsMane1}}"
+              "Text": "{{i18n:miscellaneous.mapname.LionsMane1}}"
             }
           ],
           "WorldPositions": [
@@ -84,7 +84,7 @@
                 "Width": 12,
                 "Height": 8
               },
-              "ScrollText": "{{i18n:MapName.LionsMane}}"
+              "ScrollText": "{{i18n:miscellaneous.mapname.LionsMane}}"
             },
             {
               "ScrollTextZones": [],
@@ -124,7 +124,7 @@
           "Tooltips": [
             {
               "Id": "MagicalPizzaVan",
-              "Text": "{{i18n:MapName.VanInterior}}"
+              "Text": "{{i18n:miscellaneous.mapname.VanInterior}}"
             }
           ],
           "WorldPositions": [
@@ -138,7 +138,7 @@
                 "Width": 8,
                 "Height": 7
               },
-              "ScrollText": "{{i18n:MapName.VanInterior}}"
+              "ScrollText": "{{i18n:miscellaneous.mapname.VanInterior}}"
             },
             {
               "ScrollTextZones": [],
@@ -291,7 +291,7 @@
       },
       "TargetField": [ "EastScarp", "MapAreas", "MainScarp", "ToolTips", "MateoHome" ],
       "Entries": {
-        "Text": "{{i18n:MapName.CoastalGuild}}"
+        "Text": "{{i18n:miscellaneous.mapname.CoastalGuild}}"
       }
     },
 
@@ -306,7 +306,7 @@
       },
       "TargetField": [ "EastScarp", "MapAreas", "MainScarp", "ToolTips", "LionsMane" ],
       "Entries": {
-        "Text": "{{i18n:MapName.LionsMane}}"
+        "Text": "{{i18n:miscellaneous.mapname.LionsMane}}"
       }
     },
 
@@ -342,7 +342,7 @@
           "Tooltips": [
             {
               "Id": "MateoHome",
-              "Text": "{{i18n:MapName.ESMateoHome}}"
+              "Text": "{{i18n:miscellaneous.mapname.ESMateoHome}}"
             }
           ],
           "WorldPositions": [
@@ -356,7 +356,7 @@
                 "Width": 9,
                 "Height": 11
               },
-              "ScrollText": "{{i18n:MapName.ESMateoHome}}"
+              "ScrollText": "{{i18n:miscellaneous.mapname.ESMateoHome}}"
             },
             {
               "Id": "CoastalGuild",
@@ -367,7 +367,7 @@
                 "Width": 9,
                 "Height": 11
               },
-              "ScrollText": "{{i18n:MapName.CoastalGuild}}"
+              "ScrollText": "{{i18n:miscellaneous.mapname.CoastalGuild}}"
             },
             {
               "ScrollTextZones": [],
@@ -391,7 +391,7 @@
           "Tooltips": [
             {
               "Id": "LionsMane",
-              "Text": "{{i18n:MapName.LionsMane1}}"
+              "Text": "{{i18n:miscellaneous.mapname.LionsMane1}}"
             }
           ],
           "WorldPositions": [
@@ -405,7 +405,7 @@
                 "Width": 12,
                 "Height": 8
               },
-              "ScrollText": "{{i18n:MapName.LionsMane}}"
+              "ScrollText": "{{i18n:miscellaneous.mapname.LionsMane}}"
             },
             {
               "ScrollTextZones": [],
@@ -442,7 +442,7 @@
           "Tooltips": [
             {
               "Id": "MagicalPizzaVan",
-              "Text": "{{i18n:MapName.VanInterior}}"
+              "Text": "{{i18n:miscellaneous.mapname.VanInterior}}"
             }
           ],
           "WorldPositions": [
@@ -456,7 +456,7 @@
                 "Width": 8,
                 "Height": 7
               },
-              "ScrollText": "{{i18n:MapName.VanInterior}}"
+              "ScrollText": "{{i18n:miscellaneous.mapname.VanInterior}}"
             },
             {
               "ScrollTextZones": [],
@@ -609,7 +609,7 @@
       },
       "TargetField": [ "EastScarp", "MapAreas", "MainScarp", "ToolTips", "MateoHome" ],
       "Entries": {
-        "Text": "{{i18n:MapName.CoastalGuild}}"
+        "Text": "{{i18n:miscellaneous.mapname.CoastalGuild}}"
       }
     },
 
@@ -624,7 +624,7 @@
       },
       "TargetField": [ "EastScarp", "MapAreas", "MainScarp", "ToolTips", "LionsMane" ],
       "Entries": {
-        "Text": "{{i18n:MapName.LionsMane}}"
+        "Text": "{{i18n:miscellaneous.mapname.LionsMane}}"
       }
     }
 

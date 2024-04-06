@@ -24,10 +24,10 @@
         "AcceptGift_(O)213": "{{i18n:Gifts.Roslin.GiftReaction.SalmonDinner}}",
         "AcceptGift_(O)214": "{{i18n:Gifts.Roslin.GiftReaction.FishTaco}}",
         "AcceptGift_(O)215": "{{i18n:Gifts.Roslin.GiftReaction.CrispyBass}}",
-        "AcceptGift_(O)swordandsorcery.zuzustylebagelwithlox": "{{i18n:Gifts.Roslin.GiftReaction.zuzustylebagelwithlox}}",
-        "AcceptGift_(O)swordandsorcery.zuzustylepizza": "{{i18n:Gifts.Roslin.GiftReaction.ZuzuStylePizza}}",
-        "AcceptGift_(O)swordandsorcery.zuzustylecheesecake": "{{i18n:Gifts.Roslin.GiftReaction.ZuzuStyleCheesecake}}",
-        "AcceptGift_(O)swordandsorcery.portfiredrakesparkler": "{{i18n:Gifts.Roslin.GiftReaction.PortfireDrakeSparkler}}",
+        "AcceptGift_(O){{ModID}}_zuzustylebagelwithlox": "{{i18n:Gifts.Roslin.GiftReaction.zuzustylebagelwithlox}}",
+        "AcceptGift_(O){{ModID}}_zuzustylepizza": "{{i18n:Gifts.Roslin.GiftReaction.ZuzuStylePizza}}",
+        "AcceptGift_(O){{ModID}}_zuzustylecheesecake": "{{i18n:Gifts.Roslin.GiftReaction.ZuzuStyleCheesecake}}",
+        "AcceptGift_(O){{ModID}}_portfiredrakesparkler": "{{i18n:Gifts.Roslin.GiftReaction.PortfireDrakeSparkler}}",
         // LIKES
         "AcceptGift_(O)731": "{{i18n:Gifts.Roslin.GiftReaction.MapleBar}}",
         "AcceptGift_(O)225": "{{i18n:Gifts.Roslin.GiftReaction.FriedEel}}",
@@ -46,7 +46,7 @@
         "AcceptGift_(O)446": "{{i18n:Gifts.Roslin.GiftReaction.RabbitsFoot}}",
         "AcceptGift_(O)220": "{{i18n:Gifts.Roslin.GiftReaction.ChocolateCake}}",
         // ANCIENT CROPS
-        "AcceptGift_(O)swordandsorcery.ancientwildfairyroses": "{{i18n:Gifts.Roslin.GiftReaction.AncientRose}}",
+        "AcceptGift_(O){{ModID}}_ancientwildfairyroses": "{{i18n:Gifts.Roslin.GiftReaction.AncientRose}}",
         // ITEM REJECTIONS 
         "RejectItem_(O)458": "{{i18n:Gifts.Roslin.GiftReject.Bouquet}}",
       }
@@ -61,8 +61,8 @@
         "AcceptGift_(O)213": "{{i18n:Gifts.Roslin.GiftReaction.SalmonDinner.Birthday}}",
         "AcceptGift_(O)214": "{{i18n:Gifts.Roslin.GiftReaction.FishTaco.Birthday}}",
         "AcceptGift_(O)215": "{{i18n:Gifts.Roslin.GiftReaction.CrispyBass.Birthday}}",
-        "AcceptGift_(O)swordandsorcery.zuzustylebagelwithlox": "{{i18n:Gifts.Roslin.GiftReaction.zuzustylebagelwithlox.Birthday}}",
-        "AcceptGift_(O)swordandsorcery.zuzustylepizza": "{{i18n:Gifts.Roslin.GiftReaction.ZuzuStylePizza.Birthday}}",
+        "AcceptGift_(O){{ModID}}_zuzustylebagelwithlox": "{{i18n:Gifts.Roslin.GiftReaction.zuzustylebagelwithlox.Birthday}}",
+        "AcceptGift_(O){{ModID}}_zuzustylepizza": "{{i18n:Gifts.Roslin.GiftReaction.ZuzuStylePizza.Birthday}}",
       },
       "When": {
         "Season": "winter",

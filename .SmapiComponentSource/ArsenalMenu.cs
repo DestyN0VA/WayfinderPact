@@ -109,7 +109,7 @@ public class SecondEnchantmentForgeRecipe : CustomForgeRecipe
     }
 
     public override IngredientMatcher BaseItem { get; } = new ToolIngredientMatcher();
-    public override IngredientMatcher IngredientItem { get; } = new GenericIngredientMatcher("(O)swordandsorcery.ArcanePrimer", 1);
+    public override IngredientMatcher IngredientItem { get; } = new GenericIngredientMatcher("(O)DN.SnS_ArcanePrimer", 1);
     public override int CinderShardCost { get; } = 30;
     public override Item CreateResult(Item baseItem, Item ingredItem)
     {
@@ -147,22 +147,22 @@ public partial class ModSnS
 
     public static Dictionary<string, string> ExquisiteGemMappings = new()
     {
-        { StardewValley.Object.emeraldQID, "(O)DN.SnS.ExquisiteEmerald" },
-        { StardewValley.Object.rubyQID, "(O)DN.SnS.ExquisiteRuby" },
-        { StardewValley.Object.topazQID, "(O)DN.SnS.ExquisiteTopaz" },
-        { StardewValley.Object.aquamarineQID, "(O)DN.SnS.ExquisiteAquamarine" },
-        { StardewValley.Object.amethystClusterQID, "(O)DN.SnS.ExquisiteAmethyst" },
-        { StardewValley.Object.sapphireQID /* WHAT? */, "(O)DN.SnS.ExquisiteJade" },
-        { StardewValley.Object.diamondQID, "(O)DN.SnS.ExquisiteDiamond" },
+        { StardewValley.Object.emeraldQID, "(O)DN.SnS_ExquisiteEmerald" },
+        { StardewValley.Object.rubyQID, "(O)DN.SnS_ExquisiteRuby" },
+        { StardewValley.Object.topazQID, "(O)DN.SnS_ExquisiteTopaz" },
+        { StardewValley.Object.aquamarineQID, "(O)DN.SnS_ExquisiteAquamarine" },
+        { StardewValley.Object.amethystClusterQID, "(O)DN.SnS_ExquisiteAmethyst" },
+        { StardewValley.Object.sapphireQID /* WHAT? */, "(O)DN.SnS_ExquisiteJade" },
+        { StardewValley.Object.diamondQID, "(O)DN.SnS_ExquisiteDiamond" },
     };
 
     public static Dictionary<string, string> PureOreMappings = new()
     {
-        { StardewValley.Object.copperQID, "(O)DN.SnS.PureCopperOre" },
-        { StardewValley.Object.ironQID, "(O)DN.SnS.PureIronOre" },
-        { StardewValley.Object.goldQID, "(O)DN.SnS.PureGoldOre" },
-        { StardewValley.Object.iridiumQID, "(O)DN.SnS.PureIridiumOre" },
-        { "(O)909", "(O)DN.SnS.PureRadioactiveOre" },
+        { StardewValley.Object.copperQID, "(O)DN.SnS_PureCopperOre" },
+        { StardewValley.Object.ironQID, "(O)DN.SnS_PureIronOre" },
+        { StardewValley.Object.goldQID, "(O)DN.SnS_PureGoldOre" },
+        { StardewValley.Object.iridiumQID, "(O)DN.SnS_PureIridiumOre" },
+        { "(O)909", "(O)DN.SnS_PureRadioactiveOre" },
     };
 
     public static Dictionary<string, int> CoatingIconMapping = new()
@@ -175,11 +175,11 @@ public partial class ModSnS
     };
     public static Dictionary<string, int> AlloyIconMapping = new()
     {
-        { "(O)DN.SnS.PureCopperOre",  8 },
-        { "(O)DN.SnS.PureIronOre",  9 },
-        { "(O)DN.SnS.PureGoldOre", 10 },
-        { "(O)DN.SnS.PureIridiumOre", 11 },
-        { "(O)DN.SnS.PureRadioactiveOre", 12 },
+        { "(O)DN.SnS_PureCopperOre",  8 },
+        { "(O)DN.SnS_PureIronOre",  9 },
+        { "(O)DN.SnS_PureGoldOre", 10 },
+        { "(O)DN.SnS_PureIridiumOre", 11 },
+        { "(O)DN.SnS_PureRadioactiveOre", 12 },
     };
 
     public static Dictionary<string, int> CoatingQuantities = new()
@@ -214,9 +214,9 @@ public partial class ModSnS
         // Arcane primer recipe is moved to Ch4
         // tile action is moved to Underforge
         /*
-        if (e.NewLocation.Name == "Caldera" && !e.Player.craftingRecipes.ContainsKey("swordandsorcery.ArcanePrimer"))
+        if (e.NewLocation.Name == "Caldera" && !e.Player.craftingRecipes.ContainsKey("DN.SnS_ArcanePrimer"))
         {
-            e.Player.craftingRecipes.Add("swordandsorcery.ArcanePrimer", 0);
+            e.Player.craftingRecipes.Add("DN.SnS_ArcanePrimer", 0);
         }
         else if (e.NewLocation.Name == "Blacksmith")
         {
@@ -321,7 +321,7 @@ public class ArsenalMenu : IClickableMenu
         {
             LocalPosition = new(250, height / 4 - 64 / 2),
             BoxIsThin = true,
-            ItemDisplay = new StardewValley.Object("swordandsorcery.ExquisiteDiamond", 1),
+            ItemDisplay = new StardewValley.Object("DN.SnS_ExquisiteDiamond", 1),
             TransparentItemDisplay = true,
             UserData = $"{I18n.Anvil_ValidOptions()}:\n{string.Join(newline, ModSnS.ExquisiteGemMappings.Values.Select(s => (spacing + ItemRegistry.GetData(s).DisplayName)))}"
         };
@@ -731,18 +731,18 @@ public static class MonsterTakeDamagePatch
 
         switch (mw.GetExquisiteGemstone())
         {
-            case "(O)swordandsorcery.ExquisiteEmerald":
+            case "(O)DN.SnS_ExquisiteEmerald":
                 who.buffs.Apply(new Buff("exquisiteemerald", duration: 5000,
                     effects: new BuffEffects() { Speed = { 1.5f } }));
                 break;
 
-            case "(O)swordandsorcery.ExquisiteRuby":
+            case "(O)DN.SnS_ExquisiteRuby":
                 DelayedAction.functionAfterDelay(() => { if (__instance.health.Value > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 1000);
                 DelayedAction.functionAfterDelay(() => { if (__instance.health.Value > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 2000);
                 DelayedAction.functionAfterDelay(() => { if (__instance.health.Value > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 3000);
                 break;
 
-            case "(O)swordandsorcery.ExquisiteJade":
+            case "(O)DN.SnS_ExquisiteJade":
                 if (!GameLocationDamageMonsterFlagsPatch.hasHealedYet)
                 {
                     GameLocationDamageMonsterFlagsPatch.hasHealedYet = true;
@@ -750,12 +750,12 @@ public static class MonsterTakeDamagePatch
                 }
                 break;
 
-            case "(O)swordandsorcery.ExquisiteAmethyst":
+            case "(O)DN.SnS_ExquisiteAmethyst":
                 if (Game1.random.NextDouble() < 0.15)
                     __instance.stunTime.Value = 3000;
                 break;
 
-            case "(O)swordandsorcery.ExquisiteDiamond":
+            case "(O)DN.SnS_ExquisiteDiamond":
                 if (!GameLocationDamageMonsterFlagsPatch.hasHealedYet)
                 {
                     GameLocationDamageMonsterFlagsPatch.hasHealedYet = true;
@@ -767,9 +767,9 @@ public static class MonsterTakeDamagePatch
         switch (mw.GetBladeCoating())
         {
             case "(O)766": // Slime
-                if (!__instance.modData.ContainsKey("swordandsorcery.Slimed"))
+                if (!__instance.modData.ContainsKey("DN.SnS_Slimed"))
                 {
-                    __instance.modData.Add("swordandsorcery.Slimed", "meow");
+                    __instance.modData.Add("DN.SnS_Slimed", "meow");
                     __instance.addedSpeed = -1.5f;
                 }
                 break;
@@ -802,7 +802,7 @@ public static class FarmerLessDamageForExquisiteTopazPatch
     public static void Prefix(Farmer __instance, ref int damage)
     {
         if (__instance.CurrentTool is MeleeWeapon mw &&
-            mw.GetExquisiteGemstone() == "(O)swordandsorcery.ExquisiteTopaz")
+            mw.GetExquisiteGemstone() == "(O)DN.SnS_ExquisiteTopaz")
         {
             damage = Math.Max(1, (int)(damage * 0.85));
         }

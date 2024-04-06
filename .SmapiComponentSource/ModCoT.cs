@@ -195,10 +195,10 @@ namespace CircleOfThornsSMAPI
                     new string[] { "Ancient Wild Fairy Rose Seeds" },
                     new string[] { "Ancient Elderberry Seeds" },
                     null,
-                    new string[] { "Ancient Bottle Gourd Seeds", "swordandsorcery.lavaeelandstirfriedancientbottlegourd" },
-                    new string[] { "Ancient Giant Apple Berry Seeds", "swordandsorcery.mushroomsredsauce" },
-                    new string[] { "Ancient Azure Detura", "swordandsorcery.ferngreensandpineapple" },
-                    new string[] { "Ancient Glowing Huckleberry Seeds", "swordandsorcery.ancienthuckleberryicecream" },
+                    new string[] { "Ancient Bottle Gourd Seeds", "DN.SnS_lavaeelandstirfriedancientbottlegourd" },
+                    new string[] { "Ancient Giant Apple Berry Seeds", "DN.SnS_mushroomsredsauce" },
+                    new string[] { "Ancient Azure Detura", "DN.SnS_ferngreensandpineapple" },
+                    new string[] { "Ancient Glowing Huckleberry Seeds", "DN.SnS_ancienthuckleberryicecream" },
                     null,
                 };
             for (int level = 1; level <= Game1.player.GetCustomSkillLevel(Skill); ++level)
@@ -341,7 +341,7 @@ namespace CircleOfThornsSMAPI
     {
         public static bool Prefix(FruitTree __instance, ref bool __result)
         {
-            if (__instance.treeId.Value != "swordandsorcery.ancientglowinghuckleberry.seed")
+            if (__instance.treeId.Value != "DN.SnS_ancientglowinghuckleberry.seed")
                 return true;
 
             var season = Game1.GetSeasonForLocation(__instance.Location);
@@ -357,7 +357,7 @@ namespace CircleOfThornsSMAPI
     {
         public static bool Prefix(FruitTree __instance, SpriteBatch spriteBatch, NetBool ___falling, float ___shakeTimer, float ___shakeRotation, List<Leaf> ___leaves, float ___alpha )
         {
-            if (__instance.treeId.Value != "swordandsorcery.ancientglowinghuckleberry.seed")
+            if (__instance.treeId.Value != "DN.SnS_ancientglowinghuckleberry.seed")
                 return true;
 
             Season season = Game1.GetSeasonForLocation(__instance.Location);
@@ -626,7 +626,7 @@ namespace CircleOfThornsSMAPI
                 mult += 0.01f;
             if (junimoHarvester == null && Game1.random.NextDouble() < 8 * mult)
             {
-                Game1.createItemDebris(new StardewValley.Object("swordandsorcery.druidicessence", 1), new Vector2(xTile, yTile) * Game1.tileSize, -1);
+                Game1.createItemDebris(new StardewValley.Object("DN.SnS_druidicessence", 1), new Vector2(xTile, yTile) * Game1.tileSize, -1);
             }
         }
     }
@@ -648,7 +648,7 @@ namespace CircleOfThornsSMAPI
                 mult += 0.01f;
             if (Game1.random.NextDouble() < 4 * mult)
             {
-                Game1.createItemDebris(new StardewValley.Object("swordandsorcery.druidicessence", 1), tileLocation * Game1.tileSize, -1);
+                Game1.createItemDebris(new StardewValley.Object("DN.SnS_druidicessence", 1), tileLocation * Game1.tileSize, -1);
             }
         }
     }
@@ -670,7 +670,7 @@ namespace CircleOfThornsSMAPI
                 mult += 0.01f;
             if (Game1.random.NextDouble() < 4 * mult)
             {
-                Game1.createItemDebris(new StardewValley.Object("swordandsorcery.druidicessence", 1), __instance.Tile * Game1.tileSize, -1);
+                Game1.createItemDebris(new StardewValley.Object("DN.SnS_druidicessence", 1), __instance.Tile * Game1.tileSize, -1);
             }
         }
     }
@@ -692,7 +692,7 @@ namespace CircleOfThornsSMAPI
                 mult += 0.01f;
             if (Game1.random.NextDouble() < 2 * mult)
             {
-                Game1.createItemDebris(new StardewValley.Object("swordandsorcery.druidicessence", 1), __instance.Tile * Game1.tileSize, -1);
+                Game1.createItemDebris(new StardewValley.Object("DN.SnS_druidicessence", 1), __instance.Tile * Game1.tileSize, -1);
             }
         }
     }
@@ -766,14 +766,14 @@ namespace CircleOfThornsSMAPI
                 {
                     string[] ids = new string[]
                     {
-                        "swordandsorcery.ancientamaranth.object",
-                        "swordandsorcery.ancientepiphyticfern.object",
-                        "swordandsorcery.glowingpolyporemushrooms.object",
-                        "swordandsorcery.ancientwildfairyroses.object",
-                        "swordandsorcery.ancientelderberry.object",
-                        "swordandsorcery.ancientbottlegourd.object",
-                        "swordandsorcery.ancientgiantappleberry.object",
-                        "swordandsorcery.ancientazuredetura.object"
+                        "DN.SnS_ancientamaranth.object",
+                        "DN.SnS_ancientepiphyticfern.object",
+                        "DN.SnS_glowingpolyporemushrooms.object",
+                        "DN.SnS_ancientwildfairyroses.object",
+                        "DN.SnS_ancientelderberry.object",
+                        "DN.SnS_ancientbottlegourd.object",
+                        "DN.SnS_ancientgiantappleberry.object",
+                        "DN.SnS_ancientazuredetura.object"
                     };
                     if (ids.Contains(__instance.preservedParentSheetIndex.Value))
                     {

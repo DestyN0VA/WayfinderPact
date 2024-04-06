@@ -32,7 +32,7 @@
                     "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_GaveDailySnack",
                     "Actions": [
                         "AddMail Current {{ModId}}_GaveDailySnack",
-                        "AddItem swordandsorcery.freshpopcorn"
+                        "AddItem {{ModID}}_freshpopcorn"
                     ],
                     "MarkActionApplied": false
                 },
@@ -57,7 +57,7 @@
                     "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_GaveDailyDrink",
                     "Actions": [
                         "AddMail Current {{ModId}}_GaveDailyDrink",
-                        "AddItem swordandsorcery.fountainsoda"
+                        "AddItem {{ModID}}_fountainsoda"
                     ],
                     "MarkActionApplied": false
                 },

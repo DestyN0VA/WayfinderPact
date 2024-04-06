@@ -18,7 +18,7 @@ using static StardewValley.Projectiles.BasicProjectile;
 
 namespace SwordAndSorcerySMAPI
 {
-    internal class BowCraftingRecipe : CustomCraftingRecipe
+    public class BowCraftingRecipe : CustomCraftingRecipe
     {
         public override string Description => ItemRegistry.GetDataOrErrorItem("(W)DN.SnS_Bow").Description;
 

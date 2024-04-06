@@ -321,6 +321,8 @@ namespace SwordAndSorcerySMAPI
             new ModCoT(Monitor, ModManifest, Helper).Entry();
             new ModNEA(Monitor, ModManifest, Helper).Entry(harmony);
             new ModUP(Monitor, ModManifest, Helper).Entry();
+
+            InitArsenal();
         }
 
         private void GameLoop_SaveCreated(object sender, StardewModdingAPI.Events.SaveCreatedEventArgs e)
@@ -362,7 +364,7 @@ namespace SwordAndSorcerySMAPI
                 e.Cursor.Tile == farm.GetGrandpaShrinePosition().ToVector2() &&
                 farm.grandpaScore.Value == 4 && !Game1.player.GetFarmerExtData().hasTakenLoreWeapon.Value)
             {
-                Game1.player.addItemByMenuIfNecessaryElseHoldUp(new MeleeWeapon("swordandsorcery.longlivetheking"));
+                Game1.player.addItemByMenuIfNecessaryElseHoldUp(new MeleeWeapon("DN.SnS_longlivetheking"));
                 Game1.player.GetFarmerExtData().hasTakenLoreWeapon.Value = true;
             }
         }
