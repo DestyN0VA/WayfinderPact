@@ -246,6 +246,18 @@
 
     },
 
+    {
+      "LogName": "Cirrus Foreshadowing Event",
+      "Action": "EditData",
+      "Target": "Data/Events/BusStop",
+      "Entries": {
+
+        "SnS.Ch2.Cirrus/e SnS.Ch2.Hector.8/t 600 1200/F": "SnS.CirrusTheme/-100 -100/farmer 18 23 1 Sam 24 17 2/skippable/viewport 24 23 clamp true/addConversationTopic SoldOutShow 2/pause 500/advancedMove Sam false 0 4 2 10/advancedMove farmer false 6 0 4 10/pause 250/emote farmer 8 true/emote Sam 16 true/speak Sam \"{{i18n:Events.SnS.Ch2.Sam.1}}\"/pause 250/emote farmer 32/pause 250/speak Sam \"{{i18n:Events.SnS.Ch2.Sam.2}}\"/fade/viewport -1000 -1000/pause 500/end",
+
+      }
+
+    },
+
   ]
 
 }

@@ -3631,7 +3631,9 @@ ________      ________ _   _ _______ _____
 
 */
 
-"Events.SnS.0H1.Cirrus.1": "",
+// CH 2 FORESHADOWING EVENT
+"Events.SnS.Ch2.Sam.1": "Oh, hey @! I just got back from the stadium in Zuzu, I camped out at the box office all night for concert tickets.#$b#Abigail, Sebastian and I have been wanting to see Cirrus for ages. But she always sells out, so I'm so excited to surprise them! They had no idea I was planning this.$1",
+"Events.SnS.Ch2.Sam.2": "Do you listen to her music, @? If you don't, you should! She shreds on that keytar, it's unreal. Does all her own writing, too. A real virtuoso.$3#$b#Anyway, I'm off to go deliver these. Cant wait to see the looks on their faces... catch you later, @!$0",
 
 /*
    _____ ____  _   _     _______ ____  _____ _____ _____  _____ 
@@ -3645,7 +3647,7 @@ ________      ________ _   _ _______ _____
 
 "CT.Cirrus.Example": "",
 
-// Cirrus' REACTIONS
+// CIRRUS' REACTIONS
 "CT.Cirrus.SterlingDrugs": "",
 "CT.Cirrus.SterlingRelapse": "",
 "CT.Cirrus.SterlingApology": "",
