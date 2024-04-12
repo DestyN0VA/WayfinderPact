@@ -63,8 +63,8 @@
 			"Action": "EditData",
 			"Target": "Data/TriggerActions",
 			"Entries": {
-				"SnS.Id_AutumnalStew": {
-					"Id": "SnS.Id_AutumnalStew",
+				"{{ModID}}_AutumnalStew": {
+					"Id": "{{ModID}}_AutumnalStew",
 					"Trigger": "DayEnding",
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.4",
 					"Actions": [
@@ -77,8 +77,8 @@
 			"Action": "EditData",
 			"Target": "Data/TriggerActions",
 			"Entries": {
-				"SnS.Id_SalishBourbon": {
-					"Id": "SnS.Id_SalishBourbon",
+				"{{ModID}}_SalishBourbon": {
+					"Id": "{{ModID}}_SalishBourbon",
 					"Trigger": "DayEnding",
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.11",
 					"Actions": [

@@ -1,7 +1,44 @@
 {
     "Changes": [
-
-        // MATEO'S TENT 
+        // MATEO'S TENT - LOCKED
+        {
+            "LogName": "Beach Tent Message",
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_Village",
+            "FromFile": "assets/Maps/EastScarp_MateoTent1.tmx",
+            "ToArea": {
+                "X": 89,
+                "Y": 85,
+                "Width": 9,
+                "Height": 12
+            },
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 93,
+                        "Y": 93
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Message TentMessage",
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 94,
+                        "Y": 93
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Message TentMessage",
+                    }
+                }
+            ],
+            "When": {
+                "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": false,
+                "HasSeenEvent |contains=SnS.Ch1.Mateo.0": false
+            }
+        },
         {
             "LogName": "Beach Tent Warp",
             "Action": "EditMap",
@@ -36,10 +73,10 @@
                 }
             ],
             "When": {
-                "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": false
+                "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": false,
+                "HasSeenEvent |contains=SnS.Ch1.Mateo.0": true
             }
         },
-
         // COASTAL GUILD STEP 1
         {
             "LogName": "Beach Guild Warp",
@@ -78,7 +115,6 @@
                 "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
             }
         },
-
         /* // COASTAL GUILD STEP 2
         {
             "LogName": "Upgraded Guild Warp",
@@ -107,7 +143,6 @@
                 "HasFlag |contains=NEWFGUILDFLAG": true
             }
         }, */
-
         // EAST SCARP SPECIAL ORDER BOARD
         {
             "LogName": "Guild Board",
@@ -124,7 +159,6 @@
                 "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
             }
         },
-
         // PATCHES THE DRUID'S TOWER
         {
             "LogName": "Tower Patch",
@@ -132,18 +166,17 @@
             "Target": "Maps/EastScarp_DeepMountains",
             "FromFile": "Assets/Maps/HectorTowerPatch.tmx",
             "ToArea": {
-              "X": 7,
-              "Y": 0,
-              "Width": 9,
-              "Height": 18
+                "X": 7,
+                "Y": 0,
+                "Width": 9,
+                "Height": 18
             },
             "MapProperties": {
-              "DayTiles": "Buildings 10 14 129 Buildings 11 14 130 AlwaysFront 12 13 122 AlwaysFront 12 12 113 AlwaysFront 13 9 87 AlwaysFront 13 8 78 AlwaysFront 12 9 86 AlwaysFront 12 8 77 AlwaysFront 11 10 94 AlwaysFront 11 9 85 AlwaysFront 10 10 93 AlwaysFront 10 9 84 AlwaysFront 10 6 57 AlwaysFront 10 5 48 AlwaysFront 9 6 56 AlwaysFront 9 5 47",
-              "NightTiles": "Buildings 10 14 169 Buildings 11 14 170 AlwaysFront 12 13 177 AlwaysFront 12 12 168 AlwaysFront 13 9 176 AlwaysFront 13 8 167 AlwaysFront 12 9 175 AlwaysFront 12 8 166 AlwaysFront 11 10 174 AlwaysFront 11 9 165 AlwaysFront 10 10 173 AlwaysFront 10 9 164 AlwaysFront 10 6 172 AlwaysFront 10 5 163 AlwaysFront 9 6 171 AlwaysFront 9 5 162",
-              "Light": "10 14 1 11 14 1 12 13 1 12 12 1 13 9 1 13 8 1 12 9 1 12 8 1 11 10 1 11 9 1 10 10 1 10 9 1 10 6 1 10 5 1 9 6 1 9 5 1"
+                "DayTiles": "Buildings 10 14 129 Buildings 11 14 130 AlwaysFront 12 13 122 AlwaysFront 12 12 113 AlwaysFront 13 9 87 AlwaysFront 13 8 78 AlwaysFront 12 9 86 AlwaysFront 12 8 77 AlwaysFront 11 10 94 AlwaysFront 11 9 85 AlwaysFront 10 10 93 AlwaysFront 10 9 84 AlwaysFront 10 6 57 AlwaysFront 10 5 48 AlwaysFront 9 6 56 AlwaysFront 9 5 47",
+                "NightTiles": "Buildings 10 14 169 Buildings 11 14 170 AlwaysFront 12 13 177 AlwaysFront 12 12 168 AlwaysFront 13 9 176 AlwaysFront 13 8 167 AlwaysFront 12 9 175 AlwaysFront 12 8 166 AlwaysFront 11 10 174 AlwaysFront 11 9 165 AlwaysFront 10 10 173 AlwaysFront 10 9 164 AlwaysFront 10 6 172 AlwaysFront 10 5 163 AlwaysFront 9 6 171 AlwaysFront 9 5 162",
+                "Light": "10 14 1 11 14 1 12 13 1 12 12 1 13 9 1 13 8 1 12 9 1 12 8 1 11 10 1 11 9 1 10 10 1 10 9 1 10 6 1 10 5 1 9 6 1 9 5 1"
             }
         },
-
         // ADDS THE TOWER DOOR WARP
         {
             "Action": "EditMap",
@@ -164,7 +197,6 @@
                 "HasSeenEvent |contains=SnS.Ch2.Hector.1": true
             }
         },
-
         // ADDS A LOCKED DOOR TO THE TOWER 
         {
             "Action": "EditMap",
@@ -185,7 +217,6 @@
                 "HasSeenEvent |contains=SnS.Ch2.Hector.1": false
             }
         },
-
         // DUMPSTER WARP
         {
             "Action": "EditMap",
@@ -227,7 +258,6 @@
                 "DumpsterWarp": true,
             }
         },
-
         // PATCHES THE PIZZA VAN
         {
             "LogName": "Pizza Van",
@@ -237,10 +267,10 @@
             "Priority": "Late",
             "PatchMode": "Overlay",
             "ToArea": {
-              "X": 88,
-              "Y": 77,
-              "Width": 11,
-              "Height": 6
+                "X": 88,
+                "Y": 77,
+                "Width": 11,
+                "Height": 6
             },
             "MapTiles": [
                 {
@@ -269,7 +299,6 @@
                 "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": false,
             }
         },
-
         // PATCHES THE BROKEN DOWN LION'S MANE 
         {
             "LogName": "Lion's Mane (Broken) Patch",
@@ -286,7 +315,6 @@
                 "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": false
             }
         },
-
         // ADDS SHUDDERS TO THE BROKEN DOWN LION'S MANE
         {
             "Action": "EditMap",
@@ -307,7 +335,6 @@
                 "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": false
             }
         },
-
         // PATCHES THE REPAIRED LION'S MANE 
         {
             "LogName": "Lion's Mane (Repaired) Patch",
@@ -356,7 +383,6 @@
                 "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true
             }
         },
-
         // ADDS A LOCKED DOOR TO THE UNDERFORGE
         {
             "Action": "EditMap",
@@ -377,7 +403,6 @@
                 "HasSeenEvent |contains=SnS.Ch1.Mateo.18": false
             }
         },
-
         // ADDS THE UNDERFORGE WARP FROM GUILD
         {
             "Action": "EditMap",
@@ -398,7 +423,6 @@
                 "HasSeenEvent |contains=SnS.Ch1.Mateo.18": true
             }
         },
-
         // ADDS THE UNDERFORGE WARP TO GUILD
         {
             "Action": "EditMap",
@@ -416,6 +440,200 @@
                 }
             ],
         },
-
+        // DEEP DARK WARPS
+        // DOWN
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDarkLv0",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 18,
+                        "Y": 8
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 10 9 EastScarp_DeepDarkLv1"
+                    }
+                }
+            ],
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDarkLv1",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 25,
+                        "Y": 34
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 25 31 EastScarp_DeepDarkLv2"
+                    }
+                }
+            ],
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDarkLv2",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 8,
+                        "Y": 8
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 30 22 EastScarp_DeepDarkLv3"
+                    }
+                }
+            ],
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDarkLv3",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 43,
+                        "Y": 25
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 12 5 EastScarp_DeepDarkLv4"
+                    }
+                }
+            ],
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDarkLv4",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 25,
+                        "Y": 8
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 10 9 EastScarp_DeepDarkLv5"
+                    }
+                }
+            ],
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDarkLv5",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 33,
+                        "Y": 4
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 3 15 EastScarp_DuskspireLair"
+                    }
+                }
+            ],
+        },
+        // UP
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDarkLv1",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 5,
+                        "Y": 8
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 17 7 EastScarp_DeepDarkLv0"
+                    }
+                }
+            ],
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDarkLv2",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 21,
+                        "Y": 30
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 17 7 EastScarp_DeepDarkLv0"
+                    }
+                }
+            ],
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDarkLv3",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 25,
+                        "Y": 19
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 17 7 EastScarp_DeepDarkLv0"
+                    }
+                }
+            ],
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDarkLv4",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 8,
+                        "Y": 4
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 17 7 EastScarp_DeepDarkLv0"
+                    }
+                }
+            ],
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDarkLv5",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 10,
+                        "Y": 8
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 17 7 EastScarp_DeepDarkLv0"
+                    }
+                }
+            ],
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DuskspireLair",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 3,
+                        "Y": 14
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 17 7 EastScarp_DeepDarkLv0"
+                    }
+                }
+            ],
+        },
     ]
 }

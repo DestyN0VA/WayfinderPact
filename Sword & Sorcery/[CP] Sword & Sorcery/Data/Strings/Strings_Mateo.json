@@ -38,6 +38,7 @@
         "MysteryCaveExit":"{{i18n:Strings.Mateo.MysteryCaveExit}}",
         "GuildEmblem":"{{i18n:Strings.Mateo.GuildEmblem}}",
         "HawthornLetter":"{{i18n:Strings.Mateo.HawthornLetter}}",
+        "TentMessage":"{{i18n:Strings.Mateo.TentMessage}}",
 
     }
    }

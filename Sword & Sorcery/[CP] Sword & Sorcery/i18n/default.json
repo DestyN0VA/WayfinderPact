@@ -793,7 +793,7 @@
 "Strings.Mateo.DungeonsDragons": "Evidently, Mateo is running a medieval fantasy tabletop game for the local nerds. It's called 'Dark Chronicle'.", 
 "Strings.Mateo.NotADigimon": "How many Pepper Rexes is Mateo planning to hatch..?",
 "Strings.Mateo.Chewtoy": "A stuffie as snuggled as often as it's nibbled on.",
-"Strings.Mateo.BabyEmeritus": "Is this a Pepper Rex egg? In an incubator!? And it's on!?!",
+"Strings.Mateo.BabyEmeritus": "How is Mateo powering this incubator?...",
 "Strings.Mateo.CrabStab": "In hasty handwriting, it reads 'No Crabs Allowed'.",
 "Strings.Mateo.LittleForge": "It looks like Mateo is trying to learn to maintenance their own weapons... yours, as well. And your tools.",
 "Strings.Mateo.FairyRoses": "These Fairy Roses are surprisingly well cared for.",
@@ -810,6 +810,7 @@
 "Strings.Mateo.MysteryCaveExit": "The water does lead out somewhere... but you've got no idea where, or how.",
 "Strings.Mateo.GuildEmblem": "The symbol of the Coastal Adventurer's Guild, a brilliant shield, hands proudly over a chest of adventuring supplies.",
 "Strings.Mateo.HawthornLetter": "An opened letter, signed by Linden Hawthorn: 'It was nigh that I discovered most things that you consider evil or wicked are simply lonely...'",
+"Strings.Mateo.TentMessage": "An adventurer's tent. Perhaps they're in the mines.",
 
 // GHOST RADIO
 "Strings.Mateo.GhostRadio.1": "When you turn the radio on, you catch it in the middle of a song:# 'I can feel the thunder that's breaking in your heart, I can see through the scars inside you...!'",
@@ -1072,7 +1073,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.4H.Mateo.Q3.Response.1": "You're right, @. I can't stew in this forever. I've got to take my chances and let people make judgments on their own.$1",
 "Events.S&S.Ch1.4H.Mateo.Q3.Response.2": "You're right, @. Thank you for trusting me, and seeing me through this... I'll make an effort, I promise.$12",
 "Events.S&S.Ch1.4H.Mateo.13":"I'll do better. Not just for you, but for myself, too.$32",
-"Events.S&S.Ch1.4H.Message.1":"Mateo will now attend festivals, and you can expect to see them around town more often!", 
+"Events.S&S.Ch1.4H.Message.1":"Mateo will now attend festivals!", 
 
 // 5 HEARTS PT 1
 "Events.S&S.Ch1.5H1.Mateo.1":"Howdy, @. It's a little late to get started down there tonight, isn't it? $0#$b#I know you're a competent adventurer, but I'd be pretty devastated if anything happened to you; let's make sure you're geared and ready to go.$1",
@@ -5353,10 +5354,19 @@ ________      ________ _   _ _______ _____
 */
 
 "miscellaneous.CAGArtifactLedger.message": "Use the ledger to trade monster bones for artifacts & minerals.",
+
 "miscellaneous.MermaidPendantCooldown": "%You haven't been dating very long - wait a while before you propose!",
 "miscellaneous.PendantResponse": "%It's finally the right time!...",
+
 "miscellaneous.mapname.ESMateoHome": "Mateo's Tent",
 "miscellaneous.mapname.CoastalGuild": "Coastal Adventurer's Guild",
 "miscellaneous.mapname.LionsMane1": "The Lion's Mane",
 "miscellaneous.mapname.VanInterior": "Cirrus' Pizza Van",
+"miscellaneous.mapname.DeepDarkLv0": "Deep Dark - Entrance",
+"miscellaneous.mapname.DeepDarkLv1": "Deep Dark - Level 1",
+"miscellaneous.mapname.DeepDarkLv2": "Deep Dark - Level 2",
+"miscellaneous.mapname.DeepDarkLv3": "Deep Dark - Level 3",
+"miscellaneous.mapname.DeepDarkLv4": "Deep Dark - Level 4",
+"miscellaneous.mapname.DeepDarkLv5": "Deep Dark - Level 5",
+"miscellaneous.mapname.DuskspireLair": "Deep Dark - Lair of the Duskspire Behemoth",
 }

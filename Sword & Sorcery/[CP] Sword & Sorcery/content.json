@@ -406,58 +406,6 @@
     {
       "Name": "MateoSpawn",
       "Value": "EastScarp_MateoHome 5 6",
-      "When": {
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": false
-      }
-    },
-    {
-      "Name": "MateoSpawn",
-      "Value": "EastScarp_CoastalGuild 8 5",
-      "When": {
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
-      }
-    },
-    {
-      "Name": "MateoSpawnMap",
-      "Value": "EastScarp_MateoHome",
-      "When": {
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": false
-      }
-    },
-    {
-      "Name": "MateoSpawnMap",
-      "Value": "EastScarp_CoastalGuild",
-      "When": {
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
-      }
-    },
-    {
-      "Name": "MateoSpawnTilesX",
-      "Value": "5",
-      "When": {
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": false
-      }
-    },
-    {
-      "Name": "MateoSpawnTilesX",
-      "Value": "8",
-      "When": {
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
-      }
-    },
-    {
-      "Name": "MateoSpawnTilesY",
-      "Value": "6",
-      "When": {
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": false
-      }
-    },
-    {
-      "Name": "MateoSpawnTilesY",
-      "Value": "5",
-      "When": {
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
-      }
     },
     {
       "Name": "MateoSpawn",
