@@ -444,8 +444,8 @@
           "Category": -7,
           "Price": 100,
           "Edibility": 10,
-          "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "IsDrink": true,
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 3,
@@ -464,7 +464,7 @@
             }
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 56
+          "SpriteIndex": 53
         },
       },
     },
@@ -481,7 +481,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 3,
@@ -500,7 +500,7 @@
             }
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 57
+          "SpriteIndex": 54
         },
       },
     },

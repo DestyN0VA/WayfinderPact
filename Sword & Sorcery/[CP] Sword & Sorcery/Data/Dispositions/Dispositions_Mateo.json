@@ -32,10 +32,10 @@
                         57
                     ],
                     "SpouseRoom": {
-                        "MapAsset": "MateoSpouseRoom"
+                        "MapAsset": "{{MateoSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "MateoSpousePatio"
+                        "MapAsset": "{{MateoSpousePatioOnOff}}"
                     },
                     "Home": [
                         {

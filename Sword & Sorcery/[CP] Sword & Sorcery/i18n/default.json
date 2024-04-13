@@ -3548,7 +3548,7 @@ ________      ________ _   _ _______ _____
 "Strings.Cirrus.PosterShrine": "A collage of posters featuring Cirrus' favorite artists. Her Keytar hangs alongside them.",
 "Strings.Cirrus.SignedGuitar": "There's a signature on the pickguard of this guitar. It says TRACE (was here)!",
 "Strings.Cirrus.DumpItTable": "Cirrus calls this the 'dump it table'. Among all the random knick-knacks are her building plans.",
-"Strings.Cirrus.DumpItTable2": "Cirrus' 'dump it' table is actually quite cleaner than the one at the Lion's Mane.",
+"Strings.Cirrus.DumpItTable2": "Cirrus' 'dump it' table is actually much cleaner than the one at the Lion's Mane.",
 "Strings.Cirrus.JournalPile": "A pile of journals that Cirrus has been keeping since her time in Port Drake. You'd best not snoop.",
 "Strings.Cirrus.FavoriteMug": "The mug says 'World's Okayest Musician'.",
 
@@ -5202,7 +5202,7 @@ ________      ________ _   _ _______ _____
 "food.autumnalstew.name": "Autumnal Stew",
 "food.autumnalstew.description": "Earthy and warm, with lots of seasonal flavors. It tastes how friendship feels.",
 
-"food.dandeliongreens.name": "Sautéed Dandelion Greens with Eggs",
+"food.dandeliongreens.name": "Sautéed Dandelion Greens Scramble",
 "food.dandeliongreens.description": "A little bit of forage and some eggs can go a long way for a tasty meal.",
 
 "food.portfiredrakesparkler.name": "Portfire Drake Sparkler",
@@ -5354,6 +5354,8 @@ ________      ________ _   _ _______ _____
 */
 
 "miscellaneous.CAGArtifactLedger.message": "Use the ledger to trade monster bones for artifacts & minerals.",
+"miscellaneous.LMCafe.message": "Welcome to the Lion's Mane Tavern, where heart meets stomach.",
+"miscellaneous.LMCafe.closedmessage": "The tavern will open up later for lunch service.",
 
 "miscellaneous.MermaidPendantCooldown": "%You haven't been dating very long - wait a while before you propose!",
 "miscellaneous.PendantResponse": "%It's finally the right time!...",

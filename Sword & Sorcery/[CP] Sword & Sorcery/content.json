@@ -1113,5 +1113,89 @@
         "Relationship:Mateo |contains=Dating, Engaged, Married": false
       }
     },
+    {
+      "Name": "CirrusSpousePatioOnOff",
+      "Value": "CirrusSpousePatio",
+      "When": {
+        "CirrusSpousePatioConfig": true
+      }
+    },
+    {
+      "Name": "CirrusSpousePatioOnOff",
+      "Value": "SpousePatioEmpty",
+      "When": {
+        "CirrusSpousePatioConfig": false
+      }
+    },
+    {
+      "Name": "MateoSpousePatioOnOff",
+      "Value": "MateoSpousePatio",
+      "When": {
+        "MateoSpousePatioConfig": true
+      }
+    },
+    {
+      "Name": "MateoSpousePatioOnOff",
+      "Value": "SpousePatioEmpty",
+      "When": {
+        "MateoSpousePatioConfig": false
+      }
+    },
+    {
+      "Name": "HectorSpousePatioOnOff",
+      "Value": "HectorSpousePatio",
+      "When": {
+        "HectorSpousePatioConfig": true
+      }
+    },
+    {
+      "Name": "HectorSpousePatioOnOff",
+      "Value": "SpousePatioEmpty",
+      "When": {
+        "HectorSpousePatioConfig": false
+      }
+    },
+    {
+      "Name": "CirrusSpouseRoomOnOff",
+      "Value": "CirrusSpouseRoom",
+      "When": {
+        "CirrusSpouseRoomConfig": true
+      }
+    },
+    {
+      "Name": "CirrusSpouseRoomOnOff",
+      "Value": "SpouseRoomEmpty",
+      "When": {
+        "CirrusSpouseRoomConfig": false
+      }
+    },
+    {
+      "Name": "MateoSpouseRoomOnOff",
+      "Value": "MateoSpouseRoom",
+      "When": {
+        "MateoSpouseRoomConfig": true
+      }
+    },
+    {
+      "Name": "MateoSpouseRoomOnOff",
+      "Value": "SpouseRoomEmpty",
+      "When": {
+        "MateoSpouseRoomConfig": false
+      }
+    },
+    {
+      "Name": "HectorSpouseRoomOnOff",
+      "Value": "HectorSpouseRoom",
+      "When": {
+        "HectorSpouseRoomConfig": true
+      }
+    },
+    {
+      "Name": "MateoSpouseRoomOnOff",
+      "Value": "SpouseRoomEmpty",
+      "When": {
+        "HectorSpouseRoomConfig": false
+      }
+    },
   ]
 }

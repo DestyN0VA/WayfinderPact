@@ -1,101 +1,111 @@
 {
-    "Changes": [
-        {
-            "LogName": "Loads Order Board Emoji",
-            "Action": "Load",
-            "Target": "LooseSprites/CAGemojis",
-            "FromFile": "assets/CAGemojis.png"
-        },
-        {
-            "LogName": "Loads Mateo's Secret Note Image",
-            "Action": "EditImage",
-            "Target": "TileSheets/SecretNotesImages",
-            "FromFile": "assets/Photo1.png",
-            "FromArea": {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 64
-            },
-            "ToArea": {
-                "X": 0,
-                "Y": 256,
-                "Width": 64,
-                "Height": 64
-            }
-        },
-        {
-            "LogName": "Loads Mateo's Secret Note",
-            "Action": "EditData",
-            "Target": "Data/SecretNotes",
-            "Entries": {
-                "113": "!image 16",
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "spacechase0.SpaceCore/NpcExtensionData",
-            "Entries": {
-                "Hector": {
-                    "IgnoreMarriageSchedule": true,
-                }
-            }
-        },
-        {
-            "LogName": "Disposition Change (Flower Dance) - Mateo",
-            "Action": "EditData",
-            "Target": "Data/NPCDispositions",
-            "Fields": {
-              "Mateo": {
-                "5": "datable"
-              }
-            },
-            "When": {
-              "DayEvent": "flower dance"
-            }
-          },
-          {
-            "LogName": "Disposition Change (Flower Dance) - Hector",
-            "Action": "EditData",
-            "Target": "Data/NPCDispositions",
-            "Fields": {
-              "Hector": {
-                "5": "datable"
-              }
-            },
-            "When": {
-              "DayEvent": "flower dance"
-            }
-          },
-          {
-            "LogName": "Disposition Change (Movie Theater) - Hector",
-            "Action": "EditData",
-            "Target": "Data/NPCDispositions",
-            "Fields": {
-              "Mateo": {
-                "4": "undefined"
-              }
-            },
-            "Update": "OnLocationChange",
-        
-            "When": {
-              "LocationName": "MovieTheater"
-            }
-          },
-          {
-            "LogName": "Disposition Change (Movie Theater) - Hector",
-            "Action": "EditData",
-            "Target": "Data/NPCDispositions",
-            "Fields": {
-              "Hector": {
-                "4": "undefined"
-              }
-            },
-            "Update": "OnLocationChange",
-        
-            "When": {
-              "LocationName": "MovieTheater"
-            }
-          },
-    ]
+  "Changes": [
+    {
+      "LogName": "Loads Order Board Emoji",
+      "Action": "Load",
+      "Target": "LooseSprites/CAGemojis",
+      "FromFile": "assets/CAGemojis.png"
+    },
+    {
+      "LogName": "Loads Mateo's Secret Note Image",
+      "Action": "EditImage",
+      "Target": "TileSheets/SecretNotesImages",
+      "FromFile": "assets/Photo1.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 64,
+        "Height": 64
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 256,
+        "Width": 64,
+        "Height": 64
+      }
+    },
+    {
+      "LogName": "Loads Mateo's Secret Note",
+      "Action": "EditData",
+      "Target": "Data/SecretNotes",
+      "Entries": {
+        "113": "!image 16",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/NpcExtensionData",
+      "Entries": {
+        "Hector": {
+          "IgnoreMarriageSchedule": true,
+        }
+      }
+    },
+    {
+      "LogName": "Disposition Change (Flower Dance) - Mateo",
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Fields": {
+        "Mateo": {
+          "5": "datable"
+        }
+      },
+      "When": {
+        "DayEvent": "flower dance"
+      }
+    },
+    {
+      "LogName": "Disposition Change (Flower Dance) - Hector",
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Fields": {
+        "Hector": {
+          "5": "datable"
+        }
+      },
+      "When": {
+        "DayEvent": "flower dance"
+      }
+    },
+    {
+      "LogName": "Disposition Change (Movie Theater) - Hector",
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Fields": {
+        "Mateo": {
+          "4": "undefined"
+        }
+      },
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "MovieTheater"
+      }
+    },
+    {
+      "LogName": "Disposition Change (Movie Theater) - Hector",
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Fields": {
+        "Hector": {
+          "4": "undefined"
+        }
+      },
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "MovieTheater"
+      }
+    },
+    // BLANK SPOUSE ROOM
+    {
+      "Action": "Load",
+      "Target": "Maps/SpouseRoomEmpty",
+      "FromFile": "Assets/Maps/SpouseRoomEmpty.tmx",
+    },
+    // BLANK SPOUSE PATIO 
+    {
+      "Action": "Load",
+      "Target": "Maps/SpousePatioEmpty",
+      "FromFile": "assets/Maps/SpousePatioEmpty.tmx",
+    },
+  ]
 }
