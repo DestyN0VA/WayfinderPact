@@ -3900,36 +3900,46 @@ ________      ________ _   _ _______ _____
 */
 
 // STARDROP TEA 
-"Gifts.Roslin.GiftReaction.StardropTea": "", 
+"Gifts.Roslin.GiftReaction.StardropTea": "Even I have to admit, I know this stuff gets made with a lot of care. Thanks for sharing the goods, @.$4", 
 
 // BASIC GIFT RESPONSES 
-"Gifts.Roslin.GiftReaction.Love": "",
-"Gifts.Roslin.GiftReaction.Like": "",
-"Gifts.Roslin.GiftReaction.Dislike": "",
-"Gifts.Roslin.GiftReaction.Hate": "",
-"Gifts.Roslin.GiftReaction.Neutral": "",
+"Gifts.Roslin.GiftReaction.Love": "Thanks, @. This is a very useful gift.$6",
+"Gifts.Roslin.GiftReaction.Like": "Oh, nice. Thanks, @.$0",
+"Gifts.Roslin.GiftReaction.Dislike": "Do I look like I need your garbage, @?$5",
+"Gifts.Roslin.GiftReaction.Hate": "I'll trade you a fireball to the face for this, how about that?$9",
+"Gifts.Roslin.GiftReaction.Neutral": "Thanks, I guess?$0",
 
 // ARTISANAL GOODS
-"Gifts.Roslin.GiftReaction.CategoryArtisanalGoods": "",
+"Gifts.Roslin.GiftReaction.CategoryArtisanalGoods": "Oh, you made this?... neat.$1",
 
 // TRASH
-"Gifts.Roslin.GiftReaction.CategoryTrash": "",
+"Gifts.Roslin.GiftReaction.CategoryTrash": "Almost as disgusting as you. Clod.$5",
 
 // MINERALS & GEMS
-"Gifts.Roslin.GiftReaction.CategoryGemsMinerals": "",
+"Gifts.Roslin.GiftReaction.CategoryGemsMinerals": "I can use this in my ritual magic. Thanks, @.$7",
 
-// LOVES - PLATONIC
-"Gifts.Roslin.GiftReaction.EXAMPLE1": "",
+// LOVES
+"Gifts.Roslin.GiftReaction.SolarEssence": "Solar Essences are the physical manifestation of light, as used not scientifically but by means of magical - anyway, thanks @.$11",
+"Gifts.Roslin.GiftReaction.VoidEssence": "Void Essences are a little harder to come by than Solar Essences, I find. I suppose that's because of where they come from; oh well, no matter! Thank you, @.$11",
    
 // LIKES
-"Gifts.Roslin.GiftReaction.EXAMPLE2": "",
+"Gifts.Roslin.GiftReaction.DinosaurMayo": "This stuff is great. I know it's a taste you've got to get used to, but... whatever. I got used to it.$10",
+"Gifts.Roslin.GiftReaction.VoidMayo": "This stuff is great. I know it's a taste you've got to get used to, but... whatever. I got used to it.$10",
+"Gifts.Roslin.GiftReaction.PrismaticShard": "Prismatic Shards make for fantastic spell components. Thanks, @.$11",
+"Gifts.Roslin.GiftReaction.RabbitsFoot": "Rabbit's Feet make for fantastic spell components. Thanks, @.$11",
 
-// BIRTHDAY - PLATONIC
-"Gifts.Roslin.GiftReaction.EXAMPLE.Birthday": "",
+// NEUTRALS 
+"Gifts.Roslin.GiftReaction.GoldenPumpkin": "These are for warding away what I tend to invite in, @.$7",
+"Gifts.Roslin.GiftReaction.Pearl": "Do I look like the kind of person that would wear something so excessively valueable?$9",
+"Gifts.Roslin.GiftReaction.MagicRockCandy": "It feels a little weird to just ... eat a spell component.$2",
+
+// BIRTHDAY
+"Gifts.Roslin.GiftReaction.SolarEssence.Birthday": "How'd you even find out about my birthday? Well, thanks for getting me something I really need. Essences are always important for me.$12",
+"Gifts.Roslin.GiftReaction.VoidEssence.Birthday": "How'd you even find out about my birthday? Well, thanks for getting me something I really need. Essences are always important for me.$12",
 
 // ITEM REJECTIONS 
-"Gifts.Roslin.GiftReject.Bouquet": "",
-"Gifts.Roslin.GiftReject.MermaidPendant": "",
+"Gifts.Roslin.GiftReject.Bouquet": "Uh, I'm taken, and I know you know that, so I'm not really flattered.$17",
+"Gifts.Roslin.GiftReject.MermaidPendant": "Uh, I'm taken, and I know you know that, so I'm not really flattered.$17",
 
 
 /*
@@ -3942,30 +3952,30 @@ ________      ________ _   _ _______ _____
 
  */                                           
 
- "Movies.Roslin.BraveLittleSapling.1": "",
- "Movies.Roslin.BraveLittleSapling.2": "",
- "Movies.Roslin.BraveLittleSapling.3": "",
- "Movies.Roslin.NaturalWonders.1": "",
- "Movies.Roslin.NaturalWonders.2": "",
- "Movies.Roslin.NaturalWonders.3": "",
- "Movies.Roslin.PrairieKing.1": "",
- "Movies.Roslin.PrairieKing.2": "",
- "Movies.Roslin.PrairieKing.3": "",
- "Movies.Roslin.Wumbus.1": "",
- "Movies.Roslin.Wumbus.2": "", 
- "Movies.Roslin.Wumbus.3": "",
- "Movies.Roslin.Mysterium.1": "",
- "Movies.Roslin.Mysterium.2": "",
- "Movies.Roslin.Mysterium.3": "",
- "Movies.Roslin.ItHowlsInTheRain.1": "",
- "Movies.Roslin.ItHowlsInTheRain.2": "",
- "Movies.Roslin.ItHowlsInTheRain.3": "",
- "Movies.Roslin.MiracleAtColdstarRanch.1": "",
- "Movies.Roslin.MiracleAtColdstarRanch.2": "",
- "Movies.Roslin.MiracleAtColdstarRanch.3": "",
- "Movies.Roslin.ZuzuCityExpress.1": "",
- "Movies.Roslin.ZuzuCityExpress.2": "",
- "Movies.Roslin.ZuzuCityExpress.3": "",
+ "Movies.Roslin.BraveLittleSapling.1": "Why are we seeing a kid's movie?$5",
+ "Movies.Roslin.BraveLittleSapling.2": "I think this teaches children the wrong lesson about growth.$9",
+ "Movies.Roslin.BraveLittleSapling.3": "This movie felt like it was designed to sell children's toys.$13",
+ "Movies.Roslin.NaturalWonders.1": "Why take the sorcerer to the druid movie?$9",
+ "Movies.Roslin.NaturalWonders.2": "Yeah, yeah... circle of life, whatever...$5",
+ "Movies.Roslin.NaturalWonders.3": "I liked the part when the lion ate the gazelle.$11",
+ "Movies.Roslin.PrairieKing.1": "This story is true, you know.$13",
+ "Movies.Roslin.PrairieKing.2": "Hawthorn was a good man. He would've liked you.$2",
+ "Movies.Roslin.PrairieKing.3": "It was nice to see an old friend again, I'll admit.$1",
+ "Movies.Roslin.Wumbus.1": "I don't understand what this is.$2",
+ "Movies.Roslin.Wumbus.2": "I'm more confused than when we started.$0", 
+ "Movies.Roslin.Wumbus.3": "Was the whole point of that just to get me emotionally attatched to the little Wumbus creature?$5",
+ "Movies.Roslin.Mysterium.1": "This is right up my alley. Good choice, @.$7",
+ "Movies.Roslin.Mysterium.2": "Ah, yup... of course The Black Lodge is at it again...$1",
+ "Movies.Roslin.Mysterium.3": "Not exactly true-to-life, but definitely truer than you'd think.$6",
+ "Movies.Roslin.ItHowlsInTheRain.1": "Oooh, horror. I can dig this.$0",
+ "Movies.Roslin.ItHowlsInTheRain.2": "This feels very 'made on a shoestring budget', which I can respect.$1",
+ "Movies.Roslin.ItHowlsInTheRain.3": "I really loved that. Can't be a monster flick. Thanks, @.$7",
+ "Movies.Roslin.MiracleAtColdstarRanch.1": "Is this one of those mushy romance films? Ugh.$2",
+ "Movies.Roslin.MiracleAtColdstarRanch.2": "Maybe it's almost over...$14",
+ "Movies.Roslin.MiracleAtColdstarRanch.3": "Romance flicks are just not my thing, I guess. Later, @.$17",
+ "Movies.Roslin.ZuzuCityExpress.1": "Okay, this seems sort of interesting.$0",
+ "Movies.Roslin.ZuzuCityExpress.2": "Nevermind, it's not very interesting at all.$2",
+ "Movies.Roslin.ZuzuCityExpress.3": "That was very mediocre.$9",
 
 /*
   ______ ______  _____ _______ _______      __     _       _____ 
@@ -3978,54 +3988,54 @@ ________      ________ _   _ _______ _____
  */
 
  // EGG FESTIVAL 
-"Festivals.Roslin.spring13.1": "",
-"Festivals.Roslin.spring13.2": "",
-"Festivals.Roslin.spring13.3": "",
+"Festivals.Roslin.spring13.1": "Everything, and everyone, is going to stink so bad.$5",
+"Festivals.Roslin.spring13.2": "How is everyone so amused by a bunch of children, and TWO adults, just looking around for eggs of all things?$2",
+"Festivals.Roslin.spring13.3": "Did you know Shadow Folk lay eggs? There could be some shadow eggs here right now.$7",
 
 // FLOWER DANCE 
-"Festivals.Roslin.spring24.1": "",
-"Festivals.Roslin.spring24.2": "",
-"Festivals.Roslin.spring24.3": "",
+"Festivals.Roslin.spring24.1": "Unless your name is 'Dandelion' and you're a paladin almost twice my height, you can't get me to dance.$1",
+"Festivals.Roslin.spring24.2": "I bet Solomon would make a great Flower Queen.$7",
+"Festivals.Roslin.spring24.3": "What's the deal with the boat, anyway? Has it always been in town somewhere and I just haven't noticed it?$2",
 
 // LUAU 
-"Festivals.Roslin.summer11.1": "",
-"Festivals.Roslin.summer11.2": "",
-"Festivals.Roslin.summer11.3": "",
+"Festivals.Roslin.summer11.1": "This can't possibly go poorly.$6",
+"Festivals.Roslin.summer11.2": "I'm sure the nature-types are freaking out about how much trash gets left on the beach for these festivals.$7",
+"Festivals.Roslin.summer11.3": "I'm only here because Solomon wants to experience human festivities.$1",
 
 // MOONLIGHT JELLIES
-"Festivals.Roslin.MoonlightJelly.1": "",
-"Festivals.Roslin.MoonlightJelly.2": "",
-"Festivals.Roslin.MoonlightJelly.3": "",
+"Festivals.Roslin.MoonlightJelly.1": "Ooh, lots of magic in the air tonight.$7",
+"Festivals.Roslin.MoonlightJelly.2": "Dandelion loves the Lunaloos...$3",
+"Festivals.Roslin.MoonlightJelly.3": "Lunaloo jelly is a great spell component, you know.$1",
 
 // SDV FAIR
-"Festivals.Roslin.fall16.1": "",
-"Festivals.Roslin.fall16.2": "",
-"Festivals.Roslin.fall16.3": "",
+"Festivals.Roslin.fall16.1": "Good luck on the contest, @. Mayor Lewis will set you up with a win if he knows what's good for you.$7",
+"Festivals.Roslin.fall16.2": "Solomon really likes when everyone competes.$3",
+"Festivals.Roslin.fall16.3": "Maybe I should make an apothecary stand for this, though, what use do townsfolk have for potions...$6",
 
 // SPIRIT'S EVE
-"Festivals.Roslin.fall27.1": "",
-"Festivals.Roslin.fall27.2": "",
-"Festivals.Roslin.fall27.3": "",
+"Festivals.Roslin.fall27.1": "It goes without saying I've got a soft spot for this time of year. I actually met Solomon, initially, on Spirit's Eve.$10",
+"Festivals.Roslin.fall27.2": "I love all the costumes, heh. Hopefully they'll do their job and keep the more frightful spirits away...$11",
+"Festivals.Roslin.fall27.3": "Why are you looking at me like that? Of course I've got magic planned for tonight - nothing that will do anyone any harm, I assure you.$17",
 
 // ICE FESTIVAL 
-"Festivals.Roslin.winter8.1": "",
-"Festivals.Roslin.winter8.2": "",
-"Festivals.Roslin.winter8.3": "",
+"Festivals.Roslin.winter8.1": "I keep my body heat higher with magic so I don't have to wear sleeves.$19",
+"Festivals.Roslin.winter8.2": "I wonder if people would get freaked out if I animated some of these snowmen...$11",
+"Festivals.Roslin.winter8.3": "Solomon wants to know more about the delicate art of throwing snowballs.$10",
 
 // WINTER STAR 
-"Festivals.Roslin.winter25.1": "",
-"Festivals.Roslin.winter25.2": "",
-"Festivals.Roslin.winter25.3": "",
+"Festivals.Roslin.winter25.1": "Hey, even I'm grateful for stuff. Mostly Dandelion, but still.$19",
+"Festivals.Roslin.winter25.2": "There's no gift in the world that's more meaningful than Dandelion. ...Solomon too, I guess.$16",
+"Festivals.Roslin.winter25.3": "This festival dates back, traditionally, a few hundred years. But boy, has it changed a lot.$10",
 
 // RSV GATHERING 
-"Festivals.Roslin.fall20.1": "",
-"Festivals.Roslin.fall20.2": "",
-"Festivals.Roslin.fall20.3": "",
+"Festivals.Roslin.fall20.1": "Hm... I believe these mountains are where some of my old collegues reside...$8",
+"Festivals.Roslin.fall20.2": "The spiritual energy here is- what? Nothing, @.$9",
+"Festivals.Roslin.fall20.3": "Solomon is very excited by all the food prospects, though I've got to find a place to hide so I can feed him...$13",
 
 // RSV EMBER OF RESOLUTIONS 
-"Festivals.Roslin.winter28.1": "",
-"Festivals.Roslin.winter28.2": "",
-"Festivals.Roslin.winter28.3": "",
+"Festivals.Roslin.winter28.1": "The air is heavy with the spirits that surround us.$8",
+"Festivals.Roslin.winter28.2": "I thought I was pretty irresponsible with my fire magic, but this is a massive fire hazard - a bonfire in the woods? What?$15",
+"Festivals.Roslin.winter28.3": "Ornery as I may be, there IS a certian magic to the start of a new year...$11",
 
 
 

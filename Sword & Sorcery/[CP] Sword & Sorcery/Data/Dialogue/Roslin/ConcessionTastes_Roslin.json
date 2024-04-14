@@ -7,17 +7,17 @@
                 "Roslin": {
                     "Name": "Roslin",
                     "likedTags": [
-                        "Fries",
-                        "Star Cookie",
-                        "Stardrop Sorbet",
+                        "Cappuccino Mousse Cake",
+                        "Jawbreaker",
+                        "Nachos",
                     ],
                     "LikedTags": [
-                        "Fatty",
-                        "Salty",
+                        "Sweet",
+                        "Sour",
                     ],
                     "DislikedTags": [
-                        "Sour",
-                        "Gourmet"
+                        "Fatty",
+                        "Salty"
                     
                     ]
                 }
@@ -56,7 +56,7 @@
                         },
                         {
                             "Tag": "spring_movie_1",
-                            "Response": "like",
+                            "Response": "dislike",
                             "Whitelist": [],
                             "SpecialResponses": {
                                 "BeforeMovie": {
@@ -126,7 +126,7 @@
                         },
                         {
                             "Tag": "fall_movie_0",
-                            "Response": "like",
+                            "Response": "lovee",
                             "Whitelist": [],
                             "SpecialResponses": {
                                 "BeforeMovie": {
@@ -149,7 +149,7 @@
                         },
                         {
                             "Tag": "fall_movie_1",
-                            "Response": "like", 
+                            "Response": "love", 
                             "Whitelist": [],
                             "SpecialResponses": {
                                 "BeforeMovie": {
@@ -172,7 +172,7 @@
                         },
                         {
                             "Tag": "winter_movie_0",
-                            "Response": "like",
+                            "Response": "dislike",
                             "Whitelist": [],
                             "SpecialResponses": {
                                 "BeforeMovie": {
@@ -195,7 +195,7 @@
                     },
                     {
                         "Tag": "winter_movie_1",
-                        "Response": "like",
+                        "Response": "dislike",
                         "Whitelist": [],
                         "SpecialResponses": {
                             "BeforeMovie": {

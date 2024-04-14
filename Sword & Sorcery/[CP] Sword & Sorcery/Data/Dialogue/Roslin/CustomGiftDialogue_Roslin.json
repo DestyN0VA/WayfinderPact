@@ -6,11 +6,6 @@
       "Entries": { // CUSTOM GIFT DIALOGUE
         // STARDROP TEA 
         "AcceptGift_(O)StardropTea": "{{i18n:Gifts.Roslin.GiftReaction.StardropTea}}",
-        // FISH
-        "AcceptGift_category_fish": "{{i18n:Gifts.Roslin.GiftReaction.CategoryFish}}",
-        "AcceptGift_(O)397": "{{i18n:Gifts.Roslin.GiftReaction.SeaUrchin}}",
-        "AcceptGift_(O)717": "{{i18n:Gifts.Roslin.GiftReaction.Crab}}",
-        "AcceptGift_(O)732": "{{i18n:Gifts.Roslin.GiftReaction.CrabCakes}}",
         // ARTISANAL GOODS
         "AcceptGift_category_artisan_goods": "{{i18n:Gifts.Roslin.GiftReaction.CategoryArtisanalGoods}}",
         // TRASH
@@ -18,65 +13,32 @@
         // MINERALS & GEMS
         "AcceptGiftCategory_minerals": "{{i18n:Gifts.Roslin.GiftReaction.CategoryGemsMinerals}}",
         // LOVES
-        "AcceptGift_(O)74": "{{i18n:Gifts.Roslin.GiftReaction.PrismaticShard}}",
-        "AcceptGift_(O)614": "{{i18n:Gifts.Roslin.GiftReaction.GreenTea}}",
-        "AcceptGift_(O)206": "{{i18n:Gifts.Roslin.GiftReaction.Pizza}}",
-        "AcceptGift_(O)213": "{{i18n:Gifts.Roslin.GiftReaction.SalmonDinner}}",
-        "AcceptGift_(O)214": "{{i18n:Gifts.Roslin.GiftReaction.FishTaco}}",
-        "AcceptGift_(O)215": "{{i18n:Gifts.Roslin.GiftReaction.CrispyBass}}",
-        "AcceptGift_(O){{ModID}}_zuzustylebagelwithlox": "{{i18n:Gifts.Roslin.GiftReaction.zuzustylebagelwithlox}}",
-        "AcceptGift_(O){{ModID}}_zuzustylepizza": "{{i18n:Gifts.Roslin.GiftReaction.ZuzuStylePizza}}",
-        "AcceptGift_(O){{ModID}}_zuzustylecheesecake": "{{i18n:Gifts.Roslin.GiftReaction.ZuzuStyleCheesecake}}",
-        "AcceptGift_(O){{ModID}}_portfiredrakesparkler": "{{i18n:Gifts.Roslin.GiftReaction.PortfireDrakeSparkler}}",
+        "AcceptGift_(O)768": "{{i18n:Gifts.Roslin.GiftReaction.SolarEssence}}",
+        "AcceptGift_(O)769": "{{i18n:Gifts.Roslin.GiftReaction.VoidEssence}}",
         // LIKES
-        "AcceptGift_(O)731": "{{i18n:Gifts.Roslin.GiftReaction.MapleBar}}",
-        "AcceptGift_(O)225": "{{i18n:Gifts.Roslin.GiftReaction.FriedEel}}",
-        "AcceptGift_(O)226": "{{i18n:Gifts.Roslin.GiftReaction.SpicyEel}}",
-        "AcceptGift_(O)227": "{{i18n:Gifts.Roslin.GiftReaction.Sashimi}}",
-        "AcceptGift_(O)228": "{{i18n:Gifts.Roslin.GiftReaction.MakiRoll}}",
-        "AcceptGift_(O)219": "{{i18n:Gifts.Roslin.GiftReaction.TroutSoup}}",
-        "AcceptGift_(O)167": "{{i18n:Gifts.Roslin.GiftReaction.JojaCola}}",
-        // ALCOHOL 
-        "RejectItem_(O)346": "{{i18n:Gifts.Roslin.GiftReaction.Beer}}",
-        "RejectItem_(O)303": "{{i18n:Gifts.Roslin.GiftReaction.PaleAle}}",
-        "RejectItem_(O)348": "{{i18n:Gifts.Roslin.GiftReaction.Wine}}",
-        "RejectItem_(O)304": "{{i18n:Gifts.Roslin.GiftReaction.Hops}}",
-        "RejectItem_(O)459": "{{i18n:Gifts.Roslin.GiftReaction.Mead}}",
-        // HATES 
+        "AcceptGift_(O)807": "{{i18n:Gifts.Roslin.GiftReaction.DinosaurMayo}}",
+        "AcceptGift_(O)308": "{{i18n:Gifts.Roslin.GiftReaction.VoidMayo}}",
+        "AcceptGift_(O)74": "{{i18n:Gifts.Roslin.GiftReaction.PrismaticShard}}",
         "AcceptGift_(O)446": "{{i18n:Gifts.Roslin.GiftReaction.RabbitsFoot}}",
-        "AcceptGift_(O)220": "{{i18n:Gifts.Roslin.GiftReaction.ChocolateCake}}",
-        // ANCIENT CROPS
-        "AcceptGift_(O){{ModID}}_ancientwildfairyroses": "{{i18n:Gifts.Roslin.GiftReaction.AncientRose}}",
+        // NEUTRAL 
+        "AcceptGift_(O)373": "{{i18n:Gifts.Roslin.GiftReaction.GoldenPumpkin}}",
+        "AcceptGift_(O)797": "{{i18n:Gifts.Roslin.GiftReaction.Pearl}}",
+        "AcceptGift_(O)279": "{{i18n:Gifts.Roslin.GiftReaction.MagicRockCandy}}",
         // ITEM REJECTIONS 
         "RejectItem_(O)458": "{{i18n:Gifts.Roslin.GiftReject.Bouquet}}",
+        "RejectItem_(O)460": "{{i18n:Gifts.Roslin.GiftReject.MermaidPendant}}",
       }
     },
     {
       "Action": "EditData",
       "Target": "Characters/Dialogue/Roslin",
       "Entries": { // CUSTOM GIFT DIALOGUE - BIRTHDAY
-        "AcceptGift_(O)74": "{{i18n:Gifts.Roslin.GiftReaction.PrismaticShard.Birthday}}",
-        "AcceptGift_(O)614": "{{i18n:Gifts.Roslin.GiftReaction.GreenTea.Birthday}}",
-        "AcceptGift_(O)206": "{{i18n:Gifts.Roslin.GiftReaction.Pizza.Birthday}}",
-        "AcceptGift_(O)213": "{{i18n:Gifts.Roslin.GiftReaction.SalmonDinner.Birthday}}",
-        "AcceptGift_(O)214": "{{i18n:Gifts.Roslin.GiftReaction.FishTaco.Birthday}}",
-        "AcceptGift_(O)215": "{{i18n:Gifts.Roslin.GiftReaction.CrispyBass.Birthday}}",
-        "AcceptGift_(O){{ModID}}_zuzustylebagelwithlox": "{{i18n:Gifts.Roslin.GiftReaction.zuzustylebagelwithlox.Birthday}}",
-        "AcceptGift_(O){{ModID}}_zuzustylepizza": "{{i18n:Gifts.Roslin.GiftReaction.ZuzuStylePizza.Birthday}}",
+        "AcceptGift_(O)768": "{{i18n:Gifts.Roslin.GiftReaction.SolarEssence.Birthday}}",
+        "AcceptGift_(O)769": "{{i18n:Gifts.Roslin.GiftReaction.VoidEssence.Birthday}}",
       },
       "When": {
-        "Season": "winter",
-        "Day": "21"
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Roslin",
-      "Entries": { // DATING COOLDOWN
-        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantCooldown}}",
-      },
-      "When": {
-        "HasConversationTopic |contains=RoslinMarriageCountdown": true
+        "Season": "spring",
+        "Day": "26"
       }
     },
   ]

@@ -24,5 +24,13 @@
                 "Cirrus": "{{i18n:Gifts.Cirrus.GiftReaction.Love}}/206 212 213 214 614 {{ModID}}_ancientwildfairyroses {{ModID}}_zuzustylebagelwithlox {{ModID}}_zuzustylepizza {{ModID}}_portfiredrakesparkler {{ModID}}_ancienthuckleberryicecream {{ModID}}_ancientazuredetura/{{i18n:Gifts.Cirrus.GiftReaction.Like}}/-2 -7 -80 167 225 226 227 228 219 731/{{i18n:Gifts.Cirrus.GiftReaction.Dislike}}/-4 -28/{{i18n:Gifts.Cirrus.GiftReaction.Hate}}/346 303 348 304 459 -20/{{i18n:Gifts.Cirrus.GiftReaction.Neutral}}/-4/"
             }
         },
+        {
+            "LogName": "Roslin's Gift Tastes",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "Roslin": "{{i18n:Gifts.Roslin.GiftReaction.Love}}/768 769/{{i18n:Gifts.Roslin.GiftReaction.Like}}/807 308 74 446-2/{{i18n:Gifts.Roslin.GiftReaction.Dislike}}/-79 -81 -75/{{i18n:Gifts.Roslin.GiftReaction.Hate}}/-81 -24/{{i18n:Gifts.Roslin.GiftReaction.Neutral}}/373 797 279/"
+            }
+        },
     ]
 }

@@ -1197,5 +1197,16 @@
         "HectorSpouseRoomConfig": false
       }
     },
+    {
+      "Name": "LionsManeStatus",
+      "Value": "Maps/EastScarp_LionsMane",
+    },
+    {
+      "Name": "LionsManeStatus",
+      "Value": "Maps/EastScarp_LionsManeFinal",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch4.Roslin.PENDING": true,
+      }
+    },
   ]
 }
