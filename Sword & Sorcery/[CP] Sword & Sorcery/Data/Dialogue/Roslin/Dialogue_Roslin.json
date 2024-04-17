@@ -43,35 +43,19 @@
         "HasFlag |contains=SnS_M_Roslin_OverrideSeenToday": false
       }
     },
-    // 10H OVERRIDE POOL
+    // 10H EPILOGUE POOL
     {
-      "LogName": "Dialogue - Roslin 10h Ending Override",
+      "LogName": "Dialogue - Roslin Epilogue",
       "Action": "EditData",
       "Update": "OnLocationChange",
       "Target": "Characters/Dialogue/Roslin",
       "Entries": {
-        "{{WeekDay}}": "{{i18n:Core.Roslin.LionsMane.{{Random:{{Range: 1, 10}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Roslin_OverrideSeenToday received"
+        "{{WeekDay}}": "{{i18n:Core.Roslin.Epilogue.{{Random:{{Range: 1, 10}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Roslin_OverrideSeenToday received"
       },
       "When": {
         "Hearts:Roslin": "10",
         "Query: {{Random: {{Range: 1, 30}}|key=CLMO}} = 1": true,
         "HasFlag |contains=SnS_M_Roslin_OverrideSeenToday": false
-      }
-    },
-    // DATING POOL
-    {
-      "LogName": "Dialogue - Roslin 10h Dating Override",
-      "Action": "EditData",
-      "Update": "OnLocationChange",
-      "Target": "Characters/Dialogue/Roslin",
-      "Entries": {
-        "{{WeekDay}}": "{{i18n:Core.Roslin.Dating.{{Random:{{Range: 1, 30}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Roslin_OverrideSeenToday received"
-      },
-      "When": {
-        "Hearts:Roslin": "10",
-        "Query: {{Random: {{Range: 1, 10}}|key=CDO}} = 1": true,
-        "HasFlag |contains=SnS_M_Roslin_OverrideSeenToday": false,
-        "Relationship:Roslin |contains=Dating": true
       }
     },
     /*
@@ -166,16 +150,5 @@
         "GreenRain_2": "{{i18n:Core.Roslin.GreenRain2}}",
       },
     },
-    // ENGAGEMENT DIALOGUE
-    {
-      "LogName": "Engagement Dialogue",
-      "Action": "EditData",
-      "Target": "Data/EngagementDialogue",
-      "Entries": {
-        "Roslin0": "{{i18n:Marriage.Roslin.Engagement.Roslin0}}",
-        "Roslin1": "{{i18n:Marriage.Roslin.Engagement.Roslin1}}",
-        "Roslin2": "{{i18n:Marriage.Roslin.Engagement.Roslin2}}"
-      }
-    }
   ]
 }

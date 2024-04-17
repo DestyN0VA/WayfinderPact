@@ -1,0 +1,59 @@
+{
+
+  "Changes": [
+
+    {
+      "LogName": "Roslin's 0 Heart Event",
+      "Action": "EditData",                                           
+      "Target": "Data/Events/EastScarp_CoastalGuild",
+      "Entries": {
+    
+        "SnS.Ch4.Roslin.1/e SnS.Ch3.Cirrus.14/f Mateo 2500/f Hector 2500/Cirrus 2500/t 800 2200/A CirrusLionsMane3/w sunny/F": "SnS.MateoTheme/-100 -100/farmer 9 14 2 Cirrus 14 12 0 Mateo 24 15 2 Hector 5 16 3 Roslin -100 -100 0/skippable/addConversationTopic RoslinNeedsHelp 2/addTemporaryActor MateoEmeritus 32 32 2 17 2 true Character/globalFadeToClear/changeName MateoEmeritus Emeritus/viewport 13 12 clamp true/pause 1000/emote Mateo 40/pause 250/speak Hector \"Mateo, doesn't Emeritus lay eggs?$8\"/faceDirection Mateo 3/speak Mateo \"Yup!$1\"/faceDirection Cirrus 2/speak Cirrus \"...I thought Emeritus was a boy.$17\"/speak Mateo \"To be honest, I've just never questioned it.$32\"/speak MateoEmeritus \"Huuuuuuuur!\"/speak Hector \"I see, I see. So you don't mind either way. Understood, Emeritus.$14#$b#Wait, also, it takes two to tango - where are the eggs coming from, then-$23\"/stopMusic/pause 250/playSound stoneStep/faceDirection Hector 1/warp Roslin 10 19/advancedMove Roslin false 0 -5 3 10/emote Mateo 8 true/emote Cirrus 8 true/emote Hector 8 true/pause 250/faceDirection farmer 1/speak Roslin \"You, farmer. I...$9#$b#I need your help.$8\"/playMusic SnS.LonelyTheme/advancedMove Hector false 5 0 4 10/advancedMove Cirrus false -4 0 2 10/advancedMove Mateo false -5 0 0 -1 -1 0 0 -1 -7 0 0 1 3 10/speak Hector \"You reek of Void magic. Who are you? @, how do you know this person?$16\"/speak Cirrus \"I've never seen her before.$16\"/speak Roslin \"You don't WANT to have seen me around. I've said it before, it would've been better off if I'd never spoken to @ again.$5\"/speak Mateo \"Alright, let's settle down. Who are you, and what do you need help with?$10\"/quickQuestion #This is Roslin, she and another adventurer were investigating something underneath East Scarp. #(Let Roslin introduce herself.)(break)speak Roslin \"Thank you, @.$1\"\\friendship Roslin 25(break)speak Roslin \"My name is Roslin. Archmagus of the White Lodge, Aethric Champion, Sorcerer Supreme - ah, whatever.$13#$b#My companion and I were investigating something underneath your town, and it's gone haywire.$14\"\\emote farmer 16/speak Roslin \"I'll try and keep things concise. Around when @ moved to the Valley, Dandelion, the aforementioned companion and I...$2#$b#Well, we started looking into a magical disturbance centered here, in East Scarp.$16#$b#We notified your mayor when we suspected the townsfolk were in danger, but he dismissed us; as did Marlon.$15\"/speak Mateo \"Marlon wouldn't dismiss a problem if there really was one-$16\"/speak Roslin \"You're right, he probably wouldn't. But I've long since abdicated my position in the White Lodge - erm, a court of sorcerers...$13#$b#And Dandelion has refused to join Marlon's ranks in the past.$5#$b#I suppose it's not entirely unreasonable for him to be cautious.$9\"/speak Mateo \"Can you fill us in on what you're investigating?$10\"/faceDirection Roslin 1/speak Roslin \"{{RoslinStygiumComment}}\"/emote Mateo 8/speak Roslin \"Stygium is a material uniquely coalesced from lingering feelings, positive or negative.$5#$b#I don't know who's familiar with East Scarp's history, but tragedy has struck that mine in the past...$15\"/speak Hector \"There was a collapse. Nearly a town's worth of workers got trapped down there.$23\"/speak Roslin \"Correct. And when their hopes and dreams got crushed under the rubble, all that remained was the negative feelings. All of their darkness, all of their Void energy.$16\"/speak Mateo \"So that's where the Stygium comes from, but was there something else?$34\"/speak Hector \"Actually, I see what Roslin's getting at. An incident that substantial may have created-$2\"/speak Roslin \"-A monster. Something unlike anything Dandelion and I have fought before.$2#$b#She went to scout a while back and hasn't returned. I expect she's fallen to the beast.$13\"/emote farmer 16 true/emote Cirrus 16 true/emote Mateo 16 true/emote 40 Hector true/speak Hector \"I expect such a talented sorcerer to have prepared for such an outcome.$8\"/speak Roslin \"Of course I did. But I'll need some assistance seeing it through.$11#$b#I cast a spell on Dandelion that, should she receive a fatal blow, she would be unable to die - I already suspect this had an unintentional side effect.$2#$b#Regardless, I'll need a slew of ritual components for the second portion of this. Namely, essences of all sorts.$7\"/speak Cirrus \"Void... solar, and Druidic?$2\"/speak Roslin \"And more! Fire, water, air, and earth essences as well. You need to be particularly in tune with magic to be able to see them. And that's where you come in, @.$9#$b#Close your eyes, think deeply of your own potential... Let me help you reach it...$11\"/fade/viewport -1000 -1000/warp farmer -100 -100/faceDirection farmer 2/viewport -100 -100/fade/startJittering/sns_bardicsunlock -100 -100/showFrame farmer 94/pause 10000/message \"You've unlocked the ability to sense Elemental Essences! They drop from various sources in the world.\"/fade/viewport -1000 -1000/warp farmer 9 14/faceDirection farmer 1/faceDirection Roslin 3/viewport 13 12 clamp true/pause 1000/speak Roslin \"Now, if you can help me, we may be able to save Dandelion. With her back on our side, we can deal with the beast.$9\"/speak Cirrus \"Are you... going to be okay, Roslin? I mean, if Dandelion's your companion and she's-$2\"/speak Roslin \"No reason to dwell. Not when I've already presented a potential solution.$13\"/speak Mateo \"Roslin, I know we just met, but that's not he-$2\"/jump Roslin 5/emote Roslin 12/speak Roslin \"I said I don't want to think about it - let's just focus on the matter at hand!$5\"/emote Mateo 28/pause 250/fade/viewport -1000 -1000/speak Hector \"A monster lingering under the Scarp... that would explain why the chronic fatigue continued on after the river was purified...$23\"/speak Mateo \"We'll get this sorted. That's what the Adventurer's Guild is for, after all!$14\"/speak Cirrus \"I'm worried about Roslin...$2\"/pause 250/end",
+
+      },
+            
+    },
+
+  ] 
+
+}
+
+/* 
+
+quickQuestion #That girl sounds overwhelmed. #That voice is familiar.(break)speak Mateo \"Let's check in on things, just in case.$32\"(break)speak Hector \"Right? Reminds me of something I was watching with Eloise...$7\"
+
+(0 = up, 1 = right, 2 = down, 3 = left)
+
+waitForAllStationary - waits until all advMoves are complete for next action 
+
+stopAdvancedMoves - will prevent clipping issues at the end of an event when characters advMove off screen
+
+advancedMove true/false (loop) parameters
+
+parameters:
+x y x y x y = move without pause
+
+x y z t x y z t = move with pauses
+
+x y x y z t x y = move with mix of mentioned above
+
+x = how many tiles move in x axis (+ = right, - = left)
+y = how many tiles move in y axis (+ = down, - = up)
+z = direction face upon reaching destination (1=right, 2=down, 3=left, 4=up)
+t = duration in milliseconds how long to stay in that spot (must be >= 10000ms)
+
+4- empty can
+8- question mark
+12- angry
+16- exclamation
+20- heart
+24- sleep
+28- sad
+32- happy
+36- x
+40- pause
+52- video game
+56- music note
+60- blush 
+
+*/

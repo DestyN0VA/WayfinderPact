@@ -40,7 +40,7 @@
     {
       "LogName": "Sword & Sorcery - Data Includes",
       "Action": "Include",
-      "FromFile": "Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json"
+      "FromFile": "Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json"
     },
 
     // TRIGGER ACTIONS
@@ -1206,6 +1206,20 @@
       "Value": "Maps/EastScarp_LionsManeFinal",
       "When": {
         "HasSeenEvent |contains=SnS.Ch4.Roslin.PENDING": true,
+      }
+    },
+    {
+      "Name": "RoslinStygiumComment",
+      "Value": "You stand a chance to be more familliar than anyone else here, considering the pendant made of Stygium around @'s neck.",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.17": true,
+      }
+    },
+    {
+      "Name": "RoslinStygiumComment",
+      "Value": "I know you've seen Stygium in the mines underneath East Scarp. Have you questioned where it comes from?$17",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.17": false,
       }
     },
   ]
