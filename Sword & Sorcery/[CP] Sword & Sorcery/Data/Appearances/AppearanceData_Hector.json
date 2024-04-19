@@ -78,7 +78,7 @@
             "Target": "Portraits/Hector, Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach",
             "PatchMode": "Overlay",
             "FromFile": "assets/portraits/Hector/pendant_overlay_hector.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": {
                 "Relationship:Hector |contains=Married": true,
                 "MermaidPendantHairclip": true
@@ -91,7 +91,7 @@
             "Target": "Portraits/Hector, Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach, Portraits/Hector_HoodDown",
             "PatchMode": "Overlay",
             "FromFile": "assets/{{TargetPathOnly}}/Hector/heterochromia_mf.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": {
                 "HectorHeterochromatic": true,
                 "TrueShape |contains=trueshape": false
@@ -103,7 +103,7 @@
             "Target": "Portraits/Hector, Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach, Portraits/Hector_HoodDown",
             "PatchMode": "Overlay",
             "FromFile": "assets/{{TargetPathOnly}}/Hector/heterochromia_tf.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": {
                 "HectorHeterochromatic": true,
                 "TrueShape": "trueshape"
@@ -115,7 +115,7 @@
             "Target": "Portraits/Hector_HoodUp",
             "PatchMode": "Overlay",
             "FromFile": "assets/Portraits/Hector/heterochromia_mf_hooded.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": {
                 "HectorHeterochromatic": true,
                 "TrueShape |contains=trueshape": false
@@ -127,7 +127,7 @@
             "Target": "Portraits/Hector_HoodUp",
             "PatchMode": "Overlay",
             "FromFile": "assets/Portraits/Hector/heterochromia_tf_hooded.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": {
                 "HectorHeterochromatic": true,
                 "TrueShape": "trueshape"
@@ -139,7 +139,7 @@
             "Target": "Portraits/Hector_TrueUp",
             "PatchMode": "Overlay",
             "FromFile": "assets/Portraits/Hector/heterochromia_tf_hooded.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": {
                 "HectorHeterochromatic": true
             }
@@ -150,7 +150,7 @@
             "Target": "Portraits/Hector_TrueDown",
             "PatchMode": "Overlay",
             "FromFile": "assets/Portraits/Hector/heterochromia_tf.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": {
                 "HectorHeterochromatic": true
             }
@@ -161,7 +161,7 @@
             "Target": "Characters/Hector, Characters/spring_Hector, Characters/summer_Hector, Characters/fall_Hector, Characters/winter_Hector, Characters/Hector_beach, Characters/Hector_HoodUp, Characters/Hector_HoodDown, Characters/Hector_TrueDown, Characters/Hector_TrueUp",
             "PatchMode": "Overlay",
             "FromFile": "assets/Characters/Hector/heterochromia.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": {
                 "HectorHeterochromatic": true
             }
@@ -172,7 +172,7 @@
             "Target": "Portraits/HectorWolf, Portraits/MysteryWolf, Portraits/Hector_wolf",
             "PatchMode": "Overlay",
             "FromFile": "Assets/Portraits/Hector/heterochromia_wolf.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": {
                 "HectorHeterochromatic": true
             }

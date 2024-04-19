@@ -25,7 +25,7 @@
             "Target": "Portraits/Cirrus, Characters/Cirrus, Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock, Characters/spring_Cirrus, Characters/summer_Cirrus, Characters/fall_Cirrus, Characters/Cirrus_beach, Characters/Cirrus_Glamrock",
             "PatchMode": "Overlay",
             "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Hair/{{CirrusHairColor}}.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": { "HasFile:{{FromFile}}": true }
         },
         {
@@ -34,7 +34,7 @@
             "Target": "Portraits/winter_Cirrus, Characters/winter_Cirrus",
             "PatchMode": "Overlay",
             "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Hair/{{CirrusHairColor}}_winter.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": { "HasFile:{{FromFile}}": true }
         },
         {   
@@ -43,7 +43,7 @@
             "Target": "Portraits/Cirrus, Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/winter_Cirrus, Portraits/Cirrus_beach",
             "PatchMode": "Overlay",
             "FromFile": "assets/portraits/Cirrus/{{season}}_pendant_overlay_Cirrus.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": { "Relationship:Cirrus |contains=Married": true, "MermaidPendantChoker": true }
         }
     ]

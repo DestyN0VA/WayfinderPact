@@ -77,7 +77,7 @@
             "Target": "Portraits/Mateo, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
             "PatchMode": "Overlay",
             "FromFile": "assets/portraits/Mateo/scar_overlay_mateo.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": { "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true }
         },
         {   
@@ -86,7 +86,7 @@
             "Target": "Portraits/Mateo, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
             "PatchMode": "Overlay",
             "FromFile": "assets/portraits/Mateo/pendant_overlay_mateo.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": { "Relationship:Mateo |contains=Married": true, "MermaidPendantEarring": true }
         },
         {   
@@ -95,7 +95,7 @@
             "Target": "Portraits/Mateo, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
             "PatchMode": "Overlay",
             "FromFile": "assets/portraits/Mateo/horn_overlay_mateo.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": { "MateoTrollHeritage": true, "HasSeenEvent |Contains=SnS.Ch1.Mateo.9": false }
         },
         {   
@@ -104,7 +104,7 @@
             "Target": "Portraits/Mateo, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
             "PatchMode": "Overlay",
             "FromFile": "assets/portraits/Mateo/broken_horn_overlay_mateo.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": { "MateoTrollHeritage": true, "HasSeenEvent |Contains=SnS.Ch1.Mateo.9": true }
         },
         {   
@@ -113,7 +113,7 @@
             "Target": "Characters/Mateo, Characters/Mateo_Seasonal_1, Characters/Mateo_Seasonal_2, Characters/Mateo_Seasonal_3, Characters/Mateo_Seasonal_4, Characters/Mateo_Seasonal_5, Characters/Mateo_Seasonal_6, Characters/Mateo_Seasonal_7,Characters/Mateo_Seasonal_8, Characters/Mateo_Seasonal_9, Characters/EggFair_Mateo, Characters/IceFestWinterStar_Mateo, Characters/LuauMoonlight_Mateo, Characters/Armor_Mateo, Characters/Shirtless_Mateo",
             "PatchMode": "Overlay",
             "FromFile": "assets/Characters/Mateo/horn_overlay_mateo.png",
-            "Update": "OnTimeChange, OnLocationChange",
+            "Update": "OnLocationChange",
             "When": { "MateoTrollHeritage": true }
         },
         {
@@ -123,7 +123,7 @@
             "FromFile": "Assets/{{Target}}/scar_overlay_mateo.png",
             "PatchMode": "Overlay",
             "When": { "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true },
-            "Update": "OnTimeChange, OnLocationChange"
+            "Update": "OnLocationChange"
         }
     ]
 }
