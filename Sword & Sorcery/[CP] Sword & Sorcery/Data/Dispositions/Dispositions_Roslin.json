@@ -24,9 +24,9 @@
                     "LoveInterest": "Dandelion", 
                     "SocialTab": "HiddenUntilMet",
                     "Calendar": "HiddenUntilMet",
+                    "CanVisitIsland": false,
                     "FlowerDanceCanDance": false,
                     "WinterStarParticipant": false,
-                    "ShakePortraits": [9, 15, 19, 21],
                     "Home": [
                         {
                             "ID": "Roslin - NPC Waiting Room",

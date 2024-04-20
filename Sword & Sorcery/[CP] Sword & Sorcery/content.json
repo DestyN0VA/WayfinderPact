@@ -1012,7 +1012,7 @@
     },
     {
       "Name": "TrollHeritageDialogue3",
-      "Value": "{{i18n:i18n:Events.S&S.Ch1.12H.Mateo.8}}",
+      "Value": "{{i18n:Events.S&S.Ch1.12H.Mateo.8}}",
       "When": {
         "MateoTrollHeritage": false,
       }
@@ -1220,6 +1220,20 @@
       "Value": "I know you've seen Stygium in the mines underneath East Scarp. Have you questioned where it comes from?$17",
       "When": {
         "HasSeenEvent |contains=SnS.Ch1.Mateo.17": false,
+      }
+    },
+    {
+      "Name": "TrollHeritageDialogue4",
+      "Value": "{{i18n:Events.S&S.Ch1.10H.Mateo.3}}",
+      "When": {
+        "MateoTrollHeritage": false,
+      }
+    },
+    {
+      "Name": "TrollHeritageDialogue4",
+      "Value": "{{i18n:Events.S&S.Ch1.10H.Mateo.3.TrollHeritage}}",
+      "When": {
+        "MateoTrollHeritage": true,
       }
     },
   ]

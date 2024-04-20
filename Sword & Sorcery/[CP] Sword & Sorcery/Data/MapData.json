@@ -11,7 +11,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_MateoHome": {
-          "DisplayName": "{{i18n:MapName.ESMateoHome}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.ESMateoHome}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_MateoHome"
           },
@@ -34,7 +34,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_CoastalGuild": {
-          "DisplayName": "{{i18n:MapName.CoastalGuild}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.CoastalGuild}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_CoastalGuild"
           },
@@ -57,7 +57,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_DruidTower": {
-          "DisplayName": "{{i18n:MapName.ESDruidTower}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.ESDruidTower}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_DruidTower"
           },
@@ -80,7 +80,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_DruidGrove": {
-          "DisplayName": "{{i18n:MapName.ESDruidGrove}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.ESDruidGrove}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_DruidGrove"
           },
@@ -103,7 +103,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_RiverStage1": {
-          "DisplayName": "{{i18n:MapName.ESRiverStage1}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.ESRiverStage1}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_RiverStage1"
           },
@@ -126,7 +126,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_RiverStage2": {
-          "DisplayName": "{{i18n:MapName.ESRiverStage2}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.ESRiverStage2}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_RiverStage2"
           },
@@ -149,7 +149,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_RiverStage3": {
-          "DisplayName": "{{i18n:MapName.ESRiverStage3}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.ESRiverStage3}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_RiverStage3"
           },
@@ -172,7 +172,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_RiverStage4": {
-          "DisplayName": "{{i18n:MapName.ESRiverStage4}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.ESRiverStage4}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_RiverStage4"
           },
@@ -195,7 +195,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_DateMine": {
-          "DisplayName": "{{i18n:MapName.DateMine}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.DateMine}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_DateMine"
           },
@@ -218,7 +218,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_LavaMine": {
-          "DisplayName": "{{i18n:MapName.LavaMine}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.LavaMine}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_LavaMine"
           },
@@ -241,7 +241,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_IntroMine": {
-          "DisplayName": "{{i18n:MapName.IntroMine}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.IntroMine}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_IntroMine"
           },
@@ -264,7 +264,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_HectorForest": {
-          "DisplayName": "{{i18n:MapName.HectorForest}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.HectorForest}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_HectorForest"
           },
@@ -287,7 +287,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_VanInterior": {
-          "DisplayName": "{{i18n:MapName.VanInterior}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.VanInterior}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_VanInterior"
           },
@@ -310,7 +310,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_LionsMane": {
-          "DisplayName": "{{i18n:MapName.LionsMane}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.LionsMane}}",
           "CreateOnLoad": {
             "MapPath": "{{LionsManeStatus}}"
           },
@@ -333,7 +333,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_Planetarium": {
-          "DisplayName": "{{i18n:MapName.Planetarium}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.Planetarium}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_Planetarium"
           },
@@ -356,7 +356,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_Underforge": {
-          "DisplayName": "{{i18n:MapName.Underforge}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.Underforge}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_Underforge"
           },
@@ -379,7 +379,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_DeepDarkLv0": {
-          "DisplayName": "{{i18n:MapName.DeepDarkLv0}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv0}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_DeepDarkLv0"
           },
@@ -402,7 +402,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_DeepDarkLv1": {
-          "DisplayName": "{{i18n:MapName.DeepDarkLv1}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv1}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_DeepDarkLv1"
           },
@@ -425,7 +425,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_DeepDarkLv2": {
-          "DisplayName": "{{i18n:MapName.DeepDarkLv2}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv2}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_DeepDarkLv2"
           },
@@ -448,7 +448,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_DeepDarkLv3": {
-          "DisplayName": "{{i18n:MapName.DeepDarkLv3}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv3}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_DeepDarkLv3"
           },
@@ -471,7 +471,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_DeepDarkLv4": {
-          "DisplayName": "{{i18n:MapName.DeepDarkLv4}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv4}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_DeepDarkLv4"
           },
@@ -494,7 +494,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_DeepDarkLv5": {
-          "DisplayName": "{{i18n:MapName.DeepDarkLv5}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv5}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_DeepDarkLv5"
           },
@@ -517,7 +517,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_DuskspireLair": {
-          "DisplayName": "{{i18n:MapName.DuskspireLair}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.DuskspireLair}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_DuskspireLair"
           },

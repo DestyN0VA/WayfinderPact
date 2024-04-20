@@ -928,9 +928,9 @@
 // DATE NIGHT INVITATION 
 "Mail.Mateo.Letter2": "Good morning, Sunshine.^^I know you're busy, but if you've got the time to spare - meet me in the mines. I'll wait around by the elevator for you.^^You don't have to bring anything, just your swimsuit and an inclination for mischief.^^Sincerely,^Mateo.",
 
-"Mail.Mateo.Letter3": "Good morning, @!^^This is the recipe for my favorite stew. Figured you might like it as much as I do! I hope it brings you the joy and comfort that you bring me.^^Sincerely,^Mateo.%item cookingRecipe %%[#]{{ModID}}_autumnalstew",
+"Mail.Mateo.Letter3": "Good morning, @!^^This is the recipe for my favorite stew. Figured you might like it as much as I do! I hope it brings you the joy and comfort that you bring me.^^Sincerely,^Mateo.%item cookingRecipe %%[#]DN.SnS_autumnalstew",
 
-"Mail.Mateo.Letter4": "Good morning, @!^^I had a friend who owned a brewrey back in the Fern Islands. Best booze that side of the Salish Sea.^^Here's the recipe for their special Bourbon. It's a well-kept secret.^^Sincerely,^Mateo.%item cookingRecipe %%[#]{{ModID}}_salishbourbon",
+"Mail.Mateo.Letter4": "Good morning, @!^^I had a friend who owned a brewery back in the Fern Islands. Best booze that side of the Salish Sea.^^Here's the recipe for their special Bourbon. It's a well-kept secret.^^Sincerely,^Mateo.%item cookingRecipe %%[#]DN.SnS_salishbourbon",
 
 /*
    ____  _    _ ______  _____ _______ _____ 
@@ -1350,15 +1350,14 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.10H1.Mateo.18": "Just trust me.$31",
 
 // 10 HEARTS PT 2
-"Events.S&S.Ch1.10H2.Mateo.1": "Thanks for coming, @. I wanted this to be something special.$27#$b#We're gonna go somewhere I spent a lot of time at as a kid. Pretty much one of the only places I could go to be alone.$31#$b#I'm eager to share it with you. Let's get going.$27",
+"Events.S&S.Ch1.10H2.Mateo.1": "I'm glad you're indulging me, @. I wanted this to be something special.$27#$b#We're gonna go somewhere I spent a lot of time at as a kid. Pretty much one of the only places I could go to be alone.$31#$b#I'm eager to share it with you. Let's get going.$27",
 "Events.S&S.Ch1.10H2.Mateo.2": "First, I wanted to say thank you - not just for returning my feelings, but for sticking with me for so long.$12#$b#You've been an amazing friend to me, and I'm overjoyed to be able to take the next step with you. I attribute my growth directly to your intervention.$29#$b#There's nobody else this side of the Gem Sea I'd rather call a partner. I'm honored, @.$27",
 "Events.S&S.Ch1.10H2.Q1.Answers": "#I'm glad to have been part of your journey, Teo.#You've stolen my heart, you darling rogue.",
 "Events.S&S.Ch1.10H2.Q1.Response.1": "And it'll continue on, Sunshine. Together.$27",
 "Events.S&S.Ch1.10H2.Q1.Response.2": "I'll take good care of it, Sunshine. I promise.$27",
-"Events.S&S.Ch1.10H2.Hector.1": "Fooling around?! In my forest?$9#$b#Darling? More like dasdardly! Whadda bastard!$5",
-"Events.S&S.Ch1.10H2.Hector.2": "And they have the audacity to call ME a sly dog.$8",
-"Events.S&S.Ch1.10H2.Hector.3": "At least they've got game, and I've certianly seen worse...$7",
-"Events.S&S.Ch1.10H2.Hector.4": "Ehehehehehehehe! You know what? I think I'll cause problems for them on purpose!$5",
+"Events.S&S.Ch1.10H.Mateo.3": "You're mine, now - and I'm yours. And there's something I'd like to do about that - something I've been thinking about for a long time, now.$28",
+"Events.S&S.Ch1.10H.Mateo.3.TrollHeritage": "There is one thing I think about often, actually... when we'd met, you weren't scared of me. You didn't question the horns, or the ears, or the teeth.$31#$b#At this point, I'm going to assume it's because you liked them. And, well, now that you're mine, and I'm yours...$30#$b#...I'd like to show you what I can do with them. Something I've been thinking about for a long time, now.$28",
+"Events.S&S.Ch1.10H2.Mateo.4": "I've stolen your heart and your body, @ - I'd say that's the most successful heist I'll ever pull off.$31",
 
 // 12 HEARTS 
 "Events.S&S.Ch1.12H.Mateo.1": "Hey, Sunshine!",
@@ -1369,7 +1368,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.12H.Mateo.3": "I've asked you before to trust me, and you have. Will you extend that to me again?$35",
 "Events.S&S.Ch1.12H.Mateo.4": "Let's get going, then!",
 "Events.S&S.Ch1.12H.Mateo.5": "We've chosen to spend our lives together, and now, here we are.$28#$b#There's nothing more beautiful to me than sharing in an experience like this with my spouse.$4#$b#Maybe it's not the most conventional date, but the memorable ones aren't - and I want us to remember this. I want us to look back fondly on tonight.$27",
-"Events.S&S.Ch1.12H.Mateo.6": "I think a bit of intimacy is warranted, don't you? To celebrate everything we've been through together.$68#$b#You've helped me grow, helped me change, helped me reconnect.$66#$b#You've been great to me, Sunshine. Let me be great to you.$68",
+"Events.S&S.Ch1.12H.Mateo.6": "I think a bit of intimacy is warranted, don't you? To celebrate everything we've been through together.$68#$b#Your proposal was the best thing that ever happened to me; you've been a great spouse, Sunshine. Let me be great to you in turn.$68",
 "Events.S&S.Ch1.12H.Mateo.7": "...I'm sorry, @. Is the water too cold?$66#$b#Don't worry, I'll keep us plenty warm.$69",
 "Events.S&S.Ch1.12H.Mateo.8": "@? Being the guildmaster doesn't compare to being yours.$42",
 "Events.S&S.Ch1.12H.Mateo.8.TrollHeritage": "@? Being the guildmaster doesn't compare to being yours.$42#$b#And, hey. At least you've still got one good horn to hold onto, huh?$83",
@@ -2317,7 +2316,7 @@ ________      ________ _   _ _______ _____
 "Mail.Hector.Letter1": "^^You haven't earned my praises yet, @.^^Your final challenge is an unquestioning display of empathy where it may not be owed. Figure it out, and we'll take the next step.^^ - B",
 
 // POST GUILD BEING BUILT 
-"Mail.Hector.Letter2": "^^Good job, @.^^Come meet me at the tower where you've been making your offerings. Be warned. I tend toward the impatient!^^ - B",
+"Mail.Hector.Letter2": "^^Good job, @.^^I've set up a means of getting into my Tower at the Railroad - let's see if you can find it!^^ - B",
 
 /*
    ____  _    _ ______  _____ _______ _____ 
@@ -2394,12 +2393,19 @@ ________      ________ _   _ _______ _____
 // PENTACLE QUESTS EVENTS
 "Events.S&S.Ch2.Pentacle1.Message": "Something has been added to your journal.",
 
-// QUEST EXCLUSIVE EVENT
+// QUEST EXCLUSIVE EVENTS
 
 "Events.S&S.Ch2.PentacleQuest.Hector.1": "If it isn't the mysterious new farmer. What an entirely unplanned little coincidence.$3",
 "Events.S&S.Ch2.PentacleQuest.Hector.2": "I expected a reaction far more fearful from you, though I suppose you're cut from a different cloth.$9#$B#Keep doing what you're doing. With those requests, I mean. You're proving yourself very helpful.$3",
 "Events.S&S.Ch2.PentacleQuest.Hector.3": "Who am I? All in due time, @.$2",
 "Events.S&S.Ch2.PentacleQuest.Hector.4": "All in due time...$0",
+
+"Events.S&S.Ch2.PentacleQuest2.Hector.Message": "You feel like you're being watched...",
+"Events.S&S.Ch2.PentacleQuest2.Hector.1": "@'s actually gone and collected everything I needed... they're meeting all my standards! I'm pleasantly surprised.$5",
+"Events.S&S.Ch2.PentacleQuest2.Hector.2": "Now, it'll only be a matter of time before I can put my plan in motion.$3",
+"Events.S&S.Ch2.PentacleQuest2.Hector.3": "I won't have to deal with this pain for very much longer now, will I?$2",
+"Events.S&S.Ch2.PentacleQuest2.Hector.4": "Ehehehehehehehe! It's all coming together!$4",
+"Events.S&S.Ch2.PentacleQuest2.Hector.Message2": "You could've sworn you heard laughing. While investigating, you find a seed on the ground.",
 
 // 0 HEARTS PT 1 
 "Events.S&S.Ch2.0H.Mateo.1": "I swear, the skeleton had a cape-",
@@ -2407,7 +2413,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch2.0H.Linus.2": "I was just looking for - ah!$3",
 "Events.S&S.Ch2.0H.Hector.1": "What are you doing here?$16",
 "Events.S&S.Ch2.0H.Linus.3": "I- I don't know, I was just scavenging -$3",
-"Events.S&S.Ch2.0H.Hector.2": "Oh, yeah? Is that so?$8#$b#Looks like I left that warp open again... Oops!$9",
+"Events.S&S.Ch2.0H.Hector.2": "Oh, yeah? Is that so?$8#$b#I didn't expect someone else to be hanging out in the garbage at the Railroad... Oops!$9",
 "Events.S&S.Ch2.0H.Hector.3": "Well, this wasn't how I'd planned for this to go, but I suppose it'll have to do.$23#$b#It's great to finally meet you, @. My name is...$8",
 "Events.S&S.Ch2.0H.Hector.4": "Ah, shit.",
 "Events.S&S.Ch2.0H.Hector.5": "Oh!",
@@ -5381,4 +5387,5 @@ ________      ________ _   _ _______ _____
 "miscellaneous.mapname.DeepDarkLv4": "Deep Dark - Level 4",
 "miscellaneous.mapname.DeepDarkLv5": "Deep Dark - Level 5",
 "miscellaneous.mapname.DuskspireLair": "Deep Dark - Lair of the Duskspire Behemoth",
+"miscellaneous.mapname.Underforge": "The Underforge",
 }

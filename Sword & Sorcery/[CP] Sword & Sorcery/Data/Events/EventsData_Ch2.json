@@ -13,6 +13,18 @@
       
       "When": { "SkipIntroQuest": false }
         
+		},
+    {
+			"LogName": "Hector's 0 Heart Event pt 2",
+			"Action": "EditData",
+			"Target": "Data/Events/Forest",
+      "Entries": {
+    
+        "SnS.Ch2.Hector.0p2/t 600 1800/n Hector_SpecialOrders_Pentacle1/n Hector_SpecialOrders_Pentacle2/n Hector_SpecialOrders_Pentacle3/n Hector_SpecialOrders_Pentacle4/F": "SnS.HectorTheme/-100 -100/farmer -900 -900 0/addTemporaryActor MysteryWolf 32 32 -100 -100 2 false/skippable/changeName MysteryWolf 'B'?/viewport -100 -100 clamp true/skippable/message \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.Message}}\"/fade/showFrame MysteryWolf 1/viewport -100 -100/pause 2000/showFrame MysteryWolf 2/pause 400/showFrame MysteryWolf 3/pause 400/showFrame MysteryWolf 0/pause 400/speak MysteryWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.1}}\"/pause 250/showFrame MysteryWolf 4/pause 250/speak MysteryWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.2}}\"/pause 250/showFrame MysteryWolf 5/pause 250/speak MysteryWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.3}}\"/pause 1000/animate MysteryWolf false false 100 3 3 3 3 2 2 2 2 1 1 1 1/fade/viewport -1000 -1000/speak MysteryWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.4}}[114]\"/pause 250/message \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.Message2}}\"/end",
+      }, 
+      
+      "When": { "SkipIntroQuest": false }
+        
 			},
 
     {
@@ -204,7 +216,7 @@
       "Target": "Data/Events/EastScarp_VetHouse",
       "Entries": {
     
-        "SnS.Ch2.Hector.17/r -1": "{{season}}_day_ambient/-100 -100/farmer 12 27 0 Hector 5 23 2 RichieTheMacaw 8 21 2 Jacob 999 999 0 Eloise 999 999 0/removeItem (O)460/skippable/addConversationTopic HectorEngaged 2/showFrame Hector 16/viewport 10 26/globalFadeToClear/emote farmer 16 true/textAboveHead Hector \"{{i18n:Events.S&S.Ch2.Engaged.Hector.1}}\"/pause 500/advancedMove farmer false 0 -2 -3 0 0 -1 3 10/advancedMove Hector false 0 -1 2 0 0 2 1 10/pause 1000/quickQuestion #{{i18n:Events.S&S.Ch2.Engaged.Q1.Answer.1}}#{{i18n:Events.S&S.Ch2.Engaged.Q1.Answer.2}}(break)friendship Hector 50\\speak Hector \"{{i18n:Events.S&S.Ch2.Engaged.Q1.Response.1}}\"(break)friendship Hector 50\\speak Hector \"{{i18n:Events.S&S.Ch2.Engaged.Q1.Response.2}}\"/pause 250/emote farmer 8/pause 250/speak Hector \"{{i18n:Events.S&S.Ch2.Engaged.Hector.2}}\"/pause 250/emote farmer 20/pause 250/playSound parrot/pause 250/emote Hector 12 true/faceDirection Hector 0 true/speak Hector \"{{i18n:Events.S&S.Ch2.Engaged.Hector.3}}\"/playSound doorOpen/warp Jacob 12 27/faceDirection Hector 1/advancedMove Jacob false 0 -4 3 10/pause 1/warp Eloise 12 27/advancedMove Eloise false 0 -3 3 10/emote Eloise 8 true/emote Jacob 8/advancedMove farmer false 0 -1 1 0 1 10/advancedMove Hector false 3 0 1 10/speak Jacob \"{{i18n:Events.S&S.Ch2.Engaged.Jacob.1}}\"/pause 250/faceDirection Hector 0 true/faceDirection farmer 2 true/emote Hector 60 true/emote farmer 60 true/pause 1000/faceDirection farmer 1 true/faceDirection Hector 1 true/pause 250/speak Hector \"{{i18n:Events.S&S.Ch2.Engaged.Hector.4}}\"/emote Eloise 16 true/emote Jacob 16 true/pause 250/speak Jacob \"{{i18n:Events.S&S.Ch2.Engaged.Jacob.2}}\"/speak Eloise \"{{i18n:Events.S&S.Ch2.Engaged.Eloise.1}}\"/jump Jacob 5 true/emote Jacob 60 true/emote Hector 56 true/emote farmer 56 true/emote Eloise 56 true/globalFade/viewport -1000 -1000/stopAdvancedMoves/end"
+        "SnS.Ch2.Hector.17/r -1": "{{season}}_day_ambient/-100 -100/farmer 12 27 0 Hector 5 23 2 RichieTheMacaw 8 21 2 Jacob 999 999 0 Eloise 999 999 0/removeItem (O)460/skippable/setEngaged Hector false 3/addConversationTopic HectorEngaged 2/showFrame Hector 16/viewport 10 26/globalFadeToClear/emote farmer 16 true/textAboveHead Hector \"{{i18n:Events.S&S.Ch2.Engaged.Hector.1}}\"/pause 500/advancedMove farmer false 0 -2 -3 0 0 -1 3 10/advancedMove Hector false 0 -1 2 0 0 2 1 10/pause 1000/quickQuestion #{{i18n:Events.S&S.Ch2.Engaged.Q1.Answer.1}}#{{i18n:Events.S&S.Ch2.Engaged.Q1.Answer.2}}(break)friendship Hector 50\\speak Hector \"{{i18n:Events.S&S.Ch2.Engaged.Q1.Response.1}}\"(break)friendship Hector 50\\speak Hector \"{{i18n:Events.S&S.Ch2.Engaged.Q1.Response.2}}\"/pause 250/emote farmer 8/pause 250/speak Hector \"{{i18n:Events.S&S.Ch2.Engaged.Hector.2}}\"/pause 250/emote farmer 20/pause 250/playSound parrot/pause 250/emote Hector 12 true/faceDirection Hector 0 true/speak Hector \"{{i18n:Events.S&S.Ch2.Engaged.Hector.3}}\"/playSound doorOpen/warp Jacob 12 27/faceDirection Hector 1/advancedMove Jacob false 0 -4 3 10/pause 1/warp Eloise 12 27/advancedMove Eloise false 0 -3 3 10/emote Eloise 8 true/emote Jacob 8/advancedMove farmer false 0 -1 1 0 1 10/advancedMove Hector false 3 0 1 10/speak Jacob \"{{i18n:Events.S&S.Ch2.Engaged.Jacob.1}}\"/pause 250/faceDirection Hector 0 true/faceDirection farmer 2 true/emote Hector 60 true/emote farmer 60 true/pause 1000/faceDirection farmer 1 true/faceDirection Hector 1 true/pause 250/speak Hector \"{{i18n:Events.S&S.Ch2.Engaged.Hector.4}}\"/emote Eloise 16 true/emote Jacob 16 true/pause 250/speak Jacob \"{{i18n:Events.S&S.Ch2.Engaged.Jacob.2}}\"/speak Eloise \"{{i18n:Events.S&S.Ch2.Engaged.Eloise.1}}\"/jump Jacob 5 true/emote Jacob 60 true/emote Hector 56 true/emote farmer 56 true/emote Eloise 56 true/globalFade/viewport -1000 -1000/stopAdvancedMoves/end"
 
       }, 
       

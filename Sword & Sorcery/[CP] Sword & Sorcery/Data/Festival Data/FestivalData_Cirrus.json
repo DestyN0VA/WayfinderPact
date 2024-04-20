@@ -73,11 +73,6 @@
 					"Value": "Cirrus 24 25 3",
 					"Delimiter": "/"
 				},
-				{
-					"Operation": "Append",
-					"Target": [ "Fields", "set-up", 5],
-					"Value": "/animate Cirrus false true 100 30 31 32 33"
-				}
 			],
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,

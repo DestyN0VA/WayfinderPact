@@ -19,6 +19,18 @@
             "FromFile": "Data/blank.json"
           },
           {
+            "LogName": "Roslin Loads from Blanks",
+            "Action": "Load",
+            "Target": "Characters/Dialogue/Roslin, Characters/Schedules/Roslin",
+            "FromFile": "Data/blank.json"
+          },
+          {
+            "LogName": "Dandelion Loads from Blanks",
+            "Action": "Load",
+            "Target": "Characters/Dialogue/Dandelion, Characters/Schedules/Dandelion",
+            "FromFile": "Data/blank.json"
+          },
+          {
             "LogName": "Tent Events Blank",
             "Action": "Load",
             "Target": "data/events/EastScarp_MateoHome",
