@@ -318,64 +318,57 @@
       "Name": "MateoArmor",
       "Value": "Armor_Mateo.png",
       "When": {
-        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": false,
-        "MateoTrollHeritage": false
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": false
       }
     },
     {
       "Name": "MateoArmor",
       "Value": "Armor_ScarredMateo.png",
       "When": {
-        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true,
-        "MateoTrollHeritage": false
-      }
-    },
-    {
-      "Name": "MateoArmor",
-      "Value": "Armor_Mateo_Horns.png",
-      "When": {
-        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": false,
-        "MateoTrollHeritage": true
-      }
-    },
-    {
-      "Name": "MateoArmor",
-      "Value": "Armor_ScarredMateo_Horns.png",
-      "When": {
-        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true,
-        "MateoTrollHeritage": true
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true
       }
     },
     {
       "Name": "MateoBeach",
       "Value": "Beach_Mateo.png",
-      "When": {
-        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": false,
-        "MateoTrollHeritage": true
-      }
     },
     {
       "Name": "MateoBeach",
       "Value": "Beach_ScarredMateo.png",
       "When": {
-        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true,
-        "MateoTrollHeritage": false
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true
       }
     },
     {
-      "Name": "MateoBeach",
-      "Value": "Beach_Mateo_Horns.png",
+      "Name": "Horns",
+      "Value": "Horns1" //Original Horns
+    },
+    {
+      "Name": "Horns",
+      "Value": "Horns2", //Broken Horns
       "When": {
-        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": false,
-        "MateoTrollHeritage": true
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true 
       }
     },
     {
-      "Name": "MateoBeach",
-      "Value": "Beach_ScarredMateo_Horns.png",
+      "Name": "Horns",
+      "Value": "Horns3", //Stage 1 Regrown Horns
       "When": {
-        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true,
-        "MateoTrollHeritage": true
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.14": true 
+      }
+    },
+    {
+      "Name": "Horns",
+      "Value": "Horns4", //Stage 2 Regrown Horns
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true 
+      }
+    },
+    {
+      "Name": "Horns",
+      "Value": "Horns5", //Stage 3 Regorwn Horns
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.14": true 
       }
     },
     {
