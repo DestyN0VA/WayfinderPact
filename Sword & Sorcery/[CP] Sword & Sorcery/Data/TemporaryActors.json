@@ -28,7 +28,7 @@
         {
             "Action": "Load",
             "Target": "Characters/MateoFinale",
-            "FromFile": "assets/TemporaryActors/Characters/MateoFinale.png"
+            "FromFile": "assets/TemporaryActors/Characters/MateoFinale{{MateoHorns}}.png"
         },
         {
             "Action": "Load",
