@@ -54,7 +54,7 @@
       },
       "When": {
         "Hearts:Cirrus": "10",
-        "Query: {{Random: {{Range: 1, 30}}|key=CLMO}} = 1": true,
+        "Query: {{Random: {{Range: 1, 3}}|key=CLMO}} = 1": true,
         "HasFlag |contains=SnS_M_Cirrus_OverrideSeenToday": false
       }
     },
@@ -69,7 +69,7 @@
       },
       "When": {
         "Hearts:Cirrus": "10",
-        "Query: {{Random: {{Range: 1, 10}}|key=CDO}} = 1": true,
+        "Query: {{Random: {{Range: 1, 3}}|key=CDO}} = 1": true,
         "HasFlag |contains=SnS_M_Cirrus_OverrideSeenToday": false,
         "Relationship:Cirrus |contains=Dating": true
       }

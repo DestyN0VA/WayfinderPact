@@ -38,7 +38,7 @@
                         },
                         "When": {
                                 "Hearts:Mateo": "10",
-                                "Query: {{Random: {{Range: 1, 5}}|key=MGO}} = 1": true,
+                                "Query: {{Random: {{Range: 1, 3}}|key=MGO}} = 1": true,
                                 "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true,
                                 "HasFlag |contains=SnS_M_Mateo_OverrideSeenToday": false
                         }

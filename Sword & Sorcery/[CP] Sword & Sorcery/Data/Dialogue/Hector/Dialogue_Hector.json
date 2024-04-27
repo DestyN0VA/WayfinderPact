@@ -54,7 +54,7 @@
             },
             "When": {
                 "Hearts:Hector": "10",
-                "Query: {{Random: {{Range: 1, 5}}|key=HDO}} = 1": true,
+                "Query: {{Random: {{Range: 1, 3}}|key=HDO}} = 1": true,
                 "HasFlag |contains=SnS_M_Hector_OverrideSeenToday": false
             }
         },
@@ -70,12 +70,12 @@
             "When": {
                 "Relationship:Hector |contains=Married": true,
                 "Weather": "Sun, Wind",
-                "Query: {{Random: {{Range: 1, 5}}|key=HMO}} = 1": true,
+                "Query: {{Random: {{Range: 1, 3}}|key=HMO}} = 1": true,
                 "HasFlag |contains=SnS_M_Hector_OverrideSeenToday": false
             }
         },
         {
-            "LogName": "Dialogue - Marriage Override Good Weather",
+            "LogName": "Dialogue - Marriage Override Bad Weather",
             "Action": "EditData",
             "Target": "Characters/Dialogue/Hector",
             "Entries": {
