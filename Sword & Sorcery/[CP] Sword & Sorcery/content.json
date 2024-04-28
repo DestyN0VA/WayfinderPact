@@ -391,7 +391,7 @@
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
-      "Value": "stopMusic/quickQuestion \"Is there anything I can do to help you carry that weight?#You've got responsibilities of your own now, Mateo. Don't forget them!#Just keep being my friend, Mateo! That's the kind of support I need.(break)speak Mateo \"I could never, @! Don't worry. $1\"(break)speak Mateo \"Of course, @! I've got your back.$1\"",
+      "Value": "stopMusic/quickQuestion \"Is there anything I can do to help you carry that weight?\"#You've got responsibilities of your own now, Mateo. Don't forget them!#Just keep being my friend, Mateo! That's the kind of support I need.(break)speak Mateo \"I could never, @! Don't worry. $1\"(break)speak Mateo \"Of course, @! I've got your back.$1\"",
       "When": {
         "HasFlag |contains=RivalHearts_AideenMateo": true
       }
