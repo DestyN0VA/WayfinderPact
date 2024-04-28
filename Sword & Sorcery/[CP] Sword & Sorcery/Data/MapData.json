@@ -11,7 +11,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_MateoHome": {
-          "DisplayName": "{{i18n:miscellaneous.mapname.ESMateoHome}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.CoastalGuild.False}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_MateoHome"
           },

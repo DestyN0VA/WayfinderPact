@@ -1371,7 +1371,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.12H.Mateo.6": "I think a bit of intimacy is warranted, don't you? To celebrate everything we've been through together.$68#$b#Your proposal was the best thing that ever happened to me; you've been a great spouse, Sunshine. Let me be great to you in turn.$68",
 "Events.S&S.Ch1.12H.Mateo.7": "...I'm sorry, @. Is the water too cold?$66#$b#Don't worry, I'll keep us plenty warm.$69",
 "Events.S&S.Ch1.12H.Mateo.8": "@? Being the guildmaster doesn't compare to being yours.$42",
-"Events.S&S.Ch1.12H.Mateo.8.TrollHeritage": "@? Being the guildmaster doesn't compare to being yours.$42#$b#And, hey. At least you've still got one good horn to hold onto, huh?$83",
+"Events.S&S.Ch1.12H.Mateo.8.TrollHeritage": "@? Being the guildmaster doesn't compare to being yours.$42#$b#And, hey. My horns growing back in give you something new to hold onto.$83",
 
 // 14 HEARTS
 "Events.S&S.Ch1.14H.Mateo.1": "Hey, Sunshine. I was just collecting my thoughts. There's something humbling about the rain, isn't there?$39",
@@ -1739,7 +1739,7 @@ ________      ________ _   _ _______ _____
 
 // GENERIC 5-10
 "Core.Hector.Generic.LateHeart.1": "I turned myself into a magpie out of curiosity, and then like... realized I didn't instinctively know how to fly. Oops.$4",
-"Core.Hector.Generic.LateHeart.2": "",
+"Core.Hector.Generic.LateHeart.2": "Honestly, I have no idea if I was made, grown, or born. I don't recall the circumstances of my creation. But what I do know... is that I am a man, a woman, and a wolf.$13",
 "Core.Hector.Generic.LateHeart.3": "Have you taken any time just to sit, today? Connecting with nature is a really important thing to dedicate time to.$12",
 "Core.Hector.Generic.LateHeart.4": "You know, @... I thought empathy intentionally hid from me, but here you are.$8",
 "Core.Hector.Generic.LateHeart.5": "Mayonnaise... is for drinking, right? Right?$24#$b#It's NOT? You mean to tell me that people just go on the internet and LIE about stuff like this?$20",
@@ -3605,6 +3605,15 @@ ________      ________ _   _ _______ _____
 // MOVIE INVITATION - SPOUSE 
 "MovieInvite.Spouse.Cirrus": "Of course, Rockstar! I hope you picked something good. If not, I'm sure we can figure out something else to do in the dark.$24",
 
+
+// CUSTOM WEDDING
+"CFD.Cirrus.Utility.cs.5371": "@, Cirrus - who's hair I swear was a different color yesterday... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you partners! Congratulations!$h",
+"CFD.Cirrus.Utility.cs.5373": "@, Cirrus - who's hair I swear was a different color yesterday... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you partners! Congratulations!$h",
+"CFD.Cirrus.Utility.cs.5375": "@, Cirrus - who's hair I swear was a different color yesterday... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you partners! Congratulations!$h",
+"CFD.Cirrus.Utility.cs.5377": "@, Cirrus - who's hair I swear was a different color yesterday... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you partners! Congratulations!$h",
+"CFD.Cirrus.Utility.cs.5367": "There comes a time in everyone's life when we cross paths with someone unexpectedly.#$b#When that happens, everything seems to slow down so you can appreciate the one you love for the first time.$h#$b#That being said, it is my honor on this day {0} of {1}, to unite @ and Cirrus in the bonds of marriage, so they can appreciate one another forever.",
+"CFD.Cirrus.Utility.cs.5369": "There comes a time in everyone's life when we cross paths with someone unexpectedly.#$b#When that happens, everything seems to slow down so you can appreciate the one you love for the first time.$h#$b#That being said, it is my honor on this day {0} of {1}, to unite @ and Cirrus in the bonds of marriage, so they can appreciate one another forever.",
+
 /*
   __  __          _____ _      
  |  \/  |   /\   |_   _| |     
@@ -5384,9 +5393,10 @@ ________      ________ _   _ _______ _____
 "miscellaneous.MermaidPendantCooldown": "%You haven't been dating very long - wait a while before you propose!",
 "miscellaneous.PendantResponse": "%It's finally the right time!...",
 
-"miscellaneous.mapname.ESMateoHome": "Mateo's Tent",
-"miscellaneous.mapname.CoastalGuild": "Coastal Adventurer's Guild",
-"miscellaneous.mapname.LionsMane1": "The Lion's Mane",
+"miscellaneous.mapname.CoastalGuild.False": "Mateo's Tent",
+"miscellaneous.mapname.CoastalGuild.True": "Coastal Adventurer's Guild",
+"miscellaneous.mapname.LionsMane.True": "The Lion's Mane",
+"miscellaneous.mapname.LionsMane.False": "Dilapidated Tavern",
 "miscellaneous.mapname.VanInterior": "Cirrus' Pizza Van",
 "miscellaneous.mapname.DeepDarkLv0": "Deep Dark - Entrance",
 "miscellaneous.mapname.DeepDarkLv1": "Deep Dark - Level 1",
