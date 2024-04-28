@@ -69,7 +69,7 @@
     {
 
         //Hector's 0 Heart Event
-        "HectorIntro":"{{i18n:CT.Mateo.HectorIntro}}",
+        "HectorIntro":"{{i18n:CT.Mateo.HectorIntro.{{MateoRomance}}}}",
 
         // Hector's 1 Heart Event
         "HectorBookIntro":"{{i18n:CT.Mateo.HectorBookIntro}}",
@@ -87,13 +87,13 @@
         "HectorVet2":"{{i18n:CT.Mateo.HectorVet2}}",
 
         // Hector's 5 Heart Event Pt1
-        "HectorGender": "{{i18n:CT.Mateo.HectorGender}}",
+        "HectorGender": "{{i18n:CT.Mateo.HectorGender.{{MateoRomance}}}}",
 
         // Hector's 5 Heart Event Pt2
         "HectorVet3": "{{i18n:CT.Mateo.HectorVet3}}",
 
         // Hector's 5 Heart Event Pt3
-        "HectorDND": "{{i18n:CT.Mateo.HectorDND}}",
+        "HectorDND": "{{i18n:CT.Mateo.HectorDND.{{MateoRomance}}}}",
 
         // Hector's 6 Heart Event
         "HectorRiver1": "{{i18n:CT.Mateo.HectorRiver1}}",
@@ -114,7 +114,7 @@
         "HectorHeal2": "{{i18n:CT.Mateo.HectorHeal2}}",
 
         // Hector's 10 Heart Event Pt2
-        "HectorTrueGrove": "{{i18n:CT.Mateo.HectorTrueGrove}}",
+        "HectorTrueGrove": "{{i18n:CT.Mateo.HectorTrueGrove.{{MateoRomance}}}}",
 
         // Hector's 10 Heart Event Pt2
         "HectorEngaged": "{{i18n:CT.Mateo.HectorEngaged}}"
