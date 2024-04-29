@@ -79,7 +79,7 @@
   "anvil.not-enough": "You need {{qty}} of that for this effect.",
   "anvil.locked": "Locked until Artificer {{level}}",
   "tooltip.gem.(O)DN.SnS_ExquisiteEmerald": "Evasive",
-  "tooltip.gem.(DN.SnS_ExquisiteRuby": "Harming",
+  "tooltip.gem.(O)DN.SnS_ExquisiteRuby": "Harming",
   "tooltip.gem.(O)DN.SnS_ExquisiteTopaz": "Defensive",
   "tooltip.gem.(O)DN.SnS_ExquisiteAquamarine": "Critical",
   "tooltip.gem.(O)DN.SnS_ExquisiteAmethyst": "Freezing",
