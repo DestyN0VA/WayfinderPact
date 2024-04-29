@@ -56,7 +56,7 @@ namespace SwordAndSorcerySMAPI
             }
 
             __instance.equipmentIcons.Add(
-                new ClickableComponent( new Rectangle(nextTo.bounds.Right + 16 + 2, nextTo.bounds.Top, 64, 64), "Armor")
+                new ClickableComponent( new Rectangle(nextTo.bounds.Right + 16 + 2 + ( ModSnS.instance.Helper.ModRegistry.IsLoaded("bcmpinc.WearMoreRings") ? 128 : 0), nextTo.bounds.Top, 64, 64), "Armor")
                 {
                     myID = 123450102, // TODO: Replace with Nexus mod id prefix
                     upNeighborID = Game1.player.MaxItems - (nextTo.myID == InventoryPage.region_trinkets ? 7 : 8),

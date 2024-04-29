@@ -65,11 +65,17 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(Slingshot __instance, GameLocation location, Farmer who, ref object __state)
         {
+            if (!__instance.IsBow())
+                return;
+
             location.projectiles.OnValueAdded += Projectiles_OnValueAdded;
             __state = __instance.attachments[0]?.getOne();
         }
         public static void Postfix(Slingshot __instance, GameLocation location, Farmer who, object __state)
         {
+            if (!__instance.IsBow())
+                return;
+
             if (Game1.player.HasCustomProfession(RogueSkill.ProfessionBowSecondShot) && Game1.random.NextDouble() <= 0.25)
             {
                 var ammo = __state as StardewValley.Object;

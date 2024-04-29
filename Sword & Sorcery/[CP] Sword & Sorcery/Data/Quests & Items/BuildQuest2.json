@@ -13,7 +13,7 @@
 					"Requester": "Cirrus",
 					"Repeatable": "false",
 					"RequiredTags": "event_12360010, !dropbox_LionsMane",
-					"OrderType": "SwordSorcery",
+					"OrderType": "SwordSorcery.Event",
 					"SpecialRule": "",
 					"Text": "[CAGQuest.UntimedSpecialOrder.LionsMane_Text]",
 					"ItemToRemoveOnEnd": null,

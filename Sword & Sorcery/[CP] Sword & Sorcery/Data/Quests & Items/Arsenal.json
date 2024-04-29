@@ -15,7 +15,8 @@
           "SpriteIndex": 0,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "exquisite_gem"
+            "exquisite_gem",
+            "not_museum_donatable"
           ],
         },
         "{{ModID}}_ExquisiteRuby": {
@@ -29,7 +30,8 @@
           "SpriteIndex": 2,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "exquisite_gem"
+            "exquisite_gem",
+            "not_museum_donatable"
           ],
         },
         "{{ModID}}_ExquisiteTopaz": {
@@ -43,7 +45,8 @@
           "SpriteIndex": 1,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "exquisite_gem"
+            "exquisite_gem",
+            "not_museum_donatable"
           ],
         },
         "{{ModID}}_ExquisiteJade": {
@@ -57,7 +60,8 @@
           "SpriteIndex": 3,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "exquisite_gem"
+            "exquisite_gem",
+            "not_museum_donatable"
           ],
         },
         "{{ModID}}_ExquisiteAquamarine": {
@@ -71,7 +75,8 @@
           "SpriteIndex": 6,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "exquisite_gem"
+            "exquisite_gem",
+            "not_museum_donatable"
           ],
         },
         "{{ModID}}_ExquisiteAmethyst": {
@@ -85,7 +90,8 @@
           "SpriteIndex": 4,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "exquisite_gem"
+            "exquisite_gem",
+            "not_museum_donatable"
           ],
         },
         "{{ModID}}_ExquisiteDiamond": {
@@ -99,7 +105,8 @@
           "SpriteIndex": 5,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "exquisite_gem"
+            "exquisite_gem",
+            "not_museum_donatable"
           ],
         },
         "{{ModID}}_ArcanePrimer": {
@@ -118,7 +125,7 @@
           "Name": "Pure Copper Ore",
           "DisplayName": "{{i18n: arsenal.pure-copper-ore.name}}",
           "Description": "{{i18n: arsenal.pure-copper-ore.description}}",
-          "Type": "Minerals",
+          "Type": "Basic",
           "Category": -15,
           "Price": 50,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
@@ -133,7 +140,7 @@
           "Name": "Pure Iron Ore",
           "DisplayName": "{{i18n: arsenal.pure-iron-ore.name}}",
           "Description": "{{i18n: arsenal.pure-iron-ore.description}}",
-          "Type": "Minerals",
+          "Type": "Basic",
           "Category": -15,
           "Price": 75,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
@@ -148,7 +155,7 @@
           "Name": "Pure Gold Ore",
           "DisplayName": "{{i18n: arsenal.pure-gold-ore.name}}",
           "Description": "{{i18n: arsenal.pure-gold-ore.description}}",
-          "Type": "Minerals",
+          "Type": "Basic",
           "Category": -15,
           "Price": 125,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
@@ -163,7 +170,7 @@
           "Name": "Pure Iridium Ore",
           "DisplayName": "{{i18n: arsenal.pure-iridium-ore.name}}",
           "Description": "{{i18n: arsenal.pure-iridium-ore.description}}",
-          "Type": "Minerals",
+          "Type": "Basic",
           "Category": -15,
           "Price": 500,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
@@ -178,7 +185,7 @@
           "Name": "Pure Radioactive Ore",
           "DisplayName": "{{i18n: arsenal.pure-radioactive-ore.name}}",
           "Description": "{{i18n: arsenal.pure-radioactive-ore.description}}",
-          "Type": "Minerals",
+          "Type": "Basic",
           "Category": -15,
           "Price": 1500,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
@@ -189,7 +196,7 @@
             "pure_ore"
           ],
         },
-        "{{ModID}}_CLothArmor": {
+        "{{ModID}}_ClothArmor": {
           "Name": "Cloth Armor",
           "DisplayName": "{{i18n: arsenal.cloth-armor.name}}",
           "Description": "{{i18n: arsenal.cloth-armor.description}}",
