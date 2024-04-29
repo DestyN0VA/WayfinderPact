@@ -1237,14 +1237,14 @@
       }
     },
     {
-      "Name": "TrollHeritageDialogue4",
+      "Name": "FilteredLanguage",
       "Value": "{{i18n:Events.S&S.Ch1.10H.Mateo.3}}",
       "When": {
         "ProfanityFilter": false,
       }
     },
     {
-      "Name": "TrollHeritageDialogue4",
+      "Name": "FilteredLanguage",
       "Value": "{{i18n:Events.S&S.Ch1.10H.Mateo.3.Filtered}}",
       "When": {
         "ProfanityFilter": true,
