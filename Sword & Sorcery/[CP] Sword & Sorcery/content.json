@@ -256,6 +256,13 @@
       "Description": "May cause some pathing issues, but offers a shortcut to the Druid Tower.",
       "Section": "Miscellaneous"
     },
+    "Eli&DylanExtras": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "Description": "Adds additional content for Eli and Dylan if they're installed. This is configurable because the crossover is not yet finished.",
+      "Section": "Miscellaneous"
+    },
     "ExcludeFromPerfection": {
       "AllowValues": "true, false",
       "Default": "false",
@@ -384,7 +391,7 @@
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
-      "Value": "stopMusic/quickQuestion \"Is there anything I can do to help you carry that weight?#You've got responsibilities of your own now, Mateo. Don't forget them!#Just keep being my friend, Mateo! That's the kind of support I need.(break)speak Mateo \"I could never, @! Don't worry. $1\"(break)speak Mateo \"Of course, @! I've got your back.$1\"",
+      "Value": "stopMusic/quickQuestion \"Is there anything I can do to help you carry that weight?\"#You've got responsibilities of your own now, Mateo. Don't forget them!#Just keep being my friend, Mateo! That's the kind of support I need.(break)speak Mateo \"I could never, @! Don't worry. $1\"(break)speak Mateo \"Of course, @! I've got your back.$1\"",
       "When": {
         "HasFlag |contains=RivalHearts_AideenMateo": true
       }
@@ -429,7 +436,8 @@
       "Name": "MateoHospitalScene_Setup",
       "Value": "{{MateoHospitalScene_Setup}} Nova.Eli -100 -100 2",
       "When": {
-        "HasMod: |contains=TenebrousNova.EliDylan.CP": true
+        "HasMod: |contains=TenebrousNova.EliDylan.CP": true,
+        "Eli&DylanExtras": true
       }
     },
     {
@@ -440,7 +448,9 @@
       "Name": "MateoHospitalScene",
       "Value": "speak Harvey \"{{i18n:Events.S&S.Ch1.7H1.Harvey.6}}\"/pause 1000/warp Harvey -100 -100/warp farmer -100 -100/warp Mateo 20 11/showFrame Mateo 50/changeLocation EastScarp_LavaMine/bgColor 0 0 0/ambientLight 0 0 0/viewport 17 12/playMusic Upper_Ambient/pause 1000/showFrame Mateo 51/shake Mateo 1000/pause 500/showFrame Mateo 50/playSound stairsdown/pause 300/warp Nova.Eli 6 10/advancedMove Nova.Eli false 0 1 2 10/pause 500/showFrame Nova.Eli 56/pause 750/showFrame Nova.Eli 57/pause 500/emote Nova.Eli 16 true/showFrame Nova.Eli 87/pause 750/showFrame Nova.Eli 0/faceDirection Nova.Eli 1/speed Nova.Eli 5/advancedMove Nova.Eli false 13 0 1 10/textAboveHead Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.1}}\"/pause 1000/textAboveHead Mateo \"{{i18n:Events.S&S.Ch1.7H1.Mateo.9}}\"/pause 3000/showFrame Nova.Eli 20/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.2}}\"/showFrame Mateo 0/pause 1000/shake Mateo 1000/pause 1000/showFrame Mateo 51/shake Mateo 1000/pause 1000/showFrame Mateo 50/emote Nova.Eli 28/showFrame Nova.Eli 21/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.3}}\"/globalFade/viewport -1000 -1000/pause 1000/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.4}}\"/pause 100/playSound throw/stopMusic/changeLocation Town/warp farmer 36 57/faceDirection Nova.Eli 2/showFrame Nova.Eli 0/warp Nova.Eli 33 57/showFrame Nova.Eli 67/faceDirection farmer 2/addTemporaryActor MateoKrobus 16 32 39 62 1 true Character/changeName MateoKrobus Krobus/pause 500/playSound doorClose/globalFadeToClear/viewport 35 59/playsound leafrustle/advancedMove MateoKrobus false -3 0 0 -3 4 10/emote farmer 40/pause 100/jump farmer 5 true/emote farmer 16/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.1.2}}\"/speed Nova.Eli 2/advancedMove Nova.Eli false 0 2 2 0 4 10/pause 750/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.5}}\"/pause 250/emote farmer 32/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.2}}\"/faceDirection Nova.Eli 1/emote Nova.Eli 28/faceDirection Nova.Eli 0/pause 250/emote farmer 36/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.3}}\"/fade/viewport -1000 -1000/message \"{{i18n:Events.S&S.Ch1.7H1.Message.1}}\"/mail MateoHospital/end invisible Mateo",
       "When": {
-        "HasMod: |contains=TenebrousNova.EliDylan.CP": true
+        "HasMod: |contains=TenebrousNova.EliDylan.CP": true,
+        "Eli&DylanExtras": true
+        
       }
     },
     {
@@ -560,7 +570,8 @@
       "Name": "CirrusIntro_EnD_Setup",
       "Value": "{{CirrusIntro_EnD_Setup}} Nova.Eli -999 -999 0 Nova.Dylan -999 -999 0",
       "When": {
-        "HasMod: |contains=TenebrousNova.EliDylan.CP": true
+        "HasMod: |contains=TenebrousNova.EliDylan.CP": true,
+        "Eli&DylanExtras": true
       }
     },
     {
@@ -571,7 +582,9 @@
       "Name": "CirrusIntro_EnD",
       "Value": "pause 200/playSound doorClose/warp Nova.Eli 14 23/speed Nova.Eli 5/advancedMove Nova.Eli false 0 -2 12 0 0 -2 5 0 0 -1 1 10/pause 1000/textAboveHead Nova.Eli \"SHE'S HERE!! Come on Dylan!\" true/faceDirection Clint 0/emote Clint 16 true/playSound doorClose/faceDirection Harvey 1/warp Nova.Dylan 14 23/speed Nova.Dylan 4/advancedMove Nova.Dylan false 0 -2 12 0 0 -2 5 0 1 10/faceDirection Cirrus 3/emote Cirrus 16 true/pause 250/textAboveHead Nova.Dylan \"Slow down, idiot!\" true/faceDirection Mateo 3/emote Mateo 8/faceDirection Harvey 0/advancedMove Mateo false 0 1 4 10/faceDirection Clint 3/pause 2000/shake Nova.Eli 1000/pause 1000/speak Nova.Eli \"Holy shit. It's really you!$7\"/speak Cirrus \"In the flesh!$1\"/pause 500/playSound throw true/positionOffset Nova.Eli 110 0/showFrame Nova.Eli 28/showFrame Cirrus 28/emote Nova.Eli 20 true/pause 500/emote Nova.Dylan 32/shake Nova.Eli 1000 true/shake Cirrus 1000/pause 1000/speak Nova.Eli \"I've missed you SO much! You're looking fantastic!$3\"/showFrame Nova.Eli 4 true/playSound dwop/shake Nova.Eli 200/warp Nova.Eli 32 18/pause 500/speak Mateo \"You two know each other?$36\"/faceDirection Cirrus 2 true/faceDirection Nova.Eli 2/emote Cirrus 60/speak Nova.Eli \"You could say that! Cirrus is our best mate, we go way back.$12#$b#We were meant to be waiting for her but Dylan slowed us down.$10\"/emote Nova.Dylan 16 true/jump Nova.Dylan/speak Nova.Dylan \"Excuse me? *I* slowed us down?? You're the one who was so anxious that you spilled coffee everywhere, which I had to mop up!$7\"/textAboveHead Hector \"Ehehehe!\"/advancedMove Cirrus false 0 1 -1 0 3 10/faceDirection farmer 3/pause 1500/speak Cirrus \"I missed you too, Dylan! Can I get a hug from you as well?$1\"/speak Nova.Dylan \"Oh go on then, if you must... it's good to see you again, Cirrus.$3\"/pause 250/positionOffset Cirrus -40 0/showFrame Nova.Dylan 28/showFrame Cirrus 28/shake Nova.Dylan 1000 true/shake Cirrus 1000 true/emote Nova.Eli 32 true/pause 250/emote farmer 32/showFrame Nova.Dylan 4 true/playSound dwop/shake Cirrus 200/warp Cirrus 32 19/250/speak Hector \"I guess we don't need to walk you to the Scarp after all, then?$0\"/faceDirection Cirrus 1/faceDirection farmer 0/speak Cirrus \"I should be good! Eli and Dylan offered to bring me to their place.$0\"/speak Nova.Dylan \"You and Mateo can feel free to join us, though. It sounded like you were getting on well with Cirrus before we showed up.$1\"/jump Nova.Eli/speak Nova.Eli \"Yeah! We can ask Gus for a few pizzas to go and put on a movie when we get home. How does that sound?$1\"/emote Hector 32 true/speak Mateo \"That sounds nice, actually. I'm game for it.$1\"/jump Hector/speak Hector \"Excellent! An excuse to get out of here!$9\"/speak Mateo \"Oh, come on, Biróg. Be nice.\"/speak Cirrus \"No, actually, I agree with them.$6\"/globalFade/viewport -999 -999/playSound doorClose/pause 1000/speak Sam \"No way! How come THEY get to hug her?!$8\"/speak Abigail \"Right?? Eli never told me he's besties with THE Cirrus!$7\"/speak Sebastian \"...$2\"/message \"Cirrus seemed a little nervous at first, but warmed up in the company of you, Mateo, Biróg and her best friends. Her van is parked in front of the Moray brother's house, and you have a fun time at the impromptu party.\"/end",
       "When": {
-        "HasMod: |contains=TenebrousNova.EliDylan.CP": true
+        "HasMod: |contains=TenebrousNova.EliDylan.CP": true,
+        "Eli&DylanExtras": true
+        
       }
     },
     {

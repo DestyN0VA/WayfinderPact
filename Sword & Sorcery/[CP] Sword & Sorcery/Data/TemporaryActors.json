@@ -1,6 +1,6 @@
 {
     "Changes": [
-           {
+        {
             "Action": "Load",
             "Target": "Portraits/CGEmblem",
             "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/CGEmblem.png"
@@ -114,6 +114,11 @@
             "Action": "Load",
             "Target": "Characters/ForgedD20",
             "FromFile": "assets/TemporaryActors/Characters/ForgedD20.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Portraits/YoungMateo",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/YoungMateo{{MateoHorns}}.png"
         },
     ]
 }

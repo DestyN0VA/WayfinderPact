@@ -21,7 +21,7 @@
           "Tooltips": [
             {
               "Id": "MateoHome",
-              "Text": "{{i18n:miscellaneous.mapname.ESMateoHome}}"
+              "Text": "{{i18n:miscellaneous.mapname.CoastalGuild.{{HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail}}}}"
             }
           ],
           "WorldPositions": [
@@ -35,7 +35,7 @@
                 "Width": 9,
                 "Height": 11
               },
-              "ScrollText": "{{i18n:miscellaneous.mapname.ESMateoHome}}"
+              "ScrollText": "{{i18n:miscellaneous.mapname.CoastalGuild.False}}"
             },
             {
               "Id": "CoastalGuild",
@@ -46,7 +46,7 @@
                 "Width": 9,
                 "Height": 11
               },
-              "ScrollText": "{{i18n:miscellaneous.mapname.CoastalGuild}}"
+              "ScrollText": "{{i18n:miscellaneous.mapname.CoastalGuild.True}}"
             },
             {
               "ScrollTextZones": [],
@@ -70,7 +70,7 @@
           "Tooltips": [
             {
               "Id": "LionsMane",
-              "Text": "{{i18n:miscellaneous.mapname.LionsMane1}}"
+              "Text": "{{i18n:miscellaneous.mapname.LionsMane.{{HasSeenEvent |contains=SnS.Ch3.Cirrus.13}}}}"
             }
           ],
           "WorldPositions": [
@@ -291,7 +291,7 @@
       },
       "TargetField": [ "EastScarp", "MapAreas", "MainScarp", "ToolTips", "MateoHome" ],
       "Entries": {
-        "Text": "{{i18n:miscellaneous.mapname.CoastalGuild}}"
+        "Text": "{{i18n:miscellaneous.mapname.CoastalGuild.True}}"
       }
     },
 
@@ -306,7 +306,7 @@
       },
       "TargetField": [ "EastScarp", "MapAreas", "MainScarp", "ToolTips", "LionsMane" ],
       "Entries": {
-        "Text": "{{i18n:miscellaneous.mapname.LionsMane}}"
+        "Text": "{{i18n:miscellaneous.mapname.LionsMane.True}}"
       }
     },
 
@@ -342,7 +342,7 @@
           "Tooltips": [
             {
               "Id": "MateoHome",
-              "Text": "{{i18n:miscellaneous.mapname.ESMateoHome}}"
+              "Text": "{{i18n:miscellaneous.mapname.CoastalGuild.False}}"
             }
           ],
           "WorldPositions": [
@@ -356,7 +356,7 @@
                 "Width": 9,
                 "Height": 11
               },
-              "ScrollText": "{{i18n:miscellaneous.mapname.ESMateoHome}}"
+              "ScrollText": "{{i18n:miscellaneous.mapname.CoastalGuild.False}}"
             },
             {
               "Id": "CoastalGuild",
@@ -367,7 +367,7 @@
                 "Width": 9,
                 "Height": 11
               },
-              "ScrollText": "{{i18n:miscellaneous.mapname.CoastalGuild}}"
+              "ScrollText": "{{i18n:miscellaneous.mapname.CoastalGuild.True}}"
             },
             {
               "ScrollTextZones": [],
@@ -391,7 +391,7 @@
           "Tooltips": [
             {
               "Id": "LionsMane",
-              "Text": "{{i18n:miscellaneous.mapname.LionsMane1}}"
+              "Text": "{{i18n:miscellaneous.mapname.LionsMane.True}}"
             }
           ],
           "WorldPositions": [
@@ -405,7 +405,7 @@
                 "Width": 12,
                 "Height": 8
               },
-              "ScrollText": "{{i18n:miscellaneous.mapname.LionsMane}}"
+              "ScrollText": "{{i18n:miscellaneous.mapname.LionsMane.True}}"
             },
             {
               "ScrollTextZones": [],
@@ -596,8 +596,8 @@
         "Width": 224,
         "Height": 222
       }
-    },
-
+    }
+    /*,
     //Changes the Tooltip text from Mateo's Tent to the Coastal Guild when conditions are met
     {
       "LogName": "YES SVE",
@@ -626,7 +626,7 @@
       "Entries": {
         "Text": "{{i18n:miscellaneous.mapname.LionsMane}}"
       }
-    }
+    }*/
 
   ]
 }
