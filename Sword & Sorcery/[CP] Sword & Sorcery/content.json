@@ -263,6 +263,14 @@
       "Description": "Adds additional content for Eli and Dylan if they're installed. This is configurable because the crossover is not yet finished.",
       "Section": "Miscellaneous"
     },
+
+      "ProfanityFilter": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "Description": "When toggled 'true', profanity in this mod will be cleaned up.",
+      "Section": "Miscellaneous"
+    },
     "ExcludeFromPerfection": {
       "AllowValues": "true, false",
       "Default": "false",
@@ -1226,6 +1234,20 @@
       "Value": "I know you've seen Stygium in the mines underneath East Scarp. Have you questioned where it comes from?$17",
       "When": {
         "HasSeenEvent |contains=SnS.Ch1.Mateo.17": false,
+      }
+    },
+    {
+      "Name": "TrollHeritageDialogue4",
+      "Value": "{{i18n:Events.S&S.Ch1.10H.Mateo.3}}",
+      "When": {
+        "ProfanityFilter": false,
+      }
+    },
+    {
+      "Name": "TrollHeritageDialogue4",
+      "Value": "{{i18n:Events.S&S.Ch1.10H.Mateo.3.Filtered}}",
+      "When": {
+        "ProfanityFilter": true,
       }
     },
     {
