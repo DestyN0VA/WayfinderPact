@@ -5,7 +5,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_salishbourbon": {
-          "Name": "Salish Sea Bourbon",
+          "Name": "{{ModID}}_salishbourbon",
           "DisplayName": "{{i18n: food.salishbourbon.name}}",
           "Description": "{{i18n: food.salishbourbon.description}}",
           "Type": "Cooking",
@@ -41,7 +41,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_autumnalstew": {
-          "Name": "Autumnal Stew",
+          "Name": "{{ModID}}_autumnalstew",
           "DisplayName": "{{i18n: food.autumnalstew.name}}",
           "Description": "{{i18n: food.autumnalstew.description}}",
           "Type": "Cooking",

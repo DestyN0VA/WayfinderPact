@@ -41,6 +41,7 @@
 "Core.Mateo.SummerEnd": "Suppose your summer crops are about ready to die off, @? That's alright. Just means it's time for a change; hardly a bad thing.$0",
 "Core.Mateo.FallEnd": "Winter's coming, huh? Can't say I'm looking forward to it, but Spring will come back to us eventually.$23",
 "Core.Mateo.WinterEnd": "Thank goodness we're almost done with this shit weather. The sun will shine on us again soon enough.$10",
+"Core.Mateo.WinterEnd.Filtered": "Thank goodness we're almost done with this garbage weather. The sun will shine on us again soon enough.$10",
 
 // SVE COMMUNITY DAY
 "Core.Mateo.CommunityCenter4": "I'm so glad the everyone makes the effort to spend time together here. It's such a wholesome gesture.$0",
@@ -300,6 +301,7 @@
 "Core.Mateo.Winter.LateHeart.14": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#I want to go to the museum, but I think my library card is about ten years expired. I might have to twist Gunther's arm a little to let me have a new one. At least I don't owe any overdue book fees - those I could never convince him to waive.$8#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received|I'm trying to appreciate the Winter the same way I do the Fall. It's not working. But I'm trying to make the effort to see beauty in the dismal.$8#$b#Sorry if I seem a little irate; I'm not trying to give you the cold shoulder on purpose.$16",
 "Core.Mateo.Winter.LateHeart.15": "I've been reading a lot of good books lately, now that I'm spending so much time in the library again. I can make some suggestions, if you've got the time.$0#$b#What kind of stuff do you like to read, @? Action, sci-fi, adventure?$1",
 "Core.Mateo.Winter.LateHeart.16": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#Back in college, it was pretty common to lose your keys on the way back to the dorm or leave them at the bar when you were tipsy. I made a lot of friends just by knowing how to pick locks.$13#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received|As it turns out, Dr. Harvey thinks I have a Vitamin D deficiency because I spent too much time in the mines and don't get enough sun. It gets worse in the winter because there's even less natural light than normal.$16#$b#It makes me prone to shitty moods, so he suggested some supplements and spending more time outside and around other people... I think I can handle that now.$4",
+"Core.Mateo.Winter.LateHeart.16.Filtered": "$query PLAYER_HEARTS Current Mateo 10, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail Any#Back in college, it was pretty common to lose your keys on the way back to the dorm or leave them at the bar when you were tipsy. I made a lot of friends just by knowing how to pick locks.$13#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received|As it turns out, Dr. Harvey thinks I have a Vitamin D deficiency because I spent too much time in the mines and don't get enough sun. It gets worse in the winter because there's even less natural light than normal.$16#$b#It makes me prone to awful moods, so he suggested some supplements and spending more time outside and around other people... I think I can handle that now.$4",
 "Core.Mateo.Winter.LateHeart.17": "I want to go to the museum, but I think my library card is about ten years expired. I might have to twist Gunther's arm a little to let me have a new one. At least I don't owe any overdue book fees - those I could never convince him to waive.$8",
 "Core.Mateo.Winter.LateHeart.18": "Back in college, it was pretty common to lose your keys on the way back to the dorm or leave them at the bar when you were tipsy. I made a lot of friends just by knowing how to pick locks.$13",
 
@@ -472,6 +474,7 @@
 "Marriage.Mateo.Indoor.Night.2": "I feel like I get so much work done in my office here. You don't really appreciate electricity until you lose it, I guess.$37#$b#I'm grateful for you, Sunshine. You set me back on the right track in so many ways.$32#$b#Though, if you'd like to go visit the guild and have some fun when nobody's around, I wouldn't be opposed.$36",
 "Marriage.Mateo.Indoor.Night.3": "Sometimes, when you get good at something, you think it's the only thing that makes you worthwhile.$8#$b#I felt that way about treasure hunting, about academia, about the guild.$2#$b#I'm starting to understand that's not true, though. I'm enough to be yours. Everything else comes second.$27",
 "Marriage.Mateo.Indoor.Night.4": "The only thing I like about you being gone is that I can blast embarrassing music really, really loudly.$32#$b#Wait, you can hear it outside?$3#$b#Oh, shit. I didn't realize it was THAT loud.$11#$b#...I'm not sorry, you signed up for this. No takesies-backsies.$13",
+"Marriage.Mateo.Indoor.Night.4.Filtered": "The only thing I like about you being gone is that I can blast embarrassing music really, really loudly.$32#$b#Wait, you can hear it outside?$3#$b#Oh, hell. I didn't realize it was THAT loud.$11#$b#...I'm not sorry, you signed up for this. No takesies-backsies.$13",
 "Marriage.Mateo.Indoor.Night.5": "%Mateo drapes their arms over your shoulders, leaning a little too heavily on you.#$b#Gravity is increasing on me, I can't hold myself up...$18#$b#Guess we're just going to be stuck like this, otherwise I'll fall over.$28", 
 "Marriage.Mateo.Indoor.Night.6":"I'm glad to have caught some of the light coming off you today, Sunshine. #Now...let's head to bed, huh?$31", 
 "Marriage.Mateo.Outdoor.0": "There are so many animals, I'm so impressed by how well you take care of them all on top of managing the fields, too.$32#$b#It's an amazing sight. You took this dilapidated plot of land and made it into something amazing.$1",
@@ -695,6 +698,7 @@
 "Festivals.Mateo.spring13.False.2":"Rooting for you, @. I used to be really good at this when Lewis still let me play as a kid. Not so much, now.$1",
 "Festivals.Mateo.spring13.False.3":"Gus really cooked up a storm, huh? There's like, every kind of egg imaginable here, cooked every which way.$36",
 "Festivals.Mateo.spring13.True.1": "Okay, so. There's one behind that tree right there. And another just out of sight under the bush.$14#$b#Ah, shit, Lewis is looking over here. Good luck, Sunshine.$15",
+"Festivals.Mateo.spring13.True.1.Filtered": "Okay, so. There's one behind that tree right there. And another just out of sight under the bush.$14#$b#Ah, shoot, Lewis is looking over here. Good luck, Sunshine.$15",
 "Festivals.Mateo.spring13.True.2": "See, I'm more into cooperative play. I should be allowed to help you without Lewis getting all bent out of shape.$80",
 "Festivals.Mateo.spring13.True.3": "I love you win or lose, Sunshine. But you know that, so, have fun kicking ass.$82",
 
@@ -928,9 +932,9 @@
 // DATE NIGHT INVITATION 
 "Mail.Mateo.Letter2": "Good morning, Sunshine.^^I know you're busy, but if you've got the time to spare - meet me in the mines. I'll wait around by the elevator for you.^^You don't have to bring anything, just your swimsuit and an inclination for mischief.^^Sincerely,^Mateo.",
 
-"Mail.Mateo.Letter3": "Good morning, @!^^This is the recipe for my favorite stew. Figured you might like it as much as I do! I hope it brings you the joy and comfort that you bring me.^^Sincerely,^Mateo.%item cookingRecipe %%[#]DN.SnS_autumnalstew",
+"Mail.Mateo.Letter3": "Good morning, @!^^This is the recipe for my favorite stew. Figured you might like it as much as I do! I hope it brings you the joy and comfort that you bring me.^^Sincerely,^Mateo.%item cookingRecipe DN.SnS_autumnalstew%%[#]Autmnalstew Title",
 
-"Mail.Mateo.Letter4": "Good morning, @!^^I had a friend who owned a brewery back in the Fern Islands. Best booze that side of the Salish Sea.^^Here's the recipe for their special Bourbon. It's a well-kept secret.^^Sincerely,^Mateo.%item cookingRecipe %%[#]DN.SnS_salishbourbon",
+"Mail.Mateo.Letter4": "Good morning, @!^^I had a friend who owned a brewery back in the Fern Islands. Best booze that side of the Salish Sea.^^Here's the recipe for their special Bourbon. It's a well-kept secret.^^Sincerely,^Mateo.%item cookingRecipe DN.SnS_salishbourbon%%[#]Salish Bourbon Title",
 
 /*
    ____  _    _ ______  _____ _______ _____ 
@@ -1204,6 +1208,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.7H1.Mateo.3.TrollHeritage": "You don't understand... There were so many Shadow Folk!$42#$b#They must've thought I was some kind of monster. Or worse, they knew I was human but I still frightened them!$42",
 "Events.S&S.Ch1.7H1.Mateo.4": "I've never seen them like that before, I feel like I was invading their home, I-$40#$b#I hesitated, I can't - I can't say they were wrong to defend themselves, I-$41",
 "Events.S&S.Ch1.7H1.Mateo.5": "Fuck.",
+"Events.S&S.Ch1.7H1.Mateo.5.Filtered": "Ugh...",
 "Events.S&S.Ch1.7H1.Harvey.4": "Mateo, you've taken too much of a beating. You need to lay down!$7",
 "Events.S&S.Ch1.7H1.Mateo.6": "@, I'm serious...$39",
 "Events.S&S.Ch1.7H1.Q1": "You have to believe me, the Shadow Folk... they're not just monsters, they're sentient.",
@@ -1213,7 +1218,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.7H1.Harvey.5": "It's okay, Mateo - we'll get you fixed up, I just need you to cooperate with me.$2",
 "Events.S&S.Ch1.7H1.Mateo.8": "You've got it, Harv...$39",
 "Events.S&S.Ch1.7H1.Harvey.6": "It was lucky that somebody found you in time.$2",
-"Events.S&S.Ch1.7H1.NovaEli.1": "Shit, shit, shit!",
+"Events.S&S.Ch1.7H1.NovaEli.1": "Crap, crap, crap!",
 "Events.S&S.Ch1.7H1.Mateo.9": "*Cough* Who...?",
 "Events.S&S.Ch1.7H1.NovaEli.2": "Mateo... this - this is...!$7#$b#This is really bad.$9",
 "Events.S&S.Ch1.7H1.NovaEli.3": "No, don't try to stand. I'll just have to carry you out. Hold on. I'll get you to the clinic.$2",
@@ -1228,6 +1233,7 @@ ________      ________ _   _ _______ _____
 // 7 HEARTS PT 2
 "Events.S&S.Ch1.7H2.Mateo.1": "Who goes?",
 "Events.S&S.Ch1.7H2.Mateo.2": "Shit-!",
+"Events.S&S.Ch1.7H2.Mateo.2.Filtered": "Damn-!",
 "Events.S&S.Ch1.7H2.Krobus.1": "I'm not going to hurt you...#$b#If you don't hurt me, anyway.$2",
 "Events.S&S.Ch1.7H2.Mateo.3": "Do you know them, @?$24",
 "Events.S&S.Ch1.7H2.Krobus.2": "My name is Krobus, I live just under the town...$3#$b#I heard you got hurt; people were talking about it...",
@@ -1479,6 +1485,7 @@ ________      ________ _   _ _______ _____
 "CT.Marlon.MateoWyatt": "Wyatt, that old bastard... that's the power of greed for ya, I suppose.",
 "CT.Marlon.MateoAcceptance": "Another member added to our ranks. A right skilled one, too. Mateo's abilities go beyond just talent. Can't help but wonder if there's something else to 'em.",
 "CT.Marlon.MateoPain": "That fuckin' kid, going and getting themselves hurt like that... they're no amateur! What were they thinking?#$b#They'll bounce back, I'm just... worried. I've known them since they were knee high.",
+"CT.Marlon.MateoPain.Filtered": "That damn kid, going and getting themselves hurt like that... they're no amateur! What were they thinking?#$b#They'll bounce back, I'm just... worried. I've known them since they were knee high.",
 "CT.Marlon.MateoRecovery": "Mateo's back!#$b#I should get Gunther, let 'em know...#$b#Hope they're not doing too poorly.",
 "CT.Marlon.CGuildConstruction": "I'm glad Mateo's starting to pull everything together...s'bout time.#$b#Thank you for helping them.",
 "CT.Marlon.CGuildComplete": "Hey, listen. I appreciate everything you've done for Mateo...#$b#You really set them on the right path. Not nearly the straight and narrow, but... they're far better off than they were before.#$bHah! Maybe with another branch, me and Gil can really start takin' it easy. We're not youngins anymore!",
@@ -1637,10 +1644,14 @@ ________      ________ _   _ _______ _____
 
 // ROMANTIC (POSITIVE)
 "Core.Hector.GiveFlowersA":"These look too nice for you to have grown them. Did Aideen make this for you?$9#$b#Oh, shit, they're for me? Uh, uh-$4#$b#Thanks. I uh, return the sentiment. I think. Yeah.$11",
+"Core.Hector.GiveFlowersA.Filtered":"These look too nice for you to have grown them. Did Aideen make this for you?$9#$b#Wait, what, they're for me? Uh, uh-$4#$b#Thanks. I uh, return the sentiment. I think. Yeah.$11",
 "Core.Hector.GiveFlowersB":"These look too nice for you to have grown them. Did Aideen make this for you?$9#$b#Oh, shit, they're for me? Uh, uh-$4#$b#Thanks. I uh, return the sentiment. I think. Yeah.$11",
-"Core.Hector.GivePendant":"You're really committed to making bad decisions, huh?$11#$b#Well, I'm committed to making bad decisions with you.$10",
+"Core.Hector.GiveFlowersB.Filtered": "These look too nice for you to have grown them. Did Aideen make this for you?$9#$b#Wait, what, they're for me? Uh, uh-$4#$b#Thanks. I uh, return the sentiment. I think. Yeah.$11",
+"Core.Hector.GivePendant": "You're really committed to making bad decisions, huh?$11#$b#Well, I'm committed to making bad decisions with you.$10",
 "Core.Hector.StardropGiftA": "Did you know that Stardrops only grow on the inside of meteorites, occasionally hurtling towards us from space?$0#$b#That's bullshit, but I did manage to find you one.$11",
+"Core.Hector.StardropGiftA.Filtered": "Did you know that Stardrops only grow on the inside of meteorites, occasionally hurtling towards us from space?$0#$b#That's a lie, but I did manage to find you one.$11",
 "Core.Hector.StardropGiftB":"Did you know that Stardrops only grow off of weird, horizontal palm trees, which can only grow partially submerged in water?$0#$b#That's bullshit, but I did manage to find you one.$11",
+"Core.Hector.StardropGiftB.Filtered":"Did you know that Stardrops only grow off of weird, horizontal palm trees, which can only grow partially submerged in water?$0#$b#That's a lie, but I did manage to find you one.$11",
 
 // ROMANTIC (NEGATIVE)
 "Core.Hector.DanceRejection": "No thanks, I've got four left paws.$18",
@@ -1672,6 +1683,7 @@ ________      ________ _   _ _______ _____
 "Core.Hector.ResortWander.2":"I don't like sand. It's coarse and rough and irritating and gets everywhere.$16",
 "Core.Hector.ResortChair":"Can I go home yet without looking like a weirdo?$23",
 "Core.Hector.ResortBar":"Why do people drink shit that tastes like bread when they can have delicious stuff made with fruits?$4",
+"Core.Hector.ResortBar.Filtered":"Why do people drink stuff that tastes like bread when they can have delicious stuff made with fruits?$4",
 "Core.Hector.ResortTowel":"I'm so boooooooored, I want to go hoooooooooooooooome.$16",
 "Core.Hector.ResortTowel.2":"Four thousand, three hundred, nintey six. Four thousand, three hundred, nintey se- Oh, hey @. Just counting the grains of sand.$16",
 "Core.Hector.Resort_Towel.3":"%Hector has fallen asleep without sunscreen. Oh, no!",
@@ -1746,6 +1758,7 @@ ________      ________ _   _ _______ _____
 "Core.Hector.Generic.LateHeart.6": "I went for a stupid little mental health walk today. It was nice, feet in the grass. Trying and failing to enjoy the heat. Ah, well. An attempt was made.$0",
 "Core.Hector.Generic.LateHeart.7": "Not unlike this cake, I have layers. Yes, I baked it. No, it doesn't have a file hidden inside it.[220 221]",
 "Core.Hector.Generic.LateHeart.8": "Mateo came by and asked if I wanted some flavored coffee bullshit. I told them no, but they brought one for me anyway.$16#$b#It was delicious.$8",
+"Core.Hector.Generic.LateHeart.8.Filtered": "Mateo came by and asked if I wanted some flavored coffee nonsense. I told them no, but they brought one for me anyway.$16#$b#It was delicious.$8",
 "Core.Hector.Generic.LateHeart.9": "Book said you'd be stopping in and DEMANDED, yes - DEMANDED, that I made extra breakfast for you. I'm at her whims; can't say no. She'll get upset.$7[201]",
 "Core.Hector.Generic.LateHeart.10": "Would you consider your farming practices ethical? Is that the kind of thing you think about? You're effectively supporting a small community, that's admirable.$8",
 "Core.Hector.Generic.LateHeart.11": "The light of the sunrise, and you remember everything. Only 'til the sun recedes once again, and the night comes down.$3",
@@ -1988,6 +2001,7 @@ ________      ________ _   _ _______ _____
 "Marriage.Hector.Winter": "Hey, @. Keep warm and such, you hear? In the case you're not, my bed and my arms are both open to you.$10",
 "Marriage.Hector.Winter1": "Mateo's hosting more tabletop. I guess to stave off their depression. You should come along, @. That's what friends do.$7",
 "Marriage.Hector.Winter8": "I hate the fishing festival. It's shitty and stupid. I'm going to go bully your mayor about it.$23",
+"Marriage.Hector.Winter8.Filtered": "I hate the fishing festival. It's stupid and cruel. I'm going to go bully your mayor about it.$23",
 "Marriage.Hector.Winter14": "I wonder if I can get any seed imports at the Night Market.$12",
 "Marriage.Hector.Winter24": "You're pretty hard to buy for, @. But don't worry. I've got a gift in mind for you.$10",
 "Marriage.Hector.Winter25": "Honestly, your gift is my presence at the festival. ...No, that's a joke. Your gift is AFTER the festival.$11",
@@ -2043,6 +2057,7 @@ ________      ________ _   _ _______ _____
 
 // ARTISANAL GOODS
 "Gifts.Hector.GiftReaction.CategoryArtisanalGoods": "Oooh, this is some fancy shit! Thanks, @.$9",
+"Gifts.Hector.GiftReaction.CategoryArtisanalGoods.Filtered": "Oooh, this is some fancy nonsense! Thanks, @.$9",
 
 // TRASH
 "Gifts.Hector.GiftReaction.CategoryTrash": "Do you not have a recycling machine on that farm of yours? That's alright, I'll recycle it for you.$1",
@@ -2120,6 +2135,7 @@ ________      ________ _   _ _______ _____
  "Movies.Hector.ItHowlsInTheRain.2": "Excuse me, but this is an inaccurate depiction of shapeshifters. I need write an angry letter.$16",
  "Movies.Hector.ItHowlsInTheRain.3": "That was poor shapeshifter representation. Whatever, I loved it anyway.$1",
  "Movies.Hector.MiracleAtColdstarRanch.1":"Oooh, I love cheesy holiday shit.$1",
+ "Movies.Hector.MiracleAtColdstarRanch.1.Filtered":"Oooh, I love cheesy holiday garbage.$1",
  "Movies.Hector.MiracleAtColdstarRanch.2":"I have that warm tingly feeling in my stomach. Or is that just a bellyache?$23",
  "Movies.Hector.MiracleAtColdstarRanch.3":"That was very cute.$8",
  "Movies.Hector.ZuzuCityExpress.1":"Awww, yeah. Romantic nonsense.$9",
@@ -2167,6 +2183,7 @@ ________      ________ _   _ _______ _____
 "Festivals.Hector.summer28.False.2": "I guess you can explain the Lunaloos with science, but it's more fun to explain them with magic.$13",
 "Festivals.Hector.summer28.False.3": "Nature's beauty is entirely unmatched.$13",
 "Festivals.Hector.summer28.True.1": "Yo, I heard that jellyfish was talking shit, do you want me to fight it for you?$11",
+"Festivals.Hector.summer28.True.1.Filtered": "Yo, I heard that jellyfish was talking trash, do you want me to fight it for you?$11",
 "Festivals.Hector.summer28.True.2": "Hold my hand, @.$10",
 "Festivals.Hector.summer28.True.3": "Maybe we can go for a dip after the Lunaloos are gone.$15",
 
@@ -2318,7 +2335,7 @@ ________      ________ _   _ _______ _____
 "Mail.Hector.Letter0": "@,^^Do you understand what you've been given?^^The wizard may have freely offered you nature's power, but you'll need me to help you hone it.^^Complete my challenges and I'll consider teaching you more about Druidics.^^ - B",
 
 // POST PENTACLE QUEST
-"Mail.Hector.Letter1": "^^You haven't earned my praises yet, @.^^Your final challenge is an unquestioning display of empathy where it may not be owed. Figure it out, and we'll take the next step.^^ - B",
+"Mail.Hector.Letter1": "^^You've been doing very well, @, but we're not done yet.^^Your final challenge is a display of empathy where it may not be owed. Focus on .^^ - B",
 
 // POST GUILD BEING BUILT 
 "Mail.Hector.Letter2": "^^Good job, @.^^I've set up a means of getting into my Tower at the Railroad - let's see if you can find it!^^ - B",
@@ -2421,6 +2438,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch2.0H.Hector.2": "Oh, yeah? Is that so?$8#$b#I didn't expect someone else to be hanging out in the garbage at the Railroad... Oops!$9",
 "Events.S&S.Ch2.0H.Hector.3": "Well, this wasn't how I'd planned for this to go, but I suppose it'll have to do.$23#$b#It's great to finally meet you, @. My name is...$8",
 "Events.S&S.Ch2.0H.Hector.4": "Ah, shit.",
+"Events.S&S.Ch2.0H.Hector.4.Filtered": "Aw, hold on...",
 "Events.S&S.Ch2.0H.Hector.5": "Oh!",
 "Events.S&S.Ch2.0H.Hector.6": "My name is, uh... Hector! And you're @! I've kept you quite busy this past year, haven't I?",
 "Events.S&S.Ch2.0H.Hector.7": "This wasn't how I envisioned this initial meeting to go. I usually try and go for a little more of a dramatic flair. But that's, uh. Fine. I guess.$24#$b#Listen, @. I put you through all that for a reason. A good one! And I'm going to need more of your help.$22#$b#It's gonna be big! Wouldn't be reaching out if I couldn't handle it myself. Ain't that cryptic as hell? Though, I'm not sure what you'd expect at this point!$9",
@@ -2863,17 +2881,20 @@ ________      ________ _   _ _______ _____
 "CT.Hector.HectorHeal2": "I don't know what I'd do without you, Jacob, Eloise, and Mateo...$13",
 "CT.Hector.HectorTrueGrove": "Don't overdo it on the shapeshifting, okay? You've seen the consequences.$22",
 "CT.Hector.HectorEngaged": "Holy shit, holy shit, holy shit, holy shit, holy sh-$4",
+"CT.Hector.HectorEngaged.Filtered": "Oh God, oh hell, oh crap, holy sh-$4",
 "CT.Hector.SterlingDrugs": "Sterling's been off. If you're close with him, you should check in on him, @.$17",
 "CT.Hector.SterlingRelapse": "I haven't seen Sterling at the market. I hope everything is alright. He's not been having an easy time of things, by the sounds of it.$17",
 "CT.Hector.SterlingApology": "Saw Sterling back at work. Good for him! Poor guy really went through the wringer.$11",
 "CT.Hector.SterlingRiver": "Sobriety doesn't come easy... it's difficult to claw your way up from the bottom. But I'm glad he did.$10",
 "CT.Hector.JunaBeachBallet": "Juna? Oh, I'd love to be her friend. She causes problems on purpose. But she intimidates the shit out of me.$12",
+"CT.Hector.JunaBeachBallet.Filtered": "Juna? Oh, I'd love to be her friend. She causes problems on purpose. But she intimidates the hell out of me.$12",
 "CT.Hector.LucikielArrives": "The demon? Yeah, he's hot. Listen, don't judge me. I'm just saying what everyone is thinking.$9",
 "CT.Hector.ReputationIncreased": "I heard Lucikiel has an 8-pack. He started with six, but got the other two from being A Good Noodle around town.$8",
 "CT.Hector.JasperGone2": "Jasper? Jasper Thomas? What did he do-? ... I was close with his father. Let me know when he turns up.$24",
 "CT.Hector.JasperHomeA": "Glad he made it home safely. I lost one Thomas already.$24",
 "CT.Hector.PTJ03": "More crab-related pranks is MORE BETTER.$9",
 "CT.Hector.MeetTheCats": "I was going to joke about Jean and Jorts talking shit about you, but they would never because they're actually perfect.$14",
+"CT.Hector.MeetTheCats.Filtered": "I was going to joke about Jean and Jorts talking trash about you, but they would never because they're actually perfect.$14",
 "CT.Hector.ButteredJorts": "HAHAHAHAHAHAHAHAHAHAHA Pam did WHAT-?$1",
 "CT.Hector.JortsZoomies": "I support the anti-capitalist cats.$8",
 "CT.Hector.wedding": "Congratulations on your union. No, seriously. That's lovely.$4",
@@ -2999,10 +3020,11 @@ ________      ________ _   _ _______ _____
 "Core.Cirrus.PlayerKilled.Skull.02": "Easy, now... take it slow.",
 "Core.Cirrus.PlayerKilled.Skull.03": "You're awake! Thank goodness. Hector found you all bent out of shape in the Skull Cave!$2",
 "Core.Cirrus.PlayerKilled.Skull.04": "I was so scared, @, holy shit...$21",
+"Core.Cirrus.PlayerKilled.Skull.04.Filtered": "I was so scared, @, holy crap...$21",
 "Core.Cirrus.PlayerKilled.Skull.05": "Don't do this to me again, @! If you do, I'll give YOU something to be scared about!#@21",
 "Core.Cirrus.PlayerKilled.Skull.06": "{{CPPN1}}'ll be fine, but {{LPPN1}}'ll have to be more careful next time.",
 "Core.Cirrus.PlayerKilled.Skull.07": "I'll leave you two to talk; let me know if you need anything.$2",
-"Core.Cirrus.PlayerKilled.Skull.08": "Don't make me go on without you, @. Don't you fucking dare.$21",
+"Core.Cirrus.PlayerKilled.Skull.08": "Don't make me go on without you, @. Don't you bloody dare.$21",
 
 "Core.Cirrus.GreenRain": "I've got enough issues with rain, why is it GREEN now?$19",
 "Core.Cirrus.GreenRainFinished": "Oh thank goodness it's over. At least there was no thunder...$18",
@@ -4144,6 +4166,7 @@ ________      ________ _   _ _______ _____
 "Events.SnS.Ch2.Answer2.2": "Dandelion! That's enough. Don't go frightening the townsfolk.$5",
 "Events.SnS.Ch2.Answer2.3": "Oh! You're right. I'm terribly sorry.$3",
 "Events.SnS.Ch2.Roslin.3": "Look, listen. It's the responsibility of your leaders to be dealing with this shit, not yours.$5",
+"Events.SnS.Ch2.Roslin.3.Filtered": "Look, listen. It's the responsibility of your leaders to be dealing with this crap, not yours.$5",
 "Events.SnS.Ch2.Dandelion.4": "Abrasive as Roslin may be, I do fear she's correct. If it brings you comfort, know we'll seek you out of things get dire. I hope that's a good compromise.$6",
 "Events.SnS.Ch2.Roslin.4": "...If you never see either of us again, consider it a good thing. I uh, really mean that.$2",
 "Events.SnS.Ch2.Dandelion.5": "I'm worried for this town, Roslin. The prospect of what lurks beneath deeply frightens me.$2",
