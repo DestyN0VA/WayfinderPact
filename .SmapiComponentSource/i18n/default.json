@@ -20,6 +20,8 @@
 
   "keybind.configure-bar.name": "Configure Adventure Bar",
   "keybind.configure-bar.description": "Configure the adventure bar (if unlocked)",
+  "keybind.toggle-bar.name": "Toggle Adventure Bar",
+  "keybind.toggle-bar.description": "Toggle the adventure bar (if unlocked)",
   "keybind.ability.desc": "Adventure Bar slot keybind",
   "keybind.ability.1.1": "Ability (Bar 1, Slot 1)",
   "keybind.ability.1.2": "Ability (Bar 1, Slot 2)",

@@ -131,6 +131,7 @@ namespace SwordAndSorcerySMAPI
     public class Configuration
     {
         public KeybindList ConfigureAdventureBar = new(SButton.Y);
+        public KeybindList ToggleAdventureBar = new(new Keybind(SButton.LeftControl, SButton.Y));
 
         public KeybindList AbilityBar1Slot1 = new(new Keybind(SButton.LeftControl, SButton.D1));
         public KeybindList AbilityBar1Slot2 = new(new Keybind(SButton.LeftControl, SButton.D2));
@@ -525,6 +526,7 @@ namespace SwordAndSorcerySMAPI
             {
                 gmcm.Register(ModManifest, () => Config = new(), () => Helper.WriteConfig(Config));
                 gmcm.AddKeybindList(ModManifest, () => Config.ConfigureAdventureBar, (val) => Config.ConfigureAdventureBar = val, I18n.Keybind_ConfigureBar_Name, I18n.Keybind_ConfigureBar_Description);
+                gmcm.AddKeybindList(ModManifest, () => Config.ToggleAdventureBar, (val) => Config.ToggleAdventureBar = val, I18n.Keybind_ToggleBar_Name, I18n.Keybind_ToggleBar_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar1Slot1, (val) => Config.AbilityBar1Slot1 = val, I18n.Keybind_Ability_1_1, I18n.Keybind_Ability_Desc);
                 gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar1Slot2, (val) => Config.AbilityBar1Slot2 = val, I18n.Keybind_Ability_1_2, I18n.Keybind_Ability_Desc);
                 gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar1Slot3, (val) => Config.AbilityBar1Slot3 = val, I18n.Keybind_Ability_1_3, I18n.Keybind_Ability_Desc);
@@ -619,8 +621,11 @@ namespace SwordAndSorcerySMAPI
 
             // ---
 
-            
-            if ( Config.ConfigureAdventureBar.JustPressed() && Game1.activeClickableMenu == null &&
+            if (Config.ToggleAdventureBar.JustPressed() && Game1.player.hasOrWillReceiveMail("SnS_AdventureBar"))
+            {
+                AdventureBar.Hide = !AdventureBar.Hide;
+            }
+            else if ( Config.ConfigureAdventureBar.JustPressed() && Game1.activeClickableMenu == null &&
                  Game1.player.hasOrWillReceiveMail("SnS_AdventureBar") )
             {
                 Game1.activeClickableMenu = new AdventureBarConfigureMenu();

@@ -14,6 +14,8 @@ namespace SwordAndSorcerySMAPI
     {
         private bool editing;
 
+        public static bool Hide = false;
+
         public AdventureBar( bool editing )
             : base( 0, (Game1.uiViewport.Height - 64 * 8 + 12 * 2) / 2, 64 * 2 + 12 * 2, 64 * 8 + 12 * 2 )
         {
@@ -49,6 +51,8 @@ namespace SwordAndSorcerySMAPI
         {
             if (!editing)
             {
+                if (Hide)
+                    return;
                 if (Game1.activeClickableMenu != null || Game1.CurrentEvent != null)
                     return;
             }
