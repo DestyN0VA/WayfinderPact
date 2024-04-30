@@ -268,7 +268,7 @@
       "AllowValues": "true, false",
       "Default": "false",
       "AllowBlank": false,
-      "Description": "When toggled 'true', profanity in this mod will be cleaned up.",
+      "Description": "When toggled 'true', profanity in this mod will be much milder, but not nonexistent.",
       "Section": "Miscellaneous"
     },
     "ExcludeFromPerfection": {

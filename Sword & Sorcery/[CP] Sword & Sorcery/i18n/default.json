@@ -1394,7 +1394,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch1.18.Mateo.1": "Just the person I wanted to see. I'll get right into it, I know you're busy. And besides, I'm very excited.$36#$b#When Robin built this place, some boulders behind the foundation collapsed to reveal a cave. I've been excavating as best I can, and I've made some interesting finds.$14#$b#C'mon, I want to show you.$1",
 "Events.S&S.Ch1.18.Mateo.2": "I built up this forge with Clint's help, and I've been learning with him a bit. But I like doing some stuff on my own.$12#$b#I had some leatherworking experience, but there's a ton of other types of armor to make. Fancy arrows, too... all sorts of things suited for adventuring.$1",
 "Events.S&S.Ch1.18.Message.1": "The forge burns hot. Too hot, almost.",
-"Events.S&S.Ch1.18.Message.2": "You've unlocked the power of The Artificer. Will you sharpen your blade, or your guile? The choice is yours!",
+"Events.S&S.Ch1.18.Message.2": "You've unlocked the power of The Artificer. Will you sharpen your blade, or your guile? The choice is yours! Configure your new Adventure Bar with U, or toggle it on/off with Ctrl+U. These settings can be changed in the SMAPI Config.",
 "Events.S&S.Ch1.18.Message.3": "Interact with the forge to see what new items you can craft.",
 "Events.S&S.Ch1.18.Mateo.3": "You're full of surprises, aren't you,",
 "Events.S&S.Ch1.18.Mateo.4": "Looks like you're more in-tune with this kind of stuff than you expected!$13",
@@ -1895,7 +1895,7 @@ ________      ________ _   _ _______ _____
 
 // WINTER
 "Core.Hector.Winter.Relationship.Platonic.1": "Winter's icy grip chills to the bone, but your company warms me right back up.$7#$b#I feel like you look at me funny whenever I say something nice.$8",
-"Core.Hector.Winter.Relationship.Platonic.2": "Book told me to get this to you. It's very important.[450]$13#$b#Don't get frostbite, or sick, or... whatever.$14",
+"Core.Hector.Winter.Relationship.Platonic.2": "Book told me to get this to you. It's very important.[290]$13",
 "Core.Hector.Winter.Relationship.Platonic.3": "Sometimes I think about how I wouldn't be who I am right now if not for you.$12#$b#Then I think about how you probably hear that from Mateo, too.$13#$b#That just means you're a very, very good person.$14",
 "Core.Hector.Winter.Relationship.Platonic.4": "You're very empathetic. Sometimes I worry - did someone hurt you in the past?$2#$b#You care so deeply for other people. I just wonder where it comes from.$23",
 "Core.Hector.Winter.Relationship.Platonic.5": "I know you don't have much farming to do, but you saw what happened to Mateo. Too much time in the mines will leave you sunstarved.$7",
@@ -1932,7 +1932,7 @@ ________      ________ _   _ _______ _____
 
 // WINTER
 "Core.Hector.Winter.Relationship.Romantic.1": "When I think of you, I think of... a really soft, cozy blanket that I never want to let go of.$12#$b#Thanks for bringing me such comfort.$10",
-"Core.Hector.Winter.Relationship.Romantic.2": "A little bit of coffee for my favorite person.[450]$13#$b#Don't go getting sick from the cold, now. Then I'd have to take care of you, and that'd be 'terrible'.$11",
+"Core.Hector.Winter.Relationship.Romantic.2": "A little bit of coffee for my favorite person.[250]$13#$b#Don't go getting sick from the cold, now. Then I'd have to take care of you, and that'd be 'terrible'.$11",
 "Core.Hector.Winter.Relationship.Romantic.3": "I wouldn't be who I am right now if not for you. I know that for sure.$12#$b#Bet you hear that from Mateo, too. That just means you're a very, very good person and I'm lucky to call you mine.$11",
 "Core.Hector.Winter.Relationship.Romantic.4": "If anyone ever hurt your feelings, you know I'd just eat them. Right?$8#$b#And I'll pick my teeth with their bones. Violent? What? That's romantic!$9",
 "Core.Hector.Winter.Relationship.Romantic.5": "You have a greenhouse, right? Maybe focus on that rather than the mines. You don't want to end up sunstarved like Mateo used to get.$12",
@@ -2335,7 +2335,7 @@ ________      ________ _   _ _______ _____
 "Mail.Hector.Letter0": "@,^^Do you understand what you've been given?^^The wizard may have freely offered you nature's power, but you'll need me to help you hone it.^^Complete my challenges and I'll consider teaching you more about Druidics.^^ - B",
 
 // POST PENTACLE QUEST
-"Mail.Hector.Letter1": "^^You've been doing very well, @, but we're not done yet.^^Your final challenge is a display of empathy where it may not be owed. Focus on .^^ - B",
+"Mail.Hector.Letter1": "^^You've been doing very well, @, but we're not done yet.^^There is a rogue with a heart of gold who's in need of a little empathy.^^It may not seem like they deserve it, but not everything is as it appears. Help them! - B",
 
 // POST GUILD BEING BUILT 
 "Mail.Hector.Letter2": "^^Good job, @.^^I've set up a means of getting into my Tower at the Railroad - let's see if you can find it!^^ - B",
@@ -2388,7 +2388,7 @@ ________      ________ _   _ _______ _____
 
 // RIVER QUESTS - Pt 1 
 "Quests.Hector.SpecialOrders.River1.Name": "Destroy the Leaking Pipe",
-"Quests.Hector.SpecialOrders.River1.Text": "Deliver to the altar outside of Hector's Tower.", 
+"Quests.Hector.SpecialOrders.River1.Text": "Deliver to the altar outside of Hector's Tower, and then come back the next day.", 
 "Quests.Hector.SpecialOrders.River1.Objective.0.Text": "1 Prismatic Shard.",
 "Quests.Hector.SpecialOrders.River1.Objective.1.Text": "5 ripe pieces of Ancient Fruit.",
 "Quests.Hector.SpecialOrders.River1.Objective.2.Text": "3 distinctly orange Nautilus Shells.",
@@ -5334,6 +5334,7 @@ ________      ________ _   _ _______ _____
 "magicitem.druidiceldermask.description": "It's a very heavy, uncomfortable mask made out of wood and copper. However, you feel more connected to the earth with it in your possession.",
 
 "food.crafting.salishbourbon": "Salish Bourbon", 
+"food.crafting.autumnalstew": "Autumnal Stew",
 "food.crafting.ancientmushroomstew": "Ancient Mushroom Stew",
 "food.crafting.dandeliongreens": "Dandelion Greens",
 "food.crafting.portfiredrakesparkler":  "Portfire Drake Sparkler",
