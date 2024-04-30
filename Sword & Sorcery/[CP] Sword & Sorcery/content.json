@@ -1012,7 +1012,7 @@
     },
     {
       "Name": "MateoFlirt3",
-      "Value": "{{i18n:i18n:Events.S&S.Ch1.B1.Mateo.4}}",
+      "Value": "{{i18n:Events.S&S.Ch1.B1.Mateo.4}}",
       "When": {
         "HasFlag |contains=MateoFlirt": false
       }
