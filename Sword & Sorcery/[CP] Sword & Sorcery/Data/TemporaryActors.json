@@ -32,8 +32,8 @@
         },
         {
             "Action": "Load",
-            "Target": "Characters/StygiymPendant",
-            "FromFile": "assets/TemporaryActors/Characters/StygiymPendant.png"
+            "Target": "Characters/StygiumPendant",
+            "FromFile": "assets/TemporaryActors/Characters/StygiumPendant.png"
         },
         {
             "Action": "Load",
