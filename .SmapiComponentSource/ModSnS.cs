@@ -21,6 +21,7 @@ using StardewValley.SpecialOrders;
 using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -262,6 +263,21 @@ namespace SwordAndSorcerySMAPI
             });
 
             ArmorSlotBackground = Helper.ModContent.Load<Texture2D>("assets/armor-bg.png");
+            string[] recolors =
+            [
+                "daisyniko.earthinterface",
+                "shinchan.cppurpleinterface",
+                "enteis.woodeninterfeis",
+                "thefrenchdodo.sakurainterfaceredux",
+                "nom0ri.vintageuifix",
+            ];
+            foreach (var recolor in recolors)
+            {
+                if (Helper.ModRegistry.IsLoaded( recolor ) && File.Exists(Path.Combine(Helper.DirectoryPath, "assets", "armor-bg", recolor + ".png")))
+                {
+                    ArmorSlotBackground = Helper.ModContent.Load<Texture2D>($"assets/armor-bg/{recolor}.png");
+                }
+            }
             ShieldSlotBackground = Helper.ModContent.Load<Texture2D>("assets/shield-bg.png");
             ShieldItemTexture = Helper.ModContent.Load<Texture2D>("assets/shield-item.png");
             SwordOverlay = Helper.ModContent.Load<Texture2D>("assets/SwordOverlay.png");

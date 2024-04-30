@@ -23,5 +23,9 @@
 	<ItemGroup>
 		<SMAPIDependency Include="spacechase0.SpaceCore" Version="1.18.0-sdvalpha" Reference="true" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="assets\armor-bg\" />
+	</ItemGroup>
 	
 </Project>
