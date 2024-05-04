@@ -25,6 +25,7 @@
                     "FlowerDanceCanDance": true,
                     "WinterStarParticipant": false,
                     "KissSpriteFacingRight": false,
+                    "CanVisitIsland": "{{CirrusIsland}}",
                     "ShakePortraits": [9, 15, 19, 21],
                     "SpouseRoom": {
                         "MapAsset": "{{CirrusSpouseRoomOnOff}}"

@@ -13,7 +13,9 @@
 						"AddMail Current HectorIntroLetter tomorrow",
 					]
 				}
-			}
+			}, 
+      
+			"When": { "SkipIntroQuest": false }
 		},
 		// PENTACLE QUESTLINE PT 1 - SPRING - EARTH 
 		{
@@ -28,7 +30,9 @@
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle1",
 					]
 				}
-			}
+			}, 
+      
+			"When": { "SkipIntroQuest": false }
 		},
 		// PENTACLE QUESTLINE PT 2 - SUMMMER - FIRE
 		{
@@ -43,7 +47,9 @@
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle2",
 					]
 				}
-			}
+			}, 
+      
+			"When": { "SkipIntroQuest": false }
 		},
 		// PENTACLE QUESTLINE PT 3 - FALL - AIR
 		{
@@ -58,7 +64,9 @@
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle3",
 					]
 				}
-			}
+			}, 
+      
+			"When": { "SkipIntroQuest": false }
 		},
 		// PENTACLE QUESTLINE PT 4 - WINTER - WATER
 		{
@@ -73,7 +81,9 @@
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle4",
 					]
 				}
-			}
+			}, 
+      
+			"When": { "SkipIntroQuest": false }
 		},
 		// SENDS A LETTER TELLING THE PLAYER TO FINISH MATEO'S STORYLINE BEFORE CONTINUING. 
 		{
@@ -88,7 +98,9 @@
 						"AddMail Current AetherQuest tomorrow",
 					]
 				}
-			}
+			}, 
+      
+			"When": { "SkipIntroQuest": false }
 		},
 		// SENDS A LETTER AFTER THE GUILD HAS BEEN BUILT TO INVITE THE PLAYER TO THE TOWER. 
 		{

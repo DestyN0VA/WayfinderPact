@@ -932,9 +932,9 @@
 // DATE NIGHT INVITATION 
 "Mail.Mateo.Letter2": "Good morning, Sunshine.^^I know you're busy, but if you've got the time to spare - meet me in the mines. I'll wait around by the elevator for you.^^You don't have to bring anything, just your swimsuit and an inclination for mischief.^^Sincerely,^Mateo.",
 
-"Mail.Mateo.Letter3": "Good morning, @!^^This is the recipe for my favorite stew. Figured you might like it as much as I do! I hope it brings you the joy and comfort that you bring me.^^Sincerely,^Mateo.%item cookingRecipe DN.SnS_autumnalstew%%[#]Autmnalstew Title",
+"Mail.Mateo.Letter3": "Good morning, @!^^This is the recipe for my favorite stew. Figured you might like it as much as I do! I hope it brings you the joy and comfort that you bring me.^^Sincerely,^Mateo.%item cookingRecipe DN.SnS_autumnalstew%%[#]Autmnal Stew Recipe",
 
-"Mail.Mateo.Letter4": "Good morning, @!^^I had a friend who owned a brewery back in the Fern Islands. Best booze that side of the Salish Sea.^^Here's the recipe for their special Bourbon. It's a well-kept secret.^^Sincerely,^Mateo.%item cookingRecipe DN.SnS_salishbourbon%%[#]Salish Bourbon Title",
+"Mail.Mateo.Letter4": "Good morning, @!^^I had a friend who owned a brewery back in the Fern Islands. Best booze that side of the Salish Sea.^^Here's the recipe for their special Bourbon. It's a well-kept secret.^^Sincerely,^Mateo.%item cookingRecipe DN.SnS_salishbourbon%%[#]Salish Bourbon Recipe",
 
 /*
    ____  _    _ ______  _____ _______ _____ 
@@ -2338,7 +2338,7 @@ ________      ________ _   _ _______ _____
 "Mail.Hector.Letter1": "^^You've been doing very well, @, but we're not done yet.^^There is a rogue with a heart of gold who's in need of a little empathy.^^It may not seem like they deserve it, but not everything is as it appears. Help them! - B",
 
 // POST GUILD BEING BUILT 
-"Mail.Hector.Letter2": "^^Good job, @.^^I've set up a means of getting into my Tower at the Railroad - let's see if you can find it!^^ - B",
+"Mail.Hector.Letter2": "^^You've accomplished so much, @.^^I've set up a means of getting into my Tower at the Railroad - let's see if you can find it!^^ - B",
 
 /*
    ____  _    _ ______  _____ _______ _____ 
@@ -2397,7 +2397,7 @@ ________      ________ _   _ _______ _____
 
 // RIVER QUESTS - Pt 2 
 "Quests.Hector.SpecialOrders.River2.Name": "Collect Druidic Essences",
-"Quests.Hector.SpecialOrders.River2.Text": "Deliver to the altar outside of Hector's Tower. Essences can be earned by watering & harvesting crops, scything grass, and tilling soil.", 
+"Quests.Hector.SpecialOrders.River2.Text": "Deliver to the altar outside of Hector's Tower. Essences can be collected by harvesting crops; perhaps you'll discover more ways in the future...", 
 "Quests.Hector.SpecialOrders.River2.Objective.0.Text": "Collect Essences.",
 "Quests.Hector.SpecialOrders.River2.Objective.1.Text": "Return the Essences to the altar.",
 

@@ -1586,5 +1586,33 @@
         "ProfanityFilter": true,
       }
     },
+    {
+      "Name": "HectorIsland",
+      "Value": "false",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.6": false,
+      }
+    },
+    {
+      "Name": "HectorsIsland",
+      "Value": "true",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.6": true,
+      }
+    },
+    {
+      "Name": "CirrusIsland",
+      "Value": "false",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": false,
+      }
+    },
+    {
+      "Name": "CirrusIsland",
+      "Value": "true",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+      }
+    },
   ]
 }
