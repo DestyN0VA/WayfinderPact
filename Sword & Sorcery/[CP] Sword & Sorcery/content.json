@@ -268,7 +268,7 @@
       "AllowValues": "true, false",
       "Default": "false",
       "AllowBlank": false,
-      "Description": "When toggled 'true', profanity in this mod will be cleaned up.",
+      "Description": "When toggled 'true', profanity in this mod will be much milder, but not nonexistent.",
       "Section": "Miscellaneous"
     },
     "ExcludeFromPerfection": {
@@ -1584,6 +1584,34 @@
       "Value": "{{i18n:Events.SnS.Ch2.Roslin.3.Filtered}}",
       "When": {
         "ProfanityFilter": true,
+      }
+    },
+    {
+      "Name": "HectorIsland",
+      "Value": "false",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.6": false,
+      }
+    },
+    {
+      "Name": "HectorsIsland",
+      "Value": "true",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.6": true,
+      }
+    },
+    {
+      "Name": "CirrusIsland",
+      "Value": "false",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": false,
+      }
+    },
+    {
+      "Name": "CirrusIsland",
+      "Value": "true",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
       }
     },
   ]

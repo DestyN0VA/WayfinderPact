@@ -16,7 +16,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
-              "Duration": 3,
+              "Duration": 300,
               "CustomAttributes": {
                 "FarmingLevel": 0,
                 "FishingLevel": 0,
@@ -52,7 +52,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
-              "Duration": 3,
+              "Duration": 300,
               "CustomAttributes": {
                 "FarmingLevel": 3,
                 "FishingLevel": 0,
@@ -88,7 +88,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
-              "Duration": 3,
+              "Duration": 300,
               "CustomAttributes": {
                 "FarmingLevel": 1,
                 "FishingLevel": 0,
@@ -124,7 +124,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
-              "Duration": 3,
+              "Duration": 300,
               "CustomAttributes": {
                 "FarmingLevel": 0,
                 "FishingLevel": 3,
@@ -160,7 +160,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
-              "Duration": 3,
+              "Duration": 300,
               "CustomAttributes": {
                 "FarmingLevel": 2,
                 "FishingLevel": 0,
@@ -196,7 +196,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
-              "Duration": 3,
+              "Duration": 300,
               "CustomAttributes": {
                 "FarmingLevel": 3,
                 "FishingLevel": 0,
@@ -232,7 +232,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
-              "Duration": 3,
+              "Duration": 300,
               "CustomAttributes": {
                 "FarmingLevel": 0,
                 "FishingLevel": 0,
@@ -268,7 +268,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
-              "Duration": 3,
+              "Duration": 300,
               "CustomAttributes": {
                 "FarmingLevel": 0,
                 "FishingLevel": 0,
@@ -304,7 +304,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
-              "Duration": 3,
+              "Duration": 300,
               "CustomAttributes": {
                 "FarmingLevel": 0,
                 "FishingLevel": 0,
@@ -340,7 +340,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
-              "Duration": 3,
+              "Duration": 300,
               "CustomAttributes": {
                 "FarmingLevel": 0,
                 "FishingLevel": 0,
@@ -376,7 +376,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
-              "Duration": 3,
+              "Duration": 300,
               "CustomAttributes": {
                 "FarmingLevel": 0,
                 "FishingLevel": 0,
@@ -412,7 +412,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
-              "Duration": 3,
+              "Duration": 300,
               "CustomAttributes": {
                 "FarmingLevel": 3,
                 "FishingLevel": 3,
@@ -448,7 +448,7 @@
           "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
-              "Duration": 3,
+              "Duration": 300,
               "CustomAttributes": {
                 "FarmingLevel": 0,
                 "FishingLevel": 0,
@@ -484,7 +484,7 @@
           "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
-              "Duration": 3,
+              "Duration": 300,
               "CustomAttributes": {
                 "FarmingLevel": 0,
                 "FishingLevel": 0,
@@ -512,9 +512,9 @@
   "Target": "Data/CookingRecipes",
   "Entries":
   {
-  "{{ModID}}_salishbourbon": "638 1 262 1 635 1/what is this for?/{{ModID}}_salishbourbon 1/f Mateo/{{i18n:food.crafting.salishbourbon}}",
+  "{{ModID}}_salishbourbon": "638 1 262 1 635 1/what is this for?/{{ModID}}_salishbourbon 1/false/{{i18n:food.crafting.salishbourbon}}",
 
-  "{{ModID}}_autumnalstew": "276 1 -6 1 272 1 281 1/what is this for?/{{ModID}}_autumnalstew 1/f Mateo/{{i18n:food.crafting.autumnalstew}}",
+  "{{ModID}}_autumnalstew": "276 1 -6 1 272 1 281 1/what is this for?/{{ModID}}_autumnalstew 1/false/{{i18n:food.crafting.autumnalstew}}",
 
   "{{ModID}}_dandeliongreens": "22 1 -5 1 424 1/what is this for?/{{ModID}}_dandeliongreens 1/false/{{i18n:food.crafting.dandeliongreens}}",
 

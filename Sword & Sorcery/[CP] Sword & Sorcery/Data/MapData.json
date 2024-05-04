@@ -34,7 +34,7 @@
       "Target": "Data/Locations",
       "Entries": {
         "EastScarp_CoastalGuild": {
-          "DisplayName": "{{i18n:miscellaneous.mapname.CoastalGuild}}",
+          "DisplayName": "{{i18n:miscellaneous.mapname.CoastalGuild.True}}",
           "CreateOnLoad": {
             "MapPath": "Maps/EastScarp_CoastalGuild"
           },

@@ -9,7 +9,7 @@
         {
             //ROSLIN'S STRINGS 
     
-            "EXAMPLE":"{{i18n:Strings.Roslin.EXAMPLE}}",
+            "DeepDarkNotReady":"{{i18n:Strings.Roslin.DeepDarkNotReady}}",
     
         }
        }
