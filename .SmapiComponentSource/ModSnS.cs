@@ -130,8 +130,8 @@ namespace SwordAndSorcerySMAPI
 
     public class Configuration
     {
-        public KeybindList ConfigureAdventureBar = new(SButton.Y);
-        public KeybindList ToggleAdventureBar = new(new Keybind(SButton.LeftControl, SButton.Y));
+        public KeybindList ConfigureAdventureBar = new(SButton.U);
+        public KeybindList ToggleAdventureBar = new(new Keybind(SButton.LeftControl, SButton.U));
 
         public KeybindList AbilityBar1Slot1 = new(new Keybind(SButton.LeftControl, SButton.D1));
         public KeybindList AbilityBar1Slot2 = new(new Keybind(SButton.LeftControl, SButton.D2));
@@ -266,7 +266,7 @@ namespace SwordAndSorcerySMAPI
             ArmorSlotBackground = Helper.ModContent.Load<Texture2D>("assets/armor-bg.png");
             string[] recolors =
             [
-                "daisyniko.earthinterface",
+                "daisyniko.earthyinterface",
                 "shinchan.cppurpleinterface",
                 "enteis.woodeninterfeis",
                 "thefrenchdodo.sakurainterfaceredux",
