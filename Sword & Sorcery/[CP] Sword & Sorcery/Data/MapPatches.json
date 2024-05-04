@@ -441,7 +441,72 @@
             ],
         },
         // DEEP DARK WARPS
-        // DOWN
+        {
+            "LogName": "Deep Dark Entrance",
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDark",
+            "FromFile": "Assets/Maps/DeepDarkPatch.tmx",
+            "ToArea": {
+                "X": 4,
+                "Y": 8,
+                "Width": 7,
+                "Height": 5
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDark",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 9,
+                        "Y": 11
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Message DeepDarkNotReady",
+                    }
+                }
+            ],
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch4.Roslin.6": false
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDark",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 9,
+                        "Y": 11
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 9 18 EastScarp_DeepDarkLv0"
+                    }
+                }
+            ],
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepDarkLv0",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 9,
+                        "Y": 19
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 9 12 EastScarp_DeepDark"
+                    }
+                }
+            ],
+        },
         {
             "Action": "EditMap",
             "Target": "Maps/EastScarp_DeepDarkLv0",
