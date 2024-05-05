@@ -27,6 +27,7 @@
                     "CanVisitIsland": false,
                     "FlowerDanceCanDance": false,
                     "WinterStarParticipant": false,
+                    "ItemDeliveryQuests": false,
                     "Home": [
                         {
                             "ID": "Roslin - NPC Waiting Room",

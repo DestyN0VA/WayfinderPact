@@ -27,6 +27,7 @@
                     "CanVisitIsland": false,
                     "FlowerDanceCanDance": false,
                     "WinterStarParticipant": false,
+                    "ItemDeliveryQuests": false,
                     "ShakePortraits": [5, 3],
                     "Home": [
                         {

@@ -26,6 +26,7 @@
                     "CanVisitIsland": "{{HectorIsland}}",
                     "WinterStarParticipant": false,
                     "ShakePortraits": [5, 19, 20, 27],
+                    "ItemDeliveryQuests": false,
                     "SpouseRoom": {
                         "MapAsset": "{{HectorSpouseRoomOnOff}}"
                     },

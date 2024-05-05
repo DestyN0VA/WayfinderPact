@@ -2104,7 +2104,7 @@ ________      ________ _   _ _______ _____
 "Gifts.Hector.GiftReaction.AncientRose": "Out of the lot of the Ancient Crops, these roses are my favorite. Thank you for this, @. From the bottom of my heart.$13",
 
 // ITEM REJECTIONS 
-"Hector.GiftReject.Bouquet": "Sorry, @. I'm not in a good place to date anyone right now. But I'm flattered.$4",
+"Gifts.Hector.GiftReject.Bouquet": "Sorry, @. I'm not in a good place to date anyone right now. But I'm flattered.$4",
 
 /*
   __  __  ______      _______ ______  _____ 
@@ -2680,7 +2680,7 @@ ________      ________ _   _ _______ _____
 "Events.S&S.Ch2.7H2.Hector.3": "Let me share something beautiful with you.$29",
 "Events.S&S.Ch2.7H2.Hector.4": "In order to pull this off, I need the very essence of nature itself in a pretty substantial amount.$22#$b#You're a farmer before anything else, @. There's no better person to collect it.$8",
 "Events.S&S.Ch2.7H2.Hector.5": "Now, I hate to ritualistically empower you and then kick you out, but I've still got stuff to prepare for when we finally fire this off for real.$9#$b#Thank you for your help! Now, get goin'! Shoo!$9",
-"Events.S&S.Ch2.7H2.Hector.6": "{{CPPN1}} {{LPPNI}} gone...",
+"Events.S&S.Ch2.7H2.Hector.6": "The farmer's gone...",
 "Events.S&S.Ch2.7H2.Hector.7": "I'm so tired... I can't...$19",
 
 //8 HEARTS

@@ -27,6 +27,7 @@
                     "KissSpriteFacingRight": false,
                     "CanVisitIsland": "{{CirrusIsland}}",
                     "ShakePortraits": [9, 15, 19, 21],
+                    "ItemDeliveryQuests": false,
                     "SpouseRoom": {
                         "MapAsset": "{{CirrusSpouseRoomOnOff}}"
                     },
