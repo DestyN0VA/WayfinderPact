@@ -698,7 +698,7 @@ namespace SwordAndSorcerySMAPI
 
         private void Display_RenderedHud(object sender, StardewModdingAPI.Events.RenderedHudEventArgs e)
         {
-            if (!Context.IsWorldReady)
+            if (!Context.IsWorldReady || Game1.CurrentEvent != null)
                 return;
 
             if (State.BlockCooldown > 0)
@@ -836,9 +836,9 @@ namespace SwordAndSorcerySMAPI
                 }
             }
             List<string> keysIncludingCompleted = new List<string>(keyQueue);
-            //if (orderType == "")
+            if (orderType == "")
             {
-                keyQueue.RemoveAll((string id) => Game1.player.team.completedSpecialOrders.Contains(id));
+                //keyQueue.RemoveAll((string id) => Game1.player.team.completedSpecialOrders.Contains(id));
             }
             Random r = Utility.CreateRandom(Game1.uniqueIDForThisGame, (double)Game1.stats.DaysPlayed * 1.3);
             for (int i = 0; i < 2; i++)

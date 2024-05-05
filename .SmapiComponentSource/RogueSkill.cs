@@ -87,7 +87,7 @@ namespace SwordAndSorcerySMAPI
             string[][] craftingRecipes =
             [
                 [],
-                ["DN.SnS_ClothArmor", "DN.SnS_Bow"],
+                ["DN.SnS_ClothArmor", "DN.SnS_Bow", "DN.SnS_Arrow"],
                 ["DN.SnS_CopperArmor", "DN.SnS_IronArmor", "DN.SnS_GoldArmor", "DN.SnS_IridiumArmor", "DN.SnS_RadioactiveArmor"],
                 ["DN.SnS_FirestormArrow", "DN.SnS_IcicleArrow"],
                 ["DN.SnS_ExquisiteEmerald", "DN.SnS_ExquisiteRuby", "DN.SnS_ExquisiteTopaz", "DN.SnS_ExquisiteAquamarine", "DN.SnS_ExquisiteAmethyst", "DN.SnS_ExquisiteJade", "DN.SnS_ExquisiteDiamond"],

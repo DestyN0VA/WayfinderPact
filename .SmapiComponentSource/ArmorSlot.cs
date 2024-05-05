@@ -51,7 +51,7 @@ namespace SwordAndSorcerySMAPI
             if (nextTo == null)
             {
                 nextTo = __instance.equipmentIcons.FirstOrDefault(cc => cc.myID == InventoryPage.region_hat);
-                add = (ModSnS.instance.Helper.ModRegistry.IsLoaded("bcmpinc.WearMoreRings") ? 128 : 0);
+                add = (ModSnS.instance.Helper.ModRegistry.IsLoaded("bcmpinc.WearMoreRings") ? 0 : 0);
             }
             if (nextTo == null)
             {
