@@ -664,7 +664,8 @@ namespace CircleOfThornsSMAPI
             if (!__instance.Location.IsFarm || t is not WateringCan || __instance.state.Value == HoeDirt.watered)
                 return;
 
-            float mult = Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
+            float mult = 0.1f / 4;
+            mult += Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
             if (Game1.player.hasOrWillReceiveMail("BrokenCircletPower"))
                 mult += 0.01f;
             if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
@@ -686,7 +687,8 @@ namespace CircleOfThornsSMAPI
             if (!__instance.Location.IsFarm || t is not MeleeWeapon mw || !mw.isScythe())
                 return;
 
-            float mult = Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
+            float mult = 0.1f / 2;
+            mult += Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
             if (Game1.player.hasOrWillReceiveMail("BrokenCircletPower"))
                 mult += 0.01f;
             if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
