@@ -299,7 +299,14 @@
       "AllowMultiple": false,
       "Description": "Gives Cirrus a variety of dyed hair colors, or optionally choose a static one.\nRealisticRandom gives a delay between hair color changes",
       "Section": "Overlays"
-    }
+    },
+    "CirrusSmokeyEye": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "Description": "Always give Cirrus Smokey eyeshadow when she wears makeup.",
+      "Section": "Overlays"
+    },
   },
   // DYNAMIC TOKENS
   "DynamicTokens": [
@@ -952,6 +959,52 @@
       "When": {
         "CirrusRainbowHair |contains=RealisticRandom": true,
         "HasFlag": "SnS.Flag.CirrusHairColor.Blue"
+      }
+    },
+    {
+      "Name": "CirrusMakeup",
+      "Value": "{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusMakeup}}"
+    },
+    {
+      "Name": "CirrusMakeup",
+      "Value": "{{CirrusHairColor}}",
+      "When": {
+        "CirrusRainbowHair |contains=RealisticRandom, DailyRandom": true,
+        "CirrusHairColor |contains=Red": false
+      }
+    },
+    {
+      "Name": "CirrusMakeup",
+      "Value": "Red",
+      "When": {
+        "Random: {{Range: 1, 5}}": "1",
+        "CirrusRainbowHair |contains=RealisticRandom, DailyRandom": true,
+        "CirrusHairColor |contains=Red": false
+      }
+    },
+    {
+      "Name": "CirrusMakeup",
+      "Value": "{{CirrusHairColor}}",
+      "When": {
+        "CirrusRainbowHair |contains=RealisticRandom, DailyRandom": true,
+        "CirrusHairColor |contains=Red": true
+      }
+    },
+    {
+      "Name": "CirrusMakeup",
+      "Value": "{{Random: Brown, Orange, Yellow, Blue |key=CirrusMakeup}}",
+      "When": {
+        "Random: {{Range: 1, 5}}": "1",
+        "CirrusRainbowHair |contains=RealisticRandom, DailyRandom": true,
+        "CirrusHairColor |contains=Red": true
+      }
+    },
+    
+    {
+      "Name": "CirrusMakeup",
+      "Value": "Red",
+      "When": {
+        "CirrusSmokeyEye": true
       }
     },
     {
