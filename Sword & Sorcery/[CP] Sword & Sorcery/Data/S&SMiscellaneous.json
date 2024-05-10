@@ -1,11 +1,13 @@
 {
   "Changes": [
+    // SPECIAL ORDER BOARD
     {
       "LogName": "Loads Order Board Emoji",
       "Action": "Load",
       "Target": "LooseSprites/CAGemojis",
       "FromFile": "assets/CAGemojis.png"
     },
+    // SECRET NOTE
     {
       "LogName": "Loads Mateo's Secret Note Image",
       "Action": "EditImage",
@@ -32,6 +34,7 @@
         "113": "!image 16",
       }
     },
+    // REMOVES HECTOR'S MARRIAGE SCHEDULE
     {
       "Action": "EditData",
       "Target": "spacechase0.SpaceCore/NpcExtensionData",
@@ -41,13 +44,14 @@
         }
       }
     },
+    // DISPOSITION CHANGES FOR FLOWER DANCE
     {
       "LogName": "Disposition Change (Flower Dance) - Mateo",
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
+      "Target": "Data/Characters",
       "Fields": {
         "Mateo": {
-          "5": "datable"
+          "CanBeRomanced": "true"
         }
       },
       "When": {
@@ -57,10 +61,10 @@
     {
       "LogName": "Disposition Change (Flower Dance) - Hector",
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
+      "Target": "Data/Characters",
       "Fields": {
         "Hector": {
-          "5": "datable"
+          "CanBeRomanced": "true"
         }
       },
       "When": {
@@ -68,12 +72,26 @@
       }
     },
     {
+      "LogName": "Disposition Change (Flower Dance) - Cirrus",
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Fields": {
+        "Cirrus": {
+          "CanBeRomanced": "true"
+        }
+      },
+      "When": {
+        "DayEvent": "flower dance"
+      }
+    },
+    // DISPOSITION CHANGES FOR MOVIES 
+    {
       "LogName": "Disposition Change (Movie Theater) - Hector",
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
+      "Target": "Data/Characters",
       "Fields": {
         "Mateo": {
-          "4": "undefined"
+          "Gender": "undefined"
         }
       },
       "Update": "OnLocationChange",
@@ -84,10 +102,10 @@
     {
       "LogName": "Disposition Change (Movie Theater) - Hector",
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
+      "Target": "Data/Characters",
       "Fields": {
         "Hector": {
-          "4": "undefined"
+          "Gender": "undefined"
         }
       },
       "Update": "OnLocationChange",
@@ -107,5 +125,18 @@
       "Target": "Maps/SpousePatioEmpty",
       "FromFile": "assets/Maps/SpousePatioEmpty.tmx",
     },
+    // REMOVES ENGAGEMENT EVENTS FROM EVENT LOOKUP 
+    {
+      "Action": "EditData",
+      "Target": "Mods/shekurika.EventLookup/blocklist",
+      "Entries": {
+          "SnS.Ch3.Cirrus.15": "T",
+          "SnS.Ch1.Mateo.19": "T",
+          "SnS.Ch2.Hector.17": "T"
+      },
+      "When": {
+          "HasMod": "shekurika.EventLookup",
+      }
+},
   ]
 }

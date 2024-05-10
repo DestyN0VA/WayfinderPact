@@ -1,8 +1,8 @@
 CREDITS: 
 
-➜ DestyN0VA, the Shield: Content Patcher component, narrative design, mechanical design, character design, assets, maps, 
+➜ DestyN0VA, the Shield: Content Patcher component, narrative design, mechanical design, character design, assets, maps, events, dialogue
 ➜ KittyCatCasey, the Sorcerer: C# Component, mechanical design
-➜ MADDOGOFBLANK, the Sword: Assets throughout the mod, help w/ code, maps, emotional support
+➜ MADDOGOFBLANK, the Sword: Assets throughout the mod, help w/ code, maps, bugfixing, emotional support
 ➜ Lemurkat: For East Scarp, for guiding along, and maintaining an incredible little community
 ➜ TenebrousNova: Help w/ event code, i18n, and the majority of new maps 
 ➜ TheFrenchDodo: Emeritus' sprite, books seen throughout the guild, majority of music 
@@ -30,7 +30,8 @@ CREDITS:
 ➜ 6480: Crop tweaks, LLTK blade, lots of pixel art mentoring
 ➜ Pokeinalover: Book's Human design 
 ➜ SmolHuman: Animal sprites 
-➜ Gnadi, Mareetz: Extensive playtesting
+➜ JennaJuffuffles, PaulG, Gnadi: Extensive playtesting, bugfixing, and balancing 
+➜ Kelsey, Mareetz: Extensive playtesting
 ➜ JayJayDub: Help w/ compatibility and i18n 
 ➜ Atravita: Mentoring, help w/ C# 
 ➜ Lumisteria: Mentoring, help w/ code

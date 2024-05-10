@@ -2680,8 +2680,8 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch2.7H2.Hector.3": "Let me share something beautiful with you.$29",
   "Events.S&S.Ch2.7H2.Hector.4": "In order to pull this off, I need the very essence of nature itself in a pretty substantial amount.$22#$b#You're a farmer before anything else, @. There's no better person to collect it.$8",
   "Events.S&S.Ch2.7H2.Hector.5": "Now, I hate to ritualistically empower you and then kick you out, but I've still got stuff to prepare for when we finally fire this off for real.$9#$b#Thank you for your help! Now, get goin'! Shoo!$9",
-  "Events.S&S.Ch2.7H2.Hector.6": "The farmer's gone...",
-  "Events.S&S.Ch2.7H2.Hector.7": "I'm so tired... I can't...$19",
+  "Events.S&S.Ch2.7H2.Hector.6": "With that out of the way, I can finally...",
+  "Events.S&S.Ch2.7H2.Hector.7": "Ugh, I'm so tired... Everything hurts...$19",
 
   //8 HEARTS
 
@@ -5188,17 +5188,17 @@ ________      ________ _   _ _______ _____
   "crop.ancientepiphyticfern.name": "Ancient Epiphytic Fern",
   "crop.ancientepiphyticfern.description": "A resilient fern that grew straight from stone.",
   "crop.ancientepiphyticfern.seed.name": "Ancient Epiphytic Fern Seeds",
-  "crop.ancientepiphyticfern.seed.description": "Grown in Spring and Summer. Takes fourteen days, regrows in seven.",
+  "crop.ancientepiphyticfern.seed.description": "Grown in Spring and Summer. Takes fourteen days, regrows in three.",
 
   "crop.ancientglowingpolyporemushrooms.name": "Ancient Polypore Mushroom",
   "crop.ancientglowingpolyporemushrooms.description": "A resilient, faintly glowing mushroom with an earthy smell to it.",
   "crop.ancientglowingpolyporemushrooms.seed.name": "Ancient Glowing Polypore Mushroom Seeds",
-  "crop.ancientglowingpolyporemushrooms.seed.description": "Grown in Fall and Winter. Takes twenty eight days, regrows in seven.",
+  "crop.ancientglowingpolyporemushrooms.seed.description": "Grown in Fall and Winter. Takes twenty eight days, regrows in three.",
 
   "crop.ancientwildfairyrose.name": "Ancient Wild Fairy Rose",
   "crop.ancientwildfairyrose.description": "A resilient precursor to the common Fairy Rose.",
   "crop.ancientwildfairyrose.seed.name": "Ancient Wild Fairy Rose Seeds",
-  "crop.ancientwildfairyrose.seed.description": "Grown in Spring, Summer and Fall. Takes twenty eight days, regrows in seven.",
+  "crop.ancientwildfairyrose.seed.description": "Grown in Spring, Summer and Fall. Takes twenty eight days, regrows in three.",
 
   "crop.ancientglowinghuckleberry.name": "Ancient Glowing Huckleberry",
   "crop.ancientglowinghuckleberry.description": "A massive, juicy berry that faintly glows.",

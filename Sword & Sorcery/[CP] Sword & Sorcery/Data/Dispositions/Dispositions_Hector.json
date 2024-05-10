@@ -38,8 +38,8 @@
                             "ID": "Hector - Tower",
                             "Location": "EastScarp_DruidTower",
                             "Tile": {
-                                "X": 6,
-                                "Y": 16
+                                "X": 1,
+                                "Y": 27
                             },
                             "Direction": "Down",
                             "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch2.Hector.1"

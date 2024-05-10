@@ -9,7 +9,7 @@
     {
       "LogName": "Hector Loads from Blanks",
       "Action": "Load",
-      "Target": "Characters/Dialogue/Hector, Characters/Schedules/Hector",
+      "Target": "Characters/Dialogue/Hector, Characters/Dialogue/MarriageDialogueHector, Characters/Schedules/Hector",
       "FromFile": "Data/blank.json"
     },
     {

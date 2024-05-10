@@ -5,12 +5,12 @@
     {
       "LogName": "Sword & Sorcery - Mateo Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Mateo.json, Data/Dialogue/Mateo/Dialogue_Mateo.json, Data/Dialogue/Mateo/ConcessionTastes_Mateo.json, Data/Dialogue/Mateo/ConversationTopics_Mateo.json, Data/Dialogue/Mateo/CustomFixed_Mateo.json,Data/Dialogue/Mateo/CustomGiftDialogue_Mateo.json,Data/Dialogue/Mateo/MarriageDialogue_Mateo.json, Data/Dispositions/Dispositions_Mateo.json, Data/Festival Data/FestivalData_Mateo.json, Data/Schedules/Schedule_Mateo.json, Data/Strings/Strings_Mateo.json, Data/Spouse Extras/SpouseExtras_Mateo.json"
+      "FromFile": "Data/Appearances/AppearanceData_Mateo.json, Data/Dialogue/Mateo/Dialogue_Mateo.json, Data/Dialogue/Mateo/ConcessionTastes_Mateo.json, Data/Dialogue/Mateo/ConversationTopics_Mateo.json, Data/Dialogue/Mateo/CustomFixed_Mateo.json,Data/Dialogue/Mateo/CustomGiftDialogue_Mateo.json, Data/Dialogue/Mateo/MarriageDialogue_Mateo.json, Data/Dispositions/Dispositions_Mateo.json, Data/Festival Data/FestivalData_Mateo.json, Data/Schedules/Schedule_Mateo.json, Data/Strings/Strings_Mateo.json, Data/Spouse Extras/SpouseExtras_Mateo.json"
     },
     {
       "LogName": "Sword & Sorcery - Hector Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Hector.json, Data/Dialogue/Hector/Dialogue_Hector.json, Data/Dialogue/Hector/ConcessionTastes_Hector.json, Data/Dialogue/Hector/ConversationTopics_Hector.json, Data/Dialogue/Hector/CustomFixed_Hector.json,Data/Dialogue/Hector/CustomGiftDialogue_Hector.json, Data/Dispositions/Dispositions_Hector.json, Data/Festival Data/FestivalData_Hector.json, Data/Schedules/Schedule_Hector.json, Data/Strings/Strings_Hector.json, Data/Spouse Extras/SpouseExtras_Hector.json"
+      "FromFile": "Data/Appearances/AppearanceData_Hector.json, Data/Dialogue/Hector/Dialogue_Hector.json, Data/Dialogue/Hector/ConcessionTastes_Hector.json, Data/Dialogue/Hector/ConversationTopics_Hector.json, Data/Dialogue/Hector/CustomFixed_Hector.json,Data/Dialogue/Hector/CustomGiftDialogue_Hector.json, Data/Dialogue/Hector/MarriageDialogue_Hector.json, Data/Dispositions/Dispositions_Hector.json, Data/Festival Data/FestivalData_Hector.json, Data/Schedules/Schedule_Hector.json, Data/Strings/Strings_Hector.json, Data/Spouse Extras/SpouseExtras_Hector.json"
     },
     {
       "LogName": "Sword & Sorcery - Cirrus Includes",
@@ -258,7 +258,7 @@
     },
     "DatingLength": { //maddogchange   
       "AllowValues": "7, 14, 21, 28",
-      "Default": "28",
+      "Default": "14",
       "AllowBlank": false,
       "Description": "Set length the player has to have dated Mateo, Hector, or Cirrus prior to any of them accepting the mermaid pendant and triggering the next romance event.",
       "Section": "Miscellaneous"
