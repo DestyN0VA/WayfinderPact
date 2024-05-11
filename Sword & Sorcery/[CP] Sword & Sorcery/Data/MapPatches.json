@@ -356,6 +356,324 @@
         "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true
       }
     },
+      // ADDS A LOCKED DOOR TO THE UNDERFORGE
+      {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_CoastalGuild",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 20,
+                    "Y": 13
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Message UnderScarpe",
+                }
+            }
+        ],
+        "When": {
+            "HasSeenEvent |contains=SnS.Ch1.Mateo.18": false
+        }
+    },
+    // ADDS THE UNDERFORGE WARP FROM GUILD
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_CoastalGuild",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 20,
+                    "Y": 13
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 24 5 EastScarp_Underforge"
+                }
+            }
+        ],
+        "When": {
+            "HasSeenEvent |contains=SnS.Ch1.Mateo.18": true
+        }
+    },
+    // ADDS THE UNDERFORGE WARP TO GUILD
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_Underforge",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 24,
+                    "Y": 3
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 20 14 EastScarp_CoastalGuild"
+                }
+            }
+        ],
+    },
+    // DEEP DARK WARPS
+    {
+        "LogName": "Deep Dark Entrance",
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDark",
+        "FromFile": "Assets/Maps/DeepDarkPatch.tmx",
+        "ToArea": {
+            "X": 4,
+            "Y": 8,
+            "Width": 7,
+            "Height": 5
+        }
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDark",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 9,
+                    "Y": 11
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Message DeepDarkNotReady",
+                }
+            }
+        ],
+        "When": {
+            "HasSeenEvent |contains=SnS.Ch4.Roslin.6": false
+        }
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDark",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 9,
+                    "Y": 11
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 9 18 EastScarp_DeepDarkLv0"
+                }
+            }
+        ],
+        "When": {
+            "HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
+        }
+    },
+    // DOWN
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDarkLv0",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 9,
+                    "Y": 19
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 9 12 EastScarp_DeepDark"
+                }
+            }
+        ],
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDarkLv0",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 18,
+                    "Y": 8
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 10 9 EastScarp_DeepDarkLv1"
+                }
+            }
+        ],
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDarkLv1",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 25,
+                    "Y": 34
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 25 31 EastScarp_DeepDarkLv2"
+                }
+            }
+        ],
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDarkLv2",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 8,
+                    "Y": 8
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 30 22 EastScarp_DeepDarkLv3"
+                }
+            }
+        ],
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDarkLv3",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 43,
+                    "Y": 25
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 12 5 EastScarp_DeepDarkLv4"
+                }
+            }
+        ],
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDarkLv4",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 25,
+                    "Y": 8
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 10 9 EastScarp_DeepDarkLv5"
+                }
+            }
+        ],
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDarkLv5",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 33,
+                    "Y": 4
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 3 15 EastScarp_DuskspireLair"
+                }
+            }
+        ],
+    },
+    // UP
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDarkLv1",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 5,
+                    "Y": 8
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 17 7 EastScarp_DeepDarkLv0"
+                }
+            }
+        ],
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDarkLv2",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 21,
+                    "Y": 30
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 17 7 EastScarp_DeepDarkLv0"
+                }
+            }
+        ],
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDarkLv3",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 25,
+                    "Y": 19
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 17 7 EastScarp_DeepDarkLv0"
+                }
+            }
+        ],
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDarkLv4",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 8,
+                    "Y": 4
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 17 7 EastScarp_DeepDarkLv0"
+                }
+            }
+        ],
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DeepDarkLv5",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 10,
+                    "Y": 8
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 17 7 EastScarp_DeepDarkLv0"
+                }
+            }
+        ],
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/EastScarp_DuskspireLair",
+        "MapTiles": [
+            {
+                "Position": {
+                    "X": 3,
+                    "Y": 14
+                },
+                "Layer": "Buildings",
+                "SetProperties": {
+                    "Action": "Warp 17 7 EastScarp_DeepDarkLv0"
+                }
+            }
+        ],
+    },
     // PATCHES THE PENTACLE QUEST ALTARS  
     {
       "LogName": "Hector Quest Dropbox - Spring",
