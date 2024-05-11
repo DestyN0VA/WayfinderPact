@@ -2352,7 +2352,7 @@ ________      ________ _   _ _______ _____
 
   // PENTACLE QUEST - SPRING 
   "Quests.Hector.SpecialOrders.Pentacle1.Name": "Offerings for Spring",
-  "Quests.Hector.SpecialOrders.Pentacle1.Text": "Deliver to the altar outside of the dilapidated tower in the Deep Mountains.",
+  "Quests.Hector.SpecialOrders.Pentacle1.Text": "Deliver to the altar with green candles outside of the dilapidated tower in the Deep Mountains.",
   "Quests.Hector.SpecialOrders.Pentacle1.Objective.0.Text": "3 freshly-grown Parsnips.",
   "Quests.Hector.SpecialOrders.Pentacle1.Objective.1.Text": "3 Daffodils, lovingly picked.",
   "Quests.Hector.SpecialOrders.Pentacle1.Objective.2.Text": "3 Leeks, uncooked.",
@@ -2361,7 +2361,7 @@ ________      ________ _   _ _______ _____
 
   // PENTACLE QUEST - SUMMER 
   "Quests.Hector.SpecialOrders.Pentacle2.Name": "Offerings for Summer",
-  "Quests.Hector.SpecialOrders.Pentacle2.Text": "Deliver to the altar outside of the dilapidated tower in the Deep Mountains.",
+  "Quests.Hector.SpecialOrders.Pentacle2.Text": "Deliver to the altar with red candles outside of the dilapidated tower in the Deep Mountains.",
   "Quests.Hector.SpecialOrders.Pentacle2.Objective.0.Text": "3 freshly-grown Blueberries.",
   "Quests.Hector.SpecialOrders.Pentacle2.Objective.1.Text": "3 dirt-covered Spice Berries.",
   "Quests.Hector.SpecialOrders.Pentacle2.Objective.2.Text": "3 of the sweetest Sweet Peas.",
@@ -2370,7 +2370,7 @@ ________      ________ _   _ _______ _____
 
   // PENTACLE QUEST - FALL
   "Quests.Hector.SpecialOrders.Pentacle3.Name": "Offerings for Fall",
-  "Quests.Hector.SpecialOrders.Pentacle3.Text": "Deliver to the altar outside of the dilapidated tower in the Deep Mountains.",
+  "Quests.Hector.SpecialOrders.Pentacle3.Text": "Deliver to the altar with orange candles outside of the dilapidated tower in the Deep Mountains.",
   "Quests.Hector.SpecialOrders.Pentacle3.Objective.0.Text": "3 Bok Choy, grown with love.",
   "Quests.Hector.SpecialOrders.Pentacle3.Objective.1.Text": "3 bunches of Amaranth.",
   "Quests.Hector.SpecialOrders.Pentacle3.Objective.2.Text": "3 Wild Plums. No dates!",
@@ -2379,7 +2379,7 @@ ________      ________ _   _ _______ _____
 
   // PENTACLE QUEST - Winter
   "Quests.Hector.SpecialOrders.Pentacle4.Name": "Offerings for Winter",
-  "Quests.Hector.SpecialOrders.Pentacle4.Text": "Deliver to the altar outside of the dilapidated tower in the Deep Mountains.",
+  "Quests.Hector.SpecialOrders.Pentacle4.Text": "Deliver to the altar with blue candles outside of the dilapidated tower in the Deep Mountains.",
   "Quests.Hector.SpecialOrders.Pentacle4.Objective.0.Text": "3 starchy Winter Roots.",
   "Quests.Hector.SpecialOrders.Pentacle4.Objective.1.Text": "3 Crystal Fruit sans Dust Sprites.",
   "Quests.Hector.SpecialOrders.Pentacle4.Objective.2.Text": "3 unearthed Snow Yams.",
@@ -2388,7 +2388,7 @@ ________      ________ _   _ _______ _____
 
   // RIVER QUESTS - Pt 1 
   "Quests.Hector.SpecialOrders.River1.Name": "Destroy the Leaking Pipe",
-  "Quests.Hector.SpecialOrders.River1.Text": "Deliver to the altar outside of Hector's Tower, and then come back the next day.",
+  "Quests.Hector.SpecialOrders.River1.Text": "Deliver to the altar with bright green candles outside of Hector's Tower, and then come back the next day.",
   "Quests.Hector.SpecialOrders.River1.Objective.0.Text": "1 Prismatic Shard.",
   "Quests.Hector.SpecialOrders.River1.Objective.1.Text": "5 ripe pieces of Ancient Fruit.",
   "Quests.Hector.SpecialOrders.River1.Objective.2.Text": "3 distinctly orange Nautilus Shells.",
@@ -2397,7 +2397,7 @@ ________      ________ _   _ _______ _____
 
   // RIVER QUESTS - Pt 2 
   "Quests.Hector.SpecialOrders.River2.Name": "Collect Druidic Essences",
-  "Quests.Hector.SpecialOrders.River2.Text": "Deliver to the altar outside of Hector's Tower. Essences can be collected by harvesting crops; perhaps you'll discover more ways in the future...",
+  "Quests.Hector.SpecialOrders.River2.Text": "Deliver to the altar with bright green candles outside of Hector's Tower. Essences can be collected by harvesting crops, tilling soil, watering plants and scything grass.",
   "Quests.Hector.SpecialOrders.River2.Objective.0.Text": "Collect Essences.",
   "Quests.Hector.SpecialOrders.River2.Objective.1.Text": "Return the Essences to the altar.",
 

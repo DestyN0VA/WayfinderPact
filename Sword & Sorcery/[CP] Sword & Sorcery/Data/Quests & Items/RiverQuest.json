@@ -1,6 +1,36 @@
 {
 	"Changes": [
 
+		// TRIGGER ACTIONS
+		{
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"{{ModID}}_RiverQuest.1": {
+					"Id": "{{ModID}}_RiverQuest.1",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.10",
+					"Actions": [
+						"AddMail Host HectorEssenceAltar1 Received",
+					]
+				}
+			}, 
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"{{ModID}}_RiverQuest.2": {
+					"Id": "{{ModID}}_RiverQuest.2",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.12",
+					"Actions": [
+						"AddMail Host HectorEssenceAltar2 Received",
+					]
+				}
+			}, 
+		},
+
 		{
 			"LogName": "River Quest pt 1",
 			"Action": "EditData",
@@ -13,7 +43,7 @@
 					"Name": "[CAGQuest.UntimedSpecialOrder.River1_Name]",
 					"Requester": "Hector",
 					"Repeatable": "false",
-					"RequiredTags": "event_16032000, !dropbox_DruidAltar",
+					"RequiredTags": "event_16032000, !dropbox_DruidAltarEssences",
 					"OrderType": "SwordSorcery",
 					"SpecialRule": "",
 					"Text": "[CAGQuest.UntimedSpecialOrder.River1_Text]",
@@ -26,7 +56,7 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.River1.Objective_0_Text]",
 							"RequiredCount": "1",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarEssences",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
 								"DropBoxIndicatorLocation": "14 15",
 								"AcceptedContextTags": "item_prismatic_shard"
@@ -37,7 +67,7 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.River1.Objective_1_Text]",
 							"RequiredCount": "5",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarEssences",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
 								"DropBoxIndicatorLocation": "14 15",
 								"AcceptedContextTags": "item_ancient_fruit"
@@ -48,7 +78,7 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.River1.Objective_2_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarEssences",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
 								"DropBoxIndicatorLocation": "14 15",
 								"AcceptedContextTags": "item_nautilus_shell"
@@ -59,7 +89,7 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.River1.Objective_3_Text]",
 							"RequiredCount": "10",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarEssences",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
 								"DropBoxIndicatorLocation": "14 15",
 								"AcceptedContextTags": "item_fiddlehead_fern"
@@ -70,7 +100,7 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.River1.Objective_4_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarEssences",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
 								"DropBoxIndicatorLocation": "14 15",
 								"AcceptedContextTags": "item_squid_ink"
@@ -81,7 +111,7 @@
 						{
 							"Type": "Mail",
 							"Data": {
-								"MailReceived": "Hector_SpecialOrders_River1",
+								"MailReceived": "/does ",
 								"NoLetter": "true"
 							}
 						}
@@ -102,7 +132,7 @@
 					"Name": "[CAGQuest.UntimedSpecialOrder.River2_Name]",
 					"Requester": "Hector",
 					"Repeatable": "false",
-					"RequiredTags": "event_16032000, !dropbox_DruidAltar",
+					"RequiredTags": "event_16032000, !dropbox_DruidAltarEssences",
 					"OrderType": "SwordSorcery",
 					"SpecialRule": "",
 					"Text": "[CAGQuest.UntimedSpecialOrder.River2_Text]",
@@ -115,7 +145,7 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.River2.Objective_0_Text]",
 							"RequiredCount": "100",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarEssences",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
 								"DropBoxIndicatorLocation": "14 15",
 								"AcceptedContextTags": "item_druidic_essence"
@@ -126,7 +156,7 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.River2.Objective_1_Text]",
 							"RequiredCount": "100",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarEssences",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
 								"DropBoxIndicatorLocation": "14 15",
 								"AcceptedContextTags": "item_druidic_essence"

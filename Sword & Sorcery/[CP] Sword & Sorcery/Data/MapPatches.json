@@ -355,7 +355,110 @@
       "When": {
         "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true
       }
-    }
+    },
+    // PATCHES THE PENTACLE QUEST ALTARS  
+    {
+      "LogName": "Hector Quest Dropbox - Spring",
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_DeepMountains",
+      "FromFile": "Assets/Maps/DruidAltarSpringPatch.tmx",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 14,
+        "Y": 15,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "HasFlag |contains=HectorSpringAltar": true,
+        "HasFlag |contains=Hector_SpecialOrders_Pentacle1": false
+        }
+    },
+    {
+      "LogName": "Hector Quest Dropbox - Summer",
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_DeepMountains",
+      "FromFile": "Assets/Maps/DruidAltarSummerPatch.tmx",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 13,
+        "Y": 15,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "HasFlag |contains=HectorSummerAltar": true,
+        "HasFlag |contains=Hector_SpecialOrders_Pentacle2": false
+        }
+    },
+    {
+      "LogName": "Hector Quest Dropbox - Fall",
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_DeepMountains",
+      "FromFile": "Assets/Maps/DruidAltarFallPatch.tmx",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 9,
+        "Y": 15,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "HasFlag |contains=HectorFallAltar": true,
+        "HasFlag |contains=Hector_SpecialOrders_Pentacle3": false
+        }
+    },
+    {
+      "LogName": "Hector Quest Dropbox - Winter",
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_DeepMountains",
+      "FromFile": "Assets/Maps/DruidAltarWinterPatch.tmx",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 8,
+        "Y": 15,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "HasFlag |contains=HectorWinterAltar": true,
+        "HasFlag |contains=Hector_SpecialOrders_Pentacle4": false
+        }
+    },
+    {
+      "LogName": "Hector Final Dropbox pt.1",
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_DeepMountains",
+      "FromFile": "Assets/Maps/DruidAltarEssencesPatch.tmx",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 14,
+        "Y": 15,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "HasFlag |contains=HectorEssenceAltar1": true,
+        "HasFlag |contains=Hector_SpecialOrders_River1": false
+        }
+    },
+    {
+      "LogName": "Hector Final Dropbox pt.2",
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_DeepMountains",
+      "FromFile": "Assets/Maps/DruidAltarEssencesPatch.tmx",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 14,
+        "Y": 15,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "HasFlag |contains=HectorEssenceAltar2": true,
+        "HasFlag |contains=Hector_SpecialOrders_River1": false
+        }
+    },
 
   ]
 }

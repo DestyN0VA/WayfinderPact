@@ -28,6 +28,7 @@
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON spring, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle1",
+						"AddMail Host HectorSpringAltar Received",
 					]
 				}
 			}, 
@@ -45,6 +46,7 @@
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON summer, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle2",
+						"AddMail Host HectorSummerAltar Received",
 					]
 				}
 			}, 
@@ -62,6 +64,7 @@
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON fall, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle3",
+						"AddMail Host HectorFallAltar Received",
 					]
 				}
 			}, 
@@ -79,6 +82,7 @@
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON winter, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle4",
+						"AddMail Host HectorWinterAltar Received",
 					]
 				}
 			}, 
@@ -127,7 +131,7 @@
 					"Name": "[CAGQuest.UntimedSpecialOrder.Pentacle1_Name]",
 					"Requester": "Hector",
 					"Repeatable": "false",
-					"RequiredTags": "event_16032000, !dropbox_DruidAltar",
+					"RequiredTags": "event_16032000, !dropbox_DruidAltarSpring",
 					"OrderType": "SwordSorcery.Event",
 					"SpecialRule": "",
 					"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle1_Text]",
@@ -140,7 +144,7 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle1.Objective_0_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarSpring",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
 								"DropBoxIndicatorLocation": "14 15",
 								"AcceptedContextTags": "item_parsnip"
@@ -151,7 +155,7 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle1.Objective_1_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarSpring",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
 								"DropBoxIndicatorLocation": "14 15",
 								"AcceptedContextTags": "item_daffodil"
@@ -162,7 +166,7 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle1.Objective_2_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarSpring",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
 								"DropBoxIndicatorLocation": "14 15",
 								"AcceptedContextTags": "item_leek"
@@ -173,7 +177,7 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle1.Objective_3_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarSpring",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
 								"DropBoxIndicatorLocation": "14 15",
 								"AcceptedContextTags": "item_strawberry"
@@ -184,7 +188,7 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle1.Objective_4_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarSpring",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
 								"DropBoxIndicatorLocation": "14 15",
 								"AcceptedContextTags": "item_spring_onion"
@@ -213,7 +217,7 @@
 					"Name": "[CAGQuest.UntimedSpecialOrder.Pentacle2_Name]",
 					"Requester": "Hector",
 					"Repeatable": "false",
-					"RequiredTags": "event_16032001, !dropbox_DruidAltar",
+					"RequiredTags": "event_16032001, !dropbox_DruidAltarSummer",
 					"OrderType": "SwordSorcery.Event",
 					"SpecialRule": "",
 					"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle2_Text]",
@@ -226,9 +230,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle2.Objective_0_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarSummer",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "13 15",
 								"AcceptedContextTags": "item_blueberry"
 							}
 						},
@@ -237,9 +241,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle2.Objective_1_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarSummer",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "13 15",
 								"AcceptedContextTags": "item_spice_berry"
 							}
 						},
@@ -248,9 +252,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle2.Objective_2_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarSummer",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "13 15",
 								"AcceptedContextTags": "item_sweet_pea"
 							}
 						},
@@ -259,9 +263,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle2.Objective_3_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarSummer",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "13 15",
 								"AcceptedContextTags": "item_corn"
 							}
 						},
@@ -270,9 +274,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle2.Objective_4_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarSummer",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "13 15",
 								"AcceptedContextTags": "item_red_mushroom"
 							}
 						}
@@ -299,7 +303,7 @@
 					"Name": "[CAGQuest.UntimedSpecialOrder.Pentacle3_Name]",
 					"Requester": "Hector",
 					"Repeatable": "false",
-					"RequiredTags": "event_16032002, !dropbox_DruidAltar",
+					"RequiredTags": "event_16032002, !dropbox_DruidAltarFall",
 					"OrderType": "SwordSorcery.Event",
 					"SpecialRule": "",
 					"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle3_Text]",
@@ -312,9 +316,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle3.Objective_0_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarFall",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "9 15",
 								"AcceptedContextTags": "item_bok_choy"
 							}
 						},
@@ -323,9 +327,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle3.Objective_1_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarFall",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "9 15",
 								"AcceptedContextTags": "item_amaranth"
 							}
 						},
@@ -334,9 +338,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle3.Objective_2_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarFall",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "9 15",
 								"AcceptedContextTags": "item_wild_plum"
 							}
 						},
@@ -345,9 +349,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle3.Objective_3_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarFall",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "9 15",
 								"AcceptedContextTags": "item_blackberry"
 							}
 						},
@@ -356,9 +360,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle3.Objective_4_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarFall",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "9 15",
 								"AcceptedContextTags": "item_cranberries"
 							}
 						}
@@ -385,7 +389,7 @@
 					"Name": "[CAGQuest.UntimedSpecialOrder.Pentacle4_Name]",
 					"Requester": "Hector",
 					"Repeatable": "false",
-					"RequiredTags": "event_16032003, !dropbox_DruidAltar",
+					"RequiredTags": "event_16032003, !dropbox_DruidAltarWinter",
 					"OrderType": "SwordSorcery.Event",
 					"SpecialRule": "",
 					"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle4_Text]",
@@ -398,9 +402,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle4.Objective_0_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarWinter",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "8 15",
 								"AcceptedContextTags": "item_winter_root"
 							}
 						},
@@ -409,9 +413,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle4.Objective_1_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarWinter",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "8 15",
 								"AcceptedContextTags": "item_crystal_fruit"
 							}
 						},
@@ -420,9 +424,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle4.Objective_2_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarWinter",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "8 15",
 								"AcceptedContextTags": "item_snow_yam"
 							}
 						},
@@ -431,9 +435,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle4.Objective_3_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarWinter",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "8 15",
 								"AcceptedContextTags": "item_crocus"
 							}
 						},
@@ -442,9 +446,9 @@
 							"Text": "[CAGQuest.UntimedSpecialOrder.Pentacle4.Objective_4_Text]",
 							"RequiredCount": "3",
 							"Data": {
-								"DropBox": "DruidAltar",
+								"DropBox": "DruidAltarWinter",
 								"DropBoxGameLocation": "EastScarp_DeepMountains",
-								"DropBoxIndicatorLocation": "14 15",
+								"DropBoxIndicatorLocation": "8 15",
 								"AcceptedContextTags": "item_holly"
 							}
 						}
