@@ -780,7 +780,7 @@
       },
       "When": {
         "HasFlag |contains=HectorEssenceAltar2": true,
-        "HasFlag |contains=Hector_SpecialOrders_River1": false
+        "HasFlag |contains=Hector_SpecialOrders_River2": false
         }
     },
 
