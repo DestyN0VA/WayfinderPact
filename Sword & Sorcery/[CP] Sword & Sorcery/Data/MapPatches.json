@@ -681,6 +681,7 @@
       "Target": "Maps/EastScarp_DeepMountains",
       "FromFile": "Assets/Maps/DruidAltarSpringPatch.tmx",
       "PatchMode": "Overlay",
+      "Update": "OnLocationChange",
       "ToArea": {
         "X": 14,
         "Y": 15,
@@ -698,6 +699,7 @@
       "Target": "Maps/EastScarp_DeepMountains",
       "FromFile": "Assets/Maps/DruidAltarSummerPatch.tmx",
       "PatchMode": "Overlay",
+      "Update": "OnLocationChange",
       "ToArea": {
         "X": 13,
         "Y": 15,
@@ -715,6 +717,7 @@
       "Target": "Maps/EastScarp_DeepMountains",
       "FromFile": "Assets/Maps/DruidAltarFallPatch.tmx",
       "PatchMode": "Overlay",
+      "Update": "OnLocationChange",
       "ToArea": {
         "X": 9,
         "Y": 15,
@@ -732,6 +735,7 @@
       "Target": "Maps/EastScarp_DeepMountains",
       "FromFile": "Assets/Maps/DruidAltarWinterPatch.tmx",
       "PatchMode": "Overlay",
+      "Update": "OnLocationChange",
       "ToArea": {
         "X": 8,
         "Y": 15,
@@ -749,6 +753,7 @@
       "Target": "Maps/EastScarp_DeepMountains",
       "FromFile": "Assets/Maps/DruidAltarEssencesPatch.tmx",
       "PatchMode": "Overlay",
+      "Update": "OnLocationChange",
       "ToArea": {
         "X": 14,
         "Y": 15,
@@ -766,6 +771,7 @@
       "Target": "Maps/EastScarp_DeepMountains",
       "FromFile": "Assets/Maps/DruidAltarEssencesPatch.tmx",
       "PatchMode": "Overlay",
+      "Update": "OnLocationChange",
       "ToArea": {
         "X": 14,
         "Y": 15,
