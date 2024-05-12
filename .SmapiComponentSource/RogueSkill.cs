@@ -115,7 +115,7 @@ namespace SwordAndSorcerySMAPI
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ClothArmor", false).DisplayName));
                     break;
                 case 2:
-                    ret.Add(I18n.RogueSkill_Unlock_2());
+                    ret.Add(I18n.RogueSkill_Unlock_2().Replace('^','\n'));
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_CopperArmor", false).DisplayName));
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_IronArmor", false).DisplayName));
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_GoldArmor", false).DisplayName));
@@ -127,7 +127,7 @@ namespace SwordAndSorcerySMAPI
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_IcicleArrow", false).DisplayName));
                     break;
                 case 4:
-                    ret.Add(I18n.RogueSkill_Unlock_4());
+                    ret.Add(I18n.RogueSkill_Unlock_4().Replace('^', '\n'));
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteEmerald", false).DisplayName));
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteRuby", false).DisplayName));
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteTopaz", false).DisplayName));
