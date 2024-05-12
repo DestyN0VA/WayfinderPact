@@ -111,7 +111,7 @@
 						{
 							"Type": "Mail",
 							"Data": {
-								"MailReceived": "/does ",
+								"MailReceived": "Hector_SpecialOrders_River1",
 								"NoLetter": "true"
 							}
 						}
