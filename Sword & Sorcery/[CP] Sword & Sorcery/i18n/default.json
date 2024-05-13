@@ -1251,7 +1251,7 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch1.7H2.Krobus.8": "Good to meet you, too!$1#$b#I'm going to get going, though, so you and @ can catch up! We can hang out another time.$7",
   "Events.S&S.Ch1.7H2.Mateo.10": "...I wasn't ready for that so soon after...$37",
   "Events.S&S.Ch1.7H2.Q1": "How's my face looking? Is it as bad as I think it is?",
-  "Events.S&S.Ch1.7H2.Q1.Answers": "#All you need now is a cape, mask, and musical aptitude. (PLATONIC)#You're just being self-concious; they healed well, and don't look bad at all. (PLATONIC)#Lots of folks find scars attractive, you know! Myself included.(FLIRTY)",
+  "Events.S&S.Ch1.7H2.Q1.Answers": "#All you need now is a cape, mask, and musical aptitude. (PLATONIC)#You're just being self-concious; they healed well, and don't look bad at all. (PLATONIC)#Lots of folks find scars attractive, you know! Myself included. (FLIRTY)",
   "Events.S&S.Ch1.7H2.Q1.Response.1": "The first thing I thought when I looked in the mirror was, 'Oh, I should move into the basement of an opera house.'$1#$b#Thanks for easing my nerves, @. Laughing always does the trick.$32",
   "Events.S&S.Ch1.7H2.Q1.Response.2": "Thank you, @. I have bunch of scars, but I'd managed to keep my face clear until now.$37#$b#Aw, well. If you're saying they aren't bad, they really must not be.$36",
   "Events.S&S.Ch1.7H2.Q1.Response.3": "Is that so? Guess I've lucked out then, huh? That's an extra weighty statement, coming from you...$30",
@@ -1869,7 +1869,7 @@ ________      ________ _   _ _______ _____
   // SPRING
   "Core.Hector.Spring.Relationship.Platonic.1": "You're kind of like a sun puddle. You know that, @? Warm, and always welcomed.$12#$b#Don't look at me like that. I'm allowed to be sentimental sometimes, okay?$12",
   "Core.Hector.Spring.Relationship.Platonic.2": "@, your cultivation skills really are something else. You started from nothing, but %farm is looking amazing despite the challenges.$8#$b#...Sorry not sorry for BEING one of said challenges, but I do appreciate your dedication.$9",
-  "Core.Hector.Spring.Relationship.Platonic.3": "I found a cool rock. I thought you might like it.$4[577]#$b#That's the basis of how friendship works, right? Cool rocks?$8",
+  "Core.Hector.Spring.Relationship.Platonic.3": "I found a cool rock. I thought you might like it.$4[390]#$b#That's the basis of how friendship works, right? Cool rocks?$8",
   "Core.Hector.Spring.Relationship.Platonic.4": "Jacob seems especially renewed this time of year, which is great. It bums me out when he's down.$12#$b#I just want him and Eloise to be happy, and lead an easy life. They deserve it.$14",
   "Core.Hector.Spring.Relationship.Platonic.5": "Change is on the wind, I can feel it. The question is, what's coming-$23#$b#Oh, hi @. What's up?$6",
   "Core.Hector.Spring.Relationship.Platonic.6": "Eloise was right to call me out when we first met. I think about it often; if she hadn't, I feel like I'd be different, somehow.$12#$b#Book agrees, and is excited to meet her some day. Not sure I can get Jacob in on it, though.$8",
@@ -1906,7 +1906,7 @@ ________      ________ _   _ _______ _____
   // SPRING
   "Core.Hector.Spring.Relationship.Romantic.1": "Oh, hey. It's my favorite sun puddle. When I see you, the world gets a little bit brighter. A little bit warmer. How are you doing?$12",
   "Core.Hector.Spring.Relationship.Romantic.2": "The way you tend to %farm is outright inspiring. The way you've coaxed life out of the Earth without magic...$14#$b#I guess you're more skilled than I am, since I cheat with my plants.$8",
-  "Core.Hector.Spring.Relationship.Romantic.3": "Eloise told me that not only do otters have pockets for their favorite rocks, but they hold hands so they don't float apart from each other when napping.$10[577]",
+  "Core.Hector.Spring.Relationship.Romantic.3": "Eloise told me that not only do otters have pockets for their favorite rocks, but they hold hands so they don't float apart from each other when napping.$10[390]",
   "Core.Hector.Spring.Relationship.Romantic.4": "Every time I see the flowers that grow around town, I think of you. Beautiful, delicate...$10#$b#How about you show me where the delicate stops tonight, @?$11",
   "Core.Hector.Spring.Relationship.Romantic.5": "Aideen brought Baron Munchington in for his shots today.$7#$b#He said he didn't need them due to his royal status. Well, I promptly informed him I skew anarchist.$9",
   "Core.Hector.Spring.Relationship.Romantic.6": "Book is requesting your company. Come visit her sometime, okay? Especially if you have some free time while I'm at work.$8",
@@ -2070,6 +2070,7 @@ ________      ________ _   _ _______ _____
   "Gifts.Hector.GiftReaction.FiddleheadFern": "I love these so much. They only grow in summer, and they're a pain in the ass, but so tasty! Thank you!$1",
   "Gifts.Hector.GiftReaction.FiddleheadRisotto": "This is my favorite dish cuz' it's made with my favorite thing. It's extra special since you made it - thanks, @.$13",
   "Gifts.Hector.GiftReaction.Amaranth": "Caress the one, the never fading rain in your heart, the tears of snow-white sorrow! Caress the one, the hiding amaranth, in a land, of the daybreak!$3",
+  "Gifts.Hector.GiftReaction.Stone": "Oh I LOVE rocks. So do otters, you know! Did you know they juggle them for fun?$1#$b#They also have a POCKET for their FAVORITE rock. Isn't that just the cutest thing you've ever heard?$1",
 
   // LOVES - ROMANTIC 
 
@@ -2089,8 +2090,10 @@ ________      ________ _   _ _______ _____
   "Gifts.Hector.GiftReaction.MapleBar.Birthday": "Oh, this is better than a birthday cake. I can feel the sugar crystallizing around my heart. Thanks, @!$9",
   "Gifts.Hector.GiftReaction.SolarEssence.Birthday": "This is actually a very useful birthday gift, @. Thank you.$13",
   "Gifts.Hector.GiftReaction.VoidEssence.Birthday": "This is actually a very useful birthday gift, @. Thank you.$13",
+  "Gifts.Hector.GiftReaction.Stone.Birthday": "You're giving me your favorite rock for my birthday? I'm flattered, @.$13#$b#Thank you, this is a very thoughtful gift.$14",
 
   // BIRTHDAY - ROMANTIC
+  "Gifts.Hector.GiftReaction.Stone.Birthday.Romantic": "Are you giving me your favorite rock because I'm your favorite person, my deer~ly beloved?$10#$b#Well, I accept, and I'm happy to tell you that you're ALSO my favorite person.$11",
 
   // HATES 
   "Gifts.Hector.GiftReaction.RabbitsFoot": "I know it's just matted hair, and not actually a severed paw. But it's still weird, and I don't like it.$16",

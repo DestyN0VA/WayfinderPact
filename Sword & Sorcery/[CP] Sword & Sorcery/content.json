@@ -464,7 +464,7 @@
     },
     {
       "Name": "MateoHospitalScene",
-      "Value": "message \"{{i18n:Events.S&S.Ch1.7H1.Message.1}}\"/changeLocation Town/warp farmer 36 57/faceDirection farmer 2/addTemporaryActor MateoKrobus 16 32 39 62 1 true Character/changeName MateoKrobus Krobus/pause 500/playSound doorClose/globalFadeToClear/viewport 35 59/playsound leafrustle/advancedMove MateoKrobus false -3 0 0 -3 4 10/emote farmer 40/pause 100/jump farmer 5 true/emote farmer 16/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.1}}\"/pause 250/emote farmer 32/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.2}}\"pause 250/emote farmer 36/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.3}}\"/fade/viewport -1000 -1000/mail MateoHospital/end invisible Mateo"
+      "Value": "message \"{{i18n:Events.S&S.Ch1.7H1.Message.1}}\"/changeLocation Town/warp farmer 36 57/faceDirection farmer 2/addTemporaryActor MateoKrobus 16 32 39 62 1 true Character/changeName MateoKrobus Krobus/pause 500/playSound doorClose/globalFadeToClear/viewport 35 59/playsound leafrustle/advancedMove MateoKrobus false -3 0 0 -3 4 10/emote farmer 40/pause 100/jump farmer 5 true/emote farmer 16/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.1}}\"/pause 250/emote farmer 32/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.2}}\"/pause 250/emote farmer 36/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.3}}\"/fade/viewport -1000 -1000/mail MateoHospital/end invisible Mateo"
     },
     {
       "Name": "MateoHospitalScene",
@@ -1122,6 +1122,17 @@
     {
       "Name": "10HSVEBushRemovalServices",
       "Value": "removeTile 43 26 AlwaysFront/removeTile 44 26 AlwaysFront/removeTile 45 26 AlwaysFront/removeTile 43 27 Front/removeTile 44 27 Front/removeTile 45 27 Front/removeTile 43 28 Buildings/removeTile 44 28 Buildings/removeTile 45 28 Buildings"
+    },
+    {
+      "Name": "SVEReroutingServices",
+      "Value": "advancedMove farmer false 0 4 7 0 0 -6 1 10/advancedMove Krobus false 0 4 7 0 0 -5 1 10",
+    },
+    {
+      "Name": "SVEReroutingServices",
+      "Value": "advancedMove farmer false 0 5 7 0 0 -6 1 10/advancedMove Krobus false 0 5 7 0 0 -5 1 10",
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+      }
     },
     {
       "Name": "HectorFlirt1",
