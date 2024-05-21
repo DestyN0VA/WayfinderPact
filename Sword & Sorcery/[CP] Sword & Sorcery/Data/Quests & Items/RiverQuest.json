@@ -8,7 +8,7 @@
 			"Entries": {
 				"{{ModID}}_RiverQuest.1": {
 					"Id": "{{ModID}}_RiverQuest.1",
-					"Trigger": "DayEnding",
+					"Trigger": "LocationChanged",
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.10",
 					"Actions": [
 						"AddMail Host HectorEssenceAltar1 Received",
@@ -22,7 +22,7 @@
 			"Entries": {
 				"{{ModID}}_RiverQuest.2": {
 					"Id": "{{ModID}}_RiverQuest.2",
-					"Trigger": "DayEnding",
+					"Trigger": "LocationChanged",
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.12",
 					"Actions": [
 						"AddMail Host HectorEssenceAltar2 Received",

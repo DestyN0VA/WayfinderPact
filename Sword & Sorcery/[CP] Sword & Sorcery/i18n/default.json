@@ -2871,7 +2871,7 @@ ________      ________ _   _ _______ _____
   "CT.Hector.HectorBookIntro": "If you don't come visit Book on the regular, she'll be really upset.$9",
   "CT.Hector.HectorShapeshift": "Is it just me, or are you really tired for no reason? ... No, it IS just me? Okay.$18",
   "CT.Hector.HectorBookQuest": "Have you ever seen a book cry? I don't know how Book does it, either.$23",
-  "CT.Hector.HectorVet": "Eloise is a smart cookie, isn't she?$8",
+  "CT.Hector.HectorVet": "I think working with Jacob will be a net-positive, although I still reserve the right to complain about it.$8",
   "CT.Hector.HectorVet2": "Jacob's got a real good head on his shoulders. Must be tough, raising a kid by himself.$24",
   "CT.Hector.HectorGender": "I saw you eavesdropping on the bridge, you stinker.$9",
   "CT.Hector.HectorVet3": "Hey, having a work ethic is just as surprising to you as it is to me.$8",
@@ -3782,61 +3782,36 @@ ________      ________ _   _ _______ _____
 
   // NAME & INTRO 
   "Core.Roslin.Name": "Roslin",
-  "Core.Roslin.Introduction": "TEST DIALOGUE",
+  "Core.Roslin.Introduction": "This may, potentially, be another magical disaster to add to my already disasterous supply...$13#$b#It is no matter! I will get Dandelion back, consequences be damned.$14",
 
   // COMMUNITY CENTER BUNDLES  
-  "Core.Roslin.JojaBegin": "",
-  "Core.Roslin.CCBegin": "",
-  "Core.Roslin.CCBus": "",
-  "Core.Roslin.CCMinecart": "",
-  "Core.Roslin.CCComplete": "",
-  "Core.Roslin.MovieTheater": "",
-
-  // BIRTHDAYS
-  "Core.Roslin.Fall25": "", // Mateo
-  "Core.Roslin.Winter21": "", //Hector
+  "Core.Roslin.CCComplete": "Congratulations on your contributions to the town, @.$7",
+  "Core.Roslin.MovieTheater": "I'm more into musical theatre than movies, but would rather that than a openly-resented grocery store.$9",
 
   // END OF SEASON
-  "Core.Roslin.SpringEnd": "",
-  "Core.Roslin.SummerEnd": "",
-  "Core.Roslin.FallEnd": "",
-  "Core.Roslin.WinterEnd": "",
+  "Core.Roslin.SpringEnd": "I'm sure the Druid is planning some sort of change-of-season celebration roght now.$6",
+  "Core.Roslin.SummerEnd": "Time to start regulating my body temprature with magic so I don't have to wear sleeves.$1",
+  "Core.Roslin.FallEnd": "Is this the time of year where everyone and their mother starts getting festive and excited?$8",
+  "Core.Roslin.WinterEnd": "Once more, the clock turns over. Just as it has the year before, and the year before that...$3",
 
   // SVE COMMUNITY DAY
-  "Core.Roslin.CommunityCenter4": "",
-  "Core.Roslin.CommunityCenter6": "",
-  "Core.Roslin.CommunityCenter8": "",
-  "Core.Roslin.CommunityCenter10": "",
+  "Core.Roslin.CommunityCenter10": "These kind of gatherings are what make conquering evil worthwhile.",
 
   // FESTIVALS
-  "Core.Roslin.EggFestival": "",
-  "Core.Roslin.FlowerDance": "",
-  "Core.Roslin.Luau": "",
-  "Core.Roslin.MoonlightJelly": "",
-  "Core.Roslin.SDVFair": "",
-  "Core.Roslin.SpiritsEve": "",
-  "Core.Roslin.IceFestival": "",
-  "Core.Roslin.NightMarket": "",
-  "Core.Roslin.WinterStar": "",
-
-  // RESORT
-  "Core.Roslin.ResortEntering": "",
-  "Core.Roslin.ResortLeaving": "",
-  "Core.Roslin.ResortShore": "",
-  "Core.Roslin.ResortUmbrella": "",
-  "Core.Roslin.ResortWander": "",
-  "Core.Roslin.ResortWander.2": "",
-  "Core.Roslin.ResortChair": "",
-  "Core.Roslin.ResortBar": "",
-  "Core.Roslin.ResortTowel": "",
-  "Core.Roslin.ResortTowel.2": "",
-  "Core.Roslin.Resort_Towel.3": "",
-  "Core.Roslin.Resort": "",
+  "Core.Roslin.EggFestival": "I wouldn't go to any sort of weird food festival if I didn't know Dandelion adores that stuff.$8",
+  "Core.Roslin.FlowerDance": "...I do love when Dandelion gets all dressed up...I suppose that'll make tomorrow worthwhile.$12",
+  "Core.Roslin.Luau": "I have no idea what to bring tomorrow. Maybe some sort of tincture?$13",
+  "Core.Roslin.MoonlightJelly": "There is no amount of me being ornery that would take away from the beauty of the Lunaloos.$12",
+  "Core.Roslin.SDVFair": "I can't help but look forward to seeing Welwick tomorrow. They're an associate of mine.$11",
+  "Core.Roslin.SpiritsEve": "So much work to do to prepare for tomorrow. I must appease the spirits, lest there be consequences...$15",
+  "Core.Roslin.IceFestival": "Had I not been a proficent sorcerer, figure skating would have been a choice backup plan.$6",
+  "Core.Roslin.NightMarket": "Oooh, I'm very excited for all the interesting imports that will be coming in over the next few days.$11",
+  "Core.Roslin.WinterStar": "It's interesting how much tomorrow's holiday has changed over the years...$6",
 
   // GREEN RAIN
-  "Core.Roslin.GreenRain": "",
-  "Core.Roslin.GreenRainFinished": "",
-  "Core.Roslin.GreenRain2": "",
+  "Core.Roslin.GreenRain": "I didn't know this could happen here! Perhaps it's the work of the Druid, that would make sense.$17",
+  "Core.Roslin.GreenRainFinished": "I do love how vibrant everything looks after Druidic rain. What impact does it have on %farm?$11",
+  "Core.Roslin.GreenRain2": "I'm pretty sure Hector is summoning this rain for fun. Well, Druids are going to... Druid, I suppose.$7",
 
   /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
@@ -3848,9 +3823,9 @@ ________      ________ _   _ _______ _____
 
 */
 
-  // GENERIC 0-4
-  "Core.Roslin.Generic.EarlyHeart.1": "",
-  "Core.Roslin.Generic.EarlyHeart.2": "",
+  // PRE-DANDELION RETURNING
+  "Core.Roslin.Generic.EarlyHeart.1": "How dare the birds sing, the sun rise, and the dogs run while I'm missing my Dandelion. The audacity.$13",
+  "Core.Roslin.Generic.EarlyHeart.2": "Everything is made up of essence. Fire, earth, air, water - they are the foundation on which everything else stands on.$15#$b#Solar, void and druidic are a little more situational, but serve as building blocks just the same.$16",
   "Core.Roslin.Generic.EarlyHeart.3": "",
   "Core.Roslin.Generic.EarlyHeart.4": "",
   "Core.Roslin.Generic.EarlyHeart.5": "",
@@ -3865,7 +3840,7 @@ ________      ________ _   _ _______ _____
   "Core.Roslin.Generic.EarlyHeart.14": "",
   "Core.Roslin.Generic.EarlyHeart.15": "",
 
-  // GENERIC 5-10
+  // POST-DANDELION RETURNING
   "Core.Roslin.Generic.LateHeart.1": "",
   "Core.Roslin.Generic.LateHeart.2": "",
   "Core.Roslin.Generic.LateHeart.3": "",

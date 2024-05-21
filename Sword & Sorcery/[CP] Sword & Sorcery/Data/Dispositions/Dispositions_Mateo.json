@@ -40,13 +40,14 @@
                     },
                     "Home": [
                         {
-                            "ID": "Mateo - NPC Waiting Room",
-                            "Location": "EastScarp_TNPCWaitingWarpRoom",
+                            "ID": "Mateo - Coastal Adventurer's Guild",
+                            "Location": "EastScarp_CoastalGuild",
                             "Tile": {
-                                "X": 11,
+                                "X": 8,
                                 "Y": 5
                             },
-                            "Direction": "Down"
+                            "Direction": "Down",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Mateo.12"
                         },
                         {
                             "ID": "Mateo - Beach Tent",
@@ -55,17 +56,19 @@
                                 "X": 5,
                                 "Y": 6
                             },
-                            "Direction": "Down"
+                            "Direction": "Down",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Mateo.0"
                         },
                         {
-                            "ID": "Mateo - Coastal Adventurer's Guild",
-                            "Location": "EastScarp_CoastalGuild",
+                            "ID": "Mateo - NPC Waiting Room",
+                            "Location": "EastScarp_TNPCWaitingWarpRoom",
                             "Tile": {
-                                "X": 8,
+                                "X": 11,
                                 "Y": 5
                             },
-                            "Direction": "Down"
-                        }
+                            "Direction": "Down",
+                            "Condition": "!PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Mateo.0"
+                        },
                     ],
                     "Appearance": [
                         {

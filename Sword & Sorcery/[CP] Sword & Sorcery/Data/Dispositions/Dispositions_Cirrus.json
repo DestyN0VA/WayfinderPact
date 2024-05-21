@@ -62,8 +62,9 @@
                                 "X": 13,
                                 "Y": 5
                             },
-                            "Direction": "Down"
-                        }
+                            "Direction": "Down",
+                            "Condition": "!PLAYER_HAS_SEEN_EVENT Any SnS.Ch3.Cirrus.1"
+                        },
                     ],
                     "Appearance": [
                         {

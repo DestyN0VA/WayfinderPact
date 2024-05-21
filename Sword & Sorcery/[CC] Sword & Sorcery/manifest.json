@@ -1,10 +1,10 @@
 {
-    "Name": "Sword & Sorcery",
+    "Name": "Sword & Sorcery [CC]",
     "Author": "DestyNova",
-    "Version": "1.0.0",
+    "Version": "1.10.0",
     "Description": "The guild's mascot, Emeritus, and a silly little grimoire, Book.",
     "UniqueID": "SnS.CC",
-    "UpdateKeys": [ "Nexus:???" ],
+    "UpdateKeys": [ "Nexus:12369" ],
     "ContentPackFor": {
       "UniqueID": "PeacefulEnd.CustomCompanions"
     },

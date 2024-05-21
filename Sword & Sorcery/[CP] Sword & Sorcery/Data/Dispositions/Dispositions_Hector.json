@@ -51,8 +51,9 @@
                                 "X": 12,
                                 "Y": 5
                             },
-                            "Direction": "Down"
-                        }
+                            "Direction": "Down",
+                            "Condition": "!PLAYER_HAS_SEEN_EVENT Any SnS.Ch2.Hector.1"
+                        },
                     ],
                     "Appearance": [
                         {

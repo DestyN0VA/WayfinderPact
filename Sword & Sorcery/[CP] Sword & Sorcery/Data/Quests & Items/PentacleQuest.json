@@ -7,7 +7,7 @@
 			"Entries": {
 				"{{ModID}}_PentacleQuestIntro": {
 					"Id": "{{ModID}}_PentacleQuestIntro",
-					"Trigger": "DayEnding",
+					"Trigger": "LocationChanged",
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddMail Current HectorIntroLetter tomorrow",
@@ -24,7 +24,7 @@
 			"Entries": {
 				"{{ModID}}_PentacleQuest.1": {
 					"Id": "{{ModID}}_PentacleQuest.1",
-					"Trigger": "DayEnding",
+					"Trigger": "LocationChanged",
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON spring, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle1",
@@ -42,7 +42,7 @@
 			"Entries": {
 				"{{ModID}}_PentacleQuest.2": {
 					"Id": "{{ModID}}_PentacleQuest.2",
-					"Trigger": "DayEnding",
+					"Trigger": "LocationChanged",
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON summer, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle2",
@@ -60,7 +60,7 @@
 			"Entries": {
 				"{{ModID}}_PentacleQuest.3": {
 					"Id": "{{ModID}}_PentacleQuest.3",
-					"Trigger": "DayEnding",
+					"Trigger": "LocationChanged",
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON fall, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle3",
@@ -78,7 +78,7 @@
 			"Entries": {
 				"{{ModID}}_PentacleQuest.4": {
 					"Id": "{{ModID}}_PentacleQuest.4",
-					"Trigger": "DayEnding",
+					"Trigger": "LocationChanged",
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current 112, SEASON winter, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle4",
@@ -96,7 +96,7 @@
 			"Entries": {
 				"{{ModID}}_PentacleQuestIntro.1": {
 					"Id": "{{ModID}}_PentacleQuestIntro.1",
-					"Trigger": "DayEnding",
+					"Trigger": "LocationChanged",
 					"Condition": "PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle4, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddMail Current AetherQuest tomorrow",
@@ -113,7 +113,7 @@
 			"Entries": {
 				"{{ModID}}_PentacleQuestIntro.2": {
 					"Id": "{{ModID}}_PentacleQuestIntro.2",
-					"Trigger": "DayEnding",
+					"Trigger": "LocationChanged",
 					"Condition": "PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle4, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddMail Current AetherQuest2 tomorrow",
