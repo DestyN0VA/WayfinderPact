@@ -5,27 +5,32 @@
     {
       "LogName": "Sword & Sorcery - Mateo Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Mateo.json, Data/Dialogue/Mateo/Dialogue_Mateo.json, Data/Dialogue/Mateo/ConcessionTastes_Mateo.json, Data/Dialogue/Mateo/ConversationTopics_Mateo.json, Data/Dialogue/Mateo/CustomFixed_Mateo.json,Data/Dialogue/Mateo/CustomGiftDialogue_Mateo.json, Data/Dialogue/Mateo/MarriageDialogue_Mateo.json, Data/Dispositions/Dispositions_Mateo.json, Data/Festival Data/FestivalData_Mateo.json, Data/Schedules/Schedule_Mateo.json, Data/Strings/Strings_Mateo.json, Data/Spouse Extras/SpouseExtras_Mateo.json"
+      "FromFile": "Data/Appearances/AppearanceData_Mateo.json, Data/Dialogue/Mateo/Dialogue_Mateo.json, Data/Dialogue/Mateo/ConcessionTastes_Mateo.json, Data/Dialogue/Mateo/ConversationTopics_Mateo.json, Data/Dialogue/Mateo/CustomFixed_Mateo.json,Data/Dialogue/Mateo/CustomGiftDialogue_Mateo.json, Data/Dialogue/Mateo/MarriageDialogue_Mateo.json, Data/Festival Data/FestivalData_Mateo.json, Data/Schedules/Schedule_Mateo.json, Data/Strings/Strings_Mateo.json, Data/Spouse Extras/SpouseExtras_Mateo.json"
     },
     {
       "LogName": "Sword & Sorcery - Hector Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Hector.json, Data/Dialogue/Hector/Dialogue_Hector.json, Data/Dialogue/Hector/ConcessionTastes_Hector.json, Data/Dialogue/Hector/ConversationTopics_Hector.json, Data/Dialogue/Hector/CustomFixed_Hector.json,Data/Dialogue/Hector/CustomGiftDialogue_Hector.json, Data/Dialogue/Hector/MarriageDialogue_Hector.json, Data/Dispositions/Dispositions_Hector.json, Data/Festival Data/FestivalData_Hector.json, Data/Schedules/Schedule_Hector.json, Data/Strings/Strings_Hector.json, Data/Spouse Extras/SpouseExtras_Hector.json"
+      "FromFile": "Data/Appearances/AppearanceData_Hector.json, Data/Dialogue/Hector/Dialogue_Hector.json, Data/Dialogue/Hector/ConcessionTastes_Hector.json, Data/Dialogue/Hector/ConversationTopics_Hector.json, Data/Dialogue/Hector/CustomFixed_Hector.json,Data/Dialogue/Hector/CustomGiftDialogue_Hector.json, Data/Dialogue/Hector/MarriageDialogue_Hector.json, Data/Festival Data/FestivalData_Hector.json, Data/Schedules/Schedule_Hector.json, Data/Strings/Strings_Hector.json, Data/Spouse Extras/SpouseExtras_Hector.json"
     },
     {
       "LogName": "Sword & Sorcery - Cirrus Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Cirrus.json, Data/Dialogue/Cirrus/Dialogue_Cirrus.json, Data/Dialogue/Cirrus/ConcessionTastes_Cirrus.json, Data/Dialogue/Cirrus/ConversationTopics_Cirrus.json, Data/Dialogue/Cirrus/CustomFixed_Cirrus.json,Data/Dialogue/Cirrus/CustomGiftDialogue_Cirrus.json, Data/Dialogue/Cirrus/MarriageDialogue_Cirrus.json, Data/Dispositions/Dispositions_Cirrus.json, Data/Festival Data/FestivalData_Cirrus.json, Data/Schedules/Schedule_Cirrus.json, Data/Strings/Strings_Cirrus.json, Data/Spouse Extras/SpouseExtras_Cirrus.json"
+      "FromFile": "Data/Appearances/AppearanceData_Cirrus.json, Data/Dialogue/Cirrus/Dialogue_Cirrus.json, Data/Dialogue/Cirrus/ConcessionTastes_Cirrus.json, Data/Dialogue/Cirrus/ConversationTopics_Cirrus.json, Data/Dialogue/Cirrus/CustomFixed_Cirrus.json,Data/Dialogue/Cirrus/CustomGiftDialogue_Cirrus.json, Data/Dialogue/Cirrus/MarriageDialogue_Cirrus.json, Data/Festival Data/FestivalData_Cirrus.json, Data/Schedules/Schedule_Cirrus.json, Data/Strings/Strings_Cirrus.json, Data/Spouse Extras/SpouseExtras_Cirrus.json"
     },
     {
       "LogName": "Sword & Sorcery - Roslin Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Roslin.json, Data/Dialogue/Roslin/Dialogue_Roslin.json, Data/Dialogue/Roslin/ConcessionTastes_Roslin.json, Data/Dialogue/Roslin/ConversationTopics_Roslin.json, Data/Dialogue/Roslin/CustomGiftDialogue_Roslin.json, Data/Dispositions/Dispositions_Roslin.json, Data/Festival Data/FestivalData_Roslin.json, Data/Schedules/Schedule_Roslin.json, Data/Strings/Strings_Roslin.json"
+      "FromFile": "Data/Appearances/AppearanceData_Roslin.json, Data/Dialogue/Roslin/Dialogue_Roslin.json, Data/Dialogue/Roslin/ConcessionTastes_Roslin.json, Data/Dialogue/Roslin/ConversationTopics_Roslin.json, Data/Dialogue/Roslin/CustomGiftDialogue_Roslin.json, Data/Festival Data/FestivalData_Roslin.json, Data/Schedules/Schedule_Roslin.json, Data/Strings/Strings_Roslin.json"
     },
     {
       "LogName": "Sword & Sorcery - Dandelion Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Dandelion.json, Data/Dialogue/Dandelion/Dialogue_Dandelion.json, Data/Dialogue/Dandelion/ConcessionTastes_Dandelion.json, Data/Dialogue/Dandelion/ConversationTopics_Dandelion.json, Data/Dialogue/Dandelion/CustomGiftDialogue_Dandelion.json, Data/Dispositions/Dispositions_Dandelion.json, Data/Festival Data/FestivalData_Dandelion.json, Data/Schedules/Schedule_Dandelion.json, Data/Strings/Strings_Dandelion.json"
+      "FromFile": "Data/Appearances/AppearanceData_Dandelion.json, Data/Dialogue/Dandelion/Dialogue_Dandelion.json, Data/Dialogue/Dandelion/ConcessionTastes_Dandelion.json, Data/Dialogue/Dandelion/ConversationTopics_Dandelion.json, Data/Dialogue/Dandelion/CustomGiftDialogue_Dandelion.json, Data/Festival Data/FestivalData_Dandelion.json, Data/Schedules/Schedule_Dandelion.json, Data/Strings/Strings_Dandelion.json"
+    },
+    {
+      "LogName": "Sword & Sorcery - Disposition Includes",
+      "Action": "Include",
+      "FromFile": "Data/Dispositions/Mateo/full_NPCData.json, Data/Dispositions/Mateo/vanilla_NPCData.json, Data/Dispositions/Mateo/lite_NPCData.json, Data/Dispositions/Hector/full_NPCData.json, Data/Dispositions/Hector/vanilla_NPCData.json, Data/Dispositions/Hector/lite_NPCData.json, Data/Dispositions/Cirrus/full_NPCData.json, Data/Dispositions/Cirrus/vanilla_NPCData.json, Data/Dispositions/Cirrus/lite_NPCData.json, Data/Dispositions/Roslin/full_NPCData.json, Data/Dispositions/Roslin/vanilla_NPCData.json, Data/Dispositions/Roslin/lite_NPCData.json,"
     },
     {
       "LogName": "Sword & Sorcery - Quest Includes",
@@ -42,7 +47,6 @@
       "Action": "Include",
       "FromFile": "Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json"
     },
-
     // TRIGGER ACTIONS
     {
       "LogName": "Overrides Seen Today Flag Removal",
@@ -249,6 +253,13 @@
       "Description": "Removes the quest requirements for Hector's intro quest, in case of bugs or other issues.",
       "Section": "Miscellaneous"
     },
+    "SeasonalOutfits": {
+      "AllowValues": "full, lite, vanilla",
+      "Default": "full",
+      "AllowBlank": false,
+      "Description": "Choose how many outfits S&S NPCs wear in-game. Full means they will have multiple outfits per season, along with unique festival outfits (if they're avaliable!). Lite means they wear a different outfit per season, plus Spirit's Eve and Flower Dance. Vanilla means they wear the same outfit for all of spring + summer + fall, a different outfit for winter, and unique outfits for Spirit's Eve and Flower Dance. Default is full.",
+      "Section": "Miscellaneous"
+    },
     "DumpsterWarp": {
       "AllowValues": "true, false",
       "Default": "false",
@@ -270,7 +281,6 @@
       "Description": "Adds additional content for Eli and Dylan if they're installed. This is configurable because the crossover is not yet finished.",
       "Section": "Miscellaneous"
     },
-
     "ProfanityFilter": {
       "AllowValues": "true, false",
       "Default": "false",
@@ -472,7 +482,6 @@
       "When": {
         "HasMod: |contains=TenebrousNova.EliDylan.CP": true,
         "Eli&DylanExtras": true
-
       }
     },
     {
@@ -606,7 +615,6 @@
       "When": {
         "HasMod: |contains=TenebrousNova.EliDylan.CP": true,
         "Eli&DylanExtras": true
-
       }
     },
     {
@@ -1006,7 +1014,6 @@
         "CirrusHairColor |contains=Red": true
       }
     },
-
     {
       "Name": "CirrusMakeup",
       "Value": "Red",

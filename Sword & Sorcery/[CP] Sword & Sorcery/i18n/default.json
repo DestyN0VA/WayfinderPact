@@ -278,7 +278,7 @@
   "Core.Mateo.Fall.LateHeart.11": "We use pumpkins here in the Ferngill Republic, but a lot of root vegetables can be carved for Jack o' Lanterns. Anything with a face can ward off a malicious spirit!$1#$b#If you don't have a vegetable, a bucket of water will do in a pinch.$36",
   "Core.Mateo.Fall.LateHeart.12": "Honestly, I think I'd trade an arm and a leg for some home-roasted pumpkin seeds. Toss them in spices and you've got yourself an excellent seasonal treat.$32#$b#As much as I love jams, jellies and wines - seeds win my favor.$1",
   "Core.Mateo.Fall.LateHeart.13": "Hey, @. Take a chicken or duck egg and run it along the doorframe of your farmhouse. It's supposed to be good luck around this time of year.$1#$b#Maybe it'll even keep the monsters away, if you have issues with them wandering onto your farm at night.$32",
-  "Core.Mateo.Fall.LateHeart.14": "One dude in ZuZu City messes with Spirit's Eve candy, and now it's a unspoken rule to check it all before you eat it...$11#$b#I don't like assuming malice in people, but it's a story I was told so often as I kid that I still check my treats as an adult.$16",
+  "Core.Mateo.Fall.LateHeart.14": "One dude in ZuZu City messes with Spirit's Eve candy, and now it's a unspoken rule to check it all before you eat it...$11#$b#I don't like assuming malice in people, but it's a story I was told so often as a kid that I still check my treats as an adult.$16",
   "Core.Mateo.Fall.LateHeart.15": "Gus makes fantastic desserts around this time of year. Apple pie, pecan pie, the homemade ice cream to go with it...#$b#He actually made me a whole pumpkin pie when I started coming into town more often. I was so flattered.$1",
   "Core.Mateo.Fall.LateHeart.16": "Are you going to bring something to the Spirit's Eve celebration, @? I don't know if they do it here in the Valley, but in more densely populated areas, passing out treats is a really important part of the holiday festivities.$32",
   "Core.Mateo.Fall.LateHeart.17": "Don't blow a Jack o' Lantern out before midnight, @. They're to keep away creatures of the night. I think that myth stems all the way back from when we had to contend with monsters on the surface more often.$35#$b#It was a practice to keep them away because we naturally fear the unknown.$36",
@@ -5547,7 +5547,14 @@ ________      ________ _   _ _______ _____
   "config.section.Miscellaneous.name": "Miscellaneous",
   "config.section.Miscellaneous.description": "General configuration options.",
   "config.section.Overlays.name": "Overlays",
-  "config.section.Overlays.description": "Toggle various visual edits to portraits and sprites."
+  "config.section.Overlays.description": "Toggle various visual edits to portraits and sprites.",
+
+  "config.SeasonalOutfits.name": "Seasonal Outfits",
+  "config.SeasonalOutfits.description": "Choose how many outfits S&S NPCs wear in-game. Full means they will have multiple outfits per season, along with unique festival outfits (if they're avaliable!). Lite means they wear a different outfit per season, plus Spirit's Eve and Flower Dance. Vanilla means they wear the same outfit for all of spring + summer + fall, a different outfit for winter, and unique outfits for Spirit's Eve and Flower Dance. Default is full.",
+  "config.SeasonalOutfits.values.full": "full",
+  "config.SeasonalOutfits.values.lite": "lite",
+  "config.SeasonalOutfits.values.vanilla": "vanilla",
+ 
 
 
 }
