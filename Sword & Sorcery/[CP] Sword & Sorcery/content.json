@@ -269,6 +269,20 @@
       "Description": "Control the pacing of events by configuring how much time passes between each one.",
       "Section": "Miscellaneous"
     },
+    "MateoThemeConfig": {
+      "AllowValues": "Old, New",
+      "Default": "New",
+      "AllowBlank": false,
+      "Description": "Toggles between a new varient of Mateo's theme (TheFrenchDodo) and the original varient (HarvzBack).",
+      "Section": "Miscellaneous"
+    },
+    "HectorThemeConfig": {
+      "AllowValues": "Old, New",
+      "Default": "New",
+      "AllowBlank": false,
+      "Description": "Toggles between a new varient of Hector's theme (TheFrenchDodo) and the original varient (HarvzBack).",
+      "Section": "Miscellaneous"
+    },
     "SkipIntroQuest": {
       "AllowValues": "true, false",
       "Default": "false",
@@ -1723,6 +1737,34 @@
       "Value": "6",
       "When": {
         "TimegateConfig": "OneWeek"
+      }
+    },
+    {
+      "Name": "MateoTheme",
+      "Value": "MateoTheme.ogg",
+      "When": {
+        "MateoThemeConfig": "New"
+      }
+    },
+    {
+      "Name": "MateoTheme",
+      "Value": "MateoTheme_Old.ogg",
+      "When": {
+        "MateoThemeConfig": "Old"
+      }
+    },
+    {
+      "Name": "HectorTheme",
+      "Value": "HectorTheme.ogg",
+      "When": {
+        "HectorThemeConfig": "New"
+      }
+    },
+    {
+      "Name": "HectorTheme",
+      "Value": "HectorTheme_Old.ogg",
+      "When": {
+        "HectorThemeConfig": "Old"
       }
     },
   ]
