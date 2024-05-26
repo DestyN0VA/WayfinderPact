@@ -1293,7 +1293,7 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch1.8H2.Mateo.6": "Yeah, speaking of... Let's not keep Gunther waiting.$1",
   "Events.S&S.Ch1.8H2.Mateo.7": "Thanks for coming along for this, @.$4",
   "Events.S&S.Ch1.8H2.Gunther.1": "It would seem you have a knack for timing; I've just finished setting up the ledger.$1#$b#There was some legwork to be done getting The Guild licensed to handle artifacts, but with Marlon's blessing it came much easier.",
-  "Events.S&S.Ch1.8H2.Gunther.2": "The Coastal Guild branch is hereby authorized to exchange recovered artifacts for other pieces of archaeological faculty.$0#$b#Namely, bones! Of the animal and monster sort, of course.$1 We're not here to be disrespectful.",
+  "Events.S&S.Ch1.8H2.Gunther.2": "The Coastal Guild is hereby authorized by the Archaeological Foundation to exchange recovered artifacts for other pieces of archaeological faculty.$0#$b#Namely, bones! Of the animal and monster sort, of course.$1 We're not here to be disrespectful.",
   "Events.S&S.Ch1.8H2.Marlon.4": "I suppose it's about time then, eh? Isn't it... Guildmaster Mateo?$1",
   "Events.S&S.Ch1.8H2.Mateo.8": "That's going to take some getting used to.$32",
   "Events.S&S.Ch1.8H2.Gunther.3": "We could call you Doctor-Guildmaster Mateo, if you'd like. Could stand to embarrass you a little more.$1",
@@ -2806,8 +2806,8 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch2.10H2.Hector.7": "I couldn't address the river's sickness on my own, and it hit my pride to need the help of those who'd cut my tail so long ago.$25",
   "Events.S&S.Ch2.10H2.Hector.8": "But I've long since learned that a justified instance of fear doesn't represent the lot of you.$14#$b#Thanks for that. Sincerely, with my whole heart.$13",
   "Events.S&S.Ch2.10H2.Hector.9": "My true name - the one I was made with - is Biróg.$13",
-  "Events.S&S.Ch2.10H2.Hector.10": "Names have power. I wasn't sure who I could lend that power to.$12",
-  "Events.S&S.Ch2.10H2.Hector.11": "@. The Scarp itself has a gift for you, and I brought you here to receive it. Are you ready?",
+  "Events.S&S.Ch2.10H2.Hector.10": "Names have power. I wasn't sure who I could lend that power to; though you, and the residents of The Scarp, have more than proven themselves.$12",
+  "Events.S&S.Ch2.10H2.Hector.11": "Speaking of - The Scarp itself has a gift for you, and I brought you here to receive it. Are you ready?",
   "Events.S&S.Ch2.10H2.Message.1": "You've mastered forest magic and unlocked the full scope of Druidics! What new abilities will you uncover?",
   "Events.S&S.Ch2.10H2.Hector.12": "Now, come on - let's get the good view.$8",
   "Events.S&S.Ch2.10H2.Hector.13": "I've always been fascinated by humanity, and you represent such an amazing part of it.$12",
@@ -4073,6 +4073,18 @@ ________      ________ _   _ _______ _____
 */
 
   "Strings.Roslin.DeepDarkNotReady": "There's a concerning chill coming from this passageway. You know you're not ready to face whatever's waiting down there...",
+  "Strings.Roslin.RoslinResearch": "A series of numbered journals going into the double digits. It's years of documented magical research.",
+  "Strings.Roslin.Magic8Ball": "You think you'll see your future, but it's your reflection. Despite everything, it's still you.",
+  "Strings.Roslin.RoslinJournal": "'I've been living and fighting in this war of life, but it doesn't matter how hard I try - while heroes die, new tyrants rise...'",
+  "Strings.Roslin.RedRitualCircle": "You hope this is a giant cauldron of marinara sauce.",
+  "Strings.Roslin.ExtensiveLibrary": "More books on sorcery and alchemy than you can count. It's pretty impressive, for all that everything looks very worn.",
+  "Strings.Roslin.ArmorDisplay": "Some of the first sets of armor Mateo made.",
+  "Strings.Roslin.ExtensiveLibrary2": "In between everything, you find a sketchbook that stands out. On looking through it, there are many flattering sketches of Dandelion.",
+  "Strings.Roslin.PotionMaking1": "In a small box, there's two glass beakers, a frame, a stirring rod, and a mortar and pestle.",
+  "Strings.Roslin.PotionMaking2": "A little wicker basket contains peacebloom, silverleaf, earthroot, and briarthorn for use in potions.",
+  "Strings.Roslin.PotionMaking3": "There are a bunch of different vials of oil; they all smell really nice! The most notable scent seems to be teakwood.",
+  "Strings.Roslin.HandmadeSwords": "These look recognizeable! Mateo's handiwork?",
+  "Strings.Roslin.EvenMoreSupplies": "The contents of this box aren't very organized, but there's a ton of stuff in here for crafting with.",
 
   /*
   __  __          _____ _      

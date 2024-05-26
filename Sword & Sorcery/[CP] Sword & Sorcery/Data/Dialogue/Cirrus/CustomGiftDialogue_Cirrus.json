@@ -42,9 +42,6 @@
         "RejectItem_(O)348": "{{i18n:Gifts.Cirrus.GiftReaction.Wine}}",
         "RejectItem_(O)304": "{{i18n:Gifts.Cirrus.GiftReaction.Hops}}",
         "RejectItem_(O)459": "{{i18n:Gifts.Cirrus.GiftReaction.Mead}}",
-        // HATES 
-        "AcceptGift_(O)446": "{{i18n:Gifts.Cirrus.GiftReaction.RabbitsFoot}}",
-        "AcceptGift_(O)220": "{{i18n:Gifts.Cirrus.GiftReaction.ChocolateCake}}",
         // ANCIENT CROPS
         "AcceptGift_(O){{ModID}}_ancientwildfairyroses": "{{i18n:Gifts.Cirrus.GiftReaction.AncientRose}}",
         // ITEM REJECTIONS 

@@ -58,22 +58,6 @@
         "HasFlag |contains=SnS_M_Dandelion_OverrideSeenToday": false
       }
     },
-    // DATING POOL
-    {
-      "LogName": "Dialogue - Dandelion 10h Dating Override",
-      "Action": "EditData",
-      "Update": "OnLocationChange",
-      "Target": "Characters/Dialogue/Dandelion",
-      "Entries": {
-        "{{WeekDay}}": "{{i18n:Core.Dandelion.Dating.{{Random:{{Range: 1, 30}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Dandelion_OverrideSeenToday received"
-      },
-      "When": {
-        "Hearts:Dandelion": "10",
-        "Query: {{Random: {{Range: 1, 10}}|key=CDO}} = 1": true,
-        "HasFlag |contains=SnS_M_Dandelion_OverrideSeenToday": false,
-        "Relationship:Dandelion |contains=Dating": true
-      }
-    },
     /*
    _____ ______ _   _ ______ _____  _____ _____   _____ _____          _      ____   _____ _    _ ______ 
   / ____|  ____| \ | |  ____|  __ \|_   _/ ____| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|

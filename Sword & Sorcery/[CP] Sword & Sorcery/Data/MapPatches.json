@@ -356,6 +356,23 @@
         "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true
       }
     },
+    // PATCHES THE LION'S MANE INTERIOR
+    {
+      "LogName": "Lion's Mane (Final) Patch",
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_LionsMane",
+      "PatchMode": "Replace",
+      "FromFile": "Assets/Maps/LionsManeFinalPatch.tmx",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 16,
+        "Height": 40
+      },
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch4.Roslin.5": true
+      }
+    },
       // ADDS A LOCKED DOOR TO THE UNDERFORGE
       {
         "Action": "EditMap",

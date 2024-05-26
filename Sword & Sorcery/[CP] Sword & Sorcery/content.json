@@ -28,9 +28,25 @@
       "FromFile": "Data/Appearances/AppearanceData_Dandelion.json, Data/Dialogue/Dandelion/Dialogue_Dandelion.json, Data/Dialogue/Dandelion/ConcessionTastes_Dandelion.json, Data/Dialogue/Dandelion/ConversationTopics_Dandelion.json, Data/Dialogue/Dandelion/CustomGiftDialogue_Dandelion.json, Data/Festival Data/FestivalData_Dandelion.json, Data/Schedules/Schedule_Dandelion.json, Data/Strings/Strings_Dandelion.json"
     },
     {
-      "LogName": "Sword & Sorcery - Disposition Includes",
+      "LogName": "Sword & Sorcery - Disposition Includes (Full)",
       "Action": "Include",
-      "FromFile": "Data/Dispositions/Mateo/full_NPCData.json, Data/Dispositions/Mateo/vanilla_NPCData.json, Data/Dispositions/Mateo/lite_NPCData.json, Data/Dispositions/Hector/full_NPCData.json, Data/Dispositions/Hector/vanilla_NPCData.json, Data/Dispositions/Hector/lite_NPCData.json, Data/Dispositions/Cirrus/full_NPCData.json, Data/Dispositions/Cirrus/vanilla_NPCData.json, Data/Dispositions/Cirrus/lite_NPCData.json, Data/Dispositions/Roslin/full_NPCData.json, Data/Dispositions/Roslin/vanilla_NPCData.json, Data/Dispositions/Roslin/lite_NPCData.json,"
+      "FromFile": "Data/Dispositions/Mateo/full_NPCData.json, Data/Dispositions/Hector/full_NPCData.json, Data/Dispositions/Cirrus/full_NPCData.json, Data/Dispositions/Roslin/full_NPCData.json, Data/Dispositions/Dandelion/full_NPCData.json",
+    },
+    {
+      "LogName": "Sword & Sorcery - Disposition Includes (Vanilla)",
+      "Action": "Include",
+      "FromFile": "Data/Dispositions/Mateo/vanilla_NPCData.json, Data/Dispositions/Hector/vanilla_NPCData.json, Data/Dispositions/Cirrus/vanilla_NPCData.json, Data/Dispositions/Roslin/vanilla_NPCData.json, Data/Dispositions/Dandelion/vanilla_NPCData.json",
+      "When": {
+        "SeasonalOutfits": "vanilla",
+      }
+    },
+    {
+      "LogName": "Sword & Sorcery - Disposition Includes (Lite)",
+      "Action": "Include",
+      "FromFile": "Data/Dispositions/Mateo/lite_NPCData.json, Data/Dispositions/Hector/lite_NPCData.json, Data/Dispositions/Cirrus/lite_NPCData.json, Data/Dispositions/Roslin/lite_NPCData.json, Data/Dispositions/Dandelion/lite_NPCData.json",
+      "When": {
+        "SeasonalOutfits": "lite",
+      }
     },
     {
       "LogName": "Sword & Sorcery - Quest Includes",
@@ -245,6 +261,13 @@
       "AllowBlank": false,
       "Description": "Adds a spouse patio when married.",
       "Section": "Spouse Patios"
+    },
+    "TimegateConfig": {
+      "AllowValues": "OneDay, ThreeDays, OneWeek",
+      "Default": "ThreeDays",
+      "AllowBlank": false,
+      "Description": "Control the pacing of events by configuring how much time passes between each one.",
+      "Section": "Miscellaneous"
     },
     "SkipIntroQuest": {
       "AllowValues": "true, false",
@@ -1304,17 +1327,6 @@
       }
     },
     {
-      "Name": "LionsManeStatus",
-      "Value": "Maps/EastScarp_LionsMane"
-    },
-    {
-      "Name": "LionsManeStatus",
-      "Value": "Maps/EastScarp_LionsManeFinal",
-      "When": {
-        "HasSeenEvent |contains=SnS.Ch4.Roslin.PENDING": true
-      }
-    },
-    {
       "Name": "RoslinStygiumComment",
       "Value": "You stand a chance to be more familliar than anyone else here, considering the pendant made of Stygium around @'s neck.",
       "When": {
@@ -1691,6 +1703,27 @@
       "When": {
         "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true
       }
-    }
+    },
+    {
+      "Name": "VariableTimegate",
+      "Value": "0",
+      "When": {
+        "TimegateConfig": "OneDay"
+      }
+    },
+    {
+      "Name": "VariableTimegate",
+      "Value": "2",
+      "When": {
+        "TimegateConfig": "ThreeDays"
+      }
+    },
+    {
+      "Name": "VariableTimegate",
+      "Value": "6",
+      "When": {
+        "TimegateConfig": "OneWeek"
+      }
+    },
   ]
 }
