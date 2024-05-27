@@ -57,7 +57,7 @@
         },
         {
             "Action": "Load",
-            "Target": "Characters/HectorWolf, Characters/HectorBadger, Characters/HectorOpossum, Characters/HectorRaccoon, Characters/HectorSkunk",
+            "Target": "Characters/HectorBadger, Characters/HectorOpossum, Characters/HectorRaccoon, Characters/HectorSkunk",
             "FromFile": "assets/TemporaryActors/{{Target}}.png"
         },
         {
