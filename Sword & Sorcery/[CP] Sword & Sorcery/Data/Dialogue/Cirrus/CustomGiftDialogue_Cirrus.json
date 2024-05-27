@@ -8,9 +8,6 @@
         "AcceptGift_(O)StardropTea": "{{i18n:Gifts.Cirrus.GiftReaction.StardropTea}}",
         // FISH
         "AcceptGift_category_fish": "{{i18n:Gifts.Cirrus.GiftReaction.CategoryFish}}",
-        "AcceptGift_(O)397": "{{i18n:Gifts.Cirrus.GiftReaction.SeaUrchin}}",
-        "AcceptGift_(O)717": "{{i18n:Gifts.Cirrus.GiftReaction.Crab}}",
-        "AcceptGift_(O)732": "{{i18n:Gifts.Cirrus.GiftReaction.CrabCakes}}",
         // ARTISANAL GOODS
         "AcceptGift_category_artisan_goods": "{{i18n:Gifts.Cirrus.GiftReaction.CategoryArtisanalGoods}}",
         // TRASH
