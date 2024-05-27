@@ -165,7 +165,7 @@
             "Entries": {
                 "SnS.DuskspireLaugh": {
                     "ID": "SnS.DuskspireLaugh",
-                    "Category": "Sound",
+                    "Category": "Music",
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DuskspireLaugh.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
