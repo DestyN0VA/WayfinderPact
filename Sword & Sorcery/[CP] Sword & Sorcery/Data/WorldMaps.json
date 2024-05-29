@@ -289,7 +289,7 @@
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
         "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
       },
-      "TargetField": [ "EastScarp", "MapAreas", "MainScarp", "ToolTips", "MateoHome" ],
+      "TargetField": [ "EastScarp", "MapAreas", "MateoHome", "ToolTips", "MateoHome" ],
       "Entries": {
         "Text": "{{i18n:miscellaneous.mapname.CoastalGuild.True}}"
       }
@@ -304,7 +304,7 @@
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
         "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true
       },
-      "TargetField": [ "EastScarp", "MapAreas", "MainScarp", "ToolTips", "LionsMane" ],
+      "TargetField": [ "EastScarp", "MapAreas", "LionsMane", "ToolTips", "LionsMane" ],
       "Entries": {
         "Text": "{{i18n:miscellaneous.mapname.LionsMane.True}}"
       }
@@ -607,7 +607,7 @@
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
         "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
       },
-      "TargetField": [ "EastScarp", "MapAreas", "MainScarp", "ToolTips", "MateoHome" ],
+      "TargetField": [ "EastScarp", "MapAreas", "MateoHome", "ToolTips", "MateoHome" ],
       "Entries": {
         "Text": "{{i18n:miscellaneous.mapname.CoastalGuild}}"
       }
@@ -622,7 +622,7 @@
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
         "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true
       },
-      "TargetField": [ "EastScarp", "MapAreas", "MainScarp", "ToolTips", "LionsMane" ],
+      "TargetField": [ "EastScarp", "MapAreas", "LionsMane", "ToolTips", "LionsMane" ],
       "Entries": {
         "Text": "{{i18n:miscellaneous.mapname.LionsMane}}"
       }
