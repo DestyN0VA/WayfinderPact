@@ -101,26 +101,25 @@
     {
       "Action": "EditData",
       "Target": "Characters/Dialogue/Mateo",
-      "Entries": { // FARMHOUSE UPGRADE
-        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantFarmhouse}}",
-      },
-      "When": {
-        "HasConversationTopic |contains=MateoMarriageCountdown": false,
-		"Relationship:Mateo |contains=Dating": true,
-        "FarmhouseUpgrade": "0"
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Mateo",
       "Entries": { // MARRIAGE PENDANT REACT
       "RejectItem_(O)460": "{{i18n:miscellaneous.PendantResponse}}#$action spacechase0.SpaceCore_PlayEvent SnS.Ch1.Mateo.19 false"
       },
       "When": {
         "HasConversationTopic |contains=MateoMarriageCountdown": false,
-        "Relationship:Mateo |contains=Dating": true,
-        "FarmhouseUpgrade": "1, 2, 3"
+        "Relationship:Mateo |contains=Dating": true
       }
     },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Mateo",
+      "Entries": { // MARRIAGE PENDANT REACT NO FARMHOUSE UPGRADE
+        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantFarmhouse}}",
+      },
+      "When": {
+        "HasConversationTopic |contains=MateoMarriageCountdown": false,
+		    "Relationship:Mateo |contains=Dating": true,
+        "FarmhouseUpgrade": "0"
+      }
+    }
   ]
 }

@@ -87,26 +87,25 @@
     {
       "Action": "EditData",
       "Target": "Characters/Dialogue/Hector",
-      "Entries": { // FARMHOUSE UPGRADE
-        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantFarmhouse}}",
-      },
-      "When": {
-        "HasConversationTopic |contains=HectorMarriageCountdown": false,
-		"Relationship:Hector |contains=Dating": true,
-        "FarmhouseUpgrade": "0"
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Hector",
       "Entries": { // MARRIAGE PENDANT REACT
         "RejectItem_(O)460": "{{i18n:miscellaneous.PendantResponse}}#$action spacechase0.SpaceCore_PlayEvent SnS.Ch2.Hector.17 false"
       },
       "When": {
         "HasConversationTopic |contains=HectorMarriageCountdown": false,
-        "Relationship:Hector |contains=Dating": true,
-        "FarmhouseUpgrade": "1, 2, 3"
+        "Relationship:Hector |contains=Dating": true
       }
     },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Hector",
+      "Entries": { // MARRIAGE PENDANT REACT NO FARMHOUSE UPGRADE
+        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantFarmhouse}}",
+      },
+      "When": {
+        "HasConversationTopic |contains=HectorMarriageCountdown": false,
+		    "Relationship:Hector |contains=Dating": true,
+        "FarmhouseUpgrade": "0"
+      }
+    }
   ]
 }

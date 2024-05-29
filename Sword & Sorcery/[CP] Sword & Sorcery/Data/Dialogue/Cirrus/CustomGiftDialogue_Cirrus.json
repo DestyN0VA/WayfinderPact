@@ -76,26 +76,25 @@
     {
       "Action": "EditData",
       "Target": "Characters/Dialogue/Cirrus",
-      "Entries": { // FARMHOUSE UPGRADE
-        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantFarmhouse}}",
-      },
-      "When": {
-        "HasConversationTopic |contains=CirrusMarriageCountdown": false,
-		"Relationship:Cirrus |contains=Dating": true,
-        "FarmhouseUpgrade": "0"
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Cirrus",
       "Entries": { // MARRIAGE PENDANT REACT
         "RejectItem_(O)460": "{{i18n:miscellaneous.PendantResponse}}#$action spacechase0.SpaceCore_PlayEvent SnS.Ch3.Cirrus.15 false"
       },
       "When": {
         "HasConversationTopic |contains=CirrusMarriageCountdown": false,
-        "Relationship:Cirrus |contains=Dating": true,
-        "FarmhouseUpgrade": "1, 2, 3"
+        "Relationship:Cirrus |contains=Dating": true
       }
     },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Cirrus",
+      "Entries": { // MARRIAGE PENDANT REACT NO FARMHOUSE UPGRADE
+        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantFarmhouse}}",
+      },
+      "When": {
+        "HasConversationTopic |contains=CirrusMarriageCountdown": false,
+		    "Relationship:Cirrus |contains=Dating": true,
+        "FarmhouseUpgrade": "0"
+      }
+    }
   ]
 }
