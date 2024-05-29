@@ -81,6 +81,7 @@
       },
       "When": {
         "HasConversationTopic |contains=CirrusMarriageCountdown": false,
+		"Relationship:Cirrus |contains=Dating": true,
         "FarmhouseUpgrade": "0"
       }
     },

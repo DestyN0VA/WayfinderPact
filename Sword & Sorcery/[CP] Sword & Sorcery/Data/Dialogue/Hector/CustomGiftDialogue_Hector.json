@@ -92,6 +92,7 @@
       },
       "When": {
         "HasConversationTopic |contains=HectorMarriageCountdown": false,
+		"Relationship:Hector |contains=Dating": true,
         "FarmhouseUpgrade": "0"
       }
     },
