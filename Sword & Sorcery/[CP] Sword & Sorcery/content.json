@@ -1767,5 +1767,9 @@
         "HectorThemeConfig": "Old"
       }
     },
+    {
+      "Name": "CirrusNickname",
+      "Value": "|CNickname = {{i18n: Strings.Cirrus.Nickname{{Random:1,2}}|LNickname = {{Lowercase: {{i18n: Strings.Cirrus.Nickname{{Random:1,2}}}}"
+    }
   ]
 }
