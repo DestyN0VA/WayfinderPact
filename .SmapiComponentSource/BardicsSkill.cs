@@ -113,6 +113,6 @@ namespace SwordAndSorcerySMAPI
         {
             return I18n.Level_Manacap(level * 5);
         }
-        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains("SnS.Ch2.Hector.16");
+        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains("SnS.Ch3.Cirrus.14");
     }
 }
