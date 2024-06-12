@@ -173,7 +173,7 @@ namespace SwordAndSorcerySMAPI
             timeTimer -= (int)Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds;
             if (timeTimer < 0)
             {
-                ModUP.Instance.Helper.Events.GameLoop.UpdateTicked -= ProtectionFunctionality;
+                ModUP.Instance.Helper.Events.GameLoop.UpdateTicked -= TimeFunctionality;
             }
 
             Game1.gameTimeInterval = 0;
