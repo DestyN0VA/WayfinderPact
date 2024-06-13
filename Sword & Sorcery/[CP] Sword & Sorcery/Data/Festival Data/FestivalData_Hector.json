@@ -19,6 +19,18 @@
                     "Value": "Hector 36 68 3",
                     "Delimiter": "/"
                 },
+				{   // LOCATION: SET UP Y2
+                    "Operation": "Append",
+                    "Target": [  "Entries", "Set-Up_additionalCharacters_y2" ],
+                    "Value": "Hector 8 62 2",
+                    "Delimiter": "/"
+                },
+                {   // LOCATION: MAIN EVENT Y2
+                    "Operation": "Append",
+                    "Target": [  "Entries",  "MainEvent_additionalCharacters_y2"  ],
+                    "Value": "Hector 36 68 3",
+                    "Delimiter": "/"
+                },
 			],
 			"When": {"HasSeenEvent |contains=SnS.Ch2.Hector.6": "true"},	  
         },
@@ -39,6 +51,18 @@
                 {	// LOCATION: MAIN EVENT (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters"  ],
+                    "Value": "Hector 0 15 1",
+                    "Delimiter": "/"
+                },
+				{	// LOCATION: SET UP Y2 (VANILLA)
+                    "Operation": "Append",
+                    "Target": [ "Entries","Set-Up_additionalCharacters_y2" ],
+                    "Value": "Hector 0 15 1",
+                    "Delimiter": "/"
+                },
+                {	// LOCATION: MAIN EVENT Y2 (VANILLA)
+                    "Operation": "Append",
+                    "Target": [ "Entries","MainEvent_additionalCharacters_y2"  ],
                     "Value": "Hector 0 15 1",
                     "Delimiter": "/"
                 },
@@ -72,31 +96,20 @@
 					"Value": "Hector 22 23 0",
 					"Delimiter": "/"
 				},
-			],
-			"When": {"HasSeenEvent |contains=SnS.Ch2.Hector.6": true},
-		},
-        {
-			"Action": "EditData",
-			"Target": "Data/Festivals/summer11",
-			"TextOperations": [
-				{	// LOCATION: SET UP
+				{	// LOCATION: SET UP Y2
 					"Operation": "Append",
-					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
 					"Value": "Hector 19 9 0",
 					"Delimiter": "/"
 				},
-				{	// LOCATION: SET UP 
+				{	// LOCATION: SET UP Y2
 					"Operation": "Append",
-					"Target": ["Entries","MainEvent_additionalCharacters"],
+					"Target": ["Entries","MainEvent_additionalCharacters_y2"],
 					"Value": "Hector 22 23 0",
 					"Delimiter": "/"
 				},
 			],
-			"When": 
-			{
-				"HasSeenEvent |contains=SnS.Ch2.Hector.6": true,
-				"Query: {{Year}} % 2 = 0": true,
-			},
+			"When": {"HasSeenEvent |contains=SnS.Ch2.Hector.6": true},
 		},
 
         // DANCE OF THE MOONLIGHT JELLIES
@@ -108,6 +121,12 @@
 				{   // LOCATION: SET UP & MAIN EVENT
 					"Operation": "Append",
 					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Hector 89 25 2",
+					"Delimiter": "/"
+				},
+				{   // LOCATION: SET UP & MAIN EVENT Y2
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
 					"Value": "Hector 89 25 2",
 					"Delimiter": "/"
 				},
@@ -127,6 +146,12 @@
 					"Value": "Hector 26 74 2",
 					"Delimiter": "/"
 				},
+				{	// LOCATION: SET UP & MAIN EVENT Y2
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
+					"Value": "Hector 26 74 2",
+					"Delimiter": "/"
+				},
 			],
 			"When": {"HasSeenEvent |contains=SnS.Ch2.Hector.6": true},
 		},
@@ -140,6 +165,11 @@
 				{	// LOCATION: SET UP & MAIN EVENT
 					"Operation": "Append",
 					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Hector 25 58 1",
+					"Delimiter": "/"},
+				{	// LOCATION: SET UP & MAIN EVENT Y2
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
 					"Value": "Hector 25 58 1",
 					"Delimiter": "/"},
 				],
@@ -164,6 +194,18 @@
 					"Value": "Hector 84 35 3",
 					"Delimiter": "/"
 				},
+				{	// LOCATION: SET UP Y2
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
+					"Value": "Hector 54 50 2",
+					"Delimiter": "/"
+				},
+                {   // LOCATION: MAIN EVENT Y2
+					"Operation": "Append",
+					"Target": ["Entries","Main-Event_additionalCharacters_y2"],
+					"Value": "Hector 84 35 3",
+					"Delimiter": "/"
+				},
 			],
 			"When": {"HasSeenEvent |contains=SnS.Ch2.Hector.6": true}
 		},
@@ -177,6 +219,12 @@
 				{	// LOCATION: SET UP
 					"Operation": "Append",
 					"Target": [	"Entries","Set-Up_additionalCharacters"	],
+					"Value": "Hector 37 70 3",
+					"Delimiter": "/"
+				},
+				{	// LOCATION: SET UP Y2
+					"Operation": "Append",
+					"Target": [	"Entries","Set-Up_additionalCharacters_y2"	],
 					"Value": "Hector 37 70 3",
 					"Delimiter": "/"
 				},
@@ -199,6 +247,18 @@
 					 { // LOCATION: MAIN EVENT
 					  "Operation": "Append",
 					  "Target": ["Entries", "MainEvent_additionalCharacters"],
+					  "Value": "Hector 76 50 0",
+					  "Delimiter": "/"
+					 },
+					 { // LOCATION: SET UP Y2
+					  "Operation": "Append",
+					  "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					  "Value": "Hector 114 43 2",
+					  "Delimiter": "/"
+					 },
+					 { // LOCATION: MAIN EVENT Y2
+					  "Operation": "Append",
+					  "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
 					  "Value": "Hector 76 50 0",
 					  "Delimiter": "/"
 					 },
@@ -225,6 +285,18 @@
 				 { // LOCATION: MAIN EVENT
 				  "Operation": "Append",
 				  "Target": ["Entries", "MainEvent_additionalCharacters"],
+				  "Value": "Hector 49 41 3",
+				  "Delimiter": "/"
+				 },
+				 { // LOCATION: SET UP Y2
+				  "Operation": "Append",
+				  "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+				  "Value": "Hector 53 42 3",
+				  "Delimiter": "/"
+				 },
+				 { // LOCATION: MAIN EVENT Y2
+				  "Operation": "Append",
+				  "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
 				  "Value": "Hector 49 41 3",
 				  "Delimiter": "/"
 				 },
