@@ -304,6 +304,13 @@
       "Description": "May cause some pathing issues, but offers a shortcut to the Druid Tower.",
       "Section": "Miscellaneous"
     },
+    "LionsManeExtraDoorWarp": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "Description": "May cause some pathing issues, but offers a second door to the Lion's Mane.",
+      "Section": "Miscellaneous"
+    },
     "DatingLength": { //maddogchange   
       "AllowValues": "7, 14, 21, 28",
       "Default": "14",

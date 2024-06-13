@@ -310,7 +310,37 @@
 
     // PATCHES THE REPAIRED LION'S MANE
     {
-      "LogName": "Lion's Mane (Repaired) Patch",
+      "LogName": "Lion's Mane (Repaired) One Door Patch",
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_Village",
+      "FromFile": "Assets/Maps/LionsManeRepairedPatch.tmx",
+      "ToArea": {
+        "X": 50,
+        "Y": 0,
+        "Width": 12,
+        "Height": 9
+      },
+      "MapTiles": [
+        {
+          "Position": { // RIGHT HAND DOOR
+            "X": 57,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "LockedDoorWarp 26 35 EastScarp_LionsMane 800 2400"
+          }
+        },
+      ],
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.12": true,
+        "HasFlag |contains=Cirrus_SpecialOrders_LionsManeMail": true,
+        "HasConversationTopic |contains=CirrusConcert": false,
+        "LionsManeExtraDoorWarp:": false
+      }
+    },
+    {
+      "LogName": "Lion's Mane (Repaired) Two Door Patch",
       "Action": "EditMap",
       "Target": "Maps/EastScarp_Village",
       "FromFile": "Assets/Maps/LionsManeRepairedPatch.tmx",
@@ -353,7 +383,10 @@
         }
       ],
       "When": {
-        "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.12": true,
+        "HasFlag |contains=Cirrus_SpecialOrders_LionsManeMail": true,
+        "HasConversationTopic |contains=CirrusConcert": false,
+        "LionsManeExtraDoorWarp:": true
       }
     },
     // PATCHES THE LION'S MANE INTERIOR

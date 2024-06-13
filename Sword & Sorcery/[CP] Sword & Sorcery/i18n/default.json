@@ -2318,10 +2318,11 @@ ________      ________ _   _ _______ _____
   "CFD.Hector.ExtraDialogue_SummitEvent_Intro2_Spouse": "I'd say this is the second best view in the Valley, after looking at you.",
   "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue1_Spouse": "It's been a long couple years. %year, right? $14\"/pause 1000/speak spouse \"It's been a journey well-traveled. And it's not even over yet. Only just starting, really.$13",
   "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue2_Spouse": "Thank you for everything, @. I love you.$15",
+  "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue3_Spouse": "More than the sky above, and the earth below.$11",
   "CFD.Hector.ExtraDialogue_SummitEvent_closingmessage": "It's been a long road for you and Biróg...",
 
   // MOVIE INVITATION - SPOUSE 
-  "MovieInvite.Spouse.Hector": "Sure! I'm always happy to spend time with you in a dark, cold place...$9",
+  "MovieInvite.Spouse.Hector": "Sure! I'm always happy to spend time with you in a dark, cool place...$9",
 
 
   /*
@@ -3052,7 +3053,7 @@ ________      ________ _   _ _______ _____
   "Core.Cirrus.Generic.EarlyHeart.6": "When I was younger, I used to draw really well. But I got bored and let it fall off in favor of... something else, that I forgot. Music stuck, but maybe someday that'll fall off too.$17",
   "Core.Cirrus.Generic.EarlyHeart.7": "Does this happen to you? Sometimes I space out so hard when I'm doing something I'll like, forget to eat. But it'll have felt like no time has passed. It's so easy to get lost in the things you love.$6",
   "Core.Cirrus.Generic.EarlyHeart.8": "My mom needs help with her mortgage sometimes. I'm uh, I'm glad I'm in the position to... help out, yeah.$3",
-  "Core.Cirrus.Generic.EarlyHeart.9": "Sometimes when I sit down with my keyar, I get really focused and keep playing even when I've got other stuff to do.$2#$b#It's kind of like getting stuck, and then anxious about wanting to do other things, but most of all needing to do something or it'll get worse, so I just keep playing even if I don't want to.$3",
+  "Core.Cirrus.Generic.EarlyHeart.9": "Sometimes when I sit down with my keytar, I get really focused and keep playing even when I've got other stuff to do.$2#$b#It's kind of like getting stuck, and then anxious about wanting to do other things, but most of all needing to do something or it'll get worse, so I just keep playing even if I don't want to.$3",
   "Core.Cirrus.Generic.EarlyHeart.10": "I really don't think there's any shame in being able to do a whole bunch of different things sort of mediocre.$0#$b#I can draw, and paint, and play music, and sing, and dance - only the music I'm exceptionally good at, but it didn't make learning those other skills any less fun.$1",
   "Core.Cirrus.Generic.EarlyHeart.11": "East Scarp, and honestly - Pelican Town in general - is SO pretty. It's kind of amazing that people just, live here? I'm so used to the cramped nature of cities. The air tastes better than where I normally tour.$1",
   "Core.Cirrus.Generic.EarlyHeart.12": "I have a hard time regulating my feelings, so over time I learned to let myself feel them and then process afterward. A lot of the times, that's how my songs get made.$1 ",
@@ -3622,11 +3623,11 @@ ________      ________ _   _ _______ _____
 */
 
   // SUMMIT DIALOGUE 
-  "CFD.Cirrus.ExtraDialogue_SummitEvent_Intro_Spouse": "",
-  "CFD.Cirrus.ExtraDialogue_SummitEvent_Intro2_Spouse": "",
-  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue1_Spouse": "...\"/pause 1000/speak spouse \"...",
-  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue2_Spouse": "...",
-  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue3_Spouse": "...",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Intro_Spouse": "Oh Rockstar, my Rockstar.$4",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Intro2_Spouse": "Of all the incredible things I've seen when travelling the world, this is the best.$6",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue1_Spouse": "It's been %year years, hasn't it? Since you've come here?$1\"/pause 1000/speak spouse \"Thank you for loving me, and for spending some of those together with me - and, hopefully, the rest of them.$6",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue2_Spouse": "I love you, times in infinity, for every star that's in the sky.$4",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue3_Spouse": "I love you, I love you, I love you, I love you, I love you...!$26",
   "CFD.Cirrus.ExtraDialogue_SummitEvent_closingmessage": "It's been a long road for you and Cirrus...",
 
   // MOVIE INVITATION - SPOUSE 

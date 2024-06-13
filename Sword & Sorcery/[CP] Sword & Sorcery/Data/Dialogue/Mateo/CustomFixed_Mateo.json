@@ -109,11 +109,11 @@
             "Action": "EditData",
             "Target": "strings/ExtraDialogue",
             "Entries": {
-                "ExtraDialogue_SummitEvent_Intro_Spouse": "{{i18n:CFD.Mateo.ExtraDialogue_SummitEvent_Intro_Spouse}}",
-                "ExtraDialogue_SummitEvent_Intro2_Spouse": "{{i18n:CFD.Mateo.ExtraDialogue_SummitEvent_Intro2_Spouse}}",
-                "ExtraDialogue_SummitEvent_Dialogue1_Spouse": "{{i18n:CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue1_Spouse}}",
-                "ExtraDialogue_SummitEvent_Dialogue2_Spouse": "{{i18n:CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue2_Spouse}}",
-                "ExtraDialogue_SummitEvent_Dialogue3_Spouse": "{{i18n:CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue3_Spouse}}",
+                "ExtraDialogue_SummitEvent_Intro_Mateo": "{{i18n:CFD.Mateo.ExtraDialogue_SummitEvent_Intro_Spouse}}",
+                "ExtraDialogue_SummitEvent_Intro2_Mateo": "{{i18n:CFD.Mateo.ExtraDialogue_SummitEvent_Intro2_Spouse}}",
+                "ExtraDialogue_SummitEvent_Dialogue1_Mateo": "{{i18n:CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue1_Spouse}}",
+                "ExtraDialogue_SummitEvent_Dialogue2_Mateo": "{{i18n:CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue2_Spouse}}",
+                "ExtraDialogue_SummitEvent_Dialogue3_Mateo": "{{i18n:CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue3_Spouse}}",
                 "ExtraDialogue_SummitEvent_closingmessage": "{{i18n:CFD.Mateo.ExtraDialogue_SummitEvent_closingmessage}}"
             },
             "When": {
