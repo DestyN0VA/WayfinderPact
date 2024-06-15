@@ -83,6 +83,8 @@ namespace SwordAndSorcerySMAPI
         {
             base.DoLevelPerk(level);
             Game1.player.maxHealth += 3;
+            if (level == 1)
+                Game1.player.GetFarmerExtData().maxMana.Value += 30;
 
             string[][] craftingRecipes =
             [
@@ -128,6 +130,7 @@ namespace SwordAndSorcerySMAPI
                     break;
                 case 4:
                     ret.Add(I18n.RogueSkill_Unlock_4().Replace('^', '\n'));
+                    /*
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteEmerald", false).DisplayName));
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteRuby", false).DisplayName));
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteTopaz", false).DisplayName));
@@ -135,6 +138,7 @@ namespace SwordAndSorcerySMAPI
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteAmethyst", false).DisplayName));
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteJade", false).DisplayName));
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteDiamond", false).DisplayName));
+                    */
                     break;
                 case 6:
                     ret.Add(I18n.RogueSkill_Unlock_6());
