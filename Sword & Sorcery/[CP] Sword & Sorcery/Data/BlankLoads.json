@@ -1,79 +1,79 @@
 {
-    "Changes": [
-          { 
-            "LogName": "Mateo Loads from Blanks",
-            "Action": "Load",
-            "Target": "Characters/Dialogue/Mateo, Characters/Dialogue/MarriageDialogueMateo, Characters/Schedules/Mateo",
-            "FromFile": "Data/blank.json"
-          },
-          {
-            "LogName": "Hector Loads from Blanks",
-            "Action": "Load",
-            "Target": "Characters/Dialogue/Hector, Characters/Schedules/Hector",
-            "FromFile": "Data/blank.json"
-          },
-          {
-            "LogName": "Cirrus Loads from Blanks",
-            "Action": "Load",
-            "Target": "Characters/Dialogue/Cirrus, Characters/Dialogue/MarriageDialogueCirrus, Characters/Schedules/Cirrus",
-            "FromFile": "Data/blank.json"
-          },
-          {
-            "LogName": "Roslin Loads from Blanks",
-            "Action": "Load",
-            "Target": "Characters/Dialogue/Roslin, Characters/Schedules/Roslin",
-            "FromFile": "Data/blank.json"
-          },
-          {
-            "LogName": "Dandelion Loads from Blanks",
-            "Action": "Load",
-            "Target": "Characters/Dialogue/Dandelion, Characters/Schedules/Dandelion",
-            "FromFile": "Data/blank.json"
-          },
-          {
-            "LogName": "Tent Events Blank",
-            "Action": "Load",
-            "Target": "data/events/EastScarp_MateoHome",
-            "FromFile": "assets/blank.json",
-          },
-          {
-            "LogName": "Guild Events Blank",
-            "Action": "Load",
-            "Target": "data/events/EastScarp_CoastalGuild",
-            "FromFile": "assets/blank.json",
-          },
-          {
-            "LogName": "Druid Tower Events Blank",
-            "Action": "Load",
-            "Target": "data/events/EastScarp_DruidTower",
-            "FromFile": "assets/blank.json",
-          },
-          {
-            "LogName": "Vanilla Guild Events Blank",
-            "Action": "Load",
-            "Target": "data/events/AdventureGuild",
-            "FromFile": "assets/blank.json",
-            "When": {
-              "HasMod: |contains=FlashShifter.StardewValleyExpandedCP, Wolf.Marlon, supert.adventureguildexpanded, Rafseazz.RSVCP, BlatantDecoy.BugmeatRecipes-CP, purrplingcat.npcadventure, SiTheGreat.AdventurerAbigail, MadDog.HashtagBearFam": false
-            }
-          },
-          {
-            "LogName": "Van Events Blank",
-            "Action": "Load",
-            "Target": "data/events/EastScarp_VanInterior",
-            "FromFile": "assets/blank.json",
-          },
-          {
-            "LogName": "Lion's Mane Events Blank",
-            "Action": "Load",
-            "Target": "data/events/EastScarp_LionsMane",
-            "FromFile": "assets/blank.json",
-          },
-          {
-            "LogName": "Lion's Mane Events Blank",
-            "Action": "Load",
-            "Target": "data/events/EastScarp_Underforge",
-            "FromFile": "assets/blank.json",
-          },
-    ]
+  "Changes": [
+    {
+      "LogName": "Mateo Loads from Blanks",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Mateo, Characters/Dialogue/MarriageDialogueMateo, Characters/Schedules/Mateo",
+      "FromFile": "Data/blank.json"
+    },
+    {
+      "LogName": "Hector Loads from Blanks",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Hector, Characters/Dialogue/MarriageDialogueHector, Characters/Schedules/Hector",
+      "FromFile": "Data/blank.json"
+    },
+    {
+      "LogName": "Cirrus Loads from Blanks",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Cirrus, Characters/Dialogue/MarriageDialogueCirrus, Characters/Schedules/Cirrus",
+      "FromFile": "Data/blank.json"
+    },
+    {
+      "LogName": "Roslin Loads from Blanks",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Roslin, Characters/Schedules/Roslin",
+      "FromFile": "Data/blank.json"
+    },
+    {
+      "LogName": "Dandelion Loads from Blanks",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Dandelion, Characters/Schedules/Dandelion",
+      "FromFile": "Data/blank.json"
+    },
+    {
+      "LogName": "Tent Events Blank",
+      "Action": "Load",
+      "Target": "data/events/EastScarp_MateoHome",
+      "FromFile": "assets/blank.json"
+    },
+    {
+      "LogName": "Guild Events Blank",
+      "Action": "Load",
+      "Target": "data/events/EastScarp_CoastalGuild",
+      "FromFile": "assets/blank.json"
+    },
+    {
+      "LogName": "Druid Tower Events Blank",
+      "Action": "Load",
+      "Target": "data/events/EastScarp_DruidTower",
+      "FromFile": "assets/blank.json"
+    },
+    {
+      "LogName": "Vanilla Guild Events Blank",
+      "Action": "Load",
+      "Target": "data/events/AdventureGuild",
+      "FromFile": "assets/blank.json",
+      "When": {
+        "HasMod: |contains=FlashShifter.StardewValleyExpandedCP, Wolf.Marlon, supert.adventureguildexpanded, Rafseazz.RSVCP, BlatantDecoy.BugmeatRecipes-CP, purrplingcat.npcadventure, SiTheGreat.AdventurerAbigail, MadDog.HashtagBearFam": false
+      }
+    },
+    {
+      "LogName": "Van Events Blank",
+      "Action": "Load",
+      "Target": "data/events/EastScarp_VanInterior",
+      "FromFile": "assets/blank.json"
+    },
+    {
+      "LogName": "Lion's Mane Events Blank",
+      "Action": "Load",
+      "Target": "data/events/EastScarp_LionsMane",
+      "FromFile": "assets/blank.json"
+    },
+    {
+      "LogName": "Lion's Mane Events Blank",
+      "Action": "Load",
+      "Target": "data/events/EastScarp_Underforge",
+      "FromFile": "assets/blank.json"
+    }
+  ]
 }

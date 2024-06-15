@@ -312,7 +312,7 @@
         "EastScarp_LionsMane": {
           "DisplayName": "{{i18n:miscellaneous.mapname.LionsMane}}",
           "CreateOnLoad": {
-            "MapPath": "{{LionsManeStatus}}"
+            "MapPath": "Maps/EastScarp_LionsMane"
           },
           "DefaultArrivalTile": {
             "X": 26,
@@ -533,6 +533,6 @@
           "CustomFields": {}
         }
       }
-    },
+    }
   ]
 }

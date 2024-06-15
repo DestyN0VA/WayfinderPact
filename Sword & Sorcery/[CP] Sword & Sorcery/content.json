@@ -5,27 +5,48 @@
     {
       "LogName": "Sword & Sorcery - Mateo Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Mateo.json, Data/Dialogue/Mateo/Dialogue_Mateo.json, Data/Dialogue/Mateo/ConcessionTastes_Mateo.json, Data/Dialogue/Mateo/ConversationTopics_Mateo.json, Data/Dialogue/Mateo/CustomFixed_Mateo.json,Data/Dialogue/Mateo/CustomGiftDialogue_Mateo.json,Data/Dialogue/Mateo/MarriageDialogue_Mateo.json, Data/Dispositions/Dispositions_Mateo.json, Data/Festival Data/FestivalData_Mateo.json, Data/Schedules/Schedule_Mateo.json, Data/Strings/Strings_Mateo.json, Data/Spouse Extras/SpouseExtras_Mateo.json"
+      "FromFile": "Data/Appearances/AppearanceData_Mateo.json, Data/Dialogue/Mateo/Dialogue_Mateo.json, Data/Dialogue/Mateo/ConcessionTastes_Mateo.json, Data/Dialogue/Mateo/ConversationTopics_Mateo.json, Data/Dialogue/Mateo/CustomFixed_Mateo.json,Data/Dialogue/Mateo/CustomGiftDialogue_Mateo.json, Data/Dialogue/Mateo/MarriageDialogue_Mateo.json, Data/Festival Data/FestivalData_Mateo.json, Data/Schedules/Schedule_Mateo.json, Data/Strings/Strings_Mateo.json, Data/Spouse Extras/SpouseExtras_Mateo.json"
     },
     {
       "LogName": "Sword & Sorcery - Hector Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Hector.json, Data/Dialogue/Hector/Dialogue_Hector.json, Data/Dialogue/Hector/ConcessionTastes_Hector.json, Data/Dialogue/Hector/ConversationTopics_Hector.json, Data/Dialogue/Hector/CustomFixed_Hector.json,Data/Dialogue/Hector/CustomGiftDialogue_Hector.json, Data/Dispositions/Dispositions_Hector.json, Data/Festival Data/FestivalData_Hector.json, Data/Schedules/Schedule_Hector.json, Data/Strings/Strings_Hector.json, Data/Spouse Extras/SpouseExtras_Hector.json"
+      "FromFile": "Data/Appearances/AppearanceData_Hector.json, Data/Dialogue/Hector/Dialogue_Hector.json, Data/Dialogue/Hector/ConcessionTastes_Hector.json, Data/Dialogue/Hector/ConversationTopics_Hector.json, Data/Dialogue/Hector/CustomFixed_Hector.json,Data/Dialogue/Hector/CustomGiftDialogue_Hector.json, Data/Dialogue/Hector/MarriageDialogue_Hector.json, Data/Festival Data/FestivalData_Hector.json, Data/Schedules/Schedule_Hector.json, Data/Strings/Strings_Hector.json, Data/Spouse Extras/SpouseExtras_Hector.json"
     },
     {
       "LogName": "Sword & Sorcery - Cirrus Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Cirrus.json, Data/Dialogue/Cirrus/Dialogue_Cirrus.json, Data/Dialogue/Cirrus/ConcessionTastes_Cirrus.json, Data/Dialogue/Cirrus/ConversationTopics_Cirrus.json, Data/Dialogue/Cirrus/CustomFixed_Cirrus.json,Data/Dialogue/Cirrus/CustomGiftDialogue_Cirrus.json, Data/Dialogue/Cirrus/MarriageDialogue_Cirrus.json, Data/Dispositions/Dispositions_Cirrus.json, Data/Festival Data/FestivalData_Cirrus.json, Data/Schedules/Schedule_Cirrus.json, Data/Strings/Strings_Cirrus.json, Data/Spouse Extras/SpouseExtras_Cirrus.json"
+      "FromFile": "Data/Appearances/AppearanceData_Cirrus.json, Data/Dialogue/Cirrus/Dialogue_Cirrus.json, Data/Dialogue/Cirrus/ConcessionTastes_Cirrus.json, Data/Dialogue/Cirrus/ConversationTopics_Cirrus.json, Data/Dialogue/Cirrus/CustomFixed_Cirrus.json,Data/Dialogue/Cirrus/CustomGiftDialogue_Cirrus.json, Data/Dialogue/Cirrus/MarriageDialogue_Cirrus.json, Data/Festival Data/FestivalData_Cirrus.json, Data/Schedules/Schedule_Cirrus.json, Data/Strings/Strings_Cirrus.json, Data/Spouse Extras/SpouseExtras_Cirrus.json"
     },
     {
       "LogName": "Sword & Sorcery - Roslin Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Roslin.json, Data/Dialogue/Roslin/Dialogue_Roslin.json, Data/Dialogue/Roslin/ConcessionTastes_Roslin.json, Data/Dialogue/Roslin/ConversationTopics_Roslin.json, Data/Dialogue/Roslin/CustomGiftDialogue_Roslin.json, Data/Dispositions/Dispositions_Roslin.json, Data/Festival Data/FestivalData_Roslin.json, Data/Schedules/Schedule_Roslin.json, Data/Strings/Strings_Roslin.json"
+      "FromFile": "Data/Appearances/AppearanceData_Roslin.json, Data/Dialogue/Roslin/Dialogue_Roslin.json, Data/Dialogue/Roslin/ConcessionTastes_Roslin.json, Data/Dialogue/Roslin/ConversationTopics_Roslin.json, Data/Dialogue/Roslin/CustomGiftDialogue_Roslin.json, Data/Festival Data/FestivalData_Roslin.json, Data/Schedules/Schedule_Roslin.json, Data/Strings/Strings_Roslin.json"
     },
     {
       "LogName": "Sword & Sorcery - Dandelion Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Dandelion.json, Data/Dialogue/Dandelion/Dialogue_Dandelion.json, Data/Dialogue/Dandelion/ConcessionTastes_Dandelion.json, Data/Dialogue/Dandelion/ConversationTopics_Dandelion.json, Data/Dialogue/Dandelion/CustomGiftDialogue_Dandelion.json, Data/Dispositions/Dispositions_Dandelion.json, Data/Festival Data/FestivalData_Dandelion.json, Data/Schedules/Schedule_Dandelion.json, Data/Strings/Strings_Dandelion.json"
+      "FromFile": "Data/Appearances/AppearanceData_Dandelion.json, Data/Dialogue/Dandelion/Dialogue_Dandelion.json, Data/Dialogue/Dandelion/ConcessionTastes_Dandelion.json, Data/Dialogue/Dandelion/ConversationTopics_Dandelion.json, Data/Dialogue/Dandelion/CustomGiftDialogue_Dandelion.json, Data/Festival Data/FestivalData_Dandelion.json, Data/Schedules/Schedule_Dandelion.json, Data/Strings/Strings_Dandelion.json"
+    },
+    {
+      "LogName": "Sword & Sorcery - Disposition Includes (Full)",
+      "Action": "Include",
+      "FromFile": "Data/Dispositions/Mateo/full_NPCData.json, Data/Dispositions/Hector/full_NPCData.json, Data/Dispositions/Cirrus/full_NPCData.json, Data/Dispositions/Roslin/full_NPCData.json, Data/Dispositions/Dandelion/full_NPCData.json",
+    },
+    {
+      "LogName": "Sword & Sorcery - Disposition Includes (Vanilla)",
+      "Action": "Include",
+      "FromFile": "Data/Dispositions/Mateo/vanilla_NPCData.json, Data/Dispositions/Hector/vanilla_NPCData.json, Data/Dispositions/Cirrus/vanilla_NPCData.json, Data/Dispositions/Roslin/vanilla_NPCData.json, Data/Dispositions/Dandelion/vanilla_NPCData.json",
+      "When": {
+        "SeasonalOutfits": "vanilla",
+      }
+    },
+    {
+      "LogName": "Sword & Sorcery - Disposition Includes (Lite)",
+      "Action": "Include",
+      "FromFile": "Data/Dispositions/Mateo/lite_NPCData.json, Data/Dispositions/Hector/lite_NPCData.json, Data/Dispositions/Cirrus/lite_NPCData.json, Data/Dispositions/Roslin/lite_NPCData.json, Data/Dispositions/Dandelion/lite_NPCData.json",
+      "When": {
+        "SeasonalOutfits": "lite",
+      }
     },
     {
       "LogName": "Sword & Sorcery - Quest Includes",
@@ -42,7 +63,6 @@
       "Action": "Include",
       "FromFile": "Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json"
     },
-
     // TRIGGER ACTIONS
     {
       "LogName": "Overrides Seen Today Flag Removal",
@@ -93,7 +113,7 @@
             "RemoveMail Current SnS.Flag.CirrusHairColor.red all",
             "RemoveMail Current SnS.Flag.CirrusHairColor.orange all",
             "RemoveMail Current SnS.Flag.CirrusHairColor.yellow all",
-            "RemoveMail Current SnS.Flag.CirrusHairColor.Blue all",
+            "RemoveMail Current SnS.Flag.CirrusHairColor.Blue all"
           ]
         },
         "SnS.TriggerActions.CooldownCountdown": {
@@ -124,9 +144,9 @@
             "Pathoschild.ContentPatcher_MigrateIds CookingRecipes swordandsorcery.salishburbon {{ModId}}_salishbourbon swordandsorcery.autumnalstew {{ModId}}_autumnalstew swordandsorcery.dandeliongreens {{ModId}}_dandeliongreens swordandsorcery.portfiredrakesparkler {{ModId}}_portfiredrakesparkler swordandsorcery.mushroomsredsauce {{ModId}}_mushroomsredsauce swordandsorcery.ferngreensandpineapple {{ModId}}_ferngreensandpineapple swordandsorcery.ancienthuckleberryicecream {{ModId}}_ancienthuckleberryicecream swordandsorcery.lavaeelandstirfriedancientbottlegourd {{ModId}}_lavaeelandstirfriedancientbottlegourd swordandsorcery.zuzustylepizza {{ModId}}_zuzustylepizza swordandsorcery.zuzustylebagelwithlox {{ModId}}_zuzustylebagelwithlox swordandsorcery.zuzustylecheesecake {{ModId}}_zuzustylecheesecake swordandsorcery.zuzustyleclamchowder {{ModId}}_zuzustyleclamchowder"
           ],
           "HostOnly": true
-        },
+        }
       }
-    },
+    }
   ],
   // CONFIG OPTIONS
   "ConfigSchema": {
@@ -242,11 +262,39 @@
       "Description": "Adds a spouse patio when married.",
       "Section": "Spouse Patios"
     },
+    "TimegateConfig": {
+      "AllowValues": "OneDay, ThreeDays, OneWeek",
+      "Default": "ThreeDays",
+      "AllowBlank": false,
+      "Description": "Control the pacing of events by configuring how much time passes between each one.",
+      "Section": "Miscellaneous"
+    },
+    "MateoThemeConfig": {
+      "AllowValues": "Old, New",
+      "Default": "New",
+      "AllowBlank": false,
+      "Description": "Toggles between a new varient of Mateo's theme (TheFrenchDodo) and the original varient (HarvzBack).",
+      "Section": "Miscellaneous"
+    },
+    "HectorThemeConfig": {
+      "AllowValues": "Old, New",
+      "Default": "New",
+      "AllowBlank": false,
+      "Description": "Toggles between a new varient of Hector's theme (TheFrenchDodo) and the original varient (HarvzBack).",
+      "Section": "Miscellaneous"
+    },
     "SkipIntroQuest": {
       "AllowValues": "true, false",
       "Default": "false",
       "AllowBlank": false,
       "Description": "Removes the quest requirements for Hector's intro quest, in case of bugs or other issues.",
+      "Section": "Miscellaneous"
+    },
+    "SeasonalOutfits": {
+      "AllowValues": "full, lite, vanilla",
+      "Default": "full",
+      "AllowBlank": false,
+      "Description": "Choose how many outfits S&S NPCs wear in-game. Full means they will have multiple outfits per season, along with unique festival outfits (if they're avaliable!). Lite means they wear a different outfit per season, plus Spirit's Eve and Flower Dance. Vanilla means they wear the same outfit for all of spring + summer + fall, a different outfit for winter, and unique outfits for Spirit's Eve and Flower Dance. Default is full.",
       "Section": "Miscellaneous"
     },
     "DumpsterWarp": {
@@ -256,6 +304,20 @@
       "Description": "May cause some pathing issues, but offers a shortcut to the Druid Tower.",
       "Section": "Miscellaneous"
     },
+    "LionsManeExtraDoorWarp": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "Description": "May cause some pathing issues, but offers a second door to the Lion's Mane.",
+      "Section": "Miscellaneous"
+    },
+    "DatingLength": { //maddogchange   
+      "AllowValues": "7, 14, 21, 28",
+      "Default": "14",
+      "AllowBlank": false,
+      "Description": "Set length the player has to have dated Mateo, Hector, or Cirrus prior to any of them accepting the mermaid pendant and triggering the next romance event.",
+      "Section": "Miscellaneous"
+    },
     "Eli&DylanExtras": {
       "AllowValues": "true, false",
       "Default": "false",
@@ -263,8 +325,7 @@
       "Description": "Adds additional content for Eli and Dylan if they're installed. This is configurable because the crossover is not yet finished.",
       "Section": "Miscellaneous"
     },
-
-      "ProfanityFilter": {
+    "ProfanityFilter": {
       "AllowValues": "true, false",
       "Default": "false",
       "AllowBlank": false,
@@ -298,6 +359,13 @@
       "AllowBlank": false,
       "AllowMultiple": false,
       "Description": "Gives Cirrus a variety of dyed hair colors, or optionally choose a static one.\nRealisticRandom gives a delay between hair color changes",
+      "Section": "Overlays"
+    },
+    "CirrusSmokeyEye": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "Description": "Always give Cirrus Smokey eyeshadow when she wears makeup.",
       "Section": "Overlays"
     }
   },
@@ -345,7 +413,7 @@
     },
     {
       "Name": "MateoBeach",
-      "Value": "Beach_Mateo.png",
+      "Value": "Beach_Mateo.png"
     },
     {
       "Name": "MateoBeach",
@@ -362,28 +430,28 @@
       "Name": "Horns",
       "Value": "Horns2", //Broken Horns
       "When": {
-        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true 
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true
       }
     },
     {
       "Name": "Horns",
       "Value": "Horns3", //Stage 1 Regrown Horns
       "When": {
-        "HasSeenEvent |contains=SnS.Ch1.Mateo.14": true 
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.14": true
       }
     },
     {
       "Name": "Horns",
       "Value": "Horns4", //Stage 2 Regrown Horns
       "When": {
-        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true 
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true
       }
     },
     {
       "Name": "Horns",
       "Value": "Horns5", //Stage 3 Regorwn Horns
       "When": {
-        "HasSeenEvent |contains=SnS.Ch3.Cirrus.14": true 
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.14": true
       }
     },
     {
@@ -413,7 +481,7 @@
     },
     {
       "Name": "MateoSpawn",
-      "Value": "EastScarp_MateoHome 5 6",
+      "Value": "EastScarp_MateoHome 5 6"
     },
     {
       "Name": "MateoSpawn",
@@ -450,7 +518,7 @@
     },
     {
       "Name": "MateoHospitalScene",
-      "Value": "message \"{{i18n:Events.S&S.Ch1.7H1.Message.1}}\"/changeLocation Town/warp farmer 36 57/faceDirection farmer 2/addTemporaryActor MateoKrobus 16 32 39 62 1 true Character/changeName MateoKrobus Krobus/pause 500/playSound doorClose/globalFadeToClear/viewport 35 59/playsound leafrustle/advancedMove MateoKrobus false -3 0 0 -3 4 10/emote farmer 40/pause 100/jump farmer 5 true/emote farmer 16/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.1}}\"/pause 250/emote farmer 32/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.2}}\"pause 250/emote farmer 36/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.3}}\"/fade/viewport -1000 -1000/mail MateoHospital/end invisible Mateo"
+      "Value": "message \"{{i18n:Events.S&S.Ch1.7H1.Message.1}}\"/changeLocation Town/warp farmer 36 57/faceDirection farmer 2/addTemporaryActor MateoKrobus 16 32 39 62 1 true Character/changeName MateoKrobus Krobus/pause 500/playSound doorClose/globalFadeToClear/viewport 35 59/playsound leafrustle/advancedMove MateoKrobus false -3 0 0 -3 4 10/emote farmer 40/pause 100/jump farmer 5 true/emote farmer 16/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.1}}\"/pause 250/emote farmer 32/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.2}}\"/pause 250/emote farmer 36/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.3}}\"/fade/viewport -1000 -1000/mail MateoHospital/end invisible Mateo"
     },
     {
       "Name": "MateoHospitalScene",
@@ -458,7 +526,6 @@
       "When": {
         "HasMod: |contains=TenebrousNova.EliDylan.CP": true,
         "Eli&DylanExtras": true
-        
       }
     },
     {
@@ -479,7 +546,7 @@
       "Name": "HectorRomance",
       "Value": "Romantic",
       "When": {
-        "Relationship:Hector |contains=Dating": true
+        "Relationship:Hector |contains=Dating, Engaged, Married": true
       }
     },
     {
@@ -547,7 +614,7 @@
     },
     {
       "Name": "TrueShape",
-      "Value": "{{Random: male, female|key=hector-gender}}",
+      "Value": "{{Random: male, female|key=hector-gender}}"
     },
     {
       "Name": "TrueShape",
@@ -592,7 +659,6 @@
       "When": {
         "HasMod: |contains=TenebrousNova.EliDylan.CP": true,
         "Eli&DylanExtras": true
-        
       }
     },
     {
@@ -955,31 +1021,76 @@
       }
     },
     {
+      "Name": "CirrusMakeup",
+      "Value": "{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusMakeup}}"
+    },
+    {
+      "Name": "CirrusMakeup",
+      "Value": "{{CirrusHairColor}}",
+      "When": {
+        "CirrusRainbowHair |contains=RealisticRandom, DailyRandom": true,
+        "CirrusHairColor |contains=Red": false
+      }
+    },
+    {
+      "Name": "CirrusMakeup",
+      "Value": "Red",
+      "When": {
+        "Random: {{Range: 1, 5}}": "1",
+        "CirrusRainbowHair |contains=RealisticRandom, DailyRandom": true,
+        "CirrusHairColor |contains=Red": false
+      }
+    },
+    {
+      "Name": "CirrusMakeup",
+      "Value": "{{CirrusHairColor}}",
+      "When": {
+        "CirrusRainbowHair |contains=RealisticRandom, DailyRandom": true,
+        "CirrusHairColor |contains=Red": true
+      }
+    },
+    {
+      "Name": "CirrusMakeup",
+      "Value": "{{Random: Brown, Orange, Yellow, Blue |key=CirrusMakeup}}",
+      "When": {
+        "Random: {{Range: 1, 5}}": "1",
+        "CirrusRainbowHair |contains=RealisticRandom, DailyRandom": true,
+        "CirrusHairColor |contains=Red": true
+      }
+    },
+    {
+      "Name": "CirrusMakeup",
+      "Value": "Red",
+      "When": {
+        "CirrusSmokeyEye": true
+      }
+    },
+    {
       "Name": "TrollHeritageDialogue1",
       "Value": "{{i18n:Events.S&S.Ch1.0H2.Mateo.3}}",
       "When": {
-        "MateoTrollHeritage": false,
+        "MateoTrollHeritage": false
       }
     },
     {
       "Name": "TrollHeritageDialogue1",
       "Value": "{{i18n:Events.S&S.Ch1.0H2.Mateo.3.TrollHeritage}}",
       "When": {
-        "MateoTrollHeritage": true,
+        "MateoTrollHeritage": true
       }
     },
     {
       "Name": "TrollHeritageDialogue2",
       "Value": "{{i18n:Events.S&S.Ch1.7H1.Mateo.3}}",
       "When": {
-        "MateoTrollHeritage": false,
+        "MateoTrollHeritage": false
       }
     },
     {
       "Name": "TrollHeritageDialogue2",
       "Value": "{{i18n:Events.S&S.Ch1.7H1.Mateo.3.TrollHeritage}}",
       "When": {
-        "MateoTrollHeritage": true,
+        "MateoTrollHeritage": true
       }
     },
     {
@@ -1028,28 +1139,28 @@
       "Name": "TrollHeritageDialogue3",
       "Value": "{{i18n:Events.S&S.Ch1.12H.Mateo.8}}",
       "When": {
-        "MateoTrollHeritage": false,
+        "MateoTrollHeritage": false
       }
     },
     {
       "Name": "TrollHeritageDialogue3",
       "Value": "{{i18n:Events.S&S.Ch1.12H.Mateo.8.TrollHeritage}}",
       "When": {
-        "MateoTrollHeritage": true,
+        "MateoTrollHeritage": true
       }
     },
     {
       "Name": "TrollHeritageDialogue4",
       "Value": "{{i18n:Events.S&S.Ch1.10H.Mateo.3}}",
       "When": {
-        "MateoTrollHeritage": false,
+        "MateoTrollHeritage": false
       }
     },
     {
       "Name": "TrollHeritageDialogue4",
       "Value": "{{i18n:Events.S&S.Ch1.10H.Mateo.3.TrollHeritage}}",
       "When": {
-        "MateoTrollHeritage": true,
+        "MateoTrollHeritage": true
       }
     },
     {
@@ -1062,6 +1173,17 @@
     {
       "Name": "10HSVEBushRemovalServices",
       "Value": "removeTile 43 26 AlwaysFront/removeTile 44 26 AlwaysFront/removeTile 45 26 AlwaysFront/removeTile 43 27 Front/removeTile 44 27 Front/removeTile 45 27 Front/removeTile 43 28 Buildings/removeTile 44 28 Buildings/removeTile 45 28 Buildings"
+    },
+    {
+      "Name": "SVEReroutingServices",
+      "Value": "advancedMove farmer false 0 4 7 0 0 -6 1 10/advancedMove Krobus false 0 4 7 0 0 -5 1 10",
+    },
+    {
+      "Name": "SVEReroutingServices",
+      "Value": "advancedMove farmer false 0 5 7 0 0 -6 1 10/advancedMove Krobus false 0 5 7 0 0 -5 1 10",
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+      }
     },
     {
       "Name": "HectorFlirt1",
@@ -1114,7 +1236,7 @@
     },
     {
       "Name": "SVEMarlon",
-      "Value": "Marlon",
+      "Value": "Marlon"
     },
     {
       "Name": "SVEGunther",
@@ -1125,7 +1247,7 @@
     },
     {
       "Name": "SVEGunther",
-      "Value": "Gunther",
+      "Value": "Gunther"
     },
     {
       "Name": "MateoFlirt4",
@@ -1226,393 +1348,435 @@
       }
     },
     {
-      "Name": "LionsManeStatus",
-      "Value": "Maps/EastScarp_LionsMane",
-    },
-    {
-      "Name": "LionsManeStatus",
-      "Value": "Maps/EastScarp_LionsManeFinal",
-      "When": {
-        "HasSeenEvent |contains=SnS.Ch4.Roslin.PENDING": true,
-      }
-    },
-    {
       "Name": "RoslinStygiumComment",
       "Value": "You stand a chance to be more familliar than anyone else here, considering the pendant made of Stygium around @'s neck.",
       "When": {
-        "HasSeenEvent |contains=SnS.Ch1.Mateo.17": true,
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.17": true
       }
     },
     {
       "Name": "RoslinStygiumComment",
       "Value": "I know you've seen Stygium in the mines underneath East Scarp. Have you questioned where it comes from?$17",
       "When": {
-        "HasSeenEvent |contains=SnS.Ch1.Mateo.17": false,
+        "HasSeenEvent |contains=SnS.Ch1.Mateo.17": false
       }
     },
     {
       "Name": "FilteredLanguage1",
       "Value": "{{i18n:Events.S&S.Ch1.7H1.Mateo.5}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage1",
       "Value": "{{i18n:Events.S&S.Ch1.7H1.Mateo.5.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
-          },
+    },
     {
       "Name": "FilteredLanguage2",
       "Value": "{{i18n:CT.Marlon.MateoPain}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage2",
       "Value": "{{i18n:CT.Marlon.MateoPain.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
-                },
+    },
     {
       "Name": "FilteredLanguage3",
       "Value": "{{i18n:Core.Mateo.WinterEnd}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage3",
       "Value": "{{i18n:Core.Mateo.WinterEnd.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
-                      },
+    },
     {
       "Name": "FilteredLanguage4",
       "Value": "{{i18n:Core.Mateo.Winter.LateHeart.16}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage4",
       "Value": "{{i18n:Core.Mateo.Winter.LateHeart.16.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage5",
       "Value": "{{i18n:Marriage.Mateo.Indoor.Night.4}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage5",
       "Value": "{{i18n:Marriage.Mateo.Indoor.Night.4.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage6",
       "Value": "{{i18n:Festivals.Mateo.spring13.True.1}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage6",
       "Value": "{{i18n:Festivals.Mateo.spring13.True.1.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage7",
       "Value": "{{i18n:Festivals.Mateo.spring13.True.1}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage7",
       "Value": "{{i18n:Festivals.Mateo.spring13.True.1.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage8",
       "Value": "{{i18n:Events.S&S.Ch1.7H2.Mateo.2}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage8",
       "Value": "{{i18n:Events.S&S.Ch1.7H2.Mateo.2.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage9",
       "Value": "{{i18n:Core.Hector.GiveFlowersA}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage9",
       "Value": "{{i18n:Core.Hector.GiveFlowersA.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage10",
       "Value": "{{i18n:Core.Hector.GiveFlowersB}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage10",
       "Value": "{{i18n:Core.Hector.GiveFlowersB.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage11",
       "Value": "{{i18n:Core.Hector.StardropGiftA}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage11",
       "Value": "{{i18n:Core.Hector.StardropGiftA.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage12",
       "Value": "{{i18n:Core.Hector.StardropGiftB}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage12",
       "Value": "{{i18n:Core.Hector.StardropGiftB.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage13",
       "Value": "{{i18n:Core.Hector.ResortBar}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage13",
       "Value": "{{i18n:Core.Hector.ResortBar.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage14",
       "Value": "{{i18n:Core.Hector.Generic.LateHeart.8}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage14",
       "Value": "{{i18n:Core.Hector.Generic.LateHeart.8.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage15",
       "Value": "{{i18n:Marriage.Hector.Winter8}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage15",
       "Value": "{{i18n:Marriage.Hector.Winter8.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage16",
       "Value": "{{i18n:Gifts.Hector.GiftReaction.CategoryArtisanalGoods}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage16",
       "Value": "{{i18n:Gifts.Hector.GiftReaction.CategoryArtisanalGoods.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage17",
       "Value": "{{i18n:Movies.Hector.MiracleAtColdstarRanch.1}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage17",
       "Value": "{{i18n:Movies.Hector.MiracleAtColdstarRanch.1.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage18",
       "Value": "{{i18n:Festivals.Hector.summer28.True.1}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage18",
       "Value": "{{i18n:Festivals.Hector.summer28.True.1.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage19",
       "Value": "{{i18n:Events.S&S.Ch2.0H.Hector.4}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage19",
       "Value": "{{i18n:Events.S&S.Ch2.0H.Hector.4.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage20",
       "Value": "{{i18n:CT.Hector.HectorEngaged}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage20",
       "Value": "{{i18n:CT.Hector.HectorEngaged.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage21",
       "Value": "{{i18n:CT.Hector.JunaBeachBallet}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage21",
       "Value": "{{i18n:CT.Hector.JunaBeachBallet.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage22",
       "Value": "{{i18n:CT.Hector.MeetTheCats}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage22",
       "Value": "{{i18n:CT.Hector.MeetTheCats.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage23",
       "Value": "{{i18n:Core.Cirrus.PlayerKilled.Skull.04}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage23",
       "Value": "{{i18n:Core.Cirrus.PlayerKilled.Skull.04.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "FilteredLanguage24",
       "Value": "{{i18n:Events.SnS.Ch2.Roslin.3}}",
       "When": {
-        "ProfanityFilter": false,
+        "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage24",
       "Value": "{{i18n:Events.SnS.Ch2.Roslin.3.Filtered}}",
       "When": {
-        "ProfanityFilter": true,
+        "ProfanityFilter": true
       }
     },
     {
       "Name": "HectorIsland",
       "Value": "false",
       "When": {
-        "HasSeenEvent |contains=SnS.Ch2.Hector.6": false,
+        "HasSeenEvent |contains=SnS.Ch2.Hector.6": false
       }
     },
     {
-      "Name": "HectorsIsland",
+      "Name": "HectorIsland",
       "Value": "true",
       "When": {
-        "HasSeenEvent |contains=SnS.Ch2.Hector.6": true,
+        "HasSeenEvent |contains=SnS.Ch2.Hector.6": true
       }
     },
     {
       "Name": "CirrusIsland",
       "Value": "false",
       "When": {
-        "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": false,
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": false
       }
     },
     {
       "Name": "CirrusIsland",
       "Value": "true",
       "When": {
-        "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true
       }
     },
+    {
+      "Name": "VariableTimegate",
+      "Value": "0",
+      "When": {
+        "TimegateConfig": "OneDay"
+      }
+    },
+    {
+      "Name": "VariableTimegate",
+      "Value": "2",
+      "When": {
+        "TimegateConfig": "ThreeDays"
+      }
+    },
+    {
+      "Name": "VariableTimegate",
+      "Value": "6",
+      "When": {
+        "TimegateConfig": "OneWeek"
+      }
+    },
+    {
+      "Name": "MateoTheme",
+      "Value": "MateoTheme.ogg",
+      "When": {
+        "MateoThemeConfig": "New"
+      }
+    },
+    {
+      "Name": "MateoTheme",
+      "Value": "MateoTheme_Old.ogg",
+      "When": {
+        "MateoThemeConfig": "Old"
+      }
+    },
+    {
+      "Name": "HectorTheme",
+      "Value": "HectorTheme.ogg",
+      "When": {
+        "HectorThemeConfig": "New"
+      }
+    },
+    {
+      "Name": "HectorTheme",
+      "Value": "HectorTheme_Old.ogg",
+      "When": {
+        "HectorThemeConfig": "Old"
+      }
+    },
+    {
+      "Name": "CirrusNickname",
+      "Value": "|Nickname = {{i18n: Strings.Cirrus.Nickname{{Random:1,2}}}}"
+    }
   ]
 }

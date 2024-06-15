@@ -22,6 +22,7 @@
         "AcceptGift_(O)259": "{{i18n:Gifts.Hector.GiftReaction.FiddleheadFern}}",
         "AcceptGift_(O)649": "{{i18n:Gifts.Hector.GiftReaction.FiddleheadRisotto}}",
         "AcceptGift_(O)300": "{{i18n:Gifts.Hector.GiftReaction.Amaranth}}",
+        "AcceptGift_(O)390": "{{i18n:Gifts.Hector.GiftReaction.Stone}}",
         // LIKES
         "AcceptGift_(O)731": "{{i18n:Gifts.Hector.GiftReaction.MapleBar}}",
         "AcceptGift_(O)768": "{{i18n:Gifts.Hector.GiftReaction.SolarEssence}}",
@@ -53,10 +54,24 @@
         "AcceptGift_(O)731": "{{i18n:Gifts.Hector.GiftReaction.MapleBar.Birthday}}",
         "AcceptGift_(O)768": "{{i18n:Gifts.Hector.GiftReaction.SolarEssence.Birthday}}",
         "AcceptGift_(O)769": "{{i18n:Gifts.Hector.GiftReaction.VoidEssence.Birthday}}",
+        "AcceptGift_(O)390": "{{i18n:Gifts.Hector.GiftReaction.Stone.Birthday}}",
       },
       "When": {
         "Season": "winter",
         "Day": "21"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Hector",
+      "Entries": { // CUSTOM GIFT DIALOGUE - BIRTHDAY
+        // BIRTHDAY
+        "AcceptGift_(O)390": "{{i18n:Gifts.Hector.GiftReaction.Stone.Birthday.Romantic}}",
+      },
+      "When": {
+        "Season": "winter",
+        "Day": "21",
+        "Relationship:Hector |contains=Dating, Engaged, Married": true
       }
     },
     {
@@ -80,5 +95,17 @@
         "Relationship:Hector |contains=Dating": true
       }
     },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Hector",
+      "Entries": { // MARRIAGE PENDANT REACT NO FARMHOUSE UPGRADE
+        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantFarmhouse}}",
+      },
+      "When": {
+        "HasConversationTopic |contains=HectorMarriageCountdown": false,
+		    "Relationship:Hector |contains=Dating": true,
+        "FarmhouseUpgrade": "0"
+      }
+    }
   ]
 }

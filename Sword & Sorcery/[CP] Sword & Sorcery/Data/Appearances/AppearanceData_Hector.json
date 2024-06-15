@@ -30,22 +30,22 @@
             "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_wolf.png"
         },
         {
-            "LogName": "Hector Wolf Temp Portrait Load",
+            "LogName": "Hector Wolf Tempactor Portrait Load",
             "Action": "Load",
-            "Target": "Portraits/HectorWolf",
+            "Target": "Portraits/MysteryWolf",
             "FromFile": "assets/TemporaryActors/Portraits/HectorWolf.png"
+        },
+        {
+            "LogName": "Hector Wolf Character",
+            "Action": "Load",
+            "Target": "Characters/Hector_Wolf",
+            "FromFile": "assets/TemporaryActors/Characters/HectorWolf.png"
         },
         {
             "LogName": "Hector Wolf Tempactor Character Load",
             "Action": "Load",
             "Target": "Characters/MysteryWolf",
             "FromFile": "assets/TemporaryActors/Characters/MysteryWolf.{{HectorHeterochromatic}}.png"
-        },
-        {
-            "LogName": "Hector Wolf Tempactor Portrait Load",
-            "Action": "Load",
-            "Target": "Portraits/MysteryWolf",
-            "FromFile": "assets/TemporaryActors/Portraits/HectorWolf.png"
         },
         {
             "LogName": "TrueShape (Hood Down) for Events - Hector",

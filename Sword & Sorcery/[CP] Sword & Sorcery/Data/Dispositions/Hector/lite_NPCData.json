@@ -5,17 +5,17 @@
             "Action": "EditData",
             "Target": "Data/Characters",
             "Entries": {
-                "Cirrus": {
-                    "DisplayName": "Cirrus",
-                    "Gender": "Female",
+                "Hector": {
+                    "DisplayName": "{{TrueName}}",
+                    "Gender": "Male",
                     "Age": "Adult",
-                    "Manner": "Polite",
-                    "SocialAnxiety": "Outgoing",
-                    "Optimism": "Positive",
-                    "BirthSeason": "Summer",
-                    "BirthDay": 18,
+                    "Manner": "Rude",
+                    "SocialAnxiety": "Shy",
+                    "Optimism": "Negative",
+                    "BirthSeason": "Winter",
+                    "BirthDay": 21,
                     "HomeRegion": "Town",
-                    "CanBeRomanced": "{{CirrusRelationshipStatus}}",
+                    "CanBeRomanced": "{{HectorRelationshipStatus}}",
                     "ExcludeFromPerfectionScore": false,
                     "EndSlideShow": "TrailingGroup",
                     "SpawnIfMissing": true,
@@ -23,46 +23,37 @@
                     "SocialTab": "HiddenUntilMet",
                     "Calendar": "HiddenUntilMet",
                     "FlowerDanceCanDance": true,
+                    "CanVisitIsland": "{{HectorIsland}}",
                     "WinterStarParticipant": false,
-                    "KissSpriteFacingRight": false,
-                    "CanVisitIsland": "{{CirrusIsland}}",
-                    "ShakePortraits": [9, 15, 19, 21],
+                    "ShakePortraits": [5, 19, 20, 27],
+                    "ItemDeliveryQuests": false,
                     "SpouseRoom": {
-                        "MapAsset": "{{CirrusSpouseRoomOnOff}}"
+                        "MapAsset": "{{HectorSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "{{CirrusSpousePatioOnOff}}"
+                        "MapAsset": "{{HectorSpousePatioOnOff}}"
                     },
                     "Home": [
                         {
-                            "ID": "Cirrus - Lion's Mane",
-                            "Location": "EastScarp_LionsMane",
+                            "ID": "Hector - Tower",
+                            "Location": "EastScarp_DruidTower",
                             "Tile": {
-                                "X": 18,
-                                "Y": 5
+                                "X": 1,
+                                "Y": 27
                             },
                             "Direction": "Down",
-                            "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch3.Cirrus.13"
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch2.Hector.1"
                         },
                         {
-                            "ID": "Cirrus - Van",
-                            "Location": "EastScarp_VanInterior",
-                            "Tile": {
-                                "X": 11,
-                                "Y": 4
-                            },
-                            "Direction": "Down",
-                            "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch3.Cirrus.1"
-                        },
-                        {
-                            "ID": "Cirrus - NPC Waiting Room",
+                            "ID": "Hector - NPC Waiting Room",
                             "Location": "EastScarp_TNPCWaitingWarpRoom",
                             "Tile": {
-                                "X": 13,
+                                "X": 12,
                                 "Y": 5
                             },
-                            "Direction": "Down"
-                        }
+                            "Direction": "Down",
+                            "Condition": "!PLAYER_HAS_SEEN_EVENT Any SnS.Ch2.Hector.1"
+                        },
                     ],
                     "Appearance": [
                         {
@@ -70,52 +61,52 @@
                             "Condition": "SEASON Spring",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Portrait": "Portraits/spring_Cirrus",
-                            "Sprite": "Characters/spring_Cirrus"
+                            "Portrait": "Portraits/spring_Hector",
+                            "Sprite": "Characters/spring_Hector"
                         },
                         {
                             "ID": "Summer Outfit",
                             "Condition": "SEASON Summer",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Portrait": "Portraits/summer_Cirrus",
-                            "Sprite": "Characters/summer_Cirrus"
+                            "Portrait": "Portraits/summer_Hector",
+                            "Sprite": "Characters/summer_Hector"
                         },
                         {
                             "ID": "Fall Outfit",
                             "Condition": "SEASON Fall",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Portrait": "Portraits/fall_Cirrus",
-                            "Sprite": "Characters/fall_Cirrus"
+                            "Portrait": "Portraits/fall_Hector",
+                            "Sprite": "Characters/fall_Hector"
                         },
                         {
                             "ID": "Winter Outfit",
                             "Condition": "SEASON Winter",
                             "Precedence": -10, 
                             "Weight": 1,
-                            "Portrait": "Portraits/winter_Cirrus",
-                            "Sprite": "Characters/winter_Cirrus"
+                            "Portrait": "Portraits/winter_Hector",
+                            "Sprite": "Characters/winter_Hector"
                         },
                         {
                             "ID": "Spirit's Eve",
                             "Condition": "EVENT_ID festival_fall27",
-                            "Portrait": "Portraits/Cirrus_Glamrock",
-                            "Sprite": "Characters/Cirrus_Glamrock",   
+                            "Portrait": "Portraits/Hector_HoodDown",
+                            "Sprite": "Characters/Hector_HoodDown",   
                             "Precedence": -20
                         },
                         {
                             "ID": "Luau & Moonlight Jellies",
                             "Condition": "ANY \"EVENT_ID festival_summer11\" \"EVENT_ID festival_summer28\"",
-                            "Portrait": "Portraits/Cirrus_Beach",
-                            "Sprite": "Characters/Cirrus_Beach",
+                            "Portrait": "Portraits/Hector_beach",
+                            "Sprite": "Characters/Hector_beach",
                             "Precedence": -20
                         },
                         {
                             "ID": "Beach",
                             "IsIslandAttire": true,
-                            "Portrait": "Portraits/Cirrus_beach",
-                            "Sprite": "Characters/Cirrus_beach",
+                            "Portrait": "Portraits/Hector_beach",
+                            "Sprite": "Characters/Hector_beach",
                             "Precedence": -20
                         }
                     ]

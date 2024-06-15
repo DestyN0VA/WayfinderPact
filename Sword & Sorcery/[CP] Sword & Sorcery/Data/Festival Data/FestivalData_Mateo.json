@@ -19,6 +19,18 @@
                     "Value": "Mateo 36 64 3",
                     "Delimiter": "/"
                 },
+				{   // LOCATION: SET UP Y2 (VANILLA)
+                    "Operation": "Append",
+                    "Target": [  "Entries", "Set-Up_additionalCharacters_y2" ],
+                    "Value": "Mateo 28 54 2",
+                    "Delimiter": "/"
+                },
+                {   // LOCATION: MAIN EVENT Y2 (VANILLA)
+                    "Operation": "Append",
+                    "Target": [  "Entries",  "MainEvent_additionalCharacters_y2"  ],
+                    "Value": "Mateo 36 64 3",
+                    "Delimiter": "/"
+                },
 			],
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": "true",
@@ -42,6 +54,18 @@
                 {	// LOCATION: MAIN EVENT (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters"  ],
+                    "Value": "Mateo 23 24 3",
+                    "Delimiter": "/"
+                },
+				{	// LOCATION: SET UP Y2 (VANILLA)
+                    "Operation": "Append",
+                    "Target": [ "Entries","Set-Up_additionalCharacters_y2" ],
+                    "Value": "Mateo 20 21 2",
+                    "Delimiter": "/"
+                },
+                {	// LOCATION: MAIN EVENT Y2 (VANILLA)
+                    "Operation": "Append",
+                    "Target": [ "Entries","MainEvent_additionalCharacters_y2"  ],
                     "Value": "Mateo 23 24 3",
                     "Delimiter": "/"
                 },
@@ -78,25 +102,15 @@
 					"Value": "Mateo 15 5 2",
 					"Delimiter": "/"
 				},
-			],
-			"When": {
-				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
-				"HasConversationTopic |contains=MateoPain": false,
-			  },
-		},
-        {
-			"Action": "EditData",
-			"Target": "Data/Festivals/summer11",
-			"TextOperations": [
-				{	// LOCATION: SET UP (VANILLA)
+				{	// LOCATION: SET UP Y2 (VANILLA)
 					"Operation": "Append",
-					"Target": ["Entries","Set-Up_additionalCharacters"],
+					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
 					"Value": "Mateo 17 5 2",
 					"Delimiter": "/"
 				},
-				{	// LOCATION: SET UP (VANILLA)
+				{	// LOCATION: SET UP Y2 (VANILLA)
 					"Operation": "Append",
-					"Target": ["Entries","MainEvent_additionalCharacters"],
+					"Target": ["Entries","MainEvent_additionalCharacters_y2"],
 					"Value": "Mateo 17 5 2",
 					"Delimiter": "/"
 				},
@@ -104,7 +118,6 @@
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
 				"HasConversationTopic |contains=MateoPain": false,
-				"Query: {{Year}} % 2 = 0": true,
 			  },
 		},
 
@@ -117,6 +130,12 @@
 				{   // LOCATION: SET UP & MAIN EVENT (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "Mateo 13 27 1",
+					"Delimiter": "/"
+				},
+				{   // LOCATION: SET UP & MAIN EVENT Y2 (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
 					"Value": "Mateo 13 27 1",
 					"Delimiter": "/"
 				},
@@ -139,6 +158,12 @@
 					"Value": "Mateo 37 81 0",
 					"Delimiter": "/"
 				},
+				{	// LOCATION: SET UP & MAIN EVENT Y2 (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
+					"Value": "Mateo 37 81 0",
+					"Delimiter": "/"
+				},
 			],
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
@@ -158,32 +183,22 @@
 					"Value": "Mateo 14 17 2",
 					"Delimiter": "/"
 				},
-				],
-				"When": {
-					"HasConversationTopic |contains=MateoPain": false,
-				  },
-		},
-		{
-			 "Action": "EditData",
-			 "Target": "Data/Festivals/fall27",
-			 "TextOperations": [
-				 {	// LOCATION: SET UP & MAIN EVENT (VANILLA)
+				{	// LOCATION: SET UP & MAIN EVENT Y2 (VANILLA)
 					 "Operation": "Append",
-					 "Target": ["Entries",	"Set-Up_additionalCharacters"],
+					 "Target": ["Entries",	"Set-Up_additionalCharacters_y2"],
 					 "Value": "Mateo 14 15 2",
 					 "Delimiter": "/"
 				 },
 				 ],
 				 "When": {
 					 "HasConversationTopic |contains=MateoPain": false,
-					 "Query: {{Year}} % 2 = 0": true,
 				   },
 		 },
 		 {
 			  "Action": "EditData",
 			  "Target": "Data/Festivals/fall27",
 			  "TextOperations": [
-				  {	// LOCATION: SET UP & MAIN EVENT (VANILLA)
+				  {	// LOCATION: SET UP & MAIN EVENT (SVE)
 					  "Operation": "Append",
 					  "Target": ["Entries",	"Set-Up_additionalCharacters"],
 					  "Value": "Mateo 37 57 2",
@@ -193,7 +208,6 @@
 				  "When": {
 					  "HasConversationTopic |contains=MateoPain": false,
 					  "HasMod": "FlashShifter.StardewValleyExpandedCP",
-					  "Query: {{Year}} % 4 = 3": true,
 					},
 		  },
 
@@ -212,6 +226,18 @@
                 {   // LOCATION: MAIN EVENT (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Main-Event_additionalCharacters"],
+					"Value": "Mateo 71 42 0",
+					"Delimiter": "/"
+				},
+				{	// LOCATION: SET UP Y2 (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
+					"Value": "Mateo 48 29 3",
+					"Delimiter": "/"
+				},
+                {   // LOCATION: MAIN EVENT Y2 (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries","Main-Event_additionalCharacters_y2"],
 					"Value": "Mateo 71 42 0",
 					"Delimiter": "/"
 				},
@@ -234,25 +260,15 @@
 					"Value": "Mateo 22 58 1",
 					"Delimiter": "/"
 				},
-			],
-			"When": {
-				"HasConversationTopic |contains=MateoPain": false,
-			  },
-        },
-        {
-			"Action": "EditData",
-			"Target": "Data/Festivals/winter25",
-			"TextOperations": [
-				{	// LOCATION: SET UP (VANILLA)
+				{	// LOCATION: SET UP Y2 (VANILLA)
 					"Operation": "Append",
-					"Target": [	"Entries","Set-Up_additionalCharacters"	],
+					"Target": [	"Entries","Set-Up_additionalCharacters_y2"	],
 					"Value": "Mateo 23 58 1",
 					"Delimiter": "/"
 				},
 			],
 			"When": {
 				"HasConversationTopic |contains=MateoPain": false,
-				"Query: {{Year}} % 2 = 0": true
 			  },
         },
 
@@ -271,6 +287,18 @@
 					 { // LOCATION: MAIN EVENT
 					  "Operation": "Append",
 					  "Target": ["Entries", "MainEvent_additionalCharacters"],
+					  "Value": "Mateo 77 50 0",
+					  "Delimiter": "/"
+					 },
+					 { // LOCATION: SET UP Y2
+					  "Operation": "Append",
+					  "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					  "Value": "Mateo 100 49 2",
+					  "Delimiter": "/"
+					 },
+					 { // LOCATION: MAIN EVENT Y2
+					  "Operation": "Append",
+					  "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
 					  "Value": "Mateo 77 50 0",
 					  "Delimiter": "/"
 					 },
@@ -298,6 +326,18 @@
 				 { // LOCATION: MAIN EVENT
 				  "Operation": "Append",
 				  "Target": ["Entries", "MainEvent_additionalCharacters"],
+				  "Value": "Mateo 49 42 3",
+				  "Delimiter": "/"
+				 },
+				 { // LOCATION: SET UP Y2
+				  "Operation": "Append",
+				  "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+				  "Value": "Mateo 53 43 3",
+				  "Delimiter": "/"
+				 },
+				 { // LOCATION: MAIN EVENT Y2
+				  "Operation": "Append",
+				  "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
 				  "Value": "Mateo 49 42 3",
 				  "Delimiter": "/"
 				 },

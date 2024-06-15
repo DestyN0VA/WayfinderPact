@@ -158,14 +158,41 @@
       "Action": "EditData",
       "Target": "spacechase0.SpaceCore/ObjectExtensionData",
       "Entries": {
+        "{{ModID}}_ancientazuredetura.seed": {
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
+        },
         "{{ModID}}_druidicessence": {
-          "CategoryTextOverride": "Druidic"
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
         },
         "{{ModID}}_druidictotemfetish": {
-          "CategoryTextOverride": "Druidic"
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
         },
         "{{ModID}}_druidiceldermask": {
-          "CategoryTextOverride": "Druidic"
+          "CategoryTextOverride": "Druidic",
+          "CategoryColorOverride": {
+            "R": 48,
+            "G": 162,
+            "B": 218,
+            "A": 255
+          },
         },
         "{{ModID}}_brokenshield": {
           "CategoryTextOverride": "Shield",

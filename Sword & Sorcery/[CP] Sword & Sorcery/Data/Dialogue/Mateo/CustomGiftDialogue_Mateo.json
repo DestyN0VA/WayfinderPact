@@ -109,5 +109,17 @@
         "Relationship:Mateo |contains=Dating": true
       }
     },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Mateo",
+      "Entries": { // MARRIAGE PENDANT REACT NO FARMHOUSE UPGRADE
+        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantFarmhouse}}",
+      },
+      "When": {
+        "HasConversationTopic |contains=MateoMarriageCountdown": false,
+		    "Relationship:Mateo |contains=Dating": true,
+        "FarmhouseUpgrade": "0"
+      }
+    }
   ]
 }

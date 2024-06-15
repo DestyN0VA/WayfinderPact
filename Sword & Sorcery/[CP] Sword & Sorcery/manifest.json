@@ -1,14 +1,14 @@
 {
-	"Name": "Sword & Sorcery",
+	"Name": "Sword & Sorcery [CP]",
 	"Author": "DestyNova",
-	"Version": "1.0.0",
+	"Version": "1.10.0",
 	"Description": "A fantasy expansion for East Scarp that includes NPCs, Skills, Crops, Weapons, Items & More!",
 	  "UniqueID": "DN.SnS",
 	  "MinimumApiVersion": "3.15.0",
 	  "ContentPackFor": {
 	  "UniqueID": "Pathoschild.ContentPatcher"
 	  },
-	  "UpdateKeys": ["Nexus:18210"],
+	  "UpdateKeys": ["Nexus:12369"],
 	  "Dependencies": [  
 		{
 		  "UniqueID": "LemurKat.EastScarpe.CP",

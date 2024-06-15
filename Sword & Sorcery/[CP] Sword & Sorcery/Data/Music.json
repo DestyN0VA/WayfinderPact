@@ -10,7 +10,7 @@
                 "SnS.MateoTheme": {
                     "ID": "SnS.MateoTheme",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/MateoTheme.ogg}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/{{MateoTheme}}}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
@@ -24,7 +24,7 @@
                 "SnS.HectorTheme": {
                     "ID": "SnS.HectorTheme",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/HectorTheme.ogg}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/{{HectorTheme}}}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
@@ -157,6 +157,22 @@
             }
         },
 
+        // SOUNDS
+        {
+            "LogName": "Duskspire Laugh",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.DuskspireLaugh": {
+                    "ID": "SnS.DuskspireLaugh",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DuskspireLaugh.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
+
         // JUKEBOX DATA 
         {
             "Action": "EditData",
@@ -267,6 +283,6 @@
                     "Available": null
                 }
             }
-        }
+        },
      ]
 }
