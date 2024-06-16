@@ -60,17 +60,17 @@
                                 "BeforeMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text": "{{i18n:Movies.Hector.BraveLittleSapling.1}}",
+                                    "Text": "{{i18n:Movies.Hector.NaturalWonders.1}}",
                                 },
                                 "DuringMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text": "{{i18n:Movies.Hector.BraveLittleSapling.2}}",
+                                    "Text": "{{i18n:Movies.Hector.NaturalWonders.2}}",
                                 },
                                 "AfterMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text": "{{i18n:Movies.Hector.BraveLittleSapling.3}}",
+                                    "Text": "{{i18n:Movies.Hector.NaturalWonders.3}}",
                                 }
                             },
                             "ID": "reaction_1"

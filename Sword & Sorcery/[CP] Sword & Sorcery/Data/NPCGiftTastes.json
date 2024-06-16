@@ -29,7 +29,15 @@
             "Action": "EditData",
             "Target": "Data/NPCGiftTastes",
             "Entries": {
-                "Roslin": "{{i18n:Gifts.Roslin.GiftReaction.Love}}/768 769/{{i18n:Gifts.Roslin.GiftReaction.Like}}/807 308 74 446-2/{{i18n:Gifts.Roslin.GiftReaction.Dislike}}/-79 -81 -75/{{i18n:Gifts.Roslin.GiftReaction.Hate}}/-81 -24/{{i18n:Gifts.Roslin.GiftReaction.Neutral}}/373 797 279/"
+                "Roslin": "{{i18n:Gifts.Roslin.GiftReaction.Love}}/768 769/{{i18n:Gifts.Roslin.GiftReaction.Like}}/807 308 74 446 -2/{{i18n:Gifts.Roslin.GiftReaction.Dislike}}/-79 -81 -75/{{i18n:Gifts.Roslin.GiftReaction.Hate}}/-81 -24/{{i18n:Gifts.Roslin.GiftReaction.Neutral}}/373 797 279/"
+            }
+        },
+        {
+            "LogName": "Dandelion's Gift Tastes",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "Dandelion": "{{i18n:Gifts.Dandelion.GiftReaction.Love}}/22 268 614/{{i18n:Gifts.Dandelion.GiftReaction.Like}}/421 426 430 348/{{i18n:Gifts.Dandelion.GiftReaction.Dislike}}/-20/{{i18n:Gifts.Dandelion.GiftReaction.Hate}}/769/{{i18n:Gifts.Dandelion.GiftReaction.Neutral}}/-4 -2/"
             }
         },
     ]

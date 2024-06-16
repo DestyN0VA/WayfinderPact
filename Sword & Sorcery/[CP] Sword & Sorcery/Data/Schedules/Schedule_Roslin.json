@@ -1,98 +1,74 @@
-{ 
-	"Changes":
-	[		
-
+{
+	"Changes": [
 		{
-		"LogName":"Roslin's Schedule - Not Unlocked",
-		"Action":"EditData",
-		"Target":"Characters/Schedules/Roslin",
-		"Entries":
-		{
-			// Prior to Roslin being unlocked.
-			"spring": "0 EastScarp_TNPCWaitingWarpRoom 13 5 2/1200 EastScarp_TNPCWaitingWarpRoom 13 6 2/1800 EastScarp_TNPCWaitingWarpRoom 13 5 2",
-	
-		},
-			"When": { "HasSeenEvent |contains=SnS.Ch3.Roslin.1": false }			
-		},
-
-		{
-		"LogName":"Roslin's Schedule - Unlocked",
-		"Action":"EditData",
-		"Target":"Characters/Schedules/Roslin",
-		"Entries":
-		{
-			// Prior to Roslin reuniting with Dandelion.
-			"rain": "{{Random:0 EastScarp_CoastalGuild 10 15 1 Roslin_sidemagic++0 EastScarp_CoastalGuild 18 13 2 Roslin_frontmagic++0 EastScarp_CoastalGuild 11 12 2 Roslin_fidget++0 EastScarp_CoastalGuild 7 11 2 Roslin_fidget2++0 EastScarp_LionsMane 29 30 2 Roslin_frontmagic++0 EastScarp_LionsMane 18 31 1 Roslin_sidemagic++0 EastScarp_LionsMane 33 32 2 Roslin_fidget++0 EastScarp_LionsMane 33 28 2 Roslin_fidget2++0 EastScarp_DruidTower 8 26 1 Roslin_sidemagic++0 EastScarp_DruidTower 11 16 2 Roslin_frontmagic++0 EastScarp_DruidTower 9 8 2 Roslin_fidget++0 EastScarp_DruidTower 4 14 2 Roslin_fidget2|inputSeparator=++}}/{{Random:1400 EastScarp_CoastalGuild 10 15 1 Roslin_sidemagic++1400 EastScarp_CoastalGuild 18 13 2 Roslin_frontmagic++1400 EastScarp_CoastalGuild 11 12 2 Roslin_fidget++1400 EastScarp_CoastalGuild 7 11 2 Roslin_fidget2++1400 EastScarp_LionsMane 29 30 2 Roslin_frontmagic++1400 EastScarp_LionsMane 18 31 1 Roslin_sidemagic++1400 EastScarp_LionsMane 33 32 2 Roslin_fidget++1400 EastScarp_LionsMane 33 28 2 Roslin_fidget2++1400 EastScarp_DruidTower 8 26 1 Roslin_sidemagic++1400 EastScarp_DruidTower 11 16 2 Roslin_frontmagic++1400 EastScarp_DruidTower 9 8 2 Roslin_fidget++1400 EastScarp_DruidTower 4 14 2 Roslin_fidget2|inputSeparator=++}}/2200 EastScarp_LionsMane 12 15 1",
-			"spring": "{{Random:0 EastScarp_CoastalGuild 10 15 1 Roslin_sidemagic++0 EastScarp_CoastalGuild 18 13 2 Roslin_frontmagic++0 EastScarp_CoastalGuild 11 12 2 Roslin_fidget++0 EastScarp_CoastalGuild 7 11 2 Roslin_fidget2++0 EastScarp_LionsMane 29 30 2 Roslin_frontmagic++0 EastScarp_LionsMane 18 31 1 Roslin_sidemagic++0 EastScarp_LionsMane 33 32 2 Roslin_fidget++0 EastScarp_LionsMane 33 28 2 Roslin_fidget2++0 EastScarp_DruidTower 8 26 1 Roslin_sidemagic++0 EastScarp_DruidTower 11 16 2 Roslin_frontmagic++0 EastScarp_DruidTower 9 8 2 Roslin_fidget++0 EastScarp_DruidTower 4 14 2 Roslin_fidget2|inputSeparator=++}}/{{Random:1400 EastScarp_CoastalGuild 10 15 1 Roslin_sidemagic++1400 EastScarp_CoastalGuild 18 13 2 Roslin_frontmagic++1400 EastScarp_CoastalGuild 11 12 2 Roslin_fidget++1400 EastScarp_CoastalGuild 7 11 2 Roslin_fidget2++1400 EastScarp_LionsMane 29 30 2 Roslin_frontmagic++1400 EastScarp_LionsMane 18 31 1 Roslin_sidemagic++1400 EastScarp_LionsMane 33 32 2 Roslin_fidget++1400 EastScarp_LionsMane 33 28 2 Roslin_fidget2++1400 EastScarp_DruidTower 8 26 1 Roslin_sidemagic++1400 EastScarp_DruidTower 11 16 2 Roslin_frontmagic++1400 EastScarp_DruidTower 9 8 2 Roslin_fidget++1400 EastScarp_DruidTower 4 14 2 Roslin_fidget2|inputSeparator=++}}/2200 EastScarp_LionsMane 12 15 1",
-		},
-			"When": { "HasSeenEvent |contains=SnS.Ch4.Roslin.1": true }	
-		},
-		/*
-		{
-			"LogName": "Roslin's Schedule - Unlocked (Lion's Mane)",
+			"LogName": "Roslin's Schedule - Not Unlocked",
 			"Action": "EditData",
 			"Target": "Characters/Schedules/Roslin",
 			"Entries": {
-				// After moving into the Lion's Mane.
-				"rain": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1500 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1800 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
-				"spring": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1500 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1800 EastScarp_Village 26 61 {{Random:Roslin_keyar++Roslin_sing++Roslin_wiggleidle|inputSeparator=++}}/2000 EastScarp_Village 54 6 3/2200 EastScarp_LionsMane 18 5 1",
-				"spring_Sat": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1500 EastScarp_CoastalGuild {{Random:8 13 3++15 12 0++26 15 3|inputSeparator=++}}/1800 EastScarp_Village 26 61 {{Random:Roslin_keyar++Roslin_sing++Roslin_wiggleidle|inputSeparator=++}}/2000 EastScarp_Village 54 6 3/2200 EastScarp_LionsMane 18 5 1",
-				"spring_Sun": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1500 EastScarp_CoastalGuild {{Random:8 13 3++15 12 0++26 15 3|inputSeparator=++}}/1800 EastScarp_Village 26 61 {{Random:Roslin_keyar++Roslin_sing++Roslin_wiggleidle|inputSeparator=++}}/2000 EastScarp_Village 54 6 3/2200 EastScarp_LionsMane 18 5 1",
-				"fall_Tue": "0 Mountain 65 14 2/610 65 14 2 Roslin_keytar/1300 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1500 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1800 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
-				"fall_Thu": "0 Mountain 65 14 2/610 65 14 2 Roslin_keytar/1300 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1500 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1800 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
+				// Prior to Roslin being unlocked.
+				"spring": "0 EastScarp_TNPCWaitingWarpRoom 13 5 2/1200 EastScarp_TNPCWaitingWarpRoom 13 6 2/1800 EastScarp_TNPCWaitingWarpRoom 13 5 2",
 			},
-			"When": {"HasSeenEvent |contains=SnS.Ch4.Roslin.1": true, "HasSeenEvent |contains=SnS.Ch4.Roslin.13": true}
-		},
-
-		{
-		"LogName":"Roslin's Schedule - Night Market ",
-		"Action":"EditData",
-		"Target":"Characters/Schedules/Roslin",
-		"Entries":
-			{
-			// Roslin will attend the Night Market.
-			"winter_15": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1300 Beach 66 25 2 Roslin_wiggleidle/2200 EastScarp_LionsMane 18 5 1",
-			"winter_16": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1300 Beach 66 25 2 Roslin_wiggleidle/2200 EastScarp_LionsMane 18 5 1",
-			"winter_17": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1300 Beach 66 25 2 Roslin_wiggleidle/2200 EastScarp_LionsMane 18 5 1",
-			},
-				"When": {"HasSeenEvent |contains=SnS.Ch3.Roslin.13": true }		
-		},
-
-		{
-		"LogName":"Roslin's Schedule - SVE Community Day",
-		"Action":"EditData",
-		"Target":"Characters/Schedules/Roslin",
-		"Entries":
-			{
-			// Will attend Community Day if Stardew Valley Expanded is installed.
-			"spring_22": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/800 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1030 CommunityCenter 8 7 3/1700 EastScarp_LionsMane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
-			"summer_22": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/800 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1030 CommunityCenter 8 7 3/1700 EastScarp_LionsMane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
-			"fall_22": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/800 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1030 CommunityCenter 8 7 3/1700 EastScarp_LionsMane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
-			"winter_22": "0 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/800 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1030 CommunityCenter 8 7 3/1700 EastScarp_LionsMane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/2200 EastScarp_LionsMane 18 5 1",
-			},
-				"When": {"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true, "HasSeenEvent |contains=SnS.Ch3.Roslin.13": true}			
-		},
-
-		{
-			"LogName": "Roslin's Schedule - Marriage",
-			"Action": "EditData",
-			"Target": "Characters/Schedules/Roslin",
-			"Entries": {
-				// For when Roslin is married.
-				"marriage_Mon": "800 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1700 BusStop -1 23 3",
-				"marriage_Wed": "800 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1700 BusStop -1 23 3",
-				"marriage_Fri": "800 EastScarp_Lionsmane {{Random:21 26 2 Roslin_wiggleidle++32 24 2 Roslin_sing++21 16 0++30 13 3++33 6 3 Roslin_sidesit|inputSeparator=++}}/1700 BusStop -1 23 3",
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch3.Roslin.1": false
 			}
-		}
-		*/
-
-		
-
+		},
+		{
+			"LogName": "Roslin's Schedule - Unlocked",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Roslin",
+			"Entries": {
+				// Prior to Roslin reuniting with Dandelion.
+				"rain": "{{Random:0 EastScarp_CoastalGuild 10 15 1 Roslin_sidemagic++0 EastScarp_CoastalGuild 18 13 2 Roslin_frontmagic++0 EastScarp_CoastalGuild 11 12 2 Roslin_fidget++0 EastScarp_CoastalGuild 7 11 2 Roslin_fidget2++0 EastScarp_LionsMane 29 30 2 Roslin_frontmagic++0 EastScarp_LionsMane 18 31 1 Roslin_sidemagic++0 EastScarp_LionsMane 33 32 2 Roslin_fidget++0 EastScarp_LionsMane 33 28 2 Roslin_fidget2++0 EastScarp_DruidTower 8 26 1 Roslin_sidemagic++0 EastScarp_DruidTower 11 16 2 Roslin_frontmagic++0 EastScarp_DruidTower 9 8 2 Roslin_fidget++0 EastScarp_DruidTower 4 14 2 Roslin_fidget2|inputSeparator=++}}/{{Random:1400 EastScarp_CoastalGuild 10 15 1 Roslin_sidemagic++1400 EastScarp_CoastalGuild 18 13 2 Roslin_frontmagic++1400 EastScarp_CoastalGuild 11 12 2 Roslin_fidget++1400 EastScarp_CoastalGuild 7 11 2 Roslin_fidget2++1400 EastScarp_LionsMane 29 30 2 Roslin_frontmagic++1400 EastScarp_LionsMane 18 31 1 Roslin_sidemagic++1400 EastScarp_LionsMane 33 32 2 Roslin_fidget++1400 EastScarp_LionsMane 33 28 2 Roslin_fidget2++1400 EastScarp_DruidTower 8 26 1 Roslin_sidemagic++1400 EastScarp_DruidTower 11 16 2 Roslin_frontmagic++1400 EastScarp_DruidTower 9 8 2 Roslin_fidget++1400 EastScarp_DruidTower 4 14 2 Roslin_fidget2|inputSeparator=++}}/2200 EastScarp_LionsMane 5 5 3",
+				"spring": "{{Random:0 EastScarp_CoastalGuild 10 15 1 Roslin_sidemagic++0 EastScarp_CoastalGuild 18 13 2 Roslin_frontmagic++0 EastScarp_CoastalGuild 11 12 2 Roslin_fidget++0 EastScarp_CoastalGuild 7 11 2 Roslin_fidget2++0 EastScarp_LionsMane 29 30 2 Roslin_frontmagic++0 EastScarp_LionsMane 18 31 1 Roslin_sidemagic++0 EastScarp_LionsMane 33 32 2 Roslin_fidget++0 EastScarp_LionsMane 33 28 2 Roslin_fidget2++0 EastScarp_DruidTower 8 26 1 Roslin_sidemagic++0 EastScarp_DruidTower 11 16 2 Roslin_frontmagic++0 EastScarp_DruidTower 9 8 2 Roslin_fidget++0 EastScarp_DruidTower 4 14 2 Roslin_fidget2|inputSeparator=++}}/{{Random:1400 EastScarp_CoastalGuild 10 15 1 Roslin_sidemagic++1400 EastScarp_CoastalGuild 18 13 2 Roslin_frontmagic++1400 EastScarp_CoastalGuild 11 12 2 Roslin_fidget++1400 EastScarp_CoastalGuild 7 11 2 Roslin_fidget2++1400 EastScarp_LionsMane 29 30 2 Roslin_frontmagic++1400 EastScarp_LionsMane 18 31 1 Roslin_sidemagic++1400 EastScarp_LionsMane 33 32 2 Roslin_fidget++1400 EastScarp_LionsMane 33 28 2 Roslin_fidget2++1400 EastScarp_DruidTower 8 26 1 Roslin_sidemagic++1400 EastScarp_DruidTower 11 16 2 Roslin_frontmagic++1400 EastScarp_DruidTower 9 8 2 Roslin_fidget++1400 EastScarp_DruidTower 4 14 2 Roslin_fidget2|inputSeparator=++}}/2200 EastScarp_LionsMane 5 5 3",
+			},
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.1": true
+			}
+		},
+		{
+			"LogName": "Roslin's Schedule - Reunited w/ Dandelion",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Roslin",
+			"Entries": {
+				// After Roslin reunites with Dandelion.
+				"rain": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1100 EastScarp_LionsMane 11 16 3/1300 EastScarp_VillageInn 12 31 2/{{Random:1800 EastScarp_LionsMane 10 6 0++1800 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++1800 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/2200 EastScarp_LionsMane 5 5 3",
+				"spring": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1100 EastScarp_LionsMane 11 16 3/1300 EastScarp_Village 67 76 2 Roslin_fidget/1600 EastScarp_VillageInn 12 31 2/{{Random:1800 EastScarp_LionsMane 10 6 0++1800 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++1800 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/2200 EastScarp_LionsMane 5 5 3",
+			},
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.1": true,
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
+			}
+		},
+		{
+			"LogName": "Roslin's Schedule - Night Market ",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Roslin",
+			"Entries": {
+				// Roslin will attend the Night Market.
+				"winter_15": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1300 Beach 86 31 3/2200 EastScarp_LionsMane 5 5 3",
+				"winter_16": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1300 Beach 86 31 3/2200 EastScarp_LionsMane 5 5 3",
+				"winter_17": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1300 Beach 86 31 3/2200 EastScarp_LionsMane 5 5 3",
+			},
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
+			}
+		},
+		{
+			"LogName": "Roslin's Schedule - SVE Community Day",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Roslin",
+			"Entries": {
+				// Will attend Community Day if Stardew Valley Expanded is installed.
+				"spring_22": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1030 CommunityCenter 14 24 1/{{Random:1800 EastScarp_LionsMane 10 6 0++1800 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++1800 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/2200 EastScarp_LionsMane 5 5 3",
+				"summer_22": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1030 CommunityCenter 14 24 1/{{Random:1800 EastScarp_LionsMane 10 6 0++1800 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++1800 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/2200 EastScarp_LionsMane 5 5 3",
+				"fall_22": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1030 CommunityCenter 14 24 1/{{Random:1800 EastScarp_LionsMane 10 6 0++1800 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++1800 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/2200 EastScarp_LionsMane 5 5 3",
+				"winter_22": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1030 CommunityCenter 14 24 1/{{Random:1800 EastScarp_LionsMane 10 6 0++1800 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++1800 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/2200 EastScarp_LionsMane 5 5 3",
+			},
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
+			}
+		},
 	]
 }
-
 //(0 = up, 1 = right, 2 = down, 3 = left)
-
-
-
-

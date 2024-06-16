@@ -1,6 +1,5 @@
 {
     "Changes": [
-
         // MATEO
         {
             "LogName": "Animation Descriptions",
@@ -15,7 +14,6 @@
                 "Mateo_violin": "44/44 44 44 44 44 44 45 45 45 45 45 45 45 45/44"
             }
         },
-
         // HECTOR 
         {
             "LogName": "Animation Descriptions",
@@ -31,7 +29,6 @@
                 "Hector_loaf": "19/19 19/19",
             }
         },
-
         // CIRRUS
         {
             "LogName": "Animation Descriptions",
@@ -46,8 +43,7 @@
                 "Cirrus_wiggleidle": "0/45 45 46 46 47 47 48 48 47 47 46 46 45 45/0",
                 "Cirrus_sideidle": "4/49 49 50 50 51 51 52 52 51 51 50 50 49 49/4",
             }
-        },       
-        
+        },
         // ROSLIN 
         {
             "LogName": "Animation Descriptions",
@@ -59,6 +55,20 @@
                 "Roslin_fidget": "33/33 34 34 34 34 33/33",
                 "Roslin_fidget2": "38/38 39 39 39 39 38/38",
             }
-        },   
+        },
+        // DANDELION
+        {
+            "LogName": "Animation Descriptions",
+            "Action": "EditData",
+            "Target": "Data/animationDescriptions",
+            "entries": {
+                "Dandelion_readleft": "16/16 16 16 16 16 16 17 17 17 17 17 17 17 17/16",
+                "Dandelion_readright": "18/18 18 18 18 18 18 19 19 19 19 19 19 19 19/18",
+                "Dandelion_readfront": "20/20 20 20 20 20 20 20 21 21 21 21 21 21 21/20",
+                "Dandelion_loaf": "16/16 16/16",
+                "Dandelion_stim": "23/23 24 24 25 25 26 26 27 27 28 28 29 29 30 30 31 31 23/23",
+                "Dandelion_workout": "40/40 41 41 42 42 43 43 44 44 40/40",
+            }
+        },
     ]
 }

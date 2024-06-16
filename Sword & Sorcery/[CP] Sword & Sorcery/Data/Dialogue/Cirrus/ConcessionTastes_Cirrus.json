@@ -62,17 +62,17 @@
                                 "BeforeMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text": "{{i18n:Movies.Cirrus.BraveLittleSapling.1}}",
+                                    "Text": "{{i18n:Movies.Cirrus.NaturalWonders.1}}",
                                 },
                                 "DuringMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text": "{{i18n:Movies.Cirrus.BraveLittleSapling.2}}",
+                                    "Text": "{{i18n:Movies.Cirrus.NaturalWonders.2}}",
                                 },
                                 "AfterMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Cirrus.BraveLittleSapling.3}}",
+                                    "Text":"{{i18n:Movies.Cirrus.NaturalWonders.3}}",
                                 }
                             },
                             "ID": "reaction_1"

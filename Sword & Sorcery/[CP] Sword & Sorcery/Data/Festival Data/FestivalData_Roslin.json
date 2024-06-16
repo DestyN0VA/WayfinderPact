@@ -33,7 +33,7 @@
                 },
 			],
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch3.Roslin.1": true,
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true,
 			  },	  
         },
 	
@@ -71,7 +71,7 @@
                 },
             ],
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch3.Roslin.1": true,
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true,
 			  },  
         },
 
@@ -115,7 +115,7 @@
 				}
 			],
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch3.Roslin.1": true,
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true,
 			  },
 		},
 
@@ -140,7 +140,7 @@
 				},
 			],
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch3.Roslin.1": true,
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true,
 
 			  },
 		},
@@ -165,7 +165,7 @@
 				},
 			],
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch3.Roslin.1": true,
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true,
 			  },
 		},
 
@@ -189,7 +189,7 @@
 				},
 				],
 				"When": {
-					"HasSeenEvent |contains=SnS.Ch3.Roslin.1": true,
+					"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true,
 				  },
 		},
 
@@ -225,7 +225,7 @@
 				},
 			],
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch3.Roslin.1": true,
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true,
 			  },
 		},
 
@@ -249,7 +249,7 @@
 				},
 			],
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch3.Roslin.1": true,
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true,
 			  },
         },
 
@@ -286,7 +286,7 @@
 				],
 				"When": {
 					"HasMod |contains=Rafseazz.RSVCP": true,
-					"HasSeenEvent |contains=SnS.Ch3.Roslin.1": true,
+					"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true,
 				  },
 		},
 
@@ -324,7 +324,7 @@
 		 	],
 				"When": {
 					"HasMod |contains=Rafseazz.RSVCP": true,
-					"HasSeenEvent |contains=SnS.Ch3.Roslin.1": true,
+					"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true,
 				  },
 		},
 

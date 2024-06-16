@@ -1,5 +1,6 @@
 {
   "Changes": [
+// FOOD 
     {
       "Action": "EditData",
       "Target": "Data/Objects",
@@ -504,9 +505,369 @@
         },
       },
     },
+//POTIONS
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_verdantpotion": {
+      "Name": "Verdant Potion",
+      "DisplayName": "{{i18n: food.verdantpotion.name}}",
+      "Description": "{{i18n: food.verdantpotion.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Price": 2500,
+      "Edibility": 10,
+      "IsDrink": false,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 1000,
+          "CustomAttributes": {
+            "FarmingLevel": 0,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 0,
+            "ForagingLevel": 5,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 55
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_scarletpotion": {
+      "Name": "Scarlet Potion",
+      "DisplayName": "{{i18n: food.scarletpotion.name}}",
+      "Description": "{{i18n: food.scarletpotion.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Price": 2500,
+      "Edibility": 10,
+      "IsDrink": false,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 1000,
+          "CustomAttributes": {
+            "FarmingLevel": 0,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 0,
+            "ForagingLevel": 0,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 5,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 56
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_heatherpotion": {
+      "Name": "Heather Potion",
+      "DisplayName": "{{i18n: food.heatherpotion.name}}",
+      "Description": "{{i18n: food.heatherpotion.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Price": 2500,
+      "Edibility": 10,
+      "IsDrink": false,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 1000,
+          "CustomAttributes": {
+            "FarmingLevel": 0,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 0,
+            "ForagingLevel": 0,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 5,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 57
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_zydratepotion": {
+      "Name": "Zydrate",
+      "DisplayName": "{{i18n: food.zydratepotion.name}}",
+      "Description": "{{i18n: food.zydratepotion.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Price": 2500,
+      "Edibility": 10,
+      "IsDrink": false,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 1000,
+          "CustomAttributes": {
+            "FarmingLevel": 0,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 0,
+            "ForagingLevel": 0,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 3,
+            "Defense": 3,
+            "Attack": 3,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 58
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_pistachiopotion": {
+      "Name": "Pistachio Potion",
+      "DisplayName": "{{i18n: food.pistachiopotion.name}}",
+      "Description": "{{i18n: food.pistachiopotion.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Price": 2500,
+      "Edibility": 10,
+      "IsDrink": false,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 1000,
+          "CustomAttributes": {
+            "FarmingLevel": 5,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 0,
+            "ForagingLevel": 0,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 59
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_dahliapotion": {
+      "Name": "Dahlia Potion",
+      "DisplayName": "{{i18n: food.dahliapotion.name}}",
+      "Description": "{{i18n: food.dahliapotion.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Price": 2500,
+      "Edibility": 10,
+      "IsDrink": false,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 1000,
+          "CustomAttributes": {
+            "FarmingLevel": 1,
+            "FishingLevel": 1,
+            "MiningLevel": 1,
+            "LuckLevel": 0,
+            "ForagingLevel": 0,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 60
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_slushiepotion": {
+      "Name": "Slushie Potion",
+      "DisplayName": "{{i18n: food.slushiepotion.name}}",
+      "Description": "{{i18n: food.slushiepotion.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Price": 2500,
+      "Edibility": 10,
+      "IsDrink": false,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 1000,
+          "CustomAttributes": {
+            "FarmingLevel": 0,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 0,
+            "ForagingLevel": 0,
+            "MaxStamina": 10,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 61
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_matrixpotion": {
+      "Name": "Slushie Potion",
+      "DisplayName": "{{i18n: food.matrixpotion.name}}",
+      "Description": "{{i18n: food.matrixpotion.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Price": 2500,
+      "Edibility": 10,
+      "IsDrink": false,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 1000,
+          "CustomAttributes": {
+            "FarmingLevel": 0,
+            "FishingLevel": 0,
+            "MiningLevel": 5,
+            "LuckLevel": 0,
+            "ForagingLevel": 0,
+            "MaxStamina": 0,
+            "MagneticRadius": 3,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 62
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_mcdougalpotion": {
+      "Name": "McDougal Potion",
+      "DisplayName": "{{i18n: food.mcdougalpotion.name}}",
+      "Description": "{{i18n: food.mcdougalpotion.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Price": 2500,
+      "Edibility": 10,
+      "IsDrink": false,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 1000,
+          "CustomAttributes": {
+            "FarmingLevel": 0,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 5,
+            "ForagingLevel": 0,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 63
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_toirneachpotion": {
+      "Name": "Toirneach Potion",
+      "DisplayName": "{{i18n: food.toirneachpotion.name}}",
+      "Description": "{{i18n: food.toirneachpotion.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Price": 2500,
+      "Edibility": 10,
+      "IsDrink": false,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 1000,
+          "CustomAttributes": {
+            "FarmingLevel": 0,
+            "FishingLevel": 0,
+            "MiningLevel": 4,
+            "LuckLevel": 0,
+            "ForagingLevel": 0,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 4,
+            "Attack": 4,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 64
+    },
+  },
+},
 
 // CRAFTING RECIPES 
-
 {
   "Action": "EditData",
   "Target": "Data/CookingRecipes",
@@ -536,6 +897,104 @@
 
   "{{ModID}}_zuzustyleclamchowder": "372 1 256 1 192 1/what is this for?/{{ModID}}_zuzustyleclamchowder 1/e SnS.Ch3.Cirrus.5/{{i18n:food.crafting.zuzustyleclamchowder}}",
   
+  }
+},
+
+// CUSTOM POTION CATEGORY 
+{
+  "Action": "EditData",
+  "Target": "spacechase0.SpaceCore/ObjectExtensionData",
+  "Entries": {
+    "{{ModID}}_verdantpotion": {
+      "CategoryTextOverride": "Potion",
+      "CategoryColorOverride": {
+        "R": 188,
+        "G": 13,
+        "B": 3,
+        "A": 255
+      },
+    },
+    "{{ModID}}_scarletpotion": {
+      "CategoryTextOverride": "Potion",
+      "CategoryColorOverride": {
+        "R": 188,
+        "G": 13,
+        "B": 3,
+        "A": 255
+      },
+    },
+    "{{ModID}}_heatherpotion": {
+      "CategoryTextOverride": "Potion",
+      "CategoryColorOverride": {
+        "R": 188,
+        "G": 13,
+        "B": 3,
+        "A": 255
+      },
+    },
+    "{{ModID}}_zydratepotion": {
+      "CategoryTextOverride": "Potion",
+      "CategoryColorOverride": {
+        "R": 188,
+        "G": 13,
+        "B": 3,
+        "A": 255
+      },
+    },
+    "{{ModID}}_pistachiopotion": {
+      "CategoryTextOverride": "Potion",
+      "CategoryColorOverride": {
+        "R": 188,
+        "G": 13,
+        "B": 3,
+        "A": 255
+      },
+    },
+    "{{ModID}}_dahliapotion": {
+      "CategoryTextOverride": "Potion",
+      "CategoryColorOverride": {
+        "R": 188,
+        "G": 13,
+        "B": 3,
+        "A": 255
+      },
+    },
+    "{{ModID}}_slushiepotion": {
+      "CategoryTextOverride": "Potion",
+      "CategoryColorOverride": {
+        "R": 188,
+        "G": 13,
+        "B": 3,
+        "A": 255
+      },
+    },
+    "{{ModID}}_matrixpotion": {
+      "CategoryTextOverride": "Potion",
+      "CategoryColorOverride": {
+        "R": 188,
+        "G": 13,
+        "B": 3,
+        "A": 255
+      },
+    },
+    "{{ModID}}_mcdougalpotion": {
+      "CategoryTextOverride": "Potion",
+      "CategoryColorOverride": {
+        "R": 188,
+        "G": 13,
+        "B": 3,
+        "A": 255
+      },
+    },
+    "{{ModID}}_toirneachpotion": {
+      "CategoryTextOverride": "Potion",
+      "CategoryColorOverride": {
+        "R": 188,
+        "G": 13,
+        "B": 3,
+        "A": 255
+      },
+    },
   }
 },
     ]

@@ -8,9 +8,6 @@
         "AcceptGift_(O)StardropTea": "{{i18n:Gifts.Dandelion.GiftReaction.StardropTea}}",
         // FISH
         "AcceptGift_category_fish": "{{i18n:Gifts.Dandelion.GiftReaction.CategoryFish}}",
-        "AcceptGift_(O)397": "{{i18n:Gifts.Dandelion.GiftReaction.SeaUrchin}}",
-        "AcceptGift_(O)717": "{{i18n:Gifts.Dandelion.GiftReaction.Crab}}",
-        "AcceptGift_(O)732": "{{i18n:Gifts.Dandelion.GiftReaction.CrabCakes}}",
         // ARTISANAL GOODS
         "AcceptGift_category_artisan_goods": "{{i18n:Gifts.Dandelion.GiftReaction.CategoryArtisanalGoods}}",
         // TRASH
@@ -19,34 +16,16 @@
         "AcceptGiftCategory_minerals": "{{i18n:Gifts.Dandelion.GiftReaction.CategoryGemsMinerals}}",
         // LOVES
         "AcceptGift_(O)74": "{{i18n:Gifts.Dandelion.GiftReaction.PrismaticShard}}",
+        "AcceptGift_(O)22": "{{i18n:Gifts.Dandelion.GiftReaction.Dandelion}}",
+        "AcceptGift_(O)268": "{{i18n:Gifts.Dandelion.GiftReaction.Starfruit}}",
         "AcceptGift_(O)614": "{{i18n:Gifts.Dandelion.GiftReaction.GreenTea}}",
-        "AcceptGift_(O)206": "{{i18n:Gifts.Dandelion.GiftReaction.Pizza}}",
-        "AcceptGift_(O)213": "{{i18n:Gifts.Dandelion.GiftReaction.SalmonDinner}}",
-        "AcceptGift_(O)214": "{{i18n:Gifts.Dandelion.GiftReaction.FishTaco}}",
-        "AcceptGift_(O)215": "{{i18n:Gifts.Dandelion.GiftReaction.CrispyBass}}",
-        "AcceptGift_(O){{ModID}}_zuzustylebagelwithlox": "{{i18n:Gifts.Dandelion.GiftReaction.zuzustylebagelwithlox}}",
-        "AcceptGift_(O){{ModID}}_zuzustylepizza": "{{i18n:Gifts.Dandelion.GiftReaction.ZuzuStylePizza}}",
-        "AcceptGift_(O){{ModID}}_zuzustylecheesecake": "{{i18n:Gifts.Dandelion.GiftReaction.ZuzuStyleCheesecake}}",
-        "AcceptGift_(O){{ModID}}_portfiredrakesparkler": "{{i18n:Gifts.Dandelion.GiftReaction.PortfireDrakeSparkler}}",
         // LIKES
-        "AcceptGift_(O)731": "{{i18n:Gifts.Dandelion.GiftReaction.MapleBar}}",
-        "AcceptGift_(O)225": "{{i18n:Gifts.Dandelion.GiftReaction.FriedEel}}",
-        "AcceptGift_(O)226": "{{i18n:Gifts.Dandelion.GiftReaction.SpicyEel}}",
-        "AcceptGift_(O)227": "{{i18n:Gifts.Dandelion.GiftReaction.Sashimi}}",
-        "AcceptGift_(O)228": "{{i18n:Gifts.Dandelion.GiftReaction.MakiRoll}}",
-        "AcceptGift_(O)219": "{{i18n:Gifts.Dandelion.GiftReaction.TroutSoup}}",
-        "AcceptGift_(O)167": "{{i18n:Gifts.Dandelion.GiftReaction.JojaCola}}",
-        // ALCOHOL 
-        "RejectItem_(O)346": "{{i18n:Gifts.Dandelion.GiftReaction.Beer}}",
-        "RejectItem_(O)303": "{{i18n:Gifts.Dandelion.GiftReaction.PaleAle}}",
-        "RejectItem_(O)348": "{{i18n:Gifts.Dandelion.GiftReaction.Wine}}",
-        "RejectItem_(O)304": "{{i18n:Gifts.Dandelion.GiftReaction.Hops}}",
-        "RejectItem_(O)459": "{{i18n:Gifts.Dandelion.GiftReaction.Mead}}",
+        "AcceptGift_(O)348": "{{i18n:Gifts.Dandelion.GiftReaction.Wine}}",
+        "AcceptGift_(O)421": "{{i18n:Gifts.Dandelion.GiftReaction.Sunflower}}",
+        "AcceptGift_(O)426": "{{i18n:Gifts.Dandelion.GiftReaction.GoatCheese}}",
+        "AcceptGift_(O)430": "{{i18n:Gifts.Dandelion.GiftReaction.Truffle}}",
         // HATES 
-        "AcceptGift_(O)446": "{{i18n:Gifts.Dandelion.GiftReaction.RabbitsFoot}}",
-        "AcceptGift_(O)220": "{{i18n:Gifts.Dandelion.GiftReaction.ChocolateCake}}",
-        // ANCIENT CROPS
-        "AcceptGift_(O){{ModID}}_ancientwildfairyroses": "{{i18n:Gifts.Dandelion.GiftReaction.AncientRose}}",
+        "RejectItem_(O)769": "{{i18n:Gifts.Dandelion.GiftReject.VoidEssence}}",
         // ITEM REJECTIONS 
         "RejectItem_(O)458": "{{i18n:Gifts.Dandelion.GiftReject.Bouquet}}",
       }
@@ -55,28 +34,13 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Dandelion",
       "Entries": { // CUSTOM GIFT DIALOGUE - BIRTHDAY
-        "AcceptGift_(O)74": "{{i18n:Gifts.Dandelion.GiftReaction.PrismaticShard.Birthday}}",
-        "AcceptGift_(O)614": "{{i18n:Gifts.Dandelion.GiftReaction.GreenTea.Birthday}}",
-        "AcceptGift_(O)206": "{{i18n:Gifts.Dandelion.GiftReaction.Pizza.Birthday}}",
-        "AcceptGift_(O)213": "{{i18n:Gifts.Dandelion.GiftReaction.SalmonDinner.Birthday}}",
-        "AcceptGift_(O)214": "{{i18n:Gifts.Dandelion.GiftReaction.FishTaco.Birthday}}",
-        "AcceptGift_(O)215": "{{i18n:Gifts.Dandelion.GiftReaction.CrispyBass.Birthday}}",
-        "AcceptGift_(O){{ModID}}_zuzustylebagelwithlox": "{{i18n:Gifts.Dandelion.GiftReaction.zuzustylebagelwithlox.Birthday}}",
-        "AcceptGift_(O){{ModID}}_zuzustylepizza": "{{i18n:Gifts.Dandelion.GiftReaction.ZuzuStylePizza.Birthday}}",
+      "AcceptGift_(O)22": "{{i18n:Gifts.Dandelion.GiftReaction.Dandelion.Birthday}}",
+      "AcceptGift_(O)268": "{{i18n:Gifts.Dandelion.GiftReaction.Starfruit.Birthday}}",
+      "AcceptGift_(O)614": "{{i18n:Gifts.Dandelion.GiftReaction.GreenTea.Birthday}}",
       },
       "When": {
-        "Season": "winter",
-        "Day": "21"
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Dandelion",
-      "Entries": { // DATING COOLDOWN
-        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantCooldown}}",
-      },
-      "When": {
-        "HasConversationTopic |contains=DandelionMarriageCountdown": true
+        "Season": "summer",
+        "Day": "16"
       }
     },
   ]

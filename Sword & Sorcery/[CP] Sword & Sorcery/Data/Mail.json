@@ -57,6 +57,14 @@
                 "AetherQuest2":"{{i18n:Mail.Hector.Letter2}}"
             }
         },
+        {
+            "LogName": "Dandelion Greens Recipe",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "DandelionGreensThanks":"{{i18n:Mail.Dandelion.Letter1}}"
+            }
+        },
 
         // TRIGGER ACTIONS
         {
@@ -87,5 +95,20 @@
 				}
 			}
 		},
+        {
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"{{ModID}}_DandelionGreens": {
+					"Id": "{{ModID}}_DandelionGreens",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Roslin.6",
+					"Actions": [
+						"AddMail Current DandelionGreensThanks tomorrow",
+					]
+				}
+			}
+		},
+        
     ]
 }

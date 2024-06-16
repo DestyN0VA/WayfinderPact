@@ -4450,17 +4450,25 @@ ________      ________ _   _ _______ _____
   "Gifts.Dandelion.GiftReaction.CategoryGemsMinerals": "",
 
   // LOVES - PLATONIC
-  "Gifts.Dandelion.GiftReaction.EXAMPLE1": "",
+  "Gifts.Dandelion.GiftReaction.PrismaticShard": "",
+  "Gifts.Dandelion.GiftReaction.Dandelion": "",
+  "Gifts.Dandelion.GiftReaction.Starfruit": "",
+  "Gifts.Dandelion.GiftReaction.GreenTea": "",
 
   // LIKES
-  "Gifts.Dandelion.GiftReaction.EXAMPLE2": "",
+  "Gifts.Dandelion.GiftReaction.Wine": "",
+  "Gifts.Dandelion.GiftReaction.Sunflower": "",
+  "Gifts.Dandelion.GiftReaction.GoatCheese": "",
+  "Gifts.Dandelion.GiftReaction.Truffle": "",
 
   // BIRTHDAY - PLATONIC
-  "Gifts.Dandelion.GiftReaction.EXAMPLE.Birthday": "",
+  "Gifts.Dandelion.GiftReaction.Dandelion.Birthday": "",
+  "Gifts.Dandelion.GiftReaction.Starfruit.Birthday": "",
+  "Gifts.Dandelion.GiftReaction.GreenTea.Birthday": "",
 
   // ITEM REJECTIONS 
   "Gifts.Dandelion.GiftReject.Bouquet": "",
-  "Gifts.Dandelion.GiftReject.MermaidPendant": "",
+  "Gifts.Dandelion.GiftReject.VoidEssence": "",
 
 
   /*
@@ -4582,7 +4590,7 @@ ________      ________ _   _ _______ _____
                                
 */
 
-  "Mail.Dandelion.Letter1": "",
+  "Mail.Dandelion.Letter1": "Salutations, @!^^Thank you so terribly much for assisting Roslin. As a token of appreciation, here's a easy recipe I make for her often!^^Sincerely,^Dandelion.%item cookingRecipe DN.SnS_dandeliongreens%%[#]Dandelion Greens Recipe",
 
 
   /*
@@ -5317,6 +5325,42 @@ ________      ________ _   _ _______ _____
   "weapon.thondrondhammer.name": "Thondrond Hammer",
   "weapon.thondrondhammer.description": "Imposing and undelicate. It has an engraving on the hilt in a language you don't recognize.",
 
+  "weapon.spellbinder.name": "Spellbinder",
+  "weapon.spellbinder.description": "A particularly magic-inclined blade.", 
+
+  "weapon.threewishes.name": "Three Wishes", 
+  "weapon.threewishes.description": "You feel like you can accomplish anything while holding this.", 
+
+  "weapon.ladyluck.name": "Lady Luck", 
+  "weapon.ladyluck.description": "This weapon makes you feel like you'll have a great day.", 
+
+  "weapon.mrhandy.name": "Mr. Handy", 
+  "weapon.mrhandy.description": "This weapon would have a funny accent, if it could speak.", 
+
+  "weapon.bondofflame.name": "Bond of Flame", 
+  "weapon.bondofflame.description": "Fueled by brilliant, cackling fire.", 
+
+  "weapon.destinysembrace.name": "Destiny's Embrace", 
+  "weapon.destinysembrace.description": "A unique short-spear, appearing to be made of light.", 
+
+  "weapon.axewaquestion.name": "Axe You A Question", 
+  "weapon.axewaquestion.description": "The answer is violence.", 
+
+  "weapon.sweetmemories.name": "Sweet Memories", 
+  "weapon.sweetmemories.description": "A wand that radiates with comfortable nostalgia.",
+
+  "weapon.guardianbell.name": "Guardian Bell", 
+  "weapon.guardianbell.description": "When fighting someone with knowledge is the only appropriate response.", 
+
+  "weapon.absolem.name": "Absolem", 
+  "weapon.absolem.description": "A wonderous, trippy weapon grown from red mushrooms.", 
+
+  "weapon.mallymkun.name": "Mallymkun", 
+  "weapon.mallymkun.description": "A wonderous, trippy weapon grown from red mushrooms.",
+  
+  "weapon.chilisauce.name": "Chili Sauce", 
+  "weapon.chilisauce.description": "A joyous blade, named after a particularly heroic... sheep.",
+
   "magicitem.druidictotemfetish.name": "Druidic Totem Fetish",
   "magicitem.druidictotemfetish.description": "A delicate totem, carved from wood. Despite it's size, it has a hold over the weather...",
 
@@ -5325,6 +5369,27 @@ ________      ________ _   _ _______ _____
 
   "magicitem.druidiceldermask.name": "Mask of the Thorned Circle Elder",
   "magicitem.druidiceldermask.description": "It's a very heavy, uncomfortable mask made out of wood and copper. However, you feel more connected to the earth with it in your possession.",
+
+  "food.verdantpotion.name": "Verdant Potion",
+  "food.verdantpotion.description": "Tastes weirdly like the potion The Wizard gave you...",
+  "food.scarletpotion.name": "Scarlet Potion",
+  "food.scarletpotion.description": "Let the hate flow through you.",
+  "food.heatherpotion.name": "Heather Potion",
+  "food.heatherpotion.description": "Zoom, zoom, zoom!",
+  "food.zydratepotion.name": "Zydrate",
+  "food.zydratepotion.description": "Comes in a little glass vial.",
+  "food.pistachiopotion.name": "Pistachio Potion",
+  "food.pistachiopotion.description": "Helps you feel very inspired to get farmwork done!",
+  "food.dahliapotion.name": "Dahlia Potion",
+  "food.dahliapotion.description": "Almost as pretty in color as the flower it's made from.",
+  "food.slushiepotion.name": "Slushie Potion",
+  "food.slushiepotion.description": "Wow! All that sugar makes for great energy.",
+  "food.matrixpotion.name": "Matrix Potion",
+  "food.matrixpotion.description": "Perfect for a day in the mines.",
+  "food.mcdougalpotion.name": "McDougal Potion",
+  "food.mcdougalpotion.description": "The luckiest thing you'll ever drink.",
+  "food.toirneachpotion.name": "Toirneach Potion",
+  "food.toirneachpotion.description": "For those tricky combat scenarios.",
 
   "food.crafting.salishbourbon": "Salish Bourbon",
   "food.crafting.autumnalstew": "Autumnal Stew",
@@ -5406,6 +5471,8 @@ ________      ________ _   _ _______ _____
   "miscellaneous.CAGArtifactLedger.message": "Use the ledger to trade monster bones for artifacts & minerals.",
   "miscellaneous.LMCafe.message": "Welcome to the Lion's Mane Tavern, where heart meets stomach.",
   "miscellaneous.LMCafe.closedmessage": "The tavern will open up later for lunch service.",
+  "miscellaneous.LMArmory.message": "Welcome to the Lion's Mane Armory! You've got two hands; one for a sword, one for a potion!",
+  "miscellaneous.LMArmory.closedmessage": "The armory is only open in the afternoon.", 
 
   "miscellaneous.MermaidPendantCooldown": "%You haven't been dating very long - wait a while before you propose!",
   "miscellaneous.MermaidPendantFarmhouse": "%You haven't upgraded your farmhouse to marry someone!",

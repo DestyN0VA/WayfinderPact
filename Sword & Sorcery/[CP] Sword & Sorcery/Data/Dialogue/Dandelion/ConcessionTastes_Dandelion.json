@@ -7,17 +7,18 @@
                 "Dandelion": {
                     "Name": "Dandelion",
                     "likedTags": [
-                        "Fries",
                         "Star Cookie",
-                        "Stardrop Sorbet",
+                        "Truffle Popcorn",
+                        "Panzanella Salad",
+                        "Apple Slices",
                     ],
                     "LikedTags": [
-                        "Fatty",
-                        "Salty",
+                        "Healthy",
+                        "Gourmet",
                     ],
                     "DislikedTags": [
                         "Sour",
-                        "Gourmet"
+                        "Sweet"
                     
                     ]
                 }
@@ -32,7 +33,7 @@
                     "Reactions": [
                         {
                             "Tag": "spring_movie_0",
-                            "Response": "dislike",
+                            "Response": "love",
                             "Whitelist": [],
                             "SpecialResponses": {
                                 "BeforeMovie": {
@@ -56,23 +57,23 @@
                         },
                         {
                             "Tag": "spring_movie_1",
-                            "Response": "like",
+                            "Response": "love",
                             "Whitelist": [],
                             "SpecialResponses": {
                                 "BeforeMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text": "{{i18n:Movies.Dandelion.BraveLittleSapling.1}}",
+                                    "Text": "{{i18n:Movies.Dandelion.NaturalWonders.1}}",
                                 },
                                 "DuringMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text": "{{i18n:Movies.Dandelion.BraveLittleSapling.2}}",
+                                    "Text": "{{i18n:Movies.Dandelion.NaturalWonders.2}}",
                                 },
                                 "AfterMovie": {
                                     "ResponsePoint": null,
                                     "Script": null,
-                                    "Text":"{{i18n:Movies.Dandelion.BraveLittleSapling.3}}",
+                                    "Text":"{{i18n:Movies.Dandelion.NaturalWonders.3}}",
                                 }
                             },
                             "ID": "reaction_1"
@@ -102,7 +103,7 @@
                         },
                         {
                             "Tag": "summer_movie_1",
-                            "Response": "dislike",
+                            "Response": "love",
                             "Whitelist": [],
                             "SpecialResponses": {
                                 "BeforeMovie": {
@@ -172,7 +173,7 @@
                         },
                         {
                             "Tag": "winter_movie_0",
-                            "Response": "like",
+                            "Response": "love",
                             "Whitelist": [],
                             "SpecialResponses": {
                                 "BeforeMovie": {
@@ -195,7 +196,7 @@
                     },
                     {
                         "Tag": "winter_movie_1",
-                        "Response": "like",
+                        "Response": "love",
                         "Whitelist": [],
                         "SpecialResponses": {
                             "BeforeMovie": {
