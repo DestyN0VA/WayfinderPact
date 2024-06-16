@@ -11,7 +11,7 @@
 */
     // GENERIC POOL
     {
-      "LogName": "Roslin Dialogue - 0-4",
+      "LogName": "Roslin Dialogue: Pre-Dandelion",
       "Action": "EditData",
       "Target": "Characters/Dialogue/Roslin",
       "Entries": {
@@ -19,7 +19,7 @@
       }
     },
     {
-      "LogName": "Dialogue - 6-10",
+      "LogName": "Roslin Dialogue: Post-Dandelion",
       "Action": "EditData",
       "Target": "Characters/Dialogue/Roslin",
       "Entries": {
@@ -39,7 +39,7 @@
         "{{WeekDay}}": "{{i18n:Core.Roslin.{{Season}}.{{Random:{{Range: 1, 15}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Roslin_OverrideSeenToday received"
       },
       "When": {
-        "Query: {{Random: {{Range: 1, 10}}|key=CSO}} = 1": true,
+        "Query: {{Random: {{Range: 1, 5}}|key=CSO}} = 1": true,
         "HasFlag |contains=SnS_M_Roslin_OverrideSeenToday": false
       }
     },

@@ -3829,14 +3829,14 @@ ________      ________ _   _ _______ _____
   // PRE-DANDELION RETURNING
   "Core.Roslin.Generic.EarlyHeart.1": "How dare the birds sing, the sun rise, and the dogs run while I'm missing my Dandelion. The audacity.$13",
   "Core.Roslin.Generic.EarlyHeart.2": "Everything is made up of essence. Fire, earth, air, water - they are the foundation on which everything else stands on.$15#$b#Solar, void and druidic are a little more situational, but serve as building blocks just the same.$16",
-  "Core.Roslin.Generic.EarlyHeart.3": "",
-  "Core.Roslin.Generic.EarlyHeart.4": "",
-  "Core.Roslin.Generic.EarlyHeart.5": "",
-  "Core.Roslin.Generic.EarlyHeart.6": "",
-  "Core.Roslin.Generic.EarlyHeart.7": "",
-  "Core.Roslin.Generic.EarlyHeart.8": "",
-  "Core.Roslin.Generic.EarlyHeart.9": "",
-  "Core.Roslin.Generic.EarlyHeart.10": "",
+  "Core.Roslin.Generic.EarlyHeart.3": "I can't find it in myself to enjoy anything without Dandelion around. It's feels like no longer being able to see in color.$14",
+  "Core.Roslin.Generic.EarlyHeart.4": "Food no longer has a taste. If I had to describe it, it would be like... eating mashed potatoes every meal.$13#$b#Which, I can't say I even LIKE mashed potatoes anymore.$14",
+  "Core.Roslin.Generic.EarlyHeart.5": "What kind of sorcerer would I even be, if my protectection spell didn't take...$17#$b#I'd strip myself of all my titles, if this didn't work.$16",
+  "Core.Roslin.Generic.EarlyHeart.6": "Haven't had tea in a while. Dandelion always made it with breakfast.$13#$b#It's not that I can't, it's that I don't want to. Not without her.$14",
+  "Core.Roslin.Generic.EarlyHeart.7": "I've mainly been occupying my time with research. Just in case... well, Cirrus told me to stay positive.$2#$b#Spending time with her has been helping my mood. That I'll admit.$6",
+  "Core.Roslin.Generic.EarlyHeart.8": "Biróg is very wise - wiser than one would expect, on interacting. It's lovely to have magical discussions at length.$6#$b#Especially with someone lacking the condescending attitude of most magically-inclined folks.$7",
+  "Core.Roslin.Generic.EarlyHeart.9": "Mateo displays the leadership qualities of someone who's been in that role for quite a long time. I'm very impressed by them.$3#$b#Especially considering they're relatively new to all this. They have a bright future ahead of them.$1",
+  "Core.Roslin.Generic.EarlyHeart.10": "Lately, I have found myself trying to picture a future without Dandelion. I cannot.$8#$b#That means the only option is to get her back.$9",
   "Core.Roslin.Generic.EarlyHeart.11": "",
   "Core.Roslin.Generic.EarlyHeart.12": "",
   "Core.Roslin.Generic.EarlyHeart.13": "",
@@ -4178,7 +4178,7 @@ ________      ________ _   _ _______ _____
 
   "CT.Roslin.Example": "",
 
-  // Roslin' REACTIONS
+  // ROSLIN'S REACTIONS
   "CT.Roslin.SterlingDrugs": "",
   "CT.Roslin.SterlingRelapse": "",
   "CT.Roslin.SterlingApology": "",
