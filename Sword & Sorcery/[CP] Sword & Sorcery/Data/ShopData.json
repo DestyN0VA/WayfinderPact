@@ -690,14 +690,23 @@
               "AvailableStock": 1,
               "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
-              "Price": 1, //set the price for the rotating stock
+              "Price": 30000,
               "RandomItemId": [
                 "(W)DN.SnS_keytoscarp",
-                "(W)DN.SnS_twobecomeone",
                 "(W)DN.SnS_savethequeen",
-                "(W)DN.SnS_oathkeeper",
-                "(O)DN.SnS_oblivion",
                 "(W)DN.SnS_savetheking",
+              ],
+              "MaxItems": 1
+            },
+            {
+              "Id": "{{ModID}}_LMARandom",
+              "AvailableStock": 1,
+              "AvoidRepeat": true,
+              "AvailableStockLimit": "Player",
+              "Price": 60000,
+              "RandomItemId": [
+                "(W)DN.SnS_twobecomeone",
+                "(W)DN.SnS_oathkeeper",
                 "(W)DN.SnS_waytothedawn"
               ],
               "MaxItems": 1
@@ -706,110 +715,120 @@
               "Id": "{{ModId}}_LMA1",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
-              "ItemID": "(O)DN.SnS_verdantpotion"
+              "ItemID": "(O)DN.SnS_verdantpotion",
+              "Price": 2500
             },
             {
               "Id": "{{ModId}}_LMASet2",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
-              "ItemID": "(O)DN.SnS_scarletpotion"
+              "ItemID": "(O)DN.SnS_scarletpotion",
+              "Price": 2500
             },
             {
               "Id": "{{ModId}}_LMA3",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
-              "ItemID": "(O)DN.SnS_heatherpotion"
+              "ItemID": "(O)DN.SnS_heatherpotion",
+              "Price": 2500
             },
             {
               "Id": "{{ModId}}_LMA4",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
-              "ItemID": "(O)DN.SnS_zydratepotion"
+              "ItemID": "(O)DN.SnS_zydratepotion",
+              "Price": 2500
             },
             {
               "Id": "{{ModId}}_LMA5",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
-              "ItemID": "(O)DN.SnS_pistachiopotion"
+              "ItemID": "(O)DN.SnS_pistachiopotion",
+              "Price": 2500
             },
             {
               "Id": "{{ModId}}_LMA6",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
-              "ItemID": "(O)DN.SnS_dahliapotion"
+              "ItemID": "(O)DN.SnS_dahliapotion",
+              "Price": 2500
             },
             {
               "Id": "{{ModId}}_LMA7",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
-              "ItemID": "(O)DN.SnS_slushiepotion"
+              "ItemID": "(O)DN.SnS_slushiepotion",
+              "Price": 2500
             },
             {
               "Id": "{{ModId}}_LMA8",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
-              "ItemID": "(O)DN.SnS_matrixpotion"
+              "ItemID": "(O)DN.SnS_matrixpotion",
+              "Price": 2500
             },
             {
               "Id": "{{ModId}}_LMA9",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
-              "ItemID": "(O)DN.SnS_mcdougalpotion"
+              "ItemID": "(O)DN.SnS_mcdougalpotion",
+              "Price": 2500
             },
             {
               "Id": "{{ModId}}_LMA10",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
-              "ItemID": "(O)DN.SnS_toirneachpotion"
+              "ItemID": "(O)DN.SnS_toirneachpotion",
+              "Price": 2500
             },
             {
               "Id": "{{ModId}}_LMA11",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
               "ItemID": "(W)DN.SnS_spellbinder",
-              "Price": 1 //price has to be manually set for weapons
+              "Price": 15000
             },
             {
               "Id": "{{ModId}}_LMA12",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
               "ItemID": "(W)DN.SnS_threewishes",
-              "Price": 1 //price has to be manually set for weapons
+              "Price": 15000
             },
             {
               "Id": "{{ModId}}_LMA13",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
               "ItemID": "(W)DN.SnS_ladyluck",
-              "Price": 1 //price has to be manually set for weapons
+              "Price": 15000
             },
             {
               "Id": "{{ModId}}_LMA14",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
               "ItemID": "(W)DN.SnS_bondofflame",
-              "Price": 1 //price has to be manually set for weapons
+              "Price": 15000
             },
             {
               "Id": "{{ModId}}_LMA15",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
               "ItemID": "(W)DN.SnS_destinysembrace",
-              "Price": 1 //price has to be manually set for weapons
+              "Price": 15000
             },
             {
               "Id": "{{ModId}}_LMA16",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
               "ItemID": "(W)DN.SnS_sweetmemories",
-              "Price": 1 //price has to be manually set for weapons
+              "Price": 15000
             },
             {
               "Id": "{{ModId}}_LMA17",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
               "ItemID": "(W)DN.SnS_guardianbell",
-              "Price": 1 //price has to be manually set for weapons
+              "Price": 15000
             }
           ]
         }
