@@ -686,7 +686,7 @@
           ],
           "Items": [
             {
-              "Id": "{{ModID}}_LMARandom",
+              "Id": "{{ModID}}_LMARandom1",
               "AvailableStock": 1,
               "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
@@ -699,7 +699,7 @@
               "MaxItems": 1
             },
             {
-              "Id": "{{ModID}}_LMARandom",
+              "Id": "{{ModID}}_LMARandom2",
               "AvailableStock": 1,
               "AvoidRepeat": true,
               "AvailableStockLimit": "Player",

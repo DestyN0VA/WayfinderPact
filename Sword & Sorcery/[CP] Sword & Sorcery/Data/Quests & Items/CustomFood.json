@@ -518,7 +518,7 @@
       "Category": -7,
       "Price": 2500,
       "Edibility": 10,
-      "IsDrink": false,
+      "IsDrink": true,
       "ExcludeFromShippingCollection": true,
       "Buffs": [
         {
@@ -554,7 +554,7 @@
       "Category": -7,
       "Price": 2500,
       "Edibility": 10,
-      "IsDrink": false,
+      "IsDrink": true,
       "ExcludeFromShippingCollection": true,
       "Buffs": [
         {
@@ -590,7 +590,7 @@
       "Category": -7,
       "Price": 2500,
       "Edibility": 10,
-      "IsDrink": false,
+      "IsDrink": true,
       "ExcludeFromShippingCollection": true,
       "Buffs": [
         {
@@ -626,7 +626,7 @@
       "Category": -7,
       "Price": 2500,
       "Edibility": 10,
-      "IsDrink": false,
+      "IsDrink": true,
       "ExcludeFromShippingCollection": true,
       "Buffs": [
         {
@@ -662,7 +662,7 @@
       "Category": -7,
       "Price": 2500,
       "Edibility": 10,
-      "IsDrink": false,
+      "IsDrink": true,
       "ExcludeFromShippingCollection": true,
       "Buffs": [
         {
@@ -698,7 +698,7 @@
       "Category": -7,
       "Price": 2500,
       "Edibility": 10,
-      "IsDrink": false,
+      "IsDrink": true,
       "ExcludeFromShippingCollection": true,
       "Buffs": [
         {
@@ -734,7 +734,7 @@
       "Category": -7,
       "Price": 2500,
       "Edibility": 10,
-      "IsDrink": false,
+      "IsDrink": true,
       "ExcludeFromShippingCollection": true,
       "Buffs": [
         {
@@ -770,7 +770,7 @@
       "Category": -7,
       "Price": 2500,
       "Edibility": 10,
-      "IsDrink": false,
+      "IsDrink": true,
       "ExcludeFromShippingCollection": true,
       "Buffs": [
         {
@@ -806,7 +806,7 @@
       "Category": -7,
       "Price": 2500,
       "Edibility": 10,
-      "IsDrink": false,
+      "IsDrink": true,
       "ExcludeFromShippingCollection": true,
       "Buffs": [
         {
@@ -842,7 +842,7 @@
       "Category": -7,
       "Price": 2500,
       "Edibility": 10,
-      "IsDrink": false,
+      "IsDrink": true,
       "ExcludeFromShippingCollection": true,
       "Buffs": [
         {
