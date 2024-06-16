@@ -16,7 +16,7 @@
                   "Dialogue": "{{i18n:miscellaneous.CAGArtifactLedger.message}}"
                 }
               ]
-            },
+            }
           ],
           "Items": [
             {
@@ -39,7 +39,7 @@
                 "(O)104",
                 "(O)105",
                 "(O)106",
-                "(O)107",
+                "(O)107"
               ]
             },
             {
@@ -66,7 +66,7 @@
                 "(O)98",
                 "(O)99",
                 "(O)100",
-                "(O)101",
+                "(O)101"
               ]
             },
             {
@@ -93,7 +93,7 @@
                 "(O)568",
                 "(O)569",
                 "(O)570",
-                "(O)571",
+                "(O)571"
               ]
             },
             {
@@ -121,7 +121,7 @@
                 "(O)114",
                 "(O)586",
                 "(O)587",
-                "(O)588",
+                "(O)588"
               ]
             },
             {
@@ -150,7 +150,7 @@
                 "(O)121",
                 "(O)583",
                 "(O)584",
-                "(O)585",
+                "(O)585"
               ]
             },
             {
@@ -177,7 +177,7 @@
                 "(O)127",
                 "(O)580",
                 "(O)581",
-                "(O)582",
+                "(O)582"
               ]
             },
             {
@@ -200,7 +200,7 @@
                 "(O)104",
                 "(O)105",
                 "(O)106",
-                "(O)107",
+                "(O)107"
               ]
             },
             {
@@ -227,7 +227,7 @@
                 "(O)98",
                 "(O)99",
                 "(O)100",
-                "(O)101",
+                "(O)101"
               ]
             },
             {
@@ -254,7 +254,7 @@
                 "(O)568",
                 "(O)569",
                 "(O)570",
-                "(O)571",
+                "(O)571"
               ]
             },
             {
@@ -282,7 +282,7 @@
                 "(O)114",
                 "(O)586",
                 "(O)587",
-                "(O)588",
+                "(O)588"
               ]
             },
             {
@@ -311,7 +311,7 @@
                 "(O)121",
                 "(O)583",
                 "(O)584",
-                "(O)585",
+                "(O)585"
               ]
             },
             {
@@ -338,9 +338,9 @@
                 "(O)127",
                 "(O)580",
                 "(O)581",
-                "(O)582",
+                "(O)582"
               ]
-            },
+            }
           ]
         }
       }
@@ -358,15 +358,15 @@
               "Portrait": "{{InternalAssetKey:Assets/TemporaryActors/Portraits/TheMeadowLark.png}}",
               "Dialogues": [
                 {
-                  "Dialogue": "{{i18n:miscellaneous.LMCafe.message}}",
+                  "Dialogue": "{{i18n:miscellaneous.LMCafe.message}}"
                 }
-              ],
+              ]
             },
             {
               "Name": "None",
               "Condition": "TIME 2010 1150",
               "ClosedMessage": "{{i18n:miscellaneous.LMCafe.closedmessage}}"
-            },
+            }
           ],
           "Items": [
             {
@@ -390,7 +390,7 @@
                 "(O)348",
                 "(O)346",
                 "(O)459",
-                "(O)303",
+                "(O)303"
               ]
             },
             {
@@ -414,7 +414,7 @@
                 "(O)348",
                 "(O)346",
                 "(O)459",
-                "(O)303",
+                "(O)303"
               ]
             },
             {
@@ -438,7 +438,7 @@
                 "(O)348",
                 "(O)346",
                 "(O)459",
-                "(O)303",
+                "(O)303"
               ]
             },
             {
@@ -462,7 +462,7 @@
                 "(O)348",
                 "(O)346",
                 "(O)459",
-                "(O)303",
+                "(O)303"
               ]
             },
             {
@@ -486,7 +486,7 @@
                 "(O)348",
                 "(O)346",
                 "(O)459",
-                "(O)303",
+                "(O)303"
               ]
             },
             {
@@ -510,7 +510,7 @@
                 "(O)348",
                 "(O)346",
                 "(O)459",
-                "(O)303",
+                "(O)303"
               ]
             },
             {
@@ -534,7 +534,7 @@
                 "(O)348",
                 "(O)346",
                 "(O)459",
-                "(O)303",
+                "(O)303"
               ]
             },
             {
@@ -558,7 +558,7 @@
                 "(O)348",
                 "(O)346",
                 "(O)459",
-                "(O)303",
+                "(O)303"
               ]
             },
             {
@@ -582,7 +582,7 @@
                 "(O)348",
                 "(O)346",
                 "(O)459",
-                "(O)303",
+                "(O)303"
               ]
             },
             {
@@ -606,7 +606,7 @@
                 "(O)348",
                 "(O)346",
                 "(O)459",
-                "(O)303",
+                "(O)303"
               ]
             },
             {
@@ -630,7 +630,7 @@
                 "(O)348",
                 "(O)346",
                 "(O)459",
-                "(O)303",
+                "(O)303"
               ]
             },
             {
@@ -654,9 +654,9 @@
                 "(O)348",
                 "(O)346",
                 "(O)459",
-                "(O)303",
+                "(O)303"
               ]
-            },
+            }
           ]
         }
       }
@@ -674,506 +674,146 @@
               "Portrait": "Dandelion",
               "Dialogues": [
                 {
-                  "Dialogue": "{{i18n:miscellaneous.LMArmory.message}}",
+                  "Dialogue": "{{i18n:miscellaneous.LMArmory.message}}"
                 }
-              ],
+              ]
             },
             {
               "Name": "None",
               "Condition": "TIME 2010 1150",
               "ClosedMessage": "{{i18n:miscellaneous.LMArmory.closedmessage}}"
-            },
+            }
           ],
           "Items": [
             {
-              "Id": "{{ModID}}_LMAGroup1",
+              "Id": "{{ModID}}_LMARandom",
               "AvailableStock": 1,
               "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
+              "Price": 1, //set the price for the rotating stock
               "RandomItemId": [
                 "(W)DN.SnS_keytoscarp",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
-            },
-            {
-              "Id": "{{ModID}}_LMAGroup2",
-              "AvailableStock": 1,
-              "AvoidRepeat": true,
-              "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
                 "(W)DN.SnS_twobecomeone",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
-            },
-            {
-              "Id": "{{ModID}}_LMAGroup3",
-              "AvailableStock": 1,
-              "AvoidRepeat": true,
-              "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
                 "(W)DN.SnS_savethequeen",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
-            },
-            {
-              "Id": "{{ModID}}_LMAGroup4",
-              "AvailableStock": 1,
-              "AvoidRepeat": true,
-              "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
                 "(W)DN.SnS_oathkeeper",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
-            },
-            {
-              "Id": "{{ModID}}_LMAGroup5",
-              "AvailableStock": 1,
-              "AvoidRepeat": true,
-              "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
                 "(O)DN.SnS_oblivion",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
-            },
-            {
-              "Id": "{{ModID}}_LMAGroup6",
-              "AvailableStock": 1,
-              "AvoidRepeat": true,
-              "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
                 "(W)DN.SnS_savetheking",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
+                "(W)DN.SnS_waytothedawn"
+              ],
+              "MaxItems": 1
             },
             {
-              "Id": "{{ModID}}_LMAGroup7",
+              "Id": "{{ModId}}_LMA1",
               "AvailableStock": 1,
-              "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
-                "(W)DN.SnS_waytothedawn",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
+              "ItemID": "(O)DN.SnS_verdantpotion"
             },
             {
-              "Id": "{{ModID}}_LMAGroup8",
+              "Id": "{{ModId}}_LMASet2",
               "AvailableStock": 1,
-              "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
-                "(W)DN.SnS_keytoscarp",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
+              "ItemID": "(O)DN.SnS_scarletpotion"
             },
             {
-              "Id": "{{ModID}}_LMAGroup9",
+              "Id": "{{ModId}}_LMA3",
               "AvailableStock": 1,
-              "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
-                "(W)DN.SnS_twobecomeone",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
+              "ItemID": "(O)DN.SnS_heatherpotion"
             },
             {
-              "Id": "{{ModID}}_LMAGroup10",
+              "Id": "{{ModId}}_LMA4",
               "AvailableStock": 1,
-              "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
-                "(W)DN.SnS_savethequeen",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
+              "ItemID": "(O)DN.SnS_zydratepotion"
             },
             {
-              "Id": "{{ModID}}_LMAGroup11",
+              "Id": "{{ModId}}_LMA5",
               "AvailableStock": 1,
-              "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
-                "(W)DN.SnS_oathkeeper",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
+              "ItemID": "(O)DN.SnS_pistachiopotion"
             },
             {
-              "Id": "{{ModID}}_LMAGroup12",
+              "Id": "{{ModId}}_LMA6",
               "AvailableStock": 1,
-              "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
-                "(O)DN.SnS_oblivion",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
+              "ItemID": "(O)DN.SnS_dahliapotion"
             },
             {
-              "Id": "{{ModID}}_LMAGroup13",
+              "Id": "{{ModId}}_LMA7",
               "AvailableStock": 1,
-              "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
-                "(W)DN.SnS_savetheking",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
+              "ItemID": "(O)DN.SnS_slushiepotion"
             },
             {
-              "Id": "{{ModID}}_LMAGroup14",
+              "Id": "{{ModId}}_LMA8",
               "AvailableStock": 1,
-              "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
-                "(W)DN.SnS_waytothedawn",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
+              "ItemID": "(O)DN.SnS_matrixpotion"
             },
             {
-              "Id": "{{ModID}}_LMAGroup15",
+              "Id": "{{ModId}}_LMA9",
               "AvailableStock": 1,
-              "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
-                "(W)DN.SnS_keytoscarp",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
+              "ItemID": "(O)DN.SnS_mcdougalpotion"
             },
             {
-              "Id": "{{ModID}}_LMAGroup16",
+              "Id": "{{ModId}}_LMA10",
               "AvailableStock": 1,
-              "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
-                "(W)DN.SnS_twobecomeone",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
+              "ItemID": "(O)DN.SnS_toirneachpotion"
             },
             {
-              "Id": "{{ModID}}_LMAGroup17",
+              "Id": "{{ModId}}_LMA11",
               "AvailableStock": 1,
-              "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
-                "(W)DN.SnS_savethequeen",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
+              "ItemID": "(W)DN.SnS_spellbinder",
+              "Price": 1 //price has to be manually set for weapons
             },
             {
-              "Id": "{{ModID}}_LMAGroup18",
+              "Id": "{{ModId}}_LMA12",
               "AvailableStock": 1,
-              "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
-              "UseObjectDataPrice": true,
-              "RandomItemId": [
-                "(W)DN.SnS_keytoscarp",
-                "(O)DN.SnS_verdantpotion",
-                "(O)DN.SnS_scarletpotion",
-                "(O)DN.SnS_heatherpotion",
-                "(O)DN.SnS_zydratepotion",
-                "(O)DN.SnS_pistachiopotion",
-                "(O)DN.SnS_dahliapotion",
-                "(O)DN.SnS_slushiepotion",
-                "(O)DN.SnS_matrixpotion",
-                "(O)DN.SnS_mcdougalpotion",
-                "(O)DN.SnS_toirneachpotion",
-                "(W)DN.SnS_spellbinder",
-                "(W)DN.SnS_threewishes",
-                "(W)DN.SnS_ladyluck",
-                "(W)DN.SnS_bondofflame",
-                "(W)DN.SnS_destinysembrace",
-                "(W)DN.SnS_sweetmemories",
-                "(W)DN.SnS_guardianbell",
-              ]
+              "ItemID": "(W)DN.SnS_threewishes",
+              "Price": 1 //price has to be manually set for weapons
             },
+            {
+              "Id": "{{ModId}}_LMA13",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "ItemID": "(W)DN.SnS_ladyluck",
+              "Price": 1 //price has to be manually set for weapons
+            },
+            {
+              "Id": "{{ModId}}_LMA14",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "ItemID": "(W)DN.SnS_bondofflame",
+              "Price": 1 //price has to be manually set for weapons
+            },
+            {
+              "Id": "{{ModId}}_LMA15",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "ItemID": "(W)DN.SnS_destinysembrace",
+              "Price": 1 //price has to be manually set for weapons
+            },
+            {
+              "Id": "{{ModId}}_LMA16",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "ItemID": "(W)DN.SnS_sweetmemories",
+              "Price": 1 //price has to be manually set for weapons
+            },
+            {
+              "Id": "{{ModId}}_LMA17",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "ItemID": "(W)DN.SnS_guardianbell",
+              "Price": 1 //price has to be manually set for weapons
+            }
           ]
         }
       }
-    },
+    }
   ]
 }
