@@ -10,7 +10,7 @@
   "UniqueID": "KCC.SnS",
   "Name": "Sword and Sorcery (SMAPI Component)",
   "Author": "DestyNova, spacechase0",
-  "Version": "1.0.5",
+  "Version": "1.0.5-Debug",
   "Description": "...",
   "EntryDll": "SwordAndSorcerySMAPI.dll",
   "Dependencies": [

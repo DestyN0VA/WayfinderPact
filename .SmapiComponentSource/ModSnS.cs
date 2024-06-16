@@ -18,6 +18,7 @@ using StardewValley.GameData.Weapons;
 using StardewValley.Menus;
 using StardewValley.Monsters;
 using StardewValley.SpecialOrders;
+using StardewValley.SpecialOrders.Objectives;
 using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
@@ -331,6 +332,35 @@ namespace SwordAndSorcerySMAPI
             Helper.ConsoleCommands.Add("sns_setmaxaether", "...", (cmd, args) => Game1.player.GetFarmerExtData().maxMana.Value = int.Parse(args[0]));
             Helper.ConsoleCommands.Add("sns_refillaether", "...", (cmd, args) => Game1.player.GetFarmerExtData().mana.Value = Game1.player.GetFarmerExtData().maxMana.Value);
             Helper.ConsoleCommands.Add("sns_repairarmor", "...", (cmd, args) => Game1.player.GetFarmerExtData().armorUsed.Value = 0);
+            Helper.ConsoleCommands.Add("sns_finishorders", "...", (cmd, args) =>
+            {
+                string[] valid =
+                [
+                    "Mateo.SpecialOrders.BuildGuild",
+                    "CAGQuest.UntimedSpecialOrder.Pentacle1",
+                    "CAGQuest.UntimedSpecialOrder.Pentacle2",
+                    "CAGQuest.UntimedSpecialOrder.Pentacle3",
+                    "CAGQuest.UntimedSpecialOrder.Pentacle4",
+                    "CAGQuest.UntimedSpecialOrder.River1",
+                    "CAGQuest.UntimedSpecialOrder.River2",
+                    "CAGQuest.UntimedSpecialOrder.LionsMane",
+                ];
+
+                foreach (SpecialOrder specialOrder in Game1.player.team.specialOrders)
+                {
+                    if (!valid.Contains(specialOrder.questKey.Value))
+                        continue;
+
+                    foreach (OrderObjective objective in specialOrder.objectives)
+                    {
+                        objective.SetCount(objective.maxCount.Value);
+                        objective.CheckCompletion(false);
+                        Helper.Reflection.GetField<bool>(objective, "_complete").SetValue(true);
+                    }
+
+                    specialOrder.CheckCompletion();
+                }
+            });
 
             var harmony = new Harmony(ModManifest.UniqueID);
             harmony.PatchAll( Assembly.GetExecutingAssembly() );
@@ -621,19 +651,21 @@ namespace SwordAndSorcerySMAPI
 
             // ---
 
+            var ext = Game1.player.GetFarmerExtData();
+            var hasBar = Game1.onScreenMenus.Any(m => m is AdventureBar);
+
             if (Config.ToggleAdventureBar.JustPressed() && Game1.player.hasOrWillReceiveMail("SnS_AdventureBar"))
             {
                 AdventureBar.Hide = !AdventureBar.Hide;
+                if (AdventureBar.Hide && hasBar)
+                    Game1.onScreenMenus.Remove(Game1.onScreenMenus.Where(m => m is AdventureBar).First());
             }
             else if ( Config.ConfigureAdventureBar.JustPressed() && Game1.activeClickableMenu == null &&
                  Game1.player.hasOrWillReceiveMail("SnS_AdventureBar") )
             {
                 Game1.activeClickableMenu = new AdventureBarConfigureMenu();
             }
-
-            var ext = Game1.player.GetFarmerExtData();
-            var hasBar = Game1.onScreenMenus.Any(m => m is AdventureBar);
-            if ( e.IsOneSecond && !hasBar && Game1.player.hasOrWillReceiveMail( "SnS_AdventureBar" ) )
+            if ( e.IsOneSecond && !hasBar && !AdventureBar.Hide && Game1.player.hasOrWillReceiveMail( "SnS_AdventureBar" ) )
             {
                 Game1.onScreenMenus.Add(new AdventureBar(editing: false));
             }

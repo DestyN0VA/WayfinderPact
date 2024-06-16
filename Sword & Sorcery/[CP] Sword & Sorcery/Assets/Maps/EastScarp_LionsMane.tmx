@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="36" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="21" nextobjectid="127">
  <properties>
-  <property name="DayTiles" value="Front 6 1 2371 Front 7 1 2372 Front 6 2 2396 Front 7 2 2397 Front 9 1 2371 Front 10 1 2372 Front 9 2 2396 Front 10 2 2397 Front 21 1 2371 Front 22 1 2372 Front 21 2 2396 Front 22 2 2397 Front 17 3 1449 Front 17 4 1481 Front 19 17 1449 Front 19 18 1481"/>
+  <property name="DayTiles" value="Front 21 1 2371 Front 22 1 2372 Front 21 2 2396 Front 22 2 2397 Front 17 3 1449 Front 17 4 1481 Front 19 17 1449 Front 19 18 1481"/>
   <property name="Doors" value="3 22 1 120 21 22 1 120 31 22 1 120"/>
   <property name="Music" value="SnS.CirrusTheme"/>
-  <property name="NightTiles" value="Front 6 1 2373 Front 7 1 2374 Front 6 2 2398 Front 7 2 2399 Front 9 1 2373 Front 10 1 2374 Front 9 2 2398 Front 10 2 2399 Front 21 1 2373 Front 22 1 2374 Front 21 2 2398 Front 22 2 2399 Front 17 3 1450 Front 17 4 1482 Front 19 17 1450 Front 19 18 1482"/>
+  <property name="NightTiles" value="Front 21 1 2373 Front 22 1 2374 Front 21 2 2398 Front 22 2 2399 Front 17 3 1450 Front 17 4 1482 Front 19 17 1450 Front 19 18 1482"/>
   <property name="Warp" value="8 35 EastScarp_Village 54 5 26 36 EastScarp_Village 57 5"/>
  </properties>
  <tileset firstgid="1" name="1" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
