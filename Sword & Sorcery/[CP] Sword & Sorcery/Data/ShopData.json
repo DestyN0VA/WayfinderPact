@@ -686,7 +686,7 @@
           ],
           "Items": [
             {
-              "Id": "{{ModID}}_LMARandom",
+              "Id": "{{ModID}}_LMARandom1",
               "AvailableStock": 1,
               "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
@@ -694,12 +694,12 @@
               "RandomItemId": [
                 "(W)DN.SnS_keytoscarp",
                 "(W)DN.SnS_savethequeen",
-                "(W)DN.SnS_savetheking",
+                "(W)DN.SnS_savetheking"
               ],
               "MaxItems": 1
             },
             {
-              "Id": "{{ModID}}_LMARandom",
+              "Id": "{{ModID}}_LMARandom2",
               "AvailableStock": 1,
               "AvoidRepeat": true,
               "AvailableStockLimit": "Player",
@@ -719,7 +719,7 @@
               "Price": 2500
             },
             {
-              "Id": "{{ModId}}_LMASet2",
+              "Id": "{{ModId}}_LMA2",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
               "ItemID": "(O)DN.SnS_scarletpotion",
