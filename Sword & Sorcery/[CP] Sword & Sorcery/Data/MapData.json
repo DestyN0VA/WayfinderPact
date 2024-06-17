@@ -2,7 +2,7 @@
   "Changes": [
     {
       "Action": "Load",
-      "Target": "Maps/EastScarp_MateoHome, Maps/EastScarp_CoastalGuild, Maps/EastScarp_DruidTower, Maps/EastScarp_DruidGrove, Maps/EastScarp_RiverStage1, Maps/EastScarp_RiverStage2, Maps/EastScarp_RiverStage3, Maps/EastScarp_RiverStage4, Maps/EastScarp_DateMine, Maps/EastScarp_LavaMine, Maps/EastScarp_IntroMine, Maps/EastScarp_HectorForest, Maps/EastScarp_VanInterior, Maps/EastScarp_LionsMane, Maps/EastScarp_Planetarium, Maps/EastScarp_Underforge, Maps/EastScarp_DeepDarkLv0, Maps/EastScarp_DeepDarkLv1, Maps/EastScarp_DeepDarkLv2, Maps/EastScarp_DeepDarkLv3, Maps/EastScarp_DeepDarkLv4, Maps/EastScarp_DeepDarkLv5, Maps/EastScarp_DuskspireLair",
+      "Target": "Maps/EastScarp_MateoHome, Maps/EastScarp_CoastalGuild, Maps/EastScarp_DruidTower, Maps/EastScarp_DruidGrove, Maps/EastScarp_RiverStage1, Maps/EastScarp_RiverStage2, Maps/EastScarp_RiverStage3, Maps/EastScarp_RiverStage4, Maps/EastScarp_DateMine, Maps/EastScarp_LavaMine, Maps/EastScarp_IntroMine, Maps/EastScarp_HectorForest, Maps/EastScarp_VanInterior, Maps/EastScarp_LionsMane, Maps/EastScarp_Planetarium, Maps/EastScarp_Underforge, Maps/EastScarp_DeepDarkLv0, Maps/EastScarp_DeepDarkLv1, Maps/EastScarp_DeepDarkLv2, Maps/EastScarp_DeepDarkLv3, Maps/EastScarp_DeepDarkLv4, Maps/EastScarp_DeepDarkLv5, Maps/EastScarp_DuskspireLair, Maps/SolomonMagicalCavern",
       "FromFile": "Assets/Maps/{{TargetWithoutPath}}.tmx"
     },
     {
@@ -526,6 +526,29 @@
             "Y": 15
           },
           "ExcludeFromNpcPathfinding": true,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
+      "LogName": "Solomon's Magical Cavern",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_SolomonCavern": {
+          "DisplayName": "{{i18n:miscellaneous.mapname.SolomonCavern}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/SolomonMagicalCavern"
+          },
+          "DefaultArrivalTile": {
+            "X": 12,
+            "Y": 10
+          },
+          "ExcludeFromNpcPathfinding": false,
           "ArtifactSpots": [],
           "FishAreas": {},
           "Fish": [],

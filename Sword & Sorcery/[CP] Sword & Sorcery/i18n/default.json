@@ -5489,7 +5489,8 @@ ________      ________ _   _ _______ _____
   "miscellaneous.mapname.DeepDarkLv5": "Deep Dark - Level 5",
   "miscellaneous.mapname.DuskspireLair": "Deep Dark - Lair of the Duskspire Behemoth",
   "miscellaneous.mapname.Underforge": "The Underforge",
-  "miscellaneous.mapname.ESDruidTower": "Hector's Tower", //maddogchange
+  "miscellaneous.mapname.ESDruidTower": "Hector's Tower", //maddogchange,
+  "miscellaneous.mapname.SolomonCavern": "Solomon's Cavern",
 
 
   //maddogchange
