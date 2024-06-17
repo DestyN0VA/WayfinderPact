@@ -23,7 +23,7 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Roslin",
       "Entries": {
-        "{{WeekDay}}": "{{i18n:Core.Roslin.Generic.LateHeart.{{Random:{{Range: 1, 30}}}}}}"
+        "{{WeekDay}}": "{{i18n:Core.Roslin.Generic.LateHeart.{{Random:{{Range: 1, 40}}}}}}"
       },
       "When": {
         "HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
@@ -84,7 +84,7 @@
         "fall_28": "{{i18n:Core.Roslin.FallEnd}}",
         "winter_28": "{{i18n:Core.Roslin.WinterEnd}}",
         // SVE COMMUNITY DAY
-        "CommunityCenter10": "{{i18n:Core.Roslin.CommunityCenter10}}",
+        "CommunityCenter": "{{i18n:Core.Roslin.CommunityCenter10}}",
         // FESTIVALS
         "spring_12": "{{i18n:Core.Roslin.EggFestival}}",
         "spring_23": "{{i18n:Core.Roslin.FlowerDance}}",
@@ -95,6 +95,8 @@
         "winter_7": "{{i18n:Core.Roslin.IceFestival}}",
         "winter_16": "{{i18n:Core.Roslin.NightMarket}}",
         "winter_24": "{{i18n:Core.Roslin.WinterStar}}",
+        // RESORT
+        "Resort": "{{i18n:Core.Roslin.Resort}}",
         // GREEN RAIN 
         "GreenRain": "{{i18n:Core.Roslin.GreenRain}}",
         "GreenRainFinished": "{{i18n:Core.Roslin.GreenRainFinished}}",

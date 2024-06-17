@@ -3811,6 +3811,9 @@ ________      ________ _   _ _______ _____
   "Core.Roslin.NightMarket": "Oooh, I'm very excited for all the interesting imports that will be coming in over the next few days.$11",
   "Core.Roslin.WinterStar": "It's interesting how much tomorrow's holiday has changed over the years...$6",
 
+  // RESORT
+  "Core.Roslin.Resort": "I am mainly here because Dandelion wants to be.$14",
+
   // GREEN RAIN
   "Core.Roslin.GreenRain": "I didn't know this could happen here! Perhaps it's the work of the Druid, that would make sense.$17",
   "Core.Roslin.GreenRainFinished": "I do love how vibrant everything looks after Druidic rain. What impact does it have on %farm?$11",
@@ -4266,61 +4269,43 @@ ________      ________ _   _ _______ _____
 
   // NAME & INTRO 
   "Core.Dandelion.Name": "Dandelion",
-  "Core.Dandelion.Introduction": "TEST DIALOGUE",
+  "Core.Dandelion.Introduction": "Thank you for your involvement in my rescue, @! I knew you could be relied on. I'm glad to have placed my fate in your hands, since you were able to return me to Roslin's.$1",
 
   // COMMUNITY CENTER BUNDLES  
-  "Core.Dandelion.JojaBegin": "",
-  "Core.Dandelion.CCBegin": "",
-  "Core.Dandelion.CCBus": "",
-  "Core.Dandelion.CCMinecart": "",
-  "Core.Dandelion.CCComplete": "",
-  "Core.Dandelion.MovieTheater": "",
-
-  // BIRTHDAYS
-  "Core.Dandelion.Fall25": "", //Mateo
-  "Core.Dandelion.Winter21": "", //Hector
+  "Core.Dandelion.JojaBegin": "Ah, how... unfortunate. It appears as though capitalism has touched this town the same way it has so many others.$2",
+  "Core.Dandelion.CCBegin": "I've been many places, but not all of them have a central place to congregate like this town does.$6",
+  "Core.Dandelion.CCBus": "Ah, yes! There are many excellent adventures to be had in the desert!$1",
+  "Core.Dandelion.CCMinecart": "I am not sure I could comfortably fit in a minecart. But I am more than willing to try!$1",
+  "Core.Dandelion.CCComplete": "Congratulations on everything you've accomplished thus far, @. Everyone - and I mean, everyone - must be so proud of you.$0",
+  "Core.Dandelion.MovieTheater": "Oh, a movie theatre? Excellent, there are few things I love more than a good film!$1",
 
   // END OF SEASON
-  "Core.Dandelion.SpringEnd": "",
-  "Core.Dandelion.SummerEnd": "",
-  "Core.Dandelion.FallEnd": "",
-  "Core.Dandelion.WinterEnd": "",
+  "Core.Dandelion.SpringEnd": "Did you enjoy the Spring, @? Are you ready for summer? I sure am!$14",
+  "Core.Dandelion.SummerEnd": "It's almost Fall! 'Tis the season to curl up with books and tea and do not much else.$13",
+  "Core.Dandelion.FallEnd": "How do you spend your Winters, @? I don't know much about farming, but I imagine you have other ways of spending your time.$6",
+  "Core.Dandelion.WinterEnd": "It's almost Spring again! Goodness graccious, that's exciting. A whole 'nother year has passed us.$1",
 
   // SVE COMMUNITY DAY
-  "Core.Dandelion.CommunityCenter4": "",
-  "Core.Dandelion.CommunityCenter6": "",
-  "Core.Dandelion.CommunityCenter8": "",
-  "Core.Dandelion.CommunityCenter10": "",
+  "Core.Dandelion.CommunityCenter10": "Oh, this is terribly endearing. What a lovely gathering. It's nice to see everyone in such high spirits.$13",
 
   // FESTIVALS
-  "Core.Dandelion.EggFestival": "",
-  "Core.Dandelion.FlowerDance": "",
-  "Core.Dandelion.Luau": "",
-  "Core.Dandelion.MoonlightJelly": "",
-  "Core.Dandelion.SDVFair": "",
-  "Core.Dandelion.SpiritsEve": "",
-  "Core.Dandelion.IceFestival": "",
-  "Core.Dandelion.NightMarket": "",
-  "Core.Dandelion.WinterStar": "",
+  "Core.Dandelion.EggFestival": "I adore small-town festivals! And I do plan to drag Roslin, kicking and screaming.$1",
+  "Core.Dandelion.FlowerDance": "I am looking forward to dancing with my Darling. I know she loves to, even if she acts up about it. What about you, @?$6",
+  "Core.Dandelion.Luau": "Roslin made a comment about the silliness of making soup in the Summer. I agree, even though I make tea several times a day.$13",
+  "Core.Dandelion.MoonlightJelly": "Goodness gracious, I do adore the Lunaloos. While adventuring, I never took the time to come and see them...$6",
+  "Core.Dandelion.SDVFair": "Ah. Should I put Mateo to shame and break the bell in that one carnival game? Perhaps not, I'll let them have their fun.$14",
+  "Core.Dandelion.SpiritsEve": "I do quite love Spirit's Eve! Although, I think there's a bit of bias. I do love horror stories, and the lore surrounding Spirit's Eve reminds me of those...$12",
+  "Core.Dandelion.IceFestival": "Did you know that Roslin is actually an incredibly proficent ice-skater? I didn't, either. Nor have I seen it. Perhaps she was joking?$12",
+  "Core.Dandelion.NightMarket": "Roslin ADORES the Night Market. I would argue this is her favorite time of year.$6",
+  "Core.Dandelion.WinterStar": "There is something very special about a dedicated time of year for appreciating your friends and loved ones, isn't there?$13",
 
   // RESORT
-  "Core.Dandelion.ResortEntering": "",
-  "Core.Dandelion.ResortLeaving": "",
-  "Core.Dandelion.ResortShore": "",
-  "Core.Dandelion.ResortUmbrella": "",
-  "Core.Dandelion.ResortWander": "",
-  "Core.Dandelion.ResortWander.2": "",
-  "Core.Dandelion.ResortChair": "",
-  "Core.Dandelion.ResortBar": "",
-  "Core.Dandelion.ResortTowel": "",
-  "Core.Dandelion.ResortTowel.2": "",
-  "Core.Dandelion.Resort_Towel.3": "",
-  "Core.Dandelion.Resort": "",
+  "Core.Dandelion.Resort": "I do love a day of fun in the sun! You appreciate these things more, when you've been inanimate for a while.$14",
 
   // GREEN RAIN
-  "Core.Dandelion.GreenRain": "",
-  "Core.Dandelion.GreenRainFinished": "",
-  "Core.Dandelion.GreenRain2": "",
+  "Core.Dandelion.GreenRain": "What an unusual phenonenon! I've never seen such a thing.$17",
+  "Core.Dandelion.GreenRainFinished": "I'm grateful the rain did no harm. The Druid must been terribly enthused!$1",
+  "Core.Dandelion.GreenRain2": "Is this a regular occourance to expect in the Summer? I wonder if this is unique to the Valley?$17",
 
   /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
@@ -4333,81 +4318,89 @@ ________      ________ _   _ _______ _____
 */
 
   // GENERIC 0-4
-  "Core.Dandelion.Generic.EarlyHeart.1": "",
-  "Core.Dandelion.Generic.EarlyHeart.2": "",
-  "Core.Dandelion.Generic.EarlyHeart.3": "",
-  "Core.Dandelion.Generic.EarlyHeart.4": "",
-  "Core.Dandelion.Generic.EarlyHeart.5": "",
-  "Core.Dandelion.Generic.EarlyHeart.6": "",
-  "Core.Dandelion.Generic.EarlyHeart.7": "",
-  "Core.Dandelion.Generic.EarlyHeart.8": "",
-  "Core.Dandelion.Generic.EarlyHeart.9": "",
-  "Core.Dandelion.Generic.EarlyHeart.10": "",
-  "Core.Dandelion.Generic.EarlyHeart.11": "",
-  "Core.Dandelion.Generic.EarlyHeart.12": "",
-  "Core.Dandelion.Generic.EarlyHeart.13": "",
-  "Core.Dandelion.Generic.EarlyHeart.14": "",
-  "Core.Dandelion.Generic.EarlyHeart.15": "",
+  "Core.Dandelion.Generic.EarlyHeart.1": "Ah! Hello, @! I hope you have been enjoying farming and adventuring and whatever else suits your fancy!$13",
+  "Core.Dandelion.Generic.EarlyHeart.2": "@, do you enjoy reading? I have a slew of book reccomendations, in the case you're inclined toward fantasy stories...$14",
+  "Core.Dandelion.Generic.EarlyHeart.3": "Would you, perhaps, enjoy breakfast tea with Roslin and I? Perhaps lunch tea? Or dinner tea!$1",
+  "Core.Dandelion.Generic.EarlyHeart.4": "Roslin says I have too vast of a tea collection to be reasonable. I think a hundred varieties is simply the start of a collection, not the end of one!$13",
+  "Core.Dandelion.Generic.EarlyHeart.5": "I did still have thoughts as a shield, you know. I mostly just missed Roslin. She's my Darling, after all.$4",
+  "Core.Dandelion.Generic.EarlyHeart.6": "Sword? Oh, I don't use one. I fight with my shield and raw strength. Admittedly, I could pick up anyone in town and throw them like a javelin.$14",
+  "Core.Dandelion.Generic.EarlyHeart.7": "My workout routine? Well, I lift. If I am able to bench a number, I go heavier, because if I'm not aching, I'm not growing.$17",
+  "Core.Dandelion.Generic.EarlyHeart.8": "I love home-baking bread, hosting guests, serving tea, and working to beat my own overhead press record - eight hundred pounds!",
+  "Core.Dandelion.Generic.EarlyHeart.9": "One of my most important tasks in our home is, in fact, reaching everything on the high shelves. Roslin and Cirrus are both quite small, you see...$1",
+  "Core.Dandelion.Generic.EarlyHeart.10": "Domesticity is very important to me. I love caretaking, I love homemaking, and I love being a good partner. I just also love violence and pushing the limit with my workouts.",
+  "Core.Dandelion.Generic.EarlyHeart.11": "Roslin enchanted my shield to return to me when thrown, since I had a habit of doing that and losing it.$4",
+  "Core.Dandelion.Generic.EarlyHeart.12": "My armor was crafted by a very old friend, named Weaveforger. I believe you and Mateo would take fine apprentices, if you ever had the privilage of meeting him.$6",
+  "Core.Dandelion.Generic.EarlyHeart.13": "I have travelled quite a lot, and met many people. The people of this town are among my favorites.$14",
+  "Core.Dandelion.Generic.EarlyHeart.14": "@, you are a a very accomplished person, and I consider it an honor to know you. In the case you're too busy to visit for tea, I implore you to grow your own.$13[251]",
+  "Core.Dandelion.Generic.EarlyHeart.15": "Here are some clippings from my tea plants, @. I hope you can grow them to maturity, and enjoy the spoils with friends and loved ones.$13[251]",
 
   // GENERIC 5-10
-  "Core.Dandelion.Generic.LateHeart.1": "",
-  "Core.Dandelion.Generic.LateHeart.2": "",
-  "Core.Dandelion.Generic.LateHeart.3": "",
-  "Core.Dandelion.Generic.LateHeart.4": "",
-  "Core.Dandelion.Generic.LateHeart.5": "",
-  "Core.Dandelion.Generic.LateHeart.6": "",
-  "Core.Dandelion.Generic.LateHeart.7": "",
-  "Core.Dandelion.Generic.LateHeart.8": "",
-  "Core.Dandelion.Generic.LateHeart.9": "",
-  "Core.Dandelion.Generic.LateHeart.10": "",
-  "Core.Dandelion.Generic.LateHeart.11": "",
-  "Core.Dandelion.Generic.LateHeart.12": "",
-  "Core.Dandelion.Generic.LateHeart.13": "",
-  "Core.Dandelion.Generic.LateHeart.14": "",
-  "Core.Dandelion.Generic.LateHeart.15": "",
-  "Core.Dandelion.Generic.LateHeart.16": "",
-  "Core.Dandelion.Generic.LateHeart.17": "",
-  "Core.Dandelion.Generic.LateHeart.18": "",
-  "Core.Dandelion.Generic.LateHeart.19": "",
-  "Core.Dandelion.Generic.LateHeart.20": "",
-  "Core.Dandelion.Generic.LateHeart.21": "",
-  "Core.Dandelion.Generic.LateHeart.22": "",
-  "Core.Dandelion.Generic.LateHeart.23": "",
-  "Core.Dandelion.Generic.LateHeart.24": "",
-  "Core.Dandelion.Generic.LateHeart.25": "",
-  "Core.Dandelion.Generic.LateHeart.26": "",
-  "Core.Dandelion.Generic.LateHeart.27": "",
-  "Core.Dandelion.Generic.LateHeart.28": "",
-  "Core.Dandelion.Generic.LateHeart.29": "",
-  "Core.Dandelion.Generic.LateHeart.30": "",
+  "Core.Dandelion.Generic.LateHeart.1": "Hm? Do I regret straying from my path? No, not in the slightest. I'd choose Roslin over everything, especially a dusty old order with shoddy priorities.$19",
+  "Core.Dandelion.Generic.LateHeart.2": "Life as an Oathbreaker wasn't as bad as you'd expect. I simply wandered, and helped people as I came across them.$17#$b#It perhaps would have been lonely, if I didn't have Roslin.$18",
+  "Core.Dandelion.Generic.LateHeart.3": "One thing I don't miss is sleeping in my armor. You never know what'll come after you in the middle of the night, so...$14#$b#Now, I have very cozy pajamas.$1",
+  "Core.Dandelion.Generic.LateHeart.4": "I used to only be able to take books out from the local library. Now I can purchase them, and keep them!$13#$b#You don't see the value in little things until you're lacking.$14",
+  "Core.Dandelion.Generic.LateHeart.5": "Growing tea has been so much more satisfying than just buying it. Here you go, @, some clippings I'm proud of.$14[251]",
+  "Core.Dandelion.Generic.LateHeart.6": "The last thing I read was this great enemies-to-lovers slowburn involving-$14#$b#Ah, perhaps I shouldn't spoil it, in case you read it. Hm.$12",
+  "Core.Dandelion.Generic.LateHeart.7": "I write ALMOST as much as I read. Based on my book tastes, I'm sure you could take a few guesses about my intrests...$12",
+  "Core.Dandelion.Generic.LateHeart.8": "I love high-fantasy, but science fiction is another favorite. I know Stellar Galavant is popular, but I'm more into Mass Impact in terms of space operas...$14",
+  "Core.Dandelion.Generic.LateHeart.9": "What was the last thing you read that really swept you off your feet, @? If you can't think of anything, I hope you get the chance to pick up a book soon.$6",
+  "Core.Dandelion.Generic.LateHeart.10": "I think Roslin says 'Chai Tea' to try and get under my skin. It's just 'Chai', it means 'tea'.$2#$b#Little does she know, she's very difficult to be angry at. Mainly on account of her being small and throwable.$6",
+  "Core.Dandelion.Generic.LateHeart.11": "Paying attention to the steep time of various teas is very important! Those times are on the tins for a reason, it does really impact the taste.$15",
+  "Core.Dandelion.Generic.LateHeart.12": "I feel like whenever I have matcha outside of making it myself, it tastes burnt. What's with that?$16",
+  "Core.Dandelion.Generic.LateHeart.13": "One of my favorite fancy drinks is a Port Drake Fog. It's an earl gray tea, with vanilla syrup and a thick layer of milk foam...$14",
+  "Core.Dandelion.Generic.LateHeart.14": "I don't think being a paladin was overrated, or anything. I just wouldn't do it again, because I don't need oither people to validate my drive to do good.$15#$b#Good isn't what you are. It's what you do.$14",
+  "Core.Dandelion.Generic.LateHeart.15": "I read a book recently about a satyr bard who fell in love with a dragon, and-$18#$b#Well, hm. Perhaps you should read it yourself, it's a little specific. If you like, erm, spicy fantasy romances.$12",
+  "Core.Dandelion.Generic.LateHeart.16": "There are several people in town who are extremely throwable. Eloise, for one. Very small, very areodynamic.$13#$b#Aideen? More difficult, but doable. The druid? Basically a javelin.$16",
+  "Core.Dandelion.Generic.LateHeart.17": "One of my favorite books involve an entirely male fae court falling for this adventurer who has her eyes on this femme orc - oh, sorry. Spoilers.$12",
+  "Core.Dandelion.Generic.LateHeart.18": "I don't miss sleeping on a bedroll. Even Roslin taking up the majority of the space in the big bed is still better than being on the ground.$13",
+  "Core.Dandelion.Generic.LateHeart.19": "Sometimes I can hear Roslin and Solomon arguing. It's funny, because he doesn't always appear, so it just looks like she's having a heated argument with herself.$6",
+  "Core.Dandelion.Generic.LateHeart.20": "I am quite fond of Solomon, for all that he's a mischevious little scamp. He is a reflection of Roslin, after all.$6",
+  "Core.Dandelion.Generic.LateHeart.21": "I was reading this one book the other day, about a large bone-headed monster and his lover, a thunder dragon in human form who- oh, spoilers! Sorry!$12",
+  "Core.Dandelion.Generic.LateHeart.22": "All of my tea is growing in very nicely. I'm looking forward to steeping some of my home-grown leaves. Here, have a few, @![251]$1",
+  "Core.Dandelion.Generic.LateHeart.23": "One of my more recent reads wasn't a fantasy novel, it was about a celebrity who ended up crushing on her bodyguard, and she RETURNED HER FEELI-$4#$b#Sorry, spoilers.$12",
+  "Core.Dandelion.Generic.LateHeart.24": "When I was but a neophyte back in the order, I got put through the wringer. I'm not sure I'm better off for it, nor would I train someone that way myself.$15",
+  "Core.Dandelion.Generic.LateHeart.25": "My oath was never important enough to me to put love aside for it. That was my failure as a paladin; yet, I carry the oathbreaker title proudly.$18",
+  "Core.Dandelion.Generic.LateHeart.26": "I think Mateo has done brilliantly with their means of guild management. Building a community and fostering the growth of it's members is noble, and kind.$14",
+  "Core.Dandelion.Generic.LateHeart.27": "Cirrus is a lovely and gracious person to live with. Her cooking is divine, and I will make her drinks on demand in exchange for meals.$1",
+  "Core.Dandelion.Generic.LateHeart.28": "Mateo invited me to their tabletop game, I think I'll play in the next campaign - I'm just having trouble on deciding who to write up for it.$0",
+  "Core.Dandelion.Generic.LateHeart.29": "It's very nice that Roslin and Lewis have made up. Well, as much as one CAN make up with Lewis.$6",
+  "Core.Dandelion.Generic.LateHeart.30": "I understand Marlon has his reservations about me, having broken my oath and all. Unfortunately for him, I just don't care about his opinion.$1",
+  "Core.Dandelion.Generic.LateHeart.31": "Ah! Hello, @! How is %farm coming along? I know you're quite a busy bee!$13",
+  "Core.Dandelion.Generic.LateHeart.32": "@, have you read any of the books I've mentioned? I'd love to chat about them over a cup of tea...$14",
+  "Core.Dandelion.Generic.LateHeart.33": "Roslin and I are expecting you for tea and a meal sometime, @. You're spoken very highly love in our household.$1",
+  "Core.Dandelion.Generic.LateHeart.34": "Roslin says I have too vast of a tea collection to be reasonable. I think a hundred varieties is simply the start of a collection, not the end of one!$13",
+  "Core.Dandelion.Generic.LateHeart.35": "It's been quite nice, @, to feel like I can put my past behind me and focus on a quiet life rather than adventuring.$12",
+  "Core.Dandelion.Generic.LateHeart.36": "I've been keeping up on my fitness by benchpressing locals. So far, I've been able to lift EVERYONE. And I bet I could lift you, too!$18",
+  "Core.Dandelion.Generic.LateHeart.37": "You should join me for workouts sometime, @! I know farming keeps you fit, but wouldn't you love to be able to join the Tortilla Chip Club?$14#$b#That is when the ratio of your shoulders to your waist matches that of a chippy. It's quite a feat!$18",
+  "Core.Dandelion.Generic.LateHeart.38": "Roslin got me a cute little apron for when I decide make my homemade bread. I responded by beating my overhead press record while wearing it. Eight hundred and fourteen pounds!$18",
+  "Core.Dandelion.Generic.LateHeart.39": "One of my most important tasks in our home is, in fact, reaching everything on the high shelves. Roslin and Cirrus are both quite small, you see...$1",
+  "Core.Dandelion.Generic.LateHeart.40": "I am both a 'home wife' AND a 'war wife'. I am passionate about domesticity AND violence!$13",
+  "Core.Dandelion.Generic.LateHeart.41": "My favorite way to practice my aim is by throwing large objects that should not be traditionally thrown. Like furniture, and melee weapons.$17",
+  "Core.Dandelion.Generic.LateHeart.42": "My armor was crafted by a very old friend, named Weaveforger. I believe you and Mateo would take fine apprentices, if you ever had the privilage of meeting him.$6",
+  "Core.Dandelion.Generic.LateHeart.43": "I have travelled quite a lot, and met many people. You, @, are among my shortlist of favorites.$14",
+  "Core.Dandelion.Generic.LateHeart.44": "@, you are a a very accomplished person, and I consider it an honor to know you. In the case you're too busy to visit for tea, I implore you to grow your own.$13[251]",
+  "Core.Dandelion.Generic.LateHeart.45": "Here are some clippings from my tea plants, @. I hope you can grow them to maturity, and enjoy the spoils with friends and loved ones.$13[251]",
 
   // SPRING
-  "Core.Dandelion.Spring.1": "",
-  "Core.Dandelion.Spring.2": "",
-  "Core.Dandelion.Spring.3": "",
-  "Core.Dandelion.Spring.4": "",
-  "Core.Dandelion.Spring.5": "",
+  "Core.Dandelion.Spring.1": "I love-love-love the Springtime. Maybe it's just easier to travel in Spring compared to Winter, but still...$6",
+  "Core.Dandelion.Spring.2": "What kind of crops do you grow this time of year, @? I'm sure %farm is looking incredible right around now.$1",
+  "Core.Dandelion.Spring.3": "Roslin complains a lot about allergies, but she doesn't even have them...$14",
 
   // SUMMER
-  "Core.Dandelion.Summer.1": "",
-  "Core.Dandelion.Summer.2": "",
-  "Core.Dandelion.Summer.3": "",
-  "Core.Dandelion.Summer.4": "",
-  "Core.Dandelion.Summer.5": "",
+  "Core.Dandelion.Summer.1": "I adore swimming, so I got myself a very cute swimsuit and I can't WAIT to go to the beach in it.$1",
+  "Core.Dandelion.Summer.2": "Nothing beats working out on the beach, I swear. The sea breeze is so motivating.$18",
+  "Core.Dandelion.Summer.3": "Sun's out, guns out!$18#$b#%Dandelion flexes.",
 
   // FALL
-  "Core.Dandelion.Fall.1": "",
-  "Core.Dandelion.Fall.2": "",
-  "Core.Dandelion.Fall.3": "",
-  "Core.Dandelion.Fall.4": "",
-  "Core.Dandelion.Fall.5": "",
+  "Core.Dandelion.Fall.1": "I have a GIANT pile of books I am DETERMINED to get through by the end of cozy season.$14",
+  "Core.Dandelion.Fall.2": "Now is the best time of year to curl up, reread some old favorites, and drink fancy teas, ciders, and coffee... if you're into coffee, anyway.$17",
+  "Core.Dandelion.Fall.3": "I hope I can get Cirrus to roast some pumpkin seeds for Mateo and Roslin. They're big fans, especially when you spice them up.$12",
 
   // WINTER
-  "Core.Dandelion.Winter.1": "",
-  "Core.Dandelion.Winter.2": "",
-  "Core.Dandelion.Winter.3": "",
-  "Core.Dandelion.Winter.4": "",
-  "Core.Dandelion.Winter.5": "",
+  "Core.Dandelion.Winter.1": "It is never too cold - goodness, it is never out of season at all - for bow ties.$1",
+  "Core.Dandelion.Winter.2": "The best part about being stationary is not having to worry about setting up camp in the dead of winter anymore.$15",
+  "Core.Dandelion.Winter.3": "Why does the town do a soup based festival in the summertime instead of around now?$17",
+
 
   // 10H SITUATIONAL
   "Core.Dandelion.EXAMPLE.1": "",
@@ -4433,44 +4426,43 @@ ________      ________ _   _ _______ _____
 */
 
   // STARDROP TEA 
-  "Gifts.Dandelion.GiftReaction.StardropTea": "",
+  "Gifts.Dandelion.GiftReaction.StardropTea": "@, this is my FAVORITE. THING. EVER. Thank you, I apprecaite being offered such an excuisite tea.$4",
 
   // BASIC GIFT RESPONSES 
-  "Gifts.Dandelion.GiftReaction.Love": "",
-  "Gifts.Dandelion.GiftReaction.Like": "",
-  "Gifts.Dandelion.GiftReaction.Dislike": "",
-  "Gifts.Dandelion.GiftReaction.Hate": "",
-  "Gifts.Dandelion.GiftReaction.Neutral": "",
-
+  "Gifts.Dandelion.GiftReaction.Love": "Oh, my goodness! Thank you @, this is very lovely.",
+  "Gifts.Dandelion.GiftReaction.Like": "Thank you, @! This is a kind gift.",
+  "Gifts.Dandelion.GiftReaction.Dislike": "Oh, hm! Thank you, @. ...I suppose...",
+  "Gifts.Dandelion.GiftReaction.Hate": "...Appreciated!... Thanks. ...I guess...",
+  "Gifts.Dandelion.GiftReaction.Neutral": "Thank you, @!",
   // ARTISANAL GOODS
-  "Gifts.Dandelion.GiftReaction.CategoryArtisanalGoods": "",
+  "Gifts.Dandelion.GiftReaction.CategoryArtisanalGoods": "This looks delicious, @! Did you make it on %farm?$1",
 
   // TRASH
-  "Gifts.Dandelion.GiftReaction.CategoryTrash": "",
+  "Gifts.Dandelion.GiftReaction.CategoryTrash": "...But, why?$2",
 
   // MINERALS & GEMS
-  "Gifts.Dandelion.GiftReaction.CategoryGemsMinerals": "",
+  "Gifts.Dandelion.GiftReaction.CategoryGemsMinerals": "This is very pretty! Thank you, @.$1",
 
   // LOVES - PLATONIC
-  "Gifts.Dandelion.GiftReaction.PrismaticShard": "",
-  "Gifts.Dandelion.GiftReaction.Dandelion": "",
-  "Gifts.Dandelion.GiftReaction.Starfruit": "",
-  "Gifts.Dandelion.GiftReaction.GreenTea": "",
+  "Gifts.Dandelion.GiftReaction.PrismaticShard": "Goodness, @! I know how rare these are, and what they're used for. I appreciate such a weighted gift - thank you.$1",
+  "Gifts.Dandelion.GiftReaction.Dandelion": "Ah-ha! Surprise, surprise. This is one of my favorite flowers, because you can make a lovely tea with it. Thank you, @.$1",
+  "Gifts.Dandelion.GiftReaction.Starfruit": "I love these because they're yellow, and yellow is my favorite color. I bet I could make it into a syrup for tea, too.$6",
+  "Gifts.Dandelion.GiftReaction.GreenTea": "Green tea is a CLASSIC. And these are from leaves you grew? Lovely! Thank you, @.$1",
 
   // LIKES
-  "Gifts.Dandelion.GiftReaction.Wine": "",
-  "Gifts.Dandelion.GiftReaction.Sunflower": "",
-  "Gifts.Dandelion.GiftReaction.GoatCheese": "",
-  "Gifts.Dandelion.GiftReaction.Truffle": "",
+  "Gifts.Dandelion.GiftReaction.Wine": "Oooh, I do fancy a nice wine every once in a while. Thank you, @.$6",
+  "Gifts.Dandelion.GiftReaction.Sunflower": "I love these because they're yellow, and yellow is my favorite color. I bet I could make it into a syrup for tea, too.$6",
+  "Gifts.Dandelion.GiftReaction.GoatCheese": "This pairs well with wine! And, ooh, tea. Of course it would pair well with the right tea...$1",
+  "Gifts.Dandelion.GiftReaction.Truffle": "I love these because Cirrus can use them to shave onto fancy meals.$6",
 
   // BIRTHDAY - PLATONIC
-  "Gifts.Dandelion.GiftReaction.Dandelion.Birthday": "",
-  "Gifts.Dandelion.GiftReaction.Starfruit.Birthday": "",
-  "Gifts.Dandelion.GiftReaction.GreenTea.Birthday": "",
+  "Gifts.Dandelion.GiftReaction.Dandelion.Birthday": "You got me my favorite flower, for my favorite tea, on my birthday? You're the best, @.$1",
+  "Gifts.Dandelion.GiftReaction.Starfruit.Birthday": "My favorite fruit on my birthday? You're so thoughtful, @. Thank you.$1",
+  "Gifts.Dandelion.GiftReaction.GreenTea.Birthday": "Homemade tea on my birthday? You're so thoughtful, @. Thank you.$1",
 
   // ITEM REJECTIONS 
-  "Gifts.Dandelion.GiftReject.Bouquet": "",
-  "Gifts.Dandelion.GiftReject.VoidEssence": "",
+  "Gifts.Dandelion.GiftReject.Bouquet": "Uhm, no! Sorry!$1",
+  "Gifts.Dandelion.GiftReject.VoidEssence": "Ah, erm - no thank you, @. I've had enough void magic for a lifetime.$2",
 
 
   /*
@@ -4483,30 +4475,30 @@ ________      ________ _   _ _______ _____
 
  */
 
-  "Movies.Dandelion.BraveLittleSapling.1": "",
-  "Movies.Dandelion.BraveLittleSapling.2": "",
-  "Movies.Dandelion.BraveLittleSapling.3": "",
-  "Movies.Dandelion.NaturalWonders.1": "",
-  "Movies.Dandelion.NaturalWonders.2": "",
-  "Movies.Dandelion.NaturalWonders.3": "",
-  "Movies.Dandelion.PrairieKing.1": "",
-  "Movies.Dandelion.PrairieKing.2": "",
-  "Movies.Dandelion.PrairieKing.3": "",
-  "Movies.Dandelion.Wumbus.1": "",
-  "Movies.Dandelion.Wumbus.2": "",
-  "Movies.Dandelion.Wumbus.3": "",
-  "Movies.Dandelion.Mysterium.1": "",
-  "Movies.Dandelion.Mysterium.2": "",
-  "Movies.Dandelion.Mysterium.3": "",
-  "Movies.Dandelion.ItHowlsInTheRain.1": "",
-  "Movies.Dandelion.ItHowlsInTheRain.2": "",
-  "Movies.Dandelion.ItHowlsInTheRain.3": "",
-  "Movies.Dandelion.MiracleAtColdstarRanch.1": "",
-  "Movies.Dandelion.MiracleAtColdstarRanch.2": "",
-  "Movies.Dandelion.MiracleAtColdstarRanch.3": "",
-  "Movies.Dandelion.ZuzuCityExpress.1": "",
-  "Movies.Dandelion.ZuzuCityExpress.2": "",
-  "Movies.Dandelion.ZuzuCityExpress.3": "",
+  "Movies.Dandelion.BraveLittleSapling.1": "Oh, this seems cute.$1",
+  "Movies.Dandelion.BraveLittleSapling.2": "You can do it, little sapling, I believe in you... smite your enemies!$18",
+  "Movies.Dandelion.BraveLittleSapling.3": "That was great, @. Thank you for bringing me along.$13",
+  "Movies.Dandelion.NaturalWonders.1": "Oh, I love nature.$0",
+  "Movies.Dandelion.NaturalWonders.2": "Oh, I love nature even more on seeing how violent it is.$1",
+  "Movies.Dandelion.NaturalWonders.3": "Goodness, nature is hardcore. Thank you for bringing me along.$13",
+  "Movies.Dandelion.PrairieKing.1": "Oh, this is quite a fan-favorite among your friendgroup, isn't it?$1",
+  "Movies.Dandelion.PrairieKing.2": "Ah, goodness, Linden's quite a badass-$13",
+  "Movies.Dandelion.PrairieKing.3": "Thank you for sharing something so important to you with me, @.$6",
+  "Movies.Dandelion.Wumbus.1": "What's a Wumbus?$2",
+  "Movies.Dandelion.Wumbus.2": "Oh, that's a Wumbus.$0",
+  "Movies.Dandelion.Wumbus.3": "Not to be dramatic but I would commit a violent act for Wumbus.$1",
+  "Movies.Dandelion.Mysterium.1": "Oh, Roslin loves this one.$1",
+  "Movies.Dandelion.Mysterium.2": "I would firewalk with her, if she asked me to.$1",
+  "Movies.Dandelion.Mysterium.3": "That was a good movie, a bit eclectic though.$0",
+  "Movies.Dandelion.ItHowlsInTheRain.1": "I'm surprised we're going to a horror movie.$3",
+  "Movies.Dandelion.ItHowlsInTheRain.2": "Oh. The monster is pretty cute, isn't he?$12",
+  "Movies.Dandelion.ItHowlsInTheRain.3": "That wasn't scary at all.$14",
+  "Movies.Dandelion.MiracleAtColdstarRanch.1": "Oh, I love these easy sort of movies.$6",
+  "Movies.Dandelion.MiracleAtColdstarRanch.2": "This is very sweet.$1",
+  "Movies.Dandelion.MiracleAtColdstarRanch.3": "Nothing beats a soft romance.$13",
+  "Movies.Dandelion.ZuzuCityExpress.1": "This is a classic.$6",
+  "Movies.Dandelion.ZuzuCityExpress.2": "Oh, it's a bit more dated than I remembered.$16",
+  "Movies.Dandelion.ZuzuCityExpress.3": "It's always nice to look back on a piece of cinematic history.$13",
 
   /*
   ______ ______  _____ _______ _______      __     _       _____ 
@@ -4519,54 +4511,54 @@ ________      ________ _   _ _______ _____
  */
 
   // EGG FESTIVAL 
-  "Festivals.Dandelion.spring13.1": "",
-  "Festivals.Dandelion.spring13.2": "",
-  "Festivals.Dandelion.spring13.3": "",
+  "Festivals.Dandelion.spring13.1": "I eat so many eggs, it's not even funny. Great source of protein.$1",
+  "Festivals.Dandelion.spring13.2": "I will find every egg, and eat them all. I've broken my oath, I'll shove a child.$1",
+  "Festivals.Dandelion.spring13.3": "I am perhaps grateful adults can't participate in the egg hunt, because I am very competitive.",
 
   // FLOWER DANCE 
-  "Festivals.Dandelion.spring24.1": "",
-  "Festivals.Dandelion.spring24.2": "",
-  "Festivals.Dandelion.spring24.3": "",
+  "Festivals.Dandelion.spring24.1": "I'm very fond of dancing. Roslin, not so much. But that's alright.$4",
+  "Festivals.Dandelion.spring24.2": "Everyone looks lovely, but I only have eyes for my Darling.$4",
+  "Festivals.Dandelion.spring24.3": "You look great, @. Now, if you'll excuse me, I have to go convince Roslin to dance with me.$4",
 
   // LUAU 
-  "Festivals.Dandelion.summer11.1": "",
-  "Festivals.Dandelion.summer11.2": "",
-  "Festivals.Dandelion.summer11.3": "",
+  "Festivals.Dandelion.summer11.1": "It's too hot for soup, isn't it? Goodness gracious.$1",
+  "Festivals.Dandelion.summer11.2": "I wonder if I can get Roslin to dance with me. Less people will be paying attention than at the Spring festival.$1",
+  "Festivals.Dandelion.summer11.3": "I love being at the beach. Maybe I can get some reps in while I'm here.$1",
 
   // MOONLIGHT JELLIES
-  "Festivals.Dandelion.MoonlightJelly.1": "",
-  "Festivals.Dandelion.MoonlightJelly.2": "",
-  "Festivals.Dandelion.MoonlightJelly.3": "",
+  "Festivals.Dandelion.MoonlightJelly.1": "I will never not be impressed by the Lunaloos.$4",
+  "Festivals.Dandelion.MoonlightJelly.2": "The only thing more beautiful than this festival, is Roslin.$4",
+  "Festivals.Dandelion.MoonlightJelly.3": "It doesn't matter if this is magic or science. It's just incredible.$4",
 
   // SDV FAIR
-  "Festivals.Dandelion.fall16.1": "",
-  "Festivals.Dandelion.fall16.2": "",
-  "Festivals.Dandelion.fall16.3": "",
+  "Festivals.Dandelion.fall16.1": "I will let Mateo continue to win the bell-ringing game. I think if I played, I'd break it.$1",
+  "Festivals.Dandelion.fall16.2": "There's a lot of VERY tasty food here. Best get my protien in!$1",
+  "Festivals.Dandelion.fall16.3": "Clint and Mateo are both very good smiths, I'm glad to see what they've got on display.$1",
 
   // SPIRIT'S EVE
-  "Festivals.Dandelion.fall27.1": "",
-  "Festivals.Dandelion.fall27.2": "",
-  "Festivals.Dandelion.fall27.3": "",
+  "Festivals.Dandelion.fall27.1": "Oh noooo. I am so scarrrrred. I sure hope Roslin holds my hannnnnnnnnnnd.$6",
+  "Festivals.Dandelion.fall27.2": "I love all the prep that goes into this festival, and I love how much Mateo loves it.$6",
+  "Festivals.Dandelion.fall27.3": "There's so much candy! I don't eat many sweets, but tonight is for tricks AND treats.$1",
 
   // ICE FESTIVAL 
-  "Festivals.Dandelion.winter8.1": "",
-  "Festivals.Dandelion.winter8.2": "",
-  "Festivals.Dandelion.winter8.3": "",
+  "Festivals.Dandelion.winter8.1": "Roslin claims she can ice skate, but then...refuses to prove it.$17",
+  "Festivals.Dandelion.winter8.2": "How hard do you think it would be to start a mass snowball fight?$18",
+  "Festivals.Dandelion.winter8.3": "I thought it would be colder out today than it is, honestly. At least it's not snowing!$1",
 
   // WINTER STAR 
-  "Festivals.Dandelion.winter25.1": "",
-  "Festivals.Dandelion.winter25.2": "",
-  "Festivals.Dandelion.winter25.3": "",
+  "Festivals.Dandelion.winter25.1": "I appreciate Roslin. She's the best gift I could've asked for.$4",
+  "Festivals.Dandelion.winter25.2": "I got Roslin some fuzzy socks for the holiday, because those are her favorite.$4",
+  "Festivals.Dandelion.winter25.3": "I hope you wind up with some big smiles and some bad laughs this year, @.$1",
 
   // RSV GATHERING 
-  "Festivals.Dandelion.fall20.1": "",
-  "Festivals.Dandelion.fall20.2": "",
-  "Festivals.Dandelion.fall20.3": "",
+  "Festivals.Dandelion.fall20.1": "Too bad there isn't a strength competition.$14",
+  "Festivals.Dandelion.fall20.2": "Pike makes excellent food, I could spend the whole day eating.$1",
+  "Festivals.Dandelion.fall20.3": "Coming up here is worth the hike, for sure. This is such a nice time.$1",
 
   // RSV EMBER OF RESOLUTIONS 
-  "Festivals.Dandelion.winter28.1": "",
-  "Festivals.Dandelion.winter28.2": "",
-  "Festivals.Dandelion.winter28.3": "",
+  "Festivals.Dandelion.winter28.1": "I haven't put much thought into the future. After the incident, I'm content taking things one day at a time.$14",
+  "Festivals.Dandelion.winter28.2": "Goodness, even I think that's quite a lot of wood to burn.$16",
+  "Festivals.Dandelion.winter28.3": "Coming up here is worth it for the food alone!$1",
 
 
 
@@ -4580,7 +4572,11 @@ ________      ________ _   _ _______ _____
                                                                                                    
 */
 
-  "Strings.Dandelion.EXAMPLE": "",
+  "Strings.Dandelion.DandyTea2": "Dandelion's growing quite an excessive amount of tea here in the Lion's Mane.",
+  "Strings.Dandelion.DandyTea1": "Goodness, is this yet ANOTHER planter of tea?",
+  "Strings.Dandelion.DandyTea3": "How much tea does one woman need!?",
+  "Strings.Dandelion.SpicyBooks1": "Oh, my. This is only part of Dandelion's spicy romance novel collection.",
+  "Strings.Dandelion.SpicyBooks2": "These spicy books seem even MORE extreme than the ones in the other room.",
 
   /*
   __  __          _____ _      
@@ -4637,7 +4633,7 @@ ________      ________ _   _ _______ _____
 
   "CT.Dandelion.Example": "",
 
-  // Dandelion' REACTIONS
+  // DANDELION'S REACTIONS
   "CT.Dandelion.SterlingDrugs": "",
   "CT.Dandelion.SterlingRelapse": "",
   "CT.Dandelion.SterlingApology": "",

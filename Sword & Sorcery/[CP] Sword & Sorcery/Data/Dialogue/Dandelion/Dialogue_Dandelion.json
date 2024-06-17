@@ -15,7 +15,7 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Dandelion",
       "Entries": {
-        "{{WeekDay}}": "{{i18n:Core.Dandelion.Generic.EarlyHeart.{{Random:{{Range: 1, 30}}}}}}"
+        "{{WeekDay}}": "{{i18n:Core.Dandelion.Generic.EarlyHeart.{{Random:{{Range: 1, 15}}}}}}"
       }
     },
     {
@@ -23,7 +23,7 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Dandelion",
       "Entries": {
-        "{{WeekDay}}": "{{i18n:Core.Dandelion.Generic.LateHeart.{{Random:{{Range: 1, 50}}}}}}"
+        "{{WeekDay}}": "{{i18n:Core.Dandelion.Generic.LateHeart.{{Random:{{Range: 1, 45}}}}}}"
       },
       "When": {
         "Hearts:Dandelion": "{{Range: 6, 10}}"
@@ -36,7 +36,7 @@
       "Update": "OnLocationChange",
       "Target": "Characters/Dialogue/Dandelion",
       "Entries": {
-        "{{WeekDay}}": "{{i18n:Core.Dandelion.{{Season}}.{{Random:{{Range: 1, 15}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Dandelion_OverrideSeenToday received"
+        "{{WeekDay}}": "{{i18n:Core.Dandelion.{{Season}}.{{Random:{{Range: 1, 3}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Dandelion_OverrideSeenToday received"
       },
       "When": {
         "Query: {{Random: {{Range: 1, 10}}|key=CSO}} = 1": true,
@@ -82,19 +82,13 @@
         "cc_Minecart": "{{i18n:Core.Dandelion.CCMinecart}}",
         "cc_Complete": "{{i18n:Core.Dandelion.CCComplete}}",
         "movieTheater": "{{i18n:Core.Dandelion.MovieTheater}}",
-        // BIRTHDAYS
-        "fall_25": "{{i18n:Core.Dandelion.Fall25}}",
-        "winter_21": "{{i18n:Core.Dandelion.Winter21}}",
         // END OF SEASON
         "spring_28": "{{i18n:Core.Dandelion.SpringEnd}}",
         "summer_28": "{{i18n:Core.Dandelion.SummerEnd}}",
         "fall_28": "{{i18n:Core.Dandelion.FallEnd}}",
         "winter_28": "{{i18n:Core.Dandelion.WinterEnd}}",
         // SVE COMMUNITY DAY
-        "CommunityCenter4": "{{i18n:Core.Dandelion.CommunityCenter4}}",
-        "CommunityCenter6": "{{i18n:Core.Dandelion.CommunityCenter6}}",
-        "CommunityCenter8": "{{i18n:Core.Dandelion.CommunityCenter8}}",
-        "CommunityCenter10": "{{i18n:Core.Dandelion.CommunityCenter10}}",
+        "CommunityCenter": "{{i18n:Core.Dandelion.CommunityCenter10}}",
         // FESTIVALS
         "spring_12": "{{i18n:Core.Dandelion.EggFestival}}",
         "spring_23": "{{i18n:Core.Dandelion.FlowerDance}}",
@@ -105,44 +99,7 @@
         "winter_7": "{{i18n:Core.Dandelion.IceFestival}}",
         "winter_16": "{{i18n:Core.Dandelion.NightMarket}}",
         "winter_24": "{{i18n:Core.Dandelion.WinterStar}}",
-        // ROMANTIC (POSITIVE)
-        "give_flowersA": "{{i18n:Core.Dandelion.GiveFlowersA}}",
-        "give_flowersB": "{{i18n:Core.Dandelion.GiveFlowersB}}",
-        "give_pendant": "{{i18n:Core.Dandelion.GivePendant}}",
-        "stardrop_giftA": "{{i18n:Core.Dandelion.StardropGiftA}}",
-        "stardrop_giftB": "{{i18n:Core.Dandelion.StardropGiftB}}",
-        // ROMANTIC (NEGATIVE)
-        "danceRejection": "{{i18n:Core.Dandelion.DanceRejection}}",
-        "divorced": "{{i18n:Core.Dandelion.Divorced}}",
-        "breakUp": "{{i18n:Core.Dandelion.BreakUp}}",
-        "dumped_Guys": "{{i18n:Core.Dandelion.DumpedGuys}}",
-        "secondChance_Guys": "{{i18n:Core.Dandelion.SecondChanceGuys}}",
-        "reject_two_heartA": "{{i18n:Core.Dandelion.Reject2HA}}",
-        "reject_two_heartB": "{{i18n:Core.Dandelion.Reject2HB}}",
-        "reject_four_heartA": "{{i18n:Core.Dandelion.Reject4HA}}",
-        "reject_four_heartB": "{{i18n:Core.Dandelion.Reject4HB}}",
-        "engageA": "{{i18n:Core.Dandelion.EngageA}}",
-        "engageB": "{{i18n:Core.Dandelion.EngageB}}",
-        "marriedA": "{{i18n:Core.Dandelion.MarriedA}}",
-        "marriedB": "{{i18n:Core.Dandelion.MarriedB}}",
-        "refusal_no_heartsA": "{{i18n:Core.Dandelion.RefusalNoHeartsA}}",
-        "refusal_no_heartsB": "{{i18n:Core.Dandelion.RefusalNoHeartsB}}",
-        "refusal_knownA": "{{i18n:Core.Dandelion.RefusalKnownA}}",
-        "refusal_knownB": "{{i18n:Core.Dandelion.RefusalKnownB}}",
-        "refusal_botherA": "{{i18n:Core.Dandelion.RefusalBotherA}}",
-        "refusal_botherB": "{{i18n:Core.Dandelion.RefusalBotherB}}",
         // RESORT
-        "Resort_Entering": "{{i18n:Core.Dandelion.ResortEntering}}",
-        "Resort_Leaving": "{{i18n:Core.Dandelion.ResortLeaving}}",
-        "Resort_Shore": "{{i18n:Core.Dandelion.ResortShore}}",
-        "Resort_Umbrella": "{{i18n:Core.Dandelion.ResortUmbrella}}",
-        "Resort_Wander": "{{i18n:Core.Dandelion.ResortWander}}",
-        "Resort_Wander_2": "{{i18n:Core.Dandelion.ResortWander.2}}",
-        "Resort_Chair": "{{i18n:Core.Dandelion.ResortChair}}",
-        "Resort_Bar": "{{i18n:Core.Dandelion.ResortBar}}",
-        "Resort_Towel": "{{i18n:Core.DandelionResortTowel.}}",
-        "Resort_Towel_2": "{{i18n:Core.Dandelion.ResortTowel.2}}",
-        "Resort_Towel_3": "{{i18n:Core.Dandelion.Resort_Towel.3}}",
         "Resort": "{{i18n:Core.Dandelion.Resort}}",
         // GREEN RAIN 
         "GreenRain": "{{i18n:Core.Dandelion.GreenRain}}",
