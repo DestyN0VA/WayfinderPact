@@ -866,7 +866,366 @@
     },
   },
 },
-
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_orangegingerbeer": {
+      "Name": "Orange-Flavored Ginger Beer",
+      "DisplayName": "{{i18n: food.orangegingerbeer.name}}",
+      "Description": "{{i18n: food.orangegingerbeer.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Edibility": 10,
+      "IsDrink": true,
+      "Price": 420,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 300,
+          "CustomAttributes": {
+            "FarmingLevel": 0,
+            "FishingLevel": 0,
+            "MiningLevel": 1,
+            "LuckLevel": 0,
+            "ForagingLevel": 0,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 76
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_blueberrygingerbeer": {
+      "Name": "Blueberry-Flavored Ginger Beer",
+      "DisplayName": "{{i18n: food.blueberrygingerbeer.name}}",
+      "Description": "{{i18n: food.blueberrygingerbeer.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Edibility": 10,
+      "IsDrink": true,
+      "Price": 210,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 300,
+          "CustomAttributes": {
+            "FarmingLevel": 0,
+            "FishingLevel": 1,
+            "MiningLevel": 0,
+            "LuckLevel": 0,
+            "ForagingLevel": 0,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 77
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_pineapplegingerbeer": {
+      "Name": "Pineapple-Flavored Ginger Beer",
+      "DisplayName": "{{i18n: food.pineapplegingerbeer.name}}",
+      "Description": "{{i18n: food.pineapplegingerbeer.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Edibility": 10,
+      "IsDrink": true,
+      "Price": 1260,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 300,
+          "CustomAttributes": {
+            "FarmingLevel": 1,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 0,
+            "ForagingLevel": 0,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 78
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_rhubarbgingerbeer": {
+      "Name": "Rhubarb-Flavored Ginger Beer",
+      "DisplayName": "{{i18n: food.rhubarbgingerbeer.name}}",
+      "Description": "{{i18n: food.rhubarbgingerbeer.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Edibility": 10,
+      "IsDrink": true,
+      "Price": 924,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 300,
+          "CustomAttributes": {
+            "FarmingLevel": 0,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 0,
+            "ForagingLevel": 0,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 1,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 79
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_strawberrygingerbeer": {
+      "Name": "Strawberry-Flavored Ginger Beer",
+      "DisplayName": "{{i18n: food.strawberrygingerbeer.name}}",
+      "Description": "{{i18n: food.strawberrygingerbeer.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Edibility": 10,
+      "IsDrink": true,
+      "Price": 504,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 300,
+          "CustomAttributes": {
+            "FarmingLevel": 0,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 0,
+            "ForagingLevel": 0,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 1,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 80
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_peachgingerbeer": {
+      "Name": "Peach-Flavored Ginger Beer",
+      "DisplayName": "{{i18n: food.peachgingerbeer.name}}",
+      "Description": "{{i18n: food.peachgingerbeer.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Edibility": 10,
+      "IsDrink": true,
+      "Price": 588,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 300,
+          "CustomAttributes": {
+            "FarmingLevel": 0,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 0,
+            "ForagingLevel": 1,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 81
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_ancientelderberrygingerbeer": {
+      "Name": "Ancient Elderberry-Flavored Ginger Beer",
+      "DisplayName": "{{i18n: food.ancientelderberrygingerbeer.name}}",
+      "Description": "{{i18n: food.ancientelderberrygingerbeer.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Edibility": 10,
+      "IsDrink": true,
+      "Price": 630,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 500,
+          "CustomAttributes": {
+            "FarmingLevel": 1,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 1,
+            "ForagingLevel": 1,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 82
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_ancientappleberrygingerbeer": {
+      "Name": "Ancient Appleberry-Flavored Ginger Beer",
+      "DisplayName": "{{i18n: food.ancientappleberrygingerbeer.name}}",
+      "Description": "{{i18n: food.ancientappleberrygingerbeer.description}}",
+      "Type": "Cooking",
+      "Price": 1575,
+      "Category": -7,
+      "Edibility": 10,
+      "IsDrink": true,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 500,
+          "CustomAttributes": {
+            "FarmingLevel": 1,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 1,
+            "ForagingLevel": 1,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 82
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_ancienthuckleberrygingerbeer": {
+      "Name": "Ancient Huckleberry-Flavored Ginger Beer",
+      "DisplayName": "{{i18n: food.ancienthuckleberrygingerbeer.name}}",
+      "Description": "{{i18n: food.ancienthuckleberrygingerbeer.description}}",
+      "Type": "Cooking",
+      "Price": 2150,
+      "Category": -7,
+      "Edibility": 10,
+      "IsDrink": true,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 500,
+          "CustomAttributes": {
+            "FarmingLevel": 1,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 1,
+            "ForagingLevel": 1,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 82
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_ancientfruitgingerbeer": {
+      "Name": "Ancient Fruit-Flavored Ginger Beer",
+      "DisplayName": "{{i18n: food.ancientfruitgingerbeer.name}}",
+      "Description": "{{i18n: food.ancientfruitgingerbeer.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Edibility": 10,
+      "IsDrink": true,
+      "Price": 1575,
+      "ExcludeFromShippingCollection": true,
+      "Buffs": [
+        {
+          "Duration": 400,
+          "CustomAttributes": {
+            "FarmingLevel": 1,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 0,
+            "ForagingLevel": 1,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 82
+    },
+  },
+},
 // CRAFTING RECIPES 
 {
   "Action": "EditData",

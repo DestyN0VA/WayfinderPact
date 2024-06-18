@@ -60,7 +60,7 @@
         },
         {
             "Action": "Load",
-            "Target": "Characters/Mateo_Seasonal_1, Characters/Mateo_Seasonal_2, Characters/Mateo_Seasonal_3, Characters/Mateo_Seasonal_4, Characters/Mateo_Seasonal_5, Characters/Mateo_Seasonal_6, Characters/Mateo_Seasonal_7, Characters/Mateo_Seasonal_8, Characters/Mateo_Seasonal_9, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9",
+            "Target": "Characters/Mateo_Seasonal_1, Characters/Mateo_Seasonal_2, Characters/Mateo_Seasonal_3, Characters/Mateo_Seasonal_4, Characters/Mateo_Seasonal_5, Characters/Mateo_Seasonal_6, Characters/Mateo_Seasonal_7, Characters/Mateo_Seasonal_8, Characters/Mateo_Seasonal_9, Characters/Mateo_Seasonal_10, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/Mateo_Seasonal_10",
             "FromFile": "Assets/{{TargetPathOnly}}/Mateo/Seasonal/{{TargetWithoutPath}}.png"
         },
         {
@@ -74,7 +74,7 @@
         {
             "LogName": "Mateo's Scar Overlay",
             "Action": "EditImage",
-            "Target": "Portraits/Mateo, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
+            "Target": "Portraits/Mateo, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/Mateo_Seasonal_10, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
             "PatchMode": "Overlay",
             "FromFile": "Assets/Portraits/Mateo/scar_overlay_mateo.png",
             "Update": "OnLocationChange",
@@ -83,7 +83,7 @@
         {   
             "LogName": "Mermaid Pendant Earring",
             "Action": "EditImage",
-            "Target": "Portraits/Mateo, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
+            "Target": "Portraits/Mateo, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/Mateo_Seasonal_10, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
             "PatchMode": "Overlay",
             "FromFile": "Assets/Portraits/Mateo/pendant_overlay_mateo.png",
             "Update": "OnLocationChange",
@@ -92,7 +92,7 @@
         {   
             "LogName": "Mateo's Troll Heritage Portrait Overlay",
             "Action": "EditImage",
-            "Target": "Portraits/Mateo, Portraits/Mateo_beach, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
+            "Target": "Portraits/Mateo, Portraits/Mateo_beach, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/Mateo_Seasonal_10, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
             "PatchMode": "Overlay",
             "FromFile": "Assets/Portraits/Mateo/{{Horns}}_Overlay_Mateo.png",
             "Update": "OnLocationChange",
@@ -110,7 +110,7 @@
         {   
             "LogName": "Mateo's Troll Heritage Sprite Overlay",
             "Action": "EditImage",
-            "Target": "Characters/Mateo, Characters/Mateo_Seasonal_1, Characters/Mateo_Seasonal_2, Characters/Mateo_Seasonal_3, Characters/Mateo_Seasonal_4, Characters/Mateo_Seasonal_5, Characters/Mateo_Seasonal_6, Characters/Mateo_Seasonal_7,Characters/Mateo_Seasonal_8, Characters/Mateo_Seasonal_9, Characters/EggFair_Mateo, Characters/IceFestWinterStar_Mateo, Characters/LuauMoonlight_Mateo, Characters/Armor_Mateo, Characters/Shirtless_Mateo",
+            "Target": "Characters/Mateo, Characters/Mateo_Seasonal_1, Characters/Mateo_Seasonal_2, Characters/Mateo_Seasonal_3, Characters/Mateo_Seasonal_4, Characters/Mateo_Seasonal_5, Characters/Mateo_Seasonal_6, Characters/Mateo_Seasonal_7,Characters/Mateo_Seasonal_8, Characters/Mateo_Seasonal_9, Characters/Mateo_Seasonal_10, Characters/EggFair_Mateo, Characters/IceFestWinterStar_Mateo, Characters/LuauMoonlight_Mateo, Characters/Armor_Mateo, Characters/Shirtless_Mateo",
             "PatchMode": "Overlay",
             "FromFile": "assets/Characters/Mateo/horn_overlay_mateo.png",
             "Update": "OnLocationChange",
@@ -119,7 +119,7 @@
         {
             "LogName": "Mateo's Scar Overlay",
             "Action": "EditImage",
-            "Target": "Portraits/Mateo/Festivals/EggFair_Mateo.png, Portraits/Mateo/Festivals/FlowerDance_Mateo.png, Portraits/Mateo/Festivals/IceFestWinterStar_Mateo.png, Portraits/Mateo/Seasonal/Seasonal_1.png, Portraits/Mateo/Seasonal/Seasonal_2.png, Portraits/Mateo/Seasonal/Seasonal_3.png, Portraits/Mateo/Seasonal/Seasonal_4.png, Portraits/Mateo/Seasonal/Seasonal_5.png, Portraits/Mateo/Seasonal/Seasonal_6.png, Portraits/Mateo/Seasonal/Seasonal_7.png, Portraits/Mateo/Seasonal/Seasonal_8.png, Portraits/Mateo/Seasonal/Seasonal_9.png,",
+            "Target": "Portraits/Mateo/Festivals/EggFair_Mateo.png, Portraits/Mateo/Festivals/FlowerDance_Mateo.png, Portraits/Mateo/Festivals/IceFestWinterStar_Mateo.png, Portraits/Mateo/Seasonal/Seasonal_1.png, Portraits/Mateo/Seasonal/Seasonal_2.png, Portraits/Mateo/Seasonal/Seasonal_3.png, Portraits/Mateo/Seasonal/Seasonal_4.png, Portraits/Mateo/Seasonal/Seasonal_5.png, Portraits/Mateo/Seasonal/Seasonal_6.png, Portraits/Mateo/Seasonal/Seasonal_7.png, Portraits/Mateo/Seasonal/Seasonal_8.png, Portraits/Mateo/Seasonal/Seasonal_9.png, Portraits/Mateo/Seasonal/Seasonal_10.png",
             "FromFile": "Assets/{{Target}}/scar_overlay_mateo.png",
             "PatchMode": "Overlay",
             "When": { "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true },

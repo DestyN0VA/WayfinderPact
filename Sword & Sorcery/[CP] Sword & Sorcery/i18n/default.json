@@ -5091,6 +5091,27 @@ ________      ________ _   _ _______ _____
   "food.crafting.zuzustylecheesecake": "ZuZu Style Cheesecake",
   "food.crafting.zuzustyleclamchowder": "ZuZu Style Clam Chowder",
 
+  "food.orangegingerbeer.name": "Orange-Flavored Ginger Beer",
+  "food.orangegingerbeer.description": "An orange and ginger flavored non-alcholic drink.",
+  "food.blueberrygingerbeer.name": "Blueberry-Flavored Ginger Beer",
+  "food.blueberrygingerbeer.description": "A blueberryberry and ginger flavored non-alcholic drink.",
+  "food.pineapplegingerbeer.name": "Pineapple-Flavored Ginger Beer",
+  "food.pineapplegingerbeer.description": "A pineapple and ginger flavored non-alcholic drink.",
+  "food.rhubarbgingerbeer.name": "Rhubarb-Flavored Ginger Beer",
+  "food.rhubarbgingerbeer.description": "A rhubarb and ginger flavored non-alcholic drink.",
+  "food.strawberrygingerbeer.name": "Strawberry-Flavored Ginger Beer",
+  "food.strawberrygingerbeer.description": "A strawberry and ginger flavored non-alcholic drink.",
+  "food.peachgingerbeer.name": "Peach-Flavored Ginger Beer",
+  "food.peachgingerbeer.description": "A peach and ginger flavored non-alcholic drink.",
+  "food.ancientelderberrygingerbeer.name": "Ancient Elderberry-Flavored Ginger Beer",
+  "food.ancientelderberrygingerbeer.description": "An ancient elderberry and ginger flavored non-alcholic drink.",
+  "food.ancientappleberrygingerbeer.name": "Ancient Appleberry-Flavored Ginger Beer",
+  "food.ancientappleberrygingerbeer.description": "An ancient appleberry and ginger flavored non-alcholic drink.",
+  "food.ancienthuckleberrygingerbeer.name": "Ancient Huckleberry-Flavored Ginger Beer",
+  "food.ancienthuckleberrygingerbeer.description": "An ancient huckleberry and ginger flavored non-alcholic drink.",
+  "food.ancientfruitgingerbeer.name": "Ancient Fruit-Flavored Ginger Beer",
+  "food.ancientfruitgingerbeer.description": "An ancient fruit and ginger flavored non-alcholic drink.",
+
   "arsenal.exquisite-emerald.name": "Exquisite Emerald",
   "arsenal.exquisite-emerald.description": "Weapon Effect: +1.5 speed for 5 seconds upon hitting an enemy",
   "arsenal.exquisite-ruby.name": "Exquisite Ruby",
@@ -5179,6 +5200,9 @@ ________      ________ _   _ _______ _____
   "miscellaneous.mapname.Underforge": "The Underforge",
   "miscellaneous.mapname.ESDruidTower": "Hector's Tower", //maddogchange,
   "miscellaneous.mapname.SolomonCavern": "Solomon's Cavern",
+
+  "machine.oldfashionedfermenter.name": "Old-Fashioned Fermenter", 
+  "machine.oldfashionedfermenter.description": "A jar for controlled, non-alcholic fermentation for making Ginger Beer!",
 
 
   //maddogchange

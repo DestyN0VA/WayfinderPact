@@ -34,7 +34,8 @@ ADDITIONAL CONTRIBUTORS:
 ➜ PetiteWarlock: Logo 
 ➜ Logophile: Rugs
 ➜ Shade (Open Game Art): Potion bottles 
-➜ 6480: Crop tweaks, LLTK blade, lots of pixel art mentoring
+➜ 6480: Crop tweaks, LLTK blade, yogurt jar base, machine code, lots of pixel art mentoring
+➜ MizuJakkaru: Yogurt jar base 
 ➜ Pokeinalover: Book's Human design 
 ➜ SmolHuman: Animal sprites 
 ➜ JennaJuffuffles, Gnadi: Extensive playtesting, bugfixing, and balancing 
