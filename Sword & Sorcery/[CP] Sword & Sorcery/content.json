@@ -28,6 +28,11 @@
       "FromFile": "Data/Appearances/AppearanceData_Dandelion.json, Data/Dialogue/Dandelion/Dialogue_Dandelion.json, Data/Dialogue/Dandelion/ConcessionTastes_Dandelion.json, Data/Dialogue/Dandelion/ConversationTopics_Dandelion.json, Data/Dialogue/Dandelion/CustomGiftDialogue_Dandelion.json, Data/Festival Data/FestivalData_Dandelion.json, Data/Schedules/Schedule_Dandelion.json, Data/Strings/Strings_Dandelion.json"
     },
     {
+      "LogName": "Sword & Sorcery - (Antisocial) Solomon Includes",
+      "Action": "Include",
+      "FromFile": "Data/Dialogue/Solomon/Dialogue_Solomon.json, Data/Schedules/Schedule_Solomon.json, Data/Dispositions/Solomon/AntisocialSolomon_NPCData.json"
+    },
+    {
       "LogName": "Sword & Sorcery - Disposition Includes (Full)",
       "Action": "Include",
       "FromFile": "Data/Dispositions/Mateo/full_NPCData.json, Data/Dispositions/Hector/full_NPCData.json, Data/Dispositions/Cirrus/full_NPCData.json, Data/Dispositions/Roslin/full_NPCData.json, Data/Dispositions/Dandelion/full_NPCData.json",

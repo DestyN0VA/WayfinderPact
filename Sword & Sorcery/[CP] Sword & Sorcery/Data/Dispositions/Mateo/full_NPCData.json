@@ -152,6 +152,14 @@
                             "Sprite": "Characters/Mateo_Seasonal_7"
                         },
                         {
+                            "ID": "Fall Outfit 5",
+                            "Condition": "SEASON Fall",
+                            "Precedence": -10,
+                            "Weight": 1,
+                            "Portrait": "Portraits/Mateo_Seasonal_10",
+                            "Sprite": "Characters/Mateo_Seasonal_10"
+                        },
+                        {
                             "ID": "Winter Outfit 1",
                             "Condition": "SEASON Winter",
                             "Precedence": -10,
@@ -174,6 +182,14 @@
                             "Weight": 1,
                             "Portrait": "Portraits/Mateo_Seasonal_3",
                             "Sprite": "Characters/Mateo_Seasonal_3"
+                        },
+                        {
+                            "ID": "Winter Outfit 4",
+                            "Condition": "SEASON Winter",
+                            "Precedence": -10,
+                            "Weight": 1,
+                            "Portrait": "Portraits/Mateo_Seasonal_10",
+                            "Sprite": "Characters/Mateo_Seasonal_10"
                         },
                         {
                             "ID": "Egg Festival & SDV Fair",

@@ -391,11 +391,11 @@
     },
     // PATCHES THE LION'S MANE INTERIOR
     {
-      "LogName": "Lion's Mane (Final) Patch",
+      "LogName": "Lion's Mane (No Dandelion) Patch",
       "Action": "EditMap",
       "Target": "Maps/EastScarp_LionsMane",
       "PatchMode": "Replace",
-      "FromFile": "Assets/Maps/LionsManeFinalPatch.tmx",
+      "FromFile": "Assets/Maps/LionsManeFinalPatch_NoDandelion.tmx",
       "ToArea": {
         "X": 0,
         "Y": 0,
@@ -403,7 +403,25 @@
         "Height": 40
       },
       "When": {
-        "HasSeenEvent |contains=SnS.Ch4.Roslin.5": true
+        "HasSeenEvent |contains=SnS.Ch4.Roslin.5": true,
+        "HasSeenEvent |contains=SnS.Ch4.Roslin.6": false
+      }
+    },
+    {
+      "LogName": "Lion's Mane (Dandelion + Solomon) Patch",
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_LionsMane",
+      "PatchMode": "Replace",
+      "FromFile": "Assets/Maps/LionsManeFinalPatch_DandelionReturned.tmx",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 16,
+        "Height": 40
+      },
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch4.Roslin.5": true,
+        "HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
       }
     },
       // ADDS A LOCKED DOOR TO THE UNDERFORGE

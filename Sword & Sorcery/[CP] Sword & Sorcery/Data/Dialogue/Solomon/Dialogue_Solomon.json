@@ -1,0 +1,42 @@
+{
+  "Changes": [
+/*
+   _____ ______ _   _ ______ _____  _____ _____   _____ _____          _      ____   _____ _    _ ______ 
+  / ____|  ____| \ | |  ____|  __ \|_   _/ ____| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
+ | |  __| |__  |  \| | |__  | |__) | | || |      | |  | || |    /  \  | |   | |  | | |  __| |  | | |__   
+ | | |_ |  __| | . ` |  __| |  _  /  | || |      | |  | || |   / /\ \ | |   | |  | | | |_ | |  | |  __|  
+ | |__| | |____| |\  | |____| | \ \ _| || |____  | |__| || |_ / ____ \| |___| |__| | |__| | |__| | |____ 
+  \_____|______|_| \_|______|_|  \_\_____\_____| |_____/_____/_/    \_\______\____/ \_____|\____/|______|
+
+*/
+    // GENERIC POOL
+    {
+      "LogName": "Solomon Dialogue: Pre-Dandelion",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Solomon",
+      "Entries": {
+        "{{WeekDay}}": "{{i18n:Core.Solomon.Generic.{{Random:{{Range: 1, 15}}}}}}"
+      }
+    },
+    // EPILOGUE POOL
+    {
+      "LogName": "Dialogue - Solomon Epilogue",
+      "Action": "EditData",
+      "Update": "OnLocationChange",
+      "Target": "Characters/Dialogue/Solomon",
+      "Entries": {
+        "{{WeekDay}}": "{{i18n:Core.Solomon.Epilogue.{{Random:{{Range: 1, 10}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Solomon_OverrideSeenToday received"
+      },
+    },
+    {
+      "LogName": "Solomon Dialogue - Platonic",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Solomon",
+      "Entries": {
+        // NAME & INTRO
+        "Name:": "{{i18n:Core.Solomon.Name}}",
+        "Introduction": "{{i18n:Core.Solomon.Introduction}}",
+      },
+    },
+  ]
+}

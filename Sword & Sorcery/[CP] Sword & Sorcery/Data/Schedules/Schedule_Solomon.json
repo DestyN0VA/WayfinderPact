@@ -1,0 +1,60 @@
+{
+	"Changes": [
+		{
+			"LogName": "Solomon's Schedule - Not Unlocked",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Solomon",
+			"Entries": {
+				// Prior to Solomon being unlocked.
+				"spring": "0 EastScarp_TNPCWaitingWarpRoom 16 5 2/1200 EastScarp_TNPCWaitingWarpRoom 16 6 2/1800 EastScarp_TNPCWaitingWarpRoom 16 5 2",
+			},
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": false
+			}
+		},
+		{
+			"LogName": "Solomon's Schedule - Unlocked",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Solomon",
+			"Entries": {
+				// After reuniting with Roslin.
+				"rain": "{{Random:610 EastScarp_LionsMane 12 26 0 Solomon_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1100 EastScarp_LionsMane 8 16 1/1300 EastScarp_VillageInn 12 33 0/{{Random:1800 EastScarp_LionsMane 12 26 0 Solomon_readfront++1800 EastScarp_LionsMane 7 27 0++1800 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/2200 EastScarp_LionsMane 3 5 1",
+				"spring": "{{Random:610 EastScarp_LionsMane 12 26 0 Solomon_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1100 EastScarp_LionsMane 8 16 1/1300 EastScarp_Village 66 76 2 Solomon_loaf/1600 EastScarp_VillageInn 12 33 0/{{Random:1800 EastScarp_LionsMane 12 26 0 Solomon_readfront++1800 EastScarp_LionsMane 7 27 0++1800 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/2200 EastScarp_LionsMane 3 5 1",
+			},
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
+			}
+		},
+		{
+			"LogName": "Solomon's Schedule - Night Market ",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Solomon",
+			"Entries": {
+				// Solomon will attend the Night Market.
+				"winter_15": "{{Random:610 EastScarp_LionsMane 12 26 0 Solomon_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1300 Beach 86 30 3/2200 EastScarp_LionsMane 3 5 1",
+				"winter_16": "{{Random:610 EastScarp_LionsMane 12 26 0 Solomon_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1300 Beach 86 30 3/2200 EastScarp_LionsMane 3 5 1",
+				"winter_17": "{{Random:610 EastScarp_LionsMane 12 26 0 Solomon_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1300 Beach 86 30 3/2200 EastScarp_LionsMane 3 5 1",
+			},
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
+			}
+		},
+		{
+			"LogName": "Solomon's Schedule - SVE Community Day",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Solomon",
+			"Entries": {
+				// Will attend Community Day if Stardew Valley Expanded is installed.
+				"spring_22": "{{Random:610 EastScarp_LionsMane 12 26 0 Solomon_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1030 CommunityCenter 16 24 3/{{Random:1800 EastScarp_LionsMane 12 26 0 Solomon_readfront++1800 EastScarp_LionsMane 7 27 0++1800 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/2200 EastScarp_LionsMane 3 5 1",
+				"summer_22": "{{Random:610 EastScarp_LionsMane 12 26 0 Solomon_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1030 CommunityCenter 16 24 3/{{Random:1800 EastScarp_LionsMane 12 26 0 Solomon_readfront++1800 EastScarp_LionsMane 7 27 0++1800 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/2200 EastScarp_LionsMane 3 5 1",
+				"fall_22": "{{Random:610 EastScarp_LionsMane 12 26 0 Solomon_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1030 CommunityCenter 16 24 3/{{Random:1800 EastScarp_LionsMane 12 26 0 Solomon_readfront++1800 EastScarp_LionsMane 7 27 0++1800 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/2200 EastScarp_LionsMane 3 5 1",
+				"winter_22": "{{Random:610 EastScarp_LionsMane 12 26 0 Solomon_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1030 CommunityCenter 16 24 3/{{Random:1800 EastScarp_LionsMane 12 26 0 Solomon_readfront++1800 EastScarp_LionsMane 7 27 0++1800 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/2200 EastScarp_LionsMane 3 5 1",
+			},
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
+			}
+		},
+	]
+}
+//(0 = up, 1 = right, 2 = down, 3 = left)

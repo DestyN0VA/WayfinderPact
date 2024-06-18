@@ -6,7 +6,7 @@
 			"Target": "Characters/Schedules/Roslin",
 			"Entries": {
 				// Prior to Roslin being unlocked.
-				"spring": "0 EastScarp_TNPCWaitingWarpRoom 13 5 2/1200 EastScarp_TNPCWaitingWarpRoom 13 6 2/1800 EastScarp_TNPCWaitingWarpRoom 13 5 2",
+				"spring": "0 EastScarp_TNPCWaitingWarpRoom 15 5 2/1200 EastScarp_TNPCWaitingWarpRoom 15 6 2/1800 EastScarp_TNPCWaitingWarpRoom 15 5 2",
 			},
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch3.Roslin.1": false

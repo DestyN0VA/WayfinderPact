@@ -6,7 +6,7 @@
 			"Target": "Characters/Schedules/Dandelion",
 			"Entries": {
 				// Prior to Dandelion being unlocked.
-				"spring": "0 EastScarp_TNPCWaitingWarpRoom 13 5 2/1200 EastScarp_TNPCWaitingWarpRoom 13 6 2/1800 EastScarp_TNPCWaitingWarpRoom 13 5 2",
+				"spring": "0 EastScarp_TNPCWaitingWarpRoom 14 5 2/1200 EastScarp_TNPCWaitingWarpRoom 14 6 2/1800 EastScarp_TNPCWaitingWarpRoom 14 5 2",
 			},
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": false
