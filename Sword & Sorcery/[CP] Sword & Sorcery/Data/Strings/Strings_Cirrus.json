@@ -34,6 +34,7 @@
         "DumpItTable": "{{i18n:Strings.Cirrus.DumpItTable}}",
         "DumpItTable2": "{{i18n:Strings.Cirrus.DumpItTable2}}",
         "FavoriteMug": "{{i18n:Strings.Cirrus.FavoriteMug}}",
+        "GingerBeerFermenter": "{{i18n:Strings.Cirrus.GingerBeerFermenter}}",
     }
    }
   ]

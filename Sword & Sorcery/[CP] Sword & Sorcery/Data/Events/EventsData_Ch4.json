@@ -37,6 +37,59 @@
     },
 
     {
+      "LogName": "Cirrus's Ginger Beer Unlock Event", 
+      "Action": "EditData",                                           
+      "Target": "Data/Events/EastScarp_LionsMane",
+      "Entries": {
+    
+        "SnS.Ch4.Cirrus.1/e SnS.Ch4.Roslin.3/f Cirrus 2500/t 1000 2200/w sunny/F": "SnS.CirrusTheme/-100 -100/farmer 21 21 0 Cirrus 24 16 0/addConversationTopic CirrusGingerBeer 1/skippable/playSound doorClose/fade/viewport 24 16/advancedMove farmer false 0 -5 2 0 1 10/emote farmer 8/pause 250/emote Cirrus 16 true/jump Cirrus 5/faceDirection Cirrus 3/speak Cirrus \"@! I'm glad you're here, I had something I wanted to give you.$1[(O){{ModID}}_strawberrygingerbeer]\"/pause 250/emote farmer 40/pause 250/speak Cirrus \"It's Ginger Beer! I started making it myself. You add fruit and ginger to the jar, and then you've got a delicious drink! You can even age it.$17#$b#I wanted to do something to celebrate my sobriety, so homemaking a fancy non-alcoholic drink seemed about right...$22#$b#Why don't you try, @? You grow so much cool stuff on your farm. It'd make a great alternative to wine. So, all you need is...$1\"/fade/viewport -1000 -1000/action MarkCraftingRecipeKnown Current {{ModID}}_oldfashionedfermenter/playSound discoverMineral/message \"You can now craft Old-Fashioned Fermenters! Add ginger and either orange, blueberry, pineapple, rhubarb, strawberry, peach, ancient fruit, ancient huckleberries, ancient appleberries, or ancient elderberries to make Ginger Beer, which can be aged.\"/pause 250/end",
+      
+
+      }, 
+            
+    },
+
+    /* 
+
+quickQuestion #That girl sounds overwhelmed. #That voice is familiar.(break)speak Mateo \"Let's check in on things, just in case.$32\"(break)speak Hector \"Right? Reminds me of something I was watching with Eloise...$7\"
+
+(0 = up, 1 = right, 2 = down, 3 = left)
+
+waitForAllStationary - waits until all advMoves are complete for next action 
+
+stopAdvancedMoves - will prevent clipping issues at the end of an event when characters advMove off screen
+
+advancedMove true/false (loop) parameters
+
+parameters:
+x y x y x y = move without pause
+
+x y z t x y z t = move with pauses
+
+x y x y z t x y = move with mix of mentioned above
+
+x = how many tiles move in x axis (+ = right, - = left)
+y = how many tiles move in y axis (+ = down, - = up)
+z = direction face upon reaching destination (1=right, 2=down, 3=left, 4=up)
+t = duration in milliseconds how long to stay in that spot (must be >= 10000ms)
+
+4- empty can
+8- question mark
+12- angry
+16- exclamation
+20- heart
+24- sleep
+28- sad
+32- happy
+36- x
+40- pause
+52- video game
+56- music note
+60- blush 
+
+*/
+
+    {
       "LogName": "Roslin's 4 Heart Event",
       "Action": "EditData",
       "Target": "Data/Events/EastScarp_CoastalGuild",
