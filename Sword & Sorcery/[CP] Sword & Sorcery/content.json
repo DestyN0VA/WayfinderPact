@@ -1027,41 +1027,7 @@
     },
     {
       "Name": "CirrusMakeup",
-      "Value": "{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusMakeup}}"
-    },
-    {
-      "Name": "CirrusMakeup",
       "Value": "{{CirrusHairColor}}",
-      "When": {
-        "CirrusRainbowHair |contains=RealisticRandom, DailyRandom": true,
-        "CirrusHairColor |contains=Red": false
-      }
-    },
-    {
-      "Name": "CirrusMakeup",
-      "Value": "Red",
-      "When": {
-        "Random: {{Range: 1, 5}}": "1",
-        "CirrusRainbowHair |contains=RealisticRandom, DailyRandom": true,
-        "CirrusHairColor |contains=Red": false
-      }
-    },
-    {
-      "Name": "CirrusMakeup",
-      "Value": "{{CirrusHairColor}}",
-      "When": {
-        "CirrusRainbowHair |contains=RealisticRandom, DailyRandom": true,
-        "CirrusHairColor |contains=Red": true
-      }
-    },
-    {
-      "Name": "CirrusMakeup",
-      "Value": "{{Random: Brown, Orange, Yellow, Blue |key=CirrusMakeup}}",
-      "When": {
-        "Random: {{Range: 1, 5}}": "1",
-        "CirrusRainbowHair |contains=RealisticRandom, DailyRandom": true,
-        "CirrusHairColor |contains=Red": true
-      }
     },
     {
       "Name": "CirrusMakeup",
