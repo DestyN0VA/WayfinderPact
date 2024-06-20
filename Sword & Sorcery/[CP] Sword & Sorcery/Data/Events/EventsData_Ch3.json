@@ -217,6 +217,20 @@
     },
 
     {
+      "LogName": "Cirrus's Makeup Unlock Event",
+      "Action": "EditData",                                           
+      "Target": "Data/Events/EastScarp_Village",
+      "Entries": {
+    
+        "SnS.Ch3.Cirrus.18/e SnS.Ch3.Cirrus.10/f Cirrus 1750/t 0600 1800/A CirrusLionsMane/w sunny/F": "continue/-100 -100/farmer 33 90 2 Cirrus 30 102 2/skippable/globalFadeToClear/addConversationTopic CirrusMakeup 1/animate Cirrus false true 200 45 45 46 46 47 47 48 48/viewport 31 102 clamp true/pause 1000/advancedMove farmer false 0 12 -1 0 3 10/pause 1000/emote farmer 40/pause 500/jump Cirrus 5 true/stopAnimation Cirrus/emote Cirrus 16 true/faceDirection Cirrus 1 true/speak Cirrus \"Oh, hey @!~$8\"/pause 250/emote farmer 8/pause 250/speak Cirrus \"I just got done taking some pictures. I started doing my makeup again - I haven't in a long time, and this spot has a good backdrop.$6\"/faceDirection farmer 2 true/faceDirection Cirrus 2/pause 250/speak Cirrus \"I fell out of love with the art when it became an obligation, kind of like music. But I'm trying to take it back.$3#$b#Honestly, my femininity is a big part of my personhood, and I like to express that with my outfits, my hair, my makeup...$2#$b#$17\"/pause 250/emote Cirrus 60/pause 250/speak Cirrus \"I think I lost track of my individuality, at least a little bit. Between being so career-focused, not being sober, and being very 'on' all the time for my fans, for the record label...$16#$b#But! I'm trying to do better. This is a step toward that.$1\"/faceDirection farmer 3 true/faceDirection Cirrus 1/pause 250/speak Cirrus \"There's another part of it - I'm interested in... Femmes and thems. Being a lesbian isn't part of my brand, so it couldn't be part of my identity.$18#$b#On top of that, growing up, I thought it would be easier to 'present' interested in women if I was more masculine, so I didn't embrace this side of myself until later in life.$20#$b#All of that brings me to the conclusion that... well, that it's never too late to embrace your truest self, and that no foundation of capitalism should have control over your identity or presentation.$14\"/fade/viewport -1000 -1000/speak Cirrus \"Reclamation starts with a tube of lipstick.$4\"/end"
+      }, 
+			"When": {
+				"Query: '{{PlayerGender}}' = 'Female' OR {{HasMod|contains=Hana.GenderNeutralityMod}}": true
+			  }
+            
+    },
+
+    {
 			"LogName": "Dandelion & Roslin Event #3",
 			"Action": "EditData",
 			"Target": "Data/Events/EastScarp_Village",
@@ -227,17 +241,6 @@
 	  
 		},
 
-    {
-      "LogName": "Cirrus's Makeup Unlock Event",
-      "Action": "EditData",                                           
-      "Target": "Data/Events/EastScarp_Village",
-      "Entries": {
-    
-        "SnS.Ch3.Cirrus.18/e SnS.Ch3.Cirrus.10/f Cirrus 1750/t 0600 1800/A CirrusLionsMane/w sunny/F": "continue/-100 -100/farmer 33 90 2 Cirrus 30 102 2/skippable/globalFadeToClear/addConversationTopic CirrusMakeup 1/animate Cirrus false true 200 45 45 46 46 47 47 48 48/viewport 31 102 clamp true/pause 1000/advancedMove farmer false 0 12 -1 0 3 10/pause 1000/emote farmer 40/pause 500/jump Cirrus 5 true/stopAnimation Cirrus/emote Cirrus 16 true/faceDirection Cirrus 1 true/speak Cirrus \"Oh, hey @!~$8\"/pause 250/emote farmer 8/pause 250/speak Cirrus \"I just got done taking some pictures. I started doing my makeup again - I haven't in a long time, and this spot has a good backdrop.$6\"/faceDirection farmer 2 true/faceDirection Cirrus 2/pause 250/speak Cirrus \"I fell out of love with the art when it became an obligation, kind of like music. But I'm trying to take it back.$3#$b#Honestly, my femininity is a big part of my personhood, and I like to express that with my outfits, my hair, my makeup...$2#$b#$17\"/pause 250/emote Cirrus 60/pause 250/speak Cirrus \"I think I lost track of my individuality, at least a little bit. Between being so career-focused, not being sober, and being very 'on' all the time for my fans, for the record label...$16#$b#But! I'm trying to do better. This is a step toward that.$1\"/faceDirection farmer 3 true/faceDirection Cirrus 1/pause 250/speak Cirrus \"There's another part of it - I'm interested in... Femmes and thems. Being a lesbian isn't part of my brand, so it couldn't be part of my identity.$18#$b#On top of that, growing up, I thought it would be easier to 'present' interested in women if I was more masculine, so I didn't embrace this side of myself until later in life.$20#$b#All of that brings me to the conclusion that... well, that it's never too late to embrace your truest self, and that no foundation of capitalism should have control over your identity or presentation.$14\"/fade/viewport -1000 -1000/speak Cirrus \"Reclamation starts with a tube of lipstick.$4\"/aend"
-
-      },
-            
-    },
 
   ] 
 
