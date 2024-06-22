@@ -31,6 +31,12 @@
       "FromFile": "Data/blank.json"
     },
     {
+      "LogName": "Solomon Loads from Blanks",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Solomon, Characters/Schedules/Solomon",
+      "FromFile": "Data/blank.json"
+    },
+    {
       "LogName": "Tent Events Blank",
       "Action": "Load",
       "Target": "data/events/EastScarp_MateoHome",

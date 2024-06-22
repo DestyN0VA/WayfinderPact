@@ -812,7 +812,7 @@
   "Strings.Mateo.SmithSupplies": "This chest is full of tools and supplies for blacksmithing and leatherworking!",
   "Strings.Mateo.WornChainmail": "Mateo wears chainmail underneath their leathers. It looks like they're in the process of repairing it.",
   "Strings.Mateo.MysteryCaveExit": "The water does lead out somewhere... but you've got no idea where, or how.",
-  "Strings.Mateo.GuildEmblem": "The symbol of the Coastal Adventurer's Guild, a brilliant shield, hands proudly over a chest of adventuring supplies.",
+  "Strings.Mateo.GuildEmblem": "The symbol of the Coastal Adventurer's Guild, a brilliant shield, hangs proudly over a chest of adventuring supplies.",
   "Strings.Mateo.HawthornLetter": "An opened letter, signed by Linden Hawthorn: 'It was nigh that I discovered most things that you consider evil or wicked are simply lonely...'",
   "Strings.Mateo.TentMessage": "An adventurer's tent. Perhaps they're in the mines.",
 
@@ -906,11 +906,11 @@
   "CFD.Mateo.MovieTheater_DislikeConcession_Male": "{0} hasn't touched their {1} at all...",
 
   // SUMMIT DIALOGUE 
-  "CFD.Mateo.ExtraDialogue_SummitEvent_Intro_Spouse": "Hey, Sunshine.$4",
-  "CFD.Mateo.ExtraDialogue_SummitEvent_Intro2_Spouse": "Have you ever seen such splendor?$1",
-  "CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue1_Spouse": "I can't help but think about the last %year years...$4\"/pause 1000/speak spouse \"We've been through a lot together, haven't we? And I wouldn't take back a second of it, not even the stressful parts.$14",
-  "CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue2_Spouse": "...Look at everything we've learned and accomplished together; how far we've come from where we started.$27",
-  "CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue3_Spouse": "And you know what? It's not over. There are still adventures to be had together.$4",
+  "CFD.Mateo.ExtraDialogue_SummitEvent_Intro_Mateo": "Hey, Sunshine.$4",
+  "CFD.Mateo.ExtraDialogue_SummitEvent_Intro2_Mateo": "Have you ever seen such splendor?$1",
+  "CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue1_Mateo": "I can't help but think about the last %year years...$4\"/pause 1000/speak spouse \"We've been through a lot together, haven't we? And I wouldn't take back a second of it, not even the stressful parts.$14",
+  "CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue2_Mateo": "...Look at everything we've learned and accomplished together; how far we've come from where we started.$27",
+  "CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue3_Mateo": "And you know what? It's not over. There are still adventures to be had together.$4",
   "CFD.Mateo.ExtraDialogue_SummitEvent_closingmessage": "It's been a long road for you and Mateo...",
 
   // MOVIE INVITATION - SPOUSE 
@@ -2314,11 +2314,11 @@ ________      ________ _   _ _______ _____
   "CFD.Hector.SocialPage.cs.11643": "(ex-spouse)",
 
   // SUMMIT DIALOGUE 
-  "CFD.Hector.ExtraDialogue_SummitEvent_Intro_Spouse": "My deer-ly beloved.",
-  "CFD.Hector.ExtraDialogue_SummitEvent_Intro2_Spouse": "I'd say this is the second best view in the Valley, after looking at you.",
-  "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue1_Spouse": "It's been a long couple years. %year, right? $14\"/pause 1000/speak spouse \"It's been a journey well-traveled. And it's not even over yet. Only just starting, really.$13",
-  "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue2_Spouse": "Thank you for everything, @. I love you.$15",
-  "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue3_Spouse": "More than the sky above, and the earth below.$11",
+  "CFD.Hector.ExtraDialogue_SummitEvent_Intro_Hector": "My deer-ly beloved.",
+  "CFD.Hector.ExtraDialogue_SummitEvent_Intro2_Hector": "I'd say this is the second best view in the Valley, after looking at you.",
+  "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue1_Hector": "It's been a long couple years. %year, right? $14\"/pause 1000/speak spouse \"It's been a journey well-traveled. And it's not even over yet. Only just starting, really.$13",
+  "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue2_Hector": "Thank you for everything, @. I love you.$15",
+  "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue3_Hector": "More than the sky above, and the earth below.$11",
   "CFD.Hector.ExtraDialogue_SummitEvent_closingmessage": "It's been a long road for you and Biróg...",
 
   // MOVIE INVITATION - SPOUSE 
@@ -3109,7 +3109,7 @@ ________      ________ _   _ _______ _____
   "Core.Cirrus.Generic.LateHeart.30": "Hey @! I went down to Willy's and he hooked me up with some fresh fish, it was incredible. HE'S incredible! I can't imagine how tough a job it must be to stock a fishery.$1#$b#Anyway, here's a serving of what I made since there was a bit of left over. Enjoy![242]",
   "Core.Cirrus.Generic.LateHeart.31": "I don't want to make wine or mead out of foraged fruits, but I did want to do something with everything I found.$22#$b#I ended up making some cobbler. I'm usually too impatient to bake, but I had a slice and it came out pretty good. Give it a try, @! Let me know if it came out okay.[611]",
   "Core.Cirrus.Generic.LateHeart.32": "One of the wild things about being on a stadium tour is how lonely it is. Imagine selling twenty thousand seats to a show and then just going home alone to scroll on your phone.$16#$b#It's especially difficult now that I'm sober, because if the alternative is partying and I'm trying to limit my exposure to substances...$20#$b#I'd rather play for five people and get to give them a high-five afterward than deal with the alternative these days.$17",
-  "Core.Cirrus.Generic.LateHeart.33": "Nothing beats the simplicity of a bagel with some lox on it. The secret is the water you're boiling the bread in, of course. Yup - good bagels are boiled, not baked.$17#$b#All you need is a smear of cream cheese, a cut of good salmon, and some onions if you're feeling particularly fancy. It's one of my favorite breakfasts!$1[(O){{ModID}}_zuzustylebagelwithlox]$6",
+  "Core.Cirrus.Generic.LateHeart.33": "Nothing beats the simplicity of a bagel with some lox on it. The secret is the water you're boiling the bread in, of course. Yup - good bagels are boiled, not baked.$17#$b#All you need is a smear of cream cheese, a cut of good salmon, and some onions if you're feeling particularly fancy. It's one of my favorite breakfasts!$1[(O){{ModID}}_zuzustylebagelwithlox]",
   "Core.Cirrus.Generic.LateHeart.34": "There's no such thing as wasted time unless you're just... like, watching paint dry. Not sure why you would do that to begin with, though.$14#$b#Time spent having fun, no matter what it is, is worthwhile. Don't let anyone tell you otherwise. Any activity that brings you joy is worth doing-$17#$b#I mean, I guess that includes watching paint dry if you're really into that...$16",
   "Core.Cirrus.Generic.LateHeart.35": "There was a time when I lined up a bunch of canvases against a tarp and flung brightly colored housepaint at them. It was because I wanted some stuff to bring more color to the van interior, but it didn't look great.$16#$b#That's when I decided I would go for a cozy aesthetic instead of a chaotic one.$14",
   "Core.Cirrus.Generic.LateHeart.36": "I got really into Incrediwoman comics when I was younger. That's why I decided to paint her on the side of the ol' van, anyway.$17#$b#Wanted to cover up the mural from the pizza place I was working at. But I just thought it'd be kind of neat to do some big, silly mural.$1",
@@ -3624,11 +3624,11 @@ ________      ________ _   _ _______ _____
 */
 
   // SUMMIT DIALOGUE 
-  "CFD.Cirrus.ExtraDialogue_SummitEvent_Intro_Spouse": "Oh Rockstar, my Rockstar.$4",
-  "CFD.Cirrus.ExtraDialogue_SummitEvent_Intro2_Spouse": "Of all the incredible things I've seen when travelling the world, this is the best.$6",
-  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue1_Spouse": "It's been %year years, hasn't it? Since you've come here?$1\"/pause 1000/speak spouse \"Thank you for loving me, and for spending some of those together with me - and, hopefully, the rest of them.$6",
-  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue2_Spouse": "I love you, times in infinity, for every star that's in the sky.$4",
-  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue3_Spouse": "I love you, I love you, I love you, I love you, I love you...!$26",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Intro_Cirrus": "Oh Rockstar, my Rockstar.$4",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Intro2_Cirrus": "Of all the incredible things I've seen when travelling the world, this is the best.$6",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue1_Cirrus": "It's been %year years, hasn't it? Since you've come here?$1\"/pause 1000/speak spouse \"Thank you for loving me, and for spending some of those together with me - and, hopefully, the rest of them.$6",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue2_Cirrus": "I love you, times in infinity, for every star that's in the sky.$4",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue3_Cirrus": "I love you, I love you, I love you, I love you, I love you...!$26",
   "CFD.Cirrus.ExtraDialogue_SummitEvent_closingmessage": "It's been a long road for you and Cirrus...",
 
   // MOVIE INVITATION - SPOUSE 
@@ -4718,22 +4718,38 @@ ________      ________ _   _ _______ _____
 
 */
 
+  // NAME 
+  "i18n:Core.Solomon.Name": "Solomon",
+
+  // INTRODUCTION
+  "Core.Solomon.Introduction": "How nice it is, to have a stationary place to call my own. Yes, it's a cave. But it's MY cave!$1#$b#Very nice of The Bard to allow additional magickal construction to her building.$0",
+
   // GENERIC
-  "Core.Solomon.Generic.1": "TEST",
-  "Core.Solomon.Generic.2": "TEST",
-  "Core.Solomon.Generic.3": "TEST",
-  "Core.Solomon.Generic.4": "",
-  "Core.Solomon.Generic.5": "",
-  "Core.Solomon.Generic.6": "",
-  "Core.Solomon.Generic.7": "",
-  "Core.Solomon.Generic.8": "",
-  "Core.Solomon.Generic.9": "",
-  "Core.Solomon.Generic.10": "",
-  "Core.Solomon.Generic.11": "",
-  "Core.Solomon.Generic.12": "",
-  "Core.Solomon.Generic.13": "",
-  "Core.Solomon.Generic.14": "",
-  "Core.Solomon.Generic.15": "",
+  "Core.Solomon.Generic.1": "Everyone's like, oh no! Void magic! It's bad! 'Waah, I'm afraid of what I don't understand!'$2#$b#Ignorant fools! Being afraid of The Void is like being afraid of your own feelings!$5",
+  "Core.Solomon.Generic.2": "If there is something your superiors don't want you to learn, find out WHY and make a priority to learn it immediatey!$1",
+  "Core.Solomon.Generic.3": "Remember, @. Even the most esteemed sorcerers can be bested by a skilled blacksmith... Oh, the stories I could tell you.$6#$b#Magic-users contain multitudes. Namely, being simultaniously brilliant and stupid.$7",
+  "Core.Solomon.Generic.4": "The Void is simply 'What Fills'; it emboldens emotions, positive, negative, and everything in between.$7#$b#To imply that it's negative strictly on that basis is so tired.$10",
+  "Core.Solomon.Generic.5": "You know, love and intimacy make for the most powerful Magick. Think about it, @.$4#$b#You saw what The Void did with GRIEF; think of what it could do with LOVE!$1",
+  "Core.Solomon.Generic.6": "Magick can be very mundane, but it garners a lot less respect that way. Are sunsets not magick? Are flowers not?$9#$b#Just have a bit of whimsy, will you?$10",
+  "Core.Solomon.Generic.7": "Study technique. Adapt it. But do not research anything blindly!$5",
+  "Core.Solomon.Generic.8": "I was once part of the Order of the Golden Dawn, a coliation of Shadow Folk who wanted to explore the surface before the Elemental Wars.$9#$b#They were all stupid ninnies who talked big but took no action so I ditched them to explore with Roslin instead.$6",
+  "Core.Solomon.Generic.9": "Orginizations are stupid. Authority is stupid. Bathtime is stupid.$8",
+  "Core.Solomon.Generic.10": "The Druid is very wise. The Rogue is very charming. The Bard...$1#$b#She makes me snaaacks.$4#$b#She's my favorite. Not just for that. She's also the smarest and nicest and whatever.$0",
+  "Core.Solomon.Generic.11": "Roslin and I have been companions for a very long time. So long, in fact, I'm almost glad we can spend some time apart.$2#$b#Watch it, I said almost. She's my best friend! The mayhem to my mischief! My study buddy now and forever!$1",
+  "Core.Solomon.Generic.12": "Dandelion and Roslin are very good for each other. They tick off all the boxes!$1#$b#One is tall, one is small. One does swords, one does sorcery. One is nice, one isn't!$6",
+  "Core.Solomon.Generic.13": "I am confined to Roslin's shadow outdoors in the daylight, but it allows me to see the surface safely without judgement from nervous humans.$0#$b#At least I get to be out and about in The Lion's Mane as much as I want.$6#$b#Though, there might be a reason for concern if The Scarp's more mundane residents were buying armaments and potions on the regular.$3",
+  "Core.Solomon.Generic.14": "Dandelion makes the potions for the shop. Pretty sure she sees the ancient alchemical arts as like, making tea but with extra steps.$9",
+  "Core.Solomon.Generic.15": "Roslin and Dandelion both tell the story of how they got together differently. But, don't worry, I will happily indulge you with the truth.$1#$b#They were on a quest together, begrudgingly. They stopped overnight at an inn, and paid for a room...$7#$b#But there was only one bed.$6",
+  "Core.Solomon.Generic.16": "I do believe that Roslin conspires to infuriate me sometimes. That heathen said I wasn't SCARY. Gaze into my horrifying visage and fear it!$5",
+  "Core.Solomon.Generic.17": "Curse Roslin's moral upstanding, which has bled into my being... I would be so much COOLER if I was EVIL.$10#$b#My sheer malevolence and badness would terrifying.$6",
+  "Core.Solomon.Generic.18": "Roslin should be taller. It must be due to some deplorable cosmic error that I would be stuck with such a tiny vessel.$10",
+  "Core.Solomon.Generic.19": "Sometimes I daydream about being a great, evil, Shadow King. I never will be, though, so I just randomly knock things off shelves for fun.$9",
+  "Core.Solomon.Generic.20": "I alphabetized Roslin's books yesterday. I bet she'll be so annoyed about it.$6",
+  "Core.Solomon.Generic.21": "If someone tells you not to read a book, read it immediately.$7",
+  "Core.Solomon.Generic.22": "I think The Rogue is the only figure in a position of power I trust, because they reject authority in favor of leadership. Woah.$3",
+  "Core.Solomon.Generic.23": "Just because I do not like the sun, does not mean I cannot appreciate everything basked in it's light.$0",
+  "Core.Solomon.Generic.24": "I understand there's at least one other Shadow Folk living near humans... oh, how things have changed over the years.$4",
+  "Core.Solomon.Generic.25": "The Rogue wanted to interview me for an addenda to their dissertation. I am very flattered.$4#$b#But I am very tempted to feed them false, but hilarious, information about Shadow culture.$6",
 
   // SITUATIONAL
   "Core.Solomon.EXAMPLE.1": "",

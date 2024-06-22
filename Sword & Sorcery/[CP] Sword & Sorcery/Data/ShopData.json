@@ -364,7 +364,12 @@
             },
             {
               "Name": "None",
-              "Condition": "TIME 2010 1150",
+              "Condition": "TIME 600 1200",
+              "ClosedMessage": "{{i18n:miscellaneous.LMCafe.closedmessage}}"
+            },
+            {
+              "Name": "None",
+              "Condition": "TIME 2000 2600",
               "ClosedMessage": "{{i18n:miscellaneous.LMCafe.closedmessage}}"
             }
           ],
@@ -671,7 +676,7 @@
             {
               "Name": "AnyOrNone",
               "Condition": "TIME 1200 2000",
-              "Portrait": "Dandelion",
+              "Portrait": "Solomon",
               "Dialogues": [
                 {
                   "Dialogue": "{{i18n:miscellaneous.LMArmory.message}}"
@@ -680,7 +685,12 @@
             },
             {
               "Name": "None",
-              "Condition": "TIME 2010 1150",
+              "Condition": "TIME 600 1200",
+              "ClosedMessage": "{{i18n:miscellaneous.LMArmory.closedmessage}}"
+            },
+            {
+              "Name": "None",
+              "Condition": "TIME 2000 2600",
               "ClosedMessage": "{{i18n:miscellaneous.LMArmory.closedmessage}}"
             }
           ],

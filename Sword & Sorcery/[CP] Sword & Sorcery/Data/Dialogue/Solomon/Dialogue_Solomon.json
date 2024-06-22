@@ -15,10 +15,11 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Solomon",
       "Entries": {
-        "{{WeekDay}}": "{{i18n:Core.Solomon.Generic.{{Random:{{Range: 1, 15}}}}}}"
+        "{{WeekDay}}": "{{i18n:Core.Solomon.Generic.{{Random:{{Range: 1, 25}}}}}}"
       }
     },
     // EPILOGUE POOL
+    /*
     {
       "LogName": "Dialogue - Solomon Epilogue",
       "Action": "EditData",
@@ -28,6 +29,7 @@
         "{{WeekDay}}": "{{i18n:Core.Solomon.Epilogue.{{Random:{{Range: 1, 10}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Solomon_OverrideSeenToday received"
       },
     },
+    */
     {
       "LogName": "Solomon Dialogue - Platonic",
       "Action": "EditData",

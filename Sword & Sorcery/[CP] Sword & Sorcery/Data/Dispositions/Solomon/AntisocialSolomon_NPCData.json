@@ -52,8 +52,8 @@
                     "Appearance": [
                         {
                             "ID": "Solomon - Appearance",
-                            "Portrait": "Portraits/Solomon/Solomon",
-                            "Sprite": "Characters/Solomon/Solomon",
+                            "Portrait": "Portraits/Solomon",
+                            "Sprite": "Characters/Solomon",
                         },
                     ]
                 }

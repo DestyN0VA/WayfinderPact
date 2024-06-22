@@ -147,6 +147,7 @@
       }
     },
     // CRAFTING RECIPES 
+    /*
     {
       "Action": "EditData",
       "Target": "Data/CraftingRecipes",
@@ -154,6 +155,7 @@
         "Druidic Totem Fetish": "{{ModID}}_druidicessence 50/what is this for?/{{ModID}}_druidictotemfetish 1/false/null/{{i18n:magicitem.druidictotemfetish.name}}",
       }
     },
+    */
     {
       "Action": "EditData",
       "Target": "spacechase0.SpaceCore/ObjectExtensionData",
