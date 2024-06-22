@@ -272,6 +272,7 @@ namespace SwordAndSorcerySMAPI
                 "enteis.woodeninterfeis",
                 "thefrenchdodo.sakurainterfaceredux",
                 "nom0ri.vintageuifix",
+                "Sqbr.StarryBlueUI",
             ];
             foreach (var recolor in recolors)
             {
