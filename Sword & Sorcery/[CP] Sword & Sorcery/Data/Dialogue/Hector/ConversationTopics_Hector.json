@@ -1,127 +1,58 @@
 {
     "Changes": [
-{
-    "LogName": "Conversation Topics - Hector",
-    "Action": "EditData",
-    "Target": "Characters/Dialogue/Hector",
-    "Entries": // Hector
-    {
+        {
+            "LogName": "Conversation Topics - Hector",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Hector",
+            "Entries": // HECTOR'S REACTIONS 
+            {
+                // CH2:
+                "HectorIntro": "{{i18n:CT.Hector.HectorIntro}}",
+                "HectorBookIntro": "{{i18n:CT.Hector.HectorBookIntro}}",
+                "HectorShapeshift": "{{i18n:CT.Hector.HectorShapeshift}}",
+                "HectorBookQuest": "{{i18n:CT.Hector.HectorBookQuest}}",
+                "HectorVet": "{{i18n:CT.Hector.HectorVet}}",
+                "HectorVet2": "{{i18n:CT.Hector.HectorVet2}}",
+                "HectorGender": "{{i18n:CT.Hector.HectorGender}}",
+                "HectorVet3": "{{i18n:CT.Hector.HectorVet3}}",
+                "HectorDND": "{{i18n:CT.Hector.HectorDND}}",
+                "HectorRiver1": "{{i18n:CT.Hector.HectorRiver1}}",
+                "HectorDinner": "{{i18n:CT.Hector.HectorDinner}}",
+                "HectorRiver2": "{{i18n:CT.Hector.HectorRiver2}}",
+                "HectorRiver3": "{{i18n:CT.Hector.HectorRiver3}}", 
+                "HectorHeal": "{{i18n:CT.Hector.HectorHeal}}",
+                "HectorHeal2": "{{i18n:CT.Hector.HectorHeal2}}",
+                "HectorTrueGrove": "{{i18n:CT.Hector.HectorTrueGrove}}",
+                "HectorEngaged": "{{i18n:CT.Hector.HectorEngaged}}",
 
-        //Hector's 0 Heart Event
-        "HectorIntro":"{{i18n:CT.Hector.HectorIntro}}",
+                // CH3: 
+                "CirrusArrives":"{{i18n:CT.Hector.CirrusArrives}}",
+                "CirrusWoods":"{{i18n:CT.Hector.CirrusWoods}}",
+                "CirrusGuild":"{{i18n:CT.Hector.CirrusGuild}}",
+                "CirrusMom":"{{i18n:CT.Hector.CirrusMom}}",
+                "CirrusJJ1":"{{i18n:CT.Hector.CirrusJJ1}}",
+                "CirrusRain":"{{i18n:CT.Hector.CirrusRain}}",
+                "CirrusWoods2":"{{i18n:CT.Hector.CirrusWoods2}}",
+                "CirrusJJ2":"{{i18n:CT.Hector.CirrusJJ2}}",
+                "CirrusDnD":"{{i18n:CT.Hector.CirrusDnD}}",
+                "CirrusLionsMane":"{{i18n:CT.Hector.CirrusLionsMane}}",
+                "CirrusConcert":"{{i18n:CT.Hector.CirrusConcert}}",
+                "CirrusLionsMane2":"{{i18n:CT.Hector.CirrusLionsMane2}}",
+                "CirrusLionsMane3":"{{i18n:CT.Hector.CirrusLionsMane3}}",
+                "CirrusEngaged":"{{i18n:CT.Hector.CirrusEngaged}}",
+                "CirrusOvercomingFear":"{{i18n:CT.Hector.CirrusOvercomingFear}}",
+                "CirrusPlanetarium":"{{i18n:CT.Hector.CirrusPlanetarium}}",
+                "CirrusMakeup": "{{i18n:CT.Hector.CirrusMakeup}}",
 
-        // Hector's 1 Heart Event
-        "HectorBookIntro":"{{i18n:CT.Hector.HectorBookIntro}}",
-
-        // Hector's 2 Heart Event
-        "HectorShapeshift":"{{i18n:CT.Hector.HectorShapeshift}}",
-
-        // Hector's 3 Heart Event Pt1
-        "HectorBookQuest": "{{i18n:CT.Hector.HectorBookQuest}}",
-        
-        // Hector's 3 Heart Event Pt2
-        "HectorVet": "{{i18n:CT.Hector.HectorVet}}",
-
-        // Hector's 4 Heart Event
-        "HectorVet2":"{{i18n:CT.Hector.HectorVet2}}",
-
-        // Hector's 5 Heart Event Pt1
-        "HectorGender": "{{i18n:CT.Hector.HectorGender}}",
-
-        // Hector's 5 Heart Event Pt2
-        "HectorVet3": "{{i18n:CT.Hector.HectorVet3}}",
-
-        // Hector's 5 Heart Event Pt3
-        "HectorDND": "{{i18n:CT.Hector.HectorDND}}",
-
-        // Hector's 6 Heart Event
-        "HectorRiver1": "{{i18n:CT.Hector.HectorRiver1}}",
-
-        // Hector's 7 Heart Event
-        "HectorDinner": "{{i18n:CT.Hector.HectorDinner}}",
-
-        // Hector's 7 Heart Event Pt2
-        "HectorRiver2": "{{i18n:CT.Hector.HectorRiver2}}",
-
-        // Hector's 8 Heart Event
-        "HectorRiver3": "{{i18n:CT.Hector.HectorRiver3}}",
-
-        // Hector's 9 Heart Event 
-        "HectorHeal": "{{i18n:CT.Hector.HectorHeal}}",
-
-        // Hector's 10 Heart Event 
-        "HectorHeal2": "{{i18n:CT.Hector.HectorHeal2}}",
-
-        // Hector's 10 Heart Event Pt2
-        "HectorTrueGrove": "{{i18n:CT.Hector.HectorTrueGrove}}",
-
-        // Hector's 10 Heart Event Pt2
-        "HectorEngaged": "{{i18n:CT.Hector.HectorEngaged}}"
-
-    }
-},
-
-{
-    "LogName": "Conversation Topics - Mateo",
-    "Action": "EditData",
-    "Target": "Characters/Dialogue/Mateo",
-    "Entries": // Mateo
-    {
-
-        //Hector's 0 Heart Event
-        "HectorIntro":"{{i18n:CT.Mateo.HectorIntro.{{MateoRomance}}}}",
-
-        // Hector's 1 Heart Event
-        "HectorBookIntro":"{{i18n:CT.Mateo.HectorBookIntro}}",
-
-        // Hector's 2 Heart Event
-        "HectorShapeshift":"{{i18n:CT.Mateo.HectorShapeshift}}",
-
-        // Hector's 3 Heart Event Pt1
-        "HectorBookQuest": "{{i18n:CT.Mateo.HectorBookQuest}}",
-        
-        // Hector's 3 Heart Event Pt2
-        "HectorVet": "{{i18n:CT.Mateo.HectorVet}}",
-
-        // Hector's 4 Heart Event
-        "HectorVet2":"{{i18n:CT.Mateo.HectorVet2}}",
-
-        // Hector's 5 Heart Event Pt1
-        "HectorGender": "{{i18n:CT.Mateo.HectorGender.{{MateoRomance}}}}",
-
-        // Hector's 5 Heart Event Pt2
-        "HectorVet3": "{{i18n:CT.Mateo.HectorVet3}}",
-
-        // Hector's 5 Heart Event Pt3
-        "HectorDND": "{{i18n:CT.Mateo.HectorDND.{{MateoRomance}}}}",
-
-        // Hector's 6 Heart Event
-        "HectorRiver1": "{{i18n:CT.Mateo.HectorRiver1}}",
-
-        // Hector's 7 Heart Event
-        "HectorDinner": "{{i18n:CT.Mateo.HectorDinner}}",
-
-        // Hector's 7 Heart Event Pt2
-        "HectorRiver2": "{{i18n:CT.Mateo.HectorRiver2{{HectorPronouns}}}}",
-
-        // Hector's 8 Heart Event
-        "HectorRiver3": "{{i18n:CT.Mateo.HectorRiver3}}",
-
-        // Hector's 9 Heart Event 
-        "HectorHeal": "{{i18n:CT.Mateo.HectorHeal}}",
-
-        // Hector's 10 Heart Event 
-        "HectorHeal2": "{{i18n:CT.Mateo.HectorHeal2}}",
-
-        // Hector's 10 Heart Event Pt2
-        "HectorTrueGrove": "{{i18n:CT.Mateo.HectorTrueGrove.{{MateoRomance}}}}",
-
-        // Hector's 10 Heart Event Pt2
-        "HectorEngaged": "{{i18n:CT.Mateo.HectorEngaged}}"
-
-    }
-},
-
-
+                // CH4:
+                "RoslinNeedsHelp": "{{i18n:CT.REPLACE.RoslinNeedsHelp}}",
+                "RoslinAndMateo": "{{i18n:CT.REPLACE.RoslinAndMateo}}",
+                "RoslinAndHector": "{{i18n:CT.REPLACE.RoslinAndHector}}",
+                "RoslinAndCirrus": "{{i18n:CT.REPLACE.RoslinAndCirrus}}",
+                "RoslinAndLewis": "{{i18n:CT.REPLACE.RoslinAndLewis}}",
+                "DandelionReturns": "{{i18n:CT.REPLACE.DandelionReturns}}",
+                "CirrusGingerBeer": "{{i18n:CT.REPLACE.CirrusGingerBeer}}",
+            }
+        },
     ]
 }

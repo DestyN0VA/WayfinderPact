@@ -10,25 +10,25 @@
                 {   // LOCATION: SET UP (VANILLA)
                     "Operation": "Append",
                     "Target": [  "Entries", "Set-Up_additionalCharacters" ],
-                    "Value": "Roslin 43 78 2",
+                    "Value": "Roslin 16 72 3",
                     "Delimiter": "/"
                 },
                 {   // LOCATION: MAIN EVENT (VANILLA)
                     "Operation": "Append",
                     "Target": [  "Entries",  "MainEvent_additionalCharacters"  ],
-                    "Value": "Roslin 43 78 2",
+                    "Value": "Roslin 16 72 3",
                     "Delimiter": "/"
                 },
 				{   // LOCATION: SET UP Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [  "Entries", "Set-Up_additionalCharacters_y2" ],
-                    "Value": "Roslin 43 78 2",
+                    "Value": "Roslin 16 72 3",
                     "Delimiter": "/"
                 },
                 {   // LOCATION: MAIN EVENT Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [  "Entries",  "MainEvent_additionalCharacters_y2"  ],
-                    "Value": "Roslin 43 78 2",
+                    "Value": "Roslin 16 72 3",
                     "Delimiter": "/"
                 },
 			],
@@ -48,25 +48,25 @@
                 {	// LOCATION: SET UP (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","Set-Up_additionalCharacters" ],
-                    "Value": "Roslin 16 33 2",
+                    "Value": "Roslin 62 45 0",
                     "Delimiter": "/"
                 },
                 {	// LOCATION: MAIN EVENT (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters"  ],
-                    "Value": "Roslin 25 35 3",
+                    "Value": "Roslin 62 45 0",
                     "Delimiter": "/"
                 },
 				{	// LOCATION: SET UP Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","Set-Up_additionalCharacters_y2" ],
-                    "Value": "Roslin 16 33 2",
+                    "Value": "Roslin 62 45 0",
                     "Delimiter": "/"
                 },
                 {	// LOCATION: MAIN EVENT Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters_y2"  ],
-                    "Value": "Roslin 25 35 3",
+                    "Value": "Roslin 62 45 0",
                     "Delimiter": "/"
                 },
             ],
@@ -94,25 +94,15 @@
 				{	// LOCATION: SET UP (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters"],
-					"Value": "Roslin 24 25 3",
+					"Value": "Roslin 5 5 3",
 					"Delimiter": "/"
-				},
-				{
-					"Operation": "Append",
-					"Target": [ "Fields", "set-up", 5],
-					"Value": "/animate Roslin false true 100 30 31 32 33"
 				},
 				{	// LOCATION: SET UP Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
-					"Value": "Roslin 24 25 3",
+					"Value": "Roslin 5 5 3",
 					"Delimiter": "/"
 				},
-				{
-					"Operation": "Append",
-					"Target": [ "Fields", "set-up_y2", 5],
-					"Value": "/animate Roslin false true 100 30 31 32 33"
-				}
 			],
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true,
@@ -129,13 +119,13 @@
 				{   // LOCATION: SET UP & MAIN EVENT
 					"Operation": "Append",
 					"Target": ["Entries", "Set-Up_additionalCharacters"],
-					"Value": "Roslin 41 24 2",
+					"Value": "Roslin 96 46 2",
 					"Delimiter": "/"
 				},
 				{   // LOCATION: SET UP & MAIN EVENT Y2
 					"Operation": "Append",
 					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
-					"Value": "Roslin 41 24 2",
+					"Value": "Roslin 96 46 2",
 					"Delimiter": "/"
 				},
 			],
@@ -154,13 +144,13 @@
 				{	// LOCATION: SET UP & MAIN EVENT (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters"],
-					"Value": "Roslin 46 74 0",
+					"Value": "Roslin 46 32 3",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP & MAIN EVENT Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
-					"Value": "Roslin 46 74 0",
+					"Value": "Roslin 53 82 0",
 					"Delimiter": "/"
 				},
 			],
@@ -169,7 +159,7 @@
 			  },
 		},
 
-        // SPIRIT'S EVE
+        // SPIRIT'S EVE (ROSLIN)
 
        {
 			"Action": "EditData",
@@ -178,13 +168,37 @@
 				{	// LOCATION: SET UP & MAIN EVENT (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries",	"Set-Up_additionalCharacters"],
-					"Value": "Roslin 39 81 2",
+					"Value": "Roslin 25 60 1",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP & MAIN EVENT Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries",	"Set-Up_additionalCharacters_y2"],
-					"Value": "Roslin 39 81 2",
+					"Value": "Roslin 25 60 1",
+					"Delimiter": "/"
+				},
+				],
+				"When": {
+					"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true,
+				  },
+		},
+
+        // SPIRIT'S EVE (SOLOMON)
+
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"TextOperations": [
+				{	// LOCATION: SET UP & MAIN EVENT (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries",	"Set-Up_additionalCharacters"],
+					"Value": "Solomon 25 61 1",
+					"Delimiter": "/"
+				},
+				{	// LOCATION: SET UP & MAIN EVENT Y2 (VANILLA)
+					"Operation": "Append",
+					"Target": ["Entries",	"Set-Up_additionalCharacters_y2"],
+					"Value": "Solomon 25 61 1",
 					"Delimiter": "/"
 				},
 				],
@@ -202,25 +216,25 @@
 				{	// LOCATION: SET UP (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters"],
-					"Value": "Roslin 68 12 3",
+					"Value": "Roslin 35 8 0",
 					"Delimiter": "/"
 				},
                 {   // LOCATION: MAIN EVENT (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Main-Event_additionalCharacters"],
-					"Value": "Roslin 68 12 3",
+					"Value": "Roslin 35 8 0",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
-					"Value": "Roslin 68 12 3",
+					"Value": "Roslin 35 8 0",
 					"Delimiter": "/"
 				},
                 {   // LOCATION: MAIN EVENT Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Main-Event_additionalCharacters_y2"],
-					"Value": "Roslin 68 12 3",
+					"Value": "Roslin 35 8 0",
 					"Delimiter": "/"
 				},
 			],
@@ -238,13 +252,13 @@
 				{	// LOCATION: SET UP (VANILLA)
 					"Operation": "Append",
 					"Target": [	"Entries","Set-Up_additionalCharacters"	],
-					"Value": "Roslin 44 57 2",
+					"Value": "Roslin 7 65 3",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": [	"Entries","Set-Up_additionalCharacters_y2"	],
-					"Value": "Roslin 44 57 2",
+					"Value": "Roslin 7 65 3",
 					"Delimiter": "/"
 				},
 			],
@@ -262,25 +276,25 @@
 					{ // LOCATION: SET UP
 					  "Operation": "Append",
 					  "Target": ["Entries", "Set-Up_additionalCharacters"],
-					  "Value": "Roslin 62 47 1",
+					  "Value": "Roslin 124 48 0",
 					  "Delimiter": "/"
 					 },
 					 { // LOCATION: MAIN EVENT
 					  "Operation": "Append",
 					  "Target": ["Entries", "MainEvent_additionalCharacters"],
-					  "Value": "Roslin 70 49 0",
+					  "Value": "Roslin 124 48 0",
 					  "Delimiter": "/"
 					 },
 					 { // LOCATION: SET UP Y2
 					  "Operation": "Append",
 					  "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
-					  "Value": "Roslin 62 47 1",
+					  "Value": "Roslin 124 48 0",
 					  "Delimiter": "/"
 					 },
 					 { // LOCATION: MAIN EVENT Y2
 					  "Operation": "Append",
 					  "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
-					  "Value": "Roslin 70 49 0",
+					  "Value": "Roslin 124 48 0",
 					  "Delimiter": "/"
 					 },
 				],
@@ -300,25 +314,25 @@
 				 { // LOCATION: SET UP 
 				  "Operation": "Append",
 				  "Target": ["Entries", "Set-Up_additionalCharacters"],
-				  "Value": "Roslin 49 37 2",
+				  "Value": "Roslin 28 52 0",
 				  "Delimiter": "/"
 				 },
 				 { // LOCATION: MAIN EVENT
 				  "Operation": "Append",
 				  "Target": ["Entries", "MainEvent_additionalCharacters"],
-				  "Value": "Roslin 29 48 1",
+				  "Value": "Roslin 28 52 0",
 				  "Delimiter": "/"
 				 },
 				 { // LOCATION: SET UP Y2
 				  "Operation": "Append",
 				  "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
-				  "Value": "Roslin 49 37 2",
+				  "Value": "Roslin 28 52 0",
 				  "Delimiter": "/"
 				 },
 				 { // LOCATION: MAIN EVENT Y2
 				  "Operation": "Append",
 				  "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
-				  "Value": "Roslin 29 48 1",
+				  "Value": "Roslin 28 52 0",
 				  "Delimiter": "/"
 				 },
 		 	],

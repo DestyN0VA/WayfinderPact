@@ -48,25 +48,25 @@
                 {	// LOCATION: SET UP (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","Set-Up_additionalCharacters" ],
-                    "Value": "Mateo 20 21 2",
+                    "Value": "Mateo 55 31 3",
                     "Delimiter": "/"
                 },
                 {	// LOCATION: MAIN EVENT (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters"  ],
-                    "Value": "Mateo 23 24 3",
+                    "Value": "Mateo 55 31 3",
                     "Delimiter": "/"
                 },
 				{	// LOCATION: SET UP Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","Set-Up_additionalCharacters_y2" ],
-                    "Value": "Mateo 20 21 2",
+                    "Value": "Mateo 55 31 3",
                     "Delimiter": "/"
                 },
                 {	// LOCATION: MAIN EVENT Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters_y2"  ],
-                    "Value": "Mateo 23 24 3",
+                    "Value": "Mateo 55 31 3",
                     "Delimiter": "/"
                 },
             ],
@@ -155,13 +155,13 @@
 				{	// LOCATION: SET UP & MAIN EVENT (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters"],
-					"Value": "Mateo 37 81 0",
+					"Value": "Mateo 33 81 0",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP & MAIN EVENT Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
-					"Value": "Mateo 37 81 0",
+					"Value": "Mateo 20 78 1",
 					"Delimiter": "/"
 				},
 			],
@@ -180,13 +180,13 @@
 				{	// LOCATION: SET UP & MAIN EVENT (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries",	"Set-Up_additionalCharacters"],
-					"Value": "Mateo 14 17 2",
+					"Value": "Mateo 25 57 1",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP & MAIN EVENT Y2 (VANILLA)
 					 "Operation": "Append",
 					 "Target": ["Entries",	"Set-Up_additionalCharacters_y2"],
-					 "Value": "Mateo 14 15 2",
+					 "Value": "Mateo 25 57 1",
 					 "Delimiter": "/"
 				 },
 				 ],
@@ -194,22 +194,6 @@
 					 "HasConversationTopic |contains=MateoPain": false,
 				   },
 		 },
-		 {
-			  "Action": "EditData",
-			  "Target": "Data/Festivals/fall27",
-			  "TextOperations": [
-				  {	// LOCATION: SET UP & MAIN EVENT (SVE)
-					  "Operation": "Append",
-					  "Target": ["Entries",	"Set-Up_additionalCharacters"],
-					  "Value": "Mateo 37 57 2",
-					  "Delimiter": "/"
-				  },
-				  ],
-				  "When": {
-					  "HasConversationTopic |contains=MateoPain": false,
-					  "HasMod": "FlashShifter.StardewValleyExpandedCP",
-					},
-		  },
 
         // ICE FESTIVAL 
 
@@ -220,25 +204,25 @@
 				{	// LOCATION: SET UP (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters"],
-					"Value": "Mateo 48 29 3",
+					"Value": "Mateo 99 40 1",
 					"Delimiter": "/"
 				},
                 {   // LOCATION: MAIN EVENT (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Main-Event_additionalCharacters"],
-					"Value": "Mateo 71 42 0",
+					"Value": "Mateo 99 40 1",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
-					"Value": "Mateo 48 29 3",
+					"Value": "Mateo 45 16 1",
 					"Delimiter": "/"
 				},
                 {   // LOCATION: MAIN EVENT Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Main-Event_additionalCharacters_y2"],
-					"Value": "Mateo 71 42 0",
+					"Value": "Mateo 45 16 1",
 					"Delimiter": "/"
 				},
 			],

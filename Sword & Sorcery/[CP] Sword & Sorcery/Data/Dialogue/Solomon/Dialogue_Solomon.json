@@ -15,7 +15,7 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Solomon",
       "Entries": {
-        "{{WeekDay}}": "{{i18n:Core.Solomon.Generic.{{Random:{{Range: 1, 25}}}}}}"
+        "{{WeekDay}}": "{{i18n:Core.Solomon.Generic.{{Random:{{Range: 1, 35}}}}}}"
       }
     },
     // EPILOGUE POOL
@@ -40,5 +40,15 @@
         "Introduction": "{{i18n:Core.Solomon.Introduction}}",
       },
     },
+    {
+      "LogName": "Conversation Topics - Solomon",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Solomon",
+      "Entries": // SOLOMON'S REACTIONS
+      {
+          // CH4:
+          "DandelionReturns": "{{i18n:CT.Solomon.SolomonReturns}}",
+      }
+  },
   ]
 }

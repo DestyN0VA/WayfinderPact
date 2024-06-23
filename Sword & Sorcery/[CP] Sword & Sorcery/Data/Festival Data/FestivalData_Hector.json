@@ -10,7 +10,7 @@
                 {   // LOCATION: SET UP
                     "Operation": "Append",
                     "Target": [  "Entries", "Set-Up_additionalCharacters" ],
-                    "Value": "Hector 8 62 2",
+                    "Value": "Hector 13 61 2",
                     "Delimiter": "/"
                 },
                 {   // LOCATION: MAIN EVENT
@@ -22,13 +22,13 @@
 				{   // LOCATION: SET UP Y2
                     "Operation": "Append",
                     "Target": [  "Entries", "Set-Up_additionalCharacters_y2" ],
-                    "Value": "Hector 8 62 2",
+                    "Value": "Hector 12 62 1",
                     "Delimiter": "/"
                 },
                 {   // LOCATION: MAIN EVENT Y2
                     "Operation": "Append",
                     "Target": [  "Entries",  "MainEvent_additionalCharacters_y2"  ],
-                    "Value": "Hector 36 68 3",
+                    "Value": "Hector 12 62 1",
                     "Delimiter": "/"
                 },
 			],
@@ -45,25 +45,25 @@
                 {	// LOCATION: SET UP (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","Set-Up_additionalCharacters" ],
-                    "Value": "Hector 0 15 1",
+                    "Value": "Hector 54 30 2",
                     "Delimiter": "/"
                 },
                 {	// LOCATION: MAIN EVENT (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters"  ],
-                    "Value": "Hector 0 15 1",
+                    "Value": "Hector 54 30 2",
                     "Delimiter": "/"
                 },
 				{	// LOCATION: SET UP Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","Set-Up_additionalCharacters_y2" ],
-                    "Value": "Hector 0 15 1",
+                    "Value": "Hector 54 30 2",
                     "Delimiter": "/"
                 },
                 {	// LOCATION: MAIN EVENT Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters_y2"  ],
-                    "Value": "Hector 0 15 1",
+                    "Value": "Hector 54 30 2",
                     "Delimiter": "/"
                 },
             ],
@@ -87,25 +87,25 @@
 				{	// LOCATION: SET UP
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters"],
-					"Value": "Hector 13 13 0",
+					"Value": "Hector 13 13 2",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP 
 					"Operation": "Append",
 					"Target": ["Entries","MainEvent_additionalCharacters"],
-					"Value": "Hector 22 23 0",
+					"Value": "Hector 22 23 2",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP Y2
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
-					"Value": "Hector 19 9 0",
+					"Value": "Hector 16 10 1",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP Y2
 					"Operation": "Append",
 					"Target": ["Entries","MainEvent_additionalCharacters_y2"],
-					"Value": "Hector 22 23 0",
+					"Value": "Hector 16 10 1",
 					"Delimiter": "/"
 				},
 			],
@@ -121,13 +121,13 @@
 				{   // LOCATION: SET UP & MAIN EVENT
 					"Operation": "Append",
 					"Target": ["Entries", "Set-Up_additionalCharacters"],
-					"Value": "Hector 89 25 2",
+					"Value": "Hector 85 25 2",
 					"Delimiter": "/"
 				},
 				{   // LOCATION: SET UP & MAIN EVENT Y2
 					"Operation": "Append",
 					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
-					"Value": "Hector 89 25 2",
+					"Value": "Hector 85 25 2",
 					"Delimiter": "/"
 				},
 			],
@@ -149,7 +149,7 @@
 				{	// LOCATION: SET UP & MAIN EVENT Y2
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
-					"Value": "Hector 26 74 2",
+					"Value": "Hector 39 77 3",
 					"Delimiter": "/"
 				},
 			],
@@ -197,13 +197,13 @@
 				{	// LOCATION: SET UP Y2
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
-					"Value": "Hector 54 50 2",
+					"Value": "Hector 72 52 0",
 					"Delimiter": "/"
 				},
                 {   // LOCATION: MAIN EVENT Y2
 					"Operation": "Append",
 					"Target": ["Entries","Main-Event_additionalCharacters_y2"],
-					"Value": "Hector 84 35 3",
+					"Value": "Hector 72 52 0",
 					"Delimiter": "/"
 				},
 			],
@@ -225,7 +225,7 @@
 				{	// LOCATION: SET UP Y2
 					"Operation": "Append",
 					"Target": [	"Entries","Set-Up_additionalCharacters_y2"	],
-					"Value": "Hector 37 70 3",
+					"Value": "Hector 24 57 2",
 					"Delimiter": "/"
 				},
 			],
@@ -291,13 +291,13 @@
 				 { // LOCATION: SET UP Y2
 				  "Operation": "Append",
 				  "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
-				  "Value": "Hector 53 42 3",
+				  "Value": "Hector 61 43 1",
 				  "Delimiter": "/"
 				 },
 				 { // LOCATION: MAIN EVENT Y2
 				  "Operation": "Append",
 				  "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
-				  "Value": "Hector 49 41 3",
+				  "Value": "Hector 61 43 1",
 				  "Delimiter": "/"
 				 },
 		 	],

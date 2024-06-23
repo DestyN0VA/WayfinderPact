@@ -1,297 +1,104 @@
 {
     "Changes": [ // MATEO'S CONVERSATION TOPICS
-{
-    "LogName": "Conversation Topics - Mateo",
-    "Action": "EditData",
-    "Target": "Characters/Dialogue/Mateo",
-    "Entries": // MATEO
-    {
-
-        //O Hearts pt : "MateoCaution":"{{i18n:CT.Mateo.MateoCaution}}",
-
-        //O Hearts pt 2
-        "MateoRescue":"{{i18n:CT.Mateo.MateoRescue}}",
-
-        // 2 Hearts
-        "MateoLibrary":"{{i18n:CT.Mateo.MateoLibrary}}",
-
-        // 4 Hearts 
-        "MateoAdmission":"{{i18n:CT.Mateo.MateoAdmission}}",
-
-        // 5 Hearts pt 1
-        "MateoConfrontation": "{{i18n:CT.Mateo.MateoConfrontation}}",
-        
-        // 5 Hearts pt 2
-        "MateoWyatt": "{{i18n:CT.Mateo.MateoWyatt}}",
-
-        // 5 Hearts pt 3 
-        "MateoAcceptance":"{{i18n:CT.Mateo.MateoAcceptance}}",
-
-        // 7 Hearts
-        "MateoPain": "{{i18n:CT.Mateo.MateoPain}}",
-
-        // 7 Hearts pt 2
-        "MateoRecovery": "{{i18n:CT.Mateo.MateoRecovery}}",
-
-        // 8 Hearts pt 1
-        "CGuildConstruction": "{{i18n:CT.Mateo.CGuildConstruction}}",
-
-        // 8 Hearts pt 2
-        "CGuildComplete": "{{i18n:CT.Mateo.CGuildComplete}}",
-
-        // 10 Hearts - Platonic 
-        "MateoIntegrity": "{{i18n:CT.Mateo.MateoIntegrity}}",
-
-        // 10 Hearts - Romantic Fork 
-        "MateoRomance": "{{i18n:CT.Mateo.MateoRomance}}",
-
-        // 10 Hearts - Romantic Fork 2
-        "MateoForest": "{{i18n:CT.Mateo.MateoForest}}",
-
-        // 12 Hearts
-        "MateoDate": "{{i18n:CT.Mateo.MateoDate}}",
-
-        // 14 Hearts
-        "MateoDeclaration": "{{i18n:CT.Mateo.MateoDeclaration}}"
-
-    }
-},
-
-    // MARLON 
-{
-    "LogName": "Conversation Topics - Marlon Vanilla",
-    "Action": "EditData",
-    "Target": "Characters/Dialogue/{{SVEMarlon}}",
-    "Entries":
         {
-            "MateoCaution":"{{i18n:CT.Marlon.MateoCaution}}",
-            "MateoLibrary":"{{i18n:CT.Marlon.MateoLibrary}}",
-            "MateoAdmission":"{{i18n:CT.Marlon.MateoAdmission}}",
-            "MateoConfrontation": "{{i18n:CT.Marlon.MateoConfrontation}}",
-            "MateoWyatt": "{{i18n:CT.Marlon.MateoWyatt}}",
-            "MateoAcceptance": "{{i18n:CT.Marlon.MateoAcceptance}}", 
-            "MateoPain": "{{i18n:CT.Marlon.MateoPain}}",
-            "MateoRecovery": "{{i18n:CT.Marlon.MateoRecovery}}",
-            "CGuildConstruction": "{{i18n:CT.Marlon.CGuildConstruction}}",
-            "CGuildComplete": "{{i18n:CT.Marlon.CGuildComplete}}",
-            "MateoDate": "{{i18n:CT.Marlon.MateoDate}}",
-            "MateoIntegrity": "{{i18n:CT.Marlon.MateoIntegrity}}",
-            "MateoDeclaration": "{{i18n:CT.Marlon.MateoDeclaration}}"
-            
-        },
-},
-
-    // GUNTHER
-    {
-        "LogName": "Conversation Topics - Gunther",
-        "Action": "EditData",
-        "Target": "Characters/Dialogue/{{SVEGunther}}",
-        "Entries":
-        {
-            "MateoCaution":"{{i18n:CT.Gunther.MateoCaution}}",
-            "MateoLibrary":"{{i18n:CT.Gunther.MateoLibrary}}",
-            "MateoAdmission":"{{i18n:CT.Gunther.MateoAdmission}}",
-            "MateoConfrontation": "{{i18n:CT.Gunther.MateoConfrontation}}",
-            "MateoAcceptance": "{{i18n:CT.Gunther.MateoAcceptance}}", 
-            "MateoPain": "{{i18n:CT.Gunther.MateoPain}}",
-            "MateoRecovery": "{{i18n:CT.Gunther.MateoRecovery}}",
-            "CGuildConstruction": "{{i18n:CT.Gunther.CGuildConstruction}}",
-            "CGuildComplete": "{{i18n:CT.Gunther.CGuildComplete}}",
-            "MateoDate": "{{i18n:CT.Gunther.MateoDate}}",
-            "MateoIntegrity": "{{i18n:CT.Gunther.MateoIntegrity}}",
-            "MateoDeclaration": "{{i18n:CT.Gunther.MateoDeclaration}}"
-                
-        },
-    },
-
-    {
-        "LogName": "Conversation Topics - Krobus",
-        "Action": "EditData",
-        "Target": "Characters/Dialogue/Krobus",
-        "Entries":
+            "LogName": "Conversation Topics - Mateo",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Mateo",
+            "Entries": // MATEO'S REACTIONS
             {
-                "MateoLibrary":"{{i18n:CT.Krobus.MateoLibrary}}",
-                "MateoConfrontation": "{{i18n:CT.Krobus.MateoConfrontation}}", 
-                "MateoPain": "{{i18n:CT.Krobus.MateoPain}}",
-                "MateoRecovery": "{{i18n:CT.Krobus.MateoRecovery}}",
-                "MateoIntegrity": "{{i18n:CT.Krobus.MateoIntegrity}}",
-                "MateoDeclaration": "{{i18n:CT.Krobus.MateoDeclaration}}"
+                // CH1
+                "MateoRescue": "{{i18n:CT.Mateo.MateoRescue}}",
+                "MateoLibrary": "{{i18n:CT.Mateo.MateoLibrary}}",
+                "MateoAdmission": "{{i18n:CT.Mateo.MateoAdmission}}",
+                "MateoConfrontation": "{{i18n:CT.Mateo.MateoConfrontation}}",
+                "MateoWyatt": "{{i18n:CT.Mateo.MateoWyatt}}",
+                "MateoAcceptance": "{{i18n:CT.Mateo.MateoAcceptance}}",
+                "MateoPain": "{{i18n:CT.Mateo.MateoPain}}",
+                "MateoRecovery": "{{i18n:CT.Mateo.MateoRecovery}}",
+                "CGuildConstruction": "{{i18n:CT.Mateo.CGuildConstruction}}",
+                "CGuildComplete": "{{i18n:CT.Mateo.CGuildComplete}}",
+                "MateoIntegrity": "{{i18n:CT.Mateo.MateoIntegrity}}",
+                "MateoRomance": "{{i18n:CT.Mateo.MateoRomance}}",
+                "MateoForest": "{{i18n:CT.Mateo.MateoForest}}",
+                "MateoDate": "{{i18n:CT.Mateo.MateoDate}}",
+                "MateoDeclaration": "{{i18n:CT.Mateo.MateoDeclaration}}",
+
+                // CH2:
+                "HectorIntro": "{{i18n:CT.Mateo.HectorIntro}}",
+                "HectorBookIntro": "{{i18n:CT.Mateo.HectorBookIntro}}",
+                "HectorShapeshift": "{{i18n:CT.Mateo.HectorShapeshift}}",
+                "HectorBookQuest": "{{i18n:CT.Mateo.HectorBookQuest}}",
+                "HectorVet": "{{i18n:CT.Mateo.HectorVet}}",
+                "HectorVet2": "{{i18n:CT.Mateo.HectorVet2}}",
+                "HectorGender": "{{i18n:CT.Mateo.HectorGender}}",
+                "HectorVet3": "{{i18n:CT.Mateo.HectorVet3}}",
+                "HectorDND": "{{i18n:CT.Mateo.HectorDND}}",
+                "HectorRiver1": "{{i18n:CT.Mateo.HectorRiver1}}",
+                "HectorDinner": "{{i18n:CT.Mateo.HectorDinner}}",
+                "HectorRiver2": "{{i18n:CT.Mateo.HectorRiver2}}",
+                "HectorRiver3": "{{i18n:CT.Mateo.HectorRiver3}}",
+                "HectorHeal": "{{i18n:CT.Mateo.HectorHeal}}",
+                "HectorHeal2": "{{i18n:CT.Mateo.HectorHeal2}}",
+                "HectorTrueGrove": "{{i18n:CT.Mateo.HectorTrueGrove}}",
+                "HectorEngaged": "{{i18n:CT.Mateo.HectorEngaged}}",
+                
+                // CH3: 
+                "CirrusArrives": "{{i18n:CT.Mateo.CirrusArrives}}",
+                "CirrusWoods": "{{i18n:CT.Mateo.CirrusWoods}}",
+                "CirrusGuild": "{{i18n:CT.Mateo.CirrusGuild}}",
+                "CirrusMom": "{{i18n:CT.Mateo.CirrusMom}}",
+                "CirrusJJ1": "{{i18n:CT.Mateo.CirrusJJ1}}",
+                "CirrusRain": "{{i18n:CT.Mateo.CirrusRain}}",
+                "CirrusWoods2": "{{i18n:CT.Mateo.CirrusWoods2}}",
+                "CirrusJJ2": "{{i18n:CT.Mateo.CirrusJJ2}}",
+                "CirrusDnD": "{{i18n:CT.Mateo.CirrusDnD}}",
+                "CirrusLionsMane": "{{i18n:CT.Mateo.CirrusLionsMane}}",
+                "CirrusConcert": "{{i18n:CT.Mateo.CirrusConcert}}",
+                "CirrusLionsMane2": "{{i18n:CT.Mateo.CirrusLionsMane2}}",
+                "CirrusLionsMane3": "{{i18n:CT.Mateo.CirrusLionsMane3}}",
+                "CirrusEngaged": "{{i18n:CT.Mateo.CirrusEngaged}}",
+                "CirrusOvercomingFear": "{{i18n:CT.Mateo.CirrusOvercomingFear}}",
+                "CirrusPlanetarium": "{{i18n:CT.Mateo.CirrusPlanetarium}}",
+                "CirrusMakeup": "{{i18n:CT.Mateo.CirrusMakeup}}",
+
+                // CH4:
+                "RoslinNeedsHelp": "{{i18n:CT.Mateo.RoslinNeedsHelp}}",
+                "RoslinAndMateo": "{{i18n:CT.Mateo.RoslinAndMateo}}",
+                "RoslinAndHector": "{{i18n:CT.Mateo.RoslinAndHector}}",
+                "RoslinAndCirrus": "{{i18n:CT.Mateo.RoslinAndCirrus}}",
+                "RoslinAndLewis": "{{i18n:CT.Mateo.RoslinAndLewis}}",
+                "DandelionReturns": "{{i18n:CT.Mateo.DandelionReturns}}",
+                "CirrusGingerBeer": "{{i18n:CT.Mateo.CirrusGingerBeer}}",
+
+                // OTHER: 
+                "SterlingDrugs": "{{i18n:CT.Mateo.SterlingDrugs}}",
+                "SterlingRelapse": "{{i18n:CT.Mateo.SterlingRelapse}}",
+                "SterlingApology": "{{i18n:CT.Mateo.SterlingApology}}",
+                "SterlingRiver": "{{i18n:CT.Mateo.SterlingRiver}}",
+                "JunaBeachBallet": "{{i18n:CT.Mateo.JunaBeachBallet}}",
+                "LucikielArrives": "{{i18n:CT.Mateo.LucikielArrives}}",
+                "ReputationIncreased": "{{i18n:CT.Mateo.ReputationIncreased}}",
+                "JasperGone2": "{{i18n:CT.Mateo.JasperGone2}}",
+                "JasperHomeA": "{{i18n:CT.Mateo.JasperHomeA}}",
+                "PTJ03": "{{i18n:CT.Mateo.PTJ03}}",
+                "MeetTheCats": "{{i18n:CT.Mateo.MeetTheCats}}",
+                "ButteredJorts": "{{i18n:CT.Mateo.ButteredJorts}}",
+                "JortsZoomies": "{{i18n:CT.Mateo.JortsZoomies}}",
+                "wedding": "{{i18n:CT.Mateo.wedding}}",
+                "luauBest": "{{i18n:CT.Mateo.luauBest}}",
+                "babyBoy": "{{i18n:CT.Mateo.Baby}}",
+                "babyGirl": "{{i18n:CT.Mateo.Baby}}",
+                "jojaMartStruckByLightning": "{{i18n:CT.Mateo.jojaMartStruckByLightning}}",
+                "willyBoatRepaired": "{{i18n:CT.Mateo.willyBoatRepaired}}",
+                "islandResortUnlocked": "{{i18n:CT.Mateo.islandResortUnlocked}}",
+                "leoValleyArrival": "{{i18n:CT.Mateo.leoValleyArrival}}",
+                "railroadEarthquake": "{{i18n:CT.Mateo.railroadEarthquake}}",
+                "TYRSA_AnewCoupleInTown": "{{i18n:CT.Mateo.AnewCoupleInTown}}",
+                "TYRSA_AnewBookClub": "{{i18n:CT.Mateo.AnewBookClub}}",
+                "EliIntro": "{{i18n:CT.Mateo.EliIntro}}",
+                "MeetDND": "{{i18n:CT.Mateo.MeetDND}}",
+                "Aideen_Garden": "{{i18n:CT.Mateo.AideenGarden}}"
             }
-    },
-
-    // PIERRE
-{
-    "LogName": "Conversation Topics - Pierre",
-    "Action": "EditData",
-    "Target": "Characters/Dialogue/Pierre",
-    "Entries": 
-        {
-            "MateoLibrary": "{{i18n:CT.Pierre.MateoLibrary}}",
-            "MateoConfrontation": "{{i18n:CT.Pierre.MateoConfrontation}}",
-            "MateoPain": "{{i18n:CT.Pierre.MateoPain}}",
-            "MateoRecovery": "{{i18n:CT.Pierre.MateoRecovery}}"
-    
-        }
-},
-
-    //CAROLINE
-{
-    "LogName": "Conversation Topics - Caroline",
-    "Action": "EditData",
-    "Target": "Characters/Dialogue/Caroline",
-    "Entries": 
-        {
-            "MateoLibrary": "{{i18n:CT.Caroline.MateoLibrary}}",
-            "MateoConfrontation":"{{i18n:CT.Caroline.MateoConfrontation}}",
-            "MateoRecovery":"{{i18n:CT.Caroline.MateoRecovery}}"
-        }
-},
-
-    //GUS
-{
-    "LogName": "Conversation Topics - Gus",
-    "Action": "EditData",
-    "Target": "Characters/Dialogue/Gus",
-    "Entries": 
-        {
-            "MateoLibrary": "{{i18n:CT.Gus.MateoLibrary}}",
-            "MateoConfrontation":"{{i18n:CT.Gus.MateoConfrontation}}",
-            "MateoAcceptance":"{{i18n:CT.Gus.MateoAcceptance}}", 
-            "MateoPain": "{{i18n:CT.Gus.MateoPain}}",
-            "MateoRecovery": "{{i18n:CT.Gus.MateoRecovery}}"
-        }
-},
-
-   //HALEY
-{
-    "LogName": "Conversation Topics - Haley",
-    "Action": "EditData",
-    "Target": "Characters/Dialogue/Haley",
-    "Entries": 
-        {
-            "MateoLibrary": "{{i18n:CT.Haley.MateoLibrary}}",
-            "MateoConfrontation": "{{i18n:CT.Haley.MateoConfrontation}}"
-        }
-},
-
-   //HARVEY
-{
-    "LogName": "Conversation Topics - Harvey",
-    "Action": "EditData",
-    "Target": "Characters/Dialogue/Harvey",
-    "Entries": 
-        {
-            "MateoLibrary":"{{i18n:CT.Harvey.MateoLibrary}}",
-            "MateoAdmission":"{{i18n:CT.Harvey.MateoAdmission}}",
-            "MateoConfrontation":"{{i18n:CT.Harvey.MateoConfrontation}}",
-            "MateoPain": "{{i18n:CT.Harvey.MateoPain}}",
-            "MateoRecovery": "{{i18n:CT.Harvey.MateoRecovery}}"
-        }
-},
-   // ROBIN
-{
-    "LogName": "Conversation Topics - Robin",
-    "Action": "EditData",
-    "Target": "Characters/Dialogue/Robin",
-    "Entries": 
-       {
-            "MateoAdmission":"{{i18n:CT.Robin.MateoAdmission}}",
-            "MateoAcceptance":"{{i18n:CT.Robin.MateoAcceptance}}", 
-            "CGuildConstruction": "{{i18n:CT.Robin.CGuildConstruction}}",
-            "CGuildComplete": "{{i18n:CT.Robin.CGuildComplete}}"             
-        }
-},
- 
-    // WILLY 
-{
-        "LogName": "Conversation Topics - Willy",
-        "Action": "EditData",
-        "Target": "Characters/Dialogue/Willy",
-        "Entries": 
-        {
-           
-            "MateoAdmission":"{{i18n:CT.Willy.MateoAdmission}}",
-            "MateoConfrontation":"{{i18n:CT.Willy.MateoConfrontation}}"
-        }
-},
-
-   // LEWIS
-{
-    "LogName": "Conversation Topics - Lewis",
-    "Action": "EditData",
-    "Target": "Characters/Dialogue/Lewis",
-    "Entries": 
-        {
-            "MateoLibrary": "{{i18n:CT.Lewis.MateoLibrary}}",
-            "MateoConfrontation":"{{i18n:CT.Lewis.MateoConfrontation}}",
-            "MateoPain": "{{i18n:CT.Lewis.MateoPain}}",
-            "MateoRecovery": "{{i18n:CT.Lewis.MateoRecovery}}",
-            "CGuildConstruction": "{{i18n:CT.Lewis.CGuildConstruction}}",
-            "CGuildComplete": "{{i18n:CT.Lewis.CGuildComplete}}",
-        }
-},
-
-    // ABIGAIL 
-    {
-        "LogName": "Conversation Topics - Abigail",
-        "Action": "EditData",
-        "Target": "Characters/Dialogue/Abigail",
-        "Entries": 
-        {
-            "MateoAdmission": "{{i18n:CT.Abigail.MateoAdmission}}",
-            "MateoConfrontation": "{{i18n:CT.Abigail.MateoConfrontation}}",
-
-        }
-},
-
-   // MARNIE
-{
-    "LogName": "Conversation Topics - Marnie",
-    "Action": "EditData",
-    "Target": "Characters/Dialogue/Marnie",
-    "Entries": 
-        {
-            "MateoConfrontation": "{{i18n:CT.Marnie.MateoConfrontation}}",
-            "MateoPain": "{{i18n:CT.Marnie.MateoPain}}",
-            "MateoRecovery": "{{i18n:CT.Marnie.MateoRecovery}}"
-        }
-},
-
-{
-    "LogName": "Conversation Topics - Mateo",
-    "Action": "EditData",
-    "Target": "Characters/Dialogue/Mateo",
-    "Entries": // REACTIONS
-    {
-       "SterlingDrugs": "{{i18n:CT.Mateo.SterlingDrugs}}",
-       "SterlingRelapse": "{{i18n:CT.Mateo.SterlingRelapse}}",
-       "SterlingApology": "{{i18n:CT.Mateo.SterlingApology}}",
-       "SterlingRiver": "{{i18n:CT.Mateo.SterlingRiver}}",
-       "JunaBeachBallet": "{{i18n:CT.Mateo.JunaBeachBallet}}",
-       "LucikielArrives": "{{i18n:CT.Mateo.LucikielArrives}}",
-       "ReputationIncreased": "{{i18n:CT.Mateo.ReputationIncreased}}",
-       "JasperGone2": "{{i18n:CT.Mateo.JasperGone2}}",
-       "JasperHomeA": "{{i18n:CT.Mateo.JasperHomeA}}",
-       "PTJ03": "{{i18n:CT.Mateo.PTJ03}}",
-       "MeetTheCats": "{{i18n:CT.Mateo.MeetTheCats}}",
-       "ButteredJorts": "{{i18n:CT.Mateo.ButteredJorts}}",
-       "JortsZoomies": "{{i18n:CT.Mateo.JortsZoomies}}",
-       "wedding": "{{i18n:CT.Mateo.wedding}}",
-       "luauBest": "{{i18n:CT.Mateo.luauBest}}",
-       "babyBoy": "{{i18n:CT.Mateo.Baby}}",
-       "babyGirl": "{{i18n:CT.Mateo.Baby}}",
-       "jojaMartStruckByLightning": "{{i18n:CT.Mateo.jojaMartStruckByLightning}}",
-       "willyBoatRepaired": "{{i18n:CT.Mateo.willyBoatRepaired}}",
-       "islandResortUnlocked": "{{i18n:CT.Mateo.islandResortUnlocked}}",
-       "leoValleyArrival": "{{i18n:CT.Mateo.leoValleyArrival}}",
-       "railroadEarthquake": "{{i18n:CT.Mateo.railroadEarthquake}}", 
-       "TYRSA_AnewCoupleInTown": "{{i18n:CT.Mateo.AnewCoupleInTown}}", 
-       "TYRSA_AnewBookClub": "{{i18n:CT.Mateo.AnewBookClub}}", 
-       "EliIntro": "{{i18n:CT.Mateo.EliIntro}}",
-       "MeetDND": "{{i18n:CT.Mateo.MeetDND}}",
-       "Aideen_Garden": "{{i18n:CT.Mateo.AideenGarden}}"
-
-    }
-}
+        },
     ]
 }

@@ -48,25 +48,25 @@
                 {	// LOCATION: SET UP (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","Set-Up_additionalCharacters" ],
-                    "Value": "Cirrus 16 33 2",
+                    "Value": "Cirrus 55 37 0",
                     "Delimiter": "/"
                 },
                 {	// LOCATION: MAIN EVENT (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters"  ],
-                    "Value": "Cirrus 25 35 3",
+                    "Value": "Cirrus 55 37 0",
                     "Delimiter": "/"
                 },
 				{	// LOCATION: SET UP Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","Set-Up_additionalCharacters_y2" ],
-                    "Value": "Cirrus 16 33 2",
+                    "Value": "Cirrus 55 37 0",
                     "Delimiter": "/"
                 },
                 {	// LOCATION: MAIN EVENT Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters_y2"  ],
-                    "Value": "Cirrus 25 35 3",
+                    "Value": "Cirrus 55 37 0",
                     "Delimiter": "/"
                 },
             ],
@@ -119,13 +119,13 @@
 				{   // LOCATION: SET UP & MAIN EVENT
 					"Operation": "Append",
 					"Target": ["Entries", "Set-Up_additionalCharacters"],
-					"Value": "Cirrus 41 24 2",
+					"Value": "Cirrus 13 26 1",
 					"Delimiter": "/"
 				},
 				{   // LOCATION: SET UP & MAIN EVENT Y2
 					"Operation": "Append",
 					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
-					"Value": "Cirrus 41 24 2",
+					"Value": "Cirrus 13 26 1",
 					"Delimiter": "/"
 				},
 			],
@@ -150,7 +150,7 @@
 				{	// LOCATION: SET UP & MAIN EVENT Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
-					"Value": "Cirrus 46 74 0",
+					"Value": "Cirrus 41 95 1",
 					"Delimiter": "/"
 				},
 			],
@@ -168,13 +168,13 @@
 				{	// LOCATION: SET UP & MAIN EVENT (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries",	"Set-Up_additionalCharacters"],
-					"Value": "Cirrus 39 81 2",
+					"Value": "Cirrus 25 59 1",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP & MAIN EVENT Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries",	"Set-Up_additionalCharacters_y2"],
-					"Value": "Cirrus 39 81 2",
+					"Value": "Cirrus 25 59 1",
 					"Delimiter": "/"
 				},
 				],
@@ -228,13 +228,13 @@
 				{	// LOCATION: SET UP (VANILLA)
 					"Operation": "Append",
 					"Target": [	"Entries","Set-Up_additionalCharacters"	],
-					"Value": "Cirrus 44 57 2",
+					"Value": "Cirrus 33 65 1",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": [	"Entries","Set-Up_additionalCharacters_y2"	],
-					"Value": "Cirrus 44 57 2",
+					"Value": "Cirrus 25 58 3",
 					"Delimiter": "/"
 				},
 			],
@@ -264,13 +264,13 @@
 					 { // LOCATION: SET UP Y2
 					  "Operation": "Append",
 					  "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
-					  "Value": "Cirrus 62 47 1",
+					  "Value": "Cirrus 62 43 3",
 					  "Delimiter": "/"
 					 },
 					 { // LOCATION: MAIN EVENT Y2
 					  "Operation": "Append",
 					  "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
-					  "Value": "Cirrus 70 49 0",
+					  "Value": "Cirrus 62 43 3",
 					  "Delimiter": "/"
 					 },
 				],
@@ -290,25 +290,25 @@
 				 { // LOCATION: SET UP 
 				  "Operation": "Append",
 				  "Target": ["Entries", "Set-Up_additionalCharacters"],
-				  "Value": "Cirrus 49 37 2",
+				  "Value": "Cirrus 53 44 3",
 				  "Delimiter": "/"
 				 },
 				 { // LOCATION: MAIN EVENT
 				  "Operation": "Append",
 				  "Target": ["Entries", "MainEvent_additionalCharacters"],
-				  "Value": "Cirrus 29 48 1",
+				  "Value": "Cirrus 53 44 3",
 				  "Delimiter": "/"
 				 },
 				 { // LOCATION: SET UP Y2
 				  "Operation": "Append",
 				  "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
-				  "Value": "Cirrus 49 37 2",
+				  "Value": "Cirrus 53 44 3",
 				  "Delimiter": "/"
 				 },
 				 { // LOCATION: MAIN EVENT Y2
 				  "Operation": "Append",
 				  "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
-				  "Value": "Cirrus 29 48 1",
+				  "Value": "Cirrus 53 44 3",
 				  "Delimiter": "/"
 				 },
 		 	],
