@@ -15,6 +15,16 @@
         // LOVES
         "AcceptGift_(O)768": "{{i18n:Gifts.Roslin.GiftReaction.SolarEssence}}",
         "AcceptGift_(O)769": "{{i18n:Gifts.Roslin.GiftReaction.VoidEssence}}",
+        "AcceptGift_(O){{ModID}}_verdantpotion": "{{i18n:Gifts.Roslin.GiftReaction.Potions}}",
+        "AcceptGift_(O){{ModID}}_scarletpotion": "{{i18n:Gifts.Roslin.GiftReaction.Potions}}",
+        "AcceptGift_(O){{ModID}}_heatherpotion": "{{i18n:Gifts.Roslin.GiftReaction.Potions}}",
+        "AcceptGift_(O){{ModID}}_zydratepotion": "{{i18n:Gifts.Roslin.GiftReaction.Potions}}",
+        "AcceptGift_(O){{ModID}}_pistachiopotion": "{{i18n:Gifts.Roslin.GiftReaction.Potions}}",
+        "AcceptGift_(O){{ModID}}_dahliapotion": "{{i18n:Gifts.Roslin.GiftReaction.Potions}}",
+        "AcceptGift_(O){{ModID}}_slushiepotion": "{{i18n:Gifts.Roslin.GiftReaction.Potions}}",
+        "AcceptGift_(O){{ModID}}_matrixpotion": "{{i18n:Gifts.Roslin.GiftReaction.Potions}}",
+        "AcceptGift_(O){{ModID}}_mcdougalpotion": "{{i18n:Gifts.Roslin.GiftReaction.Potions}}",
+        "AcceptGift_(O){{ModID}}_toirneachpotion": "{{i18n:Gifts.Roslin.GiftReaction.Potions}}",
         // LIKES
         "AcceptGift_(O)807": "{{i18n:Gifts.Roslin.GiftReaction.DinosaurMayo}}",
         "AcceptGift_(O)308": "{{i18n:Gifts.Roslin.GiftReaction.VoidMayo}}",

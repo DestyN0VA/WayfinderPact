@@ -27,6 +27,9 @@
         "AcceptGift_(O)394": "{{i18n:Gifts.Mateo.GiftReaction.RainbowShell}}",
         "AcceptGift_(O)731": "{{i18n:Gifts.Mateo.GiftReaction.MapleBar}}",
         "AcceptGift_(O)WWWA.AutographedPhoto": "{{i18n:Gifts.Mateo.GiftReaction.AutographedPhoto}}",
+        "AcceptGift_(O){{ModID}}_salishbourbon": "{{i18n:Gifts.Mateo.GiftReaction.SalishBourbon}}",
+        "AcceptGift_(O){{ModID}}_autumnalstew": "{{i18n:Gifts.Mateo.GiftReaction.AutumnalStew}}",
+        "AcceptGift_(O){{ModID}}_ancientwildfairyrose": "{{i18n:Gifts.Mateo.GiftReaction.AncientFairyRose}}",
         // LIKES
         "AcceptGift_(O)236": "{{i18n:Gifts.Mateo.GiftReaction.PumpkinSoup}}",
         "AcceptGift_(O)608": "{{i18n:Gifts.Mateo.GiftReaction.PumpkinPie}}",

@@ -573,6 +573,9 @@
   "Gifts.Mateo.GiftReaction.RainbowShell": "These catch the sunlight so beautifully when you find them on the beach in the morning. Thank you for sharing this with me, @.$1",
   "Gifts.Mateo.GiftReaction.MapleBar": "You know, I have really fond memories of getting homemade maple bars with close friends... they're my favorite baked good. Thank you, @.$1",
   "Gifts.Mateo.GiftReaction.AutographedPhoto": "How'd you get this-? I'm a huge fan of Rodney's work! Did you know he's won two awards? This is great, I'll treasure it! Thank you!$32",
+  "Gifts.Mateo.GiftReaction.SalishBourbon": "This is such a special drink, I know the work that goes into making it - thank you, @. For making it, and for shaing it with me.$4",
+  "Gifts.Mateo.GiftReaction.AutumnalStew": "This tastes how Spirit's Eve feels. Thank you, @!$1",
+  "Gifts.Mateo.GiftReaction.AncientFairyRose": "I remember these from when I wandered the woods as a little kid. They're my favorite. Thank you, @.$12",
 
 
   // LOVES - ROMANTIC 
@@ -2106,8 +2109,8 @@ ________      ________ _   _ _______ _____
   "Gifts.Hector.GiftReaction.FiddleheadRisotto": "This is my favorite dish cuz' it's made with my favorite thing. It's extra special since you made it - thanks, @.$13",
   "Gifts.Hector.GiftReaction.Amaranth": "Caress the one, the never fading rain in your heart, the tears of snow-white sorrow! Caress the one, the hiding amaranth, in a land, of the daybreak!$3",
   "Gifts.Hector.GiftReaction.Stone": "Oh I LOVE rocks. So do otters, you know! Did you know they juggle them for fun?$1#$b#They also have a POCKET for their FAVORITE rock. Isn't that just the cutest thing you've ever heard?$1",
-
-  // LOVES - ROMANTIC 
+  "Gifts.Hector.GiftReaction.AncientFood": "You cooked with my weird crops? Thank you, @. This looks delicious!$1",
+  "Gifts.Hector.GiftReaction.AncientBeer": "You fermented my weird crops? Thank you, @. This looks delicious, and I'm sure Cirrus is real happy about this.$1",
 
   // LIKES
   "Gifts.Hector.GiftReaction.MapleBar": "Oh, these are great. I can feel the sugar crystallizing around my heart. Thanks, @!$9",
@@ -2140,6 +2143,10 @@ ________      ________ _   _ _______ _____
   "Gifts.Hector.GiftReaction.AncientHuckleberry": "Huckleberries are my favorite berries, so I spent a lot of time recovering this strain of them. Thank you for sharing with me, @!$1",
   "Gifts.Hector.GiftReaction.AncientMushroom": "If you eat this, your stomach will glow. I'm serious, @, don't try it.$6#$b#...Yeah, you got me. I'm fibbing. But wouldn't that be cool?$9",
   "Gifts.Hector.GiftReaction.AncientRose": "Out of the lot of the Ancient Crops, these roses are my favorite. Thank you for this, @. From the bottom of my heart.$13",
+  "Gifts.Hector.GiftReaction.AncientElderberry": "These are a bit tart, but they make really good drinks and syryps and stuff. I'm glad you were able to revitalize this plant, @.$7",
+  "Gifts.Hector.GiftReaction.AncientBottleGourd": "These are so dumb looking, aren't they? But that's alright, I don't love them any less. Thank you for taking time with this, @.$8",
+  "Gifts.Hector.GiftReaction.AncientAppleBerry": "At first, I thought this was a weird blue pumpkin when I grew it the first time, but it was too squishy... they make really good snacks, though.$8",
+  "Gifts.Hector.GiftReaction.AncientAzureDetura": "These are beautiful, aren't they? I don't know of another flower that relies so heavily on the moon.$1",
 
   // ITEM REJECTIONS 
   "Gifts.Hector.GiftReject.Bouquet": "Sorry, @. I'm not in a good place to date anyone right now. But I'm flattered.$4",
@@ -3463,7 +3470,9 @@ ________      ________ _   _ _______ _____
   "Gifts.Cirrus.GiftReaction.zuzustylebagelwithlox": "@, this is BOMB. Classic Zuzu city fare. Love it. I'm so glad you made it and decided to share!$1",
   "Gifts.Cirrus.GiftReaction.ZuzuStylePizza": "@! This tastes as good as the real thing! Did you ship in water from the city? Oh my gosh! Thank you!$1",
   "Gifts.Cirrus.GiftReaction.ZuzuStyleCheesecake": "Oh my gosh, @! This takes like home, looks like you got it perfect - thank you for sharing with me!$1",
+  "Gifts.Cirrus.GiftReaction.ZuzuStyleClamChowder": "Oh, @! I'm so glad you made this, I hope it feels as homey and nostalgic to you as it does to me.$1",
   "Gifts.Cirrus.GiftReaction.PortfireDrakeSparkler": "Honestly, I love a good mocktail. I feel less left out, because I love going to bars but I don't drink anymore.$6#$b#Thanks, @. This is very thoughtful of you to have made.$4",
+  "Gifts.Cirrus.GiftReaction.GingerBeer": "Oh my gosh, you ended up making Ginger Beer? I'm so excited to try it! Thank you for engaging in my hobbies with me, @.$1",
 
   // LIKES
   "Gifts.Cirrus.GiftReaction.MapleBar": "Mateo said these were a local thing, and made me try one. And then I tried two. Then three...$1",
@@ -3976,6 +3985,7 @@ ________      ________ _   _ _______ _____
   // LOVES
   "Gifts.Roslin.GiftReaction.SolarEssence": "Solar Essences are the physical manifestation of light, as used not scientifically but by means of magical - anyway, thanks @.$11",
   "Gifts.Roslin.GiftReaction.VoidEssence": "Void Essences are a little harder to come by than Solar Essences, I find. I suppose that's because of where they come from; oh well, no matter! Thank you, @.$11",
+  "Gifts.Roslin.GiftReaction.Potions": "Oh, I'll give this to Dandelion. She loves them, but basically only because it's tea but with extra steps. That's the only reason she calls herself an alchemist.$3",
 
   // LIKES
   "Gifts.Roslin.GiftReaction.DinosaurMayo": "This stuff is great. I know it's a taste you've got to get used to, but... whatever. I got used to it.$10",
@@ -4413,6 +4423,7 @@ ________      ________ _   _ _______ _____
   "Gifts.Dandelion.GiftReaction.Dandelion": "Ah-ha! Surprise, surprise. This is one of my favorite flowers, because you can make a lovely tea with it. Thank you, @.$1",
   "Gifts.Dandelion.GiftReaction.Starfruit": "I love these because they're yellow, and yellow is my favorite color. I bet I could make it into a syrup for tea, too.$6",
   "Gifts.Dandelion.GiftReaction.GreenTea": "Green tea is a CLASSIC. And these are from leaves you grew? Lovely! Thank you, @.$1",
+  "Gifts.Dandelion.GiftReaction.Potions": "Oh, @! I love potions, of course. They are simply a step to the left from brewing tea, but with a tad more pizzaz! Thank you for being so thoughtful!$1",
 
   // LIKES
   "Gifts.Dandelion.GiftReaction.Wine": "Oooh, I do fancy a nice wine every once in a while. Thank you, @.$6",

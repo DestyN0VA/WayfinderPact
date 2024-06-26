@@ -25,6 +25,18 @@
         "AcceptGift_(O){{ModID}}_zuzustylepizza": "{{i18n:Gifts.Cirrus.GiftReaction.ZuzuStylePizza}}",
         "AcceptGift_(O){{ModID}}_zuzustylecheesecake": "{{i18n:Gifts.Cirrus.GiftReaction.ZuzuStyleCheesecake}}",
         "AcceptGift_(O){{ModID}}_portfiredrakesparkler": "{{i18n:Gifts.Cirrus.GiftReaction.PortfireDrakeSparkler}}",
+        "AcceptGift_(O){{ModID}}_zuzustyleclamchowder": "{{i18n:Gifts.Cirrus.GiftReaction.ZuzuStyleClamChowder}}",
+        "AcceptGift_(O){{ModID}}_orangegingerbeer": "{{i18n:Gifts.Cirrus.GiftReaction.GingerBeer}}",
+        "AcceptGift_(O){{ModID}}_blueberrygingerbeer": "{{i18n:Gifts.Cirrus.GiftReaction.GingerBeer}}",
+        "AcceptGift_(O){{ModID}}_pineapplegingerbeer": "{{i18n:Gifts.Cirrus.GiftReaction.GingerBeer}}",
+        "AcceptGift_(O){{ModID}}_rhubarbgingerbeer": "{{i18n:Gifts.Cirrus.GiftReaction.GingerBeer}}",
+        "AcceptGift_(O){{ModID}}_strawberrygingerbeer": "{{i18n:Gifts.Cirrus.GiftReaction.GingerBeer}}",
+        "AcceptGift_(O){{ModID}}_peachgingerbeer": "{{i18n:Gifts.Cirrus.GiftReaction.GingerBeer}}",
+        "AcceptGift_(O){{ModID}}_ancientelderberrygingerbeer": "{{i18n:Gifts.Cirrus.GiftReaction.GingerBeer}}",
+        "AcceptGift_(O){{ModID}}_ancientappleberrygingerbeer": "{{i18n:Gifts.Cirrus.GiftReaction.GingerBeer}}",
+        "AcceptGift_(O){{ModID}}_ancienthuckleberrygingerbeer": "{{i18n:Gifts.Cirrus.GiftReaction.GingerBeer}}",
+        "AcceptGift_(O){{ModID}}_ancientfruitgingerbeer": "{{i18n:Gifts.Cirrus.GiftReaction.GingerBeer}}",
+        
         // LIKES
         "AcceptGift_(O)731": "{{i18n:Gifts.Cirrus.GiftReaction.MapleBar}}",
         "AcceptGift_(O)225": "{{i18n:Gifts.Cirrus.GiftReaction.FriedEel}}",
@@ -39,6 +51,11 @@
         "RejectItem_(O)348": "{{i18n:Gifts.Cirrus.GiftReaction.Wine}}",
         "RejectItem_(O)304": "{{i18n:Gifts.Cirrus.GiftReaction.Hops}}",
         "RejectItem_(O)459": "{{i18n:Gifts.Cirrus.GiftReaction.Mead}}",
+        "RejectItem_(O)DTZ.DowntownZuzuCP_Cider": "{{i18n:Gifts.Cirrus.GiftReaction.Beer}}",
+        "RejectItem_(O)DTZ.DowntownZuzuCP_ZuzuSignatureCocktail": "{{i18n:Gifts.Cirrus.GiftReaction.Beer}}",
+        "RejectItem_(O)DTZ.DowntownZuzuCP_JojaCocktail": "{{i18n:Gifts.Cirrus.GiftReaction.Beer}}",
+        "RejectItem_(O)DTZ.DowntownZuzuCP_StrawberryDaiquiri": "{{i18n:Gifts.Cirrus.GiftReaction.Beer}}",
+        "RejectItem_(O)DTZ.DowntownZuzuCP_ZuzuChampagne": "{{i18n:Gifts.Cirrus.GiftReaction.Beer}}",
         // ANCIENT CROPS
         "AcceptGift_(O){{ModID}}_ancientwildfairyroses": "{{i18n:Gifts.Cirrus.GiftReaction.AncientRose}}",
         // ITEM REJECTIONS 

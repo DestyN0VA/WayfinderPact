@@ -40,6 +40,19 @@
         "AcceptGift_(O){{ModID}}_ancientglowinghuckleberry": "{{i18n:Gifts.Hector.GiftReaction.AncientHuckleberry}}",
         "AcceptGift_(O){{ModID}}_glowingpolyporemushrooms": "{{i18n:Gifts.Hector.GiftReaction.AncientMushroom}}",
         "AcceptGift_(O){{ModID}}_ancientwildfairyroses": "{{i18n:Gifts.Hector.GiftReaction.AncientRose}}",
+        "AcceptGift_(O){{ModID}}_ancientelderberry": "{{i18n:Gifts.Hector.GiftReaction.AncientElderberry}}",
+        "AcceptGift_(O){{ModID}}_ancientbottlegourd": "{{i18n:Gifts.Hector.GiftReaction.AncientBottleGourd}}",
+        "AcceptGift_(O){{ModID}}_ancientgiantappleberry": "{{i18n:Gifts.Hector.GiftReaction.AncientAppleBerry}}",
+        "AcceptGift_(O){{ModID}}_ancientazuredetura": "{{i18n:Gifts.Hector.GiftReaction.AncientAzureDetura}}",
+        "AcceptGift_(O){{ModID}}_portfiredrakesparkler": "{{i18n:Gifts.Hector.GiftReaction.AncientFood}}",
+        "AcceptGift_(O){{ModID}}_mushroomsredsauce": "{{i18n:Gifts.Hector.GiftReaction.AncientFood}}",
+        "AcceptGift_(O){{ModID}}_ferngreensandpineapple": "{{i18n:Gifts.Hector.GiftReaction.AncientFood}}",
+        "AcceptGift_(O){{ModID}}_ancienthuckleberryicecream": "{{i18n:Gifts.Hector.GiftReaction.AncientFood}}",
+        "AcceptGift_(O){{ModID}}_lavaeelandstirfriedancientbottlegourd": "{{i18n:Gifts.Hector.GiftReaction.AncientFood}}",
+        "AcceptGift_(O){{ModID}}_ancientelderberrygingerbeer": "{{i18n:Gifts.Hector.GiftReaction.AncientBeer}}",
+        "AcceptGift_(O){{ModID}}_ancientappleberrygingerbeer": "{{i18n:Gifts.Hector.GiftReaction.AncientBeer}}",
+        "AcceptGift_(O){{ModID}}_ancienthuckleberrygingerbeer": "{{i18n:Gifts.Hector.GiftReaction.AncientBeer}}",
+
         // ITEM REJECTIONS 
         "RejectItem_(O)458": "{{i18n:Gifts.Hector.GiftReject.Bouquet}}",
       }

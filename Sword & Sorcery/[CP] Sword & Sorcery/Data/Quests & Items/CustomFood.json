@@ -478,7 +478,7 @@
           "DisplayName": "{{i18n: food.freshpopcorn.name}}",
           "Description": "{{i18n: food.freshpopcorn.description}}",
           "Type": "Cooking",
-          "Category": -7,
+          "Category": -26,
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
@@ -515,7 +515,7 @@
       "DisplayName": "{{i18n: food.verdantpotion.name}}",
       "Description": "{{i18n: food.verdantpotion.description}}",
       "Type": "Cooking",
-      "Category": -7,
+      "Category": -26,
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
@@ -1347,6 +1347,25 @@
     },
     "{{ModID}}_toirneachpotion": {
       "CategoryTextOverride": "Potion",
+      "CategoryColorOverride": {
+        "R": 188,
+        "G": 13,
+        "B": 3,
+        "A": 255
+      },
+    },
+// CUSTOM SNACK CATEGORY 
+    "{{ModID}}_fountainsoda": {
+      "CategoryTextOverride": "Snack",
+      "CategoryColorOverride": {
+        "R": 188,
+        "G": 13,
+        "B": 3,
+        "A": 255
+      },
+    },
+    "{{ModID}}_freshpopcorn": {
+      "CategoryTextOverride": "Snack",
       "CategoryColorOverride": {
         "R": 188,
         "G": 13,
