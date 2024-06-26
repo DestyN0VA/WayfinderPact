@@ -40,26 +40,30 @@
                 "Dandelion": "{{i18n:Gifts.Dandelion.GiftReaction.Love}}/22 268 614 {{ModID}}_verdantpotion {{ModID}}_scarletpotion {{ModID}}_heatherpotion {{ModID}}_zydratepotion {{ModID}}_pistachiopotion {{ModID}}_dahliapotion {{ModID}}_slushiepotion {{ModID}}_matrixpotion {{ModID}}_mcdougalpotion {{ModID}}_toirneachpotion/{{i18n:Gifts.Dandelion.GiftReaction.Like}}/421 426 430 348/{{i18n:Gifts.Dandelion.GiftReaction.Dislike}}/-20/{{i18n:Gifts.Dandelion.GiftReaction.Hate}}/769/{{i18n:Gifts.Dandelion.GiftReaction.Neutral}}/-4 -2/"
             }
         },
-
-        // UNIVERSAL LIKES 
         {
-            "Operation": "Append",
-            "Target": [
-                "Entries",
-                "Universal_Like"
-            ],
-            "Value": "{{ModID}}_orangegingerbeer {{ModID}}_blueberrygingerbeer {{ModID}}_pineapplegingerbeer {{ModID}}_rhubarbgingerbeer {{ModID}}_strawberrygingerbeer {{ModID}}_peachgingerbeer {{ModID}}_ancientelderberrygingerbeer {{ModID}}_ancientappleberrygingerbeer {{ModID}}_ancienthuckleberrygingerbeer {{ModID}}_ancientfruitgingerbeer {{ModID}}_ancientmushroomstew {{ModID}}_mushroomsredsauce {{ModID}}_ferngreensandpineapple {{ModID}}_ancienthuckleberryicecream {{ModID}}_lavaeelandstirfriedancientbottlegourd {{ModID}}_salishBourbon {{ModID}}_autumnalstew {{ModID}}_ancientwildfairyroses {{ModID}}_ancientelderberry {{ModID}}_ancientbottlegourd {{ModID}}_ancientgiantappleberry {{ModID}}_ancientazuredetura {{ModID}}_ancientglowinghuckleberry {{ModID}}_mushroomsredsauce {{ModID}}_ferngreensandpineapple {{ModID}}_ancienthuckleberryicecream {{ModID}}_lavaeelandstirfriedancientbottlegourd",
-            "Delimiter": " "
-        },
-        // UNIVERSAL NEUTRALS
-        {
-            "Operation": "Append",
-            "Target": [
-                "Entries",
-                "Universal_Neutral"
-            ],
-            "Value": "{{ModID}}_verdantpotion {{ModID}}_scarletpotion {{ModID}}_heatherpotion {{ModID}}_zydratepotion {{ModID}}_pistachiopotion {{ModID}}_dahliapotion {{ModID}}_slushiepotion {{ModID}}_matrixpotion {{ModID}}_mcdougalpotion {{ModID}}_toirneachpotion",
-            "Delimiter": " "
-        },
+            "LogName": "Gift Tastes for Vanilla",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Universal_Neutral"
+                    ],
+                    "Value": "{{ModID}}_verdantpotion {{ModID}}_scarletpotion {{ModID}}_heatherpotion {{ModID}}_zydratepotion {{ModID}}_pistachiopotion {{ModID}}_dahliapotion {{ModID}}_slushiepotion {{ModID}}_matrixpotion {{ModID}}_mcdougalpotion {{ModID}}_toirneachpotion",
+                    "Delimiter": " "
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Universal_Like"
+                    ],
+                    "Value": "{{ModID}}_orangegingerbeer {{ModID}}_blueberrygingerbeer {{ModID}}_pineapplegingerbeer {{ModID}}_rhubarbgingerbeer {{ModID}}_strawberrygingerbeer {{ModID}}_peachgingerbeer {{ModID}}_ancientelderberrygingerbeer {{ModID}}_ancientappleberrygingerbeer {{ModID}}_ancienthuckleberrygingerbeer {{ModID}}_ancientfruitgingerbeer {{ModID}}_ancientmushroomstew {{ModID}}_mushroomsredsauce {{ModID}}_ferngreensandpineapple {{ModID}}_ancienthuckleberryicecream {{ModID}}_lavaeelandstirfriedancientbottlegourd {{ModID}}_salishBourbon {{ModID}}_autumnalstew {{ModID}}_ancientwildfairyroses {{ModID}}_ancientelderberry {{ModID}}_ancientbottlegourd {{ModID}}_ancientgiantappleberry {{ModID}}_ancientazuredetura {{ModID}}_ancientglowinghuckleberry {{ModID}}_mushroomsredsauce {{ModID}}_ferngreensandpineapple {{ModID}}_ancienthuckleberryicecream {{ModID}}_lavaeelandstirfriedancientbottlegourd",
+                    "Delimiter": " "
+                },
+            ]
+        }
     ]
 }

@@ -109,6 +109,7 @@
             "not_museum_donatable"
           ],
         },
+        /*
         "{{ModID}}_ArcanePrimer": {
           "Name": "Arcane Primer",
           "DisplayName": "{{i18n: arsenal.arcane-primer.name}}",
@@ -121,6 +122,7 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
         },
+        */
         "{{ModID}}_PureCopperOre": {
           "Name": "Pure Copper Ore",
           "DisplayName": "{{i18n: arsenal.pure-copper-ore.name}}",
@@ -426,7 +428,7 @@
         "{{ModID}}_ExquisiteAmethyst": "66 50 74 1/meow/{{ModID}}_ExquisiteAmethyst 1/false/null/{{i18n:arsenal.exquisite-amethyst.name}}/{{i18n:arsenal.exquisite-amethyst.description}}",
         "{{ModID}}_ExquisiteJade": "70 50 74 1/meow/{{ModID}}_ExquisiteJade 1/false/null/{{i18n:arsenal.exquisite-jade.name}}/{{i18n:arsenal.exquisite-jade.description}}",
         "{{ModID}}_ExquisiteDiamond": "72 50 74 1/meow/{{ModID}}_ExquisiteDiamond 1/false/null/{{i18n:arsenal.exquisite-diamond.name}}/{{i18n:arsenal.exquisite-diamond.description}}",
-        "{{ModID}}_ArcanePrimer": "797 1 896 1/meow/{{ModID}}_ArcanePrimer 1/false/null/{{i18n:arsenal.arcane-primer.name}}/{{i18n:arsenal.arcane-primer.description}}",
+        //"{{ModID}}_ArcanePrimer": "797 1 896 1/meow/{{ModID}}_ArcanePrimer 1/false/null/{{i18n:arsenal.arcane-primer.name}}/{{i18n:arsenal.arcane-primer.description}}",
         "{{ModID}}_ClothArmor": "428 10/meow/{{ModID}}_ClothArmor 1/false/null/{{i18n:arsenal.cloth-armor.name}}/{{i18n:arsenal.cloth-armor.description}}",
         "{{ModID}}_CopperArmor": "{{ModID}}_PureCopperOre 10 {{ModID}}_ClothArmor 1/meow/{{ModID}}_CopperArmor 1/false/null/{{i18n:arsenal.copper-armor.name}}/{{i18n:arsenal.copper-armor.description}}",
         "{{ModID}}_IronArmor": "{{ModID}}_PureIronOre 10 {{ModID}}_CopperArmor 1/meow/{{ModID}}_IronArmor 1/false/null/{{i18n:arsenal.iron-armor.name}}/{{i18n:arsenal.iron-armor.description}}",

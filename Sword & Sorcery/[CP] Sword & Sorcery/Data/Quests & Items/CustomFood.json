@@ -1238,7 +1238,7 @@
 
   "{{ModID}}_dandeliongreens": "22 1 -5 1 424 1/what is this for?/{{ModID}}_dandeliongreens 1/false/{{i18n:food.crafting.dandeliongreens}}",
 
-  "{{ModID}}_portfiredrakesparkler": "167 1 934 1 635 1/what is this for?/{{ModID}}_portfiredrakesparkler 1/false/{{i18n:food.crafting.portfiredrakesparkler}}",
+  "{{ModID}}_portfiredrakesparkler": "167 1 88 1 635 1/what is this for?/{{ModID}}_portfiredrakesparkler 1/false/{{i18n:food.crafting.portfiredrakesparkler}}",
 
   "{{ModID}}_mushroomsredsauce": "{{ModID}}_glowingpolyporemushrooms 1 256 1 272 1/what is this for?/{{ModID}}_mushroomsredsauce 1/false/{{i18n:food.crafting.mushroomsredsauce}}",
 

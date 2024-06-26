@@ -10,25 +10,25 @@
                 {   // LOCATION: SET UP (VANILLA)
                     "Operation": "Append",
                     "Target": [  "Entries", "Set-Up_additionalCharacters" ],
-                    "Value": "Cirrus 43 78 2",
+                    "Value": "Cirrus 8 70 1",
                     "Delimiter": "/"
                 },
                 {   // LOCATION: MAIN EVENT (VANILLA)
                     "Operation": "Append",
                     "Target": [  "Entries",  "MainEvent_additionalCharacters"  ],
-                    "Value": "Cirrus 43 78 2",
+                    "Value": "Cirrus 8 70 1",
                     "Delimiter": "/"
                 },
 				{   // LOCATION: SET UP Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [  "Entries", "Set-Up_additionalCharacters_y2" ],
-                    "Value": "Cirrus 43 78 2",
+                    "Value": "Cirrus 8 70 1",
                     "Delimiter": "/"
                 },
                 {   // LOCATION: MAIN EVENT (VANILLA)
                     "Operation": "Append",
                     "Target": [  "Entries",  "MainEvent_additionalCharacters_y2"  ],
-                    "Value": "Cirrus 43 78 2",
+                    "Value": "Cirrus 8 70 1",
                     "Delimiter": "/"
                 },
 			],

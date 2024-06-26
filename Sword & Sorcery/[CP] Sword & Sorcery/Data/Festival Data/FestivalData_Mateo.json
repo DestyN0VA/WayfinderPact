@@ -48,25 +48,25 @@
                 {	// LOCATION: SET UP (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","Set-Up_additionalCharacters" ],
-                    "Value": "Mateo 55 31 3",
+                    "Value": "Mateo 8 69 1",
                     "Delimiter": "/"
                 },
                 {	// LOCATION: MAIN EVENT (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters"  ],
-                    "Value": "Mateo 55 31 3",
+                    "Value": "Mateo 8 69 1",
                     "Delimiter": "/"
                 },
 				{	// LOCATION: SET UP Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","Set-Up_additionalCharacters_y2" ],
-                    "Value": "Mateo 55 31 3",
+                    "Value": "Mateo 8 69 1",
                     "Delimiter": "/"
                 },
                 {	// LOCATION: MAIN EVENT Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters_y2"  ],
-                    "Value": "Mateo 55 31 3",
+                    "Value": "Mateo 8 69 1",
                     "Delimiter": "/"
                 },
             ],
