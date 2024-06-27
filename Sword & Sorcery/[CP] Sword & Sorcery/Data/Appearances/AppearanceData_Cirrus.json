@@ -40,7 +40,7 @@
         {
             "LogName": "Cirrus Makeup Overlay",
             "Action": "EditImage",
-            "Target": "Portraits/Cirrus, Characters/Cirrus, Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock, Portraits/winter_Cirrus",
+            "Target": "Portraits/Cirrus, Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock, Portraits/winter_Cirrus",
             "PatchMode": "Overlay",
             "FromFile": "assets/Portraits/Cirrus/Makeup/{{CirrusMakeup}}_Makeup_Overlay.png",
             "Update": "OnLocationChange",
