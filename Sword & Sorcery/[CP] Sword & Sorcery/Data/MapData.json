@@ -556,6 +556,29 @@
           "CustomFields": {}
         }
       }
+    },
+    {
+      "LogName": "Witchcraft - Pocket Dimension",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_PocketDimension": {
+          "DisplayName": "{{i18n:miscellaneous.mapname.PocketDimension}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/PocketDimension"
+          },
+          "DefaultArrivalTile": {
+            "X": 10,
+            "Y": 11
+          },
+          "ExcludeFromNpcPathfinding": false,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
     }
   ]
 }

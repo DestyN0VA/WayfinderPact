@@ -5144,6 +5144,7 @@ ________      ________ _   _ _______ _____
   "miscellaneous.mapname.Underforge": "The Underforge",
   "miscellaneous.mapname.ESDruidTower": "Hector's Tower", //maddogchange,
   "miscellaneous.mapname.SolomonCavern": "Solomon's Cavern",
+  "miscellaneous.mapname.PocketDimension": "Pocket Dimension",
 
   "machine.oldfashionedfermenter.name": "Old-Fashioned Fermenter", 
   "machine.oldfashionedfermenter.description": "A jar for controlled, non-alcholic fermentation for making Ginger Beer!",
