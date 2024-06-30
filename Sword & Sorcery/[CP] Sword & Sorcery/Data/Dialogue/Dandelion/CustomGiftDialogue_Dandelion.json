@@ -6,6 +6,8 @@
       "Entries": { // CUSTOM GIFT DIALOGUE
         // STARDROP TEA 
         "AcceptGift_(O)StardropTea": "{{i18n:Gifts.Dandelion.GiftReaction.StardropTea}}",
+        // ANCIENT SWEET TEA
+        "AcceptGift_(O){{ModID}}_ancientsweettea": "{{i18n:Gifts.Dandelion.GiftReaction.AncientSweetTea}}",
         // FISH
         "AcceptGift_category_fish": "{{i18n:Gifts.Dandelion.GiftReaction.CategoryFish}}",
         // ARTISANAL GOODS

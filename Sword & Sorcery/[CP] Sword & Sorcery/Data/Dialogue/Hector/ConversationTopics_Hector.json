@@ -45,13 +45,15 @@
                 "CirrusMakeup": "{{i18n:CT.Hector.CirrusMakeup}}",
 
                 // CH4:
-                "RoslinNeedsHelp": "{{i18n:CT.REPLACE.RoslinNeedsHelp}}",
-                "RoslinAndMateo": "{{i18n:CT.REPLACE.RoslinAndMateo}}",
-                "RoslinAndHector": "{{i18n:CT.REPLACE.RoslinAndHector}}",
-                "RoslinAndCirrus": "{{i18n:CT.REPLACE.RoslinAndCirrus}}",
-                "RoslinAndLewis": "{{i18n:CT.REPLACE.RoslinAndLewis}}",
-                "DandelionReturns": "{{i18n:CT.REPLACE.DandelionReturns}}",
-                "CirrusGingerBeer": "{{i18n:CT.REPLACE.CirrusGingerBeer}}",
+                "RoslinNeedsHelp": "{{i18n:CT.Hector.RoslinNeedsHelp}}",
+                "RoslinAndMateo": "{{i18n:CT.Hector.RoslinAndMateo}}",
+                "RoslinAndHector": "{{i18n:CT.Hector.RoslinAndHector}}",
+                "RoslinAndCirrus": "{{i18n:CT.Hector.RoslinAndCirrus}}",
+                "RoslinAndLewis": "{{i18n:CT.Hector.RoslinAndLewis}}",
+                "DandelionReturns": "{{i18n:CT.Hector.DandelionReturns}}",
+                "CirrusGingerBeer": "{{i18n:CT.Hector.CirrusGingerBeer}}",
+                "DandelionSettling": "{{i18n:CT.Hector.DandelionReturns}}",
+                "DandelionShieldRepair": "{{i18n:CT.Hector.DandelionShieldRepair}}",
             }
         },
     ]

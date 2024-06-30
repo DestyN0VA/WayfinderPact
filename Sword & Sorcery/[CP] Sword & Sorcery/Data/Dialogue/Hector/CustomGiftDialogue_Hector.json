@@ -6,6 +6,8 @@
       "Entries": { // CUSTOM GIFT DIALOGUE
         // STARDROP TEA 
         "AcceptGift_(O)StardropTea": "{{i18n:Gifts.Hector.GiftReaction.StardropTea}}",
+        // ANCIENT SWEET TEA
+        "AcceptGift_(O){{ModID}}_ancientsweettea": "{{i18n:Gifts.Hector.GiftReaction.AncientSweetTea}}",
         // FISH
         "AcceptGift_category_fish": "{{i18n:Gifts.Hector.GiftReaction.CategoryFish}}",
         "AcceptGift_(O)397": "{{i18n:Gifts.Hector.GiftReaction.SeaUrchin}}",
@@ -52,7 +54,6 @@
         "AcceptGift_(O){{ModID}}_ancientelderberrygingerbeer": "{{i18n:Gifts.Hector.GiftReaction.AncientBeer}}",
         "AcceptGift_(O){{ModID}}_ancientappleberrygingerbeer": "{{i18n:Gifts.Hector.GiftReaction.AncientBeer}}",
         "AcceptGift_(O){{ModID}}_ancienthuckleberrygingerbeer": "{{i18n:Gifts.Hector.GiftReaction.AncientBeer}}",
-
         // ITEM REJECTIONS 
         "RejectItem_(O)458": "{{i18n:Gifts.Hector.GiftReject.Bouquet}}",
       }
@@ -116,7 +117,7 @@
       },
       "When": {
         "HasConversationTopic |contains=HectorMarriageCountdown": false,
-		    "Relationship:Hector |contains=Dating": true,
+        "Relationship:Hector |contains=Dating": true,
         "FarmhouseUpgrade": "0"
       }
     }

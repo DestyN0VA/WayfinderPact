@@ -8,6 +8,8 @@
             {
                 // CH4:
                 "DandelionReturns": "{{i18n:CT.Dandelion.DandelionReturns}}",
+                "DandelionSettling": "{{i18n:CT.Dandelion.DandelionReturns}}",
+                "DandelionShieldRepair": "{{i18n:CT.Dandelion.DandelionShieldRepair}}",
             }
         },
     ]

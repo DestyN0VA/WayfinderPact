@@ -541,6 +541,9 @@
   // STARDROP TEA 
   "Gifts.Mateo.GiftReaction.StardropTea": "Wow, @! This is amazing! It smells so good, what's it made of? Thank you for sharing this with me.$1",
 
+  // ANCIENT SWEET TEA
+  "Gifts.Mateo.GiftReaction.AncientSweetTea": "This smells SO good, the stuff that comes from %farm doesn't cease to amaze me. Thank you, @.",
+
   // BASIC GIFT RESPONSES 
   "Gifts.Mateo.GiftReaction.Love": "Wow, I feel like you really thought of me. Thank you.",
   "Gifts.Mateo.GiftReaction.Like": "You got this for me? Thanks so much, how sweet of you.",
@@ -1484,6 +1487,9 @@ ________      ________ _   _ _______ _____
   "CT.Mateo.RoslinAndLewis": "I'm glad Marlon and Lewis put some thought into what was going on, and that even though they're a bit old-school, they're capable of change.$80",
   "CT.Mateo.DandelionReturns": "We've got a whole party now that Dandelion's back. I wonder if I can get her and Roslin to play, actually...$82",
   "CT.Mateo.CirrusGingerBeer": "Fresh Ginger Beer for tabletop nights! That's so exciting. I'm glad our hangout nights aren't alchol-forward, anyway. It's more comfortable for Cirrus.$80",
+  "CT.Mateo.DandelionSettling": "It's been a lot of fun to share a shop with Dandelion. It inspires me to keep working on my blacksmithing!$78",
+  "CT.Mateo.DandelionShieldRepair": "I know the materials are pretty rare, but mythical items like what I'm making for Dandelion take a lot of polish.$78",
+  "CT.Mateo.DandelionShieldRestored": "That shield is, hands down, the coolest thing I've ever made. I'll probably be trying to top it for the rest of of my life.$13",
 
   // OTHER
   "CT.Mateo.SterlingDrugs": "Sterling's been off. If you're close with him, you should check in on him, @.$37",
@@ -2079,6 +2085,9 @@ ________      ________ _   _ _______ _____
 
   // STARDROP TEA 
   "Gifts.Hector.GiftReaction.StardropTea": "How the heck did you get a Stardrop to make this with, @? That's wild. And you're sharing with ME? I'm FLATTERED!$1",
+
+  // ANCIENT SWEET TEA
+  "Gifts.Hector.GiftReaction.AncientSweetTea": "I'm honestly flattered you went to all the effort to grow and then brew this. I feel... validated, almost. Thank you, @.$8",
 
   // BASIC GIFT RESPONSES 
   "Gifts.Hector.GiftReaction.Love": "You... actually put some effort into this, huh? Wowie. Thank you, I mean that.",
@@ -2957,6 +2966,9 @@ ________      ________ _   _ _______ _____
   "CT.Hector.RoslinAndLewis": "I'll admit, I'm very surprised by Lewis' growth. Proud of him, though. In a way. Humans contain such multitudes.$20",
   "CT.Hector.DandelionReturns": "I'm glad Dandelion is back, but I'm not looking forward to going down and finishing off whatever that monster is.$10",
   "CT.Hector.CirrusGingerBeer": "Cirrus made Ginger Beer from some of my fruits and bottled it up for me! I love it so much!$1",
+  "CT.Hector.DandelionSettling": "I've not met someone so passionate about anything as Dandelion is about tea. Perhaps I should introduce her to an ancient variety...$8",
+  "CT.Hector.DandelionShieldRepair": "Honestly, Mateo actually honing their smithing skills that finely is a bit of a surprise to me. They'd get good at anything they focused on, I think.$14",
+  "CT.Hector.DandelionShieldRestored": "Make good use of those seeds, @. The tea you can brew from the leaves is delectable.$1",
 
   // OTHER 
   "CT.Hector.SterlingDrugs": "Sterling's been off. If you're close with him, you should check in on him, @.$17",
@@ -3444,6 +3456,9 @@ ________      ________ _   _ _______ _____
   // STARDROP TEA 
   "Gifts.Cirrus.GiftReaction.StardropTea": "@! This is the best tasting tea I've ever had! How'd you even come across something like this? The flavor profile is amazing!$1",
 
+  // ANCIENT SWEET TEA
+  "Gifts.Cirrus.GiftReaction.AncientSweetTea": "I'm not even really a tea girlie and I LOVE, LOVE, LOVE this. It tastes like a dessert drink! Thank you!$1",
+
   // BASIC GIFT RESPONSES 
   "Gifts.Cirrus.GiftReaction.Love": "Thank you, @! This is bloody brilliant!",
   "Gifts.Cirrus.GiftReaction.Like": "Ooh, this is swell! Thanks, @.",
@@ -3798,6 +3813,9 @@ ________      ________ _   _ _______ _____
   "CT.Cirrus.RoslinAndLewis": "Mateo's a really good leader, I'm glad Marlon and Lewis came around to being helpful. I think we'll be really prepared for what comes next, with their help.$17",
   "CT.Cirrus.DandelionReturns": "Dandelion's back! And she's SO NICE! I'm SO EXCITED! And HAPPY! I'm overwhelmed by all my big feelings!$10",
   "CT.Cirrus.CirrusGingerBeer": "Hope you like the Ginger Beer, @! Let me know if you wind up making any.$1",
+  "CT.Cirrus.DandelionSettling": "I *love* Dandelion being here, she makes tea in the morning and I'm slowly adjusting to it from several cups of coffee a day.$1#$b#And sometimes she cooks - it's nice to be cooked for, when normally I cook for everyone else.$4",
+  "CT.Cirrus.DandelionShieldRepair": "Dandelion is all excited about something, and Roslin is... stressed, about that same something.$16",
+  "CT.Cirrus.DandelionShieldRestored": "Dandelion made SUPER fancy tea last night. It was the best I've ever had.$1",
 
   /*
   _____   ____   _____ _      _____ _   _ 
@@ -3965,6 +3983,9 @@ ________      ________ _   _ _______ _____
 
   // STARDROP TEA 
   "Gifts.Roslin.GiftReaction.StardropTea": "Even I have to admit, I know this stuff gets made with a lot of care. Thanks for sharing the goods, @.$4",
+
+  // ANCIENT SWEET TEA
+  "Gifts.Roslin.GiftReaction.AncientSweetTea": "...It makes me happy that you have something in common with my favorite person. Thanks, @.$3",
 
   // BASIC GIFT RESPONSES 
   "Gifts.Roslin.GiftReaction.Love": "Thanks, @. This is a very useful gift.$6",
@@ -4224,6 +4245,9 @@ ________      ________ _   _ _______ _____
   "CT.Roslin.RoslinAndLewis": "Kinda can't believe Lewis and Marlon came through. Maybe there's hope for this world yet.$6",
   "CT.Roslin.DandelionReturns": "...She's back... I can't believe it...$18",
   "CT.Roslin.CirrusGingerBeer": "Cirrus served up some of her Ginger Beer with dinner. It was so good, now it's all Solomon wants to drink.$10",
+  "CT.Roslin.DandelionSettling": "Dandelion and I have had a morning tea ritual as long as we've known each other... without it, I felt myself... slipping.$12",
+  "CT.Roslin.DandelionShieldRepair": "Dandelion is adamant about defeating the Duskpire Behemoth. I don't disagree, but I wish she's take a second to appreciate being, I don't know, alive-?$15",
+  "CT.Roslin.DandelionShieldRestored": "I don't want her to fight again... but I can't stop her, can I?$13",
 
   /*
   _____          _   _ _____  ______ _      _____ ____  _   _ 
@@ -4403,6 +4427,9 @@ ________      ________ _   _ _______ _____
   // STARDROP TEA 
   "Gifts.Dandelion.GiftReaction.StardropTea": "@, this is my FAVORITE. THING. EVER. Thank you, I apprecaite being offered such an excuisite tea.$4",
 
+  // ANCIENT SWEET TEA
+  "Gifts.Dandelion.GiftReaction.AncientSweetTea": "Perhaps I'm a TAD bit biased, but I love this. Stardrop tea is amazing, so are all the other varieties... but this? This is special.$4",
+
   // BASIC GIFT RESPONSES 
   "Gifts.Dandelion.GiftReaction.Love": "Oh, my goodness! Thank you @, this is very lovely.",
   "Gifts.Dandelion.GiftReaction.Like": "Thank you, @! This is a kind gift.",
@@ -4538,7 +4565,7 @@ ________      ________ _   _ _______ _____
 
 
 
-  /*
+/*
    _____ _______ _____  _____ _   _  _____  _____ 
   / ____|__   __|  __ \|_   _| \ | |/ ____|/ ____|
  | (___    | |  | |__) | | | |  \| | |  __| (___  
@@ -4554,7 +4581,7 @@ ________      ________ _   _ _______ _____
   "Strings.Dandelion.SpicyBooks1": "Oh, my. This is only part of Dandelion's spicy romance novel collection.",
   "Strings.Dandelion.SpicyBooks2": "These spicy books seem even MORE extreme than the ones in the other room.",
 
-  /*
+/*
   __  __          _____ _      
  |  \/  |   /\   |_   _| |     
  | \  / |  /  \    | | | |     
@@ -4567,7 +4594,7 @@ ________      ________ _   _ _______ _____
   "Mail.Dandelion.Letter1": "Salutations, @!^^Thank you so terribly much for assisting Roslin. As a token of appreciation, here's a easy recipe I make for her often!^^Sincerely,^Dandelion.%item cookingRecipe DN.SnS_dandeliongreens%%[#]Dandelion Greens Recipe",
 
 
-  /*
+/*
    ____  _    _ ______  _____ _______ _____ 
   / __ \| |  | |  ____|/ ____|__   __/ ____|
  | |  | | |  | | |__  | (___    | | | (___  
@@ -4577,15 +4604,26 @@ ________      ________ _   _ _______ _____
 
 */
 
-  // BUILDING THE LION'S MANE 
-  "Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE1.Name": "",
-  "Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE1.Text": "",
-  "Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE1.Objective.0.Text": "",
-  "Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE1.Objective.1.Text": "",
-  "Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE1.Objective.2.Text": "",
-  "Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE1.Objective.3.Text": "",
+  // REPAIRING DANDELION'S SHIELD (VANILLA)
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Name": "Reforge Dandelion's Shield",
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Text": "Help Dandelion be well-equipped for the final battle against the Duskspire Behemoth!",
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Objective.0.Text": "Deposit 3 Exquisite Diamonds to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Objective.1.Text": "Deposit 25 Iridium Bars to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Objective.2.Text": "Deposit 10 Iron Bars to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Objective.3.Text": "Deposit 10 Gold Bars to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Objective.4.Text": "Deposit 25 pieces of Hardwood to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Objective.5.Text": "Deposit 50 Solar Essences to the chest in the Underforge.",
 
-  /*
+  // REPAIRING DANDELION'S SHIELD (CHOCOBO VALLEY)
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield_CV.Objective.0.Text": "Deposit 3 Exquisite Diamonds to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield_CV.Objective.1.Text": "Deposit 25 Orichalcum Bars to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield_CV.Objective.2.Text": "Deposit 10 Mythril Bars to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield_CV.Objective.3.Text": "Deposit 10 Adamantite Bars to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield_CV.Objective.4.Text": "Deposit 25 pieces of Hardwood to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield_CV.Objective.5.Text": "Deposit 50 Solar Essences to the chest in the Underforge.",
+
+
+/*
  ________      ________ _   _ _______ _____ 
 |  ____\ \    / /  ____| \ | |__   __/ ____|
 | |__   \ \  / /| |__  |  \| |  | | | (___  
@@ -4608,6 +4646,9 @@ ________      ________ _   _ _______ _____
 */
 
   "CT.Dandelion.DandelionReturns": "Thank you so terribly kindly for the rescue, @. I know it was a group effort, but it goes without saying you are the heart and soul of this little squad.$6",
+  "CT.Dandelion.DandelionSettling": "Dandelion and I have had a morning tea ritual as long as we've known each other... without it, I felt myself... slipping.$12",
+  "CT.Dandelion.DandelionShieldRepair": "Dandelion is all excited about something, and Roslin is... stressed, about that same something.$16",
+  "CT.Dandelion.DandelionShieldRestored": "The Duskspire Behemoth won't stand a chance! I'm back in action, thanks to you and Mateo.",
 
 
   /*
@@ -4677,6 +4718,7 @@ ________      ________ _   _ _______ _____
 
   // CONVERSATION TOPICS
   "CT.Solomon.DandelionReturns": "I'm so glad Dandelion's back! Now maybe Roslin will get some proper rest instead of crying herself to sleep every night!$0",
+  "CT.Solomon.DandelionSettling": "It's weird to work like, a job. I guess it's not really a job. I don't really have customers. I kind of just stand there.$10#$b#Well, I stand there and look cute.$6",
   
   // SITUATIONAL
   "Core.Solomon.EXAMPLE.1": "",
@@ -4810,6 +4852,7 @@ ________      ________ _   _ _______ _____
   "AncientSeed.Hector.BottleGourd": "Ancient Bottle Gourd Seed",
   "AncientSeed.Hector.AppleBerry": "Ancient Glowing Appleberry Seed",
   "AncientSeed.Hector.Detura": "Ancient Detura Seeds",
+  "AncientSeed.Hector.SweetTea": "Ancient Sweet Tea Bush Seeds",
 
   "crop.ancientamaranth.name": "Ancient Amaranth",
   "crop.ancientamaranth.description": "An unusual grain, unique in color and texture.",
@@ -4855,6 +4898,11 @@ ________      ________ _   _ _______ _____
   "crop.ancientazuredetura.description": "A dormant cousin of the Sunflower. It's very resilliant, and can grow in the cold with minimal light.",
   "crop.ancientazuredetura.seed.name": "Ancient Azure Detura Flower Seeds",
   "crop.ancientazuredetura.seed.description": "Grown in Fall and Winter. Takes eight days. Does not regrow.",
+
+  "crop.ancientsweettealeaves.name": "Ancient Sweet Tea Leaves",
+  "crop.ancientsweettealeaves.description": "An unusual tea plant that grows best in extreme conditions. It brews sweet enough that it's liked even by people who don't favor tea.",
+  "crop.ancientsweettealeaves.seed.name": "Ancient Sweet Tea Bush Seeds",
+  "crop.ancientsweettealeaves.seed.description": "Grown in Summer and Winter. Takes thirteen days, regrows in four.",
 
   "magicitem.druidicessence.name": "Druidic Essence",
   "magicitem.druidicessence.description": "Nature's power, manifest. Used to breathe life into new things.",
@@ -5034,6 +5082,7 @@ ________      ________ _   _ _______ _____
   "food.crafting.zuzustylebagelwithlox": "ZuZu Style Bagel With Lox",
   "food.crafting.zuzustylecheesecake": "ZuZu Style Cheesecake",
   "food.crafting.zuzustyleclamchowder": "ZuZu Style Clam Chowder",
+  "food.crafting.ancientsweettea": "Ancient Sweet Tea",
 
   "food.orangegingerbeer.name": "Orange-Flavored Ginger Beer",
   "food.orangegingerbeer.description": "An orange and ginger flavored non-alcholic drink.",

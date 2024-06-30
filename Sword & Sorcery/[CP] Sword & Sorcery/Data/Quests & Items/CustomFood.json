@@ -446,7 +446,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": true,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -482,7 +482,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -519,7 +519,7 @@
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 1000,
@@ -555,7 +555,7 @@
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 1000,
@@ -591,7 +591,7 @@
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 1000,
@@ -627,7 +627,7 @@
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 1000,
@@ -663,7 +663,7 @@
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 1000,
@@ -699,7 +699,7 @@
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 1000,
@@ -735,7 +735,7 @@
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 1000,
@@ -771,7 +771,7 @@
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 1000,
@@ -807,7 +807,7 @@
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 1000,
@@ -843,7 +843,7 @@
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 1000,
@@ -879,7 +879,7 @@
       "Edibility": 10,
       "IsDrink": true,
       "Price": 420,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 300,
@@ -915,7 +915,7 @@
       "Edibility": 10,
       "IsDrink": true,
       "Price": 210,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 300,
@@ -951,7 +951,7 @@
       "Edibility": 10,
       "IsDrink": true,
       "Price": 1260,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 300,
@@ -987,7 +987,7 @@
       "Edibility": 10,
       "IsDrink": true,
       "Price": 924,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 300,
@@ -1023,7 +1023,7 @@
       "Edibility": 10,
       "IsDrink": true,
       "Price": 504,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 300,
@@ -1059,7 +1059,7 @@
       "Edibility": 10,
       "IsDrink": true,
       "Price": 588,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 300,
@@ -1095,7 +1095,7 @@
       "Edibility": 10,
       "IsDrink": true,
       "Price": 630,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 500,
@@ -1131,7 +1131,7 @@
       "Category": -7,
       "Edibility": 10,
       "IsDrink": true,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 500,
@@ -1167,7 +1167,7 @@
       "Category": -7,
       "Edibility": 10,
       "IsDrink": true,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 500,
@@ -1203,7 +1203,7 @@
       "Edibility": 10,
       "IsDrink": true,
       "Price": 1575,
-      "ExcludeFromShippingCollection": true,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
       "Buffs": [
         {
           "Duration": 400,
@@ -1223,6 +1223,42 @@
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 82
+    },
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Objects",
+  "Entries": {
+    "{{ModID}}_ancientsweettea": {
+      "Name": "Ancient Sweet Tea",
+      "DisplayName": "{{i18n: food.ancientsweettea.name}}",
+      "Description": "{{i18n: food.ancientsweettea.description}}",
+      "Type": "Cooking",
+      "Category": -7,
+      "Edibility": 10,
+      "IsDrink": true,
+      "Price": 1250,
+      "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+      "Buffs": [
+        {
+          "Duration": 400,
+          "CustomAttributes": {
+            "FarmingLevel": 0,
+            "FishingLevel": 0,
+            "MiningLevel": 0,
+            "LuckLevel": 0,
+            "ForagingLevel": 0,
+            "MaxStamina": 0,
+            "MagneticRadius": 0,
+            "Speed": 0,
+            "Defense": 0,
+            "Attack": 0,
+          }
+        }
+      ],
+      "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+      "SpriteIndex": 84
     },
   },
 },
@@ -1255,6 +1291,8 @@
   "{{ModID}}_zuzustylecheesecake": "245 1 -6 1 -5 1 400 1/what is this for?/{{ModID}}_zuzustylecheesecake 1/e SnS.Ch3.Cirrus.9/{{i18n:food.crafting.zuzustylecheesecake}}",
 
   "{{ModID}}_zuzustyleclamchowder": "372 1 256 1 192 1/what is this for?/{{ModID}}_zuzustyleclamchowder 1/e SnS.Ch3.Cirrus.5/{{i18n:food.crafting.zuzustyleclamchowder}}",
+
+  "{{ModID}}_ancientsweettea": "{{ModID}}_ancientsweettealeaves {{AncientSweetTeaDifficulty}}/what is this for?/{{ModID}}_ancientsweettea 1/e SnS.Ch3.Dandelion.3/{{i18n:food.crafting.ancientsweettea}}",
   
   }
 },

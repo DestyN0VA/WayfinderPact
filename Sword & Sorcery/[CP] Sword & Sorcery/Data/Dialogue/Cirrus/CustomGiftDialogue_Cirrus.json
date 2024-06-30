@@ -6,6 +6,8 @@
       "Entries": { // CUSTOM GIFT DIALOGUE
         // STARDROP TEA 
         "AcceptGift_(O)StardropTea": "{{i18n:Gifts.Cirrus.GiftReaction.StardropTea}}",
+        // ANCIENT SWEET TEA
+        "AcceptGift_(O){{ModID}}_ancientsweettea": "{{i18n:Gifts.Cirrus.GiftReaction.AncientSweetTea}}",
         // FISH
         "AcceptGift_category_fish": "{{i18n:Gifts.Cirrus.GiftReaction.CategoryFish}}",
         // ARTISANAL GOODS
@@ -36,7 +38,6 @@
         "AcceptGift_(O){{ModID}}_ancientappleberrygingerbeer": "{{i18n:Gifts.Cirrus.GiftReaction.GingerBeer}}",
         "AcceptGift_(O){{ModID}}_ancienthuckleberrygingerbeer": "{{i18n:Gifts.Cirrus.GiftReaction.GingerBeer}}",
         "AcceptGift_(O){{ModID}}_ancientfruitgingerbeer": "{{i18n:Gifts.Cirrus.GiftReaction.GingerBeer}}",
-        
         // LIKES
         "AcceptGift_(O)731": "{{i18n:Gifts.Cirrus.GiftReaction.MapleBar}}",
         "AcceptGift_(O)225": "{{i18n:Gifts.Cirrus.GiftReaction.FriedEel}}",
@@ -109,7 +110,7 @@
       },
       "When": {
         "HasConversationTopic |contains=CirrusMarriageCountdown": false,
-		    "Relationship:Cirrus |contains=Dating": true,
+        "Relationship:Cirrus |contains=Dating": true,
         "FarmhouseUpgrade": "0"
       }
     }

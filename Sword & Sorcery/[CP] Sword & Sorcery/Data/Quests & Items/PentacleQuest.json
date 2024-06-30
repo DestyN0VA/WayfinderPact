@@ -106,7 +106,7 @@
       
 			"When": { "SkipIntroQuest": false }
 		},
-		// SENDS A LETTER AFTER THE GUILD HAS BEEN BUILT TO INVITE THE PLAYER TO THE TOWER. 
+		// SENDS A LETTER AFTER MATEO'S STORY TO INVITE THE PLAYER TO THE RAILROAD. 
 		{
 			"Action": "EditData",
 			"Target": "Data/TriggerActions",
@@ -114,7 +114,7 @@
 				"{{ModID}}_PentacleQuestIntro.2": {
 					"Id": "{{ModID}}_PentacleQuestIntro.2",
 					"Trigger": "LocationChanged",
-					"Condition": "PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle4, PLAYER_HAS_MAIL Current Mateo_SpecialOrders_BuildGuildMail, !{{SkipIntroQuest}}",
+					"Condition": "PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle4, PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14, !{{SkipIntroQuest}}",
 					"Actions": [
 						"AddMail Current AetherQuest2 tomorrow",
 					]

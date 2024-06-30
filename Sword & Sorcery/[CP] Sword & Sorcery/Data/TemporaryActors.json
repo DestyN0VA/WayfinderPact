@@ -120,5 +120,15 @@
             "Target": "Portraits/YoungMateo",
             "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/YoungMateo{{MateoHorns}}.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Portraits/BlacksmithMateo",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/BlacksmithMateo{{MateoHorns}}.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/DandelionShield",
+            "FromFile": "assets/TemporaryActors/Characters/DandelionShield.png"
+        },
     ]
 }

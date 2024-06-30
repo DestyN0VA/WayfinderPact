@@ -68,6 +68,22 @@
       "Action": "Include",
       "FromFile": "Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/GingerFermenter.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json"
     },
+    {
+      "LogName": "Sword & Sorcery - Shield Quest Include",
+      "Action": "Include",
+      "FromFile": "Data/Quests & Items/ShieldQuest.json",
+      "When": {
+        "HasMod: |contains=Kitsutsune.Chocobovalley": false,
+      }
+    },
+    {
+      "LogName": "Sword & Sorcery - Shield Quest Include (w/ Chocobo Valley)",
+      "Action": "Include",
+      "FromFile": "Data/Quests & Items/ShieldQuest_ChocoboValley.json",
+      "When": {
+        "HasMod: |contains=Kitsutsune.Chocobovalley": true,
+      }
+    },
     // TRIGGER ACTIONS
     {
       "LogName": "Overrides Seen Today Flag Removal",
@@ -323,6 +339,13 @@
       "Description": "Set length the player has to have dated Mateo, Hector, or Cirrus prior to any of them accepting the mermaid pendant and triggering the next romance event.",
       "Section": "Miscellaneous"
     },
+    "AncientSweetTeaDifficulty": {  
+    "AllowValues": "3, 7, 14, 21,",
+    "Default": "7",
+    "AllowBlank": false,
+    "Description": "Set how many Ancient Sweet Tea Leaves are required to craft the universally loved Ancient Sweet Tea recipe.",
+    "Section": "Miscellaneous"
+  },
     "Eli&DylanExtras": {
       "AllowValues": "true, false",
       "Default": "false",
@@ -1748,6 +1771,17 @@
     {
       "Name": "CirrusNickname",
       "Value": "|Nickname = {{i18n: Strings.Cirrus.Nickname{{Random:1,2}}}}"
-    }
+    },
+    {
+      "Name": "CountForShipping",
+      "Value": "true"
+    },
+    {
+      "Name": "CountForShipping",
+      "Value": "false",
+      "When": {
+        "ExcludeFromPerfection": true
+      }
+    },,
   ]
 }

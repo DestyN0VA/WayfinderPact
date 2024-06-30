@@ -7,13 +7,15 @@
             "Entries": // Roslin
             {
                 // CH4:
-                "RoslinNeedsHelp": "{{i18n:CT.Cirrus.RoslinNeedsHelp}}",
-                "RoslinAndMateo": "{{i18n:CT.Cirrus.RoslinAndMateo}}",
-                "RoslinAndHector": "{{i18n:CT.Cirrus.RoslinAndHector}}",
-                "RoslinAndCirrus": "{{i18n:CT.Cirrus.RoslinAndCirrus}}",
-                "RoslinAndLewis": "{{i18n:CT.Cirrus.RoslinAndLewis}}",
-                "DandelionReturns": "{{i18n:CT.Cirrus.DandelionReturns}}",
-                "CirrusGingerBeer": "{{i18n:CT.Cirrus.CirrusGingerBeer}}",
+                "RoslinNeedsHelp": "{{i18n:CT.Roslin.RoslinNeedsHelp}}",
+                "RoslinAndMateo": "{{i18n:CT.Roslin.RoslinAndMateo}}",
+                "RoslinAndHector": "{{i18n:CT.Roslin.RoslinAndHector}}",
+                "RoslinAndCirrus": "{{i18n:CT.Roslin.RoslinAndCirrus}}",
+                "RoslinAndLewis": "{{i18n:CT.Roslin.RoslinAndLewis}}",
+                "DandelionReturns": "{{i18n:CT.Roslin.DandelionReturns}}",
+                "CirrusGingerBeer": "{{i18n:CT.Roslin.CirrusGingerBeer}}",
+                "DandelionSettling": "{{i18n:CT.Roslin.DandelionReturns}}",
+                "DandelionShieldRepair": "{{i18n:CT.Roslin.DandelionShieldRepair}}",
             }
         },
     ]

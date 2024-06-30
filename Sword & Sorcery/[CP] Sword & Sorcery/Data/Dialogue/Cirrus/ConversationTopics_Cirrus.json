@@ -33,6 +33,8 @@
                 "RoslinAndLewis": "{{i18n:CT.Cirrus.RoslinAndLewis}}",
                 "DandelionReturns": "{{i18n:CT.Cirrus.DandelionReturns}}",
                 "CirrusGingerBeer": "{{i18n:CT.Cirrus.CirrusGingerBeer}}",
+                "DandelionSettling": "{{i18n:CT.Cirrus.DandelionReturns}}",
+                "DandelionShieldRepair": "{{i18n:CT.Cirrus.DandelionShieldRepair}}",
             }
         },
     ]

@@ -51,7 +51,7 @@
                         "Entries",
                         "Universal_Neutral"
                     ],
-                    "Value": "{{ModID}}_verdantpotion {{ModID}}_scarletpotion {{ModID}}_heatherpotion {{ModID}}_zydratepotion {{ModID}}_pistachiopotion {{ModID}}_dahliapotion {{ModID}}_slushiepotion {{ModID}}_matrixpotion {{ModID}}_mcdougalpotion {{ModID}}_toirneachpotion",
+                    "Value": "{{ModID}}_verdantpotion {{ModID}}_scarletpotion {{ModID}}_heatherpotion {{ModID}}_zydratepotion {{ModID}}_pistachiopotion {{ModID}}_dahliapotion {{ModID}}_slushiepotion {{ModID}}_matrixpotion {{ModID}}_mcdougalpotion {{ModID}}_toirneachpotion {{ModID}}_ancientsweettealeaves",
                     "Delimiter": " "
                 },
                 {
@@ -61,6 +61,15 @@
                         "Universal_Like"
                     ],
                     "Value": "{{ModID}}_orangegingerbeer {{ModID}}_blueberrygingerbeer {{ModID}}_pineapplegingerbeer {{ModID}}_rhubarbgingerbeer {{ModID}}_strawberrygingerbeer {{ModID}}_peachgingerbeer {{ModID}}_ancientelderberrygingerbeer {{ModID}}_ancientappleberrygingerbeer {{ModID}}_ancienthuckleberrygingerbeer {{ModID}}_ancientfruitgingerbeer {{ModID}}_ancientmushroomstew {{ModID}}_mushroomsredsauce {{ModID}}_ferngreensandpineapple {{ModID}}_ancienthuckleberryicecream {{ModID}}_lavaeelandstirfriedancientbottlegourd {{ModID}}_salishBourbon {{ModID}}_autumnalstew {{ModID}}_ancientwildfairyroses {{ModID}}_ancientelderberry {{ModID}}_ancientbottlegourd {{ModID}}_ancientgiantappleberry {{ModID}}_ancientazuredetura {{ModID}}_ancientglowinghuckleberry {{ModID}}_mushroomsredsauce {{ModID}}_ferngreensandpineapple {{ModID}}_ancienthuckleberryicecream {{ModID}}_lavaeelandstirfriedancientbottlegourd",
+                    "Delimiter": " "
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Universal_Love"
+                    ],
+                    "Value": "{{ModID}}_ancientsweettea",
                     "Delimiter": " "
                 },
             ]

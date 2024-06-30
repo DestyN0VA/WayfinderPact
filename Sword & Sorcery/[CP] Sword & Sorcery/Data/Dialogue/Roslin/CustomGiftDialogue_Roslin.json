@@ -6,6 +6,8 @@
       "Entries": { // CUSTOM GIFT DIALOGUE
         // STARDROP TEA 
         "AcceptGift_(O)StardropTea": "{{i18n:Gifts.Roslin.GiftReaction.StardropTea}}",
+        // ANCIENT SWEET TEA
+        "AcceptGift_(O){{ModID}}_ancientsweettea": "{{i18n:Gifts.Roslin.GiftReaction.AncientSweetTea}}",
         // ARTISANAL GOODS
         "AcceptGift_category_artisan_goods": "{{i18n:Gifts.Roslin.GiftReaction.CategoryArtisanalGoods}}",
         // TRASH

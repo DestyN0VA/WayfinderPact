@@ -47,7 +47,8 @@
       "Entries": // SOLOMON'S REACTIONS
       {
           // CH4:
-          "DandelionReturns": "{{i18n:CT.Solomon.SolomonReturns}}",
+          "DandelionReturns": "{{i18n:CT.Solomon.DandelionReturns}}",
+          "DandelionSettling": "{{i18n:CT.Solomon.DandelionReturns}}",
       }
   },
   ]

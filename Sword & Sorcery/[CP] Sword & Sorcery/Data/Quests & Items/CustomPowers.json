@@ -61,5 +61,41 @@
 			},
 			"When": { "HasFlag": "ForgedD20Power" }
 		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Powers",
+			"Entries": {
+				"DrakeScalePower": {
+					"DisplayName": "{{i18n: power.mythiciridiumshield.name}}",
+					"Description": "{{i18n: power.mythiciridiumshield.description}}",
+					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
+					"SpriteIndex": 16,
+					"UnlockedCondition": "PLAYER_HAS_MAIL Current DandelionShieldPower",
+					"Update": "OnTimeChange, OnLocationChange",
+				}
+			},
+			"When": {
+				"HasMod: |contains=Kitsutsune.Chocobovalley": false,
+				"HasFlag": "DandelionShieldPower"
+			  }
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Powers",
+			"Entries": {
+				"DrakeScalePower": {
+					"DisplayName": "{{i18n: power.mythicorichalcumshield.name}}",
+					"Description": "{{i18n: power.mythicorichalcumshield.description}}",
+					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
+					"SpriteIndex": 16,
+					"UnlockedCondition": "PLAYER_HAS_MAIL Current DandelionShieldPower",
+					"Update": "OnTimeChange, OnLocationChange",
+				}
+			},
+			"When": {
+				"HasMod: |contains=Kitsutsune.Chocobovalley": true,
+				"HasFlag": "DandelionShieldPower"
+			  }
+		},
 	]
 }

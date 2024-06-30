@@ -6,6 +6,8 @@
       "Entries": { // CUSTOM GIFT DIALOGUE
         // STARDROP TEA 
         "AcceptGift_(O)StardropTea": "{{i18n:Gifts.Mateo.GiftReaction.StardropTea}}",
+        // ANCIENT SWEET TEA
+        "AcceptGift_(O){{ModID}}_ancientsweettea": "{{i18n:Gifts.Mateo.GiftReaction.AncientSweetTea}}",
         // FISH
         "AcceptGift_category_fish": "{{i18n:Gifts.Mateo.GiftReaction.CategoryFish}}",
         "AcceptGift_(O)397": "{{i18n:Gifts.Mateo.GiftReaction.SeaUrchin}}",
@@ -105,7 +107,7 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Mateo",
       "Entries": { // MARRIAGE PENDANT REACT
-      "RejectItem_(O)460": "{{i18n:miscellaneous.PendantResponse}}#$action spacechase0.SpaceCore_PlayEvent SnS.Ch1.Mateo.19 false"
+        "RejectItem_(O)460": "{{i18n:miscellaneous.PendantResponse}}#$action spacechase0.SpaceCore_PlayEvent SnS.Ch1.Mateo.19 false"
       },
       "When": {
         "HasConversationTopic |contains=MateoMarriageCountdown": false,
@@ -120,7 +122,7 @@
       },
       "When": {
         "HasConversationTopic |contains=MateoMarriageCountdown": false,
-		    "Relationship:Mateo |contains=Dating": true,
+        "Relationship:Mateo |contains=Dating": true,
         "FarmhouseUpgrade": "0"
       }
     }
