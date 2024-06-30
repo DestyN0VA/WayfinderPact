@@ -5158,6 +5158,15 @@ ________      ________ _   _ _______ _____
   "arsenal.lightbringer-arrow.name": "Lightbringer Arrow",
   "arsenal.lightbringer-arrow.description": "An arrow capable of eradicating foes in one hit. (No loot drops)",
 
+  "witchcraft.earth-essence.name": "Earth Essence",
+  "witchcraft.earth-essence.description": "Essence of the earth.",
+  "witchcraft.air-essence.name": "Air Essence",
+  "witchcraft.air-essence.description": "Essence of the air.",
+  "witchcraft.water-essence.name": "Water Essence",
+  "witchcraft.water-essence.description": "Essence of water.",
+  "witchcraft.fire-essence.name": "Fire Essence",
+  "witchcraft.fire-essence.description": "Essence of fire.",
+
   /*
   __  __ _____  _____  _____ ______ _      _               _   _ ______ ____  _    _  _____ 
  |  \/  |_   _|/ ____|/ ____|  ____| |    | |        /\   | \ | |  ____/ __ \| |  | |/ ____|

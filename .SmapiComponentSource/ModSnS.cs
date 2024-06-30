@@ -369,6 +369,7 @@ namespace SwordAndSorcerySMAPI
             new ModCoT(Monitor, ModManifest, Helper).Entry();
             new ModNEA(Monitor, ModManifest, Helper).Entry(harmony);
             new ModUP(Monitor, ModManifest, Helper).Entry();
+            new ModTOP(Monitor, ModManifest, Helper).Entry();
 
             InitArsenal();
         }
@@ -924,13 +925,16 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(Farmer), nameof(Farmer.takeDamage))]
     public static class FarmerArmorBlocksDamagePatch
     {
-        public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry)
+        public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager)
         {
             var ext = Game1.player.GetFarmerExtData();
             if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||
                 Game1.player.get_armorSlot().Value == null ||
                 ext.armorUsed.Value >= (Game1.player.get_armorSlot().Value.GetArmorAmount() ?? -1))
                 return true;
+
+            bool flag = (damager == null || !damager.isInvincible()) && (damager == null || (!(damager is GreenSlime) && !(damager is BigSlime)) || !__instance.isWearingRing("520"));
+            if (!flag) return true;
 
             __instance.playNearbySoundAll("parry");
 

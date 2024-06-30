@@ -178,6 +178,7 @@
   "bardics.profession.attack.range.description": "Range of Scherzo D'Inganno is extended to the entire location.",
 
   // TOP
+  "ability.witchcraft.spell-unlock-hint": "Unlocked through the Witchcraft skill",
   "witchcraft.spell.haste.name": "Haste",
   "witchcraft.spell.haste.description": "___",
   "witchcraft.spell.message.name": "Message",

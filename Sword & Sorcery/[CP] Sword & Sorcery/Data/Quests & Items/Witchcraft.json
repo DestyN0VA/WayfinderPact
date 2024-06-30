@@ -1,0 +1,76 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_EarthEssence": {
+          "Name": "Earth Essence",
+          "DisplayName": "{{i18n: witchcraft.earth-essence.name}}",
+          "Description": "{{i18n: witchcraft.earth-essence.description}}",
+          "Type": "Basic",
+          "Category": -28,
+          "Price": 15,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 86,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "essence_item"
+          ]
+        },
+        "{{ModID}}_AirEssence": {
+          "Name": "Air Essence",
+          "DisplayName": "{{i18n: witchcraft.air-essence.name}}",
+          "Description": "{{i18n: witchcraft.air-essence.description}}",
+          "Type": "Basic",
+          "Category": -28,
+          "Price": 15,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 87,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "essence_item"
+          ]
+        },
+        "{{ModID}}_WaterEssence": {
+          "Name": "Water Essence",
+          "DisplayName": "{{i18n: witchcraft.water-essence.name}}",
+          "Description": "{{i18n: witchcraft.water-essence.description}}",
+          "Type": "Basic",
+          "Category": -28,
+          "Price": 15,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 88,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "essence_item"
+          ]
+        },
+        "{{ModID}}_FireEssence": {
+          "Name": "Fire Essence",
+          "DisplayName": "{{i18n: witchcraft.fire-essence.name}}",
+          "Description": "{{i18n: witchcraft.fire-essence.description}}",
+          "Type": "Basic",
+          "Category": -28,
+          "Price": 15,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 89,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "essence_item"
+          ]
+        }
+      }
+    },
+    // CRAFTING RECIPES 
+    /*
+    {
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "{{ModID}}_LightbringerArrow": "{{ModID}}_Arrow 1 768 30/meow/{{ModID}}_LightbringerArrow 1/false/null/{{i18n:arsenal.lightbringer-arrow.name}}/{{i18n:arsenal.lightbringer-arrow.description}}",
+      }
+    },
+    */
+  ]
+}
