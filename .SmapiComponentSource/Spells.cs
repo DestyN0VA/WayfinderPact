@@ -72,6 +72,25 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
+        public static void GhostlyProjection()
+        {
+            var ext = Game1.player.GetFarmerExtData();
+
+            ext.isGhost.Value = true;
+            ext.ghostOrigPosition.Value = Game1.player.Position;
+            Game1.player.ignoreCollisions = true;
+
+            DelayedAction.functionAfterDelay(() =>
+            {
+                if (!ext.isGhost.Value)
+                    return;
+
+                ext.isGhost.Value = false;
+                Game1.player.Position = ext.ghostOrigPosition.Value;
+                Game1.player.ignoreCollisions = false;
+            }, 15000);
+        }
+
         public static void PocketChest()
         {
             string invName = $"{ModTOP.Instance.ModManifest.UniqueID}/PocketChest/{Game1.player.UniqueMultiplayerID}";
