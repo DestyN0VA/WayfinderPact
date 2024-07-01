@@ -1437,7 +1437,6 @@ ________      ________ _   _ _______ _____
   "CT.Mateo.MateoDeclaration": "I love seeing you in that pendant, Sunshine. It was difficult to make.$30#$b#There's not a lot of that material it's forged from avaliable.$28",
 
   // CH2
-  "CT.Mateo.HectorIntro": "I went and checked on Linus. He's alright, just very shaken.$78",
   "CT.Mateo.HectorIntro.Platonic": "I went and checked on Linus. He's alright, just very shaken.$78",
   "CT.Mateo.HectorIntro.Romantic": "I hope you're not too shaken after that encounter with Hector, Sunshine. I got so worried when you disappeared.$29",
   "CT.Mateo.HectorBookIntro": "Book is something else, huh? I've never seen anything like her.$1",
@@ -4607,7 +4606,7 @@ ________      ________ _   _ _______ _____
   // REPAIRING DANDELION'S SHIELD (VANILLA)
   "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Name": "Reforge Dandelion's Shield",
   "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Text": "Help Dandelion be well-equipped for the final battle against the Duskspire Behemoth!",
-  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Objective.0.Text": "Deposit 3 Exquisite Diamonds to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Objective.0.Text": "Deposit 1 Exquisite Aquamarine to the chest in the Underforge.",
   "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Objective.1.Text": "Deposit 25 Iridium Bars to the chest in the Underforge.",
   "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Objective.2.Text": "Deposit 10 Iron Bars to the chest in the Underforge.",
   "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Objective.3.Text": "Deposit 10 Gold Bars to the chest in the Underforge.",
@@ -4615,7 +4614,7 @@ ________      ________ _   _ _______ _____
   "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield.Objective.5.Text": "Deposit 50 Solar Essences to the chest in the Underforge.",
 
   // REPAIRING DANDELION'S SHIELD (CHOCOBO VALLEY)
-  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield_CV.Objective.0.Text": "Deposit 3 Exquisite Diamonds to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield_CV.Objective.0.Text": "Deposit 1 Exquisite Aquamarine to the chest in the Underforge.",
   "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield_CV.Objective.1.Text": "Deposit 25 Orichalcum Bars to the chest in the Underforge.",
   "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield_CV.Objective.2.Text": "Deposit 10 Mythril Bars to the chest in the Underforge.",
   "Quests.CAGQuest.UntimedSpecialOrder.DandelionShield_CV.Objective.3.Text": "Deposit 10 Adamantite Bars to the chest in the Underforge.",
@@ -4993,6 +4992,9 @@ ________      ________ _   _ _______ _____
 
   "food.freshpopcorn.name": "Homemade Popcorn",
   "food.freshpopcorn.description": "Covered heartily in Flavacol, this tastes just as good as when you get it at the movies.",
+
+  "food.ancientsweettea.name": "Ancient Sweet Tea",
+  "food.ancientsweettea.description": "Magical tea brewed with ancient leaves, which taste sweet and appealing to everyone who tries it.",
 
   "weapon.eldadagordagger.name": "Eldadagor Dagger",
   "weapon.eldadagordagger.description": "Graceful and sharp. It has an engraving on the hilt in a language you don't recognize.",

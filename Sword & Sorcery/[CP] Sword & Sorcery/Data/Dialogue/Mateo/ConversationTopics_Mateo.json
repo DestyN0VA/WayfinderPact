@@ -24,22 +24,22 @@
                 "MateoDeclaration": "{{i18n:CT.Mateo.MateoDeclaration}}",
 
                 // CH2:
-                "HectorIntro": "{{i18n:CT.Mateo.HectorIntro}}",
+                "HectorIntro": "{{i18n:CT.Mateo.HectorIntro.{{MateoRomance}}}}",
                 "HectorBookIntro": "{{i18n:CT.Mateo.HectorBookIntro}}",
                 "HectorShapeshift": "{{i18n:CT.Mateo.HectorShapeshift}}",
                 "HectorBookQuest": "{{i18n:CT.Mateo.HectorBookQuest}}",
                 "HectorVet": "{{i18n:CT.Mateo.HectorVet}}",
                 "HectorVet2": "{{i18n:CT.Mateo.HectorVet2}}",
-                "HectorGender": "{{i18n:CT.Mateo.HectorGender}}",
+                "HectorGender": "{{i18n:CT.Mateo.HectorGender.{{MateoRomance}}}}",
                 "HectorVet3": "{{i18n:CT.Mateo.HectorVet3}}",
-                "HectorDND": "{{i18n:CT.Mateo.HectorDND}}",
+                "HectorDND": "{{i18n:CT.Mateo.HectorDND.{{MateoRomance}}}}",
                 "HectorRiver1": "{{i18n:CT.Mateo.HectorRiver1}}",
                 "HectorDinner": "{{i18n:CT.Mateo.HectorDinner}}",
                 "HectorRiver2": "{{i18n:CT.Mateo.HectorRiver2}}",
                 "HectorRiver3": "{{i18n:CT.Mateo.HectorRiver3}}",
                 "HectorHeal": "{{i18n:CT.Mateo.HectorHeal}}",
                 "HectorHeal2": "{{i18n:CT.Mateo.HectorHeal2}}",
-                "HectorTrueGrove": "{{i18n:CT.Mateo.HectorTrueGrove}}",
+                "HectorTrueGrove": "{{i18n:CT.Mateo.HectorTrueGrove.{{MateoRomance}}}}",
                 "HectorEngaged": "{{i18n:CT.Mateo.HectorEngaged}}",
                 
                 // CH3: 

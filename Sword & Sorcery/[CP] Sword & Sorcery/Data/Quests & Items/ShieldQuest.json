@@ -23,12 +23,12 @@
 						{
 							"Type": "Donate",
 							"Text": "[CAGQuest.UntimedSpecialOrder.DandelionShield.Objective_0_Text]",
-							"RequiredCount": "3",
+							"RequiredCount": "1",
 							"Data": {
 								"DropBox": "DandelionShield",
 								"DropBoxGameLocation": "EastScarp_Underforge",
 								"DropBoxIndicatorLocation": "5 9",
-								"AcceptedContextTags": "item_exquisite_diamond"
+								"AcceptedContextTags": "item_exquisite_aquamarine"
 							}
 						},
 						{
