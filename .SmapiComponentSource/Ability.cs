@@ -33,11 +33,51 @@ namespace SwordAndSorcerySMAPI
     public static class FarmerRendererShadowstepPatch
     {
         internal static bool transparent = false;
-        public static void Prefix(Farmer who)
+        public static void Prefix(FarmerRenderer __instance, SpriteBatch b, FarmerSprite.AnimationFrame animationFrame, int currentFrame, Rectangle sourceRect, Vector2 position, Vector2 origin, float layerDepth, Color overrideColor, float rotation, float scale, Farmer who)
         {
             if ( who.buffs.AppliedBuffIds.Contains( "shadowstep" ) )
             {
                 transparent = true;
+            }
+
+            var ext = who.GetFarmerExtData();
+            if (ext.currRenderingMirror == 0)
+            {
+                bool oldTransparent = transparent;
+                Vector2 oldPos = position;
+                if (ext.mirrorImages.Value > 0)
+                {
+                    float rad = (float)-Game1.currentGameTime.TotalGameTime.TotalSeconds / 3 * 2;
+
+                    transparent = true;
+                    position = oldPos;// + new Vector2(0, -Game1.tileSize);
+                    position += new Vector2(MathF.Cos(rad) * Game1.tileSize, MathF.Sin(rad) * Game1.tileSize);
+                    ext.currRenderingMirror = 1;
+                    __instance.draw(b, animationFrame, currentFrame, sourceRect, position, origin, layerDepth, overrideColor, rotation, scale, who);
+
+                    if (ext.mirrorImages.Value > 1)
+                    {
+                        rad += MathF.PI * 2 / 3;
+                        transparent = true;
+                        position = oldPos;// + new Vector2(-Game1.tileSize, Game1.tileSize);
+                        position += new Vector2(MathF.Cos(rad) * Game1.tileSize, MathF.Sin(rad) * Game1.tileSize);
+                        ext.currRenderingMirror = 2;
+                        __instance.draw(b, animationFrame, currentFrame, sourceRect, position, origin, layerDepth, overrideColor, rotation, scale, who);
+
+                        if (ext.mirrorImages.Value > 2)
+                        {
+                            rad += MathF.PI * 2 / 3;
+                            transparent = true;
+                            position = oldPos;// + new Vector2(Game1.tileSize, Game1.tileSize);
+                            position += new Vector2(MathF.Cos(rad) * Game1.tileSize, MathF.Sin(rad) * Game1.tileSize);
+                            ext.currRenderingMirror = 3;
+                            __instance.draw(b, animationFrame, currentFrame, sourceRect, position, origin, layerDepth, overrideColor, rotation, scale, who);
+                        }
+                    }
+                    ext.currRenderingMirror = 0;
+                }
+                position = oldPos;
+                transparent = oldTransparent;
             }
         }
         public static void Postfix(Farmer who)

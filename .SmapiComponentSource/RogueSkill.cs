@@ -186,7 +186,7 @@ namespace SwordAndSorcerySMAPI
         {
             if (!__instance.eventsSeen.Contains("SnS.Ch1.Mateo.18")) // TODO: Change event
                 return;
-            if (which != Farmer.combatSkill)
+            if (which != Farmer.combatSkill && which != Farmer.miningSkill)
                 return;
 
             var data = __instance.GetFarmerExtData();

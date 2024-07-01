@@ -76,6 +76,9 @@ namespace SwordAndSorcerySMAPI
         }
 
         public readonly NetInt armorUsed = new(0);
+        public readonly NetInt mirrorImages = new(0);
+        public int currRenderingMirror = 0;
+        public bool mageArmor = false;
     }
 
     [HarmonyPatch(typeof(Farmer), "initNetFields")]
@@ -90,6 +93,7 @@ namespace SwordAndSorcerySMAPI
             __instance.NetFields.AddField(__instance.GetFarmerExtData().maxMana);
             __instance.NetFields.AddField(__instance.GetFarmerExtData().expRemainderRogue);
             __instance.NetFields.AddField(__instance.GetFarmerExtData().armorUsed);
+            __instance.NetFields.AddField(__instance.GetFarmerExtData().mirrorImages);
         }
     }
 
@@ -102,17 +106,21 @@ namespace SwordAndSorcerySMAPI
 
         public static bool IsArmorItem(this Item item)
         {
-            return (item.GetArmorAmount() ?? -1) > 0;
+            return (item.GetArmorAmount(includeMageArmor: false) ?? -1) > 0;
         }
 
-        public static int? GetArmorAmount(this Item item)
+        public static int? GetArmorAmount(this Item item, bool includeMageArmor = true)
         {
+            int mageArmor = Game1.player.GetFarmerExtData().mageArmor ? 50 : 0;
+            if (!includeMageArmor)
+                mageArmor = 0;
+
             if (item != null && ItemRegistry.GetDataOrErrorItem(item.QualifiedItemId).RawData is ObjectData data &&
                 ( data.CustomFields?.TryGetValue("ArmorValue", out string valStr) ?? false ) && int.TryParse(valStr, out int val))
             {
-                return (int)( val * ( Game1.player.HasCustomProfession( RogueSkill.ProfessionArmorCap ) ? 1.5f : 1));
+                return (int)( val * ( Game1.player.HasCustomProfession( RogueSkill.ProfessionArmorCap ) ? 1.5f : 1)) + mageArmor;
             }
-            return null;
+            return mageArmor == 0 ? null : mageArmor;
         }
     }
 
