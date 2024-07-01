@@ -117,12 +117,12 @@
         },
         {
             "Action": "Load",
-            "Target": "Portraits/YoungMateo",
+            "Target": "Portraits/YoungMateo, Characters/YoungMateo",
             "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/YoungMateo{{MateoHorns}}.png"
         },
         {
             "Action": "Load",
-            "Target": "Portraits/BlacksmithMateo",
+            "Target": "Portraits/BlacksmithMateo, Characters/BlacksmithMateo",
             "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/BlacksmithMateo{{MateoHorns}}.png"
         },
         {
