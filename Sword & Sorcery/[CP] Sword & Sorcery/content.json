@@ -84,6 +84,22 @@
         "HasMod: |contains=Kitsutsune.Chocobovalley": true,
       }
     },
+    {
+      "LogName": "Sword & Sorcery - Essence Quest Include",
+      "Action": "Include",
+      "FromFile": "Data/Quests & Items/EssenceQuest.json",
+      "When": {
+        "HasMod: |contains=Rafseazz.RSVCP": false,
+      }
+    },
+    {
+      "LogName": "Sword & Sorcery - Essence Quest Include (w/ Ridgeside Village)",
+      "Action": "Include",
+      "FromFile": "Data/Quests & Items/EssenceQuest_RSV.json",
+      "When": {
+        "HasMod: |contains=Rafseazz.RSVCP": true,
+      }
+    },
     // TRIGGER ACTIONS
     {
       "LogName": "Overrides Seen Today Flag Removal",
