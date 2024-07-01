@@ -835,7 +835,7 @@ namespace SwordAndSorcerySMAPI
             if (!Game1.player.eventsSeen.Contains(ModUP.BardicsEventId))
                 return;
 
-            Game1.player.AddCustomSkillExperience(ModUP.Skill, amount / 10);
+            Game1.player.AddCustomSkillExperience(ModUP.Skill, amount);
         }
     }
 }

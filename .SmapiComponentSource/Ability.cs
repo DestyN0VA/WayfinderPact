@@ -35,16 +35,27 @@ namespace SwordAndSorcerySMAPI
         internal static bool transparent = false;
         public static void Prefix(FarmerRenderer __instance, SpriteBatch b, FarmerSprite.AnimationFrame animationFrame, int currentFrame, Rectangle sourceRect, Vector2 position, Vector2 origin, float layerDepth, Color overrideColor, float rotation, float scale, Farmer who)
         {
-            if ( who.buffs.AppliedBuffIds.Contains( "shadowstep" ) )
+            var ext = who.GetFarmerExtData();
+
+            if ( who.buffs.AppliedBuffIds.Contains( "shadowstep" ) || ( ext.isGhost.Value && ext.currRenderingMirror == 0 ) )
             {
                 transparent = true;
             }
 
-            var ext = who.GetFarmerExtData();
             if (ext.currRenderingMirror == 0)
             {
-                bool oldTransparent = transparent;
+                ext.currRenderingMirror = 1;
+
                 Vector2 oldPos = position;
+                bool oldTransparent = transparent;
+
+                if (ext.isGhost.Value)
+                {
+                    transparent = false;
+                    position = Game1.GlobalToLocal(ext.ghostOrigPosition.Value);
+                    __instance.draw(b, animationFrame, currentFrame, sourceRect, position, origin, layerDepth, overrideColor, rotation, scale, who);
+                }
+
                 if (ext.mirrorImages.Value > 0)
                 {
                     float rad = (float)-Game1.currentGameTime.TotalGameTime.TotalSeconds / 3 * 2;
@@ -52,7 +63,7 @@ namespace SwordAndSorcerySMAPI
                     transparent = true;
                     position = oldPos;// + new Vector2(0, -Game1.tileSize);
                     position += new Vector2(MathF.Cos(rad) * Game1.tileSize, MathF.Sin(rad) * Game1.tileSize);
-                    ext.currRenderingMirror = 1;
+                    //ext.currRenderingMirror = 1;
                     __instance.draw(b, animationFrame, currentFrame, sourceRect, position, origin, layerDepth, overrideColor, rotation, scale, who);
 
                     if (ext.mirrorImages.Value > 1)
@@ -74,8 +85,8 @@ namespace SwordAndSorcerySMAPI
                             __instance.draw(b, animationFrame, currentFrame, sourceRect, position, origin, layerDepth, overrideColor, rotation, scale, who);
                         }
                     }
-                    ext.currRenderingMirror = 0;
                 }
+                ext.currRenderingMirror = 0;
                 position = oldPos;
                 transparent = oldTransparent;
             }

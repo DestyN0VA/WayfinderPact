@@ -80,7 +80,7 @@ namespace SwordAndSorcerySMAPI
             SpellCircle = Helper.ModContent.Load<Texture2D>("assets/spellcircle.png");
 
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
-
+            Helper.Events.Player.Warped += Player_Warped;
 
             Event.RegisterCommand("sns_essenceunlock", (Event @event, string[] args, EventContext context) =>
             {
@@ -113,6 +113,7 @@ namespace SwordAndSorcerySMAPI
                     {
                         layerDepth = 1,
                         scale = 4,
+                        overrideLocationDestroy = true,
                     };
                     tass.Add(tas);
                     @event.aboveMapSprites.Add(tas);
@@ -159,7 +160,7 @@ namespace SwordAndSorcerySMAPI
 
                             if (tas.scale < 0 || getLength() < 0)
                             {
-                                @event.aboveMapSprites.Remove(tas);
+                                @event.aboveMapSprites?.Remove(tas);
                             }
                         }
                     }, i);
@@ -174,6 +175,16 @@ namespace SwordAndSorcerySMAPI
         private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
         {
             Game1.player.GetFarmerExtData().mageArmor = false;
+        }
+
+        private void Player_Warped(object sender, StardewModdingAPI.Events.WarpedEventArgs e)
+        {
+            var ext = Game1.player.GetFarmerExtData();
+            if (ext.isGhost.Value)
+            {
+                ext.isGhost.Value = false;
+                Game1.player.ignoreCollisions = false;
+            }
         }
 
         private void RegisterSpells()
@@ -235,6 +246,22 @@ namespace SwordAndSorcerySMAPI
                 Function = () =>
                 {
                     CastSpell(Color.Yellow, () => Spells.MirrorImage());
+                }
+            });
+
+            Ability.Abilities.Add("spell_ghostlyprojection", new Ability("spell_ghostlyprojection")
+            {
+                Name = I18n.Witchcraft_Spell_GhostlyProjection_Name,
+                Description = I18n.Witchcraft_Spell_GhostlyProjection_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
+                SpriteIndex = 16,
+                ManaCost = () => 7,
+                KnownCondition = $"TRUE",
+                UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
+                CanUse = () => !Game1.player.GetFarmerExtData().isGhost.Value,
+                Function = () =>
+                {
+                    CastSpell(Color.Aqua, () => Spells.GhostlyProjection());
                 }
             });
 

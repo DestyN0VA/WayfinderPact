@@ -79,6 +79,8 @@ namespace SwordAndSorcerySMAPI
         public readonly NetInt mirrorImages = new(0);
         public int currRenderingMirror = 0;
         public bool mageArmor = false;
+        public readonly NetBool isGhost = new(false);
+        public readonly NetVector2 ghostOrigPosition = new();
     }
 
     [HarmonyPatch(typeof(Farmer), "initNetFields")]
@@ -94,6 +96,8 @@ namespace SwordAndSorcerySMAPI
             __instance.NetFields.AddField(__instance.GetFarmerExtData().expRemainderRogue);
             __instance.NetFields.AddField(__instance.GetFarmerExtData().armorUsed);
             __instance.NetFields.AddField(__instance.GetFarmerExtData().mirrorImages);
+            __instance.NetFields.AddField(__instance.GetFarmerExtData().isGhost);
+            __instance.NetFields.AddField(__instance.GetFarmerExtData().ghostOrigPosition);
         }
     }
 
