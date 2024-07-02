@@ -75,6 +75,45 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
+        // https://stackoverflow.com/a/57385008
+        public static IEnumerable<Color> GetColorGradient(Color from, Color to, int totalNumberOfColors)
+        {
+            if (totalNumberOfColors < 2)
+            {
+                throw new ArgumentException("Gradient cannot have less than two colors.", nameof(totalNumberOfColors));
+            }
+
+            double diffA = to.A - from.A;
+            double diffR = to.R - from.R;
+            double diffG = to.G - from.G;
+            double diffB = to.B - from.B;
+
+            int steps = totalNumberOfColors - 1;
+
+            double stepA = diffA / steps;
+            double stepR = diffR / steps;
+            double stepG = diffG / steps;
+            double stepB = diffB / steps;
+
+            yield return from;
+
+            for (int i = 1; i < steps; ++i)
+            {
+                yield return new Color(
+                    c(from.R, stepR),
+                    c(from.G, stepG),
+                    c(from.B, stepB),
+                    c(from.A, stepA));
+
+                int c(int fromC, double stepC)
+                {
+                    return (int)Math.Round(fromC + stepC * i);
+                }
+            }
+
+            yield return to;
+        }
+
         public void Entry()
         {
             SpellCircle = Helper.ModContent.Load<Texture2D>("assets/spellcircle.png");
@@ -165,6 +204,70 @@ namespace SwordAndSorcerySMAPI
                         }
                     }, i);
                 }
+
+                @event.CurrentCommand++;
+            });
+            Event.RegisterCommand("sns_magiccircle", (Event @event, string[] args, EventContext context) =>
+            {
+                ArgUtility.TryGetVector2(args, 1, out Vector2 center, out string error);
+                center -= new Vector2(1, 1);
+
+                TemporaryAnimatedSprite circle = new();
+                float drawLayer = Math.Max(0f, (float)(center.Y * Game1.tileSize - 3) / 10000f);
+                Game1.player.currentLocation.TemporarySprites.Add(circle = new TemporaryAnimatedSprite(Instance.Helper.ModContent.GetInternalAssetName("assets/spellcircle.png").BaseName, new Rectangle(0, 0, 48, 48), 10000, 1, 0, center * Game1.tileSize + new Vector2(-96 / 4 * 4 + 4, -96 / 4 * 4), false, false, drawLayer, 0, Color.Red, 2 * 4, 0, 0, 0)
+                {
+                    alpha = 0,
+                    alphaFade = -0.02f,
+                    /*
+                    light = true,
+                    lightRadius = 0.5f * 4,
+                    lightcolor = new Color(255 - Color.Red.R, 255 - Color.Red.G, 255 - Color.Red.B)
+                    */
+                });
+
+
+                Color[] colsRaw = [Color.Red, Color.Orange, Color.Yellow, Color.Lime, Color.Cyan, Color.Blue, Color.Violet, Color.White];
+                List<Color> cols = new();
+                for (int i = 0; i < colsRaw.Length - 1; ++i)
+                {
+                    cols.AddRange(GetColorGradient(colsRaw[i], colsRaw[i + 1], 40));
+                }
+
+                int interval = 10000 / cols.Count;
+                for (int i = 0; i < cols.Count; ++i)
+                {
+                    Color c = cols[Math.Min(i, cols.Count - 1)];
+                    DelayedAction.functionAfterDelay(() =>
+                    {
+                        var l = Game1.currentLightSources.FirstOrDefault(l => l.Identifier == circle.lightID);
+                        if ( l != null )
+                            l.color.Value = new Color(255 - c.R, 255 - c.G, 255 - c.B);
+                        circle.color = c;
+                        if (circle.alpha > 0.5f)
+                            circle.alpha = 0.5f;
+                        for (int i = 0; i < 12; ++i)
+                        {
+                            float drawLayer3 = Math.Max(0f, (float)(center.Y * Game1.tileSize + 3) / 10000f);
+                            float rad = (float)Game1.random.NextDouble() * MathF.PI * 2;
+                            float len = (float)Game1.random.NextDouble() * 96 / 2 * 4;
+                            Vector2 pos = new Vector2(MathF.Cos(rad) + 0.5f, MathF.Sin(rad) + 0.5f);
+                            Game1.player.currentLocation.TemporarySprites.Add(new TemporaryAnimatedSprite(Instance.Helper.ModContent.GetInternalAssetName("assets/particle.png").BaseName, new Rectangle(0, 0, 5, 5), 1000, 1, 0, center * Game1.tileSize + pos * len, false, false, drawLayer3, 0, c * 0.75f, 3, 0, 0, 0)
+                            {
+                                motion = new Vector2(0, -2),
+                                alphaFade = 0.05f,
+                                xPeriodic = true,
+                                xPeriodicLoopTime = 375,
+                                xPeriodicRange = 8,
+                                delayBeforeAnimationStart = i * interval,
+                            });
+                        }
+                    }, i * interval);
+                }
+
+                DelayedAction.functionAfterDelay(() =>
+                {
+                    circle.alphaFade = 0.02f;
+                }, 9500);
 
                 @event.CurrentCommand++;
             });
@@ -292,7 +395,10 @@ namespace SwordAndSorcerySMAPI
 
             long farmerId = who?.UniqueMultiplayerID ?? 0;
             if (who != null && Game1.random.NextDouble() < 0.15)
+            {
                 Game1.createObjectDebris("(O)DN.SnS_EarthEssence", x, y, farmerId, __instance);
+                Game1.createObjectDebris("(O)DN.SnS_EarthEssence", x, y, farmerId, __instance);
+            }
         }
     }
 
@@ -306,7 +412,10 @@ namespace SwordAndSorcerySMAPI
 
             long farmerId = who?.UniqueMultiplayerID ?? 0;
             if (Game1.random.NextDouble() < .35)
+            {
                 Game1.createObjectDebris("(O)DN.SnS_WaterEssence", (int)who.Tile.X, (int)who.Tile.Y, farmerId, who.currentLocation);
+                Game1.createObjectDebris("(O)DN.SnS_WaterEssence", (int)who.Tile.X, (int)who.Tile.Y, farmerId, who.currentLocation);
+            }
         }
     }
 
@@ -318,9 +427,9 @@ namespace SwordAndSorcerySMAPI
             if (!Game1.player.eventsSeen.Contains("SnS.Ch4.Roslin.1"))
                 return;
 
-            if (monster.isGlider.Value && Game1.random.NextDouble() < 25)
+            if (monster.isGlider.Value && Game1.random.NextDouble() < 0.25)
             {
-                Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_AirEssence"), new(x, y), 1, __instance);
+                Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_AirEssence"), new(x, y), 2, __instance);
             }
             /*
             if (__instance is MineShaft ms)
@@ -333,7 +442,7 @@ namespace SwordAndSorcerySMAPI
             */
             if (__instance is VolcanoDungeon vd && Game1.random.NextDouble() < 0.25)
             {
-                Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_FireEssence"), new(x, y), 1, __instance);
+                Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_FireEssence"), new(x, y), 2, __instance);
             }
         }
     }
