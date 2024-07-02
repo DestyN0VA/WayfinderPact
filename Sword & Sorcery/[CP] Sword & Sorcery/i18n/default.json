@@ -4171,13 +4171,17 @@ ________      ________ _   _ _______ _____
 
 */
 
-  // BUILDING THE LION'S MANE 
-  "Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE.Name": "",
-  "Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE.Text": "",
-  "Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE.Objective.0.Text": "",
-  "Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE.Objective.1.Text": "",
-  "Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE.Objective.2.Text": "",
-  "Quests.CAGQuest.UntimedSpecialOrder.EXAMPLE.Objective.3.Text": "",
+  // ESSEN-TIAL COLLECTION
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Name": "Essen-tial Collection!",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Text": "Air essences come from flying enemies. Fire essences come from Volcano enemies. Earth essences come from mining. Water essences come from fishing.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.0.Text": "Collect 50 Earth Essences.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.1.Text": "Collect 50 Fire Essences.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.2.Text": "Collect 50 Water Essences.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.3.Text": "Collect 50 Air Essences.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.4.Text": "Collect 50 Druidic Essences.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.5.Text": "Collect 50 Void Essences.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.6.Text": "Collect 50 Solar Essences.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.7.Text": "Collect 50 Spiritual Essences.",
 
   /*
  ________      ________ _   _ _______ _____ 
