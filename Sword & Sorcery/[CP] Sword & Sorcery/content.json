@@ -362,6 +362,13 @@
     "Description": "Set how many Ancient Sweet Tea Leaves are required to craft the universally loved Ancient Sweet Tea recipe.",
     "Section": "Miscellaneous"
   },
+  "ChocoboValleyMaterials": {  
+    "AllowValues": "true, false",
+    "Default": "true",
+    "AllowBlank": false,
+    "Description": "Toggle the use of Chocobo Valley's materials in a Special Order from Dandelion.",
+    "Section": "Miscellaneous"
+  },
     "Eli&DylanExtras": {
       "AllowValues": "true, false",
       "Default": "false",
