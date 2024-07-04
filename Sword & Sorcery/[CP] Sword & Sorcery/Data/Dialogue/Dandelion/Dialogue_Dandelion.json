@@ -43,6 +43,20 @@
         "HasFlag |contains=SnS_M_Dandelion_OverrideSeenToday": false
       }
     },
+    // ARM/LEG POOL
+    {
+      "LogName": "Dialogue - Dandelion Randomized Limb Dialogue",
+      "Action": "EditData",
+      "Update": "OnLocationChange",
+      "Target": "Characters/Dialogue/Dandelion",
+      "Entries": {
+        "{{WeekDay}}": "{{i18n:Core.Dandelion.{{MechanicalLimb}}.{{Random:{{Range: 1, 10}}}}}}#$action AddMail Current SnS_M_Dandelion_OverrideSeenToday received"
+      },
+      "When": {
+        "Query: {{Random: {{Range: 1, 10}}|key=CSL}} = 1": true,
+        "HasFlag |contains=SnS_M_Dandelion_OverrideSeenToday": false
+      }
+    },
     // 10H OVERRIDE POOL
     {
       "LogName": "Dialogue - Dandelion 10h Ending Override",
@@ -54,7 +68,7 @@
       },
       "When": {
         "Hearts:Dandelion": "10",
-        "Query: {{Random: {{Range: 1, 30}}|key=CLMO}} = 1": true,
+        "Query: {{Random: {{Range: 1, 10}}|key=CLMO}} = 1": true,
         "HasFlag |contains=SnS_M_Dandelion_OverrideSeenToday": false
       }
     },

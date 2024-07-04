@@ -15,7 +15,7 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Roslin",
       "Entries": {
-        "{{WeekDay}}": "{{i18n:Core.Roslin.Generic.EarlyHeart.{{Random:{{Range: 1, 15}}}}}}"
+        "{{WeekDay}}": "{{i18n:Core.Roslin.Generic.EarlyHeart.{{Random:{{Range: 1, 20}}}}}}"
       }
     },
     {
@@ -23,7 +23,7 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Roslin",
       "Entries": {
-        "{{WeekDay}}": "{{i18n:Core.Roslin.Generic.LateHeart.{{Random:{{Range: 1, 40}}}}}}"
+        "{{WeekDay}}": "{{i18n:Core.Roslin.Generic.LateHeart.{{Random:{{Range: 1, 45}}}}}}"
       },
       "When": {
         "HasSeenEvent |contains=SnS.Ch4.Roslin.6": true

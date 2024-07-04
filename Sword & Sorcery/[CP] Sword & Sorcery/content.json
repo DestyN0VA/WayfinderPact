@@ -74,6 +74,7 @@
       "FromFile": "Data/Quests & Items/ShieldQuest.json",
       "When": {
         "HasMod: |contains=Kitsutsune.Chocobovalley": false,
+        "ChocoboValleyMaterials": false,
       }
     },
     {
@@ -82,6 +83,7 @@
       "FromFile": "Data/Quests & Items/ShieldQuest_ChocoboValley.json",
       "When": {
         "HasMod: |contains=Kitsutsune.Chocobovalley": true,
+        "ChocoboValleyMaterials": true, 
       }
     },
     {
@@ -90,6 +92,7 @@
       "FromFile": "Data/Quests & Items/EssenceQuest.json",
       "When": {
         "HasMod: |contains=Rafseazz.RSVCP": false,
+        "RSVMaterials": false, 
       }
     },
     {
@@ -98,6 +101,7 @@
       "FromFile": "Data/Quests & Items/EssenceQuest_RSV.json",
       "When": {
         "HasMod: |contains=Rafseazz.RSVCP": true,
+        "RSVMaterials": true, 
       }
     },
     // TRIGGER ACTIONS
@@ -367,6 +371,13 @@
     "Default": "true",
     "AllowBlank": false,
     "Description": "Toggle the use of Chocobo Valley's materials in a Special Order from Dandelion.",
+    "Section": "Miscellaneous"
+  },
+  "RSVMaterials": {  
+    "AllowValues": "true, false",
+    "Default": "true",
+    "AllowBlank": false,
+    "Description": "Toggle the use of Chocobo Valley's materials in a Special Order from Roslin.",
     "Section": "Miscellaneous"
   },
     "Eli&DylanExtras": {
@@ -1805,6 +1816,10 @@
       "When": {
         "ExcludeFromPerfection": true
       }
-    },,
+    },
+    {
+      "Name": "MechanicalLimbs",
+      "Value": "{{Random: Arm, Leg|key=dandelion-limb}}"
+    },
   ]
 }
