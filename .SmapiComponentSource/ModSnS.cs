@@ -139,6 +139,9 @@ namespace SwordAndSorcerySMAPI
 
         public Monster LastAttacked { get; set; } = null;
         public int LastAttackedCounter { get; set; } = 0;
+
+        public Point LastWalkedTile { get; set; } = new();
+        public Dictionary<string, string> TeleportCircles { get; set; } = new();
     }
 
     public class Configuration

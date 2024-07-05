@@ -2,10 +2,13 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Netcode;
 using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Locations;
 using StardewValley.Monsters;
+using StardewValley.Objects;
+using StardewValley.TerrainFeatures;
 using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
@@ -15,8 +18,18 @@ using System.Threading.Tasks;
 
 namespace SwordAndSorcerySMAPI
 {
+    public class TeleportInfoMessage
+    {
+        public string LocationName { get; set; }
+        public Vector2 Tile { get; set; }
+        public string Error { get; set; }
+    }
+
     public class ModTOP
     {
+        public const string RequestTeleportInfoMessage = "KCC.SnS/RequestTeleportInfo";
+        public const string TeleportInfoMessage = "KCC.SnS/TeleportInfo";
+
         public static ModTOP Instance;
 
         public static Texture2D SpellCircle;
@@ -118,8 +131,13 @@ namespace SwordAndSorcerySMAPI
         {
             SpellCircle = Helper.ModContent.Load<Texture2D>("assets/spellcircle.png");
 
+            Helper.Events.Multiplayer.ModMessageReceived += Multiplayer_ModMessageReceived;
+            Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
+            Helper.Events.GameLoop.UpdateTicked += GameLoop_UpdateTicked;
             Helper.Events.Player.Warped += Player_Warped;
+            Helper.Events.World.TerrainFeatureListChanged += World_TerrainFeatureListChanged;
+            Helper.Events.World.FurnitureListChanged += World_FurnitureListChanged;
 
             Event.RegisterCommand("sns_essenceunlock", (Event @event, string[] args, EventContext context) =>
             {
@@ -240,7 +258,7 @@ namespace SwordAndSorcerySMAPI
                     DelayedAction.functionAfterDelay(() =>
                     {
                         var l = Game1.currentLightSources.FirstOrDefault(l => l.Identifier == circle.lightID);
-                        if ( l != null )
+                        if (l != null)
                             l.color.Value = new Color(255 - c.R, 255 - c.G, 255 - c.B);
                         circle.color = c;
                         if (circle.alpha > 0.5f)
@@ -275,9 +293,109 @@ namespace SwordAndSorcerySMAPI
             RegisterSpells();
         }
 
+        public static TeleportInfoMessage ProcessTeleportRequest(TeleportInfoMessage msg)
+        {
+            TeleportInfoMessage retMsg = new();
+
+            string key = $"{msg.LocationName}/{msg.Tile.X},{msg.Tile.Y}";
+            string target = null;
+            if (ModSnS.State.TeleportCircles.ContainsKey(key))
+            {
+                foreach (var kvp in ModSnS.State.TeleportCircles)
+                {
+                    if (kvp.Key != key && kvp.Value == ModSnS.State.TeleportCircles[key])
+                    {
+                        target = kvp.Key;
+                        break;
+                    }
+                }
+
+                if (target == null)
+                {
+                    retMsg.Error = "teleport-circle.error.no-match";
+                }
+                else
+                {
+                    // TODO: Check and consume essences, chests nearby and player inventory as backup
+
+                    int slash = target.IndexOf('/');
+                    int comma = target.IndexOf(',', slash + 1);
+                    retMsg.LocationName = target.Substring(0, slash);
+                    retMsg.Tile = new Vector2(float.Parse(target.Substring(slash + 1, comma - slash - 1)), float.Parse(target.Substring(comma + 1)));
+                }
+            }
+            else
+            {
+                retMsg.Error = "teleport-circle.error.unknown";
+            }
+
+            return retMsg;
+        }
+
+        public static void ProcessTeleport(TeleportInfoMessage msg)
+        {
+            if (msg.Error != null)
+            {
+                Game1.addHUDMessage(new HUDMessage(I18n.GetByKey(msg.Error)));
+            }
+            else
+            {
+                Game1.player.currentLocation.performTouchAction($"MagicWarp {msg.LocationName} {msg.Tile.X} {msg.Tile.Y}", Game1.player.getStandingPosition());
+                ModSnS.State.LastWalkedTile = msg.Tile.ToPoint();
+            }
+        }
+
+        private void Multiplayer_ModMessageReceived(object sender, StardewModdingAPI.Events.ModMessageReceivedEventArgs e)
+        {
+            if (e.FromModID != ModManifest.UniqueID)
+                return;
+
+            if (e.Type == RequestTeleportInfoMessage)
+            {
+                var msg = e.ReadAs<TeleportInfoMessage>();
+
+                var retMsg = ProcessTeleportRequest(msg);
+                Helper.Multiplayer.SendMessage(retMsg, TeleportInfoMessage, [ModManifest.UniqueID], [e.FromPlayerID]);
+            }
+            else if (e.Type == TeleportInfoMessage)
+            {
+                var msg = e.ReadAs<TeleportInfoMessage>();
+                ProcessTeleportRequest(msg);
+            }
+        }
+
+        private void GameLoop_SaveLoaded(object sender, StardewModdingAPI.Events.SaveLoadedEventArgs e)
+        {
+            ModSnS.State.TeleportCircles.Clear();
+            Utility.ForEachLocation((loc) =>
+            {
+                foreach (var tf in loc.terrainFeatures.Values)
+                {
+                    if (tf is Flooring f && f.whichFloor.Value == "DN.SnS_TeleportCircleFloor")
+                    {
+                        CacheTeleportCircle(f);
+                    }
+                }
+                return true;
+            }, includeInteriors: true, includeGenerated: false);
+        }
+
         private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
         {
             Game1.player.GetFarmerExtData().mageArmor = false;
+        }
+
+        private void GameLoop_UpdateTicked(object sender, StardewModdingAPI.Events.UpdateTickedEventArgs e)
+        {
+            if (Game1.locationRequest == null && !Game1.isWarping && Game1.player.CanMove)
+            {
+                var diff = ModSnS.State.LastWalkedTile - Game1.player.Tile.ToPoint();
+                if (ModSnS.State.LastWalkedTile != new Point(-100, -100) && 
+                    (Math.Abs(diff.X) > 1 || Math.Abs(diff.Y) > 1))
+                {
+                    ModSnS.State.LastWalkedTile = new(-100, -100);
+                }
+            }
         }
 
         private void Player_Warped(object sender, StardewModdingAPI.Events.WarpedEventArgs e)
@@ -287,6 +405,99 @@ namespace SwordAndSorcerySMAPI
             {
                 ext.isGhost.Value = false;
                 Game1.player.ignoreCollisions = false;
+            }
+        }
+
+        private void World_TerrainFeatureListChanged(object sender, StardewModdingAPI.Events.TerrainFeatureListChangedEventArgs e)
+        {
+            foreach (var removed in e.Removed)
+            {
+                if (removed.Value is Flooring f && f.whichFloor.Value == "DN.SnS_TeleportCircleFloor")
+                {
+                    ModSnS.State.TeleportCircles.Remove($"{e.Location.NameOrUniqueName}/{f.Tile.X},{f.Tile.Y}");
+                }
+            }
+            foreach (var added in e.Added)
+            {
+                if (added.Value is Flooring f && f.whichFloor.Value == "DN.SnS_TeleportCircleFloor")
+                {
+                    CacheTeleportCircle(f);
+                }
+            }
+        }
+
+        private void World_FurnitureListChanged(object sender, StardewModdingAPI.Events.FurnitureListChangedEventArgs e)
+        {
+            foreach (var removed in e.Removed)
+            {
+                Rectangle r = new Rectangle(removed.boundingBox.X / Game1.tileSize - 2, removed.boundingBox.Y / Game1.tileSize - 2, (removed.boundingBox.X + removed.boundingBox.Width) / Game1.tileSize + 2, (removed.boundingBox.Y + removed.boundingBox.Height) / Game1.tileSize + 2);
+
+                for (int ix = r.Left; ix < r.Right; ++ix)
+                {
+                    for (int iy = r.Top; iy < r.Bottom; ++iy)
+                    {
+                        if (e.Location.terrainFeatures.TryGetValue(new Vector2(ix, iy), out var tf) &&
+                             tf is Flooring f && f.whichFloor.Value == "DN.SnS_TeleportCircleFloor")
+                        {
+                            ModSnS.State.TeleportCircles.Remove($"{f.Location.NameOrUniqueName}/{f.Tile.X},{f.Tile.Y}");
+                        }
+                    }
+                }
+            }
+            foreach (var added in e.Added)
+            {
+                Rectangle r = new Rectangle(added.boundingBox.X / Game1.tileSize - 2, added.boundingBox.Y / Game1.tileSize - 2, (added.boundingBox.X + added.boundingBox.Width) / Game1.tileSize + 2, (added.boundingBox.Y + added.boundingBox.Height) / Game1.tileSize + 2);
+
+                for (int ix = r.Left; ix < r.Right; ++ix)
+                {
+                    for (int iy = r.Top; iy < r.Bottom; ++iy)
+                    {
+                        if (added.Location.terrainFeatures.TryGetValue(new Vector2(ix, iy), out var tf) &&
+                             tf is Flooring f && f.whichFloor.Value == "DN.SnS_TeleportCircleFloor")
+                        {
+                            ModSnS.State.TeleportCircles.Remove($"{f.Location.NameOrUniqueName}/{f.Tile.X},{f.Tile.Y}");
+                            CacheTeleportCircle(f);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void CacheTeleportCircle(Flooring f)
+        {
+            Rectangle r = new Rectangle((int)(f.Tile.X - 2) * Game1.tileSize, (int)(f.Tile.Y - 2) * Game1.tileSize, 5 * Game1.tileSize, 5 * Game1.tileSize);
+
+            List<Furniture> tables = new(), allTables = new();
+            foreach (var furn in f.Location.furniture)
+            {
+                if (furn.IsTable() && furn.boundingBox.Value.Intersects(r))
+                {
+                    allTables.Add(furn);
+                    if (furn.heldObject.Value != null)
+                        tables.Add(furn);
+                }
+            }
+            if (tables.Count >= 4)
+            {
+                tables.Sort((a, b) => (int)(a.TileLocation.Y * 1000 + a.TileLocation.X) - (int)(b.TileLocation.Y * 1000 + b.TileLocation.X));
+
+                string comboKey = string.Concat(tables.Select(furn => furn.heldObject.Value.ItemId));
+                ModSnS.State.TeleportCircles.Add($"{f.Location.NameOrUniqueName}/{f.Tile.X},{f.Tile.Y}", comboKey);
+            }
+
+            foreach (var table in allTables)
+            {
+                table.heldObject.fieldChangeEvent += (NetRef<StardewValley.Object> field, StardewValley.Object oldObj, StardewValley.Object newObj) =>
+                {
+                    if (f.Location == null)
+                        return;
+                    ModSnS.State.TeleportCircles.Remove($"{f.Location.NameOrUniqueName}/{f.Tile.X},{f.Tile.Y}");
+                    if (f.Location.terrainFeatures.TryGetValue(f.Tile, out TerrainFeature tf) && tf == f)
+                    {
+                        ModSnS.State.TeleportCircles.Remove($"{f.Location.NameOrUniqueName}/{f.Tile.X},{f.Tile.Y}");
+                        CacheTeleportCircle(f);
+                    }
+                };
             }
         }
 
@@ -457,7 +668,7 @@ namespace SwordAndSorcerySMAPI
         {
             var ext = Game1.player.GetFarmerExtData();
             if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||
-                ext.mirrorImages.Value <= 0 )
+                ext.mirrorImages.Value <= 0)
                 return true;
 
             bool flag = (damager == null || !damager.isInvincible()) && (damager == null || (!(damager is GreenSlime) && !(damager is BigSlime)) || !__instance.isWearingRing("520"));
@@ -489,6 +700,38 @@ namespace SwordAndSorcerySMAPI
                 damage = 0;
             }
             return true;
+        }
+    }
+
+    [HarmonyPatch(typeof(Flooring), nameof(Flooring.doCollisionAction))]
+    public static class FlooringTeleportCirclePatch
+    {
+        public static void Postfix(Flooring __instance, Character who)
+        {
+            if (who != Game1.player || Game1.locationRequest != null)
+                return;
+
+            var diff = ModSnS.State.LastWalkedTile - __instance.Tile.ToPoint();
+            if (Math.Abs(diff.X) > 1 && Math.Abs(diff.Y) > 1)
+            {
+                ModSnS.State.LastWalkedTile = __instance.Tile.ToPoint();
+
+                var req = new TeleportInfoMessage()
+                {
+                    LocationName = __instance.Location.NameOrUniqueName,
+                    Tile = __instance.Tile,
+                };
+
+                if (Game1.IsMasterGame)
+                {
+                    var ret = ModTOP.ProcessTeleportRequest(req);
+                    ModTOP.ProcessTeleport(ret);
+                }
+                else
+                {
+                    ModTOP.Instance.Helper.Multiplayer.SendMessage(req, ModTOP.RequestTeleportInfoMessage);
+                }
+            }
         }
     }
 }

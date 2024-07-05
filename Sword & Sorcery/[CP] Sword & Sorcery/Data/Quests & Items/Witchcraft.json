@@ -59,9 +59,50 @@
           "ContextTags": [
             "essence_item"
           ]
-        }
+        },
+        "{{ModID}}_TeleportCircle": {
+          "Name": "Teleport Circle",
+          "DisplayName": "{{i18n: witchcraft.teleport-circle.name}}",
+          "Description": "{{i18n: witchcraft.teleport-circle.description}}",
+          "Type": "Crafting",
+          "Category": -24,
+          "Price": 0,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/TeleportCircle.png}}",
+          "SpriteIndex": 0,
+          "Edibility": -300,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+        },
       }
     },
+    {
+      "Action": "EditData",
+      "Target": "Data/FloorsAndPaths",
+      "Entries": {
+        "{{ModId}}_TeleportCircleFloor": {
+          "Id": "{{ModId}}_TeleportCircleFloor",
+          "ItemId": "{{ModID}}_TeleportCircle",
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/TeleportCircle.png}}",
+          "Corner": {
+            "X": 0,
+            "Y": 0
+          },
+          "WinterTexture": "{{InternalAssetKey: assets/Items & Crops/TeleportCircle.png}}",
+          "WinterCorner": {
+            "X": 0,
+            "Y": 0
+          },
+          "PlacementSound": "coldSpell",
+          "RemovalSound": "coldSpell",
+          "RemovalDebrisType": 12,
+          "FootstepSound": "coldSpell",
+          "ConnectType": "Random",
+          "ShadowType": "Contoured",
+          "CornerSize": 4,
+          "FarmSpeedBuff": -1.0
+        },
+      }
+    }
     // CRAFTING RECIPES 
     /*
     {

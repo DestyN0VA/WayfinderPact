@@ -5172,6 +5172,8 @@ ________      ________ _   _ _______ _____
   "witchcraft.water-essence.description": "Essence of water.",
   "witchcraft.fire-essence.name": "Fire Essence",
   "witchcraft.fire-essence.description": "Essence of fire.",
+  "witchcraft.teleport-circle.name": "Teleport Circle",
+  "witchcraft.teleport-circle.description": "The core of a teleport circle.",
 
   /*
   __  __ _____  _____  _____ ______ _      _               _   _ ______ ____  _    _  _____ 
