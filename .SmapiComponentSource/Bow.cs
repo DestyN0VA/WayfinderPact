@@ -43,6 +43,12 @@ namespace SwordAndSorcerySMAPI
                 return true;
             return false;
         }
+        public static bool IsGun(this Slingshot slingshot)
+        {
+            if (slingshot.IsBow() && ((ItemRegistry.GetDataOrErrorItem(slingshot.QualifiedItemId).RawData as WeaponData)?.CustomFields?.ContainsKey("Bullets") ?? false))
+                return true;
+            return false;
+        }
     }
 
     [HarmonyPatch(typeof(WeaponDataDefinition), nameof(WeaponDataDefinition.CreateItem))]
@@ -76,6 +82,11 @@ namespace SwordAndSorcerySMAPI
             if (!__instance.IsBow())
                 return;
 
+            if (__instance.IsGun())
+            {
+                who.playNearbySoundLocal("sns_gunshot");
+            }
+
             if (Game1.player.HasCustomProfession(RogueSkill.ProfessionBowSecondShot) && Game1.random.NextDouble() <= 0.25)
             {
                 var ammo = __state as StardewValley.Object;
@@ -98,8 +109,13 @@ namespace SwordAndSorcerySMAPI
 
         private static void Projectiles_OnValueAdded(StardewValley.Projectiles.Projectile value)
         {
+            if (value.itemId.Value.Contains("Bullet")) // Hack
+            {
+                value.xVelocity.Value *= 2;
+                value.yVelocity.Value *= 2;
+            }
             value.ignoreObjectCollisions.Value = true;
-            if (value.itemId.Value == "(O)DN.SnS_RicochetArrow")
+            if (value.itemId.Value == "(O)DN.SnS_RicochetArrow" || value.itemId.Value == "(O)DN.SnS_RicochetBullet")
                 value.bouncesLeft.Value = 5;
         }
     }
@@ -111,6 +127,10 @@ namespace SwordAndSorcerySMAPI
         {
             if (__instance.IsBow())
                 __result = 25 + (5 * Game1.player.GetCustomSkillLevel(ModSnS.RogueSkill));
+            if (__instance.ItemId == "DN.SnS_longlivetheking_gun")
+            {
+                __result *= (int)2.5f;
+            }
         }
     }
 
@@ -125,15 +145,19 @@ namespace SwordAndSorcerySMAPI
             switch (__instance.itemId.Value)
             {
                 case "(O)DN.SnS_FirestormArrow":
+                case "(O)DN.SnS_FirestormBullet":
                     FirestormAffector(__instance, m);
                     break;
                 case "(O)DN.SnS_IcicleArrow":
+                case "(O)DN.SnS_IcicleBullet":
                     IcicleAffector(__instance, m);
                     break;
                 case "(O)DN.SnS_WindwakerArrow":
+                case "(O)DN.SnS_WindwakerBullet":
                     WindwakerAffector(__instance, m);
                     break;
                 case "(O)DN.SnS_LightbringerArrow":
+                case "(O)DN.SnS_LightbringerBullet":
                     LightbringerAffector(__instance, m);
                     break;
             }
@@ -175,9 +199,25 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Postfix(Slingshot __instance, StardewValley.Object o, ref bool __result)
         {
-            if (__instance.IsBow())
+            if (__instance.IsGun())
+            {
+                __result = o.HasContextTag("bullet_item");
+            }
+            else if (__instance.IsBow())
             {
                 __result = o.HasContextTag("arrow_item");
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Tool), nameof(Tool.canThisBeAttached))]
+    public static class ToolGunAmmoAttachPatch
+    {
+        public static void Postfix(Tool __instance, StardewValley.Object o, ref bool __result)
+        {
+            if (__instance.ItemId == "DN.SnS_longlivetheking")
+            {
+                __result = o.HasContextTag("bullet_item");
             }
         }
     }

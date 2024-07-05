@@ -5017,6 +5017,9 @@ ________      ________ _   _ _______ _____
   "weapon.longlivetheking.name": "Long Live The King",
   "weapon.longlivetheking.description": "A sword previously wielded by Linden Hawthorn, the Prairie King. Just holding it makes you feel like you've got big shoes to fill.",
 
+  "weapon.longlivetheking-gun.name": "Long Live The King (Gun)",
+  "weapon.longlivetheking-gun.description": "A gun previously wielded by Linden Hawthorn, the Prairie King. Just holding it makes you feel like you've got big shoes to fill.",
+
   "food.mushroomsredsauce.name": "Fried Polypore Mushrooms & Red Sauce",
   "food.mushroomsredsauce.description": "Battered ancient mushrooms coated in a hearty tomato sauce.",
 
@@ -5201,6 +5204,18 @@ ________      ________ _   _ _______ _____
   "arsenal.ricochet-arrow.description": "An arrow that bounces off walls.",
   "arsenal.lightbringer-arrow.name": "Lightbringer Arrow",
   "arsenal.lightbringer-arrow.description": "An arrow capable of eradicating foes in one hit. (No loot drops)",
+  "arsenal.bullet.name": "Bullet",
+  "arsenal.bullet.description": "A basic bullet.",
+  "arsenal.firestorm-bullet.name": "Firestorm Bullet",
+  "arsenal.firestorm-bullet.description": "A fiery bullet that causes additional damage over time.",
+  "arsenal.icicle-bullet.name": "Icicle Bullet",
+  "arsenal.icicle-bullet.description": "A frosty bullet that stuns your foes.",
+  "arsenal.windwaker-bullet.name": "Windwaker Bullet",
+  "arsenal.windwaker-bullet.description": "A bullet pushing your foe back with the force of a strong wind.",
+  "arsenal.ricochet-bullet.name": "Ricochet Bullet",
+  "arsenal.ricochet-bullet.description": "A bullet that bounces off walls.",
+  "arsenal.lightbringer-bullet.name": "Lightbringer Bullet",
+  "arsenal.lightbringer-bullet.description": "A bullet capable of eradicating foes in one hit. (No loot drops)",
 
   "witchcraft.earth-essence.name": "Earth Essence",
   "witchcraft.earth-essence.description": "Essence of the earth.",

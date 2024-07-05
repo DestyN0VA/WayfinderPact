@@ -250,6 +250,25 @@
       "Action": "EditData",
       "Target": "Data/Weapons",
       "Entries": {
+        "{{ModID}}_longlivetheking_gun": {
+          "Name": "Long Live The King (Gun)",
+          "DisplayName": "{{i18n: weapon.longlivetheking-gun.name}}",
+          "Description": "{{i18n: weapon.longlivetheking-gun.description}}",
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 90,
+          "Speed": 308, // All slingshots have this for some reason?,
+          "CustomFields":
+          {
+            "Bow": true,
+            "Bullets": true
+          }
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Weapons",
+      "Entries": {
         "{{ModID}}_spellbinder": {
           "Name": "Spellbinder",
           "DisplayName": "{{i18n: weapon.spellbinder.name}}",

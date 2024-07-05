@@ -396,6 +396,96 @@
             "arrow_item"
           ],
         },
+        "{{ModID}}_Bullet": {
+          "Name": "Bullet",
+          "DisplayName": "{{i18n: arsenal.bullet.name}}",
+          "Description": "{{i18n: arsenal.bullet.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 5,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
+          "SpriteIndex": 39,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "bullet_item"
+          ],
+        },
+        "{{ModID}}_FirestormBullet": {
+          "Name": "Firestorm Bullet",
+          "DisplayName": "{{i18n: arsenal.firestorm-bullet.name}}",
+          "Description": "{{i18n: arsenal.firestorm-bullet.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
+          "SpriteIndex": 40,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "bullet_item"
+          ],
+        },
+        "{{ModID}}_IcicleBullet": {
+          "Name": "Icicle Bullet",
+          "DisplayName": "{{i18n: arsenal.icicle-bullet.name}}",
+          "Description": "{{i18n: arsenal.icicle-bullet.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
+          "SpriteIndex": 31,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "bullet_item"
+          ],
+        },
+        "{{ModID}}_WindwakerBullet": {
+          "Name": "Windwaker Bullet",
+          "DisplayName": "{{i18n: arsenal.windwaker-bullet.name}}",
+          "Description": "{{i18n: arsenal.windwaker-bullet.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
+          "SpriteIndex": 33,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "bullet_item"
+          ],
+        },
+        "{{ModID}}_RicochetBullet": {
+          "Name": "Ricochet Bullet",
+          "DisplayName": "{{i18n: arsenal.ricochet-bullet.name}}",
+          "Description": "{{i18n: arsenal.ricochet-bullet.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
+          "SpriteIndex": 35,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "bullet_item"
+          ],
+        },
+        "{{ModID}}_LightbringerBullet": {
+          "Name": "Lightbringer Bullet",
+          "DisplayName": "{{i18n: arsenal.lightbringer-bullet.name}}",
+          "Description": "{{i18n: arsenal.lightbringer-bullet.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
+          "SpriteIndex": 36,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "bullet_item"
+          ],
+        },
       }
     },
     {
@@ -442,6 +532,12 @@
         "{{ModID}}_RicochetArrow": "{{ModID}}_Arrow 1 330 1/meow/{{ModID}}_RicochetArrow 1/false/null/{{i18n:arsenal.ricochet-arrow.name}}/{{i18n:arsenal.ricochet-arrow.description}}",
         "{{ModID}}_WindwakerArrow": "{{ModID}}_Arrow 1 444 1/meow/{{ModID}}_WindwakerArrow 1/false/null/{{i18n:arsenal.windwaker-arrow.name}}/{{i18n:arsenal.windwaker-arrow.description}}",
         "{{ModID}}_LightbringerArrow": "{{ModID}}_Arrow 1 768 30/meow/{{ModID}}_LightbringerArrow 1/false/null/{{i18n:arsenal.lightbringer-arrow.name}}/{{i18n:arsenal.lightbringer-arrow.description}}",
+        "{{ModID}}_Bullet": "335 1/meow/{{ModID}}_Bullet 3/false/null/{{i18n:arsenal.bullet.name}}/{{i18n:arsenal.bullet.description}}",
+        "{{ModID}}_FirestormBullet": "{{ModID}}_Bullet 1 93 10/meow/{{ModID}}_FirestormBullet 1/false/null/{{i18n:arsenal.firestorm-bullet.name}}/{{i18n:arsenal.firestorm-bullet.description}}",
+        "{{ModID}}_IcicleBullet": "{{ModID}}_Bullet 1 84 1/meow/{{ModID}}_IcicleBullet 1/false/null/{{i18n:arsenal.icicle-bullet.name}}/{{i18n:arsenal.icicle-bullet.description}}",
+        "{{ModID}}_RicochetBullet": "{{ModID}}_Bullet 1 330 1/meow/{{ModID}}_RicochetBullet 1/false/null/{{i18n:arsenal.ricochet-bullet.name}}/{{i18n:arsenal.ricochet-bullet.description}}",
+        "{{ModID}}_WindwakerBullet": "{{ModID}}_Bullet 1 444 1/meow/{{ModID}}_WindwakerBullet 1/false/null/{{i18n:arsenal.windwaker-bullet.name}}/{{i18n:arsenal.windwaker-bullet.description}}",
+        "{{ModID}}_LightbringerBullet": "{{ModID}}_Bullet 1 768 30/meow/{{ModID}}_LightbringerBullet 1/false/null/{{i18n:arsenal.lightbringer-bullet.name}}/{{i18n:arsenal.lightbringer-bullet.description}}",
       }
     },
   ]

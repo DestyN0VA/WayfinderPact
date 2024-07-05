@@ -420,6 +420,24 @@ namespace SwordAndSorcerySMAPI
             ext.mana.Value = ext.maxMana.Value;
             ext.armorUsed.Value = 0;
             ModSnS.State.HasCraftedFree = false;
+
+            if (Game1.player.GetFarmerExtData().hasTakenLoreWeapon.Value)
+            {
+                if (!Game1.player.knowsRecipe("DN.SnS_Bullet"))
+                {
+                    Game1.player.craftingRecipes.Add("DN.SnS_Bullet", 0);
+                }
+                if (Game1.player.knowsRecipe("DN.SnS_FirestormArrow") && !Game1.player.knowsRecipe("DN.SnS_FirestormBullet"))
+                    Game1.player.craftingRecipes.Add("DN.SnS_FirestormBullet", 0);
+                if (Game1.player.knowsRecipe("DN.SnS_IcicleArrow") && !Game1.player.knowsRecipe("DN.SnS_IcicleBullet"))
+                    Game1.player.craftingRecipes.Add("DN.SnS_IcicleBullet", 0);
+                if (Game1.player.knowsRecipe("DN.SnS_RicochetArrow") && !Game1.player.knowsRecipe("DN.SnS_RicochetBullet"))
+                    Game1.player.craftingRecipes.Add("DN.SnS_RicochetBullet", 0);
+                if (Game1.player.knowsRecipe("DN.SnS_WindwakerArrow") && !Game1.player.knowsRecipe("DN.SnS_WindwakerBullet"))
+                    Game1.player.craftingRecipes.Add("DN.SnS_WindwakerBullet", 0);
+                if (Game1.player.knowsRecipe("DN.SnS_LightbringerArrow") && !Game1.player.knowsRecipe("DN.SnS_LightbringerBullet"))
+                    Game1.player.craftingRecipes.Add("DN.SnS_LightbringerBullet", 0);
+            }
         }
 
         private void Input_ButtonPressed(object sender, StardewModdingAPI.Events.ButtonPressedEventArgs e)
@@ -430,6 +448,46 @@ namespace SwordAndSorcerySMAPI
             {
                 Game1.player.addItemByMenuIfNecessaryElseHoldUp(new MeleeWeapon("DN.SnS_longlivetheking"));
                 Game1.player.GetFarmerExtData().hasTakenLoreWeapon.Value = true;
+
+                if (!Game1.player.knowsRecipe("DN.SnS_Bullet"))
+                {
+                    Game1.player.craftingRecipes.Add("DN.SnS_Bullet", 0);
+                }
+                if (Game1.player.knowsRecipe("DN.SnS_FirestormArrow") && !Game1.player.knowsRecipe("DN.SnS_FirestormBullet"))
+                    Game1.player.craftingRecipes.Add("DN.SnS_FirestormBullet", 0);
+                if (Game1.player.knowsRecipe("DN.SnS_IcicleArrow") && !Game1.player.knowsRecipe("DN.SnS_IcicleBullet"))
+                    Game1.player.craftingRecipes.Add("DN.SnS_IcicleBullet", 0);
+                if (Game1.player.knowsRecipe("DN.SnS_RicochetArrow") && !Game1.player.knowsRecipe("DN.SnS_RicochetBullet"))
+                    Game1.player.craftingRecipes.Add("DN.SnS_RicochetBullet", 0);
+                if (Game1.player.knowsRecipe("DN.SnS_WindwakerArrow") && !Game1.player.knowsRecipe("DN.SnS_WindwakerBullet"))
+                    Game1.player.craftingRecipes.Add("DN.SnS_WindwakerBullet", 0);
+                if (Game1.player.knowsRecipe("DN.SnS_LightbringerArrow") && !Game1.player.knowsRecipe("DN.SnS_LightbringerBullet"))
+                    Game1.player.craftingRecipes.Add("DN.SnS_LightbringerBullet", 0);
+            }
+
+            if (Context.IsWorldReady && Context.IsPlayerFree && e.Button.IsActionButton())
+            {
+                if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking")
+                {
+                    var w = new Slingshot("DN.SnS_longlivetheking_gun");
+                    if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
+                    {
+                        w.attachments[0] = (StardewValley.Object) Game1.player.CurrentTool.attachments[0].getOne();
+                        w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
+                    }
+                    Game1.player.Items[Game1.player.CurrentToolIndex] = w;
+                }
+                else if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking_gun")
+                {
+                    var w = new MeleeWeapon("DN.SnS_longlivetheking");
+                    if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
+                    {
+                        w.attachments.SetCount(1);
+                        w.attachments[0] = (StardewValley.Object)Game1.player.CurrentTool.attachments[0].getOne();
+                        w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
+                    }
+                    Game1.player.Items[Game1.player.CurrentToolIndex] = w;
+                }
             }
         }
 
