@@ -74,6 +74,7 @@
       "FromFile": "Data/Quests & Items/ShieldQuest.json",
       "When": {
         "HasMod: |contains=Kitsutsune.Chocobovalley": false,
+        "ChocoboValleyMaterials": false,
       }
     },
     {
@@ -82,6 +83,7 @@
       "FromFile": "Data/Quests & Items/ShieldQuest_ChocoboValley.json",
       "When": {
         "HasMod: |contains=Kitsutsune.Chocobovalley": true,
+        "ChocoboValleyMaterials": true, 
       }
     },
     {
@@ -90,6 +92,7 @@
       "FromFile": "Data/Quests & Items/EssenceQuest.json",
       "When": {
         "HasMod: |contains=Rafseazz.RSVCP": false,
+        "RSVMaterials": false, 
       }
     },
     {
@@ -98,6 +101,7 @@
       "FromFile": "Data/Quests & Items/EssenceQuest_RSV.json",
       "When": {
         "HasMod: |contains=Rafseazz.RSVCP": true,
+        "RSVMaterials": true, 
       }
     },
     // TRIGGER ACTIONS
@@ -181,6 +185,33 @@
             "Pathoschild.ContentPatcher_MigrateIds CookingRecipes swordandsorcery.salishburbon {{ModId}}_salishbourbon swordandsorcery.autumnalstew {{ModId}}_autumnalstew swordandsorcery.dandeliongreens {{ModId}}_dandeliongreens swordandsorcery.portfiredrakesparkler {{ModId}}_portfiredrakesparkler swordandsorcery.mushroomsredsauce {{ModId}}_mushroomsredsauce swordandsorcery.ferngreensandpineapple {{ModId}}_ferngreensandpineapple swordandsorcery.ancienthuckleberryicecream {{ModId}}_ancienthuckleberryicecream swordandsorcery.lavaeelandstirfriedancientbottlegourd {{ModId}}_lavaeelandstirfriedancientbottlegourd swordandsorcery.zuzustylepizza {{ModId}}_zuzustylepizza swordandsorcery.zuzustylebagelwithlox {{ModId}}_zuzustylebagelwithlox swordandsorcery.zuzustylecheesecake {{ModId}}_zuzustylecheesecake swordandsorcery.zuzustyleclamchowder {{ModId}}_zuzustyleclamchowder"
           ],
           "HostOnly": true
+        },
+        "SnS.TriggerActions.RemoveMateoRomanticFlagIfNotDating": {
+          "Id": "SnS.TriggerActions.RemoveMateoRomanticFlagIfNotDating",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current MateoRomanticFlag, !PLAYER_NPC_RELATIONSHIP Current Mateo Dating Engaged Married",
+          "Actions": [
+            "RemoveMail Current MateoRomanticFlag all", //Technically C# component does this already, but doesn't account for divorce
+          ],
+          "MarkActionApplied": "false"
+        },
+        "SnS.TriggerActions.RemoveHectorRomanticFlagIfNotDating": {
+          "Id": "SnS.TriggerActions.RemoveHectorRomanticFlagIfNotDating",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current HectorRomanticFlag, !PLAYER_NPC_RELATIONSHIP Current Hector Dating Engaged Married",
+          "Actions": [
+            "RemoveMail Current HectorRomanticFlag all"
+          ],
+          "MarkActionApplied": "false"
+        },
+        "SnS.TriggerActions.RemoveCirrusRomanticFlagIfNotDating": {
+          "Id": "SnS.TriggerActions.RemoveCirrusRomanticFlagIfNotDating",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_MAIL Current CirrusRomanticFlag, !PLAYER_NPC_RELATIONSHIP Current Cirrus Dating Engaged Married",
+          "Actions": [
+            "RemoveMail Current CirrusRomanticFlag all"
+          ],
+          "MarkActionApplied": "false"
         }
       }
     }
@@ -360,6 +391,20 @@
     "Default": "7",
     "AllowBlank": false,
     "Description": "Set how many Ancient Sweet Tea Leaves are required to craft the universally loved Ancient Sweet Tea recipe.",
+    "Section": "Miscellaneous"
+  },
+  "ChocoboValleyMaterials": {  
+    "AllowValues": "true, false",
+    "Default": "true",
+    "AllowBlank": false,
+    "Description": "Toggle the use of Chocobo Valley's materials in a Special Order from Dandelion.",
+    "Section": "Miscellaneous"
+  },
+  "RSVMaterials": {  
+    "AllowValues": "true, false",
+    "Default": "true",
+    "AllowBlank": false,
+    "Description": "Toggle the use of Chocobo Valley's materials in a Special Order from Roslin.",
     "Section": "Miscellaneous"
   },
     "Eli&DylanExtras": {
@@ -1798,6 +1843,32 @@
       "When": {
         "ExcludeFromPerfection": true
       }
-    },,
+    },
+    {
+      "Name": "MechanicalLimbs",
+      "Value": "{{Random: Arm, Leg|key=dandelion-limb}}"
+    },
+    {
+      "Name": "HectorAlreadyDating",
+      "Value": "speak Hector \"{{i18n:Events.S&S.Ch2.10H2.Hector.14}}\"/pause 250/stopMusic/quickQuestion #{{i18n:Events.S&S.Ch2.10H2.Q1.Answer.1}}#{{i18n:Events.S&S.Ch2.10H2.Q1.Answer.2}}(break)addMailReceived HectorRomanticFlag\\setDating Hector\\addConversationTopic HectorMarriageCountdown {{DatingLength}}\\playMusic starshoot\\speak Hector \"{{i18n:Events.S&S.Ch2.10H2.Q1.Response.1}}\"\\animate farmer true true 200 102 103\\pause 250\\speak Hector \"{{i18n:Events.S&S.Ch2.10H2.Response.2}}\"\\stopAnimation farmer\\faceDirection farmer 3 true\\faceDirection Hector 1\\speak Hector \"{{i18n:Events.S&S.Ch2.10H2.Hector.15}}\"\\animate Hector false true 28 28\\animate farmer true true 100 101 101\\positionOffset Hector 2 0\\pause 100\\specificTemporarySprite heart 11 9\\positionOffset Hector 2 0\\positionOffset farmer -2 0\\pause 100\\positionOffset Hector 2 0\\positionOffset farmer -2 0\\pause 100\\positionOffset Hector 2 0\\positionOffset farmer -2 0(break)playMusic starshoot\\speak Hector \"{{i18n:Events.S&S.Ch2.10H2.Hector.16}}\""
+    },
+    {
+      "Name": "HectorAlreadyDating",
+      "Value": "speak Hector \"{{i18n:Events.S&S.Ch2.10H2.Hector.14.NoRomance}}\"/pause 250/stopMusic/playMusic starshoot/speak Hector \"{{i18n:Events.S&S.Ch2.10H2.Hector.16}}\"",
+      "When": {
+        "Query: {{HasFlag |contains=MateoRomanticFlag}} OR {{HasFlag |contains=CirrusRomanticFlag}} OR {{HasMod |contains=ApryllForever.CPPolyamorySweet}} OR {{HasMod |contains=aedenthorn.FreeLove}}": "true",
+      }
+    },
+    {
+      "Name": "CirrusAlreadyDating",
+      "Value": "quickQuestion It's just you and Cirrus in the Lion's Mane now. #Politely excuse yourself. (PLATONIC) #Stay, and take Cirrus up on her offer. (ROMANTIC)(break)speak Cirrus \"Have a good night, @. Get home safe. You're an amazing friend.$23\"(break)addMailReceived CirrusRomanticFlag\\setDating Cirrus\\addConversationTopic CirrusMarriageCountdown {{DatingLength}}\\warp Sam -100 100\\warp Sebastian -100 -100\\warp Abigail -100 -100\\warp farmer 18 5 true\\faceDirection farmer 1 true\\warp Cirrus 20 5 true\\faceDirection Cirrus 3 true\\positionOffset farmer 40 0 true\\positionOffset farmer 0 20 true\\positionOffset Cirrus -40 0 true\\changePortrait Cirrus beach\\changeSprite Cirrus beach\\globalFadeToClear\\viewport 27 14\\speak Cirrus \"You know, @... everything else aside, you're pretty incredible. I'm already aware of how lucky I am.$25#$b#You work really hard, you try your best to help everyone, you're encouraging and kind and sweet.$23#$b#It's hard not to feel self-conscious, like you're the type who could have anyone they wanted, you know? That's how highly I think of you.$6#$b#But I won't let that get me down! We have great chemistry, and I'm happy to be your girl! And, hey, that's not even mentioning how you are horizontally...$25\"\\animate Cirrus false true 100 28 28\\animate farmer false true 100 101 101\\specificTemporarySprite heart 19 3\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 100\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 2500\\fade\\viewport -1000 -1000\\speak Cirrus \"Speaking of... are you tired yet?$24\"/message \"The Lion's Mane - well, half of it - is now open for business!\""
+    },
+    {
+      "Name": "CirrusAlreadyDating",
+      "Value": "quickQuestion It's just you and Cirrus in the Lion's Mane now. #Politely excuse yourself. (PLATONIC)#CONGO RATS!! 2nd platonic option!!(break)speak Cirrus \"Have a good night, @. Get home safe. You're an amazing friend.$23\"(break) CONGO RATS!! You now get to design a 2nd platonic route, or just do the same as the normal platonic route but with a new platonic option!",
+      "When": {
+        "Query: {{HasFlag |contains=MateoRomanticFlag}} OR {{HasFlag |contains=HectorRomanticFlag}}": "true",
+      }
+    }
   ]
 }

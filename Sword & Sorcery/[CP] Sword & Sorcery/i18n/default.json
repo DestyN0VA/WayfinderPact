@@ -567,7 +567,7 @@
   "Gifts.Mateo.GiftReaction.CategoryGemsMinerals": "This is beautiful, @! I love how it catches the light. Thank you.$1",
 
   // LOVES - PLATONIC
-  "Gifts.Mateo.GiftReaction.PrismaticShard.Platonic": "My older brother, Raguel, was the last person to give me one of these.$1#$b# I had my sword made from it, and I understand the value of something this precious. Thank you.$4",
+  "Gifts.Mateo.GiftReaction.PrismaticShard.Platonic": "Wyatt was the last person to give me one of these.$1#$b# I had my sword made from it, and I understand the value of something this precious. Thank you.$4",
   "Gifts.Mateo.GiftReaction.Pumpkin.Platonic": "These are my favorite! Nothing beats carving a Jack o Lantern in the Fall. And besides that, they're tasty.$1",
   "Gifts.Mateo.GiftReaction.JackOLantern.Platonic": "This looks fantastic! And you carved it yourself? It looks perfectly spooky, great job!$1",
   "Gifts.Mateo.GiftReaction.GoldenPumpkin.Platonic": "You won this...and you're giving it to me?$26#$b#Thank you, @. I've got the perfect spot to display it.$1",
@@ -582,7 +582,7 @@
 
 
   // LOVES - ROMANTIC 
-  "Gifts.Mateo.GiftReaction.PrismaticShard.Romantic": "My older brother, Raguel, was the last person to give me one of these. I had my sword made from it, and I understand the value of something this precious.$4#$b#The only thing comparable to that... is you. Thank you, Sunshine.$27",
+  "Gifts.Mateo.GiftReaction.PrismaticShard.Romantic": "Wyatt was the last person to give me one of these. I had my sword made from it, and I understand the value of something this precious.$4#$b#The only thing comparable to that... is you. Thank you, Sunshine.$27",
   "Gifts.Mateo.GiftReaction.Pumpkin.Romantic": "You know me so well, Sunshine. Why don't we go and carve it together, huh?$31#$b#%Mateo gives your sleeve a playful tug.",
   "Gifts.Mateo.GiftReaction.JackOLantern.Romantic": "I'll put this on display for everyone to see, Sunshine. And I'll proudly let everyone know you carved it for me.$27",
   "Gifts.Mateo.GiftReaction.GoldenPumpkin.Romantic": "You won this...and you're giving it to me? Thanks, Sunshine. Next time, how about you and I get lost in the maze together?$30",
@@ -2863,6 +2863,7 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch2.10H2.Hector.12": "Now, come on - let's get the good view.$8",
   "Events.S&S.Ch2.10H2.Hector.13": "I've always been fascinated by humanity, and you represent such an amazing part of it.$12",
   "Events.S&S.Ch2.10H2.Hector.14": "Let me know if there's ever anything I can do for you in return. Not just in regards to Druidics, but...$14",
+  "Events.S&S.Ch2.10H2.Hector.14.NoRomance": "Let me know if there's ever anything I can do for you in return. Not just in regards to Druidics, but as a friend.$14",
   "Events.S&S.Ch2.10H2.Q1.Answer.1": "...but as a partner. (ROMANTIC)",
   "Events.S&S.Ch2.10H2.Q1.Answer.2": "...but as a friend. (PLATONIC)",
   "Events.S&S.Ch2.10H2.Q1.Response.1": "Partner? Like, partner-partner? Like, you like me? You LIKE me, like me? For real?$4#$b#Gross. I feel the same way, though. Just wasn't sure if you were into shape-shifting forest hermits and honestly I was too afraid to ask.$10",
@@ -3895,6 +3896,11 @@ ________      ________ _   _ _______ _____
   "Core.Roslin.Generic.EarlyHeart.13": "Perhaps Dandelion's fate is a punishment for meddling with the Void, and other such things.$17#$b#I just wish I had been the target, rather than my companion.$16",
   "Core.Roslin.Generic.EarlyHeart.14": "There is nobody to forgive me if Dandelion is truly lost. Goodness knows I would never forgive myself.$14",
   "Core.Roslin.Generic.EarlyHeart.15": "You do not know the breadth of feeling you are capable of, until you experience loss.$13",
+  "Core.Roslin.Generic.EarlyHeart.16": "Dandelion has given so much of herself to The Adventurer's Guild, and to her order. And this is the thanks she gets?$16",
+  "Core.Roslin.Generic.EarlyHeart.17": "Parts of Dandelion have already been taken from me, how much more of her am I expected to lose?$16",
+  "Core.Roslin.Generic.EarlyHeart.18": "Dandelion has led a tumultuous life. I refuse to let it end like this.$13",
+  "Core.Roslin.Generic.EarlyHeart.19": "I've already failed to get parts of Dandelion back from the brink. I won't let what I have left of her slip through my fingers.$13",
+  "Core.Roslin.Generic.EarlyHeart.20": "Dandelion and I have taken on impossible challenges before. The difference was, we took those on together.$13",
 
   // POST-DANDELION RETURNING
   "Core.Roslin.Generic.LateHeart.1": "Dandelion and I have tea every morning. She's very into collecting different varities, so I never know what's she going to make with breakfast.$10",
@@ -3937,6 +3943,11 @@ ________      ________ _   _ _______ _____
   "Core.Roslin.Generic.LateHeart.38": "One of the things I'm now most grateful for is that I no longer have to try and map out my future without Dandelion.$3",
   "Core.Roslin.Generic.LateHeart.39": "It turned out Dandelion's fate wasn't written in the stars, after all. There's no longer a need to threaten to rip them from the sky; I can just appreciate the view.$3",
   "Core.Roslin.Generic.LateHeart.40": "I'm glad my protection spell worked, although I could've been a bit more specific. Going forward, I probably should not be turning people into inanimate objects.$10",
+  "Core.Roslin.Generic.LateHeart.41": "Neither me nor Dandelion know the circumstances behind the loss of her limbs, as if it was wiped from our memories.$13#$b#I think she finds comfort in making up stories about it.$10",
+  "Core.Roslin.Generic.LateHeart.42": "Dandelion has two hands and both of them fit in mine perfectly. One is just a little colder than the other, that's all.$12",
+  "Core.Roslin.Generic.LateHeart.43": "Dandelion used to use a sword, but she's been lacking in finesse ever since her arm was taken. Now she just bludgeons things with her shield.$6",
+  "Core.Roslin.Generic.LateHeart.44": "I wonder how Dandelion comes up with all the wild scenarios she tells people when they ask about her limbs.$6#$b#I always thought they'd figure it was par for the course, since she's an adventurer. But it does raise eyebrows.$13",
+  "Core.Roslin.Generic.LateHeart.45": "I asked Dandelion for a hand the other day and she removed her mechanical limb at the elbow and threw it to me.$16",
 
   // SPRING
   "Core.Roslin.Spring.1": "Everyone loves the turn of the new year and neglects to mention the allergies.$5",
@@ -4183,7 +4194,7 @@ ________      ________ _   _ _______ _____
   "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.6.Text": "Collect 50 Solar Essences.",
   "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.7.Text": "Collect 50 Spiritual Essences.",
 
-  /*
+/*
  ________      ________ _   _ _______ _____ 
 |  ____\ \    / /  ____| \ | |__   __/ ____|
 | |__   \ \  / /| |__  |  \| |  | | | (___  
@@ -4403,6 +4414,28 @@ ________      ________ _   _ _______ _____
   "Core.Dandelion.Winter.2": "The best part about being stationary is not having to worry about setting up camp in the dead of winter anymore.$15",
   "Core.Dandelion.Winter.3": "Why does the town do a soup based festival in the summertime instead of around now?$17",
 
+  // MECHANICAL LIMBS
+
+  "Core.Dandelion.Arm.1": "Oh, my arm?$17#$b#It was bitten off by a basilisk that I fought in the Crimson Wastelands.$18",
+  "Core.Dandelion.Arm.2": "Oh, my arm?$17#$b#I traded it to a kraken for my mechanical leg, which I lost in a fight to a DIFFERENT kraken.$18#$action AddConversationTopic DandelionKrakenIncident 1",
+  "Core.Dandelion.Arm.3": "Oh, my arm?$17#$b#Weirdest thing! My hand just fell off one day, I saw no reason to keep the rest of it.$14",
+  "Core.Dandelion.Arm.4": "Oh, my arm?$17#$b#Lost it in a fight against a werewolf. The kiss from the damsel I saved was totally worth it, though.$14#$action AddConversationTopic DandelionWerewolfIncident 1",
+  "Core.Dandelion.Arm.5": "Oh, my arm?$17#$b#I let a raccoon borrow it and he hasn't given it back.$17#$action AddConversationTopic DandelionRaccoonIncident 1",
+  "Core.Dandelion.Arm.6": "Oh, my arm?$17#$b#I offered it to mothman in exchange for a photograph. Promised I'd never share it, sorry.$14#$action AddConversationTopic DandelionMothmanIncident 1",
+  "Core.Dandelion.Arm.7": "Oh, my arm?$17#$b#I traded it to a leprachaun for a pot of gold, although apparently you can just get those things for free at the end of a rainbow.$17",
+  "Core.Dandelion.Arm.8": "Oh, my arm?$17#$b#I lost it to a shark that I punched in the snoot while surfing.$18",
+  "Core.Dandelion.Arm.9": "Oh, my arm?$17#$b#One morning I just woke up without it. I'm waiting for it to regrow. You know, like a lizard tail.$18",
+  "Core.Dandelion.Arm.10": "Oh, my arm?$17#$b#It was ripped off and eaten by a bear. Don't worry, I've got a hand-le on it these days.$18#$action AddConversationTopic DandelionArmBearIncident 1",
+  "Core.Dandelion.Leg.1": "Oh, my leg?$17#$b#It was bitten off by a chimera that I fought in the Spirit Realm.$18",
+  "Core.Dandelion.Leg.2": "Oh, my leg?$17#$b#I traded it to a kraken for my mechanical arm, which I lost in a fight to a DIFFERENT kraken.$18#$action AddConversationTopic DandelionKrakenIncident 1",
+  "Core.Dandelion.Leg.3": "Oh, my leg?$17#$b#Weirdest thing! My foot just fell off one day, I saw no reason to keep the rest of it.$14",
+  "Core.Dandelion.Leg.4": "Oh, my leg?$17#$b#Lost it in a fight against a dragon. The kiss from the princess I saved was totally worth it, though.$14",
+  "Core.Dandelion.Leg.5": "Oh, my leg?$17#$b#I let a possum borrow it and he hasn't given it back.$17#$action AddConversationTopic DandelionPossumIncident 1",
+  "Core.Dandelion.Leg.6": "Oh, my leg?$17#$b#I offered it to bigfoot in exchange for a photograph. Promised I'd never share it, sorry.$14#$action AddConversationTopic DandelionBigfootIncident 1",
+  "Core.Dandelion.Leg.7": "Oh, my leg?$17#$b#I traded it to a leprachaun for a pot of gold, although apparently you can just get those things for free at the end of a rainbow.$17",
+  "Core.Dandelion.Leg.8": "Oh, my leg?$17#$b#I lost it to a shark that I kicked in the snoot while surfing.$18",
+  "Core.Dandelion.Leg.9": "Oh, my leg?$17#$b#One morning I just woke up without it. I'm waiting for it to regrow. You know, like a lizard tail.$18",
+  "Core.Dandelion.Leg.10": "Oh, my leg?$17#$b#It was ripped off and eaten by a bear. Don't worry, there's no longer trouble a-foot.$18#$action AddConversationTopic DandelionLegBearIncident 1",
 
   // 10H SITUATIONAL
   "Core.Dandelion.EXAMPLE.1": "",
@@ -4713,6 +4746,11 @@ ________      ________ _   _ _______ _____
   "Core.Solomon.Generic.33": "Of course there's darkness in the world, @. After all, the closer you stand to the light, the greater a shadow you cast.$2",
   "Core.Solomon.Generic.34": "To fear the unknown is base. To embrace it, is human.$8",
   "Core.Solomon.Generic.35": "Remember always that love is all you need.$4",
+  "Core.Solomon.Generic.36": "Roslin and Dandelion may not remember why the Paladin is something of a 'fullmetal' alchemist, but *I* do! And, no, I'm not telling.$6",
+  "Core.Solomon.Generic.37": "Hm? Oh, trust me. Dandelion is better off being down an arm and a leg than the alternative. They might not remember the circumstances, but I do.$1",
+  "Core.Solomon.Generic.38": "All magic comes at a cost, @.$11#$b#Just because you don't notice that cost in the moment, doesn't mean it won't come back around expecting interest at another time.$9",
+  "Core.Solomon.Generic.39": "Magic is intention, @. You can do anything as long as you've got the willpower to make it so. Bring someone back from the brink, even.$7#$b#Like anything else, though, it comes at a cost...$6",
+  "Core.Solomon.Generic.40": "Memories are a funny thing, aren't they? Sometimes you have them, sometimes they magically disappear and leave your brain riddled with gaps.$7#$b#Would be a shame if that happened to you... or your loved one, huh?$6",
 
   // SPIRIT'S EVE
   "Festivals.Solomon.fall27.1": "Don't be suspicious, don't be suspicious, don't be suspicious...$3#$b#Hello, fellow human, who certianly thinks I am simply wearing a very convincing Shadow Folk costume!$1",
@@ -5358,7 +5396,23 @@ ________      ________ _   _ _______ _____
   "config.SeasonalOutfits.values.full": "full",
   "config.SeasonalOutfits.values.lite": "lite",
   "config.SeasonalOutfits.values.vanilla": "vanilla",
+
+  "config.ChocoboValleyMaterials.name": "ChocoboValleyMaterials",
+  "config.ChocoboValleyMaterials.description": "Toggle the use of Chocobo Valley's materials in a Special Order from Dandelion.",
+  "config.ChocoboValleyMaterials.values.true": "true",
+  "config.ChocoboValleyMaterials.values.false": "false",
  
+  "config.RSVMaterials.name": "RSVMaterials",
+  "config.RSVMaterials.description": "Toggle the use of Chocobo Valley's materials in a Special Order from Roslin.",
+  "config.RSVMaterials.values.true": "true",
+  "config.RSVMaterials.values.false": "false",
+
+  "config.AncientSweetTeaDifficulty.name": "RSVMaterials",
+  "config.AncientSweetTeaDifficulty.description": "Set how many Ancient Sweet Tea Leaves are required to craft the universally loved Ancient Sweet Tea recipe.",
+  "config.AncientSweetTeaDifficulty.values.3": "3",
+  "config.AncientSweetTeaDifficulty.values.7": "7",
+  "config.AncientSweetTeaDifficulty.values.14": "14",
+  "config.AncientSweetTeaDifficulty.values.21": "21",
 
 
 }

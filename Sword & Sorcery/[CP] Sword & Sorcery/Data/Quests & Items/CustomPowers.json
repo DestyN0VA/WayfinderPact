@@ -75,7 +75,6 @@
 				}
 			},
 			"When": {
-				"HasMod: |contains=Kitsutsune.Chocobovalley": false,
 				"HasFlag": "DandelionShieldPower"
 			  }
 		},
@@ -94,6 +93,7 @@
 			},
 			"When": {
 				"HasMod: |contains=Kitsutsune.Chocobovalley": true,
+				"ChocoboValleyMaterials": true,
 				"HasFlag": "DandelionShieldPower"
 			  }
 		},
