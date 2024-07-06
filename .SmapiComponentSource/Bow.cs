@@ -194,7 +194,7 @@ namespace SwordAndSorcerySMAPI
         }
     }
 
-    [HarmonyPatch(typeof(Slingshot), nameof(Slingshot.canThisBeAttached))]
+    [HarmonyPatch(typeof(Slingshot), nameof(Slingshot.canThisBeAttached) )]
     public static class SlingshowBowAmmoAttachPatch
     {
         public static void Postfix(Slingshot __instance, StardewValley.Object o, ref bool __result)
@@ -210,7 +210,7 @@ namespace SwordAndSorcerySMAPI
         }
     }
 
-    [HarmonyPatch(typeof(Tool), nameof(Tool.canThisBeAttached))]
+    [HarmonyPatch(typeof(Tool), nameof(Tool.canThisBeAttached), new Type[] { typeof(StardewValley.Object) })]
     public static class ToolGunAmmoAttachPatch
     {
         public static void Postfix(Tool __instance, StardewValley.Object o, ref bool __result)
