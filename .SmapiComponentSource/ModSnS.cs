@@ -81,6 +81,7 @@ namespace SwordAndSorcerySMAPI
         public bool mageArmor = false;
         public readonly NetBool isGhost = new(false);
         public readonly NetVector2 ghostOrigPosition = new();
+        public readonly NetFloat stasisTimer = new( -1 );
     }
 
     [HarmonyPatch(typeof(Farmer), "initNetFields")]
@@ -98,6 +99,7 @@ namespace SwordAndSorcerySMAPI
             __instance.NetFields.AddField(__instance.GetFarmerExtData().mirrorImages);
             __instance.NetFields.AddField(__instance.GetFarmerExtData().isGhost);
             __instance.NetFields.AddField(__instance.GetFarmerExtData().ghostOrigPosition);
+            __instance.NetFields.AddField(__instance.GetFarmerExtData().stasisTimer);
         }
     }
 
@@ -142,6 +144,14 @@ namespace SwordAndSorcerySMAPI
 
         public Point LastWalkedTile { get; set; } = new();
         public Dictionary<string, string> TeleportCircles { get; set; } = new();
+
+        public string ReturnPotionLocation { get; set; }
+        public Point ReturnPotionCoordinates { get; set; }
+
+        public string PocketDimensionLocation { get; set; } = "FarmHouse";
+        public Point PocketDimensionCoordinates { get; set; } = new Point(5, 7);
+
+        public int PreCastFacingDirection { get; set; }
     }
 
     public class Configuration
@@ -465,7 +475,7 @@ namespace SwordAndSorcerySMAPI
                     Game1.player.craftingRecipes.Add("DN.SnS_LightbringerBullet", 0);
             }
 
-            if (Context.IsWorldReady && Context.IsPlayerFree && e.Button.IsActionButton())
+            if (Context.IsWorldReady && Context.IsPlayerFree && e.Button.IsActionButton() && Game1.player.ActiveItem != null)
             {
                 if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking")
                 {

@@ -20,9 +20,37 @@ namespace SwordAndSorcerySMAPI
             Game1.player.applyBuff( buff );
         }
 
+        public static void Stasis()
+        {
+            Game1.player.GetFarmerExtData().stasisTimer.Value = 3;
+        }
+
         public static void MageArmor()
         {
             Game1.player.GetFarmerExtData().mageArmor = true;
+        }
+
+        public static void WallOfForce()
+        {
+            Vector2 facingOffset = Vector2.Zero;
+            switch (ModSnS.State.PreCastFacingDirection)
+            {
+                case Game1.up: facingOffset = new(0, -1); break;
+                case Game1.down: facingOffset = new(0, 1); break;
+                case Game1.left: facingOffset = new(-1, 0); break;
+                case Game1.right: facingOffset = new(1, 0); break;
+            }
+            Vector2 sideOffset = new(facingOffset.Y, facingOffset.X);
+
+            for (int io = -3; io <= 3; ++io)
+            {
+                Vector2 pos = Game1.player.Tile + facingOffset * 2 + sideOffset * io;
+
+                if (Game1.player.currentLocation.Objects.ContainsKey(pos))
+                    continue;
+
+                Game1.player.currentLocation.Objects.Add(pos, new StardewValley.Object(pos, "DN.SnS_WallOfForce") { MinutesUntilReady = 60 });
+            }
         }
 
         public static void RevivePlant()
@@ -98,6 +126,12 @@ namespace SwordAndSorcerySMAPI
             var chest = new Chest();
             chest.GlobalInventoryId = invName;
             chest.ShowMenu();
+        }
+        public static void PocketDimension()
+        {
+            ModSnS.State.PocketDimensionLocation = Game1.player.currentLocation.NameOrUniqueName;
+            ModSnS.State.PocketDimensionCoordinates = Game1.player.TilePoint;
+            Game1.player.currentLocation.performTouchAction($"MagicWarp EastScarp_PocketDimension 15 8", Game1.player.getStandingPosition());
         }
     }
 }

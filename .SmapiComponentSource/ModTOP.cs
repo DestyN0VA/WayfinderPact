@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
+using SpaceCore.Events;
 using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Locations;
@@ -33,6 +34,7 @@ namespace SwordAndSorcerySMAPI
         public static ModTOP Instance;
 
         public static Texture2D SpellCircle;
+        public static Texture2D Portal;
 
         public IMonitor Monitor;
         public IManifest ModManifest;
@@ -47,6 +49,7 @@ namespace SwordAndSorcerySMAPI
 
         private static void CastSpell(Color spellColor, Action onCast)
         {
+            ModSnS.State.PreCastFacingDirection = Game1.player.FacingDirection;
             Game1.player.completelyStopAnimatingOrDoingAction();
             Game1.player.faceDirection(Game1.down);
             Game1.player.canMove = false;
@@ -130,6 +133,7 @@ namespace SwordAndSorcerySMAPI
         public void Entry()
         {
             SpellCircle = Helper.ModContent.Load<Texture2D>("assets/spellcircle.png");
+            Portal = Helper.ModContent.Load<Texture2D>("assets/return-portal.png");
 
             Helper.Events.Multiplayer.ModMessageReceived += Multiplayer_ModMessageReceived;
             Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
@@ -138,6 +142,10 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.Player.Warped += Player_Warped;
             Helper.Events.World.TerrainFeatureListChanged += World_TerrainFeatureListChanged;
             Helper.Events.World.FurnitureListChanged += World_FurnitureListChanged;
+            Helper.Events.Input.ButtonPressed += Input_ButtonPressed;
+            Helper.Events.Display.RenderedStep += Display_RenderedStep;
+
+            SpaceEvents.OnItemEaten += SpaceEvents_OnItemEaten;
 
             Event.RegisterCommand("sns_essenceunlock", (Event @event, string[] args, EventContext context) =>
             {
@@ -293,6 +301,102 @@ namespace SwordAndSorcerySMAPI
             RegisterSpells();
         }
 
+        private void Display_RenderedStep(object sender, StardewModdingAPI.Events.RenderedStepEventArgs e)
+        {
+            if (e.Step == StardewValley.Mods.RenderSteps.World_Sorted)
+            {
+                if (ModSnS.State.ReturnPotionLocation != null && Game1.currentLocation == Game1.getFarm())
+                {
+                    if (!Game1.getFarm().TryGetMapPropertyAs("WarpTotemEntry", out Point warp_location, required: false))
+                    {
+                        warp_location = Game1.whichFarm switch
+                        {
+                            6 => new Point(82, 29),
+                            5 => new Point(48, 39),
+                            _ => new Point(48, 7),
+                        };
+                    }
+
+                    Vector2 spot = warp_location.ToVector2() - new Vector2(0, 1);
+                    spot += new Vector2(0, -1);
+                    spot *= Game1.tileSize;
+                    e.SpriteBatch.Draw(ModTOP.Portal, Game1.GlobalToLocal(Game1.viewport, spot), null, Color.White, 0f, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, (spot.Y + Game1.tileSize * 2 + 1) / 10000f);
+                }
+            }
+
+            if (e.Step == StardewValley.Mods.RenderSteps.World_Sorted)
+            {
+                if (ModSnS.State.PocketDimensionLocation != null && Game1.currentLocation.NameOrUniqueName == "EastScarp_PocketDimension")
+                {
+                    Vector2 spot = new Vector2(15, 6);
+                    spot *= Game1.tileSize;
+                    e.SpriteBatch.Draw(ModTOP.Portal, Game1.GlobalToLocal(Game1.viewport, spot), null, Color.White, 0f, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, (spot.Y + Game1.tileSize * 2 + 1) / 10000f);
+                }
+            }
+        }
+
+        private void Input_ButtonPressed(object sender, StardewModdingAPI.Events.ButtonPressedEventArgs e)
+        {
+            if (!Context.IsWorldReady || !Context.IsPlayerFree)
+                return;
+
+            if (e.IsSuppressed())
+                return;
+
+            if (Game1.player.GetFarmerExtData().stasisTimer.Value > 0)
+            {
+                Helper.Input.Suppress(e.Button);
+            }
+
+            if (e.Button.IsActionButton() && Game1.currentLocation == Game1.getFarm() && ModSnS.State.ReturnPotionLocation != null)
+            {
+                if (!Game1.getFarm().TryGetMapPropertyAs("WarpTotemEntry", out Point warp_location, required: false))
+                {
+                    warp_location = Game1.whichFarm switch
+                    {
+                        6 => new Point(82, 29),
+                        5 => new Point(48, 39),
+                        _ => new Point(48, 7),
+                    };
+                }
+
+                if (e.Cursor.GrabTile.ToPoint() == warp_location - new Point(0, 1))
+                {
+                    Game1.player.currentLocation.performTouchAction($"MagicWarp {ModSnS.State.ReturnPotionLocation} {ModSnS.State.ReturnPotionCoordinates.X} {ModSnS.State.ReturnPotionCoordinates.Y}", Game1.player.getStandingPosition());
+                    ModSnS.State.ReturnPotionLocation = null;
+                }
+            }
+            else if (e.Button.IsActionButton() && Game1.currentLocation.NameOrUniqueName == "EastScarp_PocketDimension" && ModSnS.State.PocketDimensionLocation != null)
+            {
+                if (e.Cursor.GrabTile.ToPoint() == new Point( 15, 7 ) )
+                {
+                    Game1.player.currentLocation.performTouchAction($"MagicWarp {ModSnS.State.PocketDimensionLocation} {ModSnS.State.PocketDimensionCoordinates.X} {ModSnS.State.PocketDimensionCoordinates.Y}", Game1.player.getStandingPosition());
+                }
+            }
+        }
+
+        private void SpaceEvents_OnItemEaten(object sender, EventArgs e)
+        {
+            if (Game1.player.itemToEat == null)
+                return;
+
+            if (Game1.player.itemToEat.ItemId == "DN.SnS_ReturnPotion")
+            {
+                if (!Game1.getFarm().TryGetMapPropertyAs("WarpTotemEntry", out Point warp_location, required: false))
+                {
+                    warp_location = Game1.whichFarm switch
+                    {
+                        6 => new Point(82, 29),
+                        5 => new Point(48, 39),
+                        _ => new Point(48, 7),
+                    };
+                }
+                ModSnS.State.ReturnPotionLocation = Game1.player.currentLocation.NameOrUniqueName;
+                ModSnS.State.ReturnPotionCoordinates = Game1.player.TilePoint;
+                Game1.player.currentLocation.performTouchAction($"MagicWarp Farm {warp_location.X} {warp_location.Y}", Game1.player.getStandingPosition());
+            }
+        }
+
         public static TeleportInfoMessage ProcessTeleportRequest(TeleportInfoMessage msg)
         {
             TeleportInfoMessage retMsg = new();
@@ -394,6 +498,16 @@ namespace SwordAndSorcerySMAPI
                     (Math.Abs(diff.X) > 1 || Math.Abs(diff.Y) > 1))
                 {
                     ModSnS.State.LastWalkedTile = new(-100, -100);
+                }
+            }
+
+            var extData = Game1.player.GetFarmerExtData();
+            if (Game1.shouldTimePass() && extData.stasisTimer.Value > 0)
+            {
+                extData.stasisTimer.Value -= (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
+                if (extData.stasisTimer.Value <= 0)
+                {
+                    Game1.player.playNearbySoundLocal("coldSpell");
                 }
             }
         }
@@ -518,6 +632,21 @@ namespace SwordAndSorcerySMAPI
                 }
             });
 
+            Ability.Abilities.Add("spell_statis", new Ability("spell_statis")
+            {
+                Name = I18n.Witchcraft_Spell_Stasis_Name,
+                Description = I18n.Witchcraft_Spell_Stasis_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
+                SpriteIndex = 4,
+                ManaCost = () => 10,
+                KnownCondition = $"TRUE",
+                UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
+                Function = () =>
+                {
+                    CastSpell(Color.Orange, () => Spells.Stasis());
+                }
+            });
+
             Ability.Abilities.Add("spell_magearmor", new Ability("spell_magearmor")
             {
                 Name = I18n.Witchcraft_Spell_MageArmor_Name,
@@ -530,6 +659,21 @@ namespace SwordAndSorcerySMAPI
                 Function = () =>
                 {
                     CastSpell(Color.Orange, () => Spells.MageArmor());
+                }
+            });
+
+            Ability.Abilities.Add("spell_wallofforce", new Ability("spell_wallofforce")
+            {
+                Name = I18n.Witchcraft_Spell_WallOfForce_Name,
+                Description = I18n.Witchcraft_Spell_WallOfForce_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
+                SpriteIndex = 6,
+                ManaCost = () => 5,
+                KnownCondition = $"TRUE",
+                UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
+                Function = () =>
+                {
+                    CastSpell(Color.Orange, () => Spells.WallOfForce());
                 }
             });
 
@@ -591,6 +735,21 @@ namespace SwordAndSorcerySMAPI
                 Function = () =>
                 {
                     CastSpell(Color.Aqua, () => Spells.PocketChest());
+                }
+            });
+
+            Ability.Abilities.Add("spell_pocketdimension", new Ability("spell_pocketdimension")
+            {
+                Name = I18n.Witchcraft_Spell_PocketDimension_Name,
+                Description = I18n.Witchcraft_Spell_PocketDimension_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
+                SpriteIndex = 19,
+                ManaCost = () => 0,
+                KnownCondition = $"TRUE",
+                UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
+                Function = () =>
+                {
+                    CastSpell(Color.Aqua, () => Spells.PocketDimension());
                 }
             });
         }
@@ -732,6 +891,34 @@ namespace SwordAndSorcerySMAPI
                     ModTOP.Instance.Helper.Multiplayer.SendMessage(req, ModTOP.RequestTeleportInfoMessage);
                 }
             }
+        }
+    }
+
+    [HarmonyPatch(typeof(StardewValley.Object), nameof(StardewValley.Object.minutesElapsed))]
+    public static class ObjectWallOfForceExpirePatch
+    {
+        public static void Postfix(StardewValley.Object __instance, int minutes, ref bool __result)
+        {
+            if (__instance.ItemId == "DN.SnS_WallOfForce")
+            {
+                __instance.MinutesUntilReady -= minutes;
+                if (__instance.MinutesUntilReady <= 0)
+                    __result = true;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Farmer), nameof(Farmer.takeDamage))]
+    public static class FarmerStasisNoDamagePatch
+    {
+        public static bool Prefix(Farmer __instance)
+        {
+            if (__instance.GetFarmerExtData().stasisTimer.Value > 0)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

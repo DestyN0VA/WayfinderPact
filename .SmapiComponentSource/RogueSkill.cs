@@ -102,7 +102,8 @@ namespace SwordAndSorcerySMAPI
 
             foreach (var recipe in craftingRecipes[level])
             {
-                Game1.player.craftingRecipes.Add(recipe, 0);
+                if ( !Game1.player.knowsRecipe(recipe))
+                    Game1.player.craftingRecipes.Add(recipe, 0);
             }
         }
 

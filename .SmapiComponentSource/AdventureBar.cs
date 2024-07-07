@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using StardewValley.Menus;
+using System;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -82,7 +83,8 @@ namespace SwordAndSorcerySMAPI
 
                     b.Draw(tex, pos, Game1.getSquareSourceRectForNonStandardTileSheet(tex, 16, 16, abil.SpriteIndex), col, 0, Vector2.Zero, 4, SpriteEffects.None, 1);
 
-                    if  ( new Rectangle( pos.ToPoint(), new Point( 64, 64 ) ).Contains( Game1.getMouseX(), Game1.getMouseY() ) )
+                    if  ( new Rectangle( pos.ToPoint(), new Point( 64, 64 ) ).Contains( Game1.getMouseX(), Game1.getMouseY() ) &&
+                          GameStateQuery.CheckConditions(abil.KnownCondition, new(Game1.currentLocation, Game1.player, null, null, new Random())))
                     {
                         hover = abil;
                     }

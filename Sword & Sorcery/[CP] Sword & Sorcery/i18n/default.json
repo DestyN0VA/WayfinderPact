@@ -5227,6 +5227,10 @@ ________      ________ _   _ _______ _____
   "witchcraft.fire-essence.description": "Essence of fire.",
   "witchcraft.teleport-circle.name": "Teleport Circle",
   "witchcraft.teleport-circle.description": "The core of a teleport circle.",
+  "witchcraft.return-potion.name": "Potion of Return",
+  "witchcraft.return-potion.description": "Warps you to your farm, with a portal to return where you drank the potion.",
+  "witchcraft.wall-of-force.name": "Wall of Force",
+  "witchcraft.wall-of-force.description": "Unreakable but disappears after a while",
 
   /*
   __  __ _____  _____  _____ ______ _      _               _   _ ______ ____  _    _  _____ 

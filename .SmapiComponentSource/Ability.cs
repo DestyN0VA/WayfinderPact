@@ -33,9 +33,12 @@ namespace SwordAndSorcerySMAPI
     public static class FarmerRendererShadowstepPatch
     {
         internal static bool transparent = false;
-        public static void Prefix(FarmerRenderer __instance, SpriteBatch b, FarmerSprite.AnimationFrame animationFrame, int currentFrame, Rectangle sourceRect, Vector2 position, Vector2 origin, float layerDepth, Color overrideColor, float rotation, float scale, Farmer who)
+        public static void Prefix(FarmerRenderer __instance, SpriteBatch b, FarmerSprite.AnimationFrame animationFrame, int currentFrame, Rectangle sourceRect, Vector2 position, Vector2 origin, float layerDepth, ref Color overrideColor, float rotation, float scale, Farmer who)
         {
             var ext = who.GetFarmerExtData();
+
+            if (ext.stasisTimer.Value > 0)
+                overrideColor = Color.Black;
 
             if ( who.buffs.AppliedBuffIds.Contains( "shadowstep" ) || ( ext.isGhost.Value && ext.currRenderingMirror == 0 ) )
             {

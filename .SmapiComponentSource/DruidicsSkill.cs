@@ -99,18 +99,21 @@ namespace CircleOfThornsSMAPI
 
             if (recipes[level] != null)
             {
-                //ret.Add(I18n.Recipe_Crafting(new CraftingRecipe(recipes[level][0], false).DisplayName));
-                Game1.player.craftingRecipes.TryAdd(recipes[level][0], 0);
+                if (!Game1.player.knowsRecipe(recipes[level][0]))
+                    //ret.Add(I18n.Recipe_Crafting(new CraftingRecipe(recipes[level][0], false).DisplayName));
+                    Game1.player.craftingRecipes.TryAdd(recipes[level][0], 0);
                 if (recipes[level].Length == 2)
                 {
                     if (level == 1)
                     {
-                        Game1.player.craftingRecipes.TryAdd(recipes[level][1], 0);
+                        if (!Game1.player.knowsRecipe(recipes[level][1]))
+                            Game1.player.craftingRecipes.TryAdd(recipes[level][1], 0);
                         //ret.Add(I18n.Recipe_Crafting(new CraftingRecipe(recipes[level][1], false).DisplayName));
                     }
                     else
                     {
-                        Game1.player.cookingRecipes.TryAdd(recipes[level][1], 0);
+                        if (!Game1.player.knowsRecipe(recipes[level][1]))
+                            Game1.player.cookingRecipes.TryAdd(recipes[level][1], 0);
                         //ret.Add(I18n.Recipe_Cooking(new CraftingRecipe(recipes[level][1], true).DisplayName));
                     }
                 }

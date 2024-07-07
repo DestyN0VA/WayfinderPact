@@ -73,6 +73,34 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
         },
+        "{{ModID}}_ReturnPotion": {
+          "Name": "Return Potion",
+          "DisplayName": "{{i18n: witchcraft.return-potion.name}}",
+          "Description": "{{i18n: witchcraft.return-potion.description}}",
+          "Type": "Cooking",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 0,
+          "IsDrink": true,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 91,
+          "ExcludeFromShippingCollection": true,
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/BigCraftables",
+      "Entries": {
+        "{{ModID}}_WallOfForce": {
+          "Name": "Wall of Force",
+          "DisplayName": "{{i18n: witchcraft.wall-of-force.name}}",
+          "Description": "{{i18n: witchcraft.wall-of-force.description}}",
+          "Fragility": 2,
+          "IsLamp": true,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSMachines.png}}",
+          "SpriteIndex": 3,
+        }
       }
     },
     {
