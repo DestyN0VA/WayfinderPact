@@ -40,6 +40,8 @@
   "keybind.ability.2.7": "Ability (Bar 2, Slot 7)",
   "keybind.ability.2.8": "Ability (Bar 2, Slot 8)",
 
+  "cannot-warp": "The warp did not work.",
+
 
   // Abiltiies
   "ability.shadowstep.name": "Shadowstep",

@@ -13,6 +13,7 @@ using StardewValley.TerrainFeatures;
 using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -298,7 +299,7 @@ namespace SwordAndSorcerySMAPI
                 @event.CurrentCommand++;
             });
 
-            RegisterSpells();
+            //RegisterSpells();
         }
 
         private void Display_RenderedStep(object sender, StardewModdingAPI.Events.RenderedStepEventArgs e)

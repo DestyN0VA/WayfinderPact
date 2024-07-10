@@ -1,0 +1,12 @@
+// This is not a Content Patcher JSON file!
+// The SMAPI component loads it directly.
+// This also means it can't be edited by outside content packs.
+//
+// Note that all events listed here must start in the same location as the initial finale event.
+// The victory event can change locations, but the intermission must remain in the initial finale event the whole time.
+{
+  "default": {
+    "IntermissionEventId": "testintermission",
+    "VictoryEventId": "testvictory",
+  }
+}

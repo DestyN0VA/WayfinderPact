@@ -10,6 +10,7 @@ using SpaceCore.VanillaAssetExpansion;
 using StardewModdingAPI;
 using StardewModdingAPI.Utilities;
 using StardewValley;
+using StardewValley.BellsAndWhistles;
 using StardewValley.Extensions;
 using StardewValley.GameData.Objects;
 using StardewValley.GameData.SpecialOrders;
@@ -31,6 +32,12 @@ using xTile.Tiles;
 
 namespace SwordAndSorcerySMAPI
 {
+    public class FinalePartnerInfo
+    {
+        public string IntermissionEventId { get; set; }
+        public string VictoryEventId { get; set; }
+    }
+
     public class FarmerExtData
     {
         public readonly NetBool hasTakenLoreWeapon = new(false);
@@ -152,6 +159,9 @@ namespace SwordAndSorcerySMAPI
         public Point PocketDimensionCoordinates { get; set; } = new Point(5, 7);
 
         public int PreCastFacingDirection { get; set; }
+
+        public bool DoFinale { get; set; } = false;
+        public Monster FinaleBoss { get; set; }
     }
 
     public class Configuration
@@ -286,6 +296,19 @@ namespace SwordAndSorcerySMAPI
                     }, i);
                 }
 
+                @event.CurrentCommand++;
+            });
+
+            Event.RegisterCommand("sns_finale_phase1", (Event @event, string[] args, EventContext context) =>
+            {
+                if (Game1.currentMinigame == null)
+                {
+                    Game1.currentMinigame = new FinalePhase1Minigame(@event, context);
+                }
+            });
+            Event.RegisterCommand("sns_finale_phase2", (Event @event, string[] args, EventContext context) =>
+            {
+                State.DoFinale = true;
                 @event.CurrentCommand++;
             });
 
@@ -677,6 +700,47 @@ namespace SwordAndSorcerySMAPI
         {
             if (!Context.IsWorldReady)
                 return;
+
+            if (State.DoFinale || State.FinaleBoss != null)
+            {
+                if (State.FinaleBoss == null && Game1.CurrentEvent == null && Game1.locationRequest == null)
+                {
+                    Game1.currentLocation.characters.Add(State.FinaleBoss = new GreenSlime(Game1.player.Position + new Vector2(0, Game1.tileSize * 3), Color.Black));
+                    State.DoFinale = false;
+                }
+                if (State.FinaleBoss != null)
+                {
+                    if (Game1.locationRequest != null)
+                    {
+                        Game1.locationRequest = null;
+                        Helper.Reflection.GetField<bool>(typeof(Game1), "_isWarping").SetValue(false);
+                        var fade = Helper.Reflection.GetField<ScreenFade>(typeof(Game1), "screenFade").GetValue();
+                        fade.globalFade = false;
+                        fade.fadeToBlack = false;
+                        fade.fadeIn = false;
+                        fade.fadeToBlackAlpha = 0;
+                        Game1.player.CanMove = true;
+
+                        Game1.addHUDMessage(new HUDMessage(I18n.CannotWarp()));
+                    }
+
+                    if (!Game1.currentLocation.characters.Contains(State.FinaleBoss))
+                    {
+                        // This is really bad. Pathos don't kill me.
+                        var modInfo = ModSnS.instance.Helper.ModRegistry.Get("DN.SnS");
+                        var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
+                        var partnerInfos = pack.ReadJsonFile<Dictionary<string, FinalePartnerInfo>>("Data/FinalePartners.json");
+
+                        FinalePartnerInfo partnerInfo;
+                        if (Game1.player.spouse == null || !partnerInfos.TryGetValue(Game1.player.spouse, out partnerInfo))
+                            partnerInfo = partnerInfos["default"];
+
+                        Game1.PlayEvent(partnerInfo.VictoryEventId, checkPreconditions: false, checkSeen: false);
+
+                        State.FinaleBoss = null;
+                    }
+                }
+            }
 
             if (State.MyThrown != null)
             {
