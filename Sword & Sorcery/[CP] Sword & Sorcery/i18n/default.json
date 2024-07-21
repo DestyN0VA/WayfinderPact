@@ -140,6 +140,9 @@
   "Core.Mateo.GreenRainFinished": "The rain was pretty intense, but it didn't seem to have any negative side effects. Everything is so lush right now!$1",
   "Core.Mateo.GreenRain2": "Something tells me Hector has something to do with the weird rain. What do you think, @?$14",
 
+  // POLYAMORY 
+  "Core.Mateo.MarriedMonogamousNPC": "Sorry, @! I'm flattered, but you're with a monogomous partner, so I'd be intruding on the rules of your relationship.$16",
+
   /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
  | |  | |  ____|   /\   |  __ \__   __| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
@@ -1750,6 +1753,9 @@ ________      ________ _   _ _______ _____
   "Core.Hector.GreenRainFinished": "Everything is so beautiful right now, isn't it? Druidic Rain is an ancient sort of ritual, one performed by the earth herself.$13",
   "Core.Hector.GreenRain2": "Did you summon this, @? I'm sure you're skilled enough to do so. If not, don't worry. You'll master druidics in time.$12",
 
+  // POLYAMORY 
+  "Core.Hector.MarriedMonogamousNPC": "No thanks, @. I'm a one-person-person, and so is your current partner.$24",
+
   /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
  | |  | |  ____|   /\   |  __ \__   __| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
@@ -3116,6 +3122,10 @@ ________      ________ _   _ _______ _____
   "Core.Cirrus.GreenRain": "I've got enough issues with rain, why is it GREEN now?$19",
   "Core.Cirrus.GreenRainFinished": "Oh thank goodness it's over. At least there was no thunder...$18",
   "Core.Cirrus.GreenRain2": "I guess since there's no thunder, the weird weather isn't so bad. And all the plants looks really nice afterward.$17",
+
+  // POLYAMORY 
+  "Core.Cirrus.MarriedMonogamousNPC": "Your partner is monogamous, @. So I'm not comfortable engaging in anything romantically with you.$16",
+  
 
   /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
