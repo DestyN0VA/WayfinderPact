@@ -843,6 +843,24 @@
           ]
         }
       }
+    },
+    {
+      "LogName": "Gunnar's Adventurer Pack",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "{{ModID}}_LMArmory", "Items" ],
+      "When": {
+        "HasMod": "MadDog.HashtagBearFam"
+      },
+      "Entries": {
+        "{{ModId}}_AddGunnarAdventurerCache": {
+          "Id": "{{ModId}}_AddGunnarAdventurerCache", //
+          "Condition": "PLAYER_HAS_SEEN_EVENT current MadDog.BearFam.16193000",
+          "AvailableStock": 1,
+          "ItemId": "MadDog.HashtagBearFam_Adventurer_Cache",
+          "Price": 1000
+        }
+      }
     }
   ]
 }
