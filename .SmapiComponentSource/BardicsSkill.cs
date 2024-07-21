@@ -80,12 +80,14 @@ namespace SwordAndSorcerySMAPI
         public override void DoLevelPerk(int level)
         {
             base.DoLevelPerk(level);
+            if (level > 10) return; // Walk of Life
             Game1.player.GetFarmerExtData().maxMana.Value += 10;
         }
 
 
         public override List<string> GetExtraLevelUpInfo(int level)
         {
+            if (level > 10) return []; // Walk of Life
             string[] songMapping =
             {
                 I18n.Bardics_Song_Buff_Name() + "\n" + I18n.Bardics_Song_Buff_Description(),

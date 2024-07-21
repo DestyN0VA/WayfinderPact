@@ -78,6 +78,9 @@ namespace CircleOfThornsSMAPI
         public override void DoLevelPerk(int level)
         {
             base.DoLevelPerk(level);
+
+            if (level > 10) return; // Walk of Life
+
             string[][] recipes =
                 new string[][]
                 {
@@ -122,6 +125,8 @@ namespace CircleOfThornsSMAPI
 
         public override List<string> GetExtraLevelUpInfo(int level)
         {
+            if (level > 10) return []; // Walk of Life
+
             string[][] recipes =
                 new string[][]
                 {
@@ -133,7 +138,7 @@ namespace CircleOfThornsSMAPI
                     null,
                     new string[] { "Ancient Bottle Gourd Seeds", "DN.SnS_lavaeelandstirfriedancientbottlegourd" },
                     new string[] { "Ancient Giant Apple Berry Seeds", "DN.SnS_mushroomsredsauce" },
-                    new string[] { "Ancient Azure Detura", "DN.SnS_ferngreensandpineapple" },
+                    new string[] { "Ancient Azure Detura Seeds", "DN.SnS_ferngreensandpineapple" },
                     new string[] { "Ancient Glowing Huckleberry Seeds", "DN.SnS_ancienthuckleberryicecream" },
                     null,
                 };

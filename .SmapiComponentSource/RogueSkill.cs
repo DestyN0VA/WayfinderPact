@@ -82,6 +82,9 @@ namespace SwordAndSorcerySMAPI
         public override void DoLevelPerk(int level)
         {
             base.DoLevelPerk(level);
+
+            if (level > 10) return; // Walk of Life
+
             Game1.player.maxHealth += 3;
             if (level == 1)
                 Game1.player.GetFarmerExtData().maxMana.Value += 30;
@@ -110,6 +113,9 @@ namespace SwordAndSorcerySMAPI
         public override List<string> GetExtraLevelUpInfo(int level)
         {
             List<string> ret = new List<string>();
+
+            if (level > 10) return ret;
+
 
             switch ( level )
             {
