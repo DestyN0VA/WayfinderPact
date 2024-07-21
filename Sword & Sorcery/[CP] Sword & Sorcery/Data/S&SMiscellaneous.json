@@ -44,44 +44,14 @@
         }
       }
     },
-    // DISPOSITION CHANGES FOR FLOWER DANCE
+    // HECTOR POLYAMORY DATA
     {
-      "LogName": "Disposition Change (Flower Dance) - Mateo",
       "Action": "EditData",
-      "Target": "Data/Characters",
-      "Fields": {
-        "Mateo": {
-          "CanBeRomanced": "true"
-        }
-      },
-      "When": {
-        "DayEvent": "flower dance"
-      }
-    },
-    {
-      "LogName": "Disposition Change (Flower Dance) - Hector",
-      "Action": "EditData",
-      "Target": "Data/Characters",
-      "Fields": {
+      "Target": "EnderTedi.Polyamory/PolyamoryData",
+      "Entries": {
         "Hector": {
-          "CanBeRomanced": "true"
+          "IsPolyamorous": false
         }
-      },
-      "When": {
-        "DayEvent": "flower dance"
-      }
-    },
-    {
-      "LogName": "Disposition Change (Flower Dance) - Cirrus",
-      "Action": "EditData",
-      "Target": "Data/Characters",
-      "Fields": {
-        "Cirrus": {
-          "CanBeRomanced": "true"
-        }
-      },
-      "When": {
-        "DayEvent": "flower dance"
       }
     },
     // DISPOSITION CHANGES FOR MOVIES 
