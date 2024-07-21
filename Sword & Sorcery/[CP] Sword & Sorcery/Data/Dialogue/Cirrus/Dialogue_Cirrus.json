@@ -165,6 +165,8 @@
         "GreenRain": "{{i18n:Core.Cirrus.GreenRain}}",
         "GreenRainFinished": "{{i18n:Core.Cirrus.GreenRainFinished}}",
         "GreenRain_2": "{{i18n:Core.Cirrus.GreenRain2}}",
+        // POLYAMORY DIALOGUE
+        "CantMarry_MarriedMonogamousNPC": "PLACEHOLDER, DESTY PLEASE WRITE"
       },
     },
     // ENGAGEMENT DIALOGUE

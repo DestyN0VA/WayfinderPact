@@ -219,6 +219,8 @@
                 "GreenRain": "{{i18n:Core.Hector.GreenRain}}",
                 "GreenRainFinished": "{{i18n:Core.Hector.GreenRainFinished}}",
                 "GreenRain_2": "{{i18n:Core.Hector.GreenRain2}}",
+                // POLYAMORY DIALOGUE
+                "CantMarry_IsMonogamousNPC": "PLACEHOLDER, DESTY PLEASE WRITE" //should never happen with hector but just to be safe
             }
         },
         // ENGAGEMENT DIALOGUE
