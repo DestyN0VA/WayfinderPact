@@ -23,7 +23,7 @@
 		{
 			// Prior to Cirrus moving out of the van.
 			"rain": "610 EastScarp_VanInterior 11 4 2 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}/1200 EastScarp_VanInterior 5 4 0/1400 EastScarp_VanInterior 11 4 2 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}/1900 EastScarp_VanInterior 5 4 0/2200 EastScarp_VanInterior 11 4 2 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}",
-			"spring": "610 EastScarp_VanInterior 11 4 2 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}/1000 EastScarp_VanInterior 5 4 0/1200 EastScarp_Village 82 80 Cirrus_sidesit/1400 EastScarp_Village 26 61 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}/1600 EastScarp_Village 54 40 2 Cirrus_phonesit/1800 EastScarp_Village 97 80 1/2200 EastScarp_VanInterior 11 4 2 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}",
+			"spring": "610 EastScarp_VanInterior 11 4 2 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}/1000 EastScarp_VanInterior 5 4 0/1200 EastScarp_Village 82 79 Cirrus_sidesit/1400 EastScarp_Village 26 61 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}/1600 EastScarp_Village 54 40 2 Cirrus_phonesit/1800 EastScarp_Village 97 80 1/2200 EastScarp_VanInterior 11 4 2 {{Random:Cirrus_keyar++Cirrus_sing++Cirrus_wiggleidle++Cirrus_phone|inputSeparator=++}}",
 		},
 			"When": { "HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true, "HasSeenEvent |contains=SnS.Ch3.Cirrus.13": false }	
 		},
