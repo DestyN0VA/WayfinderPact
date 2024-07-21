@@ -146,6 +146,8 @@
                                 "GreenRain": "{{i18n:Core.Mateo.GreenRain}}",
                                 "GreenRainFinished": "{{i18n:Core.Mateo.GreenRainFinished}}",
                                 "GreenRain_2": "{{i18n:Core.Mateo.GreenRain2}}",
+                                // POLYAMORY DIALOGUE
+                                "CantMarry_MarriedMonogamousNPC": "PLACEHOLDER, DESTY PLEASE WRITE"
                         }
                 }
         ]

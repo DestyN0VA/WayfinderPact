@@ -1860,6 +1860,14 @@
       }
     },
     {
+      "Name": "HectorAlreadyDating",
+      "Value": "speak Hector \"{{i18n:Events.S&S.Ch2.10H2.Hector.14.NoRomance}}\"/pause 250/stopMusic/playMusic starshoot/speak Hector \"{{i18n:Events.S&S.Ch2.10H2.Hector.16}}\"",
+      "When": {
+        "HasMod |contains=EnderTedi.Polyamory": true,
+        "EnderTedi.Polyamory/IsDatingAnyone": true
+      }
+    },
+    {
       "Name": "CirrusAlreadyDating",
       "Value": "quickQuestion It's just you and Cirrus in the Lion's Mane now. #Politely excuse yourself. (PLATONIC) #Stay, and take Cirrus up on her offer. (ROMANTIC)(break)speak Cirrus \"Have a good night, @. Get home safe. You're an amazing friend.$23\"(break)addMailReceived CirrusRomanticFlag\\setDating Cirrus\\addConversationTopic CirrusMarriageCountdown {{DatingLength}}\\warp Sam -100 100\\warp Sebastian -100 -100\\warp Abigail -100 -100\\warp farmer 18 5 true\\faceDirection farmer 1 true\\warp Cirrus 20 5 true\\faceDirection Cirrus 3 true\\positionOffset farmer 40 0 true\\positionOffset farmer 0 20 true\\positionOffset Cirrus -40 0 true\\changePortrait Cirrus beach\\changeSprite Cirrus beach\\globalFadeToClear\\viewport 27 14\\speak Cirrus \"You know, @... everything else aside, you're pretty incredible. I'm already aware of how lucky I am.$25#$b#You work really hard, you try your best to help everyone, you're encouraging and kind and sweet.$23#$b#It's hard not to feel self-conscious, like you're the type who could have anyone they wanted, you know? That's how highly I think of you.$6#$b#But I won't let that get me down! We have great chemistry, and I'm happy to be your girl! And, hey, that's not even mentioning how you are horizontally...$25\"\\animate Cirrus false true 100 28 28\\animate farmer false true 100 101 101\\specificTemporarySprite heart 19 3\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 100\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 2500\\fade\\viewport -1000 -1000\\speak Cirrus \"Speaking of... are you tired yet?$24\"/message \"The Lion's Mane - well, half of it - is now open for business!\""
     },
