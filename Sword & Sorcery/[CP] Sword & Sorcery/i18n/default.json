@@ -4195,14 +4195,15 @@ ________      ________ _   _ _______ _____
   // ESSEN-TIAL COLLECTION
   "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Name": "Essen-tial Collection!",
   "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Text": "Air essences come from flying enemies. Fire essences come from Volcano enemies. Earth essences come from mining. Water essences come from fishing.",
-  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.0.Text": "Collect 50 Earth Essences.",
-  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.1.Text": "Collect 50 Fire Essences.",
-  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.2.Text": "Collect 50 Water Essences.",
-  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.3.Text": "Collect 50 Air Essences.",
-  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.4.Text": "Collect 50 Druidic Essences.",
-  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.5.Text": "Collect 50 Void Essences.",
-  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.6.Text": "Collect 50 Solar Essences.",
-  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.7.Text": "Collect 50 Spiritual Essences.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.0.Text": "Deposit 50 Earth Essences to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.1.Text": "Deposit 50 Fire Essences to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.2.Text": "Deposit 50 Water Essences to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.3.Text": "Deposit 50 Air Essences to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.4.Text": "Deposit 50 Druidic Essences to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.5.Text": "Deposit 50 Void Essences to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.6.Text": "Deposit 50 Solar Essences to the chest in the Underforge.",
+  "Quests.CAGQuest.UntimedSpecialOrder.RoslinEssence.Objective.7.Text": "Deposit 50 Spiritual Essences to the chest in the Underforge.",
+
 
 /*
  ________      ________ _   _ _______ _____ 
