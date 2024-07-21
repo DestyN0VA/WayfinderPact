@@ -22,9 +22,6 @@ namespace NeverEndingAdventure
     {
         /********* Fields *********/
 
-        /// <summary>The Wear More Rings mod API.</summary>
-        private IMoreRingsApi WearMoreRings;
-
         /********* Accessors *********/
 
         /// <summary>The mod instance.</summary>
@@ -33,8 +30,6 @@ namespace NeverEndingAdventure
         /// <summary>The item ID for the Ring of Wide Nets.</summary>
         public static string MateoGuildBadge => "DN.SnS_adventureguildbadge";
         public static string MateoStygiumPendant => "DN.SnS_styguimpendant";
-
-        public bool HasWearMoreRings => this.WearMoreRings != null;
 
 
         public IMonitor Monitor;
