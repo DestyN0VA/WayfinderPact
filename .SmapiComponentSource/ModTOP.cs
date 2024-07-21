@@ -870,6 +870,8 @@ namespace SwordAndSorcerySMAPI
         {
             if (who != Game1.player || Game1.locationRequest != null)
                 return;
+            if (__instance.whichFloor.Value != "DN.SnS_TeleportCircleFloor")
+                return;
 
             var diff = ModSnS.State.LastWalkedTile - __instance.Tile.ToPoint();
             if (Math.Abs(diff.X) > 1 && Math.Abs(diff.Y) > 1)
