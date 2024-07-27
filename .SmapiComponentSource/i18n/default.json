@@ -220,5 +220,12 @@
   "witchcraft.spell.pocket-chest.name": "Pocket Chest",
   "witchcraft.spell.pocket-chest.description": "___",
   "witchcraft.spell.pocket-dimension.name": "Pocket Dimension",
-  "witchcraft.spell.pocket-dimension.description": "___"
+  "witchcraft.spell.pocket-dimension.description": "___",
+
+  "research.crafting-recipe": "Recipe: {{name}}",
+  "research.spell": "Spell: {{name}}",
+  "research.learn": "Learn",
+  "research.known": "You already know this.",
+  "research.known-parenthesis": "(Known)",
+  "research.missing-components": "You are missing research components."
 }
