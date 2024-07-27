@@ -5243,6 +5243,12 @@ ________      ________ _   _ _______ _____
   "witchcraft.wall-of-force.name": "Wall of Force",
   "witchcraft.wall-of-force.description": "Unreakable but disappears after a while",
 
+  "witchcraft.research.teleportation-circle.name": "Teleport Circle",
+  "witchcraft.research.teleportation-circle.description.0": "Grants a crafting recipe for a Teleport Circle, allowing you to teleport across the world to a matching one.^Start by placing four or more tables of any type within a 5x5 area around the teleportation circle.",
+  "witchcraft.research.teleportation-circle.description.2": "Place an item on each table. Also, place a chest, and put elemental essences in it. Four will be consumed for each teleportation.",
+  "witchcraft.research.teleportation-circle.description.4": "After setting up a matching configuration somewhere else in the world, step on the circle.",
+  "witchcraft.research.teleportation-circle.description.6": "You will be teleported to the other circle, using four elemental essences from the chest as fuel.",
+
   /*
   __  __ _____  _____  _____ ______ _      _               _   _ ______ ____  _    _  _____ 
  |  \/  |_   _|/ ____|/ ____|  ____| |    | |        /\   | \ | |  ____/ __ \| |  | |/ ____|

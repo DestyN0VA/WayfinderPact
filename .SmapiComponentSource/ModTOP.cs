@@ -37,6 +37,8 @@ namespace SwordAndSorcerySMAPI
         public static Texture2D SpellCircle;
         public static Texture2D Portal;
 
+        public static Dictionary<string, ResearchEntry> Research { get; private set; }
+
         public IMonitor Monitor;
         public IManifest ModManifest;
         public IModHelper Helper;
@@ -140,11 +142,19 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
             Helper.Events.GameLoop.UpdateTicked += GameLoop_UpdateTicked;
+            Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
             Helper.Events.Player.Warped += Player_Warped;
             Helper.Events.World.TerrainFeatureListChanged += World_TerrainFeatureListChanged;
             Helper.Events.World.FurnitureListChanged += World_FurnitureListChanged;
             Helper.Events.Input.ButtonPressed += Input_ButtonPressed;
             Helper.Events.Display.RenderedStep += Display_RenderedStep;
+            Helper.Events.Content.AssetRequested += Content_AssetRequested;
+            Helper.Events.Content.AssetsInvalidated += Content_AssetInvalidated;
+
+            Helper.ConsoleCommands.Add("sns_research", "Open the witchcraft research menu", (cmd, args) =>
+            {
+                Game1.activeClickableMenu = new ResearchMenu();
+            });
 
             SpaceEvents.OnItemEaten += SpaceEvents_OnItemEaten;
 
@@ -299,7 +309,26 @@ namespace SwordAndSorcerySMAPI
                 @event.CurrentCommand++;
             });
 
-            //RegisterSpells();
+            RegisterSpells();
+        }
+
+        private void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)
+        {
+            Research = Game1.content.Load<Dictionary<string, ResearchEntry>>("KCC.SnS/WitchcraftResearch");
+        }
+
+        private void Content_AssetInvalidated(object sender, StardewModdingAPI.Events.AssetsInvalidatedEventArgs e)
+        {
+            if (e.Names.Any( a => a.IsEquivalentTo("KCC.SnS/WitchcraftResearch")))
+                Research = Game1.content.Load<Dictionary<string, ResearchEntry>>("KCC.SnS/WitchcraftResearch");
+        }
+
+        private void Content_AssetRequested(object sender, StardewModdingAPI.Events.AssetRequestedEventArgs e)
+        {
+            if (e.NameWithoutLocale.IsEquivalentTo("KCC.SnS/WitchcraftResearch"))
+            {
+                e.LoadFrom(() => new Dictionary<string, ResearchEntry>(), StardewModdingAPI.Events.AssetLoadPriority.Low);
+            }
         }
 
         private void Display_RenderedStep(object sender, StardewModdingAPI.Events.RenderedStepEventArgs e)
@@ -625,7 +654,7 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 0,
                 ManaCost = () => 3,
-                KnownCondition = $"TRUE",
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Haste",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
@@ -633,14 +662,14 @@ namespace SwordAndSorcerySMAPI
                 }
             });
 
-            Ability.Abilities.Add("spell_statis", new Ability("spell_statis")
+            Ability.Abilities.Add("spell_stasis", new Ability("spell_stasis")
             {
                 Name = I18n.Witchcraft_Spell_Stasis_Name,
                 Description = I18n.Witchcraft_Spell_Stasis_Description,
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 4,
                 ManaCost = () => 10,
-                KnownCondition = $"TRUE",
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Stasis",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
@@ -655,7 +684,7 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 5,
                 ManaCost = () => 5,
-                KnownCondition = $"TRUE",
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_MageArmor",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
@@ -670,7 +699,7 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 6,
                 ManaCost = () => 5,
-                KnownCondition = $"TRUE",
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_WallOfForce",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
@@ -685,7 +714,7 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 13,
                 ManaCost = () => 10,
-                KnownCondition = $"TRUE",
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_RevivePlant",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
@@ -700,7 +729,7 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 14,
                 ManaCost = () => 15,
-                KnownCondition = $"TRUE",
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_MirrorImage",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
@@ -715,7 +744,7 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 16,
                 ManaCost = () => 7,
-                KnownCondition = $"TRUE",
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_GhostlyProjection",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 CanUse = () => !Game1.player.GetFarmerExtData().isGhost.Value,
                 Function = () =>
@@ -731,7 +760,7 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 18,
                 ManaCost = () => 0,
-                KnownCondition = $"TRUE",
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_PocketChest",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
@@ -746,7 +775,7 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 19,
                 ManaCost = () => 0,
-                KnownCondition = $"TRUE",
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_PocketDimension",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {

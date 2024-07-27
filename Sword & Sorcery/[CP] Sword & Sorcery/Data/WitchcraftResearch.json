@@ -1,0 +1,48 @@
+{
+    "Changes": [
+      {
+        "LogName": "Witchcraft Research Data",
+        "Action": "EditData",
+        "Target": "KCC.SnS/WitchcraftResearch",
+        "Entries":
+        {
+            "{{ModId}}_Recipe_TeleportationCircle":
+            {
+                "Type": "CraftingRecipe",
+                "Value": "{{ModID}}_TeleportCircle",
+                "Name": "{{i18n: witchcraft.research.teleportation-circle.name}}",
+                "DocPages": [
+                    {
+                        "Description": "{{i18n: witchcraft.research.teleportation-circle.description.0}}",
+                    },
+                    {
+                        "Image": "{{InternalAssetKey: Assets/WitchcraftResearch/TeleportationCircle1.png}}",
+                    },
+                    {
+                        "Description": "{{i18n: witchcraft.research.teleportation-circle.description.2}}",
+                    },
+                    {
+                        "Image": "{{InternalAssetKey: Assets/WitchcraftResearch/TeleportationCircle2.png}}",
+                    },
+                    {
+                        "Description": "{{i18n: witchcraft.research.teleportation-circle.description.4}}",
+                    },
+                    {
+                        "Image": "{{InternalAssetKey: Assets/WitchcraftResearch/TeleportationCircle3.png}}",
+                    },
+                    {
+                        "Image": "{{InternalAssetKey: Assets/WitchcraftResearch/TeleportationCircle4.png}}",
+                        "Description": "{{i18n: witchcraft.research.teleportation-circle.description.6}}",
+                    }
+                ],
+                "ResearchCosts": {
+                    "(O){{ModID}}_EarthEssence": 10,
+                    "(O){{ModID}}_AirEssence": 10,
+                    "(O){{ModID}}_FireEssence": 10,
+                    "(O){{ModID}}_WaterEssence": 10,
+                }
+            },
+        }
+      }
+    ]
+}
