@@ -5487,11 +5487,11 @@ ________      ________ _   _ _______ _____
   "config.ChocoboValleyMaterials.values.false": "false",
  
   "config.RSVMaterials.name": "RSVMaterials",
-  "config.RSVMaterials.description": "Toggle the use of Chocobo Valley's materials in a Special Order from Roslin.",
+  "config.RSVMaterials.description": "Toggle the use of Ridgeside Village's materials in a Special Order from Roslin.",
   "config.RSVMaterials.values.true": "true",
   "config.RSVMaterials.values.false": "false",
 
-  "config.AncientSweetTeaDifficulty.name": "RSVMaterials",
+  "config.AncientSweetTeaDifficulty.name": "AncientSweetTeaDifficulty",
   "config.AncientSweetTeaDifficulty.description": "Set how many Ancient Sweet Tea Leaves are required to craft the universally loved Ancient Sweet Tea recipe.",
   "config.AncientSweetTeaDifficulty.values.3": "3",
   "config.AncientSweetTeaDifficulty.values.7": "7",
