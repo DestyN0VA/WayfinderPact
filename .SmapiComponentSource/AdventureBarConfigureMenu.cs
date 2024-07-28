@@ -21,6 +21,8 @@ namespace SwordAndSorcerySMAPI
 
         private AdventureBar bar;
 
+        private Image grimoire;
+
         public AdventureBarConfigureMenu(bool everything = false)
             : base(Game1.uiViewport.Width / 2 - 432 / 2, Game1.uiViewport.Height / 2 - 432 / 2, 432, 432, true)
         {
@@ -61,6 +63,19 @@ namespace SwordAndSorcerySMAPI
                 container.AddChild(img);
                 abilImages.Add(img);
             }
+
+            if (Game1.player.eventsSeen.Contains(ModTOP.WitchcraftUnlock))
+            {
+                grimoire = new()
+                {
+                    LocalPosition = new(width + 32, 32),
+                    Texture = ModTOP.Grimoire,
+                    Scale = 4,
+                    Callback = (elem) => SetChildMenu(new ResearchMenu()),
+                };
+                container.AddChild(grimoire);
+            }
+
 
             bar = new AdventureBar(editing: true);
             bar.xPositionOnScreen = xPositionOnScreen - bar.width - 12;
@@ -108,6 +123,11 @@ namespace SwordAndSorcerySMAPI
             {
                 var tex = Game1.content.Load<Texture2D>(held.TexturePath);
                 b.Draw(tex, Game1.getMousePosition().ToVector2() + new Vector2( 32, 32 ), Game1.getSquareSourceRectForNonStandardTileSheet(tex, 16, 16, held.SpriteIndex), Color.White, 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, 1);
+            }
+
+            if (grimoire.Hover)
+            {
+                drawHoverText(b, I18n.OpenGrimoire(), Game1.dialogueFont);
             }
 
             drawMouse(b);

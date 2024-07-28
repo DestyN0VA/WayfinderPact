@@ -17,6 +17,7 @@ namespace SwordAndSorcerySMAPI
         {
             CraftingRecipe,
             Spell,
+            Other,
         }
 
         public ResearchType Type { get; set; }
@@ -71,9 +72,9 @@ namespace SwordAndSorcerySMAPI
 
             ResearchList = new Table()
             {
-                LocalPosition = new(24, 24),
+                LocalPosition = new(24, 45),
                 RowHeight = 85,
-                Size = new(width / 2 - 48 - 25, height - 48),
+                Size = new(width / 2 - 48 - 50, height - 48),
             };
             container.AddChild(ResearchList);
 
@@ -135,6 +136,7 @@ namespace SwordAndSorcerySMAPI
                 {
                     case ResearchEntry.ResearchType.CraftingRecipe: name = I18n.Research_CraftingRecipe(entry.Value.Name); break;
                     case ResearchEntry.ResearchType.Spell: name = I18n.Research_Spell(entry.Value.Name); break;
+                    case ResearchEntry.ResearchType.Other: name = I18n.Research_Other(entry.Value.Name); break;
                 }
 
                 row.AddChild(new Label()

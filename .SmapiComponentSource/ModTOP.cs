@@ -32,10 +32,13 @@ namespace SwordAndSorcerySMAPI
         public const string RequestTeleportInfoMessage = "KCC.SnS/RequestTeleportInfo";
         public const string TeleportInfoMessage = "KCC.SnS/TeleportInfo";
 
+        public const string WitchcraftUnlock = "SnS.Ch4.Dandelion.6";
+
         public static ModTOP Instance;
 
         public static Texture2D SpellCircle;
         public static Texture2D Portal;
+        public static Texture2D Grimoire;
 
         public static Dictionary<string, ResearchEntry> Research { get; private set; }
 
@@ -137,6 +140,7 @@ namespace SwordAndSorcerySMAPI
         {
             SpellCircle = Helper.ModContent.Load<Texture2D>("assets/spellcircle.png");
             Portal = Helper.ModContent.Load<Texture2D>("assets/return-portal.png");
+            Grimoire = Helper.ModContent.Load<Texture2D>("assets/grimoire.png");
 
             Helper.Events.Multiplayer.ModMessageReceived += Multiplayer_ModMessageReceived;
             Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
