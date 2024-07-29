@@ -125,7 +125,7 @@ namespace SwordAndSorcerySMAPI
                 b.Draw(tex, Game1.getMousePosition().ToVector2() + new Vector2( 32, 32 ), Game1.getSquareSourceRectForNonStandardTileSheet(tex, 16, 16, held.SpriteIndex), Color.White, 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, 1);
             }
 
-            if (grimoire.Hover)
+            if (grimoire?.Hover ?? false)
             {
                 drawHoverText(b, I18n.OpenGrimoire(), Game1.dialogueFont);
             }
