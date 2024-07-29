@@ -66,7 +66,7 @@
     {
       "LogName": "Sword & Sorcery - Data Includes",
       "Action": "Include",
-      "FromFile": "Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/GingerFermenter.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/WitchcraftResearch.json"
+      "FromFile": "Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/WitchcraftResearch.json"
     },
     {
       "LogName": "Sword & Sorcery - Shield Quest Include",
@@ -404,7 +404,7 @@
     "AllowValues": "true, false",
     "Default": "true",
     "AllowBlank": false,
-    "Description": "Toggle the use of Chocobo Valley's materials in a Special Order from Roslin.",
+    "Description": "Toggle the use of Ridgeside Village's materials in a Special Order from Roslin.",
     "Section": "Miscellaneous"
   },
     "Eli&DylanExtras": {
@@ -428,6 +428,13 @@
       "Description": "Excludes S&S items from Perfection tracking.",
       "Section": "Miscellaneous"
     },
+    "CasterType": { 
+    "AllowValues": "Witch, Wizard, Sorcerer, Sorceress, Magician, Warlock, Magus, Occultist, Spellbinder, Thaumaturgist, Druid, Alchemist, Alchahestrist, Bard",
+    "Default": "Sorcerer",
+    "AllowBlank": false,
+    "Description": "Changes what kind of caster The Farmer is referred to as.",
+    "Section": "Miscellaneous"
+  },
     "HectorHeterochromatic": {
       "AllowValues": "true, false",
       "Default": "false",

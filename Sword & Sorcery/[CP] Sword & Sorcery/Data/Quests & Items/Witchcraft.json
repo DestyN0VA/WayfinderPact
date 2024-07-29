@@ -130,7 +130,7 @@
           "FarmSpeedBuff": -1.0
         },
       }
-    }
+    },
     // CRAFTING RECIPES 
     {
       "Action": "EditData",

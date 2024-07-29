@@ -88,10 +88,53 @@
             "X": 16,
             "Y": 70
           },
-          "ExcludeFromNpcPathfinding": false,
+          "ExcludeFromNpcPathfinding": true,
           "ArtifactSpots": [],
-          "FishAreas": {},
-          "Fish": [],
+          "FishAreas": {
+            "ESDruidGrovePond": {
+              "DisplayName": "{{i18n:miscellaneous.mapname.ESDruidGrovePond}}",
+              "Position": null,
+              "CrabPotFishTypes": [],
+              "CrabPotJunkChance": 0.0
+            }
+          },
+          "Fish": [
+            {
+              "Id": "{{ModID}}_SalmonOfKnowledge",
+              "ItemId": "{{ModID}}_SalmonOfKnowledge",
+              "FishAreaID": "ESDruidGrovePond",
+              "Condition": "LOCATION_Season Here spring summer",
+              "Precedence": -500
+            },
+            {
+              "Id": "{{ModID}}_Fastitocalon",
+              "ItemId": "{{ModID}}_Fastitocalon",
+              "FishAreaID": "ESDruidGrovePond",
+              "Condition": "LOCATION_Season Here spring summer fall winter",
+              "Precedence": -500
+            },
+            {
+              "Id": "{{ModID}}_PallidSailfin",
+              "ItemId": "{{ModID}}_PallidSailfin",
+              "FishAreaID": "ESDruidGrovePond",
+              "Condition": "LOCATION_Season Here winter spring",
+              "Precedence": -500
+            },
+            {
+              "Id": "{{ModID}}_GiantDragonfish",
+              "ItemId": "{{ModID}}_GiantDragonfish",
+              "FishAreaID": "ESDruidGrovePond",
+              "Condition": "LOCATION_Season Here fall winter",
+              "Precedence": -500
+            },
+            {
+              "Id": "{{ModID}}_FiveLinedConstellationFish",
+              "ItemId": "{{ModID}}_FiveLinedConstellationFish",
+              "FishAreaID": "ESDruidGrovePond",
+              "Condition": "LOCATION_Season Here summer fall",
+              "Precedence": -500
+            },
+          ],
           "Forage": [],
           "CustomFields": {}
         }
@@ -573,8 +616,51 @@
           },
           "ExcludeFromNpcPathfinding": false,
           "ArtifactSpots": [],
-          "FishAreas": {},
-          "Fish": [],
+          "FishAreas": {
+            "ESPocketDimensionPond": {
+              "DisplayName": "{{i18n:miscellaneous.mapname.ESPocketDimensionPond}}",
+              "Position": null,
+              "CrabPotFishTypes": [],
+              "CrabPotJunkChance": 0.0
+            }
+          },
+          "Fish": [
+            {
+              "Id": "{{ModID}}_SalmonOfKnowledge",
+              "ItemId": "{{ModID}}_SalmonOfKnowledge",
+              "FishAreaID": "ESPocketDimensionPond",
+              "Condition": "LOCATION_Season Here spring summer",
+              "Precedence": -500
+            },
+            {
+              "Id": "{{ModID}}_Fastitocalon",
+              "ItemId": "{{ModID}}_Fastitocalon",
+              "FishAreaID": "ESPocketDimensionPond",
+              "Condition": "LOCATION_Season Here spring summer fall winter",
+              "Precedence": -500
+            },
+            {
+              "Id": "{{ModID}}_PallidSailfin",
+              "ItemId": "{{ModID}}_PallidSailfin",
+              "FishAreaID": "ESPocketDimensionPond",
+              "Condition": "LOCATION_Season Here winter spring",
+              "Precedence": -500
+            },
+            {
+              "Id": "{{ModID}}_GiantDragonfish",
+              "ItemId": "{{ModID}}_GiantDragonfish",
+              "FishAreaID": "ESPocketDimensionPond",
+              "Condition": "LOCATION_Season Here fall winter",
+              "Precedence": -500
+            },
+            {
+              "Id": "{{ModID}}_FiveLinedConstellationFish",
+              "ItemId": "{{ModID}}_FiveLinedConstellationFish",
+              "FishAreaID": "ESPocketDimensionPond",
+              "Condition": "LOCATION_Season Here summer fall",
+              "Precedence": -500
+            },
+          ],
           "Forage": [],
           "CustomFields": {}
         }

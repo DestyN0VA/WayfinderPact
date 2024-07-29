@@ -130,5 +130,10 @@
             "Target": "Characters/DandelionShield",
             "FromFile": "assets/TemporaryActors/Characters/DandelionShield.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Characters/SolomonGrimoire",
+            "FromFile": "assets/TemporaryActors/Characters/SolomonGrimoire.png"
+        },
     ]
 }
