@@ -5354,8 +5354,9 @@ ________      ________ _   _ _______ _____
   "miscellaneous.mapname.ESDruidTower": "Hector's Tower", //maddogchange,
   "miscellaneous.mapname.SolomonCavern": "Solomon's Cavern",
   "miscellaneous.mapname.PocketDimension": "Pocket Dimension",
-  "miscellaneous.mapname.ESDruidGrovePond": "The Druid's Grove",
+  "miscellaneous.mapname.ESPocketDimensionPond": "Pocket Dimension",
   "miscellaneous.mapname.ESDruidGrove": "The Druid's Grove",
+  "miscellaneous.mapname.ESDruidGrovePond": "The Druid's Grove",
 
   "machine.oldfashionedfermenter.name": "Old-Fashioned Fermenter", 
   "machine.oldfashionedfermenter.description": "A jar for controlled, non-alcholic fermentation for making Ginger Beer!",
