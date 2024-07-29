@@ -78,7 +78,7 @@
             "Action": "EditData",
             "Target": "Strings/Characters",
             "Entries": {
-                "MovieInvite.Spouse.Hector":"{{i18n:MovieInvite_Spouse_Hector}}",
+                "MovieInvite_Spouse_Hector":"{{i18n:MovieInvite_Spouse_Hector}}",
             }
         }
     ]

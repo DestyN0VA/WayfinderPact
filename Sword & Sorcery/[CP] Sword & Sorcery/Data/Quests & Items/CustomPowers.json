@@ -97,5 +97,22 @@
 				"HasFlag": "DandelionShieldPower"
 			  }
 		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Powers",
+			"Entries": {
+				"GrimoirePower": {
+					"DisplayName": "{{i18n: power.magicalgrimoire.name}}",
+					"Description": "{{i18n: power.magicalgrimoire.description}}",
+					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
+					"SpriteIndex": 98,
+					"UnlockedCondition": "PLAYER_HAS_MAIL Current MagicalGrimoirePower",
+					"Update": "OnTimeChange, OnLocationChange",
+				}
+			},
+			"When": {
+				"HasFlag": "MagicalGrimoirePower"
+			  }
+		},
 	]
 }

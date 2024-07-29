@@ -53,7 +53,7 @@
             "Action": "EditData",
             "Target": "Strings/Characters",
             "Entries": {
-                "MovieInvite.Spouse.Cirrus":"{{i18n:MovieInvite_Spouse_Cirrus}}",
+                "MovieInvite_Spouse_Cirrus":"{{i18n:MovieInvite_Spouse_Cirrus}}",
             }
         }
     ]

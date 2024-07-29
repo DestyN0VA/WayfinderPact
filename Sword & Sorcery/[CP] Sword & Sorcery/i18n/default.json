@@ -923,7 +923,7 @@
   "CFD.Mateo.ExtraDialogue_SummitEvent_closingmessage": "It's been a long road for you and Mateo...",
 
   // MOVIE INVITATION - SPOUSE 
-  "MovieInvite.Spouse.Mateo": "I'm always happy to see a flick with you, Sunshine.$76",
+  "MovieInvite_Spouse_Mateo": "I'm always happy to see a flick with you, Sunshine.$76",
 
   /*
   __  __          _____ _      
@@ -2378,7 +2378,7 @@ ________      ________ _   _ _______ _____
   "CFD.Hector.ExtraDialogue_SummitEvent_closingmessage": "It's been a long road for you and Biróg...",
 
   // MOVIE INVITATION - SPOUSE 
-  "MovieInvite.Spouse.Hector": "Sure! I'm always happy to spend time with you in a dark, cool place...$9",
+  "MovieInvite_Spouse_Hector": "Sure! I'm always happy to spend time with you in a dark, cool place...$9",
 
 
   /*
@@ -3593,7 +3593,7 @@ ________      ________ _   _ _______ _____
   // LUAU 
   "Festivals.Cirrus.summer11.False.1": "The music they're playing over the speakers right now is pretty cool, but how about we up the tempo?$1",
   "Festivals.Cirrus.summer11.False.2": "I'm a little concerned about the contents of the pot, and it seems like a few others are too. Oh well, good vibes only I guess.$17",
-  "Festivals.Cirrus.summer11.False.3": "Eloise and Biróg hanging out is so cute! It was so nice that {{HectorPN1}} found a family here.$17",
+  "Festivals.Cirrus.summer11.False.3": "Eloise and Biróg hanging out is so cute - like one, happy family!",
   "Festivals.Cirrus.summer11.True.1": "This is my favorite thing about living in The Valley. The sand, the surf, the music, the soup... And you, Rockstar!$4",
   "Festivals.Cirrus.summer11.True.2": "The sand makes me so sleepy - can you handle the sunscreen for me, so I don't burn?$4",
   "Festivals.Cirrus.summer11.True.3": "You look great in swimwear, @. Maybe you and I can go for a dip once everyone's cleared out.$17",
@@ -3730,7 +3730,7 @@ ________      ________ _   _ _______ _____
   "CFD.Cirrus.ExtraDialogue_SummitEvent_closingmessage": "It's been a long road for you and Cirrus...",
 
   // MOVIE INVITATION - SPOUSE 
-  "MovieInvite.Spouse.Cirrus": "Of course, Rockstar! I hope you picked something good. If not, I'm sure we can figure out something else to do in the dark.$24",
+  "MovieInvite_Spouse_Cirrus": "Of course, Rockstar! I hope you picked something good. If not, I'm sure we can figure out something else to do in the dark.$24",
 
 
   // CUSTOM WEDDING
@@ -4109,9 +4109,9 @@ ________      ________ _   _ _______ _____
   "Festivals.Roslin.summer11.3": "I'm only here because Solomon wants to experience human festivities.$1",
 
   // MOONLIGHT JELLIES
-  "Festivals.Roslin.MoonlightJelly.1": "Ooh, lots of magic in the air tonight.$7",
-  "Festivals.Roslin.MoonlightJelly.2": "Dandelion loves the Lunaloos...$3",
-  "Festivals.Roslin.MoonlightJelly.3": "Lunaloo jelly is a great spell component, you know.$1",
+  "Festivals.Roslin.summer28.1": "Ooh, lots of magic in the air tonight.$7",
+  "Festivals.Roslin.summer28.2": "Dandelion loves the Lunaloos...$3",
+  "Festivals.Roslin.summer28.3": "Lunaloo jelly is a great spell component, you know.$1",
 
   // SDV FAIR
   "Festivals.Roslin.fall16.1": "Good luck on the contest, @. Mayor Lewis will set you up with a win if he knows what's good for you.$7",
@@ -4576,9 +4576,9 @@ ________      ________ _   _ _______ _____
   "Festivals.Dandelion.summer11.3": "I love being at the beach. Maybe I can get some reps in while I'm here.$1",
 
   // MOONLIGHT JELLIES
-  "Festivals.Dandelion.MoonlightJelly.1": "I will never not be impressed by the Lunaloos.$4",
-  "Festivals.Dandelion.MoonlightJelly.2": "The only thing more beautiful than this festival, is Roslin.$4",
-  "Festivals.Dandelion.MoonlightJelly.3": "It doesn't matter if this is magic or science. It's just incredible.$4",
+  "Festivals.Dandelion.summer28.1": "I will never not be impressed by the Lunaloos.$4",
+  "Festivals.Dandelion.summer28.2": "The only thing more beautiful than this festival, is Roslin.$4",
+  "Festivals.Dandelion.summer28.3": "It doesn't matter if this is magic or science. It's just incredible.$4",
 
   // SDV FAIR
   "Festivals.Dandelion.fall16.1": "I will let Mateo continue to win the bell-ringing game. I think if I played, I'd break it.$1",
@@ -4974,6 +4974,16 @@ ________      ________ _   _ _______ _____
   "power.forgedd20.name": "Handmade D20",
   "power.forgedd20.description": "A gift from Mateo. Once a day, if you pass out with the D20 in your possession, you will revive with half of your max health.",
 
+  "power.mythiciridiumshield.name": "Mythic Iridium Shield",
+  "power.mythiciridiumshield.description": "Passed to you by Dandelion. Made by Mateo out of Iridium and other rare materials.",
+
+  "power.mythicorichalcumshield.name": "Mythic Orichalcum Shield",
+  "power.mythicorichalcumshield.description": "Passed to you by Dandelion. Made by Mateo out of Orichalcum and other rare materials.",
+
+  "power.magicalgrimoire.name": "Magical Grimoire",
+  "power.magicalgrimoire.description": "Bound by hand for you by Solomon. Use it to research new spells.",
+
+
   "magicitem.brokenshield.name": "Broken Argentis Shield",
   "magicitem.brokenshield.description": "Dandelion's well-worn shield. It's broken, but useable.",
 
@@ -5105,6 +5115,17 @@ ________      ________ _   _ _______ _____
 
   "magicitem.druidiceldermask.name": "Mask of the Thorned Circle Elder",
   "magicitem.druidiceldermask.description": "It's a very heavy, uncomfortable mask made out of wood and copper. However, you feel more connected to the earth with it in your possession.",
+
+  "fish.salmonofknowledge.name": "Salmon of Knowledge",
+  "fish.salmonofknowledge.description": "A wise fish once thought mythical.",
+  "fish.fastitocalon.name": "Fastitocalon",
+  "fish.fastitocalon.description": "A large turtle with a tree growing from it's back.",
+  "fish.pallidsailfin.name": "Pallid Sailfin",
+  "fish.pallidsailfin.description": "A fish from the abyss, with ghostly fins that resemble sails.",
+  "fish.giantdragonfish.name": "Giant Dragonfish",
+  "fish.giantdragonfish.description": "It lives only in the deepest waters of The Grove.",
+  "fish.fivelinedconstellationfish.name": "Five-Lined Constallation Fish",
+  "fish.fivelinedconstellationfish.description": "Brilliantly luminescent, and easily mistook for a jellyfish.",
 
   "food.verdantpotion.name": "Verdant Potion",
   "food.verdantpotion.description": "Tastes weirdly like the potion The Wizard gave you...",
@@ -5333,6 +5354,8 @@ ________      ________ _   _ _______ _____
   "miscellaneous.mapname.ESDruidTower": "Hector's Tower", //maddogchange,
   "miscellaneous.mapname.SolomonCavern": "Solomon's Cavern",
   "miscellaneous.mapname.PocketDimension": "Pocket Dimension",
+  "miscellaneous.mapname.ESDruidGrovePond": "The Druid's Grove",
+  "miscellaneous.mapname.ESDruidGrove": "The Druid's Grove",
 
   "machine.oldfashionedfermenter.name": "Old-Fashioned Fermenter", 
   "machine.oldfashionedfermenter.description": "A jar for controlled, non-alcholic fermentation for making Ginger Beer!",
@@ -5374,7 +5397,6 @@ ________      ________ _   _ _______ _____
   "config.MermaidPendantChoker.values.true": "true",
   "config.MermaidPendantChoker.values.false": "false",
 
-
   "config.MateoSpouseRoomConfig.name": "MateoSpouseRoomConfig",
   "config.MateoSpouseRoomConfig.description": "Adds a spouse room when married.",
   "config.MateoSpouseRoomConfig.values.true": "true",
@@ -5384,7 +5406,6 @@ ________      ________ _   _ _______ _____
   "config.MateoSpousePatioConfig.description": "Adds a spouse patio when married.",
   "config.MateoSpousePatioConfig.values.true": "true",
   "config.MateoSpousePatioConfig.values.false": "false",
-
 
   "config.HectorSpouseRoomConfig.name": "HectorSpouseRoomConfig",
   "config.HectorSpouseRoomConfig.description": "Adds a spouse room when married.",
@@ -5459,7 +5480,6 @@ ________      ________ _   _ _______ _____
   "config.CirrusSmokeyEye.values.true": "true",
   "config.CirrusSmokeyEye.values.false": "false",
 
-
   "config.section.Pronouns.name": "Pronouns",
   "config.section.Pronouns.description": "Pronoun configurations for players.",
   "config.section.Custom Kids.name": "Custom Kids",
@@ -5497,6 +5517,24 @@ ________      ________ _   _ _______ _____
   "config.AncientSweetTeaDifficulty.values.7": "7",
   "config.AncientSweetTeaDifficulty.values.14": "14",
   "config.AncientSweetTeaDifficulty.values.21": "21",
+
+  "config.CasterType.name": "CasterType",
+  "config.CasterType.description": "Changes what kind of caster The Farmer is referred to as.",
+  "config.Castertype.values.Witch": "Witch",
+  "config.Castertype.values.Wizard": "Wizard",
+  "config.Castertype.values.Sorcerer": "Sorcerer",
+  "config.Castertype.values.Sorceress": "Sorceress",
+  "config.Castertype.values.Magician": "Magician",
+  "config.Castertype.values.Warlock": "Warlock",
+  "config.Castertype.values.Magus": "Magus",
+  "config.Castertype.values.Occultist": "Occultist",
+  "config.Castertype.values.Spellbinder": "Spellbinder",
+  "config.Castertype.values.Thaumaturgist": "Thaumaturgist",
+  "config.Castertype.values.Druid": "Druid",
+  "config.Castertype.values.Alchemist": "Alchemist",
+  "config.Castertype.values.Alchahestrist": "Alchahestrist",
+  "config.Castertype.values.Bard": "Bard",
+
 
 
 }
