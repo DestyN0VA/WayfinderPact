@@ -99,11 +99,29 @@
             "When": { "MateoTrollHeritage": true }
         },
         {
-            "LogName": "Mateo's Troll Heritage Portrait Overlay - Armor",
+            "LogName": "Mateo's Troll Heritage Portrait Overlay Stage 1 - Armor",
             "Action": "EditImage",
             "Target": "Portraits/Armor_Mateo",
             "PatchMode":"Overlay",
-            "FromFile": "Assets/Portraits/Mateo/Armor_{{Horns}}_Overlay_Mateo.png",
+            "FromFile": "Assets/Portraits/Mateo/Armor_Horns1_Overlay_Mateo.png",
+            "Update": "OnLocationChange",
+            "When": { "MateoTrollHeritage": true, "Horns |contains=Horns1": true }
+        },
+        {
+            "LogName": "Mateo's Troll Heritage Portrait Overlay Other Stages - Armor",
+            "Action": "EditImage",
+            "Target": "Portraits/Armor_Mateo",
+            "PatchMode":"Overlay",
+            "FromFile": "Assets/Portraits/Mateo/{{Horns}}_Overlay_Mateo.png",
+            "Update": "OnLocationChange",
+            "When": { "MateoTrollHeritage": true, "Horns |contains=Horns1": false }
+        },
+        {
+            "LogName": "Mateo's Troll Heritage Portrait Overlay Googles Patch - Armor",
+            "Action": "EditImage",
+            "Target": "Portraits/Armor_Mateo",
+            "PatchMode":"Overlay",
+            "FromFile": "Assets/Portraits/Mateo/Armor_Goggles_Overlay_Mateo.png",
             "Update": "OnLocationChange",
             "When": { "MateoTrollHeritage": true }
         },
