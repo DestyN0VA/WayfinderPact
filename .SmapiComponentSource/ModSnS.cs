@@ -503,6 +503,8 @@ namespace SwordAndSorcerySMAPI
                 if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking")
                 {
                     var w = new Slingshot("DN.SnS_longlivetheking_gun");
+                    w.enchantments.Set(Game1.player.CurrentTool.enchantments);
+                    w.modData.Set(Game1.player.CurrentTool.modData.Pairs);
                     if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
                     {
                         w.attachments[0] = (StardewValley.Object) Game1.player.CurrentTool.attachments[0].getOne();
@@ -513,6 +515,8 @@ namespace SwordAndSorcerySMAPI
                 else if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking_gun")
                 {
                     var w = new MeleeWeapon("DN.SnS_longlivetheking");
+                    w.enchantments.Set(Game1.player.CurrentTool.enchantments);
+                    w.modData.Set(Game1.player.CurrentTool.modData.Pairs);
                     if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
                     {
                         w.attachments.SetCount(1);
