@@ -189,7 +189,7 @@
         "SnS.TriggerActions.RemoveMateoRomanticFlagIfNotDating": {
           "Id": "SnS.TriggerActions.RemoveMateoRomanticFlagIfNotDating",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_HAS_MAIL Current MateoRomanticFlag, !PLAYER_NPC_RELATIONSHIP Current Mateo Dating Engaged Married",
+          "Condition": "PLAYER_HAS_MAIL Current MateoRomanticFlag, !PLAYER_NPC_RELATIONSHIP Current Mateo Dating Engaged Married, PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.15",
           "Actions": [
             "RemoveMail Current MateoRomanticFlag all", //Technically C# component does this already, but doesn't account for divorce
           ],
