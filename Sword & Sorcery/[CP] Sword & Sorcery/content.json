@@ -572,7 +572,15 @@
       "Name": "TenHeartRivalHeartsToggle",
       "Value": "stopMusic/question fork0 \"Is there anything I can do to help you carry that weight?#Actually, there was something I wanted to talk to you about. (ROMANTIC)#Just keep being my friend, Mateo! That's the kind of support I need. (PLATONIC)\"/fork MateoRomantic",
       "When": {
-        "HasFlag |contains=RivalHearts_AideenMateo": false
+        "Query: {{HasFlag |contains=CirrusRomanticFlag}} OR {{HasFlag |contains=HectorRomanticFlag}} OR {{HasFlag |contains=RivalHearts_AideenMateo}}": "true"
+      }
+    },
+    {
+      "Name": "TenHeartRivalHeartsToggle",
+      "Value": "stopMusic/question fork0 \"Is there anything I can do to help you carry that weight?#Actually, there was something I wanted to talk to you about. (ROMANTIC)#Just keep being my friend, Mateo! That's the kind of support I need. (PLATONIC)\"/fork MateoRomantic",
+      "When": {
+        "HasMod |contains=EnderTedi.Polyamory": true,
+        "EnderTedi.Polyamory/HasMonogamousPartner": true
       }
     },
     {
@@ -1883,6 +1891,14 @@
       "Value": "quickQuestion It's just you and Cirrus in the Lion's Mane now. #Politely excuse yourself. (End the event.)#Hang out a little longer.(break)speak Cirrus \"Have a good night, @. Get home safe. You're an amazing friend.$23\"(break)speak Cirrus \"Oh! I have an idea, I've been working on some song lyrics I'd be happy to show you...$1\"",
       "When": {
         "Query: {{HasFlag |contains=MateoRomanticFlag}} OR {{HasFlag |contains=HectorRomanticFlag}}": "true",
+      }
+    },
+    {
+      "Name": "CirrusAlreadyDating",
+      "Value": "quickQuestion It's just you and Cirrus in the Lion's Mane now. #Politely excuse yourself. (End the event.)#Hang out a little longer.(break)speak Cirrus \"Have a good night, @. Get home safe. You're an amazing friend.$23\"(break)speak Cirrus \"Oh! I have an idea, I've been working on some song lyrics I'd be happy to show you...$1\"",
+      "When": {
+        "HasMod |contains=EnderTedi.Polyamory": true,
+        "EnderTedi.Polyamory/HasMonogamousPartner": true
       }
     }
   ]

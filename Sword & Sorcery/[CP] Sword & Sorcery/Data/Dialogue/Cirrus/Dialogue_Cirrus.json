@@ -166,7 +166,7 @@
         "GreenRainFinished": "{{i18n:Core.Cirrus.GreenRainFinished}}",
         "GreenRain_2": "{{i18n:Core.Cirrus.GreenRain2}}",
         // POLYAMORY DIALOGUE
-        "CantMarry_MarriedMonogamousNPC": "{{i18n:Core.Cirrus.MarriedMonogamousNPC}}"
+        "RejectMermaidPendant_IsPolyamorous_PlayerWithSomeoneMonogamous": "{{i18n:Core.Cirrus.MarriedMonogamousNPC}}"
       },
     },
     // ENGAGEMENT DIALOGUE

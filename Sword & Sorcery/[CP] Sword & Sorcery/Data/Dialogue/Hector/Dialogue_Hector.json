@@ -220,7 +220,7 @@
                 "GreenRainFinished": "{{i18n:Core.Hector.GreenRainFinished}}",
                 "GreenRain_2": "{{i18n:Core.Hector.GreenRain2}}",
                 // POLYAMORY DIALOGUE
-                "CantMarry_IsMonogamousNPC": "{{i18n:Core.Hector.MarriedMonogamousNPC}}"
+                "RejectMermaidPendant_IsMonogamous_PlayerWithOtherPeople": "{{i18n:Core.Hector.MarriedMonogamousNPC}}"
             }
         },
         // ENGAGEMENT DIALOGUE
