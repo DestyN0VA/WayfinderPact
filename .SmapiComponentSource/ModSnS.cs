@@ -476,7 +476,7 @@ namespace SwordAndSorcerySMAPI
         private void Input_ButtonPressed(object sender, StardewModdingAPI.Events.ButtonPressedEventArgs e)
         {
             if (e.Button.IsActionButton() && Game1.currentLocation is Farm farm &&
-                e.Cursor.Tile == farm.GetGrandpaShrinePosition().ToVector2() &&
+                e.Cursor.GrabTile == farm.GetGrandpaShrinePosition().ToVector2() &&
                 farm.grandpaScore.Value == 4 && !Game1.player.GetFarmerExtData().hasTakenLoreWeapon.Value)
             {
                 Game1.player.addItemByMenuIfNecessaryElseHoldUp(new MeleeWeapon("DN.SnS_longlivetheking"));
