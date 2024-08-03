@@ -135,5 +135,10 @@
             "Target": "Characters/SolomonGrimoire",
             "FromFile": "assets/TemporaryActors/Characters/SolomonGrimoire.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Characters/Duskspire",
+            "FromFile": "assets/TemporaryActors/Characters/Duskspire.png"
+        },
     ]
 }

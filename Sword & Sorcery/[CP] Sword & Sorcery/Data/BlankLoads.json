@@ -59,9 +59,7 @@
       "Action": "Load",
       "Target": "data/events/AdventureGuild",
       "FromFile": "assets/blank.json",
-      "When": {
-        "HasMod: |contains=FlashShifter.StardewValleyExpandedCP, Wolf.Marlon, supert.adventureguildexpanded, Rafseazz.RSVCP, BlatantDecoy.BugmeatRecipes-CP, purrplingcat.npcadventure, SiTheGreat.AdventurerAbigail, MadDog.HashtagBearFam": false
-      }
+      "Priority": "Low",
     },
     {
       "LogName": "Van Events Blank",
@@ -79,6 +77,12 @@
       "LogName": "Lion's Mane Events Blank",
       "Action": "Load",
       "Target": "data/events/EastScarp_Underforge",
+      "FromFile": "assets/blank.json"
+    },
+    {
+      "LogName": "Duskspire Lair Events Blank",
+      "Action": "Load",
+      "Target": "data/events/EastScarp_DuskspireLair",
       "FromFile": "assets/blank.json"
     }
   ]
