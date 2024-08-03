@@ -57,8 +57,6 @@ namespace SwordAndSorcerySMAPI
             Event = @event;
             Context = context;
 
-            Console.WriteLine("meow");
-
             BossSprite = Game1.content.Load<Texture2D>("Characters/Monsters/Angry Roger");
 
             CurrentTurn = @event.actors.First();
@@ -77,6 +75,12 @@ namespace SwordAndSorcerySMAPI
                 { "Cirrus", new BattlerInfo() { Defense = 0, Mana = 50, MaxMana = 50 } },
                 { "Roslin", new BattlerInfo() { Defense = 0, Mana = 100, MaxMana = 100 } },
             };
+
+            foreach (var actor in @event.actors.ToList())
+            {
+                if (!BattlerData.ContainsKey(actor.Name) && actor.Name != "Duskspire")
+                    @event.actors.Remove(actor);
+            }
         }
 
         public string minigameId()
@@ -135,10 +139,12 @@ namespace SwordAndSorcerySMAPI
 
             b.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
 
+            /*
             Vector2 bossPos = new Vector2(18, 13);
             Rectangle bossSrc = new Rectangle(0, 96, 32, 32);
             bossPos *= Game1.tileSize;
             b.Draw(BossSprite, Game1.GlobalToLocal(bossPos - new Vector2((bossSrc.Width - 16) / 2, bossSrc.Height - 16) * Game1.pixelZoom), bossSrc, Color.White, 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, bossPos.Y / 10000f);
+            */
 
             if (CurrentTurn != null)
             {

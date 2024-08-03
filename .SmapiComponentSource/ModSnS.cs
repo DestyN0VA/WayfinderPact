@@ -547,6 +547,7 @@ namespace SwordAndSorcerySMAPI
 
         private void Content_AssetRequested(object sender, StardewModdingAPI.Events.AssetRequestedEventArgs e)
         {
+            /*
             if (e.NameWithoutLocale.IsEquivalentTo("Data/ObjectInformation"))
             {
                 e.Edit((asset) =>
@@ -659,6 +660,7 @@ namespace SwordAndSorcerySMAPI
                     return songs;
                 }, StardewModdingAPI.Events.AssetLoadPriority.Medium);
             }
+            */
         }
 
         private void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)
