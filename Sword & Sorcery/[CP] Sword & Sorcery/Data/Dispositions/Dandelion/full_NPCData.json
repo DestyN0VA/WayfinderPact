@@ -115,7 +115,14 @@
                             "Weight": 1,
                             "Portrait": "Portraits/winter_Dandelion",
                             "Sprite": "Characters/winter_Dandelion"
-                        }
+                        },
+                        {
+                            "ID": "Armor",
+                            "Condition": "Any \"EVENT_ID SnS.Ch4.Finale\" \"EVENT_ID SnS.Ch4.Intermission.Mateo\" \"EVENT_ID SnS.Ch4.Intermission.Hector\" \"EVENT_ID SnS.Ch4.Intermission.Cirrus\" \"EVENT_ID SnS.Ch4.Intermission.SoloFarmer\" \"EVENT_ID SnS.Ch4.Victory.Mateo\" \"EVENT_ID SnS.Ch4.Victory.Hector\" \"EVENT_ID SnS.Ch4.Victory.Cirrus\"",
+                            "Portrait": "Portraits/Dandelion_armored",
+                            "Sprite": "Characters/Dandelion_armored",
+                            "Precedence": -20
+                        },
                     ]
                 }
             }

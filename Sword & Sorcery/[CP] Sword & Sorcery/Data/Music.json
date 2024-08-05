@@ -156,6 +156,34 @@
                 }
             }
         },
+        {
+            "LogName": "So Much for Stardust Theme",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.SMFS": {
+                    "ID": "SnS.SMFS",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/SMFSTheme.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
+        {
+            "LogName": "So Much for Stardust Theme Reprised",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.SMFSR": {
+                    "ID": "SnS.SMFSR",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/SMFSThemeReprise.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
 
         // SOUNDS
         {
@@ -280,6 +308,26 @@
             "Entries": {
                 "SnS.VulnerableTheme": {
                     "Name": "S&S: Vulnerable Theme (Dearly Beloved)",
+                    "Available": null
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "SnS.SMFS": {
+                    "Name": "S&S: So Much For Stardust (Love from the Other Side)",
+                    "Available": null
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "SnS.SMFSR": {
+                    "Name": "S&S: So Much For Stardust Reprised (Love from the Other Side)",
                     "Available": null
                 }
             }

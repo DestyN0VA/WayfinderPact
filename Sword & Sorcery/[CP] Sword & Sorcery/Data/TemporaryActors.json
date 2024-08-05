@@ -140,5 +140,15 @@
             "Target": "Characters/Duskspire",
             "FromFile": "assets/TemporaryActors/Characters/Duskspire.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Characters/OneForAll",
+            "FromFile": "assets/TemporaryActors/Characters/OneForAll.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/RockPile",
+            "FromFile": "assets/TemporaryActors/Characters/RockPile.png"
+        },
     ]
 }
