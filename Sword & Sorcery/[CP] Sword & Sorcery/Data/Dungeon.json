@@ -1,0 +1,465 @@
+{
+    "Changes": [
+        {
+            "LogName": "Deep Dark Dungeon Maps",
+            "Action": "Load",
+            "Target": "Maps/DeepDark1, Maps/DeepDark2, Maps/DeepDark3, Maps/DeepDark4, Maps/DeepDark5, Maps/DeepDark6, Maps/DeepDark7, Maps/DeepDark8, Maps/DeepDark9, Maps/DeepDark10, Maps/DeepDark11, Maps/DeepDark12, Maps/DeepDark13, Maps/DeepDark14, Maps/DeepDark15, Maps/DeepDark16, Maps/DeepDark17, Maps/DeepDark18, Maps/DeepDark19, Maps/DeepDark20, Maps/DeepDarkMushroomEntrance",
+            "FromFile": "Assets/Maps/DeepDark/Floors/{{TargetWithoutPath}}.tmx"
+        },
+        {
+            "LogName": "Deep Dark Location (Dungeon Placeholder)",
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+                "EastScarp_DeepDark": {
+                    "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv0}}",
+                    "ExcludeFromNpcPathfinding": true,
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                    "CustomFields": {}
+                }
+            }
+        },
+        {
+            "LogName": "Deep Dark Stones",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "{{ModID}}_StygiumOreStone": {
+                    "Name": "Stone",
+                    "DisplayName": "Deep Dark Ore",
+                    "Description": "You shouldn't have this",
+                    "Type": "Litter",
+                    "Category": -999,
+                    "Price": 0,
+                    "Texture": "{{InternalAssetKey: Assets/Maps/DeepDark-rocks.png}}",
+                    "SpriteIndex": 35,
+                    "Edibility": -300,
+                },
+            }
+        },
+        {
+            "LogName": "Deep Dark Spawnable Definitions",
+            "Action": "EditData",
+            "Target": "spacechase0.SpaceCore/SpawnableDefinitions",
+            "Entries": {
+                // Minables
+                "{{ModID}}_SpawnDeepDark_Minable_StygiumOre": {
+                    "Type": "Minable",
+                    "MinableTool": "Pickaxe",
+                    "MinableObjectId": "{{ModID}}_StygiumOreStone",
+                    "MineableHealth": 32,
+                    "MinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)0" ,// TODO: Replace with stygium ore
+                                    "MinStack": 1,
+                                    "MaxStack": 3,
+                                }
+                            }
+                        ]
+                    ],
+                    "MinableExperienceGranted": 23,
+                },
+                "{{ModID}}_SpawnDeepDark_Minable_Stone1": {
+                    "Type": "Minable",
+                    "MinableTool": "Pickaxe",
+                    "MinableObjectId": "845",
+                    "MineableHealth": 9,
+                    "MinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)390",
+                                    "MinStack": 1,
+                                    "MaxStack": 3,
+                                }
+                            }
+                        ]
+                    ],
+                    "MinableExperienceGranted": 3,
+                },
+                "{{ModID}}_SpawnDeepDark_Minable_Stone2": {
+                    "Type": "Minable",
+                    "MinableTool": "Pickaxe",
+                    "MinableObjectId": "847",
+                    "MineableHealth": 9,
+                    "MinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)390",
+                                    "MinStack": 1,
+                                    "MaxStack": 3,
+                                }
+                            }
+                        ]
+                    ],
+                    "MinableExperienceGranted": 3,
+                },
+                // Large Minables
+                "{{ModID}}_SpawnDeepDark_LargeMinable_BigStone": {
+                    "Type": "LargeMinable",
+                    "LargeMinableTool": "Pickaxe",
+                    "LargeMinableHealth": 15,
+                    "LargeMinableSizeX": 2,
+                    "LargeMinableSizeY": 2,
+                    "LargeMinableTexture": "{{InternalAssetKey: Assets/Maps/DeepDark-rocks.png}}",
+                    "LargeMinableSpriteIndex": 2,
+                    "LargeMinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)390",
+                                    "MinStack": 7,
+                                    "MaxStack": 25
+                                }
+                            }
+                        ],
+                    ],
+                    "LargeMinableExperienceGranted": 10,
+                },
+                // Monsters
+                "{{ModID}}_SpawnDeepDark_Monster_RockCrab": {
+                    "Type": "Monster",
+                    "MonsterType": "RockCrab",
+                    "MonsterName": null, // TODO: Add entry to Data/Monsters with stronger stats
+                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium Blue Crab.png}}",
+                    "MonsterAdditionalData": {}
+                },
+                "{{ModID}}_SpawnDeepDark_Monster_Skeleton": {
+                    "Type": "Monster",
+                    "MonsterType": "Skeleton",
+                    "MonsterName": null, // TODO: Add entry to Data/Monsters with stronger stats
+                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium_skeleton.png}}",
+                    "MonsterAdditionalData": {}
+                },
+                "{{ModID}}_SpawnDeepDark_Monster_Skeleton_Rare": {
+                    "Type": "Monster",
+                    "MonsterType": "Skeleton",
+                    "MonsterName": null, // TODO: Add entry to Data/Monsters with stronger stats
+                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium_skeleton_partyhat.png}}",
+                    "MonsterAdditionalData": {}
+                },
+                "{{ModID}}_SpawnDeepDark_Monster_Dino": {
+                    "Type": "Monster",
+                    "MonsterType": "DinoMonster",
+                    "MonsterName": null, // TODO: Add entry to Data/Monsters with stronger stats
+                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium Rex.png}}",
+                    "MonsterAdditionalData": {}
+                },
+                "{{ModID}}_SpawnDeepDark_Monster_Golem": {
+                    "Type": "Monster",
+                    "MonsterType": "RockGolem",
+                    "MonsterName": null, // TODO: Add entry to Data/Monsters with stronger stats
+                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium Golem.png}}",
+                    "MonsterAdditionalData": {}
+                },
+                "{{ModID}}_SpawnDeepDark_Monster_Golem_Blue": {
+                    "Type": "Monster",
+                    "MonsterType": "RockGolem",
+                    "MonsterName": null, // TODO: Add entry to Data/Monsters with stronger stats
+                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium Golem Blue.png}}",
+                    "MonsterAdditionalData": {}
+                },
+                "{{ModID}}_SpawnDeepDark_Monster_Bat": {
+                    "Type": "Monster",
+                    "MonsterType": "Bat",
+                    "MonsterName": null, // TODO: Add entry to Data/Monsters with stronger stats
+                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium Bat.png}}",
+                    "MonsterAdditionalData": {}
+                },
+                "{{ModID}}_SpawnDeepDark_Monster_Skeleton_Miner": {
+                    "Type": "Monster",
+                    "MonsterType": "Skeleton",
+                    "MonsterName": null, // TODO: Add entry to Data/Monsters with stronger stats
+                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Skeleton_Miner.png}}",
+                    "MonsterAdditionalData": {}
+                },
+                "{{ModID}}_SpawnDeepDark_Monster_MetalHead": {
+                    "Type": "Monster",
+                    "MonsterType": "MetalHead",
+                    "MonsterName": null, // TODO: Add entry to Data/Monsters with stronger stats
+                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium Metal Head.png}}",
+                    "MonsterAdditionalData": {}
+                },
+                "{{ModID}}_SpawnDeepDark_Monster_Bat_HauntedSkull": {
+                    "Type": "Monster",
+                    "MonsterType": "Bat",
+                    "MonsterName": null, // TODO: Add entry to Data/Monsters with stronger stats
+                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Haunted Skull_dangerous.png}}",
+                    "MonsterAdditionalData": {}
+                },
+                "{{ModID}}_SpawnDeepDark_Monster_RockCrab_Mushroom": {
+                    "Type": "Monster",
+                    "MonsterType": "RockCrab",
+                    "MonsterName": null, // TODO: Add entry to Data/Monsters with stronger stats
+                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/False Mushroom.png}}",
+                    "MonsterAdditionalData": {}
+                },
+                "{{ModID}}_SpawnDeepDark_Monster_Skeleton_MinerMage": {
+                    "Type": "Monster",
+                    "MonsterType": "Skeleton",
+                    "MonsterName": null, // TODO: Add entry to Data/Monsters with stronger stats
+                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Skeleton_Miner_Mage.png}}",
+                    "MonsterAdditionalData": { "IsMage": true }
+                },
+                "{{ModID}}_SpawnDeepDark_Monster_Serpent": {
+                    "Type": "Monster",
+                    "MonsterType": "Serpent",
+                    "MonsterName": null, // TODO: Add entry to Data/Monsters with stronger stats
+                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium Serpent.png}}",
+                    //"MonsterAdditionalData": { "SegmentCount": 4 }
+                },
+            }
+        },
+        {
+            "LogName": "Deep Dark Spawning Groups",
+            "Action": "EditData",
+            "Target": "spacechase0.SpaceCore/SpawningGroups",
+            "Entries": {
+                "{{ModID}}_DeepDarkSpawns_Common": {
+                    "SpawnablesToSpawn": [
+                        {
+                            "SpawnableIds": [
+                                {
+                                    "Weight": 0.2,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Minable_StygiumOre"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Minable_Stone2"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Minable_Stone1"
+                                },
+                            ],
+                            "Minimum": 12,
+                            "Maximum": 34,
+                        },
+                        {
+                            "SpawnableIds": [
+                                {
+                                    "Weight": 0.1,
+                                    "Value": "{{ModID}}_SpawnDeepDark_LargeMinable_BigStone"
+                                },
+                            ],
+                            "Minimum": -3, // Trick to make none spawning more common
+                            "Maximum": 2,
+                        }
+                    ]
+                },
+                "{{ModID}}_DeepDarkSpawns_Dark": {
+                    "SpawnablesToSpawn": [
+                        {
+                            "SpawnableIds": [
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_RockCrab"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton"
+                                },
+                                {
+                                    "Weight": 0.05,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton_Rare"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Dino"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Golem"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Golem_Blue"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Golem_Blue"
+                                },
+                                {
+                                    "Weight": 3.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Bat"
+                                },
+                                {
+                                    "Weight": 3.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton_Miner"
+                                },
+                                {
+                                    "Weight": 3.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_MetalHead"
+                                }
+                            ],
+                            "Minimum": 5,
+                            "Maximum": 12,
+                        },
+                    ]
+                },
+                "{{ModID}}_DeepDarkSpawns_Mushrooms": {
+                    "SpawnablesToSpawn": [
+                        {
+                            "SpawnableIds": [
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_RockCrab"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton"
+                                },
+                                {
+                                    "Weight": 0.05,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton_Rare"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Dino"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Golem"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Golem_Blue"
+                                },
+                                {
+                                    "Weight": 3.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Bat_HauntedSkull"
+                                },
+                                {
+                                    "Weight": 3.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_RockCrab_Mushroom"
+                                },
+                                {
+                                    "Weight": 3.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton_MinerMage"
+                                },
+                                {
+                                    "Weight": 3.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Serpent"
+                                }
+                            ],
+                            "Minimum": 6,
+                            "Maximum": 15,
+                        },
+                    ]
+                }
+            }
+        },
+        {
+            "LogName": "Deep Dark Spawning Trigger Actions",
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "{{ModID}}_SpawnDeepDarkStuff_Dark": {
+                    "Id": "{{ModID}}_SpawnDeepDarkStuff_Dark",
+                    "Trigger": "Manual",
+                    "MarkActionApplied": false, // Important to make sure this will happen every time you go to the level
+                    "HostOnly": true, // Important for multiplayer support
+                    "Actions": [
+                        "spacechase0.SpaceCore_TriggerSpawnGroup {{ModID}}_DeepDarkSpawns_Common Target",
+                        "spacechase0.SpaceCore_TriggerSpawnGroup {{ModID}}_DeepDarkSpawns_Dark Target"
+                    ]
+                },
+                "{{ModID}}_SpawnDeepDarkStuff_Mushrooms": {
+                    "Id": "{{ModID}}_SpawnDeepDarkStuff_Mushrooms",
+                    "Trigger": "Manual",
+                    "MarkActionApplied": false, // Important to make sure this will happen every time you go to the level
+                    "HostOnly": true, // Important for multiplayer support
+                    "Actions": [
+                        "spacechase0.SpaceCore_TriggerSpawnGroup {{ModID}}_DeepDarkSpawns_Common Target",
+                        "spacechase0.SpaceCore_TriggerSpawnGroup {{ModID}}_DeepDarkSpawns_Mushrooms Target"
+                    ]
+                }
+            }
+        },
+        {
+            "LogName": "Deep Dark Dungeon Data",
+            "Action": "EditData",
+            "Target": "spacechase0.SpaceCore/Dungeons",
+            "Entries": {
+                "{{ModID}}_DeepDark": {
+                    "Regions": {
+                        "Dark": {
+                            "LevelRange": { "Begin": 1, "End": 9 },
+                            "MapPool": [
+                                { "Weight": 1.0, "Value": "Maps/DeepDark1" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark2" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark3" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark4" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark6" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark7" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark8" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark9" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark10" },
+                            ],
+                            "TriggerActionsOnEntry": [
+                                "{{ModID}}_SpawnDeepDarkStuff_Dark",
+                            ],
+                            "LocationDataEntry": "EastScarp_DeepDark",
+                        },
+                        "DarkMushroomTransition": {
+                            "LevelRange": { "Begin": 10, "End": 10 },
+                            "MapPool": [
+                                { "Weight": 1.0, "Value": "Maps/DeepDarkMushroomEntrance" },
+                            ],
+                            "TriggerActionsOnEntry": [
+                                "{{ModID}}_SpawnDeepDarkStuff_Mushroom",
+                            ],
+                            "LocationDataEntry": "EastScarp_DeepDark",
+                        },
+                        "Mushrooms": {
+                            "LevelRange": { "Begin": 11, "End": 20 },
+                            "MapPool": [
+                                { "Weight": 1.0, "Value": "Maps/DeepDark11" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark12" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark13" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark14" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark15" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark16" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark17" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark18" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark19" },
+                                { "Weight": 1.0, "Value": "Maps/DeepDark20" },
+                            ],
+                            "TriggerActionsOnEntry": [
+                                "{{ModID}}_SpawnDeepDarkStuff_Mushrooms",
+                            ],
+                            "LocationDataEntry": "EastScarp_DeepDark",
+                        },
+                        "DuskspireLairEntrance": {
+                            "LevelRange": { "Begin": 21, "End": 21 },
+                            "MapPool": [
+                                { "Weight": 1.0, "Value": "Maps/DeepDark5" },
+                            ],
+                            "TriggerActionsOnEntry": [
+                                "{{ModID}}_SpawnDeepDarkStuff_Dark",
+                            ],
+                            "LocationDataEntry": "EastScarp_DeepDark",
+                        },
+                    },
+                    "LadderExitLocation": "EastScarp_DeepDarkEntrance",
+                    "LadderExitTile": "17, 8",
+                    "ElevatorExitLocation": "EastScarp_DeepDarkEntrance",
+                    "ElevatorExitTile": "16, 8",
+                    "FloorsWithElevator": [ 5, 10, 15, 20 ],
+                    "SpawnsLadders": false,
+                    "SpawnsMineshafts": false,
+                }
+            }
+        }
+    ]
+}

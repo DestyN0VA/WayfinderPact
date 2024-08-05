@@ -2,7 +2,7 @@
   "Changes": [
     {
       "Action": "Load",
-      "Target": "Maps/EastScarp_MateoHome, Maps/EastScarp_CoastalGuild, Maps/EastScarp_DruidTower, Maps/EastScarp_DruidGrove, Maps/EastScarp_RiverStage1, Maps/EastScarp_RiverStage2, Maps/EastScarp_RiverStage3, Maps/EastScarp_RiverStage4, Maps/EastScarp_DateMine, Maps/EastScarp_LavaMine, Maps/EastScarp_IntroMine, Maps/EastScarp_HectorForest, Maps/EastScarp_VanInterior, Maps/EastScarp_LionsMane, Maps/EastScarp_Planetarium, Maps/EastScarp_Underforge, Maps/EastScarp_DeepDarkLv0, Maps/EastScarp_DeepDarkLv1, Maps/EastScarp_DeepDarkLv2, Maps/EastScarp_DeepDarkLv3, Maps/EastScarp_DeepDarkLv4, Maps/EastScarp_DeepDarkLv5, Maps/EastScarp_DuskspireLair, Maps/SolomonMagicalCavern, Maps/PocketDimension1, Maps/PocketDimension2, Maps/PocketDimension3, Maps/PocketDimension4",
+      "Target": "Maps/EastScarp_MateoHome, Maps/EastScarp_CoastalGuild, Maps/EastScarp_DruidTower, Maps/EastScarp_DruidGrove, Maps/EastScarp_RiverStage1, Maps/EastScarp_RiverStage2, Maps/EastScarp_RiverStage3, Maps/EastScarp_RiverStage4, Maps/EastScarp_DateMine, Maps/EastScarp_LavaMine, Maps/EastScarp_IntroMine, Maps/EastScarp_HectorForest, Maps/EastScarp_VanInterior, Maps/EastScarp_LionsMane, Maps/EastScarp_Planetarium, Maps/EastScarp_Underforge, Maps/EastScarp_DeepDarkEntrance, Maps/EastScarp_DuskspireLair, Maps/SolomonMagicalCavern, Maps/PocketDimension1, Maps/PocketDimension2, Maps/PocketDimension3, Maps/PocketDimension4",
       "FromFile": "Assets/Maps/{{TargetWithoutPath}}.tmx"
     },
     {
@@ -417,133 +417,18 @@
       }
     },
     {
-      "LogName": "Deep Dark Lv 0",
+      "LogName": "Deep Dark Entrance",
       "Action": "EditData",
       "Target": "Data/Locations",
       "Entries": {
-        "EastScarp_DeepDarkLv0": {
+        "EastScarp_DeepDarkEntrance": {
           "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv0}}",
           "CreateOnLoad": {
-            "MapPath": "Maps/EastScarp_DeepDarkLv0"
-          },
-          "DefaultArrivalTile": {
-            "X": 9,
-            "Y": 19
-          },
-          "ExcludeFromNpcPathfinding": true,
-          "ArtifactSpots": [],
-          "FishAreas": {},
-          "Fish": [],
-          "Forage": [],
-          "CustomFields": {}
-        }
-      }
-    },
-    {
-      "LogName": "Deep Dark Lv 1",
-      "Action": "EditData",
-      "Target": "Data/Locations",
-      "Entries": {
-        "EastScarp_DeepDarkLv1": {
-          "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv1}}",
-          "CreateOnLoad": {
-            "MapPath": "Maps/EastScarp_DeepDarkLv1"
-          },
-          "DefaultArrivalTile": {
-            "X": 5,
-            "Y": 9
-          },
-          "ExcludeFromNpcPathfinding": true,
-          "ArtifactSpots": [],
-          "FishAreas": {},
-          "Fish": [],
-          "Forage": [],
-          "CustomFields": {}
-        }
-      }
-    },
-    {
-      "LogName": "Deep Dark Lv 2",
-      "Action": "EditData",
-      "Target": "Data/Locations",
-      "Entries": {
-        "EastScarp_DeepDarkLv2": {
-          "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv2}}",
-          "CreateOnLoad": {
-            "MapPath": "Maps/EastScarp_DeepDarkLv2"
-          },
-          "DefaultArrivalTile": {
-            "X": 21,
-            "Y": 31
-          },
-          "ExcludeFromNpcPathfinding": true,
-          "ArtifactSpots": [],
-          "FishAreas": {},
-          "Fish": [],
-          "Forage": [],
-          "CustomFields": {}
-        }
-      }
-    },
-    {
-      "LogName": "Deep Dark Lv 3",
-      "Action": "EditData",
-      "Target": "Data/Locations",
-      "Entries": {
-        "EastScarp_DeepDarkLv3": {
-          "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv3}}",
-          "CreateOnLoad": {
-            "MapPath": "Maps/EastScarp_DeepDarkLv3"
-          },
-          "DefaultArrivalTile": {
-            "X": 25,
-            "Y": 20
-          },
-          "ExcludeFromNpcPathfinding": true,
-          "ArtifactSpots": [],
-          "FishAreas": {},
-          "Fish": [],
-          "Forage": [],
-          "CustomFields": {}
-        }
-      }
-    },
-    {
-      "LogName": "Deep Dark Lv 4",
-      "Action": "EditData",
-      "Target": "Data/Locations",
-      "Entries": {
-        "EastScarp_DeepDarkLv4": {
-          "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv4}}",
-          "CreateOnLoad": {
-            "MapPath": "Maps/EastScarp_DeepDarkLv4"
+            "MapPath": "Maps/EastScarp_DeepDarkEntrance"
           },
           "DefaultArrivalTile": {
             "X": 8,
-            "Y": 5
-          },
-          "ExcludeFromNpcPathfinding": true,
-          "ArtifactSpots": [],
-          "FishAreas": {},
-          "Fish": [],
-          "Forage": [],
-          "CustomFields": {}
-        }
-      }
-    },
-    {
-      "LogName": "Deep Dark Lv 5",
-      "Action": "EditData",
-      "Target": "Data/Locations",
-      "Entries": {
-        "EastScarp_DeepDarkLv5": {
-          "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv5}}",
-          "CreateOnLoad": {
-            "MapPath": "Maps/EastScarp_DeepDarkLv5"
-          },
-          "DefaultArrivalTile": {
-            "X": 10,
-            "Y": 9
+            "Y": 15
           },
           "ExcludeFromNpcPathfinding": true,
           "ArtifactSpots": [],
