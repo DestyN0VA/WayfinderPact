@@ -1900,6 +1900,20 @@
         "HasMod |contains=EnderTedi.Polyamory": true,
         "EnderTedi.Polyamory/HasMonogamousPartner": true
       }
-    }
+    },
+    {
+      "Name": "MateoWyattActor",
+      "Value": "MateoWyatt.png",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch3.Mateo.1": false
+      }
+    },
+    {
+      "Name": "MateoWyattActor",
+      "Value": "MateoWyatt_Old.png",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch3.Mateo.1": true
+      }
+    },
   ]
 }

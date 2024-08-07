@@ -61,7 +61,7 @@
           ]
         },
         "{{ModID}}_TeleportCircle": {
-          "Name": "Teleport Circle",
+          "Name": "{{ModID}}_TeleportCircle",
           "DisplayName": "{{i18n: witchcraft.teleport-circle.name}}",
           "Description": "{{i18n: witchcraft.teleport-circle.description}}",
           "Type": "Crafting",
@@ -71,20 +71,20 @@
           "SpriteIndex": 0,
           "Edibility": -300,
           "ExcludeFromShippingCollection": true,
-          "ExcludeFromRandomSale": true,
+          "ExcludeFromRandomSale": true
         },
         "{{ModID}}_ReturnPotion": {
-          "Name": "Return Potion",
+          "Name": "{{ModID}}_ReturnPotion",
           "DisplayName": "{{i18n: witchcraft.return-potion.name}}",
           "Description": "{{i18n: witchcraft.return-potion.description}}",
-          "Type": "Cooking",
+          "Type": "Basic",
           "Category": -26,
           "Price": 250,
           "Edibility": 0,
           "IsDrink": true,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 91,
-          "ExcludeFromShippingCollection": true,
+          "ExcludeFromShippingCollection": true
         },
       }
     },

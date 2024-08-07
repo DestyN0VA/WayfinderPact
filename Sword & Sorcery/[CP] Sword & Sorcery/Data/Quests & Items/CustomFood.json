@@ -30,7 +30,7 @@
                 "Defense": 0,
                 "Attack": 0
               }
-            },
+            }
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 17
@@ -78,7 +78,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_dandeliongreens": {
-          "Name": "Sautéed Dandelion Greens with Eggs",
+          "Name": "{{ModID}}_dandeliongreens",
           "DisplayName": "{{i18n: food.dandeliongreens.name}}",
           "Description": "{{i18n: food.dandeliongreens.description}}",
           "Type": "Cooking",
@@ -106,7 +106,7 @@
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 19
-        },
+        }
       }
     },
     {
@@ -114,7 +114,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_portfiredrakesparkler": {
-          "Name": "Portfire Drake Sparkler",
+          "Name": "{{ModID}}_portfiredrakesparkler",
           "DisplayName": "{{i18n: food.portfiredrakesparkler.name}}",
           "Description": "{{i18n: food.portfiredrakesparkler.description}}",
           "Type": "Cooking",
@@ -142,7 +142,7 @@
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 20
-        },
+        }
       }
     },
     {
@@ -150,7 +150,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_mushroomsredsauce": {
-          "Name": "Fried Mushrooms & Red Sauce",
+          "Name": "{{ModID}}_mushroomsredsauce",
           "DisplayName": "{{i18n: food.mushroomsredsauce.name}}",
           "Description": "{{i18n: food.mushroomsredsauce.description}}",
           "Type": "Cooking",
@@ -178,7 +178,7 @@
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 27
-        },
+        }
       }
     },
     {
@@ -186,7 +186,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_ferngreensandpineapple": {
-          "Name": "Fern Greens And Pineapple",
+          "Name": "{{ModID}}_ferngreensandpineapple",
           "DisplayName": "{{i18n: food.ferngreensandpineapple.name}}",
           "Description": "{{i18n: food.ferngreensandpineapple.description}}",
           "Type": "Cooking",
@@ -210,11 +210,11 @@
                 "Defense": 0,
                 "Attack": 0
               }
-            },
+            }
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 28
-        },
+        }
       }
     },
     {
@@ -222,7 +222,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_ancienthuckleberryicecream": {
-          "Name": "Ancient HuckleBerry IceCream",
+          "Name": "{{ModID}}_ancienthuckleberryicecream",
           "DisplayName": "{{i18n: food.ancienthuckleberryicecream.name}}",
           "Description": "{{i18n: food.ancienthuckleberryicecream.description}}",
           "Type": "Cooking",
@@ -246,11 +246,11 @@
                 "Defense": 0,
                 "Attack": 0
               }
-            },
+            }
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 29
-        },
+        }
       }
     },
     {
@@ -258,7 +258,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_lavaeelandstirfriedancientbottlegourd": {
-          "Name": "Lava Eel And Stir Fried Bottlegourd",
+          "Name": "{{ModID}}_lavaeelandstirfriedancientbottlegourd",
           "DisplayName": "{{i18n: food.lavaeelandstirfriedancientbottlegourd.name}}",
           "Description": "{{i18n: food.lavaeelandstirfriedancientbottlegourd.description}}",
           "Type": "Cooking",
@@ -286,7 +286,7 @@
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 30
-        },
+        }
       }
     },
     {
@@ -294,7 +294,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_zuzustylepizza": {
-          "Name": "Zuzu City Style Pizza",
+          "Name": "{{ModID}}_zuzustylepizza",
           "DisplayName": "{{i18n: food.zuzustylepizza.name}}",
           "Description": "{{i18n: food.zuzustylepizza.description}}",
           "Type": "Cooking",
@@ -316,21 +316,21 @@
                 "MagneticRadius": 0,
                 "Speed": 0,
                 "Defense": 3,
-                "Attack": 5,
+                "Attack": 5
               }
             }
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 46
-        },
-      },
+        }
+      }
     },
     {
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_zuzustylebagelwithlox": {
-          "Name": "Zuzu City Style Bagel with Lox",
+          "Name": "{{ModID}}_zuzustylebagelwithlox",
           "DisplayName": "{{i18n: food.zuzustylebagelwithlox.name}}",
           "Description": "{{i18n: food.zuzustylebagelwithlox.description}}",
           "Type": "Cooking",
@@ -352,21 +352,21 @@
                 "MagneticRadius": 0,
                 "Speed": 3,
                 "Defense": 0,
-                "Attack": 0,
+                "Attack": 0
               }
             }
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 47
-        },
-      },
+        }
+      }
     },
     {
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_zuzustylecheesecake": {
-          "Name": "Zuzu City Style Cheesecake",
+          "Name": "{{ModID}}_zuzustylecheesecake",
           "DisplayName": "{{i18n: food.zuzustylecheesecake.name}}",
           "Description": "{{i18n: food.zuzustylecheesecake.description}}",
           "Type": "Cooking",
@@ -388,21 +388,21 @@
                 "MagneticRadius": 0,
                 "Speed": 1,
                 "Defense": 1,
-                "Attack": 1,
+                "Attack": 1
               }
             }
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 48
-        },
-      },
+        }
+      }
     },
     {
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_zuzustyleclamchowder": {
-          "Name": "Zuzu City Style Clam Chowder",
+          "Name": "{{ModID}}_zuzustyleclamchowder",
           "DisplayName": "{{i18n: food.zuzustyleclamchowder.name}}",
           "Description": "{{i18n: food.zuzustyleclamchowder.description}}",
           "Type": "Cooking",
@@ -424,25 +424,25 @@
                 "MagneticRadius": 0,
                 "Speed": 0,
                 "Defense": 0,
-                "Attack": 0,
+                "Attack": 0
               }
             }
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 49
-        },
-      },
+        }
+      }
     },
     {
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_fountainsoda": {
-          "Name": "Fountain Soda",
+          "Name": "{{ModID}}_fountainsoda",
           "DisplayName": "{{i18n: food.fountainsoda.name}}",
           "Description": "{{i18n: food.fountainsoda.description}}",
-          "Type": "Cooking",
-          "Category": -7,
+          "Type": "Basic",
+          "Category": -26,
           "Price": 100,
           "Edibility": 10,
           "IsDrink": true,
@@ -460,24 +460,24 @@
                 "MagneticRadius": 0,
                 "Speed": 3,
                 "Defense": 0,
-                "Attack": 0,
+                "Attack": 0
               }
             }
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 53
-        },
-      },
+        }
+      }
     },
     {
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_freshpopcorn": {
-          "Name": "Fountain Soda",
+          "Name": "{{ModID}}_freshpopcorn",
           "DisplayName": "{{i18n: food.freshpopcorn.name}}",
           "Description": "{{i18n: food.freshpopcorn.description}}",
-          "Type": "Cooking",
+          "Type": "Basic",
           "Category": -26,
           "Price": 100,
           "Edibility": 10,
@@ -496,14 +496,14 @@
                 "MagneticRadius": 0,
                 "Speed": 0,
                 "Defense": 0,
-                "Attack": 0,
+                "Attack": 0
               }
             }
           ],
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 54
-        },
-      },
+        }
+      }
     },
 //POTIONS
 {
@@ -511,10 +511,10 @@
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_verdantpotion": {
-      "Name": "Verdant Potion",
+      "Name": "{{ModID}}_verdantpotion",
       "DisplayName": "{{i18n: food.verdantpotion.name}}",
       "Description": "{{i18n: food.verdantpotion.description}}",
-      "Type": "Cooking",
+      "Type": "Basic",
       "Category": -26,
       "Price": 2500,
       "Edibility": 10,
@@ -533,25 +533,25 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 55
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_scarletpotion": {
-      "Name": "Scarlet Potion",
+      "Name": "{{ModID}}_scarletpotion",
       "DisplayName": "{{i18n: food.scarletpotion.name}}",
       "Description": "{{i18n: food.scarletpotion.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
@@ -569,25 +569,25 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 5,
+            "Attack": 5
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 56
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_heatherpotion": {
-      "Name": "Heather Potion",
+      "Name": "{{ModID}}_heatherpotion",
       "DisplayName": "{{i18n: food.heatherpotion.name}}",
       "Description": "{{i18n: food.heatherpotion.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
@@ -605,25 +605,25 @@
             "MagneticRadius": 0,
             "Speed": 5,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 57
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_zydratepotion": {
-      "Name": "Zydrate",
+      "Name": "{{ModID}}_zydratepotion",
       "DisplayName": "{{i18n: food.zydratepotion.name}}",
       "Description": "{{i18n: food.zydratepotion.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
@@ -641,25 +641,25 @@
             "MagneticRadius": 0,
             "Speed": 3,
             "Defense": 3,
-            "Attack": 3,
+            "Attack": 3
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 58
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_pistachiopotion": {
-      "Name": "Pistachio Potion",
+      "Name": "{{ModID}}_pistachiopotion",
       "DisplayName": "{{i18n: food.pistachiopotion.name}}",
       "Description": "{{i18n: food.pistachiopotion.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
@@ -677,25 +677,25 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 59
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_dahliapotion": {
-      "Name": "Dahlia Potion",
+      "Name": "{{ModID}}_dahliapotion",
       "DisplayName": "{{i18n: food.dahliapotion.name}}",
       "Description": "{{i18n: food.dahliapotion.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
@@ -713,25 +713,25 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 60
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_slushiepotion": {
-      "Name": "Slushie Potion",
+      "Name": "{{ModID}}_slushiepotion",
       "DisplayName": "{{i18n: food.slushiepotion.name}}",
       "Description": "{{i18n: food.slushiepotion.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
@@ -749,25 +749,25 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 61
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_matrixpotion": {
-      "Name": "Slushie Potion",
+      "Name": "{{ModID}}_matrixpotion",
       "DisplayName": "{{i18n: food.matrixpotion.name}}",
       "Description": "{{i18n: food.matrixpotion.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
@@ -785,25 +785,25 @@
             "MagneticRadius": 3,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 62
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_mcdougalpotion": {
-      "Name": "McDougal Potion",
+      "Name": "{{ModID}}_mcdougalpotion",
       "DisplayName": "{{i18n: food.mcdougalpotion.name}}",
       "Description": "{{i18n: food.mcdougalpotion.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
@@ -821,25 +821,25 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 63
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_toirneachpotion": {
-      "Name": "Toirneach Potion",
+      "Name": "{{ModID}}_toirneachpotion",
       "DisplayName": "{{i18n: food.toirneachpotion.name}}",
       "Description": "{{i18n: food.toirneachpotion.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Price": 2500,
       "Edibility": 10,
       "IsDrink": true,
@@ -857,25 +857,25 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 4,
-            "Attack": 4,
+            "Attack": 4
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 64
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_orangegingerbeer": {
-      "Name": "Orange-Flavored Ginger Beer",
+      "Name": "{{ModID}}_orangegingerbeer",
       "DisplayName": "{{i18n: food.orangegingerbeer.name}}",
       "Description": "{{i18n: food.orangegingerbeer.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Edibility": 10,
       "IsDrink": true,
       "Price": 420,
@@ -893,25 +893,25 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 76
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_blueberrygingerbeer": {
-      "Name": "Blueberry-Flavored Ginger Beer",
+      "Name": "{{ModID}}_blueberrygingerbeer",
       "DisplayName": "{{i18n: food.blueberrygingerbeer.name}}",
       "Description": "{{i18n: food.blueberrygingerbeer.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Edibility": 10,
       "IsDrink": true,
       "Price": 210,
@@ -929,25 +929,25 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 77
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_pineapplegingerbeer": {
-      "Name": "Pineapple-Flavored Ginger Beer",
+      "Name": "{{ModID}}_pineapplegingerbeer",
       "DisplayName": "{{i18n: food.pineapplegingerbeer.name}}",
       "Description": "{{i18n: food.pineapplegingerbeer.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Edibility": 10,
       "IsDrink": true,
       "Price": 1260,
@@ -965,25 +965,25 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 78
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_rhubarbgingerbeer": {
-      "Name": "Rhubarb-Flavored Ginger Beer",
+      "Name": "{{ModID}}_rhubarbgingerbeer",
       "DisplayName": "{{i18n: food.rhubarbgingerbeer.name}}",
       "Description": "{{i18n: food.rhubarbgingerbeer.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Edibility": 10,
       "IsDrink": true,
       "Price": 924,
@@ -1001,25 +1001,25 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 1,
+            "Attack": 1
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 79
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_strawberrygingerbeer": {
-      "Name": "Strawberry-Flavored Ginger Beer",
+      "Name": "{{ModID}}_strawberrygingerbeer",
       "DisplayName": "{{i18n: food.strawberrygingerbeer.name}}",
       "Description": "{{i18n: food.strawberrygingerbeer.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Edibility": 10,
       "IsDrink": true,
       "Price": 504,
@@ -1037,25 +1037,25 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 1,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 80
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_peachgingerbeer": {
-      "Name": "Peach-Flavored Ginger Beer",
+      "Name": "{{ModID}}_peachgingerbeer",
       "DisplayName": "{{i18n: food.peachgingerbeer.name}}",
       "Description": "{{i18n: food.peachgingerbeer.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Edibility": 10,
       "IsDrink": true,
       "Price": 588,
@@ -1073,25 +1073,25 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 81
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_ancientelderberrygingerbeer": {
-      "Name": "Ancient Elderberry-Flavored Ginger Beer",
+      "Name": "{{ModID}}_ancientelderberrygingerbeer",
       "DisplayName": "{{i18n: food.ancientelderberrygingerbeer.name}}",
       "Description": "{{i18n: food.ancientelderberrygingerbeer.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Edibility": 10,
       "IsDrink": true,
       "Price": 630,
@@ -1109,26 +1109,26 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 82
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_ancientappleberrygingerbeer": {
-      "Name": "Ancient Appleberry-Flavored Ginger Beer",
+      "Name": "{{ModID}}_ancientappleberrygingerbeer",
       "DisplayName": "{{i18n: food.ancientappleberrygingerbeer.name}}",
       "Description": "{{i18n: food.ancientappleberrygingerbeer.description}}",
-      "Type": "Cooking",
+      "Type": "Basic",
+      "Category": -26,
       "Price": 1575,
-      "Category": -7,
       "Edibility": 10,
       "IsDrink": true,
       "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
@@ -1145,26 +1145,26 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 82
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_ancienthuckleberrygingerbeer": {
-      "Name": "Ancient Huckleberry-Flavored Ginger Beer",
+      "Name": "{{ModID}}_ancienthuckleberrygingerbeer",
       "DisplayName": "{{i18n: food.ancienthuckleberrygingerbeer.name}}",
       "Description": "{{i18n: food.ancienthuckleberrygingerbeer.description}}",
-      "Type": "Cooking",
+      "Type": "Basic",
+      "Category": -26,
       "Price": 2150,
-      "Category": -7,
       "Edibility": 10,
       "IsDrink": true,
       "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
@@ -1181,25 +1181,25 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 82
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_ancientfruitgingerbeer": {
-      "Name": "Ancient Fruit-Flavored Ginger Beer",
+      "Name": "{{ModID}}_ancientfruitgingerbeer",
       "DisplayName": "{{i18n: food.ancientfruitgingerbeer.name}}",
       "Description": "{{i18n: food.ancientfruitgingerbeer.description}}",
-      "Type": "Cooking",
-      "Category": -7,
+      "Type": "Basic",
+      "Category": -26,
       "Edibility": 10,
       "IsDrink": true,
       "Price": 1575,
@@ -1217,21 +1217,21 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 82
-    },
-  },
+    }
+  }
 },
 {
   "Action": "EditData",
   "Target": "Data/Objects",
   "Entries": {
     "{{ModID}}_ancientsweettea": {
-      "Name": "Ancient Sweet Tea",
+      "Name": "{{ModID}}_ancientsweettea",
       "DisplayName": "{{i18n: food.ancientsweettea.name}}",
       "Description": "{{i18n: food.ancientsweettea.description}}",
       "Type": "Cooking",
@@ -1253,14 +1253,14 @@
             "MagneticRadius": 0,
             "Speed": 0,
             "Defense": 0,
-            "Attack": 0,
+            "Attack": 0
           }
         }
       ],
       "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
       "SpriteIndex": 84
-    },
-  },
+    }
+  }
 },
 // CRAFTING RECIPES 
 {
@@ -1292,126 +1292,126 @@
 
   "{{ModID}}_zuzustyleclamchowder": "372 1 256 1 192 1/what is this for?/{{ModID}}_zuzustyleclamchowder 1/e SnS.Ch3.Cirrus.5/{{i18n:food.crafting.zuzustyleclamchowder}}",
 
-  "{{ModID}}_ancientsweettea": "{{ModID}}_ancientsweettealeaves {{AncientSweetTeaDifficulty}}/what is this for?/{{ModID}}_ancientsweettea 1/e SnS.Ch3.Dandelion.3/{{i18n:food.crafting.ancientsweettea}}",
+  "{{ModID}}_ancientsweettea": "{{ModID}}_ancientsweettealeaves {{AncientSweetTeaDifficulty}}/what is this for?/{{ModID}}_ancientsweettea 1/e SnS.Ch3.Dandelion.3/{{i18n:food.crafting.ancientsweettea}}"
   
   }
 },
 
-// CUSTOM POTION CATEGORY 
-{
-  "Action": "EditData",
-  "Target": "spacechase0.SpaceCore/ObjectExtensionData",
-  "Entries": {
-    "{{ModID}}_verdantpotion": {
-      "CategoryTextOverride": "Potion",
-      "CategoryColorOverride": {
-        "R": 188,
-        "G": 13,
-        "B": 3,
-        "A": 255
-      },
-    },
-    "{{ModID}}_scarletpotion": {
-      "CategoryTextOverride": "Potion",
-      "CategoryColorOverride": {
-        "R": 188,
-        "G": 13,
-        "B": 3,
-        "A": 255
-      },
-    },
-    "{{ModID}}_heatherpotion": {
-      "CategoryTextOverride": "Potion",
-      "CategoryColorOverride": {
-        "R": 188,
-        "G": 13,
-        "B": 3,
-        "A": 255
-      },
-    },
-    "{{ModID}}_zydratepotion": {
-      "CategoryTextOverride": "Potion",
-      "CategoryColorOverride": {
-        "R": 188,
-        "G": 13,
-        "B": 3,
-        "A": 255
-      },
-    },
-    "{{ModID}}_pistachiopotion": {
-      "CategoryTextOverride": "Potion",
-      "CategoryColorOverride": {
-        "R": 188,
-        "G": 13,
-        "B": 3,
-        "A": 255
-      },
-    },
-    "{{ModID}}_dahliapotion": {
-      "CategoryTextOverride": "Potion",
-      "CategoryColorOverride": {
-        "R": 188,
-        "G": 13,
-        "B": 3,
-        "A": 255
-      },
-    },
-    "{{ModID}}_slushiepotion": {
-      "CategoryTextOverride": "Potion",
-      "CategoryColorOverride": {
-        "R": 188,
-        "G": 13,
-        "B": 3,
-        "A": 255
-      },
-    },
-    "{{ModID}}_matrixpotion": {
-      "CategoryTextOverride": "Potion",
-      "CategoryColorOverride": {
-        "R": 188,
-        "G": 13,
-        "B": 3,
-        "A": 255
-      },
-    },
-    "{{ModID}}_mcdougalpotion": {
-      "CategoryTextOverride": "Potion",
-      "CategoryColorOverride": {
-        "R": 188,
-        "G": 13,
-        "B": 3,
-        "A": 255
-      },
-    },
-    "{{ModID}}_toirneachpotion": {
-      "CategoryTextOverride": "Potion",
-      "CategoryColorOverride": {
-        "R": 188,
-        "G": 13,
-        "B": 3,
-        "A": 255
-      },
-    },
-// CUSTOM SNACK CATEGORY 
-    "{{ModID}}_fountainsoda": {
-      "CategoryTextOverride": "Snack",
-      "CategoryColorOverride": {
-        "R": 188,
-        "G": 13,
-        "B": 3,
-        "A": 255
-      },
-    },
-    "{{ModID}}_freshpopcorn": {
-      "CategoryTextOverride": "Snack",
-      "CategoryColorOverride": {
-        "R": 188,
-        "G": 13,
-        "B": 3,
-        "A": 255
-      },
-    },
-  }
-},
-    ]
+// CUSTOM POTION CATEGORY
+    {
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/ObjectExtensionData",
+      "Entries": {
+        "{{ModID}}_verdantpotion": {
+          "CategoryTextOverride": "Potion",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_scarletpotion": {
+          "CategoryTextOverride": "Potion",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_heatherpotion": {
+          "CategoryTextOverride": "Potion",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_zydratepotion": {
+          "CategoryTextOverride": "Potion",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_pistachiopotion": {
+          "CategoryTextOverride": "Potion",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_dahliapotion": {
+          "CategoryTextOverride": "Potion",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_slushiepotion": {
+          "CategoryTextOverride": "Potion",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_matrixpotion": {
+          "CategoryTextOverride": "Potion",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_mcdougalpotion": {
+          "CategoryTextOverride": "Potion",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_toirneachpotion": {
+          "CategoryTextOverride": "Potion",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        // CUSTOM SNACK CATEGORY 
+        "{{ModID}}_fountainsoda": {
+          "CategoryTextOverride": "Snack",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_freshpopcorn": {
+          "CategoryTextOverride": "Snack",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        }
+      }
+    }
+  ]
 }

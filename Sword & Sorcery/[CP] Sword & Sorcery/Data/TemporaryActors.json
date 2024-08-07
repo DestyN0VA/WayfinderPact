@@ -150,5 +150,15 @@
             "Target": "Characters/RockPile",
             "FromFile": "assets/TemporaryActors/Characters/RockPile.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Characters/MateoWyatt",
+            "FromFile": "assets/TemporaryActors/Characters/{{MateoWyattActor}}"
+        },
+        {
+            "Action": "Load",
+            "Target": "Portraits/MateoWyatt",
+            "FromFile": "assets/TemporaryActors/Portraits/MateoWyatt.png"
+        }
     ]
 }
