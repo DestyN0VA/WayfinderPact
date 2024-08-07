@@ -16,7 +16,7 @@
   "Dependencies": [
     {
       "UniqueID": "spacechase0.SpaceCore",
-      "MinimumVersion": "1.24.2"
+      "MinimumVersion": "1.25.0"
     }
   ]
 }

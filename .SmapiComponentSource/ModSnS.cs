@@ -500,30 +500,37 @@ namespace SwordAndSorcerySMAPI
 
             if (Context.IsWorldReady && Context.IsPlayerFree && e.Button.IsActionButton() && Game1.player.ActiveItem != null)
             {
-                if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking")
+                if (Game1.currentLocation.GetTilePropertySplitBySpaces("Action", "Buildings", (int)e.Cursor.GrabTile.X, (int)e.Cursor.GrabTile.Y).Length == 0)
                 {
-                    var w = new Slingshot("DN.SnS_longlivetheking_gun");
-                    w.enchantments.Set(Game1.player.CurrentTool.enchantments);
-                    w.modData.Set(Game1.player.CurrentTool.modData.Pairs);
-                    if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
+                    if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking")
                     {
-                        w.attachments[0] = (StardewValley.Object) Game1.player.CurrentTool.attachments[0].getOne();
-                        w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
+                        var w = new Slingshot("DN.SnS_longlivetheking_gun");
+                        w.enchantments.Set(Game1.player.CurrentTool.enchantments);
+                        w.modData.Set(Game1.player.CurrentTool.modData.Pairs);
+                        foreach (var ench in w.enchantments)
+                            ench.ApplyTo(w, Game1.player);
+                        if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
+                        {
+                            w.attachments[0] = (StardewValley.Object)Game1.player.CurrentTool.attachments[0].getOne();
+                            w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
+                        }
+                        Game1.player.Items[Game1.player.CurrentToolIndex] = w;
                     }
-                    Game1.player.Items[Game1.player.CurrentToolIndex] = w;
-                }
-                else if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking_gun")
-                {
-                    var w = new MeleeWeapon("DN.SnS_longlivetheking");
-                    w.enchantments.Set(Game1.player.CurrentTool.enchantments);
-                    w.modData.Set(Game1.player.CurrentTool.modData.Pairs);
-                    if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
+                    else if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking_gun")
                     {
-                        w.attachments.SetCount(1);
-                        w.attachments[0] = (StardewValley.Object)Game1.player.CurrentTool.attachments[0].getOne();
-                        w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
+                        var w = new MeleeWeapon("DN.SnS_longlivetheking");
+                        w.enchantments.Set(Game1.player.CurrentTool.enchantments);
+                        w.modData.Set(Game1.player.CurrentTool.modData.Pairs);
+                        foreach (var ench in w.enchantments)
+                            ench.ApplyTo(w, Game1.player);
+                        if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
+                        {
+                            w.attachments.SetCount(1);
+                            w.attachments[0] = (StardewValley.Object)Game1.player.CurrentTool.attachments[0].getOne();
+                            w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
+                        }
+                        Game1.player.Items[Game1.player.CurrentToolIndex] = w;
                     }
-                    Game1.player.Items[Game1.player.CurrentToolIndex] = w;
                 }
             }
         }
