@@ -327,10 +327,14 @@ public class ArsenalMenu : IClickableMenu
         };
         this.gemSlot.Callback = this.gemSlot.SecondaryCallback = (elem) =>
         {
+            if (Game1.player.GetCustomSkillLevel(ModSnS.RogueSkill) < 4)
+            {
+                Game1.addHUDMessage(new HUDMessage(I18n.Anvil_Locked(4)));
+                return;
+            }
             if (Game1.player.CursorSlotItem != null &&
                 !Game1.player.CursorSlotItem.HasContextTag("exquisite_gem"))
             {
-
                 Game1.addHUDMessage(new HUDMessage(I18n.Anvil_NotHere()));
                 return;
             }
@@ -354,6 +358,12 @@ public class ArsenalMenu : IClickableMenu
         };
         this.coatingSlot.Callback = this.coatingSlot.SecondaryCallback = (elem) =>
         {
+            if (Game1.player.GetCustomSkillLevel(ModSnS.RogueSkill) < 6)
+            {
+                Game1.addHUDMessage(new HUDMessage(I18n.Anvil_Locked(6)));
+                return;
+            }
+
             if (Game1.player.CursorSlotItem != null &&
                 !ModSnS.CoatingIconMapping.ContainsKey(Game1.player.CursorSlotItem.QualifiedItemId))
             {
@@ -391,6 +401,12 @@ public class ArsenalMenu : IClickableMenu
         };
         this.alloyingSlot.Callback = this.alloyingSlot.SecondaryCallback = (elem) =>
         {
+            if (Game1.player.GetCustomSkillLevel(ModSnS.RogueSkill) < 2)
+            {
+                Game1.addHUDMessage(new HUDMessage(I18n.Anvil_Locked(2)));
+                return;
+            }
+
             if (Game1.player.CursorSlotItem != null &&
                 !ModSnS.AlloyIconMapping.ContainsKey(Game1.player.CursorSlotItem.QualifiedItemId))
             {

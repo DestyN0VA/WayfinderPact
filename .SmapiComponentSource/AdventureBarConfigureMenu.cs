@@ -57,7 +57,7 @@ namespace SwordAndSorcerySMAPI
                     TexturePixelArea = Game1.getSquareSourceRectForNonStandardTileSheet(tex, 16, 16, abils[i].SpriteIndex),
                     Scale = 4,
                     DrawColor = Color.White * (known ? 1 : 0.5f),
-                    Callback = (elem) => held = (Ability) elem.UserData,
+                    Callback = (elem) => { if (known) held = (Ability) elem.UserData; },
                     UserData = abils[i],
                 };
                 container.AddChild(img);
