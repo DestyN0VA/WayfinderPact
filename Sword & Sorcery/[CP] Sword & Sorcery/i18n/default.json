@@ -5249,6 +5249,12 @@ ________      ________ _   _ _______ _____
   "arsenal.lightbringer-bullet.name": "Lightbringer Bullet",
   "arsenal.lightbringer-bullet.description": "A bullet capable of eradicating foes in one hit. (No loot drops)",
 
+  "object.stygium-ore.name": "Stygium Ore",
+  "object.stygium-ore.description": "Metal infused with void energy. Hurts to hold.",
+  "object.stygium-bar.name": "Stygium Bar",
+  "object.stygium-bar.description": "Metal infused with void energy. Hurts to hold.",
+  "buff.stygium-poisoning": "Stygium Poisoning",
+
   "witchcraft.earth-essence.name": "Earth Essence",
   "witchcraft.earth-essence.description": "Essence of the earth.",
   "witchcraft.air-essence.name": "Air Essence",

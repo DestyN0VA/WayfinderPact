@@ -75,7 +75,7 @@
         {
             "LogName": "Deep Dark Smelting",
             "Action": "EditData",
-            "Target": "Data/Objects",
+            "Target": "Data/Machines",
             "TargetField": [ "(BC)13", "OutputRules" ],
             "Entries": {
                 "{{ModID}}_StygiumBar": {
@@ -98,7 +98,7 @@
         {
             "LogName": "Deep Dark Smelting (Heavy)",
             "Action": "EditData",
-            "Target": "Data/Objects",
+            "Target": "Data/Machines",
             "TargetField": [ "(BC)HeavyFurnace", "OutputRules" ],
             "Entries": {
                 "{{ModID}}_StygiumBar": {
@@ -555,6 +555,32 @@
                     "FloorsWithElevator": [ 5, 10, 15, 20 ],
                     "SpawnsLadders": false,
                     "SpawnsMineshafts": false,
+                }
+            }
+        },
+        {
+            "LogName": "Stygium Poisoning",
+            "Action": "EditData",
+            "Target": "spacechase0.SpaceCore/WearableData",
+            "Entries": {
+                "(O){{ModID}}_StygiumOre": {
+                    "BuffIdToApply": "{{ModID}}_StygiumPoisoning",
+                },
+                "(O){{ModID}}_StygiumBar": {
+                    "BuffIdToApply": "{{ModID}}_StygiumPoisoning",
+                }
+            }
+        },
+        {
+            "LogName": "Stygium Poisoning Buff",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                "{{ModID}}_StygiumPoisoning": {
+                    "DisplayName": "{{i18n:buff.stygium-poisoning}}",
+                    "IconTexture": "TileSheets\\BuffsIcons",
+                    "IconSpriteIndex": 26,
+                    "CustomFields": { "spacechase0.SpaceCore/HealthRegeneration": -2 },
                 }
             }
         }
