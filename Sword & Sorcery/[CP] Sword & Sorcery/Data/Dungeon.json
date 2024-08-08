@@ -23,7 +23,7 @@
             }
         },
         {
-            "LogName": "Deep Dark Stones",
+            "LogName": "Deep Dark Stones/Items",
             "Action": "EditData",
             "Target": "Data/Objects",
             "Entries": {
@@ -38,6 +38,86 @@
                     "SpriteIndex": 35,
                     "Edibility": -300,
                 },
+                "{{ModID}}_StygiumOre": {
+                  "Name": "Stygium Ore",
+                  "DisplayName": "{{i18n: object.stygium-ore.name}}",
+                  "Description": "{{i18n: object.stygium-ore.description}}",
+                  "Type": "Basic",
+                  "Category": -15,
+                  "Price": 500,
+                  "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+                  "SpriteIndex": 100,
+                  "ExcludeFromRandomSale": true,
+                  "ContextTags": [
+                    "color_blue",
+                    "ore_item",
+                    "use_reverse_name_for_sorting"
+                  ],
+                },
+                "{{ModID}}_StygiumBar": {
+                    "Name": "Stygium Bar",
+                    "DisplayName": "{{i18n: object.stygium-bar.name}}",
+                    "Description": "{{i18n: object.stygium-bar.description}}",
+                    "Type": "Basic",
+                    "Category": -15,
+                    "Price": 5000,
+                    "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+                    "SpriteIndex": 99,
+                    "ExcludeFromRandomSale": true,
+                    "ContextTags": [
+                      "color_blue",
+                      "furnace_item",
+                      "use_reverse_name_for_sorting"
+                    ],
+                },
+            }
+        },
+        {
+            "LogName": "Deep Dark Smelting",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "TargetField": [ "(BC)13", "OutputRules" ],
+            "Entries": {
+                "{{ModID}}_StygiumBar": {
+                  "Triggers": [
+                    {
+                      "RequiredItemId": "(O){{ModID}}_StygiumOre",
+                      "RequiredCount": 5,
+                    }
+                  ],
+                  "OutputItem": [
+                    {
+                      "Id": "(O){{ModID}}_StygiumBar",
+                      "ItemId": "(O){{ModID}}_StygiumBar",
+                    }
+                  ],
+                  "MinutesUntilReady": 720,
+                }
+            }
+        },
+        {
+            "LogName": "Deep Dark Smelting (Heavy)",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "TargetField": [ "(BC)HeavyFurnace", "OutputRules" ],
+            "Entries": {
+                "{{ModID}}_StygiumBar": {
+                  "Triggers": [
+                    {
+                      "RequiredItemId": "(O){{ModID}}_StygiumOre",
+                      "RequiredCount": 25,
+                    }
+                  ],
+                  "OutputItem": [
+                    {
+                      "Id": "(O){{ModID}}_StygiumBar",
+                      "ItemId": "(O){{ModID}}_StygiumBar",
+                      "MinStack": 5,
+                      "MaxStack": 6,
+                    }
+                  ],
+                  "MinutesUntilReady": 720,
+                }
             }
         },
         {
@@ -77,7 +157,7 @@
                             {
                                 "Weight": 1.0,
                                 "Value": {
-                                    "ItemId": "(O)0" ,// TODO: Replace with stygium ore
+                                    "ItemId": "(O){{ModID}}_StygiumOre",
                                     "MinStack": 1,
                                     "MaxStack": 3,
                                 }
