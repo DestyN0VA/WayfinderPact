@@ -35,14 +35,14 @@
     {
       "LogName": "Sword & Sorcery - Disposition Includes (Full)",
       "Action": "Include",
-      "FromFile": "Data/Dispositions/Mateo/full_NPCData.json, Data/Dispositions/Hector/full_NPCData.json, Data/Dispositions/Cirrus/full_NPCData.json, Data/Dispositions/Roslin/full_NPCData.json, Data/Dispositions/Dandelion/full_NPCData.json",
+      "FromFile": "Data/Dispositions/Mateo/full_NPCData.json, Data/Dispositions/Hector/full_NPCData.json, Data/Dispositions/Cirrus/full_NPCData.json, Data/Dispositions/Roslin/full_NPCData.json, Data/Dispositions/Dandelion/full_NPCData.json"
     },
     {
       "LogName": "Sword & Sorcery - Disposition Includes (Vanilla)",
       "Action": "Include",
       "FromFile": "Data/Dispositions/Mateo/vanilla_NPCData.json, Data/Dispositions/Hector/vanilla_NPCData.json, Data/Dispositions/Cirrus/vanilla_NPCData.json, Data/Dispositions/Roslin/vanilla_NPCData.json, Data/Dispositions/Dandelion/vanilla_NPCData.json",
       "When": {
-        "SeasonalOutfits": "vanilla",
+        "SeasonalOutfits": "vanilla"
       }
     },
     {
@@ -50,7 +50,7 @@
       "Action": "Include",
       "FromFile": "Data/Dispositions/Mateo/lite_NPCData.json, Data/Dispositions/Hector/lite_NPCData.json, Data/Dispositions/Cirrus/lite_NPCData.json, Data/Dispositions/Roslin/lite_NPCData.json, Data/Dispositions/Dandelion/lite_NPCData.json",
       "When": {
-        "SeasonalOutfits": "lite",
+        "SeasonalOutfits": "lite"
       }
     },
     {
@@ -74,7 +74,7 @@
       "FromFile": "Data/Quests & Items/ShieldQuest.json",
       "When": {
         "HasMod: |contains=Kitsutsune.Chocobovalley": false,
-        "ChocoboValleyMaterials": false,
+        "ChocoboValleyMaterials": false
       }
     },
     {
@@ -83,7 +83,7 @@
       "FromFile": "Data/Quests & Items/ShieldQuest_ChocoboValley.json",
       "When": {
         "HasMod: |contains=Kitsutsune.Chocobovalley": true,
-        "ChocoboValleyMaterials": true, 
+        "ChocoboValleyMaterials": true 
       }
     },
     {
@@ -92,7 +92,7 @@
       "FromFile": "Data/Quests & Items/EssenceQuest.json",
       "When": {
         "HasMod: |contains=Rafseazz.RSVCP": false,
-        "RSVMaterials": false, 
+        "RSVMaterials": false 
       }
     },
     {
@@ -101,7 +101,7 @@
       "FromFile": "Data/Quests & Items/EssenceQuest_RSV.json",
       "When": {
         "HasMod: |contains=Rafseazz.RSVCP": true,
-        "RSVMaterials": true, 
+        "RSVMaterials": true
       }
     },
     // TRIGGER ACTIONS
@@ -191,7 +191,7 @@
           "Trigger": "DayStarted",
           "Condition": "PLAYER_HAS_MAIL Current MateoRomanticFlag, !PLAYER_NPC_RELATIONSHIP Current Mateo Dating Engaged Married, PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.15",
           "Actions": [
-            "RemoveMail Current MateoRomanticFlag all", //Technically C# component does this already, but doesn't account for divorce
+            "RemoveMail Current MateoRomanticFlag all" //Technically C# component does this already, but doesn't account for divorce
           ],
           "MarkActionApplied": "false"
         },
@@ -1123,7 +1123,7 @@
     },
     {
       "Name": "CirrusMakeup",
-      "Value": "{{CirrusHairColor}}",
+      "Value": "{{CirrusHairColor}}"
     },
     {
       "Name": "CirrusMakeup",
@@ -1243,7 +1243,7 @@
     },
     {
       "Name": "SVEReroutingServices",
-      "Value": "advancedMove farmer false 0 4 7 0 0 -6 1 10/advancedMove Krobus false 0 4 7 0 0 -5 1 10",
+      "Value": "advancedMove farmer false 0 4 7 0 0 -6 1 10/advancedMove Krobus false 0 4 7 0 0 -5 1 10"
     },
     {
       "Name": "SVEReroutingServices",
@@ -1868,7 +1868,7 @@
       "Name": "HectorAlreadyDating",
       "Value": "speak Hector \"{{i18n:Events.S&S.Ch2.10H2.Hector.14.NoRomance}}\"/pause 250/stopMusic/playMusic starshoot/speak Hector \"{{i18n:Events.S&S.Ch2.10H2.Hector.16}}\"",
       "When": {
-        "Query: {{HasFlag |contains=MateoRomanticFlag}} OR {{HasFlag |contains=CirrusRomanticFlag}} OR {{HasMod |contains=ApryllForever.CPPolyamorySweet}} OR {{HasMod |contains=aedenthorn.FreeLove}}": "true",
+        "Query: {{HasFlag |contains=MateoRomanticFlag}} OR {{HasFlag |contains=CirrusRomanticFlag}} OR {{HasMod |contains=ApryllForever.CPPolyamorySweet}} OR {{HasMod |contains=aedenthorn.FreeLove}}": "true"
       }
     },
     {
@@ -1887,7 +1887,7 @@
       "Name": "CirrusAlreadyDating",
       "Value": "quickQuestion It's just you and Cirrus in the Lion's Mane now. #Politely excuse yourself. (End the event.)#Hang out a little longer.(break)speak Cirrus \"Have a good night, @. Get home safe. You're an amazing friend.$23\"(break)speak Cirrus \"Oh! I have an idea, I've been working on some song lyrics I'd be happy to show you...$1\"",
       "When": {
-        "Query: {{HasFlag |contains=MateoRomanticFlag}} OR {{HasFlag |contains=HectorRomanticFlag}}": "true",
+        "Query: {{HasFlag |contains=MateoRomanticFlag}} OR {{HasFlag |contains=HectorRomanticFlag}}": "true"
       }
     },
     {
@@ -1912,5 +1912,135 @@
         "HasSeenEvent |contains=SnS.Ch3.Mateo.1": true
       }
     },
+    {
+      "Name": "SnS.Ch4.Dandelion.7.GunnarExtra.1",
+      "Value": "pause 1"
+    },
+    {
+      "Name": "SnS.Ch4.Dandelion.7.GunnarExtra.1",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"I'm all for closing the book on this chapter of life, but is this something we're really ready for?$7#$b#This is kind of the part in the movie where we all get our affairs in order and stuff, after all...$2\"",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+      }
+    },
+    {
+      "Name": "SnS.Ch4.Dandelion.7.GunnarExtra.1",
+      "Value": "pause 1"
+    },
+    {
+      "Name": "SnS.Ch4.Dandelion.7.GunnarExtra.1",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"I'm all for closing the book on this chapter of life, but is this something we're really ready for?$7#$b#This is kind of the part in the movie where we all get our affairs in order and stuff, after all...$2\"",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+      }
+    },
+
+    {
+      "Name": "SnS.Ch4.Finale.GunnarExtra.1", //after Roslin & Dandelion
+      "Value": "pause 1"
+    },
+    {
+      "Name": "SnS.Ch4.Finale.GunnarExtra.1",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"Well, we'll make our own luck, then, right?$7\"",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+      }
+    },
+
+    {
+      "Name": "SnS.Ch4.Finale.GunnarExtra.2", //After Cirrus's don't panic
+      "Value": "pause 1"
+    },
+    {
+      "Name": "SnS.Ch4.Finale.GunnarExtra.2",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"Boy oh boy, the price of freedom is steep.$12\"",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+      }
+    },
+
+    {
+      "Name": "SnS.Ch4.Intermissions.GunnarExtra.1",
+      "Value": "pause 1"
+    },
+    {
+      "Name": "SnS.Ch4.Intermissions.GunnarExtra.1",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"Kinda blew through my stock getting down here, but I'll swing a sword 'til my arms fall off, just ask.$16\"",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+      }
+    },
+
+    {
+      "Name": "SnS.Ch4.Intermissions.GunnarExtra.2", //for the farmer/pair off forward
+      "Value": "pause 1"
+    },
+    {
+      "Name": "SnS.Ch4.Intermissions.GunnarExtra.2",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"Remember, you make your own luck.$16\"",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+
+      }
+    },
+
+    {
+      "Name": "SnS.Ch4.Victories.GunnarExtra.1",
+      "Value": "pause 1"
+    },
+    {
+      "Name": "SnS.Ch4.Victories.GunnarExtra.1",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"Kept us waiting, huh?$1\"",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+
+      }
+    },
+
+    {
+      "Name": "SnS.Ch4.Victories.GunnarExtra.2", //after Cirrus's promise to cook
+      "Value": "pause 1"
+    },
+    {
+      "Name": "SnS.Ch4.Victories.GunnarExtra.2",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"I'm gonna hold you to that promise, Cirrus.$1\"",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+
+      }
+    },
+    {
+      "Name": "SnS.Ch4.Dandelion.7.GunnarExtra.Krobus.2",
+      "Value": "pause 1"
+    },
+    {
+      "Name": "SnS.Ch4.Dandelion.7.GunnarExtra.Krobus.2",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"Oh thank Yoba, you're not a slime, you're one of us.$6\"",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+      }
+    },
+
+    {
+      "Name": "CombatWarps",
+      "Value": "warp Mateo 12 10/warp farmer 12 12/warp Dandelion 12 14/warp Hector 12 16/warp Cirrus 10 12/warp Roslin 10 14"
+    },
+    {
+      "Name": "CombatWarps",
+      "Value": "warp Mateo 12 10/warp farmer 12 12/warp Dandelion 12 14/warp Hector 12 16/warp Cirrus 10 10/warp Roslin 10 12/warp MadDog.HashtagBearFam.Gunnar 10 14",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+      }
+    }
   ]
 }
