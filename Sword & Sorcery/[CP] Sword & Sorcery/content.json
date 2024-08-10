@@ -563,21 +563,18 @@
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
-      "Value": "stopMusic/quickQuestion \"Is there anything I can do to help you carry that weight?\"#You've got responsibilities of your own now, Mateo. Don't forget them!#Just keep being my friend, Mateo! That's the kind of support I need.(break)speak Mateo \"I could never, @! Don't worry. $1\"(break)speak Mateo \"Of course, @! I've got your back.$1\"",
-      "When": {
-        "HasFlag |contains=RivalHearts_AideenMateo": true
-      }
+      "Value": "stopMusic/question fork0 \"Is there anything I can do to help you carry that weight?#Actually, there was something I wanted to talk to you about. (ROMANTIC)#Just keep being my friend, Mateo! That's the kind of support I need. (PLATONIC)\"/fork MateoRomantic"
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
-      "Value": "stopMusic/question fork0 \"Is there anything I can do to help you carry that weight?#Actually, there was something I wanted to talk to you about. (ROMANTIC)#Just keep being my friend, Mateo! That's the kind of support I need. (PLATONIC)\"/fork MateoRomantic",
+      "Value": "stopMusic/quickQuestion \"Is there anything I can do to help you carry that weight?\"#You've got responsibilities of your own now, Mateo. Don't forget them!#Just keep being my friend, Mateo! That's the kind of support I need.(break)speak Mateo \"I could never, @! Don't worry. $1\"(break)speak Mateo \"Of course, @! I've got your back.$1\"",
       "When": {
         "Query: {{HasFlag |contains=CirrusRomanticFlag}} OR {{HasFlag |contains=HectorRomanticFlag}} OR {{HasFlag |contains=RivalHearts_AideenMateo}}": "true"
       }
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
-      "Value": "stopMusic/question fork0 \"Is there anything I can do to help you carry that weight?#Actually, there was something I wanted to talk to you about. (ROMANTIC)#Just keep being my friend, Mateo! That's the kind of support I need. (PLATONIC)\"/fork MateoRomantic",
+      "Value": "stopMusic/quickQuestion \"Is there anything I can do to help you carry that weight?\"#You've got responsibilities of your own now, Mateo. Don't forget them!#Just keep being my friend, Mateo! That's the kind of support I need.(break)speak Mateo \"I could never, @! Don't worry. $1\"(break)speak Mateo \"Of course, @! I've got your back.$1\"",
       "When": {
         "HasMod |contains=EnderTedi.Polyamory": true,
         "EnderTedi.Polyamory/HasMonogamousPartner": true
