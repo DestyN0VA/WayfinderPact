@@ -21,4 +21,8 @@
     "IntermissionEventId": "SnS.Ch4.Intermission.Cirrus",
     "VictoryEventId": "SnS.Ch4.Victory.Cirrus",
   },
+  "MadDog.HashtagBearFam.Gunnar": {
+    "IntermissionEventId": "SnS.Ch4.Intermission.Gunnar",
+    "VictoryEventId": "SnS.Ch4.Victory.Gunnar",
+  },
 }
