@@ -10,7 +10,7 @@ using StardewValley.Menus;
 
 namespace SwordAndSorcerySMAPI
 {
-
+    // Legacy data, now uses SpaceCore
     public static class Farmer_ArmorSlot
     {
         internal class Holder { public readonly NetRef<Item> Value = new(); }
@@ -29,6 +29,16 @@ namespace SwordAndSorcerySMAPI
             var holder = values.GetOrCreateValue( farmer );
             return holder.Value;
         }
+
+        public static Item GetArmorItem(this Farmer farmer)
+        {
+            return ModSnS.sc.GetItemInEquipmentSlot(farmer, $"{ModSnS.instance.ModManifest.UniqueID}_Armor");
+        }
+
+        public static void SetArmorItem(this Farmer farmer, Item item)
+        {
+            ModSnS.sc.SetItemInEquipmentSlot(farmer, $"{ModSnS.instance.ModManifest.UniqueID}_Armor", item);
+        }
     }
 
     [HarmonyPatch(typeof(Farmer), "initNetFields")]
@@ -40,6 +50,7 @@ namespace SwordAndSorcerySMAPI
         }
     }
 
+    /*
 
     [HarmonyPatch(typeof(InventoryPage), MethodType.Constructor, new Type[] { typeof(int), typeof(int), typeof(int), typeof(int) })]
     public static class InventoryPageArmorConstructorPatch
@@ -150,4 +161,5 @@ namespace SwordAndSorcerySMAPI
             }
         }
     }
+    */
 }

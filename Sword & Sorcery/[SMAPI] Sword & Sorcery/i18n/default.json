@@ -9,6 +9,8 @@
   "shield-category": "Shield",
   "shield-block-text": "Shield Block: {{cooldown}}",
 
+  "ui-slot.armor": "Armor",
+
   "harp.name": "Harp",
   "harp.description": "...",
   "harp.bad-song": "Nothing happened...",

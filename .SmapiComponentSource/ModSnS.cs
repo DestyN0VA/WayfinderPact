@@ -207,6 +207,8 @@ namespace SwordAndSorcerySMAPI
 
         public const string ShadowstepEventReq = "SnS.Ch1.Mateo.18";
 
+        public static ISpaceCoreApi sc;
+
         public override void Entry(IModHelper helper)
         {
             instance = this;
@@ -338,7 +340,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.GameLoop.UpdateTicking += GameLoop_UpdateTicking;
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
             Helper.Events.GameLoop.TimeChanged += GameLoop_TimeChanged;
-            Helper.Events.GameLoop.SaveCreated += GameLoop_SaveCreated; ;
+            Helper.Events.GameLoop.SaveCreated += GameLoop_SaveCreated;
             Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
             Helper.Events.Player.Warped += Player_Warped;
             Helper.Events.Display.RenderedHud += Display_RenderedHud;
@@ -430,6 +432,17 @@ namespace SwordAndSorcerySMAPI
         private void GameLoop_SaveLoaded(object sender, StardewModdingAPI.Events.SaveLoadedEventArgs e)
         {
             Game1.player.mailReceived.OnValueAdded += OnMailReceived;
+
+            // Legacy armor slot migration
+            foreach (var player in Game1.getAllFarmers())
+            {
+                var armorSlot = player.get_armorSlot();
+                if (armorSlot.Value != null && sc.GetItemInEquipmentSlot(player, $"{ModManifest}_Armor") == null)
+                {
+                    sc.SetItemInEquipmentSlot(player, $"{ModManifest}_Armor", armorSlot.Value);
+                    armorSlot.Value = null;
+                }
+            }
         }
 
         private void OnMailReceived(string value)
@@ -505,10 +518,8 @@ namespace SwordAndSorcerySMAPI
                     if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking")
                     {
                         var w = new Slingshot("DN.SnS_longlivetheking_gun");
-                        w.enchantments.Set(Game1.player.CurrentTool.enchantments);
+                        Game1.player.CurrentTool.CopyEnchantments(Game1.player.CurrentTool, w);
                         w.modData.Set(Game1.player.CurrentTool.modData.Pairs);
-                        foreach (var ench in w.enchantments)
-                            ench.ApplyTo(w, Game1.player);
                         if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
                         {
                             w.attachments[0] = (StardewValley.Object)Game1.player.CurrentTool.attachments[0].getOne();
@@ -519,10 +530,8 @@ namespace SwordAndSorcerySMAPI
                     else if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking_gun")
                     {
                         var w = new MeleeWeapon("DN.SnS_longlivetheking");
-                        w.enchantments.Set(Game1.player.CurrentTool.enchantments);
+                        Game1.player.CurrentTool.CopyEnchantments(Game1.player.CurrentTool, w);
                         w.modData.Set(Game1.player.CurrentTool.modData.Pairs);
-                        foreach (var ench in w.enchantments)
-                            ench.ApplyTo(w, Game1.player);
                         if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
                         {
                             w.attachments.SetCount(1);
@@ -700,13 +709,20 @@ namespace SwordAndSorcerySMAPI
             Skills.RegisterSkill(RogueSkill = new RogueSkill());
             SpaceCore.CustomCraftingRecipe.CraftingRecipes.Add("DN.SnS_Bow", new BowCraftingRecipe());
 
-            var sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
+            sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
             sc.RegisterSerializerType(typeof(ThrownShield));
             sc.RegisterCustomProperty(typeof(Farmer), "shieldSlot", typeof(NetRef<Item>), AccessTools.Method(typeof(Farmer_ArmorSlot), nameof(Farmer_ArmorSlot.get_armorSlot)), AccessTools.Method(typeof(Farmer_ArmorSlot), nameof(Farmer_ArmorSlot.set_armorSlot)));
             sc.RegisterCustomProperty(typeof(Farmer), "takenLoreWeapon", typeof(NetBool), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.HasTakenLoreWeapon)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetHasTakenLoreWeapon)));
             sc.RegisterCustomProperty(typeof(Farmer), "adventureBar", typeof(NetArray<string,NetString>), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.GetAdventureBar)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetAdventureBar)));
             sc.RegisterCustomProperty(typeof(Farmer), "maxMana", typeof(NetInt), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.GetMaxMana)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetMaxMana)));
             sc.RegisterCustomProperty(typeof(Farmer), "expRemainderRogue", typeof(NetFloat), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderRogueGetter)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderRogueSetter)));
+
+            sc.RegisterEquipmentSlot(ModManifest,
+                $"{ModManifest.UniqueID}_Armor",
+                item => item == null || item.IsArmorItem(),
+                I18n.UiSlot_Armor,
+                ArmorSlotBackground);
+
         }
 
         private void GameLoop_UpdateTicking(object sender, StardewModdingAPI.Events.UpdateTickingEventArgs e)
@@ -776,7 +792,7 @@ namespace SwordAndSorcerySMAPI
                 if (State.ThrowCooldown > 0)
                     State.ThrowCooldown = MathF.Max(0, State.ThrowCooldown - (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds);
 
-                if (Game1.player.get_armorSlot().Value?.QualifiedItemId == "(O)DestyNova.SwordAndSorcery_LegendaryHeroRelic")
+                if (Game1.player.GetArmorItem()?.QualifiedItemId == "(O)DestyNova.SwordAndSorcery_LegendaryHeroRelic")
                 {
                     if (Config.ThrowShieldKey.JustPressed())
                     {
@@ -862,10 +878,16 @@ namespace SwordAndSorcerySMAPI
                     if ( abilId != null && Ability.Abilities.TryGetValue( abilId ?? "", out var abil ) && abil.ManaCost() <= ext.mana.Value && abil.CanUse() )
                     {
                         ext.mana.Value -= abil.ManaCost();
-                        abil.Function();
+                        CastAbility(abil);
                     }
                 }
             }
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static void CastAbility(Ability abil)
+        {
+            abil.Function();
         }
 
         private void Player_Warped(object sender, StardewModdingAPI.Events.WarpedEventArgs e)
@@ -882,7 +904,7 @@ namespace SwordAndSorcerySMAPI
             }
 
             var ext = Game1.player.GetFarmerExtData();
-            int? armorAmount = Game1.player.get_armorSlot().Value.GetArmorAmount();
+            int? armorAmount = Game1.player.GetArmorItem().GetArmorAmount();
             if (State.CanRepairArmor && Game1.player.HasCustomProfession(RogueSkill.ProfessionArmorRecovery) && armorAmount.HasValue)
             {
                 State.CanRepairArmor = false;
@@ -909,7 +931,7 @@ namespace SwordAndSorcerySMAPI
                 e.SpriteBatch.DrawString(Game1.smallFont, I18n.ShieldBlockText(State.BlockCooldown), new Vector2(toolbar.xPositionOnScreen + 64, y), Color.White);
             }
 
-            var armorAmt = Game1.player.get_armorSlot().Value.GetArmorAmount();
+            var armorAmt = Game1.player.GetArmorItem().GetArmorAmount();
             if ((armorAmt ?? -1) >= 0 && Game1.showingHealth)
             {
                 float modifier = 0.625f;
@@ -1089,8 +1111,8 @@ namespace SwordAndSorcerySMAPI
         {
             var ext = Game1.player.GetFarmerExtData();
             if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||
-                Game1.player.get_armorSlot().Value == null ||
-                ext.armorUsed.Value >= (Game1.player.get_armorSlot().Value.GetArmorAmount() ?? -1))
+                Game1.player.GetArmorItem() == null ||
+                ext.armorUsed.Value >= (Game1.player.GetArmorItem().GetArmorAmount() ?? -1))
                 return true;
 
             bool flag = (damager == null || !damager.isInvincible()) && (damager == null || (!(damager is GreenSlime) && !(damager is BigSlime)) || !__instance.isWearingRing("520"));
@@ -1098,7 +1120,7 @@ namespace SwordAndSorcerySMAPI
 
             __instance.playNearbySoundAll("parry");
 
-            ext.armorUsed.Value = Math.Min(Game1.player.get_armorSlot().Value.GetArmorAmount().Value, ext.armorUsed.Value + damage);
+            ext.armorUsed.Value = Math.Min(Game1.player.GetArmorItem().GetArmorAmount().Value, ext.armorUsed.Value + damage);
             damage = 0;
 
             return true;

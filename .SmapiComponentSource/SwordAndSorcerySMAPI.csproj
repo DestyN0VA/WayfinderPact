@@ -5,7 +5,7 @@
 	  <Description>...</Description>
 	  <UniqueId>KCC.SnS</UniqueId>
 	  <Authors>DestyNova, spacechase0</Authors>
-	  <Version>1.10.0</Version>
+	  <Version>1.11.0</Version>
     <TargetFramework>net6.0</TargetFramework>
 	  <EnableHarmony>true</EnableHarmony>
 	  <LangVersion>latest</LangVersion>
@@ -19,6 +19,13 @@
     <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
     <PackageReference Include="Pathoschild.Stardew.ModTranslationClassBuilder" Version="2.0.1" />
   </ItemGroup>
+
+	<!-- This fixes deployment when I use an environment variable to override my game path. No idea why -->
+	<PropertyGroup Condition="'$(OS)' == 'Windows_NT'">
+		<StartProgram>$(GamePath)\StardewModdingAPI.exe</StartProgram>
+		<StartWorkingDirectory>$(GamePath)</StartWorkingDirectory>
+	</PropertyGroup>
+
 
 	<ItemGroup>
 		<SMAPIDependency Include="spacechase0.SpaceCore" Version="1.18.0-sdvalpha" Reference="true" />

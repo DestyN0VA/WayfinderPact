@@ -1,9 +1,13 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Xml.Serialization;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using StardewModdingAPI;
 using StardewValley;
+using StardewValley.Monsters;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -18,5 +22,16 @@ namespace SwordAndSorcerySMAPI
         void RegisterSerializerType(Type type);
 
         void RegisterCustomProperty( Type declaringType, string name, Type propType, MethodInfo getter, MethodInfo setter );
+
+        void RegisterSpawnableMonster(string id, Func<Vector2, Dictionary<string, object>, Monster> monsterSpawner);
+
+        List<int> GetLocalIndexForMethod(MethodBase meth, string local);
+
+        event EventHandler<Action<string, Action>> AdvancedInteractionStarted;
+
+        void RegisterEquipmentSlot(IManifest modManifest, string globalId, Func<Item, bool> slotValidator, Func<string> slotDisplayName, Texture2D bgTex, Rectangle? bgRect = null);
+        Item GetItemInEquipmentSlot(Farmer farmer, string globalId);
+        void SetItemInEquipmentSlot(Farmer farmer, string globalId, Item item);
+        bool CanItemGoInEquipmentSlot(string globalId, Item item);
     }
 }

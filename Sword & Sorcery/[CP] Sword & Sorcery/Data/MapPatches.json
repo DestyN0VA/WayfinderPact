@@ -531,7 +531,7 @@
           },
           "Layer": "Buildings",
           "SetProperties": {
-            "Action": "Warp 17 7 EastScarp_DeepDarkLv0"
+            "Action": "Warp 17 7 EastScarp_DeepDarkEntrance"
           }
         }
       ],

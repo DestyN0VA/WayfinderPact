@@ -69,11 +69,12 @@ namespace SwordAndSorcerySMAPI
             BattlerData = new()
             {
                 { "Mateo", new BattlerInfo() { Defense = 8, Mana = 30, MaxMana = 30 } },
-                { Game1.player.Name, new BattlerInfo() { Defense = Game1.player.buffs.Defense + (Game1.player.get_armorSlot().Value?.GetArmorAmount() ?? 0) / 25, Mana = Game1.player.GetFarmerExtData().mana.Value, MaxMana = Game1.player.GetFarmerExtData().maxMana.Value } },
+                { Game1.player.Name, new BattlerInfo() { Defense = Game1.player.buffs.Defense + (Game1.player.GetArmorItem()?.GetArmorAmount() ?? 0) / 25, Mana = Game1.player.GetFarmerExtData().mana.Value, MaxMana = Game1.player.GetFarmerExtData().maxMana.Value } },
                 { "Dandelion", new BattlerInfo() { Defense = 12, Mana = 40, MaxMana = 40 } },
                 { "Hector", new BattlerInfo() { Defense = 3, Mana = 70, MaxMana = 70 } },
                 { "Cirrus", new BattlerInfo() { Defense = 0, Mana = 50, MaxMana = 50 } },
                 { "Roslin", new BattlerInfo() { Defense = 0, Mana = 100, MaxMana = 100 } },
+                { "Gunnar", new BattlerInfo() { Defense = 5, Mana = 25, MaxMana = 25 } }
             };
 
             foreach (var actor in @event.actors.ToList())
@@ -212,7 +213,7 @@ namespace SwordAndSorcerySMAPI
                 partnerInfo = partnerInfos["default"];
 
             var commands = new List<string>(Event.eventCommands);
-            commands.Insert(Event.CurrentCommand + 1, $"switchEvent {partnerInfo.IntermissionEventId}");
+            commands.Insert(Event.CurrentCommand + 1, $"switchEventFull {partnerInfo.IntermissionEventId}");
             Event.eventCommands = commands.ToArray();
 
             Event.CurrentCommand++;
