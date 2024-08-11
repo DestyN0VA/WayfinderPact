@@ -1936,14 +1936,25 @@
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
       }
     },
-
+    {
+      "Name": "SnS.Ch4.Finale.GunnarExtra.MateoSpeak",
+      "Value": "speak Mateo \"No, she's right. You've been through enough.$8#$b#Biróg, Cirrus. How are you doing?$16\""
+    },
+    {
+      "Name": "SnS.Ch4.Finale.GunnarExtra.MateoSpeak",
+      "Value": "speak Mateo \"No, she's right. You've been through enough.$8#$b#Biróg, Cirrus, Gunnar. How are you doing?$16\"",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+      }
+    },
     {
       "Name": "SnS.Ch4.Finale.GunnarExtra.1", //after Roslin & Dandelion
       "Value": "pause 1"
     },
     {
       "Name": "SnS.Ch4.Finale.GunnarExtra.1",
-      "Value": "speak MadDog.HashtagBearFam.Gunnar \"Well, we'll make our own luck, then, right?$7\"",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"Well, we'll make our own luck, then, right?$7\"/addMailReceived GunnarHelpedToo",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
@@ -2037,6 +2048,68 @@
     {
       "Name": "CombatWarps",
       "Value": "warp Mateo 12 10/warp farmer 12 12/warp Dandelion 12 14/warp Hector 12 16/warp Cirrus 10 10/warp Roslin 10 12/warp MadDog.HashtagBearFam.Gunnar 10 14",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+      }
+    },
+    {
+      "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.NotHectorVictory",
+      "Value": "warp Hector 45 90/faceDirection Hector 3"
+    },
+    {
+      "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.NotHectorVictory",
+      "Value": "warp Hector 46 90/faceDirection Hector 3/warp MadDog.HashtagBearFam.Gunnar 45 91/faceDirection MadDog.HashtagBearFam.Gunnar 0",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+      }
+    },
+
+    {
+      "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.HectorVictory",
+      "Value": "warp Mateo 45 90/faceDirection Mateo 3"
+    },
+    {
+      "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.HectorVictory",
+      "Value": "warp Mateo 46 90/faceDirection Mateo 3/warp MadDog.HashtagBearFam.Gunnar 45 91/faceDirection MadDog.HashtagBearFam.Gunnar 0",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+      }
+    },
+    {
+      "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.MateoVictory.Offset",
+      "Value": "pause 1"
+    },
+    {
+      "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.MateoVictory.Offset",
+      "Value": "positionOffset farmer 20 0/positionOffset Mateo 20 0",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+      }
+    },
+
+    {
+      "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.HectorVictory.Offset",
+      "Value": "pause 1"
+    },
+    {
+      "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.HectorVictory.Offset",
+      "Value": "positionOffset farmer 20 0/positionOffset Hector 20 0",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true,
+        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+      }
+    },
+    {
+      "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.CirrusVictory.Offset",
+      "Value": "pause 1"
+    },
+    {
+      "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.CirrusVictory.Offset",
+      "Value": "positionOffset farmer 20 0/positionOffset Cirrus 20 0",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
