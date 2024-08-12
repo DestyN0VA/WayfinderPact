@@ -11,7 +11,7 @@
             "Action": "EditData",
             "Target": "Data/Locations",
             "Entries": {
-                "EastScarp_DeepDark": {
+                "EastScarp_DeepDarkDungeon": {
                     "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv0}}",
                     "ExcludeFromNpcPathfinding": true,
                     "ArtifactSpots": [],
@@ -506,7 +506,7 @@
                             "TriggerActionsOnEntry": [
                                 "{{ModID}}_SpawnDeepDarkStuff_Dark",
                             ],
-                            "LocationDataEntry": "EastScarp_DeepDark",
+                            "LocationDataEntry": "EastScarp_DeepDarkDungeon",
                         },
                         "DarkMushroomTransition": {
                             "LevelRange": { "Begin": 10, "End": 10 },
@@ -516,7 +516,7 @@
                             "TriggerActionsOnEntry": [
                                 "{{ModID}}_SpawnDeepDarkStuff_Mushrooms",
                             ],
-                            "LocationDataEntry": "EastScarp_DeepDark",
+                            "LocationDataEntry": "EastScarp_DeepDarkDungeon",
                         },
                         "Mushrooms": {
                             "LevelRange": { "Begin": 11, "End": 20 },
@@ -545,7 +545,7 @@
                             "TriggerActionsOnEntry": [
                                 "{{ModID}}_SpawnDeepDarkStuff_Dark",
                             ],
-                            "LocationDataEntry": "EastScarp_DeepDark",
+                            "LocationDataEntry": "EastScarp_DeepDarkDungeon",
                         },
                     },
                     "LadderExitLocation": "EastScarp_DeepDarkEntrance",
