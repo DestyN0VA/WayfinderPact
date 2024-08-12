@@ -437,9 +437,9 @@ namespace SwordAndSorcerySMAPI
             foreach (var player in Game1.getAllFarmers())
             {
                 var armorSlot = player.get_armorSlot();
-                if (armorSlot.Value != null && sc.GetItemInEquipmentSlot(player, $"{ModManifest}_Armor") == null)
+                if (armorSlot.Value != null && sc.GetItemInEquipmentSlot(player, $"{ModManifest.UniqueID}_Armor") == null)
                 {
-                    sc.SetItemInEquipmentSlot(player, $"{ModManifest}_Armor", armorSlot.Value);
+                    sc.SetItemInEquipmentSlot(player, $"{ModManifest.UniqueID}_Armor", armorSlot.Value);
                     armorSlot.Value = null;
                 }
             }
@@ -509,6 +509,8 @@ namespace SwordAndSorcerySMAPI
                     Game1.player.craftingRecipes.Add("DN.SnS_WindwakerBullet", 0);
                 if (Game1.player.knowsRecipe("DN.SnS_LightbringerArrow") && !Game1.player.knowsRecipe("DN.SnS_LightbringerBullet"))
                     Game1.player.craftingRecipes.Add("DN.SnS_LightbringerBullet", 0);
+
+                Game1.player.mailReceived.Add("DN.SnS_ObtainedLLTK");
             }
 
             if (Context.IsWorldReady && Context.IsPlayerFree && e.Button.IsActionButton() && Game1.player.ActiveItem != null)
