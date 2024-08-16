@@ -15,5 +15,19 @@
             "Target": "Portraits/spring_Dandelion, Portraits/summer_Dandelion, Portraits/fall_Dandelion, Portraits/winter_Dandelion, Portraits/Dandelion_beach, Portraits/Dandelion_armored, Characters/spring_Dandelion, Characters/summer_Dandelion, Characters/fall_Dandelion, Characters/winter_Dandelion, Characters/Dandelion_beach, Characters/Dandelion_armored",
             "FromFile": "assets/{{TargetPathOnly}}/Dandelion/{{TargetWithoutPath}}.png"
         },
+
+        //Overlay
+
+        {
+            "LogName": "Pendant Overlay",
+            "Action": "EditImage",
+            "Target": "Portraits/spring_Dandelion, Portraits/summer_Dandelion, Portraits/fall_Dandelion, Portraits/winter_Dandelion, Portraits/Dandelion_beach, Portraits/Dandelion_armored",
+            "FromFile": "Assets/Portraits/Dandelion/{{TargetWithoutPath}}_pendant.png",
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange",
+            "When": {
+                "HasSeenEvent |contains=EVENTID HERE": true
+            }
+        }
     ]
 }
