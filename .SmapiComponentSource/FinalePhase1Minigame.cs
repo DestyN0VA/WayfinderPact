@@ -74,7 +74,7 @@ namespace SwordAndSorcerySMAPI
                 { "Hector", new BattlerInfo() { Defense = 3, Mana = 70, MaxMana = 70 } },
                 { "Cirrus", new BattlerInfo() { Defense = 0, Mana = 50, MaxMana = 50 } },
                 { "Roslin", new BattlerInfo() { Defense = 0, Mana = 100, MaxMana = 100 } },
-                { "Gunnar", new BattlerInfo() { Defense = 5, Mana = 25, MaxMana = 25 } }
+                { "MadDog.HashtagBearFam.Gunnar", new BattlerInfo() { Defense = 5, Mana = 25, MaxMana = 25 } }
             };
 
             foreach (var actor in @event.actors.ToList())

@@ -43,7 +43,8 @@
   "keybind.ability.2.8": "Ability (Bar 2, Slot 8)",
 
   "cannot-warp": "The warp did not work.",
-
+  "empty-slot.title": "Empty Ability Slot",
+  "empty-slot.description": "This ability slot is empty. Configure it with the adventure bar configure menu.",
 
   // Abiltiies
   "ability.shadowstep.name": "Shadowstep",

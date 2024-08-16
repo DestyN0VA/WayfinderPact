@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Netcode;
 using NeverEndingAdventure;
 using NeverEndingAdventure.Utils;
+using RadialMenu;
 using SpaceCore;
 using SpaceCore.VanillaAssetExpansion;
 using StardewModdingAPI;
@@ -208,6 +209,7 @@ namespace SwordAndSorcerySMAPI
         public const string ShadowstepEventReq = "SnS.Ch1.Mateo.18";
 
         public static ISpaceCoreApi sc;
+        public static IRadialMenuApi radial;
 
         public override void Entry(IModHelper helper)
         {
@@ -323,6 +325,7 @@ namespace SwordAndSorcerySMAPI
                 "thefrenchdodo.sakurainterfaceredux",
                 "nom0ri.vintageuifix",
                 "Sqbr.StarryBlueUI",
+                "Bos.UIInterface",
             ];
             foreach (var recolor in recolors)
             {
@@ -708,6 +711,12 @@ namespace SwordAndSorcerySMAPI
                 // shield throw is going away
             }
 
+            radial = Helper.ModRegistry.GetApi<IRadialMenuApi>("focustense.RadialMenu");
+            if (radial != null)
+            {
+                radial.RegisterCustomMenuPage(ModManifest, "AdventureBar", new AdventureBarRadialMenuPageFactory());
+            }
+
             Skills.RegisterSkill(RogueSkill = new RogueSkill());
             SpaceCore.CustomCraftingRecipe.CraftingRecipes.Add("DN.SnS_Bow", new BowCraftingRecipe());
 
@@ -887,7 +896,7 @@ namespace SwordAndSorcerySMAPI
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
-        private static void CastAbility(Ability abil)
+        internal static void CastAbility(Ability abil)
         {
             abil.Function();
         }

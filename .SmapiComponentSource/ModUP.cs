@@ -49,7 +49,7 @@ namespace SwordAndSorcerySMAPI
                 Game1.drawObjectDialogue(I18n.Harp_BadSong());
                 return;
             }
-            usedBuffToday = true;
+            //usedBuffToday = true;
 
             int strMult = Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffStrength) ? 2 : 1;
             int duration = Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffDuration) ? Buff.ENDLESS : (7 * 6 * 6 * 1000);
@@ -63,7 +63,7 @@ namespace SwordAndSorcerySMAPI
                 case 3: effects.FishingLevel.Value = 1 * strMult; break;
             }
 
-            Game1.player.applyBuff(new Buff("bardics.buff", "bardics.buff", I18n.Bardics_Song_Buff_Name(), duration, effects: effects));
+            Game1.player.applyBuff(new Buff("bardics.buff", "bardics.buff", I18n.Bardics_Song_Buff_Name(), duration, effects: effects, iconTexture: ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/abilities.png"), iconSheetIndex: 2, displayName: I18n.Bardics_Song_Buff_Name(), description: ""));
         }
 
         internal static bool usedBattleToday = false;
@@ -86,7 +86,7 @@ namespace SwordAndSorcerySMAPI
                 case 1: effects.Defense.Value = 3 * strMult; break;
             }
 
-            Game1.player.applyBuff(new Buff("bardics.battle", "bardics.battle", I18n.Bardics_Song_Battle_Name(), duration, effects: effects));
+            Game1.player.applyBuff(new Buff("bardics.battle", "bardics.battle", I18n.Bardics_Song_Battle_Name(), duration, effects: effects, iconTexture: ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/abilities.png"), iconSheetIndex: 3, displayName: I18n.Bardics_Song_Battle_Name()));
         }
 
         internal static bool usedRestorationToday = false;
@@ -489,8 +489,11 @@ namespace SwordAndSorcerySMAPI
 
         private static void SongPreamble(Action songStuff)
         {
+            Game1.player.faceDirection(Game1.down);
             Game1.player.performPlayerEmote("music");
-            Game1.player.FarmerSprite.endOfAnimationFunction = (f) => songStuff();
+            Game1.player.isEmoteAnimating = false;
+            Game1.player.noMovementPause = 150*9;
+            Game1.player.FarmerSprite.endOfAnimationFunction += (f) => { songStuff(); Game1.player.CanMove = true; };
         }
 
         public void Entry()
