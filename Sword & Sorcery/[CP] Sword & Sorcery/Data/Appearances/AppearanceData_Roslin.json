@@ -45,6 +45,20 @@
             "Action": "Load",
             "Target": "Portraits/Roslin_armored",
             "FromFile": "assets/Portraits/Roslin/Roslin_armored.png"
+        },
+
+        //Overlay
+
+        {
+            "LogName": "Pendant Overlay",
+            "Action": "EditImage",
+            "Target": "Portraits/Roslin, Portraits/HoodDown/spring_Roslin, Portraits/HoodDown/summer_Roslin, Portraits/HoodDown/fall_Roslin, Portraits/HoodDown/winter_Roslin, Portraits/HoodUp/spring_Roslin, Portraits/HoodUp/summer_Roslin, Portraits/HoodUp/fall_Roslin, Portraits/HoodUp/winter_Roslin, Portraits/Roslin_armored",
+            "FromFile": "Assets/Portraits/Roslin/Pendant_Overlay.png",
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange",
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch5.Dandelion.1": true
+            }
         }
     ]
 }

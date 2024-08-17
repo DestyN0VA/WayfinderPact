@@ -66,7 +66,7 @@
     {
       "LogName": "Sword & Sorcery - Data Includes",
       "Action": "Include",
-      "FromFile": "Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/WitchcraftResearch.json, Data/Dungeon.json"
+      "FromFile": "Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json"
     },
     {
       "LogName": "Sword & Sorcery - Shield Quest Include",
@@ -351,11 +351,11 @@
       "Description": "Toggles between a new varient of Hector's theme (TheFrenchDodo) and the original varient (HarvzBack).",
       "Section": "Miscellaneous"
     },
-    "SkipIntroQuest": {
+    "SkipIntroQuest_Setting": {
       "AllowValues": "true, false",
       "Default": "false",
       "AllowBlank": false,
-      "Description": "Removes the quest requirements for Hector's intro quest, in case of bugs or other issues.",
+      "Description": "Removes the quest requirements for Hector's intro quest, in case of bugs, participation in the Joja route, or other issues.",
       "Section": "Miscellaneous"
     },
     "SeasonalOutfits": {
@@ -633,14 +633,14 @@
       "Name": "HectorIntroRequirement",
       "Value": "SnS.Ch2.Hector.1/e SnS.Ch1.Mateo.14/t 0800 2200/n Hector_SpecialOrders_Pentacle1/n Hector_SpecialOrders_Pentacle2/n Hector_SpecialOrders_Pentacle3/n Hector_SpecialOrders_Pentacle4/F",
       "When": {
-        "SkipIntroQuest": false
+        "SkipIntroQuest_Setting": false
       }
     },
     {
       "Name": "HectorIntroRequirement",
       "Value": "SnS.Ch2.Hector.1/e SnS.Ch1.Mateo.14/t 0800 2200/F",
       "When": {
-        "SkipIntroQuest": true
+        "SkipIntroQuest_Setting": true
       }
     },
     {
@@ -2114,6 +2114,17 @@
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
       }
-    }
+    },
+    {
+      "Name": "SkipIntroQuest",
+      "Value": "{{SkipIntroQuest_Setting}}"
+   },
+   {
+      "Name": "SkipIntroQuest",
+      "Value": "true",
+      "When": {
+         "HasFlag": "JojaMember"
+      }
+   },
   ]
 }

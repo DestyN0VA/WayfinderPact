@@ -36,7 +36,19 @@
         "MysteryCaveExit": "{{i18n:Strings.Mateo.MysteryCaveExit}}",
         "GuildEmblem": "{{i18n:Strings.Mateo.GuildEmblem}}",
         "HawthornLetter": "{{i18n:Strings.Mateo.HawthornLetter}}",
-        "TentMessage": "{{i18n:Strings.Mateo.TentMessage}}"
+        "TentMessage": "{{i18n:Strings.Mateo.TentMessage}}",
+        "ExtraBooks1": "{{i18n:Strings.Mateo.ExtraBooks1}}",
+        "ExtraBooks2": "{{i18n:Strings.Mateo.ExtraBooks2}}",
+        "ExtraBooks3": "{{i18n:Strings.Mateo.ExtraBooks3}}",
+        "ExtraBooks4": "{{i18n:Strings.Mateo.ExtraBooks4}}",
+        "ExtraBooks5": "{{i18n:Strings.Mateo.ExtraBooks5}}",
+        "ExtraBooks6": "{{i18n:Strings.Mateo.ExtraBooks6}}",
+        "AdventurerDoor1": "{{i18n:Strings.Mateo.AdventurerDoor1}}",
+        "AdventurerDoor2": "{{i18n:Strings.Mateo.AdventurerDoor2}}",
+        "AdventurerDoor3": "{{i18n:Strings.Mateo.AdventurerDoor3}}",
+        "SpareSwords": "{{i18n:Strings.Mateo.SpareSwords}}",
+        "RequestBoard": "{{i18n:Strings.Mateo.RequestBoard}}",
+        "CirrusFood": "{{i18n:Strings.Mateo.CirrusFood}}",
 
       }
     }

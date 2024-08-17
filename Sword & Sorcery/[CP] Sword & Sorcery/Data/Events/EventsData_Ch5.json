@@ -1,0 +1,65 @@
+{
+
+  "Changes": [
+
+    {
+      "LogName": "Epilogue pt 1 - Dandelion Proposes", //showframe 34
+      "Action": "EditData",
+      "Target": "Data/Events/EastScarp_LionsMane", 
+      "Entries": {
+        "SnS.Ch5.Dandelion.1/f Dandelion 2000/t 800 2200/n DuskspireDefeated/F": "SnS.RoslinTheme/-100 -100/farmer 3 21 0 Roslin 6 16 3 Dandelion 5 16 1 Solomon 12 26 2 Cirrus 18 32 1 Juliet 19 31 2 Jessie 20 31 2 MadDog.HashtagBearFam.Sigurd? 28 27 2 MadDog.HashtagBearFam.Teren? 27 30 0 MadDog.HashtagBearFam.Gunnar? 29 30 0 Hector 11 31 2 Mateo 4 30 3/removeTile 18 32 Buildings/animate Solomon false true 100 28 28 29 29 30 30 31 31 32 32 33 33 34 34 35 35 36 36 37 37 38 38 39 39 40 40/globalFadeToClear/skippable/addConversationTopic FullmetalDandelion {{VariableTimegate}}/viewport 10 20 clamp true/pause 1000/playSound doorOpen/doAction 3 22/advancedMove farmer false 0 -2 4 10/emote farmer 8/speak Roslin \"Are you serious? You want to go adventuring? Dandelion, after everything we've JUST been through?$5\"/jump farmer 5/advancedMove farmer false -1 0 4 10/speak Dandelion \"No, no, no. You're misunderstanding. I said I wanted to embark on a NEW adventure.$6\"/speak Roslin \"Dandelion, I swear to the void-$8\"/speak Dandelion \"With you, Roslin. A new adventure with you.$12\"/emote Roslin 40/shake Roslin 2000/speak Roslin \"What exactly are you saying?$15\"/showFrame Dandelion 34/pause 250/emote Roslin 16 true/jump Roslin 5/pause 250/speak Dandelion \"Roslin, will you marry me?$4\"/speak Roslin \"Dandelion, we've been common-law married for a decade! Together for almost two!$16\"/speak Dandelion \"Has it been that long?$16#$b#Being with you really makes time fly.$14\"/speak Roslin \"You're daft.$13\"/speak Dandelion \"Perhaps. Consider this me making it official-official, then.$4\"/pause 250/message \"Dandelion hands Roslin a Mermaid Pendant, which shines a brilliant, solid gold.\"/speak Dandelion \"I made this out of my armor, since... well, I shouldn't be needing it anymore. We're domestic now, after all!$6\"/shake Roslin 2000/textAboveHead Roslin \"About to be HAVING a domestic, more like...\"/pause 250/advancedMove Roslin false 0 1 -2 0 0 -2 4 10/waitForAllStationary/playSound pickUpItem/emote Dandelion 8/pause 500/advancedMove Roslin false 0 2 2 0 0 -1 3 10/emote Dandelion 40 true/emote Roslin 40 true/waitForAllStationary/message \"Roslin hands Dandelion a Mermaid Pendant, which looks shaped from The Void itself.\"/shake Dandelion 2000/speak Roslin \"...Yes, obviously. The answer is yes.$3\"/playSound leafrustle/jump Dandelion 5 true/faceDirection Dandelion 2 true/emote Dandelion 16 true/jump Roslin 5 true/faceDirection Roslin 2 true/emote Roslin 12 true/pause 250/speed farmer 5/advancedMove farmer false 1 0 0 8 3 0 0 5 10 2/emote farmer 60/pause 250/faceDirection Mateo 1 true/emote Mateo 8 true/faceDirection Hector 3 true/emote Hector 8 true/fade/viewport -1000 -1000/pause 1000/stopAdvancedMoves/end"
+      }
+    },
+
+    {
+      "LogName": "Epilogue pt 2 - Wyatt Returns", 
+      "Action": "EditData",
+      "Target": "Data/Events/EastScarp_CoastalGuild", 
+      "Entries": {
+        "SnS.Ch5.Mateo.1/e SnS.Ch4.Dandelion.1/f Mateo 2000/t 800 2200/n DuskspireDefeated/F": "SnS.MateoTheme/-100 -100/farmer 19 14 1 Mateo 21 14 3/addTemporaryActor MateoEmeritus 32 32 2 17 2 true Character/changeName MateoEmeritus Emeritus/animate MateoEmeritus false true 500 23 24 25 26 0 23/skippable/viewport 12 12/globalFadeToClear/pause 1000/emote farmer 8/pause 250/speak Mateo \"{{MateoNickname}}! {{i18n:Events.S&S.Ch1.18.Mateo.1}}\"/emote farmer 32/pause 250/fade/viewport -1000 -1000/changeLocation EastScarp_Underforge/warp MateoEmeritus -100 -100/warp farmer 6 7/faceDirection farmer 1/warp Mateo 8 7/faceDirection Mateo 3/fade/viewport 13 8 clamp true/pause 1000/speak Mateo \"{{i18n:Events.S&S.Ch1.18.Mateo.2}}\"/faceDirection farmer 0/message \"{{i18n:Events.S&S.Ch1.18.Message.1}}\"/pause 250/emote Mateo 8/faceDirection farmer 0/pause 25/startJittering/showFrame farmer 94/sns_rogueunlock 6 7/shake Mateo 1000/emote Mateo 16 true/jump Mateo 5 true/pause 7000/showFrame farmer 0/message \"{{i18n:Events.S&S.Ch1.18.Message.2}}\"/stopJittering/pause 250/message \"{{i18n:Events.S&S.Ch1.18.Message.3}}\"/pause 250/faceDirection farmer 1/speak Mateo \"{{i18n:Events.S&S.Ch1.18.Mateo.3}} {{MateoNickname}}? {{i18n:Events.S&S.Ch1.18.Mateo.4}}\"/advancedMove Mateo false 0 1 1 10/pause 250/advancedMove farmer false 2 0 1 10/pause 250/viewport move 1 0 4000/speak Mateo \"{{i18n:Events.S&S.Ch1.18.Mateo.5}}\"/pause 2000/fade/viewport -1000 -1000/speak Mateo \"{{i18n:Events.S&S.Ch1.18.Mateo.6}} {{MateoNickname}}.$1\"/addMailReceived SnS_AdventureBar/end"
+      }
+    },
+
+  ]
+
+}
+
+/* 
+
+quickQuestion #That girl sounds overwhelmed. #That voice is familiar.(break)speak Mateo \"Let's check in on things, just in case.$32\"(break)speak Hector \"Right? Reminds me of something I was watching with Eloise...$7\"
+
+(0 = up, 1 = right, 2 = down, 3 = left)
+
+waitForAllStationary - waits until all advMoves are complete for next action 
+
+stopAdvancedMoves - will prevent clipping issues at the end of an event when characters advMove off screen
+
+advancedMove true/false (loop) parameters
+
+parameters:
+x y x y x y = move without pause
+
+x y z t x y z t = move with pauses
+
+x y x y z t x y = move with mix of mentioned above
+
+x = how many tiles move in x axis (+ = right, - = left)
+y = how many tiles move in y axis (+ = down, - = up)
+z = direction face upon reaching destination (1=right, 2=down, 3=left, 4=up)
+t = duration in milliseconds how long to stay in that spot (must be >= 10000ms)
+
+4- empty can
+8- question mark
+12- angry
+16- exclamation
+20- heart
+24- sleep
+28- sad
+32- happy
+36- x
+40- pause
+52- video game
+56- music note
+60- blush 
+
+*/

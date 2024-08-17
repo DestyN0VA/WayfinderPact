@@ -1865,6 +1865,9 @@
    </properties>
   </tile>
  </tileset>
+ <tileset firstgid="4316" name="NEACustom" tilewidth="16" tileheight="16" tilecount="175" columns="7">
+  <image source="NEACustom.png" width="112" height="400"/>
+ </tileset>
  <layer id="1" name="Back" width="3" height="2">
   <data encoding="csv">
 328,276,326,
@@ -1901,7 +1904,7 @@
  <layer id="3" name="Buildings" width="3" height="2">
   <data encoding="csv">
 65,66,114,
-4057,4058,4059
+4432,4433,4434
 </data>
  </layer>
  <objectgroup id="4" name="Buildings">
@@ -1920,7 +1923,7 @@
  <objectgroup id="8" name="Paths"/>
  <layer id="9" name="Front" width="3" height="2">
   <data encoding="csv">
-4025,4026,4027,
+4425,4426,4427,
 104,0,0
 </data>
  </layer>
