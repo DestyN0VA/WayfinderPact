@@ -543,7 +543,6 @@
                                 { "Weight": 1.0, "Value": "Maps/DeepDark5" },
                             ],
                             "TriggerActionsOnEntry": [
-                                "{{ModID}}_SpawnDeepDarkStuff_Dark",
                             ],
                             "LocationDataEntry": "EastScarp_DeepDarkDungeon",
                         },

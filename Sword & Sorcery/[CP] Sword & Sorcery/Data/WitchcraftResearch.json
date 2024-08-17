@@ -528,7 +528,6 @@
                     "(O){{ModID}}_WaterEssence": 10,
                 }
             },
-            /*
             "{{ModId}}_Spell_FindFamiliar":
             {
                 "Type": "Spell",
@@ -545,7 +544,6 @@
                     "(O){{ModID}}_WaterEssence": 10,
                 }
             },
-            */
             "{{ModId}}_Spell_GhostlyProjection":
             {
                 "Type": "Spell",

@@ -6,6 +6,8 @@ using Netcode;
 using SpaceCore.Events;
 using StardewModdingAPI;
 using StardewValley;
+using StardewValley.Companions;
+using StardewValley.GameData.Pets;
 using StardewValley.Locations;
 using StardewValley.Monsters;
 using StardewValley.Objects;
@@ -17,9 +19,139 @@ using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace SwordAndSorcerySMAPI
 {
+    public class FamiliarCompanion : Companion
+    {
+        public AnimatedSprite spr;
+        private PetData pet;
+        private PetBreed breed;
+        private double idleTimer = 0;
+
+        public FamiliarCompanion()
+        {
+        }
+
+        public override void InitNetFields()
+        {
+            base.InitNetFields();
+            direction.fieldChangeVisibleEvent += (field, oldVal, newVal) => { if (spr != null) spr.faceDirection(newVal); };
+        }
+
+        public override void InitializeCompanion(Farmer farmer)
+        {
+            base.InitializeCompanion(farmer);
+
+            var petData = DataLoader.Pets(Game1.content);
+            pet = petData[farmer.whichPetType];
+            breed = pet.GetBreedById(farmer.whichPetBreed);
+            spr = new(breed.Texture, 0, 32, 32);
+        }
+
+        private static List<FarmerSprite.AnimationFrame> ToAnim(List<PetAnimationFrame> frames)
+        {
+            return frames.Select(f => new FarmerSprite.AnimationFrame(f.Frame, f.Duration)
+            {
+                frameStartBehavior = (_) => { if (f.Sound != null) Game1.playSound(f.Sound); }
+            }).ToList();
+        }
+
+        public override void Update(GameTime time, GameLocation location)
+        {
+            var oldPos = Position;
+
+            base.Update(time, location);
+
+            if (oldPos == Position)
+            {
+                var oldTimer = idleTimer;
+                idleTimer += time.ElapsedGameTime.TotalSeconds;
+                if (idleTimer > 4)
+                {
+                    if (Owner.whichPetType == "Cat" && oldTimer <= 4)
+                    {
+                        spr.setCurrentAnimation(ToAnim(pet.Behaviors.First(b => b.Id == "BeginSitDown").Animation));
+                        spr.loop = false;
+                        var tmp1 = spr.currentAnimation.Last();
+                        tmp1.AddFrameEndAction( (_) =>
+                        {
+                            spr.setCurrentAnimation(ToAnim(pet.Behaviors.First(b => b.Id == "SitDownLick").Animation));
+                            spr.loop = false;
+                            var tmp2 = spr.currentAnimation.Last();
+                            tmp2.AddFrameEndAction( (_) =>
+                            {
+                                spr.setCurrentAnimation(ToAnim(pet.Behaviors.First(b => b.Id == "SitDownLickRepeat").Animation));
+                                spr.loop = true;
+                            });
+                            spr.currentAnimation[spr.currentAnimation.Count - 1] = tmp2;
+                        } );
+                        spr.currentAnimation[spr.currentAnimation.Count - 1] = tmp1;
+                    }
+                    else if (oldTimer <= 4)
+                    {
+                        spr.setCurrentAnimation(ToAnim(pet.Behaviors.First(b => b.Id == "BeginSitDown").Animation));
+                        spr.loop = false;
+                        var tmp1 = spr.currentAnimation.Last();
+                        tmp1.frameEndBehavior += (_) =>
+                        {
+                            spr.setCurrentAnimation(ToAnim(pet.Behaviors.First(b => b.Id == (Owner.whichPetType == "Dog" ? "SitDownPant" : "SitDown")).Animation));
+                            spr.loop = true;
+                        };
+                        spr.currentAnimation[spr.currentAnimation.Count - 1] = tmp1;
+                    }
+                    else
+                    {
+                        spr.animateOnce(time);
+                    }
+                }
+            }
+            else
+            {
+                idleTimer = 0;
+
+                var diff = Position - oldPos;
+                int dir = diff.Y < 0 ? Game1.up : Game1.down;
+                if (Math.Abs(diff.X) > Math.Abs(diff.Y))
+                {
+                    dir = diff.X < 0 ? Game1.left : Game1.right;
+                }
+
+                spr.loop = true;
+                switch (dir)
+                {
+                    case Game1.down: spr.AnimateDown(time); break;
+                    case Game1.right: spr.AnimateRight(time); break;
+                    case Game1.up: spr.AnimateUp(time); break;
+                    case Game1.left: spr.AnimateLeft(time); break;
+                }
+            }
+
+            if (Game1.random.NextDouble() < 0.0005)
+            {
+                Game1.playSound(breed.BarkOverride ?? pet.BarkSound, breed.VoicePitch != 1 ? null : (int)(1200 * breed.VoicePitch) );
+            }
+        }
+
+        public override void Draw(SpriteBatch b)
+        {
+            if (base.Owner == null || base.Owner.currentLocation == null || (base.Owner.currentLocation.DisplayName == "Temp" && !Game1.isFestival()))
+            {
+                return;
+            }
+
+            //b.Draw(Game1.shadowTexture, Game1.GlobalToLocal(base.Position + base.Owner.drawOffset), Game1.shadowTexture.Bounds, Color.White, 0f, new Vector2(Game1.shadowTexture.Bounds.Center.X, Game1.shadowTexture.Bounds.Center.Y), 3f, SpriteEffects.None, 0f);
+            spr.draw(b, Game1.GlobalToLocal(base.Position + base.Owner.drawOffset) - new Vector2(64, 128), (base._position.Y - 12f) / 10000f);
+        }
+
+        public override void OnOwnerWarp()
+        {
+            base.OnOwnerWarp();
+            //spr = new AnimatedSprite(Mod.instance.Helper.ModContent.GetInternalAssetName("assets/sprite.png").BaseName, 0, 16, 32);
+        }
+    }
+
     public class TeleportInfoMessage
     {
         public string LocationName { get; set; }
@@ -521,6 +653,10 @@ namespace SwordAndSorcerySMAPI
         private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
         {
             Game1.player.GetFarmerExtData().mageArmor = false;
+
+            var familiar = Game1.player.companions.FirstOrDefault(c => c is FamiliarCompanion);
+            if (familiar != null)
+                Game1.player.RemoveCompanion(familiar);
         }
 
         private void GameLoop_UpdateTicked(object sender, StardewModdingAPI.Events.UpdateTickedEventArgs e)
@@ -741,6 +877,21 @@ namespace SwordAndSorcerySMAPI
                 }
             });
 
+            Ability.Abilities.Add("spell_findfamiliar", new Ability("spell_findfamiliar")
+            {
+                Name = I18n.Witchcraft_Spell_FindFamiliar_Name,
+                Description = I18n.Witchcraft_Spell_FindFamiliar_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
+                SpriteIndex = 15,
+                ManaCost = () => 10,
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_FindFamiliar",
+                UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
+                Function = () =>
+                {
+                    CastSpell(Color.Aqua, () => Spells.FindFamiliar());
+                }
+            });
+
             Ability.Abilities.Add("spell_ghostlyprojection", new Ability("spell_ghostlyprojection")
             {
                 Name = I18n.Witchcraft_Spell_GhostlyProjection_Name,
@@ -750,7 +901,7 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => 7,
                 KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_GhostlyProjection",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
-                CanUse = () => !Game1.player.GetFarmerExtData().isGhost.Value,
+                CanUse = () => !Game1.player.companions.Any(c => c is FamiliarCompanion),
                 Function = () =>
                 {
                     CastSpell(Color.Aqua, () => Spells.GhostlyProjection());
