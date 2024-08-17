@@ -26,7 +26,7 @@
             "PatchMode": "Overlay",
             "Update": "OnLocationChange",
             "When": {
-                "HasSeenEvent |contains=EVENTID HERE": true
+                "HasSeenEvent |contains=SnS.Ch5.Dandelion.1": true
             }
         }
     ]

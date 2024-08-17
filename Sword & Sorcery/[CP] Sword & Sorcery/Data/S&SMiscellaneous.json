@@ -100,13 +100,46 @@
       "Action": "EditData",
       "Target": "Mods/shekurika.EventLookup/blocklist",
       "Entries": {
-          "SnS.Ch3.Cirrus.15": "T",
-          "SnS.Ch1.Mateo.19": "T",
-          "SnS.Ch2.Hector.17": "T"
+        "SnS.Ch3.Cirrus.15": "T",
+        "SnS.Ch1.Mateo.19": "T",
+        "SnS.Ch2.Hector.17": "T"
       },
       "When": {
-          "HasMod": "shekurika.EventLookup",
+        "HasMod": "shekurika.EventLookup",
+      },
+    },
+    // VIBRANT PASTORAL COMPAT
+    {
+      "Action": "Load",
+      "Target": "Maps/Lumisteria_Extras",
+      "FromFile": "Assets/VPRCompat/Lumisteria_Extras.png",
+      "When": {
+        "HasMod |contains=poohnhi.VPRTempFix": false,
       }
-},
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Lumisteria_Extras",
+      "FromFile": "Assets/VPRCompat/Lumisteria_Extras_VP.png",
+      "When": {
+        "HasMod |contains=poohnhi.VPRTempFix": true,
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/FlashShifter_Extras",
+      "FromFile": "Assets/VPRCompat/FlashShifter_Extras.png",
+      "When": {
+        "HasMod |contains=poohnhi.VPRTempFix": false,
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/FlashShifter_Extras",
+      "FromFile": "Assets/VPRCompat/FlashShifter_Extras_VP.png",
+      "When": {
+        "HasMod |contains=poohnhi.VPRTempFix": true,
+      }
+    },
   ]
 }

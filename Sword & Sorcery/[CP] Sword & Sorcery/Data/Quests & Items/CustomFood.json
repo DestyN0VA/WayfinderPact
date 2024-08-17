@@ -1292,8 +1292,27 @@
 
   "{{ModID}}_zuzustyleclamchowder": "372 1 256 1 192 1/what is this for?/{{ModID}}_zuzustyleclamchowder 1/e SnS.Ch3.Cirrus.5/{{i18n:food.crafting.zuzustyleclamchowder}}",
 
-  "{{ModID}}_ancientsweettea": "{{ModID}}_ancientsweettealeaves {{AncientSweetTeaDifficulty}}/what is this for?/{{ModID}}_ancientsweettea 1/e SnS.Ch3.Dandelion.3/{{i18n:food.crafting.ancientsweettea}}"
+  "{{ModID}}_ancientsweettea": "{{ModID}}_ancientsweettealeaves {{AncientSweetTeaDifficulty}}/what is this for?/{{ModID}}_ancientsweettea 1/e SnS.Ch3.Dandelion.3/{{i18n:food.crafting.ancientsweettea}}",
   
+  "{{ModID}}_verdantpotion": "{{ModID}}_EarthEssence 1 {{ModID}}_AirEssence 1 {{ModID}}_WaterEssence 1 {{ModID}}_FireEssence 1 768 1 769 1/what is this for?/{{ModID}}_verdantpotion 1/false/{{i18n:food.crafting.verdantpotion}}",
+
+	"{{ModID}}_scarletpotion": "{{ModID}}_EarthEssence 3 {{ModID}}_FireEssence 3 768 1 769 1/what is this for?/{{ModID}}_scarletpotion 1/false/{{i18n:food.crafting.scarletpotion}}",
+
+	"{{ModID}}_heatherpotion": "{{ModID}}_AirEssence 3 {{ModID}}_WaterEssence 3 768 1 769 1/what is this for?/{{ModID}}_heatherpotion 1/false/{{i18n:food.crafting.heatherpotion}}",
+
+	"{{ModID}}_zydratepotion": "{{ModID}}_EarthEssence 3 {{ModID}}_AirEssence 5 {{ModID}}_WaterEssence 5 {{ModID}}_FireEssence 3 768 1 769 1/what is this for?/{{ModID}}_zydratepotion 1/false/{{i18n:food.crafting.zydratetpotion}}",
+
+	"{{ModID}}_pistachiopotion": "{{ModID}}_EarthEssence 5 {{ModID}}_AirEssence 3 {{ModID}}_WaterEssence 3 {{ModID}}_FireEssence 5 768 1 769 1/what is this for?/{{ModID}}_pistachiopotion 1/false/{{i18n:food.crafting.pistachiopotion}}",
+
+	"{{ModID}}_dahliapotion": "{{ModID}}_EarthEssence 5 {{ModID}}_AirEssence 5 768 5/what is this for?/{{ModID}}_heatherpotion 1/false/{{i18n:food.crafting.heatherpotion}}",
+
+	"{{ModID}}_slushiepotion": "{{ModID}}_AirEssence 7 {{ModID}}_WaterEssence 7 768 7/what is this for?/{{ModID}}_slushiepotion 1/false/{{i18n:food.crafting.slushiepotion}}",
+
+	"{{ModID}}_matrixpotion": "{{ModID}}_EarthEssence 7 {{ModID}}_AirEssence 7 {{ModID}}_WaterEssence 3 {{ModID}}_FireEssence 3 768 3 769 3/what is this for?/{{ModID}}_matrixpotion 1/false/{{i18n:food.crafting.matrixpotion}}",
+
+	"{{ModID}}_mcdougalpotion": "{{ModID}}_EarthEssence 10 {{ModID}}_FireEssence 10 768 3 769 3/what is this for?/{{ModID}}_mcdougalpotion 1/false/{{i18n:food.crafting.mcdougalpotion}}",
+
+	"{{ModID}}_toirneachpotion": "{{ModID}}_AirEssence 10 {{ModID}}_WaterEssence 10 769 10/what is this for?/{{ModID}}_toirneachpotion 1/false/{{i18n:food.crafting._toirneachpotion}}",
   }
 },
 

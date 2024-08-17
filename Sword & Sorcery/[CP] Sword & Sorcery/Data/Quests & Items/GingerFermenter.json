@@ -470,10 +470,7 @@
 					  "AgingMultiplier": "4"
 					},
 					"OutputMethod": "StardewValley.Objects.Cask, Stardew Valley: OutputCask",
-					"ItemId": "(O)DN.SnS_ancientelderberrygingerbeers+
-					3=+
-					
-					17"
+					"ItemId": "(O)DN.SnS_ancientelderberrygingerbeer",
 				  }
 				],
 				"MinutesUntilReady": -1
@@ -484,17 +481,3 @@
 		  },
 	]
 }
-
-/*"Triggers": [
-						{
-							"RequiredItemId": "(O)771",
-							"RequiredCount": 10
-						}
-					],
-					"OutputItem": [
-						{
-							"ItemId": "(O)178",
-							"MinStack": 3,
-							"MaxStack": 8
-						}
-					],*/
