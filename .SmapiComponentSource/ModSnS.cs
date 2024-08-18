@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Netcode;
 using NeverEndingAdventure;
 using NeverEndingAdventure.Utils;
+using RadialMenu;
 using SpaceCore;
 using SpaceCore.VanillaAssetExpansion;
 using StardewModdingAPI;
@@ -16,6 +17,7 @@ using StardewValley.GameData.Objects;
 using StardewValley.GameData.SpecialOrders;
 using StardewValley.GameData.Tools;
 using StardewValley.GameData.Weapons;
+using StardewValley.Locations;
 using StardewValley.Menus;
 using StardewValley.Monsters;
 using StardewValley.SpecialOrders;
@@ -23,6 +25,7 @@ using StardewValley.SpecialOrders.Objectives;
 using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -208,6 +211,7 @@ namespace SwordAndSorcerySMAPI
         public const string ShadowstepEventReq = "SnS.Ch1.Mateo.18";
 
         public static ISpaceCoreApi sc;
+        public static IRadialMenuApi radial;
 
         public override void Entry(IModHelper helper)
         {
@@ -323,6 +327,7 @@ namespace SwordAndSorcerySMAPI
                 "thefrenchdodo.sakurainterfaceredux",
                 "nom0ri.vintageuifix",
                 "Sqbr.StarryBlueUI",
+                "Bos.UIInterface",
             ];
             foreach (var recolor in recolors)
             {
@@ -450,6 +455,19 @@ namespace SwordAndSorcerySMAPI
             // I hope this doesn't multi trigger...
             if (value == "DrakeScalePower")
                 Game1.player.GetFarmerExtData().maxMana.Value += 25;
+
+            if (value == "JojaMember" && Game1.IsMasterGame)
+            {
+                string[] toRemove =
+                [
+                    "CAGQuest.UntimedSpecialOrder.Pentacle1",
+                    "CAGQuest.UntimedSpecialOrder.Pentacle2",
+                    "CAGQuest.UntimedSpecialOrder.Pentacle3",
+                    "CAGQuest.UntimedSpecialOrder.Pentacle4",
+                ];
+
+                Game1.player.team.specialOrders.RemoveWhere(s => toRemove.Contains(s.questKey.Value));
+            }
         }
 
         private void GameLoop_TimeChanged(object sender, StardewModdingAPI.Events.TimeChangedEventArgs e)
@@ -708,6 +726,12 @@ namespace SwordAndSorcerySMAPI
                 // shield throw is going away
             }
 
+            radial = Helper.ModRegistry.GetApi<IRadialMenuApi>("focustense.RadialMenu");
+            if (radial != null)
+            {
+                radial.RegisterCustomMenuPage(ModManifest, "AdventureBar", new AdventureBarRadialMenuPageFactory());
+            }
+
             Skills.RegisterSkill(RogueSkill = new RogueSkill());
             SpaceCore.CustomCraftingRecipe.CraftingRecipes.Add("DN.SnS_Bow", new BowCraftingRecipe());
 
@@ -887,7 +911,7 @@ namespace SwordAndSorcerySMAPI
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
-        private static void CastAbility(Ability abil)
+        internal static void CastAbility(Ability abil)
         {
             abil.Function();
         }
@@ -1150,6 +1174,51 @@ namespace SwordAndSorcerySMAPI
         {
             if (ringId == "863" && __instance.eventsSeen.Contains("SnS.Ch3.Cirrus.9"))
                 ++__result;
+        }
+    }
+
+    [HarmonyPatch(typeof(GameLocation), "resetLocalState")]
+    public static class DeepDarkDungeonAdventurersPatch
+    {
+        public static void Postfix(GameLocation __instance)
+        {
+            if (Game1.IsMultiplayer)
+                return;
+            if (__instance.mapPath.Value != "Maps/DeepDark5")
+                return;
+            if (Game1.player.hasOrWillReceiveMail("DuskspireDefeated"))
+                return;
+
+            Point basePoint = new(28, 7);
+            Dictionary<string, (string sprite, string portrait, string dialogue)> data = new()
+            {
+                { "Mateo", new( "Armor_Mateo", "Armor_Mateo", "I'm worried, but we've made it this far. Nothing can stop us as long as we stick together.$80" ) },
+                { "Hector", new( "Hector_HoodDown", "Hector_HoodDown", "I feel sick...$19" ) },
+                { "Cirrus", new( "Cirrus_Glamrock", "Cirrus_Glamrock", "I'm not sure what's going to happen, @, but with you here we'll be fine!$17" ) },
+                { "Dandelion", new( "Dandelion_armored", "Dandelion_armored", "I have big plans for when this is over, @. Just you wait.$18" ) },
+                { "Roslin", new( "Roslin_armored", "Roslin_armored", "This place is thick with Void magic. It's all-consuming...$16" ) },
+            };
+
+            foreach (var entry in data)
+            {
+                NPC npc = new(new AnimatedSprite($"Characters\\{entry.Value.sprite}", 0, 16, 32), basePoint.ToVector2() * Game1.tileSize, "EastScarp_TNPCWaitingWarpRoom", Game1.down, $"{entry.Key}Mine", false, Game1.content.Load<Texture2D>($"Portraits\\{entry.Value.portrait}"))
+                {
+                    displayName = NPC.GetDisplayName(entry.Key)
+                };
+                npc.setNewDialogue(new Dialogue(npc, "deepdarkdialogue", entry.Value.dialogue));
+                if (entry.Key == "Mateo")
+                {
+                    /*
+                    npc.Sprite.setCurrentAnimation(
+                    [
+                        new(41, 750),
+                        new(42, 250),
+                    ]);
+                    */
+                }
+                __instance.characters.Add(npc);
+                basePoint.X++;
+            }
         }
     }
 }

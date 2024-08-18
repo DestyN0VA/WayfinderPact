@@ -100,6 +100,15 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
+        public static void FindFamiliar()
+        {
+            if (Game1.player.companions.Any(c => c is FamiliarCompanion))
+                return;
+
+            Game1.player.AddCompanion(new FamiliarCompanion());
+            Game1.player.buffs.Apply(new Buff("FamiliarLuck", "familiar", I18n.Witchcraft_Spell_FindFamiliar_Name(), Buff.ENDLESS, null, 4, new() { LuckLevel = { 1 } }, false, I18n.Witchcraft_Spell_FindFamiliar_Name(), I18n.Witchcraft_Spell_FindFamiliar_Description()));
+        }
+
         public static void GhostlyProjection()
         {
             var ext = Game1.player.GetFarmerExtData();
