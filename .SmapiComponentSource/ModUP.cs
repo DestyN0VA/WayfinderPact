@@ -319,6 +319,7 @@ namespace SwordAndSorcerySMAPI
             int damage = (int)(Game1.player.Items.Where(i => i is MeleeWeapon).Max(i => (i as MeleeWeapon).getItemLevel()) * 2.5f);
             if (Game1.player.HasCustomProfession(BardicsSkill.ProfessionAttackDamage))
                 damage *= 2;
+            damage = (int)(damage * ModSnS.AetherDamageMultiplier());
 
             float dist = Game1.tileSize * 5;
             if (Game1.player.HasCustomProfession(BardicsSkill.ProfessionAttackRange))

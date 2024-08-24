@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
+using SpaceCore;
 using SpaceCore.Events;
 using StardewModdingAPI;
 using StardewValley;
@@ -17,6 +18,8 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
@@ -171,6 +174,9 @@ namespace SwordAndSorcerySMAPI
         public static Texture2D SpellCircle;
         public static Texture2D Portal;
         public static Texture2D Grimoire;
+        public static Texture2D StuffTexture;
+
+        public static WitchcraftSkill Skill;
 
         public static Dictionary<string, ResearchEntry> Research { get; private set; }
 
@@ -185,12 +191,30 @@ namespace SwordAndSorcerySMAPI
             Helper = helper;
         }
 
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public static float SpellDamageMultiplier()
+        {
+            float ret = ModSnS.AetherDamageMultiplier();
+            if (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionSpellDamage))
+                ret += 0.25f;
+            if (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionSpellDamage2))
+                ret += 0.25f;
+            return ret;
+        }
+
         private static void CastSpell(Color spellColor, Action onCast)
         {
             ModSnS.State.PreCastFacingDirection = Game1.player.FacingDirection;
             Game1.player.completelyStopAnimatingOrDoingAction();
             Game1.player.faceDirection(Game1.down);
             Game1.player.canMove = false;
+            if (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionSpellDamage2))
+            {
+                Game1.player.temporarilyInvincible = true;
+                Game1.player.flashDuringThisTemporaryInvincibility = true;
+                Game1.player.temporaryInvincibilityTimer = 0;
+                Game1.player.currentTemporaryInvincibilityDuration = 2000;
+            }
             Game1.player.FarmerSprite.animateOnce(new FarmerSprite.AnimationFrame[]
             {
                 new FarmerSprite.AnimationFrame(57, 0),
@@ -273,6 +297,9 @@ namespace SwordAndSorcerySMAPI
             SpellCircle = Helper.ModContent.Load<Texture2D>("assets/spellcircle.png");
             Portal = Helper.ModContent.Load<Texture2D>("assets/return-portal.png");
             Grimoire = Helper.ModContent.Load<Texture2D>("assets/grimoire.png");
+            StuffTexture = Helper.ModContent.Load<Texture2D>("assets/witchcraft/stuff.png");
+
+            Skill = new WitchcraftSkill();
 
             Helper.Events.Multiplayer.ModMessageReceived += Multiplayer_ModMessageReceived;
             Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
@@ -450,6 +477,7 @@ namespace SwordAndSorcerySMAPI
 
         private void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)
         {
+            Skills.RegisterSkill(Skill);
             Research = Game1.content.Load<Dictionary<string, ResearchEntry>>("KCC.SnS/WitchcraftResearch");
         }
 
@@ -787,6 +815,8 @@ namespace SwordAndSorcerySMAPI
 
         private void RegisterSpells()
         {
+            const int WitchcraftExpMultiplier = 3;
+
             Ability.Abilities.Add("spell_haste", new Ability("spell_haste")
             {
                 Name = I18n.Witchcraft_Spell_Haste_Name,
@@ -798,6 +828,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
+                    Game1.player.AddCustomSkillExperience(ModTOP.Skill, 3 * WitchcraftExpMultiplier);
                     CastSpell(Color.LimeGreen, () => Spells.Haste());
                 }
             });
@@ -813,6 +844,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
+                    Game1.player.AddCustomSkillExperience(ModTOP.Skill, 10 * WitchcraftExpMultiplier);
                     CastSpell(Color.Orange, () => Spells.Stasis());
                 }
             });
@@ -828,6 +860,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
+                    Game1.player.AddCustomSkillExperience(ModTOP.Skill, 5 * WitchcraftExpMultiplier);
                     CastSpell(Color.Orange, () => Spells.MageArmor());
                 }
             });
@@ -843,6 +876,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
+                    Game1.player.AddCustomSkillExperience(ModTOP.Skill, 5 * WitchcraftExpMultiplier);
                     CastSpell(Color.Orange, () => Spells.WallOfForce());
                 }
             });
@@ -858,6 +892,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
+                    Game1.player.AddCustomSkillExperience(ModTOP.Skill, 10 * WitchcraftExpMultiplier);
                     CastSpell(Color.Magenta, () => Spells.RevivePlant());
                 }
             });
@@ -873,6 +908,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
+                    Game1.player.AddCustomSkillExperience(ModTOP.Skill, 15 * WitchcraftExpMultiplier);
                     CastSpell(Color.Yellow, () => Spells.MirrorImage());
                 }
             });
@@ -888,6 +924,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
+                    Game1.player.AddCustomSkillExperience(ModTOP.Skill, 10 * WitchcraftExpMultiplier);
                     CastSpell(Color.Aqua, () => Spells.FindFamiliar());
                 }
             });
@@ -904,6 +941,7 @@ namespace SwordAndSorcerySMAPI
                 CanUse = () => !Game1.player.companions.Any(c => c is FamiliarCompanion),
                 Function = () =>
                 {
+                    Game1.player.AddCustomSkillExperience(ModTOP.Skill, 7 * WitchcraftExpMultiplier);
                     CastSpell(Color.Aqua, () => Spells.GhostlyProjection());
                 }
             });
@@ -919,6 +957,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
+                    //Game1.player.AddCustomSkillExperience(ModTOP.Skill, 0 * WitchcraftExpMultiplier);
                     CastSpell(Color.Aqua, () => Spells.PocketChest());
                 }
             });
@@ -934,6 +973,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
+                    //Game1.player.AddCustomSkillExperience(ModTOP.Skill, 0 * WitchcraftExpMultiplier);
                     CastSpell(Color.Aqua, () => Spells.PocketDimension());
                 }
             });
@@ -947,9 +987,10 @@ namespace SwordAndSorcerySMAPI
         {
             if (!Game1.player.eventsSeen.Contains("SnS.Ch4.Roslin.1"))
                 return;
+            int mult = Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionEssenceDrops) ? 2 : 1;
 
             long farmerId = who?.UniqueMultiplayerID ?? 0;
-            if (who != null && Game1.random.NextDouble() < 0.15)
+            if (who != null && Game1.random.NextDouble() < 0.15 * mult)
             {
                 Game1.createObjectDebris("(O)DN.SnS_EarthEssence", x, y, farmerId, __instance);
                 Game1.createObjectDebris("(O)DN.SnS_EarthEssence", x, y, farmerId, __instance);
@@ -964,9 +1005,10 @@ namespace SwordAndSorcerySMAPI
         {
             if (!Game1.player.eventsSeen.Contains("SnS.Ch4.Roslin.1"))
                 return;
+            int mult = Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionEssenceDrops) ? 2 : 1;
 
             long farmerId = who?.UniqueMultiplayerID ?? 0;
-            if (Game1.random.NextDouble() < .35)
+            if (Game1.random.NextDouble() < .35 * mult)
             {
                 Game1.createObjectDebris("(O)DN.SnS_WaterEssence", (int)who.Tile.X, (int)who.Tile.Y, farmerId, who.currentLocation);
                 Game1.createObjectDebris("(O)DN.SnS_WaterEssence", (int)who.Tile.X, (int)who.Tile.Y, farmerId, who.currentLocation);
@@ -981,8 +1023,9 @@ namespace SwordAndSorcerySMAPI
         {
             if (!Game1.player.eventsSeen.Contains("SnS.Ch4.Roslin.1"))
                 return;
+            int mult = Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionEssenceDrops) ? 2 : 1;
 
-            if (monster.isGlider.Value && Game1.random.NextDouble() < 0.25)
+            if (monster.isGlider.Value && Game1.random.NextDouble() < 0.25 * mult)
             {
                 Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_AirEssence"), new(x, y), 2, __instance);
             }
@@ -995,7 +1038,7 @@ namespace SwordAndSorcerySMAPI
                 }
             }
             */
-            if (__instance is VolcanoDungeon vd && Game1.random.NextDouble() < 0.25)
+            if (__instance is VolcanoDungeon vd && Game1.random.NextDouble() < 0.25 * mult)
             {
                 Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_FireEssence"), new(x, y), 2, __instance);
             }
@@ -1005,9 +1048,9 @@ namespace SwordAndSorcerySMAPI
     // NOTE: Transparency for mirror image rendering is in the Shadowstep patch (since they share the transparency variable)
 
     [HarmonyPatch(typeof(Farmer), nameof(Farmer.takeDamage))]
-    [HarmonyPriority(Priority.HigherThanNormal)]
     public static class FarmerMirrorImageDamagePatch
     {
+        [HarmonyPriority(Priority.HigherThanNormal)]
         public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager)
         {
             var ext = Game1.player.GetFarmerExtData();
@@ -1098,6 +1141,7 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(Farmer), nameof(Farmer.takeDamage))]
     public static class FarmerStasisNoDamagePatch
     {
+        [HarmonyPriority(Priority.HigherThanNormal)]
         public static bool Prefix(Farmer __instance)
         {
             if (__instance.GetFarmerExtData().stasisTimer.Value > 0)
@@ -1106,6 +1150,22 @@ namespace SwordAndSorcerySMAPI
             }
 
             return true;
+        }
+    }
+
+    [HarmonyPatch(typeof(Farmer), nameof(Farmer.takeDamage))]
+    public static class FarmerAetherOnDamagePatch
+    {
+        public static void Postfix(Farmer __instance, int damage)
+        {
+            if (!__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff))
+                return;
+
+            if (damage > 0 && __instance.CanBeDamaged())
+            {
+                var ext = Game1.player.GetFarmerExtData();
+                ext.mana.Value = Math.Min(ext.mana.Value + (int)Math.Ceiling(damage * 0.2), ext.maxMana.Value);
+            }
         }
     }
 }

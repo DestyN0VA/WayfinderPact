@@ -183,6 +183,18 @@
   "bardics.profession.attack.range.description": "Range of Scherzo D'Inganno is extended to the entire location.",
 
   // TOP
+  "witchcraft.profession.essence-drops.name": "Hedge Witch",
+  "witchcraft.profession.essence-drops.description": "Double chance for elemental essence drops",
+  "witchcraft.profession.spell-damage.name": "Magus",
+  "witchcraft.profession.spell-damage.description": "+25% spell damage",
+  "witchcraft.profession.philosophers-stone.name": "Master Alchemist",
+  "witchcraft.profession.philosophers-stone.description": "Access to the Philosopher's Stone on the Adventure Bar Menu^Transmute essences from one type to another",
+  "witchcraft.profession.no-teleport-cost.name": "Master Alkahestrist",
+  "witchcraft.profession.no-teleport-cost.description": "Teleportation circle use cost reduced to 0",
+  "witchcraft.profession.spell-damage-2.name": "Abjurant Champion",
+  "witchcraft.profession.spell-damage-2.description": "Immune to damage briefly after casting, plus +25% damage buff.",
+  "witchcraft.profession.aether-buff.name": "Umbral Strider",
+  "witchcraft.profession.aether-buff.description": "+75 Max Aether, and restore some aether upon taking damage.",
   "ability.witchcraft.spell-unlock-hint": "Unlocked through the Witchcraft research system",
   "witchcraft.spell.haste.name": "Haste",
   "witchcraft.spell.haste.description": "Speeds you up.",
