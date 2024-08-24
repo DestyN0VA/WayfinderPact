@@ -213,6 +213,13 @@ namespace SwordAndSorcerySMAPI
         public static ISpaceCoreApi sc;
         public static IRadialMenuApi radial;
 
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public static float AetherDamageMultiplier()
+        {
+            return 1;
+        }
+
         public override void Entry(IModHelper helper)
         {
             instance = this;
@@ -546,6 +553,7 @@ namespace SwordAndSorcerySMAPI
                             w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
                         }
                         Game1.player.Items[Game1.player.CurrentToolIndex] = w;
+                        Helper.Input.Suppress(e.Button);
                     }
                     else if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking_gun")
                     {
@@ -559,6 +567,7 @@ namespace SwordAndSorcerySMAPI
                             w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
                         }
                         Game1.player.Items[Game1.player.CurrentToolIndex] = w;
+                        Helper.Input.Suppress(e.Button);
                     }
                 }
             }

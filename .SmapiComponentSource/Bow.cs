@@ -1,7 +1,9 @@
 ﻿using HarmonyLib;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Netcode;
 using SpaceCore;
 using StardewValley;
 using StardewValley.GameData.Weapons;
@@ -12,8 +14,12 @@ using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
+using static StardewValley.FarmerRenderer;
+using static StardewValley.FarmerSprite;
 using static StardewValley.Projectiles.BasicProjectile;
 
 namespace SwordAndSorcerySMAPI
@@ -109,6 +115,9 @@ namespace SwordAndSorcerySMAPI
 
         private static void Projectiles_OnValueAdded(StardewValley.Projectiles.Projectile value)
         {
+            value.boundingBoxWidth.Value = 48 - 8;
+            if (value.itemId.Value.ToLower().Contains("stygium") && value is BasicProjectile basic)
+                basic.damageToFarmer.Value = (int)(basic.damageToFarmer.Value * 1.5);
             if (value.itemId.Value.Contains("Bullet")) // Hack
             {
                 value.xVelocity.Value *= 2;
@@ -239,6 +248,165 @@ namespace SwordAndSorcerySMAPI
             __instance.DrawMenuIcons(spriteBatch, location, scaleSize, transparency, layerDepth, drawStackNumber, color);
 
             return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(FarmerRenderer), nameof(FarmerRenderer.draw), [typeof(SpriteBatch), typeof(AnimationFrame), typeof(int), typeof(Rectangle), typeof(Vector2), typeof(Vector2), typeof(float), typeof(int), typeof(Color), typeof(float), typeof(float), typeof(Farmer)])]
+    public static class FarmerRendererBowAndGunPatch
+    {
+        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> insns_)
+        {
+            List<CodeInstruction> insns = new(insns_);
+            List<CodeInstruction> ret = new();
+
+            int insertCounter = -1;
+            for (int i = 0; i < insns.Count; ++i)
+            {
+                var insn = insns[i];
+
+                if (insn.opcode == OpCodes.Ldfld && insn.operand is FieldInfo { Name: "usingSlingshot" } f)
+                {
+                    insertCounter = 1;
+                }
+                ret.Add(insn);
+
+                if (insertCounter != -1 && insertCounter-- == 0)
+                {
+                    ret.Add(new(OpCodes.Ldarg_0));
+                    ret.Add(new(OpCodes.Ldarg_1));
+                    ret.Add(new(OpCodes.Ldarg_S, (short)12));
+                    ret.Add(new(OpCodes.Ldarg_S, (short)5));
+                    ret.Add(new(OpCodes.Ldarg_S, (short)8));
+                    ret.Add(new(OpCodes.Ldarg_S, (short)11));
+                    ret.Add(new(OpCodes.Ldarg_S, (short)7));
+                    ret.Add(new(OpCodes.Call, AccessTools.Method(typeof(FarmerRendererBowAndGunPatch), nameof(DrawBowOrGunIfNeeded))));
+                    ret.Add(new(OpCodes.Brtrue, insns[i].operand));
+                }
+            }
+
+            return ret;
+        }
+
+        public static bool DrawBowOrGunIfNeeded(FarmerRenderer renderer, SpriteBatch b, Farmer who, Vector2 position, int facingDirection, float scale, float layerDepth)
+        {
+            if (who.CurrentTool is not Slingshot slingshot)
+                return false;
+
+
+            var baseTexture = ModSnS.instance.Helper.Reflection.GetField<Texture2D>(renderer, "baseTexture").GetValue();
+
+            if (slingshot.IsGun())
+            {
+                Point point = Utility.Vector2ToPoint(slingshot.AdjustForHeight(Utility.PointToVector2(slingshot.aimPos.Value)));
+                int mouseX = point.X;
+                int y = point.Y;
+                int backArmDistance = slingshot.GetBackArmDistance(who);
+                Vector2 shoot_origin = slingshot.GetShootOrigin(who);
+                float frontArmRotation = (float)Math.Atan2((float)y - shoot_origin.Y, (float)mouseX - shoot_origin.X) + (float)Math.PI;
+                if (!Game1.options.useLegacySlingshotFiring)
+                {
+                    frontArmRotation -= (float)Math.PI;
+                    if (frontArmRotation < 0f)
+                    {
+                        frontArmRotation += (float)Math.PI * 2f;
+                    }
+                }
+                var tex = ItemRegistry.GetDataOrErrorItem(slingshot.QualifiedItemId).GetTexture();
+                Rectangle rect = ItemRegistry.GetDataOrErrorItem(slingshot.QualifiedItemId.Replace("_gun", "")).GetSourceRect();
+                switch (facingDirection)
+                {
+                    case 0:
+                        b.Draw(baseTexture, position + new Vector2(4f + frontArmRotation * 8f, -44f), new Rectangle(173, 238, 9, 14), Color.White, 0f, new Vector2(4f, 11f), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.SlingshotUp));
+                        b.Draw(tex, position + new Vector2(4f + frontArmRotation * 8f, -44f) + new Vector2(40, -16), rect, Color.White, (-135-90) * MathF.PI / 180, new Vector2(0, 0), 4f * scale, SpriteEffects.FlipHorizontally | SpriteEffects.FlipVertically, FarmerRenderer.GetLayerDepth(layerDepth + 0.000001f, FarmerSpriteLayers.SlingshotUp));
+                        break;
+                    case 1:
+                        {
+                            frontArmRotation = 0;
+                            b.Draw(baseTexture, position + new Vector2(52 - backArmDistance, -32f), new Rectangle(147, 237, 10, 4), Color.White, 0f, new Vector2(8f, 3f), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.Slingshot));
+                            b.Draw(baseTexture, position + new Vector2(36f, -44f), new Rectangle(156, 244, 9, 10), Color.White, frontArmRotation, new Vector2(0f, 3f), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.SlingshotUp));
+                            b.Draw(tex, position + new Vector2(36f, -44f) - new Vector2(16 - 48, -8 + 48), rect, Color.White, frontArmRotation + (45) * MathF.PI / 180, new Vector2(0, 0), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth + 0.00002f, FarmerSpriteLayers.SlingshotUp));
+
+                            break;
+                        }
+                    case 3:
+                        {
+                            frontArmRotation = MathF.PI;
+                            b.Draw(baseTexture, position + new Vector2(40 + backArmDistance, -32f), new Rectangle(147, 237, 10, 4), Color.White, 0f, new Vector2(9f, 4f), 4f * scale, SpriteEffects.FlipHorizontally, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.Slingshot));
+                            b.Draw(baseTexture, position + new Vector2(24f, -40f), new Rectangle(156, 244, 9, 10), Color.White, frontArmRotation + (float)Math.PI, new Vector2(8f, 3f), 4f * scale, SpriteEffects.FlipHorizontally, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.SlingshotUp));
+                            b.Draw(tex, position + new Vector2(24f, -40f) - new Vector2(4+16, -12+32), rect, Color.White, (float)Math.PI + (45+90) * MathF.PI / 180, new Vector2(13, 5), 4f * scale, SpriteEffects.FlipHorizontally, FarmerRenderer.GetLayerDepth(layerDepth + 0.00002f, FarmerSpriteLayers.SlingshotUp));
+
+                            break;
+                        }
+                    case 2:
+                        b.Draw(baseTexture, position + new Vector2(4f, -32 - backArmDistance / 2), new Rectangle(148, 244, 4, 4), Color.White, 0f, Vector2.Zero, 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.Arms));
+                        //b.Draw(baseTexture, position + new Vector2(44f - frontArmRotation * 10f, -16f), new Rectangle(167, 235, 7, 9), Color.White, 0f, new Vector2(3f, 5f), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.Slingshot, dyeLayer: true));
+                        b.Draw(tex, position + new Vector2(44f - frontArmRotation * 10f, -16f) - new Vector2(0, 16), rect, Color.White, 45 * MathF.PI / 180, new Vector2(0, 0), 4f * scale, SpriteEffects.FlipVertically, FarmerRenderer.GetLayerDepth(layerDepth + 0.00002f, FarmerSpriteLayers.Slingshot, dyeLayer: true));
+                        break;
+                }
+            }
+            else if (slingshot.IsBow())
+            {
+                Point point = Utility.Vector2ToPoint(slingshot.AdjustForHeight(Utility.PointToVector2(slingshot.aimPos.Value)));
+                int mouseX = point.X;
+                int y = point.Y;
+                int backArmDistance = slingshot.GetBackArmDistance(who);
+                Vector2 shoot_origin = slingshot.GetShootOrigin(who);
+                float frontArmRotation = (float)Math.Atan2((float)y - shoot_origin.Y, (float)mouseX - shoot_origin.X) + (float)Math.PI;
+                if (!Game1.options.useLegacySlingshotFiring)
+                {
+                    frontArmRotation -= (float)Math.PI;
+                    if (frontArmRotation < 0f)
+                    {
+                        frontArmRotation += (float)Math.PI * 2f;
+                    }
+                }
+                var tex = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/bow-nostring.png");
+                switch (facingDirection)
+                {
+                    case 0:
+                        b.Draw(baseTexture, position + new Vector2(4f + frontArmRotation * 8f, -44f), new Rectangle(173, 238, 9, 14), Color.White, 0f, new Vector2(4f, 11f), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.SlingshotUp));
+                        b.Draw(tex, position + new Vector2(4f + frontArmRotation * 8f, -44f) + new Vector2(0, 16), null, Color.White, -135 * MathF.PI / 180, new Vector2(0, 0), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth + 0.000002f, FarmerSpriteLayers.SlingshotUp));
+                        break;
+                    case 1:
+                        {
+                            b.Draw(baseTexture, position + new Vector2(52 - backArmDistance, -32f), new Rectangle(147, 237, 10, 4), Color.White, 0f, new Vector2(8f, 3f), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.Slingshot));
+                            b.Draw(baseTexture, position + new Vector2(36f, -44f), new Rectangle(156, 244, 9, 10), Color.White, frontArmRotation, new Vector2(0f, 3f), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.SlingshotUp));
+                            b.Draw(tex, position + new Vector2(36f, -44f) - new Vector2(16, -8), null, Color.White, frontArmRotation - 45 * MathF.PI / 180, new Vector2(0, 0), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth + 0.00002f, FarmerSpriteLayers.SlingshotUp));
+                            
+                            int slingshotAttachX = (int)(Math.Cos(frontArmRotation + (float)Math.PI / 2f - 30 * MathF.PI / 180) * (double)(20 - backArmDistance - 8) - Math.Sin(frontArmRotation + (float)Math.PI / 2f - 30 * MathF.PI / 180) * -68.0);
+                            int slingshotAttachY = (int)(Math.Sin(frontArmRotation + (float)Math.PI / 2f - 30 * MathF.PI / 180) * (double)(20 - backArmDistance - 8) + Math.Cos(frontArmRotation + (float)Math.PI / 2f - 30 * MathF.PI / 180) * -68.0);
+                            Utility.drawLineWithScreenCoordinates((int)(position.X + 52f - (float)backArmDistance), (int)(position.Y - 32f - 4f), (int)(position.X + 32f + (float)(slingshotAttachX / 2)), (int)(position.Y - 32f - 12f + (float)(slingshotAttachY / 2)), b, Color.White, FarmerRenderer.GetLayerDepth(layerDepth + 0.00001f, FarmerSpriteLayers.SlingshotUp));
+                            slingshotAttachX = (int)(Math.Cos(frontArmRotation + (float)Math.PI / 2f + 55 * MathF.PI / 180) * (double)(20 - backArmDistance - 8) - Math.Sin(frontArmRotation + (float)Math.PI / 2f + 55 * MathF.PI / 180) * -90.0);
+                            slingshotAttachY = (int)(Math.Sin(frontArmRotation + (float)Math.PI / 2f + 55 * MathF.PI / 180) * (double)(20 - backArmDistance - 8) + Math.Cos(frontArmRotation + (float)Math.PI / 2f + 55 * MathF.PI / 180) * -90.0);
+                            Utility.drawLineWithScreenCoordinates((int)(position.X + 52f - (float)backArmDistance), (int)(position.Y - 32f - 4f), (int)(position.X + 32f + (float)(slingshotAttachX / 2)), (int)(position.Y - 32f - 12f + (float)(slingshotAttachY / 2)), b, Color.White, FarmerRenderer.GetLayerDepth(layerDepth + 0.00001f, FarmerSpriteLayers.SlingshotUp));
+                            break;
+                        }
+                    case 3:
+                        {
+                            b.Draw(baseTexture, position + new Vector2(40 + backArmDistance, -32f), new Rectangle(147, 237, 10, 4), Color.White, 0f, new Vector2(9f, 4f), 4f * scale, SpriteEffects.FlipHorizontally, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.Slingshot));
+                            b.Draw(baseTexture, position + new Vector2(24f, -40f), new Rectangle(156, 244, 9, 10), Color.White, frontArmRotation + (float)Math.PI, new Vector2(8f, 3f), 4f * scale, SpriteEffects.FlipHorizontally, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.SlingshotUp));
+                            b.Draw(tex, position + new Vector2(24f, -40f) - new Vector2(4, -12), null, Color.White, frontArmRotation + (float)Math.PI + 45 * MathF.PI / 180, new Vector2(13, 5), 4f * scale, SpriteEffects.FlipHorizontally, FarmerRenderer.GetLayerDepth(layerDepth + 0.00002f, FarmerSpriteLayers.SlingshotUp));
+                            
+                            int slingshotAttachX = (int)(Math.Cos(frontArmRotation + (float)Math.PI * 2f / 5f + 30 * MathF.PI / 180) * (double)(20 + backArmDistance - 8) - Math.Sin(frontArmRotation + (float)Math.PI * 2f / 5f + 30 * MathF.PI / 180) * -68.0);
+                            int slingshotAttachY = (int)(Math.Sin(frontArmRotation + (float)Math.PI * 2f / 5f + 30 * MathF.PI / 180) * (double)(20 + backArmDistance - 8) + Math.Cos(frontArmRotation + (float)Math.PI * 2f / 5f + 30 * MathF.PI / 180) * -68.0);
+                            Utility.drawLineWithScreenCoordinates((int)(position.X + 4f + (float)backArmDistance), (int)(position.Y - 32f - 8f), (int)(position.X + 26f + (float)slingshotAttachX * 4f / 10f), (int)(position.Y - 32f - 8f + (float)slingshotAttachY * 4f / 10f), b, Color.White, FarmerRenderer.GetLayerDepth(layerDepth + 0.00001f, FarmerSpriteLayers.SlingshotUp));
+                            slingshotAttachX = (int)(Math.Cos(frontArmRotation + (float)Math.PI * 2f / 5f - 60 * MathF.PI / 180) * (double)(20 + backArmDistance - 8) - Math.Sin(frontArmRotation + (float)Math.PI * 2f / 5f - 60 * MathF.PI / 180) * -90);
+                            slingshotAttachY = (int)(Math.Sin(frontArmRotation + (float)Math.PI * 2f / 5f - 60 * MathF.PI / 180) * (double)(20 + backArmDistance - 8) + Math.Cos(frontArmRotation + (float)Math.PI * 2f / 5f - 60 * MathF.PI / 180) * -90);
+                            Utility.drawLineWithScreenCoordinates((int)(position.X + 4f + (float)backArmDistance), (int)(position.Y - 32f - 8f), (int)(position.X + 26f + (float)slingshotAttachX * 4f / 10f), (int)(position.Y - 32f - 8f + (float)slingshotAttachY * 4f / 10f), b, Color.White, FarmerRenderer.GetLayerDepth(layerDepth + 0.00001f, FarmerSpriteLayers.SlingshotUp));
+                            break;
+                        }
+                    case 2:
+                        b.Draw(baseTexture, position + new Vector2(4f, -32 - backArmDistance / 2), new Rectangle(148, 244, 4, 4), Color.White, 0f, Vector2.Zero, 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.Arms));
+                        Utility.drawLineWithScreenCoordinates((int)(position.X + 16f), (int)(position.Y - 28f - (float)(backArmDistance / 2)), (int)(position.X + 12 - frontArmRotation * 10f), (int)(position.Y - 16f - 8f), b, Color.White, FarmerRenderer.GetLayerDepth(layerDepth + 0.00001f, FarmerSpriteLayers.Slingshot, dyeLayer: true));
+                        Utility.drawLineWithScreenCoordinates((int)(position.X + 16f), (int)(position.Y - 28f - (float)(backArmDistance / 2)), (int)(position.X + 72f - frontArmRotation * 10f), (int)(position.Y - 16f - 8f), b, Color.White, FarmerRenderer.GetLayerDepth(layerDepth + 0.00001f, FarmerSpriteLayers.Slingshot, dyeLayer: true));
+                        //b.Draw(baseTexture, position + new Vector2(44f - frontArmRotation * 10f, -16f), new Rectangle(167, 235, 7, 9), Color.White, 0f, new Vector2(3f, 5f), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.Slingshot, dyeLayer: true));
+                        b.Draw(tex, position + new Vector2(44f - frontArmRotation * 10f, -16f) - new Vector2(0, 48), null, Color.White, 45 * MathF.PI / 180, new Vector2(0, 0), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth + 0.00002f, FarmerSpriteLayers.Slingshot, dyeLayer: true));
+                        break;
+                }
+            }
+            else return false;
+
+            return true;
         }
     }
 }

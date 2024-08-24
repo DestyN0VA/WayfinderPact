@@ -113,7 +113,7 @@ namespace SwordAndSorcerySMAPI
 
         public override string GetSkillPageHoverText(int level)
         {
-            return I18n.Level_Manacap(level * 5);
+            return I18n.Level_Manacap(level * 10);
         }
         public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains("SnS.Ch3.Cirrus.14");
     }

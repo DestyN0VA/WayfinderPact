@@ -440,6 +440,29 @@
       }
     },
     {
+      "LogName": "Deep Dark Lv 1",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_DeepDarkLv1": {
+          "DisplayName": "{{i18n:miscellaneous.mapname.DeepDarkLv1}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_DeepDarkLv1"
+          },
+          "DefaultArrivalTile": {
+            "X": 5,
+            "Y": 9
+          },
+          "ExcludeFromNpcPathfinding": true,
+          "ArtifactSpots": [],
+          "FishAreas": {},
+          "Fish": [],
+          "Forage": [],
+          "CustomFields": {}
+        }
+      }
+    },
+    {
       "LogName": "Deep Dark Duskspire Lair",
       "Action": "EditData",
       "Target": "Data/Locations",
