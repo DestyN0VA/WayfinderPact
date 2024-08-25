@@ -764,6 +764,39 @@
         "Ancient Sweet Tea Bush Seeds": "{{ModID}}_druidicessence 10/what is this for?/{{ModID}}_ancientsweettealeaves.seed 1/false/e SnS.Ch3.Dandelion.3/{{i18n:AncientSeed.Hector.SweetTea}}",
       }
     },
+    // GIANT VARIATIONS 
+    {
+      "Action": "Load",
+      "Target": "Mods/DN.SnS/GiantCrops",
+      "FromFile": "Assets/Items & Crops/SnSGiantCrops.png"
+    },
+    {
+      "LogName": "Giant Crops for Hector",
+      "Action": "EditData",
+      "Target": "Data/GiantCrops",
+      "Entries": {
+        "DN.SnS_giant_glowingpolyporemushrooms": {
+          "FromItemId": "(O)DN.SnS_glowingpolyporemushrooms",
+          "Chance": 0.01,
+          "HarvestItems": [
+            {
+              "ItemId": "(O)DN.SnS_glowingpolyporemushrooms",
+              "MinStack": 15,
+              "MaxStack": 20
+            }
+          ],
+          "Texture": "Mods/DN.SnS/GiantCrops",
+          "TexturePosition": {
+            "X": 0,
+            "Y": 0
+          },
+          "TileSize": {
+            "X": 3,
+            "Y": 3
+          }
+        }
+      }
+    },
     // CUSTOM DRUIDIC CATEGORY 
     {
       "Action": "EditData",

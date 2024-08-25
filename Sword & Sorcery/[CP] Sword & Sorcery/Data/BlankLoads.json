@@ -84,6 +84,12 @@
       "Action": "Load",
       "Target": "data/events/EastScarp_DuskspireLair",
       "FromFile": "assets/blank.json"
+    },
+    {
+      "LogName": "Violet Moon Events Blank",
+      "Action": "Load",
+      "Target": "data/events/EastScarp_VioletMoonFestivalGrounds",
+      "FromFile": "assets/blank.json"
     }
   ]
 }
