@@ -165,5 +165,10 @@
             "Target": "Characters/WeddingArch", // UNIQUE SIZE: 125 X 80
             "FromFile": "assets/TemporaryActors/Characters/WeddingArch.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Characters/KeyArt", // UNIQUE SIZE: 327 X 279
+            "FromFile": "assets/TemporaryActors/Characters/KeyArt.png"
+        },
     ]
 }

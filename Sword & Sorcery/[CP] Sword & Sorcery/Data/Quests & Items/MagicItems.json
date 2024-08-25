@@ -146,6 +146,48 @@
         },
       }
     },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_destykeychain": {
+          "Name": "Desty's Keychain",
+          "DisplayName": "{{i18n: magicitem.destykeychain.name}}",
+          "Description": "{{i18n: magicitem.destykeychain.description}}",
+          "Type": "Basic",
+          "Price": 0,
+          "Edibility": -300,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "ContextTags": [ "keychain_item" ], 
+          "SpriteIndex": 101
+        },
+      }
+    },
+    {
+      "LogName": "Keychain Buff",
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/WearableData",
+      "Entries": {
+          "(O){{ModID}}_destykeychain": {
+              "BuffIdToApply": "{{ModID}}_DestysBuff",
+          },
+      }
+  },
+  {
+      "LogName": "Desty's Buff",
+      "Action": "EditData",
+      "Target": "Data/Buffs",
+      "Entries": {
+          "{{ModID}}_DestysBuff": {
+              "DisplayName": "{{i18n:buff.destybuff}}",
+              "IconTexture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+              "IconSpriteIndex": 102,
+              "Effects": { "Attack": 2 }
+          }
+      }
+  },
     // CRAFTING RECIPES 
     /*
     {

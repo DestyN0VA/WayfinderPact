@@ -5005,6 +5005,9 @@ ________      ________ _   _ _______ _____
   "magicitem.argentisshield.name": "Empowered Argentis Shield",
   "magicitem.argentisshield.description": "Fully restored to it's former power, this shield empowers you to protect your friends and loved ones.",
 
+  "magicitem.destykeychain.name": "Desty's Keychain",
+  "magicitem.destykeychain.description": "An unusual keychain for Long Live The King, in the shape of an X.",
+
   "food.salishbourbon.name": "Salish Sea Bourbon",
   "food.salishbourbon.description": "Mateo's favorite drink, made at a small brewery in the Fern Islands.",
 
@@ -5345,6 +5348,8 @@ ________      ________ _   _ _______ _____
   "witchcraft.research.pocket-dimension.description": "Teleports you to a pocket dimension which you can use as you like. It acts as a greenhouse.",
   "witchcraft.research.philosophers-stone.name": "Philosopher's Stone",
   "witchcraft.research.philosophers-stone.description": "Adds an icon to the Adventure Bar Menu (default U). When clicked, opens a new menu allowing you to transmute essences into other essences.",
+
+  "buff.destybuff": "Do not stand by in the presence of evil.",
 
   /*
   __  __ _____  _____  _____ ______ _      _               _   _ ______ ____  _    _  _____ 
