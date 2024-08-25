@@ -159,6 +159,11 @@
             "Action": "Load",
             "Target": "Portraits/MateoWyatt",
             "FromFile": "assets/TemporaryActors/Portraits/MateoWyatt.png"
-        }
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/WeddingArch", // UNIQUE SIZE: 125 X 80
+            "FromFile": "assets/TemporaryActors/Characters/WeddingArch.png"
+        },
     ]
 }
