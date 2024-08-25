@@ -16,7 +16,29 @@
             "Update": "OnLocationChange",
             "EnableFarmerCollision": true, 
             "TravelSpeed": 1, 
-            "EnableShadow": true
+            "EnableShadow": true,
+            "When": "ANY \"!PLAYER_HAS_SEEN_EVENT Host SnS.Ch3.Cirrus.11\" \"PLAYER_HAS_SEEN_EVENT Host SnS.Ch3.Cirrus.11\" \"!WEATHER Sun Wind\"",
+        },
+        {
+            "LogName": "BookOutside",
+            "Action": "EditMap",
+            "Target": "Maps/EastScarp_DeepMountains",
+            "MapTiles": [
+                {
+                    "Position": { "X": 7, "Y": 14 },
+                    "Layer": "Back",
+                  "SetProperties": {
+                    "CustomCompanions": "Spawn 1 SnS.CC.DN.SnS.BookOutside"
+                  }
+                }
+            ],
+            "Update": "OnLocationChange",
+            "EnableFarmerCollision": true, 
+            "TravelSpeed": 1, 
+            "EnableShadow": true,
+            "When": {
+                "Condition": "ANY \"PLAYER_HAS_SEEN_EVENT Host SnS.Ch3.Cirrus.11\" \"WEATHER Sun Wind\""
+              }
         }
         
     ]
