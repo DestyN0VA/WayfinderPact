@@ -8,7 +8,6 @@
             "Entries": {
                 "Mateo": "sweet/-1000 -1000
                 /farmer -100 -100 0 Mateo -100 -100 0 Juliet -100 -100 0 Rosa -100 -100 0 Jessie -100 -100 0 MadDog.HashtagBearFam.Sigurd? -100 -100 0 MadDog.HashtagBearFam.Teren? -100 -100 0 MadDog.HashtagBearFam.Gunnar? -100 -100 0 RodneyOBrien? -100 -100 0 SenS? -100 -100 0 Krobus -100 -100 0 Nova.Eli? -100 -100 0 Nova.Dylan? -100 -100 0 Aideen -100 -100 0 Jacob -100 -100 0 Eloise -100 -100 0 ToriLK -100 -100 0 Nora? -100 -100 0 FC.Barron? -100 -100 0 FC.John? -100 -100 0 Fievel? -100 -100 0 OliverK -100 -100 0 JosephineK -100 -100 0 Beatrice -100 -100 0 Jasper -100 -100 0 VivienneLK -100 -100 0 Eyvinder -100 -100 3 KennedyLK? -100 -100 0 EnderTedi.JSE.Toil? -100 -100 1 EnderTedi.JSE.Trouble? -100 -100 1
-                /skippable
                 /changeToTemporaryMap EastScarp_Village
                 /viewport -1000 -1000
                 /addTemporaryActor WeddingArch 125 80 17 106 0 false Character
@@ -83,7 +82,6 @@
                 ",
                 "Hector": "sweet/-1000 -1000
                 /farmer -100 -100 0 Hector -100 -100 0 Mateo -100 -100 0 Juliet -100 -100 0 Rosa -100 -100 0 Jessie -100 -100 0 MadDog.HashtagBearFam.Sigurd? -100 -100 0 MadDog.HashtagBearFam.Teren? -100 -100 0 MadDog.HashtagBearFam.Gunnar? -100 -100 0 RodneyOBrien? -100 -100 0 SenS? -100 -100 0 Krobus -100 -100 0 Nova.Eli? -100 -100 0 Nova.Dylan? -100 -100 0 Aideen -100 -100 0 Jacob -100 -100 0 Eloise -100 -100 0 ToriLK -100 -100 0 Nora? -100 -100 0 FC.Barron? -100 -100 0 FC.John? -100 -100 0 Fievel? -100 -100 0 OliverK -100 -100 0 JosephineK -100 -100 0 Beatrice -100 -100 0 Jasper -100 -100 0 VivienneLK -100 -100 0 KennedyLK? -100 -100 0 EnderTedi.JSE.Toil? -100 -100 2 EnderTedi.JSE.Trouble? -100 -100 2
-                /skippable
                 /changeToTemporaryMap EastScarp_Village
                 /viewport -1000 -1000
                 /addTemporaryActor WeddingArch 125 80 17 106 0 false Character
@@ -111,7 +109,7 @@
 
                 /positionOffset FC.Barron? -32 0
 
-                /warp EnderTedi.JSE.Toil? 25 103/warp EnderTedi.JSE.Trouble? 25 103
+                /warp EnderTedi.JSE.Toil? 26 103/warp EnderTedi.JSE.Trouble? 25 103
 
                 /faceDirection Rosa 3 true/faceDirection Juliet 1 true
                 /faceDirection Nova.Eli? 1 true/faceDirection Nova.Dylan? 3 true
