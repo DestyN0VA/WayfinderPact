@@ -258,7 +258,7 @@
 					 { // LOCATION: MAIN EVENT
 					  "Operation": "Append",
 					  "Target": ["Entries", "MainEvent_additionalCharacters"],
-					  "Value": "Cirrus 70 49 0",
+					  "Value": "Cirrus 75 50 0",
 					  "Delimiter": "/"
 					 },
 					 { // LOCATION: SET UP Y2
@@ -270,7 +270,7 @@
 					 { // LOCATION: MAIN EVENT Y2
 					  "Operation": "Append",
 					  "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
-					  "Value": "Cirrus 62 43 3",
+					  "Value": "Cirrus 75 50 0",
 					  "Delimiter": "/"
 					 },
 				],

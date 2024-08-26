@@ -184,7 +184,7 @@
               "DisplayName": "{{i18n:buff.destybuff}}",
               "IconTexture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
               "IconSpriteIndex": 102,
-              "Effects": { "Attack": 2 }
+              "Effects": { "Attack": 20 }
           }
       }
   },

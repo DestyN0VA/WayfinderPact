@@ -170,5 +170,10 @@
             "Target": "Characters/KeyArt", // UNIQUE SIZE: 327 X 279
             "FromFile": "assets/TemporaryActors/Characters/KeyArt.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Characters/DestysKeychain",
+            "FromFile": "assets/TemporaryActors/Characters/DestysKeychain.png"
+        },
     ]
 }

@@ -1,7 +1,7 @@
 CREDITS: 
 
 DUNGEON MASTER (PROJECT LEAD):
-➜ DestyN0VA, the Shield: Content Patcher component, narrative design, mechanical design, character design, assets, maps, events, dialogue
+➜ DestyN0VA, the Shield: Content Patcher component, narrative design, mechanical design, character design, assets, maps, events, dialogue, etc
 
 ADVENTURING PARTY (PRIMARY 2.0 CONTRIBUTORS): 
 ➜ KittyCatCasey, the Wand: C# Component, mechanical design
@@ -9,6 +9,7 @@ ADVENTURING PARTY (PRIMARY 2.0 CONTRIBUTORS):
 ➜ MADDOGOFBLANK, the Dagger: Additional assets throughout the mod, help w/ code, bugfixing
 ➜ EnderTedi, the Staff: Additional assets throughout the mod, help w/ code, bugfixing 
 ➜ PaulG, the Longsword: Extensive bugfixing for both Content Patcher and C# content 
+➜ TheLoreSeeker: An Adventurer's Spirit
 
 ADDITIONAL CONTRIBUTORS: 
 ➜ Lemurkat: For East Scarp, for guiding along, and maintaining an incredible little community
