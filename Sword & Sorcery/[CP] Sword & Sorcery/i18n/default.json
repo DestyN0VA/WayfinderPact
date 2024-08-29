@@ -762,7 +762,7 @@
 
   // WINTER STAR 
   "Festivals.Mateo.winter25.False.1": "When I was a kid, Marlon got me a sword as a gift. Lewis was pissed.$13",
-  "Festivals.Mateo.winter25.False.2": "The food, the gifts, the company - nothing beats this, really. Especially when Winter is otherwise such a bummer.$1#$b#Marlon and Gunther got me adventuring gear as I kid, and now I've got their backs with some pretty neat gifts.$32",
+  "Festivals.Mateo.winter25.False.2": "The food, the gifts, the company - nothing beats this, really. Especially when Winter is otherwise such a bummer.$1#$b#Marlon and Gunther got me adventuring gear as a kid, and now I've got their backs with some pretty neat gifts.$32",
   "Festivals.Mateo.winter25.False.3": "You're pretty hard to gift for, @. ",
   "Festivals.Mateo.winter25.True.1": "It's amazing to be part of something. Part of a community, a guild, a family. This whole festival really makes that all feel real.$4#$b#%Mateo kisses the tip of your nose.$18",
   "Festivals.Mateo.winter25.True.2": "I'm so glad to have been welcomed back with open arms. I really missed these festivals and the sense of community they fostered.$4",
@@ -4257,7 +4257,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch2.Answer2.3": "Oh! You're right. I'm terribly sorry.$3",
   "Events.SnS.Ch2.Roslin.3": "Look, listen. It's the responsibility of your leaders to be dealing with this shit, not yours.$5",
   "Events.SnS.Ch2.Roslin.3.Filtered": "Look, listen. It's the responsibility of your leaders to be dealing with this crap, not yours.$5",
-  "Events.SnS.Ch2.Dandelion.4": "Abrasive as Roslin may be, I do fear she's correct. If it brings you comfort, know we'll seek you out of things get dire. I hope that's a good compromise.$6",
+  "Events.SnS.Ch2.Dandelion.4": "Abrasive as Roslin may be, I do fear she's correct. If it brings you comfort, know we'll seek you out if things get dire. I hope that's a good compromise.$6",
   "Events.SnS.Ch2.Roslin.4": "...If you never see either of us again, consider it a good thing. I uh, really mean that.$2",
   "Events.SnS.Ch2.Dandelion.5": "I'm worried for this town, Roslin. The prospect of what lurks beneath deeply frightens me.$2",
   "Events.SnS.Ch2.Roslin.5": "Don't get your chainmail in a twist, Paladin. We'll get this figured out, just like we always do.$3",
