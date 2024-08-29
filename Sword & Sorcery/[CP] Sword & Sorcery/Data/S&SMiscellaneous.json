@@ -34,13 +34,33 @@
         "113": "!image 16",
       }
     },
-    // REMOVES HECTOR'S MARRIAGE SCHEDULE
+    // REMOVES HECTOR'S MARRIAGE SCHEDULE - and separate datability
     {
       "Action": "EditData",
       "Target": "spacechase0.SpaceCore/NpcExtensionData",
       "Entries": {
         "Hector": {
           "IgnoreMarriageSchedule": true,
+          "SeparateDatability": true
+        }
+      }
+    },
+    // Other separate datability
+    {
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/NpcExtensionData",
+      "Entries": {
+        "Mateo": {
+          "SeparateDatability": true
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/NpcExtensionData",
+      "Entries": {
+        "Cirrus": {
+          "SeparateDatability": true
         }
       }
     },
