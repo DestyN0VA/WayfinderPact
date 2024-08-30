@@ -74,8 +74,9 @@
                 /positionOffset Mateo -16 0
                 /showFrame farmer 101
                 /showFrame Mateo 38
-                /specificTemporarySprite heart 21 107
-                /viewport move 0 -2 6000
+                /specificTemporarySprite heart 21 106
+                /pause 2000
+                /viewport move 0 -1 6000
                 /globalFade
                 /viewport -1000 -1000
                 /end wedding
@@ -114,6 +115,8 @@
                 /faceDirection Rosa 3 true/faceDirection Juliet 1 true
                 /faceDirection Nova.Eli? 1 true/faceDirection Nova.Dylan? 3 true
                 /faceDirection FC.John? 3 true/faceDirection Jacob 1 true
+                /changePortrait Hector HoodDown
+                /changeSprite Hector HoodDown
                 /viewport 20 110 true
                 /emote Juliet 40 true
                 /globalFadeToClear
@@ -186,8 +189,9 @@
                 /faceDirection farmer 3 true
                 /showFrame farmer 101 true
                 /showFrame Hector 28
-                /specificTemporarySprite heart 21 107
-                /viewport move 0 -2 6000
+                /specificTemporarySprite heart 21 106
+                /pause 2000
+                /viewport move 0 -1 6000
                 /globalFade
                 /viewport -1000 -1000
                 /end wedding
