@@ -380,6 +380,18 @@
   "Core.Mateo.Winter.Relationship.Romantic.6": "There's a raunchy joke on the tip of my tongue about the vitamin D deficiency... Maybe if you kiss me, you'll find it.$31",
   "Core.Mateo.Winter.Relationship.Romantic.7": "I feel so unbothered by the weather, which is crazy. Wintertime used to loom at the back of my mind all year.$12#$b#Now I can appreciate it for what it is. By the way, Sunshine - I made this for you. It'll keep you warm when I can't.[236]$4",
 
+  // EPILOGUE 
+  "Core.Mateo.Epilogue.1": "", 
+  "Core.Mateo.Epilogue.2": "", 
+  "Core.Mateo.Epilogue.3": "", 
+  "Core.Mateo.Epilogue.4": "", 
+  "Core.Mateo.Epilogue.5": "", 
+  "Core.Mateo.Epilogue.6": "", 
+  "Core.Mateo.Epilogue.7": "", 
+  "Core.Mateo.Epilogue.8": "", 
+  "Core.Mateo.Epilogue.9": "", 
+  "Core.Mateo.Epilogue.10": "", 
+
   /*
   __  __          _____  _____  _____          _____ ______ 
  |  \/  |   /\   |  __ \|  __ \|_   _|   /\   / ____|  ____|
@@ -1504,6 +1516,20 @@ ________      ________ _   _ _______ _____
   "CT.Mateo.DandelionSettling": "It's been a lot of fun to share a shop with Dandelion. It inspires me to keep working on my blacksmithing!$78",
   "CT.Mateo.DandelionShieldRepair": "I know the materials are pretty rare, but mythical items like what I'm making for Dandelion take a lot of polish.$78",
   "CT.Mateo.DandelionShieldRestored": "That shield is, hands down, the coolest thing I've ever made. I'll probably be trying to top it for the rest of of my life.$13",
+  "CT.Mateo.FullmetalDandelion": "",
+  "CT.Mateo.DandelionPendant": "",
+  "CT.Mateo.SolomonGift": "",
+  "CT.Mateo.IntoTheDeepDark": "",
+  "CT.Mateo.DuskspireEncounter": "",
+
+  // CH 5
+  "CT.Mateo.DandelionProposes": "",
+  "CT.Mateo.WyattReturns": "",
+  "CT.Mateo.HectorPromotion": "",
+  "CT.Mateo.CirrusAndMom": "",
+  "CT.Mateo.RosalionWedding": "",
+  "CT.Mateo.VioletMoonRennFaire": "",
+  "CT.Mateo.SwordAndSorcery": "",
 
   // OTHER
   "CT.Mateo.SterlingDrugs": "Sterling's been off. If you're close with him, you should check in on him, @.$37",
@@ -1767,6 +1793,18 @@ ________      ________ _   _ _______ _____
 
   // POLYAMORY 
   "Core.Hector.MarriedMonogamousNPC": "No thanks, @. I'm a one-person-person, and so is your current partner.$24",
+
+  // EPILOGUE 
+  "Core.Hector.Epilogue.1": "", 
+  "Core.Hector.Epilogue.2": "", 
+  "Core.Hector.Epilogue.3": "", 
+  "Core.Hector.Epilogue.4": "", 
+  "Core.Hector.Epilogue.5": "", 
+  "Core.Hector.Epilogue.6": "", 
+  "Core.Hector.Epilogue.7": "", 
+  "Core.Hector.Epilogue.8": "", 
+  "Core.Hector.Epilogue.9": "", 
+  "Core.Hector.Epilogue.10": "", 
 
   /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
@@ -2987,6 +3025,20 @@ ________      ________ _   _ _______ _____
   "CT.Hector.DandelionSettling": "I've not met someone so passionate about anything as Dandelion is about tea. Perhaps I should introduce her to my ancient variety...$8",
   "CT.Hector.DandelionShieldRepair": "Honestly, Mateo actually honing their smithing skills that finely is a bit of a surprise to me. They'd get good at anything they focused on, I think.$14",
   "CT.Hector.DandelionShieldRestored": "Make good use of those seeds, @. The tea you can brew from the leaves is delectable.$1",
+  "CT.Hector.FullmetalDandelion": "",
+  "CT.Hector.DandelionPendant": "",
+  "CT.Hector.SolomonGift": "",
+  "CT.Hector.IntoTheDeepDark": "",
+  "CT.Hector.DuskspireEncounter": "",
+
+  // CH 5
+  "CT.Hector.DandelionProposes": "",
+  "CT.Hector.WyattReturns": "",
+  "CT.Hector.HectorPromotion": "",
+  "CT.Hector.CirrusAndMom": "",
+  "CT.Hector.RosalionWedding": "",
+  "CT.Hector.VioletMoonRennFaire": "",
+  "CT.Hector.SwordAndSorcery": "",
 
   // OTHER 
   "CT.Hector.SterlingDrugs": "Sterling's been off. If you're close with him, you should check in on him, @.$17",
@@ -3137,6 +3189,18 @@ ________      ________ _   _ _______ _____
 
   // POLYAMORY 
   "Core.Cirrus.MarriedMonogamousNPC": "Your partner is monogamous, @. So I'm not comfortable engaging in anything romantically with you.$16",
+
+ // EPILOGUE 
+  "Core.Cirrus.Epilogue.1": "",
+  "Core.Cirrus.Epilogue.2": "",
+  "Core.Cirrus.Epilogue.3": "",
+  "Core.Cirrus.Epilogue.4": "",
+  "Core.Cirrus.Epilogue.5": "",
+  "Core.Cirrus.Epilogue.6": "",
+  "Core.Cirrus.Epilogue.7": "",
+  "Core.Cirrus.Epilogue.8": "",
+  "Core.Cirrus.Epilogue.9": "",
+  "Core.Cirrus.Epilogue.10": "",
   
 
   /*
@@ -3838,6 +3902,20 @@ ________      ________ _   _ _______ _____
   "CT.Cirrus.DandelionSettling": "I *love* Dandelion being here, she makes tea in the morning and I'm slowly adjusting to it from several cups of coffee a day.$1#$b#And sometimes she cooks - it's nice to be cooked for, when normally I cook for everyone else.$4",
   "CT.Cirrus.DandelionShieldRepair": "Dandelion is all excited about something, and Roslin is... stressed, about that same something.$16",
   "CT.Cirrus.DandelionShieldRestored": "Dandelion made SUPER fancy tea last night. It was the best I've ever had.$1",
+  "CT.Cirrus.FullmetalDandelion": "",
+  "CT.Cirrus.DandelionPendant": "",
+  "CT.Cirrus.SolomonGift": "",
+  "CT.Cirrus.IntoTheDeepDark": "",
+  "CT.Cirrus.DuskspireEncounter": "",
+
+  // CH 5
+  "CT.Cirrus.DandelionProposes": "",
+  "CT.Cirrus.WyattReturns": "",
+  "CT.Cirrus.HectorPromotion": "",
+  "CT.Cirrus.CirrusAndMom": "",
+  "CT.Cirrus.RosalionWedding": "",
+  "CT.Cirrus.VioletMoonRennFaire": "",
+  "CT.Cirrus.SwordAndSorcery": "",
 
   /*
   _____   ____   _____ _      _____ _   _ 
@@ -3891,6 +3969,18 @@ ________      ________ _   _ _______ _____
   "Core.Roslin.GreenRain": "I didn't know this could happen here! Perhaps it's the work of the Druid, that would make sense.$17",
   "Core.Roslin.GreenRainFinished": "I do love how vibrant everything looks after Druidic rain. What impact does it have on %farm?$11",
   "Core.Roslin.GreenRain2": "I'm pretty sure Hector is summoning this rain for fun. Well, Druids are going to... Druid, I suppose.$7",
+
+   // EPILOGUE 
+   "Core.Roslin.Epilogue.1": "", 
+   "Core.Roslin.Epilogue.2": "", 
+   "Core.Roslin.Epilogue.3": "", 
+   "Core.Roslin.Epilogue.4": "", 
+   "Core.Roslin.Epilogue.5": "", 
+   "Core.Roslin.Epilogue.6": "", 
+   "Core.Roslin.Epilogue.7": "", 
+   "Core.Roslin.Epilogue.8": "", 
+   "Core.Roslin.Epilogue.9": "", 
+   "Core.Roslin.Epilogue.10": "",  
 
   /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
@@ -4285,6 +4375,20 @@ ________      ________ _   _ _______ _____
   "CT.Roslin.DandelionSettling": "Dandelion and I have had a morning tea ritual as long as we've known each other... without it, I felt myself... slipping.$12",
   "CT.Roslin.DandelionShieldRepair": "Dandelion is adamant about defeating the Duskpire Behemoth. I don't disagree, but I wish she's take a second to appreciate being, I don't know, alive-?$15",
   "CT.Roslin.DandelionShieldRestored": "I don't want her to fight again... but I can't stop her, can I?$13",
+  "CT.Roslin.FullmetalDandelion": "",
+  "CT.Roslin.DandelionPendant": "",
+  "CT.Roslin.SolomonGift": "",
+  "CT.Roslin.IntoTheDeepDark": "",
+  "CT.Roslin.DuskspireEncounter": "",
+
+  // CH 5
+  "CT.Roslin.DandelionProposes": "",
+  "CT.Roslin.WyattReturns": "",
+  "CT.Roslin.HectorPromotion": "",
+  "CT.Roslin.CirrusAndMom": "",
+  "CT.Roslin.RosalionWedding": "",
+  "CT.Roslin.VioletMoonRennFaire": "",
+  "CT.Roslin.SwordAndSorcery": "",
 
   /*
   _____          _   _ _____  ______ _      _____ ____  _   _ 
@@ -4342,6 +4446,18 @@ ________      ________ _   _ _______ _____
   "Core.Dandelion.GreenRain": "What an unusual phenonenon! I've never seen such a thing.$17",
   "Core.Dandelion.GreenRainFinished": "I'm grateful the rain did no harm. The Druid must been terribly enthused!$1",
   "Core.Dandelion.GreenRain2": "Is this a regular occourance to expect in the Summer? I wonder if this is unique to the Valley?$17",
+
+  // EPILOGUE 
+  "Core.Dandelion.Epilogue.1": "", 
+  "Core.Dandelion.Epilogue.2": "", 
+  "Core.Dandelion.Epilogue.3": "", 
+  "Core.Dandelion.Epilogue.4": "", 
+  "Core.Dandelion.Epilogue.5": "", 
+  "Core.Dandelion.Epilogue.6": "", 
+  "Core.Dandelion.Epilogue.7": "", 
+  "Core.Dandelion.Epilogue.8": "", 
+  "Core.Dandelion.Epilogue.9": "", 
+  "Core.Dandelion.Epilogue.10": "", 
 
   /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
@@ -4459,18 +4575,6 @@ ________      ________ _   _ _______ _____
   "Core.Dandelion.Leg.8": "Oh, my leg?$17#$b#I lost it to a shark that I kicked in the snoot while surfing.$18",
   "Core.Dandelion.Leg.9": "Oh, my leg?$17#$b#One morning I just woke up without it. I'm waiting for it to regrow. You know, like a lizard tail.$18",
   "Core.Dandelion.Leg.10": "Oh, my leg?$17#$b#It was ripped off and eaten by a bear. Don't worry, there's no longer trouble a-foot.$18#$action AddConversationTopic DandelionLegBearIncident 1",
-
-  // 10H SITUATIONAL
-  "Core.Dandelion.EXAMPLE.1": "",
-  "Core.Dandelion.EXAMPLE.2": "",
-  "Core.Dandelion.EXAMPLE.3": "",
-  "Core.Dandelion.EXAMPLE.4": "",
-  "Core.Dandelion.EXAMPLE.5": "",
-  "Core.Dandelion.EXAMPLE.6": "",
-  "Core.Dandelion.EXAMPLE.7": "",
-  "Core.Dandelion.EXAMPLE.8": "",
-  "Core.Dandelion.EXAMPLE.9": "",
-  "Core.Dandelion.EXAMPLE.10": "",
 
 
   /*
@@ -4704,10 +4808,25 @@ ________      ________ _   _ _______ _____
 
 */
 
+  // CH 4 
   "CT.Dandelion.DandelionReturns": "Thank you so terribly kindly for the rescue, @. I know it was a group effort, but it goes without saying you are the heart and soul of this little squad.$6",
   "CT.Dandelion.DandelionSettling": "Dandelion and I have had a morning tea ritual as long as we've known each other... without it, I felt myself... slipping.$12",
   "CT.Dandelion.DandelionShieldRepair": "Dandelion is all excited about something, and Roslin is... stressed, about that same something.$16",
   "CT.Dandelion.DandelionShieldRestored": "The Duskspire Behemoth won't stand a chance! I'm back in action, thanks to you and Mateo.",
+  "CT.Dandelion.FullmetalDandelion": "",
+  "CT.Dandelion.DandelionPendant": "",
+  "CT.Dandelion.SolomonGift": "",
+  "CT.Dandelion.IntoTheDeepDark": "",
+  "CT.Dandelion.DuskspireEncounter": "",
+
+  // CH 5
+  "CT.Dandelion.DandelionProposes": "",
+  "CT.Dandelion.WyattReturns": "",
+  "CT.Dandelion.HectorPromotion": "",
+  "CT.Dandelion.CirrusAndMom": "",
+  "CT.Dandelion.RosalionWedding": "",
+  "CT.Dandelion.VioletMoonRennFaire": "",
+  "CT.Dandelion.SwordAndSorcery": "",
 
 
   /*
@@ -4781,20 +4900,38 @@ ________      ________ _   _ _______ _____
   "Festivals.Solomon.fall27.3": "Little do these people know that there are much more substantial things to be afraid of in this world than the fare that wander the mines.$8",
 
   // CONVERSATION TOPICS
+
+  // CH 4
   "CT.Solomon.DandelionReturns": "I'm so glad Dandelion's back! Now maybe Roslin will get some proper rest instead of crying herself to sleep every night!$0",
   "CT.Solomon.DandelionSettling": "It's weird to work like, a job. I guess it's not really a job. I don't really have customers. I kind of just stand there.$10#$b#Well, I stand there and look cute.$6",
+  "CT.Solomon.DandelionShieldRepair": "",
+  "CT.Solomon.DandelionShieldRestored": "",
+  "CT.Solomon.FullmetalDandelion": "",
+  "CT.Solomon.DandelionPendant": "",
+  "CT.Solomon.SolomonGift": "",
+  "CT.Solomon.IntoTheDeepDark": "",
+  "CT.Solomon.DuskspireEncounter": "",
+
+  // CH 5
+  "CT.Solomon.DandelionProposes": "",
+  "CT.Solomon.WyattReturns": "",
+  "CT.Solomon.HectorPromotion": "",
+  "CT.Solomon.CirrusAndMom": "",
+  "CT.Solomon.RosalionWedding": "",
+  "CT.Solomon.VioletMoonRennFaire": "",
+  "CT.Solomon.SwordAndSorcery": "",
   
-  // SITUATIONAL
-  "Core.Solomon.EXAMPLE.1": "",
-  "Core.Solomon.EXAMPLE.2": "",
-  "Core.Solomon.EXAMPLE.3": "",
-  "Core.Solomon.EXAMPLE.4": "",
-  "Core.Solomon.EXAMPLE.5": "",
-  "Core.Solomon.EXAMPLE.6": "",
-  "Core.Solomon.EXAMPLE.7": "",
-  "Core.Solomon.EXAMPLE.8": "",
-  "Core.Solomon.EXAMPLE.9": "",
-  "Core.Solomon.EXAMPLE.10": "",
+  // EPILOGUE 
+  "Core.Solomon.Epilogue.1": "", 
+  "Core.Solomon.Epilogue.2": "", 
+  "Core.Solomon.Epilogue.3": "", 
+  "Core.Solomon.Epilogue.4": "", 
+  "Core.Solomon.Epilogue.5": "", 
+  "Core.Solomon.Epilogue.6": "", 
+  "Core.Solomon.Epilogue.7": "", 
+  "Core.Solomon.Epilogue.8": "", 
+  "Core.Solomon.Epilogue.9": "", 
+  "Core.Solomon.Epilogue.10": "", 
 
 /*
  ________      ________ _   _ _______ _____ 
@@ -4807,85 +4944,6 @@ ________      ________ _   _ _______ _____
 */
 
   "Events.SnS.0H1.Solomon.1": "",
-
-  /*
-   _____ ____  _   _     _______ ____  _____ _____ _____  _____ 
-  / ____/ __ \| \ | |   |__   __/ __ \|  __ \_   _/ ____|/ ____|
- | |   | |  | |  \| |      | | | |  | | |__) || || |    | (___  
- | |   | |  | | . ` |      | | | |  | |  ___/ | || |     \___ \ 
- | |___| |__| | |\  |_     | | | |__| | |    _| || |____ ____) |
-  \_____\____/|_| \_(_)    |_|  \____/|_|   |_____\_____|_____/ 
-
-*/
-
-  "CT.Solomon.Example": "",
-
-  // Solomon' REACTIONS
-  "CT.Solomon.SterlingDrugs": "",
-  "CT.Solomon.SterlingRelapse": "",
-  "CT.Solomon.SterlingApology": "",
-  "CT.Solomon.JunaBeachBallet": "",
-  "CT.Solomon.LucikielArrives": "",
-  "CT.Solomon.ReputationIncreased": "",
-  "CT.Solomon.JasperGone2": "",
-  "CT.Solomon.JasperHomeA": "",
-  "CT.Solomon.PTJ03": "",
-  "CT.Solomon.MeetTheCats": "",
-  "CT.Solomon.ButteredJorts": "",
-  "CT.Solomon.JortsZoomies": "",
-  "CT.Solomon.wedding": "",
-  "CT.Solomon.luauBest": "",
-  "CT.Solomon.Baby": "",
-  "CT.Solomon.jojaMartStruckByLightning": "",
-  "CT.Solomon.willyBoatRepaired": "",
-  "CT.Solomon.islandResortUnlocked": "",
-  "CT.Solomon.leoValleyArrival": "",
-  "CT.Solomon.railroadEarthquake": "",
-  "CT.Solomon.AnewCoupleInTown": "",
-  "CT.Solomon.AnewBookClub": "",
-  "CT.Solomon.EliIntro": "",
-  "CT.Solomon.MeetDND": "",
-  "CT.Solomon.AideenGarden": "",
-  "CT.Solomon.DiTR_CT_ShadowPlay": "",
-  "CT.Solomon.DiTR_CT_SensFlowers": "",
-  "CT.Solomon.BearFamTimeForBees": "",
-  "CT.Solomon.SigLowBattery": "",
-  "CT.Solomon.SigAndCigarettes": "",
-  "CT.Solomon.SigHatesCrowds": "",
-  "CT.Solomon.SigVersusCrabs": "",
-  "CT.Solomon.SondraAgingGracefully": "",
-  "CT.Solomon.SondraRememberWulfram": "",
-  "CT.Solomon.GunnarOpenForBusiness": "",
-  "CT.Solomon.GunnarBuildsaBomb": "",
-  "CT.Solomon.GunnarBreaksaSword": "",
-  "CT.Solomon.GunnarGuildTryout": "",
-  "CT.Solomon.GunnarGetsaLecture": "",
-  "CT.Solomon.GudrunQinstagram": "",
-  "CT.Solomon.GudrunEcoFriendly": "",
-  "CT.Solomon.BearFamFullHouse": "",
-  "CT.Solomon.BearFamFireDrill": "",
-  "CT.Solomon.BearFamAttacked": "",
-  "CT.Solomon.WelcomeSergeantBarnes": "",
-  "CT.Solomon.NoraIntro": "",
-  "CT.Solomon.NoraClass": "",
-  "CT.Solomon.NoraFear:": "",
-  "CT.Solomon.NoraSad": "",
-  "CT.Solomon.NoraBusy": "",
-  "CT.Solomon.JulietGremlin": "",
-  "CT.Solomon.LavrilUnlocked": "",
-  "CT.Solomon.DwarfStory": "",
-  "CT.Solomon.ShadowfolkStory": "",
-  "CT.Solomon.MeetingMeredith": "",
-  "CT.Solomon.BookLaunchParty": "",
-  "CT.Solomon.RodneyPoetryReading": "",
-  "CT.Solomon.EliJunimo2": "",
-  "CT.Solomon.DylanIntro": "",
-  "CT.Solomon.DylanBeach": "",
-  "CT.Solomon.DylanTown": "",
-  "CT.Solomon.DylanSaloon": "",
-  "CT.Solomon.JohnsArrival": "",
-  "CT.Solomon.keahi_prank": "",
-  "CT.Solomon.AfterProposal": "",
 
   /*
    _______          ______  _____  _____              _____  ____  _____   _____ ______ _______     __

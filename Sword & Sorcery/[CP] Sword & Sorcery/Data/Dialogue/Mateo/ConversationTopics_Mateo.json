@@ -71,6 +71,21 @@
                 "CirrusGingerBeer": "{{i18n:CT.Mateo.CirrusGingerBeer}}",
                 "DandelionSettling": "{{i18n:CT.Mateo.DandelionReturns}}",
                 "DandelionShieldRepair": "{{i18n:CT.Mateo.DandelionShieldRepair}}",
+                "DandelionShieldRestored": "{{i18n:CT.Mateo.DandelionShieldRestored}}",
+                "FullmetalDandelion": "{{i18n:CT.Mateo.FullmetalDandelion}}",
+                "DandelionPendant": "{{i18n:CT.Mateo.DandelionPendant}}",
+                "SolomonGift": "{{i18n:CT.Mateo.SolomonGift}}",
+                "IntoTheDeepDark": "{{i18n:CT.Mateo.IntoTheDeepDark}}",
+                "DuskspireEncounter": "{{i18n:CT.Mateo.DuskspireEncounter }}",
+
+                // CH5: 
+                "DandelionProposes": "{{i18n:CT.Mateo.DandelionProposes}}",
+                "WyattReturns": "{{i18n:CT.Mateo.WyattReturns}}",
+                "HectorPromotion": "{{i18n:CT.Mateo.HectorPromotion}}",
+                "CirrusAndMom": "{{i18n:CT.Mateo.CirrusAndMom}}",
+                "RosalionWedding": "{{i18n:CT.Mateo.RosalionWedding}}",
+                "VioletMoonRennFaire": "{{i18n:CT.Mateo.VioletMoonRennFaire}}",
+                "SwordAndSorcery": "{{i18n:CT.Mateo.SwordAndSorcery}}",
 
                 // OTHER: 
                 "SterlingDrugs": "{{i18n:CT.Mateo.SterlingDrugs}}",

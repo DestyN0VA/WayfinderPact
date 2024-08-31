@@ -117,6 +117,20 @@
                 "Relationship:Hector |contains=Married": true
             }
         },
+        // EPILOGUE POOL 
+        {
+            "LogName": "Dialogue - Hector Epilogue Override",
+            "Action": "EditData",
+            "Update": "OnLocationChange",
+            "Target": "Characters/Dialogue/Hector",
+            "Entries": {
+                "{{WeekDay}}": "{{i18n:Core.Hector.Epilogue.{{Random:{{Range: 1, 10}}|key={{Time}}}}}}"
+            },
+            "When": {
+                "HasSeenEvent |contains=SnS.Ch5.End": true,
+                "Query: {{Random: {{Range: 1, 3}}|key=HEO}} = 1": true,
+            }
+        },
         /*
    _____ ______ _   _ ______ _____  _____ _____   _____ _____          _      ____   _____ _    _ ______ 
   / ____|  ____| \ | |  ____|  __ \|_   _/ ____| |  __ \_   _|   /\   | |    / __ \ / ____| |  | |  ____|
