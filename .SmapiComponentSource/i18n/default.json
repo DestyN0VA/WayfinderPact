@@ -10,6 +10,7 @@
   "shield-block-text": "Shield Block: {{cooldown}}",
 
   "ui-slot.armor": "Armor",
+  "ui-slot.offhand": "Offhand",
 
   "harp.name": "Harp",
   "harp.description": "...",
@@ -183,6 +184,7 @@
   "bardics.profession.attack.range.description": "Range of Scherzo D'Inganno is extended to the entire location.",
 
   // TOP
+  "witchcraft.name": "Sorcery",
   "witchcraft.profession.essence-drops.name": "Hedge Witch",
   "witchcraft.profession.essence-drops.description": "Double chance for elemental essence drops",
   "witchcraft.profession.spell-damage.name": "Magus",

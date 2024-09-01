@@ -33,7 +33,13 @@
 		<StartProgram>$(GamePath)\StardewModdingAPI.exe</StartProgram>
 		<StartWorkingDirectory>$(GamePath)</StartWorkingDirectory>
 	</PropertyGroup>
-
+	
+	<!-- mac workaround, remove when updating mod build config -->
+	<PropertyGroup Condition="'$(OS)' != 'Windows_NT'">
+		<StartAction>Program</StartAction>
+		<StartProgram>/Users/spacechase0/Library/Application Support/Steam/steamapps/common/Stardew Valley/Contents/MacOS\StardewModdingAPI</StartProgram>
+		<StartWorkingDirectory>/Users/spacechase0/Library/Application Support/Steam/steamapps/common/Stardew Valley/Contents/MacOS</StartWorkingDirectory>
+	</PropertyGroup>
 
 	<ItemGroup>
 		<SMAPIDependency Include="spacechase0.SpaceCore" Version="1.18.0-sdvalpha" Reference="true" />

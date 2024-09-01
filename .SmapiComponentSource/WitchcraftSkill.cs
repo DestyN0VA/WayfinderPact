@@ -51,8 +51,8 @@ namespace SwordAndSorcerySMAPI
         {
             // TODO: Change icons to bardics
 
-            this.Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/icon.png");
-            this.SkillsPageIcon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/icon.png");
+            this.Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/witchcraft/icon.png");
+            this.SkillsPageIcon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/witchcraft/icon.png");
 
             this.ExperienceCurve = new[] { 100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000 };
 
@@ -106,7 +106,7 @@ namespace SwordAndSorcerySMAPI
 
         public override string GetName()
         {
-            return I18n.Bardics_Name();
+            return I18n.Witchcraft_Name();
         }
         public override void DoLevelPerk(int level)
         {

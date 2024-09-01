@@ -200,7 +200,7 @@ namespace SwordAndSorcerySMAPI
         public static State State => _state.Value;
 
         public static Texture2D ArmorSlotBackground;
-        public static Texture2D ShieldSlotBackground;
+        public static Texture2D OffhandSlotBackground;
         public static Texture2D ShieldItemTexture;
         public static Texture2D SwordOverlay;
 
@@ -326,6 +326,7 @@ namespace SwordAndSorcerySMAPI
             });
 
             ArmorSlotBackground = Helper.ModContent.Load<Texture2D>("assets/armor-bg.png");
+            OffhandSlotBackground = Helper.ModContent.Load<Texture2D>("assets/offhand-bg.png");
             string[] recolors =
             [
                 "daisyniko.earthyinterface",
@@ -342,8 +343,11 @@ namespace SwordAndSorcerySMAPI
                 {
                     ArmorSlotBackground = Helper.ModContent.Load<Texture2D>($"assets/armor-bg/{recolor}.png");
                 }
+                if (Helper.ModRegistry.IsLoaded( recolor ) && File.Exists(Path.Combine(Helper.DirectoryPath, "assets", "armor-bg", recolor + "_offhand.png")))
+                {
+                    OffhandSlotBackground = Helper.ModContent.Load<Texture2D>($"assets/armor-bg/{recolor}_offhand.png");
+                }
             }
-            ShieldSlotBackground = Helper.ModContent.Load<Texture2D>("assets/shield-bg.png");
             ShieldItemTexture = Helper.ModContent.Load<Texture2D>("assets/shield-item.png");
             SwordOverlay = Helper.ModContent.Load<Texture2D>("assets/SwordOverlay.png");
 
@@ -758,6 +762,11 @@ namespace SwordAndSorcerySMAPI
                 I18n.UiSlot_Armor,
                 ArmorSlotBackground);
 
+            sc.RegisterEquipmentSlot(ModManifest,
+                $"{ModManifest.UniqueID}_Offhand",
+                item => item == null || item is MeleeWeapon,
+                I18n.UiSlot_Offhand,
+                OffhandSlotBackground);
         }
 
         private void GameLoop_UpdateTicking(object sender, StardewModdingAPI.Events.UpdateTickingEventArgs e)
