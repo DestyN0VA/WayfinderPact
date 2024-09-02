@@ -32,13 +32,13 @@ namespace SwordAndSorcerySMAPI
             // Level 5
             RogueSkill.ProfessionArmorRecovery = new GenericProfession(skill: this, id: "ArmorRecovery", name: I18n.RogueSkill_Profession_ArmorRecovery_Name, description: I18n.RogueSkill_Profession_ArmorRecovery_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/ArtificerSpecialist.png")
             };
             this.Professions.Add(RogueSkill.ProfessionArmorRecovery);
 
             RogueSkill.ProfessionBowSecondShot = new GenericProfession(skill: this, id: "BowSecondShot", name: I18n.RogueSkill_Profession_RogueishArchetype_Name, description: I18n.RogueSkill_Profession_RogueishArchetype_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/RogueishArchetype.png")
             };
             this.Professions.Add(RogueSkill.ProfessionBowSecondShot);
 
@@ -47,13 +47,13 @@ namespace SwordAndSorcerySMAPI
             // Level 10 - track A
             RogueSkill.ProfessionCrafting = new GenericProfession(skill: this, id: "Crafting", name: I18n.RogueSkill_Profession_FlashOfGenius_Name, description: I18n.RogueSkill_Profession_FlashOfGenius_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/FlashOfGenius.png")
             };
             this.Professions.Add(RogueSkill.ProfessionCrafting);
 
             RogueSkill.ProfessionArmorCap = new GenericProfession(skill: this, id: "ArmorCap", name: I18n.RogueSkill_Profession_ArmorProficiency_Name, description: I18n.RogueSkill_Profession_ArmorProficiency_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/ArmorProficiency.png")
             };
             this.Professions.Add(RogueSkill.ProfessionArmorCap);
 
@@ -62,13 +62,13 @@ namespace SwordAndSorcerySMAPI
             // Level 10 - track B
             RogueSkill.ProfessionShadowStep = new GenericProfession(skill: this, id: "ShadowStep", name: I18n.Ability_Shadowstep_Name, description: I18n.Ability_Shadowstep_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/Shadowstep.png")
             };
             this.Professions.Add(RogueSkill.ProfessionShadowStep);
 
             RogueSkill.ProfessionHuntersMark = new GenericProfession(skill: this, id: "HuntersMark", name: I18n.RogueSkill_Profession_HuntersMark_Name, description: I18n.RogueSkill_Profession_HuntersMark_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/HuntersMark.png")
             };
             this.Professions.Add(RogueSkill.ProfessionHuntersMark);
 

@@ -23,6 +23,8 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using Microsoft.CodeAnalysis.Emit;
+using StardewValley.Menus;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -317,6 +319,10 @@ namespace SwordAndSorcerySMAPI
             Helper.ConsoleCommands.Add("sns_research", "Open the witchcraft research menu", (cmd, args) =>
             {
                 Game1.activeClickableMenu = new ResearchMenu();
+            });
+            Helper.ConsoleCommands.Add("sns_shieldmenu", "Open the shield sigil menu", (cmd, args) =>
+            {
+                Game1.activeClickableMenu = new ShieldSigilMenu();
             });
 
             SpaceEvents.OnItemEaten += SpaceEvents_OnItemEaten;
