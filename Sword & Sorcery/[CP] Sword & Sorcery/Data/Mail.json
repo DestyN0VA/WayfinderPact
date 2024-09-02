@@ -65,6 +65,14 @@
                 "DandelionGreensThanks":"{{i18n:Mail.Dandelion.Letter1}}"
             }
         },
+        {
+            "LogName": "Mateo's Hoodie",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "MateoHoodie":"{{i18n:Mail.Mateo.Letter5}}"
+            }
+        },
 
         // TRIGGER ACTIONS
         {
@@ -105,6 +113,20 @@
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Roslin.6",
 					"Actions": [
 						"AddMail Current DandelionGreensThanks tomorrow",
+					]
+				}
+			}
+		},
+        {
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"{{ModID}}_Mateo_Hoodie": {
+					"Id": "{{ModID}}_Mateo_Hoodie",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.15",
+					"Actions": [
+						"AddMail Current MateoHoodie tomorrow",
 					]
 				}
 			}
