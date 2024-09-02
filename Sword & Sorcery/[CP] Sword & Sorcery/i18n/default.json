@@ -959,15 +959,15 @@
                                
 */
 
-  // HOSPITAL LETTER 
   "Mail.Mateo.Letter1": "Hey, @.^^Thanks for turning up at the hospital when you did. Honestly, it would have been a lot scarier without you. They're holding me in ZuZu for a few days, but I'll be back soon. Be careful if you go exploring, okay? You're in my thoughts.^^Sincerely,^Mateo.",
 
-  // DATE NIGHT INVITATION 
   "Mail.Mateo.Letter2": "Good morning, Sunshine.^^I know you're busy, but if you've got the time to spare - meet me in the mines. I'll wait around by the elevator for you.^^You don't have to bring anything, just your swimsuit and an inclination for mischief.^^Sincerely,^Mateo.",
 
   "Mail.Mateo.Letter3": "Good morning, @!^^This is the recipe for my favorite stew. Figured you might like it as much as I do! I hope it brings you the joy and comfort that you bring me.^^Sincerely,^Mateo.%item cookingRecipe DN.SnS_autumnalstew%%[#]Autmnal Stew Recipe",
 
   "Mail.Mateo.Letter4": "Good morning, @!^^I had a friend who owned a brewery back in the Fern Islands. Best booze that side of the Salish Sea.^^Here's the recipe for their special Bourbon. It's a well-kept secret.^^Sincerely,^Mateo.%item cookingRecipe DN.SnS_salishbourbon%%[#]Salish Bourbon Recipe",
+
+  "Mail.Mateo.Letter5": "Good morning, Sunshine.^^I had a great time last night - thank you for sharing it with me.^^I figure you'd like to borrow this... <3^^Sincerely,^Mateo.%item id DN.SnS_Mateo_Hoodie%%[#]Mateo's Hoodie",
 
   /*
    ____  _    _ ______  _____ _______ _____ 
@@ -5409,6 +5409,9 @@ ________      ________ _   _ _______ _____
 
   "buff.destybuff": "Do not stand by in the presence of evil.",
 
+  "DN.SnS_Mateo_Hoodie.Name": "Mateo's Hoodie",
+  "DN.SnS_Mateo_Hoodie.Description": "Sick hoodie, adventurer!", 
+
   /*
   __  __ _____  _____  _____ ______ _      _               _   _ ______ ____  _    _  _____ 
  |  \/  |_   _|/ ____|/ ____|  ____| |    | |        /\   | \ | |  ____/ __ \| |  | |/ ____|
@@ -5532,8 +5535,13 @@ ________      ________ _   _ _______ _____
   "config.DatingLength.name": "DatingLength",
   "config.DatingLength.description": "Set length the player has to have dated Mateo, Hector, or Cirrus prior to any of them accepting the mermaid pendant and triggering the next romance event.",
 
-  "config.DylanExtras.name": "DylanExtras",
-  "config.DylanExtras.description": "Adds additional content for Eli and Dylan if they're installed. This is configurable because the crossover is not yet finished.",
+  "config.Eli&DylanExtras.name": "Eli&DylanExtras",
+  "config.Eli&DylanExtras.description": "Adds additional content for Eli and Dylan if they're installed.",
+  "config.Eli&DylanExtras.values.true": "true",
+  "config.Eli&DylanExtras.values.false": "false",
+
+  "config.Juliet&JessieExtras.name": "Juliet&JessieExtras",
+  "config.DylanExtras.description": "Adds additional content for Juliet and Jessie if they're installed.",
   "config.DylanExtras.values.true": "true",
   "config.DylanExtras.values.false": "false",
 
