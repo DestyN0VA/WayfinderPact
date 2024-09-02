@@ -525,7 +525,7 @@ public class ArsenalMenu : IClickableMenu
 
     public override void emergencyShutDown()
     {
-        base.cleanupBeforeExit();
+        base.emergencyShutDown();
         if (this.weaponSlot.Item != null)
             Game1.player.addItemByMenuIfNecessary(this.weaponSlot.Item);
     }
