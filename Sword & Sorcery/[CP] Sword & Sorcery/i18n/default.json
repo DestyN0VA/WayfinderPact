@@ -5635,6 +5635,27 @@ ________      ________ _   _ _______ _____
   "config.Castertype.values.Alchahestrist": "Alchahestrist",
   "config.Castertype.values.Bard": "Bard",
 
+  // VIOLET MOON
 
-
+  "DN.SnS_Violet_Moon_Shop_Mateo": "This is a test, adventurer!",
+  "DN.SnS_Violet_Moon_Shop_Hector": "This is a test, dweeb.",
+  "DN.SnS_Violet_Moon_Shop_Cirrus": "This is a test, fan club president!",
+  "DN.SnS_Violet_Moon_Shop_RnD": "Oh, what, now I have to test you on top of running a shop? Get out of here.",
+  "VioletMoon.Mateo": "Remember, only you can prevent forest fires.",
+  "VioletMoon.Hector": "Skibbidy toilet.",
+  "VioletMoon.Cirrus": "Eat, drink, and get married by a medieval Elvis impersonator.",
+  "VioletMoon.Dandelion": "On your left.",
+  "VioletMoon.Roslin": "Put on some Lil John and get fucked up with the yorkies.",
+  "DN.SnS.SpaceCoreCategory.FaireFood": "Faire Repast",
+  "DN.SnS.Steak_on_a_Stake": "Steak on a Stake",
+  "DN.SnS.Steak_on_a_Stake.Description": "Is this just white people kebab Desty.",
+  "DN.SnS.ScotchEgg": "Scotch Egg",
+  "DN.SnS.ScotchEgg.Description": "Desty I've never had one of these.",
+  "DN.SnS.Fruit_Hand_Pie": "Fruit Hand Pie",
+  "DN.SnS.Fruit_Hand_Pie.Description": "A piping hot mixed fruit pie in just the perfect portion size to avoid sharing.",
+  "DN.SnS.Hand_Pressed_Apple_Cider": "Hand-Pressed Apple Cider",
+  "DN.SnS.Hand_Pressed_Apple_Cider.Description": "This cider will warm you from the top of your head to the tips of your toes on a brisk autumn day.",
+  "DN.SnS.Smoked_TurkeyLeg": "Jumbo Smoked Turkey Leg",
+  "DN.SnS.Smoked_TurkeyLeg.Description": "Smoked over hickory and apple wood chips for over twelve hours, these turkey legs are fit for royalty!",
+  
 }
