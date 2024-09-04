@@ -335,7 +335,7 @@
               "ItemID": "DN.SnS_PureCopperOre",
               //"Condition": "",
               //"Price": "1600",
-              "AvailableStock": 5
+              //"AvailableStock": 5
               //"AvailableStockLimit": "Player"
             },
             {
@@ -343,7 +343,7 @@
               "ItemID": "DN.SnS_PureIronOre",
               //"Condition": "",
               //"Price": "1600",
-              "AvailableStock": 3
+              //AvailableStock": 3
               //"AvailableStockLimit": "Player"
             },
             {
@@ -351,7 +351,7 @@
               "ItemID": "DN.SnS_PureGoldOre",
               //"Condition": "",
               //"Price": "1600",
-              "AvailableStock": 1
+              //"AvailableStock": 1
               //"AvailableStockLimit": "Player"
             },
             {
@@ -359,7 +359,7 @@
               "ItemID": "DN.SnS_PureIridiumOre",
               //"Condition": "",
               //"Price": "1600",
-              "AvailableStock": 1
+              //"AvailableStock": 1
               //"AvailableStockLimit": "Player"
             },
             {
@@ -367,7 +367,7 @@
               "ItemID": "DN.SnS_PureRadioactiveOre",
               //"Condition": "",
               //"Price": "1600",
-              "AvailableStock": 1
+              //"AvailableStock": 1
               //"AvailableStockLimit": "Player"
             },
             {
@@ -783,7 +783,7 @@
         {
           "Operation": "Append",
           "Target": [ "Entries", "Set-Up_additionalCharacters" ],
-          "Value": "Mateo 30 60 2/Hector 75 60 2/Cirrus 45 48 2/Roslin 56 39 2/Dandelion 56 41 2",
+          "Value": "Mateo 30 60 2/Hector 75 60 2/Cirrus 45 48 2/Roslin 56 39 2/Dandelion 56 41 2/Solomon 12 73 2",
           "Delimiter": "/"
         },
         /*{
@@ -804,11 +804,12 @@
       "Action": "EditData",
       "Target": "Data/Festivals/fall1",
       "Entries": {
-        "Mateo": "{{i18n:VioletMoon.Mateo}}",
-        "Hector": "{{i18n:VioletMoon.Hector}}",
-        "Cirrus": "{{i18n:VioletMoon.Cirrus}}",
-        "Dandelion": "{{i18n:VioletMoon.Dandelion}}",
-        "Roslin": "{{i18n:VioletMoon.Roslin}}"
+        "Mateo": "{{i18n:VioletMoon.Mateo.{{Random:1++2++3|inputSeparator=++}}}}",
+        "Hector": "{{i18n:VioletMoon.Hector.{{Random:1++2++3|inputSeparator=++}}}}",
+        "Cirrus": "{{i18n:VioletMoon.Cirrus.{{Random:1++2++3|inputSeparator=++}}}}",
+        "Dandelion": "{{i18n:VioletMoon.Dandelion.{{Random:1++2++3|inputSeparator=++}}}}",
+        "Roslin": "{{i18n:VioletMoon.Roslin.{{Random:1++2++3|inputSeparator=++}}}}",
+        "Solomon": "{{i18n:VioletMoon.Solomon.{{Random:1++2++3|inputSeparator=++}}}}",
       }
     }
   ]
