@@ -87,6 +87,11 @@
                 "VioletMoonRennFaire": "{{i18n:CT.Mateo.VioletMoonRennFaire}}",
                 "SwordAndSorcery": "{{i18n:CT.Mateo.SwordAndSorcery}}",
 
+                // TROLL HERITAGE 
+                "TrollHeritage1": "{{i18n:CT.Mateo.TrollHeritage1}}",
+                "TrollHeritage2": "{{i18n:CT.Mateo.TrollHeritage2}}",
+                "TrollHeritage3": "{{i18n:CT.Mateo.TrollHeritage3}}",
+
                 // OTHER: 
                 "SterlingDrugs": "{{i18n:CT.Mateo.SterlingDrugs}}",
                 "SterlingRelapse": "{{i18n:CT.Mateo.SterlingRelapse}}",

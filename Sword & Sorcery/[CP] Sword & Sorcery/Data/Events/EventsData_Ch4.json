@@ -113,19 +113,6 @@
       }
     },
     {
-      "LogName": "Mateo/Eyvinder pt 3", 
-      "Action": "EditData",                                           
-      "Target": "Data/Events/EastScarp_DeepMountains",
-      "Entries": {
-        
-        "SnS.Ch4.Eyvinder/f Eyvinder 2000/t 0800 1600/w sunny/F": "{{season}}_day_ambient/-100 -100/farmer 101 21 1 Eyvinder 110 13 2 Mateo 106 27 0/addConversationTopic TrollHeritage3 {{VariableTimegate}}/removeTile Buildings 79 14/addTemporaryActor LittleGruff 16 32 79 14 2false/changeName LittleGruff \"Little Gruff\"/skippable/speak Mateo \"Where are we headed, Lil' Gruff?$1\"/fade/viewport 106 22 clamp true/advancedMove Eyvinder false 0 3 -3 0 0 5 -1 0 2 10/advancedMove Mateo false 0 -3 4 10/advancedMove LittleGruff false 0 -3 4 10/pause 500/emote farmer 8/jump Mateo 5 true/emote Mateo 16 true/speak Mateo \"Woah! Who goes?$26\"/pause 250/emote Eyvinder 40/pause 250/speak Eyvinder \"Hello, Mateo. I am... Eyvinder.#$b#It's a pleasure to meet you, finally.$1\"/speak Mateo \"Guess I can see why - I've never met another Troll before.$12\"/pause 250/emote Eyvinder 32/pause 250/speak Eyvinder \"Little Gruff has told me much about you; it would seem the pair of you have become fast friends.\"/speak Mateo \"Yeah, I'm hoping to introduce him to Emeritus soon.$1\"/speak Eyvinder \"Who?$3\"/speak Mateo \"My pet Pepper Rex.$13\"/pause 250/textAboveHead Eyvinder \"Hahaha!\"/pause 250/speak Mateo \"Eyvinder, if you have a moment, I'd love to ask you some questions...$21\"/speak Eyvinder \"Of course, I was about to request the same of you.$2#$b#Perhaps... over a glass of mead? Do you... like mead?$3\"/speak Mateo \"I love mead! Sounds great.$1\"/pause 250/emote LittleGruff 20/pause 1000/fade/viewport -1000 -1000/end"
-
-      },
-      "When": {
-        "MateoTrollHeritage": true,
-      }
-    },
-    {
       "LogName": "Deep Dark - Duskspire Final Encounter", 
       "Action": "EditData",
       "Target": "Data/Events/EastScarp_DuskspireLair",
@@ -154,7 +141,20 @@
 
         "SnS.Ch4.Victory.FarmerGuildmaster": "SnS.LonelyThemeReprise/-100 -100/Mateo 16 13 3 farmer 14 13 1 Dandelion -100 -100 2 Hector -100 -100 2 Cirrus -100 -100 2 Roslin -100 -100 2 MadDog.HashtagBearFam.Gunnar? -100 -100 2/addMailReceived DuskspireDefeated/changePortrait Cirrus Glamrock/changeSprite Cirrus Glamrock/changePortrait Hector hooddown/changeSprite Hector hooddown/changePortrait Roslin armored/changeSprite Roslin armored/viewport 15 12/addTemporaryActor RockPile 64 64 3 17 2 false Character/pause 1000/speak Mateo \"We did it, @! The Duskspire Behemoth is defeated, and East Scarp is safe from it's tyranny.$1#$b#You know, I never would have guessed you and I would come quite this far, quite literally saving The Valley together. But I'm very happy for it.$12#$b#I'm honored, beyond words, to be your best friend.$76\"/fade/viewport -1000 -1000/speak Mateo \"Let's get out of here and celebrate properly, @. The others are waiting - and besides, those rocks can't be THAT difficult to shimmy past.$78\"/changeLocation EastScarp_Village/warp farmer 44 89/faceDirection farmer 2/warp Mateo 43 89/faceDirection Mateo 2/{{SnS.Ch4.Victories.GunnarExtra.Warps.MateoVictory.Offset}}/warp Roslin 44 91/faceDirection Roslin 0/warp Dandelion 43 91/faceDirection Dandelion 0/{{SnS.Ch4.Victories.GunnarExtra.Warps.NotHectorVictory}}/warp Cirrus 42 90/faceDirection Cirrus 1/fade/viewport 44 89/pause 1000/speak Hector \"You're back...$13\"/speak Cirrus \"You're home.$10\"/{{SnS.Ch4.Victories.GunnarExtra.1}}/speak Dandelion \"Roslin has hardly had time to get my arm back in order! You're very dilligent monster-slayers.$6\"/speak Roslin \"It's really over then, isn't it?$10\"/speak Mateo \"It is! And I think this calls for a celebration!$1\"/speak Cirrus \"To the Lion's Mane, then. I'll cook us a dinner so fat it'll take days to sleep off.$1\"/{{SnS.Ch4.Victories.GunnarExtra.2}}/speak Mateo \"How are you feeling, Biróg?$36\"/speak Hector \"Like I was never sick at all. It would appear the roots of that illness ran far deeper than my river.$14\"/jump Cirrus 5 true/textAboveHead Cirrus \"Yay!\"/faceDirection Mateo 1 true/faceDirection farmer 3/speak Mateo \"Let's get going, then.\"/emote farmer 32/fade/viewport -1000 -1000/message \"The Guild spends the evening partying at the Lion's Mane, where the laughs were loud, the drinks were gingery, and the comraderie was unmatched. You've forged an unbreakable bond with the Coastal Guild; that much is clear. As everyone filters out to go to bed after an intense encounter, Mateo catches you by the shoulder outside the door.\"/warp farmer 56 5/faceDirection farmer 1/warp Mateo 58 5/faceDirection Mateo 3/fade/viewport 57 5 clamp true/pause 1000/speak Mateo \"Hey - one last thing before you head home.$1\"/emote farmer 8/pause 250/speak Mateo \"You've been with the Guild since it was made. You're a founder, and you're part of Pelican Town's branch, but...$15#$b#I just wanted you to know that I consider you one of mine.$14\"/emote farmer 20/pause 250/speak Mateo \"With that being said... @, do you swear, under oath, to continue to uplift the people around you...$76#$b#By being the Heart of the Valley?$78\"/quickQuestion #I do!(break)speak Mateo \"Then on behalf of your friends and loved ones, I herby induct you as the 8th member of the Coastal Adventurer's Guild.$80\"/emote farmer 56 true/emote Mateo 56 true/fade/viewport -1000 -1000/speak Mateo \"Rest well, @. You've earned it.$12\"/end NewDay"
       }
-    }
+    },
+    {
+      "LogName": "Mateo/Eyvinder pt 3", 
+      "Action": "EditData",                                           
+      "Target": "Data/Events/EastScarp_DeepMountains",
+      "Entries": {
+        
+        "SnS.Ch4.Eyvinder/e SnS.Ch2.Roslin.1/f Eyvinder 2000/t 0800 1600/w sunny/F": "{{season}}_day_ambient/-100 -100/farmer 79 5 2 Eyvinder 80 14 2 Mateo 78 14 2/addConversationTopic TrollHeritage3 {{VariableTimegate}}/removeTile 79 14 Buildings/animate farmer false true 70 70/addTemporaryActor LittleGruff 16 32 79 14 2 false/changeName LittleGruff \"Little Gruff\"/skippable/animate Mateo false true 350 29 30 31 32 33 32 31 30 29 29 29 29 29 29 29 29/animate Eyvinder false true 100 16 16 16 17 17 18 18 19 19 20 20 20 20 20 20 19 19 18 18 17 17 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16/fade/viewport 79 14 clamp true/pause 10000/end"
+
+      },
+      "When": {
+        "MateoTrollHeritage": true,
+      }
+    },
   ]
 }
 /* 
