@@ -88,10 +88,10 @@
                     }
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 50,
+                    "(O){{ModID}}_AirEssence": 50,
+                    "(O){{ModID}}_FireEssence": 50,
+                    "(O){{ModID}}_WaterEssence": 50,
                 }
             },
             "{{ModId}}_Recipe_VerdantPotion":
@@ -105,10 +105,8 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 5,
+                    "(O){{ModID}}_AirEssence": 5,
                 }
             },
             "{{ModId}}_Recipe_ScarletPotion":
@@ -122,10 +120,8 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_AirEssence": 5,
+                    "(O){{ModID}}_FireEssence": 5,
                 }
             },
             "{{ModId}}_Recipe_HeatherPotion":
@@ -139,10 +135,8 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 5,
+                    "(O){{ModID}}_WaterEssence": 5,
                 }
             },
             "{{ModId}}_Recipe_ZydratePotion":
@@ -156,10 +150,7 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_WaterEssence": 15,
                 }
             },
             "{{ModId}}_Recipe_PistachioPotion":
@@ -175,8 +166,8 @@
                 "ResearchCosts": {
                     "(O){{ModID}}_EarthEssence": 10,
                     "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_FireEssence": 5,
+                    "(O){{ModID}}_WaterEssence": 5,
                 }
             },
             "{{ModId}}_Recipe_DahliaPotion":
@@ -190,10 +181,8 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_AirEssence": 15,
+                    "(O){{ModID}}_WaterEssence": 15,
                 }
             },
             "{{ModId}}_Recipe_SlushiePotion":
@@ -207,10 +196,10 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 5,
+                    "(O){{ModID}}_AirEssence": 5,
+                    "(O){{ModID}}_FireEssence": 5,
+                    "(O){{ModID}}_WaterEssence": 5,
                 }
             },
             "{{ModId}}_Recipe_MatrixPotion":
@@ -224,10 +213,8 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_AirEssence": 15,
+                    "(O){{ModID}}_WaterEssence": 15,
                 }
             },
             "{{ModId}}_Recipe_McDougalPotion":
@@ -241,10 +228,7 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 20,
                 }
             },
             "{{ModId}}_Recipe_ToirneachPotion":
@@ -258,10 +242,7 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_AirEssence": 20,
                 }
             },
             "{{ModId}}_Recipe_ReturnPotion":
@@ -275,10 +256,10 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 15,
+                    "(O){{ModID}}_AirEssence": 15,
+                    "(O){{ModID}}_FireEssence": 15,
+                    "(O){{ModID}}_WaterEssence": 15,
                 }
             },
             "{{ModId}}_Spell_Haste":
@@ -291,10 +272,10 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 7,
+                    "(O){{ModID}}_AirEssence": 7,
+                    "(O){{ModID}}_FireEssence": 7,
+                    "(O){{ModID}}_WaterEssence": 7,
                 }
             },
             /*
@@ -340,10 +321,10 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 7,
+                    "(O){{ModID}}_AirEssence": 7,
+                    "(O){{ModID}}_FireEssence": 7,
+                    "(O){{ModID}}_WaterEssence": 7,
                 }
             },
             */
@@ -357,10 +338,10 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 15,
+                    "(O){{ModID}}_AirEssence": 15,
+                    "(O){{ModID}}_FireEssence": 15,
+                    "(O){{ModID}}_WaterEssence": 15,
                 }
             },
             "{{ModId}}_Spell_MageArmor":
@@ -373,12 +354,13 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 15,
+                    "(O){{ModID}}_AirEssence": 15,
+                    "(O){{ModID}}_FireEssence": 7,
+                    "(O){{ModID}}_WaterEssence": 7,
                 }
             },
+            /*
             "{{ModId}}_Spell_WallOfForce":
             {
                 "Type": "Spell",
@@ -395,7 +377,6 @@
                     "(O){{ModID}}_WaterEssence": 10,
                 }
             },
-            /*
             "{{ModId}}_Spell_Banishment":
             {
                 "Type": "Spell",
@@ -406,10 +387,10 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 7,
+                    "(O){{ModID}}_AirEssence": 7,
+                    "(O){{ModID}}_FireEssence": 7,
+                    "(O){{ModID}}_WaterEssence": 7,
                 }
             },
             "{{ModId}}_Spell_LightningBolt":
@@ -422,10 +403,8 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_AirEssence": 15,
+                    "(O){{ModID}}_WaterEssence": 15,
                 }
             },
             "{{ModId}}_Spell_Fireball":
@@ -438,10 +417,7 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_FireEssence": 30,
                 }
             },
             "{{ModId}}_Spell_MagicMissle":
@@ -454,10 +430,8 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 15,
+                    "(O){{ModID}}_AirEssence": 15,
                 }
             },
             "{{ModId}}_Spell_StellarRain":
@@ -470,10 +444,10 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 15,
+                    "(O){{ModID}}_AirEssence": 15,
+                    "(O){{ModID}}_FireEssence": 15,
+                    "(O){{ModID}}_WaterEssence": 15,
                 }
             },
             */
@@ -506,10 +480,7 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 20,
                 }
             },
             "{{ModId}}_Spell_MirrorImage":
@@ -522,10 +493,10 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 7,
+                    "(O){{ModID}}_AirEssence": 7,
+                    "(O){{ModID}}_FireEssence": 7,
+                    "(O){{ModID}}_WaterEssence": 7,
                 }
             },
             "{{ModId}}_Spell_FindFamiliar":
@@ -538,10 +509,10 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 15,
+                    "(O){{ModID}}_AirEssence": 15,
+                    "(O){{ModID}}_FireEssence": 15,
+                    "(O){{ModID}}_WaterEssence": 15,
                 }
             },
             "{{ModId}}_Spell_GhostlyProjection":
@@ -554,10 +525,10 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 15,
+                    "(O){{ModID}}_AirEssence": 15,
+                    "(O){{ModID}}_FireEssence": 15,
+                    "(O){{ModID}}_WaterEssence": 15,
                 }
             },
             /*
@@ -571,10 +542,8 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_AirEssence": 15,
+                    "(O){{ModID}}_WaterEssence": 15,
                 }
             },
             */
@@ -588,10 +557,7 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 20,
                 }
             },
             "{{ModId}}_Spell_PocketDimension":
@@ -604,10 +570,10 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 25,
+                    "(O){{ModID}}_AirEssence": 25,
+                    "(O){{ModID}}_FireEssence": 25,
+                    "(O){{ModID}}_WaterEssence": 25,
                 }
             },
             /*
@@ -621,10 +587,10 @@
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 10,
-                    "(O){{ModID}}_AirEssence": 10,
-                    "(O){{ModID}}_FireEssence": 10,
-                    "(O){{ModID}}_WaterEssence": 10,
+                    "(O){{ModID}}_EarthEssence": 15,
+                    "(O){{ModID}}_AirEssence": 15,
+                    "(O){{ModID}}_FireEssence": 15,
+                    "(O){{ModID}}_WaterEssence": 15,
                 }
             },
             */

@@ -257,6 +257,18 @@
 
     },
 
+        {
+      "LogName": "Hector's Green Rain Event",
+      "Action": "EditData",
+      "Target": "Data/Events/EastScarp_DeepMountains",
+      "Update": "OnLocationChange",
+      "Entries": {
+
+        "SnS.Hector.GreenRain/e SnS.Ch2.Hector.13/f Mateo 2500/t 0600 2000/F": "continue/-100 -100/farmer 9 24 2 Hector -100 -100 2/skippable/changeLocation EastScarp_RiverStage4/changePortrait Hector hooddown/changeSprite Hector hooddown/addTemporaryActor HectorCast 32 32 23 5 0 true Character/animate HectorCast false true 100 0 0 1 1 2 2 3 3 0 0 1 1 2 2 3 3/globalFadeToClear/viewport 23 5 clamp true/pause 1000/advancedMove farmer false 0 -8 1 10/waitForAllStationary/jump farmer 5 true/emote farmer 16/speak Hector \"Ehehehehehehehe!$39\"/pause 500/playSound thunder/screenFlash 5/pause 500/startJittering/faceDirection farmer 2 true/showFrame farmer 94/speak Hector \"The sky looked too dry for MY liking! Not green enough-$38\"/pause 250/speak Hector \"Let's stir the clouds, and twist the wind!$30\"/pause 500/playSound thunder/screenFlash 5/pause 500/speak Hector \"With a flick and a whisper, let's bend nature's whims!$58\"/pause 500/playSound thunder/screenFlash 5/pause 500/textAboveHead HectorCast \"Rain, rain, let it pour...\"/pause 2000/playSound thunder/screenFlash 5/pause 500/speak Hector \"Drenched in magic, nature will restore!$59\"/pause 500/playSound thunder/screenFlash 5/viewport move 0 1 15000/pause 15000/fade/viewport -1000 -1000/end"
+
+      }
+    },
+
     {
       "LogName": "Cirrus Foreshadowing Event",
       "Action": "EditData",

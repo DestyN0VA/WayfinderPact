@@ -381,16 +381,16 @@
   "Core.Mateo.Winter.Relationship.Romantic.7": "I feel so unbothered by the weather, which is crazy. Wintertime used to loom at the back of my mind all year.$12#$b#Now I can appreciate it for what it is. By the way, Sunshine - I made this for you. It'll keep you warm when I can't.[236]$4",
 
   // EPILOGUE 
-  "Core.Mateo.Epilogue.1": "", 
-  "Core.Mateo.Epilogue.2": "", 
-  "Core.Mateo.Epilogue.3": "", 
-  "Core.Mateo.Epilogue.4": "", 
-  "Core.Mateo.Epilogue.5": "", 
-  "Core.Mateo.Epilogue.6": "", 
-  "Core.Mateo.Epilogue.7": "", 
-  "Core.Mateo.Epilogue.8": "", 
-  "Core.Mateo.Epilogue.9": "", 
-  "Core.Mateo.Epilogue.10": "", 
+  "Core.Mateo.Epilogue.1": "If that's the last time I lead an adventuring party into a dungeon to fight a town-destroying monster, I'd be very content.$1", 
+  "Core.Mateo.Epilogue.2": "My goal, moving forward, is to make sure that everyone - from whatever walks of life, from whatever colored pasts - can find a home with me if they need it.$76", 
+  "Core.Mateo.Epilogue.3": "Wyatt is an interesting person to get to know as an adult. We've still got a lot to work on, but I do at least acknowledge his perspective and what he was trying to do to protect me.$80", 
+  "Core.Mateo.Epilogue.4": "I visit Krobus as often as I'm able. He and Emeritus get along like a house on fire.$12", 
+  "Core.Mateo.Epilogue.5": "I like to treat myself to a stiff pour of bourbon and just stare at the horizon line from the roof of the Guild, sometimes.$15", 
+  "Core.Mateo.Epilogue.6": "It's been great just to focus on making things. Armor, weapons, arrows... mostly armor, honestly. I like feeling like I'm contributing to protecting someone.$80", 
+  "Core.Mateo.Epilogue.7": "I've been... cultivating roses, experimenting with new sword molds, and just... living like a weight's been lifted.$12", 
+  "Core.Mateo.Epilogue.8": "It brings me a joy I can't describe that everyone's found peace in some way or another. Like the peace you brought me so long ago, @.$78", 
+  "Core.Mateo.Epilogue.9": "Marlon said he was proud of me. And, honestly? That never gets old. I want to feel like I'm doing right by him and Gunther.$33", 
+  "Core.Mateo.Epilogue.10": "...You understand me, just as far as I've ever wanted to be understood. You believed in me, as you would like to believe in yourself.$80", 
 
   /*
   __  __          _____  _____  _____          _____ ______ 
@@ -1800,16 +1800,16 @@ ________      ________ _   _ _______ _____
   "Core.Hector.MarriedMonogamousNPC": "No thanks, @. I'm a one-person-person, and so is your current partner.$24",
 
   // EPILOGUE 
-  "Core.Hector.Epilogue.1": "", 
-  "Core.Hector.Epilogue.2": "", 
-  "Core.Hector.Epilogue.3": "", 
-  "Core.Hector.Epilogue.4": "", 
-  "Core.Hector.Epilogue.5": "", 
-  "Core.Hector.Epilogue.6": "", 
-  "Core.Hector.Epilogue.7": "", 
-  "Core.Hector.Epilogue.8": "", 
-  "Core.Hector.Epilogue.9": "", 
-  "Core.Hector.Epilogue.10": "", 
+  "Core.Hector.Epilogue.1": "I feel good for the first time in a very, very, very long time.$7", 
+  "Core.Hector.Epilogue.2": "Jacob has been an incredibly attentive teacher. I'm trying really hard to properly diagnose issues rather than just asking the patient, though. I want to learn.$8", 
+  "Core.Hector.Epilogue.3": "I've been less inclined to watching shows, or just lazing about... there are critters who need my help, and I'm determined to do right by them.$12", 
+  "Core.Hector.Epilogue.4": "Eloise is the light of my life. Not every day comes easy, but she makes even the more difficult ones brighter.$13", 
+  "Core.Hector.Epilogue.5": "Jacob's critters are very talkative. I'm making an effort to get to know them, just like I've made an effort with you and the Guild.$6", 
+  "Core.Hector.Epilogue.6": "I look back on my prior interactions with you and feel kind of embarrassed. I guess that's just growth, huh?$8", 
+  "Core.Hector.Epilogue.7": "I thought being ornery was just who I was - but, no, it turns out that being sick'll make anyone a bit angsty and difficult.$4#$b#I apologize for everything I put you through, way back when.$13", 
+  "Core.Hector.Epilogue.8": "My patients like me, and that's the best feeling in the whole wide world. Better than watching plants grow, even.$1", 
+  "Core.Hector.Epilogue.9": "I let Eloise pick my outfits sometimes. She has better taste than I do.$4", 
+  "Core.Hector.Epilogue.10": "Eloise was right. I'm not a wolf because they're meant to be loners, I'm a wolf because they're pack animals. And I needed a pack.$11", 
 
   /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
@@ -3180,7 +3180,7 @@ ________      ________ _   _ _______ _____
 
   "Core.Cirrus.PlayerKilled.Skull.01": " ...{0}?",
   "Core.Cirrus.PlayerKilled.Skull.02": "Easy, now... take it slow.",
-  "Core.Cirrus.PlayerKilled.Skull.03": "You're awake! Thank goodness. Hector found you all bent out of shape in the Skull Cave!$2",
+  "Core.Cirrus.PlayerKilled.Skull.03": "You're awake! Thank goodness. Biróg found you all bent out of shape in the Skull Cave!$2",
   "Core.Cirrus.PlayerKilled.Skull.04": "I was so scared, @, holy shit...$21",
   "Core.Cirrus.PlayerKilled.Skull.04.Filtered": "I was so scared, @, holy crap...$21",
   "Core.Cirrus.PlayerKilled.Skull.05": "Don't do this to me again, @! If you do, I'll give YOU something to be scared about!#@21",
@@ -3195,17 +3195,17 @@ ________      ________ _   _ _______ _____
   // POLYAMORY 
   "Core.Cirrus.MarriedMonogamousNPC": "Your partner is monogamous, @. So I'm not comfortable engaging in anything romantically with you.$16",
 
- // EPILOGUE 
-  "Core.Cirrus.Epilogue.1": "",
-  "Core.Cirrus.Epilogue.2": "",
-  "Core.Cirrus.Epilogue.3": "",
-  "Core.Cirrus.Epilogue.4": "",
-  "Core.Cirrus.Epilogue.5": "",
-  "Core.Cirrus.Epilogue.6": "",
-  "Core.Cirrus.Epilogue.7": "",
-  "Core.Cirrus.Epilogue.8": "",
-  "Core.Cirrus.Epilogue.9": "",
-  "Core.Cirrus.Epilogue.10": "",
+  // EPILOGUE 
+  "Core.Cirrus.Epilogue.1": "My mom's been doing okay, thank you for asking! She's really struggling, but in that old-movie-montage kind of way. I have faith in her.$1",
+  "Core.Cirrus.Epilogue.2": "Right now, my Mom and I are doing one phone call a week. I'm not sure I'm ready to see her in person again; not until she's been dry for a bit.$17",
+  "Core.Cirrus.Epilogue.3": "I've been writing music! Which, admittedly, I hadn't in a really long time... but I've been struck with inspiration from everything that's happened.$1",
+  "Core.Cirrus.Epilogue.4": "Honestly, I've been playing the piano a lot. Not the keytar. It just... it hits different, it represents my forward direction better.$4",
+  "Core.Cirrus.Epilogue.5": "Every day my Mom makes it without a drink is it's own little blessing. I'm so proud of her.$1",
+  "Core.Cirrus.Epilogue.6": "It's going to be so nice to get to know the person my Mom was before the alchoholism. And the person she'll become, after.$1",
+  "Core.Cirrus.Epilogue.7": "I'm gonna go, go, go, there's no stopping me! I'm burning through the sky, yeah, 200 degrees, that's why they call me Mister Fahrenheit!$29",
+  "Core.Cirrus.Epilogue.8": "Sun is shining in the sky, there ain't a cloud in sight! It's stopped raining, everyone's in the play... and don't you know, it's a beautiful new day!$29",
+  "Core.Cirrus.Epilogue.9": "What's the matter? Don't you feel right? Don't you feel right, baby? Hail, oh yeah, get it from the main vine vine, all right...$29",
+  "Core.Cirrus.Epilogue.10": "Don't you, forget about me, don't, don't, don't, don't...$29",
   
 
   /*
@@ -3608,7 +3608,6 @@ ________      ________ _   _ _______ _____
   "Gifts.Cirrus.GiftReaction.Wine": "No thanks, @! I'm sober. But I appreciate being thought of!$1",
   "Gifts.Cirrus.GiftReaction.Hops": "No thanks, @! I'm sober, so I wouldn't make anything with this.$1",
 
-
   /*
   __  __  ______      _______ ______  _____ 
  |  \/  |/ __ \ \    / /_   _|  ____|/ ____|
@@ -3792,6 +3791,7 @@ ________      ________ _   _ _______ _____
 
   "Strings.Cirrus.Nickname1": "Rockstar",
   "Strings.Cirrus.Nickname2": "Superstar",
+
   /*
    _____ _    _  _____ _______ ____  __  __   ______ _______   ________ _____   
   / ____| |  | |/ ____|__   __/ __ \|  \/  | |  ____|_   _\ \ / /  ____|  __ \  
@@ -3976,16 +3976,16 @@ ________      ________ _   _ _______ _____
   "Core.Roslin.GreenRain2": "I'm pretty sure Hector is summoning this rain for fun. Well, Druids are going to... Druid, I suppose.$7",
 
    // EPILOGUE 
-   "Core.Roslin.Epilogue.1": "", 
-   "Core.Roslin.Epilogue.2": "", 
-   "Core.Roslin.Epilogue.3": "", 
-   "Core.Roslin.Epilogue.4": "", 
-   "Core.Roslin.Epilogue.5": "", 
-   "Core.Roslin.Epilogue.6": "", 
-   "Core.Roslin.Epilogue.7": "", 
-   "Core.Roslin.Epilogue.8": "", 
-   "Core.Roslin.Epilogue.9": "", 
-   "Core.Roslin.Epilogue.10": "",  
+   "Core.Roslin.Epilogue.1": "I'm not sure I've ever felt so much relief in my entire life. You must feel similarly, I can't imagine otherwise.$6", 
+   "Core.Roslin.Epilogue.2": "Solomon continues to be annoying, Dandelion continues to hyperfixate on her books, the sun sets and rises again...$4", 
+   "Core.Roslin.Epilogue.3": "I've continued my magical studies, but that just seems so much less important than... I don't know, farm fresh eggs... and a mug of tea with my wife...$9", 
+   "Core.Roslin.Epilogue.4": "I know, scientifically, it's not...possible to see the world brighter, in different colors... but I swear, I do...$8", 
+   "Core.Roslin.Epilogue.5": "...You know, I don't think I had a favorite color until I noticed how blue Dandelion's eyes are.$4", 
+   "Core.Roslin.Epilogue.6": "Cherish your loved ones, @. And maybe consider... how they'll feel if something ever happened to you while you were adventuring.$3", 
+   "Core.Roslin.Epilogue.7": "I've taken up people watching. It's so nice to just... see, with my own eyes, how much people care for one another by default.$10", 
+   "Core.Roslin.Epilogue.8": "@... do not follow my path. Do not choose the pursuit of knowledge over your well-being, or your friends and loved ones.$2", 
+   "Core.Roslin.Epilogue.9": "True love won't desert you, @. That is the lesson I have learned.$2", 
+   "Core.Roslin.Epilogue.10": "I suppose there is wonder left in the world, after all.$3",  
 
   /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
@@ -4085,18 +4085,6 @@ ________      ________ _   _ _______ _____
   "Core.Roslin.Winter.1": "Sleeves are for people who can't cheat the system with magic. You should try it, @.$7",
   "Core.Roslin.Winter.2": "I've travelled to places where the snow accumulates almost as high as I stand tall. I hate that.$9",
   "Core.Roslin.Winter.3": "I appreciate Dandelion's tea obsession much more in the Winter than I do in the Summer, I must admit.$10",
-
-  // 10H SITUATIONAL
-  "Core.Roslin.EXAMPLE.1": "",
-  "Core.Roslin.EXAMPLE.2": "",
-  "Core.Roslin.EXAMPLE.3": "",
-  "Core.Roslin.EXAMPLE.4": "",
-  "Core.Roslin.EXAMPLE.5": "",
-  "Core.Roslin.EXAMPLE.6": "",
-  "Core.Roslin.EXAMPLE.7": "",
-  "Core.Roslin.EXAMPLE.8": "",
-  "Core.Roslin.EXAMPLE.9": "",
-  "Core.Roslin.EXAMPLE.10": "",
 
   /*
    _____ _____ ______ _______   _______        _____ _______ ______  _____ 
@@ -4453,16 +4441,16 @@ ________      ________ _   _ _______ _____
   "Core.Dandelion.GreenRain2": "Is this a regular occourance to expect in the Summer? I wonder if this is unique to the Valley?$17",
 
   // EPILOGUE 
-  "Core.Dandelion.Epilogue.1": "", 
-  "Core.Dandelion.Epilogue.2": "", 
-  "Core.Dandelion.Epilogue.3": "", 
-  "Core.Dandelion.Epilogue.4": "", 
-  "Core.Dandelion.Epilogue.5": "", 
-  "Core.Dandelion.Epilogue.6": "", 
-  "Core.Dandelion.Epilogue.7": "", 
-  "Core.Dandelion.Epilogue.8": "", 
-  "Core.Dandelion.Epilogue.9": "", 
-  "Core.Dandelion.Epilogue.10": "", 
+  "Core.Dandelion.Epilogue.1": "I must admit, it's terribly nice to be married and retired from heroism. It's a privilage for such a good person to have taken up the mantle, too. Thank you, @.$1", 
+  "Core.Dandelion.Epilogue.2": "I've been wanting to lay my shield down by the flowers for a while, now. I pray there will never be a need to have to pick it back up again.$2", 
+  "Core.Dandelion.Epilogue.3": "There is a lot less tension on our half of the Lion's Mane now that there's no longer a looming threat over our heads.$1", 
+  "Core.Dandelion.Epilogue.4": "I still have my armor, except the bit I used to make Roslin's mermaid pendant. It's mostly for the memories, I don't expect to don it again in a serious capacity.$6", 
+  "Core.Dandelion.Epilogue.5": "You are welcome over for tea any time, @. You're welcome over for whatever reason, actually - your company is longed for, always.$6", 
+  "Core.Dandelion.Epilogue.6": "Roslin has been so tightly wound these past few years. It's been lovely to watch her finally come undone.$6", 
+  "Core.Dandelion.Epilogue.7": "You get a certian kind of way when you percieve every day as, potentially, your last. It's nice not to live like that anymore.$14", 
+  "Core.Dandelion.Epilogue.8": "I finally have time to start working on those physically demanding world records I'd like to break.$1", 
+  "Core.Dandelion.Epilogue.9": "The Guild is with you 'till the end of the line, @.$0", 
+  "Core.Dandelion.Epilogue.10": "On your left.$18", 
 
   /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
@@ -4926,16 +4914,16 @@ ________      ________ _   _ _______ _____
   "CT.Solomon.SwordAndSorcery": "...How 'bout that.$9#$b#Everyone's... having a great time, but... I guess that doesn't mean they are all the time.$2#$b#Somtimes, moments of fun... can just be, a sorta, lifting of the burden. For just a little moment.$9#$b#But, hey. That's life. Ya'know? You have fun. And then you have not-so-fun. You're happy, and then you're sad.$2#$b#That's the roller coaster that is life. Do you hear me? Do you understand?$8",
   
   // EPILOGUE 
-  "Core.Solomon.Epilogue.1": "", 
-  "Core.Solomon.Epilogue.2": "", 
-  "Core.Solomon.Epilogue.3": "", 
-  "Core.Solomon.Epilogue.4": "", 
-  "Core.Solomon.Epilogue.5": "", 
-  "Core.Solomon.Epilogue.6": "", 
-  "Core.Solomon.Epilogue.7": "", 
-  "Core.Solomon.Epilogue.8": "", 
-  "Core.Solomon.Epilogue.9": "", 
-  "Core.Solomon.Epilogue.10": "", 
+  "Core.Solomon.Epilogue.1": "There's magic in everything, @. It's not just spells or whatever. It's the world around you. It's your responsibility to embrace that, too.$7", 
+  "Core.Solomon.Epilogue.2": "Wouldn't it be really messed up if that wasn't the last we saw of the Duskspire? Should go back to the bottom of that dungeon and check...$8", 
+  "Core.Solomon.Epilogue.3": "How's your magical research going? Have you tried throwing a really big fireball into a really small room yet?$6", 
+  "Core.Solomon.Epilogue.4": "I just realized... you're an artificer, a druid, a bard, a sorcerer, and a paladin? You're the strongest person in the Valley, hot damn.$3", 
+  "Core.Solomon.Epilogue.5": "A strange sort of finality hangs over the Scarp, doesn't it? No? Maybe that's just me.$9", 
+  "Core.Solomon.Epilogue.6": "I wonder what's happened to those miner's souls now that - what, nothing. Me? Empathetic? NO.$5", 
+  "Core.Solomon.Epilogue.7": "Take a hard look at how far you've come, @. Didn't it all start with a letter?$7", 
+  "Core.Solomon.Epilogue.8": "Do you think about what your life COULD have been, compared to where you are now? Is that healthy?$10", 
+  "Core.Solomon.Epilogue.9": "Why on earth would you brave the Deep Dark a third time, @? What could possibly be down there?$8", 
+  "Core.Solomon.Epilogue.10": "Something about Stygium and Iridium just make me - what, @? You're interrupting my train of thought.$11", 
 
 /*
  ________      ________ _   _ _______ _____ 
