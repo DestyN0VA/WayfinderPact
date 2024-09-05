@@ -97,6 +97,7 @@ namespace SwordAndSorcerySMAPI
                 ["DN.SnS_FirestormArrow", "DN.SnS_IcicleArrow"],
                 ["DN.SnS_ExquisiteEmerald", "DN.SnS_ExquisiteRuby", "DN.SnS_ExquisiteTopaz", "DN.SnS_ExquisiteAquamarine", "DN.SnS_ExquisiteAmethyst", "DN.SnS_ExquisiteJade", "DN.SnS_ExquisiteDiamond"],
                 [],
+                [],
                 ["DN.SnS_WindwakerArrow"],
                 ["DN.SnS_RicochetArrow"],
                 ["DN.SnS_LightbringerArrow"],
