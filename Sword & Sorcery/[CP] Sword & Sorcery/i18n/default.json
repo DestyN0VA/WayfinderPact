@@ -4380,7 +4380,7 @@ ________      ________ _   _ _______ _____
   "CT.Roslin.DandelionSettling": "Dandelion and I have had a morning tea ritual as long as we've known each other... without it, I felt myself... slipping.$12",
   "CT.Roslin.DandelionShieldRepair": "Dandelion is adamant about defeating the Duskpire Behemoth. I don't disagree, but I wish she's take a second to appreciate being, I don't know, alive-?$15",
   "CT.Roslin.DandelionShieldRestored": "I don't want her to fight again... but I can't stop her, can I?$13",
-  "CT.Roslin.FullmetalDandelion": "Dandelion's arm would be a marvel of technology if a little bit of humitity didn't lock the whole damn thing up.$15",
+  "CT.Roslin.FullmetalDandelion": "Dandelion's arm would be a marvel of technology if a little bit of humidity didn't lock the whole damn thing up.$15",
   "CT.Roslin.DandelionPendant": "Dandelion's been acting weird, but maybe I'm just hyperaware and she's just like that by default.$17",
   "CT.Roslin.SolomonGift": "Be careful in your explorations, @. Sorcery is dangerous. Worthwhile, though.$16",
   "CT.Roslin.IntoTheDeepDark": "I hate this. I hate this so very, very, much.$13",
@@ -4923,7 +4923,7 @@ ________      ________ _   _ _______ _____
   "CT.Solomon.CirrusAndMom": "Cirrus is my favorite because she makes the best snacks and objectively that's what makes a good person.$1",
   "CT.Solomon.RosalionWedding": "I guess now Rozzie and Dandy are... turbo gay.$4",
   "CT.Solomon.VioletMoonRennFaire": "I'm going to eat everything at the festival and leave NOTHING for NOBODY.$1",
-  "CT.Solomon.SwordAndSorcery": "...How 'bout that.$9#$b#Everyone's... having a great time, but... I guess that doesn't mean they are all the time.$2#$b#Somtimes, moments of fun... can just be, a sorta, lifting of the burden. For just a little moment.$9#$b#But, hey. That's life. Ya'know? You have fun. And then you have not-so-fun. You're happy, and then you're sad.$2#$b#That's the roller coaster that is life. Do you hear me? Do you understand?$8",
+  "CT.Solomon.SwordAndSorcery": "...How 'bout that.$9#$b#Everyone's... having a great time, but... I guess that doesn't mean they are all the time.$2#$b#Sometimes, moments of fun... can just be, a sorta, lifting of the burden. For just a little moment.$9#$b#But, hey. That's life. Ya'know? You have fun. And then you have not-so-fun. You're happy, and then you're sad.$2#$b#That's the roller coaster that is life. Do you hear me? Do you understand?$8",
   
   // EPILOGUE 
   "Core.Solomon.Epilogue.1": "", 
@@ -5658,7 +5658,7 @@ ________      ________ _   _ _______ _____
   "VioletMoon.Dandelion.3": "Carrying the potion bottles up the mountain was an excellent workout.$1",
   "VioletMoon.Roslin.1": "I don't really like festivals, but I'm biased about this one. Fond wedding memories, and whatever.$7",
   "VioletMoon.Roslin.2": "For the last time, it's not multi-level-marketing, these essences and potions ACTUALLY work!$5.",
-  "VioletMoon.Roslin.3": "There's are excellent spell components hidden this deep in the woods.$10",
+  "VioletMoon.Roslin.3": "There are excellent spell components hidden this deep in the woods.$10",
   "VioletMoon.Solomon.1": "I'm going to eat all the Scotch Eggs and then take a nap in a crate.$6.",
   "VioletMoon.Solomon.2": "Once again, these silly humans all think I'm wearing a costume! I think they left their braincells in Pelican Town.$3",
   "VioletMoon.Solomon.3": "Krobus is being productive and that's great but I mostly just want to cause problems since I'm out and about around people.$10",
