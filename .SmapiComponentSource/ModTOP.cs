@@ -297,7 +297,7 @@ namespace SwordAndSorcerySMAPI
         public void Entry()
         {
             SpellCircle = Helper.ModContent.Load<Texture2D>("assets/spellcircle.png");
-            Portal = Helper.ModContent.Load<Texture2D>("assets/return-portal.png");
+            Portal = Helper.ModContent.Load<Texture2D>("assets/portal.png");
             Grimoire = Helper.ModContent.Load<Texture2D>("assets/grimoire.png");
             StuffTexture = Helper.ModContent.Load<Texture2D>("assets/witchcraft/stuff.png");
 
@@ -520,7 +520,9 @@ namespace SwordAndSorcerySMAPI
                     Vector2 spot = warp_location.ToVector2() - new Vector2(0, 1);
                     spot += new Vector2(0, -1);
                     spot *= Game1.tileSize;
-                    e.SpriteBatch.Draw(ModTOP.Portal, Game1.GlobalToLocal(Game1.viewport, spot), null, Color.White, 0f, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, (spot.Y + Game1.tileSize * 2 + 1) / 10000f);
+                    spot.X -= 32;
+                    int frame = ((int)Game1.currentGameTime.TotalGameTime.TotalMilliseconds % (125*6)) / 125;
+                    e.SpriteBatch.Draw(ModTOP.Portal, Game1.GlobalToLocal(Game1.viewport, spot), new Rectangle(frame % 3 * 32, frame / 3 * 32, 32, 32), Color.White, 0f, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, (spot.Y + Game1.tileSize * 2 + 1) / 10000f);
                 }
             }
 
@@ -530,7 +532,9 @@ namespace SwordAndSorcerySMAPI
                 {
                     Vector2 spot = new Vector2(15, 6);
                     spot *= Game1.tileSize;
-                    e.SpriteBatch.Draw(ModTOP.Portal, Game1.GlobalToLocal(Game1.viewport, spot), null, Color.White, 0f, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, (spot.Y + Game1.tileSize * 2 + 1) / 10000f);
+                    spot.X -= 32;
+                    int frame = ((int)Game1.currentGameTime.TotalGameTime.TotalMilliseconds % (125 * 6)) / 125;
+                    e.SpriteBatch.Draw(ModTOP.Portal, Game1.GlobalToLocal(Game1.viewport, spot), new Rectangle(frame % 3 * 32, frame / 3 * 32, 32, 32), Color.White, 0f, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, (spot.Y + Game1.tileSize * 2 + 1) / 10000f);
                 }
             }
         }
