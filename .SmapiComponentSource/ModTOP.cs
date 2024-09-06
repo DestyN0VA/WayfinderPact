@@ -179,6 +179,7 @@ namespace SwordAndSorcerySMAPI
         public static Texture2D StuffTexture;
 
         public static WitchcraftSkill Skill;
+        public static PaladinSkill PaladinSkill;
 
         public static Dictionary<string, ResearchEntry> Research { get; private set; }
 
@@ -302,6 +303,7 @@ namespace SwordAndSorcerySMAPI
             StuffTexture = Helper.ModContent.Load<Texture2D>("assets/witchcraft/stuff.png");
 
             Skill = new WitchcraftSkill();
+            PaladinSkill = new();
 
             Helper.Events.Multiplayer.ModMessageReceived += Multiplayer_ModMessageReceived;
             Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
@@ -484,6 +486,7 @@ namespace SwordAndSorcerySMAPI
         private void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)
         {
             Skills.RegisterSkill(Skill);
+            Skills.RegisterSkill(PaladinSkill);
             Research = Game1.content.Load<Dictionary<string, ResearchEntry>>("KCC.SnS/WitchcraftResearch");
         }
 

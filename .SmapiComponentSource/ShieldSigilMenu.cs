@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using SpaceCore;
 using SpaceCore.UI;
 using StardewValley;
 using StardewValley.Inventories;
@@ -19,7 +20,6 @@ public class ShieldSigilMenu : IClickableMenu
     public ShieldSigilMenu()
     :   base( Game1.uiViewport.Width / 2 - 200, Game1.uiViewport.Height / 2 - 200 - 100, 400, 400 )
     {
-        
         List<string> choices =
         [
             "(W)DN.SnS_PaladinShield",
@@ -28,6 +28,8 @@ public class ShieldSigilMenu : IClickableMenu
             "(W)DN.SnS_BardShield",
             "(W)DN.SnS_SorcererShield",
         ];
+
+        int[] levelChecks = [0, 2, 4, 6, 8];
         
         invMenu = new(Game1.uiViewport.Width / 2 - 72 * 5 - 36 + 8, yPositionOnScreen + height, true, highlightMethod:
             (item) =>
@@ -67,7 +69,10 @@ public class ShieldSigilMenu : IClickableMenu
                     restChoices.Remove(main.Item.QualifiedItemId);
                     for (int i = 0; i < 4; ++i)
                     {
-                        sub[i].Item = ItemRegistry.Create(restChoices[i]);
+                        int ind = choices.IndexOf(restChoices[i]);
+                        int level = levelChecks[ind];
+                        if (Game1.player.GetCustomSkillLevel(ModTOP.PaladinSkill) >= level)
+                            sub[i].Item = ItemRegistry.Create(restChoices[i]);
                     }
                 }
             },

@@ -1,78 +1,91 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using CircleOfThornsSMAPI;
 using HarmonyLib;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceCore;
 using StardewValley;
 using StardewValley.Menus;
+using StardewValley.Quests;
+using StardewValley.SpecialOrders;
 using SwordAndSorcerySMAPI;
-#if false
+
 namespace SwordAndSorcerySMAPI
 {
     public class PaladinSkill : SpaceCore.Skills.Skill
     {
-        public static GenericProfession ProfessionArmorRecovery;
-        public static GenericProfession ProfessionShieldArmor;
-        public static GenericProfession ProfessionCrafting;
-        public static GenericProfession ProfessionArmorCap;
-        public static GenericProfession ProfessionShadowStep;
-        public static GenericProfession ProfessionHuntersMark;
+        public static GenericProfession ProfessionShieldThrowHit2;
+        public static GenericProfession ProfessionShieldArmor1;
+        public static GenericProfession ProfessionShieldThrowLightning;
+        public static GenericProfession ProfessionShieldThrowHit3;
+        public static GenericProfession ProfessionShieldArmor2;
+        public static GenericProfession ProfessionShieldRetribution;
+
+        private static string[] events =
+        [
+            "SnS.Ch4.Intermission.Mateo",
+            "SnS.Ch4.Intermission.Hector",
+            "SnS.Ch4.Intermission.Cirrus",
+            "SnS.Ch4.Intermission.Gunnar",
+            "SnS.Ch4.Intermission.SoloFarmer",
+        ];
 
         public PaladinSkill()
-            : base("DestyNova.SwordAndSorcery.Rogue")
+            : base("DestyNova.SwordAndSorcery.Paladin")
         {
-            this.Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png");
-            this.SkillsPageIcon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png");
+            this.Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/icon.png");
+            this.SkillsPageIcon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/icon.png");
 
             this.ExperienceCurve = new[] { 100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000 };
 
             this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(252, 121, 27);
 
             // Level 5
-            PaladinSkill.ProfessionArmorRecovery = new GenericProfession(skill: this, id: "ArmorRecovery", name: I18n.PaladinSkill_Profession_ArmorRecovery_Name, description: I18n.PaladinSkill_Profession_ArmorRecovery_Description)
+            PaladinSkill.ProfessionShieldThrowHit2 = new GenericProfession(skill: this, id: "ThrowHit2", name: I18n.PaladinSkill_Profession_ShieldThrowHit2_Name, description: I18n.PaladinSkill_Profession_ShieldThrowHit2_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/ArtificerSpecialist.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/OnYourLeft.png")
             };
-            this.Professions.Add(PaladinSkill.ProfessionArmorRecovery);
+            this.Professions.Add(PaladinSkill.ProfessionShieldThrowHit2);
 
-            PaladinSkill.ProfessionShieldArmor = new GenericProfession(skill: this, id: "BowSecondShot", name: I18n.PaladinSkill_Profession_RogueishArchetype_Name, description: I18n.PaladinSkill_Profession_RogueishArchetype_Description)
+            PaladinSkill.ProfessionShieldArmor1 = new GenericProfession(skill: this, id: "Armor1", name: I18n.PaladinSkill_Profession_ShieldArmor1_Name, description: I18n.PaladinSkill_Profession_ShieldArmor2_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/RogueishArchetype.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/FightToEndTheFight.png")
             };
-            this.Professions.Add(PaladinSkill.ProfessionShieldArmor);
+            this.Professions.Add(PaladinSkill.ProfessionShieldArmor1);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(5, PaladinSkill.ProfessionArmorRecovery, PaladinSkill.ProfessionShieldArmor));
+            this.ProfessionsForLevels.Add(new ProfessionPair(5, PaladinSkill.ProfessionShieldThrowHit2, PaladinSkill.ProfessionShieldArmor1));
 
             // Level 10 - track A
-            PaladinSkill.ProfessionCrafting = new GenericProfession(skill: this, id: "Crafting", name: I18n.PaladinSkill_Profession_FlashOfGenius_Name, description: I18n.PaladinSkill_Profession_FlashOfGenius_Description)
+            PaladinSkill.ProfessionShieldThrowLightning = new GenericProfession(skill: this, id: "ThrowLightning", name: I18n.PaladinSkill_Profession_ShieldThrowLightning_Name, description: I18n.PaladinSkill_Profession_ShieldThrowLightning_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/FlashOfGenius.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/TheSunWillShineOnUsAgain.png")
             };
-            this.Professions.Add(PaladinSkill.ProfessionCrafting);
+            this.Professions.Add(PaladinSkill.ProfessionShieldThrowLightning);
 
-            PaladinSkill.ProfessionArmorCap = new GenericProfession(skill: this, id: "ArmorCap", name: I18n.PaladinSkill_Profession_ArmorProficiency_Name, description: I18n.PaladinSkill_Profession_ArmorProficiency_Description)
+            PaladinSkill.ProfessionShieldThrowHit3 = new GenericProfession(skill: this, id: "ThrowHit3", name: () => I18n.PaladinSkill_Profession_ShieldThrowHit3_Name(Game1.player.Name), description: I18n.PaladinSkill_Profession_ShieldThrowHit3_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/ArmorProficiency.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/TheyHaveAnArnmyWeHaveAFarmerName.png")
             };
-            this.Professions.Add(PaladinSkill.ProfessionArmorCap);
+            this.Professions.Add(PaladinSkill.ProfessionShieldThrowHit3);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(10, PaladinSkill.ProfessionCrafting, PaladinSkill.ProfessionArmorCap, PaladinSkill.ProfessionArmorRecovery));
+            this.ProfessionsForLevels.Add(new ProfessionPair(10, PaladinSkill.ProfessionShieldThrowLightning, PaladinSkill.ProfessionShieldThrowHit3, PaladinSkill.ProfessionShieldThrowHit2));
 
             // Level 10 - track B
-            PaladinSkill.ProfessionShadowStep = new GenericProfession(skill: this, id: "ShadowStep", name: I18n.Ability_Shadowstep_Name, description: I18n.Ability_Shadowstep_Description)
+            PaladinSkill.ProfessionShieldArmor2 = new GenericProfession(skill: this, id: "Armor2", name: I18n.PaladinSkill_Profession_ShieldArmor2_Name, description: I18n.PaladinSkill_Profession_ShieldArmor2_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/Shadowstep.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/ICanDoThisAllDay.png")
             };
-            this.Professions.Add(PaladinSkill.ProfessionShadowStep);
+            this.Professions.Add(PaladinSkill.ProfessionShieldArmor2);
 
-            PaladinSkill.ProfessionHuntersMark = new GenericProfession(skill: this, id: "HuntersMark", name: I18n.PaladinSkill_Profession_HuntersMark_Name, description: I18n.PaladinSkill_Profession_HuntersMark_Description)
+            PaladinSkill.ProfessionShieldRetribution = new GenericProfession(skill: this, id: "Retribution", name: I18n.PaladinSkill_Profession_ShieldRetribution_Name, description: I18n.PaladinSkill_Profession_ShieldRetribution_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/HuntersMark.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/YouGetHurtHurtEmBack.png")
             };
-            this.Professions.Add(PaladinSkill.ProfessionHuntersMark);
+            this.Professions.Add(PaladinSkill.ProfessionShieldRetribution);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(10, PaladinSkill.ProfessionShadowStep, PaladinSkill.ProfessionHuntersMark, PaladinSkill.ProfessionShieldArmor));
+            this.ProfessionsForLevels.Add(new ProfessionPair(10, PaladinSkill.ProfessionShieldArmor2, PaladinSkill.ProfessionShieldRetribution, PaladinSkill.ProfessionShieldArmor1));
         }
 
         public override string GetName()
@@ -85,30 +98,7 @@ namespace SwordAndSorcerySMAPI
 
             if (level > 10) return; // Walk of Life
 
-            Game1.player.maxHealth += 3;
-            if (level == 1)
-                Game1.player.GetFarmerExtData().maxMana.Value += 30;
-
-            string[][] craftingRecipes =
-            [
-                [],
-                ["DN.SnS_ClothArmor", "DN.SnS_Bow", "DN.SnS_Arrow"],
-                ["DN.SnS_CopperArmor", "DN.SnS_IronArmor", "DN.SnS_GoldArmor", "DN.SnS_IridiumArmor", "DN.SnS_RadioactiveArmor"],
-                ["DN.SnS_FirestormArrow", "DN.SnS_IcicleArrow"],
-                ["DN.SnS_ExquisiteEmerald", "DN.SnS_ExquisiteRuby", "DN.SnS_ExquisiteTopaz", "DN.SnS_ExquisiteAquamarine", "DN.SnS_ExquisiteAmethyst", "DN.SnS_ExquisiteJade", "DN.SnS_ExquisiteDiamond"],
-                [],
-                [],
-                ["DN.SnS_WindwakerArrow"],
-                ["DN.SnS_RicochetArrow"],
-                ["DN.SnS_LightbringerArrow"],
-                [],
-            ];
-
-            foreach (var recipe in craftingRecipes[level])
-            {
-                if ( !Game1.player.knowsRecipe(recipe))
-                    Game1.player.craftingRecipes.Add(recipe, 0);
-            }
+            Game1.player.maxHealth += 5;
         }
 
         public override List<string> GetExtraLevelUpInfo(int level)
@@ -117,91 +107,93 @@ namespace SwordAndSorcerySMAPI
 
             if (level > 10) return ret;
 
-
             switch ( level )
             {
-                case 1:
-                    ret.Add(I18n.PaladinSkill_Unlock_1());
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ClothArmor", false).DisplayName));
-                    break;
                 case 2:
                     ret.Add(I18n.PaladinSkill_Unlock_2().Replace('^','\n'));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_CopperArmor", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_IronArmor", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_GoldArmor", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_IridiumArmor", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_RadioactiveArmor", false).DisplayName));
-                    break;
-                case 3:
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_FirestormArrow", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_IcicleArrow", false).DisplayName));
                     break;
                 case 4:
                     ret.Add(I18n.PaladinSkill_Unlock_4().Replace('^', '\n'));
-                    /*
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteEmerald", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteRuby", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteTopaz", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteAquamarine", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteAmethyst", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteJade", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteDiamond", false).DisplayName));
-                    */
                     break;
                 case 6:
-                    ret.Add(I18n.PaladinSkill_Unlock_6());
-                    break;
-                case 7:
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_WindwakerArrow", false).DisplayName));
+                    ret.Add(I18n.PaladinSkill_Unlock_6().Replace('^', '\n'));
                     break;
                 case 8:
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_RicochetArrow", false).DisplayName));
-                    break;
-                case 9:
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_LightbringerArrow", false).DisplayName));
+                    ret.Add(I18n.PaladinSkill_Unlock_8().Replace('^', '\n'));
                     break;
             }
 
             if (level % 5 != 0)
-                ret.Add(I18n.Level_Health(3));
+                ret.Add(I18n.Level_Health(5));
 
             return ret;
         }
 
         public override string GetSkillPageHoverText(int level)
         {
-            return I18n.Level_Health(3 * level);
+            return I18n.Level_Health(5 * level);
         }
-        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains("SnS.Ch1.Mateo.18");
+        public override bool ShouldShowOnSkillsPage => events.Any(e => Game1.player.eventsSeen.Contains(e));
     }
 
     [HarmonyPatch(typeof(LevelUpMenu), nameof(LevelUpMenu.RevalidateHealth))]
-    public static class LevelUpMenuRevalidateHealthPatch
+    public static class LevelUpMenuRevalidateHealthPatchAgain
     {
         public static void Postfix(Farmer farmer)
         {
-            int amt = farmer.GetCustomSkillLevel(ModSnS.PaladinSkill) * 3;
+            int amt = farmer.GetCustomSkillLevel(ModTOP.PaladinSkill) * 5;
             farmer.maxHealth += amt;
             if (farmer.health == farmer.maxHealth - amt)
                 farmer.health += amt;
         }
     }
 
-    [HarmonyPatch(typeof(Farmer), nameof(Farmer.gainExperience))]
-    public static class FarmerExpInterceptPatch
+    [HarmonyPatch(typeof(SpecialOrder), nameof(SpecialOrder.OnMoneyRewardClaimed))]
+    public static class PaladinExpPatch1
     {
-        public static void Postfix(Farmer __instance, int which, int howMuch)
+        public static void Postfix()
         {
-            if (!__instance.eventsSeen.Contains("SnS.Ch1.Mateo.18")) // TODO: Change event
+            if (!ModTOP.PaladinSkill.ShouldShowOnSkillsPage)
                 return;
-            if (which != Farmer.combatSkill && which != Farmer.miningSkill)
+            Game1.player.AddCustomSkillExperience(ModTOP.PaladinSkill, 250);
+        }
+    }
+
+    [HarmonyPatch(typeof(Quest), nameof(Quest.OnMoneyRewardClaimed))]
+    public static class PaladinExpPatch2
+    {
+        public static void Postfix()
+        {
+            if (!ModTOP.PaladinSkill.ShouldShowOnSkillsPage)
+                return;
+            Game1.player.AddCustomSkillExperience(ModTOP.PaladinSkill, 100);
+        }
+    }
+
+    [HarmonyPatch(typeof(NPC), nameof(NPC.receiveGift))]
+    public static class PaladinExpPatch3
+    {
+        public static void Postfix(NPC __instance, StardewValley.Object o)
+        {
+            if (!ModTOP.PaladinSkill.ShouldShowOnSkillsPage)
                 return;
 
-            var data = __instance.GetFarmerExtData();
-            float exp = data.expRemainderRogue.Value + howMuch / 2f;
-            __instance.AddCustomSkillExperience(ModSnS.PaladinSkill, (int)MathF.Truncate(exp));
-            data.expRemainderRogue.Value = exp - MathF.Truncate(exp);
+            int taste = __instance.getGiftTasteForThisItem(o);
+            switch (taste)
+            {
+                case NPC.gift_taste_stardroptea:
+                    Game1.player.AddCustomSkillExperience(ModTOP.PaladinSkill, 250 / 5);
+                    break;
+                case NPC.gift_taste_love:
+                    Game1.player.AddCustomSkillExperience(ModTOP.PaladinSkill, 80 / 5);
+                    break;
+                case NPC.gift_taste_like:
+                    Game1.player.AddCustomSkillExperience(ModTOP.PaladinSkill, 45 / 5);
+                    break;
+                case NPC.gift_taste_neutral:
+                    Game1.player.AddCustomSkillExperience(ModTOP.PaladinSkill, 20 / 5);
+                    break;
+            }
         }
     }
 }
-#endif
