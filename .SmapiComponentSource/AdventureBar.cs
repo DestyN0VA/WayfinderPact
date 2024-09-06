@@ -3,10 +3,6 @@ using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using StardewValley.Menus;
 using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -93,13 +89,14 @@ namespace SwordAndSorcerySMAPI
 
             if (!editing)
             {
+                Color color = Utility.StringToColor($"{ModSnS.Config.Red} {ModSnS.Config.Green} {ModSnS.Config.Blue}") ?? Color.Aqua;
                 IClickableMenu.drawTextureBox(b, xPositionOnScreen, yPositionOnScreen + height - 12, width, 32 + 12 + 12, Color.White);
                 float perc = 0;
                 if (ext.maxMana.Value > 0)
                     perc = ext.mana.Value / (float)ext.maxMana.Value;
                 if (perc > 0)
                 {
-                    b.Draw(Game1.staminaRect, new Rectangle(12, yPositionOnScreen + height, (int)((width - 24) * perc), 32), Color.Aqua);
+                    b.Draw(Game1.staminaRect, new Rectangle(12, yPositionOnScreen + height, (int)((width - 24) * perc), 32), color);
                 }
                 string manaStr = $"{ext.mana}/{ext.maxMana}";
                 b.DrawString(Game1.smallFont, manaStr, new Vector2(width / 2 - Game1.smallFont.MeasureString(manaStr).X / 2, yPositionOnScreen + height + 2), Color.Black);

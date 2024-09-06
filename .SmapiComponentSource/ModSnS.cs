@@ -169,6 +169,10 @@ namespace SwordAndSorcerySMAPI
 
     public class Configuration
     {
+        public int Red = 0;
+        public int Green = 255;
+        public int Blue = 255;
+
         public KeybindList ConfigureAdventureBar = new(SButton.U);
         public KeybindList ToggleAdventureBar = new(new Keybind(SButton.LeftControl, SButton.U));
 
@@ -719,6 +723,9 @@ namespace SwordAndSorcerySMAPI
             if (gmcm != null)
             {
                 gmcm.Register(ModManifest, () => Config = new(), () => Helper.WriteConfig(Config));
+                gmcm.AddNumberOption(ModManifest, () => Config.Red, (val) => Config.Red = val, I18n.Int_Red_Name, I18n.Int_Red_Descripion, 0, 255);
+                gmcm.AddNumberOption(ModManifest, () => Config.Blue, (val) => Config.Blue = val, I18n.Int_Blue_Name, I18n.Int_Blue_Descripion, 0, 255);
+                gmcm.AddNumberOption(ModManifest, () => Config.Green, (val) => Config.Green = val, I18n.Int_Green_Name, I18n.Int_Green_Descripion, 0, 255);
                 gmcm.AddKeybindList(ModManifest, () => Config.ConfigureAdventureBar, (val) => Config.ConfigureAdventureBar = val, I18n.Keybind_ConfigureBar_Name, I18n.Keybind_ConfigureBar_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.ToggleAdventureBar, (val) => Config.ToggleAdventureBar = val, I18n.Keybind_ToggleBar_Name, I18n.Keybind_ToggleBar_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar1Slot1, (val) => Config.AbilityBar1Slot1 = val, I18n.Keybind_Ability_1_1, I18n.Keybind_Ability_Desc);
@@ -808,9 +815,16 @@ namespace SwordAndSorcerySMAPI
                         var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
                         var partnerInfos = pack.ReadJsonFile<Dictionary<string, FinalePartnerInfo>>("Data/FinalePartners.json");
 
-                        FinalePartnerInfo partnerInfo;
-                        if (Game1.player.spouse == null || !partnerInfos.TryGetValue(Game1.player.spouse, out partnerInfo))
-                            partnerInfo = partnerInfos["default"];
+                        FinalePartnerInfo partnerInfo = partnerInfos["default"];
+
+                        foreach (string key in partnerInfos.Keys)
+                        {
+                            if (Game1.player.friendshipData[key].IsDating())
+                            {
+                                partnerInfo = partnerInfos[key];
+                                break;
+                            }
+                        }
 
                         Game1.PlayEvent(partnerInfo.VictoryEventId, checkPreconditions: false, checkSeen: false);
 
