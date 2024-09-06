@@ -21,6 +21,12 @@
 
   "cancel": "Cancel",
 
+  "int.Red.Name": "Aether Bar Red",
+  "int.Red.Descripion": "The red value for the Aether Bar's color",
+  "int.Blue.Name": "Aether Bar Blue",
+  "int.Blue.Descripion": "The blue value for the Aether Bar's color",
+  "int.Green.Name": "Aether Bar Green",
+  "int.Green.Descripion": "The green value for the Aether Bar's color",
   "keybind.configure-bar.name": "Configure Adventure Bar",
   "keybind.configure-bar.description": "Configure the adventure bar (if unlocked)",
   "keybind.toggle-bar.name": "Toggle Adventure Bar",
