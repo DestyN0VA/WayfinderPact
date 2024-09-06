@@ -4,10 +4,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
 using NeverEndingAdventure;
-using NeverEndingAdventure.Utils;
 using RadialMenu;
 using SpaceCore;
-using SpaceCore.VanillaAssetExpansion;
 using StardewModdingAPI;
 using StardewModdingAPI.Utilities;
 using StardewValley;
@@ -15,9 +13,6 @@ using StardewValley.BellsAndWhistles;
 using StardewValley.Extensions;
 using StardewValley.GameData.Objects;
 using StardewValley.GameData.SpecialOrders;
-using StardewValley.GameData.Tools;
-using StardewValley.GameData.Weapons;
-using StardewValley.Locations;
 using StardewValley.Menus;
 using StardewValley.Monsters;
 using StardewValley.SpecialOrders;
@@ -25,13 +20,10 @@ using StardewValley.SpecialOrders.Objectives;
 using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Security.Cryptography;
-using xTile.Tiles;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -172,6 +164,10 @@ namespace SwordAndSorcerySMAPI
         public int Red = 0;
         public int Green = 255;
         public int Blue = 255;
+
+        public int TextRed = 0;
+        public int TextGreen = 0;
+        public int TextBlue = 0;
 
         public KeybindList ConfigureAdventureBar = new(SButton.U);
         public KeybindList ToggleAdventureBar = new(new Keybind(SButton.LeftControl, SButton.U));
@@ -723,9 +719,29 @@ namespace SwordAndSorcerySMAPI
             if (gmcm != null)
             {
                 gmcm.Register(ModManifest, () => Config = new(), () => Helper.WriteConfig(Config));
+                gmcm.AddSectionTitle(ModManifest, I18n.Section_AetherBar_Name, I18n.Section_AetherBar_Description);
                 gmcm.AddNumberOption(ModManifest, () => Config.Red, (val) => Config.Red = val, I18n.Int_Red_Name, I18n.Int_Red_Descripion, 0, 255);
                 gmcm.AddNumberOption(ModManifest, () => Config.Blue, (val) => Config.Blue = val, I18n.Int_Blue_Name, I18n.Int_Blue_Descripion, 0, 255);
                 gmcm.AddNumberOption(ModManifest, () => Config.Green, (val) => Config.Green = val, I18n.Int_Green_Name, I18n.Int_Green_Descripion, 0, 255);
+                gmcm.AddNumberOption(ModManifest, () => Config.TextRed, (val) => Config.TextRed = val, I18n.Int_TextRed_Name, I18n.Int_TextRed_Descripion, 0, 255);
+                gmcm.AddNumberOption(ModManifest, () => Config.TextBlue, (val) => Config.TextBlue = val, I18n.Int_TextBlue_Name, I18n.Int_TextBlue_Descripion, 0, 255);
+                gmcm.AddNumberOption(ModManifest, () => Config.TextGreen, (val) => Config.TextGreen = val, I18n.Int_TextGreen_Name, I18n.Int_TextGreen_Descripion, 0, 255);
+                gmcm.AddComplexOption(ModManifest, I18n.String_ManabarPeview, (b, pos) => {
+                    var ext = Game1.player?.GetFarmerExtData();
+                    float perc = 1;
+                    string manaStr = "10/10";
+                    if (Context.IsWorldReady)
+                    {
+                        manaStr = $"{ext.mana.Value}/{ext.maxMana.Value}";
+                        if (ext.maxMana.Value > 0)
+                            perc = ext.mana.Value / (float)ext.maxMana.Value;
+                        else perc = 0;
+                    }
+                    IClickableMenu.drawTextureBox(b, (int)pos.X, (int)pos.Y, 64 * 4 + 24, 32 + 12 + 12, Color.White);
+                    b.Draw(Game1.staminaRect, new Rectangle((int)pos.X + 12, (int)pos.Y + 12, (int)(64 * 4 * perc), 32), Utility.StringToColor($"{ModSnS.Config.Red} {ModSnS.Config.Green} {ModSnS.Config.Blue}") ?? Color.Aqua);
+                    b.DrawString(Game1.smallFont, manaStr, new Vector2(pos.X + 12 + 64 * 4 / 2 - Game1.smallFont.MeasureString(manaStr).X / 2, (int)pos.Y + 12), Utility.StringToColor($"{ModSnS.Config.TextRed} {ModSnS.Config.TextGreen} {ModSnS.Config.TextBlue}") ?? Color.Black);
+                }, height: () => 56);
+                gmcm.AddSectionTitle(ModManifest, I18n.Section_Keybinds_Name, I18n.Section_Keybinds_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.ConfigureAdventureBar, (val) => Config.ConfigureAdventureBar = val, I18n.Keybind_ConfigureBar_Name, I18n.Keybind_ConfigureBar_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.ToggleAdventureBar, (val) => Config.ToggleAdventureBar = val, I18n.Keybind_ToggleBar_Name, I18n.Keybind_ToggleBar_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar1Slot1, (val) => Config.AbilityBar1Slot1 = val, I18n.Keybind_Ability_1_1, I18n.Keybind_Ability_Desc);
@@ -943,6 +959,39 @@ namespace SwordAndSorcerySMAPI
                         CastAbility(abil);
                     }
                 }
+            }
+
+            sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
+
+            if (Game1.player.eventsSeen.Contains("SnS.Ch1.Mateo.18") && !Game1.player.hasOrWillReceiveMail("GaveArtificerLvl1"))
+            {
+                sc.AddExperienceForCustomSkill(Game1.player, RogueSkill.Id, 100);
+                Game1.addMail("GaveArtificerLvl1", true);
+            }
+
+            if (Game1.player.eventsSeen.Contains("SnS.Ch2.Hector.16") && !Game1.player.hasOrWillReceiveMail("GaveDruidicsLvl1"))
+            {
+                sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Druidics", 100);
+                Game1.addMail("GaveDruidicsLvl1", true);
+            }
+
+            if (Game1.player.eventsSeen.Contains("SnS.Ch3.Cirrus.14") && !Game1.player.hasOrWillReceiveMail("GaveBardicsLvl1"))
+            {
+                sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Bardics", 100);
+                Game1.addMail("GaveBardicsLvl1", true);
+            }
+
+            if (Game1.player.eventsSeen.Contains(ModTOP.WitchcraftUnlock) && !Game1.player.hasOrWillReceiveMail("GaveWitchCraftLvl1"))
+            {
+                sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Witchcraft", 100);
+                Game1.addMail("GaveWitchCraftLvl1", true);
+            }
+
+            //Paladin Skill - Update event id when added/decided and skill id if neededs
+            if (Game1.player.eventsSeen.Contains("PaladinUnlockEvent") && !Game1.player.hasOrWillReceiveMail("GavePaladinLvl1"))
+            {
+                sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Paladin", 100);
+                Game1.addMail("GavePaladinLvl1", true);
             }
         }
 
