@@ -2161,6 +2161,7 @@ ________      ________ _   _ _______ _____
   "Gifts.Hector.GiftReaction.SeaUrchin": "I don't like fish, because I don't like fishing outside of necessity.$24",
   "Gifts.Hector.GiftReaction.Crab": "Give this to Mateo instead.$8[717]",
   "Gifts.Hector.GiftReaction.CrabCakes": "These are Mateo's favorite, so maybe give it to them instead. I'm not a seafood person, besides.$0[732]",
+  "Gifts.Hector.GiftReaction.GoldieTheBatteryPoweredFish": "Oh! Thanks for finding Goldie, @. She goes for walks sometimes, I'dunno. I missed her tons.$1",
 
   // ARTISANAL GOODS
   "Gifts.Hector.GiftReaction.CategoryArtisanalGoods": "Oooh, this is some fancy shit! Thanks, @.$9",
@@ -2219,6 +2220,7 @@ ________      ________ _   _ _______ _____
 
   // ITEM REJECTIONS 
   "Gifts.Hector.GiftReject.Bouquet": "Sorry, @. I'm not in a good place to date anyone right now. But I'm flattered.$4",
+  "Gifts.Hector.GiftReject.Battery": "What's this for, @? I don't have anything battery powered."
 
   /*
   __  __  ______      _______ ______  _____ 
@@ -5206,7 +5208,8 @@ ________      ________ _   _ _______ _____
   "fish.giantdragonfish.description": "It lives only in the deepest waters of The Grove.",
   "fish.fivelinedconstellationfish.name": "Five-Lined Constallation Fish",
   "fish.fivelinedconstellationfish.description": "Brilliantly luminescent, and easily mistook for a jellyfish.",
-
+  "fish.goldiethebatterypoweredfish.name": "Goldie the Battery-Powered Fish", 
+  "fish.goldiethebatterypoweredfish.description": "How are there so many of these things?...", 
   "food.verdantpotion.name": "Verdant Potion",
   "food.verdantpotion.description": "Tastes weirdly like the potion The Wizard gave you...",
   "food.scarletpotion.name": "Scarlet Potion",
@@ -5458,6 +5461,7 @@ ________      ________ _   _ _______ _____
   "miscellaneous.mapname.ESPocketDimensionPond": "Pocket Dimension",
   "miscellaneous.mapname.ESDruidGrove": "The Druid's Grove",
   "miscellaneous.mapname.ESDruidGrovePond": "The Druid's Grove",
+  "miscellaneous.mapname.ESDruidTowerPond": "The Druid's Tower Pond",
 
   "machine.oldfashionedfermenter.name": "Old-Fashioned Fermenter", 
   "machine.oldfashionedfermenter.description": "A jar for controlled, non-alcholic fermentation for making Ginger Beer!",
