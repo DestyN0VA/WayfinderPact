@@ -1,9 +1,6 @@
 ﻿using HarmonyLib;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Netcode;
 using SpaceCore;
 using StardewValley;
 using StardewValley.GameData.Weapons;
@@ -13,14 +10,10 @@ using StardewValley.Projectiles;
 using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using static StardewValley.FarmerRenderer;
 using static StardewValley.FarmerSprite;
-using static StardewValley.Projectiles.BasicProjectile;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -115,6 +108,8 @@ namespace SwordAndSorcerySMAPI
 
         private static void Projectiles_OnValueAdded(StardewValley.Projectiles.Projectile value)
         {
+            value.rotationVelocity.Value = 0;
+            value.startingRotation.Value = MathF.Atan2(value.yVelocity.Value, value.xVelocity.Value) + 0.785398f;
             value.boundingBoxWidth.Value = 48 - 8;
             if (value.itemId.Value.ToLower().Contains("stygium") && value is BasicProjectile basic)
                 basic.damageToFarmer.Value = (int)(basic.damageToFarmer.Value * 1.5);
