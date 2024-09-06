@@ -1,8 +1,12 @@
 ﻿using HarmonyLib;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Netcode;
 using SpaceCore;
+using StardewModdingAPI;
 using StardewValley;
+using StardewValley.Characters;
 using StardewValley.GameData.Weapons;
 using StardewValley.ItemTypeDefinitions;
 using StardewValley.Monsters;
@@ -108,8 +112,6 @@ namespace SwordAndSorcerySMAPI
 
         private static void Projectiles_OnValueAdded(StardewValley.Projectiles.Projectile value)
         {
-            value.rotationVelocity.Value = 0;
-            value.startingRotation.Value = MathF.Atan2(value.yVelocity.Value, value.xVelocity.Value) + 0.785398f;
             value.boundingBoxWidth.Value = 48 - 8;
             if (value.itemId.Value.ToLower().Contains("stygium") && value is BasicProjectile basic)
                 basic.damageToFarmer.Value = (int)(basic.damageToFarmer.Value * 1.5);
@@ -118,9 +120,30 @@ namespace SwordAndSorcerySMAPI
                 value.xVelocity.Value *= 2;
                 value.yVelocity.Value *= 2;
             }
+            else
+            {
+                value.rotationVelocity.Value = 0;
+                value.startingRotation.Value = MathF.Atan2(value.yVelocity.Value, value.xVelocity.Value) + 0.785398f;
+            }
             value.ignoreObjectCollisions.Value = true;
             if (value.itemId.Value == "(O)DN.SnS_RicochetArrow" || value.itemId.Value == "(O)DN.SnS_RicochetBullet")
                 value.bouncesLeft.Value = 5;
+        }
+    }
+
+    [HarmonyPatch(typeof(Projectile), nameof(Projectile.update))]
+    public static class RicochetArrowRotationUpdate
+    {
+        public static void Postfix(Projectile __instance)
+        {
+            if (__instance.itemId.Value != "(O)DN.SnS_RicochetArrow") return;
+
+            IReflectedProperty<float> rotation = ModSnS.instance.Helper.Reflection.GetProperty<float>(__instance, "rotation", true);
+
+            if (rotation != null)
+            {
+                rotation.SetValue(MathF.Atan2(__instance.yVelocity.Value, __instance.xVelocity.Value) + 0.785398f);
+            }
         }
     }
 
