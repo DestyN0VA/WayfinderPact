@@ -10,6 +10,7 @@
   "shield-block-text": "Shield Block: {{cooldown}}",
 
   "ui-slot.armor": "Armor",
+  "ui-slot.offhand": "Offhand",
 
   "harp.name": "Harp",
   "harp.description": "...",
@@ -20,6 +21,12 @@
 
   "cancel": "Cancel",
 
+  "int.Red.Name": "Aether Bar Red",
+  "int.Red.Descripion": "The red value for the Aether Bar's color",
+  "int.Blue.Name": "Aether Bar Blue",
+  "int.Blue.Descripion": "The blue value for the Aether Bar's color",
+  "int.Green.Name": "Aether Bar Green",
+  "int.Green.Descripion": "The green value for the Aether Bar's color",
   "keybind.configure-bar.name": "Configure Adventure Bar",
   "keybind.configure-bar.description": "Configure the adventure bar (if unlocked)",
   "keybind.toggle-bar.name": "Toggle Adventure Bar",
@@ -183,6 +190,7 @@
   "bardics.profession.attack.range.description": "Range of Scherzo D'Inganno is extended to the entire location.",
 
   // TOP
+  "witchcraft.name": "Sorcery",
   "witchcraft.profession.essence-drops.name": "Hedge Witch",
   "witchcraft.profession.essence-drops.description": "Double chance for elemental essence drops",
   "witchcraft.profession.spell-damage.name": "Magus",
@@ -216,7 +224,7 @@
   "witchcraft.spell.lightning-bolt.description": "Fire a bolt of lightning at an enemy that can chain into other enemies.",
   "witchcraft.spell.fireball.name": "Fireball",
   "witchcraft.spell.fireball.description": "Create an damaging explosion at your cursor.",
-  "witchcraft.spell.magic-missle.name": "Magic Missile",
+  "witchcraft.spell.magic-missle.name": "Magic Missle",
   "witchcraft.spell.magic-missle.description": "Fire three projectiles that home in on the enemy.",
   "witchcraft.spell.stellar-rain.name": "Stellar Rain",
   "witchcraft.spell.stellar-rain.description": "Stars fall to the ground near you, dealing damage to every nearby enemy over time.",
@@ -225,7 +233,7 @@
   "witchcraft.spell.revive-plant.name": "Revive Plant",
   "witchcraft.spell.revive-plant.description": "Revive a 5x5 area of crops around you.",
   "witchcraft.spell.mirror-image.name": "Mirror Image",
-  "witchcraft.spell.mirror-image.description": "Summon three illusory duplicates, which have a chance of taking a hit for you.",
+  "witchcraft.spell.mirror-image.description": "Summon three illusary duplicates, which have a chance of taking a hit for you.",
   "witchcraft.spell.find-familiar.name": "Find Familiar",
   "witchcraft.spell.find-familiar.description": "Summon a small pet to follow you for the day, increasing your luck.",
   "witchcraft.spell.ghostly-projection.name": "Ghostly Projection",
