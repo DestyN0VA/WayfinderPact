@@ -213,6 +213,8 @@ namespace SwordAndSorcerySMAPI
         public static ISpaceCoreApi sc;
         public static IRadialMenuApi radial;
 
+        private Harmony harmony;
+
 
         [MethodImpl(MethodImplOptions.NoInlining)]
         public static float AetherDamageMultiplier()
@@ -429,8 +431,7 @@ namespace SwordAndSorcerySMAPI
                 }
             });
 
-            var harmony = new Harmony(ModManifest.UniqueID);
-            harmony.PatchAll( Assembly.GetExecutingAssembly() );
+            harmony = new Harmony(ModManifest.UniqueID);
 
             new ModCoT(Monitor, ModManifest, Helper).Entry();
             new ModNEA(Monitor, ModManifest, Helper).Entry(harmony);
@@ -767,6 +768,9 @@ namespace SwordAndSorcerySMAPI
                 item => item == null || item is MeleeWeapon,
                 I18n.UiSlot_Offhand,
                 OffhandSlotBackground);
+
+            // This late because of accessing SpaceCore's local variable API
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
 
         private void GameLoop_UpdateTicking(object sender, StardewModdingAPI.Events.UpdateTickingEventArgs e)
