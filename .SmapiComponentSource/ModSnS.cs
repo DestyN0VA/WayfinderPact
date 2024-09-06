@@ -960,6 +960,39 @@ namespace SwordAndSorcerySMAPI
                     }
                 }
             }
+
+            sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
+
+            if (Game1.player.eventsSeen.Contains("SnS.Ch1.Mateo.18") && !Game1.player.hasOrWillReceiveMail("GaveArtificerLvl1"))
+            {
+                sc.AddExperienceForCustomSkill(Game1.player, RogueSkill.Id, 100);
+                Game1.addMail("GaveArtificerLvl1", true);
+            }
+
+            if (Game1.player.eventsSeen.Contains("SnS.Ch2.Hector.16") && !Game1.player.hasOrWillReceiveMail("GaveDruidicsLvl1"))
+            {
+                sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Druidics", 100);
+                Game1.addMail("GaveDruidicsLvl1", true);
+            }
+
+            if (Game1.player.eventsSeen.Contains("SnS.Ch3.Cirrus.14") && !Game1.player.hasOrWillReceiveMail("GaveBardicsLvl1"))
+            {
+                sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Bardics", 100);
+                Game1.addMail("GaveBardicsLvl1", true);
+            }
+
+            if (Game1.player.eventsSeen.Contains(ModTOP.WitchcraftUnlock) && !Game1.player.hasOrWillReceiveMail("GaveWitchCraftLvl1"))
+            {
+                sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Witchcraft", 100);
+                Game1.addMail("GaveWitchCraftLvl1", true);
+            }
+
+            //Paladin Skill - Update event id when added/decided and skill id if neededs
+            if (Game1.player.eventsSeen.Contains("PaladinUnlockEvent") && !Game1.player.hasOrWillReceiveMail("GavePaladinLvl1"))
+            {
+                sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Paladin", 100);
+                Game1.addMail("GavePaladinLvl1", true);
+            }
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
