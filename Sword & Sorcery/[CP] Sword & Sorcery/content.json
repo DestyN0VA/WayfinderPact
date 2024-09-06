@@ -66,7 +66,7 @@
     {
       "LogName": "Sword & Sorcery - Data Includes",
       "Action": "Include",
-      "FromFile": "Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Festival Data/VioletMoon_Data.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json"
+      "FromFile": "Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/Books.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Quests & Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Festival Data/VioletMoon_Data.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json"
     },
     {
       "LogName": "Sword & Sorcery - Shield Quest Include",
@@ -440,6 +440,13 @@
     "Default": "Sorcerer",
     "AllowBlank": false,
     "Description": "Changes what kind of caster The Farmer is referred to as.",
+    "Section": "Miscellaneous"
+  },
+  "BookTextures": { 
+    "AllowValues": "Lumina, Daine",
+    "Default": "Lumina",
+    "AllowBlank": false,
+    "Description": "Changes the textures of S&S Skill Books.",
     "Section": "Miscellaneous"
   },
     "HectorHeterochromatic": {
@@ -2177,5 +2184,97 @@
          "HasFlag": "JojaMember"
       }
    },
+   {
+    "Name": "MateoPortraitSpriteIndex",
+    "Value": "0"
+  },
+  {
+    "Name": "MateoPortraitSpriteIndex",
+    "Value": "12",
+    "When": {
+    "MateoTrollHeritage": true
+    }
+  },
+  {
+    "Name": "HectorPortraitSpriteIndex",
+    "Value": "2"
+  },
+  {
+    "Name": "HectorPortraitSpriteIndex",
+    "Value": "14",
+    "When": {
+    "HectorHeterochromatic": true
+    }
+  },
+  {
+    "Name": "ArtificerBookSpriteIndex",
+    "Value": "0",
+    "When": {
+      "BookTextures": "Lumina"
+      }
+  },
+  {
+    "Name": "ArtificerBookSpriteIndex",
+    "Value": "5",
+    "When": {
+    "BookTextures": "Daine"
+    }
+  },
+  {
+    "Name": "DruidBookSpriteIndex",
+    "Value": "1",
+    "When": {
+      "BookTextures": "Lumina"
+      }
+  },
+  {
+    "Name": "DruidBookSpriteIndex",
+    "Value": "6",
+    "When": {
+    "BookTextures": "Daine"
+    }
+  },
+  {
+    "Name": "BardBookSpriteIndex",
+    "Value": "2",
+    "When": {
+      "BookTextures": "Lumina"
+      }
+  },
+  {
+    "Name": "BardBookSpriteIndex",
+    "Value": "7",
+    "When": {
+    "BookTextures": "Daine"
+    }
+  },
+  {
+    "Name": "SorcererBookSpriteIndex",
+    "Value": "3",
+    "When": {
+      "BookTextures": "Lumina"
+      }
+  },
+  {
+    "Name": "SorcererBookSpriteIndex",
+    "Value": "8",
+    "When": {
+    "BookTextures": "Daine"
+    }
+  },
+  {
+    "Name": "PaladinBookSpriteIndex",
+    "Value": "4",
+    "When": {
+      "BookTextures": "Lumina"
+      }
+  },
+  {
+    "Name": "PaladinBookSpriteIndex",
+    "Value": "9",
+    "When": {
+    "BookTextures": "Daine"
+    }
+  },
   ]
 }

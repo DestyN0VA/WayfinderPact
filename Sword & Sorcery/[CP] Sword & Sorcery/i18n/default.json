@@ -3357,7 +3357,7 @@ ________      ________ _   _ _______ _____
   "Core.Cirrus.LionsMane.5": "I've never had a bedroom before, @. My mother and I lived in a mobile home, and then I was living out of the van to save money.$16#$b#The Lion's Mane means the world to me. Thanks for helping make it happen, @. This town wouldn't be the same without you.$17",
   "Core.Cirrus.LionsMane.6": "It's wild to actually have customers! I'm not really relying on the Lion's Mane's finances for like, anything more than maintaining the building, but...$1#$b#It sure is nice to have a bit of extra pocket money once in a while, doing something that's way less stressful than touring.$1",
   "Core.Cirrus.LionsMane.7": "One of my favorite things about the restoration was being able to decorate the space myself without any input or commentary from anyone else.$17#$b#It was a really big deal, kind of like a step forward. And things can only get better and better from here!$1",
-  "Core.Cirrus.LionsMane.8": "I hadn't played on a full piano in ages before getting one for the Lion's Mane. I'm a little self-concious because I'm out of practice on actual keys, but...$17#$b#Gosh, @. I'm so happy. ",
+  "Core.Cirrus.LionsMane.8": "The Meadowlark? Oh, he lived here while the building was still dilapidated. I didn't have the heart to kick him out when I remodled.$17",
   "Core.Cirrus.LionsMane.9": "It feels like I stopped doing music professionally, and then suddenly, and without warning, I got hit with a rush of musical inspiration.$22#$b#It's great. I play so much more NOW than I did prior! I thought I'd lose interest, but I think I just needed a break.$1",
   "Core.Cirrus.LionsMane.10": "After the Lion's Mane was built, I thought I'd step back from music. But it's been quite the opposite; I've been playing and writing more than I have in years.$4#$b#Thank you, @. Maybe one day I'll write a song for you, and for everything you've done. I know you're carrying the entire Valley on your back.$6",
 
@@ -5045,6 +5045,20 @@ ________      ________ _   _ _______ _____
   "power.magicalgrimoire.name": "Magical Grimoire",
   "power.magicalgrimoire.description": "Bound by hand for you by Solomon. Use it to research new spells.",
 
+  "magicitem.artificerbook.name": "Tasha's Artificer Handbook", 
+  "magicitem.artificerbook.description": "A dusty tome with old blueprints.", 
+
+  "magicitem.druidbook.name": "Halsin's Guide to Druidics", 
+  "magicitem.druidbook.description": "A very comprehensive florilegium.", 
+
+  "magicitem.bardbook.name": "Volothamp's Songbook", 
+  "magicitem.bardbook.description": "A foppish portfolio of sheet music.", 
+
+  "magicitem.sorcerybook.name": "Xanathar's Guide to Everything", 
+  "magicitem.sorcerybook.description": "A battered grimoire with chaotic, hasty text.", 
+
+  "magicitem.paladinbook.name": "Aodhan's Ravenloft Dossier", 
+  "magicitem.paladinbook.description": "An emotional account of a Paladin's trip to a dark place.", 
 
   "magicitem.brokenshield.name": "Broken Argentis Shield",
   "magicitem.brokenshield.description": "Dandelion's well-worn shield. It's broken, but useable.",
@@ -5603,6 +5617,11 @@ ________      ________ _   _ _______ _____
   "config.RSVMaterials.values.true": "true",
   "config.RSVMaterials.values.false": "false",
 
+  "config.BookTextures.name": "BookTextures",
+  "config.BookTextures.description": "Changes the textures of S&S Skill Books.",
+  "config.RSVMaterials.values.lumina": "Lumina",
+  "config.RSVMaterials.values.daine": "Daine",
+
   "config.AncientSweetTeaDifficulty.name": "AncientSweetTeaDifficulty",
   "config.AncientSweetTeaDifficulty.description": "Set how many Ancient Sweet Tea Leaves are required to craft the universally loved Ancient Sweet Tea recipe.",
   "config.AncientSweetTeaDifficulty.values.3": "3",
@@ -5626,6 +5645,10 @@ ________      ________ _   _ _______ _____
   "config.Castertype.values.Alchemist": "Alchemist",
   "config.Castertype.values.Alchahestrist": "Alchahestrist",
   "config.Castertype.values.Bard": "Bard",
+
+  "Furniture.SpousePortrait.Mateo": "Mateo's Portrait",
+  "Furniture.SpousePortrait.Hector": "Biróg's Portrait",
+  "Furniture.SpousePortrait.Cirrus": "Cirrus's Portrait",
 
   // VIOLET MOON
   "DN.SnS_Violet_Moon_Shop_Mateo": "Hail and well-met, adventurer! Looking to protect yourself?",
