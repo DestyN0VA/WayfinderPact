@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="36" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="21" nextobjectid="128">
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="36" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="21" nextobjectid="129">
  <properties>
   <property name="DayTiles" value="Front 21 1 2371 Front 22 1 2372 Front 21 2 2396 Front 22 2 2397 Front 17 3 1449 Front 17 4 1481 Front 19 17 1449 Front 19 18 1481"/>
   <property name="Doors" value="3 22 1 120 21 22 1 120 31 22 1 120"/>
@@ -436,6 +436,11 @@
   <object id="127" name="TileData" x="384" y="240" width="16" height="16">
    <properties>
     <property name="Action" value="Message &quot;GingerBeerFermenter&quot;"/>
+   </properties>
+  </object>
+  <object id="128" name="TileData" x="320" y="432" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;BouncyMeadowlark&quot;"/>
    </properties>
   </object>
  </objectgroup>
