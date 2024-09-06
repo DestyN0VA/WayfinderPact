@@ -21,7 +21,8 @@
           "ContextTags": [
             "color_red",
             "fish_salmonofknowledge",
-            "fish_river"
+            "fish_river",
+            "fish_has_roe"
           ]
         }
       }
@@ -47,7 +48,8 @@
           "ContextTags": [
             "color_green",
             "fish_fastitocalon",
-            "fish_river"
+            "fish_river",
+            "fish_has_roe"
           ]
         }
       }
@@ -73,7 +75,8 @@
           "ContextTags": [
             "color_brown",
             "fish_pallidsailfin",
-            "fish_river"
+            "fish_river",
+            "fish_has_roe"
           ]
         }
       }
@@ -99,33 +102,8 @@
           "ContextTags": [
             "color_blue",
             "fish_giantdragonfish",
-            "fish_river"
-          ]
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
-        "{{ModID}}_FiveLinedConstellationFish": {
-          "Name": "{{ModID}}_FiveLinedConstellationFish",
-          "DisplayName": "{{i18n:fish.fivelinedconstellationfish.name}}",
-          "Description": "{{i18n:fish.fivelinedconstellationfish.description}}",
-          "Type": "Fish",
-          "Category": -4,
-          "ExcludeFromRandomSale": true,
-          "ExcludeFromShippingCollection": "{{CountForShipping}}",
-          "ExcludeFromFishingCollection": "{{CountForShipping}}",
-          "Price": 215,
-          "Edibility": 15,
-          "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 96,
-          "ContextTags": [
-            "color_blue",
-            "fish_fivelinedconstellationfish",
-            "fish_river"
+            "fish_river",
+            "fish_has_roe"
           ]
         }
       }
@@ -152,6 +130,7 @@
             "color_blue",
             "fish_goldiethebatterypoweredfish",
             "fish_river",
+            "fish_legendary",
             "fish_has_roe"
           ]
         }
@@ -493,61 +472,5 @@
         }
       }
     },
-    {
-      "Action": "EditData",
-      "Target": "Data/FishPondData",
-      "Entries": {
-        "{{ModID}}_GoldieTheBatteryPoweredFish": {
-          "ID": "{{ModID}}_GoldieTheBatteryPoweredFish",
-          "Precedence": 0,
-          "MaxPopulation": 1,
-          "SpawnTime": -1,
-          "RequiredTags": [
-            "fish_goldiethebatterypoweredfish"
-          ],
-          "ProducedItems": [
-            {
-              "RequiredPopulation": 7,
-              "Chance": 0.1,
-              "ItemID": "(O)787",
-              "MinQuantity": 1,
-              "MaxQuantity": 5
-            },
-            {
-              "RequiredPopulation": 5,
-              "Chance": 0.2,
-              "ItemID": "(O)787",
-              "MinQuantity": 15,
-              "MaxQuantity": 20
-            },
-            {
-              "RequiredPopulation": 3,
-              "Chance": 0.2,
-              "ItemID": "(O)787",
-              "MinQuantity": 1,
-              "MaxQuantity": 2
-            },
-            {
-              "RequiredPopulation": 0,
-              "Chance": 0.7,
-              "ItemID": "(O)787",
-              "MinQuantity": 1,
-              "MaxQuantity": 1
-            }
-          ],
-          "PopulationGates": {
-            "3": [
-              "(O)787 3",
-            ],
-            "5": [
-              "(O)787 5",
-            ],
-            "7": [
-              "(O)787 7",
-            ]
-          }
-        }
-      }
-    },
-  ]
-}
+  }
+  
