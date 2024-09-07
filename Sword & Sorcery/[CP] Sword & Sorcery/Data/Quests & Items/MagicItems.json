@@ -38,6 +38,7 @@
         },
       }
     },
+    /*
     {
       "Action": "EditData",
       "Target": "Data/Objects",
@@ -146,6 +147,7 @@
         },
       }
     },
+    */
     {
       "Action": "EditData",
       "Target": "Data/Objects",

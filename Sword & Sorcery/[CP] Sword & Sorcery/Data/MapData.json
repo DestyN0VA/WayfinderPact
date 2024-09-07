@@ -67,8 +67,23 @@
           },
           "ExcludeFromNpcPathfinding": false,
           "ArtifactSpots": [],
-          "FishAreas": {},
-          "Fish": [],
+          "FishAreas": {
+            "ESDruidTowerPond": {
+              "DisplayName": "{{i18n:miscellaneous.mapname.ESDruidTowerePond}}",
+              "Position": null,
+              "CrabPotFishTypes": [],
+              "CrabPotJunkChance": 0.0
+            }
+          },
+          "Fish": [
+            {
+              "Id": "{{ModID}}_GoldieTheBatteryPoweredFish",
+              "ItemId": "{{ModID}}_GoldieTheBatteryPoweredFish",
+              "FishAreaID": "ESDruidTowerPond",
+              "Condition": "LOCATION_Season Here spring summer fall winter",
+              "Precedence": -500
+            },
+          ],
           "Forage": [],
           "CustomFields": {}
         }

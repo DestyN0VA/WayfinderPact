@@ -2,10 +2,11 @@
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using Netcode;
 using SpaceCore;
+using StardewModdingAPI;
 using StardewValley;
+using StardewValley.Characters;
 using StardewValley.GameData.Weapons;
 using StardewValley.ItemTypeDefinitions;
 using StardewValley.Monsters;
@@ -13,14 +14,10 @@ using StardewValley.Projectiles;
 using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using static StardewValley.FarmerRenderer;
 using static StardewValley.FarmerSprite;
-using static StardewValley.Projectiles.BasicProjectile;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -123,9 +120,30 @@ namespace SwordAndSorcerySMAPI
                 value.xVelocity.Value *= 2;
                 value.yVelocity.Value *= 2;
             }
+            else
+            {
+                value.rotationVelocity.Value = 0;
+                value.startingRotation.Value = MathF.Atan2(value.yVelocity.Value, value.xVelocity.Value) + 0.785398f;
+            }
             value.ignoreObjectCollisions.Value = true;
             if (value.itemId.Value == "(O)DN.SnS_RicochetArrow" || value.itemId.Value == "(O)DN.SnS_RicochetBullet")
                 value.bouncesLeft.Value = 5;
+        }
+    }
+
+    [HarmonyPatch(typeof(Projectile), nameof(Projectile.update))]
+    public static class RicochetArrowRotationUpdate
+    {
+        public static void Postfix(Projectile __instance)
+        {
+            if (__instance.itemId.Value != "(O)DN.SnS_RicochetArrow") return;
+
+            IReflectedProperty<float> rotation = ModSnS.instance.Helper.Reflection.GetProperty<float>(__instance, "rotation", true);
+
+            if (rotation != null)
+            {
+                rotation.SetValue(MathF.Atan2(__instance.yVelocity.Value, __instance.xVelocity.Value) + 0.785398f);
+            }
         }
     }
 

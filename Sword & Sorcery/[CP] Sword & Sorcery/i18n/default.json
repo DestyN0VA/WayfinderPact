@@ -2161,6 +2161,7 @@ ________      ________ _   _ _______ _____
   "Gifts.Hector.GiftReaction.SeaUrchin": "I don't like fish, because I don't like fishing outside of necessity.$24",
   "Gifts.Hector.GiftReaction.Crab": "Give this to Mateo instead.$8[717]",
   "Gifts.Hector.GiftReaction.CrabCakes": "These are Mateo's favorite, so maybe give it to them instead. I'm not a seafood person, besides.$0[732]",
+  "Gifts.Hector.GiftReaction.GoldieTheBatteryPoweredFish": "Oh! Thanks for finding Goldie, @. She goes for walks sometimes, I'dunno. I missed her tons.$1",
 
   // ARTISANAL GOODS
   "Gifts.Hector.GiftReaction.CategoryArtisanalGoods": "Oooh, this is some fancy shit! Thanks, @.$9",
@@ -2219,6 +2220,7 @@ ________      ________ _   _ _______ _____
 
   // ITEM REJECTIONS 
   "Gifts.Hector.GiftReject.Bouquet": "Sorry, @. I'm not in a good place to date anyone right now. But I'm flattered.$4",
+  "Gifts.Hector.GiftReject.Battery": "What's this for, @? I don't have anything battery powered."
 
   /*
   __  __  ______      _______ ______  _____ 
@@ -3357,7 +3359,7 @@ ________      ________ _   _ _______ _____
   "Core.Cirrus.LionsMane.5": "I've never had a bedroom before, @. My mother and I lived in a mobile home, and then I was living out of the van to save money.$16#$b#The Lion's Mane means the world to me. Thanks for helping make it happen, @. This town wouldn't be the same without you.$17",
   "Core.Cirrus.LionsMane.6": "It's wild to actually have customers! I'm not really relying on the Lion's Mane's finances for like, anything more than maintaining the building, but...$1#$b#It sure is nice to have a bit of extra pocket money once in a while, doing something that's way less stressful than touring.$1",
   "Core.Cirrus.LionsMane.7": "One of my favorite things about the restoration was being able to decorate the space myself without any input or commentary from anyone else.$17#$b#It was a really big deal, kind of like a step forward. And things can only get better and better from here!$1",
-  "Core.Cirrus.LionsMane.8": "I hadn't played on a full piano in ages before getting one for the Lion's Mane. I'm a little self-concious because I'm out of practice on actual keys, but...$17#$b#Gosh, @. I'm so happy. ",
+  "Core.Cirrus.LionsMane.8": "The Meadowlark? Oh, he lived here while the building was still dilapidated. I didn't have the heart to kick him out when I remodled.$17",
   "Core.Cirrus.LionsMane.9": "It feels like I stopped doing music professionally, and then suddenly, and without warning, I got hit with a rush of musical inspiration.$22#$b#It's great. I play so much more NOW than I did prior! I thought I'd lose interest, but I think I just needed a break.$1",
   "Core.Cirrus.LionsMane.10": "After the Lion's Mane was built, I thought I'd step back from music. But it's been quite the opposite; I've been playing and writing more than I have in years.$4#$b#Thank you, @. Maybe one day I'll write a song for you, and for everything you've done. I know you're carrying the entire Valley on your back.$6",
 
@@ -3770,6 +3772,7 @@ ________      ________ _   _ _______ _____
   "Strings.Cirrus.JournalPile": "A pile of journals that Cirrus has been keeping since her time in Port Drake. You'd best not snoop.",
   "Strings.Cirrus.FavoriteMug": "The mug says 'World's Okayest Musician'.",
   "Strings.Cirrus.GingerBeerFermenter": "Cirrus is brewing Ginger Beer as a non-alcholic treat.",
+  "Strings.Cirrus.BouncyMeadowlark": "The most dilligent shopkeep, keeping watch as Cirrus busies herself with all her tasks.",
 
   "Strings.Cirrus.80sRadio.1": "Cirrus left her radio on pretty loud...:# 'Your kisses lift me higher, like the sweet song of a choir. You light my morning sky with burning love!'",
   "Strings.Cirrus.80sRadio.2": "Cirrus left her radio on pretty loud...:# 'Like a river flows, surely to the sea. Darling, so it goes. Some things are meant to be. Take my hand, take my whole life too, for I can't help falling in love with you...'",
@@ -5045,6 +5048,20 @@ ________      ________ _   _ _______ _____
   "power.magicalgrimoire.name": "Magical Grimoire",
   "power.magicalgrimoire.description": "Bound by hand for you by Solomon. Use it to research new spells.",
 
+  "magicitem.artificerbook.name": "Tasha's Artificer Handbook", 
+  "magicitem.artificerbook.description": "A dusty tome with old blueprints.", 
+
+  "magicitem.druidbook.name": "Halsin's Guide to Druidics", 
+  "magicitem.druidbook.description": "A very comprehensive florilegium.", 
+
+  "magicitem.bardbook.name": "Volothamp's Songbook", 
+  "magicitem.bardbook.description": "A foppish portfolio of sheet music.", 
+
+  "magicitem.sorcerybook.name": "Xanathar's Guide to Everything", 
+  "magicitem.sorcerybook.description": "A battered grimoire with chaotic, hasty text.", 
+
+  "magicitem.paladinbook.name": "Aodhan's Ravenloft Dossier", 
+  "magicitem.paladinbook.description": "An emotional account of a Paladin's trip to a dark place.", 
 
   "magicitem.brokenshield.name": "Broken Argentis Shield",
   "magicitem.brokenshield.description": "Dandelion's well-worn shield. It's broken, but useable.",
@@ -5191,7 +5208,8 @@ ________      ________ _   _ _______ _____
   "fish.giantdragonfish.description": "It lives only in the deepest waters of The Grove.",
   "fish.fivelinedconstellationfish.name": "Five-Lined Constallation Fish",
   "fish.fivelinedconstellationfish.description": "Brilliantly luminescent, and easily mistook for a jellyfish.",
-
+  "fish.goldiethebatterypoweredfish.name": "Goldie the Battery-Powered Fish", 
+  "fish.goldiethebatterypoweredfish.description": "How are there so many of these things?...", 
   "food.verdantpotion.name": "Verdant Potion",
   "food.verdantpotion.description": "Tastes weirdly like the potion The Wizard gave you...",
   "food.scarletpotion.name": "Scarlet Potion",
@@ -5443,6 +5461,7 @@ ________      ________ _   _ _______ _____
   "miscellaneous.mapname.ESPocketDimensionPond": "Pocket Dimension",
   "miscellaneous.mapname.ESDruidGrove": "The Druid's Grove",
   "miscellaneous.mapname.ESDruidGrovePond": "The Druid's Grove",
+  "miscellaneous.mapname.ESDruidTowerPond": "The Druid's Tower Pond",
 
   "machine.oldfashionedfermenter.name": "Old-Fashioned Fermenter", 
   "machine.oldfashionedfermenter.description": "A jar for controlled, non-alcholic fermentation for making Ginger Beer!",
@@ -5603,6 +5622,11 @@ ________      ________ _   _ _______ _____
   "config.RSVMaterials.values.true": "true",
   "config.RSVMaterials.values.false": "false",
 
+  "config.BookTextures.name": "BookTextures",
+  "config.BookTextures.description": "Changes the textures of S&S Skill Books.",
+  "config.RSVMaterials.values.lumina": "Lumina",
+  "config.RSVMaterials.values.daine": "Daine",
+
   "config.AncientSweetTeaDifficulty.name": "AncientSweetTeaDifficulty",
   "config.AncientSweetTeaDifficulty.description": "Set how many Ancient Sweet Tea Leaves are required to craft the universally loved Ancient Sweet Tea recipe.",
   "config.AncientSweetTeaDifficulty.values.3": "3",
@@ -5627,6 +5651,10 @@ ________      ________ _   _ _______ _____
   "config.Castertype.values.Alchahestrist": "Alchahestrist",
   "config.Castertype.values.Bard": "Bard",
 
+  "Furniture.SpousePortrait.Mateo": "Mateo's Portrait",
+  "Furniture.SpousePortrait.Hector": "Biróg's Portrait",
+  "Furniture.SpousePortrait.Cirrus": "Cirrus's Portrait",
+
   // VIOLET MOON
   "DN.SnS_Violet_Moon_Shop_Mateo": "Hail and well-met, adventurer! Looking to protect yourself?",
   "DN.SnS_Violet_Moon_Shop_Hector": "You have two hands. One of them is for your watering can, the other is for a seed bag.",
@@ -5650,6 +5678,39 @@ ________      ________ _   _ _______ _____
   "VioletMoon.Solomon.1": "I'm going to eat all the Scotch Eggs and then take a nap in a crate.$6.",
   "VioletMoon.Solomon.2": "Once again, these silly humans all think I'm wearing a costume! I think they left their braincells in Pelican Town.$3",
   "VioletMoon.Solomon.3": "Krobus is being productive and that's great but I mostly just want to cause problems since I'm out and about around people.$10",
+  "VioletMoon.Aideen.1": "Perhaps next year I shall have a flower arranging booth of my own... I do believe flower crowns should not be limited to spring only when autumn has it's own charming blooms.",
+  "VioletMoon.Aideen.2": "I rather expected to see this area filled to the brim with brambles and refuse, but I believe it's quite cleaned up. Mayor Lewis must find it a pleasant surprise that his civic duties needn't be applied here.",
+  "VioletMoon.Aideen.3": "Such strange and vivid colors... They're almost too bold for my tastes but perhaps... Perhaps they'd catch the attention of some passing viscount?",
+  "VioletMoon.Beatrice.1": "",
+  "VioletMoon.Beatrice.2": "",
+  "VioletMoon.Beatrice.3": "",
+  "VioletMoon.Eloise.1": "Do you think maybe next year they'll have falconry displays? I think I'd like to meet a wildlife rehabilitation falconer and their friends someday!",
+  "VioletMoon.Eloise.2": "Hector made me a magic flower crown for just for today! Hmmm? You can't see it? Maybe you're not magical enough!",
+  "VioletMoon.Eloise.3": "I hope dad lets me pick out a toy shield... Mateo has one with a painted turtle dove, it's perfect for me!",
+  "VioletMoon.Eyvinder.1.true": "There's secret lore hidden for those who dare seek it. Don't let cowardice hold you back.",
+  "VioletMoon.Eyvinder.2.true": "No one appears to be interested in dressing up as my folk and for that I'm grateful. I don't think I'd enjoy seeing the ghosts of my forefathers.",
+  "VioletMoon.Eyvinder.3.true": "The mead's flowing freely and that's all I could ask for - see that Cirrus lass if you're looking for something less alcoholic.",
+  "VioletMoon.Eyvinder.1.false": "A costume? Bah, you've had too much mead!",
+  "VioletMoon.Eyvinder.2.false": "The attractions are near to the boat, and I am not one of them.",
+  "VioletMoon.Eyvinder.3.false": "My people knew this land long before that boat ever docked here... I am not 'larping'.",
+  "VioletMoon.Jacob.1": "I can't say that race horses are my usual patients but I'm happy to report the ones gathered here today are in wonderful, well-cared for condition.",
+  "VioletMoon.Jacob.2": "Hopefully Eloise doesn't suddenly take up sword fighting... I don't know if I'm ready for her to go school armed with a wooden sword. She's growing up too fast.",
+  "VioletMoon.Jacob.3": "I've done some horseback riding - of course, living out here, who hasn't? But I don't know if I'm horse jockey material.",
+  "VioletMoon.ToriLK.1": "I wonder if there are any trick performing slimes here... I've seen rats perform at other ren faires, why not slimes?",
+  "VioletMoon.ToriLK.2": "I should've have dressed up for the occasion but I was afraid of looking silly. I guess I should've risked it, I feel like I stand out more in my normal clothes now.",
+  "VioletMoon.ToriLK.3": "I made sure to budget for today so I wouldn't get too tempted by anything fancy that I wouldn't never use. Although, there's plenty of food options to try out, so I might end up spending more money than I planned anyway.",
+  "VioletMoon.Rosa.1": "I don't think I've ever seen a moon like this... it makes the air feel downright magical. I could reach out and touch it, if I wanted to.",
+  "VioletMoon.Rosa.2": "A lot of folks have come up and complimented Juliet on her costume. I still think she should've gone with the pirate garb, but this is still pretty and on theme.#$b#...I meant pretty *on* theme.$4",
+  "VioletMoon.Rosa.3": "No one offered up funnel cake this year - I've already lodged a 'complaint' with Cirrus and Gus for next year. I think I'll make some of my own.",
+  "VioletMoon.Juliet.1": "I'm going to pluck that big violet moon out of the sky and give it to someone special! Who? Well, that's a secret!",
+  "VioletMoon.Juliet.2": "Gremlin doesn't like the horses. Which, I totally get - if I were confronted by something that kind of resembled a human but was ten times my size, I'd be skittish too!",
+  "VioletMoon.Juliet.3": "Lewis already suggested I can be part of the clean up crew, but Mateo came in clutch and exempted me from being volun-told.",
+  "VioletMoon.Jessie.1": "Linus and I have seen all sorts of distant friends today. *Very* distant friends, at that. It's nice to see those friends feeling free to be part of the celebration.",
+  "VioletMoon.Jessie.2": "There's plenty of sights to see and things to do, but remember to focus on the experience and not to fret over trying to immortalize it with material means.",
+  "VioletMoon.Jessie.3": "I enjoyed the boat ride over but somehow the view from land is even more stunning than the one while on the water. I hope I get to see it again soon.",
+  "VioletMoon.Jasper.1": "In my opinion this is quite possibly one of the most historically accurate Smoluanu outfits I've ever seen. I wish the shopkeep would let me speak with them after the festival.",
+  "VioletMoon.Jasper.2": "There's an interesting selection of wares available; I can't say I'm in need of bombs very often but I enjoy browsing to see what's available at least.",
+  "VioletMoon.Jasper.3": "At festival like this, there's always a bit of whimsy tied to the mundane - a fantastical veneer over history that makes it perhaps more exciting, if not quite accurate.",
 
   "DN.SnS.SpaceCoreCategory.FaireFood": "Faire Repast",
   "DN.SnS.Steak_on_a_Stake": "Steak on a Stake",

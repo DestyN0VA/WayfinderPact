@@ -15,6 +15,34 @@
  </tileset>
  <tileset firstgid="3149" name="Desty_Hector_Tilesheet" tilewidth="16" tileheight="16" tilecount="420" columns="15">
   <image source="Desty_Hector_Tilesheet.png" width="240" height="448"/>
+  <tile id="121">
+   <properties>
+    <property name="Water" value="T"/>
+   </properties>
+   <animation>
+    <frame tileid="121" duration="250"/>
+    <frame tileid="121" duration="250"/>
+    <frame tileid="121" duration="250"/>
+    <frame tileid="166" duration="250"/>
+    <frame tileid="166" duration="250"/>
+    <frame tileid="166" duration="250"/>
+   </animation>
+  </tile>
+  <tile id="122">
+   <properties>
+    <property name="Water" value="T"/>
+   </properties>
+  </tile>
+  <tile id="166">
+   <properties>
+    <property name="Water" value="T"/>
+   </properties>
+  </tile>
+  <tile id="167">
+   <properties>
+    <property name="Water" value="T"/>
+   </properties>
+  </tile>
   <tile id="405">
    <animation>
     <frame tileid="405" duration="200"/>
@@ -41,7 +69,7 @@
 0,0,0,0,0,0,0,0,0,3622,3623,0,0,
 0,3569,3626,3626,3626,3626,3626,3626,3626,3626,3630,3571,0,
 0,3319,3347,3347,3347,3320,3630,3630,3630,3630,3630,3630,0,
-0,3345,4253,4253,4253,3346,3630,3630,3630,3630,3630,3630,3630,
+0,3345,4253,4253,4253,3346,3630,3630,3630,3270,3271,3630,3630,
 0,3345,4253,4253,4253,3346,3630,3630,3630,3630,3630,3630,3630,
 0,3334,4253,4253,4253,3335,3630,3630,3630,3630,3630,3630,3630,
 0,4253,0,4253,0,0,1044,0,0,0,0,3630,0,
@@ -130,7 +158,7 @@
 1,3617,3619,3620,3621,3622,3619,3620,3621,3176,3177,3624,1,
 1,3625,3598,554,0,1919,0,0,0,3191,3192,3632,1,
 1,3386,3387,3388,5797,3405,0,0,3254,3255,3256,3257,1,
-1,3401,3402,3403,5683,3399,0,0,3269,3270,3271,3272,1,
+1,3401,3402,3403,5683,3399,0,0,3269,0,0,3272,1,
 1,5701,3518,3407,5766,3404,0,0,3284,3285,3286,3287,1,
 1,3407,5766,3399,3534,5778,0,0,0,0,0,3182,1,
 1,1,1,1,1,1,0,1,1,1,1,1,1,

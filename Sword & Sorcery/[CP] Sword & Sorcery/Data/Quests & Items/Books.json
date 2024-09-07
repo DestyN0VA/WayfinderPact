@@ -1,0 +1,368 @@
+{
+  "Changes": [
+
+  // BOOKS
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Entries": {
+      "{{ModID}}_artificerbook": {
+        "Name": "Tasha's Artificer Handbook",
+        "DisplayName": "{{i18n: magicitem.artificerbook.name}}",
+        "Description": "{{i18n: magicitem.artificerbook.description}}",
+        "Type": "asdf",
+        "Category": -103,
+        "Price": 500,
+        "Edibility": -300,
+        "IsDrink": false,
+        "ExcludeFromShippingCollection": true,
+        "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSBooks.png}}",
+        "SpriteIndex": "{{ArtificerBookSpriteIndex}}",
+        "ContextTags": ["DestyNova.SwordAndSorcery.Rogue"]
+      },
+    }
+  },
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Entries": {
+      "{{ModID}}_druidbook": {
+        "Name": "Halsin's Guide to Druidics",
+        "DisplayName": "{{i18n: magicitem.druidbook.name}}",
+        "Description": "{{i18n: magicitem.druidbook.description}}",
+        "Type": "asdf",
+        "Category": -103,
+        "Price": 500,
+        "Edibility": -300,
+        "IsDrink": false,
+        "ExcludeFromShippingCollection": true,
+        "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSBooks.png}}",
+        "SpriteIndex": "{{DruidBookSpriteIndex}}",
+        "ContextTags": ["DestyNova.SwordAndSorcery.Druidics"]
+      },
+    }
+  },
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Entries": {
+      "{{ModID}}_bardbook": {
+        "Name": "Volothamp's Songbook",
+        "DisplayName": "{{i18n: magicitem.bardbook.name}}",
+        "Description": "{{i18n: magicitem.bardbook.description}}",
+        "Type": "asdf",
+        "Category": -103,
+        "Price": 500,
+        "Edibility": -300,
+        "IsDrink": false,
+        "ExcludeFromShippingCollection": true,
+        "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSBooks.png}}",
+        "SpriteIndex": "{{BardBookSpriteIndex}}",
+        "ContextTags": ["DestyNova.SwordAndSorcery.Bardics"]
+      },
+    }
+  },
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Entries": {
+      "{{ModID}}_sorcerybook": {
+        "Name": "Xanathar's Guide to Everything",
+        "DisplayName": "{{i18n: magicitem.sorcerybook.name}}",
+        "Description": "{{i18n: magicitem.sorcerybook.description}}",
+        "Type": "asdf",
+        "Category": -103,
+        "Price": 500,
+        "Edibility": -300,
+        "IsDrink": false,
+        "ExcludeFromShippingCollection": true,
+        "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSBooks.png}}",
+        "SpriteIndex": "{{SorcererBookSpriteIndex}}",
+        "ContextTags": ["DestyNova.SwordAndSorcery.Witchcraft"]
+      },
+    }
+  },
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Entries": {
+      "{{ModID}}_paladinbook": {
+        "Name": "Aodhan's Ravenloft Dossier",
+        "DisplayName": "{{i18n: magicitem.paladinbook.name}}",
+        "Description": "{{i18n: magicitem.paladinbook.description}}",
+        "Type": "asdf",
+        "Category": -103,
+        "Price": 500,
+        "Edibility": -300,
+        "IsDrink": false,
+        "ExcludeFromShippingCollection": true,
+        "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSBooks.png}}",
+        "SpriteIndex": "{{PaladinBookSpriteIndex}}",
+        "ContextTags": ["DestyNova.SwordAndSorcery.Paladin"],
+      },
+    }
+  },
+
+  // SHOP ENTRIES
+  // ARTIFICER 
+  {
+    "LogName": "Artificer skill book shop entry (1)",
+    "Action": "EditData",
+    "Target": "Data/Shops",
+    "TargetField": [
+      "Bookseller",
+      "Items",
+      "RandomSkillBook1",
+      "RandomItemId"
+    ],
+    "Entries": {
+      "ID": "(O){{ModID}}_artificerbook",
+    },
+    "When": {
+      "HasSeenEvent": "SnS.Ch1.Mateo.18",
+    }
+  },
+  {
+    "LogName": "Artificer skill book shop entry (2)",
+    "Action": "EditData",
+    "Target": "Data/Shops",
+    "TargetField": [
+      "Bookseller",
+      "Items",
+      "RandomSkillBook2",
+      "RandomItemId"
+    ],
+    "Entries": {
+      "ID": "(O){{ModID}}_artificerbook",
+    },
+    "When": {
+      "HasSeenEvent": "SnS.Ch1.Mateo.18",
+    }
+  },
+  {
+    "LogName": "Artificer skill book shop entry (3)",
+    "Action": "EditData",
+    "Target": "Data/Shops",
+    "TargetField": [
+      "Bookseller",
+      "Items",
+      "RandomSkillBook3",
+      "RandomItemId"
+    ],
+    "Entries": {
+      "ID": "(O){{ModID}}_artificerbook",
+    },
+    "When": {
+      "HasSeenEvent": "SnS.Ch1.Mateo.18",
+    }
+},
+// DRUID
+{
+  "LogName": "Druid skill book shop entry (1)",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Bookseller",
+    "Items",
+    "RandomSkillBook1",
+    "RandomItemId"
+  ],
+  "Entries": {
+    "ID": "(O){{ModID}}_druidbook",
+  },
+  "When": {
+    "HasSeenEvent": "SnS.Ch2.Hector.16",
+  }
+},
+{
+  "LogName": "Druid skill book shop entry (2)",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Bookseller",
+    "Items",
+    "RandomSkillBook2",
+    "RandomItemId"
+  ],
+  "Entries": {
+    "ID": "(O){{ModID}}_druidbook",
+  },
+  "When": {
+    "HasSeenEvent": "SnS.Ch2.Hector.16",
+  }
+},
+{
+  "LogName": "Druid skill book shop entry (3)",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Bookseller",
+    "Items",
+    "RandomSkillBook3",
+    "RandomItemId"
+  ],
+  "Entries": {
+    "ID": "(O){{ModID}}_druidbook",
+  },
+  "When": {
+    "HasSeenEvent": "SnS.Ch2.Hector.16",
+  }
+},
+// BARD
+{
+  "LogName": "Bard skill book shop entry (1)",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Bookseller",
+    "Items",
+    "RandomSkillBook1",
+    "RandomItemId"
+  ],
+  "Entries": {
+    "ID": "(O){{ModID}}_bardbook",
+  },
+  "When": {
+    "HasSeenEvent": "SnS.Ch3.Cirrus.14",
+  }
+},
+{
+  "LogName": "Bard skill book shop entry (2)",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Bookseller",
+    "Items",
+    "RandomSkillBook2",
+    "RandomItemId"
+  ],
+  "Entries": {
+    "ID": "(O){{ModID}}_bardbook",
+  },
+  "When": {
+    "HasSeenEvent": "SnS.Ch3.Cirrus.14",
+  }
+},
+{
+  "LogName": "Bard skill book shop entry (3)",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Bookseller",
+    "Items",
+    "RandomSkillBook3",
+    "RandomItemId"
+  ],
+  "Entries": {
+    "ID": "(O){{ModID}}_bardbook",
+  },
+  "When": {
+    "HasSeenEvent": "SnS.Ch3.Cirrus.14",
+  }
+},
+// SORCERER
+{
+  "LogName": "Sorcerer skill book shop entry (1)",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Bookseller",
+    "Items",
+    "RandomSkillBook1",
+    "RandomItemId"
+  ],
+  "Entries": {
+    "ID": "(O){{ModID}}_sorcerybook",
+  },
+  "When": {
+    "HasSeenEvent": "SnS.Ch4.Dandelion.6",
+  }
+},
+{
+  "LogName": "Sorcerer skill book shop entry (2)",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Bookseller",
+    "Items",
+    "RandomSkillBook2",
+    "RandomItemId"
+  ],
+  "Entries": {
+    "ID": "(O){{ModID}}_sorcerybook",
+  },
+  "When": {
+    "HasSeenEvent": "SnS.Ch4.Dandelion.6",
+  }
+},
+{
+  "LogName": "Sorcerer skill book shop entry (3)",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Bookseller",
+    "Items",
+    "RandomSkillBook3",
+    "RandomItemId"
+  ],
+  "Entries": {
+    "ID": "(O){{ModID}}_sorcerybook",
+  },
+  "When": {
+    "HasSeenEvent": "SnS.Ch4.Dandelion.6",
+  }
+},
+// PALADIN
+{
+  "LogName": "Paladin skill book shop entry (1)",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Bookseller",
+    "Items",
+    "RandomSkillBook1",
+    "RandomItemId"
+  ],
+  "Entries": {
+    "ID": "(O){{ModID}}_paladinbook",
+  },
+  "When": {
+    "Query": "({{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Mateo}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Hector}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Cirrus}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Gunnar}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.SoloFarmer}}) = TRUE",
+  }
+},
+{
+  "LogName": "Paladin skill book shop entry (2)",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Bookseller",
+    "Items",
+    "RandomSkillBook2",
+    "RandomItemId"
+  ],
+  "Entries": {
+    "ID": "(O){{ModID}}_paladinbook",
+  },
+  "When": {
+    "Query": "({{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Mateo}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Hector}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Cirrus}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Gunnar}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.SoloFarmer}}) = TRUE",
+  }
+},
+{
+  "LogName": "Paladin skill book shop entry (3)",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Bookseller",
+    "Items",
+    "RandomSkillBook3",
+    "RandomItemId"
+  ],
+  "Entries": {
+    "ID": "(O){{ModID}}_paladinbook",
+  },
+  "When": {
+    "Query": "({{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Mateo}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Hector}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Cirrus}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Gunnar}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.SoloFarmer}}) = TRUE",
+  }
+},
+  ]
+}

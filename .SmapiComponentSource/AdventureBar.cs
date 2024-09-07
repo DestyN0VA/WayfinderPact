@@ -98,8 +98,9 @@ namespace SwordAndSorcerySMAPI
                 {
                     b.Draw(Game1.staminaRect, new Rectangle(12, yPositionOnScreen + height, (int)((width - 24) * perc), 32), color);
                 }
+                Color textColor = Utility.StringToColor($"{ModSnS.Config.TextRed} {ModSnS.Config.TextGreen} {ModSnS.Config.TextBlue}") ?? Color.Black;
                 string manaStr = $"{ext.mana}/{ext.maxMana}";
-                b.DrawString(Game1.smallFont, manaStr, new Vector2(width / 2 - Game1.smallFont.MeasureString(manaStr).X / 2, yPositionOnScreen + height + 2), Color.Black);
+                b.DrawString(Game1.smallFont, manaStr, new Vector2(width / 2 - Game1.smallFont.MeasureString(manaStr).X / 2, yPositionOnScreen + height + 2), textColor);
             }
 
             if ( hover != null )

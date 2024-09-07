@@ -66,7 +66,7 @@
     {
       "LogName": "Sword & Sorcery - Data Includes",
       "Action": "Include",
-      "FromFile": "Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Festival Data/VioletMoon_Data.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json"
+      "FromFile": "Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/Books.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Quests & Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Festival Data/VioletMoon_Data.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json"
     },
     {
       "LogName": "Sword & Sorcery - Shield Quest Include",
@@ -83,7 +83,7 @@
       "FromFile": "Data/Quests & Items/ShieldQuest_ChocoboValley.json",
       "When": {
         "HasMod: |contains=Kitsutsune.Chocobovalley": true,
-        "ChocoboValleyMaterials": true 
+        "ChocoboValleyMaterials": true
       }
     },
     {
@@ -92,7 +92,7 @@
       "FromFile": "Data/Quests & Items/EssenceQuest.json",
       "When": {
         "HasMod: |contains=Rafseazz.RSVCP": false,
-        "RSVMaterials": false 
+        "RSVMaterials": false
       }
     },
     {
@@ -386,27 +386,27 @@
       "Description": "Set length the player has to have dated Mateo, Hector, or Cirrus prior to any of them accepting the mermaid pendant and triggering the next romance event.",
       "Section": "Miscellaneous"
     },
-    "AncientSweetTeaDifficulty": {  
-    "AllowValues": "3, 7, 14, 21,",
-    "Default": "7",
-    "AllowBlank": false,
-    "Description": "Set how many Ancient Sweet Tea Leaves are required to craft the universally loved Ancient Sweet Tea recipe.",
-    "Section": "Miscellaneous"
-  },
-  "ChocoboValleyMaterials": {  
-    "AllowValues": "true, false",
-    "Default": "true",
-    "AllowBlank": false,
-    "Description": "Toggle the use of Chocobo Valley's materials in a Special Order from Dandelion.",
-    "Section": "Miscellaneous"
-  },
-  "RSVMaterials": {  
-    "AllowValues": "true, false",
-    "Default": "true",
-    "AllowBlank": false,
-    "Description": "Toggle the use of Ridgeside Village's materials in a Special Order from Roslin.",
-    "Section": "Miscellaneous"
-  },
+    "AncientSweetTeaDifficulty": {
+      "AllowValues": "3, 7, 14, 21,",
+      "Default": "7",
+      "AllowBlank": false,
+      "Description": "Set how many Ancient Sweet Tea Leaves are required to craft the universally loved Ancient Sweet Tea recipe.",
+      "Section": "Miscellaneous"
+    },
+    "ChocoboValleyMaterials": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Toggle the use of Chocobo Valley's materials in a Special Order from Dandelion.",
+      "Section": "Miscellaneous"
+    },
+    "RSVMaterials": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Toggle the use of Ridgeside Village's materials in a Special Order from Roslin.",
+      "Section": "Miscellaneous"
+    },
     "Eli&DylanExtras": {
       "AllowValues": "true, false",
       "Default": "false",
@@ -435,13 +435,20 @@
       "Description": "Excludes S&S items from Perfection tracking.",
       "Section": "Miscellaneous"
     },
-    "CasterType": { 
-    "AllowValues": "Witch, Wizard, Sorcerer, Sorceress, Magician, Warlock, Magus, Occultist, Spellbinder, Thaumaturgist, Druid, Alchemist, Alchahestrist, Bard",
-    "Default": "Sorcerer",
-    "AllowBlank": false,
-    "Description": "Changes what kind of caster The Farmer is referred to as.",
-    "Section": "Miscellaneous"
-  },
+    "CasterType": {
+      "AllowValues": "Witch, Wizard, Sorcerer, Sorceress, Magician, Warlock, Magus, Occultist, Spellbinder, Thaumaturgist, Druid, Alchemist, Alchahestrist, Bard",
+      "Default": "Sorcerer",
+      "AllowBlank": false,
+      "Description": "Changes what kind of caster The Farmer is referred to as.",
+      "Section": "Miscellaneous"
+    },
+    "BookTextures": {
+      "AllowValues": "Lumina, Daine",
+      "Default": "Lumina",
+      "AllowBlank": false,
+      "Description": "Changes the textures of S&S Skill Books.",
+      "Section": "Miscellaneous"
+    },
     "HectorHeterochromatic": {
       "AllowValues": "true, false",
       "Default": "false",
@@ -1967,7 +1974,6 @@
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
       }
     },
-
     {
       "Name": "SnS.Ch4.Finale.GunnarExtra.2", //After Cirrus's don't panic
       "Value": "pause 1"
@@ -1980,7 +1986,6 @@
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
       }
     },
-
     {
       "Name": "SnS.Ch4.Intermissions.GunnarExtra.1",
       "Value": "pause 1"
@@ -1993,7 +1998,6 @@
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
       }
     },
-
     {
       "Name": "SnS.Ch4.Intermissions.GunnarExtra.2", //for the farmer/pair off forward
       "Value": "pause 1"
@@ -2004,10 +2008,8 @@
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
-
       }
     },
-
     {
       "Name": "SnS.Ch4.Intermissions.GunnarExtra.3", //Enable the choice for Gunnar in SoloFarmer intermission
       "Value": ""
@@ -2018,10 +2020,8 @@
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
-
       }
     },
-
     {
       "Name": "SnS.Ch4.Intermissions.GunnarExtra.4", //Enable the choice for Gunnar in SoloFarmer intermission pt.2
       "Value": ""
@@ -2032,15 +2032,12 @@
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
-
       }
     },
-
     {
       "Name": "SnS.Ch4.Intermission.SoloFarmer.QQ",
       "Value": "/quickQuestion #Then don't. (Warp them out before they can protest.) #I can do this, Mateo. I've gotten a lot stronger since we first met, I promise.(break)addMailReceived SoloFarmerBattle\\speak Mateo \"What-!?$3\"\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\speak Mateo \"@!!!$19\\warp Mateo -100 -100\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up'.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\playMusic SnS.DuskspireLaugh\\emote farmer 16\\faceDirection farmer 2\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\faceDirection farmer 0\\playMusic SnS.SMFSR\\pause 1000\\message \"Time to finish this! The Valley is counting on you!\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)addMailReceived FarmerGuildmasterBattle\\speak Mateo \"I know - like Cirrus said, you're the toughest one of the bunch.$13#$b#But, more importantly, you're my best friend, @. And I'm not leaving you to fight alone.$12\"\\emote farmer 32\\pause 250\\speak Hector \"Good luck, @.\"\\speak Cirrus \"We'll be waiting for you two!$17\"\\speak Roslin \"I'm impressed by both of you.$10\"\\speak Dandelion \"We stand before a pair of true heroes.$14\"\\speak Solomon \"Alright, alright! Let's skedaddle before the big guy comes back!$5\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Mateo 2\\faceDirection farmer 2\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\pause 250\\speak Mateo \"That looks right in your hands, @.$12\"\\emote Mateo 56\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Mateo 16 true\\faceDirection Mateo 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Mateo \"Here we go, @! Let's finish this!$82\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end"
     },
-
     {
       "Name": "SnS.Ch4.Intermission.SoloFarmer.QQ",
       "Value": "/quickQuestion #Then don't. (Warp them out before they can protest.) #I can do this, Mateo. I've gotten a lot stronger since we first met, I promise.#Then join me, Mateo. So I won't have to be alone.#Then join me, Hector. So I won't have to be alone.#Then join me, Cirrus. So I won't have to be alone.{{SnS.Ch4.Intermissions.GunnarExtra.3}}(break)addMailReceived SoloFarmerBattle\\speak Mateo \"What-!?$3\"\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\speak Mateo \"@!!!$19\\warp Mateo -100 -100\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up'.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\playMusic SnS.DuskspireLaugh\\emote farmer 16\\faceDirection farmer 2\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\faceDirection farmer 0\\playMusic SnS.SMFSR\\pause 1000\\message \"Time to finish this! The Valley is counting on you!\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)addMailReceived FarmerGuildmasterBattle\\speak Mateo \"I know - like Cirrus said, you're the toughest one of the bunch.$13#$b#But, more importantly, you're my best friend, @. And I'm not leaving you to fight alone.$12\"\\emote farmer 32\\pause 250\\speak Hector \"Good luck, @.\"\\speak Cirrus \"We'll be waiting for you two!$17\"\\speak Roslin \"I'm impressed by both of you.$10\"\\speak Dandelion \"We stand before a pair of true heroes.$14\"\\speak Solomon \"Alright, alright! Let's skedaddle before the big guy comes back!$5\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Mateo 2\\faceDirection farmer 2\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\pause 250\\speak Mateo \"That looks right in your hands, @.$12\"\\emote Mateo 56\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Mateo 16 true\\faceDirection Mateo 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Mateo \"Here we go, @! Let's finish this!$82\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Mateo\\speak Mateo \"Of course I will.\"\\speak Hector \"Good luck, @.\"\\speak Cirrus \"We'll be waiting for you two!$17\"\\speak Roslin \"I'm impressed by both of you.$10\"\\speak Dandelion \"We stand before a pair of true heroes.$14\"\\speak Solomon \"Alright, alright! Let's skedaddle before the big guy comes back!$5\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Mateo 2\\faceDirection farmer 2\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\pause 250\\speak Mateo \"That looks right in your hands...$4\"\\emote Mateo 56\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Mateo 16 true\\faceDirection Mateo 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Mateo \"Let's finish this, Sunshine!$28\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Hector\\speak Hector \"Of course I will. Especially if it means putting an end to this pain permanently.$19\"\\speak Mateo \"Good luck to you.$14\"\\speak Cirrus \"We'll be waiting for you two!$17\"\\speak Roslin \"I'm impressed by both of you.$10\"\\speak Dandelion \"We stand before a pair of true heroes.$14\"\\speak Solomon \"Alright, alright! Let's skedaddle before the big guy comes back!$5\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Hector 2\\faceDirection farmer 2\\warp Mateo -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\pause 250\\speak Hector \"You always spoke to me as the hero-type, @... that's why I tested you, way back when.$18\"\\emote Hector 40\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Hector 16 true\\faceDirection Hector 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Hector \"Let's bury this. Once and for all.$19\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Cirrus\\speak Cirrus \"I'd never let you go through this alone, Rockstar.$4\"\\speak Mateo \"Good luck to you.$14\"\\speak Hector \"You've got this, I've got faith in you.$18\"\\speak Roslin \"I'm impressed by both of you.$10\"\\speak Dandelion \"We stand before a pair of true heroes.$14\"\\speak Solomon \"Alright, alright! Let's skedaddle before the big guy comes back!$5\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Cirrus 2\\faceDirection farmer 2\\warp Mateo -100 -100\\warp Hector -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Cirrus 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\pause 250\\speak Cirrus \"You look good with that shield, @... very heroic. Are you gonna sweep me off my feet-$25\"\\emote Cirrus 40\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Cirrus 16 true\\faceDirection Cirrus 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Cirrus \"Let's gooooooo! We got this! C'mon, Rockstar!$9\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end{{SnS.Ch4.Intermissions.GunnarExtra.4}}",
@@ -2051,7 +2048,6 @@
         "Relationship: MadDog.HashtagBearFam.Gunnar |contains= Dating, Married, Enganged": false
       }
     },
-
     {
       "Name": "SnS.Ch4.Victories.GunnarExtra.1",
       "Value": "pause 1"
@@ -2062,10 +2058,8 @@
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
-
       }
     },
-
     {
       "Name": "SnS.Ch4.Victories.GunnarExtra.2", //after Cirrus's promise to cook
       "Value": "pause 1"
@@ -2076,7 +2070,6 @@
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
-
       }
     },
     {
@@ -2091,7 +2084,6 @@
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
       }
     },
-
     {
       "Name": "CombatWarps",
       "Value": "warp Mateo 12 10/warp farmer 12 12/warp Dandelion 12 14/warp Hector 12 16/warp Cirrus 10 12/warp Roslin 10 14"
@@ -2116,7 +2108,6 @@
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
       }
     },
-
     {
       "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.HectorVictory",
       "Value": "warp Mateo 45 90/faceDirection Mateo 3"
@@ -2141,7 +2132,6 @@
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
       }
     },
-
     {
       "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.HectorVictory.Offset",
       "Value": "pause 1"
@@ -2169,13 +2159,116 @@
     {
       "Name": "SkipIntroQuest",
       "Value": "{{SkipIntroQuest_Setting}}"
-   },
-   {
+    },
+    {
       "Name": "SkipIntroQuest",
       "Value": "true",
       "When": {
-         "HasFlag": "JojaMember"
+        "HasFlag": "JojaMember"
       }
-   },
+    },
+    {
+      "Name": "MateoPortraitSpriteIndex",
+      "Value": "0"
+    },
+    {
+      "Name": "MateoPortraitSpriteIndex",
+      "Value": "12",
+      "When": {
+        "MateoTrollHeritage": true
+      }
+    },
+    {
+      "Name": "HectorPortraitSpriteIndex",
+      "Value": "2"
+    },
+    {
+      "Name": "HectorPortraitSpriteIndex",
+      "Value": "14",
+      "When": {
+        "HectorHeterochromatic": true
+      }
+    },
+    {
+      "Name": "ArtificerBookSpriteIndex",
+      "Value": "0",
+      "When": {
+        "BookTextures": "Lumina"
+      }
+    },
+    {
+      "Name": "ArtificerBookSpriteIndex",
+      "Value": "5",
+      "When": {
+        "BookTextures": "Daine"
+      }
+    },
+    {
+      "Name": "DruidBookSpriteIndex",
+      "Value": "1",
+      "When": {
+        "BookTextures": "Lumina"
+      }
+    },
+    {
+      "Name": "DruidBookSpriteIndex",
+      "Value": "6",
+      "When": {
+        "BookTextures": "Daine"
+      }
+    },
+    {
+      "Name": "BardBookSpriteIndex",
+      "Value": "2",
+      "When": {
+        "BookTextures": "Lumina"
+      }
+    },
+    {
+      "Name": "BardBookSpriteIndex",
+      "Value": "7",
+      "When": {
+        "BookTextures": "Daine"
+      }
+    },
+    {
+      "Name": "SorcererBookSpriteIndex",
+      "Value": "3",
+      "When": {
+        "BookTextures": "Lumina"
+      }
+    },
+    {
+      "Name": "SorcererBookSpriteIndex",
+      "Value": "8",
+      "When": {
+        "BookTextures": "Daine"
+      }
+    },
+    {
+      "Name": "PaladinBookSpriteIndex",
+      "Value": "4",
+      "When": {
+        "BookTextures": "Lumina"
+      }
+    },
+    {
+      "Name": "PaladinBookSpriteIndex",
+      "Value": "9",
+      "When": {
+        "BookTextures": "Daine"
+      }
+    },
+    {
+      "Name": "HectorWeddingQQ",
+      "Value": "textAboveHead BookDryad \"I do.\""
+    },
+    {
+      "Name": "HectorWeddingQQ",
+      "Value": "quickQuestion #I do.#I don't.(break)textAboveHead BookDryad \"I do.\"(break)speak Hector \"Too bad! You're stuck with me now.$13\"",
+      "When": {
+        "Spouse |contains=Hector": true
+      }
+    }
   ]
 }

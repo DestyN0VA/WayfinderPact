@@ -189,7 +189,7 @@
       "Entries": {
         "DN.SnS_Mateo_VioletMoon": {
           "Id": "DN.SnS_Mateo_VioletMoon",
-          "Owners": [ //don't need this
+          "Owners": [ 
             {
               "Name": "AnyOrNone",
               "Id": "DN.SnS_Mateo_VioletMoon_Dialogue",
@@ -204,193 +204,155 @@
           "Items": [
             {
               "Id": "DN.SnS_Arrow",
-              "ItemID": "DN.SnS_Arrow"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_Arrow",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 5
             },
             {
               "Id": "DN.SnS_FirestormArrow",
-              "ItemID": "DN.SnS_FirestormArrow"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_FirestormArrow",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 10
             },
             {
               "Id": "DN.SnS_IcicleArrow",
-              "ItemID": "DN.SnS_IcicleArrow"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_IcicleArrow",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 10
             },
             {
               "Id": "DN.SnS_WindwakerArrow",
-              "ItemID": "DN.SnS_WindwakerArrow"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_WindwakerArrow",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 10
             },
             {
               "Id": "DN.SnS_RicochetArrow",
-              "ItemID": "DN.SnS_RicochetArrow"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_RicochetArrow",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 10
             },
             {
               "Id": "DN.SnS_LightbringerArrow",
-              "ItemID": "DN.SnS_LightbringerArrow"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_LightbringerArrow",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 10
             },
             {
               "Id": "DN.SnS_Bullet",
-              "ItemID": "DN.SnS_Bullet"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_Bullet",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 5
             },
             {
               "Id": "DN.SnS_FirestormBullet",
-              "ItemID": "DN.SnS_FirestormBullet"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_FirestormBullet",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 10
             },
             {
               "Id": "DN.SnS_IcicleBullet",
-              "ItemID": "DN.SnS_IcicleBullet"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_IcicleBullet",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 10
             },
             {
               "Id": "DN.SnS_WindwakerBullet",
-              "ItemID": "DN.SnS_WindwakerBullet"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_WindwakerBullet",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 10
             },
             {
               "Id": "DN.SnS_RicochetBullet",
-              "ItemID": "DN.SnS_RicochetBullet"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_RicochetBullet",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 10
             },
             {
               "Id": "DN.SnS_LightbringerBullet",
-              "ItemID": "DN.SnS_LightbringerBullet"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_LightbringerBullet",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 10
             },
             {
               "Id": "DN.SnS_VioletMoon_Copper",
               "ItemID": "(O)378",
-              "Condition": "{{HasMod |contains=MadDog.HashagBearFam}}"
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "Condition": "{{HasMod |contains=MadDog.HashagBearFam}}",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 150
             },
             {
               "Id": "DN.SnS_VioletMoon_Iron",
               "ItemID": "(O)380",
-              "Condition": "{{HasMod |contains=MadDog.HashagBearFam}}"
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "Condition": "{{HasMod |contains=MadDog.HashagBearFam}}",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 250
             },
             {
               "Id": "DN.SnS_VioletMoon_Gold",
               "ItemID": "(O)384",
-              "Condition": "{{HasMod |contains=MadDog.HashagBearFam}}"
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "Condition": "{{HasMod |contains=MadDog.HashagBearFam}}",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 750
             },
             {
               "Id": "DN.SnS_VioletMoon_Coal",
               "ItemID": "(O)382",
-              "Condition": "{{HasMod |contains=MadDog.HashagBearFam}}"
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "Condition": "{{HasMod |contains=MadDog.HashagBearFam}}",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 250
             },
             {
               "Id": "DN.SnS_PureCopperOre",
               "ItemID": "DN.SnS_PureCopperOre",
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 5
-              //"AvailableStockLimit": "Player"
+              "IgnoreShopPriceModifiers": true,
+              "AvailableStock": 5,
+              "Price": 50
             },
             {
               "Id": "DN.SnS_PureIronOre",
               "ItemID": "DN.SnS_PureIronOre",
-              //"Condition": "",
-              //"Price": "1600",
-              //AvailableStock": 3
-              //"AvailableStockLimit": "Player"
+              "IgnoreShopPriceModifiers": true,
+              "AvailableStock": 3,
+              "Price": 75
             },
             {
               "Id": "DN.SnS_PureGoldOre",
               "ItemID": "DN.SnS_PureGoldOre",
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1
-              //"AvailableStockLimit": "Player"
+              "IgnoreShopPriceModifiers": true,
+              "AvailableStock": 1,
+              "Price": 125
             },
             {
               "Id": "DN.SnS_PureIridiumOre",
               "ItemID": "DN.SnS_PureIridiumOre",
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1
-              //"AvailableStockLimit": "Player"
+              "AvailableStock": 1,
+              "Price": 500
             },
             {
               "Id": "DN.SnS_PureRadioactiveOre",
               "ItemID": "DN.SnS_PureRadioactiveOre",
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1
-              //"AvailableStockLimit": "Player"
+              "IgnoreShopPriceModifiers": true,
+              "AvailableStock": 1,
+              "Price": 1500
             },
             {
               "Id": "DN.SnS_Mateo_VioletMoon_Femur",
-              "ItemID": "(W)31"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "(W)31",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 100
             },
             {
               "Id": "DN.SnS_Mateo_VioletMoon_DwarfHammer",
-              "ItemID": "(W)56"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "(W)56",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 650
             }
           ]
         },
         "DN.SnS_Hector_VioletMoon": {
           "Id": "DN.SnS_Hector_VioletMoon",
-          "Owners": [ //don't need this
+          "Owners": [ 
             {
               "Name": "AnyOrNone",
               "Id": "DN.SnS_Hector_VioletMoon_Dialogue",
@@ -405,169 +367,129 @@
           "Items": [
             {
               "Id": "DN.SnS_ancientamaranth",
-              "ItemID": "DN.SnS_ancientamaranth"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientamaranth",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 160
             },
             {
               "Id": "DN.SnS_ancientepiphyticfern",
-              "ItemID": "DN.SnS_ancientepiphyticfern"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientepiphyticfern",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 300
             },
             {
               "Id": "DN.SnS_glowingpolyporemushrooms",
-              "ItemID": "DN.SnS_glowingpolyporemushrooms"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_glowingpolyporemushrooms",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 300
             },
             {
               "Id": "DN.SnS_ancientwildfairyrose",
-              "ItemID": "DN.SnS_ancientwildfairyrose"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientwildfairyrose",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 345
             },
             {
               "Id": "DN.SnS_ancientelderberry",
-              "ItemID": "DN.SnS_ancientelderberry"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientelderberry",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 110
             },
             {
               "Id": "DN.SnS_ancientbottlegourd",
-              "ItemID": "DN.SnS_ancientbottlegourd"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientbottlegourd",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 220
             },
             {
               "Id": "DN.SnS_ancientgiantappleberry",
-              "ItemID": "DN.SnS_ancientgiantappleberry"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientgiantappleberry",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 275
             },
             {
               "Id": "DN.SnS_ancientazuredetura",
-              "ItemID": "DN.SnS_ancientazuredetura"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientazuredetura",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 160
             },
             {
               "Id": "DN.SnS_ancientglowinghuckleberry",
-              "ItemID": "DN.SnS_ancientglowinghuckleberry"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientglowinghuckleberry",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 410
             },
             {
               "Id": "DN.SnS_ancientsweettealeaves",
-              "ItemID": "DN.SnS_ancientsweettealeaves"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientsweettealeaves",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 350
             },
             {
               "Id": "DN.SnS_ancientamaranth.seed",
-              "ItemID": "DN.SnS_ancientamaranth.seed"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientamaranth.seed",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 2
             },
             {
               "Id": "DN.SnS_ancientepiphyticfern.seed",
-              "ItemID": "DN.SnS_ancientepiphyticfern.seed"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientepiphyticfern.seed",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 2
             },
             {
               "Id": "DN.SnS_glowingpolyporemushrooms.seed",
-              "ItemID": "DN.SnS_glowingpolyporemushrooms.seed"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_glowingpolyporemushrooms.seed",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 2
             },
             {
               "Id": "DN.SnS_ancientwildfairyrose.seed",
-              "ItemID": "DN.SnS_ancientwildfairyrose.seed"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientwildfairyrose.seed",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 2
             },
             {
               "Id": "DN.SnS_ancientelderberry.seed",
-              "ItemID": "DN.SnS_ancientelderberry.seed"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientelderberry.seed",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 2
             },
             {
               "Id": "DN.SnS_ancientbottlegourd.seed",
-              "ItemID": "DN.SnS_ancientbottlegourd.seed"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientbottlegourd.seed",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 2
             },
             {
               "Id": "DN.SnS_ancientgiantappleberry.seed",
-              "ItemID": "DN.SnS_ancientgiantappleberry.seed"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientgiantappleberry.seed",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 2
             },
             {
               "Id": "DN.SnS_ancientazuredetura.seed",
-              "ItemID": "DN.SnS_ancientazuredetura.seed"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientazuredetura.seed",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 2
             },
             {
               "Id": "DN.SnS_ancientglowinghuckleberry.seed",
-              "ItemID": "DN.SnS_ancientglowinghuckleberry.seed"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientglowinghuckleberry.seed",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 2
             },
             {
               "Id": "DN.SnS_ancientsweettealeaves.seed",
-              "ItemID": "DN.SnS_ancientsweettealeaves.seed"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ancientsweettealeaves.seed",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 2
             }
           ]
         },
         "DN.SnS_Cirrus_VioletMoon": {
           "Id": "DN.SnS_Cirrus_VioletMoon",
-          "Owners": [ //don't need this
+          "Owners": [ 
             {
               "Name": "AnyOrNone",
               "Id": "DN.SnS_Cirrus_VioletMoon_Dialogue",
@@ -582,113 +504,89 @@
           "Items": [
             {
               "Id": "DN.SnS_ScotchEgg",
-              "ItemID": "DN.SnS_ScotchEgg"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_ScotchEgg",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 550
             },
             {
               "Id": "DN.SnS_Steak_on_a_Stake",
-              "ItemID": "DN.SnS_Steak_on_a_Stake"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_Steak_on_a_Stake",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 550
             },
             {
               "Id": "DN.SnS_Hand_Pressed_Apple_Cider",
-              "ItemID": "DN.SnS_Hand_Pressed_Apple_Cider"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_Hand_Pressed_Apple_Cider",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 500
             },
             {
               "Id": "DN.SnS_Smoked_TurkeyLeg",
-              "ItemID": "DN.SnS_Smoked_TurkeyLeg"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_Smoked_TurkeyLeg",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 550
             },
             {
               "Id": "DN.SnS_Fruit_Hand_Pie",
-              "ItemID": "DN.SnS_Fruit_Hand_Pie"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_Fruit_Hand_Pie",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 500
             },
             {
               "Id": "DN.SnS_salishbourbon",
-              "ItemID": "DN.SnS_salishbourbon"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_salishbourbon",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 100
             },
             {
               "Id": "DN.SnS_autumnalstew",
-              "ItemID": "DN.SnS_autumnalstew"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_autumnalstew",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 100
             },
             {
               "Id": "DN.SnS_dandeliongreens",
-              "ItemID": "DN.SnS_dandeliongreens"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_dandeliongreens",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 100
             },
             {
               "Id": "DN.SnS_portfiredrakesparkler",
-              "ItemID": "DN.SnS_portfiredrakesparkler"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_portfiredrakesparkler",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 100
             },
             {
               "Id": "DN.SnS_zuzustylepizza",
-              "ItemID": "DN.SnS_zuzustylepizza"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_zuzustylepizza",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 100
             },
             {
               "Id": "DN.SnS_zuzustylebagelwithlox",
-              "ItemID": "DN.SnS_zuzustylebagelwithlox"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_zuzustylebagelwithlox",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 100
+
             },
             {
               "Id": "DN.SnS_zuzustylecheesecake",
-              "ItemID": "DN.SnS_zuzustylecheesecake"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_zuzustylecheesecake",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 100
             },
             {
               "Id": "DN.SnS_zuzustyleclamchowder",
-              "ItemID": "DN.SnS_zuzustyleclamchowder"
-              //"Condition": "",
-              //"Price": "1600",
-              //"AvailableStock": 1,
-              //"AvailableStockLimit": "Player"
+              "ItemID": "DN.SnS_zuzustyleclamchowder",
+              "IgnoreShopPriceModifiers": true,
+              "Price": 100
+
             }
           ]
         },
         "DN.SnS_RnD_VioletMoon": {
           "Id": "DN.SnS_RnD_VioletMoon",
-          "Owners": [ //don't need this
+          "Owners": [ 
             {
               "Name": "AnyOrNone",
               "Id": "DN.SnS_RnD_VioletMoon_Dialogue",
@@ -772,6 +670,240 @@
               "Price": 2500
             }
           ]
+        },
+        "DN.SnS_Krobus_VioletMoon": {
+          "Id": "DN.SnS_Krobus_VioletMoon",
+          "Owners": [ 
+            {
+              "Name": "AnyOrNone",
+              "Id": "DN.SnS_Krobus_VioletMoon_Dialogue",
+              "Portrait": "Krobus",
+              "Dialogues": [
+                {
+                  "Dialogue": "{{i18n:DN.SnS_Violet_Moon_Shop_Krobus}}"
+                }
+              ]
+            }
+          ],
+          "Items": [
+            {
+              "Id": "{{ModId}}_KrobusVMShop_VoidEgg",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)305",
+              "Price": 5000
+            },
+            {
+              "Id": "{{ModId}}_KrobusVMShop_VoidEssence",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)769",
+              "Price": 100
+            },
+            {
+              "Id": "{{ModId}}_KrobusVMShop_SolarEssence",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)768",
+              "Price": 80
+            },
+            {
+              "Id": "{{ModId}}_KrobusVMShop_MonsterFireplace",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(F)1800",
+              "Price": 20000
+            },
+            {
+              "Id": "{{ModId}}_KrobusVMShop_SignOfTheVessel",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(BC)34",
+              "Price": 350
+            },
+            {
+              "Id": "{{ModId}}_KrobusVMShop_ButterflyPowder",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)ButterflyPowder",
+              "Price": 20000
+            }
+          ]
+        },
+        "DN.SnS_Dwarf_VioletMoon": {
+          "Id": "DN.SnS_Dwarf_VioletMoon",
+          "Owners": [ 
+            {
+              "Name": "AnyOrNone",
+              "Id": "DN.SnS_Dwarf_VioletMoon_Dialogue",
+              "Portrait": "Dwarf",
+              "Dialogues": [
+                {
+                  "Dialogue": "{{i18n:DN.SnS_Violet_Moon_Shop_Dwarf}}"
+                }
+              ]
+            }
+          ],
+          "Items": [
+            {
+              "Id": "{{ModId}}_DwarfVMShop_DwarfBook",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)326",
+              "Price": 4000
+            },
+            {
+              "Id": "{{ModId}}_DwarfVMShop_LifeElixir",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)773",
+              "Price": 2000
+            },
+            {
+              "Id": "{{ModId}}_DwarfVMShop_OilofGarlic",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)772",
+              "Price": 3000
+            },
+            {
+              "Id": "{{ModId}}_DwarfVMShop_CherryBomb",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)286",
+              "Price": 450
+            },
+            {
+              "Id": "{{ModId}}_DwarfVMShop_Bomb",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)287",
+              "Price": 1000
+            },
+            {
+              "Id": "{{ModId}}_DwarfVMShop_MegaBomb",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)288",
+              "Price": 1600
+            },
+            {
+              "Id": "{{ModId}}_DwarfVMShop_MinerTreat",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)243",
+              "Price": 1000
+            },
+            {
+              "Id": "{{ModId}}_DwarfVMShop_RareCrowDwarf",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(BC)138",
+              "Price": 2500
+            },
+            {
+              "Id": "{{ModId}}_DwarfVMShop_StoneCairn",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(BC)32",
+              "Price": 200
+            }
+          ]
+        },
+        "DN.SnS_Gus_VioletMoon": {
+          "Id": "DN.SnS_Gus_VioletMoon",
+          "Owners": [ 
+            {
+              "Name": "AnyOrNone",
+              "Id": "DN.SnS_Gus_VioletMoon_Dialogue",
+              "Portrait": "Gus",
+              "Dialogues": [
+                {
+                  "Dialogue": "{{i18n:DN.SnS_Violet_Moon_Shop_Gus}}"
+                }
+              ]
+            }
+          ],
+          "Items": [
+            {
+              "Id": "{{ModId}}_GusVMShop_Beer",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)346",
+              "Price": 400
+            },
+            {
+              "Id": "{{ModId}}_GusVMShop_Coffee",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)395",
+              "Price": 300
+            },
+            {
+              "Id": "{{ModId}}_GusVMShop_Pizza",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)206",
+              "Price": 600
+            },
+            {
+              "Id": "{{ModId}}_GusVMShop_IceCream",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)233",
+              "Price": 240
+            },
+            {
+              "Id": "{{ModId}}_GusVMShop_PumpkinSoup",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)236",
+              "Price": 600
+            },
+            {
+              "Id": "{{ModId}}_GusVMShop_AutumnBounty",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)235",
+              "Price": 700
+            },
+            {
+              "Id": "{{ModId}}_GusVMShop_Cookies",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)223",
+              "Price": 280
+            },
+            {
+              "Id": "{{ModId}}_GusVMShop_CranberrySauce",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)238",
+              "Price": 240
+            },
+            {
+              "Id": "{{ModId}}_GusVMShop_RhubarbPie",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)222",
+              "Price": 800
+            },
+            {
+              "Id": "{{ModId}}_GusVMShop_StrangeBun",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)203",
+              "Price": 450
+            },
+            {
+              "Id": "{{ModId}}_GusVMShop_CranberryCandy",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)612",
+              "Price": 175
+            }
+          ]
+        },
+        "DN.SnS_Harvey_VioletMoon": {
+          "Id": "DN.SnS_Harvey_VioletMoon",
+          "Owners": [ 
+            {
+              "Name": "AnyOrNone",
+              "Id": "DN.SnS_Harvey_VioletMoon_Dialogue",
+              "Portrait": "Harvey",
+              "Dialogues": [
+                {
+                  "Dialogue": "{{i18n:DN.SnS_Violet_Moon_Shop_Harvey}}"
+                }
+              ]
+            }
+          ],
+          "Items": [
+            {
+              "Id": "DN.SnS_Harvey_VMMuscle",
+              "ItemID": "(O)349",
+              "Price": 1000
+            },
+            {
+              "Id": "DN.SnS_Harvey_VMEnergy",
+              "ItemID": "(O)351",
+              "Price": 1000
+            }
+          ]
         }
       }
     },
@@ -800,6 +932,128 @@
       ]
     },
     {
+      "LogName": "Violet Moon Where is Clint Bears",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall1",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "Set-Up_additionalCharacters" ],
+          "Value": "Clint 23 56 2",
+          "Delimiter": "/"
+        },
+        /*{
+          "Operation": "Append",
+          "Target": [ "Entries", "MainEvent_additionalCharacters" ],
+          "Value": "Clint 35 60 2",
+          "Delimiter": "/"
+        },*/
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "set-up", 5 ],
+          "Value": "/positionOffset Clint -5 0"
+        }
+      ]
+    },
+    {
+      "LogName": "Violet Moon Where is Clint No Bears",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall1",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "Set-Up_additionalCharacters" ],
+          "Value": "Clint 35 60 2",
+          "Delimiter": "/"
+        },
+        /*{
+          "Operation": "Append",
+          "Target": [ "Entries", "MainEvent_additionalCharacters" ],
+          "Value": "Clint 35 60 2",
+          "Delimiter": "/"
+        },*/
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "set-up", 5 ],
+          "Value": "/positionOffset Clint 5 0"
+        }
+      ]
+    },
+    {
+      "LogName": "Clint's Shop if No Bears",
+      "Action": "EditMap",
+      "Target": "Maps/DN.SnS_VioletMoon",
+      "When": {
+        "HasMod |contains=MadDog.HashtagBearFam": false
+      },
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 36,
+            "Y": 61
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop DN.SnS_Clint_VioletMoon"
+          }
+        }
+      ]
+    },
+    {
+      "LogName": "Violet Moon shops",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Entries": {
+        "DN.SnS_Clint_VioletMoon": {
+          "Id": "DN.SnS_Clint_VioletMoon",
+          "Owners": [ 
+            {
+              "Name": "AnyOrNone",
+              "Id": "DN.SnS_Clint_VioletMoon_Dialogue",
+              "Portrait": "Clint",
+              "Dialogues": [
+                {
+                  "Dialogue": "{{i18n:DN.SnS_Violet_Moon_Shop_Clint}}"
+                }
+              ]
+            }
+          ],
+          "Items": [
+            {
+              "Id": "DN.SnS_VioletMoon_Clint_Copper",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)378",
+              "Price": 150
+            },
+            {
+              "Id": "DN.SnS_VioletMoon_Clint_Iron",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)380",
+              "Price": 250
+            },
+            {
+              "Id": "DN.SnS_VioletMoon_Clint_Gold",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)384",
+              "Price": 750
+            },
+            {
+              "Id": "DN.SnS_VioletMoon_Clint_Coal",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(O)382",
+              "Price": 250
+            }
+          ]
+        }
+      }
+    },
+    {
       "LogName": "Violet Moon What They Say",
       "Action": "EditData",
       "Target": "Data/Festivals/fall1",
@@ -809,7 +1063,54 @@
         "Cirrus": "{{i18n:VioletMoon.Cirrus.{{Random:1++2++3|inputSeparator=++}}}}",
         "Dandelion": "{{i18n:VioletMoon.Dandelion.{{Random:1++2++3|inputSeparator=++}}}}",
         "Roslin": "{{i18n:VioletMoon.Roslin.{{Random:1++2++3|inputSeparator=++}}}}",
-        "Solomon": "{{i18n:VioletMoon.Solomon.{{Random:1++2++3|inputSeparator=++}}}}",
+        "Solomon": "{{i18n:VioletMoon.Solomon.{{Random:1++2++3|inputSeparator=++}}}}"
+      }
+    },
+    {
+      "LogName": "Violet Moon Where They Are ES Folks",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall1",
+      "When": {
+        "HasMod": "LemurKat.EastScarpe.CP"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "Set-Up_additionalCharacters" ],
+          "Value": "Aideen 80 60 3/Beatrice 47 50 2/Eloise 66 51 3/Eyvinder 15 48 2/Jacob 62 63 3/ToriLK 68 34 0/Rosa 86 13 1/Juliet 87 13 3/Jessie 39 48 2/Jasper 87 32 0",
+          "Delimiter": "/"
+        },
+        /*{
+          "Operation": "Append",
+          "Target": [ "Entries", "MainEvent_additionalCharacters" ],
+          "Value": "Aideen 80 60 3/Beatrice 47 50 2/Eloise 66 51 3/Eyvinder 15 48 2/Jacob 62 63 3/ToriLK 68 34 0/Rosa 86 13 1/Juliet 87 13 3/Jessie 39 48 2/Jasper 87 32 0",
+          "Delimiter": "/"
+        },*/
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "set-up", 5 ],
+          "Value": "changeSprite Juliet Juliet_FortuneTeller/changePortrait Juliet Juliet_FortuneTeller"
+        }
+      ]
+    },
+    {
+      "LogName": "Violet Moon What They Say - ES Folks",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall1",
+      "When": {
+        "HasMod": "LemurKat.EastScarpe.CP"
+      },
+      "Entries": {
+        "Aideen": "{{i18n:VioletMoon.Aideen.{{Random:1++2++3|inputSeparator=++}}}}",
+        "Beatrice": "{{i18n:VioletMoon.Beatrice.{{Random:1++2++3|inputSeparator=++}}}}",
+        "Eloise": "{{i18n:VioletMoon.Eloise.{{Random:1++2++3|inputSeparator=++}}}}",
+        "Eyvinder": "{{i18n:VioletMoon.Eyvinder.{{Random:1++2++3|inputSeparator=++}}.{{HasSeenEvent |contains=57877001}}}}",
+        "Jacob": "{{i18n:VioletMoon.Jacob.{{Random:1++2++3|inputSeparator=++}}}}",
+        "ToriLK": "{{i18n:VioletMoon.ToriLK.{{Random:1++2++3|inputSeparator=++}}}}",
+        "Rosa": "{{i18n:VioletMoon.Rosa.{{Random:1++2++3|inputSeparator=++}}}}",
+        "Juliet": "{{i18n:VioletMoon.Juliet.{{Random:1++2++3|inputSeparator=++}}}}",
+        "Jessie": "{{i18n:VioletMoon.Jessie.{{Random:1++2++3|inputSeparator=++}}}}",
+        "Jasper": "{{i18n:VioletMoon.Jasper.{{Random:1++2++3|inputSeparator=++}}}}"
       }
     }
   ]

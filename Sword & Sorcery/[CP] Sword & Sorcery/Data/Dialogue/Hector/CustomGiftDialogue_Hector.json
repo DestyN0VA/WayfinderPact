@@ -13,6 +13,8 @@
         "AcceptGift_(O)397": "{{i18n:Gifts.Hector.GiftReaction.SeaUrchin}}",
         "AcceptGift_(O)717": "{{i18n:Gifts.Hector.GiftReaction.Crab}}",
         "AcceptGift_(O)732": "{{i18n:Gifts.Hector.GiftReaction.CrabCakes}}",
+        "AcceptGift_(O){{ModID}}_GoldieTheBatteryPoweredFish": "{{i18n:Gifts.Hector.GiftReaction.GoldieTheBatteryPoweredFish}}",
+        "AcceptGift_(O)787": "{{i18n:Gifts.Hector.GiftReaction.Battery}}",
         // ARTISANAL GOODS
         "AcceptGift_category_artisan_goods": "{{i18n:Gifts.Hector.GiftReaction.CategoryArtisanalGoods}}",
         // TRASH
@@ -56,6 +58,7 @@
         "AcceptGift_(O){{ModID}}_ancienthuckleberrygingerbeer": "{{i18n:Gifts.Hector.GiftReaction.AncientBeer}}",
         // ITEM REJECTIONS 
         "RejectItem_(O)458": "{{i18n:Gifts.Hector.GiftReject.Bouquet}}",
+        "RejectGift_(O)787": "{{i18n:Gifts.Hector.GiftReaction.Battery}}",
       }
     },
     {
