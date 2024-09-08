@@ -201,6 +201,48 @@
               ]
             }
           ],
+          "VisualTheme": [
+            {
+              "Condition": null,
+              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderSourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 270,
+                "Height": 115
+              },
+              "PortraitBackgroundTexture": null,
+              "PortraitBackgroundSourceRect": null,
+              "DialogueBackgroundTexture": null,
+              "DialogueBackgroundSourceRect": null,
+              "DialogueColor": null,
+              "DialogueShadowColor": null,
+              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundSourceRect": {
+                "X": 18,
+                "Y": 115,
+                "Width": 15,
+                "Height": 15
+              },
+              "ItemRowBackgroundHoverColor": "Blue",
+              "ItemRowTextColor": "Violet",
+              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundSourceRect": {
+                "X": 0,
+                "Y": 115,
+                "Width": 18,
+                "Height": 18
+              },
+              "ScrollUpTexture": null,
+              "ScrollUpSourceRect": null,
+              "ScrollDownTexture": null,
+              "ScrollDownSourceRect": null,
+              "ScrollBarFrontTexture": null,
+              "ScrollBarFrontSourceRect": null,
+              "ScrollBarBackTexture": null,
+              "ScrollBarBackSourceRect": null
+            }
+          ],
           "Items": [
             {
               "Id": "DN.SnS_Arrow",
@@ -485,7 +527,49 @@
               "IgnoreShopPriceModifiers": true,
               "Price": 2
             }
-          ]
+          ],
+          "VisualTheme": [
+            {
+              "Condition": null,
+              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderSourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 270,
+                "Height": 115
+              },
+              "PortraitBackgroundTexture": null,
+              "PortraitBackgroundSourceRect": null,
+              "DialogueBackgroundTexture": null,
+              "DialogueBackgroundSourceRect": null,
+              "DialogueColor": null,
+              "DialogueShadowColor": null,
+              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundSourceRect": {
+                "X": 18,
+                "Y": 115,
+                "Width": 15,
+                "Height": 15
+              },
+              "ItemRowBackgroundHoverColor": "Blue",
+              "ItemRowTextColor": "Violet",
+              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundSourceRect": {
+                "X": 0,
+                "Y": 115,
+                "Width": 18,
+                "Height": 18
+              },
+              "ScrollUpTexture": null,
+              "ScrollUpSourceRect": null,
+              "ScrollDownTexture": null,
+              "ScrollDownSourceRect": null,
+              "ScrollBarFrontTexture": null,
+              "ScrollBarFrontSourceRect": null,
+              "ScrollBarBackTexture": null,
+              "ScrollBarBackSourceRect": null
+            }
+          ],
         },
         "DN.SnS_Cirrus_VioletMoon": {
           "Id": "DN.SnS_Cirrus_VioletMoon",
@@ -582,7 +666,49 @@
               "Price": 100
 
             }
-          ]
+          ],
+          "VisualTheme": [
+            {
+              "Condition": null,
+              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderSourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 270,
+                "Height": 115
+              },
+              "PortraitBackgroundTexture": null,
+              "PortraitBackgroundSourceRect": null,
+              "DialogueBackgroundTexture": null,
+              "DialogueBackgroundSourceRect": null,
+              "DialogueColor": null,
+              "DialogueShadowColor": null,
+              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundSourceRect": {
+                "X": 18,
+                "Y": 115,
+                "Width": 15,
+                "Height": 15
+              },
+              "ItemRowBackgroundHoverColor": "Blue",
+              "ItemRowTextColor": "Violet",
+              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundSourceRect": {
+                "X": 0,
+                "Y": 115,
+                "Width": 18,
+                "Height": 18
+              },
+              "ScrollUpTexture": null,
+              "ScrollUpSourceRect": null,
+              "ScrollDownTexture": null,
+              "ScrollDownSourceRect": null,
+              "ScrollBarFrontTexture": null,
+              "ScrollBarFrontSourceRect": null,
+              "ScrollBarBackTexture": null,
+              "ScrollBarBackSourceRect": null
+            }
+          ],
         },
         "DN.SnS_RnD_VioletMoon": {
           "Id": "DN.SnS_RnD_VioletMoon",
@@ -722,7 +848,49 @@
               "ItemID": "(O)ButterflyPowder",
               "Price": 20000
             }
-          ]
+          ],
+          "VisualTheme": [
+            {
+              "Condition": null,
+              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderSourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 270,
+                "Height": 115
+              },
+              "PortraitBackgroundTexture": null,
+              "PortraitBackgroundSourceRect": null,
+              "DialogueBackgroundTexture": null,
+              "DialogueBackgroundSourceRect": null,
+              "DialogueColor": null,
+              "DialogueShadowColor": null,
+              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundSourceRect": {
+                "X": 18,
+                "Y": 115,
+                "Width": 15,
+                "Height": 15
+              },
+              "ItemRowBackgroundHoverColor": "Blue",
+              "ItemRowTextColor": "Violet",
+              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundSourceRect": {
+                "X": 0,
+                "Y": 115,
+                "Width": 18,
+                "Height": 18
+              },
+              "ScrollUpTexture": null,
+              "ScrollUpSourceRect": null,
+              "ScrollDownTexture": null,
+              "ScrollDownSourceRect": null,
+              "ScrollBarFrontTexture": null,
+              "ScrollBarFrontSourceRect": null,
+              "ScrollBarBackTexture": null,
+              "ScrollBarBackSourceRect": null
+            }
+          ],
         },
         "DN.SnS_Dwarf_VioletMoon": {
           "Id": "DN.SnS_Dwarf_VioletMoon",
@@ -793,7 +961,49 @@
               "ItemID": "(BC)32",
               "Price": 200
             }
-          ]
+          ],
+          "VisualTheme": [
+            {
+              "Condition": null,
+              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderSourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 270,
+                "Height": 115
+              },
+              "PortraitBackgroundTexture": null,
+              "PortraitBackgroundSourceRect": null,
+              "DialogueBackgroundTexture": null,
+              "DialogueBackgroundSourceRect": null,
+              "DialogueColor": null,
+              "DialogueShadowColor": null,
+              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundSourceRect": {
+                "X": 18,
+                "Y": 115,
+                "Width": 15,
+                "Height": 15
+              },
+              "ItemRowBackgroundHoverColor": "Blue",
+              "ItemRowTextColor": "Violet",
+              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundSourceRect": {
+                "X": 0,
+                "Y": 115,
+                "Width": 18,
+                "Height": 18
+              },
+              "ScrollUpTexture": null,
+              "ScrollUpSourceRect": null,
+              "ScrollDownTexture": null,
+              "ScrollDownSourceRect": null,
+              "ScrollBarFrontTexture": null,
+              "ScrollBarFrontSourceRect": null,
+              "ScrollBarBackTexture": null,
+              "ScrollBarBackSourceRect": null
+            }
+          ],
         },
         "DN.SnS_Gus_VioletMoon": {
           "Id": "DN.SnS_Gus_VioletMoon",
@@ -876,7 +1086,49 @@
               "ItemID": "(O)612",
               "Price": 175
             }
-          ]
+          ],
+          "VisualTheme": [
+            {
+              "Condition": null,
+              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderSourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 270,
+                "Height": 115
+              },
+              "PortraitBackgroundTexture": null,
+              "PortraitBackgroundSourceRect": null,
+              "DialogueBackgroundTexture": null,
+              "DialogueBackgroundSourceRect": null,
+              "DialogueColor": null,
+              "DialogueShadowColor": null,
+              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundSourceRect": {
+                "X": 18,
+                "Y": 115,
+                "Width": 15,
+                "Height": 15
+              },
+              "ItemRowBackgroundHoverColor": "Blue",
+              "ItemRowTextColor": "Violet",
+              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundSourceRect": {
+                "X": 0,
+                "Y": 115,
+                "Width": 18,
+                "Height": 18
+              },
+              "ScrollUpTexture": null,
+              "ScrollUpSourceRect": null,
+              "ScrollDownTexture": null,
+              "ScrollDownSourceRect": null,
+              "ScrollBarFrontTexture": null,
+              "ScrollBarFrontSourceRect": null,
+              "ScrollBarBackTexture": null,
+              "ScrollBarBackSourceRect": null
+            }
+          ],
         },
         "DN.SnS_Harvey_VioletMoon": {
           "Id": "DN.SnS_Harvey_VioletMoon",
@@ -902,8 +1154,50 @@
               "Id": "DN.SnS_Harvey_VMEnergy",
               "ItemID": "(O)351",
               "Price": 1000
+            },
+          ],
+          "VisualTheme": [
+            {
+              "Condition": null,
+              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderSourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 270,
+                "Height": 115
+              },
+              "PortraitBackgroundTexture": null,
+              "PortraitBackgroundSourceRect": null,
+              "DialogueBackgroundTexture": null,
+              "DialogueBackgroundSourceRect": null,
+              "DialogueColor": null,
+              "DialogueShadowColor": null,
+              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundSourceRect": {
+                "X": 18,
+                "Y": 115,
+                "Width": 15,
+                "Height": 15
+              },
+              "ItemRowBackgroundHoverColor": "Blue",
+              "ItemRowTextColor": "Violet",
+              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundSourceRect": {
+                "X": 0,
+                "Y": 115,
+                "Width": 18,
+                "Height": 18
+              },
+              "ScrollUpTexture": null,
+              "ScrollUpSourceRect": null,
+              "ScrollDownTexture": null,
+              "ScrollDownSourceRect": null,
+              "ScrollBarFrontTexture": null,
+              "ScrollBarFrontSourceRect": null,
+              "ScrollBarBackTexture": null,
+              "ScrollBarBackSourceRect": null
             }
-          ]
+          ],
         }
       }
     },
@@ -915,7 +1209,7 @@
         {
           "Operation": "Append",
           "Target": [ "Entries", "Set-Up_additionalCharacters" ],
-          "Value": "Mateo 30 60 2/Hector 75 60 2/Cirrus 45 48 2/Roslin 56 39 2/Dandelion 56 41 2/Solomon 12 73 2",
+          "Value": "Mateo 30 60 2/Hector 75 60 2/Cirrus 45 48 2/Roslin 56 39 2/Dandelion 56 41 2/Solomon 6 75 2",
           "Delimiter": "/"
         },
         /*{
@@ -1049,7 +1343,49 @@
               "ItemID": "(O)382",
               "Price": 250
             }
-          ]
+          ],
+          "VisualTheme": [
+            {
+              "Condition": null,
+              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderSourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 270,
+                "Height": 115
+              },
+              "PortraitBackgroundTexture": null,
+              "PortraitBackgroundSourceRect": null,
+              "DialogueBackgroundTexture": null,
+              "DialogueBackgroundSourceRect": null,
+              "DialogueColor": null,
+              "DialogueShadowColor": null,
+              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundSourceRect": {
+                "X": 18,
+                "Y": 115,
+                "Width": 15,
+                "Height": 15
+              },
+              "ItemRowBackgroundHoverColor": "Blue",
+              "ItemRowTextColor": "Violet",
+              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundSourceRect": {
+                "X": 0,
+                "Y": 115,
+                "Width": 18,
+                "Height": 18
+              },
+              "ScrollUpTexture": null,
+              "ScrollUpSourceRect": null,
+              "ScrollDownTexture": null,
+              "ScrollDownSourceRect": null,
+              "ScrollBarFrontTexture": null,
+              "ScrollBarFrontSourceRect": null,
+              "ScrollBarBackTexture": null,
+              "ScrollBarBackSourceRect": null
+            }
+          ],
         }
       }
     },
