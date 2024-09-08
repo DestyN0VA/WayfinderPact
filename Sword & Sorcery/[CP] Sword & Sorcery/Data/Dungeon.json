@@ -80,7 +80,6 @@
                     "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
                     "SpriteIndex": 109,
                     "ExcludeFromRandomSale": true,
-                    "ExcludeFromPerfection": true,
                 },
             }
         },
@@ -610,12 +609,12 @@
                     "SpriteIndex": 6,
                     "MenuSpriteIndex": 17,
                     "UpgradeLevel": 5,
-                    "UpgradeFrom": {
+                    "UpgradeFrom": [{
                         "RequireToolId": "(T)IridiumHoe",
                         "Price": 35000,
                         "TradeItemId": "(O){{ModID}}_StygiumBar",
                         "TradeItemAmount": 5
-                    }
+                    }]
                 },
                 "{{ModID}}_StygiumPickaxe": {
                     "ClassName": "Pickaxe",
@@ -627,12 +626,12 @@
                     "SpriteIndex": 18,
                     "MenuSpriteIndex": 29,
                     "UpgradeLevel": 5,
-                    "UpgradeFrom": {
+                    "UpgradeFrom": [{
                         "RequireToolId": "(T)IridiumPickaxe",
                         "Price": 35000,
                         "TradeItemId": "(O){{ModID}}_StygiumBar",
                         "TradeItemAmount": 5
-                    }
+                    }]
                 },
                 "{{ModID}}_StygiumAxe": {
                     "ClassName": "Axe",
@@ -661,12 +660,12 @@
                     "SpriteIndex": 42,
                     "MenuSpriteIndex": 50,
                     "UpgradeLevel": 5,
-                    "UpgradeFrom": {
+                    "UpgradeFrom": [{
                         "RequireToolId": "(T)IridiumWateringCan",
                         "Price": 35000,
                         "TradeItemId": "(O){{ModID}}_StygiumBar",
                         "TradeItemAmount": 5
-                    }
+                    }]
                 },
                 "{{ModID}}_BlessedHoe": {
                     "ClassName": "Hoe",
@@ -678,12 +677,12 @@
                     "SpriteIndex": 6,
                     "MenuSpriteIndex": 17,
                     "UpgradeLevel": 6,
-                    "UpgradeFrom": {
+                    "UpgradeFrom": [{
                         "RequireToolId": "(T){{ModID}}_StygiumHoe",
                         "Price": 50000,
                         "TradeItemId": "(O){{ModID}}_DuskspireHeart",
                         "TradeItemAmount": 1
-                    }
+                    }]
                 },
                 "{{ModID}}_BlessedPickaxe": {
                     "ClassName": "Pickaxe",
@@ -695,12 +694,12 @@
                     "SpriteIndex": 18,
                     "MenuSpriteIndex": 29,
                     "UpgradeLevel": 6,
-                    "UpgradeFrom": {
+                    "UpgradeFrom": [{
                         "RequireToolId": "(T){{ModID}}_StygiumPickaxe",
                         "Price": 50000,
                         "TradeItemId": "(O){{ModID}}_DuskspireHeart",
                         "TradeItemAmount": 1
-                    }
+                    }]
                 },
                 "{{ModID}}_BlessedAxe": {
                     "ClassName": "Axe",
@@ -712,12 +711,12 @@
                     "SpriteIndex": 30,
                     "MenuSpriteIndex": 41,
                     "UpgradeLevel": 6,
-                    "UpgradeFrom": {
+                    "UpgradeFrom": [{
                         "RequireToolId": "(T){{ModID}}_StygiumAxe",
                         "Price": 50000,
                         "TradeItemId": "(O){{ModID}}_DuskspireHeart",
                         "TradeItemAmount": 1
-                    }
+                    }]
                 },
                 "{{ModID}}_BlessedWateringCan": {
                     "ClassName": "WateringCan",
@@ -729,12 +728,12 @@
                     "SpriteIndex": 42,
                     "MenuSpriteIndex": 50,
                     "UpgradeLevel": 6,
-                    "UpgradeFrom": {
+                    "UpgradeFrom": [{
                         "RequireToolId": "(T){{ModID}}_StygiumWateringCan",
                         "Price": 50000,
                         "TradeItemId": "(O){{ModID}}_DuskspireHeart",
                         "TradeItemAmount": 1
-                    }
+                    }]
                 },
             }
         }
