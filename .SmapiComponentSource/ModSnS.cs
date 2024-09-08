@@ -227,6 +227,12 @@ namespace SwordAndSorcerySMAPI
 
         public override void Entry(IModHelper helper)
         {
+            if (!Helper.ModRegistry.IsLoaded("DN.SnS"))
+            {
+                Monitor.Log("Failed to find CP component of S&S, make sure you installed everything from the download. (S&S will not load without it.)", LogLevel.Error);
+                return;
+            }
+
             instance = this;
             I18n.Init(Helper.Translation);
             Config = Helper.ReadConfig<Configuration>();
