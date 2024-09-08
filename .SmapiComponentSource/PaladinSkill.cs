@@ -45,13 +45,13 @@ namespace SwordAndSorcerySMAPI
             // Level 5
             PaladinSkill.ProfessionShieldThrowHit2 = new GenericProfession(skill: this, id: "ThrowHit2", name: I18n.PaladinSkill_Profession_ShieldThrowHit2_Name, description: I18n.PaladinSkill_Profession_ShieldThrowHit2_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/OnYourLeft.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/OnYourLeft.png")
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldThrowHit2);
 
             PaladinSkill.ProfessionShieldArmor1 = new GenericProfession(skill: this, id: "Armor1", name: I18n.PaladinSkill_Profession_ShieldArmor1_Name, description: I18n.PaladinSkill_Profession_ShieldArmor2_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/FightToEndTheFight.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/FightToEndTheFight.png")
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldArmor1);
 
@@ -60,13 +60,13 @@ namespace SwordAndSorcerySMAPI
             // Level 10 - track A
             PaladinSkill.ProfessionShieldThrowLightning = new GenericProfession(skill: this, id: "ThrowLightning", name: I18n.PaladinSkill_Profession_ShieldThrowLightning_Name, description: I18n.PaladinSkill_Profession_ShieldThrowLightning_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/TheSunWillShineOnUsAgain.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/TheSunWillShineOnUsAgain.png")
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldThrowLightning);
 
             PaladinSkill.ProfessionShieldThrowHit3 = new GenericProfession(skill: this, id: "ThrowHit3", name: () => I18n.PaladinSkill_Profession_ShieldThrowHit3_Name(Game1.player.Name), description: I18n.PaladinSkill_Profession_ShieldThrowHit3_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/TheyHaveAnArnmyWeHaveAFarmerName.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/TheyHaveAnArmyWeHaveAFarmerName.png")
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldThrowHit3);
 
@@ -75,13 +75,13 @@ namespace SwordAndSorcerySMAPI
             // Level 10 - track B
             PaladinSkill.ProfessionShieldArmor2 = new GenericProfession(skill: this, id: "Armor2", name: I18n.PaladinSkill_Profession_ShieldArmor2_Name, description: I18n.PaladinSkill_Profession_ShieldArmor2_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/ICanDoThisAllDay.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/ICanDoThisAllDay.png")
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldArmor2);
 
             PaladinSkill.ProfessionShieldRetribution = new GenericProfession(skill: this, id: "Retribution", name: I18n.PaladinSkill_Profession_ShieldRetribution_Name, description: I18n.PaladinSkill_Profession_ShieldRetribution_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/YouGetHurtHurtEmBack.png")
+                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/YouGetHurtHurtEmBack.png")
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldRetribution);
 

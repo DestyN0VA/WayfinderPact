@@ -46,6 +46,8 @@ namespace SwordAndSorcerySMAPI
 
         public override void draw(SpriteBatch b)
         {
+            var tex4 = Game1.content.Load<Texture2D>("SMAPI/spacechase0.testpack/shop.png");
+
             if (!editing)
             {
                 if (Hide)

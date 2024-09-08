@@ -222,7 +222,7 @@ namespace SwordAndSorcerySMAPI
     }
 
     [HarmonyPatch(typeof(Slingshot), nameof(Slingshot.canThisBeAttached) )]
-    public static class SlingshowBowAmmoAttachPatch
+    public static class SlingshowBowAmmoAttachPatch1
     {
         public static void Postfix(Slingshot __instance, StardewValley.Object o, ref bool __result)
         {
@@ -237,6 +237,21 @@ namespace SwordAndSorcerySMAPI
         }
     }
 
+    [HarmonyPatch(typeof(Tool), nameof(Tool.canThisBeAttached), new Type[] { typeof(StardewValley.Object), typeof(int) })]
+    public static class SlingshowBowAmmoAttachPatch2
+    {
+        public static void Postfix(Tool __instance, StardewValley.Object o, int slot, ref bool __result)
+        {
+            if (__instance.ItemId == "DN.SnS_longlivetheking")
+            {
+                if (slot == 0)
+                    __result = o.HasContextTag("bullet_item");
+                else if (slot == 1)
+                    __result = o.HasContextTag("keychain_item");
+            }
+        }
+    }
+
     [HarmonyPatch(typeof(Tool), nameof(Tool.canThisBeAttached), new Type[] { typeof(StardewValley.Object) })]
     public static class ToolGunAmmoAttachPatch
     {
@@ -244,7 +259,22 @@ namespace SwordAndSorcerySMAPI
         {
             if (__instance.ItemId == "DN.SnS_longlivetheking")
             {
-                __result = o.HasContextTag("bullet_item");
+                __result = o.HasContextTag("bullet_item") || o.HasContextTag("keychain_item");
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Tool), nameof(Tool.canThisBeAttached), new Type[] { typeof(StardewValley.Object), typeof(int) })]
+    public static class ToolGunAmmoAttachPatch2
+    {
+        public static void Postfix(Tool __instance, StardewValley.Object o, int slot, ref bool __result)
+        {
+            if (__instance.ItemId == "DN.SnS_longlivetheking")
+            {
+                if (slot == 0)
+                    __result = o.HasContextTag("bullet_item");
+                else if (slot == 1)
+                    __result = o.HasContextTag("keychain_item");
             }
         }
     }

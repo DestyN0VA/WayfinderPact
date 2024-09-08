@@ -172,6 +172,9 @@ namespace SwordAndSorcerySMAPI
         public KeybindList ConfigureAdventureBar = new(SButton.U);
         public KeybindList ToggleAdventureBar = new(new Keybind(SButton.LeftControl, SButton.U));
 
+        public bool LltkToggleRightClick = false;
+        public KeybindList LltkToggleKeybind = new(new Keybind(SButton.None));
+
         public KeybindList AbilityBar1Slot1 = new(new Keybind(SButton.LeftControl, SButton.D1));
         public KeybindList AbilityBar1Slot2 = new(new Keybind(SButton.LeftControl, SButton.D2));
         public KeybindList AbilityBar1Slot3 = new(new Keybind(SButton.LeftControl, SButton.D3));
@@ -398,6 +401,18 @@ namespace SwordAndSorcerySMAPI
                 }
             });
 
+            Ability.Abilities.Add("swaplltk", new Ability("swaplltk")
+            {
+                Name = I18n.Ability_LltkToggle_Name,
+                Description = I18n.Ability_LltkToggle_Description,
+                TexturePath = "SMAPI/dn.sns/assets/Items & Crops/SnSObjects.png",
+                SpriteIndex = 45,
+                KnownCondition = "PLAYER_HAS_MAIL DN.SnS_ObtainedLLTK",
+                HiddenIfLocked = true,
+                ManaCost = () => 0,
+                Function = () => SwapLltk(),
+            });
+
             Helper.ConsoleCommands.Add("sns_setmaxaether", "...", (cmd, args) => Game1.player.GetFarmerExtData().maxMana.Value = int.Parse(args[0]));
             Helper.ConsoleCommands.Add("sns_refillaether", "...", (cmd, args) => Game1.player.GetFarmerExtData().mana.Value = Game1.player.GetFarmerExtData().maxMana.Value);
             Helper.ConsoleCommands.Add("sns_repairarmor", "...", (cmd, args) => Game1.player.GetFarmerExtData().armorUsed.Value = 0);
@@ -543,39 +558,60 @@ namespace SwordAndSorcerySMAPI
                 Game1.player.mailReceived.Add("DN.SnS_ObtainedLLTK");
             }
 
-            if (Context.IsWorldReady && Context.IsPlayerFree && e.Button.IsActionButton() && Game1.player.ActiveItem != null)
+            if (Config.LltkToggleRightClick)
             {
-                if (Game1.currentLocation.GetTilePropertySplitBySpaces("Action", "Buildings", (int)e.Cursor.GrabTile.X, (int)e.Cursor.GrabTile.Y).Length == 0)
+                if (Context.IsWorldReady && Context.IsPlayerFree && e.Button.IsActionButton() && Game1.player.ActiveItem != null)
                 {
-                    if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking")
+                    if (Game1.currentLocation.GetTilePropertySplitBySpaces("Action", "Buildings", (int)e.Cursor.GrabTile.X, (int)e.Cursor.GrabTile.Y).Length == 0)
                     {
-                        var w = new Slingshot("DN.SnS_longlivetheking_gun");
-                        Game1.player.CurrentTool.CopyEnchantments(Game1.player.CurrentTool, w);
-                        w.modData.Set(Game1.player.CurrentTool.modData.Pairs);
-                        if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
+                        if (SwapLltk())
                         {
-                            w.attachments[0] = (StardewValley.Object)Game1.player.CurrentTool.attachments[0].getOne();
-                            w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
+                            Helper.Input.Suppress(e.Button);
                         }
-                        Game1.player.Items[Game1.player.CurrentToolIndex] = w;
-                        Helper.Input.Suppress(e.Button);
-                    }
-                    else if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking_gun")
-                    {
-                        var w = new MeleeWeapon("DN.SnS_longlivetheking");
-                        Game1.player.CurrentTool.CopyEnchantments(Game1.player.CurrentTool, w);
-                        w.modData.Set(Game1.player.CurrentTool.modData.Pairs);
-                        if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
-                        {
-                            w.attachments.SetCount(1);
-                            w.attachments[0] = (StardewValley.Object)Game1.player.CurrentTool.attachments[0].getOne();
-                            w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
-                        }
-                        Game1.player.Items[Game1.player.CurrentToolIndex] = w;
-                        Helper.Input.Suppress(e.Button);
                     }
                 }
             }
+        }
+
+        private bool SwapLltk()
+        {
+            if (Game1.player.ActiveItem == null)
+                return false;
+
+            if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking")
+            {
+                var w = new Slingshot("DN.SnS_longlivetheking_gun");
+                Game1.player.CurrentTool.CopyEnchantments(Game1.player.CurrentTool, w);
+                w.modData.Set(Game1.player.CurrentTool.modData.Pairs);
+                if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
+                {
+                    w.attachments.SetCount(2);
+                    w.attachments[0] = (StardewValley.Object)Game1.player.CurrentTool.attachments[0].getOne();
+                    w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
+                    w.attachments[1] = (StardewValley.Object)Game1.player.CurrentTool.attachments[1].getOne();
+                    w.attachments[1].Stack = Game1.player.CurrentTool.attachments[1].Stack;
+                }
+                Game1.player.Items[Game1.player.CurrentToolIndex] = w;
+                return true;
+            }
+            else if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking_gun")
+            {
+                var w = new MeleeWeapon("DN.SnS_longlivetheking");
+                Game1.player.CurrentTool.CopyEnchantments(Game1.player.CurrentTool, w);
+                w.modData.Set(Game1.player.CurrentTool.modData.Pairs);
+                if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
+                {
+                    w.attachments.SetCount(2);
+                    w.attachments[0] = (StardewValley.Object)Game1.player.CurrentTool.attachments[0].getOne();
+                    w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
+                    w.attachments[1] = (StardewValley.Object)Game1.player.CurrentTool.attachments[1].getOne();
+                    w.attachments[1].Stack = Game1.player.CurrentTool.attachments[1].Stack;
+                }
+                Game1.player.Items[Game1.player.CurrentToolIndex] = w;
+                return true;
+            }
+
+            return false;
         }
 
         private void Display_RenderedWorld(object sender, StardewModdingAPI.Events.RenderedWorldEventArgs e)
@@ -741,6 +777,12 @@ namespace SwordAndSorcerySMAPI
                     b.Draw(Game1.staminaRect, new Rectangle((int)pos.X + 12, (int)pos.Y + 12, (int)(64 * 4 * perc), 32), Utility.StringToColor($"{ModSnS.Config.Red} {ModSnS.Config.Green} {ModSnS.Config.Blue}") ?? Color.Aqua);
                     b.DrawString(Game1.smallFont, manaStr, new Vector2(pos.X + 12 + 64 * 4 / 2 - Game1.smallFont.MeasureString(manaStr).X / 2, (int)pos.Y + 12), Utility.StringToColor($"{ModSnS.Config.TextRed} {ModSnS.Config.TextGreen} {ModSnS.Config.TextBlue}") ?? Color.Black);
                 }, height: () => 56);
+
+                gmcm.AddSectionTitle(ModManifest, I18n.Config_Section_Lltk);
+                gmcm.AddParagraph(ModManifest, I18n.Config_Section_Lltk_Text);
+                gmcm.AddBoolOption(ModManifest, () => Config.LltkToggleRightClick, (val) => Config.LltkToggleRightClick = val, I18n.Config_LltkToggleRightClick_Name, I18n.Config_LltkToggleRightClick_Description);
+                gmcm.AddKeybindList(ModManifest, () => Config.LltkToggleKeybind, (val) => Config.LltkToggleKeybind = val, I18n.Config_LltkToggleKeybind_Name, I18n.Config_LltkToggleKeybind_Description);
+                
                 gmcm.AddSectionTitle(ModManifest, I18n.Section_Keybinds_Name, I18n.Section_Keybinds_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.ConfigureAdventureBar, (val) => Config.ConfigureAdventureBar = val, I18n.Keybind_ConfigureBar_Name, I18n.Keybind_ConfigureBar_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.ToggleAdventureBar, (val) => Config.ToggleAdventureBar = val, I18n.Keybind_ToggleBar_Name, I18n.Keybind_ToggleBar_Description);
@@ -992,6 +1034,12 @@ namespace SwordAndSorcerySMAPI
             {
                 sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Paladin", 100);
                 Game1.addMail("GavePaladinLvl1", true);
+            }
+
+
+            if (Config.LltkToggleKeybind.JustPressed())
+            {
+                SwapLltk();
             }
         }
 
@@ -1306,4 +1354,60 @@ namespace SwordAndSorcerySMAPI
             }
         }
     }
+
+    [HarmonyPatch(typeof(Farmer), nameof(Farmer.GetEffectsOfRingMultiplier))]
+    public static class FarmerWearingFakeYobaForD20Patch
+    {
+        public static void Postfix(Farmer __instance, string ringId, ref int __result)
+        {
+            if (__instance.hasOrWillReceiveMail("ForgedD20Power") && ringId == "863")
+            {
+                ++__result;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(IClickableMenu), nameof(IClickableMenu.drawTextureBox), [typeof(SpriteBatch), typeof(Texture2D), typeof(Rectangle), typeof(int), typeof(int), typeof(int), typeof(int), typeof(Color), typeof(float), typeof(bool), typeof(float) ])]
+    public static class ShopTextureBoxForVioletMoonHackPatch
+    {
+        public static bool Prefix(SpriteBatch b, Texture2D texture, Rectangle sourceRect, int x, int y, int width, int height, Color color, float scale, bool drawShadow, float draw_layer)
+        {
+            if (Game1.activeClickableMenu is ShopMenu s && s.VisualTheme.WindowBorderTexture == texture && s.VisualTheme.WindowBorderSourceRect == sourceRect &&
+                 sourceRect == new Rectangle(0, 0, 270, 115) && Game1.CurrentEvent.isFestival && Game1.CurrentEvent.id == "festival_fall1")
+            {
+                int cornerSizeX = sourceRect.Width / 3;
+                int cornerSizeY = sourceRect.Height/ 3;
+                float shadow_layer = draw_layer - 0.03f;
+                if (draw_layer < 0f)
+                {
+                    draw_layer = 0.8f - (float)y * 1E-06f;
+                    shadow_layer = 0.77f;
+                }
+                if (drawShadow)
+                {
+                    b.Draw(texture, new Vector2(x + width - (int)((float)cornerSizeX * scale) - 8, y + 8), new Rectangle(sourceRect.X + cornerSizeX * 2, sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, scale, SpriteEffects.None, shadow_layer);
+                    b.Draw(texture, new Vector2(x - 8, y + height - (int)((float)cornerSizeY * scale) + 8), new Rectangle(sourceRect.X, cornerSizeY * 2 + sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, scale, SpriteEffects.None, shadow_layer);
+                    b.Draw(texture, new Vector2(x + width - (int)((float)cornerSizeX * scale) - 8, y + height - (int)((float)cornerSizeY * scale) + 8), new Rectangle(sourceRect.X + cornerSizeX * 2, cornerSizeY * 2 + sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, scale, SpriteEffects.None, shadow_layer);
+                    b.Draw(texture, new Rectangle(x + (int)((float)cornerSizeX * scale) - 8, y + 8, width - (int)((float)cornerSizeX * scale) * 2, (int)((float)cornerSizeY * scale)), new Rectangle(sourceRect.X + cornerSizeX, sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, SpriteEffects.None, shadow_layer);
+                    b.Draw(texture, new Rectangle(x + (int)((float)cornerSizeX * scale) - 8, y + height - (int)((float)cornerSizeY * scale) + 8, width - (int)((float)cornerSizeX * scale) * 2, (int)((float)cornerSizeY * scale)), new Rectangle(sourceRect.X + cornerSizeX, cornerSizeY * 2 + sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, SpriteEffects.None, shadow_layer);
+                    b.Draw(texture, new Rectangle(x - 8, y + (int)((float)cornerSizeY * scale) + 8, (int)((float)cornerSizeX * scale), height - (int)((float)cornerSizeY * scale) * 2), new Rectangle(sourceRect.X, cornerSizeY + sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, SpriteEffects.None, shadow_layer);
+                    b.Draw(texture, new Rectangle(x + width - (int)((float)cornerSizeX * scale) - 8, y + (int)((float)cornerSizeY * scale) + 8, (int)((float)cornerSizeX * scale), height - (int)((float)cornerSizeY * scale) * 2), new Rectangle(sourceRect.X + cornerSizeX * 2, cornerSizeY + sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, SpriteEffects.None, shadow_layer);
+                    b.Draw(texture, new Rectangle((int)((float)cornerSizeX * scale / 2f) + x - 8, (int)((float)cornerSizeY * scale / 2f) + y + 8, width - (int)((float)cornerSizeX * scale), height - (int)((float)cornerSizeY * scale)), new Rectangle(cornerSizeX + sourceRect.X, cornerSizeY + sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, SpriteEffects.None, shadow_layer);
+                }
+                b.Draw(texture, new Rectangle((int)((float)cornerSizeX * scale) + x, (int)((float)cornerSizeY * scale) + y, width - (int)((float)cornerSizeX * scale * 2f), height - (int)((float)cornerSizeY * scale * 2f)), new Rectangle(cornerSizeX + sourceRect.X, cornerSizeY + sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, SpriteEffects.None, draw_layer);
+                b.Draw(texture, new Vector2(x, y), new Rectangle(sourceRect.X, sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, scale, SpriteEffects.None, draw_layer);
+                b.Draw(texture, new Vector2(x + width - (int)((float)cornerSizeX * scale), y), new Rectangle(sourceRect.X + cornerSizeX * 2, sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, scale, SpriteEffects.None, draw_layer);
+                b.Draw(texture, new Vector2(x, y + height - (int)((float)cornerSizeY * scale)), new Rectangle(sourceRect.X, cornerSizeY * 2 + sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, scale, SpriteEffects.None, draw_layer);
+                b.Draw(texture, new Vector2(x + width - (int)((float)cornerSizeX * scale), y + height - (int)((float)cornerSizeY * scale)), new Rectangle(sourceRect.X + cornerSizeX * 2, cornerSizeY * 2 + sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, scale, SpriteEffects.None, draw_layer);
+                b.Draw(texture, new Rectangle(x + (int)((float)cornerSizeX * scale), y, width - (int)((float)cornerSizeX * scale) * 2, (int)((float)cornerSizeY * scale)), new Rectangle(sourceRect.X + cornerSizeX, sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, SpriteEffects.None, draw_layer);
+                b.Draw(texture, new Rectangle(x + (int)((float)cornerSizeX * scale), y + height - (int)((float)cornerSizeY * scale), width - (int)((float)cornerSizeX * scale) * 2, (int)((float)cornerSizeY * scale)), new Rectangle(sourceRect.X + cornerSizeX, cornerSizeY * 2 + sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, SpriteEffects.None, draw_layer);
+                b.Draw(texture, new Rectangle(x, y + (int)((float)cornerSizeY * scale), (int)((float)cornerSizeX * scale), height - (int)((float)cornerSizeY * scale) * 2), new Rectangle(sourceRect.X, cornerSizeY + sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, SpriteEffects.None, draw_layer);
+                b.Draw(texture, new Rectangle(x + width - (int)((float)cornerSizeX * scale), y + (int)((float)cornerSizeY * scale), (int)((float)cornerSizeX * scale), height - (int)((float)cornerSizeY * scale) * 2), new Rectangle(sourceRect.X + cornerSizeX * 2, cornerSizeY + sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, SpriteEffects.None, draw_layer);
+                return false;
+            }
+
+            return true;
+        }
+    }
+
 }

@@ -30,13 +30,13 @@ namespace SwordAndSorcerySMAPI
             // Level 5
             BardicsSkill.ProfessionBuff = new GenericProfession(skill: this, id: "BuffSong", name: I18n.Bardics_Profession_Npcbuff, description: () => I18n.Bardics_Level_Song(I18n.Bardics_Song_Npcbuff_Name())+"\n" + I18n.Bardics_Song_Npcbuff_Description())
             {
-                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/icon.png")
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/CollegeOfEloquence.png")
             };
             this.Professions.Add(BardicsSkill.ProfessionBuff);
 
             BardicsSkill.ProfessionAttack = new GenericProfession(skill: this, id: "AttackSong", name: I18n.Bardics_Profession_Attack, description: () => I18n.Bardics_Level_Song(I18n.Bardics_Song_Attack_Name()) + "\n" + I18n.Bardics_Song_Attack_Description())
             {
-                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/icon.png")
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/CollegeOfValor.png")
             };
             this.Professions.Add(BardicsSkill.ProfessionAttack);
 
@@ -45,13 +45,13 @@ namespace SwordAndSorcerySMAPI
             // Level 10 - track A
             BardicsSkill.ProfessionBuffStrength = new GenericProfession(skill: this, id: "BuffSongStrength", name: I18n.Bardics_Profession_Npcbuff_Strength_Name, description: I18n.Bardics_Profession_Npcbuff_Strength_Description)
             {
-                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/icon.png")
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/AnimatedPerformance.png")
             };
             this.Professions.Add(BardicsSkill.ProfessionBuffStrength);
 
             BardicsSkill.ProfessionBuffDuration = new GenericProfession(skill: this, id: "BuffSondDuration", name: I18n.Bardics_Profession_Npcbuff_Duration_Name, description: I18n.Bardics_Profession_Npcbuff_Duration_Description)
             {
-                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/icon.png")
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/CreativeCrescendo.png")
             };
             this.Professions.Add(BardicsSkill.ProfessionBuffDuration);
 
@@ -60,13 +60,13 @@ namespace SwordAndSorcerySMAPI
             // Level 10 - track B
             BardicsSkill.ProfessionAttackDamage = new GenericProfession(skill: this, id: "AttackSongStrength", name: I18n.Bardics_Profession_Attack_Strength_Name, description: I18n.Bardics_Profession_Attack_Strength_Description)
             {
-                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/icon.png")
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/WordsOfTerror.png")
             };
             this.Professions.Add(BardicsSkill.ProfessionAttackDamage);
 
             BardicsSkill.ProfessionAttackRange = new GenericProfession(skill: this, id: "AttackSongRange", name: I18n.Bardics_Profession_Attack_Range_Name, description: I18n.Bardics_Profession_Attack_Range_Description)
             {
-                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/icon.png")
+                Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/WordsOfMajesty.png")
             };
             this.Professions.Add(BardicsSkill.ProfessionAttackRange);
 
