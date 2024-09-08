@@ -2220,7 +2220,7 @@ ________      ________ _   _ _______ _____
 
   // ITEM REJECTIONS 
   "Gifts.Hector.GiftReject.Bouquet": "Sorry, @. I'm not in a good place to date anyone right now. But I'm flattered.$4",
-  "Gifts.Hector.GiftReject.Battery": "What's this for, @? I don't have anything battery powered."
+  "Gifts.Hector.GiftReject.Battery": "What's this for, @? I don't have anything battery powered.",
 
   /*
   __  __  ______      _______ ______  _____ 
@@ -5020,6 +5020,25 @@ ________      ________ _   _ _______ _____
   "crop.ancientsweettealeaves.description": "An unusual tea plant that grows best in extreme conditions. It brews sweet enough that it's liked even by people who don't favor tea.",
   "crop.ancientsweettealeaves.seed.name": "Ancient Sweet Tea Bush Seeds",
   "crop.ancientsweettealeaves.seed.description": "Grown in Summer and Winter. Takes thirteen days, regrows in four.",
+
+  "forage.mushroom1.name": "Stygium-Tainted Fungus (Type A)",
+  "forage.mushroom2.name": "Stygium-Tainted Fungus (Type B)",
+  "forage.mushroom3.name": "Stygium-Tainted Fungus (Type C)",
+  "forage.mushroom4.name": "Stygium-Tainted Fungus (Type D)",
+  "forage.mushroom.description": "One of four types of mushroom native to the Deep Dark.",
+
+  "food.farafieldsnack.name": "Far Afield Snack",
+  "food.farafieldsnack.description": "Cooking the tainted food has made a surprisingly edible treat!",
+
+  "food.mushroomtreeseed.name": "Tainted Mushroom Tree Seed", 
+  "food.mushroomtreeseed.description": "Grows a Stygium mushroom tree.", 
+
+  "forage.taintedcrocus.name": "Stygium-Tainted Crocus",
+  "forage.taintedcrocus.description": "A naturally-occouring flower, tainted by nearby Stygium. ",
+  "forage.taintedcorn.name": "Stygium-Tainted Corn",
+  "forage.taintedcorn.description": "A naturally-occouring grain, tainted by nearby Stygium.",
+  "forage.taintedgrasses.name": "Stygium-Tainted Grasses",
+  "forage.taintedgrasses.description": "A naturally-occouring grass bundle, tainted by nearby Stygium. ",
 
   "magicitem.druidicessence.name": "Druidic Essence",
   "magicitem.druidicessence.description": "Nature's power, manifest. Used to breathe life into new things.",

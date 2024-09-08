@@ -1077,19 +1077,19 @@
         {
           "Operation": "Append",
           "Target": [ "Entries", "Set-Up_additionalCharacters" ],
-          "Value": "Aideen 80 60 3/Beatrice 47 50 2/Eloise 66 51 3/Eyvinder 15 48 2/Jacob 62 63 3/ToriLK 68 34 0/Rosa 86 13 1/Juliet 87 13 3/Jessie 39 48 2/Jasper 87 32 0",
+          "Value": "Aideen 80 60 3/Beatrice 47 50 2/Eloise 66 48 3/Eyvinder 15 48 2/Jacob 62 63 3/ToriLK 68 34 0/Rosa 86 13 1/Juliet 87 13 3/Jessie 39 48 2/Jasper 87 32 0",
           "Delimiter": "/"
         },
         /*{
           "Operation": "Append",
           "Target": [ "Entries", "MainEvent_additionalCharacters" ],
-          "Value": "Aideen 80 60 3/Beatrice 47 50 2/Eloise 66 51 3/Eyvinder 15 48 2/Jacob 62 63 3/ToriLK 68 34 0/Rosa 86 13 1/Juliet 87 13 3/Jessie 39 48 2/Jasper 87 32 0",
+          "Value": "Aideen 80 60 3/Beatrice 47 50 2/Eloise 66 48 3/Eyvinder 15 48 2/Jacob 62 63 3/ToriLK 68 34 0/Rosa 86 13 1/Juliet 87 13 3/Jessie 39 48 2/Jasper 87 32 0",
           "Delimiter": "/"
         },*/
         {
           "Operation": "Append",
           "Target": [ "Fields", "set-up", 5 ],
-          "Value": "changeSprite Juliet Juliet_FortuneTeller/changePortrait Juliet Juliet_FortuneTeller"
+          "Value": ""
         }
       ]
     },

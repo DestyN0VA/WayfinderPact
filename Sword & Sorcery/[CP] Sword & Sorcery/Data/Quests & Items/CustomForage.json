@@ -1,0 +1,550 @@
+{
+  "Changes": [
+    // MUSHROOMS
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_mushroom1": {
+          "Name": "Stygium-Tainted Fungus (Type A)",
+          "DisplayName": "{{i18n: forage.mushroom1.name}}",
+          "Description": "{{i18n: forage.mushroom.description}}",
+          "Type": "Forage",
+          "Category": -81,
+          "Price": 200,
+          "Edibility": -200,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{CountForShipping}}",
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 110,
+          "ContextTags": [
+            "color_dark_blue",
+            "category_forage",
+            "seedmaker_banned"
+          ],
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_mushroom2": {
+          "Name": "Stygium-Tainted Fungus (Type B)",
+          "DisplayName": "{{i18n: forage.mushroom2.name}}",
+          "Description": "{{i18n: forage.mushroom.description}}",
+          "Type": "Forage",
+          "Category": -81,
+          "Price": 200,
+          "Edibility": -200,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{CountForShipping}}",
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 111,
+          "ContextTags": [
+            "color_dark_blue",
+            "category_forage",
+            "seedmaker_banned"
+          ],
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_mushroom3": {
+          "Name": "Stygium-Tainted Fungus (Type C)",
+          "DisplayName": "{{i18n: forage.mushroom3.name}}",
+          "Description": "{{i18n: forage.mushroom.description}}",
+          "Type": "Forage",
+          "Category": -81,
+          "Price": 200,
+          "Edibility": -200,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{CountForShipping}}",
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 112,
+          "ContextTags": [
+            "color_dark_blue",
+            "category_forage",
+            "seedmaker_banned"
+          ],
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_mushroom4": {
+          "Name": "Stygium-Tainted Fungus (Type D)",
+          "DisplayName": "{{i18n: forage.mushroom4.name}}",
+          "Description": "{{i18n: forage.mushroom.description}}",
+          "Type": "Forage",
+          "Category": -81,
+          "Price": 200,
+          "Edibility": -200,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{CountForShipping}}",
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 113,
+          "ContextTags": [
+            "color_dark_blue",
+            "category_forage",
+            "seedmaker_banned"
+          ],
+        }
+      }
+    },
+    // FORAGE 
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_taintedcrocus": {
+          "Name": "Stygium-Tainted Crocus",
+          "DisplayName": "{{i18n: forage.taintedcrocus.name}}",
+          "Description": "{{i18n: forage.taintedcrocus.description}}",
+          "Type": "Forage",
+          "Category": -81,
+          "Price": 200,
+          "Edibility": 15,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{CountForShipping}}",
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 115,
+          "ContextTags": [
+            "color_dark_blue",
+            "category_forage",
+            "seedmaker_banned"
+          ],
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_taintedcorn": {
+          "Name": "Stygium-Tainted Corn",
+          "DisplayName": "{{i18n: forage.taintedcorn.name}}",
+          "Description": "{{i18n: forage.taintedcorn.description}}",
+          "Type": "Forage",
+          "Category": -81,
+          "Price": 200,
+          "Edibility": 15,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{CountForShipping}}",
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 117,
+          "ContextTags": [
+            "color_dark_blue",
+            "category_forage",
+            "seedmaker_banned"
+          ],
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_taintedgrasses": {
+          "Name": "Stygium-Tainted Grasses",
+          "DisplayName": "{{i18n: forage.taintedgrasses.name}}",
+          "Description": "{{i18n: forage.taintedgrasses.description}}",
+          "Type": "Forage",
+          "Category": -81,
+          "Price": 200,
+          "Edibility": 15,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{CountForShipping}}",
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 116,
+          "ContextTags": [
+            "color_dark_blue",
+            "category_forage",
+            "seedmaker_banned"
+          ],
+        }
+      }
+    },
+    // CRAFTING RECIPES
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_farafieldsnack": {
+          "Name": "{{ModID}}_farafieldsnack",
+          "DisplayName": "{{i18n: food.farafieldsnack.name}}",
+          "Description": "{{i18n: food.farafieldsnack.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 150,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 1,
+                "MagneticRadius": 0,
+                "Speed": 1,
+                "Defense": 1,
+                "Attack": 1
+              }
+            }
+          ],
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 118
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_mushroomtreeseed": {
+          "Name": "{{ModID}}_mushroomtreeseed",
+          "DisplayName": "{{i18n: food.mushroomtreeseed.name}}",
+          "Description": "{{i18n: food.mushroomtreeseed.description}}",
+          "Type": "Crafting",
+          "Category": -74,
+          "Price": 100,
+          "Edibility": 250,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 114
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "{{ModID}}_farafieldsnack": "{{ModID}}_taintedcrocus 1 {{ModID}}_taintedcorn 1 {{ModID}}_taintedgrasses 1/what is this for?/{{ModID}}_farafieldsnack 1/false/{{i18n:food.farafieldsnack.name}}",
+        "{{ModID}}_mushroomtreeseed": "{{ModID}}_mushroom1 3 {{ModID}}_mushroom2 3 {{ModID}}_mushroom3 3 {{ModID}}_mushroom4 3/what is this for?/{{ModID}}_mushroomtreeseed 1/false/{{i18n:food.mushroomtreeseed.name}}",
+      }
+    },
+    {
+    "Action": "EditData",
+    "Target": "Data/WildTrees",
+    "Entries": {
+    "{{ModID}}_stygiummushroomtree": {
+      "Textures": [
+        {
+          "Condition": null,
+          "Season": null,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSMushroomTree.png}}"
+        }
+      ],
+      "SeedItemId": "(O){{ModID}}_mushroomtreeseed",
+      "SeedPlantable": true,
+      "GrowthChance": 0.2,
+      "FertilizedGrowthChance": 1.0,
+      "SeedSpreadChance": 0.15,
+      "SeedOnShakeChance": 0.0,
+      "SeedOnChopChance": 0.0,
+      "DropWoodOnChop": false,
+      "DropHardwoodOnLumberChop": false,
+      "IsLeafy": false,
+      "IsLeafyInWinter": false,
+      "IsLeafyInFall": true,
+      "PlantableLocationRules": null,
+      "GrowsInWinter": false,
+      "IsStumpDuringWinter": true,
+      "AllowWoodpeckers": true,
+      "UseAlternateSpriteWhenNotShaken": false,
+      "UseAlternateSpriteWhenSeedReady": false,
+      "DebrisColor": "White",
+      "SeedDropItems": null,
+      "ChopItems": [
+        {
+          "MinSize": 3,
+          "MaxSize": 3,
+          "ForStump": false,
+          "Season": null,
+          "Chance": 1.0,
+          "Condition": null,
+          "Id": "FromTaintedMushroom",
+          "ItemId": "(O)420",
+          "RandomItemId": null,
+          "MaxItems": null,
+          "MinStack": 1,
+          "MaxStack": -1,
+          "Quality": -1,
+          "ObjectInternalName": null,
+          "ObjectDisplayName": null,
+          "ToolUpgradeLevel": -1,
+          "IsRecipe": false,
+          "StackModifiers": null,
+          "StackModifierMode": 0,
+          "QualityModifiers": null,
+          "QualityModifierMode": 0,
+          "ModData": null,
+          "PerItemCondition": null
+        },
+        {
+          "MinSize": 5,
+          "MaxSize": null,
+          "ForStump": false,
+          "Season": null,
+          "Chance": 1.0,
+          "Condition": null,
+          "Id": "FromTaintedMushroom",
+          "ItemId": "(O)420",
+          "RandomItemId": null,
+          "MaxItems": null,
+          "MinStack": 5,
+          "MaxStack": -1,
+          "Quality": -1,
+          "ObjectInternalName": null,
+          "ObjectDisplayName": null,
+          "ToolUpgradeLevel": -1,
+          "IsRecipe": false,
+          "StackModifiers": null,
+          "StackModifierMode": 0,
+          "QualityModifiers": null,
+          "QualityModifierMode": 0,
+          "ModData": null,
+          "PerItemCondition": null
+        },
+        {
+          "MinSize": 5,
+          "MaxSize": null,
+          "ForStump": false,
+          "Season": null,
+          "Chance": 0.01,
+          "Condition": null,
+          "Id": "FromTaintedMushroom",
+          "ItemId": "(H)42",
+          "RandomItemId": null,
+          "MaxItems": null,
+          "MinStack": 1,
+          "MaxStack": -1,
+          "Quality": -1,
+          "ObjectInternalName": null,
+          "ObjectDisplayName": null,
+          "ToolUpgradeLevel": -1,
+          "IsRecipe": false,
+          "StackModifiers": null,
+          "StackModifierMode": 0,
+          "QualityModifiers": null,
+          "QualityModifierMode": 0,
+          "ModData": null,
+          "PerItemCondition": null
+        },
+        {
+          "MinSize": null,
+          "MaxSize": null,
+          "ForStump": true,
+          "Season": null,
+          "Chance": 1.0,
+          "Condition": null,
+          "Id": "FromTaintedMushroom",
+          "ItemId": "(O)420",
+          "RandomItemId": null,
+          "MaxItems": null,
+          "MinStack": 1,
+          "MaxStack": -1,
+          "Quality": -1,
+          "ObjectInternalName": null,
+          "ObjectDisplayName": null,
+          "ToolUpgradeLevel": -1,
+          "IsRecipe": false,
+          "StackModifiers": null,
+          "StackModifierMode": 0,
+          "QualityModifiers": null,
+          "QualityModifierMode": 0,
+          "ModData": null,
+          "PerItemCondition": null
+        }
+      ],
+      "TapItems": [
+        {
+          "PreviousItemId": [
+            ""
+          ],
+          "DaysUntilReady": 1,
+          "DaysUntilReadyModifiers": null,
+          "DaysUntilReadyModifierMode": 0,
+          "Season": 2,
+          "Chance": 1.0,
+          "Condition": null,
+          "Id": "FromTaintedMushroom",
+          "ItemId": "(O)420",
+          "RandomItemId": null,
+          "MaxItems": null,
+          "MinStack": 1,
+          "MaxStack": -1,
+          "Quality": -1,
+          "ObjectInternalName": null,
+          "ObjectDisplayName": null,
+          "ToolUpgradeLevel": -1,
+          "IsRecipe": false,
+          "StackModifiers": null,
+          "StackModifierMode": 0,
+          "QualityModifiers": null,
+          "QualityModifierMode": 0,
+          "ModData": null,
+          "PerItemCondition": null
+        },
+        {
+          "PreviousItemId": [
+            ""
+          ],
+          "DaysUntilReady": 2,
+          "DaysUntilReadyModifiers": null,
+          "DaysUntilReadyModifierMode": 0,
+          "Season": null,
+          "Chance": 1.0,
+          "Condition": "!LOCATION_SEASON Target Winter",
+          "Id": "FromTaintedMushroom",
+          "ItemId": "(O)404",
+          "RandomItemId": null,
+          "MaxItems": null,
+          "MinStack": 1,
+          "MaxStack": -1,
+          "Quality": -1,
+          "ObjectInternalName": null,
+          "ObjectDisplayName": null,
+          "ToolUpgradeLevel": -1,
+          "IsRecipe": false,
+          "StackModifiers": null,
+          "StackModifierMode": 0,
+          "QualityModifiers": null,
+          "QualityModifierMode": 0,
+          "ModData": null,
+          "PerItemCondition": null
+        },
+        {
+          "PreviousItemId": [
+            "(O)422"
+          ],
+          "DaysUntilReady": 1,
+          "DaysUntilReadyModifiers": null,
+          "DaysUntilReadyModifierMode": 0,
+          "Season": null,
+          "Chance": 1.0,
+          "Condition": "!LOCATION_SEASON Target Winter",
+          "Id": "FromTaintedMushroom",
+          "ItemId": "(O)420",
+          "RandomItemId": null,
+          "MaxItems": null,
+          "MinStack": 1,
+          "MaxStack": -1,
+          "Quality": -1,
+          "ObjectInternalName": null,
+          "ObjectDisplayName": null,
+          "ToolUpgradeLevel": -1,
+          "IsRecipe": false,
+          "StackModifiers": null,
+          "StackModifierMode": 0,
+          "QualityModifiers": null,
+          "QualityModifierMode": 0,
+          "ModData": null,
+          "PerItemCondition": null
+        },
+        {
+          "PreviousItemId": null,
+          "DaysUntilReady": 2,
+          "DaysUntilReadyModifiers": [
+            {
+              "Id": "Fall",
+              "Condition": "LOCATION_SEASON Target Fall",
+              "Modification": 4,
+              "Amount": 1.0,
+              "RandomAmount": null
+            }
+          ],
+          "DaysUntilReadyModifierMode": 0,
+          "Season": null,
+          "Chance": 1.0,
+          "Condition": "!LOCATION_SEASON Target Winter, DAY_OF_MONTH 10 20",
+          "Id": "FromTaintedMushroom",
+          "ItemId": "(O)422",
+          "RandomItemId": null,
+          "MaxItems": null,
+          "MinStack": 1,
+          "MaxStack": -1,
+          "Quality": -1,
+          "ObjectInternalName": null,
+          "ObjectDisplayName": null,
+          "ToolUpgradeLevel": -1,
+          "IsRecipe": false,
+          "StackModifiers": null,
+          "StackModifierMode": 0,
+          "QualityModifiers": null,
+          "QualityModifierMode": 0,
+          "ModData": null,
+          "PerItemCondition": null
+        },
+        {
+          "PreviousItemId": null,
+          "DaysUntilReady": 1,
+          "DaysUntilReadyModifiers": null,
+          "DaysUntilReadyModifierMode": 0,
+          "Season": 2,
+          "Chance": 1.0,
+          "Condition": null,
+          "Id": "FromTaintedMushroom",
+          "ItemId": "PREVIOUS_OUTPUT_ID",
+          "RandomItemId": null,
+          "MaxItems": null,
+          "MinStack": 1,
+          "MaxStack": -1,
+          "Quality": -1,
+          "ObjectInternalName": null,
+          "ObjectDisplayName": null,
+          "ToolUpgradeLevel": -1,
+          "IsRecipe": false,
+          "StackModifiers": null,
+          "StackModifierMode": 0,
+          "QualityModifiers": null,
+          "QualityModifierMode": 0,
+          "ModData": null,
+          "PerItemCondition": null
+        },
+        {
+          "PreviousItemId": null,
+          "DaysUntilReady": 2,
+          "DaysUntilReadyModifiers": null,
+          "DaysUntilReadyModifierMode": 0,
+          "Season": null,
+          "Chance": 1.0,
+          "Condition": "!LOCATION_SEASON Target winter",
+          "Id": "FromTaintedMushroom",
+          "ItemId": "(O)404",
+          "RandomItemId": null,
+          "MaxItems": null,
+          "MinStack": 1,
+          "MaxStack": -1,
+          "Quality": -1,
+          "ObjectInternalName": null,
+          "ObjectDisplayName": null,
+          "ToolUpgradeLevel": -1,
+          "IsRecipe": false,
+          "StackModifiers": null,
+          "StackModifierMode": 0,
+          "QualityModifiers": null,
+          "QualityModifierMode": 0,
+          "ModData": null,
+          "PerItemCondition": null
+        }
+      ],
+      "ShakeItems": null,
+      "CustomFields": null,
+      "GrowsMoss": false
+    },
+  }
+},
+  ]
+}
