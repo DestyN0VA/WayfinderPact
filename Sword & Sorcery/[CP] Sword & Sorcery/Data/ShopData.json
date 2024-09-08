@@ -395,7 +395,7 @@
                 "(O)348",
                 "(O)346",
                 "(O)459",
-                "(O)303"
+                "(O)303",
               ]
             },
             {
@@ -661,7 +661,14 @@
                 "(O)459",
                 "(O)303"
               ]
-            }
+            },
+            {
+              "Id": "Far Afield Snack Recipe",
+              "ItemId": "{{ModID}}_farafieldsnack", 
+              "Price": 1000,
+              "IsRecipe": true,
+              "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Roslin.6"
+            },
           ]
         }
       }
@@ -839,7 +846,14 @@
               "AvailableStockLimit": "Player",
               "ItemID": "(W)DN.SnS_guardianbell",
               "Price": 15000
-            }
+            },
+            {
+              "Id": "Stygium Mushroom Tree Seed",
+              "ItemId": "{{ModID}}_mushroomtreeseed", 
+              "Price": 1000,
+              "IsRecipe": true,
+              "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Roslin.6"
+            },
           ]
         }
       }
