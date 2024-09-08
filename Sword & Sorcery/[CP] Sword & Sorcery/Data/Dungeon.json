@@ -70,6 +70,18 @@
                       "use_reverse_name_for_sorting"
                     ],
                 },
+                "{{ModID}}_DuskspireHeart": {
+                    "Name": "Duskspire Heart",
+                    "DisplayName": "{{i18n: object.duskspire-heart.name}}",
+                    "Description": "{{i18n: object.duskspire-heart.description}}",
+                    "Type": "Basic",
+                    "Category": -28,
+                    "Price": 2500,
+                    "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+                    "SpriteIndex": 109,
+                    "ExcludeFromRandomSale": true,
+                    "ExcludeFromPerfection": true,
+                },
             }
         },
         {
@@ -581,6 +593,149 @@
                     "IconSpriteIndex": 26,
                     "CustomFields": { "spacechase0.SpaceCore/HealthRegeneration": -2 },
                 }
+            }
+        },
+        {
+            "LogName": "Stygium and Blessed Tools",
+            "Action": "EditData",
+            "Target": "Data/Tools",
+            "Entries": {
+                "{{ModID}}_StygiumHoe": {
+                    "ClassName": "Hoe",
+                    "Name": "Stygium Hoe",
+                    "SalePrice": 35000,
+                    "DisplayName": "{{i18n: tool.stygium-hoe.name}}",
+                    "Description": "{{i18n: tool.stygium-hoe.description}}",
+                    "Texture": "{{InternalAssetKey: assets/Items & Crops/StygiumTools.png}}",
+                    "SpriteIndex": 6,
+                    "MenuSpriteIndex": 17,
+                    "UpgradeLevel": 5,
+                    "UpgradeFrom": {
+                        "RequireToolId": "(T)IridiumHoe",
+                        "Price": 35000,
+                        "TradeItemId": "(O){{ModID}}_StygiumBar",
+                        "TradeItemAmount": 5
+                    }
+                },
+                "{{ModID}}_StygiumPickaxe": {
+                    "ClassName": "Pickaxe",
+                    "Name": "Stygium Pickaxe",
+                    "SalePrice": 35000,
+                    "DisplayName": "{{i18n: tool.stygium-pickaxe.name}}",
+                    "Description": "{{i18n: tool.stygium-pickaxe.description}}",
+                    "Texture": "{{InternalAssetKey: assets/Items & Crops/StygiumTools.png}}",
+                    "SpriteIndex": 18,
+                    "MenuSpriteIndex": 29,
+                    "UpgradeLevel": 5,
+                    "UpgradeFrom": {
+                        "RequireToolId": "(T)IridiumPickaxe",
+                        "Price": 35000,
+                        "TradeItemId": "(O){{ModID}}_StygiumBar",
+                        "TradeItemAmount": 5
+                    }
+                },
+                "{{ModID}}_StygiumAxe": {
+                    "ClassName": "Axe",
+                    "Name": "Stygium Axe",
+                    "SalePrice": 35000,
+                    "DisplayName": "{{i18n: tool.stygium-axe.name}}",
+                    "Description": "{{i18n: tool.stygium-axe.description}}",
+                    "Texture": "{{InternalAssetKey: assets/Items & Crops/StygiumTools.png}}",
+                    "SpriteIndex": 30,
+                    "MenuSpriteIndex": 41,
+                    "UpgradeLevel": 5,
+                    "UpgradeFrom": {
+                        "RequireToolId": "(T)IridiumAxe",
+                        "Price": 35000,
+                        "TradeItemId": "(O){{ModID}}_StygiumBar",
+                        "TradeItemAmount": 5
+                    }
+                },
+                "{{ModID}}_StygiumWateringCan": {
+                    "ClassName": "WateringCan",
+                    "Name": "Stygium Watering Can",
+                    "SalePrice": 35000,
+                    "DisplayName": "{{i18n: tool.stygium-watering-can.name}}",
+                    "Description": "{{i18n: tool.stygium-watering-can.description}}",
+                    "Texture": "{{InternalAssetKey: assets/Items & Crops/StygiumTools.png}}",
+                    "SpriteIndex": 42,
+                    "MenuSpriteIndex": 50,
+                    "UpgradeLevel": 5,
+                    "UpgradeFrom": {
+                        "RequireToolId": "(T)IridiumWateringCan",
+                        "Price": 35000,
+                        "TradeItemId": "(O){{ModID}}_StygiumBar",
+                        "TradeItemAmount": 5
+                    }
+                },
+                "{{ModID}}_BlessedHoe": {
+                    "ClassName": "Hoe",
+                    "Name": "Blessed Hoe",
+                    "SalePrice": 50000,
+                    "DisplayName": "{{i18n: tool.blessed-hoe.name}}",
+                    "Description": "{{i18n: tool.blessed-hoe.description}}",
+                    "Texture": "{{InternalAssetKey: assets/Items & Crops/BlessedTools.png}}",
+                    "SpriteIndex": 6,
+                    "MenuSpriteIndex": 17,
+                    "UpgradeLevel": 6,
+                    "UpgradeFrom": {
+                        "RequireToolId": "(T){{ModID}}_StygiumHoe",
+                        "Price": 50000,
+                        "TradeItemId": "(O){{ModID}}_DuskspireHeart",
+                        "TradeItemAmount": 1
+                    }
+                },
+                "{{ModID}}_BlessedPickaxe": {
+                    "ClassName": "Pickaxe",
+                    "Name": "Blessed Pickaxe",
+                    "SalePrice": 50000,
+                    "DisplayName": "{{i18n: tool.blessed-pickaxe.name}}",
+                    "Description": "{{i18n: tool.blessed-pickaxe.description}}",
+                    "Texture": "{{InternalAssetKey: assets/Items & Crops/BlessedTools.png}}",
+                    "SpriteIndex": 18,
+                    "MenuSpriteIndex": 29,
+                    "UpgradeLevel": 6,
+                    "UpgradeFrom": {
+                        "RequireToolId": "(T){{ModID}}_StygiumPickaxe",
+                        "Price": 50000,
+                        "TradeItemId": "(O){{ModID}}_DuskspireHeart",
+                        "TradeItemAmount": 1
+                    }
+                },
+                "{{ModID}}_BlessedAxe": {
+                    "ClassName": "Axe",
+                    "Name": "Blessed Axe",
+                    "SalePrice": 50000,
+                    "DisplayName": "{{i18n: tool.blessed-axe.name}}",
+                    "Description": "{{i18n: tool.blessed-axe.description}}",
+                    "Texture": "{{InternalAssetKey: assets/Items & Crops/BlessedTools.png}}",
+                    "SpriteIndex": 30,
+                    "MenuSpriteIndex": 41,
+                    "UpgradeLevel": 6,
+                    "UpgradeFrom": {
+                        "RequireToolId": "(T){{ModID}}_StygiumAxe",
+                        "Price": 50000,
+                        "TradeItemId": "(O){{ModID}}_DuskspireHeart",
+                        "TradeItemAmount": 1
+                    }
+                },
+                "{{ModID}}_BlessedWateringCan": {
+                    "ClassName": "WateringCan",
+                    "Name": "Blessed Watering Can",
+                    "SalePrice": 50000,
+                    "DisplayName": "{{i18n: tool.blessed-watering-can.name}}",
+                    "Description": "{{i18n: tool.blessed-watering-can.description}}",
+                    "Texture": "{{InternalAssetKey: assets/Items & Crops/BlessedTools.png}}",
+                    "SpriteIndex": 42,
+                    "MenuSpriteIndex": 50,
+                    "UpgradeLevel": 6,
+                    "UpgradeFrom": {
+                        "RequireToolId": "(T){{ModID}}_StygiumWateringCan",
+                        "Price": 50000,
+                        "TradeItemId": "(O){{ModID}}_DuskspireHeart",
+                        "TradeItemAmount": 1
+                    }
+                },
             }
         }
     ]

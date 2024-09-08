@@ -2220,7 +2220,7 @@ ________      ________ _   _ _______ _____
 
   // ITEM REJECTIONS 
   "Gifts.Hector.GiftReject.Bouquet": "Sorry, @. I'm not in a good place to date anyone right now. But I'm flattered.$4",
-  "Gifts.Hector.GiftReject.Battery": "What's this for, @? I don't have anything battery powered."
+  "Gifts.Hector.GiftReject.Battery": "What's this for, @? I don't have anything battery powered.",
 
   /*
   __  __  ______      _______ ______  _____ 
@@ -5347,6 +5347,38 @@ ________      ________ _   _ _______ _____
   "object.stygium-bar.name": "Stygium Bar",
   "object.stygium-bar.description": "Metal infused with void energy. Hurts to hold.",
   "buff.stygium-poisoning": "Stygium Poisoning",
+  "tool.stygium-hoe.name": "Stygium Hoe",
+  "tool.stygium-hoe.description": "[LocalizedText Strings\\StringsFromCSFiles:Hoe.cs.14102]^Hurts to hold.",
+  "tool.stygium-pickaxe.name": "Stygium Pickaxe",
+  "tool.stygium-pickaxe.description": "[LocalizedText Strings\\StringsFromCSFiles:Pickaxe.cs.14185]^Hurts to hold.",
+  "tool.stygium-axe.name": "Stygium Axe",
+  "tool.stygium-axe.description": "[LocalizedText Strings\\StringsFromCSFiles:Axe.cs.14019]^Hurts to hold.",
+  "tool.stygium-watering-can.name": "Stygium Watering Can",
+  "tool.stygium-watering-can.description": "[LocalizedText Strings\\StringsFromCSFiles:WateringCan.cs.14325]^Hurts to hold.",
+  "tool.blessed-hoe.name": "Blessed Hoe",
+  "tool.blessed-hoe.description": "[LocalizedText Strings\\StringsFromCSFiles:Hoe.cs.14102]",
+  "tool.blessed-pickaxe.name": "Blessed Pickaxe",
+  "tool.blessed-pickaxe.description": "[LocalizedText Strings\\StringsFromCSFiles:Pickaxe.cs.14185]",
+  "tool.blessed-axe.name": "Blessed Axe",
+  "tool.blessed-axe.description": "[LocalizedText Strings\\StringsFromCSFiles:Axe.cs.14019]",
+  "tool.blessed-watering-can.name": "Blessed Watering Can",
+  "tool.blessed-watering-can.description": "[LocalizedText Strings\\StringsFromCSFiles:WateringCan.cs.14325]",
+  "weapon.paladin-shield.name": "Paladin Shield",
+  "weapon.paladin-shield.description": "A shield from Dandelion the paladin.",
+  "weapon.artificer-shield.name": "Artificer Shield",
+  "weapon.artificer-shield.description": "A shield from Dandelion the paladin, modified with artificer powers.",
+  "weapon.druid-shield.name": "Druidic Shield",
+  "weapon.druid-shield.description": "A shield from Dandelion the paladin, modified with druidic powers.",
+  "weapon.bard-shield.name": "Bardic Shield",
+  "weapon.bard-shield.description": "A shield from Dandelion the paladin, modified with bardic powers.",
+  "weapon.sorcerer-shield.name": "Sorcerer Shield",
+  "weapon.sorcerer-shield.description": "A shield from Dandelion the paladin, modified with sorcerer powers.",
+  "weapon.steel-shield.name":"Steel Shield",
+  "weapon.steel-shield.description":"A basic steel shield.",
+  "weapon.lltk-shield.name": "Long Live The King (Shield)",
+  "weapon.lltk-shield.description": "A shield previously wielded by Linden Hawthorn, the Prairie King. Just holding it makes you feel like you've got big shoes to fill.",
+  "object.duskspire-heart.name": "Duskspire Heart",
+  "object.duskspire-heart.description": "The only untainted part of the Duskspire Behemoth... perhaps it's resilient to corruption!",
 
   "witchcraft.earth-essence.name": "Earth Essence",
   "witchcraft.earth-essence.description": "Essence of the earth.",
