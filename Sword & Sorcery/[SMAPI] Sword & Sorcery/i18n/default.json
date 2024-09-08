@@ -21,6 +21,16 @@
 
   "cancel": "Cancel",
 
+  "ability.lltk-toggle.name": "LLTK Form Swap",
+  "ability.lltk-toggle.description": "Swaps the LLTK between sword and gun form.",
+
+  "config.section.lltk": "Long Live the King Config",
+  "config.section.lltk.text": "This is how you toggle the Long Live the King between sword form and gun form. There is also an ability in the Adventure Bar once you have it unlocked.",
+  "config.lltk-toggle-right-click.name": "LLTK Swap on Right click",
+  "config.lltk-toggle-right-click.description": "Swap forms of the LLTK on right click while holding it.",
+  "config.lltk-toggle-keybind.name": "LLTK Toggle Keybind",
+  "config.lltk-toggle-keybind.description": "A keybind for swapping the LLTK form if held.",
+
   "section.Aether-Bar.Name": "Aether Bar",
   "section.Aether-Bar.Description": "Settings relating to the Aether Bar.",
   "int.Red.Name": "Aether Bar Red",
