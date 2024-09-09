@@ -719,7 +719,7 @@
     ],
       "When": {
         "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true,
-        "HasSeenEvent |contains=SnS.Ch5.Mateo.1": true
+        "HasSeenEvent |contains=SnS.Ch5.Mateo": true
       }
     },
   ]
