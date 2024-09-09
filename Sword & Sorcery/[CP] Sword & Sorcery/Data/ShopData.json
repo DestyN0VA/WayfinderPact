@@ -854,6 +854,21 @@
               "IsRecipe": true,
               "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Roslin.6"
             },
+            {
+              "Id": "Stygium Blade",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "ItemId": "(W){{ModID}}_StygiumBlade", 
+              "Price": 100000,
+              "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Roslin.6"
+            },
+            {
+              "Id": "Elysium Blade",
+              "ItemId": "{{ModID}}_ElysiumBlade", 
+              "Price": 10000,
+              "IsRecipe": true,
+              "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Roslin.6, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModID}}_ElysiumBlade"
+            },
           ]
         }
       }

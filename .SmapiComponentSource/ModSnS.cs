@@ -1416,4 +1416,20 @@ namespace SwordAndSorcerySMAPI
         }
     }
 
+    [HarmonyPatch(typeof(Item), nameof(Item.actionWhenPurchased))]
+    public static class PurchaseElysiumBladeRecipeFix
+    {
+        public static void Postfix(Item __instance, ref bool __result)
+        {
+            if (__instance.QualifiedItemId == "(W)DN.SnS_ElysiumBlade" && __instance.IsRecipe)
+            {
+                if (Game1.activeClickableMenu is ShopMenu shop && shop.heldItem != null)
+                {
+                    ( shop.heldItem as MeleeWeapon ).Name = "DN.SnS_ElysiumBlade Recipe";
+                }
+                __result = true;
+            }
+        }
+    }
+
 }

@@ -23,6 +23,27 @@
             }
         },
         {
+            "LogName": "Deep Dark Chest",
+            "Action": "EditData",
+            "Target": "Data/BigCraftables",
+            "Entries": {
+                "{{ModID}}_DeepDarkChest": {
+                    "Name": "Deep Dark Chest",
+                    "DisplayName": "{{i18n: deep-dark-chest.name}}",
+                    "Description": "{{i18n: deep-dark-chest.description}}",
+                    "Price": 0,
+                    "Fragility": 0,
+                    "CanBePlacedOutdoors": true,
+                    "CanBePlacedIndoors": true,
+                    "IsLamp": false,
+                    "Texture": "{{InternalAssetKey: assets/Items & Crops/DeepDark_Treasure.png}}",
+                    "SpriteIndex": 0,
+                    "ContextTags": null,
+                    "CustomFields": null
+                },
+            }
+        },
+        {
             "LogName": "Deep Dark Stones/Items",
             "Action": "EditData",
             "Target": "Data/Objects",
@@ -137,19 +158,19 @@
             "Target": "Data/Monsters",
             "Entries": {
                 // "health/damage/_/_/_/_/drops/defense/_/_/speed/_/_/exp/name"
-                "Stygium Crab": "1100/20/0/0/false/0/732 .5 386 .5 386 .5 386 .5/5/0/1/4/.0/true/30/Stygium Crab",
-                "Stygium Skeleton": "1300/20/1/3/false/0/769 .25 105 .03 106 .03 166 .001 60 .04 232 .04 72 .03 74 .01 97 .005 99 .001/3/0/5/3/.0/true/25/Stygium Skeleton",
-                "Stygium Party Skeleton": "5000/35/1/3/false/0/769 .25 105 .03 106 .03 166 .001 60 .04 232 .04 72 .03 74 .01 97 .005 99 .001/10/0/5/3/.0/true/150/Stygium Party Skeleton",
-                "Stygium Rex": "1700/25/0/0/false/1000/80 0/8/.01/3/3/.0/true/12/Iridium Rex",
-                "Stygium Golem": "1000/15/0/0/false/1000/771 .9 771 .5 770 .5 382 .1 86 .005 72 .001/3/.01/3/3/.00/true/10/Stygium Golem",
-                "Stygium Golem (Blue)": "1000/15/0/0/false/1000/771 .9 771 .5 770 .5 382 .1 86 .005 72 .001/3/.01/3/3/.00/true/10/Stygium Golem (Blue)",
-                "Stygium Bat": "1300/35/0/0/true/1000/386 .9 386 .5 386 .25 386 .1 288 .05 768 .5 773 .05 349 .05 787 .05 337 .008/3/.01/4/4/.00/true/30/Stygium Bat",
-                "Stygium Miner": "1400/30/1/3/false/0/769 .25 105 .03 106 .03 166 .001 60 .04 232 .04 72 .03 74 .01 97 .005 99 .001/3/0/5/3/.0/true/25/Stygium Miner",
-                "Stygium Head": "1000/25/0/0/false/2000/768 .65 378 .1 378 .1 380 .1 380 .1 382 .1 98 .005 99 .001/20/.01/8/3/.0/true/15/Stygium Head",
-                "Stygium Skull": "1600/40/0/0/true/1000/386 .9 386 .5 386 .25 386 .1 288 .05 768 .5 773 .05 349 .05 787 .05 337 .008/5/.01/4/5/.00/true/30/Stygium Skull",
-                "Stygium False Mushroom": "1250/25/0/0/false/0/851 .99 848 .5 848 .2/6/0/1/4/.0/true/20/Stygium False Mushroom",
-                "Stygium Miner Mage": "1000/10/0/2/false/2000/80 0/2/.01/8/3/.0/true/15/Stygium Miner Mage",
-                "Stygium Serpent": "900/33/0/2/true/1000/769 .99 769 .15 287 .15 226 .06 446 .008 74 .001/0/.01/13/3/.0/true/30/Stygium Serpent",
+                "Stygium Crab": "2750/20/0/0/false/0/732 .5 386 .5 386 .5 386 .5/5/0/1/4/.0/true/30/Stygium Crab",
+                "Stygium Skeleton": "3250/20/1/3/false/0/769 .25 105 .03 106 .03 166 .001 60 .04 232 .04 72 .03 74 .01 97 .005 99 .001/3/0/5/3/.0/true/25/Stygium Skeleton",
+                "Stygium Party Skeleton": "12500/35/1/3/false/0/769 .25 105 .03 106 .03 166 .001 60 .04 232 .04 72 .03 74 .01 97 .005 99 .001/10/0/5/3/.0/true/150/Stygium Party Skeleton",
+                "Stygium Rex": "4250/25/0/0/false/1000/80 0/8/.01/3/3/.0/true/12/Iridium Rex",
+                "Stygium Golem": "2500/15/0/0/false/1000/771 .9 771 .5 770 .5 382 .1 86 .005 72 .001/3/.01/3/3/.00/true/10/Stygium Golem",
+                "Stygium Golem (Blue)": "2500/15/0/0/false/1000/771 .9 771 .5 770 .5 382 .1 86 .005 72 .001/3/.01/3/3/.00/true/10/Stygium Golem (Blue)",
+                "Stygium Bat": "3250/35/0/0/true/1000/386 .9 386 .5 386 .25 386 .1 288 .05 768 .5 773 .05 349 .05 787 .05 337 .008/3/.01/4/4/.00/true/30/Stygium Bat",
+                "Stygium Miner": "3500/30/1/3/false/0/769 .25 105 .03 106 .03 166 .001 60 .04 232 .04 72 .03 74 .01 97 .005 99 .001/3/0/5/3/.0/true/25/Stygium Miner",
+                "Stygium Head": "2500/25/0/0/false/2000/768 .65 378 .1 378 .1 380 .1 380 .1 382 .1 98 .005 99 .001/20/.01/8/3/.0/true/15/Stygium Head",
+                "Stygium Skull": "4000/40/0/0/true/1000/386 .9 386 .5 386 .25 386 .1 288 .05 768 .5 773 .05 349 .05 787 .05 337 .008/5/.01/4/5/.00/true/30/Stygium Skull",
+                "Stygium False Mushroom": "3125/25/0/0/false/0/851 .99 848 .5 848 .2/6/0/1/4/.0/true/20/Stygium False Mushroom",
+                "Stygium Miner Mage": "2500/10/0/2/false/2000/80 0/2/.01/8/3/.0/true/15/Stygium Miner Mage",
+                "Stygium Serpent": "2250/33/0/2/true/1000/769 .99 769 .15 287 .15 226 .06 446 .008 74 .001/0/.01/13/3/.0/true/30/Stygium Serpent",
             }
         },
         {
@@ -237,6 +258,65 @@
                         ],
                     ],
                     "LargeMinableExperienceGranted": 10,
+                },
+                // Forage
+                "{{ModID}}_SpawnDeepDark_Forage_Mushrooms": {
+                    "Type": "Forageable",
+                    "ForageableItemData": [
+                        {
+                            "Weight": 1.0,
+                            "Value": { "ItemId": "(O){{ModID}}_mushroom1" }
+                        },
+                        {
+                            "Weight": 1.0,
+                            "Value": { "ItemId": "(O){{ModID}}_mushroom2" }
+                        },
+                        {
+                            "Weight": 1.0,
+                            "Value": { "ItemId": "(O){{ModID}}_mushroom3" }
+                        },
+                        {
+                            "Weight": 1.0,
+                            "Value": { "ItemId": "(O){{ModID}}_mushroom4" }
+                        }
+                    ],
+                    "ForageableExperienceGranted": 10,
+                },
+                "{{ModID}}_SpawnDeepDark_Forage_OtherTainted": {
+                    "Type": "Forageable",
+                    "ForageableItemData": [
+                        {
+                            "Weight": 1.0,
+                            "Value": { "ItemId": "(O){{ModID}}_taintedcorn" }
+                        },
+                        {
+                            "Weight": 1.0,
+                            "Value": { "ItemId": "(O){{ModID}}_taintedgrasses" }
+                        },
+                        {
+                            "Weight": 1.0,
+                            "Value": { "ItemId": "(O){{ModID}}_taintedcrocus" }
+                        }
+                    ],
+                    "ForageableExperienceGranted": 10,
+                },
+                // Tree
+                "{{ModID}}_SpawnDeepDark_Tree_Mushroom": {
+                    "Type": "WildTree",
+                    "WildTreeType": "{{ModID}}_stygiummushroomtree",
+                },
+                // Loots chests
+                "{{ModID}}_SpawnDeepDark_LootChest": {
+                    "Type": "LootChest",
+                    "LootChestBigCraftableId": "{{ModID}}_DeepDarkChest",
+                    "LootChestDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": { "ItemID": "(W){{ModID}}_StygiumBlade" }
+                            }
+                        ]
+                    ]
                 },
                 // Monsters
                 "{{ModID}}_SpawnDeepDark_Monster_RockCrab": {
@@ -366,6 +446,16 @@
                             ],
                             "Minimum": -4, // Trick to make none spawning more common
                             "Maximum": 3,
+                        },
+                        {
+                            "SpawnableIds": [
+                                {
+                                    "Weight": 0.1,
+                                    "Value": "{{ModID}}_SpawnDeepDark_LootChest"
+                                },
+                            ],
+                            "Minimum": 0,
+                            "Maximum": 1,
                         }
                     ]
                 },
@@ -413,6 +503,16 @@
                             "Minimum": 15,
                             "Maximum": 30,
                         },
+                        {
+                            "SpawnableIds": [
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Forage_OtherTainted"
+                                },
+                            ],
+                            "Minimum": -5,
+                            "Maximum": 5,
+                        }
                     ]
                 },
                 "{{ModID}}_DeepDarkSpawns_Mushrooms": {
@@ -463,6 +563,26 @@
                             "Minimum": 20,
                             "Maximum": 35,
                         },
+                        {
+                            "SpawnableIds": [
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Tree_Mushroom"
+                                },
+                            ],
+                            "Minimum": -2,
+                            "Maximum": 4,
+                        },
+                        {
+                            "SpawnableIds": [
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Forage_Mushroom"
+                                },
+                            ],
+                            "Minimum": -10,
+                            "Maximum": 4,
+                        }
                     ]
                 }
             }
@@ -578,6 +698,21 @@
                 },
                 "(O){{ModID}}_StygiumBar": {
                     "BuffIdToApply": "{{ModID}}_StygiumPoisoning",
+                },
+                "(T){{ModID}}_StygiumHoe": {
+                    "BuffIdToApply": "{{ModID}}_StygiumPoisoning",
+                },
+                "(T){{ModID}}_StygiumPickaxe": {
+                    "BuffIdToApply": "{{ModID}}_StygiumPoisoning",
+                },
+                "(T){{ModID}}_StygiumAxe": {
+                    "BuffIdToApply": "{{ModID}}_StygiumPoisoning",
+                },
+                "(T){{ModID}}_StygiumWateringCan": {
+                    "BuffIdToApply": "{{ModID}}_StygiumPoisoning",
+                },
+                "(W){{ModID}}_StygiumBlade": {
+                    "BuffIdToApply": "{{ModID}}_StygiumPoisoning",
                 }
             }
         },
@@ -643,12 +778,12 @@
                     "SpriteIndex": 30,
                     "MenuSpriteIndex": 41,
                     "UpgradeLevel": 5,
-                    "UpgradeFrom": {
+                    "UpgradeFrom": [{
                         "RequireToolId": "(T)IridiumAxe",
                         "Price": 35000,
                         "TradeItemId": "(O){{ModID}}_StygiumBar",
                         "TradeItemAmount": 5
-                    }
+                    }]
                 },
                 "{{ModID}}_StygiumWateringCan": {
                     "ClassName": "WateringCan",
