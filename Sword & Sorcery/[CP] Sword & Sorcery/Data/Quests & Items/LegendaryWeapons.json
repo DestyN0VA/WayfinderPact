@@ -579,7 +579,7 @@
           "Defense": 2,
           "CritChance": 0.02,
           "CritMultiplier": 3.0,
-          "Type": 2,
+          "Type": 3,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 16,
           "CanBeLostOnDeath": false,
@@ -603,9 +603,9 @@
           "Defense": 2,
           "CritChance": 0.02,
           "CritMultiplier": 3.0,
-          "Type": 2,
+          "Type": 3,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 104,
+          "SpriteIndex": 103,
           "CanBeLostOnDeath": false,
           "Price": "5000", 
         },
@@ -627,9 +627,9 @@
           "Defense": 2,
           "CritChance": 0.02,
           "CritMultiplier": 3.0,
-          "Type": 2,
+          "Type": 3,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 105,
+          "SpriteIndex": 104,
           "CanBeLostOnDeath": false,
           "Price": "5000", 
         },
@@ -651,9 +651,9 @@
           "Defense": 2,
           "CritChance": 0.02,
           "CritMultiplier": 3.0,
-          "Type": 2,
+          "Type": 3,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 106,
+          "SpriteIndex": 105,
           "CanBeLostOnDeath": false,
           "Price": "5000", 
         },
@@ -675,7 +675,25 @@
           "Defense": 2,
           "CritChance": 0.02,
           "CritMultiplier": 3.0,
-          "Type": 2,
+          "Type": 3,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 106,
+          "CanBeLostOnDeath": false,
+          "Price": "5000", 
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Weapons",
+      "Entries": {
+        "{{ModID}}_SteelShield": {
+          "Name": "Steel Shield",
+          "DisplayName": "{{i18n: weapon.steel-shield.name}}",
+          "Description": "{{i18n: weapon.steel-shield.description}}",
+          "MinDamage": 15,
+          "MaxDamage": 30,
+          "Type": 3,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 107,
           "CanBeLostOnDeath": false,
@@ -683,5 +701,106 @@
         },
       }
     },
+    {
+      "Action": "EditData",
+      "Target": "Data/Weapons",
+      "Entries": {
+        "{{ModID}}_LltkShield": {
+          "Name": "Long Live the King (Shield)",
+          "DisplayName": "{{i18n: weapon.lltk-shield.name}}",
+          "Description": "{{i18n: weapon.lltk-shield.description}}",
+          "MinDamage": 100,
+          "MaxDamage": 125,
+          "Knockback": 1,
+          "Speed": 6,
+          "Precision": 100,
+          "Defense": 3,
+          "CritChance": 0.1,
+          "CritMultiplier": 3.0,
+          "Type": 3,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "SpriteIndex": 108,
+          "CanBeLostOnDeath": false,
+          "Price": "5000", 
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Weapons",
+      "Entries": {
+        "{{ModID}}_StygiumBlade": {
+          "Name": "Stygium Blade",
+          "DisplayName": "{{i18n: weapon.stygium-blade.name}}",
+          "Description": "{{i18n: weapon.stygium-blade.description}}",
+          "MinDamage": 80,
+          "MaxDamage": 100,
+          "Knockback": 1,
+          "Speed": 4,
+          "Precision": 100,
+          "Defense": 1,
+          "CritChance": 0.275,
+          "CritMultiplier": 3.5,
+          "Type": 3,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/StygiumTools.png}}",
+          "SpriteIndex": 0,
+          "CanBeLostOnDeath": false,
+          "Price": 100000, 
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Weapons",
+      "Entries": {
+        "{{ModID}}_ElysiumBlade": {
+          "Name": "Elysium Blade",
+          "DisplayName": "{{i18n: weapon.elysium-blade.name}}",
+          "Description": "{{i18n: weapon.elysium-blade.description}}",
+          "MinDamage": 100,
+          "MaxDamage": 125,
+          "Knockback": 1,
+          "Speed": 4,
+          "Precision": 100,
+          "Defense": 1,
+          "CritChance": 0.35,
+          "CritMultiplier": 4.0,
+          "Type": 3,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/BlessedTools.png}}",
+          "SpriteIndex": 0,
+          "CanBeLostOnDeath": false,
+          "Price": 25000, 
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "{{ModID}}_ElysiumBlade": "0 1/meow/0 1/false/null/{{i18n: weapon.elysium-blade.name}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/CraftingRecipeOverrides",
+      "Entries": {
+        "{{ModID}}_ElysiumBlade": {
+          "ProductQualifiedId": "(W){{ModID}}_ElysiumBlade",
+          "ProductAmount": 1,
+          "Ingredients": [
+            {
+              "Type": "Item",
+              "Value": "(W){{ModID}}_StygiumBlade",
+              "Amount": 1
+            },
+            {
+              "Type": "Item",
+              "Value": "(O){{ModID}}_DuskspireHeart",
+              "Amount": 1
+            },
+          ]
+        }
+      }
+    }
   ]
 }

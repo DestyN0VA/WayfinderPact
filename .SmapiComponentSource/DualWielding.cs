@@ -92,14 +92,14 @@ public static class DualWieldingDrawPatch
         if (lastUser == null)
             return;
 
-        var offhand = lastUser.GetOffhand();
+        var offhand = lastUser.GetOffhand() as MeleeWeapon;
         if (offhand == null)
             return;
         
         doingDualWieldCall = true;
         try
         {
-            MeleeWeapon.drawDuringUse(frameOfFarmerAnimation, facingDirection, spriteBatch, playerPosition, f, offhand.QualifiedItemId, offhand.type, isOnSpecial);
+            offhand.drawDuringUse(frameOfFarmerAnimation, facingDirection, spriteBatch, playerPosition, f);
         }
         finally
         {

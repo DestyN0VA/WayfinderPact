@@ -884,7 +884,7 @@ public static class MeleeWeaponAllowForgingDragontoothOnAllWeaponsPatch
 {
     public static void Postfix(MeleeWeapon __instance, Item item, ref bool __result)
     {
-        if (item.QualifiedItemId == "(O)852")
+        if (item?.QualifiedItemId == "(O)852")
             __result = true;
     }
 }
