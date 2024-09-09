@@ -454,7 +454,7 @@
                                     "Value": "{{ModID}}_SpawnDeepDark_LootChest"
                                 },
                             ],
-                            "Minimum": 0,
+                            "Minimum": -148,
                             "Maximum": 1,
                         }
                     ]
