@@ -25,8 +25,7 @@
                     "DisplayName": "Emeritus",
                     "PortraitTexture": "Portraits/MateoEmeritus",
                     "PetMessage": [
-                        "UwU",
-                        "I'm a baby chicken!"
+                        "{{i18n:MEEP.EmeritusOutside.{{Random:1++2++3++4++5|inputSeparator=++}}}}",
                     ],
                     "HomeTileX": 90,
                     "HomeTileY": 100,
@@ -40,8 +39,7 @@
                     "DisplayName": "Emeritus",
                     "PortraitTexture": "Portraits/MateoEmeritus",
                     "PetMessage": [
-                        "UwU",
-                        "I'm a inside baby chicken!"
+                        "{{i18n:MEEP.EmeritusInside.{{Random:1++2++3++4++5|inputSeparator=++}}}}",
                     ],
                     "HomeTileX": 2,
                     "HomeTileY": 17,

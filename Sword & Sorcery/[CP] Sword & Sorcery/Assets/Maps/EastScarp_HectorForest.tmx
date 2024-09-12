@@ -5,6 +5,7 @@
  </editorsettings>
  <properties>
   <property name="Outdoors" value="T"/>
+  <property name="Warp" value="13 33 EastScarp_DeepMountains 20 4 20 33 EastScarp_DeepMountains 20 4 21 33 EastScarp_DeepMountains 20  4"/>
  </properties>
  <tileset firstgid="1" name="paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
   <image source="paths.png" width="64" height="144"/>
@@ -417,6 +418,9 @@
   <image source="BigFern.png" width="48" height="160"/>
  </tileset>
  <layer id="1" name="Back" width="40" height="40">
+  <properties>
+   <property name="Warp" value="19 33 EastScarp_DeepMountains 20 2 20 33 EastScarp_DeepMountains 20 2 21 33 EastScarp_DeepMountains 20 2"/>
+  </properties>
   <data encoding="csv">
 3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,
 3229,3229,3229,3229,3229,3229,3400,3400,3400,3400,3401,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,3229,

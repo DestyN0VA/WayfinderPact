@@ -59,14 +59,9 @@
       "FromFile": "Data/Quests & Items/BuildQuest.json, Data/Quests & Items/BuildQuest2.json, Data/Quests & Items/CGSpecialOrders.json, Data/Quests & Items/PentacleQuest.json, Data/Quests & Items/RiverQuest.json"
     },
     {
-      "LogName": "Sword & Sorcery - Custom Companions Includes",
-      "Action": "Include",
-      "FromFile": "Data/Custom Companions/BookPathing.json, Data/Custom Companions/DinoPathing.json"
-    },
-    {
       "LogName": "Sword & Sorcery - Data Includes",
       "Action": "Include",
-      "FromFile": "Data/Custom Companions/Book.json, Data/Custom Companions/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/CustomForage.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/Books.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Quests & Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Festival Data/VioletMoon_Data.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json"
+      "FromFile": "Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/CustomForage.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/Books.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Quests & Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Festival Data/VioletMoon_Data.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json"
     },
     {
       "LogName": "Sword & Sorcery - Shield Quest Include",
@@ -2269,6 +2264,44 @@
       "When": {
         "Spouse |contains=Hector": true
       }
-    }
+    },
+    {
+      "Name": "SpecialOrderBoardRewards",
+      "Value": "{{ModID}}_artificerbook",
+    },
+    {
+      "Name": "SpecialOrderBoardRewards",
+      "Value": "{{ModID}}_{{Random:artificerbook++druidbook|inputSeparator=++}}",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true
+      }
+    },
+    {
+      "Name": "SpecialOrderBoardRewards",
+      "Value": "{{ModID}}_{{Random:artificerbook++druidbook++bardbook|inputSeparator=++}}",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true,
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.14": true
+      }
+    },
+    {
+      "Name": "SpecialOrderBoardRewards",
+      "Value": "{{ModID}}_{{Random:artificerbook++druidbook++bardbook++sorcerybook|inputSeparator=++}}",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true,
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.14": true,
+        "HasSeenEvent |contains=SnS.Ch4.Dandelion.6": true
+      }
+    },
+    {
+      "Name": "SpecialOrderBoardRewards",
+      "Value": "{{ModID}}_{{Random:artificerbook++druidbook++bardbook++sorcerybook++paladinbook|inputSeparator=++}}",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true,
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.14": true,
+        "HasSeenEvent |contains=SnS.Ch4.Dandelion.6": true,
+        "HasSeenEvent |contains=SnS.Ch4.Finale": true
+      }
+    },
   ]
 }

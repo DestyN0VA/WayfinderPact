@@ -22,7 +22,8 @@
         "AnarchyGarden": "{{i18n:Strings.Hector.AnarchyGarden}}",
         "TimeToHeal": "{{i18n:Strings.Hector.TimeToHeal}}",
         "YoureMyHuckleberry": "{{i18n:Strings.Hector.YoureMyHuckleberry}}",
-        "Annihilation": "{{i18n:Strings.Hector.Annihilation}}"
+        "Annihilation": "{{i18n:Strings.Hector.Annihilation}}",
+        "HectorGlade": "{{i18n:Strings.Hector.HectorGlade}}"
 
       }
     }

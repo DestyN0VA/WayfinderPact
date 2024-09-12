@@ -62,7 +62,7 @@
                         {
                             "Type": "Slay",
                             "Text": "[Mateo.SpecialOrders.AQ1.Objective_0_Text]",
-                            "RequiredCount": "25",
+                            "RequiredCount": "10",
                             "Data": {
                                 "TargetName": "{Monster:Target}"
                             }
@@ -72,9 +72,16 @@
                         {
                             "Type": "Money",
                             "Data": {
-                                "Amount": "10000"
+                                "Amount": "5000"
                             }
-                        }
+                        },
+                        {
+                            "Type": "Object",
+                            "Data": {
+                                "Item": "{{SpecialOrderBoardRewards}}",
+                                "Amount": 1
+                            }
+                        },
                     ]
                 } 
             }
@@ -142,7 +149,7 @@
                         {
                             "Type": "Slay",
                             "Text": "[Mateo.SpecialOrders.AQ2.Objective_0_Text]",
-                            "RequiredCount": "50",
+                            "RequiredCount": "20",
                             "Data": {
                                 "TargetName": "{Monster:Target}"
                             }
@@ -152,9 +159,16 @@
                         {
                             "Type": "Money",
                             "Data": {
-                                "Amount": "20000"
+                                "Amount": "10000"
                             }
-                        }
+                        },
+                        {
+                            "Type": "Object",
+                            "Data": {
+                                "Item": "{{SpecialOrderBoardRewards}}",
+                                "Amount": 1
+                            }
+                        },
                     ]
                 } 
             }
@@ -222,7 +236,7 @@
                         {
                             "Type": "Slay",
                             "Text": "[Mateo.SpecialOrders.AQ3.Objective_0_Text]",
-                            "RequiredCount": "75",
+                            "RequiredCount": "30",
                             "Data": {
                                 "TargetName": "{Monster:Target}"
                             }
@@ -230,11 +244,18 @@
                     ],
                     "Rewards": [
                         {
-                            "Type": "Money",
+                            "Type": "30",
                             "Data": {
-                                "Amount": "30000"
+                                "Amount": "15000"
                             }
-                        }
+                        },
+                        {
+                            "Type": "Object",
+                            "Data": {
+                                "Item": "{{SpecialOrderBoardRewards}}",
+                                "Amount": 1
+                            }
+                        },
                     ]
                 } 
             }
@@ -302,7 +323,7 @@
                         {
                             "Type": "Slay",
                             "Text": "[Mateo.SpecialOrders.AQ4.Objective_0_Text]",
-                            "RequiredCount": "50",
+                            "RequiredCount": "30",
                             "Data": {
                                 "TargetName": "{Monster:Target}"
                             }
@@ -312,12 +333,121 @@
                         {
                             "Type": "Money",
                             "Data": {
-                                "Amount": "10000"
+                                "Amount": "15000"
                             }
-                        }
+                        },
+                        {
+                            "Type": "Object",
+                            "Data": {
+                                "Item": "{{SpecialOrderBoardRewards}}",
+                                "Amount": 1
+                            }
+                        },
                     ]
                 } 
             }
+        },
+
+        {
+            "Action": "EditData",
+            "Target": "Data/SpecialOrders",
+            "Entries": {
+                "Mateo.SpecialOrders.AQ5": {
+                    "Name": "[Mateo.SpecialOrders.AQ5_Name]",
+                    "Requester": "Mateo",
+                    "Duration": "TwoWeeks",
+                    "Repeatable": "True",
+                    "RequiredTags": "",
+                    "OrderType": "SwordSorcery",
+                    "SpecialRule": "",
+                    "Text": "[Mateo.SpecialOrders.AQ5_Text]",
+                    "ItemToRemoveOnEnd": null,
+                    "MailToRemoveOnEnd": null,
+                    "RandomizedElements": [
+                        {
+                            "Name": "Monster",
+                            "Values": [
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Crab|LocalizedName|[Mateo.SpecialOrders.AQ5_0_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Skeleton|LocalizedName|[Mateo.SpecialOrders.AQ5_1_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Rex|LocalizedName|[Mateo.SpecialOrders.AQ5_2_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Golem|LocalizedName|[Mateo.SpecialOrders.AQ5_3_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Golem (Blue)|LocalizedName|[Mateo.SpecialOrders.AQ5_4_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Bat|LocalizedName|[Mateo.SpecialOrders.AQ5_5_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Miner|LocalizedName|[Mateo.SpecialOrders.AQ5_6_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Head|LocalizedName|[Mateo.SpecialOrders.AQ5_7_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Skull|LocalizedName|[Mateo.SpecialOrders.AQ5_8_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium False Mushroom|LocalizedName|[Mateo.SpecialOrders.AQ5_9_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Miner Mage|LocalizedName|[Mateo.SpecialOrders.AQ5_10_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Serpant|LocalizedName|[Mateo.SpecialOrders.AQ5_11_LocalizedName]"
+                                },
+                            ]
+                        }
+                    ],
+                    "Objectives": [
+                        {
+                            "Type": "Slay",
+                            "Text": "[Mateo.SpecialOrders.AQ4.Objective_0_Text]",
+                            "RequiredCount": "30",
+                            "Data": {
+                                "TargetName": "{Monster:Target}"
+                            }
+                        }
+                    ],
+                    "Rewards": [
+                        {
+                            "Type": "Money",
+                            "Data": {
+                                "Amount": "25000"
+                            }
+                        },
+                        {
+                            "Type": "Object",
+                            "Data": {
+                                "Item": "{{SpecialOrderBoardRewards}}",
+                                "Amount": 4
+                            }
+                        },
+                    ]
+                } 
+            },
+            "When": {
+                "HasSeenEvent": "SnS.Ch4.Dandelion.6",
+              }
         },
         
         {
@@ -360,6 +490,18 @@
                 "Mateo.SpecialOrders.AQ4_6_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ4.6.LocalizedName}}",
                 "Mateo.SpecialOrders.AQ4_7_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ4.7.LocalizedName}}",
                 "Mateo.SpecialOrders.AQ4_8_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ4.8.LocalizedName}}",
+                "Mateo.SpecialOrders.AQ5_0_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.0.LocalizedName}}",
+                "Mateo.SpecialOrders.AQ5_1_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.1.LocalizedName}}",
+                "Mateo.SpecialOrders.AQ5_2_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.2.LocalizedName}}", 
+                "Mateo.SpecialOrders.AQ5_3_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.3.LocalizedName}}", 
+                "Mateo.SpecialOrders.AQ5_4_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.4.LocalizedName}}",
+                "Mateo.SpecialOrders.AQ5_5_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.5.LocalizedName}}",
+                "Mateo.SpecialOrders.AQ5_6_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.6.LocalizedName}}",
+                "Mateo.SpecialOrders.AQ5_7_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.7.LocalizedName}}",
+                "Mateo.SpecialOrders.AQ5_8_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.8.LocalizedName}}",
+                "Mateo.SpecialOrders.AQ5_9_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.9.LocalizedName}}",
+                "Mateo.SpecialOrders.AQ5_10_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.10.LocalizedName}}",
+                "Mateo.SpecialOrders.AQ5_11_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.11.LocalizedName}}",
                 "Mateo.SpecialOrders.AQ1_Name":"{{i18n:Quests.Mateo.SpecialOrders.AQ1.Name}}",
                 "Mateo.SpecialOrders.AQ1_Text":"{{i18n:Quests.Mateo.SpecialOrders.AQ1.Text}}",
                 "Mateo.SpecialOrders.AQ1.Objective_0_Text":"{{i18n:Quests.Mateo.SpecialOrders.AQ1.Objective.0.Text}}",
@@ -372,6 +514,9 @@
                 "Mateo.SpecialOrders.AQ4_Name":"{{i18n:Quests.Mateo.SpecialOrders.AQ4.Name}}",
                 "Mateo.SpecialOrders.AQ4_Text":"{{i18n:Quests.Mateo.SpecialOrders.AQ4.Text}}", 
                 "Mateo.SpecialOrders.AQ4.Objective_0_Text":"{{i18n:Quests.Mateo.SpecialOrders.AQ4.Objective.0.Text}}",
+                "Mateo.SpecialOrders.AQ5_Name":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.Name}}",
+                "Mateo.SpecialOrders.AQ5_Text":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.Text}}", 
+                "Mateo.SpecialOrders.AQ5.Objective_0_Text":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.Objective.0.Text}}",
             }
         }
     ]

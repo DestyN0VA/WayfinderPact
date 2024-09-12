@@ -31,8 +31,7 @@
                     "DisplayName": "Book",
                     "PortraitTexture": "Portraits/BookDryad",
                     "PetMessage": [
-                        "UwU",
-                        "I'm a baby chicken!"
+                        "{{i18n:MEEP.BookOutside.{{Random:1++2++3++4++5|inputSeparator=++}}}}",
                     ],
                     "HomeTileX": 7,
                     "HomeTileY": 14,
@@ -46,8 +45,7 @@
                     "DisplayName": "Book",
                     "PortraitTexture": "Portraits/HectorBook",
                     "PetMessage": [
-                        "UwU",
-                        "I'm a inside baby chicken!"
+                        "{{i18n:MEEP.BookInside.{{Random:1++2++3++4++5|inputSeparator=++}}}}",
                     ],
                     "HomeTileX": 10,
                     "HomeTileY": 16,

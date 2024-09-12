@@ -722,5 +722,40 @@
         "HasSeenEvent |contains=SnS.Ch5.Mateo": true
       }
     },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_DeepMountains",
+      "FromFile": "Assets/Maps/HectorGladeWarp.tmx",
+      "PatchMode": "Replace",
+      "Update": "OnLocationChange",
+      "ToArea": {
+        "X": 19,
+        "Y": 3,
+        "Width": 4,
+        "Height": 3
+      },
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_DeepMountains",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 20,
+            "Y": 4
+          },
+          "Layer": "Back",
+          "SetProperties": {
+            "TouchAction": "MagicWarp EastScarp_HectorForest 21 32"
+          }
+        }
+      ],
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Hector.16": true
+      }
+    },
   ]
 }

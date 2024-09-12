@@ -444,8 +444,179 @@
           "ExcludeFromNpcPathfinding": false,
           "ArtifactSpots": [],
           "FishAreas": {},
-          "Fish": [],
-          "Forage": [],
+          "Fish": [
+            {
+              "Id": "EastScarp_Fairy_Betta_HectorForest",
+              "ItemId": "(O)EastScarp_Fairy_Betta",
+              "FishAreaID": "HectorForest",
+              "Condition": "LOCATION_Season Here spring summer fall"
+            },
+            {
+              "Id": "(O)698",
+              "ItemId": "(O)698",
+              "Condition": "LOCATION_Season Here spring fall"
+            },
+            {
+              "Id": "(O)699",
+              "ItemId": "(O)699"
+            },
+            {
+              "Season": "Spring",
+              "Id": "(O)129",
+              "ItemId": "(O)129"
+            },
+            {
+              "Season": "Summer",
+              "Id": "(O)137",
+              "ItemId": "(O)137"
+            },
+            {
+              "Season": "Summer",
+              "Id": "(O)148",
+              "ItemId": "(O)148"
+            },
+            {
+              "FishAreaId": "HectorForest",
+              "Id": "(O)136_HectorForest",
+              "ItemId": "(O)136"
+            },
+            {
+              "Season": "fall",
+              "FishAreaId": "HectorForest",
+              "Id": "(O)137_HectorForest",
+              "ItemId": "(O)137"
+            },
+            {
+              "Season": "summer",
+              "FishAreaId": "HectorForest",
+              "Id": "(O)138_HectorForest",
+              "ItemId": "(O)138"
+            },
+            {
+              "Season": "spring",
+              "FishAreaId": "OrchardOcean",
+              "Id": "(O)138_OrchardOcean",
+              "ItemId": "(O)138"
+            },
+            {
+              "Season": "fall",
+              "FishAreaId": "HectorForest",
+              "Id": "(O)139_HectorForest",
+              "ItemId": "(O)139"
+            },
+          ],
+          "Forage": [
+            {
+              "Chance": 0.7,
+              "Season": "Spring",
+              "Condition": null,
+              "Id": "DruidForage1",
+              "ItemId": "(O)20",
+              "RandomItemId": null,
+              "MinStack": -1,
+              "MaxStack": -1,
+              "Quality": -1,
+            },
+            {
+              "Chance": 0.5,
+              "Season": "Spring",
+              "Condition": null,
+              "Id": "DruidForage2",
+              "ItemId": "(O)16",
+              "RandomItemId": null,
+              "MinStack": -1,
+              "MaxStack": -1,
+              "Quality": -1,
+            },
+            {
+              "Chance": 0.5,
+              "Season": "Summer",
+              "Condition": null,
+              "Id": "DruidForage3",
+              "ItemId": "(O)396",
+              "RandomItemId": null,
+              "MinStack": -1,
+              "MaxStack": -1,
+              "Quality": -1,
+            },
+            {
+              "Chance": 0.8,
+              "Season": "Summer",
+              "Condition": null,
+              "Id": "DruidForage4",
+              "ItemId": "(O)402",
+              "RandomItemId": null,
+              "MinStack": -1,
+              "MaxStack": -1,
+              "Quality": -1,
+            },
+            {
+              "Chance": 0.4,
+              "Season": "Fall",
+              "Condition": null,
+              "Id": "DruidForage5",
+              "ItemId": "(O)404",
+              "RandomItemId": null,
+              "MinStack": -1,
+              "MaxStack": -1,
+              "Quality": -1,
+            },
+            {
+              "Chance": 0.4,
+              "Season": "Fall",
+              "Condition": null,
+              "Id": "DruidForage6",
+              "ItemId": "(O)406",
+              "RandomItemId": null,
+              "MinStack": -1,
+              "MaxStack": -1,
+              "Quality": -1,
+            },
+            {
+              "Chance": 0.9,
+              "Season": "Fall",
+              "Condition": null,
+              "Id": "DruidForage7",
+              "ItemId": "(O)408",
+              "RandomItemId": null,
+              "MinStack": -1,
+              "MaxStack": -1,
+              "Quality": -1,
+            },
+            {
+              "Chance": 0.85,
+              "Season": "Winter",
+              "Condition": null,
+              "Id": "DruidForage8",
+              "ItemId": "(O)414",
+              "RandomItemId": null,
+              "MinStack": -1,
+              "MaxStack": -1,
+              "Quality": -1,
+            },
+            {
+              "Chance": 0.9,
+              "Season": "Winter",
+              "Condition": null,
+              "Id": "DruidForage9",
+              "ItemId": "(O)418",
+              "RandomItemId": null,
+              "MinStack": -1,
+              "MaxStack": -1,
+              "Quality": -1,
+            },
+            {
+              "Chance": 0.5,
+              "Season": "Winter",
+              "Condition": null,
+              "Id": "DruidForage10",
+              "ItemId": "(O)283",
+              "RandomItemId": null,
+              "MinStack": -1,
+              "MaxStack": -1,
+              "Quality": -1,
+            }
+          ],
           "CustomFields": {}
         }
       }
@@ -536,7 +707,67 @@
           "ExcludeFromNpcPathfinding": true,
           "ArtifactSpots": [],
           "FishAreas": {},
-          "Fish": [],
+          "Fish": [
+            {
+              "Id": "EastScarp_Fairy_Betta_UnderFish",
+              "ItemId": "(O)EastScarp_Fairy_Betta",
+              "FishAreaID": "UnderFish",
+              "Condition": "LOCATION_Season Here spring summer fall"
+            },
+            {
+              "Id": "(O)698",
+              "ItemId": "(O)698",
+              "Condition": "LOCATION_Season Here spring fall"
+            },
+            {
+              "Id": "(O)699",
+              "ItemId": "(O)699"
+            },
+            {
+              "Season": "Spring",
+              "Id": "(O)129",
+              "ItemId": "(O)129"
+            },
+            {
+              "Season": "Summer",
+              "Id": "(O)137",
+              "ItemId": "(O)137"
+            },
+            {
+              "Season": "Summer",
+              "Id": "(O)148",
+              "ItemId": "(O)148"
+            },
+            {
+              "FishAreaId": "UnderFish",
+              "Id": "(O)136_UnderFish",
+              "ItemId": "(O)136"
+            },
+            {
+              "Season": "fall",
+              "FishAreaId": "UnderFish",
+              "Id": "(O)137_UnderFish",
+              "ItemId": "(O)137"
+            },
+            {
+              "Season": "summer",
+              "FishAreaId": "UnderFish",
+              "Id": "(O)138_UnderFish",
+              "ItemId": "(O)138"
+            },
+            {
+              "Season": "spring",
+              "FishAreaId": "OrchardOcean",
+              "Id": "(O)138_OrchardOcean",
+              "ItemId": "(O)138"
+            },
+            {
+              "Season": "fall",
+              "FishAreaId": "UnderFish",
+              "Id": "(O)139_UnderFish",
+              "ItemId": "(O)139"
+            },
+          ],
           "Forage": [],
           "CustomFields": {}
         }
