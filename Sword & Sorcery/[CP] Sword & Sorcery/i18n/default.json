@@ -1023,23 +1023,39 @@
   "Quests.Mateo.SpecialOrders.AQ4.6.LocalizedName": "Green Slimes",
   "Quests.Mateo.SpecialOrders.AQ4.7.LocalizedName": "Stone Golems",
   "Quests.Mateo.SpecialOrders.AQ4.8.LocalizedName": "Squid Kids",
+  "Quests.Mateo.SpecialOrders.AQ5.0.LocalizedName": "Stygium Crabs",
+  "Quests.Mateo.SpecialOrders.AQ5.1.LocalizedName": "Stygium Skeletons",
+  "Quests.Mateo.SpecialOrders.AQ5.2.LocalizedName": "Stygium Rexes",
+  "Quests.Mateo.SpecialOrders.AQ5.3.LocalizedName": "Stygium Golems",
+  "Quests.Mateo.SpecialOrders.AQ5.4.LocalizedName": "Blue Stygium Golems",
+  "Quests.Mateo.SpecialOrders.AQ5.5.LocalizedName": "Stygium Bats",
+  "Quests.Mateo.SpecialOrders.AQ5.6.LocalizedName": "Stygium Miners",
+  "Quests.Mateo.SpecialOrders.AQ5.7.LocalizedName": "Stygium Heads",
+  "Quests.Mateo.SpecialOrders.AQ5.8.LocalizedName": "Stygium Skulls",
+  "Quests.Mateo.SpecialOrders.AQ5.9.LocalizedName": "Stygium False Mushrooms",
+  "Quests.Mateo.SpecialOrders.AQ5.10.LocalizedName": "Stygium Miner Mages",
+  "Quests.Mateo.SpecialOrders.AQ5.11.LocalizedName": "Stygium Serpants",
 
   // COASTAL GUILD SPECIAL ORDERS - BOARD OBJECTIVES
   "Quests.Mateo.SpecialOrders.AQ1.Name": "From the Guildmaster:",
-  "Quests.Mateo.SpecialOrders.AQ1.Text": "I need an adventurer to slay 25 {Monster:LocalizedName} for a 10000g reward!",
-  "Quests.Mateo.SpecialOrders.AQ1.Objective.0.Text": "Slay 25 {Monster:LocalizedName}.",
+  "Quests.Mateo.SpecialOrders.AQ1.Text": "I need an adventurer to slay 10 {Monster:LocalizedName} in exchange for 5000g and a skill book!",
+  "Quests.Mateo.SpecialOrders.AQ1.Objective.0.Text": "Slay 10 {Monster:LocalizedName}.",
 
   "Quests.Mateo.SpecialOrders.AQ2.Name": "From the Guildmaster:",
-  "Quests.Mateo.SpecialOrders.AQ2.Text": "I need an adventurer to slay 50 {Monster:LocalizedName} for a 20000g reward!",
-  "Quests.Mateo.SpecialOrders.AQ2.Objective.0.Text": "Slay 50 {Monster:LocalizedName}.",
+  "Quests.Mateo.SpecialOrders.AQ2.Text": "I need an adventurer to slay 20 {Monster:LocalizedName} in exchange for 10000g and a skill book!",
+  "Quests.Mateo.SpecialOrders.AQ2.Objective.0.Text": "Slay 20 {Monster:LocalizedName}.",
 
   "Quests.Mateo.SpecialOrders.AQ3.Name": "From the Guildmaster:",
-  "Quests.Mateo.SpecialOrders.AQ3.Text": "I need an adventurer to slay 75 {Monster:LocalizedName} for a 30000g reward!",
-  "Quests.Mateo.SpecialOrders.AQ3.Objective.0.Text": "Slay 75 {Monster:LocalizedName}.",
+  "Quests.Mateo.SpecialOrders.AQ3.Text": "I need an adventurer to slay 30 {Monster:LocalizedName} in exchange for 15000g and a skill book!",
+  "Quests.Mateo.SpecialOrders.AQ3.Objective.0.Text": "Slay 30 {Monster:LocalizedName}.",
 
   "Quests.Mateo.SpecialOrders.AQ4.Name": "From the Guildmaster:",
-  "Quests.Mateo.SpecialOrders.AQ4.Text": "I need an adventurer to slay 50 {Monster:LocalizedName} for a 10000g reward!",
-  "Quests.Mateo.SpecialOrders.AQ4.Objective.0.Text": "Slay 50 {Monster:LocalizedName}.",
+  "Quests.Mateo.SpecialOrders.AQ4.Text": "I need an adventurer to slay 30 {Monster:LocalizedName} in exchange for 15000g and a skill book!",
+  "Quests.Mateo.SpecialOrders.AQ4.Objective.0.Text": "Slay 30 {Monster:LocalizedName}.",
+
+  "Quests.Mateo.SpecialOrders.AQ5.Name": "From the Guildmaster:",
+  "Quests.Mateo.SpecialOrders.AQ5.Text": "I need an adventurer to slay 30 {Monster:LocalizedName} in exchange for 25000g and a few skill books!",
+  "Quests.Mateo.SpecialOrders.AQ5.Objective.0.Text": "Slay 30 {Monster:LocalizedName}.",
 
   /*
 ________      ________ _   _ _______ _____ 
@@ -2377,6 +2393,7 @@ ________      ________ _   _ _______ _____
   "Strings.Hector.TimeToHeal": "The best spot for cuddling in a sun puddle.",
   "Strings.Hector.YoureMyHuckleberry": "These berries are huge, healthy, and glowing faintly.",
   "Strings.Hector.Annihilation": "You've been left a pile of Biróg's favorite books. The most well-read is a cosmic horror story about a lighthouse and an inverted tower.",
+  "Strings.Hector.HectorGlade": "Biróg's Glade",
 
   "Strings.Hector.LovedAltar.Platonic.1": "There's a message carved in this homemade candle...:# 'You've got my body, flesh and bone. The sky above, the earth below. Rise me up again, take me past the edge. I want to see the other side.'",
   "Strings.Hector.LovedAltar.Platonic.2": "There's a message carved in this homemade candle...:# 'Ooh, let's talk about chemistry, 'cause I'm dying to melt through to the heart of his^her molecules 'til the particles part like holy water.'",
@@ -5778,5 +5795,30 @@ ________      ________ _   _ _______ _____
   "DN.SnS.Hand_Pressed_Apple_Cider.Description": "This cider will warm you from the top of your head to the tips of your toes on a brisk autumn day.",
   "DN.SnS.Smoked_TurkeyLeg": "Jumbo Smoked Turkey Leg",
   "DN.SnS.Smoked_TurkeyLeg.Description": "Smoked over hickory and apple wood chips for over twelve hours, these turkey legs are fit for royalty!",
+
+  // MEEP 
+  "MEEP.BookOutside.1": "Oh, hello dearest @! How are you doing on this fine day? I hope your tasklist is short and your belly is full of delicious snacks.$1",
+  "MEEP.BookOutside.2": "@! What a pleasure to see you. Isn't it beautiful out today? Enjoy the sunshine while we have it! You never know when the rainclouds will come by.$0",
+  "MEEP.BookOutside.3": "Goodness, gracious! @, you must be terribly strong to hike all the way up here so often. Or, perhaps, do you warp about with magic?$1",
+  "MEEP.BookOutside.4": "You are always the most lovely thing I see when I wander about outside, @. It's quite a treat.$0",
+  "MEEP.BookOutside.5": "Oh, yay! It's my favorite visitor! How are you doing, @? Nothing short of excellent, I hope. Have a lovely day, dear. Stay safe.$1",
+
+  "MEEP.BookInside.1": "You can't put your finger on it, but something about Book seems comforting and sincere. Looking at her brings you as much joy as your visit brings her.$0",
+  "MEEP.BookInside.2": "Book seems very exciteable today! She's flying busily around the room. Perhaps some magic is in progress.$1",
+  "MEEP.BookInside.3": "Seems like Book is cross with a certian Druid. Best leave her to her devices, lest she take out some magical aggression on you!$3",
+  "MEEP.BookInside.4": "Book is incredibly happy to see you! She flies happily around you in circles for a moment before going back to her tasks.$1",
+  "MEEP.BookInside.5": "The magical grimoire appreciates your company, and floats behind you for a moment as you navigate the tower.$0",
+
+  "MEEP.EmeritusOutside.1": "Emeritus is busily guarding the guild from the crab menace! You give him an affectionate pat for his hard work.",
+  "MEEP.EmeritusOutside.2": "Emeritus gives you a big, slobbery kiss. You are now slightly sticky with Pepper Rex saliva. It smells like campfire.",
+  "MEEP.EmeritusOutside.3": "Emeritus is noisily crunching on a crab. Mateo seems to have passed their crustation hatred onwards.",
+  "MEEP.EmeritusOutside.4": "Emeritus is slightly damp and covered in sand, which will probably be great for The Guild's wooden floors.",
+  "MEEP.EmeritusOutside.5": "Emeritus seems to be leading a very happy life, eating crabs, taking naps, and getting affection from anyone who wanders by.",
+
+  "MEEP.EmeritusInside.1": "Emeritus looks up at you expectantly, so you give him a little kiss on the snoot. The Pepper Rex wags his tail appreciatively at you!",
+  "MEEP.EmeritusInside.2": "Emeritus has only nearly burned down The Guild once this week, which is probably a record of some kind.",
+  "MEEP.EmeritusInside.3": "Emeritus is wiggling side to side, like he's dancing to the beat of his own tunes. Wiggle on, lizard bro.",
+  "MEEP.EmeritusInside.4": "Emeritus' stuffed teddie is named Ducky, and he takes excellent care of her. In fact, he seems outright protective.",
+  "MEEP.EmeritusInside.5": "Emeritus bumps his head against your legs as you approach. He can't hug you, on account of his stumpy legs, but he'll sure try!",
   
 }

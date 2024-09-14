@@ -1511,292 +1511,11 @@
    </animation>
   </tile>
  </tileset>
- <tileset firstgid="1976" name="spring_daisyextras" tilewidth="16" tileheight="16" tilecount="1800" columns="30">
-  <image source="spring_daisyextras.png" width="480" height="960"/>
-  <tile id="4">
-   <properties>
-    <property name="Passable" value="T"/>
-   </properties>
-  </tile>
-  <tile id="5">
-   <animation>
-    <frame tileid="5" duration="160"/>
-    <frame tileid="11" duration="160"/>
-    <frame tileid="17" duration="160"/>
-    <frame tileid="23" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="6">
-   <animation>
-    <frame tileid="6" duration="160"/>
-    <frame tileid="12" duration="160"/>
-    <frame tileid="18" duration="160"/>
-    <frame tileid="24" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="7">
-   <animation>
-    <frame tileid="7" duration="160"/>
-    <frame tileid="13" duration="160"/>
-    <frame tileid="19" duration="160"/>
-    <frame tileid="25" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="8">
-   <animation>
-    <frame tileid="8" duration="160"/>
-    <frame tileid="14" duration="160"/>
-    <frame tileid="20" duration="160"/>
-    <frame tileid="26" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="34">
-   <properties>
-    <property name="Passable" value="T"/>
-   </properties>
-  </tile>
-  <tile id="35">
-   <animation>
-    <frame tileid="35" duration="160"/>
-    <frame tileid="41" duration="160"/>
-    <frame tileid="47" duration="160"/>
-    <frame tileid="53" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="36">
-   <animation>
-    <frame tileid="36" duration="160"/>
-    <frame tileid="42" duration="160"/>
-    <frame tileid="48" duration="160"/>
-    <frame tileid="54" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="37">
-   <animation>
-    <frame tileid="37" duration="160"/>
-    <frame tileid="43" duration="160"/>
-    <frame tileid="49" duration="160"/>
-    <frame tileid="55" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="38">
-   <animation>
-    <frame tileid="38" duration="160"/>
-    <frame tileid="44" duration="160"/>
-    <frame tileid="50" duration="160"/>
-    <frame tileid="56" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="64">
-   <properties>
-    <property name="Passable" value="T"/>
-   </properties>
-  </tile>
-  <tile id="65">
-   <animation>
-    <frame tileid="65" duration="160"/>
-    <frame tileid="71" duration="160"/>
-    <frame tileid="77" duration="160"/>
-    <frame tileid="83" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="66">
-   <animation>
-    <frame tileid="66" duration="160"/>
-    <frame tileid="72" duration="160"/>
-    <frame tileid="78" duration="160"/>
-    <frame tileid="84" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="67">
-   <animation>
-    <frame tileid="67" duration="160"/>
-    <frame tileid="73" duration="160"/>
-    <frame tileid="79" duration="160"/>
-    <frame tileid="85" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="68">
-   <animation>
-    <frame tileid="68" duration="160"/>
-    <frame tileid="74" duration="160"/>
-    <frame tileid="80" duration="160"/>
-    <frame tileid="86" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="94">
-   <properties>
-    <property name="Passable" value="T"/>
-   </properties>
-  </tile>
-  <tile id="95">
-   <animation>
-    <frame tileid="95" duration="160"/>
-    <frame tileid="101" duration="160"/>
-    <frame tileid="107" duration="160"/>
-    <frame tileid="113" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="96">
-   <animation>
-    <frame tileid="96" duration="160"/>
-    <frame tileid="102" duration="160"/>
-    <frame tileid="108" duration="160"/>
-    <frame tileid="114" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="97">
-   <animation>
-    <frame tileid="97" duration="160"/>
-    <frame tileid="103" duration="160"/>
-    <frame tileid="109" duration="160"/>
-    <frame tileid="115" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="98">
-   <animation>
-    <frame tileid="98" duration="160"/>
-    <frame tileid="104" duration="160"/>
-    <frame tileid="110" duration="160"/>
-    <frame tileid="116" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="125">
-   <animation>
-    <frame tileid="125" duration="160"/>
-    <frame tileid="131" duration="160"/>
-    <frame tileid="137" duration="160"/>
-    <frame tileid="143" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="126">
-   <animation>
-    <frame tileid="126" duration="160"/>
-    <frame tileid="132" duration="160"/>
-    <frame tileid="138" duration="160"/>
-    <frame tileid="144" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="127">
-   <animation>
-    <frame tileid="127" duration="160"/>
-    <frame tileid="133" duration="160"/>
-    <frame tileid="139" duration="160"/>
-    <frame tileid="145" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="128">
-   <animation>
-    <frame tileid="128" duration="160"/>
-    <frame tileid="134" duration="160"/>
-    <frame tileid="140" duration="160"/>
-    <frame tileid="146" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="154">
-   <animation>
-    <frame tileid="154" duration="160"/>
-    <frame tileid="160" duration="160"/>
-    <frame tileid="166" duration="160"/>
-    <frame tileid="172" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="155">
-   <animation>
-    <frame tileid="155" duration="160"/>
-    <frame tileid="161" duration="160"/>
-    <frame tileid="167" duration="160"/>
-    <frame tileid="173" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="156">
-   <animation>
-    <frame tileid="156" duration="160"/>
-    <frame tileid="162" duration="160"/>
-    <frame tileid="168" duration="160"/>
-    <frame tileid="174" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="157">
-   <animation>
-    <frame tileid="157" duration="160"/>
-    <frame tileid="163" duration="160"/>
-    <frame tileid="169" duration="160"/>
-    <frame tileid="175" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="158">
-   <animation>
-    <frame tileid="158" duration="160"/>
-    <frame tileid="164" duration="160"/>
-    <frame tileid="170" duration="160"/>
-    <frame tileid="176" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="159">
-   <animation>
-    <frame tileid="159" duration="160"/>
-    <frame tileid="165" duration="160"/>
-    <frame tileid="171" duration="160"/>
-    <frame tileid="177" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="184">
-   <animation>
-    <frame tileid="184" duration="160"/>
-    <frame tileid="190" duration="160"/>
-    <frame tileid="196" duration="160"/>
-    <frame tileid="202" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="185">
-   <animation>
-    <frame tileid="185" duration="160"/>
-    <frame tileid="191" duration="160"/>
-    <frame tileid="197" duration="160"/>
-    <frame tileid="203" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="186">
-   <animation>
-    <frame tileid="186" duration="160"/>
-    <frame tileid="192" duration="160"/>
-    <frame tileid="198" duration="160"/>
-    <frame tileid="204" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="187">
-   <animation>
-    <frame tileid="187" duration="160"/>
-    <frame tileid="193" duration="160"/>
-    <frame tileid="199" duration="160"/>
-    <frame tileid="205" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="188">
-   <animation>
-    <frame tileid="188" duration="160"/>
-    <frame tileid="194" duration="160"/>
-    <frame tileid="200" duration="160"/>
-    <frame tileid="206" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="189">
-   <animation>
-    <frame tileid="189" duration="160"/>
-    <frame tileid="195" duration="160"/>
-    <frame tileid="201" duration="160"/>
-    <frame tileid="207" duration="160"/>
-   </animation>
-  </tile>
-  <tile id="373">
-   <properties>
-    <property name="Passable" value="T"/>
-   </properties>
-  </tile>
- </tileset>
- <tileset firstgid="3776" name="spring_LionsMane" tilewidth="16" tileheight="16" tilecount="48" columns="8">
+ <tileset firstgid="1976" name="spring_LionsMane" tilewidth="16" tileheight="16" tilecount="48" columns="8">
   <image source="spring_LionsMane.png" width="128" height="96"/>
+ </tileset>
+ <tileset firstgid="2024" name="spring_mod_lumisteria_tilesheetsoutdoor_decorations" tilewidth="16" tileheight="16" tilecount="400" columns="25">
+  <image source="spring_mod_lumisteria_tilesheetsoutdoor_decorations.png" width="400" height="256"/>
  </tileset>
  <layer id="1" name="Back" width="12" height="9">
   <data encoding="csv">
@@ -1821,9 +1540,9 @@
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,2367,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,
+0,2024,2025,0,0,0,0,0,0,0,0,0,
+0,2049,2050,2051,0,0,0,0,0,0,0,0,
+0,2074,2075,2076,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0
 </data>
@@ -1848,12 +1567,12 @@
  <objectgroup id="17" name="Back3"/>
  <layer id="3" name="Buildings" width="12" height="9">
   <data encoding="csv">
-89,90,0,3784,3785,3786,3787,3788,3789,3790,30,31,
-114,115,137,3792,3793,3794,3795,3796,3797,3798,55,56,
-0,0,0,3800,3801,3802,3803,3804,3805,3806,80,81,
-0,0,0,3808,3809,3810,3811,3812,3813,3814,105,0,
-0,0,0,3816,3817,3818,3819,3820,3821,3822,130,0,
-0,0,362,2368,0,0,0,0,0,0,0,0,
+89,90,0,1984,1985,1986,1987,1988,1989,1990,30,31,
+114,115,137,1992,1993,1994,1995,1996,1997,1998,55,56,
+0,0,0,2000,2001,2002,2003,2004,2005,2006,80,81,
+0,0,0,2008,2009,2010,2011,2012,2013,2014,105,0,
+0,0,0,2016,2017,2018,2019,2020,2021,2022,130,0,
+0,0,362,0,0,0,0,0,0,0,0,0,
 292,137,412,863,0,0,0,0,0,0,0,0,
 442,258,437,384,385,386,0,0,0,0,0,0,
 467,468,469,468,469,468,442,0,258,0,439,0
@@ -1865,9 +1584,9 @@
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,
+0,2030,2031,2026,0,0,0,0,0,0,0,0,
+0,2055,2056,2057,0,0,0,0,0,0,0,0,
+0,2080,2081,2082,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0
 </data>
@@ -1893,7 +1612,7 @@
 11,12,13,0,0,0,0,0,0,0,0,0,
 36,37,38,0,0,0,0,0,0,0,0,0,
 61,62,63,0,0,0,0,0,0,0,0,0,
-86,87,2337,2338,0,0,0,0,0,0,0,0,
+86,87,0,2032,0,0,0,0,0,0,0,0,
 0,112,0,0,0,0,0,0,0,0,0,0,
 0,0,0,359,360,361,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,

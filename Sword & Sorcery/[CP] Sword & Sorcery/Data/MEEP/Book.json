@@ -1,0 +1,57 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "Entries": {
+                "{{ModId}}.BookInside": {
+                    "DisplayName": "Book",
+                    "House": "Barn",
+                    "Texture": "Characters/HectorBook",
+                    "SpriteWidth": 32,
+                    "SpriteHeight": 32
+                },
+                "{{ModId}}.BookOutside": {
+                    "DisplayName": "Book",
+                    "House": "Barn",
+                    "Texture": "Characters/BookDryad",
+                    "SpriteWidth": 16,
+                    "SpriteHeight": 32
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "MEEP/FarmAnimals/SpawnData",
+            "Entries": {
+                "{{ModId}}.Book_Outside": {
+                    "AnimalId": "{{ModId}}.BookOutside",
+                    "Age": 1,
+                    "LocationId": "EastScarp_DeepMountains",
+                    "DisplayName": "Book",
+                    "PortraitTexture": "Portraits/BookDryad",
+                    "PetMessage": [
+                        "{{i18n:MEEP.BookOutside.{{Random:1++2++3++4++5|inputSeparator=++}}}}",
+                    ],
+                    "HomeTileX": 7,
+                    "HomeTileY": 14,
+                    "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch3.Cirrus.11, WEATHER EastScarp_Village Sun"
+                },
+                
+                "{{ModId}}.Book_Inside": {
+                    "AnimalId": "{{ModId}}.BookInside",
+                    "Age": 1,
+                    "LocationId": "EastScarp_DruidTower",
+                    "DisplayName": "Book",
+                    "PortraitTexture": "Portraits/HectorBook",
+                    "PetMessage": [
+                        "{{i18n:MEEP.BookInside.{{Random:1++2++3++4++5|inputSeparator=++}}}}",
+                    ],
+                    "HomeTileX": 10,
+                    "HomeTileY": 16,
+                    "Condition": "ANY \"!PLAYER_HAS_SEEN_EVENT Any SnS.Ch3.Cirrus.11\" \"!WEATHER EastScarp_Village Sun\""
+                }
+            }
+        }
+    ]
+}

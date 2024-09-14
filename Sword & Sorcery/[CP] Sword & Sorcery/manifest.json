@@ -3,36 +3,40 @@
 	"Author": "DestyNova",
 	"Version": "1.10.0",
 	"Description": "A fantasy expansion for East Scarp that includes NPCs, Skills, Crops, Weapons, Items & More!",
-	  "UniqueID": "DN.SnS",
-	  "MinimumApiVersion": "3.15.0",
-	  "ContentPackFor": {
-	  "UniqueID": "Pathoschild.ContentPatcher"
-	  },
-	  "UpdateKeys": ["Nexus:12369"],
-	  "Dependencies": [  
+	"UniqueID": "DN.SnS",
+	"MinimumApiVersion": "3.15.0",
+	"ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher"
+	},
+	"UpdateKeys": [
+		"Nexus:12369"
+	],
+	"Dependencies": [
 		{
-		  "UniqueID": "LemurKat.EastScarpe.CP",
-		  "IsRequired": true
-		},   
-		{
-		  "UniqueID": "spacechase0.SpaceCore",
-		  "IsRequired": true
+			"UniqueID": "LemurKat.EastScarpe.CP",
+			"IsRequired": true
 		},
 		{
-            "UniqueID": "DaisyNiko.Tilesheets",
+			"UniqueID": "spacechase0.SpaceCore",
 			"IsRequired": true
-        },
-        {
-            "UniqueID": "Lumisteria.LumiTilesheetsIndoor",
+		},
+		{
+			"UniqueID": "Lumisteria.LumiTilesheetsIndoor",
 			"IsRequired": true
-        },
-        {
-            "UniqueID": "Lumisteria.TtilesheetsOutdoor",
+		},
+		{
+			"UniqueID": "Lumisteria.TtilesheetsOutdoor",
 			"IsRequired": true
-        },
+		},
 		{
 			"UniqueID": "KCC.SnS",
 			"IsRequired": true
+		},
+		{
+			"UniqueID": "DecidedlyHuman.MappingExtensionsAndExtraProperties",
+			"IsRequired": true
 		}
-	 ]
-  }
+	],
+	"DH.MEEP": "2.3.8-portraits-beta",
+	"DH.MEEP.FarmAnimalSpawns": ""
+}
