@@ -367,7 +367,7 @@ namespace SwordAndSorcerySMAPI
             // TODO: Convert to data asset so mods can add their own NPCs
             Dictionary<string, Func<BuffEffects>> buffs = new()
             {
-                { "Elliot", () => new BuffEffects() { FishingLevel = { 1 } } },
+                { "Elliott", () => new BuffEffects() { FishingLevel = { 1 } } },
                 { "Harvey", () => new BuffEffects() { MaxStamina = { 30 } } },
                 { "Sam", () => new BuffEffects() { CriticalChanceMultiplier = { 1.1f } } },
                 { "Sebastian", () => new BuffEffects() { Defense = { 2 } } },
