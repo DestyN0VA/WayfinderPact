@@ -117,9 +117,28 @@ namespace SwordAndSorcerySMAPI
             return (item.GetArmorAmount(includeMageArmor: false) ?? -1) > 0;
         }
 
+        public static bool IsShieldItem(this MeleeWeapon mw)
+        {
+            return (mw.GetData()?.CustomFields?.ContainsKey("DN.SnS_Shield") ?? false);
+        }
+
         public static int? GetArmorAmount(this Item item, bool includeMageArmor = true)
         {
             int mageArmor = Game1.player.GetFarmerExtData().mageArmor ? 50 : 0;
+
+            int shields = 0;
+            if (Game1.player.CurrentTool is MeleeWeapon mw1 && mw1.IsShieldItem())
+                ++shields;
+            if (Game1.player.GetOffhand() is MeleeWeapon mw2 && mw2.IsShieldItem())
+                ++shields;
+
+            int armorAmt = 25;
+            if (Game1.player.HasCustomProfession(PaladinSkill.ProfessionShieldArmor1))
+                armorAmt += 25;
+            if (Game1.player.HasCustomProfession(PaladinSkill.ProfessionShieldArmor2))
+                armorAmt += 50;
+            mageArmor += armorAmt * shields;
+
             if (!includeMageArmor)
                 mageArmor = 0;
 
@@ -134,7 +153,7 @@ namespace SwordAndSorcerySMAPI
 
     public class State
     {
-        public ThrownShield MyThrown { get; set; }
+        public List<ThrownShield> MyThrown { get; set; } = new();
         public float ThrowCooldown { get; set; } = 0;
 
         public float BlockCooldown { get; set; } = 0;
@@ -191,8 +210,6 @@ namespace SwordAndSorcerySMAPI
         public KeybindList AbilityBar2Slot6 = new(new Keybind(SButton.LeftShift, SButton.D6));
         public KeybindList AbilityBar2Slot7 = new(new Keybind(SButton.LeftShift, SButton.D7));
         public KeybindList AbilityBar2Slot8 = new(new Keybind(SButton.LeftShift, SButton.D8));
-
-        public KeybindList ThrowShieldKey = new(SButton.R);
     }
 
     public partial class ModSnS : StardewModdingAPI.Mod
@@ -903,27 +920,28 @@ namespace SwordAndSorcerySMAPI
                 }
             }
 
-            if (State.MyThrown != null)
+            if (State.MyThrown.Count > 0)
             {
-                if ((State.MyThrown.GetPosition() - State.MyThrown.Target.Value).Length() < 1)
+                foreach (var thrown in State.MyThrown.ToList())
                 {
-                    var playerPos = Game1.player.getStandingPosition();
-                    playerPos.X -= 16;
-                    playerPos.Y -= 64;
-                    State.MyThrown.Target.Value = playerPos;
-                    if ((State.MyThrown.GetPosition() - playerPos).Length() < 16)
+                    if ((thrown.GetPosition() - thrown.Target.Value).Length() < 16 && (thrown.Bounces.Value <= 0 || thrown.TargetMonster.Get(Game1.currentLocation) == null))
                     {
-                        State.MyThrown.Dead = true;
+                        var playerPos = Game1.player.getStandingPosition();
+                        playerPos.X -= 16;
+                        playerPos.Y -= 64;
+                        thrown.Target.Value = playerPos;
+                        if ((thrown.GetPosition() - playerPos).Length() < 16)
+                        {
+                            thrown.Dead = true;
+                        }
                     }
+                    if (thrown.Dead)
+                        State.MyThrown.Remove(thrown);
                 }
-                if (State.MyThrown.Dead)
-                    State.MyThrown = null;
             }
             else
             {
-                if (State.ThrowCooldown > 0)
-                    State.ThrowCooldown = MathF.Max(0, State.ThrowCooldown - (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds);
-
+                /*
                 if (Game1.player.GetArmorItem()?.QualifiedItemId == "(O)DestyNova.SwordAndSorcery_LegendaryHeroRelic")
                 {
                     if (Config.ThrowShieldKey.JustPressed())
@@ -931,8 +949,11 @@ namespace SwordAndSorcerySMAPI
                         State.MyThrown = new ThrownShield(Game1.player, 30, Helper.Input.GetCursorPosition().AbsolutePixels, 10);
                         Game1.currentLocation.projectiles.Add(State.MyThrown);
                     }
-                }
+                }*/
             }
+            
+            if (State.ThrowCooldown > 0)
+                State.ThrowCooldown = MathF.Max(0, State.ThrowCooldown - (float)Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds);
 
             if (State.BlockCooldown > 0)
                 State.BlockCooldown = MathF.Max(0, State.BlockCooldown - (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds);
@@ -1063,10 +1084,11 @@ namespace SwordAndSorcerySMAPI
 
         private void Player_Warped(object sender, StardewModdingAPI.Events.WarpedEventArgs e)
         {
-            if (State.MyThrown != null)
+            if (State.MyThrown.Count > 0)
             {
-                State.MyThrown.Dead = true;
-                State.MyThrown = null;
+                foreach (var entry in State.MyThrown)
+                    entry.Dead = true;
+                State.MyThrown.Clear();
             }
 
             if (Game1.player.eventsSeen.Contains(ModSnS.ShadowstepEventReq))
@@ -1122,7 +1144,7 @@ namespace SwordAndSorcerySMAPI
                 Vector2 spot = topOfBar + new Vector2(24, -40);
                 e.SpriteBatch.Draw(ShieldItemTexture, spot, new Rectangle(16, 0, 16, 16), Color.White, 0, new Vector2(8, 8), 4, SpriteEffects.None, 1);
 
-                string str = (armorAmt - Game1.player.GetFarmerExtData().armorUsed.Value) + $"/{armorAmt}";
+                string str = Math.Max(0, (armorAmt - Game1.player.GetFarmerExtData().armorUsed.Value) ?? 0) + $"/{armorAmt}";
                 Vector2 size = Game1.smallFont.MeasureString(str);
                 e.SpriteBatch.DrawString(Game1.smallFont, str, spot - new Vector2(-2, 0), Color.Black, 0, size / 2, 1, SpriteEffects.None, 1);
                 e.SpriteBatch.DrawString(Game1.smallFont, str, spot - new Vector2(2, 0), Color.Black, 0, size / 2, 1, SpriteEffects.None, 1);

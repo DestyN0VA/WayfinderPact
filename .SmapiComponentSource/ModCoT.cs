@@ -245,13 +245,16 @@ namespace CircleOfThornsSMAPI
                 if ( transformTimer >= 3000 )
                 {
                     transformTimer -= 3000;
-                    var ext = SwordAndSorcerySMAPI.Extensions.GetFarmerExtData(Game1.player);
-                    ext.mana.Value = Math.Max( ext.mana.Value - 1, 0 );
-                    if ( ext.mana.Value <= 0 )
+                    if (Game1.player.CurrentTool?.QualifiedItemId != "(W)DN.SnS_DruidShield" && Game1.player.GetOffhand()?.QualifiedItemId != "(W)DN.SnS_DruidShield")
                     {
-                        data.transformed.Value = false;
-                        PostTransform();
-                        return;
+                        var ext = SwordAndSorcerySMAPI.Extensions.GetFarmerExtData(Game1.player);
+                        ext.mana.Value = Math.Max(ext.mana.Value - 1, 0);
+                        if (ext.mana.Value <= 0)
+                        {
+                            data.transformed.Value = false;
+                            PostTransform();
+                            return;
+                        }
                     }
                 }
 

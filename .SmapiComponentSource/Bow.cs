@@ -156,7 +156,11 @@ namespace SwordAndSorcerySMAPI
                 __result = 25 + (5 * Game1.player.GetCustomSkillLevel(ModSnS.RogueSkill));
             if (__instance.ItemId == "DN.SnS_longlivetheking_gun")
             {
-                __result *= (int)2.5f;
+                __result = (int)(__result * 2.5f);
+            }
+            if (Game1.player.CurrentTool?.QualifiedItemId == "(W)DN.SnS_ArtificerShield" || Game1.player.GetOffhand()?.QualifiedItemId == "(W)DN.SnS_ArtificerShield")
+            {
+                __result = (int)(__result * 1.75f);
             }
         }
     }

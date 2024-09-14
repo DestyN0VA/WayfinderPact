@@ -33,23 +33,23 @@ namespace SwordAndSorcerySMAPI
 
         internal static void Reset()
         {
-            usedBuffToday = false;
-            usedBattleToday = false;
-            usedRestorationToday = false;
-            usedTimeToday = false;
-            usedCropsToday = false;
-            usedNpcSong = false;
+            usedBuffToday = 0;
+            usedBattleToday = 0;
+            usedRestorationToday = 0;
+            usedTimeToday = 0;
+            usedCropsToday = 0;
+            usedNpcSong = 0;
         }
 
-        internal static bool usedBuffToday = false;
+        internal static int usedBuffToday = 0;
         internal static void BuffSong()
         {
-            if (usedBuffToday)
+            if (usedBuffToday >= ModUP.GetSongLimit())
             {
                 Game1.drawObjectDialogue(I18n.Harp_BadSong());
                 return;
             }
-            //usedBuffToday = true;
+            usedBuffToday++;
 
             int strMult = Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffStrength) ? 2 : 1;
             int duration = Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffDuration) ? Buff.ENDLESS : (7 * 6 * 6 * 1000);
@@ -66,15 +66,15 @@ namespace SwordAndSorcerySMAPI
             Game1.player.applyBuff(new Buff("bardics.buff", "bardics.buff", I18n.Bardics_Song_Buff_Name(), duration, effects: effects, iconTexture: ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/abilities.png"), iconSheetIndex: 2, displayName: I18n.Bardics_Song_Buff_Name(), description: ""));
         }
 
-        internal static bool usedBattleToday = false;
+        internal static int usedBattleToday = 0;
         internal static void BattleSong()
         {
-            if (usedBattleToday)
+            if (usedBattleToday >= ModUP.GetSongLimit())
             {
                 Game1.drawObjectDialogue(I18n.Harp_BadSong());
                 return;
             }
-            usedBattleToday = true;
+            usedBattleToday ++;
 
             int strMult = Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffStrength) ? 2 : 1;
             int duration = Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffDuration) ? Buff.ENDLESS : (7 * 6 * 6 * 1000);
@@ -89,15 +89,15 @@ namespace SwordAndSorcerySMAPI
             Game1.player.applyBuff(new Buff("bardics.battle", "bardics.battle", I18n.Bardics_Song_Battle_Name(), duration, effects: effects, iconTexture: ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/abilities.png"), iconSheetIndex: 3, displayName: I18n.Bardics_Song_Battle_Name()));
         }
 
-        internal static bool usedRestorationToday = false;
+        internal static int usedRestorationToday = 0;
         internal static void RestorationSong()
         {
-            if (usedRestorationToday)
+            if (usedRestorationToday >= ModUP.GetSongLimit())
             {
                 Game1.drawObjectDialogue(I18n.Harp_BadSong());
                 return;
             }
-            usedRestorationToday = true;
+            usedRestorationToday ++;
 
             Game1.playSound("healSound");
             Game1.player.health = Math.Min(Game1.player.health + (int)(Game1.player.maxHealth * 0.25), Game1.player.maxHealth);
@@ -147,16 +147,16 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        internal static bool usedTimeToday = false;
+        internal static int usedTimeToday = 0;
         private static int timeTimer = -1;
         internal static void TimeSong()
         {
-            if (usedTimeToday)
+            if (usedTimeToday >= ModUP.GetSongLimit())
             {
                 Game1.drawObjectDialogue(I18n.Harp_BadSong());
                 return;
             }
-            usedTimeToday = true;
+            usedTimeToday ++;
 
             if (timeTimer < 0)
             {
@@ -203,10 +203,10 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        internal static bool usedCropsToday = false;
+        internal static int usedCropsToday = 0;
         internal static void CropSong()
         {
-            if (usedCropsToday)
+            if (usedCropsToday >= ModUP.GetSongLimit())
             {
                 Game1.drawObjectDialogue(I18n.Harp_BadSong());
                 return;
@@ -267,7 +267,7 @@ namespace SwordAndSorcerySMAPI
 
             if ( grewCount > 0 )
             {
-                usedCropsToday = true;
+                usedCropsToday ++;
                 Game1.addHUDMessage(new HUDMessage(I18n.Bardics_Song_Crops_Message(grewCount)));
             }
         }
@@ -350,15 +350,14 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        internal static bool usedNpcSong = false;
+        internal static int usedNpcSong = 0;
         internal static void NpcSong()
         {
-            if (usedNpcSong)
+            if (usedNpcSong >= ModUP.GetSongLimit())
             {
                 Game1.drawObjectDialogue(I18n.Harp_BadSong());
                 return;
             }
-            usedNpcSong = true;
 
             int duration = 7000 * 6 * 6;
             if (Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffDuration))
@@ -449,7 +448,7 @@ namespace SwordAndSorcerySMAPI
 
             // TODO: Icon
             Game1.player.applyBuff(new Buff("npcsong", "npcsong", I18n.Bardics_Song_Npcbuff_Buff(target.Name), duration, effects: effects));
-            usedNpcSong = true;
+            usedNpcSong ++;
         }
     }
 
@@ -486,6 +485,16 @@ namespace SwordAndSorcerySMAPI
             Monitor = monitor;
             ModManifest = manifest;
             Helper = helper;
+        }
+
+        internal static int GetSongLimit()
+        {
+            int amt = 1;
+            if (Game1.player.CurrentTool?.QualifiedItemId == "(W)DN.SnS_BardShield" || Game1.player.GetOffhand()?.QualifiedItemId == "(W)DN.SnS_BardShield")
+            {
+                ++amt;
+            }
+            return amt;
         }
 
         private static void SongPreamble(Action songStuff)
@@ -537,7 +546,7 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => 20,
                 KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.BARDICS_LEVEL Current 1",
                 UnlockHint = () => I18n.Ability_Bardics_UnlockHint(1),
-                CanUse = () => !SongEntry.usedBuffToday,
+                CanUse = () => SongEntry.usedBuffToday < ModUP.GetSongLimit(),
                 Function = () =>
                 {
                     SongPreamble(() => SongEntry.BuffSong());
@@ -552,7 +561,7 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => 20,
                 KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.BARDICS_LEVEL Current 2",
                 UnlockHint = () => I18n.Ability_Bardics_UnlockHint(2),
-                CanUse = () => !SongEntry.usedBattleToday,
+                CanUse = () => SongEntry.usedBattleToday < ModUP.GetSongLimit(),
                 Function = () =>
                 {
                     SongPreamble(() => SongEntry.BattleSong());
@@ -567,7 +576,7 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => 10,
                 KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.BARDICS_LEVEL Current 3",
                 UnlockHint = () => I18n.Ability_Bardics_UnlockHint(3),
-                CanUse = () => !SongEntry.usedRestorationToday,
+                CanUse = () => SongEntry.usedRestorationToday < ModUP.GetSongLimit(),
                 Function = () =>
                 {
                     SongPreamble(() => SongEntry.RestorationSong());
@@ -594,7 +603,7 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
                 SpriteIndex = 6,
                 ManaCost = () => 25,
-                CanUse = () => !SongEntry.usedNpcSong,
+                CanUse = () => SongEntry.usedNpcSong < ModUP.GetSongLimit(),
                 KnownCondition = $"PLAYER_IS_COLLEGE_ELOQUENCE Current",
                 HiddenIfLocked = true,
                 Function = () =>
