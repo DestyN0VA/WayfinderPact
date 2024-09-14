@@ -229,7 +229,7 @@ namespace SwordAndSorcerySMAPI
         {
             if (!Helper.ModRegistry.IsLoaded("DN.SnS"))
             {
-                Monitor.Log("Failed to find CP component of S&S, make sure you installed everything from the download. (S&S will not load without it.)", LogLevel.Error);
+                Monitor.Log("Failed to find the CP component of S&S, make sure you installed everything from the download. (S&S will not load without it.)", LogLevel.Error);
                 return;
             }
 
@@ -594,8 +594,11 @@ namespace SwordAndSorcerySMAPI
                     w.attachments.SetCount(2);
                     w.attachments[0] = (StardewValley.Object)Game1.player.CurrentTool.attachments[0].getOne();
                     w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
-                    w.attachments[1] = (StardewValley.Object)Game1.player.CurrentTool.attachments[1].getOne();
-                    w.attachments[1].Stack = Game1.player.CurrentTool.attachments[1].Stack;
+                    if (Game1.player.CurrentTool.attachments.Count > 1 && Game1.player.CurrentTool.attachments[1] != null)
+                    {
+                        w.attachments[1] = (StardewValley.Object)Game1.player.CurrentTool.attachments[1].getOne();
+                        w.attachments[1].Stack = Game1.player.CurrentTool.attachments[1].Stack;
+                    }
                 }
                 Game1.player.Items[Game1.player.CurrentToolIndex] = w;
                 return true;
@@ -610,8 +613,11 @@ namespace SwordAndSorcerySMAPI
                     w.attachments.SetCount(2);
                     w.attachments[0] = (StardewValley.Object)Game1.player.CurrentTool.attachments[0].getOne();
                     w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
-                    w.attachments[1] = (StardewValley.Object)Game1.player.CurrentTool.attachments[1].getOne();
-                    w.attachments[1].Stack = Game1.player.CurrentTool.attachments[1].Stack;
+                    if (Game1.player.CurrentTool.attachments.Count > 1 && Game1.player.CurrentTool.attachments[1] != null)
+                    {
+                        w.attachments[1] = (StardewValley.Object)Game1.player.CurrentTool.attachments[1].getOne();
+                        w.attachments[1].Stack = Game1.player.CurrentTool.attachments[1].Stack;
+                    }
                 }
                 Game1.player.Items[Game1.player.CurrentToolIndex] = w;
                 return true;
