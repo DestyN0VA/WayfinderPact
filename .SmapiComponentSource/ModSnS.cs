@@ -13,6 +13,7 @@ using StardewValley.BellsAndWhistles;
 using StardewValley.Extensions;
 using StardewValley.GameData.Objects;
 using StardewValley.GameData.SpecialOrders;
+using StardewValley.Locations;
 using StardewValley.Menus;
 using StardewValley.Monsters;
 using StardewValley.SpecialOrders;
@@ -187,6 +188,8 @@ namespace SwordAndSorcerySMAPI
         public int TextRed = 0;
         public int TextGreen = 0;
         public int TextBlue = 0;
+
+        public float MonsterHealthBuff { get; set; } = 1.75f;
 
         public KeybindList ConfigureAdventureBar = new(SButton.U);
         public KeybindList ToggleAdventureBar = new(new Keybind(SButton.LeftControl, SButton.U));
@@ -390,6 +393,8 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.Display.RenderedHud += Display_RenderedHud;
             Helper.Events.Display.RenderedWorld += Display_RenderedWorld;
             Helper.Events.Input.ButtonPressed += Input_ButtonPressed;
+            Helper.Events.World.NpcListChanged += World_NpcListChanged;
+            Helper.Events.World.LocationListChanged += World_LocationListChanged; ;
 
             GameLocation.RegisterTileAction("SwordAndSorceryOrderBoard", (loc, args, farmer, point) =>
             {
@@ -477,6 +482,41 @@ namespace SwordAndSorcerySMAPI
             new ModTOP(Monitor, ModManifest, Helper).Entry();
 
             InitArsenal();
+        }
+
+        private void World_LocationListChanged(object sender, StardewModdingAPI.Events.LocationListChangedEventArgs e)
+        {
+            foreach (var loc in e.Added)
+            {
+                if (loc is MineShaft ms && ms.mineLevel < 20)
+                    return;
+
+                foreach (var npc in loc.characters)
+                {
+                    if (npc is Monster monster && !monster.modData.ContainsKey($"{ModManifest.UniqueID}_BuffedHealth"))
+                    {
+                        monster.MaxHealth = (int)(monster.MaxHealth * Config.MonsterHealthBuff);
+                        monster.Health = (int)(monster.Health * Config.MonsterHealthBuff);
+                        monster.modData.Add($"{ModManifest.UniqueID}_BuffedHealth", "meow");
+                    }
+                }
+            }
+        }
+
+        private void World_NpcListChanged(object sender, StardewModdingAPI.Events.NpcListChangedEventArgs e)
+        {
+            if (e.Location is MineShaft ms && ms.mineLevel < 20)
+                return;
+
+            foreach (var npc in e.Added)
+            {
+                if (npc is Monster monster && !monster.modData.ContainsKey($"{ModManifest.UniqueID}_BuffedHealth"))
+                {
+                    monster.MaxHealth = (int)(monster.MaxHealth * Config.MonsterHealthBuff);
+                    monster.Health = (int)(monster.Health * Config.MonsterHealthBuff);
+                    monster.modData.Add($"{ModManifest.UniqueID}_BuffedHealth", "meow");
+                }
+            }
         }
 
         private void GameLoop_SaveCreated(object sender, StardewModdingAPI.Events.SaveCreatedEventArgs e)
@@ -784,6 +824,10 @@ namespace SwordAndSorcerySMAPI
             if (gmcm != null)
             {
                 gmcm.Register(ModManifest, () => Config = new(), () => Helper.WriteConfig(Config));
+
+                gmcm.AddSectionTitle(ModManifest, I18n.Config_Section_Balancing);
+                gmcm.AddNumberOption(ModManifest, () => Config.MonsterHealthBuff, (val) => Config.MonsterHealthBuff = val, I18n.Config_MonsterHealthBuff_Name, I18n.Config_MonsterHealthBuff_Description, 1.0f, 3.0f, 0.05f, f => ((int)((f - 1.0) * 100)).ToString());
+
                 gmcm.AddSectionTitle(ModManifest, I18n.Section_AetherBar_Name, I18n.Section_AetherBar_Description);
                 gmcm.AddNumberOption(ModManifest, () => Config.Red, (val) => Config.Red = val, I18n.Int_Red_Name, I18n.Int_Red_Descripion, 0, 255);
                 gmcm.AddNumberOption(ModManifest, () => Config.Blue, (val) => Config.Blue = val, I18n.Int_Blue_Name, I18n.Int_Blue_Descripion, 0, 255);

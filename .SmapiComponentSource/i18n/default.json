@@ -24,6 +24,9 @@
   "ability.lltk-toggle.name": "LLTK Form Swap",
   "ability.lltk-toggle.description": "Swaps the LLTK between sword and gun form.",
 
+  "config.section.balancing": "Balancing",
+  "config.monster-health-buff.name": "Monster Health Buff",
+  "config.monster-health-buff.description": "Buff monster health by a percentage (but not in the mines below level 20).",
   "config.section.lltk": "Long Live the King Config",
   "config.section.lltk.text": "This is how you toggle the Long Live the King between sword form and gun form. There is also an ability in the Adventure Bar once you have it unlocked.",
   "config.lltk-toggle-right-click.name": "LLTK Swap on Right click",

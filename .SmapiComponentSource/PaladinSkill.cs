@@ -49,7 +49,7 @@ namespace SwordAndSorcerySMAPI
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldThrowHit2);
 
-            PaladinSkill.ProfessionShieldArmor1 = new GenericProfession(skill: this, id: "Armor1", name: I18n.PaladinSkill_Profession_ShieldArmor1_Name, description: I18n.PaladinSkill_Profession_ShieldArmor2_Description)
+            PaladinSkill.ProfessionShieldArmor1 = new GenericProfession(skill: this, id: "Armor1", name: I18n.PaladinSkill_Profession_ShieldArmor1_Name, description: I18n.PaladinSkill_Profession_ShieldArmor1_Description)
             {
                 Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/FightToEndTheFight.png")
             };
