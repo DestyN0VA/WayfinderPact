@@ -576,14 +576,14 @@
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
-      "Value": "stopMusic/quickQuestion \"{{i18n:Events.S&S.Ch1.RHToggle.Mateo.1}}\"#{{i18n:Events.S&S.Ch1.RHToggle.Farmer.1}}#{{i18n:Events.S&S.Ch1.RHToggle.Farmer.2}}(break)speak Mateo \"{{Events.S&S.Ch1.RHToggle.Mateo.2}}\"(break)speak Mateo \"{{Events.S&S.Ch1.RHToggle.Mateo.3}}\"",
+      "Value": "stopMusic/quickQuestion \"{{i18n:Events.S&S.Ch1.RHToggle.Mateo.1}}\"#{{i18n:Events.S&S.Ch1.RHToggle.Farmer.1}}#{{i18n:Events.S&S.Ch1.RHToggle.Farmer.2}}(break)speak Mateo \"{{i18n:Events.S&S.Ch1.RHToggle.Mateo.2}}\"(break)speak Mateo \"{{i18n:Events.S&S.Ch1.RHToggle.Mateo.3}}\"",
       "When": {
         "Query: {{HasFlag |contains=CirrusRomanticFlag}} OR {{HasFlag |contains=HectorRomanticFlag}} OR {{HasFlag |contains=RivalHearts_AideenMateo}}": "true"
       }
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
-      "Value": "stopMusic/quickQuestion \"{{i18n:Events.S&S.Ch1.RHToggle.Mateo.1}}\"#{{i18n:Events.S&S.Ch1.RHToggle.Farmer.1}}#{{i18n:Events.S&S.Ch1.RHToggle.Farmer.2}}(break)speak Mateo \"{{Events.S&S.Ch1.RHToggle.Mateo.2}}\"(break)speak Mateo \"{{Events.S&S.Ch1.RHToggle.Mateo.3}}\"",
+      "Value": "stopMusic/quickQuestion \"{{i18n:Events.S&S.Ch1.RHToggle.Mateo.1}}\"#{{i18n:Events.S&S.Ch1.RHToggle.Farmer.1}}#{{i18n:Events.S&S.Ch1.RHToggle.Farmer.2}}(break)speak Mateo \"{{i18n:Events.S&S.Ch1.RHToggle.Mateo.2}}\"(break)speak Mateo \"{{i18n:Events.S&S.Ch1.RHToggle.Mateo.3}}\"",
       "When": {
         "HasMod |contains=EnderTedi.Polyamory": true,
         "EnderTedi.Polyamory/HasMonogamousPartner": true
