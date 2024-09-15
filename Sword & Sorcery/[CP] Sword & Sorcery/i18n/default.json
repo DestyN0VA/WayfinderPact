@@ -3292,12 +3292,12 @@ ________      ________ _   _ _______ _____
   "Core.Cirrus.Generic.LateHeart.17": "When I was at my worst, I really didn't like who I was.$16#$b#Eventually I figured out that like, people aren't really good or bad. They are what they do. So I started doing more stuff I loved.$17#$b#Not just music, which I associated with a lot of my problems... but crafting, cooking, dancing. Those kinds of things.$6",
   "Core.Cirrus.Generic.LateHeart.18": "Are you good with computers, @? Do you have one on your farm?$13#$b#I'm not. I can navigate phone apps just fine, but we couldn't afford a desktop computer when I was younger. I think hobbies involving software or coding are safe from my fixations - though, I've always wondered if I could build a computer. All the different parts seem like they'd be fun to put together.$17",
   "Core.Cirrus.Generic.LateHeart.19": "Someone I was close with when I was younger told me she liked me because I was nice.$16#$b#I didn't really get that 'nice' isn't the default character trait until I got involved with the music industry. Empathy and kindness took a sharp downturn, at that point.$17#$b#It was a hard lesson to learn, and I still think about that person a lot.$18",
-  "Core.Cirrus.Generic.LateHeart.20": "So, for proper pizza, the secret is the water. But also, the bottom has to be thin and crunchy while the crust is chewy and soft.$1#$b#The cheese to sauce ratio has to be exactly right, but the only way you'll know for sure is if you measure with your heart.[(O){{ModID}}_zuzustylepizza]$6",
-  "Core.Cirrus.Generic.LateHeart.21": "ZuZu style cheesecake has to be rich. It has to be dense. And the graham crust has to be super buttery.$1#$b#You don't want to overdo it on the toppings. One aestheitc strawberry is perfectly fine; the whole dessert is tasty enough without extras.[(O){{ModID}}_zuzustylecheesecake]$6",
-  "Core.Cirrus.Generic.LateHeart.22": "It took a really long time to address my alcohol addiction, but what helped a lot was learning how to make killer mocktails. I hated feeling left out at big events.$2#$b#The Portfire Drake Sparkler is my own fruity creation. It's got the bubbly feeling of a seltzer with the packed flavor of a fruited sour.$1[(O){{ModID}}_portfiredrakesparkler]$6",
+  "Core.Cirrus.Generic.LateHeart.20": "So, for proper pizza, the secret is the water. But also, the bottom has to be thin and crunchy while the crust is chewy and soft.$1#$b#The cheese to sauce ratio has to be exactly right, but the only way you'll know for sure is if you measure with your heart.[(O)DN.SnS_zuzustylepizza]$6",
+  "Core.Cirrus.Generic.LateHeart.21": "ZuZu style cheesecake has to be rich. It has to be dense. And the graham crust has to be super buttery.$1#$b#You don't want to overdo it on the toppings. One aestheitc strawberry is perfectly fine; the whole dessert is tasty enough without extras.[(O)DN.SnS_zuzustylecheesecake]$6",
+  "Core.Cirrus.Generic.LateHeart.22": "It took a really long time to address my alcohol addiction, but what helped a lot was learning how to make killer mocktails. I hated feeling left out at big events.$2#$b#The Portfire Drake Sparkler is my own fruity creation. It's got the bubbly feeling of a seltzer with the packed flavor of a fruited sour.$1[(O)DN.SnS_portfiredrakesparkler]$6",
   "Core.Cirrus.Generic.LateHeart.23": "'Here at JojaCorp, our values include: making numbers go up, very fast!' Does that sound like your old job, @?$1#$b#That's what being a big musician is like, too. The art matters less and less the bigger and more involved you get.$3#$b#Merch sales, ticket sales, tour planning, album deadlines - it's like living life off a spreadsheet...$0",
   "Core.Cirrus.Generic.LateHeart.24": "I get art block all the time, and it's really annoying. Sometimes, a long walk or a good nap doesn't help at all. Nothing done with intention ever brings it back.$3#$b#But it always feels like the moment I stop thinking so hard about making art, I'm able to do it again - and it's always something cooler than what I've made prior.$1",
-  "Core.Cirrus.Generic.LateHeart.25": "ZuZu style chowder always lifts me up when I'm feeling down. Especially since it's cheap and easy to make.$1#$b#I still think Port Drake style is better, since it's made to be thicker and it's delicious with crackers.[(O){{ModID}}_zuzustyleclamchowder]",
+  "Core.Cirrus.Generic.LateHeart.25": "ZuZu style chowder always lifts me up when I'm feeling down. Especially since it's cheap and easy to make.$1#$b#I still think Port Drake style is better, since it's made to be thicker and it's delicious with crackers.[(O)DN.SnS_zuzustyleclamchowder]",
   "Core.Cirrus.Generic.LateHeart.26": "Alcohol isn't the only thing I've got to steer clear of. Cigarette smoke gets me itchin' for one.$2#$b#I wouldn't dream of trying to tell someone what they can and can't do with their bodies. Hell, I know I didn't listen to anyone who told me to stop for any reason.$0#$b#What I can do is limit my exposure to substances, be honest about my boundries, and try to make good choices about the relationships I keep.$1",
   "Core.Cirrus.Generic.LateHeart.27": "Port Drake is named for the ancient creatures that supposedly lived there. I'm not much of a mythology girlie, but even I've got to admit that the existance of basically-dragons is pretty cool.$1#$b#I believed in fairy-tale stuff a whole lot less before meeting someone who turns into a wolf on a whim.$17",
   "Core.Cirrus.Generic.LateHeart.28": "I started reading the supplement books for Mateo's tabletop game. There's so much stuff, like, for every idea I have there's mechanics for it.$14#$b#I have a feeling I'm going to build a ton of characters and then not know which one to actually play. So far, I like my monster hunter build the most.$17",
@@ -3305,7 +3305,7 @@ ________      ________ _   _ _______ _____
   "Core.Cirrus.Generic.LateHeart.30": "Hey @! I went down to Willy's and he hooked me up with some fresh fish, it was incredible. HE'S incredible! I can't imagine how tough a job it must be to stock a fishery.$1#$b#Anyway, here's a serving of what I made since there was a bit of left over. Enjoy![242]",
   "Core.Cirrus.Generic.LateHeart.31": "I don't want to make wine or mead out of foraged fruits, but I did want to do something with everything I found.$22#$b#I ended up making some cobbler. I'm usually too impatient to bake, but I had a slice and it came out pretty good. Give it a try, @! Let me know if it came out okay.[611]",
   "Core.Cirrus.Generic.LateHeart.32": "One of the wild things about being on a stadium tour is how lonely it is. Imagine selling twenty thousand seats to a show and then just going home alone to scroll on your phone.$16#$b#It's especially difficult now that I'm sober, because if the alternative is partying and I'm trying to limit my exposure to substances...$20#$b#I'd rather play for five people and get to give them a high-five afterward than deal with the alternative these days.$17",
-  "Core.Cirrus.Generic.LateHeart.33": "Nothing beats the simplicity of a bagel with some lox on it. The secret is the water you're boiling the bread in, of course. Yup - good bagels are boiled, not baked.$17#$b#All you need is a smear of cream cheese, a cut of good salmon, and some onions if you're feeling particularly fancy. It's one of my favorite breakfasts!$1[(O){{ModID}}_zuzustylebagelwithlox]",
+  "Core.Cirrus.Generic.LateHeart.33": "Nothing beats the simplicity of a bagel with some lox on it. The secret is the water you're boiling the bread in, of course. Yup - good bagels are boiled, not baked.$17#$b#All you need is a smear of cream cheese, a cut of good salmon, and some onions if you're feeling particularly fancy. It's one of my favorite breakfasts!$1[(O)DN.SnS_zuzustylebagelwithlox]",
   "Core.Cirrus.Generic.LateHeart.34": "There's no such thing as wasted time unless you're just... like, watching paint dry. Not sure why you would do that to begin with, though.$14#$b#Time spent having fun, no matter what it is, is worthwhile. Don't let anyone tell you otherwise. Any activity that brings you joy is worth doing-$17#$b#I mean, I guess that includes watching paint dry if you're really into that...$16",
   "Core.Cirrus.Generic.LateHeart.35": "There was a time when I lined up a bunch of canvases against a tarp and flung brightly colored housepaint at them. It was because I wanted some stuff to bring more color to the van interior, but it didn't look great.$16#$b#That's when I decided I would go for a cozy aesthetic instead of a chaotic one.$14",
   "Core.Cirrus.Generic.LateHeart.36": "I got really into Incrediwoman comics when I was younger. That's why I decided to paint her on the side of the ol' van, anyway.$17#$b#Wanted to cover up the mural from the pizza place I was working at. But I just thought it'd be kind of neat to do some big, silly mural.$1",
@@ -4041,7 +4041,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch3.Cirrus.4.Cirrus.18": "You know, I've never had someone say that before. Like, apologize for how I'm feeling. It means a lot, I want you to know that. Thank you.$11#$b#The waterworks won't stop, even though I feel better... I guess sometimes you've just got to cry it out, or shout it out, maybe...$10",
   "Events.SnS.Ch3.Cirrus.4.Cirrus.19": "Okay, okay... I think I'm done...$28#$b#You're the best, @. Thanks for literally being a shoulder for me to cry on.$17#$b#I have an idea on how I can thank you. Let's head to the Inn, I'll show you how to make pizza - the right way, the city way!$14",
   "Events.SnS.Ch3.Cirrus.4.Cirrus.20": "Anything to distract me from waiting for a message that I know isn't coming...$2",
-  "Events.SnS.Ch3.Cirrus.4.Cirrus.21": "I'm telling you, it's the water, if it passes the fold test or not, and the quality of the cheese pull...$22[(O){{ModID}}_zuzustylepizza]",
+  "Events.SnS.Ch3.Cirrus.4.Cirrus.21": "I'm telling you, it's the water, if it passes the fold test or not, and the quality of the cheese pull...$22[(O)DN.SnS_zuzustylepizza]",
   "Events.SnS.Ch3.Cirrus.4.Message.22": "Cirrus has shared her recipe for ZuZu Style Pizza!",
 
   // 3 HEART 2
@@ -4077,7 +4077,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch3.Cirrus.6.Cirrus.19": "And that's how you make clam chowder, ZuZu City style! It's almost as good as how we made it in Port Drake, with a cream base.",
   "Events.SnS.Ch3.Cirrus.6.Cirrus.20": "Yes, please.$2",
   "Events.SnS.Ch3.Cirrus.6.Cirrus.21": "Thank you, @. If it's alright, can I just... ramble about something?$28",
-  "Events.SnS.Ch3.Cirrus.6.Cirrus.22": "She - my mom, always told me to toughen up when I got scared, but it never helped.$20#$b#What did, though, was cooking. If I couldn't handle my feelings, I just started throwing together whatever I could from an old recipe book we had laying around.$3#$b#One of my favorites is clam chowder, ZuZu style. You simmer potatoes, tomatoes, whatever other vegetables you got...#$b#It's easy and cheap, usually. And cheap was what we could afford.$28#$b#Let me tell you step-by-step, so you can make it at home!$1[(O){{ModID}}_zuzustyleclamchowder]",
+  "Events.SnS.Ch3.Cirrus.6.Cirrus.22": "She - my mom, always told me to toughen up when I got scared, but it never helped.$20#$b#What did, though, was cooking. If I couldn't handle my feelings, I just started throwing together whatever I could from an old recipe book we had laying around.$3#$b#One of my favorites is clam chowder, ZuZu style. You simmer potatoes, tomatoes, whatever other vegetables you got...#$b#It's easy and cheap, usually. And cheap was what we could afford.$28#$b#Let me tell you step-by-step, so you can make it at home!$1[(O)DN.SnS_zuzustyleclamchowder]",
   "Events.SnS.Ch3.Cirrus.6.Message.23": "Cirrus taught you how to make ZuZu Style Clam Chowder! She seemed in much higher spirits, and Rosa stayed with her after you left.",
 
   // 5 HEART
@@ -4100,7 +4100,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch3.Cirrus.7.QuickQuestion.17": "Be free of your mind, and let it flow. ",
   "Events.SnS.Ch3.Cirrus.7.QuickQuestion.18": "Open up your heart, and let things go.",
   "Events.SnS.Ch3.Cirrus.7.Cirrus.19": "It's funny how things turn around, just by singing out loud.$8",
-  "Events.SnS.Ch3.Cirrus.7.Cirrus.20": "Thanks for singing with me, @... it really meant a lot, and I think we made something beautiful together.$6#$b#Let's head back, I'll make you a quick snack since you've had such a long day![(O){{ModID}}_zuzustylebagelwithlox]",
+  "Events.SnS.Ch3.Cirrus.7.Cirrus.20": "Thanks for singing with me, @... it really meant a lot, and I think we made something beautiful together.$6#$b#Let's head back, I'll make you a quick snack since you've had such a long day![(O)DN.SnS_zuzustylebagelwithlox]",
   "Events.SnS.Ch3.Cirrus.7.Message.21": "Cirrus taught you how to make a ZuZu Style Bagel with Lox!",
   "Events.SnS.Ch3.Cirrus.7.Hector.22": "There's something about Cirrus' music that I can't quite place.$24",
   "Events.SnS.Ch3.Cirrus.7.HectorBook.23": "...?",
@@ -4132,7 +4132,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch3.Cirrus.8.QuickQuestion.21": "Would you want to grab a slice and go hang out at the arcade for a while? ",
   "Events.SnS.Ch3.Cirrus.8.QuickQuestion.22": "I haven't eaten lunch yet, want to make something together?",
   "Events.SnS.Ch3.Cirrus.8.Cirrus.23": "I'd love to!$1",
-  "Events.SnS.Ch3.Cirrus.8.Cirrus.24": "Hey, you've gotta keep your strength up dealing with everyone else's problems. C'mon, Mateo, I'll cook for you too!$24[(O){{ModID}}_portfiredrakesparkler]",
+  "Events.SnS.Ch3.Cirrus.8.Cirrus.24": "Hey, you've gotta keep your strength up dealing with everyone else's problems. C'mon, Mateo, I'll cook for you too!$24[(O)DN.SnS_portfiredrakesparkler]",
   "Events.SnS.Ch3.Cirrus.8.Mateo.25": "She's gonna be just fine.$1",
   "Events.SnS.Ch3.Cirrus.8.Message.26": "While hanging out, Cirrus taught you the recipe for her favorite mocktail, the Portfire Drake Sparkler!",
 
@@ -4472,7 +4472,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch3.Cirrus.8_JJ.QuickQuestion.21": "Would you want to grab a slice and go hang out at the arcade for a while? ",
   "Events.SnS.Ch3.Cirrus.8_JJ.QuickQuestion.22": "I haven't eaten lunch yet, want to make something together?",
   "Events.SnS.Ch3.Cirrus.8_JJ.Cirrus.23": "I'd love to!$1",
-  "Events.SnS.Ch3.Cirrus.8_JJ.Cirrus.24": "Hey, you've gotta keep your strength up dealing with everyone else's problems. C'mon, Jessie, I'll cook for you too!$24[(O){{ModID}}_portfiredrakesparkler]",
+  "Events.SnS.Ch3.Cirrus.8_JJ.Cirrus.24": "Hey, you've gotta keep your strength up dealing with everyone else's problems. C'mon, Jessie, I'll cook for you too!$24[(O)DN.SnS_portfiredrakesparkler]",
   "Events.SnS.Ch3.Cirrus.8_JJ.Jessie.25": "She's gonna be just fine.$1",
   "Events.SnS.Ch3.Cirrus.8_JJ.Message.26": "While hanging out, Cirrus taught you the recipe for her favorite mocktail, the Portfire Drake Sparkler!",
 
@@ -4651,7 +4651,7 @@ ________      ________ _   _ _______ _____
   "CT.Cirrus.CirrusDnD": "I was really surprised that Mateo made me a set of dice. They're purple and swirly, I don't know how they matched my eyes so well...$4",
   "CT.Cirrus.CirrusLionsMane": "I've been reading and watching a lot of videos, just like I did for the van. I'm so excited for the Lion's Mane project.$1",
   "CT.Cirrus.CirrusConcert": "No matter how many people would say 'good job', it didn't matter. I wasn't hearing it from my mom.$2#$b#That'll matter less soon, I think. Since time heals all wounds and I've got such an amazing support system now.$1",
-  "CT.Cirrus.CirrusLionsMane2": "Thank you for all your help, @. The Lion's Mane wouldn't have gotten repaired nearly as quickly without your help.$6#$b#Please stop by whenever you're in need of a treat. I've got you!$1[(O){{ModID}}_zuzustylecheesecake]",
+  "CT.Cirrus.CirrusLionsMane2": "Thank you for all your help, @. The Lion's Mane wouldn't have gotten repaired nearly as quickly without your help.$6#$b#Please stop by whenever you're in need of a treat. I've got you!$1[(O)DN.SnS_zuzustylecheesecake]",
   "CT.Cirrus.CirrusLionsMane3": "Suddenly learning you've 'got magic' is really jarring. I don't know what to make of it yet.$3#$b#Maybe I should just treat it like another hobby, instead of a big life-changing thing.$1#$b#Start slow, you know? That's way less overwhelming.$1",
   "CT.Cirrus.CirrusEngaged": "I love you, Rockstar. I'm looking forward to spending the rest of my life by your side.$4",
   "CT.Cirrus.CirrusOvercomingFear": "Even if I'm less afraid of the rain overall, I'd rather not get caught in it... messes up my hair, my makeup, my outfit...!$17",
@@ -5225,7 +5225,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Roslin.4.Cirrus.23": "Thank you, Roslin. I've been so much more engaged with music again, and I think that's helping a lot.$23#$b#I'm excited about my abilities, and I'm excited to share them with the people around me.$1",
 
   // GINGER BEER 
-  "Events.SnS.Ch4.Cirrus.1.Cirrus.01": "@! I'm glad you're here, I had something I wanted to give you.$1[(O){{ModID}}_strawberrygingerbeer]",
+  "Events.SnS.Ch4.Cirrus.1.Cirrus.01": "@! I'm glad you're here, I had something I wanted to give you.$1[(O)DN.SnS_strawberrygingerbeer]",
   "Events.SnS.Ch4.Cirrus.1.Cirrus.02": "It's Ginger Beer! I started making it myself. You add fruit and ginger to the jar, and then you've got a delicious drink! You can even age it.$17#$b#I wanted to do something to celebrate my sobriety, so homemaking a fancy non-alcoholic drink seemed about right...$22#$b#Why don't you try, @? You grow so much cool stuff on your farm. It'd make a great alternative to wine. So, all you need is...$1",
   "Events.SnS.Ch4.Cirrus.1.Message.03": "You can now craft Old-Fashioned Fermenters! Add ginger and either orange, blueberry, pineapple, rhubarb, strawberry, peach, ancient fruit, ancient huckleberries, ancient appleberries, or ancient elderberries to make Ginger Beer, which can be aged.",
 
@@ -5804,7 +5804,7 @@ ________      ________ _   _ _______ _____
 "Events.SnS.Ch4.Dandelion.1.Dandelion.14": "Well! I'm doing... ha, dandy, quite honestly!$6#$b#Thank you for reuniting me with my little family, @. Your contributions cannot go understated.$13",
 "Events.SnS.Ch4.Dandelion.1.Roslin.15": "It's been great to have her back. I... missed her, quite a lot.$12",
 "Events.SnS.Ch4.Dandelion.1.Dandelion.16": "I missed you too, Roslin.$4",
-"Events.SnS.Ch4.Dandelion.1.Dandelion.17": "Oh, two things before you continue about your day, @. One, I'd like to send you home with some leftovers. Best keep your energy up!$14[(O){{ModID}}_dandeliongreens]#$b#And second, I've been working on something since I've returned, and may be recruiting you for a task in the near future. Don't worry, it'll be to all our benefit.$15#$b#I'd like to be helpful during our next encounter with the beast-$13",
+"Events.SnS.Ch4.Dandelion.1.Dandelion.17": "Oh, two things before you continue about your day, @. One, I'd like to send you home with some leftovers. Best keep your energy up!$14[(O)DN.SnS_dandeliongreens]#$b#And second, I've been working on something since I've returned, and may be recruiting you for a task in the near future. Don't worry, it'll be to all our benefit.$15#$b#I'd like to be helpful during our next encounter with the beast-$13",
 "Events.SnS.Ch4.Dandelion.1.Roslin.18": "I still don't think you should ever step foot in those caves again.$16",
 "Events.SnS.Ch4.Dandelion.1.Dandelion.19": "What kind of hero would I be if I didn't join you and the others to put an end to the Duskspire Behemoth's tyrrany?$18#$b#Don't worry, @. Between the seven of us, he won't stand a chance.$14",
 "Events.SnS.Ch4.Dandelion.1.Solomon.20": "Interesting that you remember what the beast is called, but don't remember your prior encounter with it...$10",
@@ -5834,7 +5834,7 @@ ________      ________ _   _ _______ _____
 "Events.SnS.Ch4.Dandelion.3.BlacksmithMateo.05": "Here goes nothing!$82",
 "Events.SnS.Ch4.Dandelion.3.Dandelion.06": "It's beautiful... Mateo, this is the most incredible armament I've ever seen.$6",
 "Events.SnS.Ch4.Dandelion.3.BlacksmithMateo.07": "Thanks, Dandelion. That means a lot, coming from you.$29#$b#It wouldn't have been possible without @, though.$27",
-"Events.SnS.Ch4.Dandelion.3.Dandelion.08": "I do have a gift for you, @. Biróg started teaching me about ancient tea varieites, so I thought I'd share these with you as thanks for all your help.[(O){{ModID}}_ancientsweettealeaves.seed]",
+"Events.SnS.Ch4.Dandelion.3.Dandelion.08": "I do have a gift for you, @. Biróg started teaching me about ancient tea varieites, so I thought I'd share these with you as thanks for all your help.[(O)DN.SnS_ancientsweettealeaves.seed]",
 "Events.SnS.Ch4.Dandelion.3.Dandelion.09": "Ancient Sweet Tea prospers in either extreme - hot, or cold. It's quite resilliant that way! And it brews a very lovable drink, I'll tell you what.$1",
 "Events.SnS.Ch4.Dandelion.3.BlacksmithMateo.10": "Seems like none of my hobbies just stay hobbies. I'm really proud of what I made...$12",
 "Events.SnS.Ch4.Dandelion.3.Dandelion.11": "Interests are like plants! If you water them, they'll grow!$14",
@@ -7061,8 +7061,8 @@ ________      ________ _   _ _______ _____
 "Events.SnS.Ch5.End.Mateo.20": "It's just strange - I feel like, without that little push from him, none of this would've played out.$16#$b#There wouldn't have been a Coastal Guild around to slay the Duskspire Behemoth.$16#$b#He had all these crazy stories of his own, and I'm really disappointed I can't share ours with him. I suppose that's alright, though.$78#$b#He'd be so proud of everything we've accomplished. Especially you, @. Professor Hawthorn knew an adventurous spirit when he saw one.$80",
 "Events.SnS.Ch5.End.Mateo.21": "...Let's get going, aye? Don't want everyone to worry.$76",
 "Events.SnS.Ch5.End.Message.22": "It's just a weird keychain...",
-"Events.SnS.Ch5.End.Mateo.23": "That'd look cool clipped onto the hilt of a sword, wouldn't it?$76[(O){{ModID}}_destykeychain]",
-"Events.SnS.Ch5.End.Message.24": "This project is dedicated to the memory of TheLoreSeeker, a beloved community member who made a point to encourage people's wildest ideas. He may no longer be with us, but he lives on in the content of those he inspired. Thank you, to him and everyone else who contributed to S&S. And especially to you, the player, for seeing this story all the way to the end. Signed with love, DestyNova."
+"Events.SnS.Ch5.End.Mateo.23": "That'd look cool clipped onto the hilt of a sword, wouldn't it?$76[(O)DN.SnS_destykeychain]",
+"Events.SnS.Ch5.End.Message.24": "This project is dedicated to the memory of TheLoreSeeker, a beloved community member who made a point to encourage people's wildest ideas. He may no longer be with us, but he lives on in the content of those he inspired. Thank you, to him and everyone else who contributed to S&S. And especially to you, the player, for seeing this story all the way to the end. Signed with love, DestyNova.",
 
 
 /*
@@ -7391,5 +7391,4 @@ ________      ________ _   _ _______ _____
   "MEEP.EmeritusInside.3": "Emeritus is wiggling side to side, like he's dancing to the beat of his own tunes. Wiggle on, lizard bro.",
   "MEEP.EmeritusInside.4": "Emeritus' stuffed teddie is named Ducky, and he takes excellent care of her. In fact, he seems outright protective.",
   "MEEP.EmeritusInside.5": "Emeritus bumps his head against your legs as you approach. He can't hug you, on account of his stumpy legs, but he'll sure try!",
-  
-
+}
