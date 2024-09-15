@@ -572,18 +572,18 @@
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
-      "Value": "stopMusic/question fork0 \"Is there anything I can do to help you carry that weight?#Actually, there was something I wanted to talk to you about. (ROMANTIC)#Just keep being my friend, Mateo! That's the kind of support I need. (PLATONIC)\"/fork MateoRomantic"
+      "Value": "stopMusic/question fork0 \"{{i18n:Events.S&S.Ch1.RHToggle.Mateo.1}}#{{i18n:Events.S&S.Ch1.RHToggle.Question.Romantic}}#{i18n:Events.S&S.Ch1.RHToggle.Question.Platonic}}\"/fork MateoRomantic"
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
-      "Value": "stopMusic/quickQuestion \"Is there anything I can do to help you carry that weight?\"#You've got responsibilities of your own now, Mateo. Don't forget them!#Just keep being my friend, Mateo! That's the kind of support I need.(break)speak Mateo \"I could never, @! Don't worry. $1\"(break)speak Mateo \"Of course, @! I've got your back.$1\"",
+      "Value": "stopMusic/quickQuestion \"{{i18n:Events.S&S.Ch1.RHToggle.Mateo.1}}\"#{{i18n:Events.S&S.Ch1.RHToggle.Farmer.1}}#{{i18n:Events.S&S.Ch1.RHToggle.Farmer.2}}(break)speak Mateo \"{{Events.S&S.Ch1.RHToggle.Mateo.2}}\"(break)speak Mateo \"{{Events.S&S.Ch1.RHToggle.Mateo.3}}\"",
       "When": {
         "Query: {{HasFlag |contains=CirrusRomanticFlag}} OR {{HasFlag |contains=HectorRomanticFlag}} OR {{HasFlag |contains=RivalHearts_AideenMateo}}": "true"
       }
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
-      "Value": "stopMusic/quickQuestion \"Is there anything I can do to help you carry that weight?\"#You've got responsibilities of your own now, Mateo. Don't forget them!#Just keep being my friend, Mateo! That's the kind of support I need.(break)speak Mateo \"I could never, @! Don't worry. $1\"(break)speak Mateo \"Of course, @! I've got your back.$1\"",
+      "Value": "stopMusic/quickQuestion \"{{i18n:Events.S&S.Ch1.RHToggle.Mateo.1}}\"#{{i18n:Events.S&S.Ch1.RHToggle.Farmer.1}}#{{i18n:Events.S&S.Ch1.RHToggle.Farmer.2}}(break)speak Mateo \"{{Events.S&S.Ch1.RHToggle.Mateo.2}}\"(break)speak Mateo \"{{Events.S&S.Ch1.RHToggle.Mateo.3}}\"",
       "When": {
         "HasMod |contains=EnderTedi.Polyamory": true,
         "EnderTedi.Polyamory/HasMonogamousPartner": true
@@ -761,11 +761,11 @@
     },
     {
       "Name": "CirrusIntro_EnD",
-      "Value": "pause 200/emote Cirrus 40/pause 200/speak Cirrus \"Sure! I'm actually staying in East Scarp...$1\"/globalFade/viewport -999 -999/speak Hector \"Excellent! An excuse to get out of here!$9\"/speak Mateo \"Oh, come on, Biróg. Be nice.\"/speak Cirrus \"No, actually, I agree with them.$6\"/message \"Cirrus seemed a little nervous at first, but warmed up in the company of you, Mateo & Biróg. You walk her safely back to her van, parked near one of East Scarp's gardens, and part ways for the night.\"/end"
+      "Value": "pause 200/emote Cirrus 40/pause 200/speak Cirrus \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Cirrus.01}}\"/globalFade/viewport -999 -999/speak Hector \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Hector.02}}\"/speak Mateo \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Mateo.03}}\"/speak Cirrus \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Cirrus.04}}\"/message \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Message.05}}\"/end",
     },
     {
       "Name": "CirrusIntro_EnD",
-      "Value": "pause 200/playSound doorClose/warp Nova.Eli 14 23/speed Nova.Eli 5/advancedMove Nova.Eli false 0 -2 12 0 0 -2 5 0 0 -1 1 10/pause 1000/textAboveHead Nova.Eli \"SHE'S HERE!! Come on Dylan!\" true/faceDirection Clint 0/emote Clint 16 true/playSound doorClose/faceDirection Harvey 1/warp Nova.Dylan 14 23/speed Nova.Dylan 4/advancedMove Nova.Dylan false 0 -2 12 0 0 -2 5 0 1 10/faceDirection Cirrus 3/emote Cirrus 16 true/pause 250/textAboveHead Nova.Dylan \"Slow down, idiot!\" true/faceDirection Mateo 3/emote Mateo 8/faceDirection Harvey 0/advancedMove Mateo false 0 1 4 10/faceDirection Clint 3/pause 2000/shake Nova.Eli 1000/pause 1000/speak Nova.Eli \"Holy shit. It's really you!$7\"/speak Cirrus \"In the flesh!$1\"/pause 500/playSound throw true/positionOffset Nova.Eli 110 0/showFrame Nova.Eli 28/showFrame Cirrus 28/emote Nova.Eli 20 true/pause 500/emote Nova.Dylan 32/shake Nova.Eli 1000 true/shake Cirrus 1000/pause 1000/speak Nova.Eli \"I've missed you SO much! You're looking fantastic!$3\"/showFrame Nova.Eli 4 true/playSound dwop/shake Nova.Eli 200/warp Nova.Eli 32 18/pause 500/speak Mateo \"You two know each other?$36\"/faceDirection Cirrus 2 true/faceDirection Nova.Eli 2/emote Cirrus 60/speak Nova.Eli \"You could say that! Cirrus is our best mate, we go way back.$12#$b#We were meant to be waiting for her but Dylan slowed us down.$10\"/emote Nova.Dylan 16 true/jump Nova.Dylan/speak Nova.Dylan \"Excuse me? *I* slowed us down?? You're the one who was so anxious that you spilled coffee everywhere, which I had to mop up!$7\"/textAboveHead Hector \"Ehehehe!\"/advancedMove Cirrus false 0 1 -1 0 3 10/faceDirection farmer 3/pause 1500/speak Cirrus \"I missed you too, Dylan! Can I get a hug from you as well?$1\"/speak Nova.Dylan \"Oh go on then, if you must... it's good to see you again, Cirrus.$3\"/pause 250/positionOffset Cirrus -40 0/showFrame Nova.Dylan 28/showFrame Cirrus 28/shake Nova.Dylan 1000 true/shake Cirrus 1000 true/emote Nova.Eli 32 true/pause 250/emote farmer 32/showFrame Nova.Dylan 4 true/playSound dwop/shake Cirrus 200/warp Cirrus 32 19/250/speak Hector \"I guess we don't need to walk you to the Scarp after all, then?$0\"/faceDirection Cirrus 1/faceDirection farmer 0/speak Cirrus \"I should be good! Eli and Dylan offered to bring me to their place.$0\"/speak Nova.Dylan \"You and Mateo can feel free to join us, though. It sounded like you were getting on well with Cirrus before we showed up.$1\"/jump Nova.Eli/speak Nova.Eli \"Yeah! We can ask Gus for a few pizzas to go and put on a movie when we get home. How does that sound?$1\"/emote Hector 32 true/speak Mateo \"That sounds nice, actually. I'm game for it.$1\"/jump Hector/speak Hector \"Excellent! An excuse to get out of here!$9\"/speak Mateo \"Oh, come on, Biróg. Be nice.\"/speak Cirrus \"No, actually, I agree with them.$6\"/globalFade/viewport -999 -999/playSound doorClose/pause 1000/speak Sam \"No way! How come THEY get to hug her?!$8\"/speak Abigail \"Right?? Eli never told me he's besties with THE Cirrus!$7\"/speak Sebastian \"...$2\"/message \"Cirrus seemed a little nervous at first, but warmed up in the company of you, Mateo, Biróg and her best friends. Her van is parked in front of the Moray brother's house, and you have a fun time at the impromptu party.\"/end",
+      "Value": "pause 200/playSound doorClose/warp Nova.Eli 14 23/speed Nova.Eli 5/advancedMove Nova.Eli false 0 -2 12 0 0 -2 5 0 0 -1 1 10/pause 1000/textAboveHead Nova.Eli \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Nova.Eli.01}}\" true/faceDirection Clint 0/emote Clint 16 true/playSound doorClose/faceDirection Harvey 1/warp Nova.Dylan 14 23/speed Nova.Dylan 4/advancedMove Nova.Dylan false 0 -2 12 0 0 -2 5 0 1 10/faceDirection Cirrus 3/emote Cirrus 16 true/pause 250/textAboveHead Nova.Dylan \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Nova.Dylan.02}}\" true/faceDirection Mateo 3/emote Mateo 8/faceDirection Harvey 0/advancedMove Mateo false 0 1 4 10/faceDirection Clint 3/pause 2000/shake Nova.Eli 1000/pause 1000/speak Nova.Eli \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Nova.Eli.03}}\"/speak Cirrus \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Cirrus.04}}\"/pause 500/playSound throw true/positionOffset Nova.Eli 110 0/showFrame Nova.Eli 28/showFrame Cirrus 28/emote Nova.Eli 20 true/pause 500/emote Nova.Dylan 32/shake Nova.Eli 1000 true/shake Cirrus 1000/pause 1000/speak Nova.Eli \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Nova.Eli.05}}\"/showFrame Nova.Eli 4 true/playSound dwop/shake Nova.Eli 200/warp Nova.Eli 32 18/pause 500/speak Mateo \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Mateo.06}}\"/faceDirection Cirrus 2 true/faceDirection Nova.Eli 2/emote Cirrus 60/speak Nova.Eli \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Nova.Eli.07}}\"/emote Nova.Dylan 16 true/jump Nova.Dylan/speak Nova.Dylan \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Nova.Dylan.08}}\"/textAboveHead Hector \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Hector.09}}\"/advancedMove Cirrus false 0 1 -1 0 3 10/faceDirection farmer 3/pause 1500/speak Cirrus \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Cirrus.10}}\"/speak Nova.Dylan \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Nova.Dylan.11}}\"/pause 250/positionOffset Cirrus -40 0/showFrame Nova.Dylan 28/showFrame Cirrus 28/shake Nova.Dylan 1000 true/shake Cirrus 1000 true/emote Nova.Eli 32 true/pause 250/emote farmer 32/showFrame Nova.Dylan 4 true/playSound dwop/shake Cirrus 200/warp Cirrus 32 19/250/speak Hector \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Hector.12}}\"/faceDirection Cirrus 1/faceDirection farmer 0/speak Cirrus \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Cirrus.13}}\"/speak Nova.Dylan \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Nova.Dylan.14}}\"/jump Nova.Eli/speak Nova.Eli \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Nova.Eli.15}}\"/emote Hector 32 true/speak Mateo \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Mateo.16}}\"/jump Hector/speak Hector \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Hector.17}}\"/speak Mateo \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Mateo.18}}\"/speak Cirrus \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Cirrus.19}}\"/globalFade/viewport -999 -999/playSound doorClose/pause 1000/speak Sam \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Sam.20}}\"/speak Abigail \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Abigail.21}}\"/speak Sebastian \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Sebastian.22}}\"/message \"{{i18n:Events.Events.ED.SnS.Ch3.EnD.Message.23}}\"/end",
       "When": {
         "HasMod: |contains=TenebrousNova.EliDylan.CP": true,
         "Eli&DylanExtras": true
@@ -773,42 +773,42 @@
     },
     {
       "Name": "CirrusSong1",
-      "Value": "try looking at the sun. Keep your head high, and everything is alright.",
+      "Value": "{{i18n:Events.CirrusSong.1}}",
       "When": {
         "HasFlag |contains=CirrusSong1A": true
       }
     },
     {
       "Name": "CirrusSong1",
-      "Value": "look into the blue sky, and your feelings might be soaked up in it's vastness.",
+      "Value": "{{i18n:Events.CirrusSong.2}}",
       "When": {
         "HasFlag |contains=CirrusSong1B": true
       }
     },
     {
       "Name": "CirrusSong2",
-      "Value": "you might be able to find the answers that you want above the clouds.",
+      "Value": "{{i18n:Events.CirrusSong.3}}",
       "When": {
         "HasFlag |contains=CirrusSong2A": true
       }
     },
     {
       "Name": "CirrusSong2",
-      "Value": "you might find that answers you want in the light of the moon.",
+      "Value": "{{i18n:Events.CirrusSong.4}}",
       "When": {
         "HasFlag |contains=CirrusSong2B": true
       }
     },
     {
       "Name": "CirrusSong3",
-      "Value": "Be free of your mind, and let it flow.",
+      "Value": "{{i18n:Events.CirrusSong.5}}",
       "When": {
         "HasFlag |contains=CirrusSong3A": true
       }
     },
     {
       "Name": "CirrusSong3",
-      "Value": "Open up your heart, and let things go.",
+      "Value": "{{i18n:Events.CirrusSong.6}}",
       "When": {
         "HasFlag |contains=CirrusSong3B": true
       }
@@ -877,196 +877,196 @@
     },
     {
       "Name": "DynamicDnDClass",
-      "Value": "Wizard",
+      "Value": "{{i18n:DynamicD&D.1}}",
       "When": {
         "HasFlag |contains=DnDWizard": true
       }
     },
     {
       "Name": "DnDClassQQ",
-      "Value": "It's Wizard time. I cast FIREBALL!",
+      "Value": "{{i18n:DynamicD&D.2}}",
       "When": {
         "HasFlag |contains=DnDWizard": true
       }
     },
     {
       "Name": "DnDClassResponse",
-      "Value": "The Count's side of the room is engulfed in flames. Thankfully, it's large enough that your party members aren't impacted.$13",
+      "Value": "{{i18n:DynamicD&D.3}}",
       "When": {
         "HasFlag |contains=DnDWizard": true
       }
     },
     {
       "Name": "DynamicDnDClass",
-      "Value": "Ranger",
+      "Value": "{{i18n:DynamicD&D.4}}",
       "When": {
         "HasFlag |contains=DnDRanger": true
       }
     },
     {
       "Name": "DnDClassQQ",
-      "Value": "I send my miniature giant space hamster after Brahd, then nock an arrow and shoot it at him while he's distracted!",
+      "Value": "{{i18n:DynamicD&D.5}}",
       "When": {
         "HasFlag |contains=DnDRanger": true
       }
     },
     {
       "Name": "DnDClassResponse",
-      "Value": "The Count is distracted by the absurdity of your animal companion, and takes your arrow straight to the chest.$13",
+      "Value": "{{i18n:DynamicD&D.6}}",
       "When": {
         "HasFlag |contains=DnDRanger": true
       }
     },
     {
       "Name": "DynamicDnDClass",
-      "Value": "Paladin",
+      "Value": "{{i18n:DynamicD&D.7}}",
       "When": {
         "HasFlag |contains=DnDPaladin": true
       }
     },
     {
       "Name": "DnDClassQQ",
-      "Value": "I charge at Brahd, bashing him with my shield for the first attack and smiting him for the second!",
+      "Value": "{{i18n:DynamicD&D.8}}",
       "When": {
         "HasFlag |contains=DnDPaladin": true
       }
     },
     {
       "Name": "DnDClassResponse",
-      "Value": "He reels back! You got him right in the eye with the corner of the shield, and slashed his chest real good citing the power of your oath.$13",
+      "Value": "{{i18n:DynamicD&D.9}}",
       "When": {
         "HasFlag |contains=DnDPaladin": true
       }
     },
     {
       "Name": "DynamicDnDClass",
-      "Value": "Bard",
+      "Value": "{{i18n:DynamicD&D.10}}",
       "When": {
         "HasFlag |contains=DnDBard": true
       }
     },
     {
       "Name": "DnDClassQQ",
-      "Value": "I open by viciously mocking Brahd: 'I hate to judge a book by its cover, but you look all cover and no pages.'",
+      "Value": "{{i18n:DynamicD&D.11}}",
       "When": {
         "HasFlag |contains=DnDBard": true
       }
     },
     {
       "Name": "DnDClassResponse",
-      "Value": "The Count, who's basically never had his feelings hurt by a mere mortal, is so flabbergasted that he's unable to do anything but process what you just said.$13",
+      "Value": "{{i18n:DynamicD&D.12}}",
       "When": {
         "HasFlag |contains=DnDBard": true
       }
     },
     {
       "Name": "DynamicDnDClass",
-      "Value": "Cleric",
+      "Value": "{{i18n:DynamicD&D.13}}",
       "When": {
         "HasFlag |contains=DnDCleric": true
       }
     },
     {
       "Name": "DnDClassQQ",
-      "Value": "I point my mace at Brahd, calling on my patron, The God of Light, to intervene!",
+      "Value": "{{i18n:DynamicD&D.14}}",
       "When": {
         "HasFlag |contains=DnDCleric": true
       }
     },
     {
       "Name": "DnDClassResponse",
-      "Value": "Your God completely reinvigorates your entire party, and newly lent strength courses through everyone.$13",
+      "Value": "{{i18n:DynamicD&D.15}}",
       "When": {
         "HasFlag |contains=DnDCleric": true
       }
     },
     {
       "Name": "DynamicDnDClass",
-      "Value": "Rogue",
+      "Value": "{{i18n:DynamicD&D.16}}",
       "When": {
         "HasFlag |contains=DnDRogue": true
       }
     },
     {
       "Name": "DnDClassQQ",
-      "Value": "I meld with the darkness and move from shadow to shadow to sneak around Brahd, and attack him from behind!",
+      "Value": "{{i18n:DynamicD&D.17}}",
       "When": {
         "HasFlag |contains=DnDRogue": true
       }
     },
     {
       "Name": "DnDClassResponse",
-      "Value": "You're able to step from the shadows right behind Brahd, getting him clean in the ribs with your daggers.$13",
+      "Value": "{{i18n:DynamicD&D.18}}",
       "When": {
         "HasFlag |contains=DnDRogue": true
       }
     },
     {
       "Name": "CirrusFlirt1",
-      "Value": "Hey, @!$1",
+      "Value": "{{i18n:CirrusFlirt.1}}",
       "When": {
         "HasFlag |contains=CirrusFlirt": false
       }
     },
     {
       "Name": "CirrusFlirt1",
-      "Value": "Hey, sweet thing!$24",
+      "Value": "{{i18n:CirrusFlirt.2}}",
       "When": {
         "HasFlag |contains=CirrusFlirt": true
       }
     },
     {
       "Name": "CirrusFlirt2",
-      "Value": "Thanks for everything, @. Really. This wouldn't be the same without you.$6",
+      "Value": "{{i18n:CirrusFlirt.3}}",
       "When": {
         "HasFlag |contains=CirrusFlirt": false
       }
     },
     {
       "Name": "CirrusFlirt2",
-      "Value": "Thanks for everything, @. Maybe I can show my appreciation once everyone clears out.$24",
+      "Value": "{{i18n:CirrusFlirt.4}}",
       "When": {
         "HasFlag |contains=CirrusFlirt": true
       }
     },
     {
       "Name": "CirrusFlirt3",
-      "Value": "It means a lot, coming from you. You packed up and moved here, completely starting over... it was inspiring, really. Gave me the courage to do something similar.$1",
+      "Value": "{{i18n:CirrusFlirt.5}}",
       "When": {
         "HasFlag |contains=CirrusFlirt": false
       }
     },
     {
       "Name": "CirrusFlirt3",
-      "Value": "I'm proud of myself, too. But, ya'know, happiness is starting to look pretty you-shaped...$23",
+      "Value": "{{i18n:CirrusFlirt.6}}",
       "When": {
         "HasFlag |contains=CirrusFlirt": true
       }
     },
     {
       "Name": "CirrusFlirt4",
-      "Value": "fade/viewport -1000 -1000/message \"Half of The Lion's Mane is open for business, and everyone involved seems in good spirits!\"",
+      "Value": "fade/viewport -1000 -1000/message \"{{i18n:CirrusFlirt.7}}\"",
       "When": {
         "HasFlag |contains=CirrusFlirt": false
       }
     },
     {
       "Name": "CirrusFlirt4",
-      "Value": "I'm proud of myself, too. But, ya'know, happiness is starting to look pretty you-shaped...$23",
+      "Value": "{{i18n:CirrusFlirt.8}}",
       "When": {
         "HasFlag |contains=CirrusFlirt": true
       }
     },
     {
       "Name": "Cirrus10HEnding",
-      "Value": "speak Cirrus \"Thank you for everything, @. If it was for you and your friends - sorry, our friends - I don't think any of this would've fallen into place.$17#$b#For the first time in ages, I feel passionate about music again... genuinely! Not just performatively for my job, or because of expectations I set for myself...$11#$b#I'm going to make good on these powers. Hone them to a sharp point! And you too, @! We'll do this together!$10\"/end",
+      "Value": "speak Cirrus \"{{i18n:Events.SnS.Ch3.Cirrus.10h.End.Platonic.Cirrus.01}}\"/end",
       "When": {
         "Relationship:Cirrus |contains=Dating, Engaged, Married": false
       }
     },
     {
       "Name": "Cirrus10HEnding",
-      "Value": "message \"Mateo and Biróg bid you both farewell for the evening.\"/warp Mateo -100 -100 true/warp Hector -100 -100 true/warp Cirrus 26 30 true/showFrame Cirrus 0 true/faceDirection Cirrus 2 true/warp farmer 26 31 true/faceDirection farmer 2 true/stopAnimation Cirrus/viewport 26 27/advancedMove farmer false 0 2 2 10/textAboveHead Cirrus \"Wait, Rockstar-\"/emote farmer 8/waitForAllStationary/advancedMove farmer false 0 -2 4 10/pause 500/speak Cirrus \"Kiss me before you go.$23\"/pause 500/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/showFrame farmer 15/specificTemporarySprite heart 26 28/showFrame Cirrus 39/pause 2000/fade/viewport -1000 -1000/speak Cirrus \"Now that I've got you, I don't want to let you go...$25\"/quickQuestion Stay the night? #Yes! (End the day). #I wish I could, but... (End the event).(break)\\warp farmer 18 5 true\\faceDirection farmer 1 true\\warp Cirrus 20 5 true\\faceDirection Cirrus 3 true\\positionOffset farmer 40 0 true\\positionOffset farmer 0 20 true\\positionOffset Cirrus -40 0 true\\changePortrait Cirrus beach\\changeSprite Cirrus beach\\globalFadeToClear\\viewport 27 14\\speak Cirrus \"@, you're very easy to love. Your actions speak so loudly, and they're always so kind.$4#$b#We'll master Bardics together. And that's not all - I see a future with you, @. You make me really happy, and I hope you feel the same.$23\"\\animate Cirrus false true 100 28 28\\animate farmer false true 100 101 101\\specificTemporarySprite heart 19 3\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 100\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 2500\\fade\\viewport -1000 -1000\\end newDay(break)speak Cirrus \"That's okay, babe. I know you're busy - there's always, always gonna be a next time. Good night, get home safe. Love you.$23\"\\end",
+      "Value": "message \"{{i18n:Events.SnS.Ch3.Cirrus.10h.End.Platonic.Romantic.Message.01}}\"/warp Mateo -100 -100 true/warp Hector -100 -100 true/warp Cirrus 26 30 true/showFrame Cirrus 0 true/faceDirection Cirrus 2 true/warp farmer 26 31 true/faceDirection farmer 2 true/stopAnimation Cirrus/viewport 26 27/advancedMove farmer false 0 2 2 10/textAboveHead Cirrus \"{{i18n:Events.SnS.Ch3.Cirrus.10h.End.Platonic.Romantic.Cirrus.02}}\"/emote farmer 8/waitForAllStationary/advancedMove farmer false 0 -2 4 10/pause 500/speak Cirrus \"{{i18n:Events.SnS.Ch3.Cirrus.10h.End.Platonic.Romantic.Cirrus.03}}\"/pause 500/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/pause 5/positionOffset farmer 0 -4/showFrame farmer 15/specificTemporarySprite heart 26 28/showFrame Cirrus 39/pause 2000/fade/viewport -1000 -1000/speak Cirrus \"{{i18n:Events.SnS.Ch3.Cirrus.10h.End.Platonic.Romantic.Cirrus.04}}\"/quickQuestion {{i18n:Events.SnS.Ch3.Cirrus.10h.End.Platonic.Romantic.QuickQuestion.05}}#{{i18n:Events.SnS.Ch3.Cirrus.10h.End.Platonic.Romantic.QuickQuestion.06}}#{{i18n:Events.SnS.Ch3.Cirrus.10h.End.Platonic.Romantic.QuickQuestion.07}}(break)\\warp farmer 18 5 true\\faceDirection farmer 1 true\\warp Cirrus 20 5 true\\faceDirection Cirrus 3 true\\positionOffset farmer 40 0 true\\positionOffset farmer 0 20 true\\positionOffset Cirrus -40 0 true\\changePortrait Cirrus beach\\changeSprite Cirrus beach\\globalFadeToClear\\viewport 27 14\\speak Cirrus \"{{i18n:Events.SnS.Ch3.Cirrus.10h.End.Platonic.Romantic.Cirrus.08}}\"\\animate Cirrus false true 100 28 28\\animate farmer false true 100 101 101\\specificTemporarySprite heart 19 3\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 100\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 2500\\fade\\viewport -1000 -1000\\end newDay(break)speak Cirrus \"{{i18n:Events.SnS.Ch3.Cirrus.10h.End.Platonic.Romantic.Cirrus.09}}\"\\end",
       "When": {
         "Relationship:Cirrus |contains=Dating, Engaged, Married": true
       }
@@ -1327,14 +1327,14 @@
     },
     {
       "Name": "MateoFlirt4",
-      "Value": "the love of my life, and all else.$4",
+      "Value": "{{i18n:MateoFlirt.4.1}}",
       "When": {
         "Relationship:Mateo |contains=Dating, Engaged, Married": true
       }
     },
     {
       "Name": "MateoFlirt4",
-      "Value": "my best friend and all!$12",
+      "Value": "{{i18n:MateoFlirt.4.2}}",
       "When": {
         "Relationship:Mateo |contains=Dating, Engaged, Married": false
       }
@@ -1425,14 +1425,14 @@
     },
     {
       "Name": "RoslinStygiumComment",
-      "Value": "You stand a chance to be more familliar than anyone else here, considering the pendant made of Stygium around @'s neck.",
+      "Value": "{{i18n:RoslinStygiumComment.1}}",
       "When": {
         "HasSeenEvent |contains=SnS.Ch1.Mateo.17": true
       }
     },
     {
       "Name": "RoslinStygiumComment",
-      "Value": "I know you've seen Stygium in the mines underneath East Scarp. Have you questioned where it comes from?$17",
+      "Value": "{{i18n:RoslinStygiumComment.2}}",
       "When": {
         "HasSeenEvent |contains=SnS.Ch1.Mateo.17": false
       }
@@ -1890,18 +1890,18 @@
     },
     {
       "Name": "CirrusAlreadyDating",
-      "Value": "quickQuestion It's just you and Cirrus in the Lion's Mane now. #Politely excuse yourself. (PLATONIC) #Stay, and take Cirrus up on her offer. (ROMANTIC)(break)speak Cirrus \"Have a good night, @. Get home safe. You're an amazing friend.$23\"(break)addMailReceived CirrusRomanticFlag\\setDating Cirrus\\addConversationTopic CirrusMarriageCountdown {{DatingLength}}\\warp Sam -100 100\\warp Sebastian -100 -100\\warp Abigail -100 -100\\warp farmer 18 5 true\\faceDirection farmer 1 true\\warp Cirrus 20 5 true\\faceDirection Cirrus 3 true\\positionOffset farmer 40 0 true\\positionOffset farmer 0 20 true\\positionOffset Cirrus -40 0 true\\changePortrait Cirrus beach\\changeSprite Cirrus beach\\globalFadeToClear\\viewport 27 14\\speak Cirrus \"You know, @... everything else aside, you're pretty incredible. I'm already aware of how lucky I am.$25#$b#You work really hard, you try your best to help everyone, you're encouraging and kind and sweet.$23#$b#It's hard not to feel self-conscious, like you're the type who could have anyone they wanted, you know? That's how highly I think of you.$6#$b#But I won't let that get me down! We have great chemistry, and I'm happy to be your girl! And, hey, that's not even mentioning how you are horizontally...$25\"\\animate Cirrus false true 100 28 28\\animate farmer false true 100 101 101\\specificTemporarySprite heart 19 3\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 100\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 2500\\fade\\viewport -1000 -1000\\speak Cirrus \"Speaking of... are you tired yet?$24\"/message \"The Lion's Mane - well, half of it - is now open for business!\""
+      "Value": "quickQuestion {{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.Default.QuickQuestion.01}}#{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.Default.QuickQuestion.02}}#{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.Default.QuickQuestion.03}}(break)speak Cirrus \"{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.Default.Cirrus.04}}\"(break)addMailReceived CirrusRomanticFlag\\setDating Cirrus\\addConversationTopic CirrusMarriageCountdown {{DatingLength}}\\warp Sam -100 100\\warp Sebastian -100 -100\\warp Abigail -100 -100\\warp farmer 18 5 true\\faceDirection farmer 1 true\\warp Cirrus 20 5 true\\faceDirection Cirrus 3 true\\positionOffset farmer 40 0 true\\positionOffset farmer 0 20 true\\positionOffset Cirrus -40 0 true\\changePortrait Cirrus beach\\changeSprite Cirrus beach\\globalFadeToClear\\viewport 27 14\\speak Cirrus \"{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.Default.Cirrus.05}}\"\\animate Cirrus false true 100 28 28\\animate farmer false true 100 101 101\\specificTemporarySprite heart 19 3\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 100\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\positionOffset Cirrus -2 0\\positionOffset farmer 2 0\\pause 2500\\fade\\viewport -1000 -1000\\speak Cirrus \"{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.Default.Cirrus.06}}\"/message \"{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.Default.Message.07}}\"",
     },
     {
       "Name": "CirrusAlreadyDating",
-      "Value": "quickQuestion It's just you and Cirrus in the Lion's Mane now. #Politely excuse yourself. (End the event.)#Hang out a little longer.(break)speak Cirrus \"Have a good night, @. Get home safe. You're an amazing friend.$23\"(break)speak Cirrus \"Oh! I have an idea, I've been working on some song lyrics I'd be happy to show you...$1\"",
+      "Value": "quickQuestion {{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorMateo.QuickQuestion.01}}#{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorMateo.QuickQuestion.02}}#{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorMateo.QuickQuestion.03}}(break)speak Cirrus \"{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorMateo.Cirrus.04}}\"(break)speak Cirrus \"{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorMateo.Cirrus.05}}\"",
       "When": {
         "Query: {{HasFlag |contains=MateoRomanticFlag}} OR {{HasFlag |contains=HectorRomanticFlag}}": "true"
       }
     },
     {
       "Name": "CirrusAlreadyDating",
-      "Value": "quickQuestion It's just you and Cirrus in the Lion's Mane now. #Politely excuse yourself. (End the event.)#Hang out a little longer.(break)speak Cirrus \"Have a good night, @. Get home safe. You're an amazing friend.$23\"(break)speak Cirrus \"Oh! I have an idea, I've been working on some song lyrics I'd be happy to show you...$1\"",
+      "Value": "quickQuestion {{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticPolyMono.QuickQuestion.01}}#{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticPolyMono.QuickQuestion.02}}#{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticPolyMono.QuickQuestion.03}}(break)speak Cirrus \"{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticPolyMono.Cirrus.04}}\"(break)speak Cirrus \"{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticPolyMono.Cirrus.05}}\"",
       "When": {
         "HasMod |contains=EnderTedi.Polyamory": true,
         "EnderTedi.Polyamory/HasMonogamousPartner": true
@@ -1927,7 +1927,7 @@
     },
     {
       "Name": "SnS.Ch4.Dandelion.7.GunnarExtra.1",
-      "Value": "speak MadDog.HashtagBearFam.Gunnar \"I'm all for closing the book on this chapter of life, but is this something we're really ready for?$7#$b#This is kind of the part in the movie where we all get our affairs in order and stuff, after all...$2\"",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.1}}\"",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
@@ -1939,7 +1939,7 @@
     },
     {
       "Name": "SnS.Ch4.Dandelion.7.GunnarExtra.1",
-      "Value": "speak MadDog.HashtagBearFam.Gunnar \"I'm all for closing the book on this chapter of life, but is this something we're really ready for?$7#$b#This is kind of the part in the movie where we all get our affairs in order and stuff, after all...$2\"",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.2}}\"",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
@@ -1947,11 +1947,11 @@
     },
     {
       "Name": "SnS.Ch4.Finale.GunnarExtra.MateoSpeak",
-      "Value": "speak Mateo \"No, she's right. You've been through enough.$8#$b#Biróg, Cirrus. How are you doing?$16\""
+      "Value": "speak Mateo \"{{i18n:GunnarFinaleDialogue.3}}\""
     },
     {
       "Name": "SnS.Ch4.Finale.GunnarExtra.MateoSpeak",
-      "Value": "speak Mateo \"No, she's right. You've been through enough.$8#$b#Biróg, Cirrus, Gunnar. How are you doing?$16\"",
+      "Value": "speak Mateo \"{{i18n:GunnarFinaleDialogue.4}}\"",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
@@ -1963,7 +1963,7 @@
     },
     {
       "Name": "SnS.Ch4.Finale.GunnarExtra.1",
-      "Value": "speak MadDog.HashtagBearFam.Gunnar \"Well, we'll make our own luck, then, right?$7\"/addMailReceived GunnarHelpedToo",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.5}}\"/addMailReceived GunnarHelpedToo",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
@@ -1975,7 +1975,7 @@
     },
     {
       "Name": "SnS.Ch4.Finale.GunnarExtra.2",
-      "Value": "speak MadDog.HashtagBearFam.Gunnar \"Boy oh boy, the price of freedom is steep.$12\"",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.6}}\"",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
@@ -1987,7 +1987,7 @@
     },
     {
       "Name": "SnS.Ch4.Intermissions.GunnarExtra.1",
-      "Value": "speak MadDog.HashtagBearFam.Gunnar \"Kinda blew through my stock getting down here, but I'll swing a sword 'til my arms fall off, just ask.$16\"",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.7}}\"",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
@@ -1999,7 +1999,7 @@
     },
     {
       "Name": "SnS.Ch4.Intermissions.GunnarExtra.2",
-      "Value": "speak MadDog.HashtagBearFam.Gunnar \"Remember, you make your own luck.$16\"",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.8}}\"",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
@@ -2011,7 +2011,7 @@
     },
     {
       "Name": "SnS.Ch4.Intermissions.GunnarExtra.3",
-      "Value": "#Then join me, Gun. So I won't have to be alone",
+      "Value": "#{{i18n:GunnarFinaleDialogue.9}}",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
@@ -2023,7 +2023,7 @@
     },
     {
       "Name": "SnS.Ch4.Intermissions.GunnarExtra.4",
-      "Value": "(break)setDating MadDog.HashtagBearFam.Gunnar\\speak MadDog.HashtagBearFam.Gunnar \"I've always got your six, @.$19\"\\speak Mateo \"Good luck to you.$14\"\\speak Hector \"You've got this, I've got faith in you.$18\"\\speak Roslin \"I'm impressed by both of you.$10\"\\speak Dandelion \"We stand before a pair of true heroes.$14\"\\speak Solomon \"Alright, alright! Let's skedaddle before the big guy comes back!$5\"\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection MadDog.HashtagBearFam.Gunnar 2\\faceDirection farmer 2\\warp Mateo -100 -100\\warp Hector -100 -100\\warp Dandelion -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar 14 12\\faceDirection MadDog.HashtagBearFam.Gunnar 2\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote MadDog.HashtagBearFam.Gunnar 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\pause 250\\speak MadDog.HashtagBearFam.Gunnar \"I'm really trying hard to not make a Captain Ferngill joke right now, @.$17#$b#But just know you're significantly cooler AND more attractive than any musty old frozen comic book character.$19\"\\emote MadDog.HashtagBearFam.Gunnar 40\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote MadDog.HashtagBearFam.Gunnar 16 true\\faceDirection MadDog.HashtagBearFam.Gunnar 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak MadDog.HashtagBearFam.Gunnar \"Let's bash this thing into the ground, @!$19\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end",
+      "Value": "(break)setDating MadDog.HashtagBearFam.Gunnar\\speak MadDog.HashtagBearFam.Gunnar \"I've always got your six, @.$19\"\\speak Mateo \"Good luck to you.$14\"\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomamticChoice.Hector.42}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomamticChoice.Roslin.43}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomamticChoice.Dandelion.44}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomamticChoice.Solomon.45}}\"\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection MadDog.HashtagBearFam.Gunnar 2\\faceDirection farmer 2\\warp Mateo -100 -100\\warp Hector -100 -100\\warp Dandelion -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar 14 12\\faceDirection MadDog.HashtagBearFam.Gunnar 2\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote MadDog.HashtagBearFam.Gunnar 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomamticChoice.Message.46}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomamticChoice.Message.47}}\"\\pause 250\\speak MadDog.HashtagBearFam.Gunnar \"I'm really trying hard to not make a Captain Ferngill joke right now, @.$17#$b#But just know you're significantly cooler AND more attractive than any musty old frozen comic book character.$19\"\\emote MadDog.HashtagBearFam.Gunnar 40\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote MadDog.HashtagBearFam.Gunnar 16 true\\faceDirection MadDog.HashtagBearFam.Gunnar 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak MadDog.HashtagBearFam.Gunnar \"{{i18n:Events.Finale.SoloFarmer.RomamticChoice.Gunnar.50}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
@@ -2031,11 +2031,11 @@
     },
     {
       "Name": "SnS.Ch4.Intermission.SoloFarmer.QQ",
-      "Value": "/quickQuestion #Then don't. (Warp them out before they can protest.) #I can do this, Mateo. I've gotten a lot stronger since we first met, I promise.(break)addMailReceived SoloFarmerBattle\\speak Mateo \"What-!?$3\"\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\speak Mateo \"@!!!$19\\warp Mateo -100 -100\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up'.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\playMusic SnS.DuskspireLaugh\\emote farmer 16\\faceDirection farmer 2\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\faceDirection farmer 0\\playMusic SnS.SMFSR\\pause 1000\\message \"Time to finish this! The Valley is counting on you!\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)addMailReceived FarmerGuildmasterBattle\\speak Mateo \"I know - like Cirrus said, you're the toughest one of the bunch.$13#$b#But, more importantly, you're my best friend, @. And I'm not leaving you to fight alone.$12\"\\emote farmer 32\\pause 250\\speak Hector \"Good luck, @.\"\\speak Cirrus \"We'll be waiting for you two!$17\"\\speak Roslin \"I'm impressed by both of you.$10\"\\speak Dandelion \"We stand before a pair of true heroes.$14\"\\speak Solomon \"Alright, alright! Let's skedaddle before the big guy comes back!$5\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Mateo 2\\faceDirection farmer 2\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\pause 250\\speak Mateo \"That looks right in your hands, @.$12\"\\emote Mateo 56\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Mateo 16 true\\faceDirection Mateo 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Mateo \"Here we go, @! Let's finish this!$82\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end"
+      "Value": "/quickQuestion #{{i18n:Events.Finale.SoloFarmer.Default.QuickQuestion.01}}#{{i18n:Events.Finale.SoloFarmer.Default.QuickQuestion.02}}(break)addMailReceived SoloFarmerBattle\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.Default.Mateo.03}}\"\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\speak Mateo \"@!!!$19\\warp Mateo -100 -100\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.Default.Message.04}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.Default.Message.05}}\"\\playMusic SnS.DuskspireLaugh\\emote farmer 16\\faceDirection farmer 2\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\faceDirection farmer 0\\playMusic SnS.SMFSR\\pause 1000\\message \"{{i18n:Events.Finale.SoloFarmer.Default.Message.06}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)addMailReceived FarmerGuildmasterBattle\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.Default.Mateo.07}}\"\\emote farmer 32\\pause 250\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.Default.Hector.08}}\"\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.Default.Cirrus.09}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.Default.Roslin.10}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.Default.Dandelion.11}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.Default.Solomon.12}}\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Mateo 2\\faceDirection farmer 2\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.Default.Message.13}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.Default.Message.14}}\"\\pause 250\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.Default.Mateo.15}}\"\\emote Mateo 56\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Mateo 16 true\\faceDirection Mateo 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.Default.Mateo.16}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end",
     },
     {
       "Name": "SnS.Ch4.Intermission.SoloFarmer.QQ",
-      "Value": "/quickQuestion #Then don't. (Warp them out before they can protest.) #I can do this, Mateo. I've gotten a lot stronger since we first met, I promise.#Then join me, Mateo. So I won't have to be alone.#Then join me, Hector. So I won't have to be alone.#Then join me, Cirrus. So I won't have to be alone.{{SnS.Ch4.Intermissions.GunnarExtra.3}}(break)addMailReceived SoloFarmerBattle\\speak Mateo \"What-!?$3\"\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\speak Mateo \"@!!!$19\\warp Mateo -100 -100\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up'.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\playMusic SnS.DuskspireLaugh\\emote farmer 16\\faceDirection farmer 2\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\faceDirection farmer 0\\playMusic SnS.SMFSR\\pause 1000\\message \"Time to finish this! The Valley is counting on you!\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)addMailReceived FarmerGuildmasterBattle\\speak Mateo \"I know - like Cirrus said, you're the toughest one of the bunch.$13#$b#But, more importantly, you're my best friend, @. And I'm not leaving you to fight alone.$12\"\\emote farmer 32\\pause 250\\speak Hector \"Good luck, @.\"\\speak Cirrus \"We'll be waiting for you two!$17\"\\speak Roslin \"I'm impressed by both of you.$10\"\\speak Dandelion \"We stand before a pair of true heroes.$14\"\\speak Solomon \"Alright, alright! Let's skedaddle before the big guy comes back!$5\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Mateo 2\\faceDirection farmer 2\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\pause 250\\speak Mateo \"That looks right in your hands, @.$12\"\\emote Mateo 56\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Mateo 16 true\\faceDirection Mateo 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Mateo \"Here we go, @! Let's finish this!$82\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Mateo\\speak Mateo \"Of course I will.\"\\speak Hector \"Good luck, @.\"\\speak Cirrus \"We'll be waiting for you two!$17\"\\speak Roslin \"I'm impressed by both of you.$10\"\\speak Dandelion \"We stand before a pair of true heroes.$14\"\\speak Solomon \"Alright, alright! Let's skedaddle before the big guy comes back!$5\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Mateo 2\\faceDirection farmer 2\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\pause 250\\speak Mateo \"That looks right in your hands...$4\"\\emote Mateo 56\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Mateo 16 true\\faceDirection Mateo 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Mateo \"Let's finish this, Sunshine!$28\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Hector\\speak Hector \"Of course I will. Especially if it means putting an end to this pain permanently.$19\"\\speak Mateo \"Good luck to you.$14\"\\speak Cirrus \"We'll be waiting for you two!$17\"\\speak Roslin \"I'm impressed by both of you.$10\"\\speak Dandelion \"We stand before a pair of true heroes.$14\"\\speak Solomon \"Alright, alright! Let's skedaddle before the big guy comes back!$5\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Hector 2\\faceDirection farmer 2\\warp Mateo -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\pause 250\\speak Hector \"You always spoke to me as the hero-type, @... that's why I tested you, way back when.$18\"\\emote Hector 40\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Hector 16 true\\faceDirection Hector 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Hector \"Let's bury this. Once and for all.$19\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Cirrus\\speak Cirrus \"I'd never let you go through this alone, Rockstar.$4\"\\speak Mateo \"Good luck to you.$14\"\\speak Hector \"You've got this, I've got faith in you.$18\"\\speak Roslin \"I'm impressed by both of you.$10\"\\speak Dandelion \"We stand before a pair of true heroes.$14\"\\speak Solomon \"Alright, alright! Let's skedaddle before the big guy comes back!$5\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Cirrus 2\\faceDirection farmer 2\\warp Mateo -100 -100\\warp Hector -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Cirrus 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"Dandelion's shield... you decide to pick it up.\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"It can be added to your Adventure Bar.\"\\pause 250\\speak Cirrus \"You look good with that shield, @... very heroic. Are you gonna sweep me off my feet-$25\"\\emote Cirrus 40\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Cirrus 16 true\\faceDirection Cirrus 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Cirrus \"Let's gooooooo! We got this! C'mon, Rockstar!$9\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end{{SnS.Ch4.Intermissions.GunnarExtra.4}}",
+      "Value": "/quickQuestion #{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.01}}#{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.02}}#{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.03}}#{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.04}}#{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.05}}(break)addMailReceived SoloFarmerBattle\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.06}}\"\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\speak Mateo \"@!!!$19\\warp Mateo -100 -100\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.07}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.08}}\"\\playMusic SnS.DuskspireLaugh\\emote farmer 16\\faceDirection farmer 2\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\faceDirection farmer 0\\playMusic SnS.SMFSR\\pause 1000\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.09}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)addMailReceived FarmerGuildmasterBattle\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.10}}\"\\emote farmer 32\\pause 250\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.11}}\"\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.12}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Roslin.13}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Dandelion.14}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Solomon.15}}\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Mateo 2\\faceDirection farmer 2\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.16}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.17}}\"\\pause 250\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.18}}\"\\emote Mateo 56\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Mateo 16 true\\faceDirection Mateo 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.19}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Mateo\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.20}}\"\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.21}}\"\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.22}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Roslin.23}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Dandelion.24}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Solomon.25}}\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Mateo 2\\faceDirection farmer 2\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.26}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.27}}\"\\pause 250\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.28}}\"\\emote Mateo 56\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Mateo 16 true\\faceDirection Mateo 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.29}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Hector\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.30}}\"\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.31}}\"\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.32}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Roslin.33}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Dandelion.34}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Solomon.35}}\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Hector 2\\faceDirection farmer 2\\warp Mateo -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.36}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.37}}\"\\pause 250\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.38}}\"\\emote Hector 40\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Hector 16 true\\faceDirection Hector 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.39}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Cirrus\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.40}}\"\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.41}}\"\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.42}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Roslin.43}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Dandelion.44}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Solomon.45}}\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Cirrus 2\\faceDirection farmer 2\\warp Mateo -100 -100\\warp Hector -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Cirrus 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.46}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.47}}\"\\pause 250\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.48}}\"\\emote Cirrus 40\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Cirrus 16 true\\faceDirection Cirrus 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.49}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end{{SnS.Ch4.Intermissions.GunnarExtra.4}}",
       "When": {
         "Relationship: Mateo |contains= Dating, Married, Enganged": false,
         "Relationship: Hector |contains= Dating, Married, Enganged": false,
@@ -2049,7 +2049,7 @@
     },
     {
       "Name": "SnS.Ch4.Victories.GunnarExtra.1",
-      "Value": "speak MadDog.HashtagBearFam.Gunnar \"Kept us waiting, huh?$1\"",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.10}}\"",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
@@ -2061,7 +2061,7 @@
     },
     {
       "Name": "SnS.Ch4.Victories.GunnarExtra.2",
-      "Value": "speak MadDog.HashtagBearFam.Gunnar \"I'm gonna hold you to that promise, Cirrus.$1\"",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.11}}\"",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
@@ -2073,7 +2073,7 @@
     },
     {
       "Name": "SnS.Ch4.Dandelion.7.GunnarExtra.Krobus.2",
-      "Value": "speak MadDog.HashtagBearFam.Gunnar \"Oh thank Yoba, you're not a slime, you're one of us.$6\"",
+      "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.12}}\"",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true,
         "HasSeenEvent |contains=MadDog.BearFam.16193011": true
@@ -2256,11 +2256,11 @@
     },
     {
       "Name": "HectorWeddingQQ",
-      "Value": "textAboveHead BookDryad \"I do.\""
+      "Value": "textAboveHead BookDryad \"{{i18n:HectorWedding.1}}\""
     },
     {
       "Name": "HectorWeddingQQ",
-      "Value": "quickQuestion #I do.#I don't.(break)textAboveHead BookDryad \"I do.\"(break)speak Hector \"Too bad! You're stuck with me now.$13\"",
+      "Value": "quickQuestion #{{i18n:HectorWedding.1}}.#{{i18n:HectorWedding.2}}.(break)textAboveHead BookDryad \"{{i18n:HectorWedding.1}}\"(break)speak Hector \"{{i18n:HectorWedding.3}}\"",
       "When": {
         "Spouse |contains=Hector": true
       }
