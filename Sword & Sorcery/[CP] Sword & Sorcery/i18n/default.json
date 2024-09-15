@@ -7175,7 +7175,7 @@ ________      ________ _   _ _______ _____
 "Events.SnS.Ch5.End.Mateo.21": "...Let's get going, aye? Don't want everyone to worry.$76",
 "Events.SnS.Ch5.End.Message.22": "It's just a weird keychain...",
 "Events.SnS.Ch5.End.Mateo.23": "That'd look cool clipped onto the hilt of a sword, wouldn't it?$76[(O){{ModID}}_destykeychain]",
-"Events.SnS.Ch5.End.Message.24": "This project is dedicated to the memory of TheLoreSeeker, a beloved community member who made a point to encourage people's wildest ideas. He may no longer be with us, but he lives on in the content of those he inspired. Thank you, to him and everyone else who contributed to S&S. And especially to you, the player, for seeing this story all the way to the end. Signed with love, DestyNova."
+"Events.SnS.Ch5.End.Message.24": "This project is dedicated to the memory of TheLoreSeeker, a beloved community member who made a point to encourage people's wildest ideas. He may no longer be with us, but he lives on in the content of those he inspired. Thank you, to him and everyone else who contributed to S&S. And especially to you, the player, for seeing this story all the way to the end. Signed with love, DestyNova.",
 
 
 /*
@@ -7413,10 +7413,10 @@ ________      ________ _   _ _______ _____
 
   // MATEO WEDDING 
   "MateoWedding.1": "Thank you, everyone, for being here.$0#$b#I'm grateful for being given the opportunity to officiate the wedding of one of my best guild members, @.$1",
-  "": "And of a dear friend, Mateo.$1",
-  "": "Thank you, Marlon.$1",
-  "": "Ready, Sunshine?",
-  "": "As the Guild Master of the Adventurer's Guild, it is my pleasure to pronounce Mateo and @ as partners in crime.$0#$b#You may now kiss.$1",
+  "MateoWedding.2": "And of a dear friend, Mateo.$1",
+  "MateoWedding.3": "Thank you, Marlon.$1",
+  "MateoWedding.4": "Ready, Sunshine?",
+  "MateoWedding.5": "As the Guild Master of the Adventurer's Guild, it is my pleasure to pronounce Mateo and @ as partners in crime.$0#$b#You may now kiss.$1",
 
   // HECTOR WEDDING
   "HectorWedding.1": "I do.", 
