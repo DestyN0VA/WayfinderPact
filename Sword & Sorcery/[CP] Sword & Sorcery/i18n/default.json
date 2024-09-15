@@ -237,9 +237,9 @@
   "Core.Mateo.Spring.LateHeart.7": "There are way too many bugs down in the mines. Big ol' Spiders, Stick Bugs, and more variants of Cave Flies and Grubs than we can count - it's gross.$11#$b#I guess it's a good thing that, for the most part, they stay down below. Well, that's due largely to the Adventurer's Guild, huh?$0",
   "Core.Mateo.Spring.LateHeart.8": "I suspect there are variants of Pepper Rexes we haven't seen yet. For example, a lot of the bones we find in prehistoric spaces don't match the living specimens, but they're dated within the last twenty years.$35#$b#This is what happens when a 'dinosaur kid' grows up, @. I turned a childhood infatuation into an incredibly dangerous day job.$36",
   "Core.Mateo.Spring.LateHeart.9": "Dr. Harvey's been keeping on top of my medical care. I get beat up in the mines an awful lot, and things have been going so much better since I started seeking him out.$15#$b#No more waking up and rolling out of bed to a chorus of my joints making funny noises.$14",
-  "Core.Mateo.Spring.LateHeart.10": "Hey, @! I've got a bone to pick with- nah, just kidding. Just found something down below you might need for the museum. [441 442]$0",
+  "Core.Mateo.Spring.LateHeart.10": "Hey, @! I've got a bone to pick with- nah, just kidding. Just found something down below you might need for the museum. [96 97 98 99]$0",
   "Core.Mateo.Spring.LateHeart.11": "Do you know what the bottom half of a Duggy looks like? It's been on my mind all day. For all we know, they can be serpentine, and nobody's bothered to pull one up out of the hole and check. What would the academic community do without people like us, @? $1",
-  "Core.Mateo.Spring.LateHeart.12": "Hey, @! I've got a bone to pick with- nah, just kidding. Just found something down below you might need for the museum. [439 440]$0",
+  "Core.Mateo.Spring.LateHeart.12": "Hey, @! I've got a bone to pick with- nah, just kidding. Just found something down below you might need for the museum. [96 97 98 99]$0",
   "Core.Mateo.Spring.LateHeart.13": "Hey, @! I dug up a fossil, check it out. Feel free to pass it along to Gunther for me, I'm not sure if we've found this particular one yet. [588 589]$14",
   "Core.Mateo.Spring.LateHeart.14": "Hey, @! I dug up a fossil, check it out. Feel free to pass it along to Gunther for me, I'm not sure if we've found this particular one yet. [586 587]$14",
   "Core.Mateo.Spring.LateHeart.15": "Hey, @! I met with the desert trader - I had some unusual minerals they were looking for, so we did a little exchange. This is an excellent study piece! [124]$14",
@@ -591,7 +591,7 @@
   "Gifts.Mateo.GiftReaction.RainbowShell": "These catch the sunlight so beautifully when you find them on the beach in the morning. Thank you for sharing this with me, @.$1",
   "Gifts.Mateo.GiftReaction.MapleBar": "You know, I have really fond memories of getting homemade maple bars with close friends... they're my favorite baked good. Thank you, @.$1",
   "Gifts.Mateo.GiftReaction.AutographedPhoto": "How'd you get this-? I'm a huge fan of Rodney's work! Did you know he's won two awards? This is great, I'll treasure it! Thank you!$32",
-  "Gifts.Mateo.GiftReaction.SalishBourbon": "This is such a special drink, I know the work that goes into making it - thank you, @. For making it, and for shaing it with me.$4",
+  "Gifts.Mateo.GiftReaction.SalishBourbon": "This is such a special drink, I know the work that goes into making it - thank you, @. For making it, and for sharing it with me.$4",
   "Gifts.Mateo.GiftReaction.AutumnalStew": "This tastes how Spirit's Eve feels. Thank you, @!$1",
   "Gifts.Mateo.GiftReaction.AncientFairyRose": "I remember these from when I wandered the woods as a little kid. They're my favorite. Thank you, @.$12",
 
@@ -877,7 +877,6 @@
   "CFD.Mateo.Utility.cs.5367": "There comes a time in everyone's life when we cross paths with someone unexpectedly.#$b#And yet today, I find myself uniting two people who've decided to see their paths converge into one.$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Mateo in the bonds of marriage.",
   "CFD.Mateo.Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if {{LPPN1}}'d fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Mateo in the bonds of marriage.",
 
-
   // GENDER NEUTRAL PARENTAL EDITS 
   "CFD.Mateo.NPC.cs.4439": "I wonder how much the new baby will change things?$1",
   "CFD.Mateo.NPC.cs.4440": "{0}, all of the prep work is done. Now all we can do is cross our fingers and wait.$l",
@@ -927,10 +926,14 @@
   // MISC EDITS
   "CFD.Mateo.Event.cs.1815": "{0} thought everyone forgot, but then you show up with a nice gift. What a good friend.",
   "CFD.Mateo.Event.cs.1816": "{0} thought everyone forgot, but then you show up with a nice gift. What a good friend.",
-  "CFD.Mateo.Event.cs.1831": "Ooo... It's dark, and I see you and a certain special someone. {0} looks a little bashful, but happy to be with you.",
-  "CFD.Mateo.Event.cs.1832": "Ooo... It's dark, and I see you and a certain special someone. {0} looks quite hopeful, and eager to spend time with you.",
-  "CFD.Mateo.Event.cs.1833": "Ooo... It's dark, and I see you and a certain special someone. {0} looks a little bashful, but happy to be with you.",
-  "CFD.Mateo.Event.cs.1834": "Ooo... It's dark, and I see you and a certain special someone. {0} looks quite hopeful, and eager to spend time with you.",
+  "CFD.Mateo.Event.cs.1831": "Ooo... It's dark, and I see you and a certain special someone. They look a little bashful, but happy to be with you.",
+  "CFD.Mateo.Event.cs.1832": "Ooo... It's dark, and I see you and a certain special someone. They look a little bashful, but happy to be with you.",
+  "CFD.Mateo.Event.cs.1833": "Ooo... It's dark, and I see you and a certain special someone. They look a little bashful, but happy to be with you.",
+  "CFD.Mateo.Event.cs.1834": "Ooo... It's dark, and I see you and a certain special someone. They look a little bashful, but happy to be with you.",
+  "CFD.Mateo.Event.cs.1820": "Ahh... Indeed. I see you in a room, having a conversation...",
+  "CFD.Mateo.Event.cs.1821": "Ahh... Indeed. I see you in a room, having a conversation...",
+  "CFD.Mateo.Event.cs.1837": "Hmmm... now what's this lovely person's name? ... I believe it starts with an '{0}'.",
+  "CFD.Mateo.Event.cs.1838": "Hmmm... now what's this lovely person's name? ... I believe it starts with an '{0}'.",
   "CFD.Mateo.MovieTheater_LoveConcession_Female": "{0} is really enjoying their {1}!",
   "CFD.Mateo.MovieTheater_LikeConcession_Female": "{0} is enjoying their {1}.",
   "CFD.Mateo.MovieTheater_DislikeConcession_Female": "{0} hasn't touched their {1} at all...",
@@ -2466,7 +2469,7 @@ ________      ________ _   _ _______ _____
 */
 
   // PRE PENTACLE QUEST
-  "Mail.Hector.Letter0": "@,^^Do you understand what you've been given?^^The wizard may have freely offered you nature's power, but you'll need me to help you hone it.^^Complete my challenges and I'll consider teaching you more about Druidics.^^ - B",
+  "Mail.Hector.Letter0": "@,^^Do you understand what you've been given?^^The wizard may have freely offered you nature's power, but you'll need me to help you hone it.^^Complete my seasonal challenges to earn my trust and you'll be rewarded.^^My tower is in the mountains north of the Scarp.^^ - B",
 
   // POST PENTACLE QUEST
   "Mail.Hector.Letter1": "^^You've been doing very well, @, but we're not done yet.^^There is a rogue with a heart of gold who's in need of a little empathy.^^It may not seem like they deserve it, but not everything is as it appears. Help them! - B",
