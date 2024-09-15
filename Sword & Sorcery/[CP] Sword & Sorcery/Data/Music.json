@@ -191,10 +191,10 @@
             "Action": "EditData",
             "Target": "Data/AudioChanges",
             "Entries": {
-                "SnS.DuskSpireLaugh": {
-                    "ID": "SnS.DuskSpireLaugh",
+                "SnS.DuskspireLaugh": {
+                    "ID": "SnS.DuskspireLaugh",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DuskSpireLaugh.ogg}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DuskspireLaugh.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
