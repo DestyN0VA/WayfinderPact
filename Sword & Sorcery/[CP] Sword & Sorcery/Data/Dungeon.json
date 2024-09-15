@@ -99,7 +99,7 @@
                     "Category": -28,
                     "Price": 2500,
                     "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-                    "SpriteIndex": 109,
+                    "SpriteIndex": 120,
                     "ExcludeFromRandomSale": true,
                 },
             }
