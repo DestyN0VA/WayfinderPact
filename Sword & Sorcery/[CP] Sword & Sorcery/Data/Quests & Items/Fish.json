@@ -217,7 +217,7 @@
             {
               "RequiredPopulation": 3,
               "Chance": 0.2,
-              "ItemID": "(O)DN.SnS_wateressence",
+              "ItemID": "(O)DN.SnS_WaterEssence",
               "MinQuantity": 1,
               "MaxQuantity": 2
             },
@@ -278,7 +278,7 @@
             {
               "RequiredPopulation": 3,
               "Chance": 0.2,
-              "ItemID": "(O)DN.SnS_wateressence",
+              "ItemID": "(O)DN.SnS_WaterEssence",
               "MinQuantity": 1,
               "MaxQuantity": 2
             },
@@ -339,7 +339,7 @@
             {
               "RequiredPopulation": 3,
               "Chance": 0.2,
-              "ItemID": "(O)DN.SnS_wateressence",
+              "ItemID": "(O)DN.SnS_WaterEssence",
               "MinQuantity": 1,
               "MaxQuantity": 2
             },
@@ -400,7 +400,7 @@
             {
               "RequiredPopulation": 3,
               "Chance": 0.2,
-              "ItemID": "(O)DN.SnS_wateressence",
+              "ItemID": "(O)DN.SnS_WaterEssence",
               "MinQuantity": 1,
               "MaxQuantity": 2
             },
@@ -461,7 +461,7 @@
             {
               "RequiredPopulation": 3,
               "Chance": 0.2,
-              "ItemID": "(O)DN.SnS_wateressence",
+              "ItemID": "(O)DN.SnS_WaterEssence",
               "MinQuantity": 1,
               "MaxQuantity": 2
             },

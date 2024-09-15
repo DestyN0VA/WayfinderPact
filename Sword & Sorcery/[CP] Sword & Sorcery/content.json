@@ -572,7 +572,7 @@
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
-      "Value": "stopMusic/question fork0 \"{{i18n:Events.S&S.Ch1.RHToggle.Mateo.1}}#{{i18n:Events.S&S.Ch1.RHToggle.Question.Romantic}}#{i18n:Events.S&S.Ch1.RHToggle.Question.Platonic}}\"/fork MateoRomantic"
+      "Value": "stopMusic/question fork0 \"{{i18n:Events.S&S.Ch1.RHToggle.Mateo.1}}#{{i18n:Events.S&S.Ch1.RHToggle.Question.Romantic}}#{{i18n:Events.S&S.Ch1.RHToggle.Question.Platonic}}\"/fork MateoRomantic"
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
