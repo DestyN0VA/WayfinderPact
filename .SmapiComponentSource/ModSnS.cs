@@ -950,7 +950,7 @@ namespace SwordAndSorcerySMAPI
 
                         foreach (string key in partnerInfos.Keys)
                         {
-                            if (Game1.player.friendshipData[key].IsDating())
+                            if (Game1.player.friendshipData.TryGetValue( key, out var data ) && data.IsDating())
                             {
                                 partnerInfo = partnerInfos[key];
                                 break;
