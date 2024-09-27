@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Reflection.Emit;
+using System.Reflection;
 using CircleOfThornsSMAPI;
 using HarmonyLib;
 using Microsoft.Xna.Framework.Graphics;
@@ -139,12 +141,40 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(LevelUpMenu), nameof(LevelUpMenu.RevalidateHealth))]
     public static class LevelUpMenuRevalidateHealthPatchAgain
     {
-        public static void Postfix(Farmer farmer)
+        public static IEnumerable<CodeInstruction> Transpiler(ILGenerator gen, MethodBase original, IEnumerable<CodeInstruction> insns)
         {
-            int amt = farmer.GetCustomSkillLevel(ModTOP.PaladinSkill) * 5;
-            farmer.maxHealth += amt;
-            if (farmer.health == farmer.maxHealth - amt)
-                farmer.health += amt;
+            var ret = new List<CodeInstruction>();
+
+            int emhIndex = ModSnS.sc.GetLocalIndexForMethod(original, "expected_max_health")[0];
+
+            bool inserted = false;
+            foreach (var insn in insns)
+            {
+                if (insn.opcode == OpCodes.Ldfld && (FieldInfo)insn.operand == AccessTools.Field(typeof(Farmer), nameof(Farmer.maxHealth)))
+                {
+                    if (!inserted)
+                    {
+                        ret.InsertRange(ret.Count - 1,
+                            [
+                                new CodeInstruction(OpCodes.Ldloc, emhIndex),
+                                new CodeInstruction(OpCodes.Ldarg_0),
+                                new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(LevelUpMenuRevalidateHealthPatchAgain), nameof(GetExtraHealth) ) ),
+                                new CodeInstruction(OpCodes.Add),
+                                new CodeInstruction(OpCodes.Stloc, emhIndex)
+                            ]);
+                        inserted = true;
+                    }
+                }
+
+                ret.Add(insn);
+            }
+
+            return ret;
+        }
+
+        public static int GetExtraHealth(Farmer farmer)
+        {
+            return farmer.GetCustomSkillLevel(ModTOP.PaladinSkill) * 5;
         }
     }
 

@@ -6,6 +6,7 @@ using Netcode;
 using NeverEndingAdventure;
 using RadialMenu;
 using SpaceCore;
+using SpaceShared;
 using StardewModdingAPI;
 using StardewModdingAPI.Utilities;
 using StardewValley;
@@ -177,6 +178,20 @@ namespace SwordAndSorcerySMAPI
 
         public bool DoFinale { get; set; } = false;
         public Monster FinaleBoss { get; set; }
+
+        public class PolymorphData
+        {
+            public Monster Original { get; init; }
+            public float Timer { get; set; } = 10;
+        }
+        public class BanishData
+        {
+            public GameLocation Location { get; init; }
+            public float Timer { get; set; } = 15;
+        }
+
+        public Dictionary<GreenSlime, PolymorphData> Polymorphed { get; set; } = new();
+        public Dictionary<Monster, BanishData> Banished { get; set; } = new();
     }
 
     public class Configuration
@@ -435,7 +450,7 @@ namespace SwordAndSorcerySMAPI
                 Description = I18n.Ability_LltkToggle_Description,
                 TexturePath = "SMAPI/dn.sns/assets/Items & Crops/SnSObjects.png",
                 SpriteIndex = 45,
-                KnownCondition = "PLAYER_HAS_MAIL DN.SnS_ObtainedLLTK",
+                KnownCondition = "PLAYER_HAS_MAIL Current DN.SnS_ObtainedLLTK",
                 HiddenIfLocked = true,
                 ManaCost = () => 0,
                 Function = () => SwapLltk(),

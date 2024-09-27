@@ -104,7 +104,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepPatch.transparent)
+            if (FarmerRendererShadowstepPatch.transparent || ModTOP.drawingBanished)
                 color *= 0.5f;
         }
     }
@@ -113,7 +113,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepPatch.transparent)
+            if (FarmerRendererShadowstepPatch.transparent || ModTOP.drawingBanished)
                 color *= 0.5f;
         }
     }
@@ -122,7 +122,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepPatch.transparent)
+            if (FarmerRendererShadowstepPatch.transparent || ModTOP.drawingBanished)
                 color *= 0.5f;
         }
     }
@@ -131,7 +131,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepPatch.transparent)
+            if (FarmerRendererShadowstepPatch.transparent || ModTOP.drawingBanished)
                 color *= 0.5f;
         }
     }
@@ -140,7 +140,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepPatch.transparent)
+            if (FarmerRendererShadowstepPatch.transparent || ModTOP.drawingBanished)
                 color *= 0.5f;
         }
     }
