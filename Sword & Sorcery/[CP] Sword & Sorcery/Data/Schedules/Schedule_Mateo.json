@@ -104,16 +104,51 @@
 			}
 		},
 		{
-			"LogName": "Mateo's Schedule - Night Market ",
+			"LogName": "Mateo's Schedule - Night Market & Squid Festival",
 			"Action": "EditData",
 			"Target": "Characters/Schedules/Mateo",
 			"Entries": {
-				// Mateo will attend the Night Market.
+				// Mateo will attend the Night Market & Squid Festival.
 				"rain": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/{{Random: 1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare++1300 Beach 44 24 2/1310 Beach 42 24 2 Mateo_drink++1300 Beach 90 39 2/1310 Beach 90 39 2 Mateo_book++1300 Beach 90 39 2/1310 Beach 90 39 2 Mateo_violin++1300 Beach 44 24 2/1310 Beach 42 24 2 Mateo_violin|InputSeparator=++}}/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
 				"spring": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/{{Random: 1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare++1300 Beach 44 24 2/1310 Beach 42 24 2 Mateo_drink++1300 Beach 90 39 2/1310 Beach 90 39 2 Mateo_book++1300 Beach 90 39 2/1310 Beach 90 39 2 Mateo_violin++1300 Beach 44 24 2/1310 Beach 42 24 2 Mateo_violin|InputSeparator=++}}/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
+				"winter_12": "610 {{MateoSpawn}} 2/{{Random: 620 {{MateoSpawn}} 2 Mateo_violin++620 {{MateoSpawn}} 2 Mateo_book++620 {{MateoSpawn}} 2 Mateo_drink|InputSeparator=++}}/1300 Beach 64 24 2 Mateo_drink/2200 {{MateoSpawn}} 2 Mateo_book",
+				"winter_13": "610 {{MateoSpawn}} 2/{{Random: 620 {{MateoSpawn}} 2 Mateo_violin++620 {{MateoSpawn}} 2 Mateo_book++620 {{MateoSpawn}} 2 Mateo_drink|InputSeparator=++}}/1300 Beach 64 24 2 Mateo_drink/2200 {{MateoSpawn}} 2 Mateo_book",
 				"winter_15": "610 {{MateoSpawn}} 2/{{Random: 620 {{MateoSpawn}} 2 Mateo_violin++620 {{MateoSpawn}} 2 Mateo_book++620 {{MateoSpawn}} 2 Mateo_drink|InputSeparator=++}}/1300 Beach 64 24 2 Mateo_drink/2200 {{MateoSpawn}} 2 Mateo_book",
 				"winter_16": "610 {{MateoSpawn}} 2/{{Random: 620 {{MateoSpawn}} 2 Mateo_violin++620 {{MateoSpawn}} 2 Mateo_book++620 {{MateoSpawn}} 2 Mateo_drink|InputSeparator=++}}/1300 Beach 64 24 2 Mateo_drink/2200 {{MateoSpawn}} 2 Mateo_book",
 				"winter_17": "610 {{MateoSpawn}} 2/{{Random: 620 {{MateoSpawn}} 2 Mateo_violin++620 {{MateoSpawn}} 2 Mateo_book++620 {{MateoSpawn}} 2 Mateo_drink|InputSeparator=++}}/1300 Beach 64 24 2 Mateo_drink/2200 {{MateoSpawn}} 2 Mateo_book",
+			},
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasConversationTopic |contains=MateoPain": false,
+			}
+		},
+		{
+			"LogName": "Mateo's Schedule - Trout Derby",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Mateo",
+			"Entries": {
+				// Mateo will attend the Trout Derby.
+				"rain": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/{{Random: 1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare++1300 Beach 44 24 2/1310 Beach 42 24 2 Mateo_drink++1300 Beach 90 39 2/1310 Beach 90 39 2 Mateo_book++1300 Beach 90 39 2/1310 Beach 90 39 2 Mateo_violin++1300 Beach 44 24 2/1310 Beach 42 24 2 Mateo_violin|InputSeparator=++}}/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
+				"spring": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/{{Random: 1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare++1300 Beach 44 24 2/1310 Beach 42 24 2 Mateo_drink++1300 Beach 90 39 2/1310 Beach 90 39 2 Mateo_book++1300 Beach 90 39 2/1310 Beach 90 39 2 Mateo_violin++1300 Beach 44 24 2/1310 Beach 42 24 2 Mateo_violin|InputSeparator=++}}/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
+				"summer_20": "610 {{MateoSpawn}} 2/{{Random: 620 {{MateoSpawn}} 2 Mateo_violin++620 {{MateoSpawn}} 2 Mateo_book++620 {{MateoSpawn}} 2 Mateo_drink|InputSeparator=++}}/800 Forest 67 39/2000 {{MateoSpawn}} 2 Mateo_book",
+				"summer_21": "610 {{MateoSpawn}} 2/{{Random: 620 {{MateoSpawn}} 2 Mateo_violin++620 {{MateoSpawn}} 2 Mateo_book++620 {{MateoSpawn}} 2 Mateo_drink|InputSeparator=++}}/800 Forest 67 39/2000 {{MateoSpawn}} 2 Mateo_book",
+			},
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasConversationTopic |contains=MateoPain": false,
+			}
+		},
+		{
+			"LogName": "Mateo's Schedule - Desert Festival",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Mateo",
+			"Entries": {
+				// Mateo will attend the Desert Festival.
+				"rain": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/{{Random: 1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare++1300 Beach 44 24 2/1310 Beach 42 24 2 Mateo_drink++1300 Beach 90 39 2/1310 Beach 90 39 2 Mateo_book++1300 Beach 90 39 2/1310 Beach 90 39 2 Mateo_violin++1300 Beach 44 24 2/1310 Beach 42 24 2 Mateo_violin|InputSeparator=++}}/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
+				"spring": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/{{Random: 1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare++1300 Beach 44 24 2/1310 Beach 42 24 2 Mateo_drink++1300 Beach 90 39 2/1310 Beach 90 39 2 Mateo_book++1300 Beach 90 39 2/1310 Beach 90 39 2 Mateo_violin++1300 Beach 44 24 2/1310 Beach 42 24 2 Mateo_violin|InputSeparator=++}}/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
+				"DesertFestival": "610 EastScarp_CoastalGuild 8 5 2/630 Desert 3 54 2/2000 {{MateoSpawn}} 2 Mateo_book",
+				"DesertFestival_2": "610 EastScarp_CoastalGuild 8 5 2/630 Desert 3 54 2/2000 {{MateoSpawn}} 2 Mateo_book",
+				"DesertFestival_3": "610 EastScarp_CoastalGuild 8 5 2/630 Desert 3 54 2/2000 {{MateoSpawn}} 2 Mateo_book",
 			},
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,

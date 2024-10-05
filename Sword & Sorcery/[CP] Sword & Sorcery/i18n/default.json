@@ -7020,6 +7020,10 @@ ________      ________ _   _ _______ _____
 
   "DN.SnS_Mateo_Hoodie.Name": "Mateo's Hoodie",
   "DN.SnS_Mateo_Hoodie.Description": "Sick hoodie, adventurer!", 
+  "DN.SnS_Hector_Hoodie.Name": "Biróg's Hoodie",
+  "DN.SnS_Hector_Hoodie.Description": "Smells faintly like concrete after it rains.", 
+  "DN.SnS_Cirrus_Hoodie.Name": "Cirrus' Hoodie",
+  "DN.SnS_Cirrus_Hoodie.Description": "Smells faintly like concrete after it rains.", 
 
   /*
    _____ _    _          _____ _______ ______ _____     _____    ________      ________ _   _ _______ _____ 
@@ -7243,6 +7247,16 @@ ________      ________ _   _ _______ _____
   "config.CustomMateoDinah.description": "Turns on female toddler sprites that look like Mateo.",
   "config.CustomMateoDinah.values.true": "true",
   "config.CustomMateoDinah.values.false": "false",
+
+  "config.CustomCirrusFreddie.name": "CustomCirrusFreddie",
+  "config.CustomCirrusFreddie.description": "Turns on male toddler sprites that look like Cirrus.",
+  "config.CustomCirrusFreddie.values.true": "true",
+  "config.CustomCirrusFreddie.values.false": "false",
+
+  "config.CustomCirrusBrittany.name": "CustomCirrusBrittany",
+  "config.CustomCirrusBrittany.description": "Turns on female toddler sprites that look like Cirrus.",
+  "config.CustomCirrusBrittany.values.true": "true",
+  "config.CustomCirrusBrittany.values.false": "false",
 
   "config.MermaidPendantEarring.name": "MermaidPendantEarring",
   "config.MermaidPendantEarring.description": "Adds the Mermaid Pendant earring for Mateo when married.",
