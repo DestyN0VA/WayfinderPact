@@ -118,5 +118,27 @@
                 "Relationship:Cirrus |contains=Dating, Engaged, Married": true
             }
         },
+
+        // CUSTOM CHILD - SOREN
+        {
+            "Action": "EditImage",
+            "Target": "Characters/Toddler, Characters/Toddler_dark",
+            "FromFile": "assets/Characters/Mateo/Kids/mateo_soren{{MateoHorns}}.png",
+            "When": {
+                "Relationship:Cirrus": "Married",
+                "CustomCirrusFreddie": "true"
+            }
+        },
+        
+        // CUSTOM CHILD - DINAH
+        {
+            "Action": "EditImage",
+            "Target": "Characters/Toddler_girl, Characters/Toddler_girl_dark",
+            "FromFile": "assets/Characters/Mateo/Kids/mateo_dinah{{MateoHorns}}.png",
+            "When": {
+                "Relationship:Mateo": "Married",
+                "CustomMateoDinah": "true"
+            }
+        },
     ]
 }

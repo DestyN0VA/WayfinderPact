@@ -67,25 +67,25 @@
             }
         },
 
-        // CUSTOM CHILD - SOREN
+        // CUSTOM CHILD - FREDDIE
         {
             "Action": "EditImage",
             "Target": "Characters/Toddler, Characters/Toddler_dark",
-            "FromFile": "assets/Characters/Mateo/Kids/mateo_soren{{MateoHorns}}.png",
+            "FromFile": "assets/Characters/Cirrus/Kids/cirrus_freddie.png",
             "When": {
                 "Relationship:Mateo": "Married",
                 "CustomMateoSoren": "true"
             }
         },
         
-        // CUSTOM CHILD - DINAH
+        // CUSTOM CHILD - BRITTANY
         {
             "Action": "EditImage",
             "Target": "Characters/Toddler_girl, Characters/Toddler_girl_dark",
-            "FromFile": "assets/Characters/Mateo/Kids/mateo_dinah{{MateoHorns}}.png",
+            "FromFile": "assets/Characters/Cirrus/Kids/cirrus_brittany.png",
             "When": {
-                "Relationship:Mateo": "Married",
-                "CustomMateoDinah": "true"
+                "Relationship:Cirrus": "Married",
+                "CustomCirrusBrittany": "true"
             }
         },
     ]

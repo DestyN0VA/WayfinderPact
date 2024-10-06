@@ -26,14 +26,43 @@
 			}
 		},
 		{
-			"LogName": "Dandelion's Schedule - Night Market ",
+			"LogName": "Dandelion's Schedule - Night Market & Squid Festival",
 			"Action": "EditData",
 			"Target": "Characters/Schedules/Dandelion",
 			"Entries": {
-				// Dandelion will attend the Night Market.
+				// Dandelion will attend the Night Market & Squid Festival.
+				"winter_12": "{{Random:610 EastScarp_LionsMane 12 26 0 Dandelion_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1300 Beach 86 30 3/2200 EastScarp_LionsMane 3 5 1",
+				"winter_13": "{{Random:610 EastScarp_LionsMane 12 26 0 Dandelion_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1300 Beach 86 30 3/2200 EastScarp_LionsMane 3 5 1",
 				"winter_15": "{{Random:610 EastScarp_LionsMane 12 26 0 Dandelion_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1300 Beach 86 30 3/2200 EastScarp_LionsMane 3 5 1",
 				"winter_16": "{{Random:610 EastScarp_LionsMane 12 26 0 Dandelion_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1300 Beach 86 30 3/2200 EastScarp_LionsMane 3 5 1",
 				"winter_17": "{{Random:610 EastScarp_LionsMane 12 26 0 Dandelion_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1300 Beach 86 30 3/2200 EastScarp_LionsMane 3 5 1",
+			},
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
+			}
+		},
+		{
+			"LogName": "Dandelion's Schedule - Trout Derby",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Dandelion",
+			"Entries": {
+				// Dandelion will attend the Trout Derby.
+				"summer_20": "{{Random:610 EastScarp_LionsMane 12 26 0 Dandelion_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/800 Forest 70 40 3/2000 EastScarp_LionsMane 3 5 1",
+				"summer_21": "{{Random:610 EastScarp_LionsMane 12 26 0 Dandelion_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/800 Forest 40 40 3/2000 EastScarp_LionsMane 3 5 1",
+			},
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
+			}
+		},
+		{
+			"LogName": "Dandelion's Schedule - Desert Festival",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Dandelion",
+			"Entries": {
+				// Dandelion will attend the Desert Festival
+				"DesertFestival": "610 EastScarp_LionsMane 3 5 1/630 Desert 5 55 3/2000 EastScarp_LionsMane 3 5 1",
+				"DesertFestival_2": "610 EastScarp_LionsMane 3 5 1/630 Desert 5 55 3/2000 EastScarp_LionsMane 3 5 1",
+				"DesertFestival_3": "610 EastScarp_LionsMane 3 5 1/630 Desert 5 55 3/2000 EastScarp_LionsMane 3 5 1",
 			},
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true

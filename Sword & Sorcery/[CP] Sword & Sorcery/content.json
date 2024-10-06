@@ -262,6 +262,20 @@
       "Description": "Turns on female toddler sprites that look like Mateo.",
       "Section": "Custom Kids"
     },
+    "CustomCirrusFreddie": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Turns on male toddler sprites that look like Cirrus.",
+      "Section": "Custom Kids"
+    },
+    "CustomCirrusBrittany": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Turns on female toddler sprites that look like Cirrus.",
+      "Section": "Custom Kids"
+    },
     "MermaidPendantEarring": {
       "AllowValues": "true, false",
       "Default": "true",

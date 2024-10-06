@@ -7020,6 +7020,10 @@ ________      ________ _   _ _______ _____
 
   "DN.SnS_Mateo_Hoodie.Name": "Mateo's Hoodie",
   "DN.SnS_Mateo_Hoodie.Description": "Sick hoodie, adventurer!", 
+  "DN.SnS_Hector_Hoodie.Name": "Biróg's Hoodie",
+  "DN.SnS_Hector_Hoodie.Description": "Smells faintly like concrete after it rains.", 
+  "DN.SnS_Cirrus_Hoodie.Name": "Cirrus' Hoodie",
+  "DN.SnS_Cirrus_Hoodie.Description": "Smells faintly like concrete after it rains.", 
 
   /*
    _____ _    _          _____ _______ ______ _____     _____    ________      ________ _   _ _______ _____ 
@@ -7244,6 +7248,16 @@ ________      ________ _   _ _______ _____
   "config.CustomMateoDinah.values.true": "true",
   "config.CustomMateoDinah.values.false": "false",
 
+  "config.CustomCirrusFreddie.name": "CustomCirrusFreddie",
+  "config.CustomCirrusFreddie.description": "Turns on male toddler sprites that look like Cirrus.",
+  "config.CustomCirrusFreddie.values.true": "true",
+  "config.CustomCirrusFreddie.values.false": "false",
+
+  "config.CustomCirrusBrittany.name": "CustomCirrusBrittany",
+  "config.CustomCirrusBrittany.description": "Turns on female toddler sprites that look like Cirrus.",
+  "config.CustomCirrusBrittany.values.true": "true",
+  "config.CustomCirrusBrittany.values.false": "false",
+
   "config.MermaidPendantEarring.name": "MermaidPendantEarring",
   "config.MermaidPendantEarring.description": "Adds the Mermaid Pendant earring for Mateo when married.",
   "config.MermaidPendantEarring.values.true": "true",
@@ -7414,7 +7428,7 @@ ________      ________ _   _ _______ _____
   // MATEO WEDDING 
   "MateoWedding.1": "Thank you, everyone, for being here.$0#$b#I'm grateful for being given the opportunity to officiate the wedding of one of my best guild members, @.$1",
   "MateoWedding.2": "And of a dear friend, Mateo.$1",
-  "MateoWedding.3": "Thank you, Marlon.$1",
+  "MateoWedding.3": "Thank you, Marlon.",
   "MateoWedding.4": "Ready, Sunshine?",
   "MateoWedding.5": "As the Guild Master of the Adventurer's Guild, it is my pleasure to pronounce Mateo and @ as partners in crime.$0#$b#You may now kiss.$1",
 
@@ -7446,8 +7460,8 @@ ________      ________ _   _ _______ _____
 
   // CIRRUS WEDDING
   "CirrusWedding.1": "Are you lovebirds ready to finally get married?$0", 
-  "CirrusWedding.2": "Couldn't be more ready!$1#$b#How are you feeling Book? Ready to officiate this wedding for us?$1", 
-  "CirrusWedding.3": "Mhm! I'm all ready for the special surprise!$1", 
+  "CirrusWedding.2": "Couldn't be more ready!", 
+  "CirrusWedding.3": "You're not ready for the special surprise!$1", 
   "CirrusWedding.4": "Special surprise?", 
   "CirrusWedding.5": "Ahem!", 
   "CirrusWedding.6": "Thank you, everyone, for attening this wedding!$1#$b#I'm honored to be standing here, having the opportunity to officiate this, awesome, perfect wedding.$0", 
@@ -7457,7 +7471,7 @@ ________      ________ _   _ _______ _____
   "CirrusWedding.10": "Thank you, Book", 
   "CirrusWedding.11": "Cirrus, you're welcome!", 
   "CirrusWedding.12": "I hope you two enjoyed that! I spent so long learning to play the keytar just for this moment!$0", 
-  "CirrusWedding.13": "Thank you so so much, Book! I'll never forget your performance!$10#$b#It really was perfect!$11", 
+  "CirrusWedding.13": "*sob* It was perfect!", 
   "CirrusWedding.14": "Wipe those tears, Cirrus, it's your big day, you should be smiling!$0", 
   "CirrusWedding.15": "And speaking of your big day!$0#$b#I'm proud to be able to pronounce you two as lovebirds for all eternity!$0", 
   "CirrusWedding.16": "You may now kiss!$1", 

@@ -40,14 +40,43 @@
 			}
 		},
 		{
-			"LogName": "Roslin's Schedule - Night Market ",
+			"LogName": "Roslin's Schedule - Night Market & Squid Festival",
 			"Action": "EditData",
 			"Target": "Characters/Schedules/Roslin",
 			"Entries": {
-				// Roslin will attend the Night Market.
+				// Roslin will attend the Night Market & Squid Festival.
+				"winter_12": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1300 Beach 86 31 3/2200 EastScarp_LionsMane 5 5 3",
+				"winter_13": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1300 Beach 86 31 3/2200 EastScarp_LionsMane 5 5 3",
 				"winter_15": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1300 Beach 86 31 3/2200 EastScarp_LionsMane 5 5 3",
 				"winter_16": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1300 Beach 86 31 3/2200 EastScarp_LionsMane 5 5 3",
 				"winter_17": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1300 Beach 86 31 3/2200 EastScarp_LionsMane 5 5 3",
+			},
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
+			}
+		},
+		{
+			"LogName": "Roslin's Schedule - Trout Derby",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Roslin",
+			"Entries": {
+				// Roslin will attend the Trout Derby.
+				"summer_20": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/800 Forest 66 40 1/2000 EastScarp_LionsMane 5 5 3",
+				"summer_21": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/800 Forest 66 40 1/2000 EastScarp_LionsMane 5 5 3",
+			},
+			"When": {
+				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
+			}
+		},
+		{
+			"LogName": "Roslin's Schedule - Desert Festival",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Roslin",
+			"Entries": {
+				// Roslin will attend the Desert Festival.
+				"DesertFestival": "610 EastScarp_LionsMane 5 5 3/630 Desert 1 55 1/2000 EastScarp_LionsMane 5 5 3",
+				"DesertFestival_2": "610 EastScarp_LionsMane 5 5 3/630 Desert 1 55 1/2000 EastScarp_LionsMane 5 5 3",
+				"DesertFestival_3": "610 EastScarp_LionsMane 5 5 3/630 Desert 1 55 1/2000 EastScarp_LionsMane 5 5 3",
 			},
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true

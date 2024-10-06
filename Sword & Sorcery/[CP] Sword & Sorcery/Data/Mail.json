@@ -124,9 +124,37 @@
 				"{{ModID}}_Mateo_Hoodie": {
 					"Id": "{{ModID}}_Mateo_Hoodie",
 					"Trigger": "DayEnding",
-					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.15",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.19",
 					"Actions": [
 						"AddMail Current MateoHoodie tomorrow",
+					]
+				}
+			}
+		},
+        {
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"{{ModID}}_Hector_Hoodie": {
+					"Id": "{{ModID}}_Hector_Hoodie",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.17",
+					"Actions": [
+						"AddMail Current HectorHoodie tomorrow",
+					]
+				}
+			}
+		},
+        {
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"{{ModID}}_Cirrus_Hoodie": {
+					"Id": "{{ModID}}_Cirrus_Hoodie",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.15",
+					"Actions": [
+						"AddMail Current CirrusHoodie tomorrow",
 					]
 				}
 			}
