@@ -29,13 +29,20 @@ namespace SwordAndSorcerySMAPI
     public class BattlerInfo
     {
         public int Health { get; set; } = 100;
-        public int Defense { get; set; }
+        public int BaseDefense { get; set; }
         public int Mana { get; set; }
         public int MaxMana { get; set; }
 
-        public Action Ability { get; set; }
+        public Action<float> AbilityFunc { get; set; } = (_) => { };
+        public Func<string> AbilityName { get; set; } = () => "todo";
+        public Func<string> AbilityDescription { get; set; } = () => "not implemented";
+        public int AbilityManaCost { get; set; } = 10;
 
+        public int Defense => BaseDefense * (Guarding ? 1 : 2) + (Guarding ? 10 : 0);
         public bool InShadowstep { get; set; } = false;
+        public bool Guarding { get; set; } = false;
+
+        public Vector2 BasePosition { get; set; }
     }
 
     internal class FinalePhase1Minigame : IMinigame
@@ -48,9 +55,20 @@ namespace SwordAndSorcerySMAPI
         public Texture2D BossSprite { get; set; }
 
         public Character CurrentTurn { get; set; }
+        public BattlerInfo CurrentBattler => BattlerData.TryGetValue(CurrentTurn.Name, out var info) ? info : DuskspireDummyInfo;
 
         public List<Character> Battlers { get; set; } = new();
         public Dictionary<string, BattlerInfo> BattlerData { get; set; } = new();
+
+        private NPC DuskspireActor { get; set; }
+        private BattlerInfo DuskspireDummyInfo { get; set; } = new();
+        private int DuskspireHealth { get; set; } = 500;
+
+        private int CurrentChoice { get; set; } = 0;
+        private float CurrentForward { get; set; }
+        private int MovingActorForTurn { get; set; } = -2; // -1 = backward, 0 = doing action, 1 = forward, anything else = not doing anything
+        private Action PendingAction { get; set; }
+        private int PotionCount { get; set; } = 3;
 
         public FinalePhase1Minigame(Event @event, EventContext context)
         {
@@ -68,19 +86,47 @@ namespace SwordAndSorcerySMAPI
 
             BattlerData = new()
             {
-                { "Mateo", new BattlerInfo() { Defense = 8, Mana = 30, MaxMana = 30 } },
-                { Game1.player.Name, new BattlerInfo() { Defense = Game1.player.buffs.Defense + (Game1.player.GetArmorItem()?.GetArmorAmount() ?? 0) / 25, Mana = Game1.player.GetFarmerExtData().mana.Value, MaxMana = Game1.player.GetFarmerExtData().maxMana.Value } },
-                { "Dandelion", new BattlerInfo() { Defense = 12, Mana = 40, MaxMana = 40 } },
-                { "Hector", new BattlerInfo() { Defense = 3, Mana = 70, MaxMana = 70 } },
-                { "Cirrus", new BattlerInfo() { Defense = 0, Mana = 50, MaxMana = 50 } },
-                { "Roslin", new BattlerInfo() { Defense = 0, Mana = 100, MaxMana = 100 } },
-                { "MadDog.HashtagBearFam.Gunnar", new BattlerInfo() { Defense = 5, Mana = 25, MaxMana = 25 } }
+                { "Mateo", new BattlerInfo()
+                    {
+                        BaseDefense = 8,
+                        Mana = 30,
+                        MaxMana = 30,
+                        AbilityFunc = (_) => { CurrentBattler.InShadowstep = true; --MovingActorForTurn; },
+                        AbilityName = I18n.FinaleMinigame_Ability_Shadowstep_Name,
+                        AbilityDescription = I18n.FinaleMinigame_Ability_Shadowstep_Description,
+                        AbilityManaCost = 10,
+                    }
+                },
+                { Game1.player.Name, new BattlerInfo() { BaseDefense = Game1.player.buffs.Defense + (Game1.player.GetArmorItem()?.GetArmorAmount() ?? 0) / 25, Mana = Game1.player.GetFarmerExtData().mana.Value, MaxMana = Game1.player.GetFarmerExtData().maxMana.Value } },
+                { "Dandelion", new BattlerInfo() { BaseDefense = 12, Mana = 40, MaxMana = 40 } },
+                { "Hector", new BattlerInfo() { BaseDefense = 3, Mana = 70, MaxMana = 70 } },
+                { "Cirrus", new BattlerInfo() { BaseDefense = 0, Mana = 50, MaxMana = 50 } },
+                { "Roslin", new BattlerInfo() { BaseDefense = 0, Mana = 100, MaxMana = 100 } },
+                { "MadDog.HashtagBearFam.Gunnar", new BattlerInfo() { BaseDefense = 5, Mana = 25, MaxMana = 25 } }
             };
 
             foreach (var actor in @event.actors.ToList())
             {
-                if (!BattlerData.ContainsKey(actor.Name) && actor.Name != "Duskspire")
-                    @event.actors.Remove(actor);
+                if (actor.Name == "Duskspire")
+                {
+                    DuskspireActor = actor;
+                    continue;
+                }
+
+                if (BattlerData.TryGetValue(actor.Name, out var data))
+                {
+                    data.BasePosition = actor.Position;
+                }
+                else @event.actors.Remove(actor);
+            }
+            BattlerData[Game1.player.Name].BasePosition = Game1.player.Position;
+
+            foreach (var battler in BattlerData.ToArray())
+            {
+                if (battler.Value.BasePosition == default(Vector2)) // Optional NPC isn't in the event (Gunnar if Bearfam isn't installed)
+                {
+                    BattlerData.Remove(battler.Key);
+                }
             }
         }
 
@@ -94,6 +140,108 @@ namespace SwordAndSorcerySMAPI
         }
         public void receiveKeyPress(Keys k)
         {
+            if (CurrentTurn.Name == "Duskspire" || MovingActorForTurn >= -1 && MovingActorForTurn <= 1)
+                return;
+
+            if (k == Keys.Up)
+            {
+                if (--CurrentChoice < 0)
+                    CurrentChoice += 4;
+            }
+            else if (k == Keys.Down)
+            {
+                if (++CurrentChoice > 3)
+                    CurrentChoice -= 4;
+            }
+            else if (k == Utility.mapGamePadButtonToKey(Buttons.A))
+            {
+                float delay = 0;
+                switch (CurrentChoice)
+                {
+                    case 0: // Attack
+                        delay = 0.5f;
+                        PendingAction = () =>
+                        {
+                            if ( delay == 0.5f )
+                                CurrentTurn.jumpWithoutSound();
+
+                            float oldDelay = delay;
+                            delay -= (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
+                            if (oldDelay > 0 && delay <= 0)
+                            {
+                                DuskspireActor.shake(500);
+                                DuskspireHealth -= CurrentBattler.InShadowstep ? 50 : 10;
+                                Game1.playSound("serpentHit");
+                                if (CurrentBattler.InShadowstep)
+                                {
+                                    Game1.playSound("crit");
+                                    CurrentBattler.InShadowstep = false;
+                                    CurrentTurn.stopGlowing();
+                                }
+                            }
+                            else if (delay <= -0.5f)
+                            {
+                                MovingActorForTurn--;
+                            }
+                        };
+                        MovingActorForTurn = 1;
+                        break;
+                    case 1: // Ability
+                        delay = 0;
+                        CurrentBattler.Mana -= CurrentBattler.AbilityManaCost;
+                        PendingAction = () =>
+                        {
+                            CurrentBattler.AbilityFunc(-delay);
+                            delay -= (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
+                        };
+                        MovingActorForTurn = 1;
+                        break;
+                    case 2: // Guard
+                        delay = 0.5f;
+                        PendingAction = () =>
+                        {
+                            if (delay == 0.5f)
+                            {
+                                CurrentBattler.Guarding = true;
+                                CurrentTurn.startGlowing(Color.LightSlateGray, false, 0.05f);
+                                CurrentTurn.glowRate = 0.05f;
+                                Game1.playSound("clank");
+                            }
+
+                            delay -= (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
+                            if (delay <= 0)
+                            {
+                                MovingActorForTurn--;
+                            }
+                        };
+                        MovingActorForTurn = 0;
+                        break;
+                    case 3: // Use potion
+                        MovingActorForTurn = 1;
+                        delay = 0.5f;
+                        PendingAction = () =>
+                        {
+                            if (delay == 0.5f)
+                            {
+                                CurrentBattler.Health = 100;
+                                --PotionCount;
+                                Game1.playSound("healSound");
+                            }
+
+                            delay -= (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
+                            if (delay <= 0)
+                            {
+                                MovingActorForTurn--;
+                            }
+                        };
+                        break;
+                    default:
+                        Log.Warn("Invalid choice??");
+                        PendingAction = () => { MovingActorForTurn--; };
+                        MovingActorForTurn = 1;
+                        break;
+                }
+            }
         }
 
         public void receiveKeyRelease(Keys k)
@@ -102,6 +250,7 @@ namespace SwordAndSorcerySMAPI
 
         public void receiveLeftClick(int x, int y, bool playSound = true)
         {
+            receiveKeyPress(Utility.mapGamePadButtonToKey(Buttons.A));
         }
 
         public void receiveRightClick(int x, int y, bool playSound = true)
@@ -117,8 +266,64 @@ namespace SwordAndSorcerySMAPI
         {
         }
 
+        private void NextTurn()
+        {
+            if (CurrentTurn == Battlers.Last())
+            {
+                CurrentTurn = Battlers.First();
+            }
+            else
+            {
+                CurrentTurn = Battlers[Battlers.IndexOf(CurrentTurn) + 1];
+            }
+
+            if (CurrentBattler.Guarding)
+            {
+                CurrentBattler.Guarding = false;
+                CurrentTurn.stopGlowing();
+            }
+        }
+
         public bool tick(GameTime time)
         {
+            foreach (var character in Battlers)
+            {
+                character.update(time, Game1.currentLocation);
+            }
+
+            if (CurrentTurn == DuskspireActor)
+            {
+                NextTurn();
+            }
+
+            if (MovingActorForTurn == 1)
+            {
+                CurrentTurn.SetMovingRight(true);
+                CurrentTurn.MovePosition(time, Game1.viewport, Game1.currentLocation);
+                if ((CurrentTurn.Position - CurrentBattler.BasePosition).X >= 64)
+                {
+                    CurrentTurn.Halt();
+                    MovingActorForTurn--;
+                }
+            }
+            else if (MovingActorForTurn == -1)
+            {
+                CurrentTurn.SetMovingLeft(true);
+                CurrentTurn.MovePosition(time, Game1.viewport, Game1.currentLocation);
+                if ((CurrentTurn.Position - CurrentBattler.BasePosition).X <= 0)
+                {
+                    CurrentTurn.Halt();
+                    CurrentTurn.faceDirection(Game1.right);
+                    MovingActorForTurn--;
+
+                    NextTurn();
+                }
+            }
+            else if (MovingActorForTurn == 0)
+            {
+                PendingAction();
+            }
+
             return Finished;
         }
 
@@ -158,19 +363,28 @@ namespace SwordAndSorcerySMAPI
                 IClickableMenu.drawTextureBox(b, 16, y + 64, 450, 200, Color.White);
 
                 SpriteText.drawStringWithScrollCenteredAt(b, CurrentTurn.displayName, 16 + 450 / 2, y, 350);
-                SpriteText.drawString(b, "<100/100^=50/50", 250, y + 16 + 64);
+                SpriteText.drawString(b, $"<{CurrentBattler.Health}/100^={CurrentBattler.Mana}/{CurrentBattler.MaxMana}", 250, y + 16 + 64);
 
-                Utility.drawTextWithShadow(b, "   Attack", Game1.dialogueFont, new Vector2(40, y + 80 + 40 * 0), Color.Black);
-                Utility.drawTextWithShadow(b, "   Ability", Game1.dialogueFont, new Vector2(40, y + 80 + 40 * 1), Color.Black);
-                Utility.drawTextWithShadow(b, "> Guard", Game1.dialogueFont, new Vector2(40, y + 80 + 40 * 2), Color.Black);
-                Utility.drawTextWithShadow(b, "   Use Potion   (3 left)", Game1.dialogueFont, new Vector2(40, y + 80 + 40 * 3), Color.Black);
+                string[] choices = ["Attack", "Ability", "Guard", $"Use Potion   ({PotionCount} left)"];
+
+                for (int i = 0; i < choices.Length; ++i)
+                {
+                    string prefix = "   ";
+                    if (i == CurrentChoice)
+                        prefix = "> ";
+
+                    Utility.drawTextWithShadow(b, $"{prefix}{choices[i]}", Game1.dialogueFont, new Vector2(40, y + 80 + 40 * i), Color.Black);
+                }
 
                 int x = Game1.viewport.Width - 450 - 16;
 
-                //IClickableMenu.drawTextureBox(b, x, y + 64, 450, 200, Color.White);
+                if (CurrentChoice == 1)
+                {
+                    IClickableMenu.drawTextureBox(b, x, y + 64, 450, 200, Color.White);
 
-                //SpriteText.drawStringWithScrollCenteredAt(b, "Shadowstep =25", x + 450 / 2, y, 350);
-                //Utility.drawTextWithShadow(b, "Step into the shadows, making the\nuser be unable to be targeted\ndirectly until their next attack.\nThe next attack will do critical\ndamage.", Game1.smallFont, new Vector2( x + 32, y + 96 ), Color.Black );
+                    SpriteText.drawStringWithScrollCenteredAt(b, $"{CurrentBattler.AbilityName()} ={CurrentBattler.AbilityManaCost}", x + 450 / 2, y, 350);
+                    Utility.drawTextWithShadow(b, Game1.parseText(CurrentBattler.AbilityDescription(), Game1.smallFont, 450 - 32 * 2), Game1.smallFont, new Vector2( x + 32, y + 96 ), Color.Black );
+                }
             }
 
             //SpriteText.drawStringHorizontallyCenteredAt(b, "Click to simulate victory", windowSize.X / 2, windowSize.Y / 2);

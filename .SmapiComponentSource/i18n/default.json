@@ -295,5 +295,8 @@
   "research.learn": "Learn",
   "research.known": "You already know this.",
   "research.known-parenthesis": "(Known)",
-  "research.missing-components": "You are missing research components."
+  "research.missing-components": "You are missing research components.",
+
+  "finale-minigame.ability.shadowstep.name": "Shadowstep",
+  "finale-minigame.ability.shadowstep.description": "Step into the shadows, making the user be unable to be targeted directly until their next attack. The next attack will do critical damage."
 }
