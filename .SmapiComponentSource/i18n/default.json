@@ -298,5 +298,9 @@
   "research.missing-components": "You are missing research components.",
 
   "finale-minigame.ability.shadowstep.name": "Shadowstep",
-  "finale-minigame.ability.shadowstep.description": "Step into the shadows, making the user be unable to be targeted directly until their next attack. The next attack will do critical damage."
+  "finale-minigame.ability.shadowstep.description": "Step into the shadows, making the user be unable to be targeted directly until their next attack. The next attack will do critical damage.",
+
+  "teleport-circle.error.unknown": "Invalid teleport circle setup.",
+  "teleport-circle.error.no-match": "No matching teleport circle found.",
+  "teleport-circle.error.missing-essence": "3 essences not found in nearby chest.",
 }

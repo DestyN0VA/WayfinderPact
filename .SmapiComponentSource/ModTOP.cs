@@ -26,6 +26,8 @@ using System.Xml.Serialization;
 using Microsoft.CodeAnalysis.Emit;
 using StardewValley.Menus;
 using SpaceCore.Spawnables;
+using StardewValley.Inventories;
+using System.Xml;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -650,7 +652,7 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        public static TeleportInfoMessage ProcessTeleportRequest(TeleportInfoMessage msg)
+        public static TeleportInfoMessage ProcessTeleportRequest(TeleportInfoMessage msg, long from)
         {
             TeleportInfoMessage retMsg = new();
 
@@ -673,12 +675,60 @@ namespace SwordAndSorcerySMAPI
                 }
                 else
                 {
-                    // TODO: Check and consume essences, chests nearby and player inventory as backup
+                    var loc = Game1.getLocationFromName(msg.LocationName);
 
-                    int slash = target.IndexOf('/');
-                    int comma = target.IndexOf(',', slash + 1);
-                    retMsg.LocationName = target.Substring(0, slash);
-                    retMsg.Tile = new Vector2(float.Parse(target.Substring(slash + 1, comma - slash - 1)), float.Parse(target.Substring(comma + 1)));
+                    int totalFound = 0;
+                    List<(IInventory inv, Item item)> essencesFound = new();
+                    for (int ix = -2; ix <= 2; ++ix)
+                    {
+                        for (int iy = -2; iy <= 2; ++iy)
+                        {
+                            if (totalFound >= 3)
+                                continue;
+
+                            Vector2 pos = msg.Tile + new Vector2(ix, iy);
+                            if (loc.Objects.TryGetValue( pos, out var obj ) && obj is Chest chest)
+                            {
+                                // TODO: Make this use the chest mutex right
+                                var inv = chest.GetItemsForPlayer(from);
+                                for (int i = 0; i < chest.GetActualCapacity(); ++i)
+                                {
+                                    if (inv[i]?.HasContextTag("essence_item") ?? false)
+                                    {
+                                        essencesFound.Add(new(inv, inv[i]));
+                                        totalFound += inv[i].Stack;
+                                        if (totalFound >= 3)
+                                            break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    bool skipCost = Game1.getFarmer(from).HasCustomProfession(WitchcraftSkill.ProfessionNoTeleportCost);
+
+                    if (totalFound < 3 && !skipCost)
+                    {
+                        retMsg.Error = "teleport-circle.error.missing-essence";
+                    }
+                    else
+                    {
+                        if (!skipCost)
+                        {
+                            int left = 3;
+                            foreach (var entry in essencesFound)
+                            {
+                                left -= entry.inv.ReduceId(entry.item.QualifiedItemId, left);
+                                if (left <= 0)
+                                    break;
+                            }
+                        }
+
+                        int slash = target.IndexOf('/');
+                        int comma = target.IndexOf(',', slash + 1);
+                        retMsg.LocationName = target.Substring(0, slash);
+                        retMsg.Tile = new Vector2(float.Parse(target.Substring(slash + 1, comma - slash - 1)), float.Parse(target.Substring(comma + 1)));
+                    }
                 }
             }
             else
@@ -711,13 +761,13 @@ namespace SwordAndSorcerySMAPI
             {
                 var msg = e.ReadAs<TeleportInfoMessage>();
 
-                var retMsg = ProcessTeleportRequest(msg);
+                var retMsg = ProcessTeleportRequest(msg, e.FromPlayerID);
                 Helper.Multiplayer.SendMessage(retMsg, TeleportInfoMessage, [ModManifest.UniqueID], [e.FromPlayerID]);
             }
             else if (e.Type == TeleportInfoMessage)
             {
                 var msg = e.ReadAs<TeleportInfoMessage>();
-                ProcessTeleportRequest(msg);
+                ProcessTeleport(msg);
             }
             else if (e.Type == MultiplayerMessage_Polymorph)
             {
@@ -1244,7 +1294,7 @@ namespace SwordAndSorcerySMAPI
 
                 if (Game1.IsMasterGame)
                 {
-                    var ret = ModTOP.ProcessTeleportRequest(req);
+                    var ret = ModTOP.ProcessTeleportRequest(req, Game1.player.UniqueMultiplayerID);
                     ModTOP.ProcessTeleport(ret);
                 }
                 else

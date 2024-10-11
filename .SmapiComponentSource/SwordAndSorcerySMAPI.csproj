@@ -29,10 +29,12 @@
   </PropertyGroup>
 
 	<!-- This fixes deployment when I use an environment variable to override my game path. No idea why -->
+	<!--
 	<PropertyGroup Condition="'$(OS)' == 'Windows_NT'">
 		<StartProgram>$(GamePath)\StardewModdingAPI.exe</StartProgram>
 		<StartWorkingDirectory>$(GamePath)</StartWorkingDirectory>
 	</PropertyGroup>
+	-->
 	
 	<!-- mac workaround, remove when updating mod build config -->
 	<PropertyGroup Condition="'$(OS)' != 'Windows_NT'">
