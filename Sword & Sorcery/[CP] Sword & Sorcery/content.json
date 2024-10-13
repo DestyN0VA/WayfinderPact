@@ -68,8 +68,7 @@
       "Action": "Include",
       "FromFile": "Data/Quests & Items/ShieldQuest.json",
       "When": {
-        "HasMod: |contains=Kitsutsune.Chocobovalley": false,
-        "ChocoboValleyMaterials": false
+        "Query: {{ChocoboValleyMaterials}} AND {{HasMod |contains=Kitsutsune.Chocobovalley}}": false
       }
     },
     {
@@ -77,8 +76,7 @@
       "Action": "Include",
       "FromFile": "Data/Quests & Items/ShieldQuest_ChocoboValley.json",
       "When": {
-        "HasMod: |contains=Kitsutsune.Chocobovalley": true,
-        "ChocoboValleyMaterials": true
+        "Query: {{ChocoboValleyMaterials}} AND {{HasMod |contains=Kitsutsune.Chocobovalley}}": true
       }
     },
     {
@@ -86,8 +84,7 @@
       "Action": "Include",
       "FromFile": "Data/Quests & Items/EssenceQuest.json",
       "When": {
-        "HasMod: |contains=Rafseazz.RSVCP": false,
-        "RSVMaterials": false
+        "Query: {{RSVMaterials}} AND {{HasMod |contains=Rafseazz.RSVCP}}": false
       }
     },
     {
@@ -95,8 +92,7 @@
       "Action": "Include",
       "FromFile": "Data/Quests & Items/EssenceQuest_RSV.json",
       "When": {
-        "HasMod: |contains=Rafseazz.RSVCP": true,
-        "RSVMaterials": true
+        "Query: {{RSVMaterials}} AND '{{HasMod |contains=Rafseazz.RSVCP}}": true
       }
     },
     // TRIGGER ACTIONS
