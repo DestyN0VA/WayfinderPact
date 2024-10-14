@@ -1865,11 +1865,11 @@
       "Value": "|Nickname = {{i18n: Strings.Cirrus.Nickname{{Random:1,2}}}}"
     },
     {
-      "Name": "CountForShipping",
+      "Name": "CountForFarmingAchievements",
       "Value": "true"
     },
     {
-      "Name": "CountForShipping",
+      "Name": "CountForFarmingAchievements",
       "Value": "false",
       "When": {
         "ExcludeFromPerfection": true
@@ -2311,6 +2311,20 @@
         "HasSeenEvent |contains=SnS.Ch3.Cirrus.14": true,
         "HasSeenEvent |contains=SnS.Ch4.Dandelion.6": true,
         "HasSeenEvent |contains=SnS.Ch4.Finale": true
+      }
+    },
+    {
+      "Name": "MateoFatherComment",
+      "Value": "{{i18n:Events.SnS.Ch4.Eyvinder.Mateo.09.False}}",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch5.Mateo": false
+      }
+    },
+    {
+      "Name": "MateoFatherComment",
+      "Value": "{{i18n:Events.SnS.Ch4.Eyvinder.Mateo.09.True}}",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch5.Mateo": true
       }
     },
   ]

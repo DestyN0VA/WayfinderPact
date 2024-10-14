@@ -14,7 +14,7 @@
           "Price": 200,
           "Edibility": -200,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{CountForShipping}}",
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 110,
           "ContextTags": [
@@ -38,7 +38,7 @@
           "Price": 200,
           "Edibility": -200,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{CountForShipping}}",
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 111,
           "ContextTags": [
@@ -62,7 +62,7 @@
           "Price": 200,
           "Edibility": -200,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{CountForShipping}}",
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 112,
           "ContextTags": [
@@ -86,7 +86,7 @@
           "Price": 200,
           "Edibility": -200,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{CountForShipping}}",
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 113,
           "ContextTags": [
@@ -111,7 +111,7 @@
           "Price": 200,
           "Edibility": 15,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{CountForShipping}}",
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 115,
           "ContextTags": [
@@ -135,7 +135,7 @@
           "Price": 200,
           "Edibility": 15,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{CountForShipping}}",
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 117,
           "ContextTags": [
@@ -159,7 +159,7 @@
           "Price": 200,
           "Edibility": 15,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{CountForShipping}}",
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 116,
           "ContextTags": [

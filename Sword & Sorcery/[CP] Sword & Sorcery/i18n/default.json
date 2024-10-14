@@ -1303,7 +1303,7 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch1.7H2.Krobus.8": "Good to meet you, too!$1#$b#I'm going to get going, though, so you and @ can catch up! We can hang out another time.$7",
   "Events.S&S.Ch1.7H2.Mateo.10": "...I wasn't ready for that so soon after...$37",
   "Events.S&S.Ch1.7H2.Q1": "How's my face looking? Is it as bad as I think it is?",
-  "Events.S&S.Ch1.7H2.Q1.Answers": "#All you need now is a cape, mask, and musical aptitude. (PLATONIC)#You're just being self-concious; they healed well, and don't look bad at all. (PLATONIC)#Lots of folks find scars attractive, you know! Myself included. (FLIRTY)",
+  "Events.S&S.Ch1.7H2.Q1.Answers": "#All you need now is a cape, mask, and musical aptitude. (PLATONIC)#You're just being self-conscious; they healed well, and don't look bad at all. (PLATONIC)#Lots of folks find scars attractive, you know! Myself included. (FLIRTY)",
   "Events.S&S.Ch1.7H2.Q1.Response.1": "The first thing I thought when I looked in the mirror was, 'Oh, I should move into the basement of an opera house.'$1#$b#Thanks for easing my nerves, @. Laughing always does the trick.$32",
   "Events.S&S.Ch1.7H2.Q1.Response.2": "Thank you, @. I have bunch of scars, but I'd managed to keep my face clear until now.$37#$b#Aw, well. If you're saying they aren't bad, they really must not be.$36",
   "Events.S&S.Ch1.7H2.Q1.Response.3": "Is that so? Guess I've lucked out then, huh? That's an extra weighty statement, coming from you...$30",
@@ -3002,6 +3002,37 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch2.14H.Hector.3": "It broke during a conflict long ago - it's of no consequence, now. But I've held onto it out of sentiment...$12#$b#I'd like you to have it. This way, you'll think of me when we're apart. Like how I wear your pendant, and think of you.$13#$b#Maybe it's not the grandest thing, but-$15",
   "Events.S&S.Ch2.14H.Hector.4": "I love you, @. If you reach for the sky and can't quite make it, I'll bring it down for you. You are the parallel I'd lay my life on.$13",
 
+  // MATEO & EYVINDER 
+  "Events.SnS.Ch2.Eyvinder.Mateo.01": "Who's a good little noodle?$1",
+  "Events.SnS.Ch2.Eyvinder.LittleGruff.02": "BaaaaAAAAaaah.",
+  "Events.SnS.Ch2.Eyvinder.Mateo.03": "Yes you are! It's you, YOU'RE a good little noodle...$27",
+  "Events.SnS.Ch2.Eyvinder.LittleGruff.04": "BaaaaaaAAAAAAAAAaaaaaah!",
+  "Events.SnS.Ch3.Eyvinder.Mateo.01": "Where are we headed, Lil' Gruff?$1",
+  "Events.SnS.Ch3.Eyvinder.Mateo.02": "Woah! Who goes?$26",
+  "Events.SnS.Ch3.Eyvinder.Eyvinder.03": "Hello, Mateo. I am... Eyvind.#$b#It's a pleasure to meet you, finally.$1",
+  "Events.SnS.Ch3.Eyvinder.Mateo.04": "Guess I can see why - I've never met another Troll before.$12",
+  "Events.SnS.Ch3.Eyvinder.Eyvinder.05": "Little Gruff seems to have quite taken to you.#$b#Of course, the kid's affections are so easily bought: an apple, a scratch, and you've a friend for life.$1",
+  "Events.SnS.Ch3.Eyvinder.Mateo.06": "Yeah, I'm hoping to introduce him to Emeritus soon.$1",
+  "Events.SnS.Ch3.Eyvinder.Eyvinder.07": "Who?$3",
+  "Events.SnS.Ch3.Eyvinder.Mateo.08": "My pet Pepper Rex.$13",
+  "Events.SnS.Ch3.Eyvinder.Eyvinder.09": "Hahaha!",
+  "Events.SnS.Ch3.Eyvinder.Eyvinder.10": "He may not seem much more than a mouthful, but Little Gruff has inherited his father's spirit.#$b#I hope your Pepper Rex friend survives the encounter.$1",
+  "Events.SnS.Ch3.Eyvinder.Mateo.11": "Oh, he will! He's a very practiced combatant, you see. Spends the whole day fighting the Crab Menace.$1#$b#Though, Eyvind, if you have a moment, I'd love to ask you some questions...$12",
+  "Events.SnS.Ch3.Eyvinder.Eyvinder.12": "Of course, but be warned - I've got a fair few for you as well.$2#$b#But a discussion like this? It's best shared over a glass of mead.#$b#You do like mead, don't you?$3",
+  "Events.SnS.Ch3.Eyvinder.Mateo.13": "I love mead! Sounds great.$1",
+  "Events.SnS.Ch4.Eyvinder.Eyvinder.01": "Aye, Mary was one of the finest lasses I've know: smart and strong. Beautiful too.$1#$b#Found out I was ill-lit, err, that I couldn't read, and took it upon herself to try and teach me.$3#$b#Well, suffice to say, the reading didn't take - can't teach an old goat new tricks, and all that jazz - but damned if I didn't fall in love with her.$2#$b#And we Trolls? Well, we don't take to love lightly.#$b#Be careful who you give your heart to, kid.$2",
+  "Events.SnS.Ch4.Eyvinder.Mateo.02": "I'm sorry, Eyvind...$2",
+  "Events.SnS.Ch4.Eyvinder.Eyvinder.03": "Built her a house, forged a ring... asked her to be mine forever.$3",
+  "Events.SnS.Ch4.Eyvinder.Eyvinder.04": "And she said 'no'.$2#$b#She loved me, she said, loved being with me, but she couldn't, wouldn't, do 'forever'.$2",
+  "Events.SnS.Ch4.Eyvinder.Eyvinder.05": "Few days later, she slipped away into the night. And me, daft old broken-hearted fool that I was, let her go.$2#$b#Not that I could've held her. Would've been like caging a wild bird.",
+  "Events.SnS.Ch4.Eyvinder.Eyvinder.06": "Then the mines collapsed, and... my world fell apart; human friendships seemed more trouble than they were worth - and I became the monster in the mountains.$2",
+  "Events.SnS.Ch4.Eyvinder.Eyvinder.07": "I knew you existed. How could I not? Figured you'd be better off without me - and look at you!#$b#My child who is neither son nor daughter; a doctor, an adventurer - a leader.$1#$b#But for what it's worth, I'm sorry I let you, both of you, slip away. I hope she's happy now: Mary, my kestrel.$2",
+  "Events.SnS.Ch4.Eyvinder.Mateo.08": "She made her choices, and she has to live with them. But I'm sorry she hurt you in the process.$2#$b#What matters now, though, is that we have the chance to get to know each other.$78",
+  "Events.SnS.Ch4.Eyvinder.Mateo.09.False": "I have no shortage of father figures - Gunther and Marlon have looked out for me since I came back to town. But it'll be nice to have... you know, a dad.$76",
+  "Events.SnS.Ch4.Eyvinder.Mateo.09.True": "I have no shortage of father figures - Gunther and Marlon have looked out for me since I came back to town. Even Wyatt and I are working on our relationship; he raised me, and I'm glad to have him back in my life.$76#$b#But it'll be nice to have... you know, a dad.$78",
+  "Events.SnS.Ch4.Eyvinder.Eyvinder.10": "Thanks, 'Teo. I'll do my best to make up for lost time.$1",
+  "Events.SnS.Ch4.Eyvinder.Mateo.11": "Don't worry. We've got plenty of it.$80",
+
 
   /*
    _____ ____  _   _     _______ ____  _____ _____ _____  _____ 
@@ -3384,7 +3415,7 @@ ________      ________ _   _ _______ _____
 
   // 10H LION'S MANE
   "Core.Cirrus.LionsMane.1": "Hey, @! Don't worry about the menu at the Lion's Mane, okay? If you've got a craving, let me handle it. It's the least I can do after you've been such a good friend.$17",
-  "Core.Cirrus.LionsMane.2": "I've got a system to keep everything at the Lion's Mane clean. I'd rather get anxious from not doing a routine, than not have one at all.47$20#$b#Whatever works, works. Such a big is hard to keep tidy, but I'm working really hard to keep everything up and running.$1",
+  "Core.Cirrus.LionsMane.2": "I've got a system to keep everything at the Lion's Mane clean. I'd rather get anxious from not doing a routine, than not have one at all.$20#$b#Whatever works, works. Such a big space is hard to keep tidy, but I'm working really hard to keep everything up and running.$1",
   "Core.Cirrus.LionsMane.3": "You're more than welcome to stop by whenever, @. I'll cook, you can bring that lyre of yours, and we'll jam out.$1#$b#It's really nice having a living space that I can actually host in. I've never lived in a building that large before.$17",
   "Core.Cirrus.LionsMane.4": "Hungry, @? Stop by the Lion's Mane, I'll make sure you're taken care of. You helped restore the place, after all. I'll return the favor with a full belly!$1",
   "Core.Cirrus.LionsMane.5": "I've never had a bedroom before, @. My mother and I lived in a mobile home, and then I was living out of the van to save money.$16#$b#The Lion's Mane means the world to me. Thanks for helping make it happen, @. This town wouldn't be the same without you.$17",
@@ -3745,10 +3776,10 @@ ________      ________ _   _ _______ _____
 
   // WINTER STAR 
   "Festivals.Cirrus.winter25.False.1": "I really wasn't sure how this event worked, so I panicked and made thirty peanut butter and banana sandwiches.$2",
-  "Festivals.Cirrus.winter25.False.2": "I got Emeritus a new stuffie to be friends with his current stuffie, and Biróg some patches for {{HectorPN1}} battlevest, and Mateo a neat dagger I had someone in Port Drake forge and send over.$4",
+  "Festivals.Cirrus.winter25.False.2": "I got Emeritus a new stuffie to be friends with his current stuffie, Biróg some new patches, and Mateo a neat dagger I had someone in Port Drake forge and send over.$4",
   "Festivals.Cirrus.winter25.False.3": "There's so much love in the air, despite the chill! Everyone's so happy to be together, and it's really infectious.$1",
   "Festivals.Cirrus.winter25.True,1": "You're the greatest gift I ever could have gotten, Rockstar my Rockstar. Thank you.$11",
-  "Festivals.Cirrus.winter25.True.2": "I got Emeritus a new pillows, and Biróg some pryamid studs for {{HectorPN1}} battlevest, and Mateo a new frog for their sword.$4",
+  "Festivals.Cirrus.winter25.True.2": "I got Emeritus a new pillow, Biróg a bag of pyramid studs, and Mateo a new frog for their sword.$4",
   "Festivals.Cirrus.winter25.True.3": "There's so much love in the air, despite the chill! Everyone's so happy to be together, but mostly I'm happy to be together with you.$23",
 
   // RSV GATHERING 
@@ -4179,7 +4210,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch3.Cirrus.9.Hector.29": "The dice really know how to be drama queens, don't they?$8",
   "Events.SnS.Ch3.Cirrus.9.Cirrus.30": "Thanks for helping me out there, @!$1",
   "Events.SnS.Ch3.Cirrus.9.Mateo.31": "Hector, what do you do?$13",
-  "Events.SnS.Ch3.Cirrus.9.Hector.32": "I go in for an another attack!$9",
+  "Events.SnS.Ch3.Cirrus.9.Hector.32": "I go in for another attack!$9",
   "Events.SnS.Ch3.Cirrus.9.Hector.33": "Oh, damn it. That's probably a miss, huh?$8",
   "Events.SnS.Ch3.Cirrus.9.Mateo.34": "Unfortunately, yeah! Looks like you used up all your luck in the last campaign.$78",
   "Events.SnS.Ch3.Cirrus.9.Message.35": "The fight with Count Brahd Von Marovich is arduous, but exciting. He's able to hold the party off very well despite being alone. Eventually, after a break for Cirrus' homemade cheesecake, one final strike from the Sunsword does the old vampire in.",
@@ -4658,20 +4689,6 @@ ________      ________ _   _ _______ _____
   "Events.Events.ED.SnS.Ch3.EnD.Sebastian.22": "...$2",
   "Events.Events.ED.SnS.Ch3.EnD.Message.23": "Cirrus seemed a little nervous at first, but warmed up in the company of you, Mateo, Biróg and her best friends. Her van is parked in front of the Moray brother's house, and you have a fun time at the impromptu party.",
 
-  // EYVINDER AND MATEO #1 
-  "Events.SnS.Ch3.Eyvinder.Mateo.01": "Where are we headed, Lil' Gruff?$1",
-  "Events.SnS.Ch3.Eyvinder.Mateo.02": "Woah! Who goes?$26",
-  "Events.SnS.Ch3.Eyvinder.Eyvinder.03": "Hello, Mateo. I am... Eyvinder.#$b#It's a pleasure to meet you, finally.$1",
-  "Events.SnS.Ch3.Eyvinder.Mateo.04": "Guess I can see why - I've never met another Troll before.$12",
-  "Events.SnS.Ch3.Eyvinder.Eyvinder.05": "Little Gruff has told me much about you; it would seem the pair of you have become fast friends.",
-  "Events.SnS.Ch3.Eyvinder.Mateo.06": "Yeah, I'm hoping to introduce him to Emeritus soon.$1",
-  "Events.SnS.Ch3.Eyvinder.Eyvinder.07": "Who?$3",
-  "Events.SnS.Ch3.Eyvinder.Mateo.08": "My pet Pepper Rex.$13",
-  "Events.SnS.Ch3.Eyvinder.Eyvinder.09": "Hahaha!",
-  "Events.SnS.Ch3.Eyvinder.Mateo.10": "Eyvinder, if you have a moment, I'd love to ask you some questions...$21",
-  "Events.SnS.Ch3.Eyvinder.Eyvinder.11": "Of course, I was about to request the same of you.$2#$b#Perhaps... over a glass of mead? Do you... like mead?$3",
-  "Events.SnS.Ch3.Eyvinder.Mateo.12": "I love mead! Sounds great.$1",
-
   // DYNAMIC SONG 
   "Events.CirrusSong.1": "try looking at the sun. Keep your head high, and everything is alright.",
   "Events.CirrusSong.2": "look into the blue sky, and your feelings might be soaked up in it's vastness.",
@@ -4711,7 +4728,7 @@ ________      ________ _   _ _______ _____
   "CirrusFlirt.8": "I'm proud of myself, too. But, ya'know, happiness is starting to look pretty you-shaped...$23",
 
   // PLATONIC ROMANTIC ENDINGS 
-  "Events.SnS.Ch3.Cirrus.10h.End.Platonic.Cirrus.01": "Thank you for everything, @. If it was for you and your friends - sorry, our friends - I don't think any of this would've fallen into place.$17#$b#For the first time in ages, I feel passionate about music again... genuinely! Not just performatively for my job, or because of expectations I set for myself...$11#$b#I'm going to make good on these powers. Hone them to a sharp point! And you too, @! We'll do this together!$10",
+  "Events.SnS.Ch3.Cirrus.10h.End.Platonic.Cirrus.01": "Thank you for everything, @. If it wasn't for you and your friends - sorry, our friends - I don't think any of this would've fallen into place.$17#$b#For the first time in ages, I feel passionate about music again... genuinely! Not just performatively for my job, or because of expectations I set for myself...$11#$b#I'm going to make good on these powers. Hone them to a sharp point! And you too, @! We'll do this together!$10",
   "Events.SnS.Ch3.Cirrus.10h.End.Platonic.Romantic.Message.01": "Mateo and Biróg bid you both farewell for the evening.",
   "Events.SnS.Ch3.Cirrus.10h.End.Platonic.Romantic.Cirrus.02": "Wait, Rockstar-",
   "Events.SnS.Ch3.Cirrus.10h.End.Platonic.Romantic.Cirrus.03": "Kiss me before you go.$23",
