@@ -73,6 +73,22 @@
                 "MateoHoodie":"{{i18n:Mail.Mateo.Letter5}}"
             }
         },
+        {
+            "LogName": "Hector's Hoodie",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "HectorHoodie":"{{i18n:Mail.Hector.Letter3}}"
+            }
+        },
+        {
+            "LogName": "Cirrus' Hoodie",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "CirrusHoodie":"{{i18n:Mail.Cirrus.Letter0}}"
+            }
+        },
 
         // TRIGGER ACTIONS
         {

@@ -70,6 +70,27 @@
         }
       }
     },
+    {
+      "LogName": "Add Shirts",
+      "Action": "EditData",
+      "Target": "Data/Shirts",
+      "Entries": {
+        "DN.SnS_Hector_Hoodie_Unzipped": {
+          "Name": "DN.SnS_Hector_Hoodie_Unzipped",
+          "DisplayName": "{{i18n:DN.SnS_Hector_Hoodie.Name}}",
+          "Description": "{{i18n:DN.SnS_Hector_Hoodie.Description}}",
+          "Price": 2500,
+          "Texture": "Mods\\DN.SnS\\Shirts",
+          "SpriteIndex": 3,
+          "DefaultColor": "39 184 13",
+          "CanBeDyed": true,
+          "IsPrismatic": false,
+          "HasSleeves": true,
+          "CanChooseDuringCharacterCustomization": false,
+          "CustomFields": {}
+        }
+      }
+    }
 
   ]
 }

@@ -1,6 +1,5 @@
 {
     "Changes": [
-
         // CIRRUS' SPOUSE ROOM
         {
             "Action": "Load",
@@ -10,7 +9,6 @@
                 "CirrusSpouseRoomConfig": true
             }
         },
-
         // CIRRUS' SPOUSE PATIO 
         {
             "Action": "Load",
@@ -20,7 +18,6 @@
                 "CirrusSpousePatioConfig": true
             }
         },
-
         // SPOUSE ROOM SNACK MACHINES 
         {
             "Action": "EditData",
@@ -72,7 +69,6 @@
                 }
             }
         },
-
         // MAKES CIRRUS' BED SLEEPABLE WHEN MARRIED
         {
             "Action": "EditMap",
@@ -94,7 +90,6 @@
                 "Relationship:Cirrus |contains=Dating, Engaged, Married": true
             }
         },
-
         // CIRRUS REACTS TO PLAYER'S "DEATH" 
         {
             "LogName": "Player Death - Mines",
@@ -118,26 +113,24 @@
                 "Relationship:Cirrus |contains=Dating, Engaged, Married": true
             }
         },
-
-        // CUSTOM CHILD - SOREN
+        // CUSTOM CHILD - FREDDIE
         {
             "Action": "EditImage",
             "Target": "Characters/Toddler, Characters/Toddler_dark",
-            "FromFile": "assets/Characters/Mateo/Kids/mateo_soren{{MateoHorns}}.png",
+            "FromFile": "assets/Characters/Cirrus/Kids/cirrus_freddie.png",
             "When": {
                 "Relationship:Cirrus": "Married",
                 "CustomCirrusFreddie": "true"
             }
         },
-        
-        // CUSTOM CHILD - DINAH
+        // CUSTOM CHILD - BRITTANY
         {
             "Action": "EditImage",
             "Target": "Characters/Toddler_girl, Characters/Toddler_girl_dark",
-            "FromFile": "assets/Characters/Mateo/Kids/mateo_dinah{{MateoHorns}}.png",
+            "FromFile": "assets/Characters/Cirrus/Kids/cirrus_brittany.png",
             "When": {
-                "Relationship:Mateo": "Married",
-                "CustomMateoDinah": "true"
+                "Relationship:Cirrus": "Married",
+                "CustomCirrusBrittany": "true"
             }
         },
     ]

@@ -970,7 +970,7 @@
 
   "Mail.Mateo.Letter4": "Good morning, @!^^I had a friend who owned a brewery back in the Fern Islands. Best booze that side of the Salish Sea.^^Here's the recipe for their special Bourbon. It's a well-kept secret.^^Sincerely,^Mateo.%item cookingRecipe DN.SnS_salishbourbon%%[#]Salish Bourbon Recipe",
 
-  "Mail.Mateo.Letter5": "Good morning, Sunshine.^^I had a great time last night - thank you for sharing it with me.^^I figure you'd like to borrow this... <3^^Sincerely,^Mateo.%item id DN.SnS_Mateo_Hoodie%%[#]Mateo's Hoodie",
+  "Mail.Mateo.Letter5": "Good morning, Sunshine.^^I had a great time last night - thank you for sharing it with me.^^I figure you'd like to borrow this...^^Sincerely,^Mateo.%item id DN.SnS_Mateo_Hoodie%%[#]Mateo's Hoodie",
 
   /*
    ____  _    _ ______  _____ _______ _____ 
@@ -2486,6 +2486,8 @@ ________      ________ _   _ _______ _____
   // POST GUILD BEING BUILT 
   "Mail.Hector.Letter2": "^^You've accomplished so much, @.^^I've set up a means of getting into my Tower at the Railroad - let's see if you can find it!^^ - B",
 
+  "Mail.Hector.Letter3": "Rise n' shine, @!^^This probably stinks like grass or whatever, but I figured you'd kinda be into that. Softest thing you'll ever wear though.^^Hope it reminds you of me,^Biróg.%item id DN.SnS_Hector_Hoodie%%[#]Biróg's Hoodie",
+
   /*
    ____  _    _ ______  _____ _______ _____ 
   / __ \| |  | |  ____|/ ____|__   __/ ____|
@@ -3864,7 +3866,7 @@ ________      ________ _   _ _______ _____
                                
 */
 
-  "Mail.Cirrus.Letter1": "",
+"Mail.Cirrus.Letter0": "Good morning, Rockstar!^^I've left this on your bedroom floor so many times, might as well let you hold onto it for a little while.^^I hope you miss me while you wear it.^^Lots of love,^Cirrus.%item id DN.SnS_Cirrus_Hoodie%%[#]Cirrus' Hoodie",
 
 
   /*
@@ -7023,7 +7025,7 @@ ________      ________ _   _ _______ _____
   "DN.SnS_Hector_Hoodie.Name": "Biróg's Hoodie",
   "DN.SnS_Hector_Hoodie.Description": "Smells faintly like concrete after it rains.", 
   "DN.SnS_Cirrus_Hoodie.Name": "Cirrus' Hoodie",
-  "DN.SnS_Cirrus_Hoodie.Description": "Smells faintly like concrete after it rains.", 
+  "DN.SnS_Cirrus_Hoodie.Description": "Seems to have a few splashes of holographic nail polish on it.", 
 
   /*
    _____ _    _          _____ _______ ______ _____     _____    ________      ________ _   _ _______ _____ 

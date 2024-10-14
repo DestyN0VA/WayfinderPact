@@ -1,6 +1,5 @@
 {
     "Changes": [
-
         // MATEO'S SPOUSE ROOM
         {
             "Action": "Load",
@@ -10,7 +9,6 @@
                 "MateoSpouseRoomConfig": true
             }
         },
-
         // MATEO'S SPOUSE PATIO 
         {
             "Action": "Load",
@@ -20,7 +18,6 @@
                 "MateoSpousePatioConfig": true
             }
         },
-
         // MAKES MATEO'S BED SLEEPABLE WHEN MARRIED
         {
             "Action": "EditMap",
@@ -42,7 +39,6 @@
                 "Relationship:Mateo |contains=Dating, Engaged, Married": true
             }
         },
-
         // MATEO REACTS TO PLAYER'S "DEATH" 
         {
             "LogName": "Player Death - Mines",
@@ -66,26 +62,24 @@
                 "Relationship:Mateo |contains=Dating, Engaged, Married": true
             }
         },
-
-        // CUSTOM CHILD - FREDDIE
+        // CUSTOM CHILD - SOREN
         {
             "Action": "EditImage",
             "Target": "Characters/Toddler, Characters/Toddler_dark",
-            "FromFile": "assets/Characters/Cirrus/Kids/cirrus_freddie.png",
+            "FromFile": "assets/Characters/Mateo/Kids/mateo_soren{{MateoHorns}}.png",
             "When": {
                 "Relationship:Mateo": "Married",
                 "CustomMateoSoren": "true"
             }
         },
-        
-        // CUSTOM CHILD - BRITTANY
+        // CUSTOM CHILD - DINAH
         {
             "Action": "EditImage",
             "Target": "Characters/Toddler_girl, Characters/Toddler_girl_dark",
-            "FromFile": "assets/Characters/Cirrus/Kids/cirrus_brittany.png",
+            "FromFile": "assets/Characters/Mateo/Kids/mateo_dinah{{MateoHorns}}.png",
             "When": {
-                "Relationship:Cirrus": "Married",
-                "CustomCirrusBrittany": "true"
+                "Relationship:Mateo": "Married",
+                "CustomMateoDinah": "true"
             }
         },
     ]
