@@ -112,9 +112,6 @@ namespace SwordAndSorcerySMAPI
 
             Game1.fadeToBlack = false; // WHY WAS THIS KEEPING THINGS FROM TICKING
 
-            Battlers.AddRange(@event.actors);
-            Battlers.Insert(1, Game1.player);
-
             BattlerData = new()
             {
                 { "Mateo", new BattlerInfo()
@@ -308,6 +305,9 @@ namespace SwordAndSorcerySMAPI
                 else @event.actors.Remove(actor);
             }
             BattlerData[Game1.player.Name].BasePosition = Game1.player.Position;
+
+            Battlers.AddRange(@event.actors);
+            Battlers.Insert(1, Game1.player);
 
             foreach (var battler in BattlerData.ToArray())
             {

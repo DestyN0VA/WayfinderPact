@@ -74,7 +74,7 @@ public class DuskspireMonster : Monster
     {
         prevFrame = Sprite.CurrentFrame;
 
-        Health = 99999;
+        //Health = 99999;
 
         base.update(time, location);
         laughEvent.Poll();
@@ -111,7 +111,7 @@ public class DuskspireMonster : Monster
                 {
                     float dist = Vector2.Distance(farmer.StandingPixel.ToVector2(), GetBoundingBox().Center.ToVector2());
 
-                    Log.Debug("dist : " + dist);
+                    //Log.Debug("dist : " + dist);
                     if (Game1.random.NextDouble() < 1f / (5 * 60))
                     {
                         laughEvent.Fire();
@@ -201,7 +201,7 @@ public class DuskspireMonster : Monster
 
     public override void draw(SpriteBatch b)
     {
-        b.Draw(Game1.staminaRect, Game1.GlobalToLocal(Game1.viewport, GetBoundingBox()), Color.Red);
+        //b.Draw(Game1.staminaRect, Game1.GlobalToLocal(Game1.viewport, GetBoundingBox()), Color.Red);
         Sprite.draw(b, Game1.GlobalToLocal(Position - new Vector2(Sprite.SpriteWidth * Game1.pixelZoom / 2, Sprite.SpriteHeight * Game1.pixelZoom)), Position.Y / 10000f, 0, 0, Color.White, (Sprite.CurrentFrame >= 40 && Sprite.CurrentFrame <= 50) ? flippedSwing : false, Game1.pixelZoom);
     }
 }
