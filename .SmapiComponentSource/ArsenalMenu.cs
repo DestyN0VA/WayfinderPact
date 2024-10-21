@@ -725,6 +725,7 @@ public static class MonsterTakeDamagePatch
                 break;
         }
 
+        /*
         if (who == Game1.player)
         {
             if (ModSnS.State.LastAttacked == __instance)
@@ -737,6 +738,7 @@ public static class MonsterTakeDamagePatch
                 ModSnS.State.LastAttackedCounter = 0;
             }
         }
+        */
 
         damage = (int)(damage * mult);
     }

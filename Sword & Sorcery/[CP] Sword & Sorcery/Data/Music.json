@@ -197,6 +197,13 @@
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DuskspireLaugh.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
+                },
+                "SnS.DuskspireLaugh_NoLoop": {
+                    "ID": "SnS.DuskspireLaugh_NoLoop",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DuskspireLaugh.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": false
                 }
             }
         },

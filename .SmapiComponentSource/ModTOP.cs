@@ -535,7 +535,11 @@ namespace SwordAndSorcerySMAPI
             }
             else if (e.NameWithoutLocale.IsEquivalentTo("KCC.SnS/MonsterExtensionData"))
             {
-                e.LoadFrom(() => new Dictionary<string, MonsterExtensionData>(), StardewModdingAPI.Events.AssetLoadPriority.Low);
+                e.LoadFrom(() => new Dictionary<string, MonsterExtensionData>()
+                {
+                    { "Duskspire Behemoth", new() { CanBanish = false, CanPolymorph = false } },
+                    { "Duskspire Remnant", new() { CanBanish = false, CanPolymorph = false } },
+                }, StardewModdingAPI.Events.AssetLoadPriority.Exclusive);
             }
         }
 
@@ -1180,7 +1184,7 @@ namespace SwordAndSorcerySMAPI
     }
 
     [HarmonyPatch(typeof(FishingRod), "doneFishing")]
-    public static class DropWaterEssencePatch
+    public static class DropWaterEssencePatch1
     {
         public static void Postfix(Farmer who, bool consumeBaitAndTackle)
         {
@@ -1194,6 +1198,19 @@ namespace SwordAndSorcerySMAPI
                 Game1.createObjectDebris("(O)DN.SnS_WaterEssence", (int)who.Tile.X, (int)who.Tile.Y, farmerId, who.currentLocation);
                 Game1.createObjectDebris("(O)DN.SnS_WaterEssence", (int)who.Tile.X, (int)who.Tile.Y, farmerId, who.currentLocation);
             }
+        }
+    }
+
+    [HarmonyPatch(typeof(Pan), nameof(Pan.getPanItems))]
+    public static class DropWaterEssencePatch2
+    {
+        public static void Postfix(List<Item> __result)
+        {
+            if (!Game1.player.eventsSeen.Contains("SnS.Ch4.Roslin.1"))
+                return;
+            int mult = Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionEssenceDrops) ? 2 : 1;
+
+            __result.Add(ItemRegistry.Create("(O)DN.SnS_WaterEssence", mult * 3));
         }
     }
 

@@ -525,8 +525,11 @@ namespace CircleOfThornsSMAPI
     {
         public static bool Prefix(SpriteBatch b, FarmerSprite farmerSprite, Rectangle sourceRect, Vector2 position, Vector2 origin, float layerDepth, Color overrideColor, float rotation, Farmer who)
         {
-            if (Game1.player.currentLocation.currentEvent != null && !Game1.player.currentLocation.currentEvent.isFestival)
-                return true;
+            if (Game1.CurrentEvent != null && Game1.currentMinigame is not FinalePhase1Minigame)
+            {
+                if (Game1.player.currentLocation.currentEvent != null && !Game1.player.currentLocation.currentEvent.isFestival)
+                    return true;
+            }
 
             //b.Draw(Game1.staminaRect, Game1.GlobalToLocal(Game1.viewport, who.GetBoundingBox()), null, Color.Red);
 
