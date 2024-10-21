@@ -92,7 +92,7 @@
       "Action": "Include",
       "FromFile": "Data/Quests & Items/EssenceQuest_RSV.json",
       "When": {
-        "Query: {{RSVMaterials}} AND '{{HasMod |contains=Rafseazz.RSVCP}}": true
+        "Query: {{RSVMaterials}} AND {{HasMod |contains=Rafseazz.RSVCP}}": true
       }
     },
     // TRIGGER ACTIONS
