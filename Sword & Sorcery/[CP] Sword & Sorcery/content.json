@@ -68,8 +68,7 @@
       "Action": "Include",
       "FromFile": "Data/Quests & Items/ShieldQuest.json",
       "When": {
-        "HasMod: |contains=Kitsutsune.Chocobovalley": false,
-        "ChocoboValleyMaterials": false
+        "Query: {{ChocoboValleyMaterials}} AND {{HasMod |contains=Kitsutsune.Chocobovalley}}": false
       }
     },
     {
@@ -77,8 +76,7 @@
       "Action": "Include",
       "FromFile": "Data/Quests & Items/ShieldQuest_ChocoboValley.json",
       "When": {
-        "HasMod: |contains=Kitsutsune.Chocobovalley": true,
-        "ChocoboValleyMaterials": true
+        "Query: {{ChocoboValleyMaterials}} AND {{HasMod |contains=Kitsutsune.Chocobovalley}}": true
       }
     },
     {
@@ -86,8 +84,7 @@
       "Action": "Include",
       "FromFile": "Data/Quests & Items/EssenceQuest.json",
       "When": {
-        "HasMod: |contains=Rafseazz.RSVCP": false,
-        "RSVMaterials": false
+        "Query: {{RSVMaterials}} AND {{HasMod |contains=Rafseazz.RSVCP}}": false
       }
     },
     {
@@ -95,8 +92,7 @@
       "Action": "Include",
       "FromFile": "Data/Quests & Items/EssenceQuest_RSV.json",
       "When": {
-        "HasMod: |contains=Rafseazz.RSVCP": true,
-        "RSVMaterials": true
+        "Query: {{RSVMaterials}} AND {{HasMod |contains=Rafseazz.RSVCP}}": true
       }
     },
     // TRIGGER ACTIONS
@@ -1869,11 +1865,11 @@
       "Value": "|Nickname = {{i18n: Strings.Cirrus.Nickname{{Random:1,2}}}}"
     },
     {
-      "Name": "CountForShipping",
+      "Name": "CountForFarmingAchievements",
       "Value": "true"
     },
     {
-      "Name": "CountForShipping",
+      "Name": "CountForFarmingAchievements",
       "Value": "false",
       "When": {
         "ExcludeFromPerfection": true
@@ -2315,6 +2311,20 @@
         "HasSeenEvent |contains=SnS.Ch3.Cirrus.14": true,
         "HasSeenEvent |contains=SnS.Ch4.Dandelion.6": true,
         "HasSeenEvent |contains=SnS.Ch4.Finale": true
+      }
+    },
+    {
+      "Name": "MateoFatherComment",
+      "Value": "{{i18n:Events.SnS.Ch4.Eyvinder.Mateo.09.False}}",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch5.Mateo": false
+      }
+    },
+    {
+      "Name": "MateoFatherComment",
+      "Value": "{{i18n:Events.SnS.Ch4.Eyvinder.Mateo.09.True}}",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch5.Mateo": true
       }
     },
   ]
