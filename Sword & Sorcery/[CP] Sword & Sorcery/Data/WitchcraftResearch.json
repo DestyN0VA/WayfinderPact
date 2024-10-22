@@ -311,6 +311,7 @@
                     "(O){{ModID}}_WaterEssence": 10,
                 }
             },
+            */
             "{{ModId}}_Spell_Polymorph":
             {
                 "Type": "Spell",
@@ -327,7 +328,6 @@
                     "(O){{ModID}}_WaterEssence": 7,
                 }
             },
-            */
             "{{ModId}}_Spell_Stasis":
             {
                 "Type": "Spell",
@@ -377,6 +377,7 @@
                     "(O){{ModID}}_WaterEssence": 10,
                 }
             },
+            */
             "{{ModId}}_Spell_Banishment":
             {
                 "Type": "Spell",
@@ -450,7 +451,6 @@
                     "(O){{ModID}}_WaterEssence": 15,
                 }
             },
-            */
             /*
             // We're not implementing this
             "{{ModId}}_Spell_RaiseSpirit":
@@ -531,7 +531,6 @@
                     "(O){{ModID}}_WaterEssence": 15,
                 }
             },
-            /*
             "{{ModId}}_Spell_MistyStep":
             {
                 "Type": "Spell",
@@ -546,7 +545,6 @@
                     "(O){{ModID}}_WaterEssence": 15,
                 }
             },
-            */
             "{{ModId}}_Spell_PocketChest":
             {
                 "Type": "Spell",

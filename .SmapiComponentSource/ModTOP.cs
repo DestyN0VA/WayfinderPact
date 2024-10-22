@@ -25,9 +25,18 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using Microsoft.CodeAnalysis.Emit;
 using StardewValley.Menus;
+using SpaceCore.Spawnables;
+using StardewValley.Inventories;
+using System.Xml;
 
 namespace SwordAndSorcerySMAPI
 {
+    public class MonsterExtensionData
+    {
+        public bool CanPolymorph { get; set; } = true;
+        public bool CanBanish { get; set; } = true;
+    }
+
     public class FamiliarCompanion : Companion
     {
         public AnimatedSprite spr;
@@ -166,6 +175,8 @@ namespace SwordAndSorcerySMAPI
 
     public class ModTOP
     {
+        public const string MultiplayerMessage_Polymorph = "KCC.SnS/Polymorph";
+        public const string MultiplayerMessage_Banish = "KCC.SnS/Banish";
         public const string RequestTeleportInfoMessage = "KCC.SnS/RequestTeleportInfo";
         public const string TeleportInfoMessage = "KCC.SnS/TeleportInfo";
 
@@ -180,6 +191,8 @@ namespace SwordAndSorcerySMAPI
 
         public static WitchcraftSkill Skill;
         public static PaladinSkill PaladinSkill;
+
+        internal static bool drawingBanished = false;
 
         public static Dictionary<string, ResearchEntry> Research { get; private set; }
 
@@ -313,6 +326,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.Player.Warped += Player_Warped;
             Helper.Events.World.TerrainFeatureListChanged += World_TerrainFeatureListChanged;
             Helper.Events.World.FurnitureListChanged += World_FurnitureListChanged;
+            Helper.Events.World.NpcListChanged += World_NpcListChanged;
             Helper.Events.Input.ButtonPressed += Input_ButtonPressed;
             Helper.Events.Display.RenderedStep += Display_RenderedStep;
             Helper.Events.Content.AssetRequested += Content_AssetRequested;
@@ -483,6 +497,23 @@ namespace SwordAndSorcerySMAPI
             RegisterSpells();
         }
 
+        private void World_NpcListChanged(object sender, StardewModdingAPI.Events.NpcListChangedEventArgs e)
+        {
+            foreach (var npc in e.Removed)
+            {
+                if (npc is GreenSlime slime && slime.Health <= 0)
+                {
+                    if (ModSnS.State.Polymorphed.ContainsKey(slime))
+                    {
+                        var data = ModSnS.State.Polymorphed[slime];
+                        data.Original.Position = slime.Position;
+                        ModSnS.State.Polymorphed.Remove(slime);
+                        e.Location.characters.Add(data.Original);
+                    }
+                }
+            }
+        }
+
         private void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)
         {
             Skills.RegisterSkill(Skill);
@@ -502,10 +533,31 @@ namespace SwordAndSorcerySMAPI
             {
                 e.LoadFrom(() => new Dictionary<string, ResearchEntry>(), StardewModdingAPI.Events.AssetLoadPriority.Low);
             }
+            else if (e.NameWithoutLocale.IsEquivalentTo("KCC.SnS/MonsterExtensionData"))
+            {
+                e.LoadFrom(() => new Dictionary<string, MonsterExtensionData>()
+                {
+                    { "Duskspire Behemoth", new() { CanBanish = false, CanPolymorph = false } },
+                    { "Duskspire Remnant", new() { CanBanish = false, CanPolymorph = false } },
+                }, StardewModdingAPI.Events.AssetLoadPriority.Exclusive);
+            }
         }
 
         private void Display_RenderedStep(object sender, StardewModdingAPI.Events.RenderedStepEventArgs e)
         {
+            if (e.Step == StardewValley.Mods.RenderSteps.World_Sorted)
+            {
+                drawingBanished = true;
+                foreach (var monster in ModSnS.State.Banished)
+                {
+                    if (monster.Value.Location == Game1.currentLocation)
+                    {
+                        monster.Key.draw(e.SpriteBatch);
+                    }
+                }
+                drawingBanished = false;
+            }
+            
             if (e.Step == StardewValley.Mods.RenderSteps.World_Sorted)
             {
                 if (ModSnS.State.ReturnPotionLocation != null && Game1.currentLocation == Game1.getFarm())
@@ -604,7 +656,7 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        public static TeleportInfoMessage ProcessTeleportRequest(TeleportInfoMessage msg)
+        public static TeleportInfoMessage ProcessTeleportRequest(TeleportInfoMessage msg, long from)
         {
             TeleportInfoMessage retMsg = new();
 
@@ -627,12 +679,60 @@ namespace SwordAndSorcerySMAPI
                 }
                 else
                 {
-                    // TODO: Check and consume essences, chests nearby and player inventory as backup
+                    var loc = Game1.getLocationFromName(msg.LocationName);
 
-                    int slash = target.IndexOf('/');
-                    int comma = target.IndexOf(',', slash + 1);
-                    retMsg.LocationName = target.Substring(0, slash);
-                    retMsg.Tile = new Vector2(float.Parse(target.Substring(slash + 1, comma - slash - 1)), float.Parse(target.Substring(comma + 1)));
+                    int totalFound = 0;
+                    List<(IInventory inv, Item item)> essencesFound = new();
+                    for (int ix = -2; ix <= 2; ++ix)
+                    {
+                        for (int iy = -2; iy <= 2; ++iy)
+                        {
+                            if (totalFound >= 3)
+                                continue;
+
+                            Vector2 pos = msg.Tile + new Vector2(ix, iy);
+                            if (loc.Objects.TryGetValue( pos, out var obj ) && obj is Chest chest)
+                            {
+                                // TODO: Make this use the chest mutex right
+                                var inv = chest.GetItemsForPlayer(from);
+                                for (int i = 0; i < chest.GetActualCapacity(); ++i)
+                                {
+                                    if (inv[i]?.HasContextTag("essence_item") ?? false)
+                                    {
+                                        essencesFound.Add(new(inv, inv[i]));
+                                        totalFound += inv[i].Stack;
+                                        if (totalFound >= 3)
+                                            break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    bool skipCost = Game1.getFarmer(from).HasCustomProfession(WitchcraftSkill.ProfessionNoTeleportCost);
+
+                    if (totalFound < 3 && !skipCost)
+                    {
+                        retMsg.Error = "teleport-circle.error.missing-essence";
+                    }
+                    else
+                    {
+                        if (!skipCost)
+                        {
+                            int left = 3;
+                            foreach (var entry in essencesFound)
+                            {
+                                left -= entry.inv.ReduceId(entry.item.QualifiedItemId, left);
+                                if (left <= 0)
+                                    break;
+                            }
+                        }
+
+                        int slash = target.IndexOf('/');
+                        int comma = target.IndexOf(',', slash + 1);
+                        retMsg.LocationName = target.Substring(0, slash);
+                        retMsg.Tile = new Vector2(float.Parse(target.Substring(slash + 1, comma - slash - 1)), float.Parse(target.Substring(comma + 1)));
+                    }
                 }
             }
             else
@@ -665,13 +765,23 @@ namespace SwordAndSorcerySMAPI
             {
                 var msg = e.ReadAs<TeleportInfoMessage>();
 
-                var retMsg = ProcessTeleportRequest(msg);
+                var retMsg = ProcessTeleportRequest(msg, e.FromPlayerID);
                 Helper.Multiplayer.SendMessage(retMsg, TeleportInfoMessage, [ModManifest.UniqueID], [e.FromPlayerID]);
             }
             else if (e.Type == TeleportInfoMessage)
             {
                 var msg = e.ReadAs<TeleportInfoMessage>();
-                ProcessTeleportRequest(msg);
+                ProcessTeleport(msg);
+            }
+            else if (e.Type == MultiplayerMessage_Polymorph)
+            {
+                var msg = e.ReadAs<Vector2>();
+                Spells.PolymorphImpl(Game1.getFarmer(e.FromPlayerID), msg);
+            }
+            else if (e.Type == MultiplayerMessage_Banish)
+            {
+                var msg = e.ReadAs<Vector2>();
+                Spells.BanishImpl(Game1.getFarmer(e.FromPlayerID), msg);
             }
         }
 
@@ -719,6 +829,35 @@ namespace SwordAndSorcerySMAPI
                 if (extData.stasisTimer.Value <= 0)
                 {
                     Game1.player.playNearbySoundLocal("coldSpell");
+                }
+            }
+
+            foreach (var polymorphed in ModSnS.State.Polymorphed.ToArray())
+            {
+                if (ModSnS.State.Banished.ContainsKey(polymorphed.Key))
+                    continue;
+
+                polymorphed.Value.Timer -= (float) Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
+                if (polymorphed.Value.Timer <= 0)
+                {
+                    ModSnS.State.Polymorphed.Remove(polymorphed.Key);
+                    if (polymorphed.Key.currentLocation != null)
+                    {
+                        polymorphed.Value.Original.Position = polymorphed.Key.Position;
+                        polymorphed.Key.currentLocation.characters.Add(polymorphed.Value.Original);
+                        polymorphed.Key.currentLocation.characters.Remove(polymorphed.Key);
+                    }
+                }
+            }
+
+            foreach (var banished in ModSnS.State.Banished.ToArray())
+            {
+                banished.Value.Timer -= (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
+                if (banished.Value.Timer <= 0)
+                {
+                    ModSnS.State.Banished.Remove(banished.Key);
+                    if (banished.Key.currentLocation != null)
+                        banished.Key.currentLocation.characters.Add(banished.Key);
                 }
             }
         }
@@ -826,9 +965,10 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
+        internal const int WitchcraftExpMultiplier = 3;
+
         private void RegisterSpells()
         {
-            const int WitchcraftExpMultiplier = 3;
 
             Ability.Abilities.Add("spell_haste", new Ability("spell_haste")
             {
@@ -843,6 +983,21 @@ namespace SwordAndSorcerySMAPI
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.Skill, 3 * WitchcraftExpMultiplier);
                     CastSpell(Color.LimeGreen, () => Spells.Haste());
+                }
+            });
+
+            Ability.Abilities.Add("spell_polymorph", new Ability("spell_polymorph")
+            {
+                Name = I18n.Witchcraft_Spell_Polymorph_Name,
+                Description = I18n.Witchcraft_Spell_Polymorph_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
+                SpriteIndex = 3,
+                ManaCost = () => 5,
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Polymorph",
+                UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
+                Function = () =>
+                {
+                    CastSpell(Color.LimeGreen, () => Spells.Polymorph());
                 }
             });
 
@@ -878,6 +1033,7 @@ namespace SwordAndSorcerySMAPI
                 }
             });
 
+            /*
             Ability.Abilities.Add("spell_wallofforce", new Ability("spell_wallofforce")
             {
                 Name = I18n.Witchcraft_Spell_WallOfForce_Name,
@@ -891,6 +1047,22 @@ namespace SwordAndSorcerySMAPI
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.Skill, 5 * WitchcraftExpMultiplier);
                     CastSpell(Color.Orange, () => Spells.WallOfForce());
+                }
+            });
+            */
+
+            Ability.Abilities.Add("spell_banishment", new Ability("spell_banishment")
+            {
+                Name = I18n.Witchcraft_Spell_Banishment_Name,
+                Description = I18n.Witchcraft_Spell_Banishment_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
+                SpriteIndex = 7,
+                ManaCost = () => 8,
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Banish",
+                UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
+                Function = () =>
+                {
+                    CastSpell(Color.Orange, () => Spells.Banish());
                 }
             });
 
@@ -1012,7 +1184,7 @@ namespace SwordAndSorcerySMAPI
     }
 
     [HarmonyPatch(typeof(FishingRod), "doneFishing")]
-    public static class DropWaterEssencePatch
+    public static class DropWaterEssencePatch1
     {
         public static void Postfix(Farmer who, bool consumeBaitAndTackle)
         {
@@ -1026,6 +1198,19 @@ namespace SwordAndSorcerySMAPI
                 Game1.createObjectDebris("(O)DN.SnS_WaterEssence", (int)who.Tile.X, (int)who.Tile.Y, farmerId, who.currentLocation);
                 Game1.createObjectDebris("(O)DN.SnS_WaterEssence", (int)who.Tile.X, (int)who.Tile.Y, farmerId, who.currentLocation);
             }
+        }
+    }
+
+    [HarmonyPatch(typeof(Pan), nameof(Pan.getPanItems))]
+    public static class DropWaterEssencePatch2
+    {
+        public static void Postfix(List<Item> __result)
+        {
+            if (!Game1.player.eventsSeen.Contains("SnS.Ch4.Roslin.1"))
+                return;
+            int mult = Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionEssenceDrops) ? 2 : 1;
+
+            __result.Add(ItemRegistry.Create("(O)DN.SnS_WaterEssence", mult * 3));
         }
     }
 
@@ -1126,7 +1311,7 @@ namespace SwordAndSorcerySMAPI
 
                 if (Game1.IsMasterGame)
                 {
-                    var ret = ModTOP.ProcessTeleportRequest(req);
+                    var ret = ModTOP.ProcessTeleportRequest(req, Game1.player.UniqueMultiplayerID);
                     ModTOP.ProcessTeleport(ret);
                 }
                 else
@@ -1178,6 +1363,27 @@ namespace SwordAndSorcerySMAPI
             {
                 var ext = Game1.player.GetFarmerExtData();
                 ext.mana.Value = Math.Min(ext.mana.Value + (int)Math.Ceiling(damage * 0.2), ext.maxMana.Value);
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(GameLocation), nameof(GameLocation.drawAboveAlwaysFrontLayer))]
+    public static class GameLocationDrawBanishedPart2Patch
+    {
+        public static void Postfix(GameLocation __instance, SpriteBatch b)
+        {
+            try
+            {
+                ModTOP.drawingBanished = true;
+                foreach (var monster in ModSnS.State.Banished.Where(kvp => kvp.Value.Location == __instance))
+                {
+                    monster.Key.drawAboveAlwaysFrontLayer(b);
+                    monster.Key.drawAboveAllLayers(b);
+                }
+            }
+            finally
+            {
+                ModTOP.drawingBanished = false;
             }
         }
     }

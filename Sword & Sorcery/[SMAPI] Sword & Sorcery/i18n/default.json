@@ -295,5 +295,22 @@
   "research.learn": "Learn",
   "research.known": "You already know this.",
   "research.known-parenthesis": "(Known)",
-  "research.missing-components": "You are missing research components."
+  "research.missing-components": "You are missing research components.",
+
+  "finale-minigame.ability.shadowstep.name": "Shadowstep",
+  "finale-minigame.ability.shadowstep.description": "Step into the shadows, making the user be unable to be targeted directly until their next attack. The next attack will do critical damage.",
+  "finale-minigame.ability.shield-throw.name": "Shield Throw",
+  "finale-minigame.ability.shield-throw.description": "Throw a shield as an attack, dealing extra damage compared to a normal attack.",
+  "finale-minigame.ability.shapeshift.name": "Shapeshift",
+  "finale-minigame.ability.shapeshift.description": "Change forms, dealing extra damage and having higher defense for three turns.",
+  "finale-minigame.ability.song-healing.name": "Invigorating Encore",
+  "finale-minigame.ability.song-healing.description": "Heal everyone for 50 health.",
+  "finale-minigame.ability.fireball.name": "Fireball",
+  "finale-minigame.ability.fireball.description": "Shoot an explosive fireball with impressive firepower.",
+  "finale-minigame.ability.bomb-throw.name": "Bomb Throw",
+  "finale-minigame.ability.bomb-throw.description": "Throw a bomb dealing an explosive amount of damage.",
+
+  "teleport-circle.error.unknown": "Invalid teleport circle setup.",
+  "teleport-circle.error.no-match": "No matching teleport circle found.",
+  "teleport-circle.error.missing-essence": "3 essences not found in nearby chest."
 }

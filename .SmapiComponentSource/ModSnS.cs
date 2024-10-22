@@ -4,8 +4,10 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
 using NeverEndingAdventure;
+using NeverEndingAdventure.Utils;
 using RadialMenu;
 using SpaceCore;
+using SpaceShared;
 using StardewModdingAPI;
 using StardewModdingAPI.Utilities;
 using StardewValley;
@@ -177,6 +179,20 @@ namespace SwordAndSorcerySMAPI
 
         public bool DoFinale { get; set; } = false;
         public Monster FinaleBoss { get; set; }
+
+        public class PolymorphData
+        {
+            public Monster Original { get; init; }
+            public float Timer { get; set; } = 10;
+        }
+        public class BanishData
+        {
+            public GameLocation Location { get; init; }
+            public float Timer { get; set; } = 15;
+        }
+
+        public Dictionary<GreenSlime, PolymorphData> Polymorphed { get; set; } = new();
+        public Dictionary<Monster, BanishData> Banished { get; set; } = new();
     }
 
     public class Configuration
@@ -435,7 +451,7 @@ namespace SwordAndSorcerySMAPI
                 Description = I18n.Ability_LltkToggle_Description,
                 TexturePath = "SMAPI/dn.sns/assets/Items & Crops/SnSObjects.png",
                 SpriteIndex = 45,
-                KnownCondition = "PLAYER_HAS_MAIL DN.SnS_ObtainedLLTK",
+                KnownCondition = "PLAYER_HAS_MAIL Current DN.SnS_ObtainedLLTK",
                 HiddenIfLocked = true,
                 ManaCost = () => 0,
                 Function = () => SwapLltk(),
@@ -472,6 +488,15 @@ namespace SwordAndSorcerySMAPI
 
                     specialOrder.CheckCompletion();
                 }
+            });
+            Helper.ConsoleCommands.Add("sns_startfinalephase2", "...", (cmd, args) =>
+            {
+                if (!Context.IsPlayerFree || Game1.currentLocation.NameOrUniqueName != "EastScarp_DuskspireLair")
+                {
+                    Log.Info("Invalid situation");
+                    return;
+                }
+                State.DoFinale = true;
             });
 
             harmony = new Harmony(ModManifest.UniqueID);
@@ -920,46 +945,54 @@ namespace SwordAndSorcerySMAPI
             {
                 if (State.FinaleBoss == null && Game1.CurrentEvent == null && Game1.locationRequest == null)
                 {
-                    Game1.currentLocation.characters.Add(State.FinaleBoss = new GreenSlime(Game1.player.Position + new Vector2(0, Game1.tileSize * 3), Color.Black));
+                    Game1.currentLocation.characters.Add(State.FinaleBoss = new DuskspireMonster(new Vector2( 18, 13 ) * Game1.tileSize));
                     State.DoFinale = false;
                 }
                 if (State.FinaleBoss != null)
                 {
-                    if (Game1.locationRequest != null)
+                    if (Game1.player.health <= 0)
                     {
-                        Game1.locationRequest = null;
-                        Helper.Reflection.GetField<bool>(typeof(Game1), "_isWarping").SetValue(false);
-                        var fade = Helper.Reflection.GetField<ScreenFade>(typeof(Game1), "screenFade").GetValue();
-                        fade.globalFade = false;
-                        fade.fadeToBlack = false;
-                        fade.fadeIn = false;
-                        fade.fadeToBlackAlpha = 0;
-                        Game1.player.CanMove = true;
-
-                        Game1.addHUDMessage(new HUDMessage(I18n.CannotWarp()));
+                        State.FinaleBoss.currentLocation.characters.Remove(State.FinaleBoss);
+                        State.FinaleBoss = null;
                     }
-
-                    if (!Game1.currentLocation.characters.Contains(State.FinaleBoss))
+                    else
                     {
-                        // This is really bad. Pathos don't kill me.
-                        var modInfo = ModSnS.instance.Helper.ModRegistry.Get("DN.SnS");
-                        var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
-                        var partnerInfos = pack.ReadJsonFile<Dictionary<string, FinalePartnerInfo>>("Data/FinalePartners.json");
-
-                        FinalePartnerInfo partnerInfo = partnerInfos["default"];
-
-                        foreach (string key in partnerInfos.Keys)
+                        if (Game1.locationRequest != null)
                         {
-                            if (Game1.player.friendshipData.TryGetValue( key, out var data ) && data.IsDating())
-                            {
-                                partnerInfo = partnerInfos[key];
-                                break;
-                            }
+                            Game1.locationRequest = null;
+                            Helper.Reflection.GetField<bool>(typeof(Game1), "_isWarping").SetValue(false);
+                            var fade = Helper.Reflection.GetField<ScreenFade>(typeof(Game1), "screenFade").GetValue();
+                            fade.globalFade = false;
+                            fade.fadeToBlack = false;
+                            fade.fadeIn = false;
+                            fade.fadeToBlackAlpha = 0;
+                            Game1.player.CanMove = true;
+
+                            Game1.addHUDMessage(new HUDMessage(I18n.CannotWarp()));
                         }
 
-                        Game1.PlayEvent(partnerInfo.VictoryEventId, checkPreconditions: false, checkSeen: false);
+                        if (!Game1.currentLocation.characters.Contains(State.FinaleBoss))
+                        {
+                            // This is really bad. Pathos don't kill me.
+                            var modInfo = ModSnS.instance.Helper.ModRegistry.Get("DN.SnS");
+                            var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
+                            var partnerInfos = pack.ReadJsonFile<Dictionary<string, FinalePartnerInfo>>("Data/FinalePartners.json");
 
-                        State.FinaleBoss = null;
+                            FinalePartnerInfo partnerInfo = partnerInfos["default"];
+
+                            foreach (string key in partnerInfos.Keys)
+                            {
+                                if (Game1.player.friendshipData.TryGetValue(key, out var data) && data.IsDating())
+                                {
+                                    partnerInfo = partnerInfos[key];
+                                    break;
+                                }
+                            }
+
+                            Game1.PlayEvent(partnerInfo.VictoryEventId, checkPreconditions: false, checkSeen: false);
+
+                            State.FinaleBoss = null;
+                        }
                     }
                 }
             }

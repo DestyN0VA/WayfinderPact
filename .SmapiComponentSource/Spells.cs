@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
+using SpaceCore;
 using StardewValley;
 using StardewValley.Menus;
+using StardewValley.Monsters;
 using StardewValley.Objects;
 using StardewValley.TerrainFeatures;
 using System;
@@ -18,6 +20,61 @@ namespace SwordAndSorcerySMAPI
         {
             var buff = new Buff("spell_haste", "spell_haste", duration: 7000 * 6 * 5, effects: new StardewValley.Buffs.BuffEffects() { Speed = { 1 } }, displayName: I18n.Witchcraft_Spell_Haste_Name() );
             Game1.player.applyBuff( buff );
+        }
+
+        public static void Polymorph()
+        {
+            Vector2 pos = ModSnS.instance.Helper.Input.GetCursorPosition().AbsolutePixels;
+            if (Game1.options.gamepadControls)
+            {
+                pos = Game1.player.Position;
+            }
+
+            if (Game1.IsClient)
+            {
+                ModTOP.Instance.Helper.Multiplayer.SendMessage(pos, ModTOP.MultiplayerMessage_Polymorph, [ModTOP.Instance.ModManifest.UniqueID], [Game1.MasterPlayer.UniqueMultiplayerID]);
+            }
+            else
+            {
+                PolymorphImpl(Game1.player, pos);
+            }
+        }
+
+        public static void PolymorphImpl(Farmer player, Vector2 pos)
+        {
+            var data = Game1.content.Load<Dictionary<string, MonsterExtensionData>>("KCC.SnS/MonsterExtensionData");
+
+            Monster closestMonster = null;
+            float closestDist = float.MaxValue;
+            foreach (var monster in player.currentLocation.characters.Where(npc => npc is Monster).Cast<Monster>())
+            {
+                if (monster is GreenSlime)
+                    continue;
+                if (data.TryGetValue(monster.Name, out var specificData) && !specificData.CanPolymorph)
+                    continue;
+
+                float dist = Vector2.Distance(pos, monster.GetBoundingBox().Center.ToVector2());
+                if (closestDist > dist)
+                {
+                    closestMonster = monster;
+                    closestDist = dist;
+                }
+            }
+
+            if (closestMonster != null)
+            {
+                var slime = new GreenSlime(closestMonster.Position);
+                slime.focusedOnFarmers = true;
+
+                closestMonster.currentLocation.characters.Add(slime);
+                closestMonster.currentLocation.characters.Remove(closestMonster);
+                ModSnS.State.Polymorphed.Add(slime, new()
+                {
+                    Original = closestMonster
+                });
+                
+                player.AddCustomSkillExperience(ModTOP.Skill, 5 * ModTOP.WitchcraftExpMultiplier);
+            }
         }
 
         public static void Stasis()
@@ -53,6 +110,54 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
+        public static void Banish()
+        {
+            Vector2 pos = ModSnS.instance.Helper.Input.GetCursorPosition().AbsolutePixels;
+            if (Game1.options.gamepadControls)
+            {
+                pos = Game1.player.Position;
+            }
+
+            if (Game1.IsClient)
+            {
+                ModTOP.Instance.Helper.Multiplayer.SendMessage(pos, ModTOP.MultiplayerMessage_Banish, [ModTOP.Instance.ModManifest.UniqueID], [Game1.MasterPlayer.UniqueMultiplayerID]);
+            }
+            else
+            {
+                BanishImpl(Game1.player, pos);
+            }
+        }
+
+        public static void BanishImpl(Farmer player, Vector2 pos)
+        {
+            var data = Game1.content.Load<Dictionary<string, MonsterExtensionData>>("KCC.SnS/MonsterExtensionData");
+
+            Monster closestMonster = null;
+            float closestDist = float.MaxValue;
+            foreach (var monster in player.currentLocation.characters.Where(npc => npc is Monster).Cast<Monster>())
+            {
+                if (data.TryGetValue(monster.Name, out var specificData) && !specificData.CanBanish)
+                    continue;
+
+                float dist = Vector2.Distance(pos, monster.GetBoundingBox().Center.ToVector2());
+                if (closestDist > dist)
+                {
+                    closestMonster = monster;
+                    closestDist = dist;
+                }
+            }
+
+            if (closestMonster != null)
+            {
+                ModSnS.State.Banished.Add(closestMonster, new()
+                {
+                    Location = closestMonster.currentLocation
+                });
+                closestMonster.currentLocation.characters.Remove(closestMonster);
+
+                player.AddCustomSkillExperience(ModTOP.Skill, 8 * ModTOP.WitchcraftExpMultiplier);
+            }
+        }
         public static void RevivePlant()
         {
             for (int ix = -2; ix <= 2; ++ix)
