@@ -113,6 +113,21 @@ public static class DualWieldingDamagePatch
 {
     internal static bool doingDualWieldCall = false;
 
+    private static Dictionary<Monster, int> origMonsterInvinc = new();
+
+    public static void Prefix(MeleeWeapon __instance,
+        GameLocation location, int x, int y, int facingDirection, int power, Farmer who)
+    {
+        if (doingDualWieldCall)
+            return;
+
+        origMonsterInvinc.Clear();
+        foreach (var monster in location.characters.Where(npc => npc is Monster).Cast<Monster>())
+        {
+            origMonsterInvinc.Add(monster, monster.invincibleCountdown);
+        }
+    }
+
     public static void Postfix(MeleeWeapon __instance,
         GameLocation location, int x, int y, int facingDirection, int power, Farmer who)
     {
@@ -139,7 +154,7 @@ public static class DualWieldingDamagePatch
             if (monster.TakesDamageFromHitbox(offhandRect))
             {
                 oldInvincCounters.Add(monster, monster.invincibleCountdown);
-                monster.invincibleCountdown = 0;
+                monster.invincibleCountdown = origMonsterInvinc.TryGetValue( monster, out int i ) ? i : 0;
             }
         }
         try
