@@ -23,6 +23,7 @@ using SwordAndSorcerySMAPI;
 using SpaceCore;
 using StardewValley.GameData.HomeRenovations;
 using static System.Net.Mime.MediaTypeNames;
+using NeverEndingAdventure.Utils;
 
 namespace CircleOfThornsSMAPI
 {
@@ -286,14 +287,14 @@ namespace CircleOfThornsSMAPI
 
                 if (data.isResting)
                 {
-                    regenTimer += Game1.currentGameTime.ElapsedGameTime.Milliseconds;
+                    regenTimer += Game1.currentGameTime.ElapsedGameTime.Milliseconds * (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftStag) ? 2 : 1);
                     int timerCap = 200 - Game1.player.GetCustomBuffedSkillLevel(ModCoT.Skill) * 10;
                     if (regenTimer >= timerCap)
                     {
                         regenTimer -= timerCap;
-                        if (Game1.player.Stamina < Game1.player.MaxStamina)
+                        if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshift) && Game1.player.Stamina < Game1.player.MaxStamina)
                             ++Game1.player.Stamina;
-                        if (Game1.player.health < Game1.player.maxHealth)
+                        if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftStag) && Game1.player.health < Game1.player.maxHealth)
                             ++Game1.player.health;
                     }
                 }

@@ -92,7 +92,7 @@
   // NEA
   "Mateo.RejectBouquet": "Did Aideen help you put that bouquet together, @? It looks beautiful.",
   "rogue-skill.name": "Artificer",
-  "rogue-skill.unlock.1": "Adds an armor slot and a bow tool, craftable at the Underforge.",
+  "rogue-skill.unlock.1": "Adds an armor slot and a bow tool.",
   "rogue-skill.unlock.2": "Purified ore now has a chance of dropping from their respective nodes,^to be used at the Underforge.",
   "rogue-skill.unlock.4": "Exquisite gems now have a chance of dropping from their respective nodes,^to be used at the Underforge.",
   "rogue-skill.unlock.6": "You can now perform Blade Coating at the Underforge.",
@@ -106,8 +106,8 @@
   "rogue-skill.profession.armor-proficiency.description": "Adds 50% more armor points on top of your total amount.",
   "rogue-skill.profession.shadowstep.name": "Shadowstep",
   "rogue-skill.profession.shadowstep.description": "Ability: Shadowstep^Become hidden, reducing most monster aggro until you attack.^Your first attack is a critical.",
-  "rogue-skill.profession.hunters-mark.name": "Hunter's Mark'",
-  "rogue-skill.profession.hunters-mark.description": "Once a creature is attacked, consecutive hits on the same creature do more damage.",
+  "rogue-skill.profession.hunters-mark.name": "Hunter's Mark",
+  "rogue-skill.profession.hunters-mark.description": "Once a creature is attacked, consecutive hits on the same creature do more damage each time.",
 
   "anvil.valid-options": "Valid Options:",
   "anvil.gem-socket": "Exquisite Gem Socket",

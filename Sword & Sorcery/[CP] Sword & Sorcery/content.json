@@ -61,7 +61,7 @@
     {
       "LogName": "Sword & Sorcery - Data Includes",
       "Action": "Include",
-      "FromFile": "Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/CustomForage.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/Books.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Quests & Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Festival Data/VioletMoon_Data.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json"
+      "FromFile": "Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/CustomForage.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/Books.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Quests & Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Festival Data/VioletMoon_Data.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json, Data/PlayersHandbook.json"
     },
     {
       "LogName": "Sword & Sorcery - Shield Quest Include",
@@ -2325,6 +2325,39 @@
       "Value": "{{i18n:Events.SnS.Ch4.Eyvinder.Mateo.09.True}}",
       "When": {
         "HasSeenEvent |contains=SnS.Ch5.Mateo": true
+      }
+    },
+    {
+      "Name": "DruidicsCost4",
+      "Value": "4"
+    },
+    {
+      "Name": "DruidicsCost4",
+      "Value": "3",
+      "When": {
+        "HasProfession": "-197421760" // Ancient Agronomist (Druidics level 5 profession)
+      }
+    },
+    {
+      "Name": "DruidicsCost6",
+      "Value": "6"
+    },
+    {
+      "Name": "DruidicsCost6",
+      "Value": "5",
+      "When": {
+        "HasProfession": "-197421760" // Ancient Agronomist (Druidics level 5 profession)
+      }
+    },
+    {
+      "Name": "DruidicsCost10",
+      "Value": "10"
+    },
+    {
+      "Name": "DruidicsCost10",
+      "Value": "9",
+      "When": {
+        "HasProfession": "-197421760" // Ancient Agronomist (Druidics level 5 profession)
       }
     },
   ]

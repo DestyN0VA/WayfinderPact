@@ -1,0 +1,123 @@
+{
+    "Changes":
+    [
+        {
+            "Action": "EditData",
+            "Target": "spacechase0.SpaceCore/Guidebooks",
+            "Entries":
+            {
+                "{{ModID}}": {
+                    "Title": "{{i18n: guidebook.title}}",
+                    "DefaultChapter": "Title",
+                    "Chapters": {
+                        "Title": {
+                            "Name": "{{i18n: guidebook.chapter.Title.name}}",
+                            "TabIconTexture": "{{InternalAssetKey: assets/guidebook/tabs.png}}",
+                            "TabIconRect": { "X": 0, "Y": 0, "Width": 16, "Height": 16 },
+                            "Condition": "TRUE",
+                            "Pages": [
+                                { "Contents": "{{i18n: guidebook.chapter.Title.TitlePage {{HectorPronouns}}}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.Title.Introduction {{HectorPronouns}}}}" },
+                                { "Id": "Mechanics", "Contents": "{{i18n: guidebook.chapter.Title.NewMechanics {{HectorPronouns}}}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.Title.TableOfContents {{HectorPronouns}}}}" }
+                            ]
+                        },
+                        "NEA": {
+                            "Name": "{{i18n: guidebook.chapter.NEA.name}}",
+                            "TabIconTexture": "{{InternalAssetKey: assets/guidebook/tabs.png}}",
+                            "TabIconRect": { "X": 16, "Y": 0, "Width": 16, "Height": 16 },
+                            "Condition": "TRUE",
+                            "Pages": [
+                                { "Id": "Intro", "Contents": "{{i18n: guidebook.chapter.NEA.Intro {{HectorPronouns}}}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.NEA.Mateo {{HectorPronouns}}}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.NEA.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}}}}" },
+                                {
+                                    "Id": "ArtificerSkill",
+                                    "Contents": "{{i18n: guidebook.chapter.NEA.ArtificerSkill {{HectorPronouns}}}}", 
+                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18"
+                                }
+                            ]
+                        },
+                        "COT": {
+                            "Name": "{{i18n: guidebook.chapter.COT.name}}",
+                            "TabIconTexture": "{{InternalAssetKey: assets/guidebook/tabs.png}}",
+                            "TabIconRect": { "X": 0, "Y": 16, "Width": 16, "Height": 16 },
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14",
+                            "Pages": [
+                                { "Id": "Intro", "Contents": "{{i18n: guidebook.chapter.COT.Intro}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.COT.Hector |DailyPronouns={{HectorPN1}}/{{HectorPN2}} {{HectorPronouns}}}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.COT.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}}}}" },
+                                {
+                                    "Contents": "{{i18n: guidebook.chapter.COT.DruidicEssence {{HectorPronouns}}}}", 
+                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.12"
+                                },
+                                {
+                                    "Id": "DruidicsSkill",
+                                    "Contents": "{{i18n: guidebook.chapter.COT.DruidicsSkill {{HectorPronouns}}}}", 
+                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16"
+                                }
+                            ]
+                        },
+                        "UP": {
+                            "Name": "{{i18n: guidebook.chapter.UP.name}}",
+                            "TabIconTexture": "{{InternalAssetKey: assets/guidebook/tabs.png}}",
+                            "TabIconRect": { "X": 16, "Y": 16, "Width": 16, "Height": 16 },
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16",
+                            "Pages": [
+                                { "Id": "Intro", "Contents": "{{i18n: guidebook.chapter.UP.Intro {{HectorPronouns}}}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.UP.Cirrus {{HectorPronouns}}}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.UP.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}}}}" },
+                                {
+                                    "Id": "BardicsSkill",
+                                    "Contents": "{{i18n: guidebook.chapter.UP.BardicsSkill {{HectorPronouns}}}}", 
+                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14"
+                                }
+                            ]
+                        },
+                        "TOP": {
+                            "Name": "{{i18n: guidebook.chapter.TOP.name}}",
+                            "TabIconTexture": "{{InternalAssetKey: assets/guidebook/tabs.png}}",
+                            "TabIconRect": { "X": 0, "Y": 32, "Width": 16, "Height": 16 },
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14",
+                            "Pages": [
+                                { "Id": "Intro", "Contents": "{{i18n: guidebook.chapter.TOP.Intro}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.TOP.Roslin {{HectorPronouns}}}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.TOP.Dandelion {{HectorPronouns}}}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.TOP.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}}}}" },
+                                {
+                                    "Contents": "{{i18n: guidebook.chapter.TOP.ElementalEssences}}", 
+                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Roslin.1"
+                                },
+                                {
+                                    "Contents": "{{i18n: guidebook.chapter.TOP.DeepDark}}", 
+                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Roslin.6"
+                                },
+                                {
+                                    "Id": "SorcererSkill",
+                                    "Contents": "{{i18n: guidebook.chapter.TOP.SorcererSkill}}", 
+                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6"
+                                },
+                                {
+                                    "Id": "PaladinSkill",
+                                    "Contents": "{{i18n: guidebook.chapter.TOP.PaladinSkill}}", 
+                                    "Condition": "ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\""
+                                }
+                            ]
+                        },
+                        "Epilogue": {
+                            "Name": "{{i18n: guidebook.chapter.Epilogue.name}}",
+                            "TabIconTexture": "{{InternalAssetKey: assets/guidebook/tabs.png}}",
+                            "TabIconRect": { "X": 16, "Y": 32, "Width": 16, "Height": 16 },
+                            "Condition": "PLAYER_HAS_MAIL Current DuskspireDefeated",
+                            "Pages": [
+                                { "Id": "Intro", "Contents": "{{i18n: guidebook.chapter.Epilogue.Intro}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.Epilogue.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}}}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.Epilogue.FinalMessage {{HectorPronouns}}}}" }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+    ]
+}

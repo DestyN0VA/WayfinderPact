@@ -725,12 +725,12 @@ public static class MonsterTakeDamagePatch
                 break;
         }
 
-        /*
-        if (who == Game1.player)
+        //*
+        if (who == Game1.player && who.HasCustomProfession( RogueSkill.ProfessionHuntersMark ))
         {
             if (ModSnS.State.LastAttacked == __instance)
             {
-                mult += 0.1f * ++ModSnS.State.LastAttackedCounter;
+                mult += 0.025f * ++ModSnS.State.LastAttackedCounter;
             }
             else
             {
@@ -738,7 +738,7 @@ public static class MonsterTakeDamagePatch
                 ModSnS.State.LastAttackedCounter = 0;
             }
         }
-        */
+        //*/
 
         damage = (int)(damage * mult);
     }
