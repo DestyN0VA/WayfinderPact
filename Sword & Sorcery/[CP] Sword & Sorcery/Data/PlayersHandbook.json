@@ -79,18 +79,18 @@
                                     "Contents": "{{i18n: guidebook.chapter.COT.Intro}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.COT.Hector |DailyPronouns={{HectorPN1}}/{{HectorPN2}} {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.COT.Hector |DailyPronouns={{HectorPN1}}/{{HectorPN2}} {{HectorPronouns}} |TrueName={{TrueName}}}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.COT.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.COT.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}} |TrueName={{TrueName}}}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.COT.DruidicEssence {{HectorPronouns}}}}",
+                                    "Contents": "{{i18n: guidebook.chapter.COT.DruidicEssence {{HectorPronouns}} |TrueName={{TrueName}}}}",
                                     "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.12"
                                 },
                                 {
                                     "Id": "DruidicsSkill",
-                                    "Contents": "{{i18n: guidebook.chapter.COT.DruidicsSkill {{HectorPronouns}}}}",
+                                    "Contents": "{{i18n: guidebook.chapter.COT.DruidicsSkill {{HectorPronouns}} |TrueName={{TrueName}}}}",
                                     "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16"
                                 }
                             ]
@@ -108,17 +108,17 @@
                             "Pages": [
                                 {
                                     "Id": "Intro",
-                                    "Contents": "{{i18n: guidebook.chapter.UP.Intro {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.UP.Intro}}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.UP.Cirrus {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.UP.Cirrus}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.UP.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.UP.Events |VariableTimegate={{VariableTimegate}} }}"
                                 },
                                 {
                                     "Id": "BardicsSkill",
-                                    "Contents": "{{i18n: guidebook.chapter.UP.BardicsSkill {{HectorPronouns}}}}",
+                                    "Contents": "{{i18n: guidebook.chapter.UP.BardicsSkill}}",
                                     "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14"
                                 }
                             ]
@@ -261,7 +261,7 @@
 			"Entries": {
 				"{{ModID}}_PlayersHandbook": {
 					"Id": "{{ModID}}_PlayersHandbook",
-                    "Trigger": "Manual",
+                    "Trigger": "DayStarted",
 					"Actions": [
 						"AddMail Current DestyLetter tomorrow",
 					]
