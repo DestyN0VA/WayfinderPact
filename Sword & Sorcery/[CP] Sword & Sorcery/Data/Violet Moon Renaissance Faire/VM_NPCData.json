@@ -189,7 +189,7 @@
       "Entries": {
         "DN.SnS_Mateo_VioletMoon": {
           "Id": "DN.SnS_Mateo_VioletMoon",
-          "Owners": [ 
+          "Owners": [
             {
               "Name": "AnyOrNone",
               "Id": "DN.SnS_Mateo_VioletMoon_Dialogue",
@@ -394,7 +394,7 @@
         },
         "DN.SnS_Hector_VioletMoon": {
           "Id": "DN.SnS_Hector_VioletMoon",
-          "Owners": [ 
+          "Owners": [
             {
               "Name": "AnyOrNone",
               "Id": "DN.SnS_Hector_VioletMoon_Dialogue",
@@ -569,11 +569,11 @@
               "ScrollBarBackTexture": null,
               "ScrollBarBackSourceRect": null
             }
-          ],
+          ]
         },
         "DN.SnS_Cirrus_VioletMoon": {
           "Id": "DN.SnS_Cirrus_VioletMoon",
-          "Owners": [ 
+          "Owners": [
             {
               "Name": "AnyOrNone",
               "Id": "DN.SnS_Cirrus_VioletMoon_Dialogue",
@@ -708,11 +708,11 @@
               "ScrollBarBackTexture": null,
               "ScrollBarBackSourceRect": null
             }
-          ],
+          ]
         },
         "DN.SnS_RnD_VioletMoon": {
           "Id": "DN.SnS_RnD_VioletMoon",
-          "Owners": [ 
+          "Owners": [
             {
               "Name": "AnyOrNone",
               "Id": "DN.SnS_RnD_VioletMoon_Dialogue",
@@ -799,7 +799,7 @@
         },
         "DN.SnS_Krobus_VioletMoon": {
           "Id": "DN.SnS_Krobus_VioletMoon",
-          "Owners": [ 
+          "Owners": [
             {
               "Name": "AnyOrNone",
               "Id": "DN.SnS_Krobus_VioletMoon_Dialogue",
@@ -890,11 +890,201 @@
               "ScrollBarBackTexture": null,
               "ScrollBarBackSourceRect": null
             }
+          ]
+        },
+        "DN.SnS_HatMouse_VioletMoon": { //THIS IS NOT DONE YET!!!!!!!!!!!!!!!!!
+          "Id": "DN.SnS_HatMouse_VioletMoon",
+          "Owners": [
+            {
+              "Name": "AnyOrNone",
+              "Id": "DN.SnS_HatMouse_VioletMoon_Dialogue",
+              "Portrait": "",
+              "Dialogues": [
+                {
+                  "Dialogue": "{{i18n:DN.SnS_Violet_Moon_Shop_HatMouse}}"
+                }
+              ]
+            }
           ],
+          "Items": [
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.6",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)6"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.8",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)8"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.9",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)9"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.17",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)17"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.23",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)23"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.24",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)24"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.26",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)26"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.44",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)44"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.46",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)46"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.50",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)50"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.51",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)51"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.52",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)52"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.60",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)60"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.62",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)62"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.63",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)63"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.64",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)64"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.65",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)65"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.70",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)70"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.72",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)72"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.76",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)76"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.85",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)85"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.90",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)90"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.93",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)93"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.TricornHat",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)TricornHat"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.LaurelWreathHat",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)LaurelWreathHat"
+            },
+            {
+              "Id": "{{ModId}}_HatMouseVMShop_Hat.JesterHat",
+              "IgnoreShopPriceModifiers": true,
+              "ItemID": "(H)JesterHat"
+            }
+
+          ],
+          "VisualTheme": [
+            {
+              "Condition": null,
+              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderSourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 270,
+                "Height": 115
+              },
+              "PortraitBackgroundTexture": null,
+              "PortraitBackgroundSourceRect": null,
+              "DialogueBackgroundTexture": null,
+              "DialogueBackgroundSourceRect": null,
+              "DialogueColor": null,
+              "DialogueShadowColor": null,
+              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundSourceRect": {
+                "X": 18,
+                "Y": 115,
+                "Width": 15,
+                "Height": 15
+              },
+              "ItemRowBackgroundHoverColor": "Blue",
+              "ItemRowTextColor": "Violet",
+              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundSourceRect": {
+                "X": 0,
+                "Y": 115,
+                "Width": 18,
+                "Height": 18
+              },
+              "ScrollUpTexture": null,
+              "ScrollUpSourceRect": null,
+              "ScrollDownTexture": null,
+              "ScrollDownSourceRect": null,
+              "ScrollBarFrontTexture": null,
+              "ScrollBarFrontSourceRect": null,
+              "ScrollBarBackTexture": null,
+              "ScrollBarBackSourceRect": null
+            }
+          ]
         },
         "DN.SnS_Dwarf_VioletMoon": {
           "Id": "DN.SnS_Dwarf_VioletMoon",
-          "Owners": [ 
+          "Owners": [
             {
               "Name": "AnyOrNone",
               "Id": "DN.SnS_Dwarf_VioletMoon_Dialogue",
@@ -1003,11 +1193,11 @@
               "ScrollBarBackTexture": null,
               "ScrollBarBackSourceRect": null
             }
-          ],
+          ]
         },
         "DN.SnS_Gus_VioletMoon": {
           "Id": "DN.SnS_Gus_VioletMoon",
-          "Owners": [ 
+          "Owners": [
             {
               "Name": "AnyOrNone",
               "Id": "DN.SnS_Gus_VioletMoon_Dialogue",
@@ -1128,11 +1318,11 @@
               "ScrollBarBackTexture": null,
               "ScrollBarBackSourceRect": null
             }
-          ],
+          ]
         },
         "DN.SnS_Harvey_VioletMoon": {
           "Id": "DN.SnS_Harvey_VioletMoon",
-          "Owners": [ 
+          "Owners": [
             {
               "Name": "AnyOrNone",
               "Id": "DN.SnS_Harvey_VioletMoon_Dialogue",
@@ -1154,7 +1344,7 @@
               "Id": "DN.SnS_Harvey_VMEnergy",
               "ItemID": "(O)351",
               "Price": 1000
-            },
+            }
           ],
           "VisualTheme": [
             {
@@ -1197,7 +1387,7 @@
               "ScrollBarBackTexture": null,
               "ScrollBarBackSourceRect": null
             }
-          ],
+          ]
         }
       }
     },
@@ -1306,7 +1496,7 @@
       "Entries": {
         "DN.SnS_Clint_VioletMoon": {
           "Id": "DN.SnS_Clint_VioletMoon",
-          "Owners": [ 
+          "Owners": [
             {
               "Name": "AnyOrNone",
               "Id": "DN.SnS_Clint_VioletMoon_Dialogue",
@@ -1385,7 +1575,7 @@
               "ScrollBarBackTexture": null,
               "ScrollBarBackSourceRect": null
             }
-          ],
+          ]
         }
       }
     },
