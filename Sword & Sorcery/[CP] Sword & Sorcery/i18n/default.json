@@ -7717,18 +7717,18 @@ This first chapter of S&S introduces you to Mateo, a charming rogue with a sordi
 [/nospacing]
 Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town. Not only are they a skilled Rogue, but they have an inclination for blacksmithing. A good leader and better friend who'll always have your back.",
   "guidebook.chapter.NEA.Events": "[center][font=dialogue]The Story Thus Far:[/font][/center]
-[font=dialogue]Event: 0 Hearts pt 1[/font]
+[font=dialogue]Mateo Event: 0 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.0]Complete![/if]
 [else]Hint: Visit the [color=green]top floor of the Mines[/color] before midnight.[/else]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.0]
-[font=dialogue]Event: 0 Hearts pt 2[/font]
+[font=dialogue]Mateo Event: 0 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.1]Complete![/if]
 [else]Hint: Visit the [color=green]Stardew Valley Museum & Library[/color] before evening.[/else]
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.1]
-[font=dialogue]Event: 2 Hearts[/font]
+[font=dialogue]Mateo Event: 2 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.2]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Mateo 500]Hint: Visit [color=green]Pelican Town[/color] on a sunny evening.[/if]
@@ -7737,7 +7737,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.2]
-[font=dialogue]Event: 4 Hearts[/font]
+[font=dialogue]Mateo Event: 4 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.3]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1000, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoLibrary]Hint: Visit the [color=green]Beach[/color] on a sunny evening.[/if]
@@ -7749,7 +7749,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.3]
-[font=dialogue]Event: 4 Hearts[/font]
+[font=dialogue]Mateo Event: 4 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.4]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoAdmission]Hint: Visit the [color=green]top floor of the Mines[/color] in the evening.[/if]
@@ -7761,7 +7761,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.4]
-[font=dialogue]Event: 5 Hearts pt 1[/font]
+[font=dialogue]Mateo Event: 5 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.5]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250]Hint: Visit the [color=green]Saloon[/color] in the afternoon or evening.[/if]
@@ -7770,7 +7770,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.5]
-[font=dialogue]Event: 5 Hearts pt 2[/font]
+[font=dialogue]Mateo Event: 5 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.6]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoConfrontation]Hint: Visit the [color=green]Adventurer's Guild[/color] in the late afternoon or early evening.[/if]
@@ -7782,7 +7782,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.6]
-[font=dialogue]Event: 5 Hearts pt 3[/font]
+[font=dialogue]Mateo Event: 5 Hearts pt 3[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.7]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1500]Hint: Visit [color=green]Pelican Town[/color] between late morning and early evening.[/if]
@@ -7791,7 +7791,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.7]
-[font=dialogue]Event: 6 Hearts[/font]
+[font=dialogue]Mateo Event: 6 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.8]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1500]Hint: Visit the [color=green]Forest[/color] in the evening when the weather is bad.[/if]
@@ -7800,7 +7800,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.8]
-[font=dialogue]Event: 7 Hearts pt 1[/font]
+[font=dialogue]Mateo Event: 7 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.9]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1750, PLAYER_HAS_MET Current Krobus, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoAcceptance]Hint: Visit the [color=green]Hospital[/color] between late morning and late afternoon when it isn't Friday.[/if]
@@ -7813,7 +7813,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.9]
-[font=dialogue]Event: 7 Hearts pt 2[/font]
+[font=dialogue]Mateo Event: 7 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.10]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1750, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoPain]Hint: Visit [color=green]Pelican Town[/color] in the evening when it isn't Friday.[/if]
@@ -7825,7 +7825,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.10]
-[font=dialogue]Event: 8 Hearts pt 1[/font]
+[font=dialogue]Mateo Event: 8 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.11]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoRecovery]Hint: Visit [color=green]East Scarp[/color] between late morning and early evening on a sunny day.[/if]
@@ -7849,7 +7849,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [/if]
  
 [if=PLAYER_SPECIAL_ORDER_COMPLETE Current Mateo.SpecialOrders.BuildGuild]
-[font=dialogue]Event: 8 Hearts pt 2[/font]
+[font=dialogue]Mateo Event: 8 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.12]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Hint: Visit [color=green]East Scarp[/color] between late morning and early evening on a sunny day.[/if]
@@ -7858,7 +7858,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.12]
-[font=dialogue]Event: 10 Hearts[/font]
+[font=dialogue]Mateo Event: 10 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.13]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current CGuildComplete]Hint: Visit the [color=green]Railroad[/color] in the evening when it isn't Friday.[/if]
@@ -8004,13 +8004,13 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=ANY \"{{SkipIntroQuest}}\" \"!{{SkipIntroQuest}}, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle1, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle2, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle3, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle4\"]
-[font=dialogue]Event: 0 Hearts[/font]
+[font=dialogue]{{TrueName}} Event: 0 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.1]Complete![/if]
 [else]Hint: Visit the [color=green]Railroad[/color] between late morning and late evening.[/else]
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.1]
-[font=dialogue]Event: 1 Heart[/font]
+[font=dialogue]{{TrueName}} Event: 1 Heart[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.2]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorIntro]Hint: Visit [color=green]Hector's Tower[/color] between late morning and late evening.[/if]
@@ -8022,7 +8022,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.2]
-[font=dialogue]Event: 2 Hearts[/font]
+[font=dialogue]{{TrueName}} Event: 2 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.3]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorBookIntro]Hint: Visit [color=green]Hector's Tower[/color] between late morning and late evening.[/if]
@@ -8034,7 +8034,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.3]
-[font=dialogue]Event: 3 Hearts pt 1[/font]
+[font=dialogue]{{TrueName}} Event: 3 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.4]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 750, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorShapeshift]Hint: Visit [color=green]Hector's Tower[/color] between late morning and late evening.[/if]
@@ -8046,7 +8046,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.4]
-[font=dialogue]Event: 3 Hearts pt 2[/font]
+[font=dialogue]{{TrueName}} Event: 3 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.5]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 750, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorBookQuest]Hint: Visit [color=green]Hector's Tower[/color] between late morning and late evening on a sunny day.[/if]
@@ -8058,7 +8058,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.5]
-[font=dialogue]Event: 4 Hearts[/font]
+[font=dialogue]{{TrueName}} Event: 4 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.6]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 1000, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet]Hint: Visit [color=green]East Scarp[/color] between late morning and late afternoon.[/if]
@@ -8070,7 +8070,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.6]
-[font=dialogue]Event: 5 Hearts pt 1[/font]
+[font=dialogue]{{TrueName}} Event: 5 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.7]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet2]Hint: Visit [color=green]East Scarp[/color] between late morning and late afternoon.[/if]
@@ -8082,7 +8082,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.7]
-[font=dialogue]Event: 5 Hearts pt 2[/font]
+[font=dialogue]{{TrueName}} Event: 5 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.8]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorGender]Hint: Visit the [color=green]Vet House[/color] in [color=Green]East Scarp[/color] between late afternoon and mid evening.[/if]
@@ -8094,7 +8094,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.8]
-[font=dialogue]Event: 5 Hearts pt 3[/font]
+[font=dialogue]{{TrueName}} Event: 5 Hearts pt 3[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.9]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet3]Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between early evening and late evening.[/if]
@@ -8106,7 +8106,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.9]
-[font=dialogue]Event: 6 Hearts[/font]
+[font=dialogue]{{TrueName}} Event: 6 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.10]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 1500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorDND]Hint: Visit [color=green]Hector's Tower[/color] between mid morning and late evening.[/if]
@@ -8118,7 +8118,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.10]
-[font=dialogue]Event: 7 Hearts pt 1[/font]
+[font=dialogue]{{TrueName}} Event: 7 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.11]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 1750, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorRiver1]Hint: Visit [color=green]East Scarp[/color] between mid morning and early evening on a sunny day.[/if]
@@ -8144,7 +8144,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=PLAYER_HAS_MAIL Current Hector_SpecialOrders_River1]
-[font=dialogue]Event: 7 Hearts pt 2[/font]
+[font=dialogue]{{TrueName}} Event: 7 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.12]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 1750]Hint: Visit [color=green]Hector's Tower[/color] between mid morning and late evening.[/if]
@@ -8164,7 +8164,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=PLAYER_HAS_MAIL Current Hector_SpecialOrders_River2]
-[font=dialogue]Event: 8 Hearts[/font]
+[font=dialogue]{{TrueName}} Event: 8 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.13]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 2000]Hint: Visit [color=green]Hector's Tower[/color] between mid morning and late evening.[/if]
@@ -8173,7 +8173,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.13]
-[font=dialogue]Event: 9 Hearts[/font]
+[font=dialogue]{{TrueName}} Event: 9 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.14]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 2250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorRiver3]Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between mid morning and late afternoon.[/if]
@@ -8185,7 +8185,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.14]
-[font=dialogue]Event: 10 Hearts pt 1[/font]
+[font=dialogue]{{TrueName}} Event: 10 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.15]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorHeal]Hint: Visit the [color=green]Vet House[/color] in [color=green]East Scarp[/color] between late afternoon and late evening.[/if]
@@ -8197,7 +8197,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.15]
-[font=dialogue]Event: 10 Hearts pt 2[/font]
+[font=dialogue]{{TrueName}} Event: 10 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Hector 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorHeal2]Hint: Visit the [color=green]Deep Mountains[/color] between mid morning and late evening.[/if]
