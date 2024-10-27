@@ -16,7 +16,7 @@
                             "TabIconRect": { "X": 0, "Y": 0, "Width": 16, "Height": 16 },
                             "Condition": "TRUE",
                             "Pages": [
-                                { "Contents": "{{i18n: guidebook.chapter.Title.TitlePage {{HectorPronouns}}}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.Title.TitlePage |ConfigMenuLinks={{ConfigMenuLinks}} {{HectorPronouns}}}}" },
                                 { "Contents": "{{i18n: guidebook.chapter.Title.Introduction {{HectorPronouns}}}}" },
                                 { "Id": "Mechanics", "Contents": "{{i18n: guidebook.chapter.Title.NewMechanics {{HectorPronouns}}}}" },
                                 { "Contents": "{{i18n: guidebook.chapter.Title.TableOfContents {{HectorPronouns}}}}" }
@@ -46,7 +46,7 @@
                             "Pages": [
                                 { "Id": "Intro", "Contents": "{{i18n: guidebook.chapter.COT.Intro}}" },
                                 { "Contents": "{{i18n: guidebook.chapter.COT.Hector |DailyPronouns={{HectorPN1}}/{{HectorPN2}} {{HectorPronouns}}}}" },
-                                { "Contents": "{{i18n: guidebook.chapter.COT.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}}}}" },
+                                { "Contents": "{{i18n: guidebook.chapter.COT.Events |SkipIntroQuest={{SkipIntroQuest}} |VariableTimegate={{VariableTimegate}} {{HectorPronouns}}}}" },
                                 {
                                     "Contents": "{{i18n: guidebook.chapter.COT.DruidicEssence {{HectorPronouns}}}}", 
                                     "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.12"
