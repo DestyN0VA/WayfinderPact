@@ -4,7 +4,7 @@
       "LogName": "Load Festival Maps",
       "Action": "Load",
       "Target": "Maps/DN.SnS_VioletMoon",
-      "FromFile": "Violet Moon/VioletMoon/VioletMoon.tmx"
+      "FromFile": "Assets/Maps/VioletMoon.tmx"
     },
     {
       "LogName": "Add Custom Locations Data",
@@ -41,7 +41,7 @@
       "LogName": "Festival Data",
       "Action": "Load",
       "Target": "Data/Festivals/Fall1",
-      "FromFile": "Violet Moon/Data/Violet Moon Rennaissance Faire.json"
+      "FromFile": "Data/Violet Moon Renaissance Faire/VM_CoreData.json"
     },
     {
       "LogName": "Main Event Edit",

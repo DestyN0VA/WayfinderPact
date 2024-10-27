@@ -971,6 +971,7 @@
   "Mail.Mateo.Letter4": "Good morning, @!^^I had a friend who owned a brewery back in the Fern Islands. Best booze that side of the Salish Sea.^^Here's the recipe for their special Bourbon. It's a well-kept secret.^^Sincerely,^Mateo.%item cookingRecipe DN.SnS_salishbourbon%%[#]Salish Bourbon Recipe",
 
   "Mail.Mateo.Letter5": "Good morning, Sunshine.^^I had a great time last night - thank you for sharing it with me.^^I figure you'd like to borrow this...^^Sincerely,^Mateo.%item id DN.SnS_Mateo_Hoodie%%[#]Mateo's Hoodie",
+  
 
   /*
    ____  _    _ ______  _____ _______ _____ 
@@ -7413,8 +7414,8 @@ ________      ________ _   _ _______ _____
 
   "config.BookTextures.name": "BookTextures",
   "config.BookTextures.description": "Changes the textures of S&S Skill Books.",
-  "config.RSVMaterials.values.lumina": "Lumina",
-  "config.RSVMaterials.values.daine": "Daine",
+  "config.BookTextures.values.lumina": "Lumina",
+  "config.BookTextures.values.daine": "Daine",
 
   "config.AncientSweetTeaDifficulty.name": "AncientSweetTeaDifficulty",
   "config.AncientSweetTeaDifficulty.description": "Set how many Ancient Sweet Tea Leaves are required to craft the universally loved Ancient Sweet Tea recipe.",
@@ -7439,6 +7440,13 @@ ________      ________ _   _ _______ _____
   "config.Castertype.values.Alchemist": "Alchemist",
   "config.Castertype.values.Alchahestrist": "Alchahestrist",
   "config.Castertype.values.Bard": "Bard",
+
+  "config.PlayersHandbookColorScheme.name": "PlayersHandbookColorScheme",
+  "config.PlayersHandbookColorScheme.description": "Changes the textures of S&S Skill Books.",
+  "config.PlayersHandbookColorScheme.values.Black/Red": "Black/Red",
+  "config.PlayersHandbookColorScheme.values.White/Blue": "White/Blue",
+  "config.PlayersHandbookColorScheme.values.Cream/Green": "Cream/Green",
+  "config.PlayersHandbookColorScheme.values.Brown/Purple": "Brown/Purple",
 
   "Furniture.SpousePortrait.Mateo": "Mateo's Portrait",
   "Furniture.SpousePortrait.Hector": "Biróg's Portrait",
@@ -7634,7 +7642,18 @@ ________      ________ _   _ _______ _____
   "MEEP.EmeritusInside.4": "Emeritus' stuffed teddie is named Ducky, and he takes excellent care of her. In fact, he seems outright protective.",
   "MEEP.EmeritusInside.5": "Emeritus bumps his head against your legs as you approach. He can't hug you, on account of his stumpy legs, but he'll sure try!",
 
-  // Player's Handbook
+ /* 
+  _____  _           __     ________ _____  _  _____   _    _          _   _ _____  ____   ____   ____  _  __
+ |  __ \| |        /\\ \   / /  ____|  __ \( )/ ____| | |  | |   /\   | \ | |  __ \|  _ \ / __ \ / __ \| |/ /
+ | |__) | |       /  \\ \_/ /| |__  | |__) |/| (___   | |__| |  /  \  |  \| | |  | | |_) | |  | | |  | | ' / 
+ |  ___/| |      / /\ \\   / |  __| |  _  /   \___ \  |  __  | / /\ \ | . ` | |  | |  _ <| |  | | |  | |  <  
+ | |    | |____ / ____ \| |  | |____| | \ \   ____) | | |  | |/ ____ \| |\  | |__| | |_) | |__| | |__| | . \ 
+ |_|    |______/_/    \_\_|  |______|_|  \_\ |_____/  |_|  |_/_/    \_\_| \_|_____/|____/ \____/ \____/|_|\_\
+ 
+ */
+
+ "Mail.PHB": "Hello, @!^^Thank you for your purchase of the Player's Handbook.^^Contained within is everything you need to know for Sword & Sorcery, 2nd Edition. Play your way with new skills, quests, NPCs, locations, and more!^^*Dice, Monster Manual, and Dungeon Master's Guide not included.^^May your rolls be high,^Sorcerers of the Sound.%item id DN.SnS_PlayersHandbook%%[#]Player's Handbook",
+                                                                                                             
   "guidebook.title": "Sword & Sorcery",
   "guidebook.chapter.Title.name": "Introduction",
   "guidebook.chapter.Title.TitlePage.ConfigLinks": "[nospacing][nextposition=0,40][center=300][font=dialogue][texttooltip=:Opens GMCM for the Content Patcher component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig DN.SnS]CP Config[/action][/texttooltip][/font][/center][offset=300,0][center=300][font=dialogue][texttooltip=:Opens GMCM for the SMAPI component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig KCC.SnS]SMAPI Config[/action][/texttooltip][/font][/center][/nospacing]",
