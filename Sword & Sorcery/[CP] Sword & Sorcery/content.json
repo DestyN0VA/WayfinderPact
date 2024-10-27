@@ -2368,6 +2368,15 @@
       }
     },
     {
+      "Name": "ConfigMenuLinks",
+      "Value": ""
+    },
+    {
+      "Name": "ConfigMenuLinks",
+      "Value": "{{i18n: guidebook.chapter.Title.TitlePage.ConfigLinks}}",
+      "When": { "HasMod": "spacechase0.GenericModConfigMenu" }
+    },
+    {
       "Name": "PlayersHandbookColor",
       "Value": "0",
       "When": {

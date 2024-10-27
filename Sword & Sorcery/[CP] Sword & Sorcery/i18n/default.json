@@ -7658,18 +7658,17 @@ ________      ________ _   _ _______ _____
                                                                                                              
   "guidebook.title": "Sword & Sorcery",
   "guidebook.chapter.Title.name": "Introduction",
-  "guidebook.chapter.Title.TitlePage": "[nospacing][nextposition=120,20][image=SMAPI/dn.sns/assets/guidebook/logo.png:null:1][nextposition=0,null][offset=0,265][/nospacing]
-  [center][font=dialogue][link=https://www.nexusmods.com/stardewvalley/mods/12369]Nexus[/link][/font][/center]
-  [center][font=dialogue][link=https://www.patreon.com/destynova]Patreon[/link][/font][/center]
-  [center][font=dialogue][link=https://ko-fi.com/destynova]Ko-fi[/link][/font][/center]",
-  "guidebook.chapter.Title.Introduction": "[center][font=dialogue]Foreward[/font][/center]
-Hail and well-met, adventurer! Thank you for downloading Sword & Sorcery, I hope this guide finds you well. This interface documents all of the new content within the mod, unlocking gradually as you progress. 
- 
-This story is told over five chapters and introduces new NPCs, locations, skills, items, and gameplay mechanics. Everything is linear and intertwined to invoke a feel inspired by more traditional RPGs while maintaining the spirit of the vanilla game. 
- 
-With love, your Dungeon Master, 
- 
-Desty Nova",
+  "guidebook.chapter.Title.TitlePage.ConfigLinks": "[nospacing][nextposition=0,40][center=300][font=dialogue][texttooltip=:Opens GMCM for the Content Patcher component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig DN.SnS]CP Config[/action][/texttooltip][/font][/center][offset=300,0][center=300][font=dialogue][texttooltip=:Opens GMCM for the SMAPI component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig KCC.SnS]SMAPI Config[/action][/texttooltip][/font][/center][/nospacing]",
+  "guidebook.chapter.Title.TitlePage": "{{ConfigMenuLinks}}
+[nospacing][nextposition=120,110][image=SMAPI/dn.sns/assets/guidebook/logo.png:null:1][nextposition=0,null][offset=0,250][/nospacing]
+[nospacing]
+[center=200][font=dialogue][link=https://www.patreon.com/profile/creators?u=12021226]Patreon[/link][/font][/center]
+[offset=200,0][center=200][font=dialogue][link=https://www.nexusmods.com/stardewvalley/mods/12369]Nexus[/link][/font][/center]
+[offset=200,0][center=200][font=dialogue][link=https://ko-fi.com/destynova]Ko-fi[/link][/font][/center]
+[nextposition=0,null]
+[/nospacing]",
+  "guidebook.chapter.Title.Introduction": "[center][font=dialogue]Introduction[/font][/center]
+DESTY_WRITE_STUFF",
   "guidebook.chapter.Title.NewMechanics": "[center][font=dialogue]New Mechanics[/font][/center]
 [font=dialogue]Dual Wielding[/font]
 Sword & Sorcery introduces a dual-wielding feature, allowing you to attack with two weapons at once. To equip a weapon in your off-hand slot, open your inventory and click a button to the left of the window that looks like the following:
@@ -7677,7 +7676,6 @@ Sword & Sorcery introduces a dual-wielding feature, allowing you to attack with 
 [image=spacechase0.SpaceCore/ExtraEquipmentIcon]
 After that, you should see a slot labelled [color=black]Offhand[/color]. Place your desired secondary weapon in that slot. Now, whenever you swing your weapon or use your weapon ability in your hotbar, both will be used.
  
-
 [font=dialogue]Armor[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18]
 After reaching level 1 [link=NEA/ArtificerSkill]Artificer[/link], you can craft armor for the armor slot on the equipment menu (this is the same menu with the dual wielding offhand slot, explained in the last section). Armor acts as an extra buffer that absorbs damage before your health bar. It automatically repairs itself at the beginning of each day.
