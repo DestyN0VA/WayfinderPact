@@ -454,6 +454,13 @@
       "Description": "Changes the textures of S&S Skill Books.",
       "Section": "Miscellaneous"
     },
+    "PlayersHandbookColorScheme": {
+      "AllowValues": "Black/Red, White/Blue, Cream/Green, Brown/Purple",
+      "Default": "Black/Red",
+      "AllowBlank": false,
+      "Description": "Changes the the color scheme of the 'Player's Handbook' furniture item.",
+      "Section": "Miscellaneous"
+    },
     "HectorHeterochromatic": {
       "AllowValues": "true, false",
       "Default": "false",
@@ -2358,6 +2365,34 @@
       "Value": "9",
       "When": {
         "HasProfession": "-197421760" // Ancient Agronomist (Druidics level 5 profession)
+      }
+    },
+    {
+      "Name": "PlayersHandbookColor",
+      "Value": "0",
+      "When": {
+        "PlayersHandbookColorScheme": "Black/Red",
+      }
+    },
+    {
+      "Name": "PlayersHandbookColor",
+      "Value": "1",
+      "When": {
+        "PlayersHandbookColorScheme": "White/Blue",
+      }
+    },
+    {
+      "Name": "PlayersHandbookColor",
+      "Value": "2",
+      "When": {
+        "PlayersHandbookColorScheme": "Cream/Green",
+      }
+    },
+    {
+      "Name": "PlayersHandbookColor",
+      "Value": "3",
+      "When": {
+        "PlayersHandbookColorScheme": "Brown/Purple",
       }
     },
   ]
