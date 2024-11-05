@@ -784,9 +784,15 @@ namespace SwordAndSorcerySMAPI
             var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
             var partnerInfos = pack.ReadJsonFile<Dictionary<string, FinalePartnerInfo>>("Data/FinalePartners.json");
 
-            FinalePartnerInfo partnerInfo;
-            if (Game1.player.spouse == null || !partnerInfos.TryGetValue(Game1.player.spouse, out partnerInfo))
-                partnerInfo = partnerInfos["default"];
+            FinalePartnerInfo partnerInfo = partnerInfos["default"];
+            foreach (string key in partnerInfos.Keys)
+            {
+                if (Game1.player.friendshipData.TryGetValue(key, out var data) && data.IsDating())
+                {
+                    partnerInfo = partnerInfos[key];
+                    break;
+                }
+            }
 
             var commands = new List<string>(Event.eventCommands);
             commands.Insert(Event.CurrentCommand + 1, $"switchEventFull {partnerInfo.IntermissionEventId}");

@@ -1,5 +1,6 @@
 ﻿using CircleOfThornsSMAPI;
 using HarmonyLib;
+using MageDelve.Mercenaries;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
@@ -505,6 +506,7 @@ namespace SwordAndSorcerySMAPI
             new ModNEA(Monitor, ModManifest, Helper).Entry(harmony);
             new ModUP(Monitor, ModManifest, Helper).Entry();
             new ModTOP(Monitor, ModManifest, Helper).Entry();
+            new MercenaryEngine();
 
             InitArsenal();
         }
@@ -946,6 +948,35 @@ namespace SwordAndSorcerySMAPI
                 if (State.FinaleBoss == null && Game1.CurrentEvent == null && Game1.locationRequest == null)
                 {
                     Game1.currentLocation.characters.Add(State.FinaleBoss = new DuskspireMonster(new Vector2( 18, 13 ) * Game1.tileSize));
+
+                    string partner = null;
+                    {
+                        var modInfo = ModSnS.instance.Helper.ModRegistry.Get("DN.SnS");
+                        var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
+                        var partnerInfos = pack.ReadJsonFile<Dictionary<string, FinalePartnerInfo>>("Data/FinalePartners.json");
+
+                        foreach (string key in partnerInfos.Keys)
+                        {
+                            if (Game1.player.friendshipData.TryGetValue(key, out var data) && data.IsDating())
+                            {
+                                partner = key;
+                                break;
+                            }
+                        }
+                    }
+                    if (partner == null)
+                    {
+                        if (Game1.player.hasOrWillReceiveMail("FarmerGuildmasterBattle"))
+                        {
+                            partner = "Mateo";
+                        }
+                    }
+
+                    if (partner != null)
+                    {
+                        Game1.player.GetCurrentMercenaries().Add(new Mercenary(partner, Game1.player.Position));
+                    }
+
                     State.DoFinale = false;
                 }
                 if (State.FinaleBoss != null)
@@ -954,6 +985,8 @@ namespace SwordAndSorcerySMAPI
                     {
                         State.FinaleBoss.currentLocation.characters.Remove(State.FinaleBoss);
                         State.FinaleBoss = null;
+
+                        Game1.player.GetCurrentMercenaries().Clear();
                     }
                     else
                     {
@@ -973,6 +1006,8 @@ namespace SwordAndSorcerySMAPI
 
                         if (!Game1.currentLocation.characters.Contains(State.FinaleBoss))
                         {
+                            Game1.player.GetCurrentMercenaries().Clear();
+
                             // This is really bad. Pathos don't kill me.
                             var modInfo = ModSnS.instance.Helper.ModRegistry.Get("DN.SnS");
                             var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
