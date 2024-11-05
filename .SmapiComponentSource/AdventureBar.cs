@@ -74,7 +74,7 @@ namespace SwordAndSorcerySMAPI
                     var tex = Game1.content.Load<Texture2D>(abil.TexturePath);
 
                     Color col = Color.White;
-                    if (ext.mana < abil.ManaCost() || !abil.CanUse())
+                    if (ext.mana.Value < abil.ManaCost() || !abil.CanUse())
                         col *= 0.5f;
 
                     b.Draw(tex, pos, Game1.getSquareSourceRectForNonStandardTileSheet(tex, 16, 16, abil.SpriteIndex), col, 0, Vector2.Zero, 4, SpriteEffects.None, 1);

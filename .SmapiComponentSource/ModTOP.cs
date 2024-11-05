@@ -241,7 +241,7 @@ namespace SwordAndSorcerySMAPI
             float drawLayer2 = Math.Max(0f, (float)(Game1.player.StandingPixel.Y - 3) / 10000f);
             Game1.player.currentLocation.TemporarySprites.Add(new TemporaryAnimatedSprite("LooseSprites/Cursors_1_6", new Rectangle(304, 397, 11, 11), 30, 11, 0, Game1.player.Position + new Vector2(8, Game1.tileSize * -1.8f), false, false, drawLayer, 0, spellColor, Game1.pixelZoom, 0, 0, 0)
             {
-                light = true,
+                lightId = "spellcast1",
                 lightRadius = 0.5f,
                 lightcolor = new Color(255 - spellColor.R, 255 - spellColor.G, 255 - spellColor.B)
             });
@@ -250,7 +250,7 @@ namespace SwordAndSorcerySMAPI
                 alpha = 0,
                 alphaFade = -0.035f * 3,
                 alphaFadeFade = -0.002f * 4,
-                light = true,
+                lightId = "spellcast2",
                 lightRadius = 0.5f,
                 lightcolor = new Color(255 - spellColor.R, 255 - spellColor.G, 255 - spellColor.B)
             });
@@ -461,7 +461,7 @@ namespace SwordAndSorcerySMAPI
                     Color c = cols[Math.Min(i, cols.Count - 1)];
                     DelayedAction.functionAfterDelay(() =>
                     {
-                        var l = Game1.currentLightSources.FirstOrDefault(l => l.Identifier == circle.lightID);
+                        var l = Game1.currentLightSources.FirstOrDefault(l => l.Key == circle.lightId).Value;
                         if (l != null)
                             l.color.Value = new Color(255 - c.R, 255 - c.G, 255 - c.B);
                         circle.color = c;

@@ -653,7 +653,7 @@ public static class MeleeWeaponVoidEssenceCoatingPatch
             Vector2 z1 = Vector2.Zero, z2 = Vector2.Zero;
             Rectangle area = __instance.getAreaOfEffect(x, y, newFacing, ref z1, ref z2, who.GetBoundingBox(),
                 who.FarmerSprite.currentAnimationIndex);
-            location.damageMonster(area, (int)((double)(int)__instance.minDamage * (1.0 + (double)who.buffs.AttackMultiplier)), (int)((double)(int)__instance.maxDamage * (1.0 + (double)who.buffs.AttackMultiplier)), false, __instance.knockback.Value * (1f + who.buffs.KnockbackMultiplier), (int)((double)(int)__instance.addedPrecision * (1.0 + (double)who.buffs.WeaponPrecisionMultiplier)), __instance.critChance.Value * (1f + who.buffs.CriticalChanceMultiplier), __instance.critMultiplier.Value * (1f + who.buffs.CriticalPowerMultiplier), (int)__instance.type != 1 || !__instance.isOnSpecial, who);
+            location.damageMonster(area, (int)((double)(int)__instance.minDamage.Value * (1.0 + (double)who.buffs.AttackMultiplier)), (int)((double)(int)__instance.maxDamage.Value * (1.0 + (double)who.buffs.AttackMultiplier)), false, __instance.knockback.Value * (1f + who.buffs.KnockbackMultiplier), (int)((double)(int)__instance.addedPrecision.Value * (1.0 + (double)who.buffs.WeaponPrecisionMultiplier)), __instance.critChance.Value * (1f + who.buffs.CriticalChanceMultiplier), __instance.critMultiplier.Value * (1f + who.buffs.CriticalPowerMultiplier), (int)__instance.type.Value != 1 || !__instance.isOnSpecial, who);
             /*location.projectiles.RemoveWhere((Func<Projectile, bool>) (projectile =>
                {
                if (areaOfEffect.Intersects(projectile.getBoundingBox()) && !projectile.ignoreMeleeAttacks.Value)

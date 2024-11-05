@@ -254,7 +254,7 @@ namespace SwordAndSorcerySMAPI
                                     tries++;
                                 }
 
-                                if (hd.crop.dayOfCurrentPhase.Value >= ((hd.crop.phaseDays.Count > 0) ? hd.crop.phaseDays[Math.Min(hd.crop.phaseDays.Count - 1, hd.crop.currentPhase)] : 0) && hd.crop.currentPhase.Value < hd.crop.phaseDays.Count - 1)
+                                if (hd.crop.dayOfCurrentPhase.Value >= ((hd.crop.phaseDays.Count > 0) ? hd.crop.phaseDays[Math.Min(hd.crop.phaseDays.Count - 1, hd.crop.currentPhase.Value)] : 0) && hd.crop.currentPhase.Value < hd.crop.phaseDays.Count - 1)
                                 {
                                     hd.crop.currentPhase.Value++;
                                     hd.crop.dayOfCurrentPhase.Value = 0;

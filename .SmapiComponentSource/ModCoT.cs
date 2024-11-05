@@ -365,11 +365,11 @@ namespace CircleOfThornsSMAPI
                 return true;
 
             Season season = Game1.GetSeasonForLocation(__instance.Location);
-            if ((bool)__instance.greenHouseTileTree)
+            if ((bool)__instance.greenHouseTileTree.Value)
             {
                 spriteBatch.Draw(Game1.mouseCursors, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f, __instance.Tile.Y * 64f)), new Rectangle(669, 1957, 16, 16), Color.White, 0f, Vector2.Zero, 4f, SpriteEffects.None, 1E-08f);
             }
-            if ((int)__instance.growthStage < 4)
+            if ((int)__instance.growthStage.Value < 4)
             {
                 /*
                 Vector2 positionOffset = new Vector2((float)Math.Max(-8.0, Math.Min(64.0, Math.Sin((double)(__instance.Tile.X * 200f) / (Math.PI * 2.0)) * -16.0)), (float)Math.Max(-8.0, Math.Min(64.0, Math.Sin((double)(__instance.Tile.X * 200f) / (Math.PI * 2.0)) * -16.0))) / 2f;
@@ -385,11 +385,11 @@ namespace CircleOfThornsSMAPI
                 */
                 Texture2D tex = __instance.texture;
                 Rectangle rect = new(Math.Min(0, 3) * 48, 0, 48, 80);
-                spriteBatch.Draw(tex, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f, __instance.Tile.Y * 64f + 64f)), rect, ((int)__instance.struckByLightningCountdown > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (float)(__instance.getBoundingBox().Bottom - 16) / 10000f + 0.001f - __instance.Tile.X / 1000000f);
+                spriteBatch.Draw(tex, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f, __instance.Tile.Y * 64f + 64f)), rect, ((int)__instance.struckByLightningCountdown.Value > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped.Value ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (float)(__instance.getBoundingBox().Bottom - 16) / 10000f + 0.001f - __instance.Tile.X / 1000000f);
             }
             else
             {
-                if (!__instance.stump || (bool)___falling)
+                if (!__instance.stump.Value || (bool)___falling.Value)
                 {
                     Texture2D tex = __instance.texture;
                     Rectangle rect = new(Math.Min(__instance.fruit.Count, 3) * 48, 0, 48, 80);
@@ -401,11 +401,11 @@ namespace CircleOfThornsSMAPI
                     }
                     */
                     //spriteBatch.Draw(FruitTree.texture, Game1.GlobalToLocal(Game1.viewport, new Vector2(tileLocation.X * 64f + 32f, tileLocation.Y * 64f + 64f)), new Rectangle((12 + (__instance.greenHouseTree ? 1 : Utility.getSeasonNumber(season)) * 3) * 16, (int)__instance.treeType * 5 * 16, 48, 64), ((int)__instance.struckByLightningCountdown > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (float)__instance.getBoundingBox(tileLocation).Bottom / 10000f + 0.001f - tileLocation.X / 1000000f);
-                    spriteBatch.Draw(tex, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f, __instance.Tile.Y * 64f + 64f)), rect, ((int)__instance.struckByLightningCountdown > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (float)(__instance.getBoundingBox().Bottom-16) / 10000f + 0.001f - __instance.Tile.X / 1000000f);
+                    spriteBatch.Draw(tex, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f, __instance.Tile.Y * 64f + 64f)), rect, ((int)__instance.struckByLightningCountdown.Value > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped.Value ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (float)(__instance.getBoundingBox().Bottom-16) / 10000f + 0.001f - __instance.Tile.X / 1000000f);
                 }
-                else if ((float)__instance.health.Value >= 1f || (!___falling && (float)__instance.health.Value > -99f))
+                else if ((float)__instance.health.Value >= 1f || (!___falling.Value && (float)__instance.health.Value > -99f))
                 {
-                    spriteBatch.Draw(__instance.texture, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f + ((___shakeTimer > 0f) ? ((float)Math.Sin(Math.PI * 2.0 / (double)___shakeTimer) * 2f) : 0f), __instance.Tile.Y * 64f + 64f)), new Rectangle(384, (int)__instance.GetSpriteRowNumber() * 5 * 16 + 48, 48, 32), ((int)__instance.struckByLightningCountdown > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), 0f, new Vector2(24f, 32f), 4f, __instance.flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, ((bool)__instance.stump && !___falling) ? ((float)__instance.getBoundingBox().Bottom / 10000f) : ((float)__instance.getBoundingBox().Bottom / 10000f - 0.001f - __instance.Tile.X / 1000000f));
+                    spriteBatch.Draw(__instance.texture, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f + ((___shakeTimer > 0f) ? ((float)Math.Sin(Math.PI * 2.0 / (double)___shakeTimer) * 2f) : 0f), __instance.Tile.Y * 64f + 64f)), new Rectangle(384, (int)__instance.GetSpriteRowNumber() * 5 * 16 + 48, 48, 32), ((int)__instance.struckByLightningCountdown.Value > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), 0f, new Vector2(24f, 32f), 4f, __instance.flipped.Value ? SpriteEffects.FlipHorizontally : SpriteEffects.None, ((bool)__instance.stump.Value && !___falling.Value) ? ((float)__instance.getBoundingBox().Bottom / 10000f) : ((float)__instance.getBoundingBox().Bottom / 10000f - 0.001f - __instance.Tile.X / 1000000f));
                 }
                 /*
                 for (int i = 0; i < (int)__instance.fruitsOnTree; i++)

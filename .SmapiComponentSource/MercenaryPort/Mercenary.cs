@@ -379,7 +379,7 @@ namespace MageDelve.Mercenaries
                 if (pseudoframe < pseudoframeCount)
                 {
                     dummy.Position = Position;
-                    MeleeWeapon.drawDuringUse(pseudoframe, FacingDirection, b, Game1.GlobalToLocal(Position), dummy, attackWeapon.QualifiedItemId, attackWeapon.type, false);
+                    MeleeWeapon.drawDuringUse(pseudoframe, FacingDirection, b, Game1.GlobalToLocal(Position), dummy, attackWeapon.QualifiedItemId, attackWeapon.type.Value, false);
                 }
             }
 
