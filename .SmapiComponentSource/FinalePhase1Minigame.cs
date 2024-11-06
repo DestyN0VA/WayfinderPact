@@ -6,13 +6,11 @@ using NeverEndingAdventure.Utils;
 using StardewModdingAPI;
 using StardewValley;
 using StardewValley.BellsAndWhistles;
-using StardewValley.GameData.Characters;
 using StardewValley.Menus;
 using StardewValley.Minigames;
 using StardewValley.Projectiles;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace SwordAndSorcerySMAPI
@@ -20,7 +18,7 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(GameLocation), "drawFarmers")]
     public class GameLocationDrawFarmerInFinalePatch
     {
-        public static void Postfix(GameLocation __instance, SpriteBatch b)
+        public static void Postfix(SpriteBatch b)
         {
             if (Game1.currentMinigame is FinalePhase1Minigame)
                 Game1.player.draw(b);
@@ -76,10 +74,10 @@ namespace SwordAndSorcerySMAPI
         public Character CurrentTurn { get; set; }
         public BattlerInfo CurrentBattler => BattlerData.TryGetValue(CurrentTurn.Name, out var info) ? info : DuskspireDummyInfo;
 
-        public List<Character> Battlers { get; set; } = new();
-        public Dictionary<string, BattlerInfo> BattlerData { get; set; } = new();
+        public List<Character> Battlers { get; set; } = [];
+        public Dictionary<string, BattlerInfo> BattlerData { get; set; } = [];
 
-        public List<BattleProjectile> Projectiles { get; set; } = new();
+        public List<BattleProjectile> Projectiles { get; set; } = [];
 
         private NPC DuskspireActor { get; set; }
         private BattlerInfo DuskspireDummyInfo { get; set; } = new();
@@ -87,9 +85,11 @@ namespace SwordAndSorcerySMAPI
         public float DuskspireFrameTimer { get; set; } = 0;
         public int? DuskspireFrameOverride { get; set; }
         public bool DuskspireStartedTurn { get; set; } = false;
+        public int DuskspireLoop = 1;
+        public int DuskspireFrame = 0;
 
         private int CurrentChoice { get; set; } = 0;
-        private float CurrentForward { get; set; }
+        //private float CurrentForward { get; set; } Unused?
         private int MovingActorForTurn { get; set; } = -2; // -1 = backward, 0 = doing action, 1 = forward, anything else = not doing anything
         private Action PendingAction { get; set; }
         private int PotionCount { get; set; } = 3;
@@ -311,7 +311,7 @@ namespace SwordAndSorcerySMAPI
 
             foreach (var battler in BattlerData.ToArray())
             {
-                if (battler.Value.BasePosition == default(Vector2)) // Optional NPC isn't in the event (Gunnar if Bearfam isn't installed)
+                if (battler.Value.BasePosition == default) // Optional NPC isn't in the event (Gunnar if Bearfam isn't installed)
                 {
                     BattlerData.Remove(battler.Key);
                 }
@@ -376,6 +376,11 @@ namespace SwordAndSorcerySMAPI
                         MovingActorForTurn = 1;
                         break;
                     case 1: // Ability
+                        if (CurrentBattler.Mana <= 0)
+                        {
+                            MovingActorForTurn = 3;
+                            break;
+                        }
                         delay = 0;
                         CurrentBattler.Mana -= CurrentBattler.AbilityManaCost;
                         PendingAction = () =>
@@ -444,7 +449,9 @@ namespace SwordAndSorcerySMAPI
 
         public void receiveRightClick(int x, int y, bool playSound = true)
         {
+#if DEBUG
             Finished = true;
+#endif
         }
 
         public void releaseLeftClick(int x, int y)
@@ -536,9 +543,7 @@ namespace SwordAndSorcerySMAPI
                             for (int i = 0; i < choices.Count; ++i)
                             {
                                 int ind = Game1.random.Next(choices.Count);
-                                Character old = choices[i];
-                                choices[i] = choices[ind];
-                                choices[ind] = old;
+                                (choices[ind], choices[i]) = (choices[i], choices[ind]);
                             }
 
                             if (choices.Count > 0)
@@ -668,16 +673,18 @@ namespace SwordAndSorcerySMAPI
                 if (DuskspireFrameTimer >= 75)
                 {
                     DuskspireFrameTimer -= 75;
-                    DuskspireActor.Sprite.CurrentFrame += 1;
-                    if (DuskspireActor.Sprite.CurrentFrame < 28 || DuskspireActor.Sprite.CurrentFrame >= 28 + 9)
-                    {
-                        DuskspireActor.Sprite.CurrentFrame = 28;
-                    }
+                    int[] frames = [28, 29, 30, 31, 32, 33, 34, 35, 36, 35, 34, 33, 32, 31, 30, 29];
+                    
+                    DuskspireActor.Sprite.CurrentFrame = frames[DuskspireFrame];
+                    DuskspireFrame++;
+
+                    if (DuskspireFrame >= frames.Length)
+                        DuskspireFrame = 0;
                 }
                 if (DuskspireFrameOverride.HasValue)
                 {
                     DuskspireActor.Sprite.CurrentFrame = DuskspireFrameOverride.Value;
-                    DuskspireFrameTimer = -75;
+                    DuskspireFrameTimer = DuskspireFrameOverride != 25 ? -75 : -300;
                     DuskspireFrameOverride = null;
                 }
                 DuskspireActor.Sprite.UpdateSourceRect();
@@ -694,6 +701,9 @@ namespace SwordAndSorcerySMAPI
                 b.Draw(proj.Texture, Game1.GlobalToLocal( proj.Position ), proj.SourceRect, Color.White, proj.Rotation, proj.SourceRect.Size.ToVector2() / 2, 4, SpriteEffects.None, 1);
             }
 
+            IClickableMenu.drawTextureBox(b, (int)DuskspireActor.Tile.X * 64 + 256 + 64, (int)DuskspireActor.Tile.Y * 64, 64 * 4 + 24, 64, Color.White);
+            SpriteText.drawString(b, $"<{DuskspireHealth}/1000", (int)DuskspireActor.Tile.X * 64 + 256 + 64 + 24, (int)DuskspireActor.Tile.Y * 64 + 12);
+            SpriteText.drawStringWithScrollCenteredAt(b, "Duskspire", (int)DuskspireActor.Tile.X * 64 + 398 + 64 * 2 - (int)Game1.smallFont.MeasureString($"{DuskspireHealth}/1000").X / 2, (int)DuskspireActor.Tile.Y * 64 + 64 + 12);
             /*
             Vector2 bossPos = new Vector2(18, 13);
             Rectangle bossSrc = new Rectangle(0, 96, 32, 32);
@@ -773,7 +783,7 @@ namespace SwordAndSorcerySMAPI
 
                 var cmds_ = new List<string>(Event.eventCommands);
                 cmds_.Insert(Event.CurrentCommand + 1, $"end");
-                Event.eventCommands = cmds_.ToArray();
+                Event.eventCommands = [.. cmds_];
 
                 Event.CurrentCommand++;
                 return;
@@ -796,7 +806,7 @@ namespace SwordAndSorcerySMAPI
 
             var commands = new List<string>(Event.eventCommands);
             commands.Insert(Event.CurrentCommand + 1, $"switchEventFull {partnerInfo.IntermissionEventId}");
-            Event.eventCommands = commands.ToArray();
+            Event.eventCommands = [.. commands];
 
             Event.CurrentCommand++;
         }

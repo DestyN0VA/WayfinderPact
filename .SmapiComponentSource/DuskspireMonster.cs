@@ -1,32 +1,25 @@
-﻿using Microsoft.Xna.Framework;
+﻿using HarmonyLib;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
-using NeverEndingAdventure.Utils;
 using StardewValley;
 using StardewValley.Monsters;
 using StardewValley.Projectiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SwordAndSorcerySMAPI;
-public class DuskspireMonster : Monster
+public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") : Monster(name, pos)
 {
-    private NetEvent0 laughEvent = new();
-    private NetEvent1Field<bool, NetBool> swingEvent = new();
-    private NetFloat noMovementTime = new();
+    private readonly NetEvent0 laughEvent = new();
+    private readonly NetEvent1Field<bool, NetBool> swingEvent = new();
+    private readonly NetFloat noMovementTime = [];
 
     private int prevFrame = 0;
     private Vector2 lastPos = Vector2.Zero;
     private bool flippedSwing = false;
-
-    public DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth")
-    :   base(name, pos)
-    {
-    }
+    private bool doingLaugh = false;
 
     protected override void initNetFields()
     {
@@ -84,20 +77,25 @@ public class DuskspireMonster : Monster
         {
             if (prevFrame != 61 && Sprite.CurrentFrame == 61)
             {
-                string[] projectileDebuffs =
-                [
-                    // Darkness, nauseous, weakness, jinxed, slimed
-                    "26", "25", "27", "14", "13"
-                ];
-
-                for (int i = 0; i < 16; ++i)
+                if (!doingLaugh)
                 {
-                    float angle = (360 / 16 * i) * MathF.PI / 180;
-                    float xVel = MathF.Cos(angle) * 10;
-                    float yVel = MathF.Sin(angle) * 10;
-                    DebuffingProjectile proj = new(projectileDebuffs[Game1.random.Next(projectileDebuffs.Length)], 2, 1, 2, 0, xVel, yVel, Position, location, this, false, false);
-                    location.projectiles.Add(proj);
+                    string[] projectileDebuffs =
+                    [
+                        // Darkness, nauseous, weakness, jinxed, slimed
+                        "26", "25", "27", "14", "13"
+                    ];
+
+                    Game1.playSound("SnS.DuskspireLaugh_NoLoop");
+                    for (int i = 0; i < 16; ++i)
+                    {
+                        float angle = (360 / 16 * i) * MathF.PI / 180;
+                        float xVel = MathF.Cos(angle) * 10;
+                        float yVel = MathF.Sin(angle) * 10;
+                        DebuffingProjectile proj = new(projectileDebuffs[Game1.random.Next(projectileDebuffs.Length)], 2, 1, 2, 0, xVel, yVel, Position, location, this, false, false);
+                        location.projectiles.Add(proj);
+                    }
                 }
+                doingLaugh = !doingLaugh;
             }
 
             if (noMovementTime.Value > 0)
@@ -115,7 +113,7 @@ public class DuskspireMonster : Monster
                     if (Game1.random.NextDouble() < 1f / (5 * 60))
                     {
                         laughEvent.Fire();
-                        noMovementTime.Value = 33 * 75;
+                        noMovementTime.Value = 66 * 75;
                     }
                     else if (dist < Sprite.SpriteWidth * Game1.pixelZoom / 2 - 75)
                     {
@@ -141,7 +139,7 @@ public class DuskspireMonster : Monster
         if (noMovementTime.Value <= 0)
         {
             Vector2 posDiff = Position - lastPos;
-            int dir = 0;
+            int dir;
             if (Math.Abs(posDiff.Y) > Math.Abs(posDiff.X))
             {
                 if (posDiff.Y < 0)
@@ -169,28 +167,29 @@ public class DuskspireMonster : Monster
             //Sprite.animateOnce(time);
         }
 
+        ModSnS.DuskspireDeathPos = Tile - new Vector2(4, 4);
         lastPos = Position;
     }
 
     private void LaughEvent_onEvent()
     {
-        List<FarmerSprite.AnimationFrame> frames = new();
+        List<FarmerSprite.AnimationFrame> frames = [];
+        List<FarmerSprite.AnimationFrame> actualFrames = [];
         for (int i = 0; i < 8 * 4 + 1; ++i)
         {
             frames.Add(new(52 + i, 75));
-            if (i == 6)
-            {
-                var frame = frames[i];
-                frame.frameStartBehavior += (_) => Game1.playSound("SnS.DuskspireLaugh_NoLoop");
-                frames[i] = frame;
-            }
         }
-        Sprite.setCurrentAnimation(frames);
+
+        actualFrames.AddRange(frames);
+        frames.Reverse();
+        actualFrames.AddRange(frames);
+
+        Sprite.setCurrentAnimation(actualFrames);
     }
 
     private void SwingEvent_onEvent(bool arg)
     {
-        List<FarmerSprite.AnimationFrame> frames = new();
+        List<FarmerSprite.AnimationFrame> frames = [];
         for (int i = 0; i < 10; ++i)
         {
             frames.Add(new(40 + i, 75));
@@ -202,6 +201,6 @@ public class DuskspireMonster : Monster
     public override void draw(SpriteBatch b)
     {
         //b.Draw(Game1.staminaRect, Game1.GlobalToLocal(Game1.viewport, GetBoundingBox()), Color.Red);
-        Sprite.draw(b, Game1.GlobalToLocal(Position - new Vector2(Sprite.SpriteWidth * Game1.pixelZoom / 2, Sprite.SpriteHeight * Game1.pixelZoom)), Position.Y / 10000f, 0, 0, Color.White, (Sprite.CurrentFrame >= 40 && Sprite.CurrentFrame <= 50) ? flippedSwing : false, Game1.pixelZoom);
+        Sprite.draw(b, Game1.GlobalToLocal(Position - new Vector2(Sprite.SpriteWidth * Game1.pixelZoom / 2, Sprite.SpriteHeight * Game1.pixelZoom)), Position.Y / 10000f, 0, 0, Color.White, (Sprite.CurrentFrame >= 40 && Sprite.CurrentFrame <= 50) && flippedSwing, Game1.pixelZoom);
     }
 }

@@ -24,10 +24,12 @@ using StardewValley.SpecialOrders.Objectives;
 using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -180,6 +182,9 @@ namespace SwordAndSorcerySMAPI
 
         public bool DoFinale { get; set; } = false;
         public Monster FinaleBoss { get; set; }
+        public bool DoingBossDeathAnim { get; set; } = false;
+        public bool FinishedBoxxDeathAnim { get; set; } = false;
+        public int DeathAnimTimer { get; set; } = 6300;
 
         public class PolymorphData
         {
@@ -252,6 +257,8 @@ namespace SwordAndSorcerySMAPI
 
         public static ISpaceCoreApi sc;
         public static IRadialMenuApi radial;
+
+        public static Vector2 DuskspireDeathPos;
 
         private Harmony harmony;
 
@@ -362,10 +369,7 @@ namespace SwordAndSorcerySMAPI
 
             Event.RegisterCommand("sns_finale_phase1", (Event @event, string[] args, EventContext context) =>
             {
-                if (Game1.currentMinigame == null)
-                {
-                    Game1.currentMinigame = new FinalePhase1Minigame(@event, context);
-                }
+                Game1.currentMinigame ??= new FinalePhase1Minigame(@event, context);
             });
             Event.RegisterCommand("sns_finale_phase2", (Event @event, string[] args, EventContext context) =>
             {
@@ -864,15 +868,17 @@ namespace SwordAndSorcerySMAPI
                 gmcm.AddNumberOption(ModManifest, () => Config.TextGreen, (val) => Config.TextGreen = val, I18n.Int_TextGreen_Name, I18n.Int_TextGreen_Descripion, 0, 255);
                 gmcm.AddComplexOption(ModManifest, I18n.String_ManabarPeview, (b, pos) => {
                     var ext = Game1.player?.GetFarmerExtData();
-                    float perc = 1;
-                    string manaStr = "10/10";
-                    if (Context.IsWorldReady)
+                    double x;
+                    if (SaveGame.loaded == null)
+                        x = Utility.CreateRandom(0.40349d).NextDouble();
+                    else
                     {
-                        manaStr = $"{ext.mana.Value}/{ext.maxMana.Value}";
-                        if (ext.maxMana.Value > 0)
-                            perc = ext.mana.Value / (float)ext.maxMana.Value;
-                        else perc = 0;
+                        Utility.TryCreateIntervalRandom("Day", "aether", out Random r, out string error);
+                        x = r.NextDouble();
                     }
+
+                    float perc = (float)x;
+                    string manaStr = $"{(int)(10*x)}/10";
                     IClickableMenu.drawTextureBox(b, (int)pos.X, (int)pos.Y, 64 * 4 + 24, 32 + 12 + 12, Color.White);
                     b.Draw(Game1.staminaRect, new Rectangle((int)pos.X + 12, (int)pos.Y + 12, (int)(64 * 4 * perc), 32), Utility.StringToColor($"{ModSnS.Config.Red} {ModSnS.Config.Green} {ModSnS.Config.Blue}") ?? Color.Aqua);
                     b.DrawString(Game1.smallFont, manaStr, new Vector2(pos.X + 12 + 64 * 4 / 2 - Game1.smallFont.MeasureString(manaStr).X / 2, (int)pos.Y + 12), Utility.StringToColor($"{ModSnS.Config.TextRed} {ModSnS.Config.TextGreen} {ModSnS.Config.TextBlue}") ?? Color.Black);
@@ -948,6 +954,7 @@ namespace SwordAndSorcerySMAPI
                 if (State.FinaleBoss == null && Game1.CurrentEvent == null && Game1.locationRequest == null)
                 {
                     Game1.currentLocation.characters.Add(State.FinaleBoss = new DuskspireMonster(new Vector2( 18, 13 ) * Game1.tileSize));
+                    Game1.changeMusicTrack("SnS.DuskspirePhase2");
 
                     string partner = null;
                     {
@@ -1006,27 +1013,16 @@ namespace SwordAndSorcerySMAPI
 
                         if (!Game1.currentLocation.characters.Contains(State.FinaleBoss))
                         {
-                            Game1.player.GetCurrentMercenaries().Clear();
-
-                            // This is really bad. Pathos don't kill me.
-                            var modInfo = ModSnS.instance.Helper.ModRegistry.Get("DN.SnS");
-                            var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
-                            var partnerInfos = pack.ReadJsonFile<Dictionary<string, FinalePartnerInfo>>("Data/FinalePartners.json");
-
-                            FinalePartnerInfo partnerInfo = partnerInfos["default"];
-
-                            foreach (string key in partnerInfos.Keys)
+                            if (!State.FinishedBoxxDeathAnim)
                             {
-                                if (Game1.player.friendshipData.TryGetValue(key, out var data) && data.IsDating())
-                                {
-                                    partnerInfo = partnerInfos[key];
-                                    break;
-                                }
+                                Game1.player.GetCurrentMercenaries().Clear();
+                                Game1.screenGlowOnce(Color.White, false);
+                                Game1.changeMusicTrack("SnS.DuskspireDeath");
+                                TemporaryAnimatedSprite DuskspireDeath = new(Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 0, 96, 96), 75, 84, 0, new(14 * Game1.tileSize, 13 * Game1.tileSize), false, false) { scale = 4 };
+                                Game1.getLocationFromName("EastScarp_DuskspireLair").TemporarySprites.Add(DuskspireDeath);
+                                State.FinishedBoxxDeathAnim = true;
+                                Game1.pauseThenDoFunction(6300, Phase2EndP1);
                             }
-
-                            Game1.PlayEvent(partnerInfo.VictoryEventId, checkPreconditions: false, checkSeen: false);
-
-                            State.FinaleBoss = null;
                         }
                     }
                 }
@@ -1186,6 +1182,35 @@ namespace SwordAndSorcerySMAPI
             {
                 SwapLltk();
             }
+        }
+
+        private static void Phase2EndP1()
+        {
+            TemporaryAnimatedSprite DuskspireHeart = new(instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 2016, 96, 96), 75, 16, 26, new(14 * Game1.tileSize, 13 * Game1.tileSize), false, false) { scale = 4 };
+            Game1.getLocationFromName("EastScarp_DuskspireLair").TemporarySprites.Add(DuskspireHeart);
+            Game1.pauseThenDoFunction(1950, Phase2End);
+        }
+
+        private static void Phase2End()
+        {
+            // This is really bad. Pathos don't kill me.
+            var modInfo = ModSnS.instance.Helper.ModRegistry.Get("DN.SnS");
+            var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
+            var partnerInfos = pack.ReadJsonFile<Dictionary<string, FinalePartnerInfo>>("Data/FinalePartners.json");
+
+            FinalePartnerInfo partnerInfo = partnerInfos["default"];
+
+            foreach (string key in partnerInfos.Keys)
+            {
+                if (Game1.player.friendshipData.TryGetValue(key, out var data) && data.IsDating())
+                {
+                    partnerInfo = partnerInfos[key];
+                    break;
+                }
+            }
+            Game1.PlayEvent(partnerInfo.VictoryEventId, checkPreconditions: false, checkSeen: false);
+
+            State.FinaleBoss = null;
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
@@ -1420,7 +1445,7 @@ namespace SwordAndSorcerySMAPI
                 ext.armorUsed.Value >= (Game1.player.GetArmorItem().GetArmorAmount() ?? -1))
                 return true;
 
-            bool flag = (damager == null || !damager.isInvincible()) && (damager == null || (!(damager is GreenSlime) && !(damager is BigSlime)) || !__instance.isWearingRing("520"));
+            bool flag = (damager == null || !damager.isInvincible()) && (damager == null || (damager is not GreenSlime && damager is not BigSlime) || !__instance.isWearingRing("520"));
             if (!flag) return true;
 
             __instance.playNearbySoundAll("parry");

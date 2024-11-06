@@ -196,9 +196,9 @@ namespace SwordAndSorcerySMAPI
 
         private static void FirestormAffector(BasicProjectile proj, Monster m)
         {
-            DelayedAction.functionAfterDelay(() => { if (m.health.Value > 0) m.currentLocation.damageMonster(m.GetBoundingBox(), proj.damageToFarmer.Value / 2, proj.damageToFarmer.Value / 2 + 1, isBomb: true, proj.GetPlayerWhoFiredMe(m.currentLocation)); }, 1000);
-            DelayedAction.functionAfterDelay(() => { if (m.health.Value > 0) m.currentLocation.damageMonster(m.GetBoundingBox(), proj.damageToFarmer.Value / 2, proj.damageToFarmer.Value / 2 + 1, isBomb: true, proj.GetPlayerWhoFiredMe(m.currentLocation)); }, 2000);
-            DelayedAction.functionAfterDelay(() => { if (m.health.Value > 0) m.currentLocation.damageMonster(m.GetBoundingBox(), proj.damageToFarmer.Value / 2, proj.damageToFarmer.Value / 2 + 1, isBomb: true, proj.GetPlayerWhoFiredMe(m.currentLocation)); }, 3000);
+            DelayedAction.functionAfterDelay(() => { if (m.Health > 0) m.currentLocation.damageMonster(m.GetBoundingBox(), proj.damageToFarmer.Value / 2, proj.damageToFarmer.Value / 2 + 1, isBomb: true, proj.GetPlayerWhoFiredMe(m.currentLocation)); }, 1000);
+            DelayedAction.functionAfterDelay(() => { if (m.Health > 0) m.currentLocation.damageMonster(m.GetBoundingBox(), proj.damageToFarmer.Value / 2, proj.damageToFarmer.Value / 2 + 1, isBomb: true, proj.GetPlayerWhoFiredMe(m.currentLocation)); }, 2000);
+            DelayedAction.functionAfterDelay(() => { if (m.Health > 0) m.currentLocation.damageMonster(m.GetBoundingBox(), proj.damageToFarmer.Value / 2, proj.damageToFarmer.Value / 2 + 1, isBomb: true, proj.GetPlayerWhoFiredMe(m.currentLocation)); }, 3000);
         }
 
         private static void IcicleAffector(BasicProjectile proj, Monster m)

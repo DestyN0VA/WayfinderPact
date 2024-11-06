@@ -65,16 +65,10 @@ public static class ArsenalExtensions
 
 public class SecondEnchantmentForgeRecipe : CustomForgeRecipe
 {
-    private class GenericIngredientMatcher : CustomForgeRecipe.IngredientMatcher
+    private class GenericIngredientMatcher(string qualId, int qty) : CustomForgeRecipe.IngredientMatcher
     {
-        public string QualifiedId { get; }
-        public int Quantity { get; }
-
-        public GenericIngredientMatcher(string qualId, int qty)
-        {
-            QualifiedId = qualId;
-            Quantity = qty;
-        }
+        public string QualifiedId { get; } = qualId;
+        public int Quantity { get; } = qty;
 
         public override bool HasEnoughFor(Item item)
         {
@@ -704,7 +698,7 @@ public static class MonsterTakeDamagePatch
 {
     public static void Prefix(Monster __instance, ref int damage, Farmer who)
     {
-        if (!(who.CurrentTool is MeleeWeapon mw))
+        if (who.CurrentTool is not MeleeWeapon mw)
             return;
 
         float mult = 1;
@@ -744,7 +738,7 @@ public static class MonsterTakeDamagePatch
     }
     public static void Postfix(Monster __instance, int damage, Farmer who, int __result)
     {
-        if (__result <= 0 || !(who.CurrentTool is MeleeWeapon mw))
+        if (__result <= 0 || who.CurrentTool is not MeleeWeapon mw)
             return;
 
         switch (mw.GetExquisiteGemstone())
@@ -755,9 +749,9 @@ public static class MonsterTakeDamagePatch
                 break;
 
             case "(O)DN.SnS_ExquisiteRuby":
-                DelayedAction.functionAfterDelay(() => { if (__instance.health.Value > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 1000);
-                DelayedAction.functionAfterDelay(() => { if (__instance.health.Value > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 2000);
-                DelayedAction.functionAfterDelay(() => { if (__instance.health.Value > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 3000);
+                DelayedAction.functionAfterDelay(() => { if (__instance.Health > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 1000);
+                DelayedAction.functionAfterDelay(() => { if (__instance.Health > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 2000);
+                DelayedAction.functionAfterDelay(() => { if (__instance.Health > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 3000);
                 break;
 
             case "(O)DN.SnS_ExquisiteJade":
@@ -792,7 +786,7 @@ public static class MonsterTakeDamagePatch
                 }
                 break;
             case "(O)768": // solar essence
-                if (__instance.health.Value <= 0)
+                if (__instance.Health <= 0)
                 {
                     __instance.currentLocation.explode(__instance.Tile, 2, who, false, 25);
                 }
@@ -871,8 +865,7 @@ public static class MeleeWeaponCopyDataInGetOneFromPatch
 
     public static void Postfix(MeleeWeapon __instance, Item source)
     {
-        var mw = source as MeleeWeapon;
-        if (mw == null) return;
+        if (source is not MeleeWeapon mw) return;
 
         if (mw.GetExquisiteGemstone() != null) __instance.SetExquisiteGemstone(mw.GetExquisiteGemstone());
         if (mw.GetBladeCoating() != null) __instance.SetBladeCoating(mw.GetBladeCoating());
@@ -884,7 +877,7 @@ public static class MeleeWeaponCopyDataInGetOneFromPatch
 [HarmonyPatch(typeof(MeleeWeapon), nameof(MeleeWeapon.CanForge))]
 public static class MeleeWeaponAllowForgingDragontoothOnAllWeaponsPatch
 {
-    public static void Postfix(MeleeWeapon __instance, Item item, ref bool __result)
+    public static void Postfix(Item item, ref bool __result)
     {
         if (item?.QualifiedItemId == "(O)852")
             __result = true;
