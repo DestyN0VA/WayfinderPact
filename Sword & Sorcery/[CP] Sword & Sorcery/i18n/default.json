@@ -2428,6 +2428,23 @@ ________      ________ _   _ _______ _____
   "Strings.Hector.LovedAltar.Romantic.8": "There's a message carved in this homemade candle...:# 'We were tangled up like branches in a flood. I come as a blade; a sacred guardian. So you keep me sharp and test my worth in blood.",
   "Strings.Hector.LovedAltar.Romantic.9": "There's a message carved in this homemade candle...:# 'I finally think I can say that the vicious cycle was over the moment you smiled at me.'",
 
+  //Jukebox Strings
+  "Strings.Music.MateoTheme": "S&S: Mateo's Theme (Never Ending Adventure)",
+  "Strings.Music.HectorTheme": "S&S: {{HectorName}}'s Theme (Circle of Thorns)",  
+  "Strings.Music.CirrusTheme": "S&S: Cirrus' Theme (Peace and Love on the Planet Earth)",  
+  "Strings.Music.KeytarSolo": "S&S: Cirrus' Keytar Solo",    
+  "Strings.Music.DandelionTheme": "S&S: Dandelion's Theme (Giant Woman)",  
+  "Strings.Music.RoslinTheme": "S&S: Roslin's Theme (It's Over, Isn't It?)",  
+  "Strings.Music.LonelyTheme": "S&S: Lonely Theme (To Zanarkand)",  
+  "Strings.Music.LonelyThemeReprise": "S&S: Lonely Theme Reprised (To Zanarkand)",  
+  "Strings.Music.DespairTheme": "S&S: Despair Theme",  
+  "Strings.Music.HopeTheme": "S&S: Hope Theme",  
+  "Strings.Music.VulnerableTheme": "S&S: Vulnerable Theme (Dearly Beloved)",  
+  "Strings.Music.SMFS": "S&S: So Much For Stardust (Love from the Other Side)",  
+  "Strings.Music.SMFSR": "S&S: So Much For Stardust Reprised (Love from the Other Side)",  
+  "Strings.Music.DuskspirePhase1": "S&S: Duskspire Battle pt 1  (Fight With Seymour)",  
+  "Strings.Music.DuskspirePhase2": "S&S: Duskspire Battle pt 2 (Tension Rising)",  
+
   /*
    _____ _    _  _____ _______ ____  __  __   ______ _______   ________ _____   
   / ____| |  | |/ ____|__   __/ __ \|  \/  | |  ____|_   _\ \ / /  ____|  __ \  
