@@ -184,6 +184,34 @@
                 }
             }
         },
+        {
+            "LogName": "Duskspire Themes",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.DuskspirePhase1": {
+                    "ID": "SnS.DuskspirePhase1",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DuskspirePhase1.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+                "SnS.DuskspirePhase2": {
+                    "ID": "SnS.DuskspirePhase2",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DuskspirePhase2.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+                "SnS.DuskspireDeath": {
+                    "ID": "SnS.DuskspireDeath",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DuskspireDeath.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
 
         // SOUNDS
         {
