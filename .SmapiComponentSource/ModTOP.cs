@@ -355,16 +355,18 @@ namespace SwordAndSorcerySMAPI
 
                 Color[] cols = [Color.White, Color.White, Color.White, Color.White, Color.White, Color.White, Color.White, Color.White];
 
+                Texture2D texture = Game1.content.Load<Texture2D>("SMAPI/DN.SnS/assets/Items & Crops/SnSObjects.png");
+
                 Rectangle[] srcRects =
                 [
-                    new Rectangle(80, 144, 16, 16),
-                    new Rectangle(96, 144, 16, 16),
-                    new Rectangle(112, 144, 16, 16),
-                    new Rectangle(128, 144, 16, 16),
-                    new Rectangle(80, 144, 16, 16),
-                    new Rectangle(96, 144, 16, 16),
-                    new Rectangle(112, 144, 16, 16),
-                    new Rectangle(128, 144, 16, 16),
+                    new(96, 128, 16, 16),
+                    new(112, 128, 16, 16),
+                    new(128, 128, 16, 16),
+                    new(144, 128, 16, 16),
+                    new(96, 128, 16, 16),
+                    new(112, 128, 16, 16),
+                    new(128, 128, 16, 16),
+                    new(144, 128, 16, 16)
                 ];
 
                 int soFar = 0;

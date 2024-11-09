@@ -94,6 +94,7 @@ namespace SwordAndSorcerySMAPI
                 float perc = 0;
                 if (ext.maxMana.Value > 0)
                     perc = ext.mana.Value / (float)ext.maxMana.Value;
+                if (perc > 1) perc = 1;
                 if (perc > 0)
                 {
                     b.Draw(Game1.staminaRect, new Rectangle(12, yPositionOnScreen + height, (int)((width - 24) * perc), 32), color);

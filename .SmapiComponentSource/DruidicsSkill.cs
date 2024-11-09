@@ -97,9 +97,6 @@ namespace CircleOfThornsSMAPI
                     null,
                 };
 
-            var ext = SwordAndSorcerySMAPI.Extensions.GetFarmerExtData(Game1.player);
-            ext.maxMana.Value += 5;
-
             if (recipes[level] != null)
             {
                 if (!Game1.player.knowsRecipe(recipes[level][0]))

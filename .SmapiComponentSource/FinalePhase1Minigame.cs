@@ -413,6 +413,7 @@ namespace SwordAndSorcerySMAPI
                     case 3: // Use potion
                         MovingActorForTurn = 1;
                         delay = 0.5f;
+                        if (PotionCount <= 0) { MovingActorForTurn = 3; break; }
                         PendingAction = () =>
                         {
                             if (delay == 0.5f)
@@ -783,8 +784,8 @@ namespace SwordAndSorcerySMAPI
 
                 var cmds_ = new List<string>(Event.eventCommands);
                 cmds_.Insert(Event.CurrentCommand + 1, $"end");
-                Event.eventCommands = [.. cmds_];
 
+                Event.eventCommands = [.. cmds_];
                 Event.CurrentCommand++;
                 return;
             }

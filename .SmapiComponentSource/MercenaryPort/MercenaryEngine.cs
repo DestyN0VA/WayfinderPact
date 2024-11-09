@@ -124,17 +124,17 @@ namespace MageDelve.Mercenaries
             });
         }
 
-        private void Content_AssetRequested(object sender, StardewModdingAPI.Events.AssetRequestedEventArgs e)
+        private void Content_AssetRequested(object sender, AssetRequestedEventArgs e)
         {
         }
 
-        private void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)
+        private void GameLoop_GameLaunched(object sender, GameLaunchedEventArgs e)
         {
-            var sc = ModSnS.instance.Helper.ModRegistry.GetApi<SwordAndSorcerySMAPI.ISpaceCoreApi>("spacechase0.SpaceCore");
+            var sc = ModSnS.instance.Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
             sc.RegisterSerializerType( typeof( Mercenary ) );
         }
 
-        private void Player_Warped(object sender, StardewModdingAPI.Events.WarpedEventArgs e)
+        private void Player_Warped(object sender, WarpedEventArgs e)
         {
             if (e.Player != Game1.player)
                 return;

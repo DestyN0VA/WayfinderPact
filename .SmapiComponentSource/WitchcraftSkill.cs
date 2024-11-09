@@ -4,7 +4,6 @@ using CircleOfThornsSMAPI;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
-using SwordAndSorcerySMAPI;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -49,8 +48,6 @@ namespace SwordAndSorcerySMAPI
         public WitchcraftSkill()
             : base("DestyNova.SwordAndSorcery.Witchcraft")
         {
-            // TODO: Change icons to bardics
-
             this.Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/witchcraft/icon.png");
             this.SkillsPageIcon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/witchcraft/icon.png");
 
@@ -111,8 +108,6 @@ namespace SwordAndSorcerySMAPI
         public override void DoLevelPerk(int level)
         {
             base.DoLevelPerk(level);
-            if (level > 10) return; // Walk of Life
-            Game1.player.GetFarmerExtData().maxMana.Value += 10;
         }
 
 
