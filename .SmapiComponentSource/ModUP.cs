@@ -408,7 +408,7 @@ namespace SwordAndSorcerySMAPI
 
             NPC target = null;
             float distSoFar = float.MaxValue;
-            foreach (var npc in Game1.currentLocation.characters.Where(c => c.isVillager()))
+            foreach (var npc in Game1.currentLocation.characters.Where(c => c.IsVillager))
             {
                 float dist = Vector2.Distance(npc.StandingPixel.ToVector2(), Game1.player.StandingPixel.ToVector2());
                 if ( dist < distSoFar )
@@ -787,7 +787,7 @@ namespace SwordAndSorcerySMAPI
                 case MultiplayerMessage_MonsterKnockback:
                     {
                         var msg = e.ReadAs<MonsterKnockbackMessage>();
-                        var player = Game1.getFarmer(e.FromPlayerID);
+                        var player = Game1.GetPlayer(e.FromPlayerID);
                         (player.currentLocation.characters.FirstOrDefault(npc => npc.id == msg.MonsterId) as Monster)?.takeDamage(0, msg.Trajectory.X, -msg.Trajectory.Y, false, 0, player);
                     }
                     break;
@@ -800,7 +800,7 @@ namespace SwordAndSorcerySMAPI
                         }
                         else
                         {
-                            var player = Game1.getFarmer(e.FromPlayerID);
+                            var player = Game1.GetPlayer(e.FromPlayerID);
 
                             Horse horse = null;
                             Utility.ForEachBuilding<Stable>((s) =>
@@ -828,14 +828,14 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
+        private void GameLoop_DayStarted(object sender, DayStartedEventArgs e)
         {
             SongEntry.Reset();
         }
 
-        private void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)
+        private void GameLoop_GameLaunched(object sender, GameLaunchedEventArgs e)
         {
-            var sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
+            //var sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
             Skills.RegisterSkill(Skill);
         }
     }

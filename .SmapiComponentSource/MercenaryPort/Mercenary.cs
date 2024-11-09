@@ -1,26 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.WebSockets;
-using System.Reflection.Metadata.Ecma335;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
-using HarmonyLib;
 using MageDelve.Mercenaries.Actions;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
-using NeverEndingAdventure.Utils;
-using SpaceShared;
 using StardewValley;
 using StardewValley.Enchantments;
-using StardewValley.Extensions;
 using StardewValley.Monsters;
-using StardewValley.Objects;
 using StardewValley.Tools;
 
 namespace MageDelve.Mercenaries
@@ -57,7 +45,7 @@ namespace MageDelve.Mercenaries
         internal Vector2 targetPos;
 
         private static float pathfindStep = 16;
-        private static float pathfindStepDiag = 16 * 0.707f;
+        //private static float pathfindStepDiag = 16 * 0.707f;
 
         public Mercenary()
         {
@@ -118,6 +106,8 @@ namespace MageDelve.Mercenaries
         public void UpdateForFarmer(Farmer farmer, int numInFormation, GameTime gameTime)
         {
             // TODO: Don't update if time isn't passing!
+            if (!Game1.shouldTimePass())
+                return;
 
             if (targeting != null && targeting.Health <= 0)
                 targeting = null;
@@ -557,8 +547,8 @@ namespace MageDelve.Mercenaries
             float foundDist = float.MaxValue;
             Queue<Vector2> found = null;
             float pathfindStepSq = pathfindStep * pathfindStep;
-            float maxDistSq = Vector2.Distance(Position, targetPos) * 3;
-            maxDistSq *= maxDistSq;
+            /*float maxDistSq = Vector2.Distance(Position, targetPos) * 3;
+            maxDistSq *= maxDistSq;*/
             float maxLen = Math.Max(1000, Vector2.Distance(Position, targetPos) * 5);
             while (toCheck.Count > 0)
             {

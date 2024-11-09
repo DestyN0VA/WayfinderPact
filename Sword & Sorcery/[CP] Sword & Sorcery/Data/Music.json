@@ -184,6 +184,34 @@
                 }
             }
         },
+        {
+            "LogName": "Duskspire Themes",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.DuskspirePhase1": {
+                    "ID": "SnS.DuskspirePhase1",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DuskspirePhase1.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+                "SnS.DuskspirePhase2": {
+                    "ID": "SnS.DuskspirePhase2",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DuskspirePhase2.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+                "SnS.DuskspireDeath": {
+                    "ID": "SnS.DuskspireDeath",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DuskspireDeath.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                }
+            }
+        },
 
         // SOUNDS
         {
@@ -214,7 +242,7 @@
             "Target": "Data/JukeboxTracks",
             "Entries": {
                 "SnS.MateoTheme": {
-                    "Name": "Mateo's Theme (Never Ending Adventure)",
+                    "Name": "{{i18n:Strings.Music.MateoTheme}}",
                     "Available": null
                 }
             }
@@ -224,7 +252,7 @@
             "Target": "Data/JukeboxTracks",
             "Entries": {
                 "SnS.HectorTheme": {
-                    "Name": "{{TrueName}}'s Theme (Circle of Thorns)",
+                    "Name": "{{i18n:Strings.Music.HectorTheme |HectorName={{TrueName}}}}",
                     "Available": null
                 }
             }
@@ -234,7 +262,7 @@
             "Target": "Data/JukeboxTracks",
             "Entries": {
                 "SnS.CirrusTheme": {
-                    "Name": "Cirrus' Theme (Peace and Love on the Planet Earth)",
+                    "Name": "{{i18n:Strings.Music.CirrusTheme}}",
                     "Available": null
                 }
             }
@@ -244,7 +272,7 @@
             "Target": "Data/JukeboxTracks",
             "Entries": {
                 "SnS.KeytarSolo": {
-                    "Name": "Cirrus' Keytar Solo",
+                    "Name": "{{i18n:Strings.Music.KeytarSolo}}",
                     "Available": null
                 }
             }
@@ -254,7 +282,7 @@
             "Target": "Data/JukeboxTracks",
             "Entries": {
                 "SnS.DandelionTheme": {
-                    "Name": "Dandelion's Theme (Giant Woman)",
+                    "Name": "{{i18n:Strings.Music.DandelionTheme}}",
                     "Available": null
                 }
             }
@@ -264,7 +292,7 @@
             "Target": "Data/JukeboxTracks",
             "Entries": {
                 "SnS.RoslinTheme": {
-                    "Name": "Roslin's Theme (It's Over, Isn't It?)",
+                    "Name": "{{i18n:Strings.Music.RoslinTheme}}",
                     "Available": null
                 }
             }
@@ -274,7 +302,7 @@
             "Target": "Data/JukeboxTracks",
             "Entries": {
                 "SnS.LonelyTheme": {
-                    "Name": "S&S: Lonely Theme (To Zanarkand)",
+                    "Name": "{{i18n:Strings.Music.LonelyTheme}}",
                     "Available": null
                 }
             }
@@ -284,7 +312,7 @@
             "Target": "Data/JukeboxTracks",
             "Entries": {
                 "SnS.LonelyThemeReprise": {
-                    "Name": "S&S: Lonely Theme Reprised (To Zanarkand)",
+                    "Name": "{{i18n:Strings.Music.LonelyThemeReprise}}",
                     "Available": null
                 }
             }
@@ -294,7 +322,7 @@
             "Target": "Data/JukeboxTracks",
             "Entries": {
                 "SnS.DespairTheme": {
-                    "Name": "S&S: Despair Theme",
+                    "Name": "{{i18n:Strings.Music.DespairTheme}}",
                     "Available": null
                 }
             }
@@ -304,7 +332,7 @@
             "Target": "Data/JukeboxTracks",
             "Entries": {
                 "SnS.HopeTheme": {
-                    "Name": "S&S: Hope Theme",
+                    "Name": "{{i18n:Strings.Music.HopeTheme}}",
                     "Available": null
                 }
             }
@@ -314,7 +342,7 @@
             "Target": "Data/JukeboxTracks",
             "Entries": {
                 "SnS.VulnerableTheme": {
-                    "Name": "S&S: Vulnerable Theme (Dearly Beloved)",
+                    "Name": "{{i18n:Strings.Music.VulnerableTheme}}",
                     "Available": null
                 }
             }
@@ -324,7 +352,7 @@
             "Target": "Data/JukeboxTracks",
             "Entries": {
                 "SnS.SMFS": {
-                    "Name": "S&S: So Much For Stardust (Love from the Other Side)",
+                    "Name": "{{i18n:Strings.Music.SMFS}}",
                     "Available": null
                 }
             }
@@ -334,10 +362,24 @@
             "Target": "Data/JukeboxTracks",
             "Entries": {
                 "SnS.SMFSR": {
-                    "Name": "S&S: So Much For Stardust Reprised (Love from the Other Side)",
+                    "Name": "{{i18n:Strings.Music.SMFSR}}",
                     "Available": null
                 }
             }
         },
+        {
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "SnS.DuskspirePhase1": {
+                    "Name": "{{i18n:Strings.Music.DuskspirePhase1}}",
+                    "Available": null
+                },
+                "SnS.DuskspirePhase2": {
+                    "Name": "{{i18n:Strings.Music.DuskspirePhase2}}",
+                    "Available": null
+                }
+            }
+        }
      ]
 }

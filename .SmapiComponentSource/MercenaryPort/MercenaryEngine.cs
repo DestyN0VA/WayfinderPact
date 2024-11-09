@@ -198,7 +198,7 @@ namespace MageDelve.Mercenaries
         {
             if (Game1.IsMasterGame)
             {
-                var farmer = Game1.getFarmerMaybeOffline(e.Peer.PlayerID); // I don't know if they count as offline or not at this point
+                var farmer = Game1.GetPlayer(e.Peer.PlayerID); // I don't know if they count as offline or not at this point
                 foreach (var merc in farmer.GetCurrentMercenaries())
                 {
                     merc.OnLeave();

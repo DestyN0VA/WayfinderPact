@@ -61,7 +61,7 @@
     {
       "LogName": "Sword & Sorcery - Data Includes",
       "Action": "Include",
-      "FromFile": "Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/CustomForage.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/Books.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Quests & Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json, Data/Violet Moon Renaissance Faire/VM_CoreData.json, Data/Violet Moon Renaissance Faire/VM_FestivalData.json, Data/Violet Moon Renaissance Faire/VM_NPCData.json, Data/PlayersHandbook.json"
+      "FromFile": "Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/CustomForage.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/Books.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Quests & Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json"
     },
     {
       "LogName": "Sword & Sorcery - Shield Quest Include",
@@ -166,7 +166,7 @@
             "AddMail Current SnS.Flag.CirrusHairColor.{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}} received"
           ]
         },
-        "{{ModId}}_MigrateIds": {
+        /*"{{ModId}}_MigrateIds": {
           "Id": "{{ModId}}_MigrateIds",
           "Trigger": "DayStarted",
           "Actions": [
@@ -176,7 +176,7 @@
             "Pathoschild.ContentPatcher_MigrateIds CookingRecipes swordandsorcery.salishburbon {{ModId}}_salishbourbon swordandsorcery.autumnalstew {{ModId}}_autumnalstew swordandsorcery.dandeliongreens {{ModId}}_dandeliongreens swordandsorcery.portfiredrakesparkler {{ModId}}_portfiredrakesparkler swordandsorcery.mushroomsredsauce {{ModId}}_mushroomsredsauce swordandsorcery.ferngreensandpineapple {{ModId}}_ferngreensandpineapple swordandsorcery.ancienthuckleberryicecream {{ModId}}_ancienthuckleberryicecream swordandsorcery.lavaeelandstirfriedancientbottlegourd {{ModId}}_lavaeelandstirfriedancientbottlegourd swordandsorcery.zuzustylepizza {{ModId}}_zuzustylepizza swordandsorcery.zuzustylebagelwithlox {{ModId}}_zuzustylebagelwithlox swordandsorcery.zuzustylecheesecake {{ModId}}_zuzustylecheesecake swordandsorcery.zuzustyleclamchowder {{ModId}}_zuzustyleclamchowder"
           ],
           "HostOnly": true
-        },
+        },*/
         "SnS.TriggerActions.RemoveMateoRomanticFlagIfNotDating": {
           "Id": "SnS.TriggerActions.RemoveMateoRomanticFlagIfNotDating",
           "Trigger": "DayStarted",
@@ -454,13 +454,13 @@
       "Description": "Changes the textures of S&S Skill Books.",
       "Section": "Miscellaneous"
     },
-    "PlayersHandbookColorScheme": {
+    /*"PlayersHandbookColorScheme": {
       "AllowValues": "Black/Red, White/Blue, Cream/Green, Brown/Purple",
       "Default": "Black/Red",
       "AllowBlank": false,
       "Description": "Changes the the color scheme of the 'Player's Handbook' furniture item.",
       "Section": "Miscellaneous"
-    },
+    },*/
     "HectorHeterochromatic": {
       "AllowValues": "true, false",
       "Default": "false",
@@ -1946,20 +1946,7 @@
       "Name": "SnS.Ch4.Dandelion.7.GunnarExtra.1",
       "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.1}}\"",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
-      }
-    },
-    {
-      "Name": "SnS.Ch4.Dandelion.7.GunnarExtra.1",
-      "Value": "pause 1"
-    },
-    {
-      "Name": "SnS.Ch4.Dandelion.7.GunnarExtra.1",
-      "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.2}}\"",
-      "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -1970,8 +1957,7 @@
       "Name": "SnS.Ch4.Finale.GunnarExtra.MateoSpeak",
       "Value": "speak Mateo \"{{i18n:GunnarFinaleDialogue.4}}\"",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -1982,8 +1968,7 @@
       "Name": "SnS.Ch4.Finale.GunnarExtra.1",
       "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.5}}\"/addMailReceived GunnarHelpedToo",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -1994,8 +1979,7 @@
       "Name": "SnS.Ch4.Finale.GunnarExtra.2",
       "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.6}}\"",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -2006,8 +1990,7 @@
       "Name": "SnS.Ch4.Intermissions.GunnarExtra.1",
       "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.7}}\"",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -2018,8 +2001,7 @@
       "Name": "SnS.Ch4.Intermissions.GunnarExtra.2",
       "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.8}}\"",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -2030,8 +2012,7 @@
       "Name": "SnS.Ch4.Intermissions.GunnarExtra.3",
       "Value": "#{{i18n:GunnarFinaleDialogue.9}}",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -2040,10 +2021,9 @@
     },
     {
       "Name": "SnS.Ch4.Intermissions.GunnarExtra.4",
-      "Value": "(break)setDating MadDog.HashtagBearFam.Gunnar\\speak MadDog.HashtagBearFam.Gunnar \"I've always got your six, @.$19\"\\speak Mateo \"Good luck to you.$14\"\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomamticChoice.Hector.42}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomamticChoice.Roslin.43}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomamticChoice.Dandelion.44}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomamticChoice.Solomon.45}}\"\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection MadDog.HashtagBearFam.Gunnar 2\\faceDirection farmer 2\\warp Mateo -100 -100\\warp Hector -100 -100\\warp Dandelion -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar 14 12\\faceDirection MadDog.HashtagBearFam.Gunnar 2\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote MadDog.HashtagBearFam.Gunnar 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomamticChoice.Message.46}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomamticChoice.Message.47}}\"\\pause 250\\speak MadDog.HashtagBearFam.Gunnar \"I'm really trying hard to not make a Captain Ferngill joke right now, @.$17#$b#But just know you're significantly cooler AND more attractive than any musty old frozen comic book character.$19\"\\emote MadDog.HashtagBearFam.Gunnar 40\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote MadDog.HashtagBearFam.Gunnar 16 true\\faceDirection MadDog.HashtagBearFam.Gunnar 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak MadDog.HashtagBearFam.Gunnar \"{{i18n:Events.Finale.SoloFarmer.RomamticChoice.Gunnar.50}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end",
+      "Value": "(break)setDating MadDog.HashtagBearFam.Gunnar\\speak MadDog.HashtagBearFam.Gunnar \"{{i18n:Events.SnS.Ch4.Intermission.Gunnar.MadDog.HashtagBearFam.Gunnar.16}}\"\\speak Mateo \"{{i18n:Events.SnS.Ch4.Intermission.Gunnar.Mateo.17}}\"\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.42}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Roslin.43}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Dandelion.44}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Solomon.45}}\"\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection MadDog.HashtagBearFam.Gunnar 2\\faceDirection farmer 2\\warp Mateo -100 -100\\warp Hector -100 -100\\warp Dandelion -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar 14 12\\faceDirection MadDog.HashtagBearFam.Gunnar 2\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote MadDog.HashtagBearFam.Gunnar 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.46}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.47}}\"\\pause 250\\speak MadDog.HashtagBearFam.Gunnar \"{{i18n:Events.SnS.Ch4.Intermission.Gunnar.MadDog.HashtagBearFam.Gunnar.24}}\"\\emote MadDog.HashtagBearFam.Gunnar 40\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote MadDog.HashtagBearFam.Gunnar 16 true\\faceDirection MadDog.HashtagBearFam.Gunnar 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak MadDog.HashtagBearFam.Gunnar \"{{i18n:Events.SnS.Ch4.Intermission.Gunnar.MadDog.HashtagBearFam.Gunnar.25}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -2052,7 +2032,7 @@
     },
     {
       "Name": "SnS.Ch4.Intermission.SoloFarmer.QQ",
-      "Value": "/quickQuestion #{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.01}}#{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.02}}#{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.03}}#{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.04}}#{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.05}}(break)addMailReceived SoloFarmerBattle\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.06}}\"\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\speak Mateo \"@!!!$19\\warp Mateo -100 -100\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.07}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.08}}\"\\playMusic SnS.DuskspireLaugh\\emote farmer 16\\faceDirection farmer 2\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\faceDirection farmer 0\\playMusic SnS.SMFSR\\pause 1000\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.09}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)addMailReceived FarmerGuildmasterBattle\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.10}}\"\\emote farmer 32\\pause 250\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.11}}\"\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.12}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Roslin.13}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Dandelion.14}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Solomon.15}}\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Mateo 2\\faceDirection farmer 2\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.16}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.17}}\"\\pause 250\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.18}}\"\\emote Mateo 56\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Mateo 16 true\\faceDirection Mateo 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.19}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Mateo\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.20}}\"\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.21}}\"\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.22}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Roslin.23}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Dandelion.24}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Solomon.25}}\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Mateo 2\\faceDirection farmer 2\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.26}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.27}}\"\\pause 250\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.28}}\"\\emote Mateo 56\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Mateo 16 true\\faceDirection Mateo 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.29}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Hector\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.30}}\"\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.31}}\"\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.32}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Roslin.33}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Dandelion.34}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Solomon.35}}\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Hector 2\\faceDirection farmer 2\\warp Mateo -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.36}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.37}}\"\\pause 250\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.38}}\"\\emote Hector 40\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Hector 16 true\\faceDirection Hector 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.39}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Cirrus\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.40}}\"\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.41}}\"\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.42}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Roslin.43}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Dandelion.44}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Solomon.45}}\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Cirrus 2\\faceDirection farmer 2\\warp Mateo -100 -100\\warp Hector -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Cirrus 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.46}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.47}}\"\\pause 250\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.48}}\"\\emote Cirrus 40\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Cirrus 16 true\\faceDirection Cirrus 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.49}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end{{SnS.Ch4.Intermissions.GunnarExtra.4}}",
+      "Value": "/quickQuestion #{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.01}}#{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.02}}#{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.03}}#{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.04}}#{{i18n:Events.Finale.SoloFarmer.RomanticChoice.QuickQuestion.05}}{{SnS.Ch4.Intermissions.GunnarExtra.3}}(break)addMailReceived SoloFarmerBattle\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.06}}\"\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\speak Mateo \"@!!!$19\\warp Mateo -100 -100\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.07}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.08}}\"\\playMusic SnS.DuskspireLaugh\\emote farmer 16\\faceDirection farmer 2\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\faceDirection farmer 0\\playMusic SnS.SMFSR\\pause 1000\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.09}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)addMailReceived FarmerGuildmasterBattle\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.10}}\"\\emote farmer 32\\pause 250\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.11}}\"\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.12}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Roslin.13}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Dandelion.14}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Solomon.15}}\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Mateo 2\\faceDirection farmer 2\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.16}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.17}}\"\\pause 250\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.18}}\"\\emote Mateo 56\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Mateo 16 true\\faceDirection Mateo 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.19}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Mateo\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.20}}\"\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.21}}\"\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.22}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Roslin.23}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Dandelion.24}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Solomon.25}}\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Mateo 2\\faceDirection farmer 2\\warp Hector -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.26}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.27}}\"\\pause 250\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.28}}\"\\emote Mateo 56\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Mateo 16 true\\faceDirection Mateo 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.29}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Hector\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.30}}\"\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.31}}\"\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.32}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Roslin.33}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Dandelion.34}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Solomon.35}}\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Hector 2\\faceDirection farmer 2\\warp Mateo -100 -100\\warp Cirrus -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Mateo 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.36}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.37}}\"\\pause 250\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.38}}\"\\emote Hector 40\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Hector 16 true\\faceDirection Hector 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.39}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end(break)setDating Cirrus\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.40}}\"\\speak Mateo \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Mateo.41}}\"\\speak Hector \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Hector.42}}\"\\speak Roslin \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Roslin.43}}\"\\speak Dandelion \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Dandelion.44}}\"\\speak Solomon \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Solomon.45}}\"\\{{SnS.Ch4.Intermissions.GunnarExtra.2}}\\startJittering\\animate farmer true false 100 30 30 31 31 32 32 33 33 34 34 35 35\\pause 500\\screenFlash 5\\playSound wand\\pause 500\\fade\\viewport -1000 -1000\\stopJittering\\faceDirection Cirrus 2\\faceDirection farmer 2\\warp Mateo -100 -100\\warp Hector -100 -100\\warp MadDog.HashtagBearFam.Gunnar? -100 -100\\warp Dandelion -100 -100\\warp Roslin -100 -100\\addTemporaryActor DandelionShield 16 16 15 15 2 false Character\\hideShadow DandelionShield true\\pause 1000\\fade\\viewport 15 12\\emote farmer 40 true\\emote Cirrus 8\\pause 250\\advancedMove farmer false 0 2 2 10\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.46}}\"\\warp DandelionShield 15 12\\showFrame farmer 57\\playSound discoverMineral\\pause 1000\\warp DandelionShield -100 -100\\showFrame farmer 0\\message \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Message.47}}\"\\pause 250\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.48}}\"\\emote Cirrus 40\\playMusic SnS.DuskspireLaugh\\emote farmer 16 true\\faceDirection farmer 0 true\\emote Cirrus 16 true\\faceDirection Cirrus 0 true\\screenFlash 5\\playSound wand\\warp Duskspire 14 9\\animate Duskspire false true 100 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17\\speak Cirrus \"{{i18n:Events.Finale.SoloFarmer.RomanticChoice.Cirrus.49}}\"\\pause 1000\\globalFade\\viewport -1000 -1000\\sns_finale_phase2\\end{{SnS.Ch4.Intermissions.GunnarExtra.4}}",
       "When": {
         "Relationship: Mateo |contains= Dating, Married, Enganged": false,
         "Relationship: Hector |contains= Dating, Married, Enganged": false,
@@ -2068,8 +2048,7 @@
       "Name": "SnS.Ch4.Victories.GunnarExtra.1",
       "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.10}}\"",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -2080,8 +2059,7 @@
       "Name": "SnS.Ch4.Victories.GunnarExtra.2",
       "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.11}}\"",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -2092,8 +2070,7 @@
       "Name": "SnS.Ch4.Dandelion.7.GunnarExtra.Krobus.2",
       "Value": "speak MadDog.HashtagBearFam.Gunnar \"{{i18n:GunnarFinaleDialogue.12}}\"",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -2104,8 +2081,7 @@
       "Name": "CombatWarps",
       "Value": "warp Mateo 12 10/warp farmer 12 12/warp Dandelion 12 14/warp Hector 12 16/warp Cirrus 10 10/warp Roslin 10 12/warp MadDog.HashtagBearFam.Gunnar 10 14",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -2116,8 +2092,7 @@
       "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.NotHectorVictory",
       "Value": "warp Hector 46 90/faceDirection Hector 3/warp MadDog.HashtagBearFam.Gunnar 45 91/faceDirection MadDog.HashtagBearFam.Gunnar 0",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -2128,8 +2103,7 @@
       "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.HectorVictory",
       "Value": "warp Mateo 46 90/faceDirection Mateo 3/warp MadDog.HashtagBearFam.Gunnar 45 91/faceDirection MadDog.HashtagBearFam.Gunnar 0",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -2140,8 +2114,7 @@
       "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.MateoVictory.Offset",
       "Value": "positionOffset farmer 20 0/positionOffset Mateo 20 0",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -2152,8 +2125,7 @@
       "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.HectorVictory.Offset",
       "Value": "positionOffset farmer 20 0/positionOffset Hector 20 0",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -2164,8 +2136,7 @@
       "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.CirrusVictory.Offset",
       "Value": "positionOffset farmer 20 0/positionOffset Cirrus 20 0",
       "When": {
-        "HasMod |contains=MadDog.HashtagBearFam": true,
-        "HasSeenEvent |contains=MadDog.BearFam.16193011": true
+        "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
     {
@@ -2376,7 +2347,7 @@
       "Value": "{{i18n: guidebook.chapter.Title.TitlePage.ConfigLinks}}",
       "When": { "HasMod": "spacechase0.GenericModConfigMenu" }
     },
-    {
+    /*{
       "Name": "PlayersHandbookColor",
       "Value": "0",
       "When": {
@@ -2403,6 +2374,6 @@
       "When": {
         "PlayersHandbookColorScheme": "Brown/Purple",
       }
-    },
+    },*/
   ]
 }

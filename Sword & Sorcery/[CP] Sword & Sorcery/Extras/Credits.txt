@@ -8,8 +8,8 @@ ADVENTURING PARTY (2.0 CONTRIBUTORS):
 ➜ MADDOGOFBLANK, the Dagger: Additional assets throughout the mod, Violet Moon Festival primary contributor, extensive help w/ code, bugfixing
 ➜ 7thAxis, the Glaive: Dialogue code overhaul/additional optimization code, pronoun code, Solomon portraits/sprites, majority of Deep Dark assets  
 ➜ TheFrenchDodo, the Halberd: Emeritus' sprite, books seen throughout the guild, Mateo and Hector's new themes and all other music, Deep Dark monsters
-➜ TenebrousNova: Help w/ event code, i18n, and the majority of new maps incl. Deep Dark maps 
-➜ EnderTedi, the Staff: Additional assets throughout the mod, help w/ code, wedding events, bugfixing 
+➜ TenebrousNova, the Zweihander: Help w/ event code, i18n, and the majority of new maps incl. Deep Dark maps, playtesting 
+➜ EnderTedi, the Staff: Additional assets throughout the mod, help w/ code (C# and CP), wedding events, bugfixing 
 ➜ TheMainDaine, the Harp: Additional portrait/sprite art, playtesting and dialogue editing 
 ➜ TheLoreSeeker, An Adventurer's Spirit: Emeritus' and Book's portraits, scope creep
 

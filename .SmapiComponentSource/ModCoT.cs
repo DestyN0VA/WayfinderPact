@@ -365,7 +365,7 @@ namespace CircleOfThornsSMAPI
                 return true;
 
             Season season = Game1.GetSeasonForLocation(__instance.Location);
-            if ((bool)__instance.greenHouseTileTree.Value)
+            if ((bool)__instance.GreenHouseTileTree)
             {
                 spriteBatch.Draw(Game1.mouseCursors, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f, __instance.Tile.Y * 64f)), new Rectangle(669, 1957, 16, 16), Color.White, 0f, Vector2.Zero, 4f, SpriteEffects.None, 1E-08f);
             }

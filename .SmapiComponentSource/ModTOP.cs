@@ -709,7 +709,7 @@ namespace SwordAndSorcerySMAPI
                         }
                     }
 
-                    bool skipCost = Game1.getFarmer(from).HasCustomProfession(WitchcraftSkill.ProfessionNoTeleportCost);
+                    bool skipCost = Game1.GetPlayer(from).HasCustomProfession(WitchcraftSkill.ProfessionNoTeleportCost);
 
                     if (totalFound < 3 && !skipCost)
                     {
@@ -720,9 +720,9 @@ namespace SwordAndSorcerySMAPI
                         if (!skipCost)
                         {
                             int left = 3;
-                            foreach (var entry in essencesFound)
+                            foreach (var (inv, item) in essencesFound)
                             {
-                                left -= entry.inv.ReduceId(entry.item.QualifiedItemId, left);
+                                left -= inv.ReduceId(item.QualifiedItemId, left);
                                 if (left <= 0)
                                     break;
                             }
@@ -730,8 +730,8 @@ namespace SwordAndSorcerySMAPI
 
                         int slash = target.IndexOf('/');
                         int comma = target.IndexOf(',', slash + 1);
-                        retMsg.LocationName = target.Substring(0, slash);
-                        retMsg.Tile = new Vector2(float.Parse(target.Substring(slash + 1, comma - slash - 1)), float.Parse(target.Substring(comma + 1)));
+                        retMsg.LocationName = target[..slash];
+                        retMsg.Tile = new Vector2(float.Parse(target.Substring(slash + 1, comma - slash - 1)), float.Parse(target[(comma + 1)..]));
                     }
                 }
             }
@@ -776,12 +776,12 @@ namespace SwordAndSorcerySMAPI
             else if (e.Type == MultiplayerMessage_Polymorph)
             {
                 var msg = e.ReadAs<Vector2>();
-                Spells.PolymorphImpl(Game1.getFarmer(e.FromPlayerID), msg);
+                Spells.PolymorphImpl(Game1.GetPlayer(e.FromPlayerID), msg);
             }
             else if (e.Type == MultiplayerMessage_Banish)
             {
                 var msg = e.ReadAs<Vector2>();
-                Spells.BanishImpl(Game1.getFarmer(e.FromPlayerID), msg);
+                Spells.BanishImpl(Game1.GetPlayer(e.FromPlayerID), msg);
             }
         }
 
@@ -1236,7 +1236,7 @@ namespace SwordAndSorcerySMAPI
                 }
             }
             */
-            if (__instance is VolcanoDungeon vd && Game1.random.NextDouble() < 0.25 * mult)
+            if (__instance is VolcanoDungeon && Game1.random.NextDouble() < 0.25 * mult)
             {
                 Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_FireEssence"), new(x, y), 2, __instance);
             }
@@ -1256,7 +1256,7 @@ namespace SwordAndSorcerySMAPI
                 ext.mirrorImages.Value <= 0)
                 return true;
 
-            bool flag = (damager == null || !damager.isInvincible()) && (damager == null || (!(damager is GreenSlime) && !(damager is BigSlime)) || !__instance.isWearingRing("520"));
+            bool flag = (damager == null || !damager.isInvincible()) && (damager == null || (damager is not GreenSlime && damager is not BigSlime) || !__instance.isWearingRing("520"));
             if (!flag) return true;
 
             if (Game1.random.Next(ext.mirrorImages.Value + 1) != 0)
