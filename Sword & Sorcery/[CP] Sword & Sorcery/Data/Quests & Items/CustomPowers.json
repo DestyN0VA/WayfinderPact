@@ -9,7 +9,7 @@
 					"DisplayName": "{{i18n: power.stygium-pendant.name}}",
 					"Description": "{{i18n: power.stygium-pendant.description}}",
 					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
-					"TexturePosition": { "X": 112, "Y": 0 },
+					"SpriteIndex": 7,
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current StygiumPendantPower",
 					"Update": "OnTimeChange, OnLocationChange",
 				}
@@ -24,7 +24,7 @@
 					"DisplayName": "{{i18n: power.broken-circlet.name}}",
 					"Description": "{{i18n: power.broken-circlet.description}}",
 					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
-					"TexturePosition": { "X": 128, "Y": 0 },
+					"SpriteIndex": 8,
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current BrokenCircletPower",
 					"Update": "OnTimeChange, OnLocationChange",
 				}
@@ -39,7 +39,7 @@
 					"DisplayName": "{{i18n: power.drake-scale.name}}",
 					"Description": "{{i18n: power.drake-scale.description}}",
 					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
-					"TexturePosition": { "X": 112, "Y": 80 },
+					"SpriteIndex": 52,
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current DrakeScalePower",
 					"Update": "OnTimeChange, OnLocationChange",
 				}
@@ -54,7 +54,7 @@
 					"DisplayName": "{{i18n: power.forgedd20.name}}",
 					"Description": "{{i18n: power.forgedd20.description}}",
 					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
-					"TexturePosition": { "X": 80, "Y": 80 },
+					"SpriteIndex": 50,
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current ForgedD20Power",
 					"Update": "OnTimeChange, OnLocationChange",
 				}

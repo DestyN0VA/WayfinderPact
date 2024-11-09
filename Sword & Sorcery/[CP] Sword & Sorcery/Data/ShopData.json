@@ -879,7 +879,8 @@
       "Target": "Data/Shops",
       "TargetField": [ "{{ModID}}_LMArmory", "Items" ],
       "When": {
-        "HasMod": "MadDog.HashtagBearFam"
+        "HasMod": "MadDog.HashtagBearFam",
+        "HasFlag": "MadDog.HashtagBearFam.GunnarsShop"
       },
       "Entries": {
         "{{ModId}}_AddGunnarAdventurerCache": {
