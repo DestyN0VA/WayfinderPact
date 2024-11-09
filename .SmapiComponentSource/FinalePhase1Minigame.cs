@@ -215,7 +215,8 @@ namespace SwordAndSorcerySMAPI
                             {
                                 if (battler.Value.Health == 0 )
                                 {
-                                    Battlers.First(c => c.Name == battler.Key).stopGlowing();
+                                    continue;
+                                    //Battlers.First(c => c.Name == battler.Key).stopGlowing();
                                 }
                                 battler.Value.Health = Math.Min( battler.Value.Health + 50, 100 );
                             }
