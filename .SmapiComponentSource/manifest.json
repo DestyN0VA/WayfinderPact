@@ -9,14 +9,14 @@
   "$schema": "https://smapi.io/schemas/manifest.json",
   "UniqueID": "KCC.SnS",
   "Name": "Sword and Sorcery (SMAPI Component)",
-  "Author": "DestyNova, spacechase0",
-  "Version": "1.12.0",
+  "Author": "KittyCatCasey, EnderTedi",
+  "Version": "2.0.0",
   "Description": "...",
   "EntryDll": "SwordAndSorcerySMAPI.dll",
   "Dependencies": [
     {
       "UniqueID": "spacechase0.SpaceCore",
-      "MinimumVersion": "1.26.0"
+      "MinimumVersion": "1.26.1"
     }
   ]
 }

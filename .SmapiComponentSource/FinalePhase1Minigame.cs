@@ -215,7 +215,8 @@ namespace SwordAndSorcerySMAPI
                             {
                                 if (battler.Value.Health == 0 )
                                 {
-                                    Battlers.First(c => c.Name == battler.Key).stopGlowing();
+                                    continue;
+                                    //Battlers.First(c => c.Name == battler.Key).stopGlowing();
                                 }
                                 battler.Value.Health = Math.Min( battler.Value.Health + 50, 100 );
                             }
@@ -413,6 +414,7 @@ namespace SwordAndSorcerySMAPI
                     case 3: // Use potion
                         MovingActorForTurn = 1;
                         delay = 0.5f;
+                        if (PotionCount <= 0) { MovingActorForTurn = 3; break; }
                         PendingAction = () =>
                         {
                             if (delay == 0.5f)
@@ -783,8 +785,8 @@ namespace SwordAndSorcerySMAPI
 
                 var cmds_ = new List<string>(Event.eventCommands);
                 cmds_.Insert(Event.CurrentCommand + 1, $"end");
-                Event.eventCommands = [.. cmds_];
 
+                Event.eventCommands = [.. cmds_];
                 Event.CurrentCommand++;
                 return;
             }

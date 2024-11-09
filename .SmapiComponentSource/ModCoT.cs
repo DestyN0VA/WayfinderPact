@@ -230,7 +230,7 @@ namespace CircleOfThornsSMAPI
             Skills.RegisterSkill(Skill);
         }
 
-        private double shapeshiftPressedTimer = 0;
+        //private double shapeshiftPressedTimer = 0;
         private int regenTimer = 0;
         private int transformTimer = 0;
         private void GameLoop_UpdateTicking(object sender, StardewModdingAPI.Events.UpdateTickingEventArgs e)

@@ -88,8 +88,6 @@ namespace SwordAndSorcerySMAPI
             if (level > 10) return; // Walk of Life
 
             Game1.player.maxHealth += 3;
-            if (level == 1)
-                Game1.player.GetFarmerExtData().maxMana.Value += 30;
 
             string[][] craftingRecipes =
             [

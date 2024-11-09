@@ -8,7 +8,7 @@ using NeverEndingAdventure;
 using NeverEndingAdventure.Utils;
 using RadialMenu;
 using SpaceCore;
-using SpaceShared;
+using SpaceShared.APIs;
 using StardewModdingAPI;
 using StardewModdingAPI.Utilities;
 using StardewValley;
@@ -24,12 +24,10 @@ using StardewValley.SpecialOrders.Objectives;
 using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -261,7 +259,6 @@ namespace SwordAndSorcerySMAPI
         public static Vector2 DuskspireDeathPos;
 
         private Harmony harmony;
-
 
         [MethodImpl(MethodImplOptions.NoInlining)]
         public static float AetherDamageMultiplier()
@@ -602,9 +599,42 @@ namespace SwordAndSorcerySMAPI
         private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
         {
             var ext = Game1.player.GetFarmerExtData();
-            ext.mana.Value = ext.maxMana.Value;
+
+            int maxMana = 0;
+
+            //Artificer Mana
+            if (Game1.player.GetCustomSkillLevel(RogueSkill.Id) == 1)
+            {
+                maxMana += 30;
+            }
+
+            //Druidics Mana
+            for (int i = 0; i < Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Druidics"); i++)
+            {
+                if (i == 4 || i == 9) continue;
+                else if (i >= 10) break;
+                else maxMana += 5;
+            }
+
+            //Bardics Mana
+            for (int i = 0; i < Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Bardics"); i++)
+            {
+                if (i == 4 || i == 9) continue;
+                else if (i >= 10) break;
+                else maxMana += 10;
+            }
+
+            //Sorcery Mana
+            for (int i = 0; i < Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Witchcraft"); i++)
+            {
+                if (i == 4 || i == 9) continue;
+                else if (i >= 10) break;
+                else maxMana += 10;
+            }
+
+            ext.mana.Value = ext.maxMana.Value = maxMana;
             ext.armorUsed.Value = 0;
-            ModSnS.State.HasCraftedFree = false;
+            State.HasCraftedFree = false;
 
             if (Game1.player.GetFarmerExtData().hasTakenLoreWeapon.Value)
             {
@@ -623,6 +653,8 @@ namespace SwordAndSorcerySMAPI
                 if (Game1.player.knowsRecipe("DN.SnS_LightbringerArrow") && !Game1.player.knowsRecipe("DN.SnS_LightbringerBullet"))
                     Game1.player.craftingRecipes.Add("DN.SnS_LightbringerBullet", 0);
             }
+
+
         }
 
         private void Input_ButtonPressed(object sender, StardewModdingAPI.Events.ButtonPressedEventArgs e)
@@ -1439,6 +1471,11 @@ namespace SwordAndSorcerySMAPI
     {
         public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager)
         {
+            if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff))
+            {
+                __instance.GetFarmerExtData().mana.Value += 2;
+            }
+
             var ext = Game1.player.GetFarmerExtData();
             if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||
                 Game1.player.GetArmorItem() == null ||
