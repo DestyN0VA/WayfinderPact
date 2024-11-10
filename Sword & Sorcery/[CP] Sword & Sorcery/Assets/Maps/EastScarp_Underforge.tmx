@@ -1781,9 +1781,6 @@
  <tileset firstgid="8694" name="volcano_dungeon" tilewidth="16" tileheight="16" tilecount="576" columns="16">
   <image source="volcano_dungeon.png" width="256" height="576"/>
   <tile id="320">
-   <properties>
-    <property name="Water" value="I"/>
-   </properties>
    <animation>
     <frame tileid="320" duration="100"/>
     <frame tileid="321" duration="100"/>
