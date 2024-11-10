@@ -434,7 +434,7 @@
           "Category": -29,
           "Price": 10,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
-          "SpriteIndex": 31,
+          "SpriteIndex": 41,
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -449,7 +449,7 @@
           "Category": -29,
           "Price": 10,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
-          "SpriteIndex": 33,
+          "SpriteIndex": 43,
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -464,7 +464,7 @@
           "Category": -29,
           "Price": 10,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
-          "SpriteIndex": 35,
+          "SpriteIndex": 44,
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -479,7 +479,7 @@
           "Category": -29,
           "Price": 10,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
-          "SpriteIndex": 36,
+          "SpriteIndex": 46,
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
