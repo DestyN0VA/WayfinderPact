@@ -147,7 +147,7 @@
           "Edibility": 15,
           "IsDrink": false,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 110,
+          "SpriteIndex": 109,
           "ContextTags": [
             "color_blue",
             "fish_goldiethebatterypoweredfish",

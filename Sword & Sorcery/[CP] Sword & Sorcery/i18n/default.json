@@ -6468,8 +6468,8 @@ ________      ________ _   _ _______ _____
 
   // CH 4 
   "CT.Dandelion.DandelionReturns": "Thank you so terribly kindly for the rescue, @. I know it was a group effort, but it goes without saying you are the heart and soul of this little squad.$6",
-  "CT.Dandelion.DandelionSettling": "Dandelion and I have had a morning tea ritual as long as we've known each other... without it, I felt myself... slipping.$12",
-  "CT.Dandelion.DandelionShieldRepair": "Dandelion is all excited about something, and Roslin is... stressed, about that same something.$16",
+  "CT.Dandelion.DandelionSettling": "Roslin and I had tea this morning. Things are finally starting to feel back to normal.$1",
+  "CT.Dandelion.DandelionShieldRepair": "Thank you kindly for helping with repairs, @. I appreciate you muchly.$1",
   "CT.Dandelion.DandelionShieldRestored": "The Duskspire Behemoth won't stand a chance! I'm back in action, thanks to you and Mateo.",
   "CT.Dandelion.FullmetalDandelion": "When I lift, I don't count it if I'm using my metal arm. That feels like cheating.$14",
   "CT.Dandelion.DandelionPendant": "Hmm... I wonder what I'm going to do for Roslin... something grounded, but unique...$17",
@@ -6804,6 +6804,7 @@ ________      ________ _   _ _______ _____
 
   "weapon.longlivetheking-gun.name": "Long Live The King (Gun)",
   "weapon.longlivetheking-gun.description": "A gun previously wielded by Linden Hawthorn, the Prairie King. Just holding it makes you feel like you've got big shoes to fill.",
+
 
   "food.mushroomsredsauce.name": "Fried Polypore Mushrooms & Red Sauce",
   "food.mushroomsredsauce.description": "Battered ancient mushrooms coated in a hearty tomato sauce.",
@@ -7579,7 +7580,7 @@ ________      ________ _   _ _______ _____
   "HectorWedding.18": "Biróg, do you take @ as your wedded ${husband^wife^spouse}$?$1",
   "HectorWedding.19": "Look at my Eloise...",
   "HectorWedding.20": "@, do you take Biróg as your wedded wolf?$1",
-  "HectorWedding.21": "Then as your best friend, it is my pleasure to unite @ and Biróg in the bonds of marrage.$0#$b#$1I now pronounce you partners!$1",
+  "HectorWedding.21": "Then as your best friend, it is my pleasure to unite @ and Biróg in the bonds of marriage.$0#$b#$1I now pronounce you partners!$1",
   "HectorWedding.22": "Is this the part were we kiss?$9",
   "HectorWedding.23": "Yes!",
   "HectorWedding.24": "Then let's do that.$8",

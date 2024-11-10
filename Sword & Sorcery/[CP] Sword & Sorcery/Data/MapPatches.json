@@ -524,6 +524,22 @@
     },
     {
       "Action": "EditMap",
+      "Target": "Maps/EastScarp_DeepDarkEntrance",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 9,
+            "Y": 19
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 9 12 EastScarp_DeepDark"
+          }
+        }
+      ],
+    },
+    {
+      "Action": "EditMap",
       "Target": "Maps/EastScarp_DuskspireLair",
       "MapTiles": [
         {

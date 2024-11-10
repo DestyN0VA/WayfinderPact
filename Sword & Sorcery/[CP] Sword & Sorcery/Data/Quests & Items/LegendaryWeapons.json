@@ -784,7 +784,7 @@
       "Action": "EditData",
       "Target": "Data/CraftingRecipes",
       "Entries": {
-        "{{ModID}}_ElysiumBlade": "0 1/meow/0 1/false/null/{{i18n: weapon.elysium-blade.name}}"
+        "{{ModID}}_ElysiumBlade": "{{ModID}}_StygiumBlade 1 {{ModID}}_DuskspireHeart 1/meow/{{ModID}}_ElysiumBlade 1/false/null/{{i18n: weapon.elysium-blade.name}}"
       }
     },
     {
