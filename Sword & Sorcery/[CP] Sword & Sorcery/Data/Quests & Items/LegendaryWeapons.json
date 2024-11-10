@@ -5,7 +5,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_keytoscarp": {
-          "Name": "Key to Scarp",
+          "Name": "{{ModID}}_keytoscarp",
           "DisplayName": "{{i18n: weapon.keytoscarp.name}}",
           "Description": "{{i18n: weapon.keytoscarp.description}}",
           "MinDamage": 70,
@@ -20,7 +20,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 21,
           "CanBeLostOnDeath": false,
-          "Price": "30000", 
+          "Price": "30000"
         },
       }
     },
@@ -29,7 +29,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_twobecomeone": {
-          "Name": "Two Become One",
+          "Name": "{{ModID}}_twobecomeone",
           "DisplayName": "{{i18n: weapon.twobecomeone.name}}",
           "Description": "{{i18n: weapon.twobecomeone.description}}",
           "MinDamage": 100,
@@ -44,8 +44,8 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 22,
           "CanBeLostOnDeath": false,
-          "Price": "60000", 
-          
+          "Price": "60000"
+
         },
       }
     },
@@ -54,7 +54,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_savethequeen": {
-          "Name": "Save the Queen",
+          "Name": "{{ModID}}_savethequeen",
           "DisplayName": "{{i18n: weapon.savethequeen.name}}",
           "Description": "{{i18n: weapon.savethequeen.description}}",
           "MinDamage": 60,
@@ -69,7 +69,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 23,
           "CanBeLostOnDeath": false,
-          "Price": "25000", 
+          "Price": "25000"
         },
       }
     },
@@ -78,7 +78,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_oathkeeper": {
-          "Name": "Oathkeeper",
+          "Name": "{{ModID}}_oathkeeper",
           "DisplayName": "{{i18n: weapon.oathkeeper.name}}",
           "Description": "{{i18n: weapon.oathkeeper.description}}",
           "MinDamage": 80,
@@ -93,7 +93,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 24,
           "CanBeLostOnDeath": false,
-          "Price": "50000", 
+          "Price": "50000"
         },
       }
     },
@@ -102,7 +102,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_savetheking": {
-          "Name": "Save the King",
+          "Name": "{{ModID}}_savetheking",
           "DisplayName": "{{i18n: weapon.savetheking.name}}",
           "Description": "{{i18n: weapon.savetheking.description}}",
           "MinDamage": 100,
@@ -117,7 +117,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 25,
           "CanBeLostOnDeath": false,
-          "Price": "25000", 
+          "Price": "25000"
         },
       }
     },
@@ -126,7 +126,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_waytothedawn": {
-          "Name": "Way to the Dawn",
+          "Name": "{{ModID}}_waytothedawn",
           "DisplayName": "{{i18n: weapon.waytothedawn.name}}",
           "Description": "{{i18n: weapon.waytothedawn.description}}",
           "MinDamage": 130,
@@ -141,7 +141,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 26,
           "CanBeLostOnDeath": false,
-          "Price": "50000", 
+          "Price": "50000"
         },
       }
     },
@@ -150,7 +150,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_eldadagordagger": {
-          "Name": "Eldadagor Dagger",
+          "Name": "{{ModID}}_eldadagordagger",
           "DisplayName": "{{i18n: weapon.eldadagordagger.name}}",
           "Description": "{{i18n: weapon.eldadagordagger.description}}",
           "MinDamage": 30,
@@ -167,7 +167,7 @@
           "MineBaseLevel": 60,
           "MineMinLevel": 60,
           "CanBeLostOnDeath": true,
-          "Price": "5000", 
+          "Price": "5000"
         },
       }
     },
@@ -176,7 +176,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_glaewndilsword": {
-          "Name": "Glaewndil Sword",
+          "Name": "{{ModID}}_glaewndilsword",
           "DisplayName": "{{i18n: weapon.glaewndilsword.name}}",
           "Description": "{{i18n: weapon.glaewndilsword.description}}",
           "MinDamage": 40,
@@ -193,7 +193,7 @@
           "MineBaseLevel": 60,
           "MineMinLevel": 60,
           "CanBeLostOnDeath": true,
-          "Price": "5000", 
+          "Price": "5000"
         },
       }
     },
@@ -202,7 +202,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_thondrondhammer": {
-          "Name": "Thondrond Hammer",
+          "Name": "{{ModID}}_thondrondhammer",
           "DisplayName": "{{i18n: weapon.thondrondhammer.name}}",
           "Description": "{{i18n: weapon.thondrondhammer.description}}",
           "MinDamage": 50,
@@ -219,7 +219,7 @@
           "MineBaseLevel": 60,
           "MineMinLevel": 60,
           "CanBeLostOnDeath": true,
-          "Price": "5000", 
+          "Price": "5000"
         },
       }
     },
@@ -228,7 +228,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_longlivetheking": {
-          "Name": "Long Live The King",
+          "Name": "{{ModID}}_longlivetheking",
           "DisplayName": "{{i18n: weapon.longlivetheking.name}}",
           "Description": "{{i18n: weapon.longlivetheking.description}}",
           "MinDamage": 125,
@@ -251,14 +251,13 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_longlivetheking_gun": {
-          "Name": "Long Live The King (Gun)",
+          "Name": "{{ModID}}_longlivetheking_gun",
           "DisplayName": "{{i18n: weapon.longlivetheking-gun.name}}",
           "Description": "{{i18n: weapon.longlivetheking-gun.description}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 90,
           "Speed": 308, // All slingshots have this for some reason?,
-          "CustomFields":
-          {
+          "CustomFields": {
             "Bow": true,
             "Bullets": true
           }
@@ -270,7 +269,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_spellbinder": {
-          "Name": "Spellbinder",
+          "Name": "{{ModID}}_spellbinder",
           "DisplayName": "{{i18n: weapon.spellbinder.name}}",
           "Description": "{{i18n: weapon.spellbinder.description}}",
           "MinDamage": 40,
@@ -285,7 +284,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 65,
           "CanBeLostOnDeath": true,
-          "Price": "15000", 
+          "Price": "15000"
         },
       }
     },
@@ -294,7 +293,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_threewishes": {
-          "Name": "Three Wishes",
+          "Name": "{{ModID}}_threewishes",
           "DisplayName": "{{i18n: weapon.threewishes.name}}",
           "Description": "{{i18n: weapon.threewishes.description}}",
           "MinDamage": 70,
@@ -309,7 +308,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 66,
           "CanBeLostOnDeath": true,
-          "Price": "15000", 
+          "Price": "15000"
         },
       }
     },
@@ -318,7 +317,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_ladyluck": {
-          "Name": "Lady Luck",
+          "Name": "{{ModID}}_ladyluck",
           "DisplayName": "{{i18n: weapon.ladyluck.name}}",
           "Description": "{{i18n: weapon.ladyluck.description}}",
           "MinDamage": 70,
@@ -333,7 +332,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 67,
           "CanBeLostOnDeath": true,
-          "Price": "15000", 
+          "Price": "15000"
         },
       }
     },
@@ -342,7 +341,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_mrhandy": {
-          "Name": "Mister Handy",
+          "Name": "{{ModID}}_mrhandy",
           "DisplayName": "{{i18n: weapon.mrhandy.name}}",
           "Description": "{{i18n: weapon.mrhandy.description}}",
           "MinDamage": 30,
@@ -359,7 +358,7 @@
           "MineBaseLevel": 60,
           "MineMinLevel": 60,
           "CanBeLostOnDeath": true,
-          "Price": "5000", 
+          "Price": "5000"
         },
       }
     },
@@ -368,7 +367,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_bondofflame": {
-          "Name": "Bond of Flame",
+          "Name": "{{ModID}}_bondofflame",
           "DisplayName": "{{i18n: weapon.bondofflame.name}}",
           "Description": "{{i18n: weapon.bondofflame.description}}",
           "MinDamage": 80,
@@ -383,7 +382,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 69,
           "CanBeLostOnDeath": true,
-          "Price": "15000", 
+          "Price": "15000"
         },
       }
     },
@@ -392,7 +391,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_destinysembrace": {
-          "Name": "Destiny's Embrace",
+          "Name": "{{ModID}}_destinysembrace",
           "DisplayName": "{{i18n: weapon.destinysembrace.name}}",
           "Description": "{{i18n: weapon.destinysembrace.description}}",
           "MinDamage": 60,
@@ -407,7 +406,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 70,
           "CanBeLostOnDeath": true,
-          "Price": "15000", 
+          "Price": "15000"
         },
       }
     },
@@ -416,7 +415,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_sweetmemories": {
-          "Name": "Sweet Memories",
+          "Name": "{{ModID}}_sweetmemories",
           "DisplayName": "{{i18n: weapon.sweetmemories.name}}",
           "Description": "{{i18n: weapon.sweetmemories.description}}",
           "MinDamage": 60,
@@ -431,7 +430,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 71,
           "CanBeLostOnDeath": true,
-          "Price": "15000", 
+          "Price": "15000"
         },
       }
     },
@@ -440,7 +439,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_axewaquestion": {
-          "Name": "Axe You A Question",
+          "Name": "{{ModID}}_axewaquestion",
           "DisplayName": "{{i18n: weapon.axewaquestion.name}}",
           "Description": "{{i18n: weapon.axewaquestion.description}}",
           "MinDamage": 40,
@@ -457,7 +456,7 @@
           "MineBaseLevel": 60,
           "MineMinLevel": 60,
           "CanBeLostOnDeath": true,
-          "Price": "5000", 
+          "Price": "5000"
         },
       }
     },
@@ -466,7 +465,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_guardianbell": {
-          "Name": "Guardian Bell",
+          "Name": "{{ModID}}_guardianbell",
           "DisplayName": "{{i18n: weapon.guardianbell.name}}",
           "Description": "{{i18n: weapon.guardianbell.description}}",
           "MinDamage": 70,
@@ -481,7 +480,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 73,
           "CanBeLostOnDeath": true,
-          "Price": "15000", 
+          "Price": "15000"
         },
       }
     },
@@ -490,7 +489,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_absolem": {
-          "Name": "Absolem",
+          "Name": "{{ModID}}_absolem",
           "DisplayName": "{{i18n: weapon.absolem.name}}",
           "Description": "{{i18n: weapon.absolem.description}}",
           "MinDamage": 60,
@@ -507,7 +506,7 @@
           "MineBaseLevel": 80,
           "MineMinLevel": 80,
           "CanBeLostOnDeath": true,
-          "Price": "5000", 
+          "Price": "5000"
         },
       }
     },
@@ -516,7 +515,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_mallymkun": {
-          "Name": "Mallymkun",
+          "Name": "{{ModID}}_mallymkun",
           "DisplayName": "{{i18n: weapon.mallymkun.name}}",
           "Description": "{{i18n: weapon.mallymkun.description}}",
           "MinDamage": 80,
@@ -533,7 +532,7 @@
           "MineBaseLevel": 80,
           "MineMinLevel": 80,
           "CanBeLostOnDeath": true,
-          "Price": "7000", 
+          "Price": "7000"
         },
       }
     },
@@ -542,7 +541,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_chilisauce": {
-          "Name": "ChiliSauce",
+          "Name": "{{ModID}}_chilisauce",
           "DisplayName": "{{i18n: weapon.chilisauce.name}}",
           "Description": "{{i18n: weapon.chilisauce.description}}",
           "MinDamage": 40,
@@ -559,7 +558,7 @@
           "MineBaseLevel": 60,
           "MineMinLevel": 60,
           "CanBeLostOnDeath": true,
-          "Price": "5000", 
+          "Price": "5000"
         },
       }
     },
@@ -568,7 +567,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_PaladinShield": {
-          "Name": "Paladin Shield",
+          "Name": "{{ModID}}_PaladinShield",
           "DisplayName": "{{i18n: weapon.paladin-shield.name}}",
           "Description": "{{i18n: weapon.paladin-shield.description}}",
           "MinDamage": 40,
@@ -583,7 +582,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 16,
           "CanBeLostOnDeath": false,
-          "Price": "5000", 
+          "Price": "5000",
           "CustomFields": { "{{ModID}}_Shield": true }
         },
       }
@@ -593,7 +592,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_ArtificerShield": {
-          "Name": "Artificer Shield",
+          "Name": "{{ModID}}_ArtificerShield",
           "DisplayName": "{{i18n: weapon.artificer-shield.name}}",
           "Description": "{{i18n: weapon.artificer-shield.description}}",
           "MinDamage": 40,
@@ -608,7 +607,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 103,
           "CanBeLostOnDeath": false,
-          "Price": "5000", 
+          "Price": "5000",
           "CustomFields": { "{{ModID}}_Shield": true }
         },
       }
@@ -618,7 +617,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_DruidShield": {
-          "Name": "Druid Shield",
+          "Name": "{{ModID}}_DruidShield",
           "DisplayName": "{{i18n: weapon.druid-shield.name}}",
           "Description": "{{i18n: weapon.druid-shield.description}}",
           "MinDamage": 40,
@@ -633,7 +632,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 104,
           "CanBeLostOnDeath": false,
-          "Price": "5000", 
+          "Price": "5000",
           "CustomFields": { "{{ModID}}_Shield": true }
         },
       }
@@ -643,7 +642,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_BardShield": {
-          "Name": "Bard Shield",
+          "Name": "{{ModID}}_BardShield",
           "DisplayName": "{{i18n: weapon.bard-shield.name}}",
           "Description": "{{i18n: weapon.bard-shield.description}}",
           "MinDamage": 40,
@@ -658,7 +657,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 105,
           "CanBeLostOnDeath": false,
-          "Price": "5000", 
+          "Price": "5000",
           "CustomFields": { "{{ModID}}_Shield": true }
         },
       }
@@ -668,7 +667,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_SorcererShield": {
-          "Name": "Sorcerer Shield",
+          "Name": "{{ModID}}_SorcererShield",
           "DisplayName": "{{i18n: weapon.sorcerer-shield.name}}",
           "Description": "{{i18n: weapon.sorcerer-shield.description}}",
           "MinDamage": 40,
@@ -683,7 +682,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 106,
           "CanBeLostOnDeath": false,
-          "Price": "5000", 
+          "Price": "5000",
           "CustomFields": { "{{ModID}}_Shield": true }
         },
       }
@@ -693,7 +692,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_SteelShield": {
-          "Name": "Steel Shield",
+          "Name": "{{ModID}}_SteelShield",
           "DisplayName": "{{i18n: weapon.steel-shield.name}}",
           "Description": "{{i18n: weapon.steel-shield.description}}",
           "MinDamage": 15,
@@ -702,7 +701,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 107,
           "CanBeLostOnDeath": false,
-          "Price": "5000", 
+          "Price": "5000",
           "CustomFields": { "{{ModID}}_Shield": true }
         },
       }
@@ -712,7 +711,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_LltkShield": {
-          "Name": "Long Live the King (Shield)",
+          "Name": "{{ModID}}_LltkShield",
           "DisplayName": "{{i18n: weapon.lltk-shield.name}}",
           "Description": "{{i18n: weapon.lltk-shield.description}}",
           "MinDamage": 100,
@@ -727,7 +726,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 108,
           "CanBeLostOnDeath": false,
-          "Price": "5000", 
+          "Price": "5000",
           "CustomFields": { "{{ModID}}_Shield": true }
         },
       }
@@ -737,7 +736,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_StygiumBlade": {
-          "Name": "Stygium Blade",
+          "Name": "{{ModID}}_StygiumBlade",
           "DisplayName": "{{i18n: weapon.stygium-blade.name}}",
           "Description": "{{i18n: weapon.stygium-blade.description}}",
           "MinDamage": 80,
@@ -752,7 +751,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/StygiumTools.png}}",
           "SpriteIndex": 0,
           "CanBeLostOnDeath": false,
-          "Price": 100000, 
+          "Price": 100000
         },
       }
     },
@@ -761,7 +760,7 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_ElysiumBlade": {
-          "Name": "Elysium Blade",
+          "Name": "{{ModID}}_ElysiumBlade",
           "DisplayName": "{{i18n: weapon.elysium-blade.name}}",
           "Description": "{{i18n: weapon.elysium-blade.description}}",
           "MinDamage": 100,
@@ -776,7 +775,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/BlessedTools.png}}",
           "SpriteIndex": 0,
           "CanBeLostOnDeath": false,
-          "Price": 25000, 
+          "Price": 25000
         },
       }
     },
