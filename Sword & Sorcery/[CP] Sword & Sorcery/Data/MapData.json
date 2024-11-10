@@ -767,6 +767,12 @@
               "Id": "(O)139_UnderFish",
               "ItemId": "(O)139"
             },
+            {
+              "Season": "spring, summer, fall, winter",
+              "FishAreaId": "UnderFishLavaPool",
+              "Id": "(O)162_UnderFishLavaPool",
+              "ItemId": "(O)162"
+            },
           ],
           "Forage": [],
           "CustomFields": {}
