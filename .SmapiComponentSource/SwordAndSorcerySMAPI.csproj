@@ -15,9 +15,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Leclair.Stardew.ModManifestBuilder" Version="2.1.0" />
-    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
-    <PackageReference Include="Pathoschild.Stardew.ModTranslationClassBuilder" Version="2.0.1" />
+    <PackageReference Include="Leclair.Stardew.ModManifestBuilder" Version="2.4.0" />
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.3.2" />
+    <PackageReference Include="Pathoschild.Stardew.ModTranslationClassBuilder" Version="2.2.0" />
   </ItemGroup>
 
 
@@ -27,21 +27,6 @@
     <StartProgram>$(GamePath)\StardewModdingAPI.exe</StartProgram>
     <StartWorkingDirectory>$(GamePath)</StartWorkingDirectory>
   </PropertyGroup>
-
-	<!-- This fixes deployment when I use an environment variable to override my game path. No idea why -->
-	<!--
-	<PropertyGroup Condition="'$(OS)' == 'Windows_NT'">
-		<StartProgram>$(GamePath)\StardewModdingAPI.exe</StartProgram>
-		<StartWorkingDirectory>$(GamePath)</StartWorkingDirectory>
-	</PropertyGroup>
-	-->
-	
-	<!-- mac workaround, remove when updating mod build config -->
-	<PropertyGroup Condition="'$(OS)' != 'Windows_NT'">
-		<StartAction>Program</StartAction>
-		<StartProgram>/Users/spacechase0/Library/Application Support/Steam/steamapps/common/Stardew Valley/Contents/MacOS\StardewModdingAPI</StartProgram>
-		<StartWorkingDirectory>/Users/spacechase0/Library/Application Support/Steam/steamapps/common/Stardew Valley/Contents/MacOS</StartWorkingDirectory>
-	</PropertyGroup>
 
 	<ItemGroup>
 		<SMAPIDependency Include="spacechase0.SpaceCore" Version="1.18.0-sdvalpha" Reference="true" />

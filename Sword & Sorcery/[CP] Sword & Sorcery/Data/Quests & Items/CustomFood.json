@@ -1283,7 +1283,7 @@
       }
     },
     // CRAFTING RECIPES 
-    {
+    /*
       "Action": "EditData",
       "Target": "Data/CraftingRecipes",
       "Entries": {
@@ -1299,6 +1299,7 @@
         "{{ModID}}_toirneachpotion": "{{ModID}}_AirEssence 10 {{ModID}}_WaterEssence 10 769 10/what is this for?/{{ModID}}_toirneachpotion 1/false/{{i18n:food.crafting._toirneachpotion}}",
       }
     },
+    */
     // CUSTOM POTION CATEGORY
     {
       "Action": "EditData",

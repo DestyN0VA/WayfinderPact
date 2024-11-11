@@ -167,8 +167,23 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
             //Sprite.animateOnce(time);
         }
 
-        ModSnS.DuskspireDeathPos = Tile - new Vector2(4, 4);
+        ModSnS.DuskspireDeathPos = Position - new Vector2(4, 4) * 64;
         lastPos = Position;
+    }
+
+    protected override void sharedDeathAnimation()
+    {
+        if (Name != "Duskspire Remnant")
+            Game1.playSound("SnS.DuskspireDeath");
+
+        TemporaryAnimatedSprite DuskspireDeath = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 0, 96, 96), 75, 84, 0, ModSnS.DuskspireDeathPos, false, false) { scale = 4 };
+        TemporaryAnimatedSprite DuskspireHeart = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 2016, 96, 96), 75, 16, 50, ModSnS.DuskspireDeathPos, false, false) { scale = 4 };
+        currentLocation.TemporarySprites.Add(DuskspireDeath);
+        DelayedAction.removeTemporarySpriteAfterDelay(currentLocation, DuskspireDeath.id, 6300);
+        DelayedAction.addTemporarySpriteAfterDelay(DuskspireHeart, currentLocation, 6300);
+        DelayedAction.removeTemporarySpriteAfterDelay(currentLocation, DuskspireHeart.id, 12300);
+        DelayedAction.functionAfterDelay(() => Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_DuskspireHeart"), Position, Game1.down, currentLocation), 12300);
+        currentLocation.modData.Add("DN.SnS_DuskspireFaught", "true");
     }
 
     private void LaughEvent_onEvent()
@@ -195,6 +210,13 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
             frames.Add(new(40 + i, 75));
         }
         Sprite.setCurrentAnimation(frames);
+        foreach (Farmer f in Game1.getAllFarmers().Where(f => f.currentLocation.Name == "EastScarp_DuskspireLair"))
+        {
+            if (f.GetBoundingBox().Intersects(GetBoundingBox()))
+            {
+                f.takeDamage(DamageToFarmer, false, this);
+            }
+        }
         flippedSwing = arg;
     }
 

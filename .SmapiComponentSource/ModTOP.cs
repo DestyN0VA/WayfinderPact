@@ -1164,6 +1164,21 @@ namespace SwordAndSorcerySMAPI
                     CastSpell(Color.Aqua, () => Spells.PocketDimension());
                 }
             });
+
+            /*Ability.Abilities.Add("spell_fireball", new Ability("spell_fireball")
+            {
+                Name = I18n.Witchcraft_Spell_Fireball_Name,
+                Description = I18n.Witchcraft_Spell_Fireball_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
+                SpriteIndex = 10,
+                ManaCost = () => 5,
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Fireball",
+                UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
+                Function = () =>
+                {
+                    CastSpell(Color.Red, () => Spells.Fireball());
+                }
+            });*/
         }
     }
 

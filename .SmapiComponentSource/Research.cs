@@ -3,11 +3,8 @@ using Microsoft.Xna.Framework.Graphics;
 using SpaceCore.UI;
 using StardewValley;
 using StardewValley.Menus;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -16,6 +13,7 @@ namespace SwordAndSorcerySMAPI
         public enum ResearchType
         {
             CraftingRecipe,
+            AlchemyRecipe,
             Spell,
             Other,
         }
@@ -135,6 +133,7 @@ namespace SwordAndSorcerySMAPI
                 switch (entry.Value.Type)
                 {
                     case ResearchEntry.ResearchType.CraftingRecipe: name = I18n.Research_CraftingRecipe(entry.Value.Name); break;
+                    case ResearchEntry.ResearchType.AlchemyRecipe: name = I18n.Research_AlchemyRecipe(entry.Value.Name); break;
                     case ResearchEntry.ResearchType.Spell: name = I18n.Research_Spell(entry.Value.Name); break;
                     case ResearchEntry.ResearchType.Other: name = I18n.Research_Other(entry.Value.Name); break;
                 }

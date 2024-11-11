@@ -213,7 +213,7 @@ namespace SwordAndSorcerySMAPI
                         {
                             foreach ( var battler in BattlerData )
                             {
-                                if (battler.Value.Health == 0 )
+                                if (battler.Value.Health <= 0 )
                                 {
                                     continue;
                                     //Battlers.First(c => c.Name == battler.Key).stopGlowing();
@@ -329,20 +329,20 @@ namespace SwordAndSorcerySMAPI
         }
         public void receiveKeyPress(Keys k)
         {
-            if (CurrentTurn.Name == "Duskspire" || MovingActorForTurn >= -1 && MovingActorForTurn <= 1)
+            if (CurrentTurn.Name == "Duskspire" || MovingActorForTurn >= -1 && MovingActorForTurn <= 1 || waitingForProjectiles)
                 return;
 
-            if (k == Keys.Up)
+            if (k == Keys.Up || k == Keys.W || k == Utility.mapGamePadButtonToKey(Buttons.DPadUp) || k == Utility.mapGamePadButtonToKey(Buttons.LeftThumbstickUp))
             {
                 if (--CurrentChoice < 0)
                     CurrentChoice += 4;
             }
-            else if (k == Keys.Down)
+            else if (k == Keys.Down || k == Keys.S || k == Utility.mapGamePadButtonToKey(Buttons.DPadDown) || k == Utility.mapGamePadButtonToKey(Buttons.LeftThumbstickDown))
             {
                 if (++CurrentChoice > 3)
                     CurrentChoice -= 4;
             }
-            else if (k == Utility.mapGamePadButtonToKey(Buttons.A))
+            else if (k == Utility.mapGamePadButtonToKey(Buttons.A) || k == Keys.Enter)
             {
                 float delay = 0;
                 switch (CurrentChoice)
