@@ -96,7 +96,7 @@
             },
             "{{ModId}}_Recipe_VerdantPotion":
             {
-                "Type": "CraftingRecipe",
+                "Type": "AlchemyRecipe",
                 "Value": "{{ModId}}_verdantpotion",
                 "Name": "{{i18n: food.verdantpotion.name}}",
                 "DocPages": [

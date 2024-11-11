@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.Xna.Framework;
 using SpaceCore;
 using StardewValley;
 using StardewValley.Menus;
@@ -241,11 +242,33 @@ namespace SwordAndSorcerySMAPI
             chest.GlobalInventoryId = invName;
             chest.ShowMenu();
         }
+
         public static void PocketDimension()
         {
             ModSnS.State.PocketDimensionLocation = Game1.player.currentLocation.NameOrUniqueName;
             ModSnS.State.PocketDimensionCoordinates = Game1.player.TilePoint;
             Game1.player.currentLocation.performTouchAction($"MagicWarp EastScarp_PocketDimension 15 8", Game1.player.getStandingPosition());
+        }
+
+        public static void Fireball()
+        {
+            var pos = Game1.getMousePosition().ToVector2();
+            var playerPos = Game1.player.Position;
+
+            Vector2 m = new((pos.X - playerPos.X) / 64, (pos.Y - playerPos.Y) / 64);
+
+            float d = Vector2.Distance(pos / 64, playerPos / 64);
+            TemporaryAnimatedSprite fireball = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("").Name, new(0, 0, 16, 16), 1000, 1, 10000, Game1.player.Position, false, false)
+            {
+                motion = m / 1500,
+                lightId = "FireBall",
+                lightcolor = Color.Red,
+                scale = 4
+            };
+
+            Game1.player.currentLocation.TemporarySprites.Add(fireball);
+            DelayedAction.removeTemporarySpriteAfterDelay(Game1.player.currentLocation, fireball.id, 1500);
+            DelayedAction.functionAfterDelay(null, 1500);
         }
     }
 }

@@ -22,6 +22,7 @@ using StardewValley.Monsters;
 using StardewValley.SpecialOrders;
 using StardewValley.SpecialOrders.Objectives;
 using StardewValley.Tools;
+using SwordAndSorcerySMAPI.Alchemy;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -242,8 +243,6 @@ namespace SwordAndSorcerySMAPI
         private static PerScreen<State> _state = new(() => new State());
         public static State State => _state.Value;
 
-        public static Texture2D ArmorSlotBackground;
-        public static Texture2D OffhandSlotBackground;
         public static Texture2D ShieldItemTexture;
         public static Texture2D SwordOverlay;
 
@@ -257,6 +256,7 @@ namespace SwordAndSorcerySMAPI
         public static IRadialMenuApi radial;
 
         public static Vector2 DuskspireDeathPos;
+        public static int AetherRestoreTimer = 0;
 
         private Harmony harmony;
 
@@ -373,30 +373,6 @@ namespace SwordAndSorcerySMAPI
                 State.DoFinale = true;
                 @event.CurrentCommand++;
             });
-
-            ArmorSlotBackground = Helper.ModContent.Load<Texture2D>("assets/armor-bg.png");
-            OffhandSlotBackground = Helper.ModContent.Load<Texture2D>("assets/offhand-bg.png");
-            string[] recolors =
-            [
-                "daisyniko.earthyinterface",
-                "shinchan.cppurpleinterface",
-                "enteis.woodeninterfeis",
-                "thefrenchdodo.sakurainterfaceredux",
-                "nom0ri.vintageuifix",
-                "Sqbr.StarryBlueUI",
-                "Bos.UIInterface",
-            ];
-            foreach (var recolor in recolors)
-            {
-                if (Helper.ModRegistry.IsLoaded( recolor ) && File.Exists(Path.Combine(Helper.DirectoryPath, "assets", "armor-bg", recolor + ".png")))
-                {
-                    ArmorSlotBackground = Helper.ModContent.Load<Texture2D>($"assets/armor-bg/{recolor}.png");
-                }
-                if (Helper.ModRegistry.IsLoaded( recolor ) && File.Exists(Path.Combine(Helper.DirectoryPath, "assets", "armor-bg", recolor + "_offhand.png")))
-                {
-                    OffhandSlotBackground = Helper.ModContent.Load<Texture2D>($"assets/armor-bg/{recolor}_offhand.png");
-                }
-            }
             ShieldItemTexture = Helper.ModContent.Load<Texture2D>("assets/shield-item.png");
             SwordOverlay = Helper.ModContent.Load<Texture2D>("assets/SwordOverlay.png");
 
@@ -508,6 +484,7 @@ namespace SwordAndSorcerySMAPI
             new ModUP(Monitor, ModManifest, Helper).Entry();
             new ModTOP(Monitor, ModManifest, Helper).Entry();
             new MercenaryEngine();
+            new AlchemyEngine();
 
             InitArsenal();
         }
@@ -600,6 +577,10 @@ namespace SwordAndSorcerySMAPI
         {
             var ext = Game1.player.GetFarmerExtData();
 
+
+            if (Game1.shortDayNameFromDayOfSeason(Game1.dayOfMonth) == "Mon")
+                Game1.getLocationFromName("EastScarp_DuskspireLair").modData.Remove("DN.SnS_DuskspireFaught");
+
             int maxMana = 0;
 
             //Artificer Mana
@@ -630,6 +611,11 @@ namespace SwordAndSorcerySMAPI
                 if (i == 4 || i == 9) continue;
                 else if (i >= 10) break;
                 else maxMana += 10;
+            }
+
+            if (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff))
+            {
+                maxMana += 75;
             }
 
             ext.mana.Value = ext.maxMana.Value = maxMana;
@@ -765,6 +751,46 @@ namespace SwordAndSorcerySMAPI
 
         private void Content_AssetRequested(object sender, StardewModdingAPI.Events.AssetRequestedEventArgs e)
         {
+            if (e.NameWithoutLocale.IsEquivalentTo("DN.SnS/AlchemyRecipes"))
+                e.LoadFrom(() => new Dictionary<string, AlchemyData>(), StardewModdingAPI.Events.AssetLoadPriority.Exclusive);
+         
+            string[] recolors =
+            [
+                "daisyniko.earthyinterface",
+                "shinchan.cppurpleinterface",
+                "enteis.woodeninterfeis",
+                "thefrenchdodo.sakurainterfaceredux",
+                "nom0ri.vintageuifix",
+                "Sqbr.StarryBlueUI",
+                "Bos.UIInterface",
+            ];
+
+            if (e.NameWithoutLocale.IsEquivalentTo("DN.SnS/ArmorSlot"))
+            {
+                string ArmorSlot = "assets/armor-bg.png";
+                foreach (var recolor in recolors)
+                {
+                    if (Helper.ModRegistry.IsLoaded(recolor) && File.Exists(Path.Combine(Helper.DirectoryPath, "assets", "armor-bg", recolor + ".png")))
+                    {
+                        ArmorSlot = $"assets/armor-bg/{recolor}.png";
+                    }
+                }
+                e.LoadFromModFile<Texture2D>(ArmorSlot, StardewModdingAPI.Events.AssetLoadPriority.Exclusive);
+            }
+
+            if (e.NameWithoutLocale.IsEquivalentTo("DN.SnS/OffhandSlot"))
+            {
+                string OffhandSlot = "assets/offhand-bg.png";
+                foreach (var recolor in recolors)
+                {
+                    if (Helper.ModRegistry.IsLoaded(recolor) && File.Exists(Path.Combine(Helper.DirectoryPath, "assets", "armor-bg", recolor + "_offhand.png")))
+                    {
+                        OffhandSlot = $"assets/armor-bg/{recolor}_offhand.png";
+                    }
+                }
+                e.LoadFromModFile<Texture2D>(OffhandSlot, StardewModdingAPI.Events.AssetLoadPriority.Exclusive);
+            }
+
             /*
             if (e.NameWithoutLocale.IsEquivalentTo("Data/ObjectInformation"))
             {
@@ -964,13 +990,13 @@ namespace SwordAndSorcerySMAPI
                 $"{ModManifest.UniqueID}_Armor",
                 item => item == null || item.IsArmorItem(),
                 I18n.UiSlot_Armor,
-                ArmorSlotBackground);
+                Game1.content.Load<Texture2D>("DN.SnS/ArmorSlot"));
 
             sc.RegisterEquipmentSlot(ModManifest,
                 $"{ModManifest.UniqueID}_Offhand",
                 item => item == null || item is MeleeWeapon,
                 I18n.UiSlot_Offhand,
-                OffhandSlotBackground);
+                Game1.content.Load<Texture2D>("DN.SnS/OffhandSlot"));
 
             // This late because of accessing SpaceCore's local variable API
             harmony.PatchAll(Assembly.GetExecutingAssembly());
@@ -1047,13 +1073,30 @@ namespace SwordAndSorcerySMAPI
                         {
                             if (!State.FinishedBoxxDeathAnim)
                             {
-                                Game1.player.GetCurrentMercenaries().Clear();
-                                Game1.screenGlowOnce(Color.White, false);
-                                Game1.changeMusicTrack("SnS.DuskspireDeath");
-                                TemporaryAnimatedSprite DuskspireDeath = new(Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 0, 96, 96), 75, 84, 0, new(14 * Game1.tileSize, 13 * Game1.tileSize), false, false) { scale = 4 };
-                                Game1.getLocationFromName("EastScarp_DuskspireLair").TemporarySprites.Add(DuskspireDeath);
                                 State.FinishedBoxxDeathAnim = true;
-                                Game1.pauseThenDoFunction(6300, Phase2EndP1);
+                                Game1.screenGlowOnce(Color.White, false);
+                            }
+
+                            if (Game1.getAllFarmers().Any(f => f.currentLocation == Game1.getLocationFromName("EastScarp_DuskspireLair") && f.Items.Any(f => f.QualifiedItemId == "(O)DN.SnS_DuskspireHeart")))
+                            {
+                                Game1.player.GetCurrentMercenaries().Clear();// This is really bad. Pathos don't kill me.
+                                var modInfo = ModSnS.instance.Helper.ModRegistry.Get("DN.SnS");
+                                var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
+                                var partnerInfos = pack.ReadJsonFile<Dictionary<string, FinalePartnerInfo>>("Data/FinalePartners.json");
+
+                                FinalePartnerInfo partnerInfo = partnerInfos["default"];
+
+                                foreach (string key in partnerInfos.Keys)
+                                {
+                                    if (Game1.player.friendshipData.TryGetValue(key, out var data) && data.IsDating())
+                                    {
+                                        partnerInfo = partnerInfos[key];
+                                        break;
+                                    }
+                                }
+                                Game1.PlayEvent(partnerInfo.VictoryEventId, checkPreconditions: false, checkSeen: false);
+
+                                State.FinaleBoss = null;
                             }
                         }
                     }
@@ -1216,35 +1259,6 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        private static void Phase2EndP1()
-        {
-            TemporaryAnimatedSprite DuskspireHeart = new(instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 2016, 96, 96), 75, 16, 26, new(14 * Game1.tileSize, 13 * Game1.tileSize), false, false) { scale = 4 };
-            Game1.getLocationFromName("EastScarp_DuskspireLair").TemporarySprites.Add(DuskspireHeart);
-            Game1.pauseThenDoFunction(1950, Phase2End);
-        }
-
-        private static void Phase2End()
-        {
-            // This is really bad. Pathos don't kill me.
-            var modInfo = ModSnS.instance.Helper.ModRegistry.Get("DN.SnS");
-            var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
-            var partnerInfos = pack.ReadJsonFile<Dictionary<string, FinalePartnerInfo>>("Data/FinalePartners.json");
-
-            FinalePartnerInfo partnerInfo = partnerInfos["default"];
-
-            foreach (string key in partnerInfos.Keys)
-            {
-                if (Game1.player.friendshipData.TryGetValue(key, out var data) && data.IsDating())
-                {
-                    partnerInfo = partnerInfos[key];
-                    break;
-                }
-            }
-            Game1.PlayEvent(partnerInfo.VictoryEventId, checkPreconditions: false, checkSeen: false);
-
-            State.FinaleBoss = null;
-        }
-
         [MethodImpl(MethodImplOptions.NoInlining)]
         internal static void CastAbility(Ability abil)
         {
@@ -1271,6 +1285,11 @@ namespace SwordAndSorcerySMAPI
             {
                 State.CanRepairArmor = false;
                 ext.armorUsed.Value = Math.Max(0, ext.armorUsed.Value - armorAmount.Value / 5);
+            }
+
+            if (e.NewLocation.Name == "EastScarp_DuskspireLair" && !e.NewLocation.modData.ContainsKey("DN.SnS_DuskspireFaught") && Game1.player.eventsSeen.Contains("SnS.Ch4.Finale") && !e.NewLocation.characters.Any(m => m.Name == "Duskspire Remnant"))
+            {
+                e.NewLocation.characters.Add(new DuskspireMonster(new Vector2(18, 13) * Game1.tileSize, "Duskspire Remnant"));
             }
         }
 
@@ -1471,10 +1490,14 @@ namespace SwordAndSorcerySMAPI
     {
         public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager)
         {
-            if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff))
+
+            if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && ModSnS.AetherRestoreTimer <= 0)
             {
-                __instance.GetFarmerExtData().mana.Value += 2;
+                ModSnS.AetherRestoreTimer = 2000;
+                __instance.GetFarmerExtData().mana.Value += 5;
             }
+            else
+                ModSnS.AetherRestoreTimer -= Game1.currentGameTime.ElapsedGameTime.Milliseconds;
 
             var ext = Game1.player.GetFarmerExtData();
             if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||

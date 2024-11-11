@@ -1,14 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using SpaceCore;
 using SpaceCore.UI;
 using StardewValley;
 using StardewValley.Menus;
+using SwordAndSorcerySMAPI.Alchemy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 using Image = SpaceCore.UI.Image;
 
 namespace SwordAndSorcerySMAPI
@@ -22,6 +21,7 @@ namespace SwordAndSorcerySMAPI
         private AdventureBar bar;
 
         private Image grimoire;
+        private Image alchemy;
 
         public AdventureBarConfigureMenu(bool everything = false)
             : base(Game1.uiViewport.Width / 2 - 432 / 2, Game1.uiViewport.Height / 2 - 432 / 2, 432, 432, true)
@@ -74,8 +74,16 @@ namespace SwordAndSorcerySMAPI
                     Callback = (elem) => SetChildMenu(new ResearchMenu()),
                 };
                 container.AddChild(grimoire);
-            }
 
+                alchemy = new()
+                {
+                    LocalPosition = new(width + 32, 96),
+                    Texture = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/stone.png"),
+                    Scale = 4,
+                    Callback = (elem) => SetChildMenu(new FancyAlchemyMenu())
+                };
+                container.AddChild(alchemy);
+            }
 
             bar = new AdventureBar(editing: true);
             bar.xPositionOnScreen = xPositionOnScreen - bar.width - 12;
@@ -128,6 +136,11 @@ namespace SwordAndSorcerySMAPI
             if (grimoire?.Hover ?? false)
             {
                 drawHoverText(b, I18n.OpenGrimoire(), Game1.dialogueFont);
+            }
+
+            if (alchemy?.Hover ?? false)
+            {
+                drawHoverText(b, I18n.OpenAlchemy(), Game1.dialogueFont);
             }
 
             drawMouse(b);

@@ -220,7 +220,7 @@
   "witchcraft.profession.spell-damage.name": "Magus",
   "witchcraft.profession.spell-damage.description": "+25% spell damage",
   "witchcraft.profession.philosophers-stone.name": "Master Alchemist",
-  "witchcraft.profession.philosophers-stone.description": "Access to the Philosopher's Stone on the Adventure Bar Menu^Transmute essences from one type to another",
+  "witchcraft.profession.philosophers-stone.description": "All Alchemy recipes have their essence requirements halved.",
   "witchcraft.profession.no-teleport-cost.name": "Master Alkahestrist",
   "witchcraft.profession.no-teleport-cost.description": "Teleportation circle use cost reduced to 0",
   "witchcraft.profession.spell-damage-2.name": "Abjurant Champion",
@@ -288,8 +288,10 @@
   "paladin-skill.profession.shield-retribution.description": "If you have Armor Points when you take damage and have a Shield equipped, automatically deal damage back at your enemies.",
 
   "open-grimoire": "Open the Witchcraft Grimoire",
+  "open-alchemy":  "Use the Philosopher's Stone. (Alchemy)",
 
   "research.crafting-recipe": "Recipe: {{name}}",
+  "research.alchemy-recipe":  "Alchemy: {{name}}",
   "research.spell": "Spell: {{name}}",
   "research.other": "Other: {{name}}",
   "research.learn": "Learn",

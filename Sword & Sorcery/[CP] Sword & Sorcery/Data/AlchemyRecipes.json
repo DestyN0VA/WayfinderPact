@@ -1,0 +1,72 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "DN.SnS/AlchemyRecipes",
+      "Entries": {
+        "FireEssence_Transmutation": {
+          "OutputItem": "(O){{ModID}}_FireEssence",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModId}}_WaterEssence": 1 //temporarily 1. Currently multiple of the same item don't work
+          }
+        },
+        "WaterEssence_Transmutation": {
+          "OutputItem": "(O){{ModID}}_WaterEssence",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_AirEssence": 1 //temporarily 1. Currently multiple of the same item don't work
+          }
+        },
+        "AirEssence_Transmutation": {
+          "OutputItem": "(O){{ModID}}_AirEssence",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_EarthEssence": 1 //temporarily 1. Currently multiple of the same item don't work
+          }
+        },
+        "EarthEssence_Transmutation": {
+          "OutputItem": "(O){{ModID}}_EarthEssence",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_druidicessence": 1 //temporarily 1. Currently multiple of the same item don't work
+          }
+        },
+        "DruidicEssence_Transmutation": {
+          "OutputItem": "(O){{ModID}}_druidicessence",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O)768": 1 //temporarily 1. Currently multiple of the same item don't work
+          }
+        },
+        "VoidEssence_Transmutation": {
+          "OutputItem": "(O)768",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O)769": 1 //temporarily 1. Currently multiple of the same item don't work
+          }
+        },
+        "SolarEssence_Transmutation": {
+          "OutputItem": "(O)769",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_FireEssence": 1 //temporarily 1. Currently multiple of the same item don't work
+          }
+        },
+        "VerdantPotion": {
+          "OutputItem": "(O){{ModID}}_verdantpotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_EarthEssence": 1,
+            "(O){{ModID}}_AirEssence": 1,
+            "(O){{ModID}}_WaterEssence": 1,
+            "(O){{ModID}}_FireEssence": 1,
+            "(O)768": 1,
+            "(O)769": 1
+          },
+          "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_VerdantPotion"
+        }
+      }
+    }
+  ]
+}
