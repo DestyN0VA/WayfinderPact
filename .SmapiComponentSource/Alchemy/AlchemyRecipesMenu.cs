@@ -17,7 +17,7 @@ namespace SwordAndSorcerySMAPI.Alchemy
         private List<ItemWithBorder> recipes = new();
 
         public AlchemyRecipesMenu()
-        : base(Game1.viewport.Width / 2 - 320, Game1.viewport.Height / 2 - 240, 640, 480, true)
+        : base(Game1.uiViewport.Width / 2 - 320, Game1.uiViewport.Height / 2 - 240, 640, 480, true)
         {
             ui = new();
             ui.LocalPosition = new(xPositionOnScreen, yPositionOnScreen);
@@ -52,15 +52,6 @@ namespace SwordAndSorcerySMAPI.Alchemy
                 var tmp = ItemRegistry.Create(recipe.Value.OutputItem, recipe.Value.OutputQuantity);
                 fake.DisplayName = tmp.DisplayName;
                 fake.description = tmp.getDescription();
-                if (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionPhilosopherStone)) foreach (var ingredients in recipe.Value.Ingredients)
-                    {
-                        if (ingredients.Key.ContainsIgnoreCase("essence") && ingredients.Value > 1)
-                        {
-                            int halved = ingredients.Value / 2;
-                            recipe.Value.Ingredients[ingredients.Key] = halved;
-                        }
-                    }
-
                 fake.recipeList.TryAddMany(recipe.Value.Ingredients);
 
                 ItemWithBorder recipe_ = new()
