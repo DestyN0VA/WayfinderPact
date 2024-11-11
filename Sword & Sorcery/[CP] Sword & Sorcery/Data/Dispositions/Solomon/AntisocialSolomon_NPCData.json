@@ -6,7 +6,7 @@
             "Target": "Data/Characters",
             "Entries": {
                 "Solomon": {
-                    "DisplayName": "Solomon",
+                    "DisplayName": "{{i18n:Core.Solomon.Name}}",
                     "Gender": "Male",
                     "Age": "Adult",
                     "Manner": "Rude",

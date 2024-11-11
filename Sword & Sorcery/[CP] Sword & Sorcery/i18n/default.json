@@ -817,7 +817,7 @@
   "Strings.Mateo.OverwhelmingBooks3": "Mateo's textbooks, they look well-loved. On cracking one open, there appears to be tons of annotations.",
   "Strings.Mateo.DungeonsDragons": "Evidently, Mateo is running a medieval fantasy tabletop game for the local nerds. It's called 'Dark Chronicle'.",
   "Strings.Mateo.NotADigimon": "How many Pepper Rexes is Mateo planning to hatch..?",
-  "Strings.Mateo.Chewtoy": "A stuffie as snuggled as often as it's nibbled on.",
+  "Strings.Mateo.Chewtoy": "A stuffie snuggled as often as it's nibbled on.",
   "Strings.Mateo.BabyEmeritus": "How is Mateo powering this incubator?...",
   "Strings.Mateo.CrabStab": "In hasty handwriting, it reads 'No Crabs Allowed'.",
   "Strings.Mateo.LittleForge": "It looks like Mateo is trying to learn to maintenance their own weapons... yours, as well. And your tools.",
@@ -1447,7 +1447,7 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch1.18.Mateo.1": "Just the person I wanted to see. I'll get right into it, I know you're busy. And besides, I'm very excited.$36#$b#When Robin built this place, some boulders behind the foundation collapsed to reveal a cave. I've been excavating as best I can, and I've made some interesting finds.$14#$b#C'mon, I want to show you.$1",
   "Events.S&S.Ch1.18.Mateo.2": "I built up this forge with Clint's help, and I've been learning with him a bit. But I like doing some stuff on my own.$12#$b#I had some leatherworking experience, but there's a ton of other types of armor to make. Fancy arrows, too... all sorts of things suited for adventuring.$1",
   "Events.S&S.Ch1.18.Message.1": "The forge burns hot. Too hot, almost.",
-  "Events.S&S.Ch1.18.Message.2": "You've unlocked the power of The Artificer. Will you sharpen your blade, or your guile? The choice is yours! Configure your new Adventure Bar with U, or toggle it on/off with Ctrl+U. These settings can be changed in the SMAPI Config.",
+  "Events.S&S.Ch1.18.Message.2": "You've unlocked the power of The Artificer. Will you sharpen your blade, or your guile? The choice is yours! Configure your new Adventure Bar with U, or toggle it on/off with Ctrl and U. These settings can be changed in the SMAPI Config.",
   "Events.S&S.Ch1.18.Message.3": "Interact with the forge to see what new items you can craft.",
   "Events.S&S.Ch1.18.Mateo.3": "You're full of surprises, aren't you,",
   "Events.S&S.Ch1.18.Mateo.4": "Looks like you're more in-tune with this kind of stuff than you expected!$13",
@@ -1462,6 +1462,17 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch1.RHToggle.Farmer.2": "Just keep being my friend, Mateo! That's the kind of support I need.",
   "Events.S&S.Ch1.RHToggle.Mateo.2": "I could never, @! Don't worry. $1",
   "Events.S&S.Ch1.RHToggle.Mateo.3": "Of course, @! I've got your back.$1",
+
+// ARTIFICER UNLOCK EVENT
+  "SnS.S&S.Ch1.19.Mateo.1": "Oh! Hello, Sunshine. Sorry for the mode of undress, I was tidying up and it gets pretty hot down here.$31#$b#Something tells me you don't mind terribly, though.$30#b#Now, to what do I owe the privilege of your company?$28",
+  "SnS.S&S.Ch1.19.Message.1": "You offer Mateo the Mermaid Pendant, which is taken from you by a trembling hand.",
+  "SnS.S&S.Ch1.19.Mateo.2": "Oh wow - of course, @. Yes. Absolutely yes.$29",
+  "SnS.S&S.Ch1.19.Mateo.3": "I just have a question first.",
+  "SnS.S&S.Ch1.19.Q1.Answers": "You could have anyone in The Valley. Why do you want me? #Because you've stolen my heart, and I have no intention of taking it back. #Because, Mateo. You and I have... FORGED an unbreakable bond.",
+  "SnS.S&S.Ch1.19.Q1.Response.1": "A brillant heist, one for the ages. They'll put it in the history books.$28",
+  "SnS.S&S.Ch1.19.Q1.Response.2": "Did you just-?$13#$b#Hahahahahahahaha! We really are perfect for each other.$1",
+  "SnS.S&S.Ch1.19.Mateo.4": "I did say it was hot down here, Sunshine. And it's only gonna get hotter now that you're mine.$28",
+
 
   /*
    _____ ____  _   _     _______ ____  _____ _____ _____  _____ 
@@ -2428,23 +2439,6 @@ ________      ________ _   _ _______ _____
   "Strings.Hector.LovedAltar.Romantic.8": "There's a message carved in this homemade candle...:# 'We were tangled up like branches in a flood. I come as a blade; a sacred guardian. So you keep me sharp and test my worth in blood.",
   "Strings.Hector.LovedAltar.Romantic.9": "There's a message carved in this homemade candle...:# 'I finally think I can say that the vicious cycle was over the moment you smiled at me.'",
 
-  //Jukebox Strings
-  "Strings.Music.MateoTheme": "S&S: Mateo's Theme (Never Ending Adventure)",
-  "Strings.Music.HectorTheme": "S&S: {{HectorName}}'s Theme (Circle of Thorns)",  
-  "Strings.Music.CirrusTheme": "S&S: Cirrus' Theme (Peace and Love on the Planet Earth)",  
-  "Strings.Music.KeytarSolo": "S&S: Cirrus' Keytar Solo",    
-  "Strings.Music.DandelionTheme": "S&S: Dandelion's Theme (Giant Woman)",  
-  "Strings.Music.RoslinTheme": "S&S: Roslin's Theme (It's Over, Isn't It?)",  
-  "Strings.Music.LonelyTheme": "S&S: Lonely Theme (To Zanarkand)",  
-  "Strings.Music.LonelyThemeReprise": "S&S: Lonely Theme Reprised (To Zanarkand)",  
-  "Strings.Music.DespairTheme": "S&S: Despair Theme",  
-  "Strings.Music.HopeTheme": "S&S: Hope Theme",  
-  "Strings.Music.VulnerableTheme": "S&S: Vulnerable Theme (Dearly Beloved)",  
-  "Strings.Music.SMFS": "S&S: So Much For Stardust (Love from the Other Side)",  
-  "Strings.Music.SMFSR": "S&S: So Much For Stardust Reprised (Love from the Other Side)",  
-  "Strings.Music.DuskspirePhase1": "S&S: Duskspire Battle pt 1  (Fight With Seymour)",  
-  "Strings.Music.DuskspirePhase2": "S&S: Duskspire Battle pt 2 (Tension Rising)",  
-
   /*
    _____ _    _  _____ _______ ____  __  __   ______ _______   ________ _____   
   / ____| |  | |/ ____|__   __/ __ \|  \/  | |  ____|_   _\ \ / /  ____|  __ \  
@@ -3019,6 +3013,15 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch2.14H.Hector.Message.1": "This fragment of Hector's circlet will double the drop rate of Druidic Essences. It's stored in your Powers menu.",
   "Events.S&S.Ch2.14H.Hector.3": "It broke during a conflict long ago - it's of no consequence, now. But I've held onto it out of sentiment...$12#$b#I'd like you to have it. This way, you'll think of me when we're apart. Like how I wear your pendant, and think of you.$13#$b#Maybe it's not the grandest thing, but-$15",
   "Events.S&S.Ch2.14H.Hector.4": "I love you, @. If you reach for the sky and can't quite make it, I'll bring it down for you. You are the parallel I'd lay my life on.$13",
+
+  //HECTOR LARPING(?) IN THE GREEN RAIN
+  "Events.S&S.Ch2.GreenRain.Hector.1": "Ehehehehehehehe!$39",
+  "Events.S&S.Ch2.GreenRain.Hector.2": "The sky looked too dry for MY liking! Not green enough-$38",
+  "Events.S&S.Ch2.GreenRain.Hector.3": "Let's stir the clouds, and twist the wind!$30",
+  "Events.S&S.Ch2.GreenRain.Hector.4": "With a flick and a whisper, let's bend nature's whims!$58",
+  "Events.S&S.Ch2.GreenRain.Hector.5": "Rain, rain, let it pour...",
+  "Events.S&S.Ch2.GreenRain.Hector.6": "Drenched in magic, nature will restore!$59",
+  "Events.S&S.Ch2.GreenRain.Hector.7": "EHEHEHEHEHEHEHEHEHEHEHE!$39",
 
   // MATEO & EYVINDER 
   "Events.SnS.Ch2.Eyvinder.Mateo.01": "Who's a good little noodle?$1",
@@ -4303,6 +4306,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch3.Cirrus.12.QuickQuestion.05": "Nobody can really be cheery all the time.",
   "Events.SnS.Ch3.Cirrus.12.Cirrus.06": "Thank you. I don't know how to explain how much it means to hear that. You're an incredible friend.$11",
   "Events.SnS.Ch3.Cirrus.12.Cirrus.07": "You're right! They're only happy all the time online. And that's fake - I'm done with all that. No more fake friends, no more fake persona...$10",
+  "Events.SnS.Ch3.Cirrus.12.Cirrus.Fork": "#Before that, I wanted to tell you I'm starting to see you as more than a friend. (FLIRTY)#I do! Hope you're up for socializing. (PLATONIC)",
   "Events.SnS.Ch3.Cirrus.12.Cirrus.08": "Okay, I'm done. I think I got all the tears out. Now, did you have anything planned for the evening now that I've gone and gotten the big emotions out of the way?$1",
   "Events.SnS.Ch3.Cirrus.12.Cirrus.09": "The more the merrier! Somehow, I'm not surprised you had something up your sleeve.$17",
   "Events.SnS.Ch3.Cirrus.12.Hector.10": "There they are!",
@@ -6272,6 +6276,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Intermission.SoloFarmer.Roslin.08": "We can't control the {{CasterType}}, Dandelion.",
   "Events.SnS.Ch4.Intermission.SoloFarmer.Hector.09": "...I trust them to finish this.$18",
   "Events.SnS.Ch4.Intermission.SoloFarmer.Cirrus.10": "So do I. @'s the most powerful out of the lot of us.$22",
+  "Events.SnS.Ch4.Intermission.SoloFarmer.Mateo.08": "So do I. @'s the most powerful out of the lot of us.$22",
   "Events.SnS.Ch4.Victory.Mateo.Mateo.01": "We did it, Sunshine. The Duskspire Behemoth is defeated, and East Scarp is safe from it's tyranny.$14#$b#You know, I never would have guessed you and I would come quite this far, quite literally saving The Valley together. But I'm very happy for it. So happy, in fact, I-$15",
   "Events.SnS.Ch4.Victory.Mateo.Mateo.02": "Let's get out of here and celebrate properly, @. The others are waiting - and besides, those rocks can't be THAT difficult to shimmy past...$12",
   "Events.SnS.Ch4.Victory.Mateo.Hector.03": "You're back...$13",
@@ -6505,7 +6510,7 @@ ________      ________ _   _ _______ _____
 */
 
   // NAME 
-  "i18n:Core.Solomon.Name": "Solomon",
+  "Core.Solomon.Name": "Solomon",
 
   // INTRODUCTION
   "Core.Solomon.Introduction": "How nice it is, to have a stationary place to call my own. Yes, it's a cave. But it's MY cave!$1#$b#Very nice of The Bard to allow additional magickal construction to her building.$0",
@@ -7298,7 +7303,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch5.End.Mateo.20": "It's just strange - I feel like, without that little push from him, none of this would've played out.$16#$b#There wouldn't have been a Coastal Guild around to slay the Duskspire Behemoth.$16#$b#He had all these crazy stories of his own, and I'm really disappointed I can't share ours with him. I suppose that's alright, though.$78#$b#He'd be so proud of everything we've accomplished. Especially you, @. Professor Hawthorn knew an adventurous spirit when he saw one.$80",
   "Events.SnS.Ch5.End.Mateo.21": "...Let's get going, aye? Don't want everyone to worry.$76",
   "Events.SnS.Ch5.End.Message.22": "It's just a weird keychain...",
-  "Events.SnS.Ch5.End.Mateo.23": "That'd look cool clipped onto the hilt of a sword, wouldn't it?$76[(O){{ModID}}_destykeychain]",
+  "Events.SnS.Ch5.End.Mateo.23": "That'd look cool clipped onto the hilt of a sword, wouldn't it?$76",
   "Events.SnS.Ch5.End.Message.24": "This project is dedicated to the memory of TheLoreSeeker, a beloved community member who made a point to encourage people's wildest ideas. He may no longer be with us, but he lives on in the content of those he inspired. Thank you, to him and everyone else who contributed to S&S. And especially to you, the player, for seeing this story all the way to the end. Signed with love, DestyNova.",
 
 
@@ -7740,8 +7745,37 @@ ________      ________ _   _ _______ _____
   "MEEP.EmeritusInside.2": "Emeritus has only nearly burned down The Guild once this week, which is probably a record of some kind.",
   "MEEP.EmeritusInside.3": "Emeritus is wiggling side to side, like he's dancing to the beat of his own tunes. Wiggle on, lizard bro.",
   "MEEP.EmeritusInside.4": "Emeritus' stuffed teddie is named Ducky, and he takes excellent care of her. In fact, he seems outright protective.",
-  "MEEP.EmeritusInside.5": "Emeritus bumps his head against your legs as you approach. He can't hug you, on account of his stumpy legs, but he'll sure try!"
+  "MEEP.EmeritusInside.5": "Emeritus bumps his head against your legs as you approach. He can't hug you, on account of his stumpy legs, but he'll sure try!",
 
+  //VARIOUS STRINGS
+
+    //Jukebox Strings
+  "Strings.Music.MateoTheme": "S&S: Mateo's Theme (Never Ending Adventure)",
+  "Strings.Music.HectorTheme": "S&S: {{HectorName}}'s Theme (Circle of Thorns)",  
+  "Strings.Music.CirrusTheme": "S&S: Cirrus' Theme (Peace and Love on the Planet Earth)",  
+  "Strings.Music.KeytarSolo": "S&S: Cirrus' Keytar Solo",    
+  "Strings.Music.DandelionTheme": "S&S: Dandelion's Theme (Giant Woman)",  
+  "Strings.Music.RoslinTheme": "S&S: Roslin's Theme (It's Over, Isn't It?)",  
+  "Strings.Music.LonelyTheme": "S&S: Lonely Theme (To Zanarkand)",  
+  "Strings.Music.LonelyThemeReprise": "S&S: Lonely Theme Reprised (To Zanarkand)",  
+  "Strings.Music.DespairTheme": "S&S: Despair Theme",  
+  "Strings.Music.HopeTheme": "S&S: Hope Theme",  
+  "Strings.Music.VulnerableTheme": "S&S: Vulnerable Theme (Dearly Beloved)",  
+  "Strings.Music.SMFS": "S&S: So Much For Stardust (Love from the Other Side)",  
+  "Strings.Music.SMFSR": "S&S: So Much For Stardust Reprised (Love from the Other Side)",  
+  "Strings.Music.DuskspirePhase1": "S&S: Duskspire Battle pt 1  (Fight With Seymour)",  
+  "Strings.Music.DuskspirePhase2": "S&S: Duskspire Battle pt 2 (Tension Rising)",  
+
+    //Various Names
+  "Strings.Names.Book": "Book",
+  "Strings.Names.Emeritus": "Emeritus",
+  "Strings.Names.Gunther": "Gunther",
+  "Strings.Names.Marlon": "Marlon",
+  "Strings.Names.Wyatt": "Wyatt",
+  "Strings.Names.???": "???", 
+  "Strings.Names.B": "'B'?",
+  "Strings.Names.Hector?": "Hector?", //why is he like this roflmao
+  "Strings.Names.LittleGruff": "Little Gruff"
   /* 
   _____  _           __     ________ _____  _  _____   _    _          _   _ _____  ____   ____   ____  _  __
  |  __ \| |        /\\ \   / /  ____|  __ \( )/ ____| | |  | |   /\   | \ | |  __ \|  _ \ / __ \ / __ \| |/ /

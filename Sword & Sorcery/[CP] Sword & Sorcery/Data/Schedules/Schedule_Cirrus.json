@@ -59,7 +59,8 @@
 				"winter_17": "610 EastScarp_LionsMane 18 5 1/1000 EastScarp_Lionsmane 21 16 0/1200 EastScarp_Lionsmane {{Random:21 26 2 Cirrus_wiggleidle++32 24 2 Cirrus_sing++21 16 0++30 13 3++33 6 3 Cirrus_sidesit|inputSeparator=++}}/1300 Beach 66 25 2 Cirrus_wiggleidle/2200 EastScarp_LionsMane 18 5 1",
 			},
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true
+				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+				"HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true
 			}
 		},
 		{
@@ -74,7 +75,8 @@
 				"summer_21": "610 EastScarp_LionsMane 18 5 1/800 Forest 69 39 2 Cirrus_wiggleidle/2000 EastScarp_LionsMane 18 5 1",
 			},
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true
+				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+				"HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true
 			}
 		},
 		{
@@ -90,7 +92,8 @@
 				"DesertFestival_3": "610 EastScarp_LionsMane 18 5 1/630 Desert 4 54 2 Cirrus_wiggleidle/2000 EastScarp_LionsMane 18 5 1",
 			},
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true
+				"HasSeenEvent |contains=SnS.Ch3.Cirrus.1": true,
+				"HasSeenEvent |contains=SnS.Ch3.Cirrus.13": true
 			}
 		},
 		{

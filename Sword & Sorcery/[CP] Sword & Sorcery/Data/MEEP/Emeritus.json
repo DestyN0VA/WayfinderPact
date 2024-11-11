@@ -5,7 +5,7 @@
             "Target": "Data/FarmAnimals",
             "Entries": {
                 "{{ModId}}.Emeritus": {
-                    "DisplayName": "Emeritus",
+                    "DisplayName": "{{i18n:Strings.Names.Emeritus}}",
                     "House": "Barn",
                     "Texture": "Characters/MateoEmeritus",
                     "SpriteWidth": 32,
@@ -22,7 +22,7 @@
                     "AnimalId": "{{ModId}}.Emeritus",
                     "Age": 1,
                     "LocationId": "EastScarp_Village",
-                    "DisplayName": "Emeritus",
+                    "DisplayName": "{{i18n:Strings.Names.Emeritus}}",
                     "PortraitTexture": "Portraits/MateoEmeritus",
                     "PetMessage": [
                         "{{i18n:MEEP.EmeritusOutside.{{Random:1++2++3++4++5|inputSeparator=++}}}}",
@@ -36,7 +36,7 @@
                     "AnimalId": "{{ModId}}.Emeritus",
                     "Age": 1,
                     "LocationId": "EastScarp_CoastalGuild",
-                    "DisplayName": "Emeritus",
+                    "DisplayName": "{{i18n:Strings.Names.Emeritus}}",
                     "PortraitTexture": "Portraits/MateoEmeritus",
                     "PetMessage": [
                         "{{i18n:MEEP.EmeritusInside.{{Random:1++2++3++4++5|inputSeparator=++}}}}",

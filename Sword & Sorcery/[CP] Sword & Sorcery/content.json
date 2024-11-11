@@ -37,7 +37,7 @@
       "Action": "Include",
       "FromFile": "Data/Dispositions/Mateo/full_NPCData.json, Data/Dispositions/Hector/full_NPCData.json, Data/Dispositions/Cirrus/full_NPCData.json, Data/Dispositions/Roslin/full_NPCData.json, Data/Dispositions/Dandelion/full_NPCData.json"
     },
-    {
+    /*{
       "LogName": "Sword & Sorcery - Disposition Includes (Vanilla)",
       "Action": "Include",
       "FromFile": "Data/Dispositions/Mateo/vanilla_NPCData.json, Data/Dispositions/Hector/vanilla_NPCData.json, Data/Dispositions/Cirrus/vanilla_NPCData.json, Data/Dispositions/Roslin/vanilla_NPCData.json, Data/Dispositions/Dandelion/vanilla_NPCData.json",
@@ -52,7 +52,7 @@
       "When": {
         "SeasonalOutfits": "lite"
       }
-    },
+    },*/
     {
       "LogName": "Sword & Sorcery - Quest Includes",
       "Action": "Include",
@@ -61,7 +61,7 @@
     {
       "LogName": "Sword & Sorcery - Data Includes",
       "Action": "Include",
-      "FromFile": "Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/CustomForage.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/Books.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Quests & Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json"
+      "FromFile": "Data/AlchemyRecipes.json, Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/CustomForage.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/Books.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Quests & Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json"
     },
     {
       "LogName": "Sword & Sorcery - Shield Quest Include",
@@ -363,13 +363,13 @@
       "Description": "Removes the quest requirements for Hector's intro quest, in case of bugs, participation in the Joja route, or other issues.",
       "Section": "Miscellaneous"
     },
-    "SeasonalOutfits": {
+    /*"SeasonalOutfits": {
       "AllowValues": "full, lite, vanilla",
       "Default": "full",
       "AllowBlank": false,
       "Description": "Choose how many outfits S&S NPCs wear in-game. Full means they will have multiple outfits per season, along with unique festival outfits (if they're avaliable!). Lite means they wear a different outfit per season, plus Spirit's Eve and Flower Dance. Vanilla means they wear the same outfit for all of spring + summer + fall, a different outfit for winter, and unique outfits for Spirit's Eve and Flower Dance. Default is full.",
       "Section": "Miscellaneous"
-    },
+    },*/
     "DumpsterWarp": {
       "AllowValues": "true, false",
       "Default": "false",
@@ -790,6 +790,10 @@
     },
     {
       "Name": "CirrusSong1",
+      "Value": "null"
+    },
+    {
+      "Name": "CirrusSong1",
       "Value": "{{i18n:Events.CirrusSong.1}}",
       "When": {
         "HasFlag |contains=CirrusSong1A": true
@@ -804,6 +808,10 @@
     },
     {
       "Name": "CirrusSong2",
+      "Value": "null"
+    },
+    {
+      "Name": "CirrusSong2",
       "Value": "{{i18n:Events.CirrusSong.3}}",
       "When": {
         "HasFlag |contains=CirrusSong2A": true
@@ -815,6 +823,10 @@
       "When": {
         "HasFlag |contains=CirrusSong2B": true
       }
+    },
+    {
+      "Name": "CirrusSong3",
+      "Value": "null"
     },
     {
       "Name": "CirrusSong3",
@@ -891,6 +903,18 @@
     {
       "Name": "HectorPronouns",
       "Value": "|HPN1={{HectorPN1}} |HPN2={{HectorPN2}} |HPN3={{HectorPN3}} |HPN4={{HectorPN4}}"
+    },
+    {
+      "Name": "DynamicDnDClass",
+      "Value": "null"
+    },
+    {
+      "Name": "DnDClassQQ",
+      "Value": "null"
+    },
+    {
+      "Name": "DnDClassResponse",
+      "Value": "null"
     },
     {
       "Name": "DynamicDnDClass",
