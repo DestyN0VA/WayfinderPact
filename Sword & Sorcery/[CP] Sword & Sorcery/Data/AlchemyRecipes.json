@@ -65,7 +65,110 @@
             "(O)769": 1
           },
           "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_VerdantPotion"
-        }
+        },
+        "ScarletPotion": {
+          "OutputItem": "(O){{ModID}}_scarletpotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_EarthEssence": 3,
+            "(O){{ModID}}_FireEssence": 3,
+            "(O)768": 1,
+            "(O)769": 1
+          },
+          "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_ScarletPotion"
+        },
+        "HeatherPotion": {
+          "OutputItem": "(O){{ModID}}_heatherpotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_AirEssence": 3,
+            "(O){{ModID}}_WaterEssence": 3,
+            "(O)768": 1,
+            "(O)769": 1
+          },
+          "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_HeatherPotion"
+        },
+        "ZydratePotion": {
+          "OutputItem": "(O){{ModID}}_zydratepotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_EarthEssence": 3,
+            "(O){{ModID}}_AirEssence": 5,
+            "(O){{ModID}}_WaterEssence": 5,
+            "(O){{ModID}}_FireEssence": 3,
+            "(O)768": 1,
+            "(O)769": 1
+          },
+          "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_ZydratePotion"
+        },
+        "PistachioPotion": {
+          "OutputItem": "(O){{ModID}}_pistachiopotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_EarthEssence": 5,
+            "(O){{ModID}}_AirEssence": 3,
+            "(O){{ModID}}_WaterEssence": 3,
+            "(O){{ModID}}_FireEssence": 5,
+            "(O)768": 1,
+            "(O)769": 1
+          },
+          "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_PistachioPotion"
+        },
+        "DahliaPotion": {
+          "OutputItem": "(O){{ModID}}_dahliapotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_EarthEssence": 5,
+            "(O){{ModID}}_AirEssence": 5,
+            "(O)768": 5,
+          },
+          "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_DahliaPotion"
+        },
+        "SlushiePotion": {
+          "OutputItem": "(O){{ModID}}_slushiepotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_AirEssence": 7,
+            "(O){{ModID}}_WaterEssence": 7,
+            "(O)768": 7,
+          },
+          "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_SlushiePotion"
+        },
+        "MatrixPotion": {
+          "OutputItem": "(O){{ModID}}_matrixpotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_EarthEssence": 7,
+            "(O){{ModID}}_AirEssence": 7,
+            "(O){{ModID}}_WaterEssence": 3,
+            "(O){{ModID}}_FireEssence": 3,
+            "(O)768": 3,
+            "(O)769": 3
+          },
+          "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_MatrixPotion"
+        },
+        "McDougalPotion": {
+          "OutputItem": "(O){{ModID}}_mcdougalpotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_EarthEssence": 10,
+            "(O){{ModID}}_FireEssence": 10,
+            "(O)768": 3,
+            "(O)769": 3
+          },
+          "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_McDougalPotion"
+        },
+        "ToirneachPotion": {
+          "OutputItem": "(O){{ModID}}_verdantpotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_AirEssence": 10,
+            "(O){{ModID}}_WaterEssence": 10,
+            "(O)768": 10,
+            "(O)769": 10
+          },
+          "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_ToirneachPotion"
+        },
       }
     }
   ]
