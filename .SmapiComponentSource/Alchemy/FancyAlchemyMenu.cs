@@ -34,7 +34,7 @@ namespace SwordAndSorcerySMAPI.Alchemy
         private bool playedSynthesizeSound = true;
 
         public FancyAlchemyMenu()
-        : base(Game1.viewport.Width / 2 - (64 * 12 + 32 + 432) /2, Game1.viewport.Height / 2 - (480 + 250 + 432) / 2, 64 * 12 + 32, 480 + 250)
+        : base(Game1.uiViewport.Width / 2 - (64 * 12 + 32) /2, Game1.uiViewport.Height / 2 - (480 + 250) / 2, 64 * 12 + 32, 480 + 250)
         {
             ui = new RootElement();
             ui.LocalPosition = new Vector2(xPositionOnScreen, yPositionOnScreen);
@@ -126,27 +126,22 @@ namespace SwordAndSorcerySMAPI.Alchemy
         internal void CheckRecipe()
         {
             this.output.ItemDisplay = null;
-            foreach (var recipeData in AlchemyRecipes.Get().Values)
+            var recipes = AlchemyRecipes.Get().Values;
+            foreach (var recipeData in recipes)
             {
-                if (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionPhilosopherStone)) foreach (var ingredients in recipeData.Ingredients)
-                    {
-                        if (ingredients.Key.ContainsIgnoreCase("essence") && ingredients.Value > 1)
-                        {
-                            int halved = ingredients.Value / 2;
-                            recipeData.Ingredients[ingredients.Key] = halved;
-                        }
-                    }
-
                 var recipe = new Tuple<string, bool>[6];
 
                 string output = recipeData.OutputItem;
                 int outputQty = recipeData.OutputQuantity;
 
                 int ir = 0;
-                foreach (string ingredData in recipeData.Ingredients.Keys)
+                foreach (var ingredData in recipeData.Ingredients)
                 {
-                    recipe[ir] = new(ingredData, false);
-                    ++ir;
+                    for (int i = 0; i < ingredData.Value; i++)
+                    {
+                        recipe[ir] = new(ingredData.Key, false);
+                        ir++;
+                    }
                 }
                 for (; ir < recipe.Length; ++ir)
                     recipe[ir] = new(null, true); // Invalid ingredient, but marked as found so it doesn't matter
@@ -266,9 +261,14 @@ namespace SwordAndSorcerySMAPI.Alchemy
                 }
                 else if (output.Item != null)
                 {
-                    if (held == null || held.canStackWith(output.Item))
+                    if (held == null)
                     {
                         held = output.Item;
+                        output.Item = null;
+                    }
+                    else if (held.canStackWith(output.Item) && held.Stack + output.Item.Stack <= 999)
+                    {
+                        held.Stack += output.Item.Stack;
                         output.Item = null;
                     }
                 }
@@ -278,6 +278,14 @@ namespace SwordAndSorcerySMAPI.Alchemy
         public override void receiveRightClick(int x, int y, bool playSound = true)
         {
             base.receiveRightClick(x, y, playSound);
+            if (ItemWithBorder.HoveredElement is ItemSlot itemSlot)
+            {
+                if (itemSlot == output && output.Item != null && held != null)
+                {
+                    return;
+                }
+            }
+            
             held = inventory.rightClick(x, y, held, playSound);
         }
 
@@ -294,7 +302,7 @@ namespace SwordAndSorcerySMAPI.Alchemy
                 output.ItemDisplay = null;
             }
         }
-
+        
         public override void draw(SpriteBatch b)
         {
             drawTextureBox(b, xPositionOnScreen, yPositionOnScreen, width, height, Color.White);

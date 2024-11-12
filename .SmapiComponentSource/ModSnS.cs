@@ -377,6 +377,7 @@ namespace SwordAndSorcerySMAPI
             SwordOverlay = Helper.ModContent.Load<Texture2D>("assets/SwordOverlay.png");
 
             Helper.Events.Content.AssetRequested += Content_AssetRequested;
+            Helper.Events.Content.AssetsInvalidated += Content_AssetsInvalidated;
             Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
             Helper.Events.GameLoop.UpdateTicking += GameLoop_UpdateTicking;
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
@@ -476,6 +477,11 @@ namespace SwordAndSorcerySMAPI
                 }
                 State.DoFinale = true;
             });
+            Helper.ConsoleCommands.Add("sns_transmute", "...", (cmd, args) =>
+            {
+                if (Context.IsPlayerFree)
+                    Game1.activeClickableMenu = new TransmuteMenu();
+            });
 
             harmony = new Harmony(ModManifest.UniqueID);
 
@@ -487,6 +493,14 @@ namespace SwordAndSorcerySMAPI
             new AlchemyEngine();
 
             InitArsenal();
+        }
+
+        private void Content_AssetsInvalidated(object sender, StardewModdingAPI.Events.AssetsInvalidatedEventArgs e)
+        {
+            if (e.NamesWithoutLocale.Any(l => l.BaseName.EqualsIgnoreCase("DN.SnS/AlchemyRecipe")))
+            {
+                AlchemyRecipes._RecipeData = null;
+            }
         }
 
         private void World_LocationListChanged(object sender, StardewModdingAPI.Events.LocationListChangedEventArgs e)

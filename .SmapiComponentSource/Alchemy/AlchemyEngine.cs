@@ -23,7 +23,7 @@ namespace SwordAndSorcerySMAPI.Alchemy
             SoundEffect alchemySynthesize = SoundEffect.FromFile(Path.Combine(ModSnS.instance.Helper.DirectoryPath, "assets", "alchemy-synthesize.wav"));
             Game1.soundBank.AddCue(new CueDefinition("spacechase0.MageDelve_alchemy_synthesize", alchemySynthesize, 3));
 
-            ModSnS.instance.Helper.ConsoleCommands.Add("magedelve_alchemy", "...", OnAlchemyCommand);
+            ModSnS.instance.Helper.ConsoleCommands.Add("sns_alchemy", "...", OnAlchemyCommand);
         }
 
         private void OnAlchemyCommand(string arg1, string[] arg2)

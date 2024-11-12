@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace SwordAndSorcerySMAPI
+namespace SwordAndSorcerySMAPI.Alchemy
 {
-    internal class AlchemyData
+    public class AlchemyData
     {
         public string OutputItem { get; set; }
         public int OutputQuantity { get; set; } = 1;
