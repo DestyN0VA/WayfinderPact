@@ -685,8 +685,8 @@
                     "ElevatorExitLocation": "EastScarp_DeepDarkEntrance",
                     "ElevatorExitTile": "16, 8",
                     "FloorsWithElevator": [ 5, 10, 15, 20 ],
-                    "SpawnsLadders": false,
-                    "SpawnsMineshafts": false,
+                    "SpawnLadders": false,
+                    "SpawnMineshafts": false,
                 }
             }
         },
