@@ -2578,12 +2578,12 @@ ________      ________ _   _ _______ _____
   // QUEST EXCLUSIVE EVENTS
 
   "Events.S&S.Ch2.PentacleQuest.Hector.1": "If it isn't the mysterious new farmer. What an entirely unplanned little coincidence.$3",
-  "Events.S&S.Ch2.PentacleQuest.Hector.2": "I expected a reaction far more fearful from you, though I suppose you're cut from a different cloth.$9#$B#Keep doing what you're doing. With those requests, I mean. You're proving yourself very helpful.$3",
+  "Events.S&S.Ch2.PentacleQuest.Hector.2": "I expected a reaction far more fearful from you, though I suppose you're cut from a different cloth.$9#$B#You have much to learn about the world around you, about what you're capable of.$3",
   "Events.S&S.Ch2.PentacleQuest.Hector.3": "Who am I? All in due time, @.$2",
   "Events.S&S.Ch2.PentacleQuest.Hector.4": "All in due time...$0",
 
   "Events.S&S.Ch2.PentacleQuest2.Hector.Message": "You feel like you're being watched...",
-  "Events.S&S.Ch2.PentacleQuest2.Hector.1": "@'s actually gone and collected everything I needed... they're meeting all my standards! I'm pleasantly surprised.$5",
+  "Events.S&S.Ch2.PentacleQuest2.Hector.1": "@'s meeting all my standards! I'm pleasantly surprised.$5",
   "Events.S&S.Ch2.PentacleQuest2.Hector.2": "Now, it'll only be a matter of time before I can put my plan in motion.$3",
   "Events.S&S.Ch2.PentacleQuest2.Hector.3": "I won't have to deal with this pain for very much longer now, will I?$2",
   "Events.S&S.Ch2.PentacleQuest2.Hector.4": "Ehehehehehehehe! It's all coming together!$4",

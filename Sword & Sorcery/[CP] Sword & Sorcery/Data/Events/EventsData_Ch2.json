@@ -2,17 +2,14 @@
 
   "Changes": [
 
-    /*{
+    {
 			"LogName": "Hector's 0 Heart Event",
 			"Action": "EditData",
 			"Target": "Data/Events/Forest",
       "Entries": {
     
-        "SnS.Ch2.Hector.0/t 600 1800/n Hector_SpecialOrders_Pentacle1/n Hector_SpecialOrders_Pentacle2/F": "SnS.HectorTheme/-100 -100/farmer 68 1 0/addTemporaryActor Hector_Wolf 32 32 73 9 3 true Character/skippable/changeName Hector_Wolf {{i18n:Strings.Names.B}}/viewport 68 8 clamp true/advancedMove farmer false 0 12 2 10/waitForAllStationary/emote farmer 8/faceDirection farmer 0/playSound leafrustle/advancedMove Hector_Wolf false -5 0 2 10/jump farmer 5 true/emote farmer 16 true/startJittering/pause 1000/speak Hector_Wolf \"{{i18n:Events.S&S.Ch2.PentacleQuest.Hector.1}}\"/stopJittering/pause 250/emote farmer 12/pause 250/showFrame Hector_Wolf 28/animate Hector_Wolf false false 200 28 28 29 29 30 30 31 31 32 32 33 33 34 34 35/pause 3000/animate Hector_Wolf false true 200 35 35/speak Hector_Wolf \"{{i18n:Events.S&S.Ch2.PentacleQuest.Hector.2}}\"/pause 250/emote farmer 40/pause 250/speak Hector_Wolf \"{{i18n:Events.S&S.Ch2.PentacleQuest.Hector.3}}\"/fade/viewport -1000 -1000/speak Hector_Wolf \"{{i18n:Events.S&S.Ch2.PentacleQuest.Hector.4}}\"/end"
-      }, 
-      
-      "When": { "SkipIntroQuest": false }
-        
+        "SnS.Ch2.Hector.0/t 600 1800/F": "SnS.HectorTheme/-100 -100/farmer 68 1 0/addTemporaryActor Hector_Wolf 32 32 73 9 3 true Character/skippable/changeName Hector_Wolf {{i18n:Strings.Names.B}}/viewport 68 8 clamp true/advancedMove farmer false 0 12 2 10/waitForAllStationary/emote farmer 8/faceDirection farmer 0/playSound leafrustle/advancedMove Hector_Wolf false -5 0 2 10/jump farmer 5 true/emote farmer 16 true/startJittering/pause 1000/speak Hector_Wolf \"{{i18n:Events.S&S.Ch2.PentacleQuest.Hector.1}}\"/stopJittering/pause 250/emote farmer 12/pause 250/showFrame Hector_Wolf 28/animate Hector_Wolf false false 200 28 28 29 29 30 30 31 31 32 32 33 33 34 34 35/pause 3000/animate Hector_Wolf false true 200 35 35/speak Hector_Wolf \"{{i18n:Events.S&S.Ch2.PentacleQuest.Hector.2}}\"/pause 250/emote farmer 40/pause 250/speak Hector_Wolf \"{{i18n:Events.S&S.Ch2.PentacleQuest.Hector.3}}\"/fade/viewport -1000 -1000/speak Hector_Wolf \"{{i18n:Events.S&S.Ch2.PentacleQuest.Hector.4}}\"/end"
+      },      
 		},
     {
 			"LogName": "Hector's 0 Heart Event pt 2",
@@ -20,13 +17,9 @@
 			"Target": "Data/Events/Forest",
       "Entries": {
     
-        "SnS.Ch2.Hector.0p2/e SnS.Ch2.Hector.0/t 600 1800/n Hector_SpecialOrders_Pentacle1/n Hector_SpecialOrders_Pentacle2/n Hector_SpecialOrders_Pentacle3/n Hector_SpecialOrders_Pentacle4/F": "SnS.HectorTheme/-100 -100/farmer -900 -900 0/addTemporaryActor MysteryWolf 32 32 -100 -100 2 false/skippable/changeName MysteryWolf {{i18n:Strings.Names.B}}/viewport -100 -100 clamp true/skippable/message \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.Message}}\"/fade/showFrame MysteryWolf 1/viewport -100 -100/pause 2000/showFrame MysteryWolf 2/pause 400/showFrame MysteryWolf 3/pause 400/showFrame MysteryWolf 0/pause 400/speak MysteryWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.1}}\"/pause 250/showFrame MysteryWolf 4/pause 250/speak MysteryWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.2}}\"/pause 250/showFrame MysteryWolf 5/pause 250/speak MysteryWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.3}}\"/pause 1000/animate MysteryWolf false false 100 3 3 3 3 2 2 2 2 1 1 1 1/fade/viewport -1000 -1000/speak MysteryWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.4}}[114]\"/pause 250/message \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.Message2}}\"/end"
-      }, 
-      
-      "When": { "SkipIntroQuest": false }
-        
-			},
-    */
+        "SnS.Ch2.Hector.0p2/e SnS.Ch2.Hector.0/e SnS.Ch1.Mateo.12/t 600 1800/F": "SnS.HectorTheme/-100 -100/farmer -900 -900 0/addTemporaryActor MysteryWolf 32 32 -100 -100 2 false/skippable/changeName MysteryWolf {{i18n:Strings.Names.B}}/viewport -100 -100 clamp true/skippable/message \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.Message}}\"/fade/showFrame MysteryWolf 1/viewport -100 -100/pause 2000/showFrame MysteryWolf 2/pause 400/showFrame MysteryWolf 3/pause 400/showFrame MysteryWolf 0/pause 400/speak MysteryWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.1}}\"/pause 250/showFrame MysteryWolf 4/pause 250/speak MysteryWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.2}}\"/pause 250/showFrame MysteryWolf 5/pause 250/speak MysteryWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.3}}\"/pause 1000/animate MysteryWolf false false 100 3 3 3 3 2 2 2 2 1 1 1 1/fade/viewport -1000 -1000/speak MysteryWolf \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.4}}[114]\"/pause 250/message \"{{i18n:Events.S&S.Ch2.PentacleQuest2.Hector.Message2}}\"/end"
+      },      
+		},
     {
       "LogName": "Hector's 0 Heart Event",
       "Action": "EditData",                                           
