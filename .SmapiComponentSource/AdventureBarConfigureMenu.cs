@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using SpaceCore;
 using SpaceCore.UI;
 using StardewValley;
 using StardewValley.Menus;
@@ -19,16 +18,19 @@ namespace SwordAndSorcerySMAPI
         private Ability held;
 
         private AdventureBar bar;
+        private StaticContainer container;
 
         private Image grimoire;
         private Image alchemy;
+        private Image transmutation;
+        public bool RefreshSpells = false;
 
         public AdventureBarConfigureMenu(bool everything = false)
             : base(Game1.uiViewport.Width / 2 - 432 / 2, Game1.uiViewport.Height / 2 - 432 / 2, 432, 432, true)
         {
             ui = new RootElement();
 
-            var container = new StaticContainer()
+            container = new StaticContainer()
             {
                 LocalPosition = new Vector2( xPositionOnScreen, yPositionOnScreen ),
                 Size = new Vector2(432, 432),
@@ -75,9 +77,19 @@ namespace SwordAndSorcerySMAPI
                 };
                 container.AddChild(grimoire);
 
-                alchemy = new()
+                transmutation = new()
                 {
                     LocalPosition = new(width + 32, 96),
+                    Texture = ModTOP.StuffTexture,
+                    TexturePixelArea = new(16, 0, 16, 16),
+                    Scale = 4,
+                    Callback = (elem) => SetChildMenu(new TransmuteMenu())
+                };
+                container.AddChild(transmutation);
+
+                alchemy = new()
+                {
+                    LocalPosition = new(width + 32, 160),
                     Texture = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/stone.png"),
                     Scale = 4,
                     Callback = (elem) => SetChildMenu(new FancyAlchemyMenu())
@@ -87,6 +99,44 @@ namespace SwordAndSorcerySMAPI
 
             bar = new AdventureBar(editing: true);
             bar.xPositionOnScreen = xPositionOnScreen - bar.width - 12;
+        }
+
+        private void UpdateAbilities()
+        {
+            foreach (var img in abilImages)
+            {
+                container.RemoveChild(img);
+            }
+            abilImages.Clear();
+
+            var abils = Ability.Abilities.Values.ToList();
+            int ip = 0;
+            for (int i = 0; i < abils.Count; ++i)
+            {
+                int ix = ip % 6;
+                int iy = ip / 6;
+
+                var tex = Game1.content.Load<Texture2D>(abils[i].TexturePath);
+                bool known = GameStateQuery.CheckConditions(abils[i].KnownCondition, new(Game1.currentLocation, Game1.player, null, null, new Random()));
+                if (!known && abils[i].HiddenIfLocked)
+                    continue;
+
+                ++ip;
+
+                var img = new Image()
+                {
+                    LocalPosition = new Vector2(4 + ix * 72, 4 + iy * 72),
+                    Texture = tex,
+                    TexturePixelArea = Game1.getSquareSourceRectForNonStandardTileSheet(tex, 16, 16, abils[i].SpriteIndex),
+                    Scale = 4,
+                    DrawColor = Color.White * (known ? 1 : 0.5f),
+                    Callback = (elem) => { if (known) held = (Ability)elem.UserData; },
+                    UserData = abils[i],
+                };
+                container.AddChild(img);
+                abilImages.Add(img);
+            }
+            RefreshSpells = false;
         }
 
         public override void receiveLeftClick(int x, int y, bool playSound = true)
@@ -108,6 +158,8 @@ namespace SwordAndSorcerySMAPI
         public override void update(GameTime time)
         {
             base.update(time);
+            if (RefreshSpells)
+                UpdateAbilities();
             ui.Update();
         }
 
@@ -132,15 +184,22 @@ namespace SwordAndSorcerySMAPI
                 var tex = Game1.content.Load<Texture2D>(held.TexturePath);
                 b.Draw(tex, Game1.getMousePosition().ToVector2() + new Vector2( 32, 32 ), Game1.getSquareSourceRectForNonStandardTileSheet(tex, 16, 16, held.SpriteIndex), Color.White, 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, 1);
             }
-
-            if (grimoire?.Hover ?? false)
+            if (GetChildMenu() == null)
             {
-                drawHoverText(b, I18n.OpenGrimoire(), Game1.dialogueFont);
-            }
+                if (grimoire?.Hover ?? false)
+                {
+                    drawHoverText(b, I18n.OpenGrimoire(), Game1.dialogueFont);
+                }
+                
+                if (transmutation?.Hover ?? false)
+                {
+                    drawHoverText(b, I18n.OpenTransmuation(), Game1.dialogueFont);
+                }
 
-            if (alchemy?.Hover ?? false)
-            {
-                drawHoverText(b, I18n.OpenAlchemy(), Game1.dialogueFont);
+                if (alchemy?.Hover ?? false)
+                {
+                    drawHoverText(b, I18n.OpenAlchemy(), Game1.dialogueFont);
+                }
             }
 
             drawMouse(b);

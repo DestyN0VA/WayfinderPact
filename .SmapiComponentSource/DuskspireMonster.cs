@@ -65,6 +65,8 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
 
     public override void update(GameTime time, GameLocation location)
     {
+        Sprite.SpriteWidth = 96;
+        Sprite.SpriteHeight = 96;
         prevFrame = Sprite.CurrentFrame;
 
         //Health = 99999;
@@ -100,6 +102,11 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
 
             if (noMovementTime.Value > 0)
                 noMovementTime.Value -= (float)time.ElapsedGameTime.TotalMilliseconds;
+            if (stunTime.Value > 2000)
+                stunTime.Value = 2000;
+            if (stunTime.Value > 0)
+                stunTime.Value -= (int)time.ElapsedGameTime.TotalMilliseconds;
+
 
             //Log.Debug("nmt:" + noMovementTime.Value);
             if (noMovementTime.Value <= 0)
@@ -110,17 +117,18 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
                     float dist = Vector2.Distance(farmer.StandingPixel.ToVector2(), GetBoundingBox().Center.ToVector2());
 
                     //Log.Debug("dist : " + dist);
-                    if (Game1.random.NextDouble() < 1f / (5 * 60))
+                    if (Game1.random.NextDouble() < 1f / (5 * 60) && stunTime.Value <= 0)
                     {
+                        doingLaugh = false;
                         laughEvent.Fire();
                         noMovementTime.Value = 66 * 75;
                     }
-                    else if (dist < Sprite.SpriteWidth * Game1.pixelZoom / 2 - 75)
+                    else if (dist < Sprite.SpriteWidth * Game1.pixelZoom / 2 - 75 && stunTime.Value <= 0)
                     {
                         swingEvent.Fire(farmer.Position.X > Position.X);
                         noMovementTime.Value = 100 * 10;
                     }
-                    else
+                    else if (stunTime.Value <= 0)
                     {
                         Vector2 vel = Utility.getVelocityTowardPlayer(GetBoundingBox().Center, Speed, farmer);
                         //Log.Debug("vel: " + vel);
@@ -138,9 +146,12 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
 
         if (noMovementTime.Value <= 0)
         {
+
             Vector2 posDiff = Position - lastPos;
             int dir;
-            if (Math.Abs(posDiff.Y) > Math.Abs(posDiff.X))
+            if (stunTime.Value > 0)
+                dir = Game1.down;
+            else if (Math.Abs(posDiff.Y) > Math.Abs(posDiff.X))
             {
                 if (posDiff.Y < 0)
                     dir = Game1.up;
@@ -175,14 +186,14 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
     {
         if (Name != "Duskspire Remnant")
             Game1.playSound("SnS.DuskspireDeath");
-
-        TemporaryAnimatedSprite DuskspireDeath = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 0, 96, 96), 75, 84, 0, ModSnS.DuskspireDeathPos, false, false) { scale = 4 };
-        TemporaryAnimatedSprite DuskspireHeart = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 2016, 96, 96), 75, 16, 50, ModSnS.DuskspireDeathPos, false, false) { scale = 4 };
+        var pos = ModSnS.DuskspireDeathPos;
+        TemporaryAnimatedSprite DuskspireDeath = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 0, 96, 96), 75, 84, 0, pos, false, false) { scale = 4 };
+        TemporaryAnimatedSprite DuskspireHeart = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 2016, 96, 96), 75, 16, 5, pos, false, false) { scale = 4 };
         currentLocation.TemporarySprites.Add(DuskspireDeath);
         DelayedAction.removeTemporarySpriteAfterDelay(currentLocation, DuskspireDeath.id, 6300);
-        DelayedAction.addTemporarySpriteAfterDelay(DuskspireHeart, currentLocation, 6300);
-        DelayedAction.removeTemporarySpriteAfterDelay(currentLocation, DuskspireHeart.id, 12300);
-        DelayedAction.functionAfterDelay(() => Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_DuskspireHeart"), Position, Game1.down, currentLocation), 12300);
+        DelayedAction.addTemporarySpriteAfterDelay(DuskspireHeart, currentLocation, 6301);
+        DelayedAction.removeTemporarySpriteAfterDelay(currentLocation, DuskspireHeart.id, 12301);
+        DelayedAction.functionAfterDelay(() => Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_DuskspireHeart"), Position, Game1.down, currentLocation), 12301);
         currentLocation.modData.Add("DN.SnS_DuskspireFaught", "true");
     }
 

@@ -106,7 +106,7 @@
                 ],
                 "ResearchCosts": {
                     "(O){{ModID}}_EarthEssence": 5,
-                    "(O){{ModID}}_AirEssence": 5,
+                    "(O){{ModID}}_AirEssence": 5
                 }
             },
             "{{ModId}}_Recipe_ScarletPotion":
@@ -435,20 +435,17 @@
                     "(O){{ModID}}_AirEssence": 15,
                 }
             },
-            "{{ModId}}_Spell_StellarRain":
+            "{{ModId}}_Spell_Icebolt":
             {
                 "Type": "Spell",
-                "Name": "{{i18n: witchcraft.research.stellar-rain.name}}",
+                "Name": "{{i18n: witchcraft.research.icebolt.name}}",
                 "DocPages": [
                     {
-                        "Description": "{{i18n: witchcraft.research.stellar-rain.description}}",
+                        "Description": "{{i18n: witchcraft.research.icebolt.description}}",
                     },
                 ],
                 "ResearchCosts": {
-                    "(O){{ModID}}_EarthEssence": 15,
-                    "(O){{ModID}}_AirEssence": 15,
-                    "(O){{ModID}}_FireEssence": 15,
-                    "(O){{ModID}}_WaterEssence": 15,
+                    "(O){{ModID}}_WaterEssence": 30
                 }
             },
             /*

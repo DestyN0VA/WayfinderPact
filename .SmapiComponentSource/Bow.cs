@@ -70,7 +70,7 @@ namespace SwordAndSorcerySMAPI
     }
 
     [HarmonyPatch(typeof(Slingshot), nameof(Slingshot.PerformFire))]
-    public static class SlingshowBowProjectileEffectsPatch
+    public static class SlingshotBowProjectileEffectsPatch
     {
         public static void Prefix(Slingshot __instance, GameLocation location, Farmer who, ref object __state)
         {
@@ -203,8 +203,11 @@ namespace SwordAndSorcerySMAPI
 
         private static void IcicleAffector(BasicProjectile proj, Monster m)
         {
-            m.stunTime.Value = 500 + Game1.random.Next(1000);
-            Game1.Multiplayer.broadcastSprites(m.currentLocation, new TemporaryAnimatedSprite(Game1.mouseCursors2Name, new Rectangle(118, 227, 16, 13), new Vector2(0, 0), false, 0f, Color.White) { layerDepth = (m.StandingPixel.Y + 2) / 10000f, animationLength = 1, interval = m.stunTime.Value, scale = Game1.pixelZoom, id = (int)(m.position.X * 777 + m.position.Y * 77777), positionFollowsAttachedCharacter = true, attachedCharacter = m });
+            if (m is not DuskspireMonster || m.stunTime.Value <= 0)
+            {
+                m.stunTime.Value = 500 + Game1.random.Next(1000);
+                Game1.Multiplayer.broadcastSprites(m.currentLocation, new TemporaryAnimatedSprite(Game1.mouseCursors2Name, new Rectangle(118, 227, 16, 13), new Vector2(0, 0), false, 0f, Color.White) { layerDepth = (m.StandingPixel.Y + 2) / 10000f, animationLength = 1, interval = m.stunTime.Value, scale = Game1.pixelZoom, id = (int)(m.position.X * 777 + m.position.Y * 77777), positionFollowsAttachedCharacter = true, attachedCharacter = m });
+            }
         }
 
         private static void WindwakerAffector(BasicProjectile proj, Monster m)
@@ -214,6 +217,11 @@ namespace SwordAndSorcerySMAPI
 
         private static void LightbringerAffector(BasicProjectile proj, Monster m)
         {
+            if (m is DuskspireMonster)
+            {
+                Game1.showRedMessage(I18n.Arrow_Lightbringer_Duskspire());
+            }
+
             for (int i = 0; i < 10; ++i)
             {
                 Vector2 pos = m.GetBoundingBox().Center.ToVector2();

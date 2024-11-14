@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.SymbolStore;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -129,7 +130,7 @@ namespace SwordAndSorcerySMAPI.Alchemy
             var recipes = AlchemyRecipes.Get().Values;
             foreach (var recipeData in recipes)
             {
-                var recipe = new Tuple<string, bool>[6];
+                var recipe = new Tuple<string, int, bool>[6];
 
                 string output = recipeData.OutputItem;
                 int outputQty = recipeData.OutputQuantity;
@@ -137,14 +138,11 @@ namespace SwordAndSorcerySMAPI.Alchemy
                 int ir = 0;
                 foreach (var ingredData in recipeData.Ingredients)
                 {
-                    for (int i = 0; i < ingredData.Value; i++)
-                    {
-                        recipe[ir] = new(ingredData.Key, false);
-                        ir++;
-                    }
+                    recipe[ir] = new(ingredData.Key, ingredData.Value, false);
+                    ir++;
                 }
                 for (; ir < recipe.Length; ++ir)
-                    recipe[ir] = new(null, true); // Invalid ingredient, but marked as found so it doesn't matter
+                    recipe[ir] = new(null, 0, true); // Invalid ingredient, but marked as found so it doesn't matter
 
                 List<ItemSlot> notUsed = new(ingreds);
                 for (int i = notUsed.Count - 1; i >= 0; --i)
@@ -166,20 +164,15 @@ namespace SwordAndSorcerySMAPI.Alchemy
                             cat = cati;
                         if (cat.HasValue && cati < 0)
                         {
-                            if (ingreds[i].Item.Category == cati)
+                            if (ingreds[i].Item.Category == cati && ingreds[i].Item.Stack == recipe[j].Item2)
                             {
-                                recipe[j] = new(recipe[j].Item1, true);
+                                recipe[j] = new(recipe[j].Item1, recipe[j].Item2, true);
                                 notUsed.Remove(ingreds[i]);
                             }
                         }
-                        else if (ingreds[i].Item.QualifiedItemId == recipe[j].Item1 && !recipe[j].Item2)
+                        else if (ingreds[i].Item.QualifiedItemId == recipe[j].Item1 && recipe[j].Item2 == ingreds[i].Item.Stack && !recipe[j].Item3)
                         {
-                            recipe[j] = new(recipe[j].Item1, true);
-                            notUsed.Remove(ingreds[i]);
-                        }
-                        else if (ingreds[i].Item.HasContextTag(recipe[j].Item1) && !recipe[j].Item2)
-                        {
-                            recipe[j] = new(recipe[j].Item1, true);
+                            recipe[j] = new(recipe[j].Item1, recipe[j].Item2, true);
                             notUsed.Remove(ingreds[i]);
                         }
                     }
@@ -188,7 +181,7 @@ namespace SwordAndSorcerySMAPI.Alchemy
                 bool okay = true;
                 for (int i = 0; i < recipe.Length; ++i)
                 {
-                    if (!recipe[i].Item2)
+                    if (!recipe[i].Item3)
                     {
                         okay = false;
                         break;
@@ -225,23 +218,40 @@ namespace SwordAndSorcerySMAPI.Alchemy
             {
                 if (slot != output)
                 {
-                    if (slot.Item == null && held != null && held is StardewValley.Object)
+                    if (held != null && held is StardewValley.Object)
                     {
-                        if (held.Stack > 1)
+                        if (slot.Item == null)
                         {
-                            slot.Item = held.getOne();
-                            slot.Item.Stack = 1;
-                            held.Stack -= 1;
+                            if (held.Stack > 1)
+                            {
+                                slot.Item = held.getOne();
+                                slot.Item.Stack = 1;
+                                held.Stack--;
+                            }
+                            else
+                            {
+                                slot.Item = held;
+                                held = null;
+                            }
                         }
-                        else
+                        else if (slot.Item != null && held.canStackWith(slot.Item))
                         {
-                            slot.Item = held;
-                            held = null;
+                            if (held.Stack > 1)
+                            {
+                                slot.Item.Stack++;
+                                held.Stack--;
+                            }
+                            else
+                            {
+                                slot.Item.Stack++;
+                                held = null;
+                            }
                         }
                     }
                     else if (slot.Item != null && held == null)
                     {
                         held = slot.Item;
+                        held.Stack = slot.Item.Stack;
                         slot.Item = null;
                     }
                     else if (slot.Item != null && held != null && held is StardewValley.Object)
@@ -256,7 +266,6 @@ namespace SwordAndSorcerySMAPI.Alchemy
                         if (left <= 0)
                             held = null;
                     }
-
                     CheckRecipe();
                 }
                 else if (output.Item != null)

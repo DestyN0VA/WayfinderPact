@@ -1,22 +1,43 @@
-﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
+﻿using HarmonyLib;
+using Microsoft.Build.Utilities;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using SpaceCore;
 using StardewValley;
-using StardewValley.Menus;
+using StardewValley.Extensions;
 using StardewValley.Monsters;
 using StardewValley.Objects;
+using StardewValley.Projectiles;
 using StardewValley.TerrainFeatures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace SwordAndSorcerySMAPI
 {
     internal static class Spells
     {
+        public static int GetSpellDamange(int BaseDamange, int LevelAddition, out int Max)
+        {
+            Farmer farmer = Game1.player;
+            float Damage = BaseDamange;
+            float Mult = 0;
+
+            for (int i = 0; i < farmer.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Witchcraft"); i++)
+            {
+                if (i >= 10) break;
+                Damage += LevelAddition;
+            }
+
+            if (farmer.HasCustomProfession(WitchcraftSkill.ProfessionSpellDamage))
+                Mult += 0.25f;
+
+            Damage *= 1 + Mult;
+            Max = (int)(Damage * 1.2);
+
+            return (int)Damage;
+        }
+
         public static void Haste()
         {
             var buff = new Buff("spell_haste", "spell_haste", duration: 7000 * 6 * 5, effects: new StardewValley.Buffs.BuffEffects() { Speed = { 1 } }, displayName: I18n.Witchcraft_Spell_Haste_Name() );
@@ -250,25 +271,256 @@ namespace SwordAndSorcerySMAPI
             Game1.player.currentLocation.performTouchAction($"MagicWarp EastScarp_PocketDimension 15 8", Game1.player.getStandingPosition());
         }
 
-        public static void Fireball()
+        public static void Fireball(Vector2 MousePos)
         {
-            var pos = Game1.getMousePosition().ToVector2();
-            var playerPos = Game1.player.Position;
+            Farmer farmer = Game1.player;
+            GameLocation location = farmer.currentLocation;
+            var PlayerPos = farmer.getStandingPosition();
+            var TargetPos = new Vector2(Game1.viewport.X, Game1.viewport.Y) + MousePos;
 
-            Vector2 m = new((pos.X - playerPos.X) / 64, (pos.Y - playerPos.Y) / 64);
-
-            float d = Vector2.Distance(pos / 64, playerPos / 64);
-            TemporaryAnimatedSprite fireball = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("").Name, new(0, 0, 16, 16), 1000, 1, 10000, Game1.player.Position, false, false)
+            int time = 1000;
+            float speed = Vector2.Distance(PlayerPos, TargetPos) / 64f;
+            if (speed < 8)
             {
-                motion = m / 1500,
-                lightId = "FireBall",
-                lightcolor = Color.Red,
-                scale = 4
-            };
+                time = (int)(speed * (1000 / 8));
+                speed = 8;
+            }
 
-            Game1.player.currentLocation.TemporarySprites.Add(fireball);
-            DelayedAction.removeTemporarySpriteAfterDelay(Game1.player.currentLocation, fireball.id, 1500);
-            DelayedAction.functionAfterDelay(null, 1500);
+            Vector2 motion = Utility.getVelocityTowardPoint(PlayerPos, TargetPos, speed);
+
+            DebuffingProjectile Fireball = new(null, 10, 0, 5, 0.1f, motion.X, motion.Y, PlayerPos - new Vector2(32f, 48f), location, farmer, hitsMonsters: true, playDefaultSoundOnFire: false);
+            Fireball.uniqueID.Value = Game1.random.Next();
+            Fireball.wavyMotion.Value = false;
+            Fireball.piercesLeft.Value = 99999;
+            Fireball.IgnoreLocationCollision = true;
+            Fireball.ignoreObjectCollisions.Value = true;
+            Fireball.projectileID.Value = 15;
+            Fireball.alpha.Value = 0.001f;
+            Fireball.alphaChange.Value = 0.05f;
+            Fireball.light.Value = true;
+            Fireball.boundingBoxWidth.Value = 32;
+            location.projectiles.Add(Fireball);
+            location.playSound("fireball");
+
+            DelayedAction.functionAfterDelay(() =>
+            {
+                int Min = GetSpellDamange(50, 15, out int Max);
+                int Min2 = GetSpellDamange(25, 10, out int Max2);
+
+                location.projectiles.RemoveWhere(p => p.uniqueID == Fireball.uniqueID);
+                location.playSound("explosion");
+
+                foreach (Monster m in location.characters.Where(c => c is Monster))
+                {
+                    if (Vector2.Distance(TargetPos, m.Position) <= -5 * 64 || Vector2.Distance(TargetPos, m.Position) >= 5 * 64) continue;
+
+                    location.damageMonster(m.GetBoundingBox(), Min, Max, false, Game1.player, true);
+
+                    DelayedAction.functionAfterDelay(() => { if (m.Health > 0) location.damageMonster(m.GetBoundingBox(), Min2, Max2, isBomb: false, Game1.player); }, 1000);
+                    DelayedAction.functionAfterDelay(() => { if (m.Health > 0) location.damageMonster(m.GetBoundingBox(), Min2, Max2, isBomb: false, Game1.player); }, 2000);
+                    DelayedAction.functionAfterDelay(() => { if (m.Health > 0) location.damageMonster(m.GetBoundingBox(), Min2, Max2, isBomb: false, Game1.player); }, 3000);
+                }
+            }, time);
+        }
+
+        public static void Icebolt(Vector2 MousePos)
+        {
+            Farmer farmer = Game1.player;
+            GameLocation location = farmer.currentLocation;
+            var PlayerPos = farmer.getStandingPosition();
+            var TargetPos = new Vector2(Game1.viewport.X, Game1.viewport.Y) + MousePos;
+
+            int time = 500;
+            float speed = Vector2.Distance(PlayerPos, TargetPos) / 64f * 2;
+            if (speed < 4)
+            {
+                time = (int)(speed * (500 / 4));
+                speed = 4;
+            }
+
+            Vector2 motion = Utility.getVelocityTowardPoint(PlayerPos, TargetPos, speed);
+
+            DebuffingProjectile Icebolt = new("frozen", 17, 0, 3, 1f, motion.X, motion.Y, PlayerPos - new Vector2(32f, 48f), location, farmer, hitsMonsters: true, playDefaultSoundOnFire: false);
+            Icebolt.uniqueID.Value = Game1.random.Next();
+            Icebolt.wavyMotion.Value = false;
+            Icebolt.piercesLeft.Value = 99999;
+            Icebolt.IgnoreLocationCollision = true;
+            Icebolt.ignoreObjectCollisions.Value = true;
+            Icebolt.projectileID.Value = 15;
+            Icebolt.alpha.Value = 0.001f;
+            Icebolt.alphaChange.Value = 0.05f;
+            Icebolt.light.Value = true;
+            Icebolt.boundingBoxWidth.Value = 32;
+
+            location.projectiles.Add(Icebolt);
+            location.playSound("fireball");
+
+            DelayedAction.functionAfterDelay(() =>
+            {
+                location.projectiles.RemoveWhere(p => p.uniqueID == Icebolt.uniqueID);
+                location.playSound("frozen");
+                int Min = GetSpellDamange(20, 5, out int Max);
+
+                foreach (Monster m in location.characters.Where(c => c is Monster))
+                {
+                    if (Vector2.Distance(TargetPos, m.Position) <= -5 * 64 || Vector2.Distance(TargetPos, m.Position) >= 5 * 64) continue;
+
+                    if (m is not DuskspireMonster || m.stunTime.Value <= 0)
+                        m.stunTime.Value = 10000;
+                    Game1.Multiplayer.broadcastSprites(location, new TemporaryAnimatedSprite("LooseSprites\\Cursors2", new Rectangle(118, 227, 16, 13), new Vector2(0f, 0f), flipped: false, 0f, Color.White)
+                    {
+                        layerDepth = (float)(m.StandingPixel.Y + 2) / 10000f,
+                        animationLength = 1,
+                        interval = 5000,
+                        scale = 4f,
+                        id = (int)(m.position.X * 777f + m.position.Y * 77777f),
+                        positionFollowsAttachedCharacter = true,
+                        attachedCharacter = m
+                    });
+
+                    location.damageMonster(m.GetBoundingBox(), Min, Max, false, Game1.player, true);
+                }
+            }, time);
+        }
+
+        public static void MagicMissle()
+        {
+            Farmer farmer = Game1.player;
+            GameLocation location = farmer.currentLocation;
+            Vector2 PlayerPos = farmer.Position;
+            
+            if (Utility.findClosestMonsterWithinRange(location, PlayerPos, 100 * 64) == null)
+            {
+                Ability.Abilities.TryGetValue("spell_magicmissle", out Ability abil);
+                farmer.GetFarmerExtData().mana.Value += abil.ManaCost();
+                Game1.showRedMessage(I18n.Witchcraft_Spell_NoEnemyFound(I18n.Witchcraft_Spell_MagicMissle_Name()));
+                return;
+            }
+
+            var TargetPos1 = PlayerPos + new Vector2(0, -64);
+            SetUpMagicMissle(location, TargetPos1, Utility.getVelocityTowardPoint(PlayerPos, TargetPos1, 4));
+
+            var TargetPos2 = PlayerPos + new Vector2(64, 64);
+            SetUpMagicMissle(location, TargetPos2, Utility.getVelocityTowardPoint(PlayerPos, TargetPos2, 4));
+
+            var TargetPos3 = PlayerPos + new Vector2(-64, 64);
+            SetUpMagicMissle(location, TargetPos3, Utility.getVelocityTowardPoint(PlayerPos, TargetPos3, 4));
+        }
+
+        private static void SetUpMagicMissle(GameLocation location, Vector2 TargetPos, Vector2 Motion)
+        {
+            int Damage = GetSpellDamange(50, 25, out _);
+
+            BasicProjectile MagicMissle = new(Damage / 3, 8, 999, 10, 0, 0, 0, TargetPos, damagesMonsters: true, location: location, firer: Game1.player);
+            MagicMissle.uniqueID.Value = Game1.random.Next();
+            MagicMissle.lightSourceId = "Magic Missle";
+            MagicMissle.maxTravelDistance.Value = 3000;
+            MagicMissle.IgnoreLocationCollision = true;
+            MagicMissle.ignoreObjectCollisions.Value = true;
+            MagicMissle.alpha.Value = 0.001f;
+            MagicMissle.alphaChange.Value = 0.05f;
+            MagicMissle.boundingBoxWidth.Value = 32;
+            MagicMissle.xVelocity.Value = Motion.X;
+            MagicMissle.yVelocity.Value = Motion.Y;
+            location.projectiles.Add(MagicMissle);
+        }
+
+        public static Dictionary<int, List<Monster>> Monsters = [];
+
+        public static void LightningBolt()
+        {
+            int i = 0;
+            var keys = Monsters.Keys.ToList();
+            foreach (var key in keys)
+                if (i < key)
+                    i = key + 1;
+
+            Farmer farmer = Game1.player;
+            GameLocation location = farmer.currentLocation;
+            Monster m = Utility.findClosestMonsterWithinRange(location, Game1.player.Position, 15 * 64);
+            if (m is null)
+            {
+                Ability.Abilities.TryGetValue("spell_lightningbolt", out Ability abil);
+                Game1.player.GetFarmerExtData().mana.Value += abil.ManaCost();
+                Game1.showRedMessage(I18n.Witchcraft_Spell_NoEnemyFound(I18n.Witchcraft_Spell_LightningBolt_Name()));
+                return;
+            }
+            else Monsters.Add(i, [m]);
+
+            TemporaryAnimatedSprite LightningBolt = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/ThorLightning.png").BaseName, new(0, 0, 32, 48), 75, 16, 1, m.Position - new Vector2(64, 64 * 3), false, false) { scale = 4, layerDepth = 1 };
+            location.TemporarySprites.Add(LightningBolt);
+            location.damageMonster(m.GetBoundingBox(), GetSpellDamange(50, 10, out int Max), Max, false, farmer);
+            Game1.playSound("thunder");
+            DelayedAction.functionAfterDelay(() => ChainLightningBolt(farmer, location, m, i, 5), 500);
+        }
+
+        public static void ChainLightningBolt(Farmer farmer, GameLocation location, Monster monster, int DictKey, int Chain)
+        {
+            Monster m = Utility.findClosestMonsterWithinRange(location, monster.Position, 15 * 64, match: l => !Monsters[DictKey].Contains(l));
+            if (m is null || Chain <= 0)
+            {
+                Monsters.Remove(DictKey);
+                return;
+            }
+            else Monsters[DictKey].Add(m);
+            TemporaryAnimatedSprite LightningBolt = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/ThorLightning.png").BaseName, new(0, 0, 32, 48), 75, 16, 1, m.Position - new Vector2(64, 64 * 3), false, false) { scale = 4, layerDepth = 1 };
+            location.TemporarySprites.Add(LightningBolt);
+            location.damageMonster(m.GetBoundingBox(), GetSpellDamange(50 - ((6 - Chain) * 10), 10 - (6 - Chain), out int Max), Max, false, farmer);
+            DelayedAction.functionAfterDelay(() => ChainLightningBolt(farmer, location, m, DictKey, Chain - 1), 500);
+            Game1.playSound("thunder");
+        }
+
+        public static List<Tuple<Projectile, bool, float, float>> Projectiles = [];
+
+        [HarmonyPatch(typeof(Projectile), nameof(Projectile.update))]
+        public static class MagicMissleHomingPatch
+        {
+            public static void Postfix(Projectile __instance, GameTime time, GameLocation location)
+            {
+                if (__instance.lightSourceId != "Magic Missle") return;
+
+                if (!Projectiles.Any(p => p.Item1 == __instance))
+                {
+                    Projectiles.Add(new(__instance, false, __instance.xVelocity.Value / 50, __instance.yVelocity.Value / 50));
+                }
+
+                var p = Projectiles.First(p => p.Item1 == __instance);
+
+                if (!p.Item2)
+                {
+
+                    if (MathF.Round(__instance.xVelocity.Value, MidpointRounding.ToZero) != 0)
+                        __instance.xVelocity.Value -= p.Item3;
+                    
+                    if (MathF.Round(__instance.yVelocity.Value, MidpointRounding.ToZero) != 0)
+                        __instance.yVelocity.Value -= p.Item4;
+
+                    if (MathF.Round(__instance.xVelocity.Value, MidpointRounding.ToZero) == 0 && MathF.Round(__instance.yVelocity.Value, MidpointRounding.ToZero) == 0)
+                        Projectiles[Projectiles.IndexOf(p)] = new(p.Item1, true, p.Item3, p.Item4);
+                }
+                else
+                {
+                    if (__instance.acceleration.Value != Vector2.Zero) __instance.acceleration.Value = Vector2.Zero;
+                    Vector2 Motion;
+                    Monster m = Utility.findClosestMonsterWithinRange(location, __instance.position.Value, 100 * 64);
+                    if (m is not null)
+                    {
+                        Motion = Utility.getVelocityTowardPoint(__instance.position.Value, Utility.PointToVector2(m.GetBoundingBox().Center), 10);
+                    }
+                    else
+                    {
+                        Motion = Utility.getVelocityTowardPoint(__instance.position.Value, Utility.PointToVector2(Game1.player.GetBoundingBox().Center), 3);
+                        if (__instance.position.Value == Utility.PointToVector2(Game1.player.GetBoundingBox().Center))
+                        {
+                            location.projectiles.Remove(__instance);
+                            Projectiles.Remove(p);
+                            return;
+                        }
+                    }
+                    __instance.xVelocity.Value = (int)Motion.X;
+                    __instance.yVelocity.Value = (int)Motion.Y;
+                }
+            }
         }
     }
 }
