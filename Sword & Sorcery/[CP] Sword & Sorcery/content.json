@@ -356,13 +356,13 @@
       "Description": "Toggles between a new varient of Hector's theme (TheFrenchDodo) and the original varient (HarvzBack).",
       "Section": "Miscellaneous"
     },
-    "SkipIntroQuest_Setting": {
+    /*"SkipIntroQuest_Setting": {
       "AllowValues": "true, false",
       "Default": "false",
       "AllowBlank": false,
       "Description": "Removes the quest requirements for Hector's intro quest, in case of bugs, participation in the Joja route, or other issues.",
       "Section": "Miscellaneous"
-    },
+    },*/
     /*"SeasonalOutfits": {
       "AllowValues": "full, lite, vanilla",
       "Default": "full",
