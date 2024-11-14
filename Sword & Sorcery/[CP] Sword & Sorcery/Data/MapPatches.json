@@ -640,11 +640,8 @@
         "Width": 1,
         "Height": 2
       },
-      "When": {
-        "HasFlag |contains=HectorEssenceAltar1": true,
-        "HasFlag |contains=Hector_SpecialOrders_River1": false
-      }
     },
+    /*
     {
       "LogName": "Hector Final Dropbox pt.2",
       "Action": "EditMap",
@@ -663,6 +660,7 @@
         "HasFlag |contains=Hector_SpecialOrders_River2": false
       }
     },
+    */
     // ADDS THE GROVE WARPS
     {
       "Action": "EditMap",

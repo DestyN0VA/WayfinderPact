@@ -56,7 +56,7 @@
     {
       "LogName": "Sword & Sorcery - Quest Includes",
       "Action": "Include",
-      "FromFile": "Data/Quests & Items/BuildQuest.json, Data/Quests & Items/BuildQuest2.json, Data/Quests & Items/CGSpecialOrders.json, Data/Quests & Items/PentacleQuest.json, Data/Quests & Items/RiverQuest.json"
+      "FromFile": "Data/Quests & Items/BuildQuest.json, Data/Quests & Items/BuildQuest2.json, Data/Quests & Items/CGSpecialOrders.json, Data/Quests & Items/RiverQuest.json" //Data/Quests & Items/PentacleQuest.json
     },
     {
       "LogName": "Sword & Sorcery - Data Includes",
@@ -655,6 +655,7 @@
         "Eli&DylanExtras": true
       }
     },
+    /*
     {
       "Name": "HectorIntroRequirement",
       "Value": "SnS.Ch2.Hector.1/e SnS.Ch1.Mateo.14/t 0800 2200/n Hector_SpecialOrders_Pentacle1/n Hector_SpecialOrders_Pentacle2/n Hector_SpecialOrders_Pentacle3/n Hector_SpecialOrders_Pentacle4/F",
@@ -669,6 +670,7 @@
         "SkipIntroQuest_Setting": true
       }
     },
+    */
     {
       "Name": "HectorRomance",
       "Value": "Romantic",
@@ -2163,6 +2165,7 @@
         "HasMod |contains=MadDog.HashtagBearFam": true
       }
     },
+    /*
     {
       "Name": "SkipIntroQuest",
       "Value": "{{SkipIntroQuest_Setting}}"
@@ -2174,6 +2177,7 @@
         "HasFlag": "JojaMember"
       }
     },
+    */
     {
       "Name": "MateoPortraitSpriteIndex",
       "Value": "0"
