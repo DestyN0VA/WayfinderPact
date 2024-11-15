@@ -1017,7 +1017,7 @@
         "EastScarp_PocketDimension": {
           "DisplayName": "{{i18n:miscellaneous.mapname.PocketDimension}}",
           "CreateOnLoad": {
-            "MapPath": "Maps/PocketDimension1"
+            "MapPath": "Maps/PocketDimension{{PocketDimensionUpgrade}}"
           },
           "DefaultArrivalTile": {
             "X": 10,

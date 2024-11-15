@@ -3,7 +3,6 @@ using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using NeverEndingAdventure.Utils;
-using SpaceCore;
 using SpaceCore.UI;
 using StardewValley;
 using StardewValley.Extensions;
@@ -35,14 +34,9 @@ namespace SwordAndSorcerySMAPI.Alchemy
                 if (recipe.Value.UnlockConditions is not null && !GameStateQuery.CheckConditions(recipe.Value.UnlockConditions))
                     continue;
 
-                int x = 0;
-                foreach (string item in recipe.Value.Ingredients.Keys)
+                if (recipe.Value.Ingredients.Keys.Count > 6)
                 {
-                    x += recipe.Value.Ingredients[item];
-                }
-                if (x > 6)
-                {
-                    Log.Warn($"Alchemy Recipe {recipe.Key} has more than 6 ingredients. Skipping");
+                    Log.Error($"Alchemy Recipe {recipe.Key} has more than 6 ingredients. Skipping");
                     continue;
                 }
 
@@ -71,6 +65,7 @@ namespace SwordAndSorcerySMAPI.Alchemy
 
                         List<Item> items = [];
 
+
                         foreach (string item in recipe.Value.Ingredients.Keys)
                         {
                             for (int i = 0; i < recipe.Value.Ingredients[item]; ++i)
@@ -84,11 +79,10 @@ namespace SwordAndSorcerySMAPI.Alchemy
                                 {
                                     var invItem = Game1.player.Items[j];
                                     if (invItem == null) continue;
-
-                                    
-                                    if (invItem.QualifiedItemId == item || cat != null && invItem.Category == cat || item == "essence_item" && invItem.HasContextTag(item))
+                                    if (invItem.QualifiedItemId == item || cat != null && invItem.Category == cat)
                                     {
-                                        items.Add(invItem);
+                                        if (!items.Any(i => i.QualifiedItemId == invItem.QualifiedItemId))
+                                            items.Add(invItem);
                                         invItem.Stack--;
                                         if (invItem.Stack <= 0)
                                             Game1.player.Items[j] = null;
@@ -101,7 +95,9 @@ namespace SwordAndSorcerySMAPI.Alchemy
                         int ingred = 0;
                         foreach (Item item in items)
                         {
-                            parent.ingreds[ingred].Item = item.getOne();
+                            Item item2 = item.getOne();
+                            item2.Stack = recipe.Value.Ingredients.First(i => i.Key == item.QualifiedItemId).Value;
+                            parent.ingreds[ingred].Item = item2;
                             ingred++;
                         }
 

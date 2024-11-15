@@ -28,6 +28,7 @@ using StardewValley.Menus;
 using SpaceCore.Spawnables;
 using StardewValley.Inventories;
 using System.Xml;
+using StardewValley.Projectiles;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -235,7 +236,7 @@ namespace SwordAndSorcerySMAPI
             {
                 new FarmerSprite.AnimationFrame(57, 0),
                 new FarmerSprite.AnimationFrame(57, 500, false, false),
-                new FarmerSprite.AnimationFrame((short)Game1.player.FarmerSprite.CurrentFrame, 500, false, false, player => { onCast(); player.CanMove = true; })
+                new FarmerSprite.AnimationFrame((short)Game1.player.FarmerSprite.CurrentFrame, 100, false, false, player => { onCast(); player.CanMove = true; })
             });
             float drawLayer = Math.Max(0f, (float)(Game1.player.StandingPixel.Y + 3) / 10000f);
             float drawLayer2 = Math.Max(0f, (float)(Game1.player.StandingPixel.Y - 3) / 10000f);
@@ -1165,20 +1166,61 @@ namespace SwordAndSorcerySMAPI
                 }
             });
 
-            /*Ability.Abilities.Add("spell_fireball", new Ability("spell_fireball")
+            Ability.Abilities.Add("spell_fireball", new Ability("spell_fireball")
             {
                 Name = I18n.Witchcraft_Spell_Fireball_Name,
                 Description = I18n.Witchcraft_Spell_Fireball_Description,
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
-                SpriteIndex = 10,
-                ManaCost = () => 5,
+                SpriteIndex = 9,
+                ManaCost = () => { return 10 - (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionSpellDamage) ? 2 : 0); },
                 KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Fireball",
-                UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
+                UnlockHint = I18n.Ability_Witchcraft_SpellUnlockHint,
                 Function = () =>
                 {
-                    CastSpell(Color.Red, () => Spells.Fireball());
+                    var mousepos = Utility.PointToVector2(Game1.getMousePosition());
+                    CastSpell(Color.Red, () => Spells.Fireball(mousepos));
                 }
-            });*/
+            });
+
+            Ability.Abilities.Add("spell_icebolt", new Ability("spell_icebolt")
+            {
+                Name = I18n.Witchcraft_Spell_IceBolt_Name,
+                Description = I18n.Witchcraft_Spell_IceBolt_Description,
+                TexturePath = Projectile.projectileSheetName,
+                SpriteIndex = 17,
+                ManaCost = () => { return 10 - (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionSpellDamage) ? 2 : 0); },
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Icebolt",
+                UnlockHint = I18n.Ability_Witchcraft_SpellUnlockHint,
+                Function = () =>
+                {
+                    var mousepos = Utility.PointToVector2(Game1.getMousePosition());
+                    CastSpell(Color.Blue, () => Spells.Icebolt(mousepos));
+                }
+            });
+
+            Ability.Abilities.Add("spell_magicmissle", new Ability("spell_magicmissle")
+            {
+                Name = I18n.Witchcraft_Spell_MagicMissle_Name,
+                Description = I18n.Witchcraft_Spell_MagicMissle_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
+                SpriteIndex = 10,
+                ManaCost = () => { return 10 - (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionSpellDamage) ? 2 : 0); },
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_MagicMissle",
+                UnlockHint = I18n.Ability_Witchcraft_SpellUnlockHint,
+                Function = () => CastSpell(Color.White, Spells.MagicMissle)
+            });
+
+            Ability.Abilities.Add("spell_lightningbolt", new Ability("spell_lightningbolt")
+            {
+                Name = I18n.Witchcraft_Spell_LightningBolt_Name,
+                Description = I18n.Witchcraft_Spell_LightningBolt_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
+                SpriteIndex = 8,
+                ManaCost = () => { return 10 - (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionSpellDamage) ? 2 : 0); },
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_LightningBolt",
+                UnlockHint = I18n.Ability_Witchcraft_SpellUnlockHint,
+                Function = () => CastSpell(Color.Aquamarine, Spells.LightningBolt)
+            });
         }
     }
 

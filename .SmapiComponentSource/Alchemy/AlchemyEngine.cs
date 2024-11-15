@@ -34,33 +34,4 @@ namespace SwordAndSorcerySMAPI.Alchemy
             Game1.activeClickableMenu = new FancyAlchemyMenu();
         }
     }
-
-    [HarmonyPatch(typeof(Utility), nameof(Utility.getTrashReclamationPrice))]
-    public class PhilosophersStoneFunctionalityPatch
-    {
-        public static void Postfix(Item i, Farmer f, ref int __result)
-        {
-            if (!f.professions.Contains(WitchcraftSkill.ProfessionPhilosopherStone.GetVanillaId()) )
-            {
-                return;
-            }
-
-            float sellPercentage = 1;
-            if (i.canBeTrashed())
-            {
-                if (i is Wallpaper || i is Furniture)
-                {
-                    __result = -1;
-                    return;
-                }
-                StardewValley.Object obj = i as StardewValley.Object;
-                if ((obj != null && !obj.bigCraftable.Value) || i is MeleeWeapon || i is Ring || i is Boots)
-                {
-                    __result = (int)((float)i.Stack * ((float)i.sellToStorePrice(-1L) * sellPercentage));
-                    return;
-                }
-            }
-            __result = -1;
-        }
-    }
 }

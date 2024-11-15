@@ -1,127 +1,188 @@
 ﻿using StardewValley.Menus;
 using StardewValley;
+using StardewValley.Extensions;
 using SpaceCore.UI;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Object = StardewValley.Object;
+using System;
+using SpaceCore;
+using StardewValley.BellsAndWhistles;
 
 namespace SwordAndSorcerySMAPI
 {
     internal class TransmuteMenu : IClickableMenu
     {
         private RootElement ui;
-        private List<ItemSlot> essenceTo;
+        private List<ItemWithBorder> Essences = [];
+        private List<Label> TransmutableLabel = [];
+        private int TransmutationCost = 4;
+        public List<string> essenceIds = [];
 
         public TransmuteMenu()
-            : base(Game1.uiViewport.Width / 2 - (64 * 12 + 32) / 2, Game1.uiViewport.Height / 2 - (480 + 250) / 2, 64 * 12 + 32, 480 + 250)
+            : base(Game1.uiViewport.Width / 2 - 724 / 2, Game1.uiViewport.Height / 2 - 480 / 2, 724, 480)
         {
+            if (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionEssenceDrops))
+            {
+                TransmutationCost = 2;
+            }
+            if (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionPhilosopherStone))
+            {
+                TransmutationCost = 1;
+            }
+
             ui = new()
             {
                 LocalPosition = new(xPositionOnScreen, yPositionOnScreen)
             };
 
-            var container = new StaticContainer()
+            ScrollContainer table = new()
             {
-                Size = new(this.width, this.height),
-                OutlineColor = Color.White
-            };
-            ui.AddChild(container);
-
-            var ingredientsButton = new Image()
-            {
-                Texture = ModTOP.Grimoire,
-                Scale = 4,
-                Callback = (e) => SetChildMenu(new TransmuteIngredients()),
-                LocalPosition = new(32, 32),
-            };
-            container.AddChild(ingredientsButton);
-        }
-
-        public override void receiveLeftClick(int x, int y, bool playSound = true)
-        {
-            base.receiveLeftClick(x, y, playSound);
-        }
-
-        public override void receiveRightClick(int x, int y, bool playSound = true)
-        {
-            base.receiveRightClick(x, y, playSound);
-        }
-
-        internal List<Item> GetAllEssences()
-        {
-            List<Item> essences = [];
-            var itemids = ItemRegistry.GetObjectTypeDefinition().GetAllIds().Where(i => (ItemRegistry.Create(i) is Object o && o.HasContextTag("essence_item")) || i == "(O)768" || i == "(O)769");
-
-            foreach (var itemid in itemids)
-            {
-                essences.Add(ItemRegistry.Create(itemid));
-            }
-            return essences;
-        }
-
-        public override void draw(SpriteBatch b)
-        {
-            base.draw(b);
-            ui.Draw(b);
-            drawMouse(b);
-        }
-    }
-
-    internal class TransmuteIngredients : IClickableMenu
-    {
-        private RootElement ui;
-        private List<ItemWithBorder> Essences = new();
-
-        public TransmuteIngredients()
-            : base(Game1.uiViewport.Width / 2 - 320, Game1.uiViewport.Height / 2 - 240, 640, 480, true)
-        {
-            ui = new();
-            ui.LocalPosition = new(xPositionOnScreen, yPositionOnScreen);
-
-            Table table = new()
-            {
-                RowHeight = 110,
-                Size = new(640, 480),
+                Size = new(width - 64, height - 16),
+                LocalPosition = new(32, 32)
             };
 
-            List<Element> currRow = new();
             var items = GetAllEssences();
+            int w = 0;
+            int h = 0;
             foreach (var item in items)
             {
                 ItemWithBorder essence_ = new()
                 {
                     ItemDisplay = item,
-                    LocalPosition = new(currRow.Count * 110, 0),
-                    UserData = item,
-                    Callback = (e) =>
-                    {
-                        var slot = Essences.First(l => l.ItemDisplay == item);
-                        slot.TransparentItemDisplay = !slot.TransparentItemDisplay;
-                    },
+                    LocalPosition = new(16 + 110 * w, 110 * h + 32 * h)
                 };
-                currRow.Add(essence_);
-                this.Essences.Add(essence_);
-                if (currRow.Count == 6)
+                essence_.Callback = (e) =>
                 {
-                    table.AddRow(currRow.ToArray());
-                    currRow.Clear();
+                    if (!essence_.TransparentItemDisplay)
+                    {
+                        if (!DoesPlayerHaveSpaceForEssence(item))
+                        {
+                            Game1.showRedMessageUsingLoadString("Strings/StringsFromCSFiles:Crop.cs.588");
+                        }
+                        else
+                        {
+                            DoTransmutation(item);
+                        }
+                    }
+                };
+                table.AddChild(essence_);
+                Essences.Add(essence_);
+                Label essencelabel_ = new()
+                {
+                    String = GetTransmutableCountFor(item).ToString(),
+                    Font = Game1.smallFont,
+                    UserData = essence_,
+                    LocalPosition = new(48 + 110 * w, 110 * (h + 1) + 32 * h)
+                };
+                table.AddChild(essencelabel_);
+                TransmutableLabel.Add(essencelabel_);
+                
+                w++;
+                if ((items.Count < 6 && w >= 4) || (w >= 6))
+                {
+                    w = 0;
+                    h++;
                 }
             }
-            if (currRow.Count != 0)
-                table.AddRow(currRow.ToArray());
+
             ui.AddChild(table);
+            UpdateEssenceAvailability();
+        }
+
+        internal void UpdateEssenceAvailability()
+        {
+            foreach (var essence in Essences)
+            {
+                List<string> localEssenceIds = [];
+                localEssenceIds.AddRange(essenceIds);
+                localEssenceIds.Remove(essence.ItemDisplay.QualifiedItemId);
+
+                int x = 0;
+                foreach (var item in Game1.player.Items.Where(i => i is not null))
+                {
+                    if (localEssenceIds.Contains(item.QualifiedItemId))
+                    {
+                        x += item.Stack;
+                    }
+                }
+                essence.TransparentItemDisplay = x < TransmutationCost;
+
+                var label = TransmutableLabel.FirstOrDefault(l => l.UserData == essence);
+                label.String = GetTransmutableCountFor(essence.ItemDisplay).ToString();
+            }
+        }
+
+        private int GetTransmutableCountFor(Item essence)
+        {
+            List<string> localEssenceIds = [];
+            localEssenceIds.AddRange(essenceIds);
+            localEssenceIds.Remove(essence.QualifiedItemId);
+
+            int x = 0;
+            foreach (var item in Game1.player.Items.Where(i => i is not null))
+            {
+                if (localEssenceIds.Contains(item.QualifiedItemId))
+                {
+                    x += item.Stack;
+                }
+            }
+            return x / TransmutationCost;
+        }
+
+        private void DoTransmutation(Item essence)
+        {
+            List<string> localEssenceIds = [];
+            foreach (string essenceId in essenceIds)
+            {
+                localEssenceIds.Add(essenceId.ToLower());
+            }
+            localEssenceIds.Remove(essence.QualifiedItemId.ToLower());
+
+            for (int i = 0; i < TransmutationCost; ++i)
+            {
+                for (int j = 0; j < Game1.player.Items.Count; ++j)
+                {
+                    var invItem = Game1.player.Items[j];
+                    if (invItem == null) continue;
+
+                    if (localEssenceIds.Contains(invItem.QualifiedItemId.ToLower()))
+                    {
+                        invItem.Stack--;
+                        if (invItem.Stack <= 0)
+                            Game1.player.Items[j] = null;
+                        break;
+                    }
+                }
+            }
+
+            Game1.player.addItemToInventory(ItemRegistry.Create(essence.QualifiedItemId, 1));
+            UpdateEssenceAvailability();
+        }
+
+        private bool DoesPlayerHaveSpaceForEssence(Item essence)
+        {
+            if (Game1.player.freeSpotsInInventory() > 0)
+                return true;
+            else if (Game1.player.Items.Any(i => i.canStackWith(essence) && i.Stack < 999))
+                return true;
+            else return false;
         }
 
         internal List<Item> GetAllEssences()
         {
             List<Item> essences = [];
-            var itemids = ItemRegistry.GetObjectTypeDefinition().GetAllIds().Where(i => (ItemRegistry.Create(i) is Object o && o.HasContextTag("essence_item")) || i == "(O)768" || i == "(O)769");
-
+            var itemids = ItemRegistry.GetObjectTypeDefinition().GetAllIds().Where(i => (ItemRegistry.Create($"(O){i}") is Object o && o.HasContextTag("essence_item")) || i == "768" || i == "769");
+            
             foreach (var itemid in itemids)
             {
-                essences.Add(ItemRegistry.Create(itemid));
+                essences.Add(ItemRegistry.Create($"(O){itemid}"));
+                if (!essenceIds.Contains($"(O){itemid}"))
+                {
+                    essenceIds.Add($"(O){itemid}");
+                }
             }
             return essences;
         }
@@ -134,15 +195,14 @@ namespace SwordAndSorcerySMAPI
 
         public override void draw(SpriteBatch b)
         {
+            drawTextureBox(b, xPositionOnScreen, yPositionOnScreen, width, height, Color.White);
+
+            base.draw(b);
             ui.Draw(b);
 
-            drawMouse(b);
+            SpriteText.drawStringWithScrollCenteredAt(b, I18n.Transmutation_Cost($"{TransmutationCost}"), xPositionOnScreen + width / 2, yPositionOnScreen - 64);
 
-            if (ItemWithBorder.HoveredElement != null)
-            {
-                var fake = ItemWithBorder.HoveredElement.UserData as Item;
-                drawHoverText(b, " ", Game1.smallFont, boldTitleText: fake.DisplayName);
-            }
+            drawMouse(b);
         }
     }
 }

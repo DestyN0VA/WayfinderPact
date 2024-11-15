@@ -15,8 +15,11 @@
           "IsDrink": false,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 5
-        },
+          "SpriteIndex": 5,
+          "ContextTags": [
+            "essence_item"
+          ]
+        }
       }
     },
     {
@@ -35,7 +38,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
           "SpriteIndex": 6
-        },
+        }
       }
     },
     /*
@@ -162,9 +165,11 @@
           "IsDrink": false,
           "ExcludeFromShippingCollection": true,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "ContextTags": [ "keychain_item" ], 
+          "ContextTags": [
+            "keychain_item"
+          ],
           "SpriteIndex": 101
-        },
+        }
       }
     },
     {
@@ -172,24 +177,26 @@
       "Action": "EditData",
       "Target": "spacechase0.SpaceCore/WearableData",
       "Entries": {
-          "(O){{ModID}}_destykeychain": {
-              "BuffIdToApply": "{{ModID}}_DestysBuff",
-          },
+        "(O){{ModID}}_destykeychain": {
+          "BuffIdToApply": "{{ModID}}_DestysBuff"
+        }
       }
-  },
-  {
+    },
+    {
       "LogName": "Desty's Buff",
       "Action": "EditData",
       "Target": "Data/Buffs",
       "Entries": {
-          "{{ModID}}_DestysBuff": {
-              "DisplayName": "{{i18n:buff.destybuff}}",
-              "IconTexture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-              "IconSpriteIndex": 102,
-              "Effects": { "Attack": 20 }
+        "{{ModID}}_DestysBuff": {
+          "DisplayName": "{{i18n:buff.destybuff}}",
+          "IconTexture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "IconSpriteIndex": 102,
+          "Effects": {
+            "Attack": 20
           }
+        }
       }
-  },
+    },
     // CRAFTING RECIPES 
     /*
     {
@@ -211,7 +218,7 @@
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_druidicessence": {
           "CategoryTextOverride": "Druidic",
@@ -220,7 +227,7 @@
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_druidictotemfetish": {
           "CategoryTextOverride": "Druidic",
@@ -229,7 +236,7 @@
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_druidiceldermask": {
           "CategoryTextOverride": "Druidic",
@@ -238,7 +245,7 @@
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_brokenshield": {
           "CategoryTextOverride": "Shield",
@@ -263,8 +270,8 @@
         },
         "{{ModID}}_stygiumstatuette": {
           "CategoryTextOverride": "Corrupted Object"
-        },
+        }
       }
-    },
+    }
   ]
 }

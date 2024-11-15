@@ -28,3 +28,4 @@ _ReSharper*/
 *.nuget.props
 *.nuget.targets
 
+/.vscode

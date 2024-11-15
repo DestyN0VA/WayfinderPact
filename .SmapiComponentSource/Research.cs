@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using SpaceCore.UI;
 using StardewValley;
 using StardewValley.Menus;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -48,6 +49,7 @@ namespace SwordAndSorcerySMAPI
         public Label CurrentPageDisplay { get; set; }
         public Label RightPageButton { get; set; }
         public Label LearnButton { get; set; }
+        private List<Tuple<ItemWithBorder, int>> components_ = [];
 
         public (string id, int page)? deferSwitch = null;
 
@@ -163,7 +165,7 @@ namespace SwordAndSorcerySMAPI
                             TransparentItemDisplay = Game1.player.Items.CountId(components[i]) >= qty ? false : true,
                             BoxColor = null,
                         };
-
+                        components_.Add(new(slot, qty));
                         row.AddChild(slot);
                     }
                 }
@@ -240,7 +242,7 @@ namespace SwordAndSorcerySMAPI
 
             if (CanLearn(id))
             {
-                LearnButton.Callback = (elem) => Learn();
+                LearnButton.Callback = (elem) => Learn(id);
             }
             else
             {
@@ -262,7 +264,7 @@ namespace SwordAndSorcerySMAPI
             return true;
         }
 
-        public void Learn()
+        public void Learn(string id)
         {
             Game1.player.mailReceived.Add($"WitchcraftResearch_{CurrentResearch}");
 
@@ -284,6 +286,35 @@ namespace SwordAndSorcerySMAPI
             });
 
             LearnButton.Callback = null;
+
+            (GetParentMenu() as AdventureBarConfigureMenu).RefreshSpells = true;
+
+            foreach (var cost in ModTOP.Research[id].ResearchCosts.Keys)
+            {
+                for (int i = 0; i < ModTOP.Research[id].ResearchCosts[cost]; i++)
+                {
+                    for (int j = 0; j < Game1.player.Items.Count; j++)
+                    {
+                        var invItem = Game1.player.Items[j];
+                        if (invItem == null) continue;
+                        if (invItem.QualifiedItemId == cost)
+                        {
+                            invItem.Stack--;
+                            if (invItem.Stack <= 0)
+                                Game1.player.Items[j] = null;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        public void UpdateComponentVisibility()
+        {
+            foreach (var component in components_)
+            {
+                component.Item1.TransparentItemDisplay = Game1.player.Items.CountId(component.Item1.ItemDisplay.QualifiedItemId) >= component.Item2 ? false : true;
+            }
         }
 
         public override void update(GameTime time)
@@ -291,6 +322,7 @@ namespace SwordAndSorcerySMAPI
             base.update(time);
 
             ui.Update();
+            UpdateComponentVisibility(); 
 
             if (deferSwitch != null)
             {

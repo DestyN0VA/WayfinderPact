@@ -1,4 +1,5 @@
 ﻿using CircleOfThornsSMAPI;
+using ContentPatcher;
 using HarmonyLib;
 using MageDelve.Mercenaries;
 using Microsoft.Xna.Framework;
@@ -1012,6 +1013,39 @@ namespace SwordAndSorcerySMAPI
                 I18n.UiSlot_Offhand,
                 Game1.content.Load<Texture2D>("DN.SnS/OffhandSlot"));
 
+
+            var CP = Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
+            if (CP != null)
+            {
+                CP.RegisterToken(ModManifest, "PocketDimensionUpgrade", () =>
+                {
+                    Farmer player;
+
+                    if (Context.IsWorldReady)
+                        player = Game1.player;
+                    else if (SaveGame.loaded?.player != null)
+                        player = SaveGame.loaded.player;
+                    else
+                        return null;
+
+                    int i = 1;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Witchcraft") >= 10)
+                        i++;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Bardics") >= 10)
+                        i++;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Druidics") >= 10)
+                        i++;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Paladin") >= 10)
+                        i++;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Rogue") >= 10)
+                        i++;
+
+                    if (i++ > 4) i = 4;
+
+                    return [$"{i}"];
+                });
+            }
+
             // This late because of accessing SpaceCore's local variable API
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
@@ -1211,21 +1245,21 @@ namespace SwordAndSorcerySMAPI
                     new KeybindList[2] { Config.AbilityBar1Slot8, Config.AbilityBar2Slot8 },
                 };
 
-                for ( int islot = 0; islot < 8; ++islot )
+                for (int islot = 0; islot < 8; ++islot)
                 {
                     string abilId = null;
-                    if (binds[islot][1].JustPressed() )
+                    if (binds[islot][1].JustPressed())
                     {
                         Helper.Input.SuppressActiveKeybinds(binds[islot][1]);
                         abilId = ext.adventureBar[8 + islot];
                     }
-                    else if (binds[ islot ][ 0 ].JustPressed() )
+                    else if (binds[islot][0].JustPressed())
                     {
                         Helper.Input.SuppressActiveKeybinds(binds[islot][0]);
                         abilId = ext.adventureBar[islot];
                     }
 
-                    if ( abilId != null && Ability.Abilities.TryGetValue( abilId ?? "", out var abil ) && abil.ManaCost() <= ext.mana.Value && abil.CanUse() )
+                    if (abilId != null && Ability.Abilities.TryGetValue(abilId ?? "", out var abil) && abil.ManaCost() <= ext.mana.Value && abil.CanUse())
                     {
                         ext.mana.Value -= abil.ManaCost();
                         CastAbility(abil);
@@ -1507,11 +1541,10 @@ namespace SwordAndSorcerySMAPI
 
             if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && ModSnS.AetherRestoreTimer <= 0)
             {
-                ModSnS.AetherRestoreTimer = 2000;
+                ModSnS.AetherRestoreTimer = 2500;
                 __instance.GetFarmerExtData().mana.Value += 5;
+                DelayedAction.functionAfterDelay(() => ModSnS.AetherRestoreTimer = 0, 2500);
             }
-            else
-                ModSnS.AetherRestoreTimer -= Game1.currentGameTime.ElapsedGameTime.Milliseconds;
 
             var ext = Game1.player.GetFarmerExtData();
             if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||

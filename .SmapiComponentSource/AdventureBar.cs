@@ -3,6 +3,8 @@ using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using StardewValley.Menus;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -59,14 +61,14 @@ namespace SwordAndSorcerySMAPI
             Ability hover = null;
 
             IClickableMenu.drawTextureBox(b, Game1.menuTexture, new Rectangle(0, 256, 60, 60), xPositionOnScreen, yPositionOnScreen, width, height, Color.White, 1f, drawShadow: false );
-            for ( int ibar = 0; ibar < 2; ++ibar )
+            for (int ibar = 0; ibar < 2; ++ibar)
             {
-                for ( int islot = 0; islot < 8; ++islot )
+                for (int islot = 0; islot < 8; ++islot)
                 {
-                    var pos = new Vector2( xPositionOnScreen + 12 + 64 * ibar, yPositionOnScreen + 12 + 64 * islot);
+                    var pos = new Vector2(xPositionOnScreen + 12 + 64 * ibar, yPositionOnScreen + 12 + 64 * islot);
                     b.Draw(Game1.menuTexture, pos, Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, 10), Color.White);
                     // tinyFont only supports digits :( -- TODO find custom font
-                    b.DrawString(Game1.smallFont, (ibar == 0 ? "Ctrl+" : "Shift+") + $"{islot+1}", pos + new Vector2(4, 4), Color.DimGray, 0, Vector2.Zero, 0.5f, SpriteEffects.None, 1);
+                    b.DrawString(Game1.smallFont, (ibar == 0 ? "Ctrl+" : "Shift+") + $"{islot + 1}", pos + new Vector2(4, 4), Color.DimGray, 0, Vector2.Zero, 0.5f, SpriteEffects.None, 1);
 
                     if (!Ability.Abilities.TryGetValue(ext.adventureBar[8 * ibar + islot] ?? "", out Ability abil))
                         continue;
