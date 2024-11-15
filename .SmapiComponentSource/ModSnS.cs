@@ -1,4 +1,5 @@
 ﻿using CircleOfThornsSMAPI;
+using ContentPatcher;
 using HarmonyLib;
 using MageDelve.Mercenaries;
 using Microsoft.Xna.Framework;
@@ -256,7 +257,7 @@ namespace SwordAndSorcerySMAPI
         public static IRadialMenuApi radial;
 
         public static Vector2 DuskspireDeathPos;
-        public static int AetherRestoreTimer = 0;
+        public static bool AetherRestoreBool = true;
 
         private Harmony harmony;
 
@@ -1012,6 +1013,39 @@ namespace SwordAndSorcerySMAPI
                 I18n.UiSlot_Offhand,
                 Game1.content.Load<Texture2D>("DN.SnS/OffhandSlot"));
 
+
+            var CP = Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
+            if (CP != null)
+            {
+                CP.RegisterToken(ModManifest, "PocketDimensionUpgrade", () =>
+                {
+                    Farmer player;
+
+                    if (Context.IsWorldReady)
+                        player = Game1.player;
+                    else if (SaveGame.loaded?.player != null)
+                        player = SaveGame.loaded.player;
+                    else
+                        return null;
+
+                    int i = 1;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Witchcraft") >= 10)
+                        i++;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Bardics") >= 10)
+                        i++;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Druidics") >= 10)
+                        i++;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Paladin") >= 10)
+                        i++;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Rogue") >= 10)
+                        i++;
+
+                    if (i++ > 4) i = 4;
+
+                    return [$"{i}"];
+                });
+            }
+
             // This late because of accessing SpaceCore's local variable API
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
@@ -1505,13 +1539,12 @@ namespace SwordAndSorcerySMAPI
         public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager)
         {
 
-            if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && ModSnS.AetherRestoreTimer <= 0)
+            if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && ModSnS.AetherRestoreBool)
             {
-                ModSnS.AetherRestoreTimer = 2000;
+                ModSnS.AetherRestoreBool = false;
                 __instance.GetFarmerExtData().mana.Value += 5;
+                DelayedAction.functionAfterDelay(() => ModSnS.AetherRestoreBool = true, 5000);
             }
-            else
-                ModSnS.AetherRestoreTimer -= Game1.currentGameTime.ElapsedGameTime.Milliseconds;
 
             var ext = Game1.player.GetFarmerExtData();
             if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||

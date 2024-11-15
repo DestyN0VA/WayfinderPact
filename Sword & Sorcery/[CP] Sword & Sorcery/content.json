@@ -2375,6 +2375,17 @@
       "Value": "{{i18n: guidebook.chapter.Title.TitlePage.ConfigLinks}}",
       "When": { "HasMod": "spacechase0.GenericModConfigMenu" }
     },
+    {
+      "Name": "PocketDimensionUpgrade",
+      "Value": "1"
+    },
+    {
+      "Name": "PocketDimensionUpgrade",
+      "Value": "{{KCC.SnS/PocketDimensionUpgrade}}",
+      "When": {
+        "HasValue: {{PocketDimensionUpgrade}}": true
+      }
+    }
     /*{
       "Name": "PlayersHandbookColor",
       "Value": "0",
