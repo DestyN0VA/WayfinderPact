@@ -22,7 +22,7 @@
                 }
             }
         },
-        {
+       /* {
             "LogName": "Deep Dark Chest",
             "Action": "EditData",
             "Target": "Data/BigCraftables",
@@ -42,7 +42,7 @@
                     "CustomFields": null
                 },
             }
-        },
+        },*/
         {
             "LogName": "Deep Dark Stones/Items",
             "Action": "EditData",
