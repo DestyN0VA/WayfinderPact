@@ -386,7 +386,7 @@
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Bat_HauntedSkull": {
                     "Type": "Monster",
-                    "MonsterType": "Bat",
+                    "MonsterType": "Skull",
                     "MonsterName": "Stygium Skull",
                     "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Haunted Skull_dangerous.png}}",
                     "MonsterAdditionalData": {}
@@ -611,7 +611,8 @@
                     "HostOnly": true, // Important for multiplayer support
                     "Actions": [
                         "spacechase0.SpaceCore_TriggerSpawnGroup {{ModID}}_DeepDarkSpawns_Common Target",
-                        "spacechase0.SpaceCore_TriggerSpawnGroup {{ModID}}_DeepDarkSpawns_Mushrooms Target"
+                        "spacechase0.SpaceCore_TriggerSpawnGroup {{ModID}}_DeepDarkSpawns_Mushrooms Target",
+                        "spacechase0.SpaceCore_TriggerSpawnGroup {{ModID}}_DeepDarkSpawns_Dark Target"
                     ]
                 }
             }
