@@ -579,7 +579,7 @@
                             "SpawnableIds": [
                                 {
                                     "Weight": 1.0,
-                                    "Value": "{{ModID}}_SpawnDeepDark_Forage_Mushroom"
+                                    "Value": "{{ModID}}_SpawnDeepDark_Forage_Mushrooms"
                                 },
                             ],
                             "Minimum": -10,

@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
 using StardewValley;
+using StardewValley.Companions;
 using StardewValley.Monsters;
 using StardewValley.Projectiles;
 using System;
@@ -236,4 +237,20 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
         //b.Draw(Game1.staminaRect, Game1.GlobalToLocal(Game1.viewport, GetBoundingBox()), Color.Red);
         Sprite.draw(b, Game1.GlobalToLocal(Position - new Vector2(Sprite.SpriteWidth * Game1.pixelZoom / 2, Sprite.SpriteHeight * Game1.pixelZoom)), Position.Y / 10000f, 0, 0, Color.White, (Sprite.CurrentFrame >= 40 && Sprite.CurrentFrame <= 50) && flippedSwing, Game1.pixelZoom);
     }
+
+    [HarmonyPatch(typeof(HungryFrogCompanion), nameof(HungryFrogCompanion.tongueReachedMonster))]
+    public static class FrogTrinketDoesntAutoKillDuskspire
+    {
+        public static bool Prefix(HungryFrogCompanion __instance, Monster m)
+        {
+            if (m is DuskspireMonster)
+            {
+                m.currentLocation.damageMonster(m.GetBoundingBox(), 80, 120, false, __instance.Owner);
+                __instance.OnOwnerWarp();
+                return false;
+            }
+            return true;
+        }
+    }
+
 }

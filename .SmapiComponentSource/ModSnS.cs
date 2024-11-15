@@ -257,7 +257,7 @@ namespace SwordAndSorcerySMAPI
         public static IRadialMenuApi radial;
 
         public static Vector2 DuskspireDeathPos;
-        public static bool AetherRestoreBool = true;
+        public static int AetherRestoreTimer = 0;
 
         private Harmony harmony;
 
@@ -1539,11 +1539,11 @@ namespace SwordAndSorcerySMAPI
         public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager)
         {
 
-            if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && ModSnS.AetherRestoreBool)
+            if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && ModSnS.AetherRestoreTimer <= 0)
             {
-                ModSnS.AetherRestoreBool = false;
+                ModSnS.AetherRestoreTimer = 2500;
                 __instance.GetFarmerExtData().mana.Value += 5;
-                DelayedAction.functionAfterDelay(() => ModSnS.AetherRestoreBool = true, 5000);
+                DelayedAction.functionAfterDelay(() => ModSnS.AetherRestoreTimer = 0, 2500);
             }
 
             var ext = Game1.player.GetFarmerExtData();

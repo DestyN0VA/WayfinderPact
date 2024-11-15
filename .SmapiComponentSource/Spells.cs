@@ -302,11 +302,10 @@ namespace SwordAndSorcerySMAPI
             location.projectiles.Add(Fireball);
             location.playSound("fireball");
 
-
             DelayedAction.functionAfterDelay(() =>
             {
-                int Min = GetSpellDamange(50, 15, out int Max);
-                int Min2 = GetSpellDamange(25, 10, out int Max2);
+                int Min = GetSpellDamange(30, 10, out int Max);
+                int Min2 = GetSpellDamange(20, 8, out int Max2);
 
                 location.projectiles.RemoveWhere(p => p.uniqueID == Fireball.uniqueID);
                 location.playSound("explosion");
@@ -423,7 +422,7 @@ namespace SwordAndSorcerySMAPI
 
         private static void SetUpMagicMissle(GameLocation location, Vector2 TargetPos, Vector2 Motion)
         {
-            int Damage = GetSpellDamange(50, 25, out _);
+            int Damage = GetSpellDamange(50, 10, out _);
 
             BasicProjectile MagicMissle = new(Damage / 3, 8, 999, 10, 0, 0, 0, TargetPos, damagesMonsters: true, location: location, firer: Game1.player);
             MagicMissle.uniqueID.Value = Game1.random.Next();
