@@ -563,9 +563,6 @@ namespace SwordAndSorcerySMAPI
         private void OnMailReceived(string value)
         {
             // I hope this doesn't multi trigger...
-            if (value == "DrakeScalePower")
-                Game1.player.GetFarmerExtData().maxMana.Value += 25;
-
             if (value == "JojaMember" && Game1.IsMasterGame)
             {
                 string[] toRemove =
@@ -598,11 +595,13 @@ namespace SwordAndSorcerySMAPI
 
             int maxMana = 0;
 
+            //DrakeScalePower
+            if (Game1.player.hasOrWillReceiveMail("DrakeScalePower"))
+                maxMana += 25;
+
             //Artificer Mana
             if (Game1.player.GetCustomSkillLevel(RogueSkill.Id) == 1)
-            {
                 maxMana += 30;
-            }
 
             //Druidics Mana
             for (int i = 0; i < Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Druidics"); i++)
@@ -1550,11 +1549,9 @@ namespace SwordAndSorcerySMAPI
         public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager)
         {
 
-            if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && ModSnS.AetherRestoreTimer <= 0 && __instance.GetFarmerExtData().maxMana.Value > __instance.GetFarmerExtData().mana.Value)
+            if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && __instance.CanBeDamaged() && __instance.GetFarmerExtData().maxMana.Value > __instance.GetFarmerExtData().mana.Value)
             {
-                ModSnS.AetherRestoreTimer = 2500;
-                __instance.GetFarmerExtData().mana.Value += (int)MathF.Min(5, __instance.GetFarmerExtData().maxMana.Value - __instance.GetFarmerExtData().mana.Value);
-                DelayedAction.functionAfterDelay(() => ModSnS.AetherRestoreTimer = 0, 2500);
+                __instance.GetFarmerExtData().mana.Value += (int)MathF.Min(Game1.random.Next(5,10), __instance.GetFarmerExtData().maxMana.Value - __instance.GetFarmerExtData().mana.Value);
             }
 
             var ext = Game1.player.GetFarmerExtData();
