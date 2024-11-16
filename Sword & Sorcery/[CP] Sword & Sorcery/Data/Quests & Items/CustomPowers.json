@@ -4,14 +4,14 @@
 		{
 			"Action": "EditData",
 			"Target": "Data/Powers",
+			"Update": "OnLocationChange",
 			"Entries": {
 				"StygiumPendantPower": {
 					"DisplayName": "{{i18n: power.stygium-pendant.name}}",
 					"Description": "{{i18n: power.stygium-pendant.description}}",
 					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
-					"SpriteIndex": 7,
-					"UnlockedCondition": "PLAYER_HAS_MAIL Current StygiumPendantPower",
-					"Update": "OnTimeChange, OnLocationChange",
+					"TexturePosition": { "X": 112, "Y": 0 },
+					"UnlockedCondition": "PLAYER_HAS_MAIL Current StygiumPendantPower"
 				}
 			},
 			"When": { "HasFlag": "StygiumPendantPower" }
@@ -19,14 +19,14 @@
 		{
 			"Action": "EditData",
 			"Target": "Data/Powers",
+			"Update": "OnLocationChange",
 			"Entries": {
-				"SnS.Ch2.Hector.19": {
+				"BrokenCircletPower": {
 					"DisplayName": "{{i18n: power.broken-circlet.name}}",
 					"Description": "{{i18n: power.broken-circlet.description}}",
 					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
-					"SpriteIndex": 8,
-					"UnlockedCondition": "PLAYER_HAS_MAIL Current BrokenCircletPower",
-					"Update": "OnTimeChange, OnLocationChange",
+					"TexturePosition": { "X": 128, "Y": 0 },
+					"UnlockedCondition": "PLAYER_HAS_MAIL Current BrokenCircletPower"
 				}
 			},
 			"When": { "HasFlag": "BrokenCircletPower" }
@@ -34,14 +34,14 @@
 		{
 			"Action": "EditData",
 			"Target": "Data/Powers",
+			"Update": "OnLocationChange",
 			"Entries": {
 				"DrakeScalePower": {
 					"DisplayName": "{{i18n: power.drake-scale.name}}",
 					"Description": "{{i18n: power.drake-scale.description}}",
 					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
-					"SpriteIndex": 52,
-					"UnlockedCondition": "PLAYER_HAS_MAIL Current DrakeScalePower",
-					"Update": "OnTimeChange, OnLocationChange",
+					"TexturePosition": { "X": 32, "Y": 80 },
+					"UnlockedCondition": "PLAYER_HAS_MAIL Current DrakeScalePower"
 				}
 			},
 			"When": { "HasFlag": "DrakeScalePower" }
@@ -49,14 +49,14 @@
 		{
 			"Action": "EditData",
 			"Target": "Data/Powers",
+			"Update": "OnLocationChange",
 			"Entries": {
-				"DrakeScalePower": {
+				"ForgedD20Power": {
 					"DisplayName": "{{i18n: power.forgedd20.name}}",
 					"Description": "{{i18n: power.forgedd20.description}}",
 					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
-					"SpriteIndex": 50,
-					"UnlockedCondition": "PLAYER_HAS_MAIL Current ForgedD20Power",
-					"Update": "OnTimeChange, OnLocationChange",
+					"TexturePosition": { "X": 0, "Y": 80 },
+					"UnlockedCondition": "PLAYER_HAS_MAIL Current ForgedD20Power"
 				}
 			},
 			"When": { "HasFlag": "ForgedD20Power" }
@@ -64,31 +64,29 @@
 		{
 			"Action": "EditData",
 			"Target": "Data/Powers",
+			"Update": "OnLocationChange",
 			"Entries": {
-				"DrakeScalePower": {
+				"DandelionShieldPower": {
 					"DisplayName": "{{i18n: power.mythiciridiumshield.name}}",
 					"Description": "{{i18n: power.mythiciridiumshield.description}}",
 					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
-					"SpriteIndex": 16,
-					"UnlockedCondition": "PLAYER_HAS_MAIL Current DandelionShieldPower",
-					"Update": "OnTimeChange, OnLocationChange",
+					"TexturePosition": { "X": 96, "Y": 16 },
+					"UnlockedCondition": "PLAYER_HAS_MAIL Current DandelionShieldPower"
 				}
 			},
-			"When": {
-				"HasFlag": "DandelionShieldPower"
-			  }
+			"When": { "HasFlag": "DandelionShieldPower" }
 		},
 		{
 			"Action": "EditData",
 			"Target": "Data/Powers",
+			"Update": "OnLocationChange",
 			"Entries": {
-				"DrakeScalePower": {
+				"DandelionShieldPower": {
 					"DisplayName": "{{i18n: power.mythicorichalcumshield.name}}",
 					"Description": "{{i18n: power.mythicorichalcumshield.description}}",
 					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
-					"SpriteIndex": 16,
-					"UnlockedCondition": "PLAYER_HAS_MAIL Current DandelionShieldPower",
-					"Update": "OnTimeChange, OnLocationChange",
+					"TexturePosition": { "X": 96, "Y": 16 },
+					"UnlockedCondition": "PLAYER_HAS_MAIL Current DandelionShieldPower"
 				}
 			},
 			"When": {
@@ -100,19 +98,17 @@
 		{
 			"Action": "EditData",
 			"Target": "Data/Powers",
+			"Update": "OnLocationChange",
 			"Entries": {
-				"GrimoirePower": {
+				"MagicalGrimoirePower": {
 					"DisplayName": "{{i18n: power.magicalgrimoire.name}}",
 					"Description": "{{i18n: power.magicalgrimoire.description}}",
 					"TexturePath": "{{InternalAssetKey: Assets/Items & Crops/SnSObjects.png}}",
-					"SpriteIndex": 98,
-					"UnlockedCondition": "PLAYER_HAS_MAIL Current MagicalGrimoirePower",
-					"Update": "OnTimeChange, OnLocationChange",
+					"TexturePosition": { "X": 128, "Y": 144 },
+					"UnlockedCondition": "PLAYER_HAS_MAIL Current MagicalGrimoirePower"
 				}
 			},
-			"When": {
-				"HasFlag": "MagicalGrimoirePower"
-			  }
-		},
+			"When": { "HasFlag": "MagicalGrimoirePower" }
+		}
 	]
 }
