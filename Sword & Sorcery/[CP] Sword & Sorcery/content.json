@@ -618,6 +618,10 @@
       }
     },
     {
+      "Name": "MateoAnimation",
+      "Value": "{{Random: Mateo_violin, Mateo_book, Mateo_drink|key=Mateo-Animation}}"
+    },
+    {
       "Name": "MateoRelationshipStatus",
       "Value": "false",
       "When": {
