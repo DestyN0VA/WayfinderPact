@@ -141,7 +141,7 @@
   "Core.Mateo.GreenRain2": "Something tells me Hector has something to do with the weird rain. What do you think, @?$14",
 
   // POLYAMORY 
-  "Core.Mateo.MarriedMonogamousNPC": "Sorry, @! I'm flattered, but you're with a monogomous partner, so I'd be intruding on the rules of your relationship.$16",
+  "Core.Mateo.MarriedMonogamousNPC": "Sorry, @! I'm flattered, but you're with a monogamous partner, so I'd be intruding on the rules of your relationship.$16",
 
   /*
   _    _ ______          _____ _______   _____ _____          _      ____   _____ _    _ ______ 
@@ -323,7 +323,7 @@
   "Core.Mateo.Summer.Relationship.Platonic.3": "Valley Summers aren't anything like Port of Plenty Summers, thank goodness. In the Islands, when it got really hot, it also got really humid - so it felt like you were walking through soup.$9#$b#I hated it, honestly. We're right by the ocean, so I thought the weather would be just as bad, but maybe it has something to do with the mountains nearby.$0",
   "Core.Mateo.Summer.Relationship.Platonic.4": "I've never seen a snake fossil with this particular shape, @. Do you know someone who might know more? [825 826]$14",
   "Core.Mateo.Summer.Relationship.Platonic.5": "So I climbed through the hatch on the roof of The Guild and watched the sunset last night. Beer in hand, just listening to the waves.$1#$b#It was amazing. There's something really special about The Valley, @.$78",
-  "Core.Mateo.Summer.Relationship.Platonic.6": "I got bitten up by one of those flying Serpants in the Skull Cave. Those things are fierce, aren't they?$22#$b#I'd rather deal with an entire horde of skeletons. Take this, in case you run into the same problem. [349]$10",
+  "Core.Mateo.Summer.Relationship.Platonic.6": "I got bitten up by one of those flying Serpents in the Skull Cave. Those things are fierce, aren't they?$22#$b#I'd rather deal with an entire horde of skeletons. Take this, in case you run into the same problem. [349]$10",
   "Core.Mateo.Summer.Relationship.Platonic.7": "20 some-odd years adventuring will leave you with a lot of scars. I was self-conscious of them at first, but now they're a point of pride.$35#$b#Even the new ones. That particular series of injuries set me on a path I never would have expected.$76",
 
   // 10 HEARTS PLATONIC - FALL
@@ -444,7 +444,7 @@
   "Marriage.Mateo.Fall": "It's the best time of year! Profitable for %farm, the air is crisp, I get to see you wearing my jacket - Look, I have a soft spot for sharing clothes. $30#$b#You, wearing something of mine, standing in your field of pumpkins, cranberries and sunflowers? That's what perfection looks like to me.$27",
   "Marriage.Mateo.Fall1": "It's the best time of year! Profitable for %farm, the air is crisp, I get to see you wearing my jacket - Look, I have a soft spot for sharing clothes. $30#$b#You, wearing something of mine, standing in your field of pumpkins, cranberries and sunflowers? That's what perfection looks like to me.$27",
   "Marriage.Mateo.Fall15": "@, I dug this up and had it cut for your festival display tomorrow.[72]$0#$b#Having a variety of high-quality items is the best way to win, ya'know? I'm sure you're prepared, I just wanted to help in what way I can.$1",
-  "Marriage.Mateo.Fall16": "Good luck today, Sunshine! I know you've got this in the bag, you work so hard and %farm deserves all of the acknowledgement.$32#$b#And, of course, I've got my own display of appreciation planned for when we come home.$31",
+  "Marriage.Mateo.Fall16": "Good luck today, Sunshine! I know you've got this in the bag, you work so hard and %farm deserves all of the acknowledgment.$32#$b#And, of course, I've got my own display of appreciation planned for when we come home.$31",
   "Marriage.Mateo.Fall25": "Good morning, Sunshine. There's only one thing better than waking up next to you on my birthday-$28#$b#-And that's gonna be seeing you bent over something later.$30#$b#%Mateo takes your face in their hands and kisses you; they seem more needy than usual.",
   "Marriage.Mateo.Fall26": "You know what tomorrow is, @. Second best day of the year only after our anniversary.[746]$1#$b#I've been getting ready all season, but now it's crunch time.$13",
   "Marriage.Mateo.Fall27": "Remember the rules, @! Check your candy, wear a costume, hand out treats, and most importantly - Never blow out a Jack o' Lantern before midnight!$32#$b#So much to do tonight! Including you.$13#$b#%Mateo grabs your shoulders and kisses the tip of your nose.",
@@ -521,7 +521,7 @@
   "Marriage.Mateo.Good.7": "I wish the valley had a more robust music scene. I'd be taking you to shows all the time. We'll just have to deal with dancing to the radio for now, though.$4",
   "Marriage.Mateo.Good.8": "Marlon says he's really proud of how far you've come as an adventurer, by the way.$0#$b#In the case he won't say it to your face, I figured you should know.$1",
   "Marriage.Mateo.Neutral.0": "I think I should go tidy up the kitchen or something, maybe get some laundry done.$34#$b#Is there anything in particular you need help with? Don't be afraid to ask.$32",
-  "Marriage.Mateo.Neutral.1": "I'm so tired today. I'm having a lot of trouble getting getting work done. Maybe I'll walk over to the guild and see Emeritus instead. I'm sorry, @.$8",
+  "Marriage.Mateo.Neutral.1": "I'm so tired today. I'm having a lot of trouble getting work done. Maybe I'll walk over to the guild and see Emeritus instead. I'm sorry, @.$8",
   "Marriage.Mateo.Neutral.2": "Since I've moved in with you, I haven't been so worried about the wintertime.$24#$b#Staying out of the mines and taking my vitamins is helping a lot, too.$0",
   "Marriage.Mateo.Neutral.3": "Why am I so tired? Are you tired?$16#$b#Maybe I should take a nap or something.$17",
   "Marriage.Mateo.Neutral.4": "I should go grab the violin. It's back at the guild right now.$4#$b#I can play some pretty mean cowboy folk, if that's your kind of thing. I'd serenade the heck out of you, Sunshine.$80",
@@ -653,8 +653,8 @@
   "Gifts.Mateo.GiftReaction.StrangeDoll": "To be honest, even I have no idea what this is - besides haunted.$37[126]",
 
   // BIRTHDAY - PLATONIC
-  "Gifts.Mateo.GiftReaction.Pumpkin.Birthday.Platonic": "You remembered my birthday? #And is this this freshly grown? Thank you, I'll carve it up right away! $1",
-  "Gifts.Mateo.GiftReaction.Jack-o-Lantern.Birthday.Platonic": "You remembered my birthday? And is this this freshly grown? Thank you, I'll display it right away! $1",
+  "Gifts.Mateo.GiftReaction.Pumpkin.Birthday.Platonic": "You remembered my birthday? #And is this freshly grown? Thank you, I'll carve it up right away! $1",
+  "Gifts.Mateo.GiftReaction.Jack-o-Lantern.Birthday.Platonic": "You remembered my birthday? And is this freshly grown? Thank you, I'll display it right away! $1",
   "Gifts.Mateo.GiftReaction.PumpkinPie.Birthday.Platonic": "You remembered my birthday AND made a homemade pumpkin treat? You're the best, @. Thank you. $1",
   "Gifts.Mateo.GiftReaction.PumpkinSoup.Birthday.Platonic": "You remembered my birthday AND made a homemade pumpkin treat? You're the best, @. Thank you. $1",
   "Gifts.Mateo.GiftReaction.FairyRose.Birthday.Platonic": "You remembered my birthday...and got me my favorite flowers. I'll be sure to press these in my journal, things like this deserve to be kept.$4",
@@ -846,7 +846,7 @@
   "Strings.Mateo.AdventurerDoor2": "Wyatt stays here when he visits Mateo.",
   "Strings.Mateo.AdventurerDoor3": "A spare room for passing adventurers. Currently, it's half-furnished and waiting for someone to move in.",
   "Strings.Mateo.SpareSwords": "Spare adventuring supplies, free for anyone to grab as needed.",
-  "Strings.Mateo.RequestBoard": "It looks like The Guild have been fufilling requests of their own. Everything they need to do is posted here.",
+  "Strings.Mateo.RequestBoard": "It looks like The Guild have been fulfilling requests of their own. Everything they need to do is posted here.",
   "Strings.Mateo.CirrusFood": "Cirrus has stuffed the fridge full of leftovers. Yum!",
 
   // GHOST RADIO
@@ -1096,7 +1096,7 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch1.2H.Mateo.3": "I spent a lot of time here, as a kid. Mostly in the library, behind the counter. At the beach, too. Not sure why I'm feeling so nostalgic, though.$16",
   "Events.S&S.Ch1.2H.Mateo.Question.1": "Have you ever felt that way? An inexplicable need to recreate the past?",
   "Events.S&S.Ch1.2H.Mateo.Q1.Answer.1": "Sometimes, but I don't usually indulge it.",
-  "Events.S&S.Ch1.2H.Mateo.Q1.Answer.2": "...You're an archeologist, isn't that your job?",
+  "Events.S&S.Ch1.2H.Mateo.Q1.Answer.2": "...You're an archaeologist, isn't that your job?",
   "Events.S&S.Ch1.2H.Mateo.Q1.Answer.3": "I do. I feel that way about home sometimes.",
   "Events.S&S.Ch1.2H.Mateo.Q1.Response.1": "No shame in that. It's wiser to row toward the future rather than get caught in the current.$1",
   "Events.S&S.Ch1.2H.Mateo.Q1.Response.2": "That was pretty humerus, @. A real rib-tickler.$32",
@@ -1118,7 +1118,7 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch1.4H.Mateo.Q1.Answer.1": "You know that wasn't your fault. You were just a kid, you said it yourself.",
   "Events.S&S.Ch1.4H.Mateo.Q1.Answer.2": "That's in the past, though. Don't get caught in the riptide or you'll drown.",
   "Events.S&S.Ch1.4H.Mateo.Q1.Response.1": "It was my fault, @. I made that choice. It was the wrong one, I own that.$16#$b#I look back on what I did, as the person I am now... Nobody's more disappointed in me, than me.$16#$b#Blame doesn't matter. Everything's still gone. All I can do now is help restore it.$24",
-  "Events.S&S.Ch1.4H.Mateo.Q1.Response.2": "But...!$18#$b#It feels like I'm already drowning!$19#$b#I'm afraid, @. Of what they'll think, of how they'll react. I'm not sure I deserve their acknowledgement, much less their forgiveness.$2",
+  "Events.S&S.Ch1.4H.Mateo.Q1.Response.2": "But...!$18#$b#It feels like I'm already drowning!$19#$b#I'm afraid, @. Of what they'll think, of how they'll react. I'm not sure I deserve their acknowledgment, much less their forgiveness.$2",
   "Events.S&S.Ch1.4H.Mateo.10": "I can't face Pelican Town. I'm a thief and I owe them all an apology, but they have no reason not to expect an ulterior motive.$17#$b#You're the only person that's approached me so far, but you didn't know who I was.$8", //
   "Events.S&S.Ch1.4H.Mateo.Q2.Answer.1": "You're isolating yourself as punishment for something you didn't have control over.",
   "Events.S&S.Ch1.4H.Mateo.Q2.Answer.2": "Just because something bad happened in the past, doesn't mean amends can't be made in the future.",
@@ -1230,7 +1230,7 @@ ________      ________ _   _ _______ _____
 
   // 6 HEARTS PT 1
   "Events.S&S.Ch1.6H1.Mateo.1": "I'm telling you...",
-  "Events.S&S.Ch1.6H1.Mateo.2": "The Royal Serpant was THIS big!",
+  "Events.S&S.Ch1.6H1.Mateo.2": "The Royal Serpent was THIS big!",
   "Events.S&S.Ch1.6H1.Lewis.1": "Oh, dagnabbit!$4#$b#I locked myself out...$3",
   "Events.S&S.Ch1.6H1.Mateo.3": "Hey, Lewis. Don't worry, I've got it...$1",
   "Events.S&S.Ch1.6H1.Lewis.2": "Are those lockpicks-?",
@@ -1247,7 +1247,7 @@ ________      ________ _   _ _______ _____
   // 6 HEARTS PT 2
   "Events.S&S.Ch1.6H2.Mateo.1": "I'm glad you're here.$39",
   "Events.S&S.Ch1.6H2.Mateo.2": "I was just thinking about you, actually. And how you're the crux of how everything's turned around recently. It's just that...$62",
-  "Events.S&S.Ch1.6H2.Mateo.3": "...Well, reserving judgement for someone is a matter of infinite hope, isn't it?$70",
+  "Events.S&S.Ch1.6H2.Mateo.3": "...Well, reserving judgment for someone is a matter of infinite hope, isn't it?$70",
   "Events.S&S.Ch1.6H2.Mateo.4": "You showed me kindness even when I was convinced nobody had any for me. You took the time to chase me down when I was being intentionally scarce.$39#$b#You make me feel seen.$38",
   "Events.S&S.Ch1.6H2.Mateo.5": "I wanted to say thank you for that. That I appreciate and acknowledge that effort. Going out of your way to prove someone wrong...$38#$b#To remind them that they're capable of being cared for... It shows how brilliant of a person you are.$50#$b#And that's something you deserve to hear.$70",
 
@@ -1463,7 +1463,7 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch1.RHToggle.Mateo.2": "I could never, @! Don't worry. $1",
   "Events.S&S.Ch1.RHToggle.Mateo.3": "Of course, @! I've got your back.$1",
 
-// ARTIFICER UNLOCK EVENT
+  // ARTIFICER UNLOCK EVENT
   "SnS.S&S.Ch1.19.Mateo.1": "Oh! Hello, Sunshine. Sorry for the mode of undress, I was tidying up and it gets pretty hot down here.$31#$b#Something tells me you don't mind terribly, though.$30#b#Now, to what do I owe the privilege of your company?$28",
   "SnS.S&S.Ch1.19.Message.1": "You offer Mateo the Mermaid Pendant, which is taken from you by a trembling hand.",
   "SnS.S&S.Ch1.19.Mateo.2": "Oh wow - of course, @. Yes. Absolutely yes.$29",
@@ -1501,7 +1501,7 @@ ________      ________ _   _ _______ _____
   "CT.Mateo.MateoRomance": "I'm so grateful you feel the same way about me, @... I wasn't going to say anything and risk our friendship.$27",
   "CT.Mateo.MateoForest": "Can't help but feel like something was watching us in those woods. Might've been imagining it, though.$34",
   "CT.Mateo.MateoDate": "The other night was...amazing, @. You really are my Sunshine.$28#$b#Let's... let's go down there again sometime soon, huh?$31",
-  "CT.Mateo.MateoDeclaration": "I love seeing you in that pendant, Sunshine. It was difficult to make.$30#$b#There's not a lot of that material it's forged from avaliable.$28",
+  "CT.Mateo.MateoDeclaration": "I love seeing you in that pendant, Sunshine. It was difficult to make.$30#$b#There's not a lot of that material it's forged from available.$28",
 
   // CH2
   "CT.Mateo.HectorIntro.Platonic": "I went and checked on Linus. He's alright, just very shaken.$78",
@@ -1533,7 +1533,7 @@ ________      ________ _   _ _______ _____
   "CT.Mateo.CirrusMom": "Cirrus seems a little bit low. I know it's got to do with her mom... I really empathize with having a rocky parental relationship.$16",
   "CT.Mateo.CirrusJJ1": "Juliet, Rosa and Cirrus are quite a trio, aren't they?$14",
   "CT.Mateo.CirrusRain": "I do feel terribly for Cirrus. She mentioned something about a fire, but then abruptly changed the subject...$16",
-  "CT.Mateo.CirrusWoods2": "Everyone's totally taken by Cirrus, and I love that for her. She deserves attention that isn't fake or dependant on serivce.$1",
+  "CT.Mateo.CirrusWoods2": "Everyone's totally taken by Cirrus, and I love that for her. She deserves attention that isn't fake or dependent on service.$1",
   "CT.Mateo.CirrusJJ2": "Juliet mentioned that Cirrus was really opening up to her, and I'm so glad for that. She deserves a big, healthy support system.$12",
   "CT.Mateo.CirrusDnD": "I hope everyone likes their dice sets. I tried to pick colors that really represented the people I was giving them to.$27",
   "CT.Mateo.CirrusLionsMane": "The town is growing so much, and I love that. It'll be so cool having an actual tavern right here in East Scarp.$76",
@@ -1556,7 +1556,7 @@ ________      ________ _   _ _______ _____
   "CT.Mateo.DandelionSettling": "It's been a lot of fun to share a shop with Dandelion. It inspires me to keep working on my blacksmithing!$78",
   "CT.Mateo.DandelionShieldRepair": "I know the materials are pretty rare, but mythical items like what I'm making for Dandelion take a lot of polish.$78",
   "CT.Mateo.DandelionShieldRestored": "That shield is, hands down, the coolest thing I've ever made. I'll probably be trying to top it for the rest of of my life.$13",
-  "CT.Mateo.FullmetalDandelion": "How do you think Dandelion's prosthetic? Like, logiscally? Do you think she can... pop it off, to give Roslin a hand?$36",
+  "CT.Mateo.FullmetalDandelion": "How do you think Dandelion's prosthetic? Like, logically? Do you think she can... pop it off, to give Roslin a hand?$36",
   "CT.Mateo.DandelionPendant": "I'm really excited for Dandelion, but I understand wanting to wait until the Duskspire is taken care of first.$2",
   "CT.Mateo.SolomonGift": "Solomon gave you a book?... Is it haunted, he seems like the type who'd give you something haunted.$3",
   "CT.Mateo.IntoTheDeepDark": "I'm really worried for our friend's safety, but we don't have a choice. It's our responsibility to protect the townies, first and foremost. That's the oath we took on.$16",
@@ -1565,11 +1565,11 @@ ________      ________ _   _ _______ _____
   // CH 5
   "CT.Mateo.DandelionProposes": "The suspense regarding when Dandelion was going to pop the question was killing me...$1",
   "CT.Mateo.WyattReturns": "I'll admit, I still have really complicated feelings about Wyatt. But that's better than it was before, which was just... anger.$32 ",
-  "CT.Mateo.HectorPromotion": "Biróg seems really glad for Jacob's acknowledgement; he's going to do great, even if he's mostly just cheating by asking the animals what's wrong.$35",
+  "CT.Mateo.HectorPromotion": "Biróg seems really glad for Jacob's acknowledgment; he's going to do great, even if he's mostly just cheating by asking the animals what's wrong.$35",
   "CT.Mateo.CirrusAndMom": "Cirrus seems so airy lately. I'm glad that she's taking the time and space to find her true.$76",
   "CT.Mateo.RosalionWedding": "I'm over the moon for Dandelion and Roslin. This whole thing must feel so storybook for them.$27",
   "CT.Mateo.VioletMoonRennFaire": "Having a group project to focus on will help take everyone's mind off the battle, I think.$12",
-  "CT.Mateo.SwordAndSorcery": "...The guild's story is one about a time, @. One about people. But most importantly, it was a story about love from lonliness.$80",
+  "CT.Mateo.SwordAndSorcery": "...The guild's story is one about a time, @. One about people. But most importantly, it was a story about love from loneliness.$80",
 
   // TROLL HERITAGE 
   "CT.Mateo.TrollHeritage1": "Eyvinder was so cool. I've never met another Troll, and don't know my upbringing, so it was nice to get a lot of my questions answered...$12 ",
@@ -1625,7 +1625,7 @@ ________      ________ _   _ _______ _____
   // GUNTHER
   "CT.Gunther.MateoCaution": "Don't mind me, @. I've just had a case of the nerves lately. Nothing to fret about.",
   "CT.Gunther.MateoLibrary": "The previous curator? Oh, his name was Wyatt.#$b#With his apprentice being back in town, I'll have to have a word with Marlon and Lewis.",
-  "CT.Gunther.MateoAdmission": "I spoke with Marlon. He and I are going to have to have a chat with Mateo.#$b#I am not willing to take chances with the collection in progress if they have any lasting ties with their previous teacher...#$b#Lewis assured me of Mateo's character, and that the situation was very likely a result of manipulation on Wyatt's part... but I need to make a judgement for myself.",
+  "CT.Gunther.MateoAdmission": "I spoke with Marlon. He and I are going to have to have a chat with Mateo.#$b#I am not willing to take chances with the collection in progress if they have any lasting ties with their previous teacher...#$b#Lewis assured me of Mateo's character, and that the situation was very likely a result of manipulation on Wyatt's part... but I need to make a judgment for myself.",
   "CT.Gunther.MateoConfrontation": "I hoped for the best, and it would appear that it worked out. Mateo's more well-read than I expected, hardly the criminal a man like Wyatt would've raised them to be.#$b#I think they'll make a fine addition to the academic community; I'm looking forward to whatever contributions they look to make.",
   "CT.Gunther.MateoWyatt": "I misjudged Mateo. I'm grateful everything seems to be worked out.",
   "CT.Gunther.MateoAcceptance": "It was good of Marlon to take Mateo under his wing, though they hardly need it. They're a storied adventurer of their own right.#$b#They mentioned they've been doing this for years, with a number of close encounters.#$b#I can't help but worry when you lot do your thing. I know it's necessary, but... I do fret about it often.",
@@ -1814,7 +1814,7 @@ ________      ________ _   _ _______ _____
   "Core.Hector.ResortBar": "Why do people drink shit that tastes like bread when they can have delicious stuff made with fruits?$4",
   "Core.Hector.ResortBar.Filtered": "Why do people drink stuff that tastes like bread when they can have delicious stuff made with fruits?$4",
   "Core.Hector.ResortTowel": "I'm so boooooooored, I want to go hoooooooooooooooome.$16",
-  "Core.Hector.ResortTowel.2": "Four thousand, three hundred, nintey six. Four thousand, three hundred, nintey se- Oh, hey @. Just counting the grains of sand.$16",
+  "Core.Hector.ResortTowel.2": "Four thousand, three hundred, ninety six. Four thousand, three hundred, ninety se- Oh, hey @. Just counting the grains of sand.$16",
   "Core.Hector.Resort_Towel.3": "%Hector has fallen asleep without sunscreen. Oh, no!",
   "Core.Hector.Resort": "Well, now I can officially say I've braved the island. Is it time to go home, yet?$9",
 
@@ -2253,7 +2253,7 @@ ________      ________ _   _ _______ _____
   "Gifts.Hector.GiftReaction.AncientHuckleberry": "Huckleberries are my favorite berries, so I spent a lot of time recovering this strain of them. Thank you for sharing with me, @!$1",
   "Gifts.Hector.GiftReaction.AncientMushroom": "If you eat this, your stomach will glow. I'm serious, @, don't try it.$6#$b#...Yeah, you got me. I'm fibbing. But wouldn't that be cool?$9",
   "Gifts.Hector.GiftReaction.AncientRose": "Out of the lot of the Ancient Crops, these roses are my favorite. Thank you for this, @. From the bottom of my heart.$13",
-  "Gifts.Hector.GiftReaction.AncientElderberry": "These are a bit tart, but they make really good drinks and syryps and stuff. I'm glad you were able to revitalize this plant, @.$7",
+  "Gifts.Hector.GiftReaction.AncientElderberry": "These are a bit tart, but they make really good drinks and syrups and stuff. I'm glad you were able to revitalize this plant, @.$7",
   "Gifts.Hector.GiftReaction.AncientBottleGourd": "These are so dumb looking, aren't they? But that's alright, I don't love them any less. Thank you for taking time with this, @.$8",
   "Gifts.Hector.GiftReaction.AncientAppleBerry": "At first, I thought this was a weird blue pumpkin when I grew it the first time, but it was too squishy... they make really good snacks, though.$8",
   "Gifts.Hector.GiftReaction.AncientAzureDetura": "These are beautiful, aren't they? I don't know of another flower that relies so heavily on the moon.$1",
@@ -2273,7 +2273,7 @@ ________      ________ _   _ _______ _____
  */
 
   "Movies.Hector.BraveLittleSapling.1": "I identify with the sapling already.$0",
-  "Movies.Hector.BraveLittleSapling.2": "Is this supposed to be so relatable or is it just really specific?$23",
+  "Movies.Hector.BraveLittleSapling.2": "Is this supposed to be so repeatable or is it just really specific?$23",
   "Movies.Hector.BraveLittleSapling.3": "I feel personally called out, but I loved it a lot!$9",
   "Movies.Hector.NaturalWonders.1": "Is that me on screen, or is it just ANOTHER very handsome wolf?$16",
   "Movies.Hector.NaturalWonders.2": "I mean, yeah, of course wolves aren't solitary. Eloise could've told you that.$6",
@@ -2312,7 +2312,7 @@ ________      ________ _   _ _______ _____
   "Festivals.Hector.spring13.False.1": "I bet I could kick these children's asses if your silly little Mayor would let me play.$9",
   "Festivals.Hector.spring13.False.2": "Who in their right mind eats THIS many eggs? This whole town's gonna stink!$16",
   "Festivals.Hector.spring13.False.3": "Fine, I'll try some of the food, but I'm gonna complain about it the whole time.$23",
-  "Festivals.Hector.spring13.True.1": "I'm not really familliar with the Pelican Town residents. I don't leave the Scarp often enough to get to know them.$24",
+  "Festivals.Hector.spring13.True.1": "I'm not really familiar with the Pelican Town residents. I don't leave the Scarp often enough to get to know them.$24",
   "Festivals.Hector.spring13.True.2": "I guess you can't say you dragged me here kicking and screaming! I came, mostly willingly.$14",
   "Festivals.Hector.spring13.True.3": "...Are you SURE I can't compete? I would win the contest in honor of our marriage.$15",
 
@@ -2320,7 +2320,7 @@ ________      ________ _   _ _______ _____
   "Festivals.Hector.spring24.False.1": "Ugh, this is disgusting. Look at everyone, having a great time, all dressed up. ...I'm lying, I love it, actually.$8",
   "Festivals.Hector.spring24.False.2": "I know I don't HAVE to dance, or participate, or whatever... but I want to, I just also reserve the right to bitch about it.$24",
   "Festivals.Hector.spring24.False.3": "Not sure where I'd get one of those blue tuxes. My druid garb is fancy enough, no? Never mind the moss.$12",
-  "Festivals.Hector.spring24.True.1": "We can dance at home, ya'know. A little two-step. Maybe the Charleston. Or would you perfer more of a Devil's Tango?$13",
+  "Festivals.Hector.spring24.True.1": "We can dance at home, ya'know. A little two-step. Maybe the Charleston. Or would you prefer more of a Devil's Tango?$13",
   "Festivals.Hector.spring24.True.2": "I've got two left paws, just so you know. Well, technically I - you get what I'm saying.$10",
   "Festivals.Hector.spring24.True.3": "I'm not much on these big gatherings, BUT... seeing you happy is enough for me.$11",
   "Festivals.Hector.spring24.Accept": "Sure, but like, gross.$1",
@@ -2365,7 +2365,7 @@ ________      ________ _   _ _______ _____
   "Festivals.Hector.winter8.False.3": "I knoooow everyone's having a good time, but like. At least DO SOMETHING with the fish.$9",
   "Festivals.Hector.winter8.True.1": "At least being outside in the cold is a good excuse to curl up with you later - not that I needed one, really.$10",
   "Festivals.Hector.winter8.True.2": "I'm chilly, will you hold me about it?$10",
-  "Festivals.Hector.winter8.True.3": "If I interrupted the fishing part of of this festival, would you be like, BIG mad, or LITTLE mad?$23",
+  "Festivals.Hector.winter8.True.3": "If I interrupted the fishing part of this festival, would you be like, BIG mad, or LITTLE mad?$23",
 
   // WINTER STAR 
   "Festivals.Hector.winter25.False.1": "I really don't know what to get anyone, so my presence will just have to be the gift.$1",
@@ -2725,7 +2725,7 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch2.5H1.Mateo.4": "Are you alright?",
   "Events.S&S.Ch2.5H1.Hector.3": "Yeah. Just thinking. ...Humans are so courageous. It makes my shape-shifting feel like a privilege, and I hadn't considered that before.",
   "Events.S&S.Ch2.5H1.Mateo.5": "I think it's your turn for a vulnerable explanation.$14",
-  "Events.S&S.Ch2.5H1.Hector.4": "In contrast to your relationship with gender, I feel the opposite. I identify strongly with masculinity and feminity, just on different days.$8#$b#I'll wake up and know how I want to be perceived. Sometimes it depends on confidence, or self-assurance. It's very... hm.$23",
+  "Events.S&S.Ch2.5H1.Hector.4": "In contrast to your relationship with gender, I feel the opposite. I identify strongly with masculinity and femininity, just on different days.$8#$b#I'll wake up and know how I want to be perceived. Sometimes it depends on confidence, or self-assurance. It's very... hm.$23",
   "Events.S&S.Ch2.5H1.Mateo.6": "Fluid.",
   "Events.S&S.Ch2.5H1.Hector.5": "Yes. Thank you.$12#$b#I feel very...seen.$14",
   "Events.S&S.Ch2.5H1.Mateo.7": "Even though we identify very differently, there's something universal about being queer that can foster these kinds of connections.$32",
@@ -3119,7 +3119,7 @@ ________      ________ _   _ _______ _____
   "CT.Hector.DandelionPendant": "I do consider marriage a construct of capitalism. But that's okay - it's joyful nonetheless.$14",
   "CT.Hector.SolomonGift": "Remember to be careful with all of your newfound power, @! Everything comes at a cost!$1",
   "CT.Hector.IntoTheDeepDark": "That crused-to-hell cave system makes me sick...$19",
-  "CT.Hector.DuskspireEncounter": "I can't remember the last time I felt so good. Physically, it feels like I'm myself again in my entireity.$13",
+  "CT.Hector.DuskspireEncounter": "I can't remember the last time I felt so good. Physically, it feels like I'm myself again in my entirety.$13",
 
   // CH 5
   "CT.Hector.DandelionProposes": "I'll be on my best behavior at the wedding. Promise.$12",
@@ -3182,7 +3182,7 @@ ________      ________ _   _ _______ _____
   "Core.Cirrus.Introduction": "Thanks for the save at the saloon, @. I get pretty overwhelmed by people sometimes, even though I know they mean no harm.",
 
   // COMMUNITY CENTER BUNDLES  
-  "Core.Cirrus.JojaBegin": "Bummer about Joja, isn't it? They tried to move in on Port Drake, too, but the people there were more retalitory about it...$3",
+  "Core.Cirrus.JojaBegin": "Bummer about Joja, isn't it? They tried to move in on Port Drake, too, but the people there were more retaliatory about it...$3",
   "Core.Cirrus.CCBegin": "That old building must be really important to the community if they've charged you with refurbishing it. Good luck!$17",
   "Core.Cirrus.CCBus": "I'm grateful to have my own car, but using a bus to get to the city would be so much easier if I wasn't recognized all the time.#3",
   "Core.Cirrus.CCMinecart": "What? You can actually just jump in a minecart and ride it somewhere? That's wild! I wanna go!$14",
@@ -3218,8 +3218,8 @@ ________      ________ _   _ _______ _____
 
   // ROMANTIC (POSITIVE) 
   "Core.Cirrus.GiveFlowersA": "Oh, @! These are very sweet, is this a Pelican Town thing?$1",
-  "Core.Cirrus.GiveFlowersB": "Oh, interesting! In Port Drake, we do something completely different. Good luck in your endevors, @!",
-  "Core.Cirrus.GivePendant": "Oh, interesting! In Port Drake, propose with 'Phoenix' feathers. Good luck in your endevors, @!",
+  "Core.Cirrus.GiveFlowersB": "Oh, interesting! In Port Drake, we do something completely different. Good luck in your endeavors, @!",
+  "Core.Cirrus.GivePendant": "Oh, interesting! In Port Drake, propose with 'Phoenix' feathers. Good luck in your endeavors, @!",
   "Core.Cirrus.StardropGiftA": "I found this for you, @ - I wanted to show my love in something of a grand gesture. I hope you'll accept it!$23",
   "Core.Cirrus.StardropGiftB": "I've had this for a long time, @ - But I think you and the farm need it more than I do.$23",
 
@@ -3229,11 +3229,11 @@ ________      ________ _   _ _______ _____
   "Core.Cirrus.BreakUp": "Oh - uhm, well. Th-thanks for everything, @... I, uh... I'm gonna... I'm gonna go, okay? Gonna go process. This was a relationship I have to mourn.$13",
   "Core.Cirrus.DumpedGirls": "...I can't believe I actually trusted you to treat me any differently than the hundreds of thousands of people I performed for. Was this all just a performance for you?$12",
   "Core.Cirrus.SecondChanceGirls": "I'm really not sure about this, but... I guess anything's worth trying twice, right?$16",
-  "Core.Cirrus.Reject2HA": "Oh, interesting! In Port Drake, we do something completely different. Good luck in your endevors, @!",
-  "Core.Cirrus.Reject2HB": "Oh, interesting! In Port Drake, we do something completely different. Good luck in your endevors, @!",
-  "Core.Cirrus.Reject4HA": "Oh, interesting! In Port Drake, we do something completely different. Good luck in your endevors, @!",
-  "Core.Cirrus.Reject4HB": "Oh, interesting! In Port Drake, we do something completely different. Good luck in your endevors, @!",
-  "Core.Cirrus.EngageA": "Hey, this is... kind of uncomforable, considering you're engaged. I have boundries and standards, sorry not sorry.$2",
+  "Core.Cirrus.Reject2HA": "Oh, interesting! In Port Drake, we do something completely different. Good luck in your endeavors, @!",
+  "Core.Cirrus.Reject2HB": "Oh, interesting! In Port Drake, we do something completely different. Good luck in your endeavors, @!",
+  "Core.Cirrus.Reject4HA": "Oh, interesting! In Port Drake, we do something completely different. Good luck in your endeavors, @!",
+  "Core.Cirrus.Reject4HB": "Oh, interesting! In Port Drake, we do something completely different. Good luck in your endeavors, @!",
+  "Core.Cirrus.EngageA": "Hey, this is... kind of uncomfortable, considering you're engaged. I have boundaries and standards, sorry not sorry.$2",
   "Core.Cirrus.EngageB": "Full offense, this is weird and gross considering you're engaged. No, I'm not interested.$5",
   "Core.Cirrus.MarriedA": "No, absolutely not. I should tell your partner.$5",
   "Core.Cirrus.MarriedB": "You are seconds from getting cut off, @.$5",
@@ -3241,7 +3241,7 @@ ________      ________ _   _ _______ _____
   "Core.Cirrus.RefusalNoHeartsB": "Uh, thanks? But like, no thanks!$3",
   "Core.Cirrus.RefusalKnownA": "I'm ...flattered? I guess? But, no?$17",
   "Core.Cirrus.RefusalKnownB": "This kind of happens to me a lot and it doesn't get less weird.$20",
-  "Core.Cirrus.RefusalBotherA": "I'm going to have to set some boundries with you if you don't stop, @. Please.$18",
+  "Core.Cirrus.RefusalBotherA": "I'm going to have to set some boundaries with you if you don't stop, @. Please.$18",
   "Core.Cirrus.RefusalBotherB": "Stop, @. I don't want to have to cut you off like I have so many others.$18",
 
   // RESORT
@@ -3286,7 +3286,7 @@ ________      ________ _   _ _______ _____
   "Core.Cirrus.Epilogue.3": "I've been writing music! Which, admittedly, I hadn't in a really long time... but I've been struck with inspiration from everything that's happened.$1",
   "Core.Cirrus.Epilogue.4": "Honestly, I've been playing the piano a lot. Not the keytar. It just... it hits different, it represents my forward direction better.$4",
   "Core.Cirrus.Epilogue.5": "Every day my Mom makes it without a drink is it's own little blessing. I'm so proud of her.$1",
-  "Core.Cirrus.Epilogue.6": "It's going to be so nice to get to know the person my Mom was before the alchoholism. And the person she'll become, after.$1",
+  "Core.Cirrus.Epilogue.6": "It's going to be so nice to get to know the person my Mom was before the alcoholism. And the person she'll become, after.$1",
   "Core.Cirrus.Epilogue.7": "I'm gonna go, go, go, there's no stopping me! I'm burning through the sky, yeah, 200 degrees, that's why they call me Mister Fahrenheit!$29",
   "Core.Cirrus.Epilogue.8": "Sun is shining in the sky, there ain't a cloud in sight! It's stopped raining, everyone's in the play... and don't you know, it's a beautiful new day!$29",
   "Core.Cirrus.Epilogue.9": "What's the matter? Don't you feel right? Don't you feel right, baby? Hail, oh yeah, get it from the main vine vine, all right...$29",
@@ -3337,32 +3337,32 @@ ________      ________ _   _ _______ _____
 
   // GENERIC 5-10
   "Core.Cirrus.Generic.LateHeart.1": "I have this little cup for my watercolor paints that says 'PAINT WATER, DO NOT DRINK'. Guess what I did today...$17#$b#I've been doing watercolor - badly, on and off - for a really long time now. Just following the dopamine, you know? But I still mess up with the dumb paint water.$1",
-  "Core.Cirrus.Generic.LateHeart.2": "Since the salmon here is so unbelievebly good AND cheap, I made a bunch of it with lemon and garlic for meal prep this morning.$1#$b#Yeah, yeah. I had a fitness girlie phase, too. It's just a process of building healthy, sustainable habits. Meal prepping is easy and cheap. Here, @! Have one!$15",
+  "Core.Cirrus.Generic.LateHeart.2": "Since the salmon here is so unbelievably good AND cheap, I made a bunch of it with lemon and garlic for meal prep this morning.$1#$b#Yeah, yeah. I had a fitness girlie phase, too. It's just a process of building healthy, sustainable habits. Meal prepping is easy and cheap. Here, @! Have one!$15",
   "Core.Cirrus.Generic.LateHeart.3": "I got really into overnight oats for a while, especially since I'd have early drives and not enough time to cook myself something substantial. Nothing beats a complete breakfast though, with the pancakes and everything.$15",
-  "Core.Cirrus.Generic.LateHeart.4": "I'm really inspired by some of my favorite artists. I grew up on their music and it feels like they shaped the person I am.$17#$b#A lot of them came before me, so I'll never have the opprotunity to meet them, but it's something I think about a lot, you know? Just being able to say thank you.$1#$b#One of them is still the best-selling artist in all of Ferngull, even though he's long gone!$1",
+  "Core.Cirrus.Generic.LateHeart.4": "I'm really inspired by some of my favorite artists. I grew up on their music and it feels like they shaped the person I am.$17#$b#A lot of them came before me, so I'll never have the opportunity to meet them, but it's something I think about a lot, you know? Just being able to say thank you.$1#$b#One of them is still the best-selling artist in all of Ferngull, even though he's long gone!$1",
   "Core.Cirrus.Generic.LateHeart.5": "Music is a great way to connect with people. It's something I'll always know I have to acknowledge; I put words to paper, then put a tune to it, and sometimes those words really resonate.$6#$b#The thing is, the people who hear that music just know the music itself, not me, as a person. And that can be pretty lonely.$3#$b#But, I have friends now! Real ones, who care about who I am and what I'm doing. Thank you for being around for me, @.$1",
   "Core.Cirrus.Generic.LateHeart.6": "What kind of music do I listen do? Oh, tons of things, but lately I've been really into SKA-? You know, SKA. Yeah, like-$1#$b#Pick it up, pick it up, pick it up!$15",
   "Core.Cirrus.Generic.LateHeart.7": "Since moving here, I've been listening to a lot more country stuff. Seems appropriate, you know? Moving out to the country, wanted to get a country vibe.$14#$b#I love it, pretty unexpectedly. Especially songs about women getting revenge on their exes. Honestly, I love that for them.$15",
-  "Core.Cirrus.Generic.LateHeart.8": "The more time passes, the more I realize I'm not suited for the rockstar life.$17#$b#I got pretty addicted to alcohol when I'd first fell into things. I'm bone-dry now, though. Sobriety has done me a lot of good.$1#$b#Being here is making it easier, too. Like there's a lot less pressure to be performative, which spurned my addiciton in the first place.$0",
+  "Core.Cirrus.Generic.LateHeart.8": "The more time passes, the more I realize I'm not suited for the rockstar life.$17#$b#I got pretty addicted to alcohol when I'd first fell into things. I'm bone-dry now, though. Sobriety has done me a lot of good.$1#$b#Being here is making it easier, too. Like there's a lot less pressure to be performative, which spurned my addiction in the first place.$0",
   "Core.Cirrus.Generic.LateHeart.9": "On tour, I'd go to parties and just fake my way through and it felt like everyone else was, too - I'd say 'nice to meet you' to people I knew I'd given my socials to before.$3#$b#I'd just get trashed because I couldn't leave. But, hey! No wild parties in Pelican Town or East Scarp, huh? If there's one thing I can say confidently about the people here, it's that they're far from fakey-fake.$1",
   "Core.Cirrus.Generic.LateHeart.10": "I spent so much time in the industry cultivating a fake persona that I think I almost lost track of who I really was.$17#$b#Don't let perception disrupt reality, @. I think it's been my biggest mistake.$16",
-  "Core.Cirrus.Generic.LateHeart.11": "It's pretty wild, I think I got everything I could have ever wanted in my life - fame, acknowledgement, priase, to do what I love as a job...$16#$b#I guess I didn't ever expect to resent it so much. I don't think it's BAD to monetize your hobbies, but... to monetize your personhood is something else. Zero out of ten, would not reccomend.$17",
+  "Core.Cirrus.Generic.LateHeart.11": "It's pretty wild, I think I got everything I could have ever wanted in my life - fame, acknowledgment, praise, to do what I love as a job...$16#$b#I guess I didn't ever expect to resent it so much. I don't think it's BAD to monetize your hobbies, but... to monetize your personhood is something else. Zero out of ten, would not recommend.$17",
   "Core.Cirrus.Generic.LateHeart.12": "There are people out there who'll care more about what you can do for them, rather than about you as a person. I met tons of them on tour; executives and other professionals who only saw a bottom line.$16#$b#Don't ever let people see you as less than what you are, @. You're brilliant, and you've accomplished so much. Don't let others take advantage of your tenacity.$17",
   "Core.Cirrus.Generic.LateHeart.13": "Sometimes I'll like, learn an entire craft exists and then get really obsessed with it, buy all the stuff for it, do it for a while and then the cycle repeats.$17#$b#I've painted custom shoes and learned to resole them, rebound books with custom leather covers, built costume replica props...$14#$b#I don't regret any of it, but there's a reason I make an effort to keep the van clean and tidy now. All those hobbies take up tons of space!$15",
   "Core.Cirrus.Generic.LateHeart.14": "I was briefly interested in learning how to make mead, but I have such a poor relationship with substances that I don't trust myself to do any homebrewing.$3#$b#To be honest, I don't even want to say 'maybe someday', because I have an addictive personality and I've already learned what my limits are.$1",
   "Core.Cirrus.Generic.LateHeart.15": "One of my favorite things about performing is getting to do a lot of my own costume design. I've even made a few of the pieces I've worn on tour.$1#$b#As far as aesthetic, I like to go as eye-catching and ridiculous as possible. As long as I can still move around on stage, nothing is too wild.$14",
-  "Core.Cirrus.Generic.LateHeart.16": "I'll be honest, my mom's tried to control my finances on a few separate occasions. And it wasn't exactly to keep me from pounding beers, either. It was for her own frivilous spending.$2#$b#It's difficult, but I'm glad I mostly worked independantly of her interests. Might have been a lot worse off otherwise.$17",
+  "Core.Cirrus.Generic.LateHeart.16": "I'll be honest, my mom's tried to control my finances on a few separate occasions. And it wasn't exactly to keep me from pounding beers, either. It was for her own frivolous spending.$2#$b#It's difficult, but I'm glad I mostly worked independently of her interests. Might have been a lot worse off otherwise.$17",
   "Core.Cirrus.Generic.LateHeart.17": "When I was at my worst, I really didn't like who I was.$16#$b#Eventually I figured out that like, people aren't really good or bad. They are what they do. So I started doing more stuff I loved.$17#$b#Not just music, which I associated with a lot of my problems... but crafting, cooking, dancing. Those kinds of things.$6",
   "Core.Cirrus.Generic.LateHeart.18": "Are you good with computers, @? Do you have one on your farm?$13#$b#I'm not. I can navigate phone apps just fine, but we couldn't afford a desktop computer when I was younger. I think hobbies involving software or coding are safe from my fixations - though, I've always wondered if I could build a computer. All the different parts seem like they'd be fun to put together.$17",
   "Core.Cirrus.Generic.LateHeart.19": "Someone I was close with when I was younger told me she liked me because I was nice.$16#$b#I didn't really get that 'nice' isn't the default character trait until I got involved with the music industry. Empathy and kindness took a sharp downturn, at that point.$17#$b#It was a hard lesson to learn, and I still think about that person a lot.$18",
   "Core.Cirrus.Generic.LateHeart.20": "So, for proper pizza, the secret is the water. But also, the bottom has to be thin and crunchy while the crust is chewy and soft.$1#$b#The cheese to sauce ratio has to be exactly right, but the only way you'll know for sure is if you measure with your heart.[(O)DN.SnS_zuzustylepizza]$6",
-  "Core.Cirrus.Generic.LateHeart.21": "ZuZu style cheesecake has to be rich. It has to be dense. And the graham crust has to be super buttery.$1#$b#You don't want to overdo it on the toppings. One aestheitc strawberry is perfectly fine; the whole dessert is tasty enough without extras.[(O)DN.SnS_zuzustylecheesecake]$6",
+  "Core.Cirrus.Generic.LateHeart.21": "ZuZu style cheesecake has to be rich. It has to be dense. And the graham crust has to be super buttery.$1#$b#You don't want to overdo it on the toppings. One aesthetic strawberry is perfectly fine; the whole dessert is tasty enough without extras.[(O)DN.SnS_zuzustylecheesecake]$6",
   "Core.Cirrus.Generic.LateHeart.22": "It took a really long time to address my alcohol addiction, but what helped a lot was learning how to make killer mocktails. I hated feeling left out at big events.$2#$b#The Portfire Drake Sparkler is my own fruity creation. It's got the bubbly feeling of a seltzer with the packed flavor of a fruited sour.$1[(O)DN.SnS_portfiredrakesparkler]$6",
   "Core.Cirrus.Generic.LateHeart.23": "'Here at JojaCorp, our values include: making numbers go up, very fast!' Does that sound like your old job, @?$1#$b#That's what being a big musician is like, too. The art matters less and less the bigger and more involved you get.$3#$b#Merch sales, ticket sales, tour planning, album deadlines - it's like living life off a spreadsheet...$0",
   "Core.Cirrus.Generic.LateHeart.24": "I get art block all the time, and it's really annoying. Sometimes, a long walk or a good nap doesn't help at all. Nothing done with intention ever brings it back.$3#$b#But it always feels like the moment I stop thinking so hard about making art, I'm able to do it again - and it's always something cooler than what I've made prior.$1",
   "Core.Cirrus.Generic.LateHeart.25": "ZuZu style chowder always lifts me up when I'm feeling down. Especially since it's cheap and easy to make.$1#$b#I still think Port Drake style is better, since it's made to be thicker and it's delicious with crackers.[(O)DN.SnS_zuzustyleclamchowder]",
-  "Core.Cirrus.Generic.LateHeart.26": "Alcohol isn't the only thing I've got to steer clear of. Cigarette smoke gets me itchin' for one.$2#$b#I wouldn't dream of trying to tell someone what they can and can't do with their bodies. Hell, I know I didn't listen to anyone who told me to stop for any reason.$0#$b#What I can do is limit my exposure to substances, be honest about my boundries, and try to make good choices about the relationships I keep.$1",
-  "Core.Cirrus.Generic.LateHeart.27": "Port Drake is named for the ancient creatures that supposedly lived there. I'm not much of a mythology girlie, but even I've got to admit that the existance of basically-dragons is pretty cool.$1#$b#I believed in fairy-tale stuff a whole lot less before meeting someone who turns into a wolf on a whim.$17",
+  "Core.Cirrus.Generic.LateHeart.26": "Alcohol isn't the only thing I've got to steer clear of. Cigarette smoke gets me itchin' for one.$2#$b#I wouldn't dream of trying to tell someone what they can and can't do with their bodies. Hell, I know I didn't listen to anyone who told me to stop for any reason.$0#$b#What I can do is limit my exposure to substances, be honest about my boundaries, and try to make good choices about the relationships I keep.$1",
+  "Core.Cirrus.Generic.LateHeart.27": "Port Drake is named for the ancient creatures that supposedly lived there. I'm not much of a mythology girlie, but even I've got to admit that the existence of basically-dragons is pretty cool.$1#$b#I believed in fairy-tale stuff a whole lot less before meeting someone who turns into a wolf on a whim.$17",
   "Core.Cirrus.Generic.LateHeart.28": "I started reading the supplement books for Mateo's tabletop game. There's so much stuff, like, for every idea I have there's mechanics for it.$14#$b#I have a feeling I'm going to build a ton of characters and then not know which one to actually play. So far, I like my monster hunter build the most.$17",
   "Core.Cirrus.Generic.LateHeart.29": "I've never gone adventuring like Mateo does, and honestly, the mines sound pretty intimidating. Not sure it's for me.$16#$b#But if I was together with everyone, I'd be willing to give it a shot! Might be a bit scary, though.$17#$b#I don't have armor. Maybe I would wear one of my performance costumes?$20",
   "Core.Cirrus.Generic.LateHeart.30": "Hey @! I went down to Willy's and he hooked me up with some fresh fish, it was incredible. HE'S incredible! I can't imagine how tough a job it must be to stock a fishery.$1#$b#Anyway, here's a serving of what I made since there was a bit of left over. Enjoy![242]",
@@ -3372,7 +3372,7 @@ ________      ________ _   _ _______ _____
   "Core.Cirrus.Generic.LateHeart.34": "There's no such thing as wasted time unless you're just... like, watching paint dry. Not sure why you would do that to begin with, though.$14#$b#Time spent having fun, no matter what it is, is worthwhile. Don't let anyone tell you otherwise. Any activity that brings you joy is worth doing-$17#$b#I mean, I guess that includes watching paint dry if you're really into that...$16",
   "Core.Cirrus.Generic.LateHeart.35": "There was a time when I lined up a bunch of canvases against a tarp and flung brightly colored housepaint at them. It was because I wanted some stuff to bring more color to the van interior, but it didn't look great.$16#$b#That's when I decided I would go for a cozy aesthetic instead of a chaotic one.$14",
   "Core.Cirrus.Generic.LateHeart.36": "I got really into Incrediwoman comics when I was younger. That's why I decided to paint her on the side of the ol' van, anyway.$17#$b#Wanted to cover up the mural from the pizza place I was working at. But I just thought it'd be kind of neat to do some big, silly mural.$1",
-  "Core.Cirrus.Generic.LateHeart.37": "I just picked up the latest issue of Incrediwoman, and it left off on a cliffhanger so I've got to admit - I'm a little emotionally indesposed right now.$16#$b#Is she okay? Is her girlfriend okay? Will her big bad actually be able to figure out her identity this time, or will she be able to slip away to safety?$17#$b#She'll probably be fine, but like. I'm excited! I want to see what happens! I can't stop thinking about it!$1",
+  "Core.Cirrus.Generic.LateHeart.37": "I just picked up the latest issue of Incrediwoman, and it left off on a cliffhanger so I've got to admit - I'm a little emotionally indisposed right now.$16#$b#Is she okay? Is her girlfriend okay? Will her big bad actually be able to figure out her identity this time, or will she be able to slip away to safety?$17#$b#She'll probably be fine, but like. I'm excited! I want to see what happens! I can't stop thinking about it!$1",
   "Core.Cirrus.Generic.LateHeart.38": "I never went to college, I got swept up in the industry pretty early on. But I'm not sure I'd like to anyway - considering all my hobbies, I'd probably be more suited to a trade.$14#$b#If I did go to college, I probably would've picked something random to major in, gotten bored, regretted my decisions, and dropped out anyway. Too hard to stick with one thing.$1",
   "Core.Cirrus.Generic.LateHeart.39": "To be honest, @, I hardly made it out of high school. I got through on C's because I never did any work that wasn't either urgent or interesting to me, personally.$13#$b#The school system is kind of weird in that regard, don't you think? I feel like I just couldn't make the same connections my peers could.$16#$b#But that's okay, because I do a ton of other stuff and make enough money to get by. That's what matters!$17",
   "Core.Cirrus.Generic.LateHeart.40": "I'm a shooting star leaping through the sky like a tiger, defying the laws of gravity! I'm a racing car passing by like Lady Godiva. I'm gonna go, go, go, there's no stopping me!$26",
@@ -3389,7 +3389,7 @@ ________      ________ _   _ _______ _____
 
   // SPRING
   "Core.Cirrus.Spring.1": "Spring is all about new beginnings, and I love that. I bet it's really busy for your farm, trying to get caught up after Winter. Good luck!$1",
-  "Core.Cirrus.Spring.2": "Do you cook often? I bet the home-grown crops must taste so good in all your meals.$0#$b#I'll trade you a homemade mealfor fresh ingredients, @!$1",
+  "Core.Cirrus.Spring.2": "Do you cook often? I bet the home-grown crops must taste so good in all your meals.$0#$b#I'll trade you a homemade meal for fresh ingredients, @!$1",
   "Core.Cirrus.Spring.3": "I don't even know what's in season this time of year. I just tend to pick the freshest looking stuff at the market.$3#$b#What are you growing, @? Got any insider info on what's tastiest right now?$1",
   "Core.Cirrus.Spring.4": "I'm really excited for the festivals this season. I'm not often in town long enough to be able to check out local festivities.$1#$b#Especially the Egg Festival, I bet there'll be tons of great food.$1",
   "Core.Cirrus.Spring.5": "What kind of farming do you do, @? Do you mostly use a greenhouse, or do you focus on seasonal stuff more?$1#$b#I bet you make all sorts of fancy artisanal goods, too.$6",
@@ -3402,9 +3402,9 @@ ________      ________ _   _ _______ _____
   // SUMMER
   "Core.Cirrus.Summer.1": "Are you a beach-goer, @? We should go sometime, we could collect some shells, clean them, paint them - make little keepsakes!$1#$b#Maybe we can do some stuff with resin - I've never worked with resin before, but hey, it's never too late to start!$17",
   "Core.Cirrus.Summer.2": "Nothing beats laying out on a towel and catching some sun. The warmth, the vibes, the beachy tunes. It's all perfect.$14#$b#Add in desserts made with seasonal fruit and a lump of homemade ice cream and it makes for a perfect day.$1",
-  "Core.Cirrus.Summer.3": "My favorite icecream is a chocolate base, with marshmellow and caramel swirl, and chunks of chocolate. Bonus points if they're in fun shapes. What's yours, @?$1",
+  "Core.Cirrus.Summer.3": "My favorite icecream is a chocolate base, with marshmallow and caramel swirl, and chunks of chocolate. Bonus points if they're in fun shapes. What's yours, @?$1",
   "Core.Cirrus.Summer.4": "I bet there's a lot of really solid fish you can catch this time of year. Most importantly, you can cook delicious meals with those fresh-caught fish!$1#$b#Maybe avoid cooking with Pufferfish, though, I think that's a recipe for disaster.$17",
-  "Core.Cirrus.Summer.8": "You ever get that summertime sadness, @?$16#$b#Me neither. It's so hard to be down when your surroundings are florushing and everyone seems so happy.$1",
+  "Core.Cirrus.Summer.8": "You ever get that summertime sadness, @?$16#$b#Me neither. It's so hard to be down when your surroundings are flourishing and everyone seems so happy.$1",
   "Core.Cirrus.Summer.5": "I'm pretty proud of my wardrobe, but in particular, I go through a lot of swimsuits. There are just so many cute options these days.$25",
   "Core.Cirrus.Summer.6": "Have you seen those rainbow shells that wash up on the beach? They catch the light so nice, and they've got a nice weight to them.$1#$b#Those mermaid pendants married folks wear look a lot like them, don't they? Maybe that's what they're made of.$17",
   "Core.Cirrus.Summer.7": "Oooh, that's right! Starfruit is in season. You can make really tasty treats with those - have you ever dipped one in chocolate and frozen it? Delicious!$1",
@@ -3412,14 +3412,14 @@ ________      ________ _   _ _______ _____
   "Core.Cirrus.Summer.10": "Air conditioning takes so much to run, I just try and spend as much time outside as possible. Is it sweaty? Yeah, but it keeps me active.$17",
 
   // FALL
-  "Core.Cirrus.Fall.1": "'Tis the season to make every comfort food under the sun. Here's a pumpkin treat for your health, @!$1#$b#Definitely your health, not me foistering my excess on whoever passes. Look, I portion with my heart.$17[608 236] ",
+  "Core.Cirrus.Fall.1": "'Tis the season to make every comfort food under the sun. Here's a pumpkin treat for your health, @!$1#$b#Definitely your health, not me foisting my excess on whoever passes. Look, I portion with my heart.$17[608 236] ",
   "Core.Cirrus.Fall.3": "I love how I can dress this time of year. It's not too cold, not too hot - perfect time to be fashion forward@$14",
   "Core.Cirrus.Fall.4": "It's pumpkin spice season! But not only that, it's mulled cider season, it's pie season, it's still s'mores season if you squint, it's-$1#$b#%This goes on for a while.",
-  "Core.Cirrus.Fall.5": "Cities have parks - I mean, ZuZu's got a big one in it's center - but it's not the same as all the foilage just being... everywhere.$1#$b#Yeah, yeah. Call me a leaf-peeper all you want, but it's because you're used to it. Let this city girl have nice things.$17",
+  "Core.Cirrus.Fall.5": "Cities have parks - I mean, ZuZu's got a big one in it's center - but it's not the same as all the foliage just being... everywhere.$1#$b#Yeah, yeah. Call me a leaf-peeper all you want, but it's because you're used to it. Let this city girl have nice things.$17",
   "Core.Cirrus.Fall.6": "One of the things I've noticed about city folk is that the weather doesn't matter - the coffee is always iced.$16#$b#I don't mind either way, coffee is coffee, it doesn't do much for me in the energy department.$1",
-  "Core.Cirrus.Fall.7": "Okay, okay, but I've got an idea - so in ZuZu there were pop up Sprit's Eve stores around this time of year.$15#$b#What if you open one up in Spring? Hit the niche market of early costume preppers.$14",
-  "Core.Cirrus.Fall.8": "I'm looking forward to Sprit's Eve, but I think the Fall Festival will be just as fun. Am I biased? Maybe.$1#$b#Look, I'm not sure there's a single person in the known universe who can actually turn down a deep-fried cookie.$17",
-  "Core.Cirrus.Fall.9": "I do have a big appreciation for horror movie scores, especially the classic ones. Sometimes, minimal and chilling works a lot better than heavy orcestration.$14#$b#I think it's more memorable, too.$17",
+  "Core.Cirrus.Fall.7": "Okay, okay, but I've got an idea - so in ZuZu there were pop up Spirit's Eve stores around this time of year.$15#$b#What if you open one up in Spring? Hit the niche market of early costume preppers.$14",
+  "Core.Cirrus.Fall.8": "I'm looking forward to Spirit's Eve, but I think the Fall Festival will be just as fun. Am I biased? Maybe.$1#$b#Look, I'm not sure there's a single person in the known universe who can actually turn down a deep-fried cookie.$17",
+  "Core.Cirrus.Fall.9": "I do have a big appreciation for horror movie scores, especially the classic ones. Sometimes, minimal and chilling works a lot better than heavy orchestration.$14#$b#I think it's more memorable, too.$17",
   "Core.Cirrus.Fall.10": "@ It's your lucky day! Once again, I completely overcooked. I was going with the theme of the season, and well... here you go![235]",
 
   // WINTER
@@ -3442,16 +3442,16 @@ ________      ________ _   _ _______ _____
   "Core.Cirrus.LionsMane.5": "I've never had a bedroom before, @. My mother and I lived in a mobile home, and then I was living out of the van to save money.$16#$b#The Lion's Mane means the world to me. Thanks for helping make it happen, @. This town wouldn't be the same without you.$17",
   "Core.Cirrus.LionsMane.6": "It's wild to actually have customers! I'm not really relying on the Lion's Mane's finances for like, anything more than maintaining the building, but...$1#$b#It sure is nice to have a bit of extra pocket money once in a while, doing something that's way less stressful than touring.$1",
   "Core.Cirrus.LionsMane.7": "One of my favorite things about the restoration was being able to decorate the space myself without any input or commentary from anyone else.$17#$b#It was a really big deal, kind of like a step forward. And things can only get better and better from here!$1",
-  "Core.Cirrus.LionsMane.8": "The Meadowlark? Oh, he lived here while the building was still dilapidated. I didn't have the heart to kick him out when I remodled.$17",
+  "Core.Cirrus.LionsMane.8": "The Meadowlark? Oh, he lived here while the building was still dilapidated. I didn't have the heart to kick him out when I remodeled.$17",
   "Core.Cirrus.LionsMane.9": "It feels like I stopped doing music professionally, and then suddenly, and without warning, I got hit with a rush of musical inspiration.$22#$b#It's great. I play so much more NOW than I did prior! I thought I'd lose interest, but I think I just needed a break.$1",
   "Core.Cirrus.LionsMane.10": "After the Lion's Mane was built, I thought I'd step back from music. But it's been quite the opposite; I've been playing and writing more than I have in years.$4#$b#Thank you, @. Maybe one day I'll write a song for you, and for everything you've done. I know you're carrying the entire Valley on your back.$6",
 
   // 10H DATING 
   "Core.Cirrus.Dating.1": "Hey, Rockstar. You workin' hard today? Oh, I bet.$25#$b#Maybe I can help you unwind from a busy day after hours in the Lion's Mane. What do you say?$24",
   "Core.Cirrus.Dating.2": "It's my Superstar, my Rockstar, my ShowStopper, my-$23#$b#Well, we can save some pet names for later.$25#$b#But in the case I don't get to see you tonight, here's a pick-me-up for the road.[198 201 231]",
-  "Core.Cirrus.Dating.3": "I think about our relationship often, and there's so much of it that feels right out of one of those sappy holoday movies. Like, okay, hear me out.$25#$b#City girl is temporarily in the country, is convinced to stay by kindly farmer and {{LPPN1}} friends, opens a shop, falls in love, and embraces true happiness and passion or whatever.$24#$b#C'mon, @. Don't tell me you haven't seen that one before.$24",
+  "Core.Cirrus.Dating.3": "I think about our relationship often, and there's so much of it that feels right out of one of those sappy holiday movies. Like, okay, hear me out.$25#$b#City girl is temporarily in the country, is convinced to stay by kindly farmer and {{LPPN1}} friends, opens a shop, falls in love, and embraces true happiness and passion or whatever.$24#$b#C'mon, @. Don't tell me you haven't seen that one before.$24",
   "Core.Cirrus.Dating.4": "Wow, Rockstar. You sure are looking like you put your hours in today. Have you always been so... tightly muscled?$23#$b#If I asked really nicely, could you carry me? How about if I asked not-so-nicely?$25",
-  "Core.Cirrus.Dating.5": "I wanted to cook for you, but I think I might have gone a little overboard. So first I figured I'd make sure you had a hearty lunch...$23[240]#$b#Couldn't forget the healthy side salad, of course.[196]$25#$b#But then I was like, no wait, @ should also have a snack, so I whipped these up really quick-[220]$23#$b#And then, finally, I realized you'd probably want to wash all that down. Anyway, hope you have a very fufilling day, @! Love you![167]$24",
+  "Core.Cirrus.Dating.5": "I wanted to cook for you, but I think I might have gone a little overboard. So first I figured I'd make sure you had a hearty lunch...$23[240]#$b#Couldn't forget the healthy side salad, of course.[196]$25#$b#But then I was like, no wait, @ should also have a snack, so I whipped these up really quick-[220]$23#$b#And then, finally, I realized you'd probably want to wash all that down. Anyway, hope you have a very fulfilling day, @! Love you![167]$24",
   "Core.Cirrus.Dating.6": "How could I NOT just look at you and immediately think, 'talented, brilliant, incredible, amazing, show-stopping'?$24#$b#That's right! I can't. It's impossible. Can't do it. Nope.$25",
   "Core.Cirrus.Dating.7": "I think about my mom often, still. She hasn't tried to contact me in a while, which is a good thing! I guess it goes to show that like...$23#$b#The blood of the covenant is thicker than the water of the womb, but cheese dip is thicker than both! Thanks for being my cheese dip.$17#$b#That sounded cuter in my head...$20",
   "Core.Cirrus.Dating.8": "I'm going birdwatching with Eloise and Biróg sometime soon! Would you want to join us, Rockstar? It involves being really quiet, a nice change of pace from other more chaotic hobbies.$1#$b#I guess it's one of two things that can shut me up.$25",
@@ -3494,11 +3494,11 @@ ________      ________ _   _ _______ _____
   "Marriage.Cirrus.Patio.3": "Good morning, sweet thing! I made you an extra thermos of coffee to go. Have fun storming the castle...! or, watering crops, or petting cows...[253]",
   "Marriage.Cirrus.Patio.4": "Hello, Rockstar~ Figured I'd send you off with a nice warm thermos of tea for on the go. Enjoy your day, I'll see you tonight![614]",
   "Marriage.Cirrus.Patio.5": "@! I packed you a lunch. The secret ingredient was love~ Have an amazing day out there! [204]$1",
-  "Marriage.Cirrus.Patio.6": "Morning, Rockstar! I've got an extra little treat for your lunch bag today just in case you're feeling adventerous. Have an excellent day today, I love you![243]$4",
+  "Marriage.Cirrus.Patio.6": "Morning, Rockstar! I've got an extra little treat for your lunch bag today just in case you're feeling adventurous. Have an excellent day today, I love you![243]$4",
 
   // SPOUSE ROOM 
   "Marriage.Cirrus.SpouseRoom.1": "I hope you don't mind the occasional jam session, Rockstar. You're welcome to join me, of course!$14",
-  "Marriage.Cirrus.SpouseRoom.2": "I really appreciate having an extra room here, despite having the entireity of the Lion's Mane. It makes me feel like I have all sorts of places to feel welcome and comfortable.$17",
+  "Marriage.Cirrus.SpouseRoom.2": "I really appreciate having an extra room here, despite having the entirety of the Lion's Mane. It makes me feel like I have all sorts of places to feel welcome and comfortable.$17",
   "Marriage.Cirrus.SpouseRoom.3": "Are my decorations too chaotic? I really hope you don't mind. I have a system to keep things tidy, but if anything gets too out of hand please let me know.$17",
   "Marriage.Cirrus.SpouseRoom.4": "I was planning to do some crafting and tidying today, Rockstar~ care to join?$17",
   "Marriage.Cirrus.SpouseRoom.5": "%Cirrus is looking at a picture of you two on her phone. It's from the day she moved in, when you put this room together with her. She's smiling softly.",
@@ -3514,7 +3514,7 @@ ________      ________ _   _ _______ _____
 
   // SPECIAL DATES - SPRING
   "Marriage.Cirrus.Spring": "It's a beautiful day outside. The birds are singing, the flowers are blooming... on days like these, we should really be taking advantage of the the weather and scenery.$25",
-  "Marriage.Cirrus.Spring1": "I'm so excited to have the opprotunity to start fresh with you, Rockstar. Let's continue pursuing the best for ourselves and each other in this new year.$24",
+  "Marriage.Cirrus.Spring1": "I'm so excited to have the opportunity to start fresh with you, Rockstar. Let's continue pursuing the best for ourselves and each other in this new year.$24",
   "Marriage.Cirrus.Spring13": "Are you excited for the Egg Festival, Rockstar? I'm going to help Gus cook for it. He always works so hard for festivals, I bet he could use a hand!$1",
   "Marriage.Cirrus.Spring23": "The Flower Dance is tomorrow! I'm so excited to spend it with you, @. Looking forward to after the festival, too. Hopefully we'll both still be in a jovial mood.$25",
   "Marriage.Cirrus.Spring24": "I'm so exciiiited! I get to wear my pretty dress, I get to see everyone else all dressed up - and, oh, of COURSE I get to see my favorite person getting {{LPPN1}} groove on!$23",
@@ -3563,7 +3563,7 @@ ________      ________ _   _ _______ _____
   "Marriage.Cirrus.Indoor.Day.2": "If I wrote a song about you, what would you want me to highlight? Our relationship? All of the trials you've overcome since you've come to The Valley?$23",
   "Marriage.Cirrus.Indoor.Day.3": "It's beautiful out!~ I hope you're able to finish up your chores early so that you can enjoy the day - and me, if you're feeling up for it.$23",
   "Marriage.Cirrus.Indoor.Day.4": "This week I've painted a pair of sneakers, purchased hair dye supplies, read a book on editing videos, studded an old leather belt, and cooked two new recipes!$1",
-  "Marriage.Cirrus.Indoor.Day.5": "I promise, the tub will never be left with hair dye stains. Amateur cosmotologist I may be, I've messed up enough bathrooms that I know better by now.$1",
+  "Marriage.Cirrus.Indoor.Day.5": "I promise, the tub will never be left with hair dye stains. Amateur cosmetologist I may be, I've messed up enough bathrooms that I know better by now.$1",
   "Marriage.Cirrus.Indoor.Night.1": "I've been having fun pushing my wardrobe recently, since I'm stationary and financially stable. I have so much space now, between here and the Lion's Mane.$17",
   "Marriage.Cirrus.Indoor.Night.2": "I'm feeling a little... what's the word, salacious? Yeah, salacious. Care to indulge me, Rockstar?$23",
   "Marriage.Cirrus.Indoor.Night.3": "Hey, Rockstar. I'll give you one guess as to what's under my clothes right now - or, you could just take them off and find out.$24",
@@ -3579,7 +3579,7 @@ ________      ________ _   _ _______ _____
 
   // GENERIC DIALOGUE - KIDS 
   "Marriage.Cirrus.OneKid.0": "I want %kid1 to have every single privilege I never did. No food scarcity, no trailer, nothing - we're gonna raise them right, give them the upbringing that I never had.$23",
-  "Marriage.Cirrus.OneKid.1": "To be honest, I wasn't sure I'd be ready for kids. But thinking about giving a chance to a little human to have a better childhood than I did is really fufilling to me.$23",
+  "Marriage.Cirrus.OneKid.1": "To be honest, I wasn't sure I'd be ready for kids. But thinking about giving a chance to a little human to have a better childhood than I did is really fulfilling to me.$23",
   "Marriage.Cirrus.OneKid.2": "%kid1 enjoyed some fingerpainting today! They're a natural, of course. Got everything hung up on the fridge. Tomorrow I'll have them play keyboard a little bit.$1",
   "Marriage.Cirrus.OneKid.3": "%kid1 is picking up on activities really quick! Puzzles, movies, art, music... they're interested in all of it, and I couldn't be happier.$17",
   "Marriage.Cirrus.OneKid.4": "%kid1 and I went to the Lion's Mane today to go bake a bunch of cookies! These were made with love from your wife and child.$23[223]",
@@ -3616,7 +3616,7 @@ ________      ________ _   _ _______ _____
 
   // ENGAGEMENT DIALOGUE 
   "Marriage.Cirrus.Engagement.Cirrus0": "I'm so excited, Rockstar! I've got my dress and everything. Doesn't matter if the ceremony isn't fancy, it'll be a dream come true no matter what.$23",
-  "Marriage.Cirrus.Engagement.Cirrus1": "@, I'm so nervous. I feel like I can't think straight. The strands of our life are about to entertwine and I couldn't be happier for it.$23",
+  "Marriage.Cirrus.Engagement.Cirrus1": "@, I'm so nervous. I feel like I can't think straight. The strands of our life are about to intertwine and I couldn't be happier for it.$23",
   "Marriage.Cirrus.Engagement.Cirrus2": "We're going to spend the rest of our lives together, Rockstar. We'll share in the messes, the chaos, the love... are you ready?$23",
 
   /*
@@ -3671,8 +3671,8 @@ ________      ________ _   _ _______ _____
   "Gifts.Cirrus.GiftReaction.SpicyEel": "I think people are largely turned off by eel, but I think it's delicious!#4",
   "Gifts.Cirrus.GiftReaction.Sashimi": "I love shashimi. I started my raw fish journey with lox, and now I have a strict 'try everything twice' rule.",
   "Gifts.Cirrus.GiftReaction.MakiRoll": "I love sushi. I started my raw fish journey with lox, and now I have a strict 'try everything twice' rule.",
-  "Gifts.Cirrus.GiftReaction.TroutSoup": "Is trout the prittiest fish? No. Is it one of the most delicious? Yes.$1",
-  "Gifts.Cirrus.GiftReaction.JojaCola": "I know it's a little sacreligious, but I'll take fizzy over booze every time!$14",
+  "Gifts.Cirrus.GiftReaction.TroutSoup": "Is trout the prettiest fish? No. Is it one of the most delicious? Yes.$1",
+  "Gifts.Cirrus.GiftReaction.JojaCola": "I know it's a little sacrilegious, but I'll take fizzy over booze every time!$14",
 
   // BIRTHDAY - PLATONIC
   "Gifts.Cirrus.GiftReaction.PrismaticShard.Birthday": "@, This is the most beautiful thing I've ever seen, and you saved one for my birthday? You're so wholly lovely! Thank you...$10",
@@ -3739,9 +3739,9 @@ ________      ________ _   _ _______ _____
  */
 
   // EGG FESTIVAL 
-  "Festivals.Cirrus.spring13.False.1": "They didn't have anything like this back home, but who am I to turn down a bunch of egg-based food? Especially devilled eggs, oh man. I hope Gus makes a bunch.$1",
+  "Festivals.Cirrus.spring13.False.1": "They didn't have anything like this back home, but who am I to turn down a bunch of egg-based food? Especially deviled eggs, oh man. I hope Gus makes a bunch.$1",
   "Festivals.Cirrus.spring13.False.2": "Can give or take the actual egg hunt part of this whole shindig, honestly. But the punch? The decorations? The food? This is all so cute!$1",
-  "Festivals.Cirrus.spring13.False.3": "I know it might be draining to attend festivals every year, but as someone who didn't have the opprotunity for stuff like this on the road, I really love it.$17",
+  "Festivals.Cirrus.spring13.False.3": "I know it might be draining to attend festivals every year, but as someone who didn't have the opportunity for stuff like this on the road, I really love it.$17",
   "Festivals.Cirrus.spring13.True.1": "Nothing is better than watching you beat a bunch of children in a game, Rockstar. Go git 'em.$4",
   "Festivals.Cirrus.spring13.True.2": "Love you, Rockstar! You have fun, I'll be over here. Snacking, living my best life.$4",
   "Festivals.Cirrus.spring13.True.3": "How many of those hats have you collected from winning this thing, Rockstar?$1",
@@ -3842,8 +3842,8 @@ ________      ________ _   _ _______ _____
   "Strings.Cirrus.ModelTrain": "Cirrus' seemingly endless list of fixations apparently included model trains at some point.",
   "Strings.Cirrus.ChefMike": "Cirrus doesn't use 'Chef Mike' unless it's for reheating her own leftovers.",
   "Strings.Cirrus.SpotlessKitchen": "It's very tidy and well-kept.",
-  "Strings.Cirrus.BeatenCoffeeMachine": "Apparently named 'Clive', based on the sticky note attatched to it.",
-  "Strings.Cirrus.RecordShelf1": "An entire shelf of casette tapes.",
+  "Strings.Cirrus.BeatenCoffeeMachine": "Apparently named 'Clive', based on the sticky note attached to it.",
+  "Strings.Cirrus.RecordShelf1": "An entire shelf of cassette tapes.",
   "Strings.Cirrus.RecordShelf2": "An entire shelf of CDs.",
   "Strings.Cirrus.RecordShelf3": "An entire shelf of records.",
   "Strings.Cirrus.BigTV": "It's one of the few things you've noticed with dust on it. Guess Cirrus doesn't spend much time in the living room.",
@@ -3854,14 +3854,14 @@ ________      ________ _   _ _______ _____
   "Strings.Cirrus.DumpItTable2": "Cirrus' 'dump it' table is actually much cleaner than the one at the Lion's Mane.",
   "Strings.Cirrus.JournalPile": "A pile of journals that Cirrus has been keeping since her time in Port Drake. You'd best not snoop.",
   "Strings.Cirrus.FavoriteMug": "The mug says 'World's Okayest Musician'.",
-  "Strings.Cirrus.GingerBeerFermenter": "Cirrus is brewing Ginger Beer as a non-alcholic treat.",
-  "Strings.Cirrus.BouncyMeadowlark": "The most dilligent shopkeep, keeping watch as Cirrus busies herself with all her tasks.",
+  "Strings.Cirrus.GingerBeerFermenter": "Cirrus is brewing Ginger Beer as a non-alcoholic treat.",
+  "Strings.Cirrus.BouncyMeadowlark": "The most diligent shopkeep, keeping watch as Cirrus busies herself with all her tasks.",
 
   "Strings.Cirrus.80sRadio.1": "Cirrus left her radio on pretty loud...:# 'Your kisses lift me higher, like the sweet song of a choir. You light my morning sky with burning love!'",
   "Strings.Cirrus.80sRadio.2": "Cirrus left her radio on pretty loud...:# 'Like a river flows, surely to the sea. Darling, so it goes. Some things are meant to be. Take my hand, take my whole life too, for I can't help falling in love with you...'",
   "Strings.Cirrus.80sRadio.3": "Cirrus left her radio on pretty loud...:# 'You're the cutest jailbird I ever did see, I sure would be delighted with your company - Come on and do the Jailhouse Rock with me!'",
   "Strings.Cirrus.80sRadio.4": "Cirrus left her radio on pretty loud...:# 'I'm a shooting star leaping through the sky like a tiger, defying the laws of gravity! I'm a racing car passing by like Lady Godiva. I'm gonna go, go, go, there's no stopping me!",
-  "Strings.Cirrus.80sRadio.5": "Cirrus left her radio on pretty loud...:# 'I'm burning through the sky, yeah, 200 degrees, that's why they call me Mister Fahrenheit! I'm travelling at the speed of light, I wanna make a supersonic woman of you!",
+  "Strings.Cirrus.80sRadio.5": "Cirrus left her radio on pretty loud...:# 'I'm burning through the sky, yeah, 200 degrees, that's why they call me Mister Fahrenheit! I'm traveling at the speed of light, I wanna make a supersonic woman of you!",
   "Strings.Cirrus.80sRadio.6": "Cirrus left her radio on pretty loud...:# 'How long can you stand the heat? Out of the doorway the bullets rip to the sound of the beat, look out! Another one bites the dust!'",
   "Strings.Cirrus.80sRadio.7": "Cirrus left her radio on pretty loud...:# 'It's the terror of knowing what this world is about, watching some good friends screaming LET ME OUT! Pray tomorrow gets me higher, high, high, pressure on people, people on streets-'",
   "Strings.Cirrus.80sRadio.8": "Cirrus left her radio on pretty loud...:# 'There's a starman waiting in the sky, he'd like to come and meet us but he thinks he'd blow our minds. There's a starman waiting in the sky, he's told us not to blow it cuz' he knows it's all worthwhile!'",
@@ -3890,7 +3890,7 @@ ________      ________ _   _ _______ _____
 
   // SUMMIT DIALOGUE 
   "CFD.Cirrus.ExtraDialogue_SummitEvent_Intro_Cirrus": "Oh Rockstar, my Rockstar.$4",
-  "CFD.Cirrus.ExtraDialogue_SummitEvent_Intro2_Cirrus": "Of all the incredible things I've seen when travelling the world, this is the best.$6",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Intro2_Cirrus": "Of all the incredible things I've seen when traveling the world, this is the best.$6",
   "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue1_Cirrus": "It's been %year years, hasn't it? Since you've come here?$1\"/pause 1000/speak spouse \"Thank you for loving me, and for spending some of those together with me - and, hopefully, the rest of them.$6",
   "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue2_Cirrus": "I love you, times in infinity, for every star that's in the sky.$4",
   "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue3_Cirrus": "I love you, I love you, I love you, I love you, I love you...!$26",
@@ -4855,7 +4855,7 @@ ________      ________ _   _ _______ _____
 
   // NAME & INTRO 
   "Core.Roslin.Name": "Roslin",
-  "Core.Roslin.Introduction": "This may, potentially, be another magical disaster to add to my already disasterous supply...$13#$b#It is no matter! I will get Dandelion back, consequences be damned.$14",
+  "Core.Roslin.Introduction": "This may, potentially, be another magical disaster to add to my already disastrous supply...$13#$b#It is no matter! I will get Dandelion back, consequences be damned.$14",
 
   // COMMUNITY CENTER BUNDLES  
   "Core.Roslin.CCComplete": "Congratulations on your contributions to the town, @.$7",
@@ -4877,7 +4877,7 @@ ________      ________ _   _ _______ _____
   "Core.Roslin.MoonlightJelly": "There is no amount of me being ornery that would take away from the beauty of the Lunaloos.$12",
   "Core.Roslin.SDVFair": "I can't help but look forward to seeing Welwick tomorrow. They're an associate of mine.$11",
   "Core.Roslin.SpiritsEve": "So much work to do to prepare for tomorrow. I must appease the spirits, lest there be consequences...$15",
-  "Core.Roslin.IceFestival": "Had I not been a proficent sorcerer, figure skating would have been a choice backup plan.$6",
+  "Core.Roslin.IceFestival": "Had I not been a proficient sorcerer, figure skating would have been a choice backup plan.$6",
   "Core.Roslin.NightMarket": "Oooh, I'm very excited for all the interesting imports that will be coming in over the next few days.$11",
   "Core.Roslin.WinterStar": "It's interesting how much tomorrow's holiday has changed over the years...$6",
 
@@ -4916,14 +4916,14 @@ ________      ________ _   _ _______ _____
   "Core.Roslin.Generic.EarlyHeart.2": "Everything is made up of essence. Fire, earth, air, water - they are the foundation on which everything else stands on.$15#$b#Solar, void and druidic are a little more situational, but serve as building blocks just the same.$16",
   "Core.Roslin.Generic.EarlyHeart.3": "I can't find it in myself to enjoy anything without Dandelion around. It's feels like no longer being able to see in color.$14",
   "Core.Roslin.Generic.EarlyHeart.4": "Food no longer has a taste. If I had to describe it, it would be like... eating mashed potatoes every meal.$13#$b#Which, I can't say I even LIKE mashed potatoes anymore.$14",
-  "Core.Roslin.Generic.EarlyHeart.5": "What kind of sorcerer would I even be, if my protectection spell didn't take...$17#$b#I'd strip myself of all my titles, if this didn't work.$16",
+  "Core.Roslin.Generic.EarlyHeart.5": "What kind of sorcerer would I even be, if my protection spell didn't take...$17#$b#I'd strip myself of all my titles, if this didn't work.$16",
   "Core.Roslin.Generic.EarlyHeart.6": "Haven't had tea in a while. Dandelion always made it with breakfast.$13#$b#It's not that I can't, it's that I don't want to. Not without her.$14",
   "Core.Roslin.Generic.EarlyHeart.7": "I've mainly been occupying my time with research. Just in case... well, Cirrus told me to stay positive.$2#$b#Spending time with her has been helping my mood. That I'll admit.$6",
   "Core.Roslin.Generic.EarlyHeart.8": "Biróg is very wise - wiser than one would expect, on interacting. It's lovely to have magical discussions at length.$6#$b#Especially with someone lacking the condescending attitude of most magically-inclined folks.$7",
   "Core.Roslin.Generic.EarlyHeart.9": "Mateo displays the leadership qualities of someone who's been in that role for quite a long time. I'm very impressed by them.$3#$b#Especially considering they're relatively new to all this. They have a bright future ahead of them.$1",
   "Core.Roslin.Generic.EarlyHeart.10": "Lately, I have found myself trying to picture a future without Dandelion. I cannot.$8#$b#That means the only option is to get her back.$9",
   "Core.Roslin.Generic.EarlyHeart.11": "Dandelion's fate can't possibly be written into the stars. If it is, I'll simply have to rip them from the sky and start over.$5",
-  "Core.Roslin.Generic.EarlyHeart.12": "My twisted life has made me capable. But in the midst of loss, I think I would perfer peace and comfort to skill.$13",
+  "Core.Roslin.Generic.EarlyHeart.12": "My twisted life has made me capable. But in the midst of loss, I think I would prefer peace and comfort to skill.$13",
   "Core.Roslin.Generic.EarlyHeart.13": "Perhaps Dandelion's fate is a punishment for meddling with the Void, and other such things.$17#$b#I just wish I had been the target, rather than my companion.$16",
   "Core.Roslin.Generic.EarlyHeart.14": "There is nobody to forgive me if Dandelion is truly lost. Goodness knows I would never forgive myself.$14",
   "Core.Roslin.Generic.EarlyHeart.15": "You do not know the breadth of feeling you are capable of, until you experience loss.$13",
@@ -4934,33 +4934,33 @@ ________      ________ _   _ _______ _____
   "Core.Roslin.Generic.EarlyHeart.20": "Dandelion and I have taken on impossible challenges before. The difference was, we took those on together.$13",
 
   // POST-DANDELION RETURNING
-  "Core.Roslin.Generic.LateHeart.1": "Dandelion and I have tea every morning. She's very into collecting different varities, so I never know what's she going to make with breakfast.$10",
+  "Core.Roslin.Generic.LateHeart.1": "Dandelion and I have tea every morning. She's very into collecting different varieties, so I never know what's she going to make with breakfast.$10",
   "Core.Roslin.Generic.LateHeart.2": "Magic is a skill practiced with time and patience. You will get better if you invest in yourself, same as anything else.$11#$b#You've mastered so much already, @. This is just another branching aspect of your skillset.$10",
   "Core.Roslin.Generic.LateHeart.3": "How are your skills progressing, @? You have a lot of things to divide your time between, I understand...$11#$b#I'm just very excited for your progression. You'll make a fine sorcerer.$10",
   "Core.Roslin.Generic.LateHeart.4": "I've collected many a title over the years. None of them really matter to me, now. My priorities have changed. I just want to be 'Dandy's'.$18#$b#What about you, though? Have you given yourself a magical moniker?$18",
   "Core.Roslin.Generic.LateHeart.5": "Solomon is a good man, he's just very ornery. Can't lie, he probably gets it's from me. We're intrinsically connected.$11",
   "Core.Roslin.Generic.LateHeart.6": "Oh, my appearance? That's due to my magical partnership with Solomon. The ears, the teeth - those are from him.$6#$b#It's a bit subtler on his end, but he inherited my hair curl. And my attitude, apparently.$7",
-  "Core.Roslin.Generic.LateHeart.7": "Essences are building blocks. Once you harness their power, you can build anything as long as the exchange is equivilant in one way or another.$1",
+  "Core.Roslin.Generic.LateHeart.7": "Essences are building blocks. Once you harness their power, you can build anything as long as the exchange is equivalent in one way or another.$1",
   "Core.Roslin.Generic.LateHeart.8": "Some say sorcery is greedy. That you take, without giving back. Not only is that untrue, but greed isn't inherently bad.$9#$b#Do you only label 'want' as 'greed' when you perceive it as negative? Or is wanting the best for the world, a sin?$7",
   "Core.Roslin.Generic.LateHeart.9": "I was hurting when Dandelion was gone. I could no longer see what her and I on this path to protect in the first place.$2#$b#Dandelion, however... she'd never turn her back on the world, no matter how bad things got.$19",
   "Core.Roslin.Generic.LateHeart.10": "Hindsight is twenty-twenty. I realize, now, that there's no way I wouldn't have been able to get Dandelion back.$3#$b#I would've given up anything for her safe return - my arms, my legs, my heart, my eyes - whatever the Void wanted.$18",
   "Core.Roslin.Generic.LateHeart.11": "Few lessons are painless, @. Especially not the good ones. That is part of life, part of change.$15#$b#The sooner you accept that, the sooner you open yourself up to growth.$11",
   "Core.Roslin.Generic.LateHeart.12": "Some perceive sorcery as an intricate practice. It's not, because I don't think emotions are intricate. I think they're raw, honest.$11#$b#That is the drive behind that sort of magic. Intent. And intent is fueled by feelings, by morals.$10",
   "Core.Roslin.Generic.LateHeart.13": "I collect spell components in my spare time. Anything can be used, really. Bird feathers. Weird herbs. Rocks. Gems. If it meant anything to something, you can use it.$11",
-  "Core.Roslin.Generic.LateHeart.14": "Dandelion and I have been travelling alone for a very long time. It's an incredible thing, really. To suddenly have a home, a group of friends.$6#$b#Don't think I don't appreciate your role in that, @.$7",
+  "Core.Roslin.Generic.LateHeart.14": "Dandelion and I have been traveling alone for a very long time. It's an incredible thing, really. To suddenly have a home, a group of friends.$6#$b#Don't think I don't appreciate your role in that, @.$7",
   "Core.Roslin.Generic.LateHeart.15": "The longer I stay here, the more I found out about everything you've done for the valley. It's very impressive, @.$11#$b#I do wonder what motivates your virtues.$10",
-  "Core.Roslin.Generic.LateHeart.16": "Solomon specializes in The Void - it's within his nature, as a Shadow Folk. I specialize in the Prime Material and the emements that build it.$1#$b#Together, we have a very comprehensive of the magic that surrounds us.$6",
-  "Core.Roslin.Generic.LateHeart.17": "Solomon is old enough to recall the Elemental Wars. Hearing about them from his perspective is jarring, to say the least.$13#$b#I understand why he perfers to focus his time and attention on the surface world, despite it's flaws.$14",
+  "Core.Roslin.Generic.LateHeart.16": "Solomon specializes in The Void - it's within his nature, as a Shadow Folk. I specialize in the Prime Material and the elements that build it.$1#$b#Together, we have a very comprehensive of the magic that surrounds us.$6",
+  "Core.Roslin.Generic.LateHeart.17": "Solomon is old enough to recall the Elemental Wars. Hearing about them from his perspective is jarring, to say the least.$13#$b#I understand why he prefers to focus his time and attention on the surface world, despite it's flaws.$14",
   "Core.Roslin.Generic.LateHeart.18": "Solomon is easily endeared by things you and I take for granted. I've never seen anyone with a bigger smile, even though half the time it's mischief-related.$3",
-  "Core.Roslin.Generic.LateHeart.19": "The White Lodge? It is an orginization of do-gooders inclined to magic, similar to a Paladin order, although they're more martial.$9#$b#Every collective has it's flaws, even if it's followers are good-intended. That's why Dandelion and I work alone, now.$13",
+  "Core.Roslin.Generic.LateHeart.19": "The White Lodge? It is an organization of do-gooders inclined to magic, similar to a Paladin order, although they're more martial.$9#$b#Every collective has it's flaws, even if it's followers are good-intended. That's why Dandelion and I work alone, now.$13",
   "Core.Roslin.Generic.LateHeart.20": "Years and years ago, the White Lodge ran closely alongside the Circle of Thorns.$13#$b#I do believe they started to lose their way after The Circle disbanded; druids seem more morally upstanding than sorcerers, in my experience.$9",
-  "Core.Roslin.Generic.LateHeart.21": "Dandelion's time with her order? You'd have to ask her, there's no reason for me to speak on her bahalf.$11#$b#I will say, I'm biased, but I am in favor of her reasons for breaking her oath.$18",
+  "Core.Roslin.Generic.LateHeart.21": "Dandelion's time with her order? You'd have to ask her, there's no reason for me to speak on her behalf.$11#$b#I will say, I'm biased, but I am in favor of her reasons for breaking her oath.$18",
   "Core.Roslin.Generic.LateHeart.22": "I am primarily inclined to fire magic, although my connection to Solomon bolsters my skills pertaining to The Void.$11#$b#What element speaks to you, @? It's okay to have a favorite. I don't think the building blocks have opinions on that sort of thing.$10",
   "Core.Roslin.Generic.LateHeart.23": "Cirrus sure knows how to make a damn fine cup of coffee.$11#$b#And, although she claims not to be a baker, she makes a cherry pie to die for.$7",
   "Core.Roslin.Generic.LateHeart.24": "I like my coffee black. Dandelion likes a tiny little drop of coffee in a mug of milk, basically.$17#$b#But goodness forbid you suggest putting a bit of sugar or milk in tea. That's smiting territory.$16",
   "Core.Roslin.Generic.LateHeart.25": "Dandelion and I have made an effort not to take up much of Cirrus' kitchen space, especially considering we order most of our meals from her anyway.$11#$b#That has not stopped Dandelion from having an entire cabinet of various teas.$15",
   "Core.Roslin.Generic.LateHeart.26": "Oh, most of the books you see around the Lion's Mane belong to me.$15#$b#Dandelion hides hers, because they're all... spicy, dark-fantasy type things.$19",
-  "Core.Roslin.Generic.LateHeart.27": "My idea of a perfect night spent independantly involves studying magic, the mood set by candles and background music...$17#$b#Dandelion is much the same, but the rate at which she consumes fantasy fiction is austounding.$11",
+  "Core.Roslin.Generic.LateHeart.27": "My idea of a perfect night spent independently involves studying magic, the mood set by candles and background music...$17#$b#Dandelion is much the same, but the rate at which she consumes fantasy fiction is astounding.$11",
   "Core.Roslin.Generic.LateHeart.28": "I don't have many hobbies, although I'm trying to branch out my interests now that I'm settled in.$11#$b#Dandelion has been having quite a lot of fun making potions for the shop. It's something she's always wanted to do, but never had the means.$10",
   "Core.Roslin.Generic.LateHeart.29": "I introduced Dandelion to alchemy, although I do believe it's simply an extension of her obsession with tea.$6#$b#What is brewing, if not mundane alchemy anyway?$8",
   "Core.Roslin.Generic.LateHeart.30": "These days, I care about two things: Dandelion's happiness, and Solomon's.$18#$b#Thank you for putting me in the position to focus on what matters, @.$19",
@@ -4969,7 +4969,7 @@ ________      ________ _   _ _______ _____
   "Core.Roslin.Generic.LateHeart.33": "I feel as though I can see in color again. I can appreciate the change in season, the details of my surroundings, the activity of people passing by...$10",
   "Core.Roslin.Generic.LateHeart.34": "Dandelion made mashed potatoes with dinner the other night. It was at that point, I realized, that not EVERYTHING tastes like them anymore.$18",
   "Core.Roslin.Generic.LateHeart.35": "Cirrus is a large part of the reason I think I was able to make it through the situation with Dandelion.$1#$b#Without her limitless positivity, I feel as though I would've fallen into despair.$6",
-  "Core.Roslin.Generic.LateHeart.36": "I have a good time indulging in nostalgia with Biróg.$1#$b#While I agree that disbanding the Circle of Thorns was for the best, I do miss the comraderie that our orginizations had.$3",
+  "Core.Roslin.Generic.LateHeart.36": "I have a good time indulging in nostalgia with Biróg.$1#$b#While I agree that disbanding the Circle of Thorns was for the best, I do miss the camaraderie that our organizations had.$3",
   "Core.Roslin.Generic.LateHeart.37": "Mateo is a good person, and Dandelion was right to place her trust in them. I believed Marlon's successor would be more inclined to following in his footsteps.$9#$b#But they didn't. And I'm thankful for it.$1",
   "Core.Roslin.Generic.LateHeart.38": "One of the things I'm now most grateful for is that I no longer have to try and map out my future without Dandelion.$3",
   "Core.Roslin.Generic.LateHeart.39": "It turned out Dandelion's fate wasn't written in the stars, after all. There's no longer a need to threaten to rip them from the sky; I can just appreciate the view.$3",
@@ -4986,7 +4986,7 @@ ________      ________ _   _ _______ _____
   "Core.Roslin.Spring.3": "Here's hoping you're not too overworked this time of year. I imagine you're probably making up for winter.$3",
 
   // SUMMER
-  "Core.Roslin.Summer.1": "Air conditioners hate this ONE trick - magically changing your body temprature depending on the weather. Handy trick for staying comfortable.$7",
+  "Core.Roslin.Summer.1": "Air conditioners hate this ONE trick - magically changing your body temperature depending on the weather. Handy trick for staying comfortable.$7",
   "Core.Roslin.Summer.2": "I'm not much of a beach person, but whatever. I'll go if Dandelion wants to go. She looks cute in her swimsuit, anyway.$8",
   "Core.Roslin.Summer.3": "I love how everyone complains about the heat, but then they decide to have a festival involving a giant pot of soup.$7",
 
@@ -4997,7 +4997,7 @@ ________      ________ _   _ _______ _____
 
   // WINTER
   "Core.Roslin.Winter.1": "Sleeves are for people who can't cheat the system with magic. You should try it, @.$7",
-  "Core.Roslin.Winter.2": "I've travelled to places where the snow accumulates almost as high as I stand tall. I hate that.$9",
+  "Core.Roslin.Winter.2": "I've traveled to places where the snow accumulates almost as high as I stand tall. I hate that.$9",
   "Core.Roslin.Winter.3": "I appreciate Dandelion's tea obsession much more in the Winter than I do in the Summer, I must admit.$10",
 
   /*
@@ -5045,7 +5045,7 @@ ________      ________ _   _ _______ _____
 
   // NEUTRALS 
   "Gifts.Roslin.GiftReaction.GoldenPumpkin": "These are for warding away what I tend to invite in, @.$7",
-  "Gifts.Roslin.GiftReaction.Pearl": "Do I look like the kind of person that would wear something so excessively valueable?$9",
+  "Gifts.Roslin.GiftReaction.Pearl": "Do I look like the kind of person that would wear something so excessively valuable?$9",
   "Gifts.Roslin.GiftReaction.MagicRockCandy": "It feels a little weird to just ... eat a spell component.$2",
 
   // BIRTHDAY
@@ -5078,7 +5078,7 @@ ________      ________ _   _ _______ _____
   "Movies.Roslin.PrairieKing.3": "It was nice to see an old friend again, I'll admit.$1",
   "Movies.Roslin.Wumbus.1": "I don't understand what this is.$2",
   "Movies.Roslin.Wumbus.2": "I'm more confused than when we started.$0",
-  "Movies.Roslin.Wumbus.3": "Was the whole point of that just to get me emotionally attatched to the little Wumbus creature?$5",
+  "Movies.Roslin.Wumbus.3": "Was the whole point of that just to get me emotionally attached to the little Wumbus creature?$5",
   "Movies.Roslin.Mysterium.1": "This is right up my alley. Good choice, @.$7",
   "Movies.Roslin.Mysterium.2": "Ah, yup... of course The Black Lodge is at it again...$1",
   "Movies.Roslin.Mysterium.3": "Not exactly true-to-life, but definitely truer than you'd think.$6",
@@ -5143,7 +5143,7 @@ ________      ________ _   _ _______ _____
   "Festivals.Roslin.winter25.3": "This festival dates back, traditionally, a few hundred years. But boy, has it changed a lot.$10",
 
   // RSV GATHERING 
-  "Festivals.Roslin.fall20.1": "Hm... I believe these mountains are where some of my old collegues reside...$8",
+  "Festivals.Roslin.fall20.1": "Hm... I believe these mountains are where some of my old colleagues reside...$8",
   "Festivals.Roslin.fall20.2": "The spiritual energy here is- what? Nothing, @.$9",
   "Festivals.Roslin.fall20.3": "Solomon is very excited by all the food prospects, though I've got to find a place to hide so I can feed him...$13",
 
@@ -5175,7 +5175,7 @@ ________      ________ _   _ _______ _____
   "Strings.Roslin.PotionMaking1": "In a small box, there's two glass beakers, a frame, a stirring rod, and a mortar and pestle.",
   "Strings.Roslin.PotionMaking2": "A little wicker basket contains peacebloom, silverleaf, earthroot, and briarthorn for use in potions.",
   "Strings.Roslin.PotionMaking3": "There are a bunch of different vials of oil; they all smell really nice! The most notable scent seems to be teakwood.",
-  "Strings.Roslin.HandmadeSwords": "These look recognizeable! Mateo's handiwork?",
+  "Strings.Roslin.HandmadeSwords": "These look recognizable! Mateo's handiwork?",
   "Strings.Roslin.EvenMoreSupplies": "The contents of this box aren't very organized, but there's a ton of stuff in here for crafting with.",
 
   /*
@@ -5281,7 +5281,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Roslin.1.Roslin.18": "You're right, he probably wouldn't. But I've long since abdicated my position in the White Lodge - erm, a court of sorcerers...$13#$b#And Dandelion has refused to join Marlon's ranks in the past.$5#$b#I suppose it's not entirely unreasonable for him to be cautious.$9",
   "Events.SnS.Ch4.Roslin.1.Mateo.19": "Can you fill us in on what you're investigating?$10",
   "Events.SnS.Ch4.Roslin.1.Roslin.20": "{{RoslinStygiumComment}}",
-  "RoslinStygiumComment.1": "You stand a chance to be more familliar than anyone else here, considering the pendant made of Stygium around @'s neck.",
+  "RoslinStygiumComment.1": "You stand a chance to be more familiar than anyone else here, considering the pendant made of Stygium around @'s neck.",
   "RoslinStygiumComment.2": "I know you've seen Stygium in the mines underneath East Scarp. Have you questioned where it comes from?$17",
   "Events.SnS.Ch4.Roslin.1.Roslin.21": "Stygium is a material uniquely coalesced from lingering feelings, positive or negative.$5#$b#I don't know who's familiar with East Scarp's history, but tragedy has struck that mine in the past...$15",
   "Events.SnS.Ch4.Roslin.1.Hector.22": "There was a collapse. Nearly a town's worth of workers got trapped down there.$23",
@@ -5322,7 +5322,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Roslin.2.Mateo.16": "C'mon, Roslin. @. I don't think this is going to be productive, after all.$16",
   "Events.SnS.Ch4.Roslin.2.Roslin.17": "You're right. Anger won't do us any good, we're wasting precious time.$2#$b#Dandelion has given enough of her physical self to the Adventurer's Guild, anyway.$16",
   "Events.SnS.Ch4.Roslin.2.QuickQuestion.18": "Lewis, there HAS to be something you can do. ",
-  "Events.SnS.Ch4.Roslin.2.QuickQuestion.19": "Marlon, you should know better than to pass judgement like that.",
+  "Events.SnS.Ch4.Roslin.2.QuickQuestion.19": "Marlon, you should know better than to pass judgment like that.",
   "Events.SnS.Ch4.Roslin.2.Lewis.20": "You're right, @... I just need to figure out what. I can do better, just give me some time. This is all very over my head.$2",
   "Events.SnS.Ch4.Roslin.2.MateoMarlon.21": "Aye, you're right, @... they were right to call me out. Lewis and I will figure out what support we can muster.$2",
   "Events.SnS.Ch4.Roslin.2.MateoMarlon.22": "Mateo's come a long way, callin' me out on my blunders... Feels like only yesterday they were hidin' from me.$2",
@@ -5343,7 +5343,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Roslin.3.Hector.11": "Not one bit. I made my choices, I'm proud of them, and I'll stand by them.$12",
   "Events.SnS.Ch4.Roslin.3.Roslin.12": "You're... making me empathize with Lewis, of all people.$14",
   "Events.SnS.Ch4.Roslin.3.Hector.13": "I don't like him, but I won't claim to be suited to managing a whole town of people.$14",
-  "Events.SnS.Ch4.Roslin.3.Roslin.14": "I suppose Marlon isn't in the wrong, either. He's lacking in context, but it's wrong to have made such a harsh judgement...$16",
+  "Events.SnS.Ch4.Roslin.3.Roslin.14": "I suppose Marlon isn't in the wrong, either. He's lacking in context, but it's wrong to have made such a harsh judgment...$16",
   "Events.SnS.Ch4.Roslin.3.QuickQuestion.15": "Why did you leave the White Lodge, anyway? ",
   "Events.SnS.Ch4.Roslin.3.QuickQuestion.16": "Why won't Dandelion join the Adventurer's Guild?",
   "Events.SnS.Ch4.Roslin.3.Roslin.17": "Shadowfolk have a more intrinsic connection with Aether than Humans do, so I befriended one. The Lodge didn't approve.$17#$b#At the time, we were debating waging war against them. I was considered a traitor, so I left before I could be...removed.$15#$b#I don't regret my decision. I know I'm rough around the edges, but I've always believed in the moral good.$10",
@@ -5511,7 +5511,7 @@ ________      ________ _   _ _______ _____
 
 
   // CH4  
-  "CT.Roslin.RoslinNeedsHelp": "It's embarrassing to have so much esteem, yet be desparate for help... What kind of sorcerer am I if I cannot even save my own partner?$16",
+  "CT.Roslin.RoslinNeedsHelp": "It's embarrassing to have so much esteem, yet be desperate for help... What kind of sorcerer am I if I cannot even save my own partner?$16",
   "CT.Roslin.RoslinAndMateo": "I'm impressed by Mateo's integrity. I am not impressed by Lewis and Marlon being total clods.$15",
   "CT.Roslin.RoslinAndHector": "The Druid is very wise, if a bit of a contrarian... I suppose if it's 'for the bit'...$5",
   "CT.Roslin.RoslinAndCirrus": "Cirrus is the sweetest woman besides Dandelion that I have ever met, and if anyone so much as looks at her wrong, I will set them aflame.$6",
@@ -5569,7 +5569,7 @@ ________      ________ _   _ _______ _____
   "Core.Dandelion.SpringEnd": "Did you enjoy the Spring, @? Are you ready for summer? I sure am!$14",
   "Core.Dandelion.SummerEnd": "It's almost Fall! 'Tis the season to curl up with books and tea and do not much else.$13",
   "Core.Dandelion.FallEnd": "How do you spend your Winters, @? I don't know much about farming, but I imagine you have other ways of spending your time.$6",
-  "Core.Dandelion.WinterEnd": "It's almost Spring again! Goodness graccious, that's exciting. A whole 'nother year has passed us.$1",
+  "Core.Dandelion.WinterEnd": "It's almost Spring again! Goodness gracious, that's exciting. A whole 'nother year has passed us.$1",
 
   // SVE COMMUNITY DAY
   "Core.Dandelion.CommunityCenter10": "Oh, this is terribly endearing. What a lovely gathering. It's nice to see everyone in such high spirits.$13",
@@ -5581,7 +5581,7 @@ ________      ________ _   _ _______ _____
   "Core.Dandelion.MoonlightJelly": "Goodness gracious, I do adore the Lunaloos. While adventuring, I never took the time to come and see them...$6",
   "Core.Dandelion.SDVFair": "Ah. Should I put Mateo to shame and break the bell in that one carnival game? Perhaps not, I'll let them have their fun.$14",
   "Core.Dandelion.SpiritsEve": "I do quite love Spirit's Eve! Although, I think there's a bit of bias. I do love horror stories, and the lore surrounding Spirit's Eve reminds me of those...$12",
-  "Core.Dandelion.IceFestival": "Did you know that Roslin is actually an incredibly proficent ice-skater? I didn't, either. Nor have I seen it. Perhaps she was joking?$12",
+  "Core.Dandelion.IceFestival": "Did you know that Roslin is actually an incredibly proficient ice-skater? I didn't, either. Nor have I seen it. Perhaps she was joking?$12",
   "Core.Dandelion.NightMarket": "Roslin ADORES the Night Market. I would argue this is her favorite time of year.$6",
   "Core.Dandelion.WinterStar": "There is something very special about a dedicated time of year for appreciating your friends and loved ones, isn't there?$13",
 
@@ -5589,9 +5589,9 @@ ________      ________ _   _ _______ _____
   "Core.Dandelion.Resort": "I do love a day of fun in the sun! You appreciate these things more, when you've been inanimate for a while.$14",
 
   // GREEN RAIN
-  "Core.Dandelion.GreenRain": "What an unusual phenonenon! I've never seen such a thing.$17",
+  "Core.Dandelion.GreenRain": "What an unusual phenomenon! I've never seen such a thing.$17",
   "Core.Dandelion.GreenRainFinished": "I'm grateful the rain did no harm. The Druid must been terribly enthused!$1",
-  "Core.Dandelion.GreenRain2": "Is this a regular occourance to expect in the Summer? I wonder if this is unique to the Valley?$17",
+  "Core.Dandelion.GreenRain2": "Is this a regular occurrence to expect in the Summer? I wonder if this is unique to the Valley?$17",
 
   // EPILOGUE 
   "Core.Dandelion.Epilogue.1": "I must admit, it's terribly nice to be married and retired from heroism. It's a privilege for such a good person to have taken up the mantle, too. Thank you, @.$1",
@@ -5617,7 +5617,7 @@ ________      ________ _   _ _______ _____
 
   // GENERIC 0-4
   "Core.Dandelion.Generic.EarlyHeart.1": "Ah! Hello, @! I hope you have been enjoying farming and adventuring and whatever else suits your fancy!$13",
-  "Core.Dandelion.Generic.EarlyHeart.2": "@, do you enjoy reading? I have a slew of book reccomendations, in the case you're inclined toward fantasy stories...$14",
+  "Core.Dandelion.Generic.EarlyHeart.2": "@, do you enjoy reading? I have a slew of book recommendations, in the case you're inclined toward fantasy stories...$14",
   "Core.Dandelion.Generic.EarlyHeart.3": "Would you, perhaps, enjoy breakfast tea with Roslin and I? Perhaps lunch tea? Or dinner tea!$1",
   "Core.Dandelion.Generic.EarlyHeart.4": "Roslin says I have too vast of a tea collection to be reasonable. I think a hundred varieties is simply the start of a collection, not the end of one!$13",
   "Core.Dandelion.Generic.EarlyHeart.5": "I did still have thoughts as a shield, you know. I mostly just missed Roslin. She's my Darling, after all.$4",
@@ -5628,7 +5628,7 @@ ________      ________ _   _ _______ _____
   "Core.Dandelion.Generic.EarlyHeart.10": "Domesticity is very important to me. I love caretaking, I love homemaking, and I love being a good partner. I just also love violence and pushing the limit with my workouts.",
   "Core.Dandelion.Generic.EarlyHeart.11": "Roslin enchanted my shield to return to me when thrown, since I had a habit of doing that and losing it.$4",
   "Core.Dandelion.Generic.EarlyHeart.12": "My armor was crafted by a very old friend, named Weaveforger. I believe you and Mateo would take fine apprentices, if you ever had the privilege of meeting him.$6",
-  "Core.Dandelion.Generic.EarlyHeart.13": "I have travelled quite a lot, and met many people. The people of this town are among my favorites.$14",
+  "Core.Dandelion.Generic.EarlyHeart.13": "I have traveled quite a lot, and met many people. The people of this town are among my favorites.$14",
   "Core.Dandelion.Generic.EarlyHeart.14": "@, you are a a very accomplished person, and I consider it an honor to know you. In the case you're too busy to visit for tea, I implore you to grow your own.$13[251]",
   "Core.Dandelion.Generic.EarlyHeart.15": "Here are some clippings from my tea plants, @. I hope you can grow them to maturity, and enjoy the spoils with friends and loved ones.$13[251]",
 
@@ -5639,20 +5639,20 @@ ________      ________ _   _ _______ _____
   "Core.Dandelion.Generic.LateHeart.4": "I used to only be able to take books out from the local library. Now I can purchase them, and keep them!$13#$b#You don't see the value in little things until you're lacking.$14",
   "Core.Dandelion.Generic.LateHeart.5": "Growing tea has been so much more satisfying than just buying it. Here you go, @, some clippings I'm proud of.$14[251]",
   "Core.Dandelion.Generic.LateHeart.6": "The last thing I read was this great enemies-to-lovers slowburn involving-$14#$b#Ah, perhaps I shouldn't spoil it, in case you read it. Hm.$12",
-  "Core.Dandelion.Generic.LateHeart.7": "I write ALMOST as much as I read. Based on my book tastes, I'm sure you could take a few guesses about my intrests...$12",
+  "Core.Dandelion.Generic.LateHeart.7": "I write ALMOST as much as I read. Based on my book tastes, I'm sure you could take a few guesses about my interests...$12",
   "Core.Dandelion.Generic.LateHeart.8": "I love high-fantasy, but science fiction is another favorite. I know Stellar Galavant is popular, but I'm more into Mass Impact in terms of space operas...$14",
   "Core.Dandelion.Generic.LateHeart.9": "What was the last thing you read that really swept you off your feet, @? If you can't think of anything, I hope you get the chance to pick up a book soon.$6",
   "Core.Dandelion.Generic.LateHeart.10": "I think Roslin says 'Chai Tea' to try and get under my skin. It's just 'Chai', it means 'tea'.$2#$b#Little does she know, she's very difficult to be angry at. Mainly on account of her being small and throwable.$6",
   "Core.Dandelion.Generic.LateHeart.11": "Paying attention to the steep time of various teas is very important! Those times are on the tins for a reason, it does really impact the taste.$15",
   "Core.Dandelion.Generic.LateHeart.12": "I feel like whenever I have matcha outside of making it myself, it tastes burnt. What's with that?$16",
   "Core.Dandelion.Generic.LateHeart.13": "One of my favorite fancy drinks is a Port Drake Fog. It's an earl gray tea, with vanilla syrup and a thick layer of milk foam...$14",
-  "Core.Dandelion.Generic.LateHeart.14": "I don't think being a paladin was overrated, or anything. I just wouldn't do it again, because I don't need oither people to validate my drive to do good.$15#$b#Good isn't what you are. It's what you do.$14",
+  "Core.Dandelion.Generic.LateHeart.14": "I don't think being a paladin was overrated, or anything. I just wouldn't do it again, because I don't need other people to validate my drive to do good.$15#$b#Good isn't what you are. It's what you do.$14",
   "Core.Dandelion.Generic.LateHeart.15": "I read a book recently about a satyr bard who fell in love with a dragon, and-$18#$b#Well, hm. Perhaps you should read it yourself, it's a little specific. If you like, erm, spicy fantasy romances.$12",
-  "Core.Dandelion.Generic.LateHeart.16": "There are several people in town who are extremely throwable. Eloise, for one. Very small, very areodynamic.$13#$b#Aideen? More difficult, but doable. The druid? Basically a javelin.$16",
+  "Core.Dandelion.Generic.LateHeart.16": "There are several people in town who are extremely throwable. Eloise, for one. Very small, very aerodynamic.$13#$b#Aideen? More difficult, but doable. The druid? Basically a javelin.$16",
   "Core.Dandelion.Generic.LateHeart.17": "One of my favorite books involve an entirely male fae court falling for this adventurer who has her eyes on this femme orc - oh, sorry. Spoilers.$12",
   "Core.Dandelion.Generic.LateHeart.18": "I don't miss sleeping on a bedroll. Even Roslin taking up the majority of the space in the big bed is still better than being on the ground.$13",
   "Core.Dandelion.Generic.LateHeart.19": "Sometimes I can hear Roslin and Solomon arguing. It's funny, because he doesn't always appear, so it just looks like she's having a heated argument with herself.$6",
-  "Core.Dandelion.Generic.LateHeart.20": "I am quite fond of Solomon, for all that he's a mischevious little scamp. He is a reflection of Roslin, after all.$6",
+  "Core.Dandelion.Generic.LateHeart.20": "I am quite fond of Solomon, for all that he's a mischievous little scamp. He is a reflection of Roslin, after all.$6",
   "Core.Dandelion.Generic.LateHeart.21": "I was reading this one book the other day, about a large bone-headed monster and his lover, a thunder dragon in human form who- oh, spoilers! Sorry!$12",
   "Core.Dandelion.Generic.LateHeart.22": "All of my tea is growing in very nicely. I'm looking forward to steeping some of my home-grown leaves. Here, have a few, @![251]$1",
   "Core.Dandelion.Generic.LateHeart.23": "One of my more recent reads wasn't a fantasy novel, it was about a celebrity who ended up crushing on her bodyguard, and she RETURNED HER FEELI-$4#$b#Sorry, spoilers.$12",
@@ -5675,7 +5675,7 @@ ________      ________ _   _ _______ _____
   "Core.Dandelion.Generic.LateHeart.40": "I am both a 'home wife' AND a 'war wife'. I am passionate about domesticity AND violence!$13",
   "Core.Dandelion.Generic.LateHeart.41": "My favorite way to practice my aim is by throwing large objects that should not be traditionally thrown. Like furniture, and melee weapons.$17",
   "Core.Dandelion.Generic.LateHeart.42": "My armor was crafted by a very old friend, named Weaveforger. I believe you and Mateo would take fine apprentices, if you ever had the privilege of meeting him.$6",
-  "Core.Dandelion.Generic.LateHeart.43": "I have travelled quite a lot, and met many people. You, @, are among my shortlist of favorites.$14",
+  "Core.Dandelion.Generic.LateHeart.43": "I have traveled quite a lot, and met many people. You, @, are among my shortlist of favorites.$14",
   "Core.Dandelion.Generic.LateHeart.44": "@, you are a a very accomplished person, and I consider it an honor to know you. In the case you're too busy to visit for tea, I implore you to grow your own.$13[251]",
   "Core.Dandelion.Generic.LateHeart.45": "Here are some clippings from my tea plants, @. I hope you can grow them to maturity, and enjoy the spoils with friends and loved ones.$13[251]",
 
@@ -5733,7 +5733,7 @@ ________      ________ _   _ _______ _____
 */
 
   // STARDROP TEA 
-  "Gifts.Dandelion.GiftReaction.StardropTea": "@, this is my FAVORITE. THING. EVER. Thank you, I apprecaite being offered such an excuisite tea.$4",
+  "Gifts.Dandelion.GiftReaction.StardropTea": "@, this is my FAVORITE. THING. EVER. Thank you, I appreciate being offered such an exquisite tea.$4",
 
   // ANCIENT SWEET TEA
   "Gifts.Dandelion.GiftReaction.AncientSweetTea": "Perhaps I'm a TAD bit biased, but I love this. Stardrop tea is amazing, so are all the other varieties... but this? This is special.$4",
@@ -5843,7 +5843,7 @@ ________      ________ _   _ _______ _____
 
   // SDV FAIR
   "Festivals.Dandelion.fall16.1": "I will let Mateo continue to win the bell-ringing game. I think if I played, I'd break it.$1",
-  "Festivals.Dandelion.fall16.2": "There's a lot of VERY tasty food here. Best get my protien in!$1",
+  "Festivals.Dandelion.fall16.2": "There's a lot of VERY tasty food here. Best get my protein in!$1",
   "Festivals.Dandelion.fall16.3": "Clint and Mateo are both very good smiths, I'm glad to see what they've got on display.$1",
 
   // SPIRIT'S EVE
@@ -5950,7 +5950,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Dandelion.1.Solomon.06": "Haha, yes! I am a sorcerer unmatched! As you witnessed, when I aided heroically to undo Roslin's spell.$1",
   "Events.SnS.Ch4.Dandelion.1.Roslin.07": "It was mostly @ that assisted by getting the components to cast it.$0",
   "Events.SnS.Ch4.Dandelion.1.Solomon.08": "You're such a mood killer. Anyway...$2",
-  "Events.SnS.Ch4.Dandelion.1.QuickQuestion.09": "You can still separate from her shadow, even though you bargined for it? ",
+  "Events.SnS.Ch4.Dandelion.1.QuickQuestion.09": "You can still separate from her shadow, even though you bargained for it? ",
   "Events.SnS.Ch4.Dandelion.1.QuickQuestion.10": "Are you settling in okay, Dandelion?",
   "Events.SnS.Ch4.Dandelion.1.Solomon.11": "Yeah, it's not exactly practical when we're out on the road, but...$2#$b#Since we're homebodies now, I can make the Lion's Mane the Lion's MINE.$6",
   "Events.SnS.Ch4.Dandelion.1.Roslin.12": "He's allowed freedom from his shadowy confines as long as he stays in the building and doesn't cause a ruckus.$1",
@@ -5960,7 +5960,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Dandelion.1.Dandelion.16": "I missed you too, Roslin.$4",
   "Events.SnS.Ch4.Dandelion.1.Dandelion.17": "Oh, two things before you continue about your day, @. One, I'd like to send you home with some leftovers. Best keep your energy up!$14[(O)DN.SnS_dandeliongreens]#$b#And second, I've been working on something since I've returned, and may be recruiting you for a task in the near future. Don't worry, it'll be to all our benefit.$15#$b#I'd like to be helpful during our next encounter with the beast-$13",
   "Events.SnS.Ch4.Dandelion.1.Roslin.18": "I still don't think you should ever step foot in those caves again.$16",
-  "Events.SnS.Ch4.Dandelion.1.Dandelion.19": "What kind of hero would I be if I didn't join you and the others to put an end to the Duskspire Behemoth's tyrrany?$18#$b#Don't worry, @. Between the seven of us, he won't stand a chance.$14",
+  "Events.SnS.Ch4.Dandelion.1.Dandelion.19": "What kind of hero would I be if I didn't join you and the others to put an end to the Duskspire Behemoth's tyranny?$18#$b#Don't worry, @. Between the seven of us, he won't stand a chance.$14",
   "Events.SnS.Ch4.Dandelion.1.Solomon.20": "Interesting that you remember what the beast is called, but don't remember your prior encounter with it...$10",
   "Events.SnS.Ch4.Dandelion.1.Dandelion.21": "What?",
   "Events.SnS.Ch4.Dandelion.1.Roslin.22": "What?",
@@ -5988,8 +5988,8 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Dandelion.3.BlacksmithMateo.05": "Here goes nothing!$82",
   "Events.SnS.Ch4.Dandelion.3.Dandelion.06": "It's beautiful... Mateo, this is the most incredible armament I've ever seen.$6",
   "Events.SnS.Ch4.Dandelion.3.BlacksmithMateo.07": "Thanks, Dandelion. That means a lot, coming from you.$29#$b#It wouldn't have been possible without @, though.$27",
-  "Events.SnS.Ch4.Dandelion.3.Dandelion.08": "I do have a gift for you, @. Biróg started teaching me about ancient tea varieites, so I thought I'd share these with you as thanks for all your help.[(O)DN.SnS_ancientsweettealeaves.seed]",
-  "Events.SnS.Ch4.Dandelion.3.Dandelion.09": "Ancient Sweet Tea prospers in either extreme - hot, or cold. It's quite resilliant that way! And it brews a very lovable drink, I'll tell you what.$1",
+  "Events.SnS.Ch4.Dandelion.3.Dandelion.08": "I do have a gift for you, @. Biróg started teaching me about ancient tea varieties, so I thought I'd share these with you as thanks for all your help.[(O)DN.SnS_ancientsweettealeaves.seed]",
+  "Events.SnS.Ch4.Dandelion.3.Dandelion.09": "Ancient Sweet Tea prospers in either extreme - hot, or cold. It's quite resilient that way! And it brews a very lovable drink, I'll tell you what.$1",
   "Events.SnS.Ch4.Dandelion.3.BlacksmithMateo.10": "Seems like none of my hobbies just stay hobbies. I'm really proud of what I made...$12",
   "Events.SnS.Ch4.Dandelion.3.Dandelion.11": "Interests are like plants! If you water them, they'll grow!$14",
 
@@ -6004,7 +6004,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Dandelion.4.Dandelion.08": "It's fine! Probably.$13",
   "Events.SnS.Ch4.Dandelion.4.Roslin.09": "I'm going to go make sure Solomon hasn't burned anything down yet... have a good day, @.$7#$b#Don't do anything strenuous, Dandelion.$9",
   "Events.SnS.Ch4.Dandelion.4.Dandelion.10": "It's sweet how she worries.$1",
-  "Events.SnS.Ch4.Dandelion.4.Dandelion.11": "Neither I nor Roslin remember how I lost my arm and leg. Don't even recall getting the prosthetics.$17#$b#But I do know they sieze up when it gets rainy. Terribly inconvienent, really.$15",
+  "Events.SnS.Ch4.Dandelion.4.Dandelion.11": "Neither I nor Roslin remember how I lost my arm and leg. Don't even recall getting the prosthetics.$17#$b#But I do know they seize up when it gets rainy. Terribly inconvenient, really.$15",
   "Events.SnS.Ch4.Dandelion.4.Dandelion.12": "But!",
   "Events.SnS.Ch4.Dandelion.4.Dandelion.13": "Enough about my sorry state.",
   "Events.SnS.Ch4.Dandelion.4.Dandelion.14": "I was thinking, @. A dangerous thing, I know. But...$14#$b#Now that we're settled, I'm going to propose to Roslin.$4",
@@ -6017,7 +6017,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Dandelion.4.Roslin.19": "Well, you're kind of... soft, and cute. So.$9",
   "Events.SnS.Ch4.Dandelion.4.Solomon.20": "I am a mighty sorcerer! I am not soft OR cute!$5",
   "Events.SnS.Ch4.Dandelion.4.Roslin.21": "You can be multiple things.$9",
-  "Events.SnS.Ch4.Dandelion.4.Solomon.22": "...In that case, I perfer cute and 'fluffy' to cute and 'soft.'$6",
+  "Events.SnS.Ch4.Dandelion.4.Solomon.22": "...In that case, I prefer cute and 'fluffy' to cute and 'soft.'$6",
 
   // DANDELION 8 ROSLIN 8 
   "Events.SnS.Ch4.Dandelion.5.Dandelion.01": "Hello, @! Sorry, you've just got me in the middle of quite a good book. Big, satisfying climax. You know how these things go, I'm sure.$7#$b#I quite love fantasy fiction. I often make connections with the heroes, and I crave their happy endings... Speaking of, actually.$8#$b#Before I get too much further into this, I wanted to ask you something.$9",
@@ -6045,7 +6045,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Dandelion.6.Solomon.08": "Of course, you'll have to figure out the rest on your own. What, do I look like some kinda mentor to you?$2#$b#Use essences! Make potions! Cast spells! Take the fabric of reality and tie it in a bow, who cares? Have fun, live deliciously!$1",
 
   // DANDELION 10 ROSLIN 10 
-  "Events.SnS.Ch4.Dandelion.7.Mateo.01": "Excellent! You're just in time, @. Now that everyone's together, we can procceed...$14",
+  "Events.SnS.Ch4.Dandelion.7.Mateo.01": "Excellent! You're just in time, @. Now that everyone's together, we can proceed...$14",
   "Events.SnS.Ch4.Dandelion.7.Mateo.02": "I think it goes without saying we've got quite a challenge ahead. I know everyone has been preparing in their own way...$12#$b#But there was one last thing I needed to do before we ventured forth into the unknown.$14",
   "Events.SnS.Ch4.Dandelion.7.Cirrus.03": "Oh, I see what you mean now, Biróg.$1",
   "Events.SnS.Ch4.Dandelion.7.Hector.04": "I told you so.$14",
@@ -6054,7 +6054,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Dandelion.7.Dandelion.07": "I don't know, Darling. But the suspense is killing me.$14",
   "Events.SnS.Ch4.Dandelion.7.Solomon.08": "Out with it already, then!$5",
   "Events.SnS.Ch4.Dandelion.7.Mateo.09": "Dandelion. Do you swear, under oath, to uphold the morals you hold dear...$12#$b#In the name of protecting your friends and loved ones, and fighting for what's right?$82",
-  "Events.SnS.Ch4.Dandelion.7.Dandelion.10": "Oh, goodness. I... wasn't expecting to be able to be part of an orginization like this again.$10#$b#Yes, I do!$11",
+  "Events.SnS.Ch4.Dandelion.7.Dandelion.10": "Oh, goodness. I... wasn't expecting to be able to be part of an organization like this again.$10#$b#Yes, I do!$11",
   "Events.SnS.Ch4.Dandelion.7.Mateo.11": "Then on behalf of Stardew Valley, I officially induct you as the 5th member of the Coastal Adventurer's Guild!",
   "Events.SnS.Ch4.Dandelion.7.Dandelion.12": "Thank you!",
   "Events.SnS.Ch4.Dandelion.7.Mateo.13": "Roslin-$15",
@@ -6080,7 +6080,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Dandelion.7.Solomon.33": "Same! Same same, same same same.$0",
   "Events.SnS.Ch4.Dandelion.7.Cirrus.34": "I love your little curl, Krobus. It's nice to meet you!$1",
   "Events.SnS.Ch4.Dandelion.7.Krobus.35": "Oh, t-thank you-$4",
-  "Events.SnS.Ch4.Dandelion.7.Hector.36": "And thank you for so dilligently scoping out the cavern for us, Krobus. It's great to get the chance to work together with you.$12",
+  "Events.SnS.Ch4.Dandelion.7.Hector.36": "And thank you for so diligently scoping out the cavern for us, Krobus. It's great to get the chance to work together with you.$12",
   "Events.SnS.Ch4.Dandelion.7.Krobus.37": "Oh goodness, you're welcome, I-$4",
   "Events.SnS.Ch4.Dandelion.7.Dandelion.38": "It's a pleasure, Krobus. And thank you for your hard work.$14",
   "Events.SnS.Ch4.Dandelion.7.Roslin.39": "Thank you, Krobus. I know it must be difficult to be around so many humans. And to have traversed into such a dangerous place on their behalf.$10",
@@ -6327,7 +6327,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Victory.Cirrus.Hector.10": "Like I was never sick at all. It would appear the roots of that illness ran far deeper than my river.$14",
   "Events.SnS.Ch4.Victory.Cirrus.Cirrus.11": "Yay!",
   "Events.SnS.Ch4.Victory.Cirrus.Mateo.12": "Let's get going, then.",
-  "Events.SnS.Ch4.Victory.Cirrus.Message.13": "The Guild spends the evening partying at the Lion's Mane, where the laughs were loud, the drinks were gingery, and the comraderie was unmatched. You've forged an unbreakable bond with the Coastal Guild; that much is clear. As everyone filters out to go to bed after an intense encounter, Mateo catches you by the shoulder outside the door.",
+  "Events.SnS.Ch4.Victory.Cirrus.Message.13": "The Guild spends the evening partying at the Lion's Mane, where the laughs were loud, the drinks were gingery, and the camaraderie was unmatched. You've forged an unbreakable bond with the Coastal Guild; that much is clear. As everyone filters out to go to bed after an intense encounter, Mateo catches you by the shoulder outside the door.",
   "Events.SnS.Ch4.Victory.Cirrus.Mateo.14": "Hey - one last thing before you head home.$1",
   "Events.SnS.Ch4.Victory.Cirrus.Mateo.15": "You've been with the Guild since it was made. You're a founder, and you're part of Pelican Town's branch, but...$15#$b#I just wanted you to know that I consider you one of mine.$14",
   "Events.SnS.Ch4.Victory.Cirrus.Cirrus.16": "Awww, Mateo! Not afraid of Marlon getting on your for double-dipping?$1",
@@ -6340,7 +6340,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Victory.Gunnar.Hector.03": "You're back...$13",
   "Events.SnS.Ch4.Victory.Gunnar.Cirrus.04": "You're home.$10",
   "Events.SnS.Ch4.Victory.Gunnar.MadDog.HashtagBearFam.Gunnar.05": "Didn't keep you waiting too long, did we?$13",
-  "Events.SnS.Ch4.Victory.Gunnar.Dandelion.06": "Roslin has hardly had time to get my arm back in order! You're very dilligent monster-slayers.$6",
+  "Events.SnS.Ch4.Victory.Gunnar.Dandelion.06": "Roslin has hardly had time to get my arm back in order! You're very diligent monster-slayers.$6",
   "Events.SnS.Ch4.Victory.Gunnar.Roslin.07": "It's really over then, isn't it?$10",
   "Events.SnS.Ch4.Victory.Gunnar.Mateo.08": "It is! And I think this calls for a celebration!$1",
   "Events.SnS.Ch4.Victory.Gunnar.Cirrus.09": "To the Lion's Mane, then. I'll cook us a dinner so fat it'll take days to sleep off.$1",
@@ -6349,7 +6349,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Victory.Gunnar.Hector.12": "Like I was never sick at all. It would appear the roots of that illness ran far deeper than my river.$14",
   "Events.SnS.Ch4.Victory.Gunnar.Cirrus.13": "Yay!",
   "Events.SnS.Ch4.Victory.Gunnar.Mateo.14": "Let's get going, then.",
-  "Events.SnS.Ch4.Victory.Gunnar.Message.15": "The Guild spends the evening partying at the Lion's Mane, where the laughs were loud, the drinks were gingery, and the comraderie was unmatched. You've forged an unbreakable bond with the Coastal Guild; that much is clear. As everyone filters out to go to bed after an intense encounter, Mateo catches you by the shoulder outside the door.",
+  "Events.SnS.Ch4.Victory.Gunnar.Message.15": "The Guild spends the evening partying at the Lion's Mane, where the laughs were loud, the drinks were gingery, and the camaraderie was unmatched. You've forged an unbreakable bond with the Coastal Guild; that much is clear. As everyone filters out to go to bed after an intense encounter, Mateo catches you by the shoulder outside the door.",
   "Events.SnS.Ch4.Victory.Gunnar.Mateo.16": "Hey - one last thing before you head home.$1",
   "Events.SnS.Ch4.Victory.Gunnar.Mateo.17": "You've been with the Guild since it was made. You're a founder, and you're part of Pelican Town's branch, but...$15#$b#I just wanted you to know that I consider you one of mine.$14",
   "Events.SnS.Ch4.Victory.Gunnar.MadDog.HashtagBearFam.Gunnar.18": "You're not muscling in on *my* @ now, are you Mateo?$13",
@@ -6360,7 +6360,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Victory.SoloFarmer.Hector.02": "You're back...$13",
   "Events.SnS.Ch4.Victory.SoloFarmer.Cirrus.03": "You're home.$10",
   "Events.SnS.Ch4.Victory.SoloFarmer.Mateo.04": "Thank goodness, we were so worried.$12",
-  "Events.SnS.Ch4.Victory.SoloFarmer.Dandelion.05": "Roslin has hardly had time to get my arm back in order! You're a very dilligent monster-slayer.$6",
+  "Events.SnS.Ch4.Victory.SoloFarmer.Dandelion.05": "Roslin has hardly had time to get my arm back in order! You're a very diligent monster-slayer.$6",
   "Events.SnS.Ch4.Victory.SoloFarmer.Roslin.06": "It's really over then, isn't it?$10",
   "Events.SnS.Ch4.Victory.SoloFarmer.Mateo.07": "It is! And I think this calls for a celebration!$1",
   "Events.SnS.Ch4.Victory.SoloFarmer.Cirrus.08": "To the Lion's Mane, then. I'll cook us a dinner so fat it'll take days to sleep off.$1",
@@ -6368,7 +6368,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Victory.SoloFarmer.Hector.10": "Like I was never sick at all. It would appear the roots of that illness ran far deeper than my river.$14",
   "Events.SnS.Ch4.Victory.SoloFarmer.Cirrus.11": "Yay!",
   "Events.SnS.Ch4.Victory.SoloFarmer.Mateo.12": "Let's get going, then.",
-  "Events.SnS.Ch4.Victory.SoloFarmer.Message.13": "The Guild spends the evening partying at the Lion's Mane, where the laughs were loud, the drinks were gingery, and the comraderie was unmatched. You've forged an unbreakable bond with the Coastal Guild; that much is clear. As everyone filters out to go to bed after an intense encounter, Mateo catches you by the shoulder outside the door.",
+  "Events.SnS.Ch4.Victory.SoloFarmer.Message.13": "The Guild spends the evening partying at the Lion's Mane, where the laughs were loud, the drinks were gingery, and the camaraderie was unmatched. You've forged an unbreakable bond with the Coastal Guild; that much is clear. As everyone filters out to go to bed after an intense encounter, Mateo catches you by the shoulder outside the door.",
   "Events.SnS.Ch4.Victory.SoloFarmer.Mateo.14": "Hey - one last thing before you head home.$1",
   "Events.SnS.Ch4.Victory.SoloFarmer.Mateo.15": "You've been with the Guild since it was made. You're a founder, and you're part of Pelican Town's branch, but...$15#$b#I just wanted you to know that I consider you one of mine.$14",
   "Events.SnS.Ch4.Victory.SoloFarmer.Mateo.16": "With that being said... @, do you swear, under oath, to continue to uplift the people around you...$76#$b#By being the Heart of the Valley?$78",
@@ -6377,7 +6377,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Mateo.02": "Let's get out of here and celebrate properly, @. The others are waiting - and besides, those rocks can't be THAT difficult to shimmy past.$78",
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Hector.03": "You're back...$13",
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Cirrus.04": "You're home.$10",
-  "Events.SnS.Ch4.Victory.FarmerGuildmaster.Dandelion.05": "Roslin has hardly had time to get my arm back in order! You're very dilligent monster-slayers.$6",
+  "Events.SnS.Ch4.Victory.FarmerGuildmaster.Dandelion.05": "Roslin has hardly had time to get my arm back in order! You're very diligent monster-slayers.$6",
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Roslin.06": "It's really over then, isn't it?$10",
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Mateo.07": "It is! And I think this calls for a celebration!$1",
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Cirrus.08": "To the Lion's Mane, then. I'll cook us a dinner so fat it'll take days to sleep off.$1",
@@ -6385,7 +6385,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Hector.10": "Like I was never sick at all. It would appear the roots of that illness ran far deeper than my river.$14",
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Cirrus.11": "Yay!",
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Mateo.12": "Let's get going, then.",
-  "Events.SnS.Ch4.Victory.FarmerGuildmaster.Message.13": "The Guild spends the evening partying at the Lion's Mane, where the laughs were loud, the drinks were gingery, and the comraderie was unmatched. You've forged an unbreakable bond with the Coastal Guild; that much is clear. As everyone filters out to go to bed after an intense encounter, Mateo catches you by the shoulder outside the door.",
+  "Events.SnS.Ch4.Victory.FarmerGuildmaster.Message.13": "The Guild spends the evening partying at the Lion's Mane, where the laughs were loud, the drinks were gingery, and the camaraderie was unmatched. You've forged an unbreakable bond with the Coastal Guild; that much is clear. As everyone filters out to go to bed after an intense encounter, Mateo catches you by the shoulder outside the door.",
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Mateo.14": "Hey - one last thing before you head home.$1",
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Mateo.15": "You've been with the Guild since it was made. You're a founder, and you're part of Pelican Town's branch, but...$15#$b#I just wanted you to know that I consider you one of mine.$14",
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Mateo.16": "With that being said... @, do you swear, under oath, to continue to uplift the people around you...$76#$b#By being the Heart of the Valley?$78",
@@ -6517,18 +6517,18 @@ ________      ________ _   _ _______ _____
 
   // GENERIC
   "Core.Solomon.Generic.1": "Everyone's like, oh no! Void magic! It's bad! 'Waah, I'm afraid of what I don't understand!'$2#$b#Ignorant fools! Being afraid of The Void is like being afraid of your own feelings!$5",
-  "Core.Solomon.Generic.2": "If there is something your superiors don't want you to learn, find out WHY and make a priority to learn it immediatey!$1",
-  "Core.Solomon.Generic.3": "Remember, @. Even the most esteemed sorcerers can be bested by a skilled blacksmith... Oh, the stories I could tell you.$6#$b#Magic-users contain multitudes. Namely, being simultaniously brilliant and stupid.$7",
+  "Core.Solomon.Generic.2": "If there is something your superiors don't want you to learn, find out WHY and make a priority to learn it immediate!$1",
+  "Core.Solomon.Generic.3": "Remember, @. Even the most esteemed sorcerers can be bested by a skilled blacksmith... Oh, the stories I could tell you.$6#$b#Magic-users contain multitudes. Namely, being simultaneously brilliant and stupid.$7",
   "Core.Solomon.Generic.4": "The Void is simply 'What Fills'; it emboldens emotions, positive, negative, and everything in between.$7#$b#To imply that it's negative strictly on that basis is so tired.$10",
   "Core.Solomon.Generic.5": "You know, love and intimacy make for the most powerful Magick. Think about it, @.$4#$b#You saw what The Void did with GRIEF; think of what it could do with LOVE!$1",
   "Core.Solomon.Generic.6": "Magick can be very mundane, but it garners a lot less respect that way. Are sunsets not magick? Are flowers not?$9#$b#Just have a bit of whimsy, will you?$10",
   "Core.Solomon.Generic.7": "Study technique. Adapt it. But do not research anything blindly!$5",
-  "Core.Solomon.Generic.8": "I was once part of the Order of the Golden Dawn, a coliation of Shadow Folk who wanted to explore the surface before the Elemental Wars.$9#$b#They were all stupid ninnies who talked big but took no action so I ditched them to explore with Roslin instead.$6",
-  "Core.Solomon.Generic.9": "Orginizations are stupid. Authority is stupid. Bathtime is stupid.$8",
+  "Core.Solomon.Generic.8": "I was once part of the Order of the Golden Dawn, a coalition of Shadow Folk who wanted to explore the surface before the Elemental Wars.$9#$b#They were all stupid ninnies who talked big but took no action so I ditched them to explore with Roslin instead.$6",
+  "Core.Solomon.Generic.9": "Organizations are stupid. Authority is stupid. Bathtime is stupid.$8",
   "Core.Solomon.Generic.10": "The Druid is very wise. The Rogue is very charming. The Bard...$1#$b#She makes me snaaacks.$4#$b#She's my favorite. Not just for that. She's also the smartest and nicest and whatever.$0",
   "Core.Solomon.Generic.11": "Roslin and I have been companions for a very long time. So long, in fact, I'm almost glad we can spend some time apart.$2#$b#Watch it, I said almost. She's my best friend! The mayhem to my mischief! My study buddy now and forever!$1",
   "Core.Solomon.Generic.12": "Dandelion and Roslin are very good for each other. They tick off all the boxes!$1#$b#One is tall, one is small. One does swords, one does sorcery. One is nice, one isn't!$6",
-  "Core.Solomon.Generic.13": "I am confined to Roslin's shadow outdoors in the daylight, but it allows me to see the surface safely without judgement from nervous humans.$0#$b#At least I get to be out and about in The Lion's Mane as much as I want.$6#$b#Though, there might be a reason for concern if The Scarp's more mundane residents were buying armaments and potions on the regular.$3",
+  "Core.Solomon.Generic.13": "I am confined to Roslin's shadow outdoors in the daylight, but it allows me to see the surface safely without judgment from nervous humans.$0#$b#At least I get to be out and about in The Lion's Mane as much as I want.$6#$b#Though, there might be a reason for concern if The Scarp's more mundane residents were buying armaments and potions on the regular.$3",
   "Core.Solomon.Generic.14": "Dandelion makes the potions for the shop. Pretty sure she sees the ancient alchemical arts as like, making tea but with extra steps.$9",
   "Core.Solomon.Generic.15": "Roslin and Dandelion both tell the story of how they got together differently. But, don't worry, I will happily indulge you with the truth.$1#$b#They were on a quest together, begrudgingly. They stopped overnight at an inn, and paid for a room...$7#$b#But there was only one bed.$6",
   "Core.Solomon.Generic.16": "I do believe that Roslin conspires to infuriate me sometimes. That heathen said I wasn't SCARY. Gaze into my horrifying visage and fear it!$5",
@@ -6662,7 +6662,7 @@ ________      ________ _   _ _______ _____
   "crop.ancientglowinghuckleberry.name": "Ancient Glowing Huckleberry",
   "crop.ancientglowinghuckleberry.description": "A massive, juicy berry that faintly glows.",
   "crop.ancientglowinghuckleberry.seed.name": "Ancient Glowing Huckleberry Seed",
-  "crop.ancientglowinghuckleberry.seed.description": "Previously dormant, ancient and unrecognizeable. Takes 28 days to produce a mature berry vine. Bears Huckleberries in the Summer and Fall. Only grows if the 8 surrounding 'tiles' are empty.",
+  "crop.ancientglowinghuckleberry.seed.description": "Previously dormant, ancient and unrecognizable. Takes 28 days to produce a mature berry vine. Bears Huckleberries in the Summer and Fall. Only grows if the 8 surrounding 'tiles' are empty.",
 
   "crop.ancientelderberry.name": "Ancient Elderberry",
   "crop.ancientelderberry.description": "Flavorful, but a little tart. Makes a great fruited sour or seltzer.",
@@ -6680,7 +6680,7 @@ ________      ________ _   _ _______ _____
   "crop.ancientgiantappleberry.seed.description": "Grown in Spring, Summer, and Fall. Takes ten days. Does not regrow.",
 
   "crop.ancientazuredetura.name": "Ancient Azure Detura Flower",
-  "crop.ancientazuredetura.description": "A dormant cousin of the Sunflower. It's very resilliant, and can grow in the cold with minimal light.",
+  "crop.ancientazuredetura.description": "A dormant cousin of the Sunflower. It's very resilient, and can grow in the cold with minimal light.",
   "crop.ancientazuredetura.seed.name": "Ancient Azure Detura Flower Seeds",
   "crop.ancientazuredetura.seed.description": "Grown in Fall and Winter. Takes eight days. Does not regrow.",
 
@@ -6702,11 +6702,11 @@ ________      ________ _   _ _______ _____
   "food.mushroomtreeseed.description": "Grows a Stygium mushroom tree.",
 
   "forage.taintedcrocus.name": "Stygium-Tainted Crocus",
-  "forage.taintedcrocus.description": "A naturally-occouring flower, tainted by nearby Stygium. ",
+  "forage.taintedcrocus.description": "A naturally-occurring flower, tainted by nearby Stygium. ",
   "forage.taintedcorn.name": "Stygium-Tainted Corn",
-  "forage.taintedcorn.description": "A naturally-occouring grain, tainted by nearby Stygium.",
+  "forage.taintedcorn.description": "A naturally-occurring grain, tainted by nearby Stygium.",
   "forage.taintedgrasses.name": "Stygium-Tainted Grasses",
-  "forage.taintedgrasses.description": "A naturally-occouring grass bundle, tainted by nearby Stygium. ",
+  "forage.taintedgrasses.description": "A naturally-occurring grass bundle, tainted by nearby Stygium. ",
 
   "magicitem.druidicessence.name": "Druidic Essence",
   "magicitem.druidicessence.description": "Nature's power, manifest. Used to breathe life into new things.",
@@ -6751,7 +6751,7 @@ ________      ________ _   _ _______ _____
   "magicitem.paladinbook.description": "An emotional account of a Paladin's trip to a dark place.",
 
   "magicitem.brokenshield.name": "Broken Argentis Shield",
-  "magicitem.brokenshield.description": "Dandelion's well-worn shield. It's broken, but useable.",
+  "magicitem.brokenshield.description": "Dandelion's well-worn shield. It's broken, but usable.",
 
   "magicitem.repairedshield.name": "Repaired Argentis Shield",
   "magicitem.repairedshield.description": "Much more reliable now that it's no longer in such a sorry state.",
@@ -6869,10 +6869,10 @@ ________      ________ _   _ _______ _____
   "weapon.guardianbell.description": "When fighting someone with knowledge is the only appropriate response.",
 
   "weapon.absolem.name": "Absolem",
-  "weapon.absolem.description": "A wonderous, trippy weapon grown from red mushrooms.",
+  "weapon.absolem.description": "A wondrous, trippy weapon grown from red mushrooms.",
 
   "weapon.mallymkun.name": "Mallymkun",
-  "weapon.mallymkun.description": "A wonderous, trippy weapon grown from red mushrooms.",
+  "weapon.mallymkun.description": "A wondrous, trippy weapon grown from red mushrooms.",
 
   "weapon.chilisauce.name": "Chili Sauce",
   "weapon.chilisauce.description": "A joyous blade, named after a particularly heroic... sheep.",
@@ -6881,7 +6881,7 @@ ________      ________ _   _ _______ _____
   "magicitem.druidictotemfetish.description": "A delicate totem, carved from wood. Despite it's size, it has a hold over the weather...",
 
   "magicitem.stygiumstatuette.name": "Stygium Statuette",
-  "magicitem.stygiumstatuette.description": "It looks expensive, and power eminates from it. It might be cursed. You can sell it, but passing it on might have consequences. Consider trashing it instead.",
+  "magicitem.stygiumstatuette.description": "It looks expensive, and power emanates from it. It might be cursed. You can sell it, but passing it on might have consequences. Consider trashing it instead.",
 
   "magicitem.druidiceldermask.name": "Mask of the Thorned Circle Elder",
   "magicitem.druidiceldermask.description": "It's a very heavy, uncomfortable mask made out of wood and copper. However, you feel more connected to the earth with it in your possession.",
@@ -6894,7 +6894,7 @@ ________      ________ _   _ _______ _____
   "fish.pallidsailfin.description": "A fish from the abyss, with ghostly fins that resemble sails.",
   "fish.giantdragonfish.name": "Giant Dragonfish",
   "fish.giantdragonfish.description": "It lives only in the deepest waters of The Grove.",
-  "fish.fivelinedconstellationfish.name": "Five-Lined Constallation Fish",
+  "fish.fivelinedconstellationfish.name": "Five-Lined Constellation Fish",
   "fish.fivelinedconstellationfish.description": "Brilliantly luminescent, and easily mistook for a jellyfish.",
   "fish.goldiethebatterypoweredfish.name": "Goldie the Battery-Powered Fish",
   "fish.goldiethebatterypoweredfish.description": "How are there so many of these things?...",
@@ -6945,25 +6945,25 @@ ________      ________ _   _ _______ _____
   "food.crafting.toirneachpotion": "Toirneach Potion",
 
   "food.orangegingerbeer.name": "Orange-Flavored Ginger Beer",
-  "food.orangegingerbeer.description": "An orange and ginger flavored non-alcholic drink.",
+  "food.orangegingerbeer.description": "An orange and ginger flavored non-alcoholic drink.",
   "food.blueberrygingerbeer.name": "Blueberry-Flavored Ginger Beer",
-  "food.blueberrygingerbeer.description": "A blueberryberry and ginger flavored non-alcholic drink.",
+  "food.blueberrygingerbeer.description": "A blueberryberry and ginger flavored non-alcoholic drink.",
   "food.pineapplegingerbeer.name": "Pineapple-Flavored Ginger Beer",
-  "food.pineapplegingerbeer.description": "A pineapple and ginger flavored non-alcholic drink.",
+  "food.pineapplegingerbeer.description": "A pineapple and ginger flavored non-alcoholic drink.",
   "food.rhubarbgingerbeer.name": "Rhubarb-Flavored Ginger Beer",
-  "food.rhubarbgingerbeer.description": "A rhubarb and ginger flavored non-alcholic drink.",
+  "food.rhubarbgingerbeer.description": "A rhubarb and ginger flavored non-alcoholic drink.",
   "food.strawberrygingerbeer.name": "Strawberry-Flavored Ginger Beer",
-  "food.strawberrygingerbeer.description": "A strawberry and ginger flavored non-alcholic drink.",
+  "food.strawberrygingerbeer.description": "A strawberry and ginger flavored non-alcoholic drink.",
   "food.peachgingerbeer.name": "Peach-Flavored Ginger Beer",
-  "food.peachgingerbeer.description": "A peach and ginger flavored non-alcholic drink.",
+  "food.peachgingerbeer.description": "A peach and ginger flavored non-alcoholic drink.",
   "food.ancientelderberrygingerbeer.name": "Ancient Elderberry-Flavored Ginger Beer",
-  "food.ancientelderberrygingerbeer.description": "An ancient elderberry and ginger flavored non-alcholic drink.",
+  "food.ancientelderberrygingerbeer.description": "An ancient elderberry and ginger flavored non-alcoholic drink.",
   "food.ancientappleberrygingerbeer.name": "Ancient Appleberry-Flavored Ginger Beer",
-  "food.ancientappleberrygingerbeer.description": "An ancient appleberry and ginger flavored non-alcholic drink.",
+  "food.ancientappleberrygingerbeer.description": "An ancient appleberry and ginger flavored non-alcoholic drink.",
   "food.ancienthuckleberrygingerbeer.name": "Ancient Huckleberry-Flavored Ginger Beer",
-  "food.ancienthuckleberrygingerbeer.description": "An ancient huckleberry and ginger flavored non-alcholic drink.",
+  "food.ancienthuckleberrygingerbeer.description": "An ancient huckleberry and ginger flavored non-alcoholic drink.",
   "food.ancientfruitgingerbeer.name": "Ancient Fruit-Flavored Ginger Beer",
-  "food.ancientfruitgingerbeer.description": "An ancient fruit and ginger flavored non-alcholic drink.",
+  "food.ancientfruitgingerbeer.description": "An ancient fruit and ginger flavored non-alcoholic drink.",
 
   "arsenal.exquisite-emerald.name": "Exquisite Emerald",
   "arsenal.exquisite-emerald.description": "An exquisite emerald, usable at the Underforge to enhance your weapon.",
@@ -7127,7 +7127,7 @@ ________      ________ _   _ _______ _____
   "witchcraft.research.revive-plant.name": "Revive Plants",
   "witchcraft.research.revive-plant.description": "Revive a 5x5 area of crops around you.",
   "witchcraft.research.mirror-image.name": "Mirror Image",
-  "witchcraft.research.mirror-image.description": "Summon three illusary duplicates, which have a chance of taking a hit for you.",
+  "witchcraft.research.mirror-image.description": "Summon three illusory duplicates, which have a chance of taking a hit for you.",
   "witchcraft.research.find-familiar.name": "Find Familiar",
   "witchcraft.research.find-familiar.description": "Summon a small pet to follow you for the day, increasing your luck.",
   "witchcraft.research.ghostly-projection.name": "Ghostly Projection",
@@ -7349,7 +7349,7 @@ ________      ________ _   _ _______ _____
   "miscellaneous.mapname.ESDruidTowerPond": "The Druid's Tower Pond",
 
   "machine.oldfashionedfermenter.name": "Old-Fashioned Fermenter",
-  "machine.oldfashionedfermenter.description": "A jar for controlled, non-alcholic fermentation for making Ginger Beer!",
+  "machine.oldfashionedfermenter.description": "A jar for controlled, non-alcoholic fermentation for making Ginger Beer!",
 
   //maddogchange
   "config.Player Pronouns 1.name": "Player Pronouns 1",
@@ -7570,7 +7570,7 @@ ________      ________ _   _ _______ _____
   "HectorWedding.3": "Too bad! You're stuck with me now.$13",
   "HectorWedding.4": "Eli, lower your volume!",
   "HectorWedding.5": "Rosa, you got any clue who that is?$2",
-  "HectorWedding.6": "Not a clue, I've never seen {{HPN2}} before...$3#$b#Apprently an East Scarp resident?$3",
+  "HectorWedding.6": "Not a clue, I've never seen {{HPN2}} before...$3#$b#Apparently an East Scarp resident?$3",
   "HectorWedding.7": "Weird that we've never seen this Bee-rogue person before.$1#$b#Wonder if anyone else has...'",
   "HectorWedding.8": "That's Biróg, {{HPN2}} works at the vet clinic with my dad!$1#$b#{{HPN1}}'s a great kind wolf!$0",
   "HectorWedding.9": "Wolf?",
@@ -7596,7 +7596,7 @@ ________      ________ _   _ _______ _____
   "CirrusWedding.3": "You're not ready for the special surprise!$1",
   "CirrusWedding.4": "Special surprise?",
   "CirrusWedding.5": "Ahem!",
-  "CirrusWedding.6": "Thank you, everyone, for attening this wedding!$1#$b#I'm honored to be standing here, having the opportunity to officiate this, awesome, perfect wedding.$0",
+  "CirrusWedding.6": "Thank you, everyone, for attending this wedding!$1#$b#I'm honored to be standing here, having the opportunity to officiate this, awesome, perfect wedding.$0",
   "CirrusWedding.7": "But before we get to the main part, I'd like to present my gift to this lovely couple.$0#$b#Cirrus, @, I hope you enjoy this!$1",
   "CirrusWedding.8": "I'd like to play one of Cirrus's songs for everyone here, but especially for @ and Cirrus!$1",
   "CirrusWedding.9": "Book...",
@@ -7614,8 +7614,8 @@ ________      ________ _   _ _______ _____
   "DN.SnS_Violet_Moon_Shop_Cirrus": "Let me guess, someone 'stole' your sweet roll?",
   "DN.SnS_Violet_Moon_Shop_RnD": "I used to be an adventurer like you, until Dandelion took a Duskspire Behemoth to the knee.",
   "DN.SnS_Violet_Moon_Shop_HatMouse": "Hiyo, poke. Did you win games? Gud. Me sell hats.",
-  "VioletMoon.Mateo.1": "Remember, only you can prevent forest fires! Put out your cigarettes in the designated recepticle!$1",
-  "VioletMoon.Mateo.2": "I love the strength contest at the Valley Fair, but I definitely perfer showing off at the archery range.$14",
+  "VioletMoon.Mateo.1": "Remember, only you can prevent forest fires! Put out your cigarettes in the designated receptacle!$1",
+  "VioletMoon.Mateo.2": "I love the strength contest at the Valley Fair, but I definitely prefer showing off at the archery range.$14",
   "VioletMoon.Mateo.3": "Feeling pretty bewitched by the moonlight, @. How about you?$15",
   "VioletMoon.Hector.1": "The Mother Tree's roots do, in fact, reach this far. Her influence is pretty substantial, @.$6",
   "VioletMoon.Hector.2": "Yes, yes. It's very pretty up here. Sucks if you're afraid of heights, though.$8",
@@ -7730,14 +7730,14 @@ ________      ________ _   _ _______ _____
   "MEEP.BookOutside.5": "Oh, yay! It's my favorite visitor! How are you doing, @? Nothing short of excellent, I hope. Have a lovely day, dear. Stay safe.$1",
 
   "MEEP.BookInside.1": "You can't put your finger on it, but something about Book seems comforting and sincere. Looking at her brings you as much joy as your visit brings her.$0",
-  "MEEP.BookInside.2": "Book seems very exciteable today! She's flying busily around the room. Perhaps some magic is in progress.$1",
+  "MEEP.BookInside.2": "Book seems very excitable today! She's flying busily around the room. Perhaps some magic is in progress.$1",
   "MEEP.BookInside.3": "Seems like Book is cross with a certain Druid. Best leave her to her devices, lest she take out some magical aggression on you!$3",
   "MEEP.BookInside.4": "Book is incredibly happy to see you! She flies happily around you in circles for a moment before going back to her tasks.$1",
   "MEEP.BookInside.5": "The magical grimoire appreciates your company, and floats behind you for a moment as you navigate the tower.$0",
 
   "MEEP.EmeritusOutside.1": "Emeritus is busily guarding the guild from the crab menace! You give him an affectionate pat for his hard work.",
   "MEEP.EmeritusOutside.2": "Emeritus gives you a big, slobbery kiss. You are now slightly sticky with Pepper Rex saliva. It smells like campfire.",
-  "MEEP.EmeritusOutside.3": "Emeritus is noisily crunching on a crab. Mateo seems to have passed their crustation hatred onwards.",
+  "MEEP.EmeritusOutside.3": "Emeritus is noisily crunching on a crab. Mateo seems to have passed their crustacean hatred onwards.",
   "MEEP.EmeritusOutside.4": "Emeritus is slightly damp and covered in sand, which will probably be great for The Guild's wooden floors.",
   "MEEP.EmeritusOutside.5": "Emeritus seems to be leading a very happy life, eating crabs, taking naps, and getting affection from anyone who wanders by.",
 
@@ -7749,30 +7749,30 @@ ________      ________ _   _ _______ _____
 
   //VARIOUS STRINGS
 
-    //Jukebox Strings
+  //Jukebox Strings
   "Strings.Music.MateoTheme": "S&S: Mateo's Theme (Never Ending Adventure)",
-  "Strings.Music.HectorTheme": "S&S: {{HectorName}}'s Theme (Circle of Thorns)",  
-  "Strings.Music.CirrusTheme": "S&S: Cirrus' Theme (Peace and Love on the Planet Earth)",  
-  "Strings.Music.KeytarSolo": "S&S: Cirrus' Keytar Solo",    
-  "Strings.Music.DandelionTheme": "S&S: Dandelion's Theme (Giant Woman)",  
-  "Strings.Music.RoslinTheme": "S&S: Roslin's Theme (It's Over, Isn't It?)",  
-  "Strings.Music.LonelyTheme": "S&S: Lonely Theme (To Zanarkand)",  
-  "Strings.Music.LonelyThemeReprise": "S&S: Lonely Theme Reprised (To Zanarkand)",  
-  "Strings.Music.DespairTheme": "S&S: Despair Theme",  
-  "Strings.Music.HopeTheme": "S&S: Hope Theme",  
-  "Strings.Music.VulnerableTheme": "S&S: Vulnerable Theme (Dearly Beloved)",  
-  "Strings.Music.SMFS": "S&S: So Much For Stardust (Love from the Other Side)",  
-  "Strings.Music.SMFSR": "S&S: So Much For Stardust Reprised (Love from the Other Side)",  
-  "Strings.Music.DuskspirePhase1": "S&S: Duskspire Battle pt 1  (Fight With Seymour)",  
-  "Strings.Music.DuskspirePhase2": "S&S: Duskspire Battle pt 2 (Tension Rising)",  
+  "Strings.Music.HectorTheme": "S&S: {{HectorName}}'s Theme (Circle of Thorns)",
+  "Strings.Music.CirrusTheme": "S&S: Cirrus' Theme (Peace and Love on the Planet Earth)",
+  "Strings.Music.KeytarSolo": "S&S: Cirrus' Keytar Solo",
+  "Strings.Music.DandelionTheme": "S&S: Dandelion's Theme (Giant Woman)",
+  "Strings.Music.RoslinTheme": "S&S: Roslin's Theme (It's Over, Isn't It?)",
+  "Strings.Music.LonelyTheme": "S&S: Lonely Theme (To Zanarkand)",
+  "Strings.Music.LonelyThemeReprise": "S&S: Lonely Theme Reprised (To Zanarkand)",
+  "Strings.Music.DespairTheme": "S&S: Despair Theme",
+  "Strings.Music.HopeTheme": "S&S: Hope Theme",
+  "Strings.Music.VulnerableTheme": "S&S: Vulnerable Theme (Dearly Beloved)",
+  "Strings.Music.SMFS": "S&S: So Much For Stardust (Love from the Other Side)",
+  "Strings.Music.SMFSR": "S&S: So Much For Stardust Reprised (Love from the Other Side)",
+  "Strings.Music.DuskspirePhase1": "S&S: Duskspire Battle pt 1  (Fight With Seymour)",
+  "Strings.Music.DuskspirePhase2": "S&S: Duskspire Battle pt 2 (Tension Rising)",
 
-    //Various Names
+  //Various Names
   "Strings.Names.Book": "Book",
   "Strings.Names.Emeritus": "Emeritus",
   "Strings.Names.Gunther": "Gunther",
   "Strings.Names.Marlon": "Marlon",
   "Strings.Names.Wyatt": "Wyatt",
-  "Strings.Names.???": "???", 
+  "Strings.Names.???": "???",
   "Strings.Names.B": "'B'?",
   "Strings.Names.Hector?": "Hector?", //why is he like this roflmao
   "Strings.Names.LittleGruff": "Little Gruff"
