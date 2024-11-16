@@ -1061,7 +1061,7 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 7,
                 ManaCost = () => 8,
-                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Banish",
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Banishment",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
@@ -1407,22 +1407,6 @@ namespace SwordAndSorcerySMAPI
             }
 
             return true;
-        }
-    }
-
-    [HarmonyPatch(typeof(Farmer), nameof(Farmer.takeDamage))]
-    public static class FarmerAetherOnDamagePatch
-    {
-        public static void Postfix(Farmer __instance, int damage)
-        {
-            if (!__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff))
-                return;
-
-            if (damage > 0 && __instance.CanBeDamaged())
-            {
-                var ext = Game1.player.GetFarmerExtData();
-                ext.mana.Value = Math.Min(ext.mana.Value + (int)Math.Ceiling(damage * 0.2), ext.maxMana.Value);
-            }
         }
     }
 

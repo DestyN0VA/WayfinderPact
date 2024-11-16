@@ -302,32 +302,9 @@ namespace SwordAndSorcerySMAPI
             location.projectiles.Add(Fireball);
             location.playSound("fireball");
 
-            DelayedAction.functionAfterDelay(() =>
-            {
-                int Min = GetSpellDamange(30, 10, out int Max);
-                int Min2 = GetSpellDamange(20, 8, out int Max2);
+            TargetPos = TargetPos - new Vector2(32f, 48f);
 
-                location.projectiles.RemoveWhere(p => p.uniqueID == Fireball.uniqueID);
-                location.playSound("explosion");
-
-                List<Monster> BurnMonsters = [];
-
-                foreach (Monster m in location.characters.Where(c => c is Monster))
-                {
-                    if (Vector2.Distance(TargetPos, m.Position) <= -5 * 64 || Vector2.Distance(TargetPos, m.Position) >= 5 * 64) continue;
-
-                    BurnMonsters.Add(m);
-                }
-
-                foreach (Monster m in BurnMonsters)
-                {
-                    location.damageMonster(m.GetBoundingBox(), Min, Max, false, Game1.player, true);
-
-                    DelayedAction.functionAfterDelay(() => { if (m.Health > 0) location.damageMonster(m.GetBoundingBox(), Min2, Max2, isBomb: false, Game1.player); }, 1000);
-                    DelayedAction.functionAfterDelay(() => { if (m.Health > 0) location.damageMonster(m.GetBoundingBox(), Min2, Max2, isBomb: false, Game1.player); }, 2000);
-                    DelayedAction.functionAfterDelay(() => { if (m.Health > 0) location.damageMonster(m.GetBoundingBox(), Min2, Max2, isBomb: false, Game1.player); }, 3000);
-                }
-            }, time);
+            Fireballs.Add(new(Fireball, time));
         }
 
         public static void Icebolt(Vector2 MousePos)
@@ -362,38 +339,9 @@ namespace SwordAndSorcerySMAPI
             location.projectiles.Add(Icebolt);
             location.playSound("fireball");
 
-            DelayedAction.functionAfterDelay(() =>
-            {
-                location.projectiles.RemoveWhere(p => p.uniqueID == Icebolt.uniqueID);
-                location.playSound("frozen");
-                int Min = GetSpellDamange(20, 5, out int Max);
+            TargetPos = TargetPos - new Vector2(32f, 48f);
 
-                List<Monster> FreezeMonsters = [];
-
-                foreach (Monster m in location.characters.Where(c => c is Monster))
-                {
-                    if (Vector2.Distance(TargetPos, m.Position) <= -5 * 64 || Vector2.Distance(TargetPos, m.Position) >= 5 * 64) continue;
-                    FreezeMonsters.Add(m);
-                }
-
-                foreach(Monster m in FreezeMonsters)
-                {
-                    if (m is not DuskspireMonster || m.stunTime.Value <= 0)
-                        m.stunTime.Value = 10000;
-                    Game1.Multiplayer.broadcastSprites(location, new TemporaryAnimatedSprite("LooseSprites\\Cursors2", new Rectangle(118, 227, 16, 13), new Vector2(0f, 0f), flipped: false, 0f, Color.White)
-                    {
-                        layerDepth = (float)(m.StandingPixel.Y + 2) / 10000f,
-                        animationLength = 1,
-                        interval = 5000,
-                        scale = 4f,
-                        id = (int)(m.position.X * 777f + m.position.Y * 77777f),
-                        positionFollowsAttachedCharacter = true,
-                        attachedCharacter = m
-                    });
-
-                    location.damageMonster(m.GetBoundingBox(), Min, Max, false, Game1.player, true);
-                }
-            }, time);
+            Icebolts.Add(new(Icebolt, time));
         }
 
         public static void MagicMissle()
@@ -483,55 +431,134 @@ namespace SwordAndSorcerySMAPI
             Game1.playSound("thunder");
         }
 
-        public static List<Tuple<Projectile, bool, float, float>> Projectiles = [];
+        public static List<Tuple<Projectile, bool, float, float>> MagicMissles = [];
+        public static List<Tuple<Projectile, float>> Fireballs = [];
+        public static List<Tuple<Projectile, float>> Icebolts = [];
 
         [HarmonyPatch(typeof(Projectile), nameof(Projectile.update))]
-        public static class MagicMissleHomingPatch
+        public static class ProjectileSpellsPatch
         {
             public static void Postfix(Projectile __instance, GameTime time, GameLocation location)
             {
-                if (__instance.lightSourceId != "Magic Missle") return;
-
-                if (!Projectiles.Any(p => p.Item1 == __instance))
+                if (__instance.lightSourceId == "Magic Missle")
                 {
-                    Projectiles.Add(new(__instance, false, __instance.xVelocity.Value / 50, __instance.yVelocity.Value / 50));
-                }
-
-                var p = Projectiles.First(p => p.Item1 == __instance);
-
-                if (!p.Item2)
-                {
-
-                    if (MathF.Round(__instance.xVelocity.Value, MidpointRounding.ToZero) != 0)
-                        __instance.xVelocity.Value -= p.Item3;
-                    
-                    if (MathF.Round(__instance.yVelocity.Value, MidpointRounding.ToZero) != 0)
-                        __instance.yVelocity.Value -= p.Item4;
-
-                    if (MathF.Round(__instance.xVelocity.Value, MidpointRounding.ToZero) == 0 && MathF.Round(__instance.yVelocity.Value, MidpointRounding.ToZero) == 0)
-                        Projectiles[Projectiles.IndexOf(p)] = new(p.Item1, true, p.Item3, p.Item4);
-                }
-                else
-                {
-                    if (__instance.acceleration.Value != Vector2.Zero) __instance.acceleration.Value = Vector2.Zero;
-                    Vector2 Motion;
-                    Monster m = Utility.findClosestMonsterWithinRange(location, __instance.position.Value, 100 * 64);
-                    if (m is not null)
+                    if (!MagicMissles.Any(p => p.Item1 == __instance))
                     {
-                        Motion = Utility.getVelocityTowardPoint(__instance.position.Value, Utility.PointToVector2(m.GetBoundingBox().Center), 10);
+                        MagicMissles.Add(new(__instance, false, __instance.xVelocity.Value / 50, __instance.yVelocity.Value / 50));
+                    }
+
+                    var p = MagicMissles.First(p => p.Item1 == __instance);
+
+                    if (!p.Item2)
+                    {
+
+                        if (MathF.Round(__instance.xVelocity.Value, MidpointRounding.ToZero) != 0)
+                            __instance.xVelocity.Value -= p.Item3;
+
+                        if (MathF.Round(__instance.yVelocity.Value, MidpointRounding.ToZero) != 0)
+                            __instance.yVelocity.Value -= p.Item4;
+
+                        if (MathF.Round(__instance.xVelocity.Value, MidpointRounding.ToZero) == 0 && MathF.Round(__instance.yVelocity.Value, MidpointRounding.ToZero) == 0)
+                            MagicMissles[MagicMissles.IndexOf(p)] = new(p.Item1, true, p.Item3, p.Item4);
                     }
                     else
                     {
-                        Motion = Utility.getVelocityTowardPoint(__instance.position.Value, Utility.PointToVector2(Game1.player.GetBoundingBox().Center), 10);
-                        if (Game1.player.GetBoundingBox().Contains(__instance.position.Value))
+                        if (__instance.acceleration.Value != Vector2.Zero) __instance.acceleration.Value = Vector2.Zero;
+                        Vector2 Motion;
+                        Monster m = Utility.findClosestMonsterWithinRange(location, __instance.position.Value, 100 * 64);
+                        if (m is not null)
                         {
-                            location.projectiles.Remove(__instance);
-                            Projectiles.Remove(p);
-                            return;
+                            Motion = Utility.getVelocityTowardPoint(__instance.position.Value, Utility.PointToVector2(m.GetBoundingBox().Center), 10);
+                        }
+                        else
+                        {
+                            Motion = Utility.getVelocityTowardPoint(__instance.position.Value, Utility.PointToVector2(Game1.player.GetBoundingBox().Center), 10);
+                            if (Game1.player.GetBoundingBox().Contains(__instance.position.Value))
+                            {
+                                location.projectiles.Remove(__instance);
+                                MagicMissles.Remove(p);
+                                return;
+                            }
+                        }
+                        __instance.xVelocity.Value = (int)Motion.X;
+                        __instance.yVelocity.Value = (int)Motion.Y;
+                    }
+                }
+                else if (Fireballs.Any(f => f.Item1 == __instance))
+                {
+                    var Fireball = Fireballs.First(f => f.Item1 == __instance);
+                    if (Fireball.Item2 - (float)Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds <= 0)
+                    {
+                        int Min = GetSpellDamange(30, 10, out int Max);
+                        int Min2 = GetSpellDamange(20, 8, out int Max2);
+
+                        location.projectiles.RemoveWhere(f => f.uniqueID == Fireball.Item1.uniqueID);
+                        location.playSound("explosion");
+                        Fireballs.Remove(Fireball);
+
+                        List<Monster> BurnMonsters = [];
+
+                        foreach (Monster m in location.characters.Where(c => c is Monster))
+                        {
+                            if (Vector2.Distance(__instance.position.Value, m.Position) <= -5 * 64 || Vector2.Distance(__instance.position.Value, m.Position) >= 5 * 64) continue;
+
+                            BurnMonsters.Add(m);
+                        }
+
+                        foreach (Monster m in BurnMonsters)
+                        {
+                            location.damageMonster(m.GetBoundingBox(), Min, Max, false, Game1.player, true);
+
+                            DelayedAction.functionAfterDelay(() => { if (m.Health > 0) location.damageMonster(m.GetBoundingBox(), Min2, Max2, isBomb: false, Game1.player); }, 1000);
+                            DelayedAction.functionAfterDelay(() => { if (m.Health > 0) location.damageMonster(m.GetBoundingBox(), Min2, Max2, isBomb: false, Game1.player); }, 2000);
+                            DelayedAction.functionAfterDelay(() => { if (m.Health > 0) location.damageMonster(m.GetBoundingBox(), Min2, Max2, isBomb: false, Game1.player); }, 3000);
                         }
                     }
-                    __instance.xVelocity.Value = (int)Motion.X;
-                    __instance.yVelocity.Value = (int)Motion.Y;
+                    else
+                    {
+                        Fireballs[Fireballs.IndexOf(Fireball)] = new(Fireball.Item1, Fireball.Item2 - (float)Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds);
+                    }
+                }
+                else if (Icebolts.Any(i => i.Item1 == __instance))
+                {
+                    var Icebolt = Icebolts.First(i => i.Item1 == __instance);
+                    if (Icebolt.Item2 - (float)Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds <= 0)
+                    {
+                        location.projectiles.RemoveWhere(p => p.uniqueID == Icebolt.Item1.uniqueID);
+                        location.playSound("frozen");
+                        Icebolts.Remove(Icebolt);
+                        int Min = GetSpellDamange(20, 5, out int Max);
+
+                        List<Monster> FreezeMonsters = [];
+
+                        foreach (Monster m in location.characters.Where(c => c is Monster))
+                        {
+                            if (Vector2.Distance(__instance.position.Value, m.Position) <= -5 * 64 || Vector2.Distance(__instance.position.Value, m.Position) >= 5 * 64) continue;
+                            FreezeMonsters.Add(m);
+                        }
+
+                        foreach (Monster m in FreezeMonsters)
+                        {
+                            if (m is not DuskspireMonster || m.stunTime.Value <= 0)
+                                m.stunTime.Value = 10000;
+                            Game1.Multiplayer.broadcastSprites(location, new TemporaryAnimatedSprite("LooseSprites\\Cursors2", new Rectangle(118, 227, 16, 13), new Vector2(0f, 0f), flipped: false, 0f, Color.White)
+                            {
+                                layerDepth = (float)(m.StandingPixel.Y + 2) / 10000f,
+                                animationLength = 1,
+                                interval = 5000,
+                                scale = 4f,
+                                id = (int)(m.position.X * 777f + m.position.Y * 77777f),
+                                positionFollowsAttachedCharacter = true,
+                                attachedCharacter = m
+                            });
+
+                            location.damageMonster(m.GetBoundingBox(), Min, Max, false, Game1.player, true);
+                        }
+                    }
+                    else
+                    {
+                        Icebolts[Icebolts.IndexOf(Icebolt)] = new(Icebolt.Item1, Icebolt.Item2 - (float)Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds);
+                    }
                 }
             }
         }
@@ -541,7 +568,7 @@ namespace SwordAndSorcerySMAPI
             public static void Postfix(BasicProjectile __instance)
             {
                 if (__instance.lightSourceId != "Magic Missle") return;
-                Projectiles.RemoveWhere(p => p.Item1 == __instance);
+                MagicMissles.RemoveWhere(p => p.Item1 == __instance);
             }
         }
     }

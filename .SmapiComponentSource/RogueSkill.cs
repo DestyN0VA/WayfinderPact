@@ -8,11 +8,10 @@ using Microsoft.Xna.Framework.Graphics;
 using SpaceCore;
 using StardewValley;
 using StardewValley.Menus;
-using SwordAndSorcerySMAPI;
 
 namespace SwordAndSorcerySMAPI
 {
-    public class RogueSkill : SpaceCore.Skills.Skill
+    public class RogueSkill : Skills.Skill
     {
         public static GenericProfession ProfessionArmorRecovery;
         public static GenericProfession ProfessionBowSecondShot;
