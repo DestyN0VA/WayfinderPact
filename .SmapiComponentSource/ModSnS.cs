@@ -1013,6 +1013,17 @@ namespace SwordAndSorcerySMAPI
                 I18n.UiSlot_Offhand,
                 Game1.content.Load<Texture2D>("DN.SnS/OffhandSlot"));
 
+            sc.RegisterSpawnableMonster("Skull", (pos, data) =>
+            {
+                Bat Skull = new(pos);
+                Skull.reloadSprite();
+                Helper.Reflection.GetField<float>(Skull, "extraVelocity").SetValue(3);
+                Helper.Reflection.GetField<float>(Skull, "maxSpeed").SetValue(8);
+                Skull.shakeTimer = 100;
+                Skull.cursedDoll.Value = true;
+                Skull.hauntedSkull.Value = true;
+                return Skull;
+            });
 
             var CP = Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
             if (CP != null)
@@ -1539,10 +1550,10 @@ namespace SwordAndSorcerySMAPI
         public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager)
         {
 
-            if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && ModSnS.AetherRestoreTimer <= 0)
+            if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && ModSnS.AetherRestoreTimer <= 0 && __instance.GetFarmerExtData().maxMana.Value > __instance.GetFarmerExtData().mana.Value)
             {
                 ModSnS.AetherRestoreTimer = 2500;
-                __instance.GetFarmerExtData().mana.Value += 5;
+                __instance.GetFarmerExtData().mana.Value += (int)MathF.Min(5, __instance.GetFarmerExtData().maxMana.Value - __instance.GetFarmerExtData().mana.Value);
                 DelayedAction.functionAfterDelay(() => ModSnS.AetherRestoreTimer = 0, 2500);
             }
 
