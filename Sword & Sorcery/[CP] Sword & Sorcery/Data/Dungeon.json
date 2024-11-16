@@ -308,7 +308,7 @@
                     "WildTreeType": "{{ModID}}_stygiummushroomtree",
                 },
                 // Loots chests
-                "{{ModID}}_SpawnDeepDark_LootChest": {
+                /*"{{ModID}}_SpawnDeepDark_LootChest": {
                     "Type": "LootChest",
                     "LootChestBigCraftableId": "{{ModID}}_DeepDarkChest",
                     "LootChestDrops": [
@@ -319,7 +319,7 @@
                             }
                         ]
                     ]
-                },
+                },*/
                 // Monsters
                 "{{ModID}}_SpawnDeepDark_Monster_RockCrab": {
                     "Type": "Monster",
