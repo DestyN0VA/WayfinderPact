@@ -559,7 +559,11 @@ namespace SwordAndSorcerySMAPI
         {
             Game1.player.mailReceived.OnValueAdded += OnMailReceived;
 
+            // Remove Seasonal Offerings Special Orders
+            Game1.player.team.specialOrders.RemoveWhere(o => o.questKey.Value.StartsWithIgnoreCase("CAGQuest.UntimedSpecialOrder.Pentacle"));
+            
             // Legacy armor slot migration
+
             foreach (var player in Game1.getAllFarmers())
             {
                 var armorSlot = player.get_armorSlot();
