@@ -134,7 +134,7 @@
       "Target": "Maps/Lumisteria_Extras",
       "FromFile": "Assets/VPRCompat/Lumisteria_Extras.png",
       "When": {
-        "HasMod |contains=poohnhi.VPRTempFix": false,
+        "HasMod |contains=grapeponta.VibrantPastoralRecolor": false,
       }
     },
     {
@@ -142,7 +142,7 @@
       "Target": "Maps/Lumisteria_Extras",
       "FromFile": "Assets/VPRCompat/Lumisteria_Extras_VP.png",
       "When": {
-        "HasMod |contains=poohnhi.VPRTempFix": true,
+        "HasMod |contains=grapeponta.VibrantPastoralRecolor": true,
       }
     },
     {
@@ -150,7 +150,7 @@
       "Target": "Maps/FlashShifter_Extras",
       "FromFile": "Assets/VPRCompat/FlashShifter_Extras.png",
       "When": {
-        "HasMod |contains=poohnhi.VPRTempFix": false,
+        "HasMod |contains=grapeponta.VibrantPastoralRecolor": false,
       }
     },
     {
@@ -158,7 +158,7 @@
       "Target": "Maps/FlashShifter_Extras",
       "FromFile": "Assets/VPRCompat/FlashShifter_Extras_VP.png",
       "When": {
-        "HasMod |contains=poohnhi.VPRTempFix": true,
+        "HasMod |contains=grapeponta.VibrantPastoralRecolor": true,
       }
     },
   ]

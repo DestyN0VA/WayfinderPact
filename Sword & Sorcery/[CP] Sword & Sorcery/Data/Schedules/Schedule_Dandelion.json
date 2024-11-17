@@ -48,7 +48,7 @@
 			"Entries": {
 				// Dandelion will attend the Trout Derby.
 				"summer_20": "{{Random:610 EastScarp_LionsMane 12 26 0 Dandelion_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/800 Forest 70 40 3/2000 EastScarp_LionsMane 3 5 1",
-				"summer_21": "{{Random:610 EastScarp_LionsMane 12 26 0 Dandelion_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/800 Forest 40 40 3/2000 EastScarp_LionsMane 3 5 1",
+				"summer_21": "{{Random:610 EastScarp_LionsMane 12 26 0 Dandelion_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/800 Forest 70 40 3/2000 EastScarp_LionsMane 3 5 1",
 			},
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
