@@ -641,7 +641,7 @@ namespace SwordAndSorcerySMAPI
             if (Game1.player.mailReceived.Any(m => m.StartsWith("DN.SnS.MaxMana_")) && int.TryParse(Game1.player.mailReceived.First(m => m.StartsWith("DN.SnS.MaxMana_")).Split('_')[1], out int OverridenMaxMana))
                 maxMana = OverridenMaxMana;              
 
-            ext.mana.Value = ext.maxMana.Value = maxMana;
+            ext.maxMana.Value = maxMana;
         }
 
         private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
@@ -652,7 +652,8 @@ namespace SwordAndSorcerySMAPI
                 Game1.getLocationFromName("EastScarp_DuskspireLair").modData.Remove("DN.SnS_DuskspireFaught");
 
             RecalculateAether();
-            
+
+            ext.mana.Value = ext.maxMana.Value;
             ext.armorUsed.Value = 0;
             State.HasCraftedFree = false;
 
