@@ -25,15 +25,6 @@ namespace SwordAndSorcerySMAPI
         public static GenericProfession ProfessionShieldArmor2;
         public static GenericProfession ProfessionShieldRetribution;
 
-        private static string[] events =
-        [
-            "SnS.Ch4.Intermission.Mateo",
-            "SnS.Ch4.Intermission.Hector",
-            "SnS.Ch4.Intermission.Cirrus",
-            "SnS.Ch4.Intermission.Gunnar",
-            "SnS.Ch4.Intermission.SoloFarmer",
-        ];
-
         public PaladinSkill()
             : base("DestyNova.SwordAndSorcery.Paladin")
         {
@@ -135,7 +126,7 @@ namespace SwordAndSorcerySMAPI
         {
             return I18n.Level_Health(5 * level);
         }
-        public override bool ShouldShowOnSkillsPage => events.Any(e => Game1.player.eventsSeen.Contains(e));
+        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Any(e => e.StartsWith("SnS.Ch4.Intermission."));
     }
 
     [HarmonyPatch(typeof(LevelUpMenu), nameof(LevelUpMenu.RevalidateHealth))]
