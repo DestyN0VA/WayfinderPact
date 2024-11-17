@@ -1000,6 +1000,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
+                    Game1.player.AddCustomSkillExperience(ModTOP.Skill, 5 * WitchcraftExpMultiplier);
                     CastSpell(Color.LimeGreen, () => Spells.Polymorph());
                 }
             });
@@ -1061,10 +1062,11 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 7,
                 ManaCost = () => 8,
-                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Banish",
+                KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Banishment",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
+                    Game1.player.AddCustomSkillExperience(ModTOP.Skill, 8 * WitchcraftExpMultiplier);
                     CastSpell(Color.Orange, () => Spells.Banish());
                 }
             });
@@ -1177,6 +1179,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = I18n.Ability_Witchcraft_SpellUnlockHint,
                 Function = () =>
                 {
+                    Game1.player.AddCustomSkillExperience(ModTOP.Skill, 10 * WitchcraftExpMultiplier);
                     var mousepos = Utility.PointToVector2(Game1.getMousePosition());
                     CastSpell(Color.Red, () => Spells.Fireball(mousepos));
                 }
@@ -1193,6 +1196,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = I18n.Ability_Witchcraft_SpellUnlockHint,
                 Function = () =>
                 {
+                    Game1.player.AddCustomSkillExperience(ModTOP.Skill, 10 * WitchcraftExpMultiplier);
                     var mousepos = Utility.PointToVector2(Game1.getMousePosition());
                     CastSpell(Color.Blue, () => Spells.Icebolt(mousepos));
                 }
@@ -1207,8 +1211,12 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => { return 10 - (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionSpellDamage) ? 2 : 0); },
                 KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_MagicMissle",
                 UnlockHint = I18n.Ability_Witchcraft_SpellUnlockHint,
-                Function = () => CastSpell(Color.White, Spells.MagicMissle)
-            });
+                Function = () =>
+                {
+                    Game1.player.AddCustomSkillExperience(ModTOP.Skill, 10 * WitchcraftExpMultiplier);
+                    CastSpell(Color.White, Spells.MagicMissle);
+                }
+                });
 
             Ability.Abilities.Add("spell_lightningbolt", new Ability("spell_lightningbolt")
             {
@@ -1219,7 +1227,11 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => { return 10 - (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionSpellDamage) ? 2 : 0); },
                 KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_LightningBolt",
                 UnlockHint = I18n.Ability_Witchcraft_SpellUnlockHint,
-                Function = () => CastSpell(Color.Aquamarine, Spells.LightningBolt)
+                Function = () =>
+                {
+                    Game1.player.AddCustomSkillExperience(ModTOP.Skill, 10 * WitchcraftExpMultiplier);
+                    CastSpell(Color.Aquamarine, Spells.LightningBolt);
+                }
             });
         }
     }
@@ -1407,22 +1419,6 @@ namespace SwordAndSorcerySMAPI
             }
 
             return true;
-        }
-    }
-
-    [HarmonyPatch(typeof(Farmer), nameof(Farmer.takeDamage))]
-    public static class FarmerAetherOnDamagePatch
-    {
-        public static void Postfix(Farmer __instance, int damage)
-        {
-            if (!__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff))
-                return;
-
-            if (damage > 0 && __instance.CanBeDamaged())
-            {
-                var ext = Game1.player.GetFarmerExtData();
-                ext.mana.Value = Math.Min(ext.mana.Value + (int)Math.Ceiling(damage * 0.2), ext.maxMana.Value);
-            }
         }
     }
 

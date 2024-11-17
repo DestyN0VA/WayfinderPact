@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="9">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="9">
  <editorsettings>
   <export target="MushroomCave.tmx" format="tmx"/>
  </editorsettings>
@@ -1800,7 +1800,7 @@
    </animation>
   </tile>
  </tileset>
- <layer id="1" name="Back" width="60" height="60" visible="0">
+ <layer id="1" name="Back" width="60" height="60">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2063,7 +2063,7 @@
     <property name="Action" value="spacechase0.SpaceCore_DungeonElevatorMenu DN.SnS_DeepDark"/>
    </properties>
   </object>
-  <object id="8" x="224" y="80" width="16" height="16">
+  <object id="8" name="TileData" x="224" y="80" width="16" height="16">
    <properties>
     <property name="Action" value="spacechase0.SpaceCore_DungeonLadder"/>
    </properties>

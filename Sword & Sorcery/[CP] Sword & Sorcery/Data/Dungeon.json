@@ -22,7 +22,7 @@
                 }
             }
         },
-        {
+       /* {
             "LogName": "Deep Dark Chest",
             "Action": "EditData",
             "Target": "Data/BigCraftables",
@@ -42,7 +42,7 @@
                     "CustomFields": null
                 },
             }
-        },
+        },*/
         {
             "LogName": "Deep Dark Stones/Items",
             "Action": "EditData",
@@ -308,7 +308,7 @@
                     "WildTreeType": "{{ModID}}_stygiummushroomtree",
                 },
                 // Loots chests
-                "{{ModID}}_SpawnDeepDark_LootChest": {
+                /*"{{ModID}}_SpawnDeepDark_LootChest": {
                     "Type": "LootChest",
                     "LootChestBigCraftableId": "{{ModID}}_DeepDarkChest",
                     "LootChestDrops": [
@@ -319,7 +319,7 @@
                             }
                         ]
                     ]
-                },
+                },*/
                 // Monsters
                 "{{ModID}}_SpawnDeepDark_Monster_RockCrab": {
                     "Type": "Monster",
@@ -386,7 +386,7 @@
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Bat_HauntedSkull": {
                     "Type": "Monster",
-                    "MonsterType": "Bat",
+                    "MonsterType": "Skull",
                     "MonsterName": "Stygium Skull",
                     "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Haunted Skull_dangerous.png}}",
                     "MonsterAdditionalData": {}
@@ -579,7 +579,7 @@
                             "SpawnableIds": [
                                 {
                                     "Weight": 1.0,
-                                    "Value": "{{ModID}}_SpawnDeepDark_Forage_Mushroom"
+                                    "Value": "{{ModID}}_SpawnDeepDark_Forage_Mushrooms"
                                 },
                             ],
                             "Minimum": -10,
@@ -611,7 +611,8 @@
                     "HostOnly": true, // Important for multiplayer support
                     "Actions": [
                         "spacechase0.SpaceCore_TriggerSpawnGroup {{ModID}}_DeepDarkSpawns_Common Target",
-                        "spacechase0.SpaceCore_TriggerSpawnGroup {{ModID}}_DeepDarkSpawns_Mushrooms Target"
+                        "spacechase0.SpaceCore_TriggerSpawnGroup {{ModID}}_DeepDarkSpawns_Mushrooms Target",
+                        "spacechase0.SpaceCore_TriggerSpawnGroup {{ModID}}_DeepDarkSpawns_Dark Target"
                     ]
                 }
             }

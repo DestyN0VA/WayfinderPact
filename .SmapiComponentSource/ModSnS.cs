@@ -1,4 +1,5 @@
 ﻿using CircleOfThornsSMAPI;
+using ContentPatcher;
 using HarmonyLib;
 using MageDelve.Mercenaries;
 using Microsoft.Xna.Framework;
@@ -562,9 +563,6 @@ namespace SwordAndSorcerySMAPI
         private void OnMailReceived(string value)
         {
             // I hope this doesn't multi trigger...
-            if (value == "DrakeScalePower")
-                Game1.player.GetFarmerExtData().maxMana.Value += 25;
-
             if (value == "JojaMember" && Game1.IsMasterGame)
             {
                 string[] toRemove =
@@ -597,11 +595,13 @@ namespace SwordAndSorcerySMAPI
 
             int maxMana = 0;
 
+            //DrakeScalePower
+            if (Game1.player.hasOrWillReceiveMail("DrakeScalePower"))
+                maxMana += 25;
+
             //Artificer Mana
             if (Game1.player.GetCustomSkillLevel(RogueSkill.Id) == 1)
-            {
                 maxMana += 30;
-            }
 
             //Druidics Mana
             for (int i = 0; i < Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Druidics"); i++)
@@ -1011,6 +1011,50 @@ namespace SwordAndSorcerySMAPI
                 item => item == null || item is MeleeWeapon,
                 I18n.UiSlot_Offhand,
                 Game1.content.Load<Texture2D>("DN.SnS/OffhandSlot"));
+
+            sc.RegisterSpawnableMonster("Skull", (pos, data) =>
+            {
+                Bat Skull = new(pos);
+                Skull.reloadSprite();
+                Helper.Reflection.GetField<float>(Skull, "extraVelocity").SetValue(3);
+                Helper.Reflection.GetField<float>(Skull, "maxSpeed").SetValue(8);
+                Skull.shakeTimer = 100;
+                Skull.cursedDoll.Value = true;
+                Skull.hauntedSkull.Value = true;
+                return Skull;
+            });
+
+            var CP = Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
+            if (CP != null)
+            {
+                CP.RegisterToken(ModManifest, "PocketDimensionUpgrade", () =>
+                {
+                    Farmer player;
+
+                    if (Context.IsWorldReady)
+                        player = Game1.player;
+                    else if (SaveGame.loaded?.player != null)
+                        player = SaveGame.loaded.player;
+                    else
+                        return null;
+
+                    int i = 1;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Witchcraft") >= 10)
+                        i++;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Bardics") >= 10)
+                        i++;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Druidics") >= 10)
+                        i++;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Paladin") >= 10)
+                        i++;
+                    if (Game1.player.GetCustomSkillLevel("DestyNova.SwordAndSorcery.Rogue") >= 10)
+                        i++;
+
+                    if (i++ > 4) i = 4;
+
+                    return [$"{i}"];
+                });
+            }
 
             // This late because of accessing SpaceCore's local variable API
             harmony.PatchAll(Assembly.GetExecutingAssembly());
@@ -1505,13 +1549,10 @@ namespace SwordAndSorcerySMAPI
         public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager)
         {
 
-            if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && ModSnS.AetherRestoreTimer <= 0)
+            if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && __instance.CanBeDamaged() && __instance.GetFarmerExtData().maxMana.Value > __instance.GetFarmerExtData().mana.Value)
             {
-                ModSnS.AetherRestoreTimer = 2000;
-                __instance.GetFarmerExtData().mana.Value += 5;
+                __instance.GetFarmerExtData().mana.Value += (int)MathF.Min(Game1.random.Next(5,10), __instance.GetFarmerExtData().maxMana.Value - __instance.GetFarmerExtData().mana.Value);
             }
-            else
-                ModSnS.AetherRestoreTimer -= Game1.currentGameTime.ElapsedGameTime.Milliseconds;
 
             var ext = Game1.player.GetFarmerExtData();
             if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||
