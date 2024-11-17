@@ -30,6 +30,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -437,7 +438,17 @@ namespace SwordAndSorcerySMAPI
                 Function = () => SwapLltk(),
             });
 
-            Helper.ConsoleCommands.Add("sns_setmaxaether", "...", (cmd, args) => Game1.player.GetFarmerExtData().maxMana.Value = int.Parse(args[0]));
+            Helper.ConsoleCommands.Add("sns_setmaxaether", "Sets Max Aether to the provided amount, or resets to default with the 'reset' argument", (cmd, args) => {
+                Game1.player.mailReceived.RemoveWhere(m => m.StartsWith("DN.SnS.MaxMana_"));
+                if (args[0].EqualsIgnoreCase("reset"))
+                {
+                    RecalculateAether();
+                    return;
+                }
+                int newMax = int.Parse(args[0]);
+                Game1.player.mailReceived.Add($"DN.SnS.MaxMana_{newMax}");
+                Game1.player.GetFarmerExtData().maxMana.Value = newMax;
+                });
             Helper.ConsoleCommands.Add("sns_refillaether", "...", (cmd, args) => Game1.player.GetFarmerExtData().mana.Value = Game1.player.GetFarmerExtData().maxMana.Value);
             Helper.ConsoleCommands.Add("sns_repairarmor", "...", (cmd, args) => Game1.player.GetFarmerExtData().armorUsed.Value = 0);
             Helper.ConsoleCommands.Add("sns_finishorders", "...", (cmd, args) =>
@@ -585,13 +596,8 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
-        {
-            var ext = Game1.player.GetFarmerExtData();
-
-
-            if (Game1.shortDayNameFromDayOfSeason(Game1.dayOfMonth) == "Mon")
-                Game1.getLocationFromName("EastScarp_DuskspireLair").modData.Remove("DN.SnS_DuskspireFaught");
+        private static void RecalculateAether()
+        {var ext = Game1.player.GetFarmerExtData();
 
             int maxMana = 0;
 
@@ -600,7 +606,7 @@ namespace SwordAndSorcerySMAPI
                 maxMana += 25;
 
             //Artificer Mana
-            if (Game1.player.GetCustomSkillLevel(RogueSkill.Id) == 1)
+            if (Game1.player.GetCustomSkillLevel(RogueSkill.Id) >= 1)
                 maxMana += 30;
 
             //Druidics Mana
@@ -632,7 +638,21 @@ namespace SwordAndSorcerySMAPI
                 maxMana += 75;
             }
 
+            if (Game1.player.mailReceived.Any(m => m.StartsWith("DN.SnS.MaxMana_")) && int.TryParse(Game1.player.mailReceived.First(m => m.StartsWith("DN.SnS.MaxMana_")).Split('_')[1], out int OverridenMaxMana))
+                maxMana = OverridenMaxMana;              
+
             ext.mana.Value = ext.maxMana.Value = maxMana;
+        }
+
+        private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
+        {
+            var ext = Game1.player.GetFarmerExtData();
+
+            if (Game1.shortDayNameFromDayOfSeason(Game1.dayOfMonth) == "Mon")
+                Game1.getLocationFromName("EastScarp_DuskspireLair").modData.Remove("DN.SnS_DuskspireFaught");
+
+            RecalculateAether();
+            
             ext.armorUsed.Value = 0;
             State.HasCraftedFree = false;
 
