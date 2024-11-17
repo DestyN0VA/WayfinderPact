@@ -18,7 +18,7 @@
 			"Target": "Characters/Schedules/Mateo",
 			"Entries": {
 				// After Mateo has been unlocked. In the mines, then at the beach, then home.
-				"rain": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare/{{Random: 1800 EastScarp_MateoHome 5 6 2 Mateo_violin++1800 EastScarp_MateoHome 5 6 2 Mateo_book++1800 EastScarp_MateoHome 5 6 2 Mateo_drink|InputSeparator=++}}",
+				"rain": "GOTO spring",
 				"spring": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare/{{Random: 1800 EastScarp_MateoHome 5 6 2 Mateo_violin++1800 EastScarp_MateoHome 5 6 2 Mateo_book++1800 EastScarp_MateoHome 5 6 2 Mateo_drink|InputSeparator=++}}"
 			},
 			"When": {
@@ -35,7 +35,7 @@
 				"rain": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
 				"spring": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
 				"spring_Tue": "610 EastScarp_CoastalGuild 8 5 2/{{Random: 620 EastScarp_CoastalGuild 8 5 2 Mateo_violin++620 EastScarp_CoastalGuild 8 5 2 Mateo_book++620 EastScarp_CoastalGuild 8 5 2 Mateo_drink|InputSeparator=++}}/1000 ArchaeologyHouse 4 10 2 Mateo_book/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
-				"spring_Thu": "610 EastScarp_CoastalGuild 8 5 2/{{Random: 620 EastScarp_CoastalGuild 8 5 2 Mateo_violin++620 EastScarp_CoastalGuild 8 5 2 Mateo_book++620 EastScarp_CoastalGuild 8 5 2 Mateo_drink|InputSeparator=++}}/1000 ArchaeologyHouse 4 10 2 Mateo_book/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
+				"spring_Thu": "GOTO spring_Tue",
 				"spring_Fri": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/{{Random: 1300 Saloon 40 18 2/1310 Saloon 40 18 2 Mateo_drink++1300 Saloon 43 17 2/1310 Saloon 43 17 2 Mateo_sit_stare++1300 Saloon 26 23 3++1300 Saloon 6 17 2/1310 Saloon 6 17 2 Mateo_drink++1300 Saloon 13 20 2/1310 Saloon 13 20 2 Mateo_sit_stare|InputSeparator=++}}/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
 				"spring_Sat": "610 EastScarp_CoastalGuild 8 5 2/{{Random: 620 EastScarp_CoastalGuild 8 5 2 Mateo_violin++620 EastScarp_CoastalGuild 8 5 2 Mateo_book++620 EastScarp_CoastalGuild 8 5 2 Mateo_drink|InputSeparator=++}}/1300 EastScarp_VillageInn 31 11 2 Mateo_violin/1600 EastScarp_VillageInn 43 11 2 Mateo_drink/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
 				"spring_Sun": "610 EastScarp_CoastalGuild 8 5 2/{{Random: 620 EastScarp_CoastalGuild 8 5 2 Mateo_violin++620 EastScarp_CoastalGuild 8 5 2 Mateo_book++620 EastScarp_CoastalGuild 8 5 2 Mateo_drink|InputSeparator=++}}/1000 EastScarp_Village 75 120 2/1010 EastScarp_Village 75 121 2/1020 EastScarp_Village 75 121 2 Mateo_sit_stare/1400 EastScarp_Village 75 120 2/1410 EastScarp_Village 35 98 2/1420 EastScarp_Village 35 98 2 Mateo_drink/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
@@ -70,13 +70,13 @@
 			"Target": "Characters/Schedules/Mateo",
 			"Entries": {
 				// Mateo will not spend time in the mines after Harvey addresses their seasonal affective disorder.
-				"rain": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
+				"rain": "GOTO spring",
 				"spring": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
 				"winter": "610 EastScarp_CoastalGuild 8 5 2/{{Random: 620 EastScarp_CoastalGuild 8 5 2 Mateo_violin++620 EastScarp_CoastalGuild 8 5 2 Mateo_book++620 EastScarp_CoastalGuild 8 5 2 Mateo_drink|InputSeparator=++}}/1300 EastScarp_VillageInn 31 11 2 Mateo_violin/1600 EastScarp_VillageInn 43 11 2 Mateo_drink/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
 				"winter_Fri": "610 EastScarp_CoastalGuild 8 5 2/{{Random: 620 EastScarp_CoastalGuild 8 5 2 Mateo_violin++620 EastScarp_CoastalGuild 8 5 2 Mateo_book++620 EastScarp_CoastalGuild 8 5 2 Mateo_drink|InputSeparator=++}}/{{Random: 1300 Saloon 40 18 2/1310 Saloon 40 18 2 Mateo_drink++1300 Saloon 43 17 2/1310 Saloon 43 17 2 Mateo_sit_stare++1300 Saloon 26 23 3++1300 Saloon 6 17 2/1310 Saloon 6 17 2 Mateo_drink++1300 Saloon 13 20 2/1310 Saloon 13 20 2 Mateo_sit_stare|InputSeparator=++}}/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
 				"winter_Sat": "610 EastScarp_CoastalGuild 8 5 2/{{Random: 620 EastScarp_CoastalGuild 8 5 2 Mateo_violin++620 EastScarp_CoastalGuild 8 5 2 Mateo_book++620 EastScarp_CoastalGuild 8 5 2 Mateo_drink|InputSeparator=++}}/1000 ArchaeologyHouse 4 10 2 Mateo_book/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
 				"winter_12": "610 EastScarp_CoastalGuild 8 5 2/0900 Hospital 20 11 2/1300 ArchaeologyHouse 4 10 2 Mateo_book/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
-				"winter_26": "610 EastScarp_CoastalGuild 8 5 2/0900 Hospital 20 11 2/1300 ArchaeologyHouse 4 10 2 Mateo_book/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}"
+				"winter_26": "GOTO winter_12"
 			},
 			"When": {
 				"Hearts:Mateo": "10",
@@ -90,12 +90,12 @@
 			"Target": "Characters/Schedules/Mateo",
 			"Entries": {
 				// Will attend Community Day if Stardew Valley Expanded is installed.
-				"rain": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
+				"rain": "GOTO spring",
 				"spring": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
 				"spring_22": "610 {{MateoSpawn}} 2/800 CommunityCenter 55 13 2/1030 CommunityCenter 55 13 2 Mateo_sword/1700 {{MateoSpawn}} 2 Mateo_book",
-				"summer_22": "610 {{MateoSpawn}} 2/800 CommunityCenter 55 13 2/1030 CommunityCenter 55 13 2 Mateo_sword/1700 {{MateoSpawn}} 2 Mateo_book",
-				"fall_22": "610 {{MateoSpawn}} 2/800 CommunityCenter 55 13 2/1030 CommunityCenter 55 13 2 Mateo_sword/1700 {{MateoSpawn}} 2 Mateo_book",
-				"winter_22": "610 {{MateoSpawn}} 2/800 CommunityCenter 55 13 2/1030 CommunityCenter 55 13 2 Mateo_sword/1700 {{MateoSpawn}} 2 Mateo_book"
+				"summer_22": "GOTO spring_22",
+				"fall_22": "GOTO spring_22",
+				"winter_22": "GOTO spring_22"
 			},
 			"When": {
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
@@ -147,8 +147,8 @@
 				"rain": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
 				"spring": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
 				"DesertFestival": "610 EastScarp_CoastalGuild 8 5 2/630 Desert 3 54 2/2000 {{MateoSpawn}} 2 Mateo_book",
-				"DesertFestival_2": "610 EastScarp_CoastalGuild 8 5 2/630 Desert 3 54 2/2000 {{MateoSpawn}} 2 Mateo_book",
-				"DesertFestival_3": "610 EastScarp_CoastalGuild 8 5 2/630 Desert 3 54 2/2000 {{MateoSpawn}} 2 Mateo_book"
+				"DesertFestival_2": "GOTO DesertFestival",
+				"DesertFestival_3": "GOTO DesertFestival"
 			},
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
@@ -174,8 +174,8 @@
 			"Entries": {
 				// For when Mateo is married.
 				"marriage_Mon": "800 EastScarp_CoastalGuild 8 5 2/{{Random: 900 EastScarp_CoastalGuild 8 5 2++900 EastScarp_CoastalGuild 8 5 2 Mateo_book++900 EastScarp_CoastalGuild 8 13 2 Mateo_book++900 EastScarp_CoastalGuild 14 12 2 Mateo_drink++900 EastScarp_CoastalGuild 8 5 2 Mateo_violin|InputSeparator=++}}/1700 bed",
-				"marriage_Wed": "800 EastScarp_CoastalGuild 8 5 2/{{Random: 900 EastScarp_CoastalGuild 8 5 2++900 EastScarp_CoastalGuild 8 5 2 Mateo_book++900 EastScarp_CoastalGuild 8 13 2 Mateo_book++900 EastScarp_CoastalGuild 14 12 2 Mateo_drink++900 EastScarp_CoastalGuild 8 5 2 Mateo_violin}}/1700 bed",
-				"marriage_Fri": "800 EastScarp_CoastalGuild 8 5 2/{{Random: 900 EastScarp_CoastalGuild 8 5 2++900 EastScarp_CoastalGuild 8 5 2 Mateo_book++900 EastScarp_CoastalGuild 8 13 2 Mateo_book++900 EastScarp_CoastalGuild 14 12 2 Mateo_drink++900 EastScarp_CoastalGuild 8 5 2 Mateo_violin}}/1700 bed"
+				"marriage_Wed": "GOTO marriage_Mon",
+				"marriage_Fri": "GOTO marriage_Mon"
 			}
 		}
 	]
