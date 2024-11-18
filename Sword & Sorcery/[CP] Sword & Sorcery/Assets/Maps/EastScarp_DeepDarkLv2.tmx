@@ -3,6 +3,9 @@
  <editorsettings>
   <export target="MushroomCave.tmx" format="tmx"/>
  </editorsettings>
+  <properties>
+  <property name="LocationContext" value="SnSDeepDark"/>
+ </properties>
  <tileset firstgid="1" name="paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
   <image source="paths.png" width="64" height="144"/>
  </tileset>

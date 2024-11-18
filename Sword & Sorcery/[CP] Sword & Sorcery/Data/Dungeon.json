@@ -874,6 +874,21 @@
                     }]
                 },
             }
+        },
+
+        //Custom Location Context data so it stops RAINING in the deep dark
+        {
+            "Action": "EditData",
+            "Target": "Data/LocationContexts",
+            "Entries": {
+                //LOCATION CONTEXT
+                "SnSDeepDark": {
+                    "PlayRandomAmbientSounds": false,
+                    "CopyWeatherFromLocation": "Desert",
+                    "DefaultMusic": "Volcano_Ambient",
+                    "CustomFields": {}
+                }
+            }
         }
     ]
 }

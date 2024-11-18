@@ -6,6 +6,7 @@
  <properties>
   <property name="spacechase0.SpaceCore_DungeonElevatorEntrance" value="5 8"/>
   <property name="spacechase0.SpaceCore_DungeonLadderEntrance" value="8 7"/>
+  <property name="LocationContext" value="SnSDeepDark"/>
  </properties>
  <tileset firstgid="1" name="paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
   <image source="paths.png" width="64" height="256"/>
