@@ -784,7 +784,7 @@
     },
     {
       "Name": "CirrusIntro_EnD",
-      "Value": "pause 200/emote Cirrus 40/pause 200/speak Cirrus \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Cirrus.01}}\"/globalFade/viewport -999 -999/speak Hector \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Hector.02}}\"/speak Mateo \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Mateo.03}}\"/speak Cirrus \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Cirrus.04}}\"/message \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Message.05}}\"/end",
+      "Value": "pause 200/emote Cirrus 40/pause 200/speak Cirrus \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Cirrus.01}}\"/globalFade/viewport -999 -999/speak Hector \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Hector.02}}\"/speak Mateo \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Mateo.03}}\"/speak Cirrus \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Cirrus.04}}\"/message \"{{i18n:Events.Events.ED.SnS.Ch3.Default.Message.05}}\"/end"
     },
     {
       "Name": "CirrusIntro_EnD",
