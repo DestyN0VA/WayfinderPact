@@ -268,8 +268,7 @@
       "SeedDropItems": null,
       "ChopItems": [
         {
-          "MinSize": 3,
-          "MaxSize": 3,
+          "MinSize": 5,
           "ForStump": false,
           "Season": null,
           "Chance": 1.0,
@@ -293,8 +292,7 @@
           "PerItemCondition": null
         },
         {
-          "MinSize": 3,
-          "MaxSize": 3,
+          "MinSize": 5,
           "ForStump": false,
           "Season": null,
           "Chance": 1.0,
@@ -318,8 +316,7 @@
           "PerItemCondition": null
         },
         {
-          "MinSize": 3,
-          "MaxSize": 3,
+          "MinSize": 5,
           "ForStump": false,
           "Season": null,
           "Chance": 1.0,
@@ -343,8 +340,7 @@
           "PerItemCondition": null
         },
         {
-          "MinSize": 3,
-          "MaxSize": 3,
+          "MinSize": 5,
           "ForStump": false,
           "Season": null,
           "Chance": 1.0,
@@ -377,7 +373,7 @@
           "DaysUntilReadyModifiers": null,
           "DaysUntilReadyModifierMode": 0,
           "Season": 2,
-          "Chance": 1.0,
+          "Chance": 0.25,
           "Condition": null,
           "Id": "FromTaintedMushroom1",
           "ItemId": "(O){{ModID}}_mushroom1",
@@ -405,7 +401,7 @@
           "DaysUntilReadyModifiers": null,
           "DaysUntilReadyModifierMode": 0,
           "Season": 2,
-          "Chance": 1.0,
+          "Chance": 0.25,
           "Condition": null,
           "Id": "FromTaintedMushroom2",
           "ItemId": "(O){{ModID}}_mushroom2",
@@ -433,7 +429,7 @@
           "DaysUntilReadyModifiers": null,
           "DaysUntilReadyModifierMode": 0,
           "Season": 2,
-          "Chance": 1.0,
+          "Chance": 0.25,
           "Condition": null,
           "Id": "FromTaintedMushroom3",
           "ItemId": "(O){{ModID}}_mushroom3",
@@ -461,7 +457,7 @@
           "DaysUntilReadyModifiers": null,
           "DaysUntilReadyModifierMode": 0,
           "Season": 2,
-          "Chance": 1.0,
+          "Chance": 0.25,
           "Condition": null,
           "Id": "FromTaintedMushroom4",
           "ItemId": "(O){{ModID}}_mushroom4",

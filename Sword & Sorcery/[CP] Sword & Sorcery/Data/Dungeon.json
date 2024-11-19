@@ -3,7 +3,7 @@
         {
             "LogName": "Deep Dark Dungeon Maps",
             "Action": "Load",
-            "Target": "Maps/DeepDark1, Maps/DeepDark2, Maps/DeepDark3, Maps/DeepDark4, Maps/DeepDark5, Maps/DeepDark6, Maps/DeepDark7, Maps/DeepDark8, Maps/DeepDark9, Maps/DeepDark10, Maps/DeepDark11, Maps/DeepDark12, Maps/DeepDark13, Maps/DeepDark14, Maps/DeepDark15, Maps/DeepDark16, Maps/DeepDark17, Maps/DeepDark18, Maps/DeepDark19, Maps/DeepDark20, Maps/DeepDarkMushroomEntrance",
+            "Target": "Maps/DeepDark1, Maps/DeepDark2, Maps/DeepDark3, Maps/DeepDark4, Maps/DeepDark5, Maps/DeepDark6, Maps/DeepDark7, Maps/DeepDark8, Maps/DeepDark9, Maps/DeepDark10, Maps/DeepDark11, Maps/DeepDark12, Maps/DeepDark13, Maps/DeepDark14, Maps/DeepDark15, Maps/DeepDark16, Maps/DeepDark17, Maps/DeepDark18, Maps/DeepDark19, Maps/DeepDark20, Maps/DeepDark21, Maps/DeepDark22, Maps/DeepDark23, Maps/DeepDark24, Maps/DeepDark25, Maps/DeepDark26, Maps/DeepDark27, Maps/DeepDark28, Maps/DeepDark29, Maps/DeepDark30, Maps/DeepDarkMushroomEntrance",
             "FromFile": "Assets/Maps/DeepDark/Floors/{{TargetWithoutPath}}.tmx"
         },
         {
@@ -671,7 +671,7 @@
                             ],
                             "LocationDataEntry": "EastScarp_DeepDark",
                         },
-                        "DuskspireLairEntrance": {
+                        /*"DuskspireLairEntrance": {
                             "LevelRange": { "Begin": 21, "End": 21 },
                             "MapPool": [
                                 { "Weight": 1.0, "Value": "Maps/DeepDark5" },
@@ -679,16 +679,61 @@
                             "TriggerActionsOnEntry": [
                             ],
                             "LocationDataEntry": "EastScarp_DeepDarkDungeon",
-                        },
+                        },*/
                     },
                     "LadderExitLocation": "EastScarp_DeepDarkEntrance",
                     "LadderExitTile": "17, 8",
                     "ElevatorExitLocation": "EastScarp_DeepDarkEntrance",
                     "ElevatorExitTile": "16, 8",
-                    "FloorsWithElevator": [ 5, 10, 15, 20 ],
+                    "FloorsWithElevator": [ 5, 10, 15, 20, 25, 30 ],
                     "SpawnLadders": false,
                     "SpawnMineshafts": false,
+                    "ViewportFollowsPlayer": false
                 }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "spacechase0.SpaceCore/Dungeons",
+            "TargetField": [ "{{ModID}}_DeepDark", "Regions" ], 
+            "Entries": {
+                "MushroomLakeTransition": {
+                    "LevelRange": { "Begin": 21, "End": 21 },
+                    "MapPool": [
+                        { "Weight": 1.0, "Value": "Maps/DeepDark21" },
+                    ],
+                    "TriggerActionsOnEntry": [
+                        "{{ModID}}_SpawnDeepDarkStuff_Mushrooms",
+                    ],
+                    "LocationDataEntry": "EastScarp_DeepDarkDungeon",
+                },
+                "Lake": {
+                    "LevelRange": { "Begin": 22, "End": 30 },
+                    "MapPool": [
+                        { "Weight": 1.0, "Value": "Maps/DeepDark22" },
+                        { "Weight": 1.0, "Value": "Maps/DeepDark23" },
+                        { "Weight": 1.0, "Value": "Maps/DeepDark24" },
+                        { "Weight": 1.0, "Value": "Maps/DeepDark25" },
+                        { "Weight": 1.0, "Value": "Maps/DeepDark26" },
+                        { "Weight": 1.0, "Value": "Maps/DeepDark27" },
+                        { "Weight": 1.0, "Value": "Maps/DeepDark28" },
+                        { "Weight": 1.0, "Value": "Maps/DeepDark29" },
+                        { "Weight": 1.0, "Value": "Maps/DeepDark30" },
+                    ],
+                    "TriggerActionsOnEntry": [
+                        "{{ModID}}_SpawnDeepDarkStuff_Dark",
+                    ],
+                    "LocationDataEntry": "EastScarp_DeepDarkDungeon",
+                },
+                "DuskspireLairEntrance": {
+                    "LevelRange": { "Begin": 31, "End": 31 },
+                    "MapPool": [
+                        { "Weight": 1.0, "Value": "Maps/DeepDark5" },
+                    ],
+                    "TriggerActionsOnEntry": [
+                    ],
+                    "LocationDataEntry": "EastScarp_DeepDarkDungeon",
+                },
             }
         },
         {
@@ -889,6 +934,28 @@
                     "CustomFields": {}
                 }
             }
+        },
+
+        //Map Strings for Deep Darp...axell was here
+        {
+            "LogName": "Deep Dark Map Strings",
+            "Action": "EditData",
+            "Target": "strings/StringsFromMaps",
+            "Entries": {
+                "DDLakeSign0": "{{i18n:Strings.DeepDark.DDLakeSign0}}",
+                "DDLakeSign1": "{{i18n:Strings.DeepDark.DDLakeSign1}}",
+                "DDLakeSign2": "{{i18n:Strings.DeepDark.DDLakeSign2}}",
+                "DDLakeSign3": "{{i18n:Strings.DeepDark.DDLakeSign3}}",
+                "DDLakeSign4": "{{i18n:Strings.DeepDark.DDLakeSign4}}",
+                "DDLakeSign5": "{{i18n:Strings.DeepDark.DDLakeSign5}}",
+                "DDLakeSign6": "{{i18n:Strings.DeepDark.DDLakeSign6}}",
+                "DDLakeSign7": "{{i18n:Strings.DeepDark.DDLakeSign7}}",
+                "DDLakeSign8": "{{i18n:Strings.DeepDark.DDLakeSign8}}",
+                "DDLakeSign9": "{{i18n:Strings.DeepDark.DDLakeSign9}}",
+                "DDTipTable": "{{i18n:Strings.DeepDark.DDTipTable}}"
+
+            }
         }
+        
     ]
 }
