@@ -10279,7 +10279,7 @@
   </object>
   <object id="11" name="TileData" x="160" y="160" width="16" height="16">
    <properties>
-    <property name="Action" value="message DDTipTable"/>
+    <property name="Action" value="Message DDTipTable"/>
    </properties>
   </object>
   <object id="13" name="TileData" x="64" y="272" width="16" height="16">

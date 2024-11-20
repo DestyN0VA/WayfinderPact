@@ -7778,8 +7778,8 @@ ________      ________ _   _ _______ _____
   "Strings.Names.LittleGruff": "Little Gruff",
 
   //Deep Dark
-  "Strings.DeepDark.DDLakeSign0": "\"Welcome to Lake Land! It's lovely here, if you can get past the monster infestation.\"#\"Warp pads to the left leave the caverns, ones to the right proceed forward.\"#\"I installed them personally, hoot! But really... I recomend turning back...\" - Owl Boy",
-  "Strings.DeepDark.DDLakeSign1": "\"Why on EARTH is the elevator over there? Here's an escape pad. Consider leaving me a tip.\" - Owl Boy",
+  "Strings.DeepDark.DDLakeSign0": "\"Welcome to Lake Land! It's lovely here, if you can get past the monster infestation.\"#\"Look for a warp at the end of the room to proceed forward. Use the starting warp to exit the caverns.\"#\"I installed all these warps all personally. You're welcome, hoot!\" - Owl Boy",
+  "Strings.DeepDark.DDLakeSign1": "\"How on EARTH is anyone supposed to reach that elevator? Here's an escape pad. Consider leaving me a tip.\" - Owl Boy",
   "Strings.DeepDark.DDLakeSign2": "\"The prize for reaching the end of this room is your upcoming demise. Turn back, you absolute buffoon.\" - Owl Boy",
   "Strings.DeepDark.DDLakeSign3": "\"If you stopped to read this, I hope you aren't being attacked by monsters.\" - Owl Boy",
   "Strings.DeepDark.DDLakeSign4": "\"HOW DO I GET OUT OF HERE?! WHERE IS THE EXIT??? HOOT! HOOT!\" - Owl Boy",
@@ -7801,4373 +7801,599 @@ ________      ________ _   _ _______ _____
  
  */
 
-  /*"Mail.PHB": "Hello, @!^^Thank you for your purchase of the Player's Handbook. Contained within is everything you need to know for Sword & Sorcery, 2nd Edition. Play your way with new skills, quests, NPCs, locations, and more!^^May the dice favor you kindly,^Sorcerers of the Sound%item id DN.SnS_PlayersHandbook%%[#]Player's Handbook",
+ /* "Mail.PHB": "Hello, @!^^Thank you for your purchase of the Player's Handbook. Contained within is everything you need to know for Sword & Sorcery, 2nd Edition. Play your way with new skills, quests, NPCs, locations, and more!^^May the dice favor you kindly,^Sorcerers of the Sound%item id DN.SnS_PlayersHandbook%%[#]Player's Handbook",
 
   "Furniture.PlayersHandbook": "S&S Player's Handbook",
 
   "guidebook.title": "Sword & Sorcery",
   "guidebook.chapter.Title.name": "Introduction",
   "guidebook.chapter.Title.TitlePage.ConfigLinks": "[nospacing][nextposition=0,40][center=300][font=dialogue][texttooltip=:Opens GMCM for the Content Patcher component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig DN.SnS]CP Config[/action][/texttooltip][/font][/center][offset=300,0][center=300][font=dialogue][texttooltip=:Opens GMCM for the SMAPI component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig KCC.SnS]SMAPI Config[/action][/texttooltip][/font][/center][/nospacing]",
-  "guidebook.chapter.Title.TitlePage": "{{ConfigMenuLinks}},,,,,
-  [ "nospacing" ],
-  [ "nextposition=120", 110 ],
-  [ "image=SMAPI/dn.sns/assets/guidebook/logo.png", :, null, :, 1 ],
-  [ "nextposition=0", null ],
-  [ "offset=0", 250 ],
-  [ "/nospacing" ],
-  [ "nospacing" ],
-  [ "center=200" ],
-  [ "font=dialogue" ],
-  [
-    "link=https",
-    :, //www.patreon.com/profile/creators?u=12021226]Patreon[/link][/font][/center]
-    [ "offset=200", 0 ],
-    [ "center=200" ],
-    [ "font=dialogue" ],
-    [
-      "link=https",
-      :, //www.nexusmods.com/stardewvalley/mods/12369]Nexus[/link][/font][/center]
-      [ "offset=200", 0 ],
-      [ "center=200" ],
-      [ "font=dialogue" ],
-      [
-        "link=https",
-        :, //ko-fi.com/destynova]Ko-fi[/link][/font][/center]
-        [ "nextposition=0", null ],
-        [ "/nospacing" ],
-        ",,,,,,
-        "guidebook.chapter.Title.Introduction",
-        :,
-        "[center][font=dialogue]Introduction[/font][/center],,,,,
-        "DESTY_WRITE_STUFF\",",
-        "guidebook.chapter.Title.NewMechanics",
-        :,
-        "[center][font=dialogue]New Mechanics[/font][/center],,,,,
-        [ "font=dialogue" ],
-        "Dual",
-
-        "Wielding",
-        [ "/font" ],
-        "Sword",
-        "&",
-        "Sorcery",
-        "introduces",
-        "a",
-        "dual-wielding",
-        "feature",
-        "allowing",
-        "you",
-        "to",
-        "attack",
-        "with",
-        "two",
-        "weapons",
-        "at",
-        "once.",
-        "To",
-        "equip",
-        "a",
-        "weapon",
-        "in",
-        "your",
-        "off-hand",
-        "slot",
-        "open",
-        "your",
-        "inventory",
-        "and",
-        "click",
-        "a",
-        "button",
-        "to",
-        "the",
-        "left",
-        "of",
-        "the",
-        "window",
-        "that",
-        "looks",
-        "like",
-        "the",
-        "following",
-        :,
-
-        [ "image=spacechase0.SpaceCore/ExtraEquipmentIcon" ],
-        "After",
-        "that",
-        "you",
-        "should",
-        "see",
-        "a",
-        "slot",
-        "labelled",
-        [ "color=black" ],
-        "Offhand",
-
-        [ "/color" ],
-        ".",
-
-        "Place",
-        "your",
-        "desired",
-        "secondary",
-        "weapon",
-        "in",
-        "that",
-        "slot.",
-        "Now",
-        "whenever",
-        "you",
-        "swing",
-        "your",
-        "weapon",
-        "or",
-        "use",
-        "your",
-        "weapon",
-        "ability",
-        "in",
-        "your",
-        "hotbar",
-        "both",
-        "will",
-        "be",
-        "used.",
-
-        [ "font=dialogue" ],
-        "Armor",
-
-        [ "/font" ],
-        [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.18" ],
-        "After",
-        "reaching",
-        "level",
-        1,
-        [ "link=NEA/ArtificerSkill" ],
-        "Artificer",
-
-        [ "/link" ],
-        "you",
-        "can",
-        "craft",
-        "armor",
-        "for",
-        "the",
-        "armor",
-        "slot",
-        "on",
-        "the",
-        "equipment",
-        "menu",
-        "(this",
-        "is",
-        "the",
-        "same",
-        "menu",
-        "with",
-        "the",
-        "dual",
-        "wielding",
-        "offhand",
-        "slot",
-        "explained",
-        "in",
-        "the",
-        "last",
-        "section).",
-        "Armor",
-        "acts",
-        "as",
-        "an",
-        "extra",
-        "buffer",
-        "that",
-        "absorbs",
-        "damage",
-        "before",
-        "your",
-        "health",
-        "bar.",
-        "It",
-        "automatically",
-        "repairs",
-        "itself",
-        "at",
-        "the",
-        "beginning",
-        "of",
-        "each",
-        "day.",
-        [ "/if" ],
-        [ "else" ],
-        "(locked)",
-
-        [ "/else" ],
-
-        [ "font=dialogue" ],
-        "Adventure",
-
-        "Bar",
-        [ "/font" ],
-        [ "if=PLAYER_HAS_MAIL", "Current", "SnS_AdventureBar" ],
-        "On",
-        "the",
-        "left",
-        "side",
-        "of",
-        "your",
-        "screen",
-        "you",
-        "can",
-        "see",
-        "two",
-        "columns",
-        "with",
-        "a",
-        "bar",
-        "underneath.",
-        "This",
-        "is",
-        "the",
-        "Adventure",
-        "Bar.",
-        "The",
-        "columns",
-        "repesent",
-        "ability",
-        "slots",
-        "that",
-        "you",
-        "can",
-        "activate",
-        "with",
-        "keybindings.",
-        "The",
-        "bar",
-        "underneath",
-        "is",
-        "your",
-        "Aether",
-        "which",
-        "is",
-        "consumed",
-        "to",
-        "use",
-        "most",
-        "abilities.",
-        "To",
-        "use",
-        "an",
-        "ability",
-        "use",
-        "the",
-        "keybinding",
-        "configured",
-        "for",
-        "that",
-        "slot.",
-        "(default",
-        :,
-        "Ctrl+NUMBER",
-        "or",
-        "Shift+NUMBER",
-        "though",
-        "these",
-        "can",
-        "be",
-        "configured",
-        "in",
-        "GMCM).",
-        "If",
-        "you're using a gamepad, the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod can also be used to trigger configured abilities.",
-
-        "You",
-        "can",
-        "change",
-        "what",
-        "abilities",
-        "are",
-        "in",
-        "which",
-        "slots",
-        "by",
-        "using",
-        "the",
-        "Adventure",
-        "Bar",
-        "Menu",
-        "keybinding",
-        "(default",
-        :,
-        "U).",
-        "You",
-        "will",
-        "unlock",
-        "different",
-        "abilities",
-        "throughout",
-        "the",
-        "story",
-        "of",
-        "the",
-        "Sword",
-        "&",
-        "Sorcery.",
-
-        "The",
-        "adventure",
-        "bar",
-        "can",
-        "be",
-        "hidden",
-        "with",
-        "the",
-        "configured",
-        "keybinding",
-        "(default",
-        :,
-        "Ctrl+U).",
-        [ "/if" ],
-        [ "else" ],
-        "(locked)",
-
-        [ "/else" ],
-
-        [ "font=dialogue" ],
-        "New",
-
-        "Skills",
-        [ "/font" ],
-        "2.",
-        [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.18" ],
-        [ "link=NEA/ArtificerSkill" ],
-        "Artificer",
-
-        [ "/link" ],
-        [ "/if" ],
-        [ "else" ],
-        "Artificer",
-
-        "(locked)",
-        [ "/else" ],
-        "2.",
-        [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.16" ],
-        [ "link=COT/DruidicsSkill" ],
-        "Druidics",
-
-        [ "/link" ],
-        [ "/if" ],
-        [ "else" ],
-        "Druidics",
-
-        "(locked)",
-        [ "/else" ],
-        "3.",
-        [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch3.Cirrus.14" ],
-        [ "link=UP/BardicsSkill" ],
-        "Bardics",
-
-        [ "/link" ],
-        [ "/if" ],
-        [ "else" ],
-        "Bardics",
-
-        "(locked)",
-        [ "/else" ],
-        "4.",
-        [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch4.Dandelion.6" ],
-        [ "link=TOP/SorcererSkill" ],
-        "Sorcerer",
-
-        [ "/link" ],
-        [ "/if" ],
-        [ "else" ],
-        "Sorcerer",
-
-        "(locked)",
-        [ "/else" ],
-        "4.",
-        [
-          "if=ANY",
-          "\\\"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\\\" \\\"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\\\" \\\"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\\\" \\\"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\\\" \\\"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\\\"][link=TOP/PaladinSkill]Paladin[/link][/if][else]Paladin (locked)[/else]\"",
-          "guidebook.chapter.Title.TableOfContents",
-          :,
-          "[center][font=dialogue]Table of Contents[/font][/center],,,,,
-          "1.",
-          [ "link=NEA/Intro" ],
-          "Never",
-
-          "Ending",
-          "Adventure",
-          [ "/link" ],
-          "2.",
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.14" ],
-          [ "link=COT/Intro" ],
-          "Circle",
-
-          "of",
-          "Thorns",
-          [ "/link" ],
-          [ "/if" ],
-          [ "else" ],
-          "Circle",
-
-          "of",
-          "Thorns",
-          "(locked)",
-          [ "/else" ],
-          "3.",
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.16" ],
-          [ "link=UP/Intro" ],
-          "Under",
-
-          "Pressure",
-          [ "/link" ],
-          [ "/if" ],
-          [ "else" ],
-          "Under",
-
-          "Pressure",
-          "(locked)",
-          [ "/else" ],
-          "4.",
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch3.Cirrus.14" ],
-          [ "link=TOP/Intro" ],
-          "The",
-
-          "Other",
-          "Promise",
-          [ "/link" ],
-          [ "/if" ],
-          [ "else" ],
-          "The",
-
-          "Other",
-          "Promise",
-          "(locked)",
-          [ "/else" ],
-          "5.",
-          [ "if=PLAYER_HAS_MAIL", "Current", "DuskspireDefeated" ],
-          [ "link=Epilogue/Intro" ],
-          "Epilogue",
-
-          [ "/link" ],
-          [ "/if" ],
-          [ "else" ],
-          "Epilogue",
-
-          "(locked)",
-          [ "/else" ],
-          ",,,,,,
-          "guidebook.chapter.NEA.name",
-          :,
-          "Never Ending Adventure",
-          "guidebook.chapter.NEA.Intro",
-          :,
-          "[center][font=dialogue]Introduction[/font][/center],,,,,
-          "This",
-          "first",
-          "chapter",
-          "of",
-          "S&S",
-          "introduces",
-          "you",
-          "to",
-          "Mateo",
-          "a",
-          "charming",
-          "rogue",
-          "with",
-          "a",
-          "sordid",
-          "history.",
-          "Unravel",
-          "their",
-          "connection",
-          "to",
-          "the",
-          "Museum's missing contents, help them reconnect with the townsfolk, learn the Artificer skill, unlock the Underforge, the Arsenal system, and found a new branch of the Adventurer's",
-          "Guild.\",",
-          "guidebook.chapter.NEA.Mateo",
-          :,
-          "[nospacing],,,,,
-          [ "nextposition=0", 10 ],
-          [ "center=300" ],
-          [ "font=dialogue" ],
-          "Mateo",
-
-          [ "/font" ],
-          [ "/center" ],
-          [ "offset=118", 50 ],
-          [ "image=Characters/Mateo", :, 0, 0, 16, 32, :, 4 ],
-          [ "offset=-118", 144 ],
-          [ "center=300" ],
-          "Pronouns",
-
-          :,
-          "they/them",
-          [ "/center" ],
-          [ "offset=0", 32 ],
-          [ "center=300" ],
-          "Birthday",
-
-          :,
-          "Fall",
-          25,
-          [ "/center" ],
-          [ "nextposition=322", 16 ],
-          [ "image=Portraits/Mateo", :, 0, 0, 64, 64, :, 4 ],
-          [ "nextposition=0", 288 ],
-          [ "/nospacing" ],
-          "Mateo",
-          "is",
-          "an",
-          "experienced",
-          "adventurer",
-          "with",
-          "a",
-          "kind",
-          "heart",
-          "who",
-          "grew",
-          "up",
-          "in",
-          "Pelican",
-          "Town.",
-          "Not",
-          "only",
-          "are",
-          "they",
-          "a",
-          "skilled",
-          "Rogue",
-          "but",
-          "they",
-          "have",
-          "an",
-          "inclination",
-          "for",
-          "blacksmithing.",
-          "A",
-          "good",
-          "leader",
-          "and",
-          "better",
-          "friend",
-          "who'll always have your back.\",",
-          "guidebook.chapter.NEA.Events",
-          :,
-          "[center][font=dialogue]The Story Thus Far:[/font][/center],,,,,
-          [ "font=dialogue" ],
-          "Mateo",
-
-          "Event",
-          :,
-          0,
-          "Hearts",
-          "pt",
-          1,
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.0" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          "Hint",
-
-          :,
-          "Visit",
-          "the",
-          [ "color=green" ],
-          "top",
-
-          "floor",
-          "of",
-          "the",
-          "Mines",
-          [ "/color" ],
-          "before",
-          "midnight.",
-          [ "/else" ],
-
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.0" ],
-          [ "font=dialogue" ],
-          "Mateo",
-
-          "Event",
-          :,
-          0,
-          "Hearts",
-          "pt",
-          2,
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.1" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          "Hint",
-
-          :,
-          "Visit",
-          "the",
-          [ "color=green" ],
-          "Stardew",
-
-          "Valley",
-          "Museum",
-          "&",
-          "Library",
-          [ "/color" ],
-          "before",
-          "evening.",
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.1" ],
-          [ "font=dialogue" ],
-          "Mateo",
-
-          "Event",
-          :,
-          2,
-          "Hearts",
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.2" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 500 ],
-          "Hint",
-
-          :,
-          "Visit",
-          [ "color=green" ],
-          "Pelican",
-
-          "Town",
-          [ "/color" ],
-          "on",
-          "a",
-          "sunny",
-          "evening.",
-          [ "/if" ],
-          [ "else" ],
-          "Requirement",
-
-          :,
-          2,
-          "Hearts",
-          "of",
-          "friendship",
-          "with",
-          [ "color=red" ],
-          "Mateo",
-
-          [ "/color" ],
-          [ "/else" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.2" ],
-          [ "font=dialogue" ],
-          "Mateo",
-
-          "Event",
-          :,
-          4,
-          "Hearts",
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.3" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 1000, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "MateoLibrary" ],
-          "Hint",
-
-          :,
-          "Visit",
-          "the",
-          [ "color=green" ],
-          "Beach",
-
-          [ "/color" ],
-          "on",
-          "a",
-          "sunny",
-          "evening.",
-          [ "/if" ],
-          [ "else" ],
-          [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 1000 ],
-          "Requirement",
-
-          :,
-          4,
-          "Hearts",
-          "with",
-          [ "color=red" ],
-          "Mateo",
-
-          [ "/color" ],
-          [ "/if" ],
-          [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "MateoLibrary" ],
-          "Requirement",
-
-          :,
-          "Wait",
-          { { "VariableTimegate" } },
-          "days",
-          "after",
-          "the",
-          "previous",
-          "event.",
-          [ "/if" ],
-          [ "/else" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.3" ],
-          [ "font=dialogue" ],
-          "Mateo",
-
-          "Event",
-          :,
-          4,
-          "Hearts",
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.4" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 1250, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "MateoAdmission" ],
-          "Hint",
-
-          :,
-          "Visit",
-          "the",
-          [ "color=green" ],
-          "top",
-
-          "floor",
-          "of",
-          "the",
-          "Mines",
-          [ "/color" ],
-          "in",
-          "the",
-          "evening.",
-          [ "/if" ],
-          [ "else" ],
-          [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 1250 ],
-          "Requirement",
-
-          :,
-          5,
-          "Hearts",
-          "with",
-          [ "color=red" ],
-          "Mateo",
-
-          [ "/color" ],
-          [ "/if" ],
-          [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "MateoAdmission" ],
-          "Requirement",
-
-          :,
-          "Wait",
-          { { "VariableTimegate" } },
-          "days",
-          "after",
-          "the",
-          "previous",
-          "event.",
-          [ "/if" ],
-          [ "/else" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.4" ],
-          [ "font=dialogue" ],
-          "Mateo",
-
-          "Event",
-          :,
-          5,
-          "Hearts",
-          "pt",
-          1,
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.5" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 1250 ],
-          "Hint",
-
-          :,
-          "Visit",
-          "the",
-          [ "color=green" ],
-          "Saloon",
-
-          [ "/color" ],
-          "in",
-          "the",
-          "afternoon",
-          "or",
-          "evening.",
-          [ "/if" ],
-          [ "else" ],
-          "Requirement",
-
-          :,
-          5,
-          "Hearts",
-          "with",
-          [ "color=red" ],
-          "Mateo",
-
-          [ "/color" ],
-          [ "/else" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.5" ],
-          [ "font=dialogue" ],
-          "Mateo",
-
-          "Event",
-          :,
-          5,
-          "Hearts",
-          "pt",
-          2,
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.6" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 1250, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "MateoConfrontation" ],
-          "Hint",
-
-          :,
-          "Visit",
-          "the",
-          [ "color=green" ],
-          "Adventurer's Guild[/color] in the late afternoon or early evening.[/if]",
-
-          [ "else" ],
-          [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 1250 ],
-          "Requirement",
-
-          :,
-          5,
-          "Hearts",
-          "with",
-          [ "color=red" ],
-          "Mateo",
-
-          [ "/color" ],
-          [ "/if" ],
-          [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "MateoConfrontation" ],
-          "Requirement",
-
-          :,
-          "Wait",
-          { { "VariableTimegate" } },
-          "days",
-          "after",
-          "the",
-          "previous",
-          "event.",
-          [ "/if" ],
-          [ "/else" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.6" ],
-          [ "font=dialogue" ],
-          "Mateo",
-
-          "Event",
-          :,
-          5,
-          "Hearts",
-          "pt",
-          3,
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.7" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 1500 ],
-          "Hint",
-
-          :,
-          "Visit",
-          [ "color=green" ],
-          "Pelican",
-
-          "Town",
-          [ "/color" ],
-          "between",
-          "late",
-          "morning",
-          "and",
-          "early",
-          "evening.",
-          [ "/if" ],
-          [ "else" ],
-          "Requirement",
-
-          :,
-          6,
-          "Hearts",
-          "with",
-          [ "color=red" ],
-          "Mateo",
-
-          [ "/color" ],
-          [ "/else" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.7" ],
-          [ "font=dialogue" ],
-          "Mateo",
-
-          "Event",
-          :,
-          6,
-          "Hearts",
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.8" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 1500 ],
-          "Hint",
-
-          :,
-          "Visit",
-          "the",
-          [ "color=green" ],
-          "Forest",
-
-          [ "/color" ],
-          "in",
-          "the",
-          "evening",
-          "when",
-          "the",
-          "weather",
-          "is",
-          "bad.",
-          [ "/if" ],
-          [ "else" ],
-          "Requirement",
-
-          :,
-          6,
-          "Hearts",
-          "with",
-          [ "color=red" ],
-          "Mateo",
-
-          [ "/color" ],
-          [ "/else" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.8" ],
-          [ "font=dialogue" ],
-          "Mateo",
-
-          "Event",
-          :,
-          7,
-          "Hearts",
-          "pt",
-          1,
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.9" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 1750, "PLAYER_HAS_MET", "Current", "Krobus", "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "MateoAcceptance" ],
-          "Hint",
-
-          :,
-          "Visit",
-          "the",
-          [ "color=green" ],
-          "Hospital",
-
-          [ "/color" ],
-          "between",
-          "late",
-          "morning",
-          "and",
-          "late",
-          "afternoon",
-          "when",
-          "it",
-          "isn't Friday.[/if]",
-          [ "else" ],
-          [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 1750 ],
-          "Requirement",
-
-          :,
-          7,
-          "Hearts",
-          "with",
-          [ "color=red" ],
-          "Mateo",
-
-          [ "/color" ],
-          [ "/if" ],
-          [ "if=!PLAYER_HAS_MET", "Current", "Krobus" ],
-          "Requirement",
-
-          :,
-          "Meet",
-          [ "color=red" ],
-          "Krobus",
-
-          [ "/color" ],
-          [ "/if" ],
-          [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "MateoAcceptance" ],
-          "Requirement",
-
-          :,
-          "Wait",
-          { { "VariableTimegate" } },
-          "days",
-          "after",
-          "seeing",
-          "the",
-          "(DESTY_WRITE_STUFF",
-          "Name",
-          "of",
-          "SnS.Ch1.Mateo.6",
-          "event)",
-          "event.",
-          [ "/if" ],
-          [ "/else" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.9" ],
-          [ "font=dialogue" ],
-          "Mateo",
-
-          "Event",
-          :,
-          7,
-          "Hearts",
-          "pt",
-          2,
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.10" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 1750, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "MateoPain" ],
-          "Hint",
-
-          :,
-          "Visit",
-          [ "color=green" ],
-          "Pelican",
-
-          "Town",
-          [ "/color" ],
-          "in",
-          "the",
-          "evening",
-          "when",
-          "it",
-          "isn't Friday.[/if]",
-          [ "else" ],
-          [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 1750 ],
-          "Requirement",
-
-          :,
-          7,
-          "Hearts",
-          "with",
-          [ "color=red" ],
-          "Mateo",
-
-          [ "/color" ],
-          [ "/if" ],
-          [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "MateoPain" ],
-          "Requirement",
-
-          :,
-          "Wait",
-          { { "VariableTimegate" } },
-          "days",
-          "after",
-          "the",
-          "previous",
-          "event.",
-          [ "/if" ],
-          [ "/else" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.10" ],
-          [ "font=dialogue" ],
-          "Mateo",
-
-          "Event",
-          :,
-          8,
-          "Hearts",
-          "pt",
-          1,
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.11" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 2000, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "MateoRecovery" ],
-          "Hint",
-
-          :,
-          "Visit",
-          [ "color=green" ],
-          "East",
-
-          "Scarp",
-          [ "/color" ],
-          "between",
-          "late",
-          "morning",
-          "and",
-          "early",
-          "evening",
-          "on",
-          "a",
-          "sunny",
-          "day.",
-          [ "/if" ],
-          [ "else" ],
-          [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 2000 ],
-          "Requirement",
-
-          :,
-          8,
-          "Hearts",
-          "with",
-          [ "color=red" ],
-          "Mateo",
-
-          [ "/color" ],
-          [ "/if" ],
-          [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "MateoRecovery" ],
-          "Requirement",
-
-          :,
-          "Wait",
-          { { "VariableTimegate" } },
-          "days",
-          "after",
-          "the",
-          "previous",
-          "event.",
-          [ "/if" ],
-          [ "/else" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.11" ],
-          [ "font=dialogue" ],
-          "Special",
-
-          "Order",
-          :,
-          "Mateo's Request[/font]",
-          [ "if=PLAYER_SPECIAL_ORDER_COMPLETE", "Current", "Mateo.SpecialOrders.BuildGuild" ],
-          "You",
-
-          "gathered",
-          "materials",
-          "for",
-          [ "color=red" ],
-          "Mateo",
-
-          [ "/color" ],
-          ".",
-
-          [ "/if" ],
-          [ "else" ],
-          "Gather",
-
-          "materials",
-          "for",
-          "the",
-          "new",
-          "branch",
-          "of",
-          "the",
-          "adventurer's guild:",
-          "*",
-          500,
-          [ "itemtooltip=(O)388" ],
-          [ "icon=Maps/springobjects", :, 64, 256, 16, 16 ],
-          [ "color=blue" ],
-          "Wood",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          300,
-          [ "itemtooltip=(O)390" ],
-          [ "icon=Maps/springobjects", :, 96, 256, 16, 16 ],
-          [ "color=blue" ],
-          "Stone",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          100,
-          [ "itemtooltip=(O)709" ],
-          [ "icon=Maps/springobjects", :, 208, 464, 16, 16 ],
-          [ "color=blue" ],
-          "Hardwood",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          [ "if=!PLAYER_SPECIAL_ORDER_ACTIVE", "Current", "Mateo.SpecialOrders.BuildGuild" ],
-          "You",
-
-          "seem",
-          "to",
-          "be",
-          "missing",
-          "the",
-          "special",
-          "order.",
-          [ "onceaction=AddSpecialOrder", "Mateo.SpecialOrders.BuildGuild" ],
-          "Click",
-
-          "here",
-          "to",
-          "re-add",
-          "it",
-          "to",
-          "your",
-          "journal.",
-          [ "/onceaction" ],
-          [ "/if" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_SPECIAL_ORDER_COMPLETE", "Current", "Mateo.SpecialOrders.BuildGuild" ],
-          [ "font=dialogue" ],
-          "Mateo",
-
-          "Event",
-          :,
-          8,
-          "Hearts",
-          "pt",
-          2,
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.12" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 2000 ],
-          "Hint",
-
-          :,
-          "Visit",
-          [ "color=green" ],
-          "East",
-
-          "Scarp",
-          [ "/color" ],
-          "between",
-          "late",
-          "morning",
-          "and",
-          "early",
-          "evening",
-          "on",
-          "a",
-          "sunny",
-          "day.",
-          [ "/if" ],
-          [ "else" ],
-          "Requirement",
-
-          :,
-          8,
-          "Hearts",
-          "with",
-          [ "color=red" ],
-          "Mateo",
-
-          [ "/color" ],
-          [ "/else" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.12" ],
-          [ "font=dialogue" ],
-          "Mateo",
-
-          "Event",
-          :,
-          10,
-          "Hearts",
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.13" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 2500, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "CGuildComplete" ],
-          "Hint",
-
-          :,
-          "Visit",
-          "the",
-          [ "color=green" ],
-          "Railroad",
-
-          [ "/color" ],
-          "in",
-          "the",
-          "evening",
-          "when",
-          "it",
-          "isn't Friday.[/if]",
-          [ "else" ],
-          [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Mateo", 2500 ],
-          "Requirement",
-
-          :,
-          10,
-          "Hearts",
-          "with",
-          [ "color=red" ],
-          "Mateo",
-
-          [ "/color" ],
-          [ "/if" ],
-          [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "CGuildComplete" ],
-          "Requirement",
-
-          :,
-          "Wait",
-          "a",
-          "day",
-          "after",
-          "the",
-          "previous",
-          "event.",
-          [ "/if" ],
-          [ "/else" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.14" ],
-          [ "font=dialogue" ],
-          "Event",
-
-          :,
-          "Artificer",
-          "Skill",
-          "Unlock",
-          [ "/font" ],
-          [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch1.Mateo.14" ],
-          "Complete!",
-
-          [ "/if" ],
-          [ "else" ],
-          "Hint",
-          :,
-          "Visit",
-          "the",
-          [ "color=green" ],
-          "Coastal",
-
-          "Adventurer's Guild[/color] between late morning and early evening.",
-          [ "/else" ],
-          [ "/if" ],
-          ", // NOTE: SnS.Ch1.Mateo.13 is not included since it is optional and can be missed.,,,,,
-          "guidebook.chapter.NEA.ArtificerSkill",
-          :,
-          "[center][font=dialogue]Artificer Skill[/font][/center],,,,,
-          "You've unlocked the Artificer skill! Artificer can be levelled up killing monsters and mining.",
-
-          [ "font=dialogue" ],
-          "Unlocks",
-
-          [ "/font" ],
-          "*",
-          "Level",
-          1,
-          "-",
-          "Unlocks",
-          "the",
-          [ "itemtooltip=(O)DN.SnS_ClothArmor" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 32, 48, 16, 16 ],
-          [ "color=blue" ],
-          "Cloth",
-
-          "Armor",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          [ "itemtooltip=(W)DN.SnS_Bow" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 32, 80, 16, 16 ],
-          [ "color=blue" ],
-          "Bow",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "and",
-          [ "itemtooltip=(O)DN.SnS_Arrow" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 16, 64, 16, 16 ],
-          [ "color=blue" ],
-          "Arrow",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "recipes.",
-          "*",
-          "Level",
-          2,
-          "-",
-          "Pure",
-          "ore",
-          "now",
-          "has",
-          "a",
-          "chance",
-          "to",
-          "drop",
-          "from",
-          "their",
-          "respective",
-          "ore",
-          "nodes.",
-          "These",
-          "can",
-          "be",
-          "smelted",
-          "used",
-          "at",
-          "the",
-          [ "color=green" ],
-          "Underforge",
-
-          [ "/color" ],
-          "(see",
-          "the",
-          [ "color=black" ],
-          "Underforge",
-
-          [ "/color" ],
-          "section",
-          "later",
-          "on",
-          "this",
-          "page",
-          "for",
-          "more",
-          "details)",
-          "or",
-          "crafted",
-          "into",
-          "armor.",
-          "(Each",
-          "tier",
-          "of",
-          "armor",
-          "also",
-          "requires",
-          "the",
-          "previous",
-          "tier",
-          "as",
-          "an",
-          "ingredient.)",
-          "Unlocks",
-          "the",
-          [ "itemtooltip=(O)DN.SnS_CopperArmor" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 48, 48, 16, 16 ],
-          [ "color=blue" ],
-          "Copper",
-
-          "Armor",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          [ "itemtooltip=(O)DN.SnS_IronArmor" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 64, 48, 16, 16 ],
-          [ "color=blue" ],
-          "Iron",
-
-          "Armor",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          [ "itemtooltip=(O)DN.SnS_GoldArmor" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 80, 48, 16, 16 ],
-          [ "color=blue" ],
-          "Gold",
-
-          "Armor",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          [ "itemtooltip=(O)DN.SnS_IridiumArmor" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 96, 48, 16, 16 ],
-          [ "color=blue" ],
-          "Iridium",
-
-          "Armor",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          [ "itemtooltip=(O)DN.SnS_RadioactiveArmor" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 0, 64, 16, 16 ],
-          [ "color=blue" ],
-          "Radioactive",
-
-          "Armor",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "recipes.",
-          "*",
-          "Level",
-          3,
-          "-",
-          "Unlocks",
-          "the",
-          [ "itemtooltip=(O)DN.SnS_FirestormArrow" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 32, 64, 16, 16 ],
-          [ "color=blue" ],
-          "Firestorm",
-
-          "Arrow",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "and",
-          [ "itemtooltip=(O)DN.SnS_IcicleArrow" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 48, 64, 16, 16 ],
-          [ "color=blue" ],
-          "Icicle",
-
-          "Arrow",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "recipes.",
-          "*",
-          "Level",
-          4,
-          "-",
-          "Exquisite",
-          "gems",
-          "now",
-          "have",
-          "a",
-          "chance",
-          "to",
-          "drop",
-          "from",
-          "their",
-          "respective",
-          "gem",
-          "nodes.",
-          "These",
-          "can",
-          "be",
-          "used",
-          "at",
-          "the",
-          [ "color=green" ],
-          "Underforge",
-
-          [ "/color" ],
-          "(see",
-          "the",
-          [ "color=black" ],
-          "Underforge",
-
-          [ "/color" ],
-          "section",
-          "later",
-          "on",
-          "this",
-          "page",
-          "for",
-          "more",
-          "details).",
-          "They",
-          "can",
-          "also",
-          "be",
-          "crafted",
-          "with",
-          "enough",
-          "of",
-          "their",
-          "original",
-          "gemstone.",
-          "*",
-          "Level",
-          5,
-          "-",
-          "See",
-          [ "color=black" ],
-          "Professions",
-
-          [ "/color" ],
-          "later",
-          "on",
-          "this",
-          "page.",
-          "*",
-          "Level",
-          6,
-          "-",
-          "You",
-          "can",
-          "now",
-          "perform",
-          "Blade",
-          "Coating",
-          "at",
-          "the",
-          [ "color=green" ],
-          "Underforge",
-
-          [ "/color" ],
-          "using",
-          "certain",
-          "monster",
-          "loot",
-          "(see",
-          "the",
-          [ "color=black" ],
-          "Underforge",
-
-          [ "/color" ],
-          "section",
-          "later",
-          "on",
-          "this",
-          "page",
-          "for",
-          "more",
-          "details).",
-          "*",
-          "Level",
-          7,
-          "-",
-          "Unlocks",
-          "the",
-          [ "itemtooltip=(O)DN.SnS_WindwakerArrow" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 80, 64, 16, 16 ],
-          [ "color=blue" ],
-          "Windwaker",
-
-          "Arrow",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "recipe.",
-          "*",
-          "Level",
-          8,
-          "-",
-          "Unlocks",
-          "the",
-          [ "itemtooltip=(O)DN.SnS_RicochetArrow" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 0, 80, 16, 16 ],
-          [ "color=blue" ],
-          "Ricochet",
-
-          "Arrow",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "recipe.",
-          "*",
-          "Level",
-          9,
-          "-",
-          "Unlocks",
-          "the",
-          [ "itemtooltip=(O)DN.SnS_LightbringerArrow" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 16, 80, 16, 16 ],
-          [ "color=blue" ],
-          "Lightbringer",
-
-          "Arrow",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "recipe.",
-          "*",
-          "Level",
-          7,
-          "-",
-          "See",
-          [ "color=black" ],
-          "Professions",
-
-          [ "/color" ],
-          "later",
-          "on",
-          "this",
-          "page.",
-
-          [ "font=dialogue" ],
-          "Underforge",
-
-          [ "/font" ],
-          "You",
-          "can",
-          "go",
-          "to",
-          "the",
-          [ "color=green" ],
-          "Underforge",
-
-          [ "/color" ],
-          "in",
-          "the",
-          [ "color=green" ],
-          "Coastal",
-
-          "Adventurer's Guild[/color] by going through a door to the right of the main room. Here, you can attach three different types of items to your weapon to make them stronger. You can do this by using the forge in the top left of the map.",
-
-          "You",
-          "can",
-          "attach",
-          25,
-          "pure",
-          "ore",
-          "to",
-          "a",
-          "weapon",
-          "to",
-          "improve",
-          "it's damage:",
-          "*",
-          [ "itemtooltip=(O)DN.SnS_PureCopperOre" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 64, 32, 16, 16 ],
-          [ "color=blue" ],
-          "Pure",
-
-          "Copper",
-          "Ore",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          "+5%",
-          "damage",
-          "*",
-          [ "itemtooltip=(O)DN.SnS_PureIronOre" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 80, 32, 16, 16 ],
-          [ "color=blue" ],
-          "Pure",
-
-          "Iron",
-          "Ore",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          "+10%",
-          "damage",
-          "*",
-          [ "itemtooltip=(O)DN.SnS_PureGoldOre" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 96, 32, 16, 16 ],
-          [ "color=blue" ],
-          "Pure",
-
-          "Gold",
-          "Ore",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          "+15%",
-          "damage",
-          "*",
-          [ "itemtooltip=(O)DN.SnS_PureIridiumOre" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 0, 48, 16, 16 ],
-          [ "color=blue" ],
-          "Pure",
-
-          "Iridium",
-          "Ore",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          "+20%",
-          "damage",
-          "*",
-          [ "itemtooltip=(O)DN.SnS_PureRadioactiveOre" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 16, 48, 16, 16 ],
-          [ "color=blue" ],
-          "Pure",
-
-          "Radioactive",
-          "Ore",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          "+25%",
-          "damage",
-
-          "You",
-          "can",
-          "attach",
-          "an",
-          "exquisite",
-          "gem",
-          "to",
-          "a",
-          "weapon",
-          "to",
-          "give",
-          "it",
-          "new",
-          "effects",
-          :,
-          "*",
-          [ "itemtooltip=(O)DN.SnS_ExquisiteEmerald" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 0, 0, 16, 16 ],
-          [ "color=blue" ],
-          "Exquisite",
-
-          "Emerald",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          [ "texttooltip=Evasive", :, "Increases", "your", "speed", "by", "+1.5", "for", 5, "seconds", "after", "hitting", "an", "enemy." ],
-          [ "color=purple" ],
-          "Evasive",
-
-          [ "/color" ],
-          [ "/texttooltip" ],
-          "*",
-          [ "itemtooltip=(O)DN.SnS_ExquisiteTopaz" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 16, 0, 16, 16 ],
-          [ "color=blue" ],
-          "Exquisite",
-
-          "Topaz",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          [ "texttooltip=Defensive", :, "Reduces", "incoming", "damage", "by", "15%." ],
-          [ "color=purple" ],
-          "Defensive",
-
-          [ "/color" ],
-          [ "/texttooltip" ],
-          "*",
-          [ "itemtooltip=(O)DN.SnS_ExquisiteRuby" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 32, 0, 16, 16 ],
-          [ "color=blue" ],
-          "Exquisite",
-
-          "Ruby",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          [ "texttooltip=Harming", :, "Deals", "an", "extra", "10%", "damage", "to", "an", "enemy", "once", "every", "second", "for", 3, "seconds", "after", "hitting", "it." ],
-          [ "color=purple" ],
-          "Harming",
-
-          [ "/color" ],
-          [ "/texttooltip" ],
-          "*",
-          [ "itemtooltip=(O)DN.SnS_ExquisiteJade" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 48, 0, 16, 16 ],
-          [ "color=blue" ],
-          "Exquisite",
-
-          "Jade",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          [ "texttooltip=Restful", :, "Grants", "+2", "stamina", "upon", "hitting", "an", "enemy." ],
-          [ "color=purple" ],
-          "Restful",
-
-          [ "/color" ],
-          [ "/texttooltip" ],
-          "*",
-          [ "itemtooltip=(O)DN.SnS_ExquisiteAmethyst" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 64, 0, 16, 16 ],
-          [ "color=blue" ],
-          "Exquisite",
-
-          "Amethyst",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          [ "texttooltip=Freezing", :, "15%", "chance", "of", "freezing", "an", "enemy", "on", "hit." ],
-          [ "color=purple" ],
-          "Freezing",
-
-          [ "/color" ],
-          [ "/texttooltip" ],
-          "*",
-          [ "itemtooltip=(O)DN.SnS_ExquisiteDiamond" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 80, 0, 16, 16 ],
-          [ "color=blue" ],
-          "Exquisite",
-
-          "Diamond",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          [ "texttooltip=Healthy", :, "Grants", "+1", "health", "upon", "hitting", "an", "enemy." ],
-          [ "color=purple" ],
-          "Healthy",
-
-          [ "/color" ],
-          [ "/texttooltip" ],
-          "*",
-          [ "itemtooltip=(O)DN.SnS_ExquisiteAquamarine" ],
-          [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsarsenal.png", :, 96, 0, 16, 16 ],
-          [ "color=blue" ],
-          "Exquisite",
-
-          "Aquamarine",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          [
-            "texttooltip=Critical",
-            :,
-            "Provides",
-
-            "a",
-            "15%",
-            "chance",
-            "of",
-            "a",
-            "critical",
-            "hit",
-            "when",
-            "hitting",
-            "an",
-            "enemy.",
-            "(If",
-            "the",
-            "hit",
-            "is",
-            "already",
-            "a",
-            "critical",
-            "hit",
-            "the",
-            "damage",
-            "will",
-            "be",
-            "multiplied",
-            "again."
-          ],
-          [ "color=purple" ],
-          "Critical",
-
-          [ "/color" ],
-          [ "/texttooltip" ],
-
-          "You",
-          "can",
-          "attach",
-          "a",
-          "large",
-          "amount",
-          "of",
-          "certain",
-          "monster",
-          "loot",
-          "to",
-          "a",
-          "weapon",
-          "to",
-          "give",
-          "it",
-          "new",
-          "effects",
-          :,
-          "*",
-          999,
-          [ "itemtooltip=(O)766" ],
-          [ "icon=Maps/springobjects", :, 352, 496, 16, 16 ],
-          [ "color=blue" ],
-          "Slime",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          [ "texttooltip=Slimy", :, "Slows", "down", "enemies", "upon", "hit.", "Works", "once", "per", "enemy." ],
-          [ "color=purple" ],
-          "Slimy",
-
-          [ "/color" ],
-          [ "/texttooltip" ],
-          "*",
-          300,
-          [ "itemtooltip=(O)769" ],
-          [ "icon=Maps/springobjects", :, 16, 512, 16, 16 ],
-          [ "color=blue" ],
-          "Void",
-
-          "Essence",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          [ "texttooltip=Shadow", "Duplicates", :, "Basic", "attacks", "affect", "all", "four", "cardinal", "directions.", "(Attacks", "in", "the", "other", "directions", "are", "invisible.)" ],
-          [ "color=purple" ],
-          "Shadow",
-
-          "Duplicates",
-          [ "/color" ],
-          [ "/texttooltip" ],
-          "*",
-          300,
-          [ "itemtooltip=(O)768" ],
-          [ "icon=Maps/springobjects", :, 0, 512, 16, 16 ],
-          [ "color=blue" ],
-          "Solar",
-
-          "Essence",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          [ "texttooltip=Explosive", "Demise", :, "Upon", "killing", "a", "mob", "they", "blow", "up.", "No", "damage", "to", "farmer." ],
-          [ "color=purple" ],
-          "Explosive",
-
-          "Demise",
-          [ "/color" ],
-          [ "/texttooltip" ],
-          "*",
-          300,
-          [ "itemtooltip=(O)684" ],
-          [ "icon=Maps/springobjects", :, 192, 448, 16, 16 ],
-          [ "color=blue" ],
-          "Bug",
-
-          "Meat",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          [ "texttooltip=Greedy", :, "Mob", "drops", "are", "rolled", "twice." ],
-          [ "color=purple" ],
-          "Greedy",
-
-          [ "/color" ],
-          [ "/texttooltip" ],
-          "*",
-          500,
-          [ "itemtooltip=(O)767" ],
-          [ "icon=Maps/springobjects", :, 368, 496, 16, 16 ],
-          [ "color=blue" ],
-          "Bat",
-
-          "Wing",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "-",
-          [ "texttooltip=Floating", :, "You", "can", "attack", "across", "stones", "and", "other", "objects." ],
-          [ "color=purple" ],
-          "Floating",
-
-          [ "/color" ],
-          [ "/texttooltip" ],
-
-          "You",
-          "can",
-          "choose",
-          "one",
-          "item",
-          "type",
-          "from",
-          "each",
-          "category",
-          "above.",
-
-          [ "font=dialogue" ],
-          "Professions",
-
-          [ "/font" ],
-          "Level",
-          5,
-          :,
-          "*",
-          "Artificer",
-          "Specialist",
-          "-",
-          "Once",
-          "an",
-          "hour",
-          "get",
-          "a",
-          "chance",
-          "to",
-          "recover",
-          "Armor",
-          "Points",
-          "by",
-          "changing",
-          "locations.",
-          "*",
-          "Rogueish",
-          "Archetype",
-          "-",
-          "25%",
-          "chance",
-          "of",
-          "shooting",
-          "a",
-          "second",
-          "arrow",
-          "without",
-          "consuming",
-          "additional",
-          "ammo.",
-
-          "Level",
-          10,
-          "if",
-          "you",
-          "chose",
-          "Artificer",
-          "Specialist",
-          :,
-          "*",
-          "Flash",
-          "of",
-          "Genius",
-          "-",
-          "The",
-          "first",
-          "craftable",
-          "you",
-          "make",
-          "each",
-          "day",
-          "has",
-          "zero",
-          "ingredient",
-          "cost.",
-          "(Ingredients",
-          "must",
-          "still",
-          "be",
-          "owned",
-          "however.)",
-          "*",
-          "Armor",
-          "Proficiency",
-          "-",
-          "Adds",
-          "50%",
-          "more",
-          "armor",
-          "points",
-          "on",
-          "top",
-          "of",
-          "your",
-          "total",
-          "amount.",
-
-          "Level",
-          10,
-          "if",
-          "you",
-          "chose",
-          "Rogueish",
-          "Archetype",
-          :,
-          "*",
-          "Shadowstep",
-          "-",
-          "Grants",
-          "the",
-          [
-            "texttooltip=Shadowstep",
-            :,
-            "Become",
-
-            "hidden",
-            "reducing",
-            "most",
-            "monster",
-            "aggro",
-            "until",
-            "you",
-            "attack.",
-            "Your",
-            "first",
-            "attack",
-            "after",
-            "using",
-            "the",
-            "ability",
-            "is",
-            "an",
-            "automatic",
-            "critical",
-            "hit."
-          ],
-          [ "color=DarkOrange" ],
-          "Shadowstep",
-
-          [ "/color" ],
-          [ "/texttooltip" ],
-          "ability",
-          "(usable",
-          "with",
-          "the",
-          "Adventure",
-          "Bar",
-          "see",
-          [ "link=Title/Mechanics" ],
-          "New",
-
-          "Mechanics",
-          [ "/link" ],
-          "for",
-          "more",
-          "info).",
-          "*",
-          "Hunter's Mark - Once a creature is attacked, consecutive hits on the same creature do slightly more damage each time.\",",
-
-          "guidebook.chapter.COT.name",
-          :,
-          "Circle of Thorns",
-          "guidebook.chapter.COT.Intro",
-          :,
-          "[center][font=dialogue]Introduction[/font][/center],,,,,
-          "The",
-          "second",
-          "chapter",
-          "of",
-          "S&S",
-          "reveals",
-          "the",
-          "identity",
-          "of",
-          "B",
-          "who",
-          "introduces",
-          "themselves",
-          "as",
-          "'Hector';",
-          "a",
-          "druid",
-          "deeply",
-          "rooted",
-          "to",
-          "the",
-          "earth",
-          "itself.",
-          "Learn",
-          "about",
-          "what",
-          "has",
-          "this",
-          "wolf",
-          "snapping",
-          "at",
-          "the",
-          "hand",
-          "that",
-          "feeds",
-          "them",
-          "-",
-          "gain",
-          "the",
-          "trust",
-          "of",
-          "one",
-          "of",
-          "the",
-          "Valley's nature guardians and purify a river corrupted by pollution, learn the Druid skill, collect Druidic Essences, and unlock the True Grove and the secrets it hides.\",",
-          "guidebook.chapter.COT.Hector",
-          :,
-          "[nospacing],,,,,
-          [ "nextposition=0", 10 ],
-          [ "center=300" ],
-          [ "font=dialogue" ],
-          { { "TrueName" } },
-          [ "/font" ],
-          [ "/center" ],
-          [ "offset=118", 50 ],
-          [ "image=Characters/Hector", :, 0, 0, 16, 32, :, 4 ],
-          [ "offset=-118", 144 ],
-          [ "center=300" ],
-          "Pronouns",
-
-          :,
-          { { "DailyPronouns" } },
-          [ "/center" ],
-          [ "offset=0", 32 ],
-          [ "center=300" ],
-          "Birthday",
-
-          :,
-          "Winter",
-          21,
-          [ "/center" ],
-          [ "nextposition=322", 16 ],
-          [ "image=Portraits/Hector", :, 0, 0, 64, 64, :, 4 ],
-          [ "nextposition=0", 288 ],
-          [ "/nospacing" ],
-          { { "TrueName" } },
-          "is",
-          "an",
-          "elusive",
-          "Druid",
-          "living",
-          "in",
-          "a",
-          "dilapidated",
-          "old",
-          "tower.",
-          "Seemingly",
-          "having",
-          "been",
-          "around",
-          "as",
-          "long",
-          "as",
-          "the",
-          "land",
-          "itself",
-          "this",
-          "knowledgeable",
-          "yet",
-          "bitey",
-          "shapeshifter",
-          "has",
-          "a",
-          "lot",
-          "to",
-          "learn",
-          "about",
-          "social",
-          "graces.",
-          "However",
-          "they",
-          "have",
-          "a",
-          "lot",
-          "to",
-          "offer",
-          "those",
-          "who",
-          "prove",
-          "themselves",
-          "trustworthy.\",",
-          "guidebook.chapter.COT.Events",
-          :,
-          "[center][font=dialogue]Story so far[/font][/center],,,,,
-          [
-            "if=!",
-            { { "SkipIntroQuest" } }
-          ],
-          [ "font=dialogue" ],
-          "Special",
-
-          "Order",
-          :,
-          "Offerings",
-          "for",
-          "Spring",
-          [ "/font" ],
-          [ "if=PLAYER_SPECIAL_ORDER_COMPLETE", "Current", "CAGQuest.UntimedSpecialOrder.Pentacle1" ],
-          "You",
-
-          "made",
-          "the",
-          "offerings",
-          "for",
-          "spring.",
-          [ "/if" ],
-          [ "else" ],
-          "Make",
-
-          "the",
-          "following",
-          "offerings",
-          "to",
-          "the",
-          "altar",
-          "near",
-          "the",
-          "dilapidated",
-          "tower",
-          "in",
-          "the",
-          [ "color=green" ],
-          "Deep",
-
-          "Mountains",
-          [ "/color" ],
-          :,
-          "*",
-          3,
-          [ "itemtooltip=(O)24" ],
-          [ "icon=Maps/springobjects", :, 0, 16, 16, 16 ],
-          [ "color=blue" ],
-          "Parsnip",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)18" ],
-          [ "icon=Maps/springobjects", :, 352, 0, 16, 16 ],
-          [ "color=blue" ],
-          "Daffodil",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)20" ],
-          [ "icon=Maps/springobjects", :, 320, 0, 16, 16 ],
-          [ "color=blue" ],
-          "Leek",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)400" ],
-          [ "icon=Maps/springobjects", :, 256, 256, 16, 16 ],
-          [ "color=blue" ],
-          "Strawberry",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)399" ],
-          [ "icon=Maps/springobjects", :, 240, 256, 16, 16 ],
-          [ "color=blue" ],
-          "Spring",
-
-          "Onion",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          [ "if=!PLAYER_SPECIAL_ORDER_ACTIVE", "Current", "CAGQuest.UntimedSpecialOrder.Pentacle1" ],
-          "You",
-
-          "seem",
-          "to",
-          "be",
-          "missing",
-          "the",
-          "special",
-          "order.",
-          [ "onceaction=AddSpecialOrder", "CAGQuest.UntimedSpecialOrder.Pentacle1" ],
-          "Click",
-
-          "here",
-          "to",
-          "re-add",
-          "it",
-          "to",
-          "your",
-          "journal.",
-          [ "/onceaction" ],
-          [ "/if" ],
-          [ "/else" ],
-
-          [ "if=PLAYER_HAS_MAIL", "Current", "Hector_SpecialOrders_Pentacle1" ],
-          [ "font=dialogue" ],
-          "Special",
-
-          "Order",
-          :,
-          "Offerings",
-          "for",
-          "Summer",
-          [ "/font" ],
-          [ "if=PLAYER_SPECIAL_ORDER_COMPLETE", "Current", "CAGQuest.UntimedSpecialOrder.Pentacle2" ],
-          "You",
-
-          "made",
-          "the",
-          "offerings",
-          "for",
-          "summer.",
-          [ "/if" ],
-          [ "else" ],
-          "Make",
-
-          "the",
-          "following",
-          "offerings",
-          "to",
-          "the",
-          "altar",
-          "near",
-          "the",
-          "dilapidated",
-          "tower",
-          "in",
-          "the",
-          [ "color=green" ],
-          "Deep",
-
-          "Mountains",
-          [ "/color" ],
-          :,
-          "*",
-          3,
-          [ "itemtooltip=(O)234" ],
-          [ "icon=Maps/springobjects", :, 288, 160, 16, 16 ],
-          [ "color=blue" ],
-          "Blueberry",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)396" ],
-          [ "icon=Maps/springobjects", :, 192, 256, 16, 16 ],
-          [ "color=blue" ],
-          "Spice",
-
-          "Berry",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)402" ],
-          [ "icon=Maps/springobjects", :, 288, 256, 16, 16 ],
-          [ "color=blue" ],
-          "Sweet",
-
-          "Pea",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)270" ],
-          [ "icon=Maps/springobjects", :, 96, 176, 16, 16 ],
-          [ "color=blue" ],
-          "Corn",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)420" ],
-          [ "icon=Maps/springobjects", :, 192, 272, 16, 16 ],
-          [ "color=blue" ],
-          "Red",
-
-          "Mushroom",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          [ "if=!PLAYER_SPECIAL_ORDER_ACTIVE", "Current", "CAGQuest.UntimedSpecialOrder.Pentacle2" ],
-          "You",
-
-          "seem",
-          "to",
-          "be",
-          "missing",
-          "the",
-          "special",
-          "order.",
-          [ "onceaction=AddSpecialOrder", "CAGQuest.UntimedSpecialOrder.Pentacle2" ],
-          "Click",
-
-          "here",
-          "to",
-          "re-add",
-          "it",
-          "to",
-          "your",
-          "journal.",
-          [ "/onceaction" ],
-          [ "/if" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_MAIL", "Current", "Hector_SpecialOrders_Pentacle2" ],
-          [ "font=dialogue" ],
-          "Special",
-
-          "Order",
-          :,
-          "Offerings",
-          "for",
-          "Fall",
-          [ "/font" ],
-          [ "if=PLAYER_SPECIAL_ORDER_COMPLETE", "Current", "CAGQuest.UntimedSpecialOrder.Pentacle3" ],
-          "You",
-
-          "made",
-          "the",
-          "offerings",
-          "for",
-          "fall.",
-          [ "/if" ],
-          [ "else" ],
-          "Make",
-
-          "the",
-          "following",
-          "offerings",
-          "to",
-          "the",
-          "altar",
-          "near",
-          "the",
-          "dilapidated",
-          "tower",
-          "in",
-          "the",
-          [ "color=green" ],
-          "Deep",
-
-          "Mountains",
-          [ "/color" ],
-          :,
-          "*",
-          3,
-          [ "itemtooltip=(O)278" ],
-          [ "icon=Maps/springobjects", :, 224, 176, 16, 16 ],
-          [ "color=blue" ],
-          "Bok",
-
-          "Choy",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)300" ],
-          [ "icon=Maps/springobjects", :, 192, 192, 16, 16 ],
-          [ "color=blue" ],
-          "Amaranth",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)406" ],
-          [ "icon=Maps/springobjects", :, 352, 256, 16, 16 ],
-          [ "color=blue" ],
-          "Wild",
-
-          "Plum",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)410" ],
-          [ "icon=Maps/springobjects", :, 32, 272, 16, 16 ],
-          [ "color=blue" ],
-          "Blackberry",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)282" ],
-          [ "icon=Maps/springobjects", :, 288, 176, 16, 16 ],
-          [ "color=blue" ],
-          "Cranberries",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          [ "if=!PLAYER_SPECIAL_ORDER_ACTIVE", "Current", "CAGQuest.UntimedSpecialOrder.Pentacle3" ],
-          "You",
-
-          "seem",
-          "to",
-          "be",
-          "missing",
-          "the",
-          "special",
-          "order.",
-          [ "onceaction=AddSpecialOrder", "CAGQuest.UntimedSpecialOrder.Pentacle3" ],
-          "Click",
-
-          "here",
-          "to",
-          "re-add",
-          "it",
-          "to",
-          "your",
-          "journal.",
-          [ "/onceaction" ],
-          [ "/if" ],
-          [ "/else" ],
-          [ "/if" ],
-
-          [ "if=PLAYER_HAS_MAIL", "Current", "Hector_SpecialOrders_Pentacle3" ],
-          [ "font=dialogue" ],
-          "Special",
-
-          "Order",
-          :,
-          "Offerings",
-          "for",
-          "Winter",
-          [ "/font" ],
-          [ "if=PLAYER_SPECIAL_ORDER_COMPLETE", "Current", "CAGQuest.UntimedSpecialOrder.Pentacle4" ],
-          "You",
-
-          "made",
-          "the",
-          "offerings",
-          "for",
-          "winter.",
-          [ "/if" ],
-          [ "else" ],
-          "Make",
-
-          "the",
-          "following",
-          "offerings",
-          "to",
-          "the",
-          "altar",
-          "near",
-          "the",
-          "dilapidated",
-          "tower",
-          "in",
-          "the",
-          [ "color=green" ],
-          "Deep",
-
-          "Mountains",
-          [ "/color" ],
-          :,
-          "*",
-          3,
-          [ "itemtooltip=(O)412" ],
-          [ "icon=Maps/springobjects", :, 64, 272, 16, 16 ],
-          [ "color=blue" ],
-          "Winter",
-
-          "Root",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)414" ],
-          [ "icon=Maps/springobjects", :, 96, 272, 16, 16 ],
-          [ "color=blue" ],
-          "Crystal",
-
-          "Fruit",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)416" ],
-          [ "icon=Maps/springobjects", :, 128, 272, 16, 16 ],
-          [ "color=blue" ],
-          "Snow",
-
-          "Yam",
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)418" ],
-          [ "icon=Maps/springobjects", :, 160, 272, 16, 16 ],
-          [ "color=blue" ],
-          "Crocus",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          "*",
-          3,
-          [ "itemtooltip=(O)283" ],
-          [ "icon=Maps/springobjects", :, 304, 176, 16, 16 ],
-          [ "color=blue" ],
-          "Holly",
-
-          [ "/color" ],
-          [ "/itemtooltip" ],
-          [ "if=!PLAYER_SPECIAL_ORDER_ACTIVE", "Current", "CAGQuest.UntimedSpecialOrder.Pentacle4" ],
-          "You",
-
-          "seem",
-          "to",
-          "be",
-          "missing",
-          "the",
-          "special",
-          "order.",
-          [ "onceaction=AddSpecialOrder", "CAGQuest.UntimedSpecialOrder.Pentacle4" ],
-          "Click",
-
-          "here",
-          "to",
-          "re-add",
-          "it",
-          "to",
-          "your",
-          "journal.",
-          [ "/onceaction" ],
-          [ "/if" ],
-          [ "/else" ],
-          [ "/if" ],
-          [ "/if" ],
-
-          [
-            "if=ANY",
-            "\\\"{{SkipIntroQuest}}\\\" \\\"!{{SkipIntroQuest}}, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle1, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle2, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle3, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle4\\\"]",
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            0,
-            "Hearts",
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.1" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            "Hint",
-
-            :,
-            "Visit",
-            "the",
-            [ "color=green" ],
-            "Railroad",
-
-            [ "/color" ],
-            "between",
-            "late",
-            "morning",
-            "and",
-            "late",
-            "evening.",
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.1" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            1,
-            "Heart",
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.2" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 250, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorIntro" ],
-            "Hint",
-
-            :,
-            "Visit",
-            [ "color=green" ],
-            "Hector's Tower[/color] between late morning and late evening.[/if]",
-
-            [ "else" ],
-            [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 250 ],
-            "Requirement",
-
-            :,
-            1,
-            "Heart",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/if" ],
-            [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorIntro" ],
-            "Requirement",
-
-            :,
-            "Wait",
-            { { "VariableTimegate" } },
-            "days",
-            "after",
-            "the",
-            "previous",
-            "event.",
-            [ "/if" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.2" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            2,
-            "Hearts",
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.3" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 500, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorBookIntro" ],
-            "Hint",
-
-            :,
-            "Visit",
-            [ "color=green" ],
-            "Hector's Tower[/color] between late morning and late evening.[/if]",
-
-            [ "else" ],
-            [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 500 ],
-            "Requirement",
-
-            :,
-            2,
-            "Hearts",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/if" ],
-            [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorBookIntro" ],
-            "Requirement",
-
-            :,
-            "Wait",
-            { { "VariableTimegate" } },
-            "days",
-            "after",
-            "the",
-            "previous",
-            "event.",
-            [ "/if" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.3" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            3,
-            "Hearts",
-            "pt",
-            1,
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.4" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 750, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorShapeshift" ],
-            "Hint",
-
-            :,
-            "Visit",
-            [ "color=green" ],
-            "Hector's Tower[/color] between late morning and late evening.[/if]",
-
-            [ "else" ],
-            [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 750 ],
-            "Requirement",
-
-            :,
-            3,
-            "Hearts",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/if" ],
-            [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorShapeshift" ],
-            "Requirement",
-
-            :,
-            "Wait",
-            { { "VariableTimegate" } },
-            "days",
-            "after",
-            "the",
-            "previous",
-            "event.",
-            [ "/if" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.4" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            3,
-            "Hearts",
-            "pt",
-            2,
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.5" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 750, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorBookQuest" ],
-            "Hint",
-
-            :,
-            "Visit",
-            [ "color=green" ],
-            "Hector's Tower[/color] between late morning and late evening on a sunny day.[/if]",
-
-            [ "else" ],
-            [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 750 ],
-            "Requirement",
-
-            :,
-            3,
-            "Hearts",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/if" ],
-            [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorBookQuest" ],
-            "Requirement",
-
-            :,
-            "Wait",
-            { { "VariableTimegate" } },
-            "days",
-            "after",
-            "the",
-            "previous",
-            "event.",
-            [ "/if" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.5" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            4,
-            "Hearts",
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.6" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 1000, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorVet" ],
-            "Hint",
-
-            :,
-            "Visit",
-            [ "color=green" ],
-            "East",
-
-            "Scarp",
-            [ "/color" ],
-            "between",
-            "late",
-            "morning",
-            "and",
-            "late",
-            "afternoon.",
-            [ "/if" ],
-            [ "else" ],
-            [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 1000 ],
-            "Requirement",
-
-            :,
-            4,
-            "Hearts",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/if" ],
-            [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorVet" ],
-            "Requirement",
-
-            :,
-            "Wait",
-            { { "VariableTimegate" } },
-            "days",
-            "after",
-            "the",
-            "previous",
-            "event.",
-            [ "/if" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.6" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            5,
-            "Hearts",
-            "pt",
-            1,
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.7" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 1250, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorVet2" ],
-            "Hint",
-
-            :,
-            "Visit",
-            [ "color=green" ],
-            "East",
-
-            "Scarp",
-            [ "/color" ],
-            "between",
-            "late",
-            "morning",
-            "and",
-            "late",
-            "afternoon.",
-            [ "/if" ],
-            [ "else" ],
-            [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 1250 ],
-            "Requirement",
-
-            :,
-            5,
-            "Hearts",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/if" ],
-            [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorVet2" ],
-            "Requirement",
-
-            :,
-            "Wait",
-            { { "VariableTimegate" } },
-            "days",
-            "after",
-            "the",
-            "previous",
-            "event.",
-            [ "/if" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.7" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            5,
-            "Hearts",
-            "pt",
-            2,
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.8" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 1250, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorGender" ],
-            "Hint",
-
-            :,
-            "Visit",
-            "the",
-            [ "color=green" ],
-            "Vet",
-
-            "House",
-            [ "/color" ],
-            "in",
-            [ "color=Green" ],
-            "East",
-
-            "Scarp",
-            [ "/color" ],
-            "between",
-            "late",
-            "afternoon",
-            "and",
-            "mid",
-            "evening.",
-            [ "/if" ],
-            [ "else" ],
-            [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 1250 ],
-            "Requirement",
-
-            :,
-            5,
-            "Hearts",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/if" ],
-            [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorGender" ],
-            "Requirement",
-
-            :,
-            "Wait",
-            { { "VariableTimegate" } },
-            "days",
-            "after",
-            "the",
-            "previous",
-            "event.",
-            [ "/if" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.8" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            5,
-            "Hearts",
-            "pt",
-            3,
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.9" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 1250, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorVet3" ],
-            "Hint",
-
-            :,
-            "Visit",
-            "the",
-            [ "color=green" ],
-            "Coastal",
-
-            "Adventurer's Guild[/color] between early evening and late evening.[/if]",
-            [ "else" ],
-            [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 1250 ],
-            "Requirement",
-
-            :,
-            5,
-            "Hearts",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/if" ],
-            [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorVet3" ],
-            "Requirement",
-
-            :,
-            "Wait",
-            { { "VariableTimegate" } },
-            "days",
-            "after",
-            "the",
-            "previous",
-            "event.",
-            [ "/if" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.9" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            6,
-            "Hearts",
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.10" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 1500, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorDND" ],
-            "Hint",
-
-            :,
-            "Visit",
-            [ "color=green" ],
-            "Hector's Tower[/color] between mid morning and late evening.[/if]",
-
-            [ "else" ],
-            [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 1500 ],
-            "Requirement",
-
-            :,
-            6,
-            "Hearts",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/if" ],
-            [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorDND" ],
-            "Requirement",
-
-            :,
-            "Wait",
-            { { "VariableTimegate" } },
-            "days",
-            "after",
-            "the",
-            "previous",
-            "event.",
-            [ "/if" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.10" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            7,
-            "Hearts",
-            "pt",
-            1,
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.11" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 1750, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorRiver1" ],
-            "Hint",
-
-            :,
-            "Visit",
-            [ "color=green" ],
-            "East",
-
-            "Scarp",
-            [ "/color" ],
-            "between",
-            "mid",
-            "morning",
-            "and",
-            "early",
-            "evening",
-            "on",
-            "a",
-            "sunny",
-            "day.",
-            [ "/if" ],
-            [ "else" ],
-            [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 1750 ],
-            "Requirement",
-
-            :,
-            7,
-            "Hearts",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/if" ],
-            [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorRiver1" ],
-            "Requirement",
-
-            :,
-            "Wait",
-            { { "VariableTimegate" } },
-            "days",
-            "after",
-            "the",
-            "previous",
-            "event.",
-            [ "/if" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.10" ],
-            [ "font=dialogue" ],
-            "Special",
-
-            "Order",
-            :,
-            "Destroy",
-            "the",
-            "Leaking",
-            "Pipe",
-            [ "/font" ],
-            [ "if=PLAYER_SPECIAL_ORDER_COMPLETE", "Current", "CAGQuest.UntimedSpecialOrder.River1" ],
-            "You",
-
-            "helped",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            "destroy",
-            "the",
-            "leaking",
-            "pipe.",
-            [ "/if" ],
-            [ "else" ],
-            "Deliver",
-
-            "the",
-            "following",
-            "items",
-            "to",
-            "the",
-            "altar",
-            "outside",
-            "of",
-            [ "color=green" ],
-            "Hector's Tower[/color] in the [color=green]Deep Mountains[/color]:",
-
-            "*",
-            1,
-            [ "itemtooltip=(O)74" ],
-            [ "icon=Maps/springobjects", :, 32, 48, 16, 16 ],
-            [ "color=blue" ],
-            "Prismatic",
-
-            "Shard",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "*",
-            5,
-            [ "itemtooltip=(O)454" ],
-            [ "icon=Maps/springobjects", :, 352, 288, 16, 16 ],
-            [ "color=blue" ],
-            "Ancient",
-
-            "Fruit",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "*",
-            3,
-            [ "itemtooltip=(O)586" ],
-            [ "icon=Maps/springobjects", :, 128, 256, 16, 16 ],
-            [ "color=blue" ],
-            "Nautilus",
-
-            "Shell",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "*",
-            10,
-            [ "itemtooltip=(O)259" ],
-            [ "icon=Maps/springobjects", :, 304, 160, 16, 16 ],
-            [ "color=blue" ],
-            "Fiddlehead",
-
-            "Fern",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "*",
-            3,
-            [ "itemtooltip=(O)814" ],
-            [ "icon=Maps/springobjects", :, 352, 528, 16, 16 ],
-            [ "color=blue" ],
-            "Squid",
-
-            "Ink",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            [ "if=!PLAYER_SPECIAL_ORDER_ACTIVE", "Current", "CAGQuest.UntimedSpecialOrder.River1" ],
-            "You",
-
-            "seem",
-            "to",
-            "be",
-            "missing",
-            "the",
-            "special",
-            "order.",
-            [ "onceaction=AddSpecialOrder", "CAGQuest.UntimedSpecialOrder.River1" ],
-            "Click",
-
-            "here",
-            "to",
-            "re-add",
-            "it",
-            "to",
-            "your",
-            "journal.",
-            [ "/onceaction" ],
-            [ "/if" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_MAIL", "Current", "Hector_SpecialOrders_River1" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            7,
-            "Hearts",
-            "pt",
-            2,
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.12" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 1750 ],
-            "Hint",
-
-            :,
-            "Visit",
-            [ "color=green" ],
-            "Hector's Tower[/color] between mid morning and late evening.[/if]",
-
-            [ "else" ],
-            "Requirement",
-
-            :,
-            7,
-            "Hearts",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.12" ],
-            [ "font=dialogue" ],
-            "Special",
-
-            "Order",
-            :,
-            "Collect",
-            "Druidic",
-            "Essences",
-            [ "/font" ],
-            [ "if=PLAYER_SPECIAL_ORDER_COMPLETE", "Current", "CAGQuest.UntimedSpecialOrder.River2" ],
-            "You",
-
-            "collected",
-            "the",
-            "druidic",
-            "essences.",
-            [ "/if" ],
-            [ "else" ],
-            "Deliver",
-
-            "the",
-            "following",
-            "items",
-            "to",
-            "the",
-            "altar",
-            "outside",
-            "of",
-            [ "color=green" ],
-            "Hector's Tower[/color] in the [color=green]Deep Mountains[/color]:",
-
-            "*",
-            100,
-            [ "itemtooltip=(O)DN.SnS_druidicessence" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 80, 0, 16, 16 ],
-            [ "color=blue" ],
-            "Druidic",
-
-            "Essence",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            [ "itemtooltip=(O)DN.SnS_druidicessence" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 80, 0, 16, 16 ],
-            [ "color=blue" ],
-            "Druidic",
-
-            "Essence",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "can",
-            "be",
-            "found",
-            "from",
-            "tilling",
-            "soil",
-            "watering",
-            "crops",
-            "harvesting",
-            "crops",
-            "and",
-            "cutting",
-            "grass.",
-            [ "if=!PLAYER_SPECIAL_ORDER_ACTIVE", "Current", "CAGQuest.UntimedSpecialOrder.River2" ],
-            "You",
-
-            "seem",
-            "to",
-            "be",
-            "missing",
-            "the",
-            "special",
-            "order.",
-            [ "onceaction=AddSpecialOrder", "CAGQuest.UntimedSpecialOrder.River2" ],
-            "Click",
-
-            "here",
-            "to",
-            "re-add",
-            "it",
-            "to",
-            "your",
-            "journal.",
-            [ "/onceaction" ],
-            [ "/if" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_MAIL", "Current", "Hector_SpecialOrders_River2" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            8,
-            "Hearts",
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.13" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 2000 ],
-            "Hint",
-
-            :,
-            "Visit",
-            [ "color=green" ],
-            "Hector's Tower[/color] between mid morning and late evening.[/if]",
-
-            [ "else" ],
-            "Requirement",
-
-            :,
-            8,
-            "Hearts",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.13" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            9,
-            "Hearts",
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.14" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 2250, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorRiver3" ],
-            "Hint",
-
-            :,
-            "Visit",
-            "the",
-            [ "color=green" ],
-            "Coastal",
-
-            "Adventurer's Guild[/color] between mid morning and late afternoon.[/if]",
-            [ "else" ],
-            [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 2250 ],
-            "Requirement",
-
-            :,
-            9,
-            "Hearts",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/if" ],
-            [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorRiver3" ],
-            "Requirement",
-
-            :,
-            "Wait",
-            { { "VariableTimegate" } },
-            "days",
-            "after",
-            "the",
-            "previous",
-            "event.",
-            [ "/if" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.14" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            10,
-            "Hearts",
-            "pt",
-            1,
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.15" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 2500, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorHeal" ],
-            "Hint",
-
-            :,
-            "Visit",
-            "the",
-            [ "color=green" ],
-            "Vet",
-
-            "House",
-            [ "/color" ],
-            "in",
-            [ "color=green" ],
-            "East",
-
-            "Scarp",
-            [ "/color" ],
-            "between",
-            "late",
-            "afternoon",
-            "and",
-            "late",
-            "evening.",
-            [ "/if" ],
-            [ "else" ],
-            [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 2500 ],
-            "Requirement",
-
-            :,
-            10,
-            "Hearts",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/if" ],
-            [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorHeal" ],
-            "Requirement",
-
-            :,
-            "Wait",
-            { { "VariableTimegate" } },
-            "days",
-            "after",
-            "the",
-            "previous",
-            "event.",
-            [ "/if" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.15" ],
-            [ "font=dialogue" ],
-            { { "TrueName" } },
-            "Event",
-            :,
-            10,
-            "Hearts",
-            "pt",
-            2,
-            [ "/font" ],
-            [ "if=PLAYER_HAS_SEEN_EVENT", "Current", "SnS.Ch2.Hector.16" ],
-            "Complete!",
-
-            [ "/if" ],
-            [ "else" ],
-            [ "if=PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 2500, "!PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorHeal2" ],
-            "Hint",
-
-            :,
-            "Visit",
-            "the",
-            [ "color=green" ],
-            "Deep",
-
-            "Mountains",
-            [ "/color" ],
-            "between",
-            "mid",
-            "morning",
-            "and",
-            "late",
-            "evening.",
-            [ "/if" ],
-            [ "else" ],
-            [ "if=!PLAYER_FRIENDSHIP_POINTS", "Current", "Hector", 2500 ],
-            "Requirement",
-
-            :,
-            10,
-            "Hearts",
-            "with",
-            [ "color=red" ],
-            { { "TrueName" } },
-            [ "/color" ],
-            [ "/if" ],
-            [ "if=PLAYER_HAS_CONVERSATION_TOPIC", "Current", "HectorHeal2" ],
-            "Requirement",
-
-            :,
-            "Wait",
-            { { "VariableTimegate" } },
-            "days",
-            "after",
-            "the",
-            "previous",
-            "event.",
-            [ "/if" ],
-            [ "/else" ],
-            [ "/else" ],
-            [ "/if" ],
-            ",,,,,,
-            "guidebook.chapter.COT.DruidicEssence",
-            :,
-            "[center][font=dialogue]Druidic Essence[/font][/center],,,,,
-            "At",
-            "this",
-            "point",
-            "you've unlocked [itemtooltip=(O)DN.SnS_druidicessence][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip]. This is used for a special order during the story, as well as for crafting as you progress in the [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=COT/DruidicsSkill]Druidics[/link] skill[/if][else]Druidics skill (locked)[/else].",
-
-            "You",
-            "can",
-            "gather",
-            "this",
-            "item",
-            "in",
-            "the",
-            "following",
-            "ways",
-            :,
-            "*",
-            "Tilling",
-            "soil",
-            "*",
-            "Watering",
-            "crops",
-            "*",
-            "Harvesting",
-            "crops",
-            "*",
-            "Cutting",
-            "grass",
-
-            "Be",
-            "sure",
-            "to",
-            "keep",
-            "saving",
-            "these",
-            "after",
-            "the",
-            "special",
-            "order",
-            "is",
-            "complete.",
-            "They",
-            "will",
-            "definitely",
-            "come",
-            "in",
-            "handy!\",",
-            "guidebook.chapter.COT.DruidicsSkill",
-            :,
-            "[center][font=dialogue]Druidics[/font][/center],,,,,
-            "You've unlocked the Druidics skill! Druidics can be levelled up by farming and foraging.",
-
-            [ "font=dialogue" ],
-            "Unlocks",
-
-            [ "/font" ],
-            "*",
-            "Level",
-            1,
-            "-",
-            "Unlocks",
-            "the",
-            [
-              "texttooltip=Shapeshift",
-              "(Buck)",
-              :,
-              "Transform",
-
-              "into",
-              "a",
-              "buck",
-              "giving",
-              "a",
-              "speed",
-              "boost",
-              "and",
-              "a",
-              "buff",
-              "to",
-              "your",
-              "foraging",
-              "skill.",
-              "You",
-              "may",
-              "not",
-              "use",
-              "tools",
-              "or",
-              "attack",
-              "while",
-              "transformed."
-            ],
-            [ "color=darkorange" ],
-            "Shapeshift",
-
-            "(Buck)",
-            [ "/color" ],
-            [ "/texttooltip" ],
-            "and",
-            [
-              "texttooltip=Shapeshift",
-              "(Doe)",
-              :,
-              "Transform",
-
-              "into",
-              "a",
-              "doe",
-              "giving",
-              "a",
-              "speed",
-              "boost",
-              "and",
-              "a",
-              "buff",
-              "to",
-              "your",
-              "foraging",
-              "skill.",
-              "You",
-              "may",
-              "not",
-              "use",
-              "tools",
-              "or",
-              "attack",
-              "while",
-              "transformed."
-            ],
-            [ "color=darkorange" ],
-            "Shapeshift",
-
-            "(Doe)",
-            [ "/color" ],
-            [ "/texttooltip" ],
-            "abilities.",
-            "(These",
-            "function",
-            "the",
-            "same",
-            "and",
-            "differ",
-            "in",
-            "appearance",
-            "only.)",
-            "Also",
-            "unlocks",
-            "the",
-            [ "itemtooltip=(O)DN.SnS_ancientamaranth.seed" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 144, 0, 16, 16 ],
-            [ "color=blue" ],
-            "Ancient",
-
-            "Amaranth",
-            "Seeds",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "and",
-            [ "itemtooltip=(O)DN.SnS_ancientepiphyticfern.seed" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 16, 16, 16, 16 ],
-            [ "color=blue" ],
-            "Ancient",
-
-            "Epiphytic",
-            "Fern",
-            "Seeds",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "recipes.",
-            "*",
-            "Level",
-            2,
-            "-",
-            "Unlocks",
-            "the",
-            [ "itemtooltip=(O)DN.SnS_glowingpolyporemushrooms.seed" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 48, 16, 16, 16 ],
-            [ "color=blue" ],
-            "Ancient",
-
-            "Glowing",
-            "Polypore",
-            "Mushroom",
-            "Spores",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "recipe.",
-            "*",
-            "Level",
-            3,
-            "-",
-            "Unlocks",
-            "the",
-            [ "itemtooltip=(O)DN.SnS_ancientwildfairyrose.seed" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 0, 16, 16, 16 ],
-            [ "color=blue" ],
-            "Ancient",
-
-            "Wild",
-            "Fairy",
-            "Rose",
-            "Seeds",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "recipe.",
-            "*",
-            "Level",
-            4,
-            "-",
-            "Unlocks",
-            "the",
-            [ "itemtooltip=(O)DN.SnS_ancientelderberry.seed" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 128, 48, 16, 16 ],
-            [ "color=blue" ],
-            "Ancient",
-
-            "Elderberry",
-            "Seeds",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "recipe.",
-            "*",
-            "Level",
-            5,
-            "-",
-            "See",
-            [ "color=black" ],
-            "Professions",
-
-            [ "/color" ],
-            "later",
-            "on",
-            "this",
-            "page.",
-            "*",
-            "Level",
-            6,
-            "-",
-            "Unlocks",
-            "the",
-            [ "itemtooltip=(O)DN.SnS_ancientbottlegourd.seed" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 0, 64, 16, 16 ],
-            [ "color=blue" ],
-            "Ancient",
-
-            "Bottle",
-            "Gourd",
-            "Seeds",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "and",
-            [ "itemtooltip=(O)SnS_lavaeelandstirfriedancientbottlegourd" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 0, 48, 16, 16 ],
-            [ "color=blue" ],
-            "Lava",
-
-            "Eel",
-            "&",
-            "Bottle",
-            "Gourd",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "recipes.",
-            "*",
-            "Level",
-            7,
-            "-",
-            "Unlocks",
-            "the",
-            [ "itemtooltip=(O)DN.SnS_ancientgiantappleberry.seed" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 32, 64, 16, 16 ],
-            [ "color=blue" ],
-            "Ancient",
-
-            "Giant",
-            "Apple",
-            "Berry",
-            "Seeds",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "and",
-            [ "itemtooltip=(O)SnS_mushroomsredsauce" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 112, 32, 16, 16 ],
-            [ "color=blue" ],
-            "Fried",
-
-            "Polypore",
-            "Mushrooms",
-            "&",
-            "Red",
-            "Sauce",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "recipes.",
-            "*",
-            "Level",
-            8,
-            "-",
-            "Unlocks",
-            "the",
-            [ "itemtooltip=(O)DN.SnS_ancientazuredetura.seed" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 64, 64, 16, 16 ],
-            [ "color=blue" ],
-            "Ancient",
-
-            "Azure",
-            "Detura",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "and",
-            [ "itemtooltip=(O)SnS_ferngreensandpineapple" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 128, 32, 16, 16 ],
-            [ "color=blue" ],
-            "Fern",
-
-            "Greens",
-            "and",
-            "Pineapple",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "recipes.",
-            "*",
-            "Level",
-            9,
-            "-",
-            "Unlocks",
-            "the",
-            [ "itemtooltip=(O)DN.SnS_ancientglowinghuckleberry.seed" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 32, 16, 16, 16 ],
-            [ "color=blue" ],
-            "Ancient",
-
-            "Glowing",
-            "Huckleberry",
-            "Seeds",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "and",
-            [ "itemtooltip=(O)SnS_ancienthuckleberryicecream" ],
-            [ "icon=SMAPI/dn.sns/assets/items", "&", "crops/snsobjects.png", :, 144, 32, 16, 16 ],
-            [ "color=blue" ],
-            "Ancient",
-
-            "Huckleberry",
-            "Ice",
-            "Cream",
-            [ "/color" ],
-            [ "/itemtooltip" ],
-            "recipes.",
-            "*",
-            "Level",
-            10,
-            "-",
-            "See",
-            [ "color=black" ],
-            "Professions",
-
-            [ "/color" ],
-            "later",
-            "on",
-            "this",
-            "page.",
-            "Additionally",
-            "each",
-            "level",
-            "will",
-            "increase",
-            "your",
-            "transformed",
-            "movement",
-            "speed",
-            "and",
-            "regeneration",
-            "speed",
-            "as",
-            "well",
-            "as",
-            "the",
-            "Druidic",
-            "Essence",
-            "drop",
-            "rate.",
-
-            [ "font=dialogue" ],
-            "Professions",
-
-            [ "/font" ],
-            "Level",
-            5,
-            :,
-            "*",
-            "Skilled",
-            "Shapeshifter",
-            "-",
-            "Adds",
-            "stamina",
-            "regeneration",
-            "ability",
-            "to",
-            "shapeshifting",
-            "after",
-            "not",
-            "moving",
-            "for",
-            "a",
-            "few",
-            "seconds.",
-            "*",
-            "Ancient",
-            "Agronomist",
-            "-",
-            "Reduces",
-            "cost",
-            "of",
-            "creating",
-            "ancient",
-            "druidic",
-            "seeds",
-            "by",
-            "one",
-            "essence.",
-
-            "Level",
-            10,
-            "if",
-            "you",
-            "chose",
-            "Skilled",
-            "Shapeshifter",
-            :,
-            "*",
-            "Stag's Path - Adds health regeneration to stamina regeneration with double the speed.",
-            "*",
-            "Wolf's Path - Adds ability to fight while shapeshifted, as well as a defense and attack buff. Unlocks the [color=darkorange]Shapeshift (Wolf)[/color] ability. (All forms get the combat abilities - wolf form has the same functionality of the other two forms, it just looks different.)",
-
-            "Level",
-            10,
-            "if",
-            "you",
-            "chose",
-            "Ancient",
-            "Agronomist",
-            :,
-            "*",
-            "Branch",
-            "of",
-            "Midgard",
-            "-",
-            "All",
-            "ancient",
-            "crops",
-            "grow",
-            "10%",
-            "faster",
-            "and",
-            "all",
-            "artisan",
-            "goods",
-            "derived",
-            "from",
-            "them",
-            "are",
-            "worth",
-            "10%",
-            "more.",
-            "Stacks",
-            "with",
-            "Artisan",
-            "and",
-            "Agriculturist.",
-            "*",
-            "Branch",
-            "of",
-            "Yggdrasil",
-            "-",
-            "Druidic",
-            "essences",
-            "have",
-            "an",
-            "additional",
-            "10%",
-            "chance",
-            "to",
-            "drop.",
-            "Druidic",
-            "crops",
-            "water",
-            "surrounding",
-            "crops",
-            "with",
-            "the",
-            "same",
-            "range",
-            "as",
-            "a",
-            "Quality",
-            "Sprinkler.\"" */
+  "guidebook.chapter.Title.TitlePage": "{{ConfigMenuLinks}}
+[nospacing][nextposition=120,110][image=SMAPI/dn.sns/assets/guidebook/logo.png:null:1][nextposition=0,null][offset=0,250][/nospacing]
+[nospacing]
+[center=200][font=dialogue][link=https://www.patreon.com/profile/creators?u=12021226]Patreon[/link][/font][/center]
+[offset=200,0][center=200][font=dialogue][link=https://www.nexusmods.com/stardewvalley/mods/12369]Nexus[/link][/font][/center]
+[offset=200,0][center=200][font=dialogue][link=https://ko-fi.com/destynova]Ko-fi[/link][/font][/center]
+[nextposition=0,null]
+[/nospacing]",
+  "guidebook.chapter.Title.Introduction": "[center][font=dialogue]Introduction[/font][/center]
+DESTY_WRITE_STUFF",
+  "guidebook.chapter.Title.NewMechanics": "[center][font=dialogue]New Mechanics[/font][/center]
+[font=dialogue]Dual Wielding[/font]
+Sword & Sorcery introduces a dual-wielding feature, allowing you to attack with two weapons at once. To equip a weapon in your off-hand slot, open your inventory and click a button to the left of the window that looks like the following:
+ 
+[image=spacechase0.SpaceCore/ExtraEquipmentIcon]
+After that, you should see a slot labelled [color=black]Offhand[/color]. Place your desired secondary weapon in that slot. Now, whenever you swing your weapon or use your weapon ability in your hotbar, both will be used.
+ 
+[font=dialogue]Armor[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18]
+After reaching level 1 [link=NEA/ArtificerSkill]Artificer[/link], you can craft armor for the armor slot on the equipment menu (this is the same menu with the dual wielding offhand slot, explained in the last section). Armor acts as an extra buffer that absorbs damage before your health bar. It automatically repairs itself at the beginning of each day.
+[/if]
+[else](locked)[/else]
+ 
+[font=dialogue]Adventure Bar[/font]
+[if=PLAYER_HAS_MAIL Current SnS_AdventureBar]
+On the left side of your screen, you can see two columns with a bar underneath. This is the Adventure Bar. The columns repesent ability slots that you can activate with keybindings. The bar underneath is your Aether, which is consumed to use most abilities. To use an ability, use the keybinding configured for that slot. (default: Ctrl+NUMBER or Shift+NUMBER, though these can be configured in GMCM). If you're using a gamepad, the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod can also be used to trigger configured abilities.
+ 
+You can change what abilities are in which slots by using the Adventure Bar Menu keybinding (default: U). You will unlock different abilities throughout the story of the Sword & Sorcery.
+ 
+The adventure bar can be hidden with the configured keybinding (default: Ctrl+U).
+[/if]
+[else](locked)[/else]
+ 
+[font=dialogue]New Skills[/font]
+2. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18][link=NEA/ArtificerSkill]Artificer[/link][/if][else]Artificer (locked)[/else]
+2. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=COT/DruidicsSkill]Druidics[/link][/if][else]Druidics (locked)[/else]
+3. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=UP/BardicsSkill]Bardics[/link][/if][else]Bardics (locked)[/else]
+4. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6][link=TOP/SorcererSkill]Sorcerer[/link][/if][else]Sorcerer (locked)[/else]
+4. [if=ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\"][link=TOP/PaladinSkill]Paladin[/link][/if][else]Paladin (locked)[/else]",
+  "guidebook.chapter.Title.TableOfContents": "[center][font=dialogue]Table of Contents[/font][/center]
+1. [link=NEA/Intro]Never Ending Adventure[/link]
+2. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=COT/Intro]Circle of Thorns[/link][/if][else]Circle of Thorns (locked)[/else]
+3. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=UP/Intro]Under Pressure[/link][/if][else]Under Pressure (locked)[/else]
+4. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=TOP/Intro]The Other Promise[/link][/if][else]The Other Promise (locked)[/else]
+5. [if=PLAYER_HAS_MAIL Current DuskspireDefeated][link=Epilogue/Intro]Epilogue[/link][/if][else]Epilogue (locked)[/else]",
+  "guidebook.chapter.NEA.name": "Never Ending Adventure",
+  "guidebook.chapter.NEA.Intro": "[center][font=dialogue]Introduction[/font][/center]
+This first chapter of S&S introduces you to Mateo, a charming rogue with a sordid history. Unravel their connection to the Museum's missing contents, help them reconnect with the townsfolk, learn the Artificer skill, unlock the Underforge, the Arsenal system, and found a new branch of the Adventurer's Guild.",
+  "guidebook.chapter.NEA.Mateo": "[nospacing]
+[nextposition=0,10][center=300][font=dialogue]Mateo[/font][/center]
+[offset=118,50][image=Characters/Mateo:0,0,16,32:4]
+[offset=-118,144][center=300]Pronouns: they/them[/center]
+[offset=0,32][center=300]Birthday: Fall 25[/center]
+[nextposition=322,16][image=Portraits/Mateo:0,0,64,64:4]
+[nextposition=0,288]
+[/nospacing]
+Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town. Not only are they a skilled Rogue, but they have an inclination for blacksmithing. A good leader and better friend who'll always have your back.",
+  "guidebook.chapter.NEA.Events": "[center][font=dialogue]The Story Thus Far:[/font][/center]
+[font=dialogue]Mateo Event: 0 Hearts pt 1[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.0]Complete![/if]
+[else]Hint: Visit the [color=green]top floor of the Mines[/color] before midnight.[/else]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.0]
+[font=dialogue]Mateo Event: 0 Hearts pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.1]Complete![/if]
+[else]Hint: Visit the [color=green]Stardew Valley Museum & Library[/color] before evening.[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.1]
+[font=dialogue]Mateo Event: 2 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.2]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 500]Hint: Visit [color=green]Pelican Town[/color] on a sunny evening.[/if]
+[else]Requirement: 2 Hearts of friendship with [color=red]Mateo[/color][/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.2]
+[font=dialogue]Mateo Event: 4 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.3]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1000, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoLibrary]Hint: Visit the [color=green]Beach[/color] on a sunny evening.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1000]Requirement: 4 Hearts with [color=red]Mateo[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoLibrary]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.3]
+[font=dialogue]Mateo Event: 4 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.4]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoAdmission]Hint: Visit the [color=green]top floor of the Mines[/color] in the evening.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1250]Requirement: 5 Hearts with [color=red]Mateo[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoAdmission]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.4]
+[font=dialogue]Mateo Event: 5 Hearts pt 1[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.5]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250]Hint: Visit the [color=green]Saloon[/color] in the afternoon or evening.[/if]
+[else]Requirement: 5 Hearts with [color=red]Mateo[/color][/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.5]
+[font=dialogue]Mateo Event: 5 Hearts pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.6]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoConfrontation]Hint: Visit the [color=green]Adventurer's Guild[/color] in the late afternoon or early evening.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1250]Requirement: 5 Hearts with [color=red]Mateo[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoConfrontation]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.6]
+[font=dialogue]Mateo Event: 5 Hearts pt 3[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.7]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1500]Hint: Visit [color=green]Pelican Town[/color] between late morning and early evening.[/if]
+[else]Requirement: 6 Hearts with [color=red]Mateo[/color][/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.7]
+[font=dialogue]Mateo Event: 6 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.8]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1500]Hint: Visit the [color=green]Forest[/color] in the evening when the weather is bad.[/if]
+[else]Requirement: 6 Hearts with [color=red]Mateo[/color][/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.8]
+[font=dialogue]Mateo Event: 7 Hearts pt 1[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.9]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1750, PLAYER_HAS_MET Current Krobus, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoAcceptance]Hint: Visit the [color=green]Hospital[/color] between late morning and late afternoon when it isn't Friday.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1750]Requirement: 7 Hearts with [color=red]Mateo[/color][/if]
+[if=!PLAYER_HAS_MET Current Krobus]Requirement: Meet [color=red]Krobus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoAcceptance]Requirement: Wait {{VariableTimegate}} days after seeing the (DESTY_WRITE_STUFF Name of SnS.Ch1.Mateo.6 event) event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.9]
+[font=dialogue]Mateo Event: 7 Hearts pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.10]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1750, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoPain]Hint: Visit [color=green]Pelican Town[/color] in the evening when it isn't Friday.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1750]Requirement: 7 Hearts with [color=red]Mateo[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoPain]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.10]
+[font=dialogue]Mateo Event: 8 Hearts pt 1[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.11]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoRecovery]Hint: Visit [color=green]East Scarp[/color] between late morning and early evening on a sunny day.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Requirement: 8 Hearts with [color=red]Mateo[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoRecovery]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.11]
+[font=dialogue]Special Order: Mateo's Request[/font]
+[if=PLAYER_SPECIAL_ORDER_COMPLETE Current Mateo.SpecialOrders.BuildGuild]You gathered materials for [color=red]Mateo[/color].[/if]
+[else]Gather materials for the new branch of the adventurer's guild:
+* 500 [itemtooltip=(O)388][icon=Maps/springobjects:64,256,16,16] [color=blue]Wood[/color][/itemtooltip]
+* 300 [itemtooltip=(O)390][icon=Maps/springobjects:96,256,16,16] [color=blue]Stone[/color][/itemtooltip]
+* 100 [itemtooltip=(O)709][icon=Maps/springobjects:208,464,16,16] [color=blue]Hardwood[/color][/itemtooltip]
+[if=!PLAYER_SPECIAL_ORDER_ACTIVE Current Mateo.SpecialOrders.BuildGuild]You seem to be missing the special order.
+[onceaction=AddSpecialOrder Mateo.SpecialOrders.BuildGuild]Click here to re-add it to your journal.[/onceaction][/if]
+[/else]
+[/if]
+ 
+[if=PLAYER_SPECIAL_ORDER_COMPLETE Current Mateo.SpecialOrders.BuildGuild]
+[font=dialogue]Mateo Event: 8 Hearts pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.12]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Hint: Visit [color=green]East Scarp[/color] between late morning and early evening on a sunny day.[/if]
+[else]Requirement: 8 Hearts with [color=red]Mateo[/color][/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.12]
+[font=dialogue]Mateo Event: 10 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.13]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current CGuildComplete]Hint: Visit the [color=green]Railroad[/color] in the evening when it isn't Friday.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 2500]Requirement: 10 Hearts with [color=red]Mateo[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CGuildComplete]Requirement: Wait a day after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14]
+[font=dialogue]Event: Artificer Skill Unlock[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14]Complete![/if]
+[else]
+Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between late morning and early evening.
+[/else]
+[/if]", // NOTE: SnS.Ch1.Mateo.13 is not included since it is optional and can be missed.
+  "guidebook.chapter.NEA.ArtificerSkill": "[center][font=dialogue]Artificer Skill[/font][/center]
+You've unlocked the Artificer skill! Artificer can be levelled up killing monsters and mining.
+ 
+[font=dialogue]Unlocks[/font]
+* Level 1 - Unlocks the [itemtooltip=(O)DN.SnS_ClothArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,48,16,16] [color=blue]Cloth Armor[/color][/itemtooltip], [itemtooltip=(W)DN.SnS_Bow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,80,16,16] [color=blue]Bow[/color][/itemtooltip], and [itemtooltip=(O)DN.SnS_Arrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,64,16,16] [color=blue]Arrow[/color][/itemtooltip] recipes.
+* Level 2 - Pure ore now has a chance to drop from their respective ore nodes. These can be smelted, used at the [color=green]Underforge[/color] (see the [color=black]Underforge[/color] section later on this page for more details), or crafted into armor. (Each tier of armor also requires the previous tier as an ingredient.) Unlocks the [itemtooltip=(O)DN.SnS_CopperArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,48,16,16] [color=blue]Copper Armor[/color][/itemtooltip],  [itemtooltip=(O)DN.SnS_IronArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:64,48,16,16] [color=blue]Iron Armor[/color][/itemtooltip], [itemtooltip=(O)DN.SnS_GoldArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,48,16,16] [color=blue]Gold Armor[/color][/itemtooltip],  [itemtooltip=(O)DN.SnS_IridiumArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:96,48,16,16] [color=blue]Iridium Armor[/color][/itemtooltip], [itemtooltip=(O)DN.SnS_RadioactiveArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,64,16,16] [color=blue]Radioactive Armor[/color][/itemtooltip] recipes.
+* Level 3 - Unlocks the [itemtooltip=(O)DN.SnS_FirestormArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,64,16,16] [color=blue]Firestorm Arrow[/color][/itemtooltip] and [itemtooltip=(O)DN.SnS_IcicleArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,64,16,16] [color=blue]Icicle Arrow[/color][/itemtooltip] recipes.
+* Level 4 - Exquisite gems now have a chance to drop from their respective gem nodes. These can be used at the [color=green]Underforge[/color] (see the [color=black]Underforge[/color] section later on this page for more details). They can also be crafted with enough of their original gemstone.
+* Level 5 - See [color=black]Professions[/color] later on this page.
+* Level 6 - You can now perform Blade Coating at the [color=green]Underforge[/color] using certain monster loot (see the [color=black]Underforge[/color] section later on this page for more details).
+* Level 7 - Unlocks the [itemtooltip=(O)DN.SnS_WindwakerArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,64,16,16] [color=blue]Windwaker Arrow[/color][/itemtooltip] recipe.
+* Level 8 - Unlocks the [itemtooltip=(O)DN.SnS_RicochetArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,80,16,16] [color=blue]Ricochet Arrow[/color][/itemtooltip] recipe.
+* Level 9 - Unlocks the [itemtooltip=(O)DN.SnS_LightbringerArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,80,16,16] [color=blue]Lightbringer Arrow[/color][/itemtooltip] recipe.
+* Level 7 - See [color=black]Professions[/color] later on this page.
+ 
+[font=dialogue]Underforge[/font]
+You can go to the [color=green]Underforge[/color] in the [color=green]Coastal Adventurer's Guild[/color] by going through a door to the right of the main room. Here, you can attach three different types of items to your weapon to make them stronger. You can do this by using the forge in the top left of the map.
+ 
+You can attach 25 pure ore to a weapon to improve it's damage:
+* [itemtooltip=(O)DN.SnS_PureCopperOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:64,32,16,16] [color=blue]Pure Copper Ore[/color][/itemtooltip] - +5% damage
+* [itemtooltip=(O)DN.SnS_PureIronOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,32,16,16] [color=blue]Pure Iron Ore[/color][/itemtooltip] - +10% damage
+* [itemtooltip=(O)DN.SnS_PureGoldOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:96,32,16,16] [color=blue]Pure Gold Ore[/color][/itemtooltip] - +15% damage
+* [itemtooltip=(O)DN.SnS_PureIridiumOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,48,16,16] [color=blue]Pure Iridium Ore[/color][/itemtooltip] - +20% damage
+* [itemtooltip=(O)DN.SnS_PureRadioactiveOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,48,16,16] [color=blue]Pure Radioactive Ore[/color][/itemtooltip] - +25% damage
+ 
+You can attach an exquisite gem to a weapon to give it new effects:
+   * [itemtooltip=(O)DN.SnS_ExquisiteEmerald][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,0,16,16] [color=blue]Exquisite Emerald[/color][/itemtooltip] - [texttooltip=Evasive:Increases your speed by +1.5 for 5 seconds after hitting an enemy.][color=purple]Evasive[/color][/texttooltip]
+   * [itemtooltip=(O)DN.SnS_ExquisiteTopaz][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,0,16,16] [color=blue]Exquisite Topaz[/color][/itemtooltip] - [texttooltip=Defensive:Reduces incoming damage by 15%.][color=purple]Defensive[/color][/texttooltip]
+   * [itemtooltip=(O)DN.SnS_ExquisiteRuby][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,0,16,16] [color=blue]Exquisite Ruby[/color][/itemtooltip] - [texttooltip=Harming:Deals an extra 10% damage to an enemy once every second for 3 seconds after hitting it.][color=purple]Harming[/color][/texttooltip]
+   * [itemtooltip=(O)DN.SnS_ExquisiteJade][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,0,16,16] [color=blue]Exquisite Jade[/color][/itemtooltip] - [texttooltip=Restful:Grants +2 stamina upon hitting an enemy.][color=purple]Restful[/color][/texttooltip]
+   * [itemtooltip=(O)DN.SnS_ExquisiteAmethyst][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:64,0,16,16] [color=blue]Exquisite Amethyst[/color][/itemtooltip] - [texttooltip=Freezing:15% chance of freezing an enemy on hit.][color=purple]Freezing[/color][/texttooltip]
+   * [itemtooltip=(O)DN.SnS_ExquisiteDiamond][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,0,16,16] [color=blue]Exquisite Diamond[/color][/itemtooltip] - [texttooltip=Healthy:Grants +1 health upon hitting an enemy.][color=purple]Healthy[/color][/texttooltip]
+   * [itemtooltip=(O)DN.SnS_ExquisiteAquamarine][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:96,0,16,16] [color=blue]Exquisite Aquamarine[/color][/itemtooltip] - [texttooltip=Critical:Provides a 15% chance of a critical hit when hitting an enemy.
+(If the hit is already a critical hit, the damage will be multiplied again.][color=purple]Critical[/color][/texttooltip]
+ 
+You can attach a large amount of certain monster loot to a weapon to give it new effects:
+   * 999 [itemtooltip=(O)766][icon=Maps/springobjects:352,496,16,16] [color=blue]Slime[/color][/itemtooltip] - [texttooltip=Slimy:Slows down enemies upon hit. Works once per enemy.][color=purple]Slimy[/color][/texttooltip]
+   * 300 [itemtooltip=(O)769][icon=Maps/springobjects:16,512,16,16] [color=blue]Void Essence[/color][/itemtooltip] - [texttooltip=Shadow Duplicates:Basic attacks affect all four cardinal directions. (Attacks in the other directions are invisible.)][color=purple]Shadow Duplicates[/color][/texttooltip]
+   * 300 [itemtooltip=(O)768][icon=Maps/springobjects:0,512,16,16] [color=blue]Solar Essence[/color][/itemtooltip] - [texttooltip=Explosive Demise:Upon killing a mob, they blow up. No damage to farmer.][color=purple]Explosive Demise[/color][/texttooltip]
+   * 300 [itemtooltip=(O)684][icon=Maps/springobjects:192,448,16,16] [color=blue]Bug Meat[/color][/itemtooltip] - [texttooltip=Greedy:Mob drops are rolled twice.][color=purple]Greedy[/color][/texttooltip]
+   * 500 [itemtooltip=(O)767][icon=Maps/springobjects:368,496,16,16] [color=blue]Bat Wing[/color][/itemtooltip] - [texttooltip=Floating:You can attack across stones and other objects.][color=purple]Floating[/color][/texttooltip]
+ 
+You can choose one item type from each category above.
+ 
+[font=dialogue]Professions[/font]
+Level 5:
+* Artificer Specialist - Once an hour, get a chance to recover Armor Points by changing locations.
+* Rogueish Archetype - 25% chance of shooting a second arrow without consuming additional ammo.
+ 
+Level 10, if you chose Artificer Specialist:
+* Flash of Genius - The first craftable you make each day has zero ingredient cost. (Ingredients must still be owned, however.)
+* Armor Proficiency - Adds 50% more armor points on top of your total amount.
+ 
+Level 10, if you chose Rogueish Archetype:
+* Shadowstep - Grants the [texttooltip=Shadowstep:Become hidden, reducing most monster aggro until you attack.
+Your first attack after using the ability is an automatic critical hit.][color=DarkOrange]Shadowstep[/color][/texttooltip] ability (usable with the Adventure Bar, see [link=Title/Mechanics]New Mechanics[/link] for more info).
+* Hunter's Mark - Once a creature is attacked, consecutive hits on the same creature do slightly more damage each time.",
+
+  "guidebook.chapter.COT.name": "Circle of Thorns",
+  "guidebook.chapter.COT.Intro": "[center][font=dialogue]Introduction[/font][/center]
+The second chapter of S&S reveals the identity of 'B', who introduces themselves as 'Hector'; a druid deeply rooted to the earth itself. Learn about what has this wolf snapping at the hand that feeds them - gain the trust of one of the Valley's nature guardians and purify a river corrupted by pollution, learn the Druid skill, collect Druidic Essences, and unlock the True Grove and the secrets it hides.",
+  "guidebook.chapter.COT.Hector": "[nospacing]
+[nextposition=0,10][center=300][font=dialogue]{{TrueName}}[/font][/center]
+[offset=118,50][image=Characters/Hector:0,0,16,32:4]
+[offset=-118,144][center=300]Pronouns: {{DailyPronouns}}[/center]
+[offset=0,32][center=300]Birthday: Winter 21[/center]
+[nextposition=322,16][image=Portraits/Hector:0,0,64,64:4]
+[nextposition=0,288]
+[/nospacing]
+{{TrueName}} is an elusive Druid living in a dilapidated old tower. Seemingly having been around as long as the land itself, this knowledgeable yet bitey shapeshifter has a lot to learn about social graces. However, they have a lot to offer those who prove themselves trustworthy.",
+  "guidebook.chapter.COT.Events": "[center][font=dialogue]Story so far[/font][/center]
+[if=!{{SkipIntroQuest}}]
+[font=dialogue]Special Order: Offerings for Spring[/font]
+[if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.Pentacle1]You made the offerings for spring.[/if]
+[else]Make the following offerings to the altar near the dilapidated tower in the [color=green]Deep Mountains[/color]:
+* 3 [itemtooltip=(O)24][icon=Maps/springobjects:0,16,16,16] [color=blue]Parsnip[/color][/itemtooltip]
+* 3 [itemtooltip=(O)18][icon=Maps/springobjects:352,0,16,16] [color=blue]Daffodil[/color][/itemtooltip]
+* 3 [itemtooltip=(O)20][icon=Maps/springobjects:320,0,16,16] [color=blue]Leek[/color][/itemtooltip]
+* 3 [itemtooltip=(O)400][icon=Maps/springobjects:256,256,16,16] [color=blue]Strawberry[/color][/itemtooltip]
+* 3 [itemtooltip=(O)399][icon=Maps/springobjects:240,256,16,16] [color=blue]Spring Onion[/color][/itemtooltip]
+[if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.Pentacle1]You seem to be missing the special order.
+[onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle1]Click here to re-add it to your journal.[/onceaction][/if]
+[/else]
+ 
+[if=PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle1]
+[font=dialogue]Special Order: Offerings for Summer[/font]
+[if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.Pentacle2]You made the offerings for summer.[/if]
+[else]Make the following offerings to the altar near the dilapidated tower in the [color=green]Deep Mountains[/color]:
+* 3 [itemtooltip=(O)234][icon=Maps/springobjects:288,160,16,16] [color=blue]Blueberry[/color][/itemtooltip]
+* 3 [itemtooltip=(O)396][icon=Maps/springobjects:192,256,16,16] [color=blue]Spice Berry[/color][/itemtooltip]
+* 3 [itemtooltip=(O)402][icon=Maps/springobjects:288,256,16,16] [color=blue]Sweet Pea[/color][/itemtooltip]
+* 3 [itemtooltip=(O)270][icon=Maps/springobjects:96,176,16,16] [color=blue]Corn[/color][/itemtooltip]
+* 3 [itemtooltip=(O)420][icon=Maps/springobjects:192,272,16,16] [color=blue]Red Mushroom[/color][/itemtooltip]
+[if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.Pentacle2]You seem to be missing the special order.
+[onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle2]Click here to re-add it to your journal.[/onceaction][/if]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle2]
+[font=dialogue]Special Order: Offerings for Fall[/font]
+[if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.Pentacle3]You made the offerings for fall.[/if]
+[else]Make the following offerings to the altar near the dilapidated tower in the [color=green]Deep Mountains[/color]:
+* 3 [itemtooltip=(O)278][icon=Maps/springobjects:224,176,16,16] [color=blue]Bok Choy[/color][/itemtooltip]
+* 3 [itemtooltip=(O)300][icon=Maps/springobjects:192,192,16,16] [color=blue]Amaranth[/color][/itemtooltip]
+* 3 [itemtooltip=(O)406][icon=Maps/springobjects:352,256,16,16] [color=blue]Wild Plum[/color][/itemtooltip]
+* 3 [itemtooltip=(O)410][icon=Maps/springobjects:32,272,16,16] [color=blue]Blackberry[/color][/itemtooltip]
+* 3 [itemtooltip=(O)282][icon=Maps/springobjects:288,176,16,16] [color=blue]Cranberries[/color][/itemtooltip]
+[if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.Pentacle3]You seem to be missing the special order.
+[onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle3]Click here to re-add it to your journal.[/onceaction][/if]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle3]
+[font=dialogue]Special Order: Offerings for Winter[/font]
+[if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.Pentacle4]You made the offerings for winter.[/if]
+[else]Make the following offerings to the altar near the dilapidated tower in the [color=green]Deep Mountains[/color]:
+* 3 [itemtooltip=(O)412][icon=Maps/springobjects:64,272,16,16] [color=blue]Winter Root[/color][/itemtooltip]
+* 3 [itemtooltip=(O)414][icon=Maps/springobjects:96,272,16,16] [color=blue]Crystal Fruit[/color][/itemtooltip]
+* 3 [itemtooltip=(O)416][icon=Maps/springobjects:128,272,16,16] [color=blue]Snow Yam[/color][/itemtooltip]
+* 3 [itemtooltip=(O)418][icon=Maps/springobjects:160,272,16,16] [color=blue]Crocus[/color][/itemtooltip]
+* 3 [itemtooltip=(O)283][icon=Maps/springobjects:304,176,16,16] [color=blue]Holly[/color][/itemtooltip]
+[if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.Pentacle4]You seem to be missing the special order.
+[onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle4]Click here to re-add it to your journal.[/onceaction][/if]
+[/else]
+[/if]
+[/if]
+ 
+[if=ANY \"{{SkipIntroQuest}}\" \"!{{SkipIntroQuest}}, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle1, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle2, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle3, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle4\"]
+[font=dialogue]{{TrueName}} Event: 0 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.1]Complete![/if]
+[else]Hint: Visit the [color=green]Railroad[/color] between late morning and late evening.[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.1]
+[font=dialogue]{{TrueName}} Event: 1 Heart[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.2]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorIntro]Hint: Visit [color=green]Hector's Tower[/color] between late morning and late evening.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Hector 250]Requirement: 1 Heart with [color=red]{{TrueName}}[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorIntro]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.2]
+[font=dialogue]{{TrueName}} Event: 2 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.3]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorBookIntro]Hint: Visit [color=green]Hector's Tower[/color] between late morning and late evening.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Hector 500]Requirement: 2 Hearts with [color=red]{{TrueName}}[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorBookIntro]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.3]
+[font=dialogue]{{TrueName}} Event: 3 Hearts pt 1[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.4]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 750, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorShapeshift]Hint: Visit [color=green]Hector's Tower[/color] between late morning and late evening.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Hector 750]Requirement: 3 Hearts with [color=red]{{TrueName}}[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorShapeshift]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.4]
+[font=dialogue]{{TrueName}} Event: 3 Hearts pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.5]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 750, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorBookQuest]Hint: Visit [color=green]Hector's Tower[/color] between late morning and late evening on a sunny day.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Hector 750]Requirement: 3 Hearts with [color=red]{{TrueName}}[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorBookQuest]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.5]
+[font=dialogue]{{TrueName}} Event: 4 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.6]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1000, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet]Hint: Visit [color=green]East Scarp[/color] between late morning and late afternoon.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Hector 1000]Requirement: 4 Hearts with [color=red]{{TrueName}}[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.6]
+[font=dialogue]{{TrueName}} Event: 5 Hearts pt 1[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.7]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet2]Hint: Visit [color=green]East Scarp[/color] between late morning and late afternoon.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Hector 1250]Requirement: 5 Hearts with [color=red]{{TrueName}}[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet2]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.7]
+[font=dialogue]{{TrueName}} Event: 5 Hearts pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.8]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorGender]Hint: Visit the [color=green]Vet House[/color] in [color=Green]East Scarp[/color] between late afternoon and mid evening.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Hector 1250]Requirement: 5 Hearts with [color=red]{{TrueName}}[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorGender]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.8]
+[font=dialogue]{{TrueName}} Event: 5 Hearts pt 3[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.9]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet3]Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between early evening and late evening.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Hector 1250]Requirement: 5 Hearts with [color=red]{{TrueName}}[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet3]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.9]
+[font=dialogue]{{TrueName}} Event: 6 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.10]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorDND]Hint: Visit [color=green]Hector's Tower[/color] between mid morning and late evening.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Hector 1500]Requirement: 6 Hearts with [color=red]{{TrueName}}[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorDND]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.10]
+[font=dialogue]{{TrueName}} Event: 7 Hearts pt 1[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.11]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1750, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorRiver1]Hint: Visit [color=green]East Scarp[/color] between mid morning and early evening on a sunny day.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Hector 1750]Requirement: 7 Hearts with [color=red]{{TrueName}}[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorRiver1]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.10]
+[font=dialogue]Special Order: Destroy the Leaking Pipe[/font]
+[if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.River1]You helped [color=red]{{TrueName}}[/color] destroy the leaking pipe.[/if]
+[else]Deliver the following items to the altar outside of [color=green]Hector's Tower[/color] in the [color=green]Deep Mountains[/color]:
+* 1 [itemtooltip=(O)74][icon=Maps/springobjects:32,48,16,16] [color=blue]Prismatic Shard[/color][/itemtooltip]
+* 5 [itemtooltip=(O)454][icon=Maps/springobjects:352,288,16,16] [color=blue]Ancient Fruit[/color][/itemtooltip]
+* 3 [itemtooltip=(O)586][icon=Maps/springobjects:128,256,16,16] [color=blue]Nautilus Shell[/color][/itemtooltip]
+* 10 [itemtooltip=(O)259][icon=Maps/springobjects:304,160,16,16] [color=blue]Fiddlehead Fern[/color][/itemtooltip]
+* 3 [itemtooltip=(O)814][icon=Maps/springobjects:352,528,16,16] [color=blue]Squid Ink[/color][/itemtooltip]
+[if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.River1]You seem to be missing the special order.
+[onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.River1]Click here to re-add it to your journal.[/onceaction][/if]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_MAIL Current Hector_SpecialOrders_River1]
+[font=dialogue]{{TrueName}} Event: 7 Hearts pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.12]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1750]Hint: Visit [color=green]Hector's Tower[/color] between mid morning and late evening.[/if]
+[else]Requirement: 7 Hearts with [color=red]{{TrueName}}[/color][/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.12]
+[font=dialogue]Special Order: Collect Druidic Essences[/font]
+[if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.River2]You collected the druidic essences.[/if]
+[else]Deliver the following items to the altar outside of [color=green]Hector's Tower[/color] in the [color=green]Deep Mountains[/color]:
+* 100 [itemtooltip=(O)DN.SnS_druidicessence][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip]
+[itemtooltip=(O)DN.SnS_druidicessence][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip] can be found from tilling soil, watering crops, harvesting crops, and cutting grass.
+[if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.River2]You seem to be missing the special order.
+[onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.River2]Click here to re-add it to your journal.[/onceaction][/if]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_MAIL Current Hector_SpecialOrders_River2]
+[font=dialogue]{{TrueName}} Event: 8 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.13]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 2000]Hint: Visit [color=green]Hector's Tower[/color] between mid morning and late evening.[/if]
+[else]Requirement: 8 Hearts with [color=red]{{TrueName}}[/color][/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.13]
+[font=dialogue]{{TrueName}} Event: 9 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.14]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 2250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorRiver3]Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between mid morning and late afternoon.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Hector 2250]Requirement: 9 Hearts with [color=red]{{TrueName}}[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorRiver3]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.14]
+[font=dialogue]{{TrueName}} Event: 10 Hearts pt 1[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.15]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorHeal]Hint: Visit the [color=green]Vet House[/color] in [color=green]East Scarp[/color] between late afternoon and late evening.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Hector 2500]Requirement: 10 Hearts with [color=red]{{TrueName}}[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorHeal]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.15]
+[font=dialogue]{{TrueName}} Event: 10 Hearts pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorHeal2]Hint: Visit the [color=green]Deep Mountains[/color] between mid morning and late evening.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Hector 2500]Requirement: 10 Hearts with [color=red]{{TrueName}}[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorHeal2]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]",
+  "guidebook.chapter.COT.DruidicEssence": "[center][font=dialogue]Druidic Essence[/font][/center]
+At this point, you've unlocked [itemtooltip=(O)DN.SnS_druidicessence][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip]. This is used for a special order during the story, as well as for crafting as you progress in the [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=COT/DruidicsSkill]Druidics[/link] skill[/if][else]Druidics skill (locked)[/else].
+ 
+You can gather this item in the following ways:
+* Tilling soil
+* Watering crops
+* Harvesting crops
+* Cutting grass
+ 
+Be sure to keep saving these after the special order is complete. They will definitely come in handy!",
+  "guidebook.chapter.COT.DruidicsSkill": "[center][font=dialogue]Druidics[/font][/center]
+You've unlocked the Druidics skill! Druidics can be levelled up by farming and foraging.
+
+[font=dialogue]Unlocks[/font]
+* Level 1 - Unlocks the [texttooltip=Shapeshift (Buck):Transform into a buck, giving a speed boost and a buff to your foraging skill.
+You may not use tools or attack while transformed.][color=darkorange]Shapeshift (Buck)[/color][/texttooltip] and [texttooltip=Shapeshift (Doe):Transform into a doe, giving a speed boost and a buff to your foraging skill.
+You may not use tools or attack while transformed.][color=darkorange]Shapeshift (Doe)[/color][/texttooltip] abilities. (These function the same, and differ in appearance only.) Also unlocks the [itemtooltip=(O)DN.SnS_ancientamaranth.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:144,0,16,16] [color=blue]Ancient Amaranth Seeds[/color][/itemtooltip] and [itemtooltip=(O)DN.SnS_ancientepiphyticfern.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:16,16,16,16] [color=blue]Ancient Epiphytic Fern Seeds[/color][/itemtooltip] recipes.
+* Level 2 - Unlocks the [itemtooltip=(O)DN.SnS_glowingpolyporemushrooms.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:48,16,16,16] [color=blue]Ancient Glowing Polypore Mushroom Spores[/color][/itemtooltip] recipe.
+* Level 3 - Unlocks the [itemtooltip=(O)DN.SnS_ancientwildfairyrose.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:0,16,16,16] [color=blue]Ancient Wild Fairy Rose Seeds[/color][/itemtooltip] recipe.
+* Level 4 - Unlocks the [itemtooltip=(O)DN.SnS_ancientelderberry.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:128,48,16,16] [color=blue]Ancient Elderberry Seeds[/color][/itemtooltip] recipe.
+* Level 5 - See [color=black]Professions[/color] later on this page.
+* Level 6 - Unlocks the [itemtooltip=(O)DN.SnS_ancientbottlegourd.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:0,64,16,16] [color=blue]Ancient Bottle Gourd Seeds[/color][/itemtooltip] and [itemtooltip=(O)SnS_lavaeelandstirfriedancientbottlegourd][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:0,48,16,16] [color=blue]Lava Eel & Bottle Gourd[/color][/itemtooltip] recipes.
+* Level 7 - Unlocks the [itemtooltip=(O)DN.SnS_ancientgiantappleberry.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:32,64,16,16] [color=blue]Ancient Giant Apple Berry Seeds[/color][/itemtooltip] and [itemtooltip=(O)SnS_mushroomsredsauce][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:112,32,16,16] [color=blue]Fried Polypore Mushrooms & Red Sauce[/color][/itemtooltip] recipes.
+* Level 8 - Unlocks the [itemtooltip=(O)DN.SnS_ancientazuredetura.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:64,64,16,16] [color=blue]Ancient Azure Detura[/color][/itemtooltip] and [itemtooltip=(O)SnS_ferngreensandpineapple][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:128,32,16,16] [color=blue]Fern Greens and Pineapple[/color][/itemtooltip] recipes.
+* Level 9 - Unlocks the [itemtooltip=(O)DN.SnS_ancientglowinghuckleberry.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:32,16,16,16] [color=blue]Ancient Glowing Huckleberry Seeds[/color][/itemtooltip] and [itemtooltip=(O)SnS_ancienthuckleberryicecream][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:144,32,16,16] [color=blue]Ancient Huckleberry Ice Cream[/color][/itemtooltip] recipes.
+* Level 10 - See [color=black]Professions[/color] later on this page.
+Additionally, each level will increase your transformed movement speed and regeneration speed, as well as the Druidic Essence drop rate.
+ 
+[font=dialogue]Professions[/font]
+Level 5:
+* Skilled Shapeshifter - Adds stamina regeneration ability to shapeshifting, after not moving for a few seconds.
+* Ancient Agronomist - Reduces cost of creating ancient druidic seeds by one essence.
+ 
+Level 10, if you chose Skilled Shapeshifter:
+* Stag's Path - Adds health regeneration to stamina regeneration with double the speed.
+* Wolf's Path - Adds ability to fight while shapeshifted, as well as a defense and attack buff. Unlocks the [color=darkorange]Shapeshift (Wolf)[/color] ability. (All forms get the combat abilities - wolf form has the same functionality of the other two forms, it just looks different.)
+ 
+Level 10, if you chose Ancient Agronomist:
+* Branch of Midgard - All ancient crops grow 10% faster, and all artisan goods derived from them are worth 10% more. Stacks with Artisan and Agriculturist.
+* Branch of Yggdrasil - Druidic essences have an additional 10% chance to drop. Druidic crops water surrounding crops with the same range as a Quality Sprinkler."*/
 }

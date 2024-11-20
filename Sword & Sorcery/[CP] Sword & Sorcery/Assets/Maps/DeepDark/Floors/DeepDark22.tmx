@@ -10,7 +10,7 @@
   <property name="TreatAsOutdoors" value="T"/>
   <property name="indoorWater" value="T"/>
   <property name="spacechase0.SpaceCore_DungeonElevatorEntrance" value="10 7"/>
-  <property name="spacechase0.SpaceCore_DungeonLadderEntrance" value="53 51"/>
+  <property name="spacechase0.SpaceCore_DungeonLadderEntrance" value="8 16"/>
  </properties>
  <tileset firstgid="1" name="paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
   <image source="paths" width="64" height="256"/>
