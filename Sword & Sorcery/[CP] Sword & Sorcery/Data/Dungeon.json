@@ -164,14 +164,14 @@
                 "Stygium Rex": "4250/25/0/0/false/1000/769 .99 {{ModID}}_StygiumOre .03 80 0/8/.01/3/3/.0/true/12/{{i18n:Strings.Monsters.StygiumRex}}",
                 "Stygium Golem": "2500/15/0/0/false/1000/769 .99 {{ModID}}_StygiumOre .03 749 .1 {{ModID}}_taintedgrasses .5 66 .05/3/.01/3/3/.00/true/10/{{i18n:Strings.Monsters.StygiumGolemPurple}}",
                 "Stygium Golem (Blue)": "2500/15/0/0/false/1000/769 .99 {{ModID}}_StygiumOre .03 749 .1 {{ModID}}_taintedgrasses .5 72 .01 84 .05/3/.01/3/3/.00/true/10/{{i18n:Strings.Monsters.StygiumGolemBlue}}",
-                "Stygium Bat": "3250/35/0/0/true/1000/769 .99 {{ModID}}_StygiumOre .03 767 .99 522 .001/3/.01/4/4/.00/true/30/{{i18n:Strings.Monsters.StygiumBat}}",
+                "Stygium Bat": "3250/35/0/0/true/1000/769 .99 {{ModID}}_StygiumOre .03 767 .99 522 .01/3/.01/4/4/.00/true/30/{{i18n:Strings.Monsters.StygiumBat}}",
                 "Stygium Miner": "3500/30/1/3/false/0/769 .99 {{ModID}}_StygiumOre .05 {{ModID}}_taintedcorn .05 105 .01 881 .99 243 .01 287 .05 287 .03 288 .01/3/0/5/3/.0/true/25/{{i18n:Strings.Monsters.StygiumMiner}}",
                 "Stygium Head": "2500/25/0/0/false/2000/769 .99 {{ModID}}_StygiumOre .03 380 .10 335 .05 121 .01/20/.01/8/3/.0/true/15/{{i18n:Strings.Monsters.StygiumHead}}",
                 "Stygium Skull": "4000/40/0/0/true/1000/769 .99 {{ModID}}_StygiumOre .03 881 .99 581 .05/5/.01/4/5/.00/true/30/{{i18n:Strings.Monsters.StygiumSkull}}",
                 "Stygium False Mushroom": "3125/25/0/0/false/0/769 .99 {{ModID}}_StygiumOre .03 {{ModID}}_mushroom1 .25 {{ModID}}_mushroom2 .25 {{ModID}}_mushroom3 .25 {{ModID}}_mushroom4 .25/6/0/1/4/.0/true/20/{{i18n:Strings.Monsters.StygiumFalseMushroom}}",
                 "Stygium Miner Mage": "2500/10/0/2/false/2000/769 .99 {{ModID}}_StygiumOre .05 {{ModID}}_taintedcorn .05 105 .01 881 .99 243 .01 84 .05 80 0/2/.01/8/3/.0/true/15/{{i18n:Strings.Monsters.StygiumMinerMage}}",
                 "Stygium Serpent": "2250/33/0/2/true/1000/769 .99 {{ModID}}_StygiumOre .03 148 .3 225 .05/0/.01/13/3/.0/true/30/{{i18n:Strings.Monsters.StygiumSerpent}}",
-                "Stygium Squid": "2250/20/0/0/true/0/769 .99 {{ModID}}_StygiumOre .03 151 .3 814 .2 921 .05 681 .001/5/0/6/3/.0/true/30/{{i18n:Strings.Monsters.StygiumSquid}}",
+                "Stygium Squid": "2250/20/0/0/true/0/769 .99 {{ModID}}_StygiumOre .03 151 .3 814 .2 921 .05 681 .01/5/0/6/3/.0/true/30/{{i18n:Strings.Monsters.StygiumSquid}}",
                 "Duskspire Behemoth": "10000/35/1/3/false/0//20/0/5/3/.0/true/250/{{i18n:Strings.Monsters.DuskspireBehemoth}}",
                 "Duskspire Remnant": "6500/25/1/3/false/0//10/0/5/3/.0/true/100/{{i18n:Strings.Monsters.DuskspireRemnant}}"
             }
