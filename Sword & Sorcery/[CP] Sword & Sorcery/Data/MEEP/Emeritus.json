@@ -25,7 +25,7 @@
                     "DisplayName": "{{i18n:Strings.Names.Emeritus}}",
                     "PortraitTexture": "Portraits/MateoEmeritus",
                     "PetMessage": [
-                        "{{i18n:MEEP.EmeritusOutside.{{Random: {{Range: 1, 10}}|key=EmDialogue}}}}"
+                        "{{i18n:MEEP.EmeritusOutside.{{Random: {{Range: 1, 5}}|key=EmDialogue}}}}"
                     ],
                     "HomeTileX": 90,
                     "HomeTileY": 100,
@@ -39,7 +39,7 @@
                     "DisplayName": "{{i18n:Strings.Names.Emeritus}}",
                     "PortraitTexture": "Portraits/MateoEmeritus",
                     "PetMessage": [
-                        "{{i18n:MEEP.EmeritusInside.{{Random: {{Range: 1, 10}}|key=EmDialogue}}}}"
+                        "{{i18n:MEEP.EmeritusInside.{{Random: {{Range: 1, 5}}|key=EmDialogue}}}}"
                     ],
                     "HomeTileX": 2,
                     "HomeTileY": 17,
