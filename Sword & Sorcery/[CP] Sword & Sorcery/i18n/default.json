@@ -7030,6 +7030,8 @@ ________      ________ _   _ _______ _____
   "arsenal.lightbringer-bullet.name": "Lightbringer Bullet",
   "arsenal.lightbringer-bullet.description": "A bullet capable of eradicating foes in one hit. (No loot drops)",
 
+  "object.stygium-ore-stone.name": "Stygium Node",
+  "object.stygium-ore-stone.description": "You shouldn't have this",
   "object.stygium-ore.name": "Stygium Ore",
   "object.stygium-ore.description": "Metal infused with void energy. Hurts to hold.",
   "object.stygium-bar.name": "Stygium Bar",
@@ -7777,7 +7779,7 @@ ________      ________ _   _ _______ _____
   "Strings.Names.Hector?": "Hector?", //why is he like this roflmao
   "Strings.Names.LittleGruff": "Little Gruff",
 
-  //Deep Dark
+  //Deep Dark Map Strings. I wonder who Owl Boy is?
   "Strings.DeepDark.DDLakeSign0": "\"Welcome to Lake Land! It's lovely here, if you can get past the monster infestation.\"#\"Look for a warp at the end of the room to proceed forward. Use the starting warp to exit the caverns.\"#\"I installed all these warps all personally. You're welcome, hoot!\" - Owl Boy",
   "Strings.DeepDark.DDLakeSign1": "\"How on EARTH is anyone supposed to reach that elevator? Here's an escape pad. Consider leaving me a tip.\" - Owl Boy",
   "Strings.DeepDark.DDLakeSign2": "\"The prize for reaching the end of this room is your upcoming demise. Turn back, you absolute buffoon.\" - Owl Boy",
@@ -7786,9 +7788,30 @@ ________      ________ _   _ _______ _____
   "Strings.DeepDark.DDLakeSign5": "\"What a beautiful view... How I wish to share it with someone...\" - Owl Boy",
   "Strings.DeepDark.DDLakeSign6": "\"Why warp pads when there are corridors? You... don't want to go down the corridors, trust me.\" - Owl Boy",
   "Strings.DeepDark.DDLakeSign7": "\"I often come here to think... Alas, the monsters make that a tad difficult these days.\" - Owl Boy",
-  "Strings.DeepDark.DDLakeSign8": "\"Sometime you have to stop and wonder...\"#\"Ah, blast it all, I forgot what I was going to write.\" - Owl Boy",
+  "Strings.DeepDark.DDLakeSign8": "\"Sometimes you have to stop and wonder...\"#\"Ah, blast it all, I forgot what I was going to write.\" - Owl Boy",
   "Strings.DeepDark.DDLakeSign9": "\"What does the owl say when he's having a good time?\"#\"What a hoot!\" - Owl Boy",
-  "Strings.DeepDark.DDTipTable": "You consider leaving a tip, but there are too many feathers in the pouch."
+  "Strings.DeepDark.DDLakeSign10": "\"Haha, made you look! Hooty hoot HOOT!\" - Owl Boy",
+  "Strings.DeepDark.DDTipTable": "You consider leaving a tip, but there are too many feathers in the pouch.",
+  "Strings.DeepDark.DDDeadGuy": "You take a moment of silence to pay your respects.",
+  "Strings.DeepDark.DDBackpack": "The backpack is empty, save a note that reads \"turn back\".",
+
+  //Monsters
+  "Strings.Monsters.StygiumCrab": "Stygium Crab",
+  "Strings.Monsters.StygiumSkeleton": "Stygium Skeleton",
+  "Strings.Monsters.StygiumPartySkeleton": "Stygium Party Skeleton",
+  "Strings.Monsters.StygiumRex": "Stygium Rex",
+  "Strings.Monsters.StygiumGolemPurple": "Stygium Golem (Purple)",
+  "Strings.Monsters.StygiumGolemBlue": "Stygium Golem (Blue)",
+  "Strings.Monsters.StygiumBat": "Stygium Bat",
+  "Strings.Monsters.StygiumMiner": "Stygium Miner",
+  "Strings.Monsters.StygiumHead": "Stygium Head",
+  "Strings.Monsters.StygiumSkull": "Stygium Skull",
+  "Strings.Monsters.StygiumFalseMushroom": "Stygium False Mushroom",
+  "Strings.Monsters.StygiumMinerMage": "Stygium Miner Mage",
+  "Strings.Monsters.StygiumSerpent": "Stygium Serpent",
+  "Strings.Monsters.StygiumSquid": "Stygium Squid",
+  "Strings.Monsters.DuskspireBehemoth": "Duskspire Behemoth",
+  "Strings.Monsters.DuskspireRemnant": "Duskspire Remnant"
 
 
   /* 

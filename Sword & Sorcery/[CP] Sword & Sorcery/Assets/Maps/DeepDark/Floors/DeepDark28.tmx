@@ -5,7 +5,7 @@
  </editorsettings>
  <properties>
   <property name="BrookSounds" value="8 6 4 26 25 4 39 35 4 54 40 4 0 46 5"/>
-  <property name="LocationContext" value="SnSDeepDark"/>
+  <property name="LocationContext" value="SnSDeepDarkLakes"/>
   <property name="NoFishing" value="T"/>
   <property name="TreatAsOutdoors" value="T"/>
   <property name="indoorWater" value="T"/>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="16" tileheight="16" infinite="0" nextlayerid="20" nextobjectid="13">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="16" tileheight="16" infinite="0" nextlayerid="20" nextobjectid="14">
  <editorsettings>
   <export target="MushroomCave.tmx" format="tmx"/>
  </editorsettings>
  <properties>
   <property name="BrookSounds" value="21 8 4 30 20 4 11 43 4 42 15 4 47 24 4 53 16 4 59 51 4 0 46 4"/>
-  <property name="LocationContext" value="SnSDeepDark"/>
+  <property name="LocationContext" value="SnSDeepDarkLakes"/>
   <property name="NoFishing" value="T"/>
   <property name="TreatAsOutdoors" value="T"/>
   <property name="indoorWater" value="T"/>
@@ -10251,7 +10251,7 @@
 0,0,0,0,0,0,0,0,0,0,1239,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1206,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1326,0,0,0
 </data>
  </layer>
- <objectgroup id="4" name="Buildings" visible="0">
+ <objectgroup id="4" name="Buildings">
   <object id="7" name="TileData" x="112" y="112" width="16" height="16">
    <properties>
     <property name="Action" value="spacechase0.SpaceCore_DungeonElevatorMenu DN.SnS_DeepDark"/>
@@ -10273,6 +10273,11 @@
    </properties>
   </object>
   <object id="12" name="TileData" x="288" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message DDLakeSign7"/>
+   </properties>
+  </object>
+  <object id="13" name="TileData" x="288" y="208" width="16" height="16">
    <properties>
     <property name="Action" value="Message DDLakeSign7"/>
    </properties>
