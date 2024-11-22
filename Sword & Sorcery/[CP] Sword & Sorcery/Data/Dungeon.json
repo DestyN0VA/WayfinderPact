@@ -966,7 +966,7 @@
                     ],
                     "LocationDataEntry": "EastScarp_DeepDarkDungeon"
                 }
-            },
+            }
             //"When": { "HasFlag: |contains=DuskspireDefeated": true }
         },
         {
@@ -1169,23 +1169,22 @@
                 },
 
                 //Levels
-                //Set up in case we ever want each floor set to have custom music
                 "SnSDeepDarkDark": {
                     "PlayRandomAmbientSounds": false,
                     "CopyWeatherFromLocation": "Desert",
-                    "DefaultMusic": "Volcano_Ambient",
+                    "DefaultMusic": "SnS.DeepDarkDark",
                     "CustomFields": {}
                 },
                 "SnSDeepDarkMushrooms": {
                     "PlayRandomAmbientSounds": false,
                     "CopyWeatherFromLocation": "Desert",
-                    "DefaultMusic": "Volcano_Ambient",
+                    "DefaultMusic": "SnS.DeepDarkMushrooms",
                     "CustomFields": {}
                 },
                 "SnSDeepDarkLakes": {
                     "PlayRandomAmbientSounds": false,
                     "CopyWeatherFromLocation": "Desert",
-                    "DefaultMusic": "Volcano_Ambient",
+                    "DefaultMusic": "SnS.DeepDarkLakes",
                     "CustomFields": {}
                 }
             }

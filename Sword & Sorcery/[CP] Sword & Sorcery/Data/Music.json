@@ -3,7 +3,7 @@
 
         // AUDIO DATA
         {
-            "LogName": "Mateo Theme",
+            "LogName": "S&S Music",
             "Action": "EditData",
             "Target": "Data/AudioChanges",
             "Entries": {
@@ -13,182 +13,91 @@
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/{{MateoTheme}}}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
-                }
-            }
-        },
-        {
-            "LogName": "Hector Theme",
-            "Action": "EditData",
-            "Target": "Data/AudioChanges",
-            "Entries": {
+                },
                 "SnS.HectorTheme": {
                     "ID": "SnS.HectorTheme",
                     "Category": "Music",
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/{{HectorTheme}}}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
-                }
-            }
-        },
-        {
-            "LogName": "Cirrus Theme",
-            "Action": "EditData",
-            "Target": "Data/AudioChanges",
-            "Entries": {
+                },
                 "SnS.CirrusTheme": {
                     "ID": "SnS.CirrusTheme",
                     "Category": "Music",
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/CirrusTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
-                }
-            }
-        },
-        {
-            "LogName": "Cirrus' Keytar Solo'",
-            "Action": "EditData",
-            "Target": "Data/AudioChanges",
-            "Entries": {
+                },
                 "SnS.KeytarSolo": {
                     "ID": "SnS.KeytarSolo",
                     "Category": "Music",
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/KeytarSolo.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
-                }
-            }
-        },
-        {
-            "LogName": "Dandelion Theme",
-            "Action": "EditData",
-            "Target": "Data/AudioChanges",
-            "Entries": {
+                },
                 "SnS.DandelionTheme": {
                     "ID": "SnS.DandelionTheme",
                     "Category": "Music",
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DandelionTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
-                }
-            }
-        },
-        {
-            "LogName": "Roslin Theme",
-            "Action": "EditData",
-            "Target": "Data/AudioChanges",
-            "Entries": {
+                },
                 "SnS.RoslinTheme": {
                     "ID": "SnS.RoslinTheme",
                     "Category": "Music",
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/RoslinTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
-                }
-            }
-        },
-        {
-            "LogName": "Lonely Theme",
-            "Action": "EditData",
-            "Target": "Data/AudioChanges",
-            "Entries": {
+                },
                 "SnS.LonelyTheme": {
                     "ID": "SnS.LonelyTheme",
                     "Category": "Music",
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/LonelyTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
-                }
-            }
-        },
-        {
-            "LogName": "Lonely Theme: Reprise",
-            "Action": "EditData",
-            "Target": "Data/AudioChanges",
-            "Entries": {
+                },
                 "SnS.LonelyThemeReprise": {
                     "ID": "SnS.LonelyThemeReprise",
                     "Category": "Music",
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/LonelyReprise.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
-                }
-            }
-        },
-        {
-            "LogName": "Despair Theme",
-            "Action": "EditData",
-            "Target": "Data/AudioChanges",
-            "Entries": {
+                },
                 "SnS.DespairTheme": {
                     "ID": "SnS.DespairTheme",
                     "Category": "Music",
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DespairTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
-                }
-            }
-        },
-        {
-            "LogName": "Hope Theme",
-            "Action": "EditData",
-            "Target": "Data/AudioChanges",
-            "Entries": {
+                },
                 "SnS.HopeTheme": {
                     "ID": "SnS.HopeTheme",
                     "Category": "Music",
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/HopeTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
-                }
-            }
-        },
-        {
-            "LogName": "Vulnerable Theme",
-            "Action": "EditData",
-            "Target": "Data/AudioChanges",
-            "Entries": {
+                },
                 "SnS.VulnerableTheme": {
                     "ID": "SnS.VulnerableTheme",
                     "Category": "Music",
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/VulnerableTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
-                }
-            }
-        },
-        {
-            "LogName": "So Much for Stardust Theme",
-            "Action": "EditData",
-            "Target": "Data/AudioChanges",
-            "Entries": {
+                },
                 "SnS.SMFS": {
                     "ID": "SnS.SMFS",
                     "Category": "Music",
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/SMFSTheme.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
-                }
-            }
-        },
-        {
-            "LogName": "So Much for Stardust Theme Reprised",
-            "Action": "EditData",
-            "Target": "Data/AudioChanges",
-            "Entries": {
+                },
                 "SnS.SMFSR": {
                     "ID": "SnS.SMFSR",
                     "Category": "Music",
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/SMFSThemeReprise.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
-                }
-            }
-        },
-        {
-            "LogName": "Duskspire Themes",
-            "Action": "EditData",
-            "Target": "Data/AudioChanges",
-            "Entries": {
+                },
                 "SnS.DuskspirePhase1": {
                     "ID": "SnS.DuskspirePhase1",
                     "Category": "Music",
@@ -207,6 +116,27 @@
                     "ID": "SnS.DuskspireDeath",
                     "Category": "Music",
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DuskspireDeath.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+                "SnS.DeepDarkDark": {
+                    "ID": "SnS.DeepDarkDark",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DeepDark_Dark.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+                "SnS.DeepDarkMushrooms": {
+                    "ID": "SnS.DeepDarkMushrooms",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DeepDark_Mushrooms.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+                "SnS.DeepDarkLakes": {
+                    "ID": "SnS.DeepDarkLakes",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DeepDark_Lakes.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 }
@@ -244,139 +174,73 @@
                 "SnS.MateoTheme": {
                     "Name": "{{i18n:Strings.Music.MateoTheme}}",
                     "Available": null
-                }
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/JukeboxTracks",
-            "Entries": {
+                },
                 "SnS.HectorTheme": {
                     "Name": "{{i18n:Strings.Music.HectorTheme |HectorName={{TrueName}}}}",
                     "Available": null
-                }
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/JukeboxTracks",
-            "Entries": {
+                },
                 "SnS.CirrusTheme": {
                     "Name": "{{i18n:Strings.Music.CirrusTheme}}",
                     "Available": null
-                }
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/JukeboxTracks",
-            "Entries": {
+                },
                 "SnS.KeytarSolo": {
                     "Name": "{{i18n:Strings.Music.KeytarSolo}}",
                     "Available": null
-                }
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/JukeboxTracks",
-            "Entries": {
+                },
                 "SnS.DandelionTheme": {
                     "Name": "{{i18n:Strings.Music.DandelionTheme}}",
                     "Available": null
-                }
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/JukeboxTracks",
-            "Entries": {
+                },
                 "SnS.RoslinTheme": {
                     "Name": "{{i18n:Strings.Music.RoslinTheme}}",
                     "Available": null
-                }
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/JukeboxTracks",
-            "Entries": {
+                },
                 "SnS.LonelyTheme": {
                     "Name": "{{i18n:Strings.Music.LonelyTheme}}",
                     "Available": null
-                }
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/JukeboxTracks",
-            "Entries": {
+                },
                 "SnS.LonelyThemeReprise": {
                     "Name": "{{i18n:Strings.Music.LonelyThemeReprise}}",
                     "Available": null
-                }
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/JukeboxTracks",
-            "Entries": {
+                },
                 "SnS.DespairTheme": {
                     "Name": "{{i18n:Strings.Music.DespairTheme}}",
                     "Available": null
-                }
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/JukeboxTracks",
-            "Entries": {
+                },
                 "SnS.HopeTheme": {
                     "Name": "{{i18n:Strings.Music.HopeTheme}}",
                     "Available": null
-                }
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/JukeboxTracks",
-            "Entries": {
+                },
                 "SnS.VulnerableTheme": {
                     "Name": "{{i18n:Strings.Music.VulnerableTheme}}",
                     "Available": null
-                }
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/JukeboxTracks",
-            "Entries": {
+                },
                 "SnS.SMFS": {
                     "Name": "{{i18n:Strings.Music.SMFS}}",
                     "Available": null
-                }
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/JukeboxTracks",
-            "Entries": {
+                },
                 "SnS.SMFSR": {
                     "Name": "{{i18n:Strings.Music.SMFSR}}",
                     "Available": null
-                }
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/JukeboxTracks",
-            "Entries": {
+                },
                 "SnS.DuskspirePhase1": {
                     "Name": "{{i18n:Strings.Music.DuskspirePhase1}}",
                     "Available": null
                 },
                 "SnS.DuskspirePhase2": {
                     "Name": "{{i18n:Strings.Music.DuskspirePhase2}}",
+                    "Available": null
+                },
+                "SnS.DeepDarkDark": {
+                    "Name": "{{i18n:Strings.Music.DeepDarkDark}}",
+                    "Available": null
+                },
+                "SnS.DeepDarkMushrooms": {
+                    "Name": "{{i18n:Strings.Music.DeepDarkMushrooms}}",
+                    "Available": null
+                },
+                "SnS.DeepDarkLakes": {
+                    "Name": "{{i18n:Strings.Music.DeepDarkLakes}}",
                     "Available": null
                 }
             }
