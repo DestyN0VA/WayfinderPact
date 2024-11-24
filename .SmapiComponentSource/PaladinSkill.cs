@@ -13,6 +13,7 @@ using StardewValley.Menus;
 using StardewValley.Quests;
 using StardewValley.SpecialOrders;
 using SwordAndSorcerySMAPI;
+using StardewValley.SpecialOrders.Rewards;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -169,23 +170,23 @@ namespace SwordAndSorcerySMAPI
         }
     }
 
-    [HarmonyPatch(typeof(SpecialOrder), nameof(SpecialOrder.OnMoneyRewardClaimed))]
+    [HarmonyPatch(typeof(SpecialOrder), nameof(SpecialOrder.Update))]
     public static class PaladinExpPatch1
     {
-        public static void Postfix()
+        public static void Postfix(SpecialOrder __instance)
         {
-            if (!ModTOP.PaladinSkill.ShouldShowOnSkillsPage)
+            if (!ModTOP.PaladinSkill.ShouldShowOnSkillsPage || __instance.questState.Value != SpecialOrderStatus.Complete || !__instance.readyForRemoval.Value)
                 return;
             Game1.player.AddCustomSkillExperience(ModTOP.PaladinSkill, 250);
         }
     }
 
-    [HarmonyPatch(typeof(Quest), nameof(Quest.OnMoneyRewardClaimed))]
+    [HarmonyPatch(typeof(Quest), nameof(Quest.questComplete))]
     public static class PaladinExpPatch2
     {
-        public static void Postfix()
+        public static void Postfix(Quest __instance)
         {
-            if (!ModTOP.PaladinSkill.ShouldShowOnSkillsPage)
+            if (!ModTOP.PaladinSkill.ShouldShowOnSkillsPage || !__instance.completed.Value)
                 return;
             Game1.player.AddCustomSkillExperience(ModTOP.PaladinSkill, 100);
         }

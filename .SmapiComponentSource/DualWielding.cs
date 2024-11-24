@@ -22,11 +22,35 @@ public static class DualWieldExtensions
     }
 }
 
+[HarmonyPatch(typeof(MeleeWeapon), nameof(MeleeWeapon.getCategoryName))]
+public static class ShieldCategoryName
+{
+    public static void Postfix(MeleeWeapon __instance, ref string __result)
+    {
+        if (__instance.GetData().CustomFields?.ContainsKey("DN.SnS_Shield") ?? false)
+        {
+            __result = "Shield";
+        }
+    }
+}
+
+[HarmonyPatch(typeof(Tool), nameof(Tool.getCategoryColor))]
+public static class ShieldCategoryColor
+{
+    public static void Postfix(Tool __instance, ref Color __result)
+    {
+        if (__instance is MeleeWeapon && ((__instance as MeleeWeapon).GetData().CustomFields?.ContainsKey("DN.SnS_Shield") ?? false))
+        {
+            __result = Color.CornflowerBlue;
+        }
+    }
+}
+
 [HarmonyPatch(typeof(MeleeWeapon), "doAnimateSpecialMove")]
 public static class DualWieldingSpecialMovePatch
 {
     internal static ConditionalWeakTable<MeleeWeapon, FarmerSprite> fakeSprites = new();
-    
+
     internal static bool doingDualWieldCall = false;
     public static void Postfix(MeleeWeapon __instance)
     {
@@ -87,13 +111,15 @@ public static class DualWieldingDrawPatch
             return;
 
         var __instance = f.CurrentTool as MeleeWeapon;
+        if ((__instance.GetData().CustomFields?.ContainsKey("DN.SnS_Shield") ?? false))
+            return;
 
         var lastUser = __instance?.lastUser;
         if (lastUser == null)
             return;
 
-        var offhand = lastUser.GetOffhand() as MeleeWeapon;
-        if (offhand == null)
+        var offhand = lastUser.GetOffhand();
+        if (offhand == null || (offhand.GetData().CustomFields?.ContainsKey("DN.SnS_Shield") ?? false))
             return;
         
         doingDualWieldCall = true;

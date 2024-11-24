@@ -526,6 +526,7 @@
         "{{ModID}}_IridiumArmor": "{{ModID}}_PureIridiumOre 10 {{ModID}}_GoldArmor 1/meow/{{ModID}}_IridiumArmor 1/false/null/{{i18n:arsenal.iridium-armor.name}}",
         "{{ModID}}_RadioactiveArmor": "{{ModID}}_PureRadioactiveOre 10 {{ModID}}_IridiumArmor 1/meow/{{ModID}}_RadioactiveArmor 1/false/null/{{i18n:arsenal.radioactive-armor.name}}",
         "{{ModID}}_Bow": "709 10/meow/0 1/false/null",
+        "{{ModID}}_SteelShield": "335 5 388 24/meow/0 1/false/null",
         "{{ModID}}_Arrow": "388 1 390 1/meow/{{ModID}}_Arrow 1/false/null",
         "{{ModID}}_FirestormArrow": "{{ModID}}_Arrow 1 93 10/meow/{{ModID}}_FirestormArrow 1/false/null",
         "{{ModID}}_IcicleArrow": "{{ModID}}_Arrow 1 84 1/meow/{{ModID}}_IcicleArrow 1/false/null",

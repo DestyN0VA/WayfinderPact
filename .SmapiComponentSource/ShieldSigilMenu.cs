@@ -31,7 +31,7 @@ public class ShieldSigilMenu : IClickableMenu
 
         int[] levelChecks = [0, 2, 4, 6, 8];
         
-        invMenu = new(Game1.uiViewport.Width / 2 - 72 * 5 - 36 + 8, yPositionOnScreen + height, true, highlightMethod:
+        invMenu = new(Game1.uiViewport.Width / 2 - 72 * 5 - 36 + 8, yPositionOnScreen + height + 32, true, highlightMethod:
             (item) =>
             {
                 return (item == null || choices.Contains(item.QualifiedItemId));
@@ -111,7 +111,7 @@ public class ShieldSigilMenu : IClickableMenu
             container.AddChild(sub[i]);
         }
     }
-
+    public int timer = 5000;
     public override void update(GameTime time)
     {
         base.update(time);

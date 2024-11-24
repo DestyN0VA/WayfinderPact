@@ -44,7 +44,7 @@ namespace MageDelve.Mercenaries
 
             MercenaryActionData.ActionTypes.Add("MeleeAttackNearestMonster", (merc, actionData) =>
             {
-                string weaponId = "(W)DN.SnS_keytoscarp";
+                string weaponId = "DN.SnS_keytoscarp";
                 // TODO: Change based on merc.CorrespondingNpc (the npc ID)?
 
                 //var actionParams = actionData.Parameters.ToObject<MeleeAttackMercenaryActionParameters>(js);

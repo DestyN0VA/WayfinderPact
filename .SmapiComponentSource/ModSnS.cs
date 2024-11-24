@@ -30,10 +30,26 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace SwordAndSorcerySMAPI
 {
+    public class SteelShieldRecipe : CustomCraftingRecipe
+    {
+        public override string Description => ItemRegistry.GetDataOrErrorItem("(W)DN.SnS_SteelShield").Description;
+
+        public override Texture2D IconTexture => ItemRegistry.GetDataOrErrorItem("(W)DN.SnS_SteelShield").GetTexture();
+
+        public override Rectangle? IconSubrect => ItemRegistry.GetDataOrErrorItem("(W)DN.SnS_SteelShield").GetSourceRect();
+
+        private IngredientMatcher[] ingreds = [new ObjectIngredientMatcher("(O)335", 5), new ObjectIngredientMatcher("(O)388", 25)];
+        public override IngredientMatcher[] Ingredients => ingreds;
+
+        public override Item CreateResult()
+        {
+            return ItemRegistry.Create("(W)DN.SnS_SteelShield");
+        }
+    }
+
     public class FinalePartnerInfo
     {
         public string IntermissionEventId { get; set; }
@@ -238,7 +254,7 @@ namespace SwordAndSorcerySMAPI
         public KeybindList AbilityBar2Slot8 = new(new Keybind(SButton.LeftShift, SButton.D8));
     }
 
-    public partial class ModSnS : StardewModdingAPI.Mod
+    public partial class ModSnS : Mod
     {
         public static ModSnS instance;
         public static Configuration Config { get; set; }
@@ -405,6 +421,14 @@ namespace SwordAndSorcerySMAPI
                 return true;
             });
 
+            GameLocation.RegisterTileAction("DN.SnS_ShieldSigilMenu", (loc, args, f, p) =>
+            {
+                if (ModTOP.PaladinSkill.ShouldShowOnSkillsPage)
+                {
+                    Game1.activeClickableMenu = new ShieldSigilMenu();
+                }
+                return true;
+            });
 
             GameStateQuery.Register("PLAYER_HAS_SHADOWSTEP", (args, ctx) =>
             {
@@ -650,6 +674,9 @@ namespace SwordAndSorcerySMAPI
 
         private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
         {
+            if (!Game1.player.knowsRecipe("DN.SnS_SteelShield"))
+                Game1.player.craftingRecipes.Add("DN.SnS_SteelShield", 0);
+
             var ext = Game1.player.GetFarmerExtData();
 
             if (Game1.shortDayNameFromDayOfSeason(Game1.dayOfMonth) == "Mon")
@@ -792,6 +819,9 @@ namespace SwordAndSorcerySMAPI
         {
             if (e.NameWithoutLocale.IsEquivalentTo("DN.SnS/AlchemyRecipes"))
                 e.LoadFrom(() => new Dictionary<string, AlchemyData>(), StardewModdingAPI.Events.AssetLoadPriority.Exclusive);
+
+            if (e.NameWithoutLocale.IsEquivalentTo("DN.SnS/FinalePartners"))
+                e.LoadFrom(() => new Dictionary<string, FinalePartnerInfo>(), StardewModdingAPI.Events.AssetLoadPriority.Exclusive);
          
             string[] recolors =
             [
@@ -946,6 +976,9 @@ namespace SwordAndSorcerySMAPI
             */
         }
 
+        private double Perc;
+        private double wait = 0;
+
         private void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)
         {
             var gmcm = Helper.ModRegistry.GetApi<SpaceShared.APIs.IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
@@ -966,15 +999,19 @@ namespace SwordAndSorcerySMAPI
                 gmcm.AddComplexOption(ModManifest, I18n.String_ManabarPeview, (b, pos) => {
                     var ext = Game1.player?.GetFarmerExtData();
                     double x;
-                    if (SaveGame.loaded == null)
-                        x = Utility.CreateRandom(0.40349d).NextDouble();
+
+                    if (wait <= 0)
+                    {
+                        Perc = x = Game1.random.NextDouble();
+                        wait = 5000;
+                    }
                     else
                     {
-                        Utility.TryCreateIntervalRandom("Day", "aether", out Random r, out string error);
-                        x = r.NextDouble();
+                        x = Perc;
+                        wait -= Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds;
                     }
 
-                    float perc = (float)x;
+                    double perc = x;
                     string manaStr = $"{(int)(10*x)}/10";
                     IClickableMenu.drawTextureBox(b, (int)pos.X, (int)pos.Y, 64 * 4 + 24, 32 + 12 + 12, Color.White);
                     b.Draw(Game1.staminaRect, new Rectangle((int)pos.X + 12, (int)pos.Y + 12, (int)(64 * 4 * perc), 32), Utility.StringToColor($"{ModSnS.Config.Red} {ModSnS.Config.Green} {ModSnS.Config.Blue}") ?? Color.Aqua);
@@ -1015,7 +1052,8 @@ namespace SwordAndSorcerySMAPI
             }
 
             Skills.RegisterSkill(RogueSkill = new RogueSkill());
-            SpaceCore.CustomCraftingRecipe.CraftingRecipes.Add("DN.SnS_Bow", new BowCraftingRecipe());
+            CustomCraftingRecipe.CraftingRecipes.Add("DN.SnS_Bow", new BowCraftingRecipe());
+            CustomCraftingRecipe.CraftingRecipes.Add("DN.SnS_SteelShield", new SteelShieldRecipe());
 
             sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
             sc.RegisterSerializerType(typeof(ThrownShield));
@@ -1047,6 +1085,29 @@ namespace SwordAndSorcerySMAPI
                 Skull.cursedDoll.Value = true;
                 Skull.hauntedSkull.Value = true;
                 return Skull;
+            });
+
+            sc.RegisterSpawnableMonster("MagmaSprite", (pos, data) =>
+            {
+                Bat MagmaSprite = new(pos);
+                MagmaSprite.reloadSprite();
+                if (!data.TryGetValue("Sparkler", out _))
+                {
+                    MagmaSprite.Slipperiness *= 2;
+                    Helper.Reflection.GetField<float>(MagmaSprite, "maxSpeed").SetValue(Game1.random.Next(3, 9));
+                }
+                else
+                {
+                    MagmaSprite.Slipperiness += 3;
+                    Helper.Reflection.GetField<float>(MagmaSprite, "maxSpeed").SetValue(Game1.random.Next(3, 8));
+                    MagmaSprite.canLunge.Value = true;
+                }
+                Helper.Reflection.GetField<float>(MagmaSprite, "extraVelocity").SetValue(2);
+                MagmaSprite.shakeTimer = 100;
+                MagmaSprite.cursedDoll.Value = true;
+                MagmaSprite.magmaSprite.Value = true;
+
+                return MagmaSprite;
             });
 
             var CP = Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
@@ -1087,31 +1148,40 @@ namespace SwordAndSorcerySMAPI
 
         private void GameLoop_UpdateTicking(object sender, StardewModdingAPI.Events.UpdateTickingEventArgs e)
         {
+
             if (!Context.IsWorldReady)
                 return;
+
+            if (!Game1.player.mailReceived.Contains("DN.SnS_IntermissionShield") && Game1.player.eventsSeen.Any(m => m.StartsWith("SnS.Ch4.Victory")))
+            {
+                Game1.player.addItemByMenuIfNecessary(ItemRegistry.Create("(W)DN.SnS_PaladinShield", 1, 0, false));
+                Game1.addMail("DN.SnS_IntermissionShield", true, false);
+            }
 
             if (State.DoFinale || State.FinaleBoss != null)
             {
                 if (State.FinaleBoss == null && Game1.CurrentEvent == null && Game1.locationRequest == null)
                 {
+                    if (!Game1.player.mailReceived.Contains("DN.SnS_IntermissionShield"))
+                    {
+                        Game1.player.addItemByMenuIfNecessary(ItemRegistry.Create("(W)DN.SnS_PaladinShield", 1, 0, false));
+                        Game1.addMail("DN.SnS_IntermissionShield", true, false);
+                    }
                     Game1.currentLocation.characters.Add(State.FinaleBoss = new DuskspireMonster(new Vector2( 18, 13 ) * Game1.tileSize));
                     Game1.changeMusicTrack("SnS.DuskspirePhase2");
 
                     string partner = null;
-                    {
-                        var modInfo = ModSnS.instance.Helper.ModRegistry.Get("DN.SnS");
-                        var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
-                        var partnerInfos = pack.ReadJsonFile<Dictionary<string, FinalePartnerInfo>>("Data/FinalePartners.json");
+                    var partnerInfos = Game1.content.Load<Dictionary<string, FinalePartnerInfo>>("DN.SnS/FinalePartners");
 
-                        foreach (string key in partnerInfos.Keys)
+                    foreach (string key in partnerInfos.Keys)
+                    {
+                        if (Game1.player.friendshipData.TryGetValue(key, out var data) && data.IsDating())
                         {
-                            if (Game1.player.friendshipData.TryGetValue(key, out var data) && data.IsDating())
-                            {
-                                partner = key;
-                                break;
-                            }
+                            partner = key;
+                            break;
                         }
                     }
+
                     if (partner == null)
                     {
                         if (Game1.player.hasOrWillReceiveMail("FarmerGuildmasterBattle"))
@@ -1160,12 +1230,10 @@ namespace SwordAndSorcerySMAPI
                                 Game1.screenGlowOnce(Color.White, false);
                             }
 
-                            if (Game1.getAllFarmers().Any(f => f.currentLocation == Game1.getLocationFromName("EastScarp_DuskspireLair") && f.Items.Any(f => f.QualifiedItemId == "(O)DN.SnS_DuskspireHeart")))
+                            if (Game1.getAllFarmers().Any(f => f.currentLocation == Game1.getLocationFromName("EastScarp_DuskspireLair") && f.Items.Count > 0 && f.Items.Any(f => f.QualifiedItemId == "(O)DN.SnS_DuskspireHeart")))
                             {
-                                Game1.player.GetCurrentMercenaries().Clear();// This is really bad. Pathos don't kill me.
-                                var modInfo = ModSnS.instance.Helper.ModRegistry.Get("DN.SnS");
-                                var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
-                                var partnerInfos = pack.ReadJsonFile<Dictionary<string, FinalePartnerInfo>>("Data/FinalePartners.json");
+                                Game1.player.GetCurrentMercenaries().Clear();
+                                var partnerInfos = Game1.content.Load<Dictionary<string, FinalePartnerInfo>>("DN.SnS/FinalePartners");
 
                                 FinalePartnerInfo partnerInfo = partnerInfos["default"];
 
@@ -1236,7 +1304,7 @@ namespace SwordAndSorcerySMAPI
                         duration: 250,
                         displayName: I18n.Ability_Shadowstep_Name(),
                         effects: new() { CriticalChanceMultiplier = { 999f } },
-                        iconTexture: Game1.content.Load<Texture2D>(Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name ),
+                        iconTexture: Game1.content.Load<Texture2D>(Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name),
                         iconSheetIndex: 0);
                     Game1.player.applyBuff(b);
                 }
@@ -1251,13 +1319,13 @@ namespace SwordAndSorcerySMAPI
             var ext = Game1.player.GetFarmerExtData();
             var hasBar = Game1.onScreenMenus.Any(m => m is AdventureBar);
 
-            if (Config.ToggleAdventureBar.JustPressed() && Game1.player.hasOrWillReceiveMail("SnS_AdventureBar"))
+            if (Config.ToggleAdventureBar.JustPressed() && Game1.activeClickableMenu == null && Game1.player.hasOrWillReceiveMail("SnS_AdventureBar"))
             {
                 AdventureBar.Hide = !AdventureBar.Hide;
                 if (AdventureBar.Hide && hasBar)
                     Game1.onScreenMenus.Remove(Game1.onScreenMenus.Where(m => m is AdventureBar).First());
             }
-            else if ( Config.ConfigureAdventureBar.JustPressed() && Game1.activeClickableMenu == null &&
+            else if ( Config.ConfigureAdventureBar.JustPressed() && Game1.activeClickableMenu == null && !Game1.IsChatting &&
                  Game1.player.hasOrWillReceiveMail("SnS_AdventureBar") )
             {
                 Game1.activeClickableMenu = new AdventureBarConfigureMenu();
@@ -1266,7 +1334,7 @@ namespace SwordAndSorcerySMAPI
             {
                 Game1.onScreenMenus.Add(new AdventureBar(editing: false));
             }
-            else if (hasBar)
+            else if (hasBar && Game1.activeClickableMenu == null && !Game1.IsChatting)
             {
                 KeybindList[][] binds = new KeybindList[8][]
                 {
@@ -1328,8 +1396,7 @@ namespace SwordAndSorcerySMAPI
                 Game1.addMail("GaveWitchCraftLvl1", true);
             }
 
-            //Paladin Skill - Update event id when added/decided and skill id if neededs
-            if (Game1.player.eventsSeen.Contains("PaladinUnlockEvent") && !Game1.player.hasOrWillReceiveMail("GavePaladinLvl1"))
+            if (Game1.player.eventsSeen.Any(l => l.StartsWith("SnS.Ch4.Victory")) && !Game1.player.hasOrWillReceiveMail("GavePaladinLvl1"))
             {
                 sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Paladin", 100);
                 Game1.addMail("GavePaladinLvl1", true);

@@ -103,11 +103,12 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
 
             if (noMovementTime.Value > 0)
                 noMovementTime.Value -= (float)time.ElapsedGameTime.TotalMilliseconds;
-            if (stunTime.Value > 2000)
-                stunTime.Value = 2000;
             if (stunTime.Value > 0)
+            {
+                Sprite.AnimateDown(time, -45);
                 stunTime.Value -= (int)time.ElapsedGameTime.TotalMilliseconds;
-
+                noMovementTime.Value = stunTime.Value;
+            }
 
             //Log.Debug("nmt:" + noMovementTime.Value);
             if (noMovementTime.Value <= 0)
@@ -118,18 +119,18 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
                     float dist = Vector2.Distance(farmer.StandingPixel.ToVector2(), GetBoundingBox().Center.ToVector2());
 
                     //Log.Debug("dist : " + dist);
-                    if (Game1.random.NextDouble() < 1f / (5 * 60) && stunTime.Value <= 0)
+                    if (Game1.random.NextDouble() < 1f / (5 * 60))
                     {
                         doingLaugh = false;
                         laughEvent.Fire();
                         noMovementTime.Value = 66 * 75;
                     }
-                    else if (dist < Sprite.SpriteWidth * Game1.pixelZoom / 2 - 75 && stunTime.Value <= 0)
+                    else if (dist < Sprite.SpriteWidth * Game1.pixelZoom / 2 - 75)
                     {
                         swingEvent.Fire(farmer.Position.X > Position.X);
                         noMovementTime.Value = 100 * 10;
                     }
-                    else if (stunTime.Value <= 0)
+                    else
                     {
                         Vector2 vel = Utility.getVelocityTowardPlayer(GetBoundingBox().Center, Speed, farmer);
                         //Log.Debug("vel: " + vel);
@@ -168,10 +169,10 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
             }
             switch (dir)
             {
-                case Game1.up: Sprite.AnimateUp(time, -50); break;
-                case Game1.down: Sprite.AnimateDown(time, -50); break;
-                case Game1.left: Sprite.AnimateLeft(time, -50); break;
-                case Game1.right: Sprite.AnimateRight(time, -50); break;
+                case Game1.up: Sprite.AnimateUp(time, -45); break;
+                case Game1.down: Sprite.AnimateDown(time, -45); break;
+                case Game1.left: Sprite.AnimateLeft(time, -45); break;
+                case Game1.right: Sprite.AnimateRight(time, -45); break;
             }
         }
         else
@@ -191,10 +192,8 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
         TemporaryAnimatedSprite DuskspireDeath = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 0, 96, 96), 75, 84, 0, pos, false, false) { scale = 4 };
         TemporaryAnimatedSprite DuskspireHeart = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 2016, 96, 96), 75, 16, 5, pos, false, false) { scale = 4 };
         currentLocation.TemporarySprites.Add(DuskspireDeath);
-        DelayedAction.removeTemporarySpriteAfterDelay(currentLocation, DuskspireDeath.id, 6300);
-        DelayedAction.addTemporarySpriteAfterDelay(DuskspireHeart, currentLocation, 6301);
-        DelayedAction.removeTemporarySpriteAfterDelay(currentLocation, DuskspireHeart.id, 12301);
-        DelayedAction.functionAfterDelay(() => Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_DuskspireHeart"), Position, Game1.down, currentLocation), 12301);
+        DelayedAction.addTemporarySpriteAfterDelay(DuskspireHeart, Game1.getLocationFromName("EastScarp_DuskspireLair"), 6300);
+        DelayedAction.functionAfterDelay(() => Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_DuskspireHeart"), Position, Game1.down, currentLocation), 12300);
         currentLocation.modData.Add("DN.SnS_DuskspireFaught", "true");
     }
 

@@ -189,9 +189,7 @@ namespace SwordAndSorcerySMAPI
                             else
                             {
                                 CurrentBattler.OrigTexture = CurrentTurn.Sprite.textureName.Value;
-                                var modInfo = ModSnS.instance.Helper.ModRegistry.Get("DN.SnS");
-                                var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
-                                CurrentTurn.Sprite.LoadTexture( pack.ModContent.GetInternalAssetName( "Assets/TemporaryActors/Characters/HectorWolf.png" ).BaseName );
+                                CurrentTurn.Sprite.LoadTexture("Characters/Hector_Wolf");
                                 CurrentTurn.Sprite.SpriteWidth = 32;
                                 CurrentTurn.Sprite.SpriteHeight = 32;
                                 CurrentTurn.Sprite.CurrentFrame = 4;
@@ -452,7 +450,8 @@ namespace SwordAndSorcerySMAPI
         public void receiveRightClick(int x, int y, bool playSound = true)
         {
 #if DEBUG
-            Finished = true;
+            //Finished = true;
+            DuskspireHealth = 1;
 #endif
         }
 
@@ -783,18 +782,12 @@ namespace SwordAndSorcerySMAPI
                 Game1.player.health = -999;
                 Game1.player.eventsSeen.Remove(Event.id);
 
-                var cmds_ = new List<string>(Event.eventCommands);
-                cmds_.Insert(Event.CurrentCommand + 1, $"end");
+                Event.endBehaviors();
 
-                Event.eventCommands = [.. cmds_];
-                Event.CurrentCommand++;
                 return;
             }
 
-            // This is really bad. Pathos don't kill me.
-            var modInfo = ModSnS.instance.Helper.ModRegistry.Get("DN.SnS");
-            var pack = modInfo.GetType().GetProperty("ContentPack")?.GetValue(modInfo) as IContentPack;
-            var partnerInfos = pack.ReadJsonFile<Dictionary<string, FinalePartnerInfo>>("Data/FinalePartners.json");
+            var partnerInfos = Game1.content.Load<Dictionary<string, FinalePartnerInfo>>("DN.SnS/FinalePartners");
 
             FinalePartnerInfo partnerInfo = partnerInfos["default"];
             foreach (string key in partnerInfos.Keys)
@@ -806,11 +799,8 @@ namespace SwordAndSorcerySMAPI
                 }
             }
 
-            var commands = new List<string>(Event.eventCommands);
-            commands.Insert(Event.CurrentCommand + 1, $"switchEventFull {partnerInfo.IntermissionEventId}");
-            Event.eventCommands = [.. commands];
-
-            Event.CurrentCommand++;
+            Event.endBehaviors();
+            DelayedAction.functionAfterDelay(() => Game1.PlayEvent(partnerInfo.IntermissionEventId, false, false), 500);
         }
     }
 }

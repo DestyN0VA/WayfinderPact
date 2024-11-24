@@ -111,7 +111,7 @@
             },
             "{{ModId}}_Recipe_ScarletPotion":
             {
-                "Type": "CraftingRecipe",
+                "Type": "AlchemyRecipe",
                 "Value": "{{ModId}}_scarletpotion",
                 "Name": "{{i18n: food.scarletpotion.name}}",
                 "DocPages": [
@@ -126,7 +126,7 @@
             },
             "{{ModId}}_Recipe_HeatherPotion":
             {
-                "Type": "CraftingRecipe",
+                "Type": "AlchemyRecipe",
                 "Value": "{{ModId}}_heatherpotion",
                 "Name": "{{i18n: food.heatherpotion.name}}",
                 "DocPages": [
@@ -141,7 +141,7 @@
             },
             "{{ModId}}_Recipe_ZydratePotion":
             {
-                "Type": "CraftingRecipe",
+                "Type": "AlchemyRecipe",
                 "Value": "{{ModId}}_zydratepotion",
                 "Name": "{{i18n: food.zydratepotion.name}}",
                 "DocPages": [
@@ -155,7 +155,7 @@
             },
             "{{ModId}}_Recipe_PistachioPotion":
             {
-                "Type": "CraftingRecipe",
+                "Type": "AlchemyRecipe",
                 "Value": "{{ModId}}_pistachiopotion",
                 "Name": "{{i18n: food.pistachiopotion.name}}",
                 "DocPages": [
@@ -172,7 +172,7 @@
             },
             "{{ModId}}_Recipe_DahliaPotion":
             {
-                "Type": "CraftingRecipe",
+                "Type": "AlchemyRecipe",
                 "Value": "{{ModId}}_dahliapotion",
                 "Name": "{{i18n: food.dahliapotion.name}}",
                 "DocPages": [
@@ -187,7 +187,7 @@
             },
             "{{ModId}}_Recipe_SlushiePotion":
             {
-                "Type": "CraftingRecipe",
+                "Type": "AlchemyRecipe",
                 "Value": "{{ModId}}_slushiepotion",
                 "Name": "{{i18n: food.slushiepotion.name}}",
                 "DocPages": [
@@ -204,7 +204,7 @@
             },
             "{{ModId}}_Recipe_MatrixPotion":
             {
-                "Type": "CraftingRecipe",
+                "Type": "AlchemyRecipe",
                 "Value": "{{ModId}}_matrixpotion",
                 "Name": "{{i18n: food.matrixpotion.name}}",
                 "DocPages": [
@@ -219,7 +219,7 @@
             },
             "{{ModId}}_Recipe_McDougalPotion":
             {
-                "Type": "CraftingRecipe",
+                "Type": "AlchemyRecipe",
                 "Value": "{{ModId}}_mcdougalpotion",
                 "Name": "{{i18n: food.mcdougalpotion.name}}",
                 "DocPages": [
@@ -233,7 +233,7 @@
             },
             "{{ModId}}_Recipe_ToirneachPotion":
             {
-                "Type": "CraftingRecipe",
+                "Type": "AlchemyRecipe",
                 "Value": "{{ModId}}_toirneachpotion",
                 "Name": "{{i18n: food.toirneachpotion.name}}",
                 "DocPages": [
@@ -247,7 +247,7 @@
             },
             "{{ModId}}_Recipe_ReturnPotion":
             {
-                "Type": "CraftingRecipe",
+                "Type": "AlchemyRecipe",
                 "Value": "{{ModId}}_ReturnPotion",
                 "Name": "{{i18n: witchcraft.return-potion.name}}",
                 "DocPages": [

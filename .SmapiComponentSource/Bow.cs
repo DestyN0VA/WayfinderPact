@@ -7,6 +7,7 @@ using SpaceCore;
 using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Characters;
+using StardewValley.Extensions;
 using StardewValley.GameData.Weapons;
 using StardewValley.ItemTypeDefinitions;
 using StardewValley.Monsters;
@@ -16,8 +17,11 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
+using Object = StardewValley.Object;
 using static StardewValley.FarmerRenderer;
 using static StardewValley.FarmerSprite;
+using StardewValley.Minigames;
+using StardewValley.SaveMigrations;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -238,7 +242,23 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Postfix(Slingshot __instance, StardewValley.Object o, ref bool __result)
         {
-            if (__instance.IsGun())
+            if (__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking_gun"))
+            {
+                __instance.AttachmentSlotsCount = 2;
+                NetObjectArray<StardewValley.Object> netObjectArray = __instance.attachments;
+                if (netObjectArray != null && netObjectArray.Count > 0)
+                {
+                    for (int slot = 0; slot < __instance.attachments.Length; slot++)
+                    {
+                        if (CanThisBeAttached(o, slot))
+                        {
+                            __result = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            else if (__instance.IsGun())
             {
                 __result = o.HasContextTag("bullet_item");
             }
@@ -247,47 +267,110 @@ namespace SwordAndSorcerySMAPI
                 __result = o.HasContextTag("arrow_item");
             }
         }
-    }
 
-    [HarmonyPatch(typeof(Tool), nameof(Tool.canThisBeAttached), new Type[] { typeof(StardewValley.Object), typeof(int) })]
-    public static class SlingshowBowAmmoAttachPatch2
-    {
-        public static void Postfix(Tool __instance, StardewValley.Object o, int slot, ref bool __result)
+        public static bool CanThisBeAttached(Object o, int slot)
         {
-            if (__instance.ItemId == "DN.SnS_longlivetheking")
-            {
-                if (slot == 0)
-                    __result = o.HasContextTag("bullet_item");
-                else if (slot == 1)
-                    __result = o.HasContextTag("keychain_item");
-            }
+            if (slot == 0)
+                return o.HasContextTag("bullet_item");
+            else
+                return o.HasContextTag("keychain_item");
         }
     }
 
-    [HarmonyPatch(typeof(Tool), nameof(Tool.canThisBeAttached), new Type[] { typeof(StardewValley.Object) })]
-    public static class ToolGunAmmoAttachPatch
+    [HarmonyPatch(typeof(Tool), nameof(Tool.drawAttachments))]
+    public static class LLTKAttachmentSlots
     {
-        public static void Postfix(Tool __instance, StardewValley.Object o, ref bool __result)
+        public static bool Prefix(Tool __instance, SpriteBatch b, int x, int y)
         {
-            if (__instance.ItemId == "DN.SnS_longlivetheking")
-            {
-                __result = o.HasContextTag("bullet_item") || o.HasContextTag("keychain_item");
-            }
+            if (__instance.ItemId != "DN.SnS_longlivetheking_gun") return true;
+
+            __instance.AttachmentSlotsCount = 2;
+
+            y += (__instance.enchantments.Count > 0) ? 8 : 4;
+
+            ModSnS.instance.Helper.Reflection.GetMethod(__instance, "DrawAttachmentSlot", true).Invoke([0, b, x, y]);
+            y += 68;
+            ModSnS.instance.Helper.Reflection.GetMethod(__instance, "DrawAttachmentSlot", true).Invoke([1, b, x, y]);
+            return false;
         }
     }
 
-    [HarmonyPatch(typeof(Tool), nameof(Tool.canThisBeAttached), new Type[] { typeof(StardewValley.Object), typeof(int) })]
-    public static class ToolGunAmmoAttachPatch2
+    [HarmonyPatch(typeof(Tool), nameof(Tool.attach))]
+    public static class LLTKAttachSlots
     {
-        public static void Postfix(Tool __instance, StardewValley.Object o, int slot, ref bool __result)
+        public static bool Prefix(Tool __instance, Object o, ref Object __result)
         {
-            if (__instance.ItemId == "DN.SnS_longlivetheking")
+            if (!__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking_gun")) return true;
+
+            if (o == null)
             {
-                if (slot == 0)
-                    __result = o.HasContextTag("bullet_item");
-                else if (slot == 1)
-                    __result = o.HasContextTag("keychain_item");
+                for (int slot = 0; slot < __instance.attachments.Length; slot++)
+                {
+                    Object oldObj = __instance.attachments[slot];
+                    if (oldObj != null)
+                    {
+                        __instance.attachments[slot] = null;
+                        Game1.playSound("dwop");
+                        __result = oldObj;
+                        return false;
+                    }
+                }
+                __result = null;
+                return false;
             }
+            int originalStack = o.Stack;
+            for (int slot = 0; slot < __instance.attachments.Length; slot++)
+            {
+                if (!CanThisBeAttached(o, slot))
+                {
+                    continue;
+                }
+                Object oldObj = __instance.attachments[slot];
+                if (oldObj == null)
+                {
+                    __instance.attachments[slot] = o;
+                    o = null;
+                    break;
+                }
+                if (oldObj.canStackWith(o))
+                {
+                    o.Stack = oldObj.addToStack(o);
+                    if (o.Stack < 1)
+                    {
+                        o = null;
+                        break;
+                    }
+                }
+            }
+            if (o == null || o.Stack != originalStack)
+            {
+                Game1.playSound("button1");
+                __result = o;
+                return false;
+            }
+            for (int slot = 0; slot < __instance.attachments.Length; slot++)
+            {
+                Object oldObj = __instance.attachments[slot];
+                __instance.attachments[slot] = null;
+                if (CanThisBeAttached(o, slot))
+                {
+                    __instance.attachments[slot] = o;
+                    Game1.playSound("button1");
+                    __result = oldObj;
+                    return false;
+                }
+                __instance.attachments[slot] = oldObj;
+            }
+            __result = o;
+            return false;
+        }
+
+        public static bool CanThisBeAttached(Object o, int slot)
+        {
+            if (slot == 0)
+                return o.HasContextTag("bullet_item");
+            else
+                return o.HasContextTag("keychain_item");
         }
     }
 

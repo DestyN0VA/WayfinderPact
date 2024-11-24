@@ -370,7 +370,7 @@ namespace SwordAndSorcerySMAPI
 
         private static void SetUpMagicMissle(GameLocation location, Vector2 TargetPos, Vector2 Motion)
         {
-            int Damage = GetSpellDamange(50, 10, out _);
+            int Damage = GetSpellDamange(50, 20, out _);
 
             BasicProjectile MagicMissle = new(Damage / 3, 8, 999, 10, 0, 0, 0, TargetPos, damagesMonsters: true, location: location, firer: Game1.player);
             MagicMissle.uniqueID.Value = Game1.random.Next();
@@ -539,13 +539,12 @@ namespace SwordAndSorcerySMAPI
 
                         foreach (Monster m in FreezeMonsters)
                         {
-                            if (m is not DuskspireMonster || m.stunTime.Value <= 0)
-                                m.stunTime.Value = 10000;
+                            m.stunTime.Value = 6000 / (m is DuskspireMonster ? 2 : 1);
                             Game1.Multiplayer.broadcastSprites(location, new TemporaryAnimatedSprite("LooseSprites\\Cursors2", new Rectangle(118, 227, 16, 13), new Vector2(0f, 0f), flipped: false, 0f, Color.White)
                             {
                                 layerDepth = (float)(m.StandingPixel.Y + 2) / 10000f,
                                 animationLength = 1,
-                                interval = 5000,
+                                interval = 6000 / (m is DuskspireMonster ? 2 : 1),
                                 scale = 4f,
                                 id = (int)(m.position.X * 777f + m.position.Y * 77777f),
                                 positionFollowsAttachedCharacter = true,

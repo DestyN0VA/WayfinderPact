@@ -64,7 +64,7 @@ namespace SwordAndSorcerySMAPI
             Game1.currentLocation.projectiles.Add(ModSnS.State.MyThrown.Last());
 
             ModSnS.State.ThrowCooldown = 3500;
-            if (__instance.lastUser.professions.Contains(Farmer.acrobat))
+            if (__instance.lastUser?.professions.Contains(Farmer.acrobat) ?? false)
                 ModSnS.State.ThrowCooldown /= 2;
             if (__instance.hasEnchantmentOfType<ArtfulEnchantment>())
                 ModSnS.State.ThrowCooldown /= 2;
@@ -72,7 +72,7 @@ namespace SwordAndSorcerySMAPI
             Game1.player.playNearbySoundLocal("daggerswipe");
 
             AnimatedSprite.endOfAnimationBehavior endOfAnimFunc = __instance.triggerDefenseSwordFunction;
-            switch (__instance.lastUser.FacingDirection)
+            switch (__instance.lastUser?.FacingDirection)
             {
                 case 0:
                     ((FarmerSprite)__instance.lastUser.Sprite).animateOnce(252, 250, 1, endOfAnimFunc);
@@ -86,7 +86,7 @@ namespace SwordAndSorcerySMAPI
                     ((FarmerSprite)__instance.lastUser.Sprite).animateOnce(234, 250, 1, endOfAnimFunc);
                     __instance.Update(2, 0, __instance.lastUser);
                     break;
-                case 3:
+                default:
                     ((FarmerSprite)__instance.lastUser.Sprite).animateOnce(259, 250, 1, endOfAnimFunc);
                     __instance.Update(3, 0, __instance.lastUser);
                     break;

@@ -15,7 +15,7 @@ namespace MageDelve.Mercenaries
 
         //public string CanRecruit { get; set; } = "TRUE";
         //public int RecruitCost { get; set; } = 0;
-        ///public List<EffectData> DismissEffects { get; set; }
+        //public List<EffectData> DismissEffects { get; set; }
 
         //public string CurrentDialogueString { get; set; }
 
