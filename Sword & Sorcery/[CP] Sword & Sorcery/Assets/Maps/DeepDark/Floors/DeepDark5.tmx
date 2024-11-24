@@ -4,7 +4,7 @@
   <export target="MushroomCave.tmx" format="tmx"/>
  </editorsettings>
  <properties>
-  <property name="LocationContext" value="SnSDeepDarkDark"/>
+  <property name="LocationContext" value="SnSDeepDark"/>
   <property name="spacechase0.SpaceCore_DungeonElevatorEntrance" value="8 9"/>
   <property name="spacechase0.SpaceCore_DungeonLadderEntrance" value="11 10"/>
  </properties>
