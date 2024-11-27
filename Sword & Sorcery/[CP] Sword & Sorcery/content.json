@@ -133,39 +133,6 @@
             "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.True false"
           ]
         },
-        "SnS.TriggerActions.SetHairColorCoolDown": {
-          "Id": "SnS.TriggerActions.SetHairColorCoolDown",
-          "Trigger": "DayStarted",
-          "MarkActionApplied": false,
-          "Condition": "{{CirrusRainbowHair |contains=RealisticRandom}}, PLAYER_STAT Current CirrusHairCooldown 0 0",
-          "Actions": [
-            "IncrementStat CirrusHairCooldown {{Random: {{range: 3, 4}}}}",
-            "IncrementStat CirrusHairColor -1",
-            "RemoveMail Current SnS.Flag.CirrusHairColor.brown all",
-            "RemoveMail Current SnS.Flag.CirrusHairColor.red all",
-            "RemoveMail Current SnS.Flag.CirrusHairColor.orange all",
-            "RemoveMail Current SnS.Flag.CirrusHairColor.yellow all",
-            "RemoveMail Current SnS.Flag.CirrusHairColor.Blue all"
-          ]
-        },
-        "SnS.TriggerActions.CooldownCountdown": {
-          "Id": "SnS.TriggerActions.CooldownCountdown",
-          "Trigger": "DayEnding",
-          "MarkActionApplied": false,
-          "Condition": "{{CirrusRainbowHair |contains=RealisticRandom}}, PLAYER_STAT Current CirrusHairCooldown 1",
-          "Action": "IncrementStat CirrusHairCooldown -1"
-        },
-        //{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}}
-        "SnS.TriggerActions.SetPersistentHairColor": {
-          "Id": "SnS.TriggerActions.SetPersistentHairColor",
-          "Trigger": "DayStarted",
-          "MarkActionApplied": false,
-          "Condition": "{{CirrusRainbowHair |contains=RealisticRandom}}, PLAYER_STAT Current CirrusHairColor 0 0",
-          "Actions": [
-            "IncrementStat CirrusHairColor",
-            "AddMail Current SnS.Flag.CirrusHairColor.{{Random: Brown, Red, Orange, Yellow, Blue |key=CirrusHair}} received"
-          ]
-        },
         /*"{{ModId}}_MigrateIds": {
           "Id": "{{ModId}}_MigrateIds",
           "Trigger": "DayStarted",
@@ -1139,42 +1106,9 @@
     },
     {
       "Name": "CirrusHairColor",
-      "Value": "Brown",
+      "Value": "{{KCC.SnS/CirrusHair}}",
       "When": {
-        "CirrusRainbowHair |contains=RealisticRandom": true,
-        "HasFlag": "SnS.Flag.CirrusHairColor.Brown"
-      }
-    },
-    {
-      "Name": "CirrusHairColor",
-      "Value": "Red",
-      "When": {
-        "CirrusRainbowHair |contains=RealisticRandom": true,
-        "HasFlag": "SnS.Flag.CirrusHairColor.Red"
-      }
-    },
-    {
-      "Name": "CirrusHairColor",
-      "Value": "Orange",
-      "When": {
-        "CirrusRainbowHair |contains=RealisticRandom": true,
-        "HasFlag": "SnS.Flag.CirrusHairColor.Orange"
-      }
-    },
-    {
-      "Name": "CirrusHairColor",
-      "Value": "Yellow",
-      "When": {
-        "CirrusRainbowHair |contains=RealisticRandom": true,
-        "HasFlag": "SnS.Flag.CirrusHairColor.Yellow"
-      }
-    },
-    {
-      "Name": "CirrusHairColor",
-      "Value": "Blue",
-      "When": {
-        "CirrusRainbowHair |contains=RealisticRandom": true,
-        "HasFlag": "SnS.Flag.CirrusHairColor.Blue"
+        "CirrusRainbowHair |contains=RealisticRandom": true
       }
     },
     {
@@ -2387,7 +2321,7 @@
       "Name": "PocketDimensionUpgrade",
       "Value": "{{KCC.SnS/PocketDimensionUpgrade}}",
       "When": {
-        "HasValue: {{PocketDimensionUpgrade}}": true
+        "HasValue: {{KCC.SnS/PocketDimensionUpgrade}}": true
       }
     }
     /*{

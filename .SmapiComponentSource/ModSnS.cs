@@ -1140,6 +1140,33 @@ namespace SwordAndSorcerySMAPI
 
                     return [$"{i}"];
                 });
+
+                CP.RegisterToken(ModManifest, "CirrusHair", () =>
+                {
+                    if (!Context.IsWorldReady)
+                        return null;
+
+                    if (Game1.stats.Get("CirrusCooldown") == 0 && Game1.random.NextBool(1/3))
+                    {
+                        Game1.stats.Increment("CirrusCooldown", 6);
+                        Game1.stats.Increment("CirrusHair", 1);
+                    }
+                    else if (Game1.stats.Get("CirrusCooldown") != 0)
+                    {
+                        Game1.stats.Increment("CirrusCooldown", -1);
+                    }
+
+                    Random r = Utility.CreateRandom(Game1.hash.GetDeterministicHashCode("CirrusHair"), Game1.uniqueIDForThisGame, Game1.stats.Get("CirrusHair"));
+
+                    return r.Next(0, 5) switch
+                    {
+                        0 => ["Brown"],
+                        1 => ["Red"],
+                        2 => ["Orange"],
+                        3 => ["Yellow"],
+                        _ => ["Blue"],
+                    };
+                });
             }
 
             // This late because of accessing SpaceCore's local variable API
@@ -1336,17 +1363,17 @@ namespace SwordAndSorcerySMAPI
             }
             else if (hasBar && Game1.activeClickableMenu == null && !Game1.IsChatting)
             {
-                KeybindList[][] binds = new KeybindList[8][]
-                {
-                    new KeybindList[2] { Config.AbilityBar1Slot1, Config.AbilityBar2Slot1 },
-                    new KeybindList[2] { Config.AbilityBar1Slot2, Config.AbilityBar2Slot2 },
-                    new KeybindList[2] { Config.AbilityBar1Slot3, Config.AbilityBar2Slot3 },
-                    new KeybindList[2] { Config.AbilityBar1Slot4, Config.AbilityBar2Slot4 },
-                    new KeybindList[2] { Config.AbilityBar1Slot5, Config.AbilityBar2Slot5 },
-                    new KeybindList[2] { Config.AbilityBar1Slot6, Config.AbilityBar2Slot6 },
-                    new KeybindList[2] { Config.AbilityBar1Slot7, Config.AbilityBar2Slot7 },
-                    new KeybindList[2] { Config.AbilityBar1Slot8, Config.AbilityBar2Slot8 },
-                };
+                KeybindList[][] binds =
+                [
+                    [ Config.AbilityBar1Slot1, Config.AbilityBar2Slot1 ],
+                    [ Config.AbilityBar1Slot2, Config.AbilityBar2Slot2 ],
+                    [ Config.AbilityBar1Slot3, Config.AbilityBar2Slot3 ],
+                    [ Config.AbilityBar1Slot4, Config.AbilityBar2Slot4 ],
+                    [ Config.AbilityBar1Slot5, Config.AbilityBar2Slot5 ],
+                    [ Config.AbilityBar1Slot6, Config.AbilityBar2Slot6 ],
+                    [ Config.AbilityBar1Slot7, Config.AbilityBar2Slot7 ],
+                    [ Config.AbilityBar1Slot8, Config.AbilityBar2Slot8 ],
+                ];
 
                 for (int islot = 0; islot < 8; ++islot)
                 {
