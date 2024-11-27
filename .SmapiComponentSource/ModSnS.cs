@@ -801,13 +801,13 @@ namespace SwordAndSorcerySMAPI
         private void Display_RenderedWorld(object sender, StardewModdingAPI.Events.RenderedWorldEventArgs e)
         {
             if (!Game1.player.eventsSeen.Contains("SnS.Ch1.Mateo.12") ||
-                 Game1.player.team.acceptedSpecialOrderTypes.Contains("SwordSorcery") ||
+                 Game1.player.team.acceptedSpecialOrderTypes.Contains("SwordSorcery")  ||
                  Game1.eventUp)
             {
                 return;
             }
 
-            if (Game1.currentLocation.NameOrUniqueName == "Custom_EastScarpe")
+            if (Game1.currentLocation.NameOrUniqueName == "EastScarp_Village")
             {
                 Vector2 tile = new(24.4f, 82);
                 float yOffset = 4 * (float)Math.Round(Math.Sin(Game1.currentGameTime.TotalGameTime.TotalMilliseconds / 250f), 2);
