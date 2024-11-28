@@ -59,7 +59,7 @@
                                 {
                                     "Id": "ArtificerSkill",
                                     "Contents": "{{i18n: guidebook.chapter.NEA.ArtificerSkill {{HectorPronouns}}}}",
-                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18"
+                                   // "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18"
                                 }
                             ]
                         },
@@ -72,7 +72,7 @@
                                 "Width": 16,
                                 "Height": 16
                             },
-                            "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14",
+                            //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14",
                             "Pages": [
                                 {
                                     "Id": "Intro",
@@ -86,12 +86,12 @@
                                 },
                                 {
                                     "Contents": "{{i18n: guidebook.chapter.COT.DruidicEssence {{HectorPronouns}} |TrueName={{TrueName}}}}",
-                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.12"
+                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.12"
                                 },
                                 {
                                     "Id": "DruidicsSkill",
                                     "Contents": "{{i18n: guidebook.chapter.COT.DruidicsSkill {{HectorPronouns}} |TrueName={{TrueName}}}}",
-                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16"
+                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16"
                                 }
                             ]
                         },
@@ -104,7 +104,7 @@
                                 "Width": 16,
                                 "Height": 16
                             },
-                            "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16",
+                            //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16",
                             "Pages": [
                                 {
                                     "Id": "Intro",
@@ -119,7 +119,7 @@
                                 {
                                     "Id": "BardicsSkill",
                                     "Contents": "{{i18n: guidebook.chapter.UP.BardicsSkill}}",
-                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14"
+                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14"
                                 }
                             ]
                         },
@@ -132,7 +132,7 @@
                                 "Width": 16,
                                 "Height": 16
                             },
-                            "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14",
+                            //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14",
                             "Pages": [
                                 {
                                     "Id": "Intro",
@@ -149,21 +149,21 @@
                                 },
                                 {
                                     "Contents": "{{i18n: guidebook.chapter.TOP.ElementalEssences}}",
-                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Roslin.1"
+                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Roslin.1"
                                 },
                                 {
                                     "Contents": "{{i18n: guidebook.chapter.TOP.DeepDark}}",
-                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Roslin.6"
+                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Roslin.6"
                                 },
                                 {
                                     "Id": "SorcererSkill",
                                     "Contents": "{{i18n: guidebook.chapter.TOP.SorcererSkill}}",
-                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6"
+                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6"
                                 },
                                 {
                                     "Id": "PaladinSkill",
                                     "Contents": "{{i18n: guidebook.chapter.TOP.PaladinSkill}}",
-                                    "Condition": "ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\""
+                                    //"Condition": "ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\""
                                 }
                             ]
                         },
@@ -176,7 +176,7 @@
                                 "Width": 16,
                                 "Height": 16
                             },
-                            "Condition": "PLAYER_HAS_MAIL Current DuskspireDefeated",
+                            //"Condition": "PLAYER_HAS_MAIL Current DuskspireDefeated",
                             "Pages": [
                                 {
                                     "Id": "Intro",
