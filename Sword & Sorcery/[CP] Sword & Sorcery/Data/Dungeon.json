@@ -173,6 +173,7 @@
                 "Stygium Serpent": "2250/33/0/2/true/1000/769 .99 {{ModID}}_StygiumOre .03 148 .1 225 .05/0/.01/13/3/.0/true/30/{{i18n:Strings.Monsters.StygiumSerpent}}",
                 "Stygium Leviathan": "4500/45/0/2/true/1000/769 .99 {{ModID}}_StygiumOre .99 {{ModID}}_StygiumOre .99 {{ModID}}_StygiumOre .99 166 .99 799 .1 242 .05 681 .01 560 .5 117 .2 74 .01/0/.01/13/3/.0/true/50/{{i18n:Strings.Monsters.StygiumLeviathan}}",
                 "Stygium Squid": "2250/20/0/0/true/0/769 .99 {{ModID}}_StygiumOre .03 798 .1 814 .2 921 .05 681 .01/5/0/6/3/.0/true/30/{{i18n:Strings.Monsters.StygiumSquid}}",
+                "Stygium Droplet": "2250/25/0/0/true/2000/769 .99 {{ModID}}_StygiumOre .03 561 .2 265 .1 895 .05 681 .01/8/.01/8/2/.0/true/30/{{i18n:Strings.Monsters.StygiumDroplet}}",
                 "Duskspire Behemoth": "10000/35/1/3/false/0//20/0/5/3/.0/true/250/{{i18n:Strings.Monsters.DuskspireBehemoth}}",
                 "Duskspire Remnant": "6500/25/1/3/false/0//10/0/5/3/.0/true/100/{{i18n:Strings.Monsters.DuskspireRemnant}}"
             }
@@ -488,6 +489,12 @@
                     "MonsterType": "BlueSquid",
                     "MonsterName": "Stygium Squid",
                     "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Blue Squid.png}}"
+                },
+                "{{ModID}}_SpawnDeepDark_Monster_Droplet": {
+                    "Type": "Monster",
+                    "MonsterType": "MagmaSprite",
+                    "MonsterName": "Stygium Droplet",
+                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Stygium Droplet.png}}"
                 }
             }
         },
@@ -551,7 +558,7 @@
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton"
                                 },
                                 {
-                                    "Weight": 0.05,
+                                    "Weight": 0.03,
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton_Rare"
                                 },
                                 {
@@ -595,11 +602,11 @@
                         {
                             "SpawnableIds": [
                                 {
-                                    "Weight": 1.0,
+                                    "Weight": 1.5,
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton"
                                 },
                                 {
-                                    "Weight": 0.05,
+                                    "Weight": 0.03,
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton_Rare"
                                 },
                                 {
@@ -607,11 +614,11 @@
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Dino"
                                 },
                                 {
-                                    "Weight": 1.0,
+                                    "Weight": 1.5,
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Golem_Blue"
                                 },
                                 {
-                                    "Weight": 1.0,
+                                    "Weight": 0.5,
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Bat_HauntedSkull"
                                 },
                                 {
@@ -623,7 +630,7 @@
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton_MinerMage"
                                 },
                                 {
-                                    "Weight": 1.0,
+                                    "Weight": 0.5,
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Serpent"
                                 }
                             ],
@@ -695,7 +702,7 @@
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton"
                                 },
                                 {
-                                    "Weight": 0.05,
+                                    "Weight": 0.03,
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton_Rare"
                                 },
                                 {
@@ -712,7 +719,7 @@
                                 },
                                 {
                                     "Weight": 0.5,
-                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Bat_HauntedSkull"
+                                    "Value": "{{ModID}}_SpawnDeepDark_Monster_Droplet"
                                 },
                                 {
                                     "Weight": 1.0,
@@ -751,7 +758,7 @@
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton"
                                 },
                                 {
-                                    "Weight": 0.05,
+                                    "Weight": 0.03,
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton_Rare"
                                 },
                                 {

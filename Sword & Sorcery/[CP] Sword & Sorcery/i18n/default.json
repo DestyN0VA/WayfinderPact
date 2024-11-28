@@ -7814,8 +7814,9 @@ ________      ________ _   _ _______ _____
   "Strings.Monsters.StygiumSerpent": "Stygium Serpent",
   "Strings.Monsters.StygiumLeviathan": "Stygium Leviathan",
   "Strings.Monsters.StygiumSquid": "Stygium Squid",
+  "Strings.Monsters.StygiumDroplet": "Stygium Droplet",
   "Strings.Monsters.DuskspireBehemoth": "Duskspire Behemoth",
-  "Strings.Monsters.DuskspireRemnant": "Duskspire Remnant"
+  "Strings.Monsters.DuskspireRemnant": "Duskspire Remnant",
 
 
   /* 
@@ -7828,7 +7829,7 @@ ________      ________ _   _ _______ _____
  
  */
 
- /* "Mail.PHB": "Hello, @!^^Thank you for your purchase of the Player's Handbook. Contained within is everything you need to know for Sword & Sorcery, 2nd Edition. Play your way with new skills, quests, NPCs, locations, and more!^^May the dice favor you kindly,^Sorcerers of the Sound%item id DN.SnS_PlayersHandbook%%[#]Player's Handbook",
+  "Mail.PHB": "Hello, @!^^Thank you for your purchase of the Player's Handbook. Contained within is everything you need to know for Sword & Sorcery, 2nd Edition. Play your way with new skills, quests, NPCs, locations, and more!^^May the dice favor you kindly,^Sorcerers of the Sound%item id DN.SnS_PlayersHandbook%%[#]Player's Handbook",
 
   "Furniture.PlayersHandbook": "S&S Player's Handbook",
 
@@ -8422,5 +8423,5 @@ Level 10, if you chose Skilled Shapeshifter:
  
 Level 10, if you chose Ancient Agronomist:
 * Branch of Midgard - All ancient crops grow 10% faster, and all artisan goods derived from them are worth 10% more. Stacks with Artisan and Agriculturist.
-* Branch of Yggdrasil - Druidic essences have an additional 10% chance to drop. Druidic crops water surrounding crops with the same range as a Quality Sprinkler."*/
+* Branch of Yggdrasil - Druidic essences have an additional 10% chance to drop. Druidic crops water surrounding crops with the same range as a Quality Sprinkler."
 }

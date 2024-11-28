@@ -82,7 +82,7 @@
                                     "Contents": "{{i18n: guidebook.chapter.COT.Hector |DailyPronouns={{HectorPN1}}/{{HectorPN2}} {{HectorPronouns}} |TrueName={{TrueName}}}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.COT.Events |SkipIntroQuest={{SkipIntroQuest}} |VariableTimegate={{VariableTimegate}} {{HectorPronouns}} |TrueName={{TrueName}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.COT.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}} |TrueName={{TrueName}}}}"
                                 },
                                 {
                                     "Contents": "{{i18n: guidebook.chapter.COT.DruidicEssence {{HectorPronouns}} |TrueName={{TrueName}}}}",
@@ -199,21 +199,21 @@
             "LogName": "Load Furniture Image",
             "Action": "Load",
             "Target": "Mods/Sword & Sorcery/GuidebookTabs",
-            "FromFile": "Assets/Guidebook/tabs.png",
+            "FromFile": "Assets/Guidebook/tabs.png"
         },
         // GUIDEBOOK (ITEM)
         {
             "LogName": "Load Furniture Image",
             "Action": "Load",
             "Target": "Mods/Sword & Sorcery/GuidebookItem",
-            "FromFile": "Assets/Guidebook/book.png",
+            "FromFile": "Assets/Guidebook/book.png"
         },
         {
             "LogName": "Create Furniture",
             "Action": "EditData",
             "Target": "Data/Furniture",
             "Entries": {
-                "{{ModID}}_PlayersHandbook": "{{ModID}}_PlayersHandbook/decor/1 2/1 1/1/500/2/{{i18n:Furniture.PlayersHandbook}}/{{PlayersHandbookColor}}/Mods\\Sword & Sorcery\\GuidebookItem/true",
+                "{{ModID}}_PlayersHandbook": "{{ModID}}_PlayersHandbook/decor/1 2/1 1/1/500/2/{{i18n:Furniture.PlayersHandbook}}/{{PlayersHandbookColor}}/Mods\\Sword & Sorcery\\GuidebookItem/true"
             }
         },
         {
@@ -242,7 +242,7 @@
                    "MarkActionApplied": false,
 					"Trigger": "Manual",
 					"Actions": [
-						"spacechase0.SpaceCore_OpenGuidebook {{ModId}}",
+						"spacechase0.SpaceCore_OpenGuidebook {{ModId}}"
 					]
 				}
 			}
@@ -252,7 +252,7 @@
             "Action": "EditData",
             "Target": "Data/Mail",
             "Entries": {
-                "DestyLetter":"{{i18n:Mail.PHB}}",
+                "DestyLetter":"{{i18n:Mail.PHB}}"
             }
         },
         {
@@ -263,7 +263,7 @@
 					"Id": "{{ModID}}_PlayersHandbook",
                     "Trigger": "DayStarted",
 					"Actions": [
-						"AddMail Current DestyLetter tomorrow",
+						"AddMail Current DestyLetter tomorrow"
 					]
 				}
 			}
