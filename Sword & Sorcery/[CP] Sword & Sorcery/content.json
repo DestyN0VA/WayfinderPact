@@ -2391,8 +2391,43 @@
     },
     {
       "Name": "SpaceCoreRecolors",
-      "Value": "thefrenchdodo.sakurainterfaceredux_equipmentmenu.png",
+      "Value": "thefrenchdodo.sakurainterfaceredux_equipmentmenu",
       "When": { "HasMod": "thefrenchdodo.sakurainterfaceredux", "EquipmentMenuConfig": true }
+    },
+    {
+      "Name": "GuidebookRecolors",
+      "Value": "Bos.UIInterface_tabs",
+      "When": { "HasMod": "Bos.UIInterface" }
+    },
+    {
+      "Name": "GuidebookRecolors",
+      "Value": "daisyniko.earthyinterface_tabs",
+      "When": { "HasMod": "daisyniko.earthyinterface" }
+    },
+    {
+      "Name": "GuidebookRecolors",
+      "Value": "enteis.woodeninterfeis_tabs",
+      "When": { "HasMod": "enteis.woodeninterfeis" }
+    },
+    {
+      "Name": "GuidebookRecolors",
+      "Value": "nom0ri.vintageuifix_tabs",
+      "When": { "HasMod": "nom0ri.vintageuifix" }
+    },
+    {
+      "Name": "GuidebookRecolors",
+      "Value": "shinchan.cppurpleinterface_tabs",
+      "When": { "HasMod": "shinchan.cppurpleinterface" }
+    },
+    {
+      "Name": "GuidebookRecolors",
+      "Value": "Sqbr.StarryBlueUI_tabs",
+      "When": { "HasMod": "Sqbr.StarryBlueUI" }
+    },
+    {
+      "Name": "GuidebookRecolors",
+      "Value": "thefrenchdodo.sakurainterfaceredux_tabs",
+      "When": { "HasMod": "thefrenchdodo.sakurainterfaceredux" }
     },
   ]
 }

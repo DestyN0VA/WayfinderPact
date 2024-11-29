@@ -199,7 +199,7 @@
             "LogName": "Load Furniture Image",
             "Action": "Load",
             "Target": "Mods/Sword & Sorcery/GuidebookTabs",
-            "FromFile": "Assets/Guidebook/tabs.png"
+            "FromFile": "Assets/Guidebook/{{GuidebookRecolors}}.png"
         },
         // GUIDEBOOK (ITEM)
         {
