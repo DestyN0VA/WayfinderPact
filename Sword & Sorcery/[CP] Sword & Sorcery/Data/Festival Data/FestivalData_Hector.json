@@ -90,7 +90,7 @@
 					"Value": "Hector 13 13 2",
 					"Delimiter": "/"
 				},
-				{	// LOCATION: SET UP 
+				{	// LOCATION: MAIN EVENT 
 					"Operation": "Append",
 					"Target": ["Entries","MainEvent_additionalCharacters"],
 					"Value": "Hector 22 23 2",
@@ -99,13 +99,13 @@
 				{	// LOCATION: SET UP Y2
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
-					"Value": "Hector 16 10 1",
+					"Value": "Hector 19 9 3",
 					"Delimiter": "/"
 				},
-				{	// LOCATION: SET UP Y2
+				{	// LOCATION: MAIN EVENT Y2
 					"Operation": "Append",
 					"Target": ["Entries","MainEvent_additionalCharacters_y2"],
-					"Value": "Hector 16 10 1",
+					"Value": "Hector 19 9 3",
 					"Delimiter": "/"
 				},
 			],

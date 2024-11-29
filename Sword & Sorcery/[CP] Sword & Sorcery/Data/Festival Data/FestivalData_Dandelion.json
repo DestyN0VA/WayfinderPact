@@ -94,7 +94,7 @@
 				{	// LOCATION: SET UP (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters"],
-					"Value": "Dandelion 4 5 3",
+					"Value": "Dandelion 4 5 1",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP Y2 (VANILLA)

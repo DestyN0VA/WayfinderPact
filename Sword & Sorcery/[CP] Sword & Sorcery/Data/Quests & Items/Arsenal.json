@@ -8,8 +8,8 @@
           "Name": "Exquisite Emerald",
           "DisplayName": "{{i18n: arsenal.exquisite-emerald.name}}",
           "Description": "{{i18n: arsenal.exquisite-emerald.description}}",
-          "Type": "Minerals",
-          "Category": -2,
+          "Type": "Basic",
+          "Category": 0,
           "Price": 2500,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
           "SpriteIndex": 0,
@@ -23,8 +23,8 @@
           "Name": "Exquisite Ruby",
           "DisplayName": "{{i18n: arsenal.exquisite-ruby.name}}",
           "Description": "{{i18n: arsenal.exquisite-ruby.description}}",
-          "Type": "Minerals",
-          "Category": -2,
+          "Type": "Basic",
+          "Category": 0,
           "Price": 2500,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
           "SpriteIndex": 2,
@@ -38,8 +38,8 @@
           "Name": "Exquisite Topaz",
           "DisplayName": "{{i18n: arsenal.exquisite-topaz.name}}",
           "Description": "{{i18n: arsenal.exquisite-topaz.description}}",
-          "Type": "Minerals",
-          "Category": -2,
+          "Type": "Basic",
+          "Category": 0,
           "Price": 800,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
           "SpriteIndex": 1,
@@ -53,8 +53,8 @@
           "Name": "Exquisite Jade",
           "DisplayName": "{{i18n: arsenal.exquisite-jade.name}}",
           "Description": "{{i18n: arsenal.exquisite-jade.description}}",
-          "Type": "Minerals",
-          "Category": -2,
+          "Type": "Basic",
+          "Category": 0,
           "Price": 2000,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
           "SpriteIndex": 3,
@@ -68,8 +68,8 @@
           "Name": "Exquisite Aquamarine",
           "DisplayName": "{{i18n: arsenal.exquisite-aquamarine.name}}",
           "Description": "{{i18n: arsenal.exquisite-aquamarine.description}}",
-          "Type": "Minerals",
-          "Category": -2,
+          "Type": "Basic",
+          "Category": 0,
           "Price": 1800,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
           "SpriteIndex": 6,
@@ -83,8 +83,8 @@
           "Name": "Exquisite Amethyst",
           "DisplayName": "{{i18n: arsenal.exquisite-amethyst.name}}",
           "Description": "{{i18n: arsenal.exquisite-amethyst.description}}",
-          "Type": "Minerals",
-          "Category": -2,
+          "Type": "Basic",
+          "Category": 0,
           "Price": 1000,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
           "SpriteIndex": 4,
@@ -98,8 +98,8 @@
           "Name": "Exquisite Diamond",
           "DisplayName": "{{i18n: arsenal.exquisite-diamond.name}}",
           "Description": "{{i18n: arsenal.exquisite-diamond.description}}",
-          "Type": "Minerals",
-          "Category": -2,
+          "Type": "Basic",
+          "Category": 0,
           "Price": 7500,
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
           "SpriteIndex": 5,
@@ -499,8 +499,7 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
           "SpriteIndex": 37,
           "Speed": 308, // All slingshots have this for some reason?,
-          "CustomFields":
-          {
+          "CustomFields": {
             "Bow": true,
           }
         },
@@ -540,6 +539,41 @@
         "{{ModID}}_WindwakerBullet": "{{ModID}}_Bullet 1 444 1/meow/{{ModID}}_WindwakerBullet 1/false/null/{{i18n:arsenal.windwaker-bullet.name}}",
         "{{ModID}}_LightbringerBullet": "{{ModID}}_Bullet 1 768 30/meow/{{ModID}}_LightbringerBullet 1/false/null/{{i18n:arsenal.lightbringer-bullet.name}}",
       }
+    },
+    // CUSTOM MINERAL CATEGORY 
+    {
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/ObjectExtensionData",
+      "Entries": {
+        "{{ModID}}_ExquisiteEmerald": {
+          "CategoryTextOverride": "Rare Mineral",
+          "CategoryColorOverride": {},
+        },
+        "{{ModID}}_ExquisiteRuby": {
+          "CategoryTextOverride": "Rare Mineral",
+          "CategoryColorOverride": {},
+        },
+        "{{ModID}}_ExquisiteTopaz": {
+          "CategoryTextOverride": "Rare Mineral",
+          "CategoryColorOverride": {},
+        },
+        "{{ModID}}_ExquisiteAquamarin": {
+          "CategoryTextOverride": "Rare Mineral",
+          "CategoryColorOverride": {},
+        },
+        "{{ModID}}_ExquisiteAmethyst": {
+          "CategoryTextOverride": "Rare Mineral",
+          "CategoryColorOverride": {},
+        },
+        "{{ModID}}_ExquisiteJade": {
+          "CategoryTextOverride": "Rare Mineral",
+          "CategoryColorOverride": {},
+        },
+        "{{ModID}}_ExquisiteDiamond": {
+          "CategoryTextOverride": "Rare Mineral",
+          "CategoryColorOverride": {},
+        },
+      },
     },
   ]
 }
