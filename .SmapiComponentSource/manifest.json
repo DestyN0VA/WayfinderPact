@@ -10,7 +10,7 @@
   "UniqueID": "KCC.SnS",
   "Name": "Sword and Sorcery (SMAPI Component)",
   "Author": "KittyCatCasey, EnderTedi",
-  "Version": "2.2.0",
+  "Version": "2.2.0-Debug",
   "Description": "...",
   "EntryDll": "SwordAndSorcerySMAPI.dll",
   "Dependencies": [
@@ -20,7 +20,7 @@
     },
     {
       "UniqueID": "spacechase0.SpaceCore",
-      "MinimumVersion": "1.26.2"
+      "MinimumVersion": "1.27.0"
     }
   ]
 }

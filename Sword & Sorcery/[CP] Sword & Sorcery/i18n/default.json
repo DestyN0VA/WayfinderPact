@@ -8423,5 +8423,55 @@ Level 10, if you chose Skilled Shapeshifter:
  
 Level 10, if you chose Ancient Agronomist:
 * Branch of Midgard - All ancient crops grow 10% faster, and all artisan goods derived from them are worth 10% more. Stacks with Artisan and Agriculturist.
-* Branch of Yggdrasil - Druidic essences have an additional 10% chance to drop. Druidic crops water surrounding crops with the same range as a Quality Sprinkler."
+* Branch of Yggdrasil - Druidic essences have an additional 10% chance to drop. Druidic crops water surrounding crops with the same range as a Quality Sprinkler.",
+
+"guidebook.chapter.UP.name": "Under Pressure",
+"guidebook.chapter.UP.BardicsSkill": "[center][font=dialogue]Druidics[/font][/center]
+You've unlocked the Bardics skill! Bardics can be leveled up by talking to NPCs. 
+ 
+Each level, you gain 10 max aether and a new song for the adventure bar. These songs cast various effects, detailed under Songs.
+ 
+[font=dialogue]Unlocks[/font]
+> Level 1 - Unlocks [color=purple]Fantasia Alla Marcia[/color].
+> Level 2 - Unlocks [color=purple]Battlefield Overture[/color].
+> Level 3 - Unlocks [color=purple]Invigorating Encore[/color].
+> Level 4 - Unlocks [color=purple]Enduring Melody[/color].
+> Level 5 - Unlocks one of two songs based on your profession choice:
+ 
+  = College of Eloquence - [color=purple]Rogues' Humorsque[/color]
+  = College of Valor - [color=purple]Scherzo D'Inganno[/color]
+ 
+> Level 6 - Unlocks [color=purple]Ballad of Chronomancy[/color].
+> Level 7 - Unlocks [color=purple]Track of {{horseName}}[/color].
+> Level 8 - Unlocks [color=purple]Druid's Lullaby[/color].
+> Level 9 - Unlocks [color=purple]A Walk in Adante[/color].
+> Level 10 - Upgrades your song choice at level 5.
+ 
+[font=dialogue]Songs[/font]
+> [color=purple]Fantasia Alla Marcia[/color] - (Aether Cost: 20) Grants a random passive buff. Usable once per day. 
+> [color=purple]Battlefield Overture[/color] - (Aether Cost: 20) Grants either an attack or defense buff. Usable once per day. 
+> [color=purple]Invigorating Encore[/color] - (Aether Cost: 10) Restores 25% health and energy. Usable once per day. 
+> [color=purple]Enduring Melody[/color] - (Aether Cost: 10) Creates a protective sound barrier that keeps enemies away for 30 seconds. 
+> [color=purple]Rogues' Humorsque[/color] - (Aether Cost: 25) Offers a buff depending on who it's played to. Usable on one villager per day. 
+> [color=purple]Scherzo D'Inganno[/color] - (Aether Cost: 20) Lets out a discordant sound that damages all enemies in range. 
+> [color=purple]Ballad of Chronomancy[/color] - (Aether Cost: 35) Pauses time for two minutes. 
+> [color=purple]Track of {{horseName}}[/color] - (Aether Cost: 10) Teleports you to your horse. 
+> [color=purple]Druid's Lullaby[/color] - (Aether Cost: 30) Once per day, applies +25% growth rate to crops in a 7x7 area around you, once per crop. 
+> [color=purple]A Walk in Adante[/color] - (Aether Cost: 15) Allows remote use of any obelisks you've acquired. 
+ 
+[font=dialogue]Professions[/font]
+Level 5
+* College of Eloquence - Learns the song Rogues' Humorsque.
+* College of Valor - Learns the song Scherzo D'Inganno.
+ 
+Level 10 
+College of Eloquence Track
+* Animated Performance - Strength of Bardic buffs are doubled.
+* Creative Crescendo - All Bardic buffs last all day.
+ 
+College of Valor Track
+* Words of Terror - Damage of Scherzo D'Inganno is doubled.
+* Words of Majesty - Damage of Scherzo D'Inganno is extended to the entire location."
+
+
 }
