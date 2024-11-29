@@ -7555,6 +7555,11 @@ ________      ________ _   _ _______ _____
   "config.PlayersHandbookColorScheme.values.Cream/Green": "Cream/Green",
   "config.PlayersHandbookColorScheme.values.Brown/Purple": "Brown/Purple",
 
+  "config.EquipmentMenuConfig.name": "EquipmentMenuConfig",
+  "config.EquipmentMenuConfig.description": "Recolors the Equipment Menu added by Spacecore to match Bog's Forest UI, DaisyNiko's Earthy UI, Enteis' Natural Dark Wood UI, Nom0ri's Vintage UI V2 for 1.6, Shinchan's Purple UI, SQBR's StarryBlue UI, or TheFrenchDodo's Sakura Interface Redux.",
+  "config.EquipmentMenuConfig.values.true": "true",
+  "config.EquipmentMenuConfig.values.false": "false",
+
   "Furniture.SpousePortrait.Mateo": "Mateo's Portrait",
   "Furniture.SpousePortrait.Hector": "Biróg's Portrait",
   "Furniture.SpousePortrait.Cirrus": "Cirrus's Portrait",

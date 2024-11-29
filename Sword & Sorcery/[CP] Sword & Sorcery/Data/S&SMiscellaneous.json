@@ -161,5 +161,12 @@
         "HasMod |contains=grapeponta.VibrantPastoralRecolor": true,
       }
     },
+    // SPACECORE COMPAT
+    {
+      "Action": "EditImage",
+      "Target": "spacechase0.SpaceCore/ExtraEquipmentIcon",
+      "FromFile": "Assets/SpacecoreCompat/{{SpaceCoreRecolors}}.png",
+      "ToArea": { "X": 0, "Y": 0, "Width": 16, "Height": 16 }
+  }
   ]
 }

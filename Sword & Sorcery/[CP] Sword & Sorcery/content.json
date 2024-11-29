@@ -302,6 +302,13 @@
       "Description": "Adds a spouse patio when married.",
       "Section": "Spouse Patios"
     },
+    "EquipmentMenuConfig": {
+      "AllowValues": "true,false",
+      "Default": "true",
+      "AllowBlank": false,
+      "Description": "Recolors the Equipment Menu added by Spacecore to match Bog's Forest UI, DaisyNiko's Earthy UI, Enteis' Natural Dark Wood UI, Nom0ri's Vintage UI V2 for 1.6, Shinchan's Purple UI, SQBR's StarryBlue UI, or TheFrenchDodo's Sakura Interface Redux.",
+      "Section": "Miscellaneous"
+    },
     "TimegateConfig": {
       "AllowValues": "OneDay, ThreeDays, OneWeek",
       "Default": "ThreeDays",
@@ -2351,6 +2358,41 @@
       "When": {
         "PlayersHandbookColorScheme": "Brown/Purple"
       }
-    }
+    },
+    {
+      "Name": "SpaceCoreRecolors",
+      "Value": "Bos.UIInterface_equipmentmenu",
+      "When": { "HasMod": "Bos.UIInterface", "EquipmentMenuConfig": true }
+    },
+    {
+      "Name": "SpaceCoreRecolors",
+      "Value": "daisyniko.earthyinterface_equipmentmenu",
+      "When": { "HasMod": "daisyniko.earthyinterface", "EquipmentMenuConfig": true }
+    },
+    {
+      "Name": "SpaceCoreRecolors",
+      "Value": "enteis.woodeninterfeis_equipmentmenu",
+      "When": { "HasMod": "enteis.woodeninterfeis", "EquipmentMenuConfig": true }
+    },
+    {
+      "Name": "SpaceCoreRecolors",
+      "Value": "nom0ri.vintageuifix_equipmentmenu",
+      "When": { "HasMod": "nom0ri.vintageuifix", "EquipmentMenuConfig": true }
+    },
+    {
+      "Name": "SpaceCoreRecolors",
+      "Value": "shinchan.cppurpleinterface_equipmentmenu",
+      "When": { "HasMod": "shinchan.cppurpleinterface", "EquipmentMenuConfig": true }
+    },
+    {
+      "Name": "SpaceCoreRecolors",
+      "Value": "Sqbr.StarryBlueUI_equipmentmenu",
+      "When": { "HasMod": "Sqbr.StarryBlueUI", "EquipmentMenuConfig": true }
+    },
+    {
+      "Name": "SpaceCoreRecolors",
+      "Value": "thefrenchdodo.sakurainterfaceredux_equipmentmenu.png",
+      "When": { "HasMod": "thefrenchdodo.sakurainterfaceredux", "EquipmentMenuConfig": true }
+    },
   ]
 }
