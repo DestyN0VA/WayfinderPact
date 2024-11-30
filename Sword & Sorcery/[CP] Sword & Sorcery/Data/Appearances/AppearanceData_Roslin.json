@@ -37,13 +37,13 @@
         {
             "LogName": "Armor - Roslin",
             "Action": "Load",
-            "Target": "Characters/Roslin_armored",
+            "Target": "Characters/Roslin_armored, Characters/RoslinMine",
             "FromFile": "assets/Characters/Roslin/Roslin_armored.png"
         },
         {
             "LogName": "Armor - Roslin",
             "Action": "Load",
-            "Target": "Portraits/Roslin_armored",
+            "Target": "Portraits/Roslin_armored, Portraits/RoslinMine",
             "FromFile": "assets/Portraits/Roslin/Roslin_armored.png"
         },
 

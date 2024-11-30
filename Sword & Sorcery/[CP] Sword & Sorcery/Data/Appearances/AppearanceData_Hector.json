@@ -20,7 +20,7 @@
         {
             "LogName": "Druid Outfit (Hood Down) for Events - Hector",
             "Action": "Load",
-            "Target": "Portraits/Hector_HoodDown, Characters/Hector_HoodDown",
+            "Target": "Portraits/Hector_HoodDown, Characters/Hector_HoodDown, Portraits/HectorMine, Characters/HectorMine",
             "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_hooddown.png"
         },
         {

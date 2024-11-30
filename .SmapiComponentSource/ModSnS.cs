@@ -1730,11 +1730,11 @@ namespace SwordAndSorcerySMAPI
             Point basePoint = new(28, 7);
             Dictionary<string, (string sprite, string portrait, string dialogue)> data = new()
             {
-                { "Mateo", new( "Armor_Mateo", "Armor_Mateo", "I'm worried, but we've made it this far. Nothing can stop us as long as we stick together.$80" ) },
-                { "Hector", new( "Hector_HoodDown", "Hector_HoodDown", "I feel sick...$19" ) },
-                { "Cirrus", new( "Cirrus_Glamrock", "Cirrus_Glamrock", "I'm not sure what's going to happen, @, but with you here we'll be fine!$17" ) },
-                { "Dandelion", new( "Dandelion_armored", "Dandelion_armored", "I have big plans for when this is over, @. Just you wait.$18" ) },
-                { "Roslin", new( "Roslin_armored", "Roslin_armored", "This place is thick with Void magic. It's all-consuming...$16" ) },
+                { "Mateo", new( "Armor_Mateo", "Armor_Mateo", I18n.FakeNpc_Deepdark_MateoMine() ) },
+                { "Hector", new( "Hector_HoodDown", "Hector_HoodDown", I18n.FakeNpc_Deepdark_HectorMine() ) },
+                { "Cirrus", new( "Cirrus_Glamrock", "Cirrus_Glamrock", I18n.FakeNpc_Deepdark_CirrusMine() ) },
+                { "Dandelion", new( "Dandelion_armored", "Dandelion_armored", I18n.FakeNpc_Deepdark_DandelionMine() ) },
+                { "Roslin", new( "Roslin_armored", "Roslin_armored", I18n.FakeNpc_Deepdark_RoslinMine() ) },
             };
 
             foreach (var entry in data)
