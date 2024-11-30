@@ -45,7 +45,7 @@
 			"Target": "Characters/Schedules/Roslin",
 			"Entries": {
 				// Roslin will attend the Night Market & Squid Festival.
-				"winter_12": "{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1300 Beach 86 31 3/2200 EastScarp_LionsMane 5 5 3",
+				"winter_12": "MAIL beachBridgeFixed/GOTO spring/{{Random:610 EastScarp_LionsMane 10 6 0++610 EastScarp_LionsMane 12 8 1 Roslin_sidemagic++610 EastScarp_LionsMane 11 7 2 Roslin_frontmagic|inputSeparator=++}}/1300 Beach 86 31 3/2200 EastScarp_LionsMane 5 5 3",
 				"winter_13": "GOTO winter_12",
 				"winter_15": "GOTO winter_12",
 				"winter_16": "GOTO winter_12",

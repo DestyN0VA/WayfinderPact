@@ -31,7 +31,7 @@
 			"Target": "Characters/Schedules/Dandelion",
 			"Entries": {
 				// Dandelion will attend the Night Market & Squid Festival.
-				"winter_12": "{{Random:610 EastScarp_LionsMane 12 26 0 Dandelion_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1300 Beach 86 30 3/2200 EastScarp_LionsMane 3 5 1",
+				"winter_12": "MAIL beachBridgeFixed/GOTO spring/{{Random:610 EastScarp_LionsMane 12 26 0 Dandelion_readfront++610 EastScarp_LionsMane 7 27 0++610 EastScarp_LionsMane 2 26 3|inputSeparator=++}}/1300 Beach 86 30 3/2200 EastScarp_LionsMane 3 5 1",
 				"winter_13": "GOTO winter_12",
 				"winter_15": "GOTO winter_12",
 				"winter_16": "GOTO winter_12",

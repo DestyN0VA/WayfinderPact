@@ -849,12 +849,12 @@ public static class Game1ChangeGemToExquisitePatch
         if (Game1.player.GetCustomSkillLevel(ModSnS.RogueSkill) >= 4 &&
             GameLocationBreakingStoneFlagPatch.IsBreakingStone > 0 &&
             ModSnS.ExquisiteGemMappings.TryGetValue(id, out string newId) &&
-            Game1.random.NextDouble() < 0.02 * chanceMult)
+            Game1.random.NextDouble() < 0.25 * chanceMult)
             id = newId;
         if (Game1.player.GetCustomSkillLevel(ModSnS.RogueSkill) >= 2 &&
             GameLocationBreakingStoneFlagPatch.IsBreakingStone > 0 &&
             ModSnS.PureOreMappings.TryGetValue(id, out newId) &&
-            Game1.random.NextDouble() < 0.1 * chanceMult)
+            Game1.random.NextDouble() < 0.15 * chanceMult)
             id = newId;
     }
 }
