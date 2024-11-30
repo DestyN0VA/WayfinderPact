@@ -944,9 +944,10 @@
   // SUMMIT DIALOGUE 
   "CFD.Mateo.ExtraDialogue_SummitEvent_Intro_Mateo": "Hey, Sunshine.$4",
   "CFD.Mateo.ExtraDialogue_SummitEvent_Intro2_Mateo": "Have you ever seen such splendor?$1",
-  "CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue1_Mateo": "I can't help but think about the last %year years...$4\"/pause 1000/speak spouse \"We've been through a lot together, haven't we? And I wouldn't take back a second of it, not even the stressful parts.$14",
-  "CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue2_Mateo": "...Look at everything we've learned and accomplished together; how far we've come from where we started.$27",
-  "CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue3_Mateo": "And you know what? It's not over. There are still adventures to be had together.$4",
+  "CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue1_Mateo": "I can't help but think about the last %year years...$4",
+  "CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue2_Mateo": "We've been through a lot together, haven't we? And I wouldn't take back a second of it, not even the stressful parts.$14",
+  "CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue3_Mateo": "...Look at everything we've learned and accomplished together; how far we've come from where we started.$27",
+  "CFD.Mateo.ExtraDialogue_SummitEvent_Dialogue4_Mateo": "And you know what? It's not over. There are still adventures to be had together.$4",
   "CFD.Mateo.ExtraDialogue_SummitEvent_closingmessage": "It's been a long road for you and Mateo...",
 
   // MOVIE INVITATION - SPOUSE 
@@ -2470,9 +2471,10 @@ ________      ________ _   _ _______ _____
   // SUMMIT DIALOGUE 
   "CFD.Hector.ExtraDialogue_SummitEvent_Intro_Hector": "My deer-ly beloved.",
   "CFD.Hector.ExtraDialogue_SummitEvent_Intro2_Hector": "I'd say this is the second best view in the Valley, after looking at you.",
-  "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue1_Hector": "It's been a long couple years. %year, right? $14\"/pause 1000/speak spouse \"It's been a journey well-traveled. And it's not even over yet. Only just starting, really.$13",
-  "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue2_Hector": "Thank you for everything, @. I love you.$15",
-  "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue3_Hector": "More than the sky above, and the earth below.$11",
+  "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue1_Hector": "It's been a long couple years. %year, right? $14",
+  "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue2_Hector": "It's been a journey well-traveled. And it's not even over yet. Only just starting, really.$13",
+  "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue3_Hector": "Thank you for everything, @. I love you.$15",
+  "CFD.Hector.ExtraDialogue_SummitEvent_Dialogue4_Hector": "More than the sky above, and the earth below.$11",
   "CFD.Hector.ExtraDialogue_SummitEvent_closingmessage": "It's been a long road for you and Biróg...",
 
   // MOVIE INVITATION - SPOUSE 
@@ -3891,9 +3893,10 @@ ________      ________ _   _ _______ _____
   // SUMMIT DIALOGUE 
   "CFD.Cirrus.ExtraDialogue_SummitEvent_Intro_Cirrus": "Oh Rockstar, my Rockstar.$4",
   "CFD.Cirrus.ExtraDialogue_SummitEvent_Intro2_Cirrus": "Of all the incredible things I've seen when traveling the world, this is the best.$6",
-  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue1_Cirrus": "It's been %year years, hasn't it? Since you've come here?$1\"/pause 1000/speak spouse \"Thank you for loving me, and for spending some of those together with me - and, hopefully, the rest of them.$6",
-  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue2_Cirrus": "I love you, times in infinity, for every star that's in the sky.$4",
-  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue3_Cirrus": "I love you, I love you, I love you, I love you, I love you...!$26",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue1_Cirrus": "It's been %year years, hasn't it? Since you've come here?$1",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue2_Cirrus": "Thank you for loving me, and for spending some of those together with me - and, hopefully, the rest of them.$6",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue3_Cirrus": "I love you, times in infinity, for every star that's in the sky.$4",
+  "CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue4_Cirrus": "I love you, I love you, I love you, I love you, I love you...!$26",
   "CFD.Cirrus.ExtraDialogue_SummitEvent_closingmessage": "It's been a long road for you and Cirrus...",
 
   // MOVIE INVITATION - SPOUSE 

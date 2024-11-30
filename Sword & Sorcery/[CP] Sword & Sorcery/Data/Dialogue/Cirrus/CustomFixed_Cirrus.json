@@ -23,15 +23,20 @@
             "Action": "EditData",
             "Target": "Data/ExtraDialogue",
             "Entries": {
-                "SummitEvent_Intro_Spouse": "{{i18n:CFD.Cirrus.ExtraDialogue_SummitEvent_Intro_Spouse}}",
-                "SummitEvent_Intro2_Spouse": "{{i18n:CFD.Cirrus.ExtraDialogue_SummitEvent_Intro2_Spouse}}",
-                "SummitEvent_Intro2_Spouse_Gruff": "{{i18n:CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue1_Spouse}}",
-                "SummitEvent_Dialogue1_Spouse": "{{i18n:CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue2_Spouse}}",
-                "SummitEvent_Dialogue2_Spouse": "{{i18n:CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue3_Spouse}}",
-                "SummitEvent_Dialogue3_Cirrus": "{{i18n:CFD.Cirrus.ExtraDialogue_SummitEvent_closingmessage}}"
+                "SummitEvent_Intro_Spouse": "{{i18n:CFD.Cirrus.ExtraDialogue_SummitEvent_Intro_Cirrus}}", //greeting
+                "SummitEvent_Intro2_Spouse": "{{i18n:CFD.Cirrus.ExtraDialogue_SummitEvent_Intro2_Cirrus}}",
+                "SummitEvent_Intro2_Spouse_Gruff": "{{i18n:CFD.Cirrus.ExtraDialogue_SummitEvent_Intro2_Cirrus}}", //Only used if male, make same as SummitEvent_Intro2_Spouse
+                //spouse turn left
+                "SummitEvent_Dialogue1_Spouse": "{{i18n:CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue1_Cirrus}}",
+                "SummitEvent_Dialogue1B_Spouse": "{{i18n:CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue2_Cirrus}}",
+                "SummitEvent_Dialogue2_Spouse": "{{i18n:CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue3_Cirrus}}",
+                //spouse turn up
+                "SummitEvent_Dialogue3_Cirrus": "{{i18n:CFD.Cirrus.ExtraDialogue_SummitEvent_Dialogue4_Cirrus}}", //change to NPC internal name
+                //roll credits
+                "SummitEvent_closingmessage": "{{i18n:CFD.Cirrus.ExtraDialogue_SummitEvent_closingmessage}}" // Qi speaking
             },
             "When": {
-                "Relationship:Cirrus": "Married",
+                "Relationship:Cirrus": "Married"
             }
         },
         { // EDITS TO CHARACTERS.JSON
@@ -39,7 +44,7 @@
             "Action": "EditData",
             "Target": "Strings/Characters",
             "Entries": {
-                "MovieInvite_Spouse_Cirrus": "{{i18n:MovieInvite_Spouse_Cirrus}}",
+                "MovieInvite_Spouse_Cirrus": "{{i18n:MovieInvite_Spouse_Cirrus}}"
             }
         }
     ]

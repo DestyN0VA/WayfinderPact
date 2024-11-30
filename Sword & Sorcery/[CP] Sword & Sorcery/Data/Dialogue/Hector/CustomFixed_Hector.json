@@ -41,15 +41,20 @@
             "Action": "EditData",
             "Target": "Data/ExtraDialogue",
             "Entries": {
-                "SummitEvent_Intro_Spouser": "{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Intro_Spouse}}",
-                "SummitEvent_Intro2_Spouse": "{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Intro2_Spouse}}",
-                "SummitEvent_Intro2_Spouse_Gruff": "{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Dialogue1_Spouse}}",
-                "SummitEvent_Dialogue1_Spouse": "{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Dialogue2_Spouse}}",
-                "SummitEvent_Dialogue2_Spouse": "{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Dialogue3_Spouse}}",
-                "SummitEvent_Dialogue3_Hector": "{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_closingmessage}}"
+                "SummitEvent_Intro_Spouse": "{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Intro_Hector}}", //greeting
+                "SummitEvent_Intro2_Spouse": "{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Intro2_Hector}}",
+                "SummitEvent_Intro2_Spouse_Gruff": "{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Intro2_Hector}}", //Only used if male, make same as SummitEvent_Intro2_Spouse
+                //spouse turn left
+                "SummitEvent_Dialogue1_Spouse": "{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Dialogue1_Hector}}",
+                "SummitEvent_Dialogue1B_Spouse": "{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Dialogue2_Hector}}",
+                "SummitEvent_Dialogue2_Spouse": "{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Dialogue3_Hector}}",
+                //spouse turn up
+                "SummitEvent_Dialogue3_Hector": "{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_Dialogue4_Hector}}", //change to NPC internal name
+                //roll credits
+                "SummitEvent_closingmessage": "{{i18n:CFD.Hector.ExtraDialogue_SummitEvent_closingmessage}}" // Qi speaking
             },
             "When": {
-                "Relationship:Hector": "Married",
+                "Relationship:Hector": "Married"
             }
         },
         { // EDITS TO CHARACTERS.JSON
@@ -57,7 +62,7 @@
             "Action": "EditData",
             "Target": "Strings/Characters",
             "Entries": {
-                "MovieInvite_Spouse_Hector": "{{i18n:MovieInvite_Spouse_Hector}}",
+                "MovieInvite_Spouse_Hector": "{{i18n:MovieInvite_Spouse_Hector}}"
             }
         }
     ]
