@@ -79,11 +79,12 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/Hector",
             "Entries": {
-                "{{WeekDay}}": "{{i18n:Marriage.Hector.BadWeather.{{Random:{{Range: 1, 15}}|key={{Time}}}}}}"
+                "{{WeekDay}}": "{{i18n:Marriage.Hector.BadWeather.{{Random:{{Range: 1, 15}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Hector_OverrideSeenToday received"
             },
             "When": {
                 "Relationship:Hector |contains=Married": true,
-                "Weather": "Rain, Storm, Snow"
+                "Weather": "Rain, Storm, Snow",
+                "HasFlag |contains=SnS_M_Hector_OverrideSeenToday": false
             }
         },
         {

@@ -25,7 +25,7 @@
       "Entries": {
         // NAME & INTRO
         "Name:": "{{i18n:Core.Solomon.Name}}",
-        "Introduction": "{{i18n:Core.Solomon.Introduction}}",
+        "Introduction": "{{i18n:Core.Solomon.Introduction}}"
       },
     },
     {
