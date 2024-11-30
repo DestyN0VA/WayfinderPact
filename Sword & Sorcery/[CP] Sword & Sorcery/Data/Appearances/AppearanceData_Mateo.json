@@ -43,13 +43,13 @@
         {
             "LogName": "Armor Portraits - Mateo",
             "Action": "Load",
-            "Target": "Portraits/Armor_Mateo",
+            "Target": "Portraits/Armor_Mateo, Portraits/MateoMine",
             "FromFile": "Assets/Portraits/Mateo/{{MateoArmor}}"
         },
         {
             "LogName": "Armor Sprites - Mateo",
             "Action": "Load",
-            "Target": "Characters/Armor_Mateo",
+            "Target": "Characters/Armor_Mateo, Characters/MateoMine",
             "FromFile": "Assets/Characters/Mateo/Armor_Mateo.png"
         },
         {

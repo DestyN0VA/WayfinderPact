@@ -16,6 +16,11 @@
             "Target": "Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/winter_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock, Characters/spring_Cirrus, Characters/summer_Cirrus, Characters/fall_Cirrus, Characters/winter_Cirrus, Characters/Cirrus_beach, Characters/Cirrus_Glamrock",
             "FromFile": "assets/{{TargetPathOnly}}/Cirrus/{{TargetWithoutPath}}.png"
         },
+        {
+            "Action": "Load",
+            "Target": "Portraits/CirrusMine, Characters/CirrusMine",
+            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Cirrus_Glamrock.png"
+        },
 
     
         // OVERLAYS
