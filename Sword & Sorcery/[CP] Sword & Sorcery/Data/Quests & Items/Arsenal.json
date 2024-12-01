@@ -5,7 +5,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_ExquisiteEmerald": {
-          "Name": "Exquisite Emerald",
+          "Name": "{{ModID}}_ExquisiteEmerald",
           "DisplayName": "{{i18n: arsenal.exquisite-emerald.name}}",
           "Description": "{{i18n: arsenal.exquisite-emerald.description}}",
           "Type": "Basic",
@@ -17,10 +17,10 @@
           "ContextTags": [
             "exquisite_gem",
             "not_museum_donatable"
-          ],
+          ]
         },
         "{{ModID}}_ExquisiteRuby": {
-          "Name": "Exquisite Ruby",
+          "Name": "{{ModID}}_ExquisiteRuby",
           "DisplayName": "{{i18n: arsenal.exquisite-ruby.name}}",
           "Description": "{{i18n: arsenal.exquisite-ruby.description}}",
           "Type": "Basic",
@@ -32,10 +32,10 @@
           "ContextTags": [
             "exquisite_gem",
             "not_museum_donatable"
-          ],
+          ]
         },
         "{{ModID}}_ExquisiteTopaz": {
-          "Name": "Exquisite Topaz",
+          "Name": "{{ModID}}_ExquisiteTopaz",
           "DisplayName": "{{i18n: arsenal.exquisite-topaz.name}}",
           "Description": "{{i18n: arsenal.exquisite-topaz.description}}",
           "Type": "Basic",
@@ -47,10 +47,10 @@
           "ContextTags": [
             "exquisite_gem",
             "not_museum_donatable"
-          ],
+          ]
         },
         "{{ModID}}_ExquisiteJade": {
-          "Name": "Exquisite Jade",
+          "Name": "{{ModID}}_ExquisiteJade",
           "DisplayName": "{{i18n: arsenal.exquisite-jade.name}}",
           "Description": "{{i18n: arsenal.exquisite-jade.description}}",
           "Type": "Basic",
@@ -62,10 +62,10 @@
           "ContextTags": [
             "exquisite_gem",
             "not_museum_donatable"
-          ],
+          ]
         },
         "{{ModID}}_ExquisiteAquamarine": {
-          "Name": "Exquisite Aquamarine",
+          "Name": "{{ModID}}_ExquisiteAquamarine",
           "DisplayName": "{{i18n: arsenal.exquisite-aquamarine.name}}",
           "Description": "{{i18n: arsenal.exquisite-aquamarine.description}}",
           "Type": "Basic",
@@ -77,10 +77,10 @@
           "ContextTags": [
             "exquisite_gem",
             "not_museum_donatable"
-          ],
+          ]
         },
         "{{ModID}}_ExquisiteAmethyst": {
-          "Name": "Exquisite Amethyst",
+          "Name": "{{ModID}}_ExquisiteAmethyst",
           "DisplayName": "{{i18n: arsenal.exquisite-amethyst.name}}",
           "Description": "{{i18n: arsenal.exquisite-amethyst.description}}",
           "Type": "Basic",
@@ -92,10 +92,10 @@
           "ContextTags": [
             "exquisite_gem",
             "not_museum_donatable"
-          ],
+          ]
         },
         "{{ModID}}_ExquisiteDiamond": {
-          "Name": "Exquisite Diamond",
+          "Name": "{{ModID}}_ExquisiteDiamond",
           "DisplayName": "{{i18n: arsenal.exquisite-diamond.name}}",
           "Description": "{{i18n: arsenal.exquisite-diamond.description}}",
           "Type": "Basic",
@@ -107,11 +107,11 @@
           "ContextTags": [
             "exquisite_gem",
             "not_museum_donatable"
-          ],
+          ]
         },
         /*
         "{{ModID}}_ArcanePrimer": {
-          "Name": "Arcane Primer",
+          "Name": "{{ModID}}_ArcanePrimer",
           "DisplayName": "{{i18n: arsenal.arcane-primer.name}}",
           "Description": "{{i18n: arsenal.arcane-primer.description}}",
           "Type": "Crafting",
@@ -120,11 +120,11 @@
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
           "SpriteIndex": 7,
           "ExcludeFromShippingCollection": true,
-          "ExcludeFromRandomSale": true,
+          "ExcludeFromRandomSale": true
         },
         */
         "{{ModID}}_PureCopperOre": {
-          "Name": "Pure Copper Ore",
+          "Name": "{{ModID}}_PureCopperOre",
           "DisplayName": "{{i18n: arsenal.pure-copper-ore.name}}",
           "Description": "{{i18n: arsenal.pure-copper-ore.description}}",
           "Type": "Basic",
@@ -136,10 +136,10 @@
           "ContextTags": [
             "ore_item",
             "pure_ore"
-          ],
+          ]
         },
         "{{ModID}}_PureIronOre": {
-          "Name": "Pure Iron Ore",
+          "Name": "{{ModID}}_PureIronOre",
           "DisplayName": "{{i18n: arsenal.pure-iron-ore.name}}",
           "Description": "{{i18n: arsenal.pure-iron-ore.description}}",
           "Type": "Basic",
@@ -151,10 +151,10 @@
           "ContextTags": [
             "ore_item",
             "pure_ore"
-          ],
+          ]
         },
         "{{ModID}}_PureGoldOre": {
-          "Name": "Pure Gold Ore",
+          "Name": "{{ModID}}_PureGoldOre",
           "DisplayName": "{{i18n: arsenal.pure-gold-ore.name}}",
           "Description": "{{i18n: arsenal.pure-gold-ore.description}}",
           "Type": "Basic",
@@ -166,10 +166,10 @@
           "ContextTags": [
             "ore_item",
             "pure_ore"
-          ],
+          ]
         },
         "{{ModID}}_PureIridiumOre": {
-          "Name": "Pure Iridium Ore",
+          "Name": "{{ModID}}_PureIridiumOre",
           "DisplayName": "{{i18n: arsenal.pure-iridium-ore.name}}",
           "Description": "{{i18n: arsenal.pure-iridium-ore.description}}",
           "Type": "Basic",
@@ -181,10 +181,10 @@
           "ContextTags": [
             "ore_item",
             "pure_ore"
-          ],
+          ]
         },
         "{{ModID}}_PureRadioactiveOre": {
-          "Name": "Pure Radioactive Ore",
+          "Name": "{{ModID}}_PureRadioactiveOre",
           "DisplayName": "{{i18n: arsenal.pure-radioactive-ore.name}}",
           "Description": "{{i18n: arsenal.pure-radioactive-ore.description}}",
           "Type": "Basic",
@@ -196,10 +196,10 @@
           "ContextTags": [
             "ore_item",
             "pure_ore"
-          ],
+          ]
         },
         "{{ModID}}_ClothArmor": {
-          "Name": "Cloth Armor",
+          "Name": "{{ModID}}_ClothArmor",
           "DisplayName": "{{i18n: arsenal.cloth-armor.name}}",
           "Description": "{{i18n: arsenal.cloth-armor.description}}",
           "Type": "Basic",
@@ -213,11 +213,11 @@
             "armor_item"
           ],
           "CustomFields": {
-            "ArmorValue": 25,
+            "ArmorValue": 25
           }
         },
         "{{ModID}}_CopperArmor": {
-          "Name": "Copper Armor",
+          "Name": "{{ModID}}_CopperArmor",
           "DisplayName": "{{i18n: arsenal.copper-armor.name}}",
           "Description": "{{i18n: arsenal.copper-armor.description}}",
           "Type": "Basic",
@@ -231,11 +231,11 @@
             "armor_item"
           ],
           "CustomFields": {
-            "ArmorValue": 50,
+            "ArmorValue": 50
           }
         },
         "{{ModID}}_IronArmor": {
-          "Name": "Iron Armor",
+          "Name": "{{ModID}}_IronArmor",
           "DisplayName": "{{i18n: arsenal.iron-armor.name}}",
           "Description": "{{i18n: arsenal.iron-armor.description}}",
           "Type": "Basic",
@@ -249,11 +249,11 @@
             "armor_item"
           ],
           "CustomFields": {
-            "ArmorValue": 75,
+            "ArmorValue": 75
           }
         },
         "{{ModID}}_GoldArmor": {
-          "Name": "Gold Armor",
+          "Name": "{{ModID}}_GoldArmor",
           "DisplayName": "{{i18n: arsenal.gold-armor.name}}",
           "Description": "{{i18n: arsenal.gold-armor.description}}",
           "Type": "Basic",
@@ -267,11 +267,11 @@
             "armor_item"
           ],
           "CustomFields": {
-            "ArmorValue": 100,
+            "ArmorValue": 100
           }
         },
         "{{ModID}}_IridiumArmor": {
-          "Name": "Iridium Armor",
+          "Name": "{{ModID}}_IridiumArmor",
           "DisplayName": "{{i18n: arsenal.iridium-armor.name}}",
           "Description": "{{i18n: arsenal.iridium-armor.description}}",
           "Type": "Basic",
@@ -285,11 +285,11 @@
             "armor_item"
           ],
           "CustomFields": {
-            "ArmorValue": 125,
+            "ArmorValue": 125
           }
         },
         "{{ModID}}_RadioactiveArmor": {
-          "Name": "Radioactive Armor",
+          "Name": "{{ModID}}_RadioactiveArmor",
           "DisplayName": "{{i18n: arsenal.radioactive-armor.name}}",
           "Description": "{{i18n: arsenal.radioactive-armor.description}}",
           "Type": "Basic",
@@ -303,11 +303,11 @@
             "armor_item"
           ],
           "CustomFields": {
-            "ArmorValue": 150,
+            "ArmorValue": 150
           }
         },
         "{{ModID}}_StygiumArmor": {
-          "Name": "Stygium Armor",
+          "Name": "{{ModID}}_StygiumArmor",
           "DisplayName": "{{i18n: arsenal.stygium-armor.name}}",
           "Description": "{{i18n: arsenal.stygium-armor.description}}",
           "Type": "Basic",
@@ -321,11 +321,11 @@
             "armor_item"
           ],
           "CustomFields": {
-            "ArmorValue": 175,
+            "ArmorValue": 175
           }
         },
         "{{ModID}}_ElysiumArmor": {
-          "Name": "Elysium Armor",
+          "Name": "{{ModID}}_ElysiumArmor",
           "DisplayName": "{{i18n: arsenal.elysium-armor.name}}",
           "Description": "{{i18n: arsenal.elysium-armor.description}}",
           "Type": "Basic",
@@ -339,11 +339,11 @@
             "armor_item"
           ],
           "CustomFields": {
-            "ArmorValue": 200,
+            "ArmorValue": 200
           }
         },
         "{{ModID}}_Arrow": {
-          "Name": "Arrow",
+          "Name": "{{ModID}}_Arrow",
           "DisplayName": "{{i18n: arsenal.arrow.name}}",
           "Description": "{{i18n: arsenal.arrow.description}}",
           "Type": "Basic",
@@ -355,10 +355,10 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "arrow_item"
-          ],
+          ]
         },
         "{{ModID}}_FirestormArrow": {
-          "Name": "Firestorm Arrow",
+          "Name": "{{ModID}}_FirestormArrow",
           "DisplayName": "{{i18n: arsenal.firestorm-arrow.name}}",
           "Description": "{{i18n: arsenal.firestorm-arrow.description}}",
           "Type": "Basic",
@@ -370,10 +370,10 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "arrow_item"
-          ],
+          ]
         },
         "{{ModID}}_IcicleArrow": {
-          "Name": "Icicle Arrow",
+          "Name": "{{ModID}}_IcicleArrow",
           "DisplayName": "{{i18n: arsenal.icicle-arrow.name}}",
           "Description": "{{i18n: arsenal.icicle-arrow.description}}",
           "Type": "Basic",
@@ -385,10 +385,10 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "arrow_item"
-          ],
+          ]
         },
         "{{ModID}}_WindwakerArrow": {
-          "Name": "Windwaker Arrow",
+          "Name": "{{ModID}}_WindwakerArrow",
           "DisplayName": "{{i18n: arsenal.windwaker-arrow.name}}",
           "Description": "{{i18n: arsenal.windwaker-arrow.description}}",
           "Type": "Basic",
@@ -400,10 +400,10 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "arrow_item"
-          ],
+          ]
         },
         "{{ModID}}_RicochetArrow": {
-          "Name": "Ricochet Arrow",
+          "Name": "{{ModID}}_RicochetArrow",
           "DisplayName": "{{i18n: arsenal.ricochet-arrow.name}}",
           "Description": "{{i18n: arsenal.ricochet-arrow.description}}",
           "Type": "Basic",
@@ -415,10 +415,10 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "arrow_item"
-          ],
+          ]
         },
         "{{ModID}}_LightbringerArrow": {
-          "Name": "Lightbringer Arrow",
+          "Name": "{{ModID}}_LightbringerArrow",
           "DisplayName": "{{i18n: arsenal.lightbringer-arrow.name}}",
           "Description": "{{i18n: arsenal.lightbringer-arrow.description}}",
           "Type": "Basic",
@@ -430,10 +430,10 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "arrow_item"
-          ],
+          ]
         },
         "{{ModID}}_Bullet": {
-          "Name": "Bullet",
+          "Name": "{{ModID}}_Bullet",
           "DisplayName": "{{i18n: arsenal.bullet.name}}",
           "Description": "{{i18n: arsenal.bullet.description}}",
           "Type": "Basic",
@@ -445,10 +445,10 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "bullet_item"
-          ],
+          ]
         },
         "{{ModID}}_FirestormBullet": {
-          "Name": "Firestorm Bullet",
+          "Name": "{{ModID}}_FirestormBullet",
           "DisplayName": "{{i18n: arsenal.firestorm-bullet.name}}",
           "Description": "{{i18n: arsenal.firestorm-bullet.description}}",
           "Type": "Basic",
@@ -460,10 +460,10 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "bullet_item"
-          ],
+          ]
         },
         "{{ModID}}_IcicleBullet": {
-          "Name": "Icicle Bullet",
+          "Name": "{{ModID}}_IcicleBullet",
           "DisplayName": "{{i18n: arsenal.icicle-bullet.name}}",
           "Description": "{{i18n: arsenal.icicle-bullet.description}}",
           "Type": "Basic",
@@ -475,10 +475,10 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "bullet_item"
-          ],
+          ]
         },
         "{{ModID}}_WindwakerBullet": {
-          "Name": "Windwaker Bullet",
+          "Name": "{{ModID}}_WindwakerBullet",
           "DisplayName": "{{i18n: arsenal.windwaker-bullet.name}}",
           "Description": "{{i18n: arsenal.windwaker-bullet.description}}",
           "Type": "Basic",
@@ -490,10 +490,10 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "bullet_item"
-          ],
+          ]
         },
         "{{ModID}}_RicochetBullet": {
-          "Name": "Ricochet Bullet",
+          "Name": "{{ModID}}_RicochetBullet",
           "DisplayName": "{{i18n: arsenal.ricochet-bullet.name}}",
           "Description": "{{i18n: arsenal.ricochet-bullet.description}}",
           "Type": "Basic",
@@ -505,10 +505,10 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "bullet_item"
-          ],
+          ]
         },
         "{{ModID}}_LightbringerBullet": {
-          "Name": "Lightbringer Bullet",
+          "Name": "{{ModID}}_LightbringerBullet",
           "DisplayName": "{{i18n: arsenal.lightbringer-bullet.name}}",
           "Description": "{{i18n: arsenal.lightbringer-bullet.description}}",
           "Type": "Basic",
@@ -520,8 +520,8 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "bullet_item"
-          ],
-        },
+          ]
+        }
       }
     },
     {
@@ -529,16 +529,16 @@
       "Target": "Data/Weapons",
       "Entries": {
         "{{ModID}}_Bow": {
-          "Name": "Bow",
+          "Name": "{{ModID}}_Bow",
           "DisplayName": "{{i18n: arsenal.bow.name}}",
           "Description": "{{i18n: arsenal.bow.description}}",
           "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
           "SpriteIndex": 37,
           "Speed": 308, // All slingshots have this for some reason?,
           "CustomFields": {
-            "Bow": true,
+            "Bow": true
           }
-        },
+        }
       }
     },
     // CRAFTING RECIPES 
@@ -575,7 +575,7 @@
         "{{ModID}}_IcicleBullet": "{{ModID}}_Bullet 1 84 1/meow/{{ModID}}_IcicleBullet 1/false/null",
         "{{ModID}}_RicochetBullet": "{{ModID}}_Bullet 1 330 1/meow/{{ModID}}_RicochetBullet 1/false/null/{{i18n:arsenal.ricochet-bullet.name}}",
         "{{ModID}}_WindwakerBullet": "{{ModID}}_Bullet 1 444 1/meow/{{ModID}}_WindwakerBullet 1/false/null/{{i18n:arsenal.windwaker-bullet.name}}",
-        "{{ModID}}_LightbringerBullet": "{{ModID}}_Bullet 1 768 30/meow/{{ModID}}_LightbringerBullet 1/false/null/{{i18n:arsenal.lightbringer-bullet.name}}",
+        "{{ModID}}_LightbringerBullet": "{{ModID}}_Bullet 1 768 30/meow/{{ModID}}_LightbringerBullet 1/false/null/{{i18n:arsenal.lightbringer-bullet.name}}"
       }
     },
     // CUSTOM MINERAL CATEGORY 
@@ -585,33 +585,33 @@
       "Entries": {
         "{{ModID}}_ExquisiteEmerald": {
           "CategoryTextOverride": "Rare Mineral",
-          "CategoryColorOverride": {},
+          "CategoryColorOverride": {}
         },
         "{{ModID}}_ExquisiteRuby": {
           "CategoryTextOverride": "Rare Mineral",
-          "CategoryColorOverride": {},
+          "CategoryColorOverride": {}
         },
         "{{ModID}}_ExquisiteTopaz": {
           "CategoryTextOverride": "Rare Mineral",
-          "CategoryColorOverride": {},
+          "CategoryColorOverride": {}
         },
         "{{ModID}}_ExquisiteAquamarin": {
           "CategoryTextOverride": "Rare Mineral",
-          "CategoryColorOverride": {},
+          "CategoryColorOverride": {}
         },
         "{{ModID}}_ExquisiteAmethyst": {
           "CategoryTextOverride": "Rare Mineral",
-          "CategoryColorOverride": {},
+          "CategoryColorOverride": {}
         },
         "{{ModID}}_ExquisiteJade": {
           "CategoryTextOverride": "Rare Mineral",
-          "CategoryColorOverride": {},
+          "CategoryColorOverride": {}
         },
         "{{ModID}}_ExquisiteDiamond": {
           "CategoryTextOverride": "Rare Mineral",
-          "CategoryColorOverride": {},
-        },
-      },
-    },
+          "CategoryColorOverride": {}
+        }
+      }
+    }
   ]
 }
