@@ -306,6 +306,42 @@
             "ArmorValue": 150,
           }
         },
+        "{{ModID}}_StygiumArmor": {
+          "Name": "Stygium Armor",
+          "DisplayName": "{{i18n: arsenal.stygium-armor.name}}",
+          "Description": "{{i18n: arsenal.stygium-armor.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 1750,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
+          "SpriteIndex": 49,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "armor_item"
+          ],
+          "CustomFields": {
+            "ArmorValue": 175,
+          }
+        },
+        "{{ModID}}_ElysiumArmor": {
+          "Name": "Elysium Armor",
+          "DisplayName": "{{i18n: arsenal.elysium-armor.name}}",
+          "Description": "{{i18n: arsenal.elysium-armor.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 2000,
+          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSArsenal.png}}",
+          "SpriteIndex": 50,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "armor_item"
+          ],
+          "CustomFields": {
+            "ArmorValue": 200,
+          }
+        },
         "{{ModID}}_Arrow": {
           "Name": "Arrow",
           "DisplayName": "{{i18n: arsenal.arrow.name}}",
@@ -524,6 +560,8 @@
         "{{ModID}}_GoldArmor": "{{ModID}}_PureGoldOre 10 {{ModID}}_IronArmor 1/meow/{{ModID}}_GoldArmor 1/false/null/{{i18n:arsenal.gold-armor.name}}",
         "{{ModID}}_IridiumArmor": "{{ModID}}_PureIridiumOre 10 {{ModID}}_GoldArmor 1/meow/{{ModID}}_IridiumArmor 1/false/null/{{i18n:arsenal.iridium-armor.name}}",
         "{{ModID}}_RadioactiveArmor": "{{ModID}}_PureRadioactiveOre 10 {{ModID}}_IridiumArmor 1/meow/{{ModID}}_RadioactiveArmor 1/false/null/{{i18n:arsenal.radioactive-armor.name}}",
+        "{{ModID}}_StygiumArmor": "{{ModID}}_StygiumBar 25/meow/{{ModID}}_StygiumArmor 1/false/null/{{i18n:arsenal.stygium-armor.name}}",
+        "{{ModID}}_ElysiumArmor": "{{ModID}}_StygiumArmor 1 {{ModID}}_DuskspireHeart 1/meow/{{ModID}}_ElysiummArmor 1/false/null/{{i18n:arsenal.elysium-armor.name}}",
         "{{ModID}}_Bow": "709 10/meow/0 1/false/null",
         "{{ModID}}_SteelShield": "335 5 388 24/meow/0 1/false/null",
         "{{ModID}}_Arrow": "388 1 390 1/meow/{{ModID}}_Arrow 1/false/null",
