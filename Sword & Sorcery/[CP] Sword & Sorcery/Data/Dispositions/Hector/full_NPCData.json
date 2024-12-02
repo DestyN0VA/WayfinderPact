@@ -23,7 +23,7 @@
                     "SocialTab": "HiddenUntilMet",
                     "Calendar": "HiddenUntilMet",
                     "FlowerDanceCanDance": true,
-                    "CanVisitIsland": "{{HectorIsland}}",
+                    "CanVisitIsland": false,
                     "WinterStarParticipant": false,
                     "ShakePortraits": [5, 19, 20, 27],
                     "ItemDeliveryQuests": false,

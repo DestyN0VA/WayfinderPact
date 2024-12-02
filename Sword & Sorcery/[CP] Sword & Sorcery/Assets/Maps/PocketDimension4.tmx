@@ -6,7 +6,7 @@
   <property name="TreatAsOutdoors" value="T"/>
  </properties>
  <tileset firstgid="1" name="DeepDark1" tilewidth="16" tileheight="16" tilecount="1484" columns="28">
-  <image source="DeepDark1.png" width="448" height="862"/>
+  <image source="DeepDarkTiles_1.png" width="448" height="862"/>
  </tileset>
  <tileset firstgid="1485" name="fall_outdoorsTileSheet2" tilewidth="16" tileheight="16" tilecount="1120" columns="16">
   <image source="fall_outdoorsTileSheet2.png" width="256" height="1120"/>

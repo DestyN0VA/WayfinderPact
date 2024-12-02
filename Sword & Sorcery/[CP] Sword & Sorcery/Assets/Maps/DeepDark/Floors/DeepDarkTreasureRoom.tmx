@@ -4,7 +4,7 @@
   <property name="LocationContext" value="SnSDeepDark"/>
  </properties>
  <tileset firstgid="1" name="DeepDark1" tilewidth="16" tileheight="16" tilecount="1484" columns="28">
-  <image source="DeepDark1.png" width="448" height="862"/>
+  <image source="DeepDarkTiles_1.png" width="448" height="862"/>
  </tileset>
  <layer id="1" name="Back" width="20" height="16">
   <data encoding="csv">

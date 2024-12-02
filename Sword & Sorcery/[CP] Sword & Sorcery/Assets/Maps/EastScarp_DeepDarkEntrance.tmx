@@ -10,7 +10,7 @@
   <image source="paths.png" width="64" height="256"/>
  </tileset>
  <tileset firstgid="65" name="DeepDark1" tilewidth="16" tileheight="16" tilecount="1484" columns="28">
-  <image source="DeepDark1.png" width="448" height="862"/>
+  <image source="DeepDarkTiles_1.png" width="448" height="862"/>
   <tile id="1">
    <properties>
     <property name="Type" value="Stone"/>

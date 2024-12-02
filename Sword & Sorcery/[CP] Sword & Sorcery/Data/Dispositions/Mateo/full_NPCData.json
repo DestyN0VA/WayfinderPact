@@ -24,6 +24,7 @@
                     "Calendar": "HiddenUntilMet",
                     "IntroductionsQuest": false,
                     "FlowerDanceCanDance": true,
+                    "CanVisitIsland": false,
                     "WinterStarParticipant": false,
                     "IsDarkSkinned": true,
                     "ShakePortraits": [
