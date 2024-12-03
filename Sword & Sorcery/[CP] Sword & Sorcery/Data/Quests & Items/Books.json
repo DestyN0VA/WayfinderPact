@@ -87,7 +87,7 @@
     "Target": "Data/Objects",
     "Entries": {
       "{{ModID}}_paladinbook": {
-        "Name": "Aodhan's Ravenloft Dossier",
+        "Name": "Valtari's Ravenloft Dossier",
         "DisplayName": "{{i18n: magicitem.paladinbook.name}}",
         "Description": "{{i18n: magicitem.paladinbook.description}}",
         "Type": "asdf",
