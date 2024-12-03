@@ -227,7 +227,7 @@ namespace SwordAndSorcerySMAPI
                         {
                             if ( hd.crop != null && !hd.crop.modData.ContainsKey( $"{ModUP.Instance.ModManifest.UniqueID}_BardicsCropSongBuff" ) )
                             {
-                                hd.crop.modData.Add($"{ModUP.Instance.ModManifest.UniqueID}_BardicsCropSongBuff", "meow");
+                                hd.crop.modData.Add($"{ModUP.Instance.ModManifest.UniqueID}_BardicsCropSongBuff", "hoot");
 
                                 int totalDaysOfCropGrowth = 0;
                                 for (int j = 0; j < hd.crop.phaseDays.Count - 1; j++)

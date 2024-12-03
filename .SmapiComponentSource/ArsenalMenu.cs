@@ -781,7 +781,7 @@ public static class MonsterTakeDamagePatch
             case "(O)766": // Slime
                 if (!__instance.modData.ContainsKey("DN.SnS_Slimed"))
                 {
-                    __instance.modData.Add("DN.SnS_Slimed", "meow");
+                    __instance.modData.Add("DN.SnS_Slimed", "hoot");
                     __instance.addedSpeed = -1.5f;
                 }
                 break;

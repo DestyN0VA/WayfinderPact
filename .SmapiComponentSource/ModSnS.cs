@@ -552,7 +552,7 @@ namespace SwordAndSorcerySMAPI
                     {
                         monster.MaxHealth = (int)(monster.MaxHealth * Config.MonsterHealthBuff);
                         monster.Health = (int)(monster.Health * Config.MonsterHealthBuff);
-                        monster.modData.Add($"{ModManifest.UniqueID}_BuffedHealth", "meow");
+                        monster.modData.Add($"{ModManifest.UniqueID}_BuffedHealth", "hoot");
                     }
                 }
             }
@@ -569,7 +569,7 @@ namespace SwordAndSorcerySMAPI
                 {
                     monster.MaxHealth = (int)(monster.MaxHealth * Config.MonsterHealthBuff);
                     monster.Health = (int)(monster.Health * Config.MonsterHealthBuff);
-                    monster.modData.Add($"{ModManifest.UniqueID}_BuffedHealth", "meow");
+                    monster.modData.Add($"{ModManifest.UniqueID}_BuffedHealth", "hoot");
                 }
             }
         }
@@ -1166,6 +1166,27 @@ namespace SwordAndSorcerySMAPI
                         3 => ["Yellow"],
                         _ => ["Blue"],
                     };
+                });
+
+                CP.RegisterToken(ModManifest, "HorseName", () =>
+                {
+                    Farmer player;
+
+                    if (Context.IsWorldReady)
+                        player = Game1.player;
+                    else if (SaveGame.loaded?.player != null)
+                        player = SaveGame.loaded.player;
+                    else
+                        return null;
+
+                    string playerhorsename = Game1.player.horseName.Value;
+
+                    if (playerhorsename == null)
+                        return [$"Horse"];
+
+                    else
+                        return [$"{playerhorsename}"];
+
                 });
             }
 

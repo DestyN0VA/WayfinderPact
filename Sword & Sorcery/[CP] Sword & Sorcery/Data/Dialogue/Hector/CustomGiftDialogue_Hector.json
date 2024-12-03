@@ -33,7 +33,7 @@
         "AcceptGift_(O)769": "{{i18n:Gifts.Hector.GiftReaction.VoidEssence}}",
         // ALCOHOL 
         "AcceptGift_(O)346": "{{i18n:Gifts.Hector.GiftReaction.Beer}}",
-        "AcceptGift_(O)303": "{{i18n:Gifts.Hector.GiftReaction}}",
+        "AcceptGift_(O)303": "{{i18n:Gifts.Hector.GiftReaction.PaleAle}}",
         "AcceptGift_(O)348": "{{i18n:Gifts.Hector.GiftReaction.Wine}}",
         // HATES 
         "AcceptGift_(O)446": "{{i18n:Gifts.Hector.GiftReaction.RabbitsFoot}}",

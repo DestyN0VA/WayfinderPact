@@ -136,8 +136,8 @@
       "Action": "EditData",
       "Target": "Data/CraftingRecipes",
       "Entries": {
-        "{{ModID}}_TeleportCircle": "{{ModID}}_WaterEssence 10 {{ModID}}_AirEssence 10 {{ModID}}_EarthEssence 10 {{ModID}}_FireEssence 10 769 25/meow/{{ModID}}_TeleportCircle 1/false/null",
-        "{{ModID}}_ReturnPotion": "{{ModID}}_WaterEssence 1 {{ModID}}_AirEssence 1 {{ModID}}_EarthEssence 1 {{ModID}}_FireEssence 1 769 5/meow/{{ModID}}_ReturnPotion 1/false/null",
+        "{{ModID}}_TeleportCircle": "{{ModID}}_WaterEssence 10 {{ModID}}_AirEssence 10 {{ModID}}_EarthEssence 10 {{ModID}}_FireEssence 10 769 25/hoot/{{ModID}}_TeleportCircle 1/false/null",
+        "{{ModID}}_ReturnPotion": "{{ModID}}_WaterEssence 1 {{ModID}}_AirEssence 1 {{ModID}}_EarthEssence 1 {{ModID}}_FireEssence 1 769 5/hoot/{{ModID}}_ReturnPotion 1/false/null"
       }
     },
   ]

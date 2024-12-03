@@ -2,9 +2,9 @@
 
   <PropertyGroup>
 	  <Name>Sword and Sorcery (SMAPI Component)</Name>
-	  <Description>...</Description>
+	  <Description>C# code for Sword and Sorcery</Description>
 	  <UniqueId>KCC.SnS</UniqueId>
-	  <Authors>KittyCatCasey, EnderTedi</Authors>
+	  <Authors>KittyCatCasey, EnderTedi, 7thAxis</Authors>
 	  <Version>2.2.0</Version>
     <TargetFramework>net6.0</TargetFramework>
 	  <EnableHarmony>true</EnableHarmony>
