@@ -8448,8 +8448,24 @@ Level 10, if you chose Ancient Agronomist:
 * Branch of Yggdrasil - Druidic essences have an additional 10% chance to drop. Druidic crops water surrounding crops with the same range as a Quality Sprinkler.",
 
 "guidebook.chapter.UP.name": "Under Pressure",
+"guidebook.chapter.UP.Intro": "[center][font=dialogue]Introduction[/font][/center]
+ 
+The third chapter of S&S follows Cirrus, a pop-rock star known all across the Ferngill Republic. Help her set boundaries with her ill-intentioned mother, form authentic relationships with the residents of East Scarp and Pelican Town, maintain a work-life balance, build The Lion's Mane, and discover her true magical prowess...",
+"guidebook.chapter.UP.Events": "[center][font=dialogue]The Story Thus Far:[/font][/center]
+[font=dialogue]Cirrus Event: 0 Hearts pt 1[/font]
+[if=PLAYER_HAS_SEEN_EVENT EVENT HERE]Complete![/if]
+[else]Hint: god this is gonna [color=green]make me want to eat my own ass[/color] oh god.[/else]",
+"guidebook.chapter.Up.Cirrus": "[nospacing]
+[nextposition=0,10][center=300][font=dialogue]Cirrus[/font][/center]
+[offset=118,50][image=Characters/Cirrus:0,0,16,32:4]
+[offset=-118,144][center=300]Pronouns: She/Her[/center]
+[offset=0,32][center=300]Birthday: Summer 18[/center]
+[nextposition=322,16][image=Portraits/Cirrus:0,0,64,64:4]
+[nextposition=0,288]
+[/nospacing]
+Cirrus is well-known all across the Ferngill Republic for her addictive lyrics and memorable melodies. This glamrock star has seen it all; most often, the bottom of a bottle... but she's sober now, and looking for a fresh start away from the chaos of celebrity life. ",
 "guidebook.chapter.UP.BardicsSkill": "[center][font=dialogue]Bardics[/font][/center]
-You've unlocked the Bardics skill! Bardics can be leveled up by talking to NPCs and performing songs from your adventure bar. 
+[offset=200,0][image=SMAPI/kcc.sns/assets/bardics/icon.png:0,0,10,10:4]You've unlocked the Bardics skill! Bardics can be leveled up by talking to NPCs and performing songs from your adventure bar. 
  
 Each level, you gain 10 max aether and a new song for the adventure bar. These songs cast various effects, hover for more details.
  
@@ -8516,9 +8532,9 @@ obelisks you've acquired.
 [font=dialogue]Professions[/font]
 [color=DarkBlue]-Level 5-[/color]
 = [color=MediumBlue]College of Eloquence[/color]
-    Learns the song [icon=SMAPI/kcc.sns/assets/abilities.png:96,0,16,16] [color=purple]Rogues' Humorsque[/color].
+    Learns the song [icon=SMAPI/kcc.sns/assets/abilities.png:96,0,16,16][color=purple]Rogues' Humorsque[/color].
 = [color=MediumBlue]College of Valor[/color]
-    Learns the song [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16] [color=purple]Scherzo D'Inganno[/color].
+    Learns the song [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color].
  
 [color=DarkBlue]-Level 10-[/color]
 [color=MediumBlue]College of Eloquence Track[/color]

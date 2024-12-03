@@ -108,7 +108,7 @@
                             "Pages": [
                                 {
                                     "Id": "Intro",
-                                    "Contents": "{{i18n: guidebook.chapter.UP.Intro}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.UP.Intro}}"
                                 },
                                 {
                                     "Contents": "{{i18n: guidebook.chapter.UP.Cirrus}}"
