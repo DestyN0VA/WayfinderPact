@@ -6,6 +6,11 @@
       "FromFile": "Assets/Maps/{{TargetWithoutPath}}.tmx"
     },
     {
+      "Action": "Load",
+      "Target": "maps/DeepDarkTiles_1, maps/DeepDarkTiles_2, maps/DeepDarkTiles_3, maps/custommush1_animation, maps/DeepDark-algaesheet, maps/DeepDark-bubbles, maps/DeepDark-cobwebs, maps/DeepDark-Fires, maps/DeepDark-fog, maps/DeepDark-fog_cyan, maps/DeepDark-rocks, maps/DeepDark-roots, maps/DeepDark-watercaustics, maps/DeepDark-watercaustics_fading, maps/DeepDark-waterfall",
+      "FromFile": "Assets/Tilesheets/DeepDark/{{TargetWithoutPath}}.png"
+  },
+    {
       "LogName": "Mateo's Tent",
       "Action": "EditData",
       "Target": "Data/Locations",

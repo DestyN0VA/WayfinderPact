@@ -2122,7 +2122,7 @@
   </tile>
  </tileset>
  <tileset firstgid="7196" name="DeepDark1" tilewidth="16" tileheight="16" tilecount="1484" columns="28">
-  <image source="DeepDark1.png" width="448" height="862"/>
+  <image source="DeepDarkTiles_1.png" width="448" height="862"/>
  </tileset>
  <tileset firstgid="8680" name="MadDog_PlanetariumScreen" tilewidth="16" tileheight="16" tilecount="240" columns="24">
   <image source="MadDog_PlanetariumScreen.png" width="384" height="160"/>

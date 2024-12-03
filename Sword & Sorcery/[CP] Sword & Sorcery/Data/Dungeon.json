@@ -55,7 +55,7 @@
                     "Type": "Litter",
                     "Category": -999,
                     "Price": 0,
-                    "Texture": "{{InternalAssetKey: Assets/Maps/DeepDark-rocks.png}}",
+                    "Texture": "{{InternalAssetKey: Assets/Tilesheets/DeepDark/DeepDark-rocks.png}}",
                     "SpriteIndex": 35,
                     "Edibility": -300
                 },
@@ -248,7 +248,7 @@
                     "LargeMinableHealth": 15,
                     "LargeMinableSizeX": 2,
                     "LargeMinableSizeY": 2,
-                    "LargeMinableTexture": "{{InternalAssetKey: Assets/Maps/DeepDark-rocks.png}}",
+                    "LargeMinableTexture": "{{InternalAssetKey: Assets/Tilesheets/DeepDark/DeepDark-rocks.png}}",
                     "LargeMinableSpriteIndex": 2,
                     "LargeMinableDrops": [
                         [
