@@ -363,7 +363,7 @@ namespace MageDelve.Mercenaries
             {
                 int pseudoframeCount = attackWeapon.type.Value == 1 ? 4 : 8;
                 int pseudoframe = (int)(untilEndAction.Value / (swingTime / pseudoframeCount));
-                //Console.WriteLine("MEOW swing draw " + pseudoframe + " " + pseudoframeCount+" "+untilEndAction.Value + " " + swingTime);
+                //Console.WriteLine("HOOT swing draw " + pseudoframe + " " + pseudoframeCount+" "+untilEndAction.Value + " " + swingTime);
                 //Console.WriteLine("mine " + ((Game1.player.CurrentTool as MeleeWeapon)?.speed?.Value ?? -1));
                 //Console.WriteLine("pos " + Position + " " + dummy.Position + " " + targeting?.Position+" "+targeting.Name);
                 if (pseudoframe < pseudoframeCount)

@@ -130,7 +130,7 @@
   "Core.Mateo.PlayerKilled.Skull.02": "Easy, now... take it slow.",
   "Core.Mateo.PlayerKilled.Skull.03": "You're awake! Thank goodness. Mateo found you all bent out of shape in the Skull Cave!$2",
   "Core.Mateo.PlayerKilled.Skull.04": "Sunshine!$18#$b#I was so worried, you getting hurt is my worst nightmare!$19",
-  "Core.Mateo.PlayerKilled.Skull.05": "Are {{LPPN1}} going to be alright, Harv?$29",
+  "Core.Mateo.PlayerKilled.Skull.05": "{{CPPNI}} {{LPPN1}} going to be alright, Harv?$29",
   "Core.Mateo.PlayerKilled.Skull.06": "{{CPPN1}}'ll be fine, but {{LPPN1}}'ll need to be a little more careful next time.$2",
   "Core.Mateo.PlayerKilled.Skull.07": "I'll leave you two to talk; let me know if you need anything.$2",
   "Core.Mateo.PlayerKilled.Skull.08": "I was so afraid of losing you, @. I don't know what I'd do without my best friend, the love of my life.$17#$b#Please ask for help if you need it next time, Sunshine! I'd rather be in danger with you than have you go at the Skull Cave alone!$19",
@@ -1935,7 +1935,7 @@ ________      ________ _   _ _______ _____
   "Core.Hector.Generic.LateHeart.37": "I make the most of the turning tide, it just split what's left of the burning silence.$3#$b#Don't wait, cuz' this could be the last time you turn up in the reveries of my mind.$3",
   "Core.Hector.Generic.LateHeart.38": "Trees have a sweet tooth too, you know. They'll share if you just ask nicely.$8[724]",
   "Core.Hector.Generic.LateHeart.39": "Jacob has given me a few of these, but... I think you need them more.[349]$12#$b#I know you're probably in the mines more since the farm is dormant. Don't get hurt, alright?$13",
-  "Core.Hector.Generic.LateHeart.40": "I've never spent much time thinking about the future. It never seemed necessary; I took everything one sunrise at a time.$22#$b#Lately, I think about so many thinks. Jacob, Eloise, the health of the Scarp...$23",
+  "Core.Hector.Generic.LateHeart.40": "I've never spent much time thinking about the future. It never seemed necessary; I took everything one sunrise at a time.$22#$b#Lately, I think about so many things. Jacob, Eloise, the health of the Scarp...$23",
   "Core.Hector.Generic.LateHeart.41": "@! I've picked up reading. Mateo's library is pretty substantial, ya'know?$7#$b#I've gotten really into this comic, Agent of As-something. It's about a God of Stories, it's real good.$6",
   "Core.Hector.Generic.LateHeart.42": "You seem to be a catalyst for change, @. You reintegrated Mateo, and now - well.$3#$b#I leave the tower, I have a job, I've made friends. I would've kept myself from these experiences if not for you.$8",
   "Core.Hector.Generic.LateHeart.43": "There's so much more to this world than my tower, and the wood that surrounds it.$13#$b#I can't imagine being cooped up in there anymore, especially with Jacob and Eloise relying on me.$14",
@@ -5307,7 +5307,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Roslin.1.Cirrus.39": "I'm worried about Roslin...$2",
 
   // 1 HEART
-  "Events.SnS.Ch4.Roslin.2.MateoMarlon.01": "The adventurers you're referring to - Dandelion and Roslin... I've looked into them since the last time we spoke.$5#$b#The former is not aligned with The Guild, and the latter left her conclave of sorcerers.$3#$b#I don't have the context, but it doesn't bode will. I understand why their warnings can be difficult to heed.$0",
+  "Events.SnS.Ch4.Roslin.2.MateoMarlon.01": "The adventurers you're referring to - Dandelion and Roslin... I've looked into them since the last time we spoke.$5#$b#The former is not aligned with The Guild, and the latter left her conclave of sorcerers.$3#$b#I don't have the context, but it doesn't bode well. I understand why their warnings can be difficult to heed.$0",
   "Events.SnS.Ch4.Roslin.2.Lewis.02": "Marlon, I need you to understand that I don't really comprehend what that means.$2#$b#I'm not willfully ignorant, but your world and your responsibilities are different than mine.$2#$b#I don't want it to seem like their warnings aren't weighing heavily on my shoulders, I'm worried for the townsfolk over a problem I can't comprehend-",
   "Events.SnS.Ch4.Roslin.2.Roslin.03": "I've got words for you, Mayor!$15",
   "Events.SnS.Ch4.Roslin.2.MateoMarlon.04": "Now, Roslin, I understand you may take issue with how Lewis is handling things, but-$2",
@@ -8448,52 +8448,91 @@ Level 10, if you chose Ancient Agronomist:
 * Branch of Yggdrasil - Druidic essences have an additional 10% chance to drop. Druidic crops water surrounding crops with the same range as a Quality Sprinkler.",
 
 "guidebook.chapter.UP.name": "Under Pressure",
-"guidebook.chapter.UP.BardicsSkill": "[center][font=dialogue]Druidics[/font][/center]
-You've unlocked the Bardics skill! Bardics can be leveled up by talking to NPCs. 
+"guidebook.chapter.UP.BardicsSkill": "[center][font=dialogue]Bardics[/font][/center]
+You've unlocked the Bardics skill! Bardics can be leveled up by talking to NPCs and performing songs from your adventure bar. 
  
-Each level, you gain 10 max aether and a new song for the adventure bar. These songs cast various effects, detailed under Songs.
+Each level, you gain 10 max aether and a new song for the adventure bar. These songs cast various effects, hover for more details.
  
 [font=dialogue]Unlocks[/font]
-> Level 1 - Unlocks [color=purple]Fantasia Alla Marcia[/color].
-> Level 2 - Unlocks [color=purple]Battlefield Overture[/color].
-> Level 3 - Unlocks [color=purple]Invigorating Encore[/color].
-> Level 4 - Unlocks [color=purple]Enduring Melody[/color].
+> Level 1 - Unlocks [texttooltip=Fantasia Alla Marcia:Grants a random passive buff. 
+ 
+> Usable once per day
+> Aether cost: 20
+][icon=SMAPI/kcc.sns/assets/abilities.png:32,0,16,16][color=purple]Fantasia Alla Marcia[/color][/texttooltip].
+> Level 2 - Unlocks [texttooltip=Battlefield Overture:Grants either an attack or defense buff.
+ 
+> Usable once per day
+> Aether cost: 20
+ ][icon=SMAPI/kcc.sns/assets/abilities.png:48,0,16,16][color=purple]Battlefield Overture[/color][/texttooltip].
+> Level 3 - Unlocks [texttooltip=Invigorating Encore:Restores 25% health and energy.
+ 
+> Usable once per day
+> Aether cost: 10
+ ][icon=SMAPI/kcc.sns/assets/abilities.png:64,0,16,16][color=purple]Invigorating Encore[/color][/texttooltip].
+> Level 4 - Unlocks [texttooltip=Enduring Melody:Creates a protective sound barrier that
+keeps enemies away for 30 seconds.
+ 
+> Unlimited daily use
+> Aether cost: 10
+ ][icon=SMAPI/kcc.sns/assets/abilities.png:80,0,16,16][color=purple]Enduring Melody[/color][/texttooltip].
 > Level 5 - Unlocks one of two songs based on your profession choice:
  
-  = College of Eloquence - [color=purple]Rogues' Humorsque[/color]
-  = College of Valor - [color=purple]Scherzo D'Inganno[/color]
+  = College of Eloquence - [texttooltip=Rogues' Humorsque:Offers a buff depending on who it's played to.
  
-> Level 6 - Unlocks [color=purple]Ballad of Chronomancy[/color].
-> Level 7 - Unlocks [color=purple]Track of {{horseName}}[/color].
-> Level 8 - Unlocks [color=purple]Druid's Lullaby[/color].
-> Level 9 - Unlocks [color=purple]A Walk in Adante[/color].
+> Usable once per day
+> Aether cost: 25
+ ][icon=SMAPI/kcc.sns/assets/abilities.png:96,0,16,16][color=purple]Rogues' Humorsque[/color][/texttooltip]
+  = College of Valor - [texttooltip=Scherzo D'Inganno:Lets out a discordant sound that
+damages all enemies in range.
+ 
+> Unlimited daily use
+> Aether cost: 20
+][icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color][/texttooltip]
+ 
+> Level 6 - Unlocks [texttooltip=Ballad of Chronomancy:Pauses time for two minutes.
+
+> Unlimited daily use
+> Aether cost: 35
+ ][icon=SMAPI/kcc.sns/assets/abilities.png:0,16,16,16][color=purple]Ballad of Chronomancy[/color][/texttooltip].
+> Level 7 - Unlocks [texttooltip=Track of {{HorseName}}:Teleports you to your horse. 
+ 
+> Unlimited daily use
+> Aether cost: 10
+ ][icon=SMAPI/kcc.sns/assets/abilities.png:16,16,16,16][color=purple]Track of {{HorseName}}[/color][/texttooltip].
+> Level 8 - Unlocks [texttooltip=Druid's Lullaby:Applies a 25% growth rate to crops in a 7x7
+area around you, once per crop. 
+ 
+> Usable once per day
+> Aether cost: 30
+][icon=SMAPI/kcc.sns/assets/abilities.png:32,16,16,16][color=purple]Druid's Lullaby[/color][/texttooltip].
+> Level 9 - Unlocks [texttooltip=A Walk in Adante:Allows remote use of any
+obelisks you've acquired. 
+ 
+> Unlimited daily use
+> Aether cost: 15
+ ][icon=SMAPI/kcc.sns/assets/abilities.png:48,16,16,16][color=purple]A Walk in Adante[/color][/texttooltip].
 > Level 10 - Upgrades your song choice at level 5.
  
-[font=dialogue]Songs[/font]
-> [color=purple]Fantasia Alla Marcia[/color] - (Aether Cost: 20) Grants a random passive buff. Usable once per day. 
-> [color=purple]Battlefield Overture[/color] - (Aether Cost: 20) Grants either an attack or defense buff. Usable once per day. 
-> [color=purple]Invigorating Encore[/color] - (Aether Cost: 10) Restores 25% health and energy. Usable once per day. 
-> [color=purple]Enduring Melody[/color] - (Aether Cost: 10) Creates a protective sound barrier that keeps enemies away for 30 seconds. 
-> [color=purple]Rogues' Humorsque[/color] - (Aether Cost: 25) Offers a buff depending on who it's played to. Usable on one villager per day. 
-> [color=purple]Scherzo D'Inganno[/color] - (Aether Cost: 20) Lets out a discordant sound that damages all enemies in range. 
-> [color=purple]Ballad of Chronomancy[/color] - (Aether Cost: 35) Pauses time for two minutes. 
-> [color=purple]Track of {{horseName}}[/color] - (Aether Cost: 10) Teleports you to your horse. 
-> [color=purple]Druid's Lullaby[/color] - (Aether Cost: 30) Once per day, applies +25% growth rate to crops in a 7x7 area around you, once per crop. 
-> [color=purple]A Walk in Adante[/color] - (Aether Cost: 15) Allows remote use of any obelisks you've acquired. 
- 
 [font=dialogue]Professions[/font]
-Level 5
-* College of Eloquence - Learns the song Rogues' Humorsque.
-* College of Valor - Learns the song Scherzo D'Inganno.
+[color=DarkBlue]-Level 5-[/color]
+= [color=MediumBlue]College of Eloquence[/color]
+    Learns the song [icon=SMAPI/kcc.sns/assets/abilities.png:96,0,16,16] [color=purple]Rogues' Humorsque[/color].
+= [color=MediumBlue]College of Valor[/color]
+    Learns the song [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16] [color=purple]Scherzo D'Inganno[/color].
  
-Level 10 
-College of Eloquence Track
-* Animated Performance - Strength of Bardic buffs are doubled.
-* Creative Crescendo - All Bardic buffs last all day.
+[color=DarkBlue]-Level 10-[/color]
+[color=MediumBlue]College of Eloquence Track[/color]
+= [icon=SMAPI/kcc.sns/assets/bardics/animatedperformance.png:0,0,16,16] [color=Blue]Animated Performance[/color]
+    Strength of Bardic buffs are doubled.
+= [icon=SMAPI/kcc.sns/assets/bardics/creativecrescendo.png:0,0,16,16] [color=Blue]Creative Crescendo[/color]
+    All Bardic buffs last all day.
  
-College of Valor Track
-* Words of Terror - Damage of Scherzo D'Inganno is doubled.
-* Words of Majesty - Damage of Scherzo D'Inganno is extended to the entire location."
+[color=MediumBlue]College of Valor Track[/color]
+= [icon=SMAPI/kcc.sns/assets/bardics/wordsofterror.png:0,0,16,16] [color=Blue]Words of Terror[/color]
+    Damage of [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color] is doubled.
+= [icon=SMAPI/kcc.sns/assets/bardics/wordsofmajesty.png:0,0,16,16] [color=Blue]Words of Majesty[/cplor]]
+    Damage of [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color] is extended
+    to the entire location."
 
 
 }

@@ -2396,6 +2396,10 @@
     },
     {
       "Name": "GuidebookRecolors",
+      "Value": "Tabs"
+    },
+    {
+      "Name": "GuidebookRecolors",
       "Value": "Bos.UIInterface_tabs",
       "When": { "HasMod": "Bos.UIInterface" }
     },

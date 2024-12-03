@@ -118,7 +118,7 @@
                                 },
                                 {
                                     "Id": "BardicsSkill",
-                                    "Contents": "{{i18n: guidebook.chapter.UP.BardicsSkill}}",
+                                    "Contents": "{{i18n: guidebook.chapter.UP.BardicsSkill |HorseName={{KCC.SnS/HorseName}}}}"
                                     //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14"
                                 }
                             ]

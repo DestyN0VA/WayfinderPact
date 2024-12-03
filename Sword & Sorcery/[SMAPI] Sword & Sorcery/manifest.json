@@ -9,9 +9,9 @@
   "$schema": "https://smapi.io/schemas/manifest.json",
   "UniqueID": "KCC.SnS",
   "Name": "Sword and Sorcery (SMAPI Component)",
-  "Author": "KittyCatCasey, EnderTedi",
+  "Author": "KittyCatCasey, EnderTedi, 7thAxis",
   "Version": "2.2.0-Debug",
-  "Description": "...",
+  "Description": "C# code for Sword and Sorcery",
   "EntryDll": "SwordAndSorcerySMAPI.dll",
   "Dependencies": [
     {
