@@ -7905,6 +7905,7 @@ The adventure bar can be hidden with the configured keybinding (default: Ctrl+U)
 5. [if=PLAYER_HAS_MAIL Current DuskspireDefeated][link=Epilogue/Intro]Epilogue[/link][/if][else]Epilogue (locked)[/else]",
   "guidebook.chapter.NEA.name": "Never Ending Adventure",
   "guidebook.chapter.NEA.Intro": "[center][font=dialogue]Introduction[/font][/center]
+   
 This first chapter of S&S introduces you to Mateo, a charming rogue with a sordid history. Unravel their connection to the Museum's missing contents, help them reconnect with the townsfolk, learn the Artificer skill, unlock the Underforge, the Arsenal system, and found a new branch of the Adventurer's Guild.",
   "guidebook.chapter.NEA.Mateo": "[nospacing]
 [nextposition=0,10][center=300][font=dialogue]Mateo[/font][/center]
@@ -7916,6 +7917,7 @@ This first chapter of S&S introduces you to Mateo, a charming rogue with a sordi
 [/nospacing]
 Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town. Not only are they a skilled Rogue, but they have an inclination for blacksmithing. A good leader and better friend who'll always have your back.",
   "guidebook.chapter.NEA.Events": "[center][font=dialogue]The Story Thus Far:[/font][/center]
+   
 [font=dialogue]Mateo Event: 0 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.0]Complete![/if]
 [else]Hint: Visit the [color=green]top floor of the Mines[/color] before midnight.[/else]
@@ -8075,22 +8077,9 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between late morning and early evening.
 [/else]
 [/if]", // NOTE: SnS.Ch1.Mateo.13 is not included since it is optional and can be missed.
-  "guidebook.chapter.NEA.ArtificerSkill": "[center][font=dialogue]Artificer Skill[/font][/center]
-You've unlocked the Artificer skill! Artificer can be levelled up killing monsters and mining.
+
+"guidebook.chapter.NEA.Underforge": "[center][font=dialogue]Underforge[/font][/center]
  
-[font=dialogue]Unlocks[/font]
-* Level 1 - Unlocks the [itemtooltip=(O)DN.SnS_ClothArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,48,16,16] [color=blue]Cloth Armor[/color][/itemtooltip], [itemtooltip=(W)DN.SnS_Bow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,80,16,16] [color=blue]Bow[/color][/itemtooltip], and [itemtooltip=(O)DN.SnS_Arrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,64,16,16] [color=blue]Arrow[/color][/itemtooltip] recipes.
-* Level 2 - Pure ore now has a chance to drop from their respective ore nodes. These can be smelted, used at the [color=green]Underforge[/color] (see the [color=black]Underforge[/color] section later on this page for more details), or crafted into armor. (Each tier of armor also requires the previous tier as an ingredient.) Unlocks the [itemtooltip=(O)DN.SnS_CopperArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,48,16,16] [color=blue]Copper Armor[/color][/itemtooltip],  [itemtooltip=(O)DN.SnS_IronArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:64,48,16,16] [color=blue]Iron Armor[/color][/itemtooltip], [itemtooltip=(O)DN.SnS_GoldArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,48,16,16] [color=blue]Gold Armor[/color][/itemtooltip],  [itemtooltip=(O)DN.SnS_IridiumArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:96,48,16,16] [color=blue]Iridium Armor[/color][/itemtooltip], [itemtooltip=(O)DN.SnS_RadioactiveArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,64,16,16] [color=blue]Radioactive Armor[/color][/itemtooltip] recipes.
-* Level 3 - Unlocks the [itemtooltip=(O)DN.SnS_FirestormArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,64,16,16] [color=blue]Firestorm Arrow[/color][/itemtooltip] and [itemtooltip=(O)DN.SnS_IcicleArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,64,16,16] [color=blue]Icicle Arrow[/color][/itemtooltip] recipes.
-* Level 4 - Exquisite gems now have a chance to drop from their respective gem nodes. These can be used at the [color=green]Underforge[/color] (see the [color=black]Underforge[/color] section later on this page for more details). They can also be crafted with enough of their original gemstone.
-* Level 5 - See [color=black]Professions[/color] later on this page.
-* Level 6 - You can now perform Blade Coating at the [color=green]Underforge[/color] using certain monster loot (see the [color=black]Underforge[/color] section later on this page for more details).
-* Level 7 - Unlocks the [itemtooltip=(O)DN.SnS_WindwakerArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,64,16,16] [color=blue]Windwaker Arrow[/color][/itemtooltip] recipe.
-* Level 8 - Unlocks the [itemtooltip=(O)DN.SnS_RicochetArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,80,16,16] [color=blue]Ricochet Arrow[/color][/itemtooltip] recipe.
-* Level 9 - Unlocks the [itemtooltip=(O)DN.SnS_LightbringerArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,80,16,16] [color=blue]Lightbringer Arrow[/color][/itemtooltip] recipe.
-* Level 7 - See [color=black]Professions[/color] later on this page.
- 
-[font=dialogue]Underforge[/font]
 You can go to the [color=green]Underforge[/color] in the [color=green]Coastal Adventurer's Guild[/color] by going through a door to the right of the main room. Here, you can attach three different types of items to your weapon to make them stronger. You can do this by using the forge in the top left of the map.
  
 You can attach 25 pure ore to a weapon to improve it's damage:
@@ -8117,7 +8106,23 @@ You can attach a large amount of certain monster loot to a weapon to give it new
    * 300 [itemtooltip=(O)684][icon=Maps/springobjects:192,448,16,16] [color=blue]Bug Meat[/color][/itemtooltip] - [texttooltip=Greedy:Mob drops are rolled twice.][color=purple]Greedy[/color][/texttooltip]
    * 500 [itemtooltip=(O)767][icon=Maps/springobjects:368,496,16,16] [color=blue]Bat Wing[/color][/itemtooltip] - [texttooltip=Floating:You can attack across stones and other objects.][color=purple]Floating[/color][/texttooltip]
  
-You can choose one item type from each category above.
+You can choose one item type from each category above.",
+
+"guidebook.chapter.NEA.ArtificerSkill": "[center][font=dialogue]Artificer Skill[/font][/center]
+ 
+You've unlocked the Artificer skill! Artificer can be levelled up killing monsters and mining.
+ 
+[font=dialogue]Unlocks[/font]
+* Level 1 - Unlocks the [itemtooltip=(O)DN.SnS_ClothArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,48,16,16] [color=blue]Cloth Armor[/color][/itemtooltip], [itemtooltip=(W)DN.SnS_Bow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,80,16,16] [color=blue]Bow[/color][/itemtooltip], and [itemtooltip=(O)DN.SnS_Arrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,64,16,16] [color=blue]Arrow[/color][/itemtooltip] recipes.
+* Level 2 - Pure ore now has a chance to drop from their respective ore nodes. These can be smelted, used at the [color=green]Underforge[/color] (see the [color=black]Underforge[/color] section later on this page for more details), or crafted into armor. (Each tier of armor also requires the previous tier as an ingredient.) Unlocks the [itemtooltip=(O)DN.SnS_CopperArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,48,16,16] [color=blue]Copper Armor[/color][/itemtooltip],  [itemtooltip=(O)DN.SnS_IronArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:64,48,16,16] [color=blue]Iron Armor[/color][/itemtooltip], [itemtooltip=(O)DN.SnS_GoldArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,48,16,16] [color=blue]Gold Armor[/color][/itemtooltip],  [itemtooltip=(O)DN.SnS_IridiumArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:96,48,16,16] [color=blue]Iridium Armor[/color][/itemtooltip], [itemtooltip=(O)DN.SnS_RadioactiveArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,64,16,16] [color=blue]Radioactive Armor[/color][/itemtooltip] recipes.
+* Level 3 - Unlocks the [itemtooltip=(O)DN.SnS_FirestormArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,64,16,16] [color=blue]Firestorm Arrow[/color][/itemtooltip] and [itemtooltip=(O)DN.SnS_IcicleArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,64,16,16] [color=blue]Icicle Arrow[/color][/itemtooltip] recipes.
+* Level 4 - Exquisite gems now have a chance to drop from their respective gem nodes. These can be used at the [color=green]Underforge[/color] (see the [color=black]Underforge[/color] section later on this page for more details). They can also be crafted with enough of their original gemstone.
+* Level 5 - See [color=black]Professions[/color] later on this page.
+* Level 6 - You can now perform Blade Coating at the [color=green]Underforge[/color] using certain monster loot (see the [color=black]Underforge[/color] section later on this page for more details).
+* Level 7 - Unlocks the [itemtooltip=(O)DN.SnS_WindwakerArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,64,16,16] [color=blue]Windwaker Arrow[/color][/itemtooltip] recipe.
+* Level 8 - Unlocks the [itemtooltip=(O)DN.SnS_RicochetArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,80,16,16] [color=blue]Ricochet Arrow[/color][/itemtooltip] recipe.
+* Level 9 - Unlocks the [itemtooltip=(O)DN.SnS_LightbringerArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,80,16,16] [color=blue]Lightbringer Arrow[/color][/itemtooltip] recipe.
+* Level 10 - See [color=black]Professions[/color] later on this page.
  
 [font=dialogue]Professions[/font]
 Level 5:
@@ -8135,7 +8140,8 @@ Your first attack after using the ability is an automatic critical hit.][color=D
 
   "guidebook.chapter.COT.name": "Circle of Thorns",
   "guidebook.chapter.COT.Intro": "[center][font=dialogue]Introduction[/font][/center]
-The second chapter of S&S reveals the identity of 'B', who introduces themselves as 'Hector'; a druid deeply rooted to the earth itself. Learn about what has this wolf snapping at the hand that feeds them - gain the trust of one of the Valley's nature guardians and purify a river corrupted by pollution, learn the Druid skill, collect Druidic Essences, and unlock the True Grove and the secrets it hides.",
+ 
+The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} as 'Hector'; a druid deeply rooted to the earth itself. Learn about what has this wolf snapping at the hand that feeds {{HPN2}} - gain the trust of one of the Valley's nature guardians and purify a river corrupted by pollution, learn the Druid skill, collect Druidic Essences, and unlock the True Grove and the secrets it hides.",
   "guidebook.chapter.COT.Hector": "[nospacing]
 [nextposition=0,10][center=300][font=dialogue]{{TrueName}}[/font][/center]
 [offset=118,50][image=Characters/Hector:0,0,16,32:4]
@@ -8144,65 +8150,10 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [nextposition=322,16][image=Portraits/Hector:0,0,64,64:4]
 [nextposition=0,288]
 [/nospacing]
-{{TrueName}} is an elusive Druid living in a dilapidated old tower. Seemingly having been around as long as the land itself, this knowledgeable yet bitey shapeshifter has a lot to learn about social graces. However, they have a lot to offer those who prove themselves trustworthy.",
+{{TrueName}} is an elusive Druid living in a dilapidated old tower. Seemingly having been around as long as the land itself, this knowledgeable yet bitey shapeshifter has a lot to learn about social graces. However, {{HPN1}} has a lot to offer those who prove themselves trustworthy.",
   "guidebook.chapter.COT.Events": "[center][font=dialogue]Story so far[/font][/center]
-[if=!{{SkipIntroQuest}}]
-[font=dialogue]Special Order: Offerings for Spring[/font]
-[if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.Pentacle1]You made the offerings for spring.[/if]
-[else]Make the following offerings to the altar near the dilapidated tower in the [color=green]Deep Mountains[/color]:
-* 3 [itemtooltip=(O)24][icon=Maps/springobjects:0,16,16,16] [color=blue]Parsnip[/color][/itemtooltip]
-* 3 [itemtooltip=(O)18][icon=Maps/springobjects:352,0,16,16] [color=blue]Daffodil[/color][/itemtooltip]
-* 3 [itemtooltip=(O)20][icon=Maps/springobjects:320,0,16,16] [color=blue]Leek[/color][/itemtooltip]
-* 3 [itemtooltip=(O)400][icon=Maps/springobjects:256,256,16,16] [color=blue]Strawberry[/color][/itemtooltip]
-* 3 [itemtooltip=(O)399][icon=Maps/springobjects:240,256,16,16] [color=blue]Spring Onion[/color][/itemtooltip]
-[if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.Pentacle1]You seem to be missing the special order.
-[onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle1]Click here to re-add it to your journal.[/onceaction][/if]
-[/else]
  
-[if=PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle1]
-[font=dialogue]Special Order: Offerings for Summer[/font]
-[if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.Pentacle2]You made the offerings for summer.[/if]
-[else]Make the following offerings to the altar near the dilapidated tower in the [color=green]Deep Mountains[/color]:
-* 3 [itemtooltip=(O)234][icon=Maps/springobjects:288,160,16,16] [color=blue]Blueberry[/color][/itemtooltip]
-* 3 [itemtooltip=(O)396][icon=Maps/springobjects:192,256,16,16] [color=blue]Spice Berry[/color][/itemtooltip]
-* 3 [itemtooltip=(O)402][icon=Maps/springobjects:288,256,16,16] [color=blue]Sweet Pea[/color][/itemtooltip]
-* 3 [itemtooltip=(O)270][icon=Maps/springobjects:96,176,16,16] [color=blue]Corn[/color][/itemtooltip]
-* 3 [itemtooltip=(O)420][icon=Maps/springobjects:192,272,16,16] [color=blue]Red Mushroom[/color][/itemtooltip]
-[if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.Pentacle2]You seem to be missing the special order.
-[onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle2]Click here to re-add it to your journal.[/onceaction][/if]
-[/else]
-[/if]
- 
-[if=PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle2]
-[font=dialogue]Special Order: Offerings for Fall[/font]
-[if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.Pentacle3]You made the offerings for fall.[/if]
-[else]Make the following offerings to the altar near the dilapidated tower in the [color=green]Deep Mountains[/color]:
-* 3 [itemtooltip=(O)278][icon=Maps/springobjects:224,176,16,16] [color=blue]Bok Choy[/color][/itemtooltip]
-* 3 [itemtooltip=(O)300][icon=Maps/springobjects:192,192,16,16] [color=blue]Amaranth[/color][/itemtooltip]
-* 3 [itemtooltip=(O)406][icon=Maps/springobjects:352,256,16,16] [color=blue]Wild Plum[/color][/itemtooltip]
-* 3 [itemtooltip=(O)410][icon=Maps/springobjects:32,272,16,16] [color=blue]Blackberry[/color][/itemtooltip]
-* 3 [itemtooltip=(O)282][icon=Maps/springobjects:288,176,16,16] [color=blue]Cranberries[/color][/itemtooltip]
-[if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.Pentacle3]You seem to be missing the special order.
-[onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle3]Click here to re-add it to your journal.[/onceaction][/if]
-[/else]
-[/if]
- 
-[if=PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle3]
-[font=dialogue]Special Order: Offerings for Winter[/font]
-[if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.Pentacle4]You made the offerings for winter.[/if]
-[else]Make the following offerings to the altar near the dilapidated tower in the [color=green]Deep Mountains[/color]:
-* 3 [itemtooltip=(O)412][icon=Maps/springobjects:64,272,16,16] [color=blue]Winter Root[/color][/itemtooltip]
-* 3 [itemtooltip=(O)414][icon=Maps/springobjects:96,272,16,16] [color=blue]Crystal Fruit[/color][/itemtooltip]
-* 3 [itemtooltip=(O)416][icon=Maps/springobjects:128,272,16,16] [color=blue]Snow Yam[/color][/itemtooltip]
-* 3 [itemtooltip=(O)418][icon=Maps/springobjects:160,272,16,16] [color=blue]Crocus[/color][/itemtooltip]
-* 3 [itemtooltip=(O)283][icon=Maps/springobjects:304,176,16,16] [color=blue]Holly[/color][/itemtooltip]
-[if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.Pentacle4]You seem to be missing the special order.
-[onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.Pentacle4]Click here to re-add it to your journal.[/onceaction][/if]
-[/else]
-[/if]
-[/if]
- 
-[if=ANY \"{{SkipIntroQuest}}\" \"!{{SkipIntroQuest}}, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle1, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle2, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle3, PLAYER_HAS_MAIL Current Hector_SpecialOrders_Pentacle4\"]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14]
 [font=dialogue]{{TrueName}} Event: 0 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.1]Complete![/if]
 [else]Hint: Visit the [color=green]Railroad[/color] between late morning and late evening.[/else]
@@ -8332,11 +8283,11 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [font=dialogue]Special Order: Destroy the Leaking Pipe[/font]
 [if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.River1]You helped [color=red]{{TrueName}}[/color] destroy the leaking pipe.[/if]
 [else]Deliver the following items to the altar outside of [color=green]Hector's Tower[/color] in the [color=green]Deep Mountains[/color]:
-* 1 [itemtooltip=(O)74][icon=Maps/springobjects:32,48,16,16] [color=blue]Prismatic Shard[/color][/itemtooltip]
-* 5 [itemtooltip=(O)454][icon=Maps/springobjects:352,288,16,16] [color=blue]Ancient Fruit[/color][/itemtooltip]
-* 3 [itemtooltip=(O)586][icon=Maps/springobjects:128,256,16,16] [color=blue]Nautilus Shell[/color][/itemtooltip]
-* 10 [itemtooltip=(O)259][icon=Maps/springobjects:304,160,16,16] [color=blue]Fiddlehead Fern[/color][/itemtooltip]
-* 3 [itemtooltip=(O)814][icon=Maps/springobjects:352,528,16,16] [color=blue]Squid Ink[/color][/itemtooltip]
+> 1 [itemtooltip=(O)74][icon=Maps/springobjects:32,48,16,16] [color=blue]Prismatic Shard[/color][/itemtooltip]
+> 5 [itemtooltip=(O)454][icon=Maps/springobjects:352,288,16,16] [color=blue]Ancient Fruit[/color][/itemtooltip]
+> 3 [itemtooltip=(O)586][icon=Maps/springobjects:128,256,16,16] [color=blue]Nautilus Shell[/color][/itemtooltip]
+> 10 [itemtooltip=(O)259][icon=Maps/springobjects:304,160,16,16] [color=blue]Fiddlehead Fern[/color][/itemtooltip]
+>  3 [itemtooltip=(O)814][icon=Maps/springobjects:352,528,16,16] [color=blue]Squid Ink[/color][/itemtooltip]
 [if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.River1]You seem to be missing the special order.
 [onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.River1]Click here to re-add it to your journal.[/onceaction][/if]
 [/else]
@@ -8355,7 +8306,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [font=dialogue]Special Order: Collect Druidic Essences[/font]
 [if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.River2]You collected the druidic essences.[/if]
 [else]Deliver the following items to the altar outside of [color=green]Hector's Tower[/color] in the [color=green]Deep Mountains[/color]:
-* 100 [itemtooltip=(O)DN.SnS_druidicessence][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip]
+> 100 [itemtooltip=(O)DN.SnS_druidicessence][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip]
 [itemtooltip=(O)DN.SnS_druidicessence][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip] can be found from tilling soil, watering crops, harvesting crops, and cutting grass.
 [if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.River2]You seem to be missing the special order.
 [onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.River2]Click here to re-add it to your journal.[/onceaction][/if]
@@ -8407,54 +8358,256 @@ The second chapter of S&S reveals the identity of 'B', who introduces themselves
 [/else]
 [/if]",
   "guidebook.chapter.COT.DruidicEssence": "[center][font=dialogue]Druidic Essence[/font][/center]
+   
 At this point, you've unlocked [itemtooltip=(O)DN.SnS_druidicessence][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip]. This is used for a special order during the story, as well as for crafting as you progress in the [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=COT/DruidicsSkill]Druidics[/link] skill[/if][else]Druidics skill (locked)[/else].
  
 You can gather this item in the following ways:
-* Tilling soil
-* Watering crops
-* Harvesting crops
-* Cutting grass
+> Tilling soil
+> Watering crops
+> Harvesting crops
+> Cutting grass
  
 Be sure to keep saving these after the special order is complete. They will definitely come in handy!",
   "guidebook.chapter.COT.DruidicsSkill": "[center][font=dialogue]Druidics[/font][/center]
-You've unlocked the Druidics skill! Druidics can be levelled up by farming and foraging.
-
+[offset=200,0][image=SMAPI/kcc.sns/assets/druidics/druid.png:0,0,16,16:4]You've unlocked the Druidics skill! Druidics can be leveled up by farming and foraging.
+ 
+Each level, you will increase your transformed movement speed and regeneration speed, as well as the drop rate of Druidic Essence.
+ 
 [font=dialogue]Unlocks[/font]
-* Level 1 - Unlocks the [texttooltip=Shapeshift (Buck):Transform into a buck, giving a speed boost and a buff to your foraging skill.
-You may not use tools or attack while transformed.][color=darkorange]Shapeshift (Buck)[/color][/texttooltip] and [texttooltip=Shapeshift (Doe):Transform into a doe, giving a speed boost and a buff to your foraging skill.
-You may not use tools or attack while transformed.][color=darkorange]Shapeshift (Doe)[/color][/texttooltip] abilities. (These function the same, and differ in appearance only.) Also unlocks the [itemtooltip=(O)DN.SnS_ancientamaranth.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:144,0,16,16] [color=blue]Ancient Amaranth Seeds[/color][/itemtooltip] and [itemtooltip=(O)DN.SnS_ancientepiphyticfern.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:16,16,16,16] [color=blue]Ancient Epiphytic Fern Seeds[/color][/itemtooltip] recipes.
-* Level 2 - Unlocks the [itemtooltip=(O)DN.SnS_glowingpolyporemushrooms.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:48,16,16,16] [color=blue]Ancient Glowing Polypore Mushroom Spores[/color][/itemtooltip] recipe.
-* Level 3 - Unlocks the [itemtooltip=(O)DN.SnS_ancientwildfairyrose.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:0,16,16,16] [color=blue]Ancient Wild Fairy Rose Seeds[/color][/itemtooltip] recipe.
-* Level 4 - Unlocks the [itemtooltip=(O)DN.SnS_ancientelderberry.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:128,48,16,16] [color=blue]Ancient Elderberry Seeds[/color][/itemtooltip] recipe.
-* Level 5 - See [color=black]Professions[/color] later on this page.
-* Level 6 - Unlocks the [itemtooltip=(O)DN.SnS_ancientbottlegourd.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:0,64,16,16] [color=blue]Ancient Bottle Gourd Seeds[/color][/itemtooltip] and [itemtooltip=(O)SnS_lavaeelandstirfriedancientbottlegourd][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:0,48,16,16] [color=blue]Lava Eel & Bottle Gourd[/color][/itemtooltip] recipes.
-* Level 7 - Unlocks the [itemtooltip=(O)DN.SnS_ancientgiantappleberry.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:32,64,16,16] [color=blue]Ancient Giant Apple Berry Seeds[/color][/itemtooltip] and [itemtooltip=(O)SnS_mushroomsredsauce][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:112,32,16,16] [color=blue]Fried Polypore Mushrooms & Red Sauce[/color][/itemtooltip] recipes.
-* Level 8 - Unlocks the [itemtooltip=(O)DN.SnS_ancientazuredetura.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:64,64,16,16] [color=blue]Ancient Azure Detura[/color][/itemtooltip] and [itemtooltip=(O)SnS_ferngreensandpineapple][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:128,32,16,16] [color=blue]Fern Greens and Pineapple[/color][/itemtooltip] recipes.
-* Level 9 - Unlocks the [itemtooltip=(O)DN.SnS_ancientglowinghuckleberry.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:32,16,16,16] [color=blue]Ancient Glowing Huckleberry Seeds[/color][/itemtooltip] and [itemtooltip=(O)SnS_ancienthuckleberryicecream][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:144,32,16,16] [color=blue]Ancient Huckleberry Ice Cream[/color][/itemtooltip] recipes.
-* Level 10 - See [color=black]Professions[/color] later on this page.
-Additionally, each level will increase your transformed movement speed and regeneration speed, as well as the Druidic Essence drop rate.
+> Level 1 - Unlocks two forms:
+  = [texttooltip=Shapeshift (Buck):Transform into a buck, giving a speed boost and a buff to your foraging skill.
+You may not use tools or attack while transformed.][icon=SMAPI/kcc.sns/assets/druidics/druid2.png:0,0,10,10] [color=purple]Shapeshift (Buck)[/color][/texttooltip]
+  = [texttooltip=Shapeshift (Doe):Transform into a doe, giving a speed boost and a buff to your foraging skill.
+You may not use tools or attack while transformed.][icon=SMAPI/kcc.sns/assets/druidics/druid1.png:0,0,10,10] [color=purple]Shapeshift (Doe)[/color][/texttooltip]
+
+Recipe Unlocks:
+  = [itemtooltip=(O)DN.SnS_ancientamaranth.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:144,0,16,16] [color=blue]Ancient Amaranth Seeds[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ancientepiphyticfern.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:16,16,16,16] [color=blue]Ancient Epiphytic Fern Seeds[/color][/itemtooltip]
+> Level 2 - Unlocks the recipes:
+  = [itemtooltip=(O)DN.SnS_glowingpolyporemushrooms.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:48,16,16,16] [color=blue]Ancient Glowing Polypore Mushroom Spores[/color][/itemtooltip]
+> Level 3 - Unlocks the recipes:
+  = [itemtooltip=(O)DN.SnS_ancientwildfairyrose.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:0,16,16,16] [color=blue]Ancient Wild Fairy Rose Seeds[/color][/itemtooltip]
+> Level 4 - Unlocks the recipes:
+  = [itemtooltip=(O)DN.SnS_ancientelderberry.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:128,48,16,16] [color=blue]Ancient Elderberry Seeds[/color][/itemtooltip]
+ 
+> Level 5 - See [color=black]Professions[/color] later on this page.
+ 
+> Level 6 - Unlocks the recipes:
+  = [itemtooltip=(O)DN.SnS_ancientbottlegourd.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:0,64,16,16] [color=blue]Ancient Bottle Gourd Seeds[/color][/itemtooltip] 
+  = [itemtooltip=(O)DN.SnS_lavaeelandstirfriedancientbottlegourd][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:0,48,16,16] [color=blue]Lava Eel & Bottle Gourd[/color][/itemtooltip]
+> Level 7 - Unlocks the recipes:
+  = [itemtooltip=(O)DN.SnS_ancientgiantappleberry.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:32,64,16,16] [color=blue]Ancient Giant Apple Berry Seeds[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_mushroomsredsauce][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:112,32,16,16] [color=blue]Fried Polypore Mushrooms & Red Sauce[/color][/itemtooltip]
+> Level 8 - Unlocks the recipes: 
+  = [itemtooltip=(O)DN.SnS_ancientazuredetura.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:64,64,16,16] [color=blue]Ancient Azure Detura[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ferngreensandpineapple][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:128,32,16,16] [color=blue]Fern Greens and Pineapple[/color][/itemtooltip]
+> Level 9 - Unlocks the recipes:
+  = [itemtooltip=(O)DN.SnS_ancientglowinghuckleberry.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:32,16,16,16] [color=blue]Ancient Glowing Huckleberry Seeds[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ancienthuckleberryicecream][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:144,32,16,16] [color=blue]Ancient Huckleberry Ice Cream[/color][/itemtooltip]
+ 
+> Level 10 - See [color=black]Professions[/color] later on this page.
  
 [font=dialogue]Professions[/font]
-Level 5:
-* Skilled Shapeshifter - Adds stamina regeneration ability to shapeshifting, after not moving for a few seconds.
-* Ancient Agronomist - Reduces cost of creating ancient druidic seeds by one essence.
+[color=DarkBlue]-Level 5-[/color]
+= [icon=SMAPI/kcc.sns/assets/druidics/skilledshapeshifter.png:0,0,16,16][color=MediumBlue]Skilled Shapeshifter[/color] - Adds stamina regeneration ability to shapeshifting, after not moving for a few seconds.
+= [icon=SMAPI/kcc.sns/assets/druidics/ancientagronomist.png:0,0,16,16][color=MediumBlue]Ancient Agronomist[/color] - Reduces cost of creating ancient druidic seeds by one essence.
  
-Level 10, if you chose Skilled Shapeshifter:
-* Stag's Path - Adds health regeneration to stamina regeneration with double the speed.
-* Wolf's Path - Adds ability to fight while shapeshifted, as well as a defense and attack buff. Unlocks the [color=darkorange]Shapeshift (Wolf)[/color] ability. (All forms get the combat abilities - wolf form has the same functionality of the other two forms, it just looks different.)
+[color=DarkBlue]-Level 10-[/color]
+[color=MediumBlue]Skilled Shapeshifter Track[/color]
+= [icon=SMAPI/kcc.sns/assets/druidics/stagpath.png:0,0,16,16][color=blue]Stag's Path[/color] - Adds health regeneration to stamina regeneration with double the speed.
+= [icon=SMAPI/kcc.sns/assets/druidics/wolfpath.png:0,0,16,16][color=blue]Wolf's Path[/color] - Adds ability to fight while shapeshifted, as well as a defense and attack buff. 
+  > Unlocks the [texttooltip=Shapeshift (Wolf):Transform into a wolf, giving a speed boost and a buff to your foraging skill. 
+Also gains combat abilities.][icon=SMAPI/kcc.sns/assets/druidics/wolfpath.png:0,0,16,16] [color=purple]Shapeshift (Wolf)[/color][/texttooltip] ability.
  
-Level 10, if you chose Ancient Agronomist:
-* Branch of Midgard - All ancient crops grow 10% faster, and all artisan goods derived from them are worth 10% more. Stacks with Artisan and Agriculturist.
-* Branch of Yggdrasil - Druidic essences have an additional 10% chance to drop. Druidic crops water surrounding crops with the same range as a Quality Sprinkler.",
+[color=MediumBlue]Ancient Agronomist Track[/color]
+= [icon=SMAPI/kcc.sns/assets/druidics/branchofmidgard.png:0,0,16,16][color=blue]Branch of Midgard[/color] - All ancient crops grow 10% faster, and all artisan goods derived from them are worth 10% more. Stacks with Artisan and Agriculturist.
+= [icon=SMAPI/kcc.sns/assets/druidics/branchofyggdrasil.png:0,0,16,16][color=blue]Branch of Yggdrasil[/color] - Druidic essences have an additional 10% chance to drop. Druidic crops water surrounding crops with the same range as a Quality Sprinkler.",
 
 "guidebook.chapter.UP.name": "Under Pressure",
 "guidebook.chapter.UP.Intro": "[center][font=dialogue]Introduction[/font][/center]
  
 The third chapter of S&S follows Cirrus, a pop-rock star known all across the Ferngill Republic. Help her set boundaries with her ill-intentioned mother, form authentic relationships with the residents of East Scarp and Pelican Town, maintain a work-life balance, build The Lion's Mane, and discover her true magical prowess...",
 "guidebook.chapter.UP.Events": "[center][font=dialogue]The Story Thus Far:[/font][/center]
-[font=dialogue]Cirrus Event: 0 Hearts pt 1[/font]
-[if=PLAYER_HAS_SEEN_EVENT EVENT HERE]Complete![/if]
-[else]Hint: god this is gonna [color=green]make me want to eat my own ass[/color] oh god.[/else]",
+ 
+[font=dialogue]Cirrus Event: 0 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.1]Complete![/if]
+[else]Hint: Visit [color=green]the saloon[/color] between 12pm and 10pm in sunny weather.[/else]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.1]
+[font=dialogue]Cirrus Event: 1 Heart[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.2]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Cirrus 250, !PLAYER_HAS_CONVERSATION_TOPIC Current CirrusArrives]Hint: Visit [color=green]East Scarp's Deep Mountains[/color] between 6pm and 10pm in sunny weather.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Cirrus 250]Requirement: 1 Heart with [color=red]Cirrus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CirrusArrives]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.2]
+[font=dialogue]Cirrus Event: 2 Heart[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.3]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Cirrus 500, !PLAYER_HAS_CONVERSATION_TOPIC Current CirrusWoods]Hint: Visit [color=green]the East Scarp Coastal Guild[/color] between 12pm and 10pm in sunny weather.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Cirrus 500]Requirement: 2 Hearts with [color=red]Cirrus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CirrusWoods]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.3]
+[font=dialogue]Cirrus Event: 3 Heart[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.4]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Cirrus 750, !PLAYER_HAS_CONVERSATION_TOPIC Current CirrusGuild]Hint: Visit [color=green]East Scarp[/color] between 12pm and 8pm in sunny weather.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Cirrus 750]Requirement: 3 Hearts with [color=red]Cirrus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CirrusGuild]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+{{JulietJessie}}
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.4]
+[font=dialogue]Cirrus Event: 4 Heart[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.6]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Cirrus 1000, !PLAYER_HAS_CONVERSATION_TOPIC Current CirrusMom]Hint: Visit [color=green]East Scarp[/color] between 6pm and 10pm in sunny weather.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Cirrus 1000]Requirement: 4 Heart with [color=red]Cirrus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CirrusMom]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.6]
+[font=dialogue]Cirrus Event: 5 Heart[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.7]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Cirrus 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current CirrusRain]Hint: Visit [color=green]East Scarp's Deep Mountains[/color] between 6pm and 10pm in sunny weather.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Cirrus 1250]Requirement: 5 Hearts with [color=red]Cirrus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CirrusRain]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.7]
+[font=dialogue]Cirrus Event: 6 Heart[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.8]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Cirrus 1500, !PLAYER_HAS_CONVERSATION_TOPIC Current CirrusWoods2]Hint: Visit [color=green]Pelican Town[/color] between 10am and 3pm in sunny weather.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Cirrus 1500]Requirement: 6 Hearts with [color=red]Cirrus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CirrusWoods2]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.8]
+[font=dialogue]Cirrus Event: 7 Heart[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.9]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Cirrus 1750, !PLAYER_HAS_CONVERSATION_TOPIC Current CirrusJJ2]Hint: Visit [color=green]the East Scarp Coastal Guild[/color] between 5pm and 10pm.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Cirrus 1750]Requirement: 7 Hearts with [color=red]Cirrus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CirrusJJ2]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.9]
+[font=dialogue]Cirrus Event: 7 Heart Pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.10]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Cirrus 1750, !PLAYER_HAS_CONVERSATION_TOPIC Current CirrusDnD]Hint: Visit [color=green]East Scarp[/color] between 8am and 5pm in sunny weather.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Cirrus 1750]Requirement: 7 Hearts with [color=red]Cirrus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CirrusDnD]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.10]
+[font=dialogue]Cirrus Event: 8 Heart[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.11]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Cirrus 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current CirrusLionsMane]Hint: Visit [color=green]the bus stop[/color] between 6am and 12pm in sunny weather.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Cirrus 2000]Requirement: 8 Hearts with [color=red]Cirrus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CirrusLionsMane]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.11]
+[font=dialogue]Cirrus Event: 8 Heart Pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.12]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Cirrus 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current CirrusDnD]Hint: Visit [color=green]East Scarp[/color] between 8am and 5pm in sunny weather.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Cirrus 2000]Requirement: 8 Hearts with [color=red]Cirrus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CirrusDnD]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.10]
+[font=dialogue]Special Order: Cirrus's Request[/font]
+[if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.LionsMane]You gathered materials for [color=red]Cirrus[/color].[/if]
+[else]Help Cirrus out by gathering supplies for her to build with!
+> 900 [itemtooltip=(O)388][icon=Maps/springobjects:64,256,16,16] [color=blue]Wood[/color][/itemtooltip]
+> 500 [itemtooltip=(O)390][icon=Maps/springobjects:96,256,16,16] [color=blue]Stone[/color][/itemtooltip]
+> 200 [itemtooltip=(O)709][icon=Maps/springobjects:208,464,16,16] [color=blue]Hardwood[/color][/itemtooltip]
+>  25 [itemtooltip=(O)709][icon=Maps/springobjects:368,208,16,16] [color=blue]Iron Bars[/color][/itemtooltip]
+[if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.LionsMane]You seem to be missing the special order.
+[onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.LionsMane]Click here to re-add it to your journal.[/onceaction][/if]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.12]
+[font=dialogue]Cirrus Event: 9 Heart[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.13]Complete![/if]
+[else]
+[if=!PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.LionsMane]Complete the [color=blue]Cirrus's Request[/color] special order.[/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Cirrus 2250, !PLAYER_HAS_CONVERSATION_TOPIC Current CirrusConcert]Hint: Visit [color=green]East Scarp[/color] between 8am and 5pm in sunny weather.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Cirrus 2250]Requirement: 9 Hearts with [color=red]Cirrus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CirrusConcert]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.13]
+[font=dialogue]Cirrus Event: 10 Heart[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Cirrus 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current CirrusLionsMane2]Hint: Visit [color=green]the Lion's Mane[/color] between 12pm and 8pm in sunny weather.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Cirrus 2500]Requirement: 10 Hearts with [color=red]Cirrus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CirrusLionsMane2]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+",
+"guidebook.UP.Events.JJ.true": "[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.4]
+[font=dialogue]Cirrus Event: 3 Heart Pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.5]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Cirrus 750, !PLAYER_HAS_CONVERSATION_TOPIC Current CirrusGuild]Hint: Visit [color=green]East Scarp[/color] between 12pm and 8pm in sunny weather.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Cirrus 750]Requirement: 3 Heart with [color=red]Cirrus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CirrusGuild]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]",
+"guidebook.UP.Events.JJ.false": "[font=dialogue]Cirrus Event: 3 Heart Pt 2[/font]
+Juliet and Jessie is not installed. Skipping event.",
 "guidebook.chapter.Up.Cirrus": "[nospacing]
 [nextposition=0,10][center=300][font=dialogue]Cirrus[/font][/center]
 [offset=118,50][image=Characters/Cirrus:0,0,16,32:4]
@@ -8546,7 +8699,7 @@ obelisks you've acquired.
 [color=MediumBlue]College of Valor Track[/color]
 = [icon=SMAPI/kcc.sns/assets/bardics/wordsofterror.png:0,0,16,16] [color=Blue]Words of Terror[/color]
     Damage of [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color] is doubled.
-= [icon=SMAPI/kcc.sns/assets/bardics/wordsofmajesty.png:0,0,16,16] [color=Blue]Words of Majesty[/cplor]]
+= [icon=SMAPI/kcc.sns/assets/bardics/wordsofmajesty.png:0,0,16,16] [color=Blue]Words of Majesty[/color]
     Damage of [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color] is extended
     to the entire location."
 
