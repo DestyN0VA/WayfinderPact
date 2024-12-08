@@ -1728,15 +1728,15 @@ ________      ________ _   _ _______ _____
   "Core.Hector.Introduction": "You have no idea what I'm capable of, farmer. Nor of what I've got in mind for you.",
 
   // DYNAMIC PRONOUNS 
-  "Core.HectorPN.M.1": "he",
-  "Core.HectorPN.M.2": "him",
-  "Core.HectorPN.M.3": "his",
-  "Core.HectorPN.M.4": "himself",
+  "Core.HectorPN.M.1": "He",
+  "Core.HectorPN.M.2": "Him",
+  "Core.HectorPN.M.3": "His",
+  "Core.HectorPN.M.4": "Himself",
 
-  "Core.HectorPN.F.1": "she",
-  "Core.HectorPN.F.2": "her",
-  "Core.HectorPN.F.3": "hers",
-  "Core.HectorPN.F.4": "herself",
+  "Core.HectorPN.F.1": "She",
+  "Core.HectorPN.F.2": "Her",
+  "Core.HectorPN.F.3": "Hers",
+  "Core.HectorPN.F.4": "Herself",
 
   // COMMUNITY CENTER BUNDLES  
   "Core.Hector.JojaBegin": "You're a traitor! I needed you, and you've gone and given in to Morris? Of course I know it was you, everyone else who would've bought a membership already!$27#$b#You're not who I thought you were! I can't trust you, get out of my face.$21",
@@ -7867,7 +7867,7 @@ ________      ________ _   _ _______ _____
 [nextposition=0,null]
 [/nospacing]",
   "guidebook.chapter.Title.Introduction": "[center][font=dialogue]Introduction[/font][/center]
-DESTY_WRITE_STUFF",
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   "guidebook.chapter.Title.NewMechanics": "[center][font=dialogue]New Mechanics[/font][/center]
 [font=dialogue]Dual Wielding[/font]
 Sword & Sorcery introduces a dual-wielding feature, allowing you to attack with two weapons at once. To equip a weapon in your off-hand slot, open your inventory and click a button to the left of the window that looks like the following:
@@ -7903,6 +7903,7 @@ The adventure bar can be hidden with the configured keybinding (default: Ctrl+U)
 3. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=UP/Intro]Under Pressure[/link][/if][else]Under Pressure (locked)[/else]
 4. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=TOP/Intro]The Other Promise[/link][/if][else]The Other Promise (locked)[/else]
 5. [if=PLAYER_HAS_MAIL Current DuskspireDefeated][link=Epilogue/Intro]Epilogue[/link][/if][else]Epilogue (locked)[/else]",
+"guidebook.chapter.Title.Cheats": "document cheats here",
   "guidebook.chapter.NEA.name": "Never Ending Adventure",
   "guidebook.chapter.NEA.Intro": "[center][font=dialogue]Introduction[/font][/center]
    
@@ -7910,7 +7911,7 @@ This first chapter of S&S introduces you to Mateo, a charming rogue with a sordi
   "guidebook.chapter.NEA.Mateo": "[nospacing]
 [nextposition=0,10][center=300][font=dialogue]Mateo[/font][/center]
 [offset=118,50][image=Characters/Mateo:0,0,16,32:4]
-[offset=-118,144][center=300]Pronouns: they/them[/center]
+[offset=-118,144][center=300]Pronouns: They/Them[/center]
 [offset=0,32][center=300]Birthday: Fall 25[/center]
 [nextposition=322,16][image=Portraits/Mateo:0,0,64,64:4]
 [nextposition=0,288]
@@ -7920,19 +7921,19 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
    
 [font=dialogue]Mateo Event: 0 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.0]Complete![/if]
-[else]Hint: Visit the [color=green]top floor of the Mines[/color] before midnight.[/else]
+[else]Hint: Visit the [color=green]top floor of the Mines[/color] before 12am.[/else]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.0]
 [font=dialogue]Mateo Event: 0 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.1]Complete![/if]
-[else]Hint: Visit the [color=green]Stardew Valley Museum & Library[/color] before evening.[/else]
+[else]Hint: Visit the [color=green]Stardew Valley Museum & Library[/color] between 8am and 1am.[/else]
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.1]
 [font=dialogue]Mateo Event: 2 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.2]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 500]Hint: Visit [color=green]Pelican Town[/color] on a sunny evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 500]Hint: Visit [color=green]Pelican Town[/color] between 5pm and 1am in sunny weather.[/if]
 [else]Requirement: 2 Hearts of friendship with [color=red]Mateo[/color][/else]
 [/else]
 [/if]
@@ -7941,7 +7942,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [font=dialogue]Mateo Event: 4 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.3]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1000, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoLibrary]Hint: Visit the [color=green]Beach[/color] on a sunny evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1000, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoLibrary]Hint: Visit the [color=green]Beach[/color] between 6pm and 12am in sunny weather.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1000]Requirement: 4 Hearts with [color=red]Mateo[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoLibrary]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -7953,7 +7954,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [font=dialogue]Mateo Event: 4 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.4]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoAdmission]Hint: Visit the [color=green]top floor of the Mines[/color] in the evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoAdmission]Hint: Visit the [color=green]top floor of the Mines[/color] between 6pm and 1am.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1250]Requirement: 5 Hearts with [color=red]Mateo[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoAdmission]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -7965,7 +7966,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [font=dialogue]Mateo Event: 5 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.5]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250]Hint: Visit the [color=green]Saloon[/color] in the afternoon or evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250]Hint: Visit the [color=green]Saloon[/color] between 12pm and 12am.[/if]
 [else]Requirement: 5 Hearts with [color=red]Mateo[/color][/else]
 [/else]
 [/if]
@@ -7974,7 +7975,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [font=dialogue]Mateo Event: 5 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.6]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoConfrontation]Hint: Visit the [color=green]Adventurer's Guild[/color] in the late afternoon or early evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoConfrontation]Hint: Visit the [color=green]Adventurer's Guild[/color] between 2pm and 10pm.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1250]Requirement: 5 Hearts with [color=red]Mateo[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoConfrontation]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -7986,7 +7987,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [font=dialogue]Mateo Event: 5 Hearts pt 3[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.7]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1500]Hint: Visit [color=green]Pelican Town[/color] between late morning and early evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1500]Hint: Visit [color=green]Pelican Town[/color] between 10am and 6pm.[/if]
 [else]Requirement: 6 Hearts with [color=red]Mateo[/color][/else]
 [/else]
 [/if]
@@ -7995,7 +7996,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [font=dialogue]Mateo Event: 6 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.8]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1500]Hint: Visit the [color=green]Forest[/color] in the evening when the weather is bad.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1500]Hint: Visit the [color=green]Forest[/color] between 6pm and 12am in bad weather.[/if]
 [else]Requirement: 6 Hearts with [color=red]Mateo[/color][/else]
 [/else]
 [/if]
@@ -8004,11 +8005,11 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [font=dialogue]Mateo Event: 7 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.9]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1750, PLAYER_HAS_MET Current Krobus, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoAcceptance]Hint: Visit the [color=green]Hospital[/color] between late morning and late afternoon when it isn't Friday.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1750, PLAYER_HAS_MET Current Krobus, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoAcceptance]Hint: Visit the [color=green]Hospital[/color] between 9am and 5pm when it isn't Friday.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1750]Requirement: 7 Hearts with [color=red]Mateo[/color][/if]
 [if=!PLAYER_HAS_MET Current Krobus]Requirement: Meet [color=red]Krobus[/color][/if]
-[if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoAcceptance]Requirement: Wait {{VariableTimegate}} days after seeing the (DESTY_WRITE_STUFF Name of SnS.Ch1.Mateo.6 event) event.[/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoAcceptance]Requirement: Wait {{VariableTimegate}} days after seeing the previous event.[/if]
 [/else]
 [/else]
 [/if]
@@ -8017,7 +8018,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [font=dialogue]Mateo Event: 7 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.10]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1750, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoPain]Hint: Visit [color=green]Pelican Town[/color] in the evening when it isn't Friday.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1750, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoPain]Hint: Visit [color=green]Pelican Town[/color] between 5pm and 12am when it isn't Friday.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1750]Requirement: 7 Hearts with [color=red]Mateo[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoPain]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8029,7 +8030,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [font=dialogue]Mateo Event: 8 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.11]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoRecovery]Hint: Visit [color=green]East Scarp[/color] between late morning and early evening on a sunny day.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoRecovery]Hint: Visit [color=green]East Scarp[/color] between 8am and 6pm in sunny weather.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Requirement: 8 Hearts with [color=red]Mateo[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoRecovery]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8053,16 +8054,16 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [font=dialogue]Mateo Event: 8 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.12]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Hint: Visit [color=green]East Scarp[/color] between late morning and early evening on a sunny day.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Hint: Visit [color=green]East Scarp[/color] between 8am and 6pm in sunny weather.[/if]
 [else]Requirement: 8 Hearts with [color=red]Mateo[/color][/else]
 [/else]
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.12]
 [font=dialogue]Mateo Event: 10 Hearts[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.13]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current CGuildComplete]Hint: Visit the [color=green]Railroad[/color] in the evening when it isn't Friday.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current CGuildComplete]Hint: Visit the [color=green]Railroad[/color] between 5pm and 12am when it isn't Friday.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 2500]Requirement: 10 Hearts with [color=red]Mateo[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current CGuildComplete]Requirement: Wait a day after the previous event.[/if]
@@ -8072,9 +8073,9 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14]
 [font=dialogue]Event: Artificer Skill Unlock[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18]Complete![/if]
 [else]
-Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between late morning and early evening.
+Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between 8am and 10pm.
 [/else]
 [/if]", // NOTE: SnS.Ch1.Mateo.13 is not included since it is optional and can be missed.
 
@@ -8083,60 +8084,112 @@ Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between late mor
 You can go to the [color=green]Underforge[/color] in the [color=green]Coastal Adventurer's Guild[/color] by going through a door to the right of the main room. Here, you can attach three different types of items to your weapon to make them stronger. You can do this by using the forge in the top left of the map.
  
 You can attach 25 pure ore to a weapon to improve it's damage:
-* [itemtooltip=(O)DN.SnS_PureCopperOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:64,32,16,16] [color=blue]Pure Copper Ore[/color][/itemtooltip] - +5% damage
-* [itemtooltip=(O)DN.SnS_PureIronOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,32,16,16] [color=blue]Pure Iron Ore[/color][/itemtooltip] - +10% damage
-* [itemtooltip=(O)DN.SnS_PureGoldOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:96,32,16,16] [color=blue]Pure Gold Ore[/color][/itemtooltip] - +15% damage
-* [itemtooltip=(O)DN.SnS_PureIridiumOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,48,16,16] [color=blue]Pure Iridium Ore[/color][/itemtooltip] - +20% damage
-* [itemtooltip=(O)DN.SnS_PureRadioactiveOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,48,16,16] [color=blue]Pure Radioactive Ore[/color][/itemtooltip] - +25% damage
+   > [itemtooltip=(O)DN.SnS_PureCopperOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:64,32,16,16] [color=blue]Pure Copper Ore[/color][/itemtooltip] - +5% damage
+   > [itemtooltip=(O)DN.SnS_PureIronOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,32,16,16] [color=blue]Pure Iron Ore[/color][/itemtooltip] - +10% damage
+   > [itemtooltip=(O)DN.SnS_PureGoldOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:96,32,16,16] [color=blue]Pure Gold Ore[/color][/itemtooltip] - +15% damage
+   > [itemtooltip=(O)DN.SnS_PureIridiumOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,48,16,16] [color=blue]Pure Iridium Ore[/color][/itemtooltip] - +20% damage
+   > [itemtooltip=(O)DN.SnS_PureRadioactiveOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,48,16,16] [color=blue]Pure Radioactive Ore[/color][/itemtooltip] - +25% damage
  
 You can attach an exquisite gem to a weapon to give it new effects:
-   * [itemtooltip=(O)DN.SnS_ExquisiteEmerald][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,0,16,16] [color=blue]Exquisite Emerald[/color][/itemtooltip] - [texttooltip=Evasive:Increases your speed by +1.5 for 5 seconds after hitting an enemy.][color=purple]Evasive[/color][/texttooltip]
-   * [itemtooltip=(O)DN.SnS_ExquisiteTopaz][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,0,16,16] [color=blue]Exquisite Topaz[/color][/itemtooltip] - [texttooltip=Defensive:Reduces incoming damage by 15%.][color=purple]Defensive[/color][/texttooltip]
-   * [itemtooltip=(O)DN.SnS_ExquisiteRuby][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,0,16,16] [color=blue]Exquisite Ruby[/color][/itemtooltip] - [texttooltip=Harming:Deals an extra 10% damage to an enemy once every second for 3 seconds after hitting it.][color=purple]Harming[/color][/texttooltip]
-   * [itemtooltip=(O)DN.SnS_ExquisiteJade][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,0,16,16] [color=blue]Exquisite Jade[/color][/itemtooltip] - [texttooltip=Restful:Grants +2 stamina upon hitting an enemy.][color=purple]Restful[/color][/texttooltip]
-   * [itemtooltip=(O)DN.SnS_ExquisiteAmethyst][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:64,0,16,16] [color=blue]Exquisite Amethyst[/color][/itemtooltip] - [texttooltip=Freezing:15% chance of freezing an enemy on hit.][color=purple]Freezing[/color][/texttooltip]
-   * [itemtooltip=(O)DN.SnS_ExquisiteDiamond][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,0,16,16] [color=blue]Exquisite Diamond[/color][/itemtooltip] - [texttooltip=Healthy:Grants +1 health upon hitting an enemy.][color=purple]Healthy[/color][/texttooltip]
-   * [itemtooltip=(O)DN.SnS_ExquisiteAquamarine][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:96,0,16,16] [color=blue]Exquisite Aquamarine[/color][/itemtooltip] - [texttooltip=Critical:Provides a 15% chance of a critical hit when hitting an enemy.
+   > [itemtooltip=(O)DN.SnS_ExquisiteEmerald][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,0,16,16] [color=blue]Exquisite Emerald[/color][/itemtooltip] - [texttooltip=Evasive:Increases your speed by +1.5 for 5 seconds after hitting an enemy.][color=purple]Evasive[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteTopaz][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,0,16,16] [color=blue]Exquisite Topaz[/color][/itemtooltip] - [texttooltip=Defensive:Reduces incoming damage by 15%.][color=purple]Defensive[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteRuby][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,0,16,16] [color=blue]Exquisite Ruby[/color][/itemtooltip] - [texttooltip=Harming:Deals an extra 10% damage to an enemy once every second for 3 seconds after hitting it.][color=purple]Harming[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteJade][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,0,16,16] [color=blue]Exquisite Jade[/color][/itemtooltip] - [texttooltip=Restful:Grants +2 stamina upon hitting an enemy.][color=purple]Restful[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteAmethyst][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:64,0,16,16] [color=blue]Exquisite Amethyst[/color][/itemtooltip] - [texttooltip=Freezing:15% chance of freezing an enemy on hit.][color=purple]Freezing[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteDiamond][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,0,16,16] [color=blue]Exquisite Diamond[/color][/itemtooltip] - [texttooltip=Healthy:Grants +1 health upon hitting an enemy.][color=purple]Healthy[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteAquamarine][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:96,0,16,16] [color=blue]Exquisite Aquamarine[/color][/itemtooltip] - [texttooltip=Critical:Provides a 15% chance of a critical hit when hitting an enemy.
 (If the hit is already a critical hit, the damage will be multiplied again.][color=purple]Critical[/color][/texttooltip]
  
 You can attach a large amount of certain monster loot to a weapon to give it new effects:
-   * 999 [itemtooltip=(O)766][icon=Maps/springobjects:352,496,16,16] [color=blue]Slime[/color][/itemtooltip] - [texttooltip=Slimy:Slows down enemies upon hit. Works once per enemy.][color=purple]Slimy[/color][/texttooltip]
-   * 300 [itemtooltip=(O)769][icon=Maps/springobjects:16,512,16,16] [color=blue]Void Essence[/color][/itemtooltip] - [texttooltip=Shadow Duplicates:Basic attacks affect all four cardinal directions. (Attacks in the other directions are invisible.)][color=purple]Shadow Duplicates[/color][/texttooltip]
-   * 300 [itemtooltip=(O)768][icon=Maps/springobjects:0,512,16,16] [color=blue]Solar Essence[/color][/itemtooltip] - [texttooltip=Explosive Demise:Upon killing a mob, they blow up. No damage to farmer.][color=purple]Explosive Demise[/color][/texttooltip]
-   * 300 [itemtooltip=(O)684][icon=Maps/springobjects:192,448,16,16] [color=blue]Bug Meat[/color][/itemtooltip] - [texttooltip=Greedy:Mob drops are rolled twice.][color=purple]Greedy[/color][/texttooltip]
-   * 500 [itemtooltip=(O)767][icon=Maps/springobjects:368,496,16,16] [color=blue]Bat Wing[/color][/itemtooltip] - [texttooltip=Floating:You can attack across stones and other objects.][color=purple]Floating[/color][/texttooltip]
+   > 999 [itemtooltip=(O)766][icon=Maps/springobjects:352,496,16,16] [color=blue]Slime[/color][/itemtooltip] - [texttooltip=Slimy:Slows down enemies upon hit. Works once per enemy.][color=purple]Slimy[/color][/texttooltip]
+   > 300 [itemtooltip=(O)769][icon=Maps/springobjects:16,512,16,16] [color=blue]Void Essence[/color][/itemtooltip] - [texttooltip=Shadow Duplicates:Basic attacks affect all four cardinal directions. (Attacks in the other directions are invisible.)][color=purple]Shadow Duplicates[/color][/texttooltip]
+   > 300 [itemtooltip=(O)768][icon=Maps/springobjects:0,512,16,16] [color=blue]Solar Essence[/color][/itemtooltip] - [texttooltip=Explosive Demise:Upon killing a mob, they blow up. No damage to farmer.][color=purple]Explosive Demise[/color][/texttooltip]
+   > 300 [itemtooltip=(O)684][icon=Maps/springobjects:192,448,16,16] [color=blue]Bug Meat[/color][/itemtooltip] - [texttooltip=Greedy:Mob drops are rolled twice.][color=purple]Greedy[/color][/texttooltip]
+   > 500 [itemtooltip=(O)767][icon=Maps/springobjects:368,496,16,16] [color=blue]Bat Wing[/color][/itemtooltip] - [texttooltip=Floating:You can attack across stones and other objects.][color=purple]Floating[/color][/texttooltip]
  
 You can choose one item type from each category above.",
 
 "guidebook.chapter.NEA.ArtificerSkill": "[center][font=dialogue]Artificer Skill[/font][/center]
  
-You've unlocked the Artificer skill! Artificer can be levelled up killing monsters and mining.
+You've unlocked the Artificer skill! Artificer can be leveled up killing monsters and mining.
  
 [font=dialogue]Unlocks[/font]
-* Level 1 - Unlocks the [itemtooltip=(O)DN.SnS_ClothArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,48,16,16] [color=blue]Cloth Armor[/color][/itemtooltip], [itemtooltip=(W)DN.SnS_Bow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,80,16,16] [color=blue]Bow[/color][/itemtooltip], and [itemtooltip=(O)DN.SnS_Arrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,64,16,16] [color=blue]Arrow[/color][/itemtooltip] recipes.
-* Level 2 - Pure ore now has a chance to drop from their respective ore nodes. These can be smelted, used at the [color=green]Underforge[/color] (see the [color=black]Underforge[/color] section later on this page for more details), or crafted into armor. (Each tier of armor also requires the previous tier as an ingredient.) Unlocks the [itemtooltip=(O)DN.SnS_CopperArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,48,16,16] [color=blue]Copper Armor[/color][/itemtooltip],  [itemtooltip=(O)DN.SnS_IronArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:64,48,16,16] [color=blue]Iron Armor[/color][/itemtooltip], [itemtooltip=(O)DN.SnS_GoldArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,48,16,16] [color=blue]Gold Armor[/color][/itemtooltip],  [itemtooltip=(O)DN.SnS_IridiumArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:96,48,16,16] [color=blue]Iridium Armor[/color][/itemtooltip], [itemtooltip=(O)DN.SnS_RadioactiveArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,64,16,16] [color=blue]Radioactive Armor[/color][/itemtooltip] recipes.
-* Level 3 - Unlocks the [itemtooltip=(O)DN.SnS_FirestormArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,64,16,16] [color=blue]Firestorm Arrow[/color][/itemtooltip] and [itemtooltip=(O)DN.SnS_IcicleArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,64,16,16] [color=blue]Icicle Arrow[/color][/itemtooltip] recipes.
-* Level 4 - Exquisite gems now have a chance to drop from their respective gem nodes. These can be used at the [color=green]Underforge[/color] (see the [color=black]Underforge[/color] section later on this page for more details). They can also be crafted with enough of their original gemstone.
-* Level 5 - See [color=black]Professions[/color] later on this page.
-* Level 6 - You can now perform Blade Coating at the [color=green]Underforge[/color] using certain monster loot (see the [color=black]Underforge[/color] section later on this page for more details).
-* Level 7 - Unlocks the [itemtooltip=(O)DN.SnS_WindwakerArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,64,16,16] [color=blue]Windwaker Arrow[/color][/itemtooltip] recipe.
-* Level 8 - Unlocks the [itemtooltip=(O)DN.SnS_RicochetArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,80,16,16] [color=blue]Ricochet Arrow[/color][/itemtooltip] recipe.
-* Level 9 - Unlocks the [itemtooltip=(O)DN.SnS_LightbringerArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,80,16,16] [color=blue]Lightbringer Arrow[/color][/itemtooltip] recipe.
-* Level 10 - See [color=black]Professions[/color] later on this page.
+> Level 1 - Recipe unlocks: 
+ = [itemtooltip=(O)DN.SnS_ClothArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,48,16,16] [color=blue]Cloth Armor[/color][/itemtooltip]
+ = [itemtooltip=(W)DN.SnS_Bow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,80,16,16] [color=blue]Bow[/color][/itemtooltip]
+ = [itemtooltip=(O)DN.SnS_Arrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,64,16,16] [color=blue]Arrow[/color][/itemtooltip]
+  
+> Level 2 - Recipe & Mechanic unlocks:
+ = Pure ore now has a chance to
+    drop from their respective ore
+    nodes for use in the [link=NEA/Underforge]Underforge[/link].
+ = [itemtooltip=(O)DN.SnS_CopperArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,48,16,16] [color=blue]Copper Armor[/color][/itemtooltip]
+ = [itemtooltip=(O)DN.SnS_IronArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:64,48,16,16] [color=blue]Iron Armor[/color][/itemtooltip]
+ = [itemtooltip=(O)DN.SnS_GoldArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,48,16,16] [color=blue]Gold Armor[/color][/itemtooltip]
+ = [itemtooltip=(O)DN.SnS_IridiumArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:96,48,16,16] [color=blue]Iridium Armor[/color][/itemtooltip]
+ = [itemtooltip=(O)DN.SnS_RadioactiveArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,64,16,16] [color=blue]Radioactive Armor[/color][/itemtooltip]
+  
+> Level 3 - Recipe unlocks:
+  = [itemtooltip=(O)DN.SnS_FirestormArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,64,16,16] [color=blue]Firestorm Arrow[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_IcicleArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,64,16,16] [color=blue]Icicle Arrow[/color][/itemtooltip]
+   
+> Level 4 - Mechanic unlocks:
+  = Exquisite gems now have a chance
+     to drop from their respective gem 
+     nodes for use in the [link=NEA/Underforge]Underforge[/link].
  
-[font=dialogue]Professions[/font]
-Level 5:
-* Artificer Specialist - Once an hour, get a chance to recover Armor Points by changing locations.
-* Rogueish Archetype - 25% chance of shooting a second arrow without consuming additional ammo.
+> Level 5 - See the [link=NEA/ArtificerProfessions]Artificer Professions[/link] page.
  
-Level 10, if you chose Artificer Specialist:
-* Flash of Genius - The first craftable you make each day has zero ingredient cost. (Ingredients must still be owned, however.)
-* Armor Proficiency - Adds 50% more armor points on top of your total amount.
+> Level 6 Mechanic unlocks:
+  = You can now perform Blade Coating 
+     at the [link=NEA/Underforge]Underforge[/link] using large stacks
+     of certain monster loot.
+   
+> Level 7 Recipe unlocks:
+  = [itemtooltip=(O)DN.SnS_WindwakerArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,64,16,16] [color=blue]Windwaker Arrow[/color][/itemtooltip]
+   
+> Level 8 - Recipe unlocks:
+  = [itemtooltip=(O)DN.SnS_RicochetArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,80,16,16] [color=blue]Ricochet Arrow[/color][/itemtooltip]
+   
+> Level 9 - Recipe unlocks:
+  = [itemtooltip=(O)DN.SnS_LightbringerArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,80,16,16] [color=blue]Lightbringer Arrow[/color][/itemtooltip]
  
-Level 10, if you chose Rogueish Archetype:
-* Shadowstep - Grants the [texttooltip=Shadowstep:Become hidden, reducing most monster aggro until you attack.
-Your first attack after using the ability is an automatic critical hit.][color=DarkOrange]Shadowstep[/color][/texttooltip] ability (usable with the Adventure Bar, see [link=Title/Mechanics]New Mechanics[/link] for more info).
-* Hunter's Mark - Once a creature is attacked, consecutive hits on the same creature do slightly more damage each time.",
+  > Level 10 - See the [link=NEA/ArtificerProfessions]Artificer Professions[/link] page.",
+
+"guidebook.chapter.NEA.ArtificerProfessions": "[center][font=dialogue]Professions[/font][/center]
+  
+Like vanilla skills, the Artificer skill provides professions that change the gameplay experience at levels 5 and 10.
+ 
+[font=dialogue]Level 5[/font]
+= [icon=SMAPI/kcc.sns/assets/rogue/artificerspecialist.png:0,0,16,16] [color=MediumBlue]Artificer Specialist[/color]
+    Adds stamina regeneration ability to
+    Armor Points by changing locations.
+= [icon=SMAPI/kcc.sns/assets/rogue/rogueisharchetype.png:0,0,16,16] [color=MediumBlue]Rogueish Archetype[/color]
+    25% chance of shooting a second arrow
+    without consuming additional ammo.
+ 
+[font=dialogue]Level 10[/font]
+[color=MediumBlue]Artificer Specialist Track[/color]
+= [icon=SMAPI/kcc.sns/assets/rogue/flashofgenius.png:0,0,16,16] [color=blue]Flash of Genius[/color]
+    The first craftable you make each day
+    has zero ingredient cost. 
+    (Note: Ingredients must still be owned)
+= [icon=SMAPI/kcc.sns/assets/rogue/armorproficiency.png:0,0,16,16] [color=blue]Armor Proficiency[/color]
+    Adds 50% more armorpoints on top of
+    your total amount.
+ 
+[color=MediumBlue]Rogueish Archetype Track[/color]
+= [icon=SMAPI/kcc.sns/assets/rogue/Shadowstep.png:0,0,16,16] [color=blue]Shadowstep[/color]
+    Grants the [texttooltip=Shadowstep:Become hidden, reducing most monster aggro until you attack.
+Your first attack after using the ability is an automatic critical hit.][icon=SMAPI/kcc.sns/assets/rogue/Shadowstep.png:0,0,16,16][color=purple]Shadowstep[/color][/texttooltip] ability. 
+    (Usable with the [link=Title/Mechanics]Adventure Bar[/link])
+= [icon=SMAPI/kcc.sns/assets/rogue/huntersmark.png:0,0,16,16] [color=blue]Hunter's Mark[/color]
+    Once a creature is attacked, consecutive
+    hits on the same creature do slightly
+    more damage each time.",
+
+"guidebook.chapter.NEA.Armor": "Armor
+Explain what the fuck these do, add info on the new ones",
 
   "guidebook.chapter.COT.name": "Circle of Thorns",
   "guidebook.chapter.COT.Intro": "[center][font=dialogue]Introduction[/font][/center]
@@ -8145,7 +8198,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
   "guidebook.chapter.COT.Hector": "[nospacing]
 [nextposition=0,10][center=300][font=dialogue]{{TrueName}}[/font][/center]
 [offset=118,50][image=Characters/Hector:0,0,16,32:4]
-[offset=-118,144][center=300]Pronouns: {{DailyPronouns}}[/center]
+[offset=-118,144][center=300]Pronouns: {{CHPN1}}/{{CHPN2}} [/center]
 [offset=0,32][center=300]Birthday: Winter 21[/center]
 [nextposition=322,16][image=Portraits/Hector:0,0,64,64:4]
 [nextposition=0,288]
@@ -8156,14 +8209,14 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14]
 [font=dialogue]{{TrueName}} Event: 0 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.1]Complete![/if]
-[else]Hint: Visit the [color=green]Railroad[/color] between late morning and late evening.[/else]
+[else]Hint: Visit the [color=green]Railroad[/color] between 8am and 10pm.[/else]
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.1]
 [font=dialogue]{{TrueName}} Event: 1 Heart[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.2]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorIntro]Hint: Visit [color=green]Hector's Tower[/color] between late morning and late evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorIntro]Hint: Visit [color=green]Hector's Tower[/color] between 8am and 10pm.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Hector 250]Requirement: 1 Heart with [color=red]{{TrueName}}[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorIntro]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8175,7 +8228,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]{{TrueName}} Event: 2 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.3]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorBookIntro]Hint: Visit [color=green]Hector's Tower[/color] between late morning and late evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorBookIntro]Hint: Visit [color=green]Hector's Tower[/color] between 8am and 10pm.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Hector 500]Requirement: 2 Hearts with [color=red]{{TrueName}}[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorBookIntro]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8187,7 +8240,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]{{TrueName}} Event: 3 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.4]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 750, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorShapeshift]Hint: Visit [color=green]Hector's Tower[/color] between late morning and late evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 750, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorShapeshift]Hint: Visit [color=green]Hector's Tower[/color] between 8am and 10pm.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Hector 750]Requirement: 3 Hearts with [color=red]{{TrueName}}[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorShapeshift]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8199,7 +8252,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]{{TrueName}} Event: 3 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.5]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 750, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorBookQuest]Hint: Visit [color=green]Hector's Tower[/color] between late morning and late evening on a sunny day.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 750, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorBookQuest]Hint: Visit [color=green]Hector's Tower[/color]  between 8am and 10pm in sunny weather.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Hector 750]Requirement: 3 Hearts with [color=red]{{TrueName}}[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorBookQuest]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8211,7 +8264,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]{{TrueName}} Event: 4 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.6]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1000, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet]Hint: Visit [color=green]East Scarp[/color] between late morning and late afternoon.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1000, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet]Hint: Visit [color=green]East Scarp[/color] between 9am and 5pm.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Hector 1000]Requirement: 4 Hearts with [color=red]{{TrueName}}[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8223,7 +8276,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]{{TrueName}} Event: 5 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.7]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet2]Hint: Visit [color=green]East Scarp[/color] between late morning and late afternoon.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet2]Hint: Visit [color=green]East Scarp[/color] between 9am and 5pm.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Hector 1250]Requirement: 5 Hearts with [color=red]{{TrueName}}[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet2]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8235,7 +8288,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]{{TrueName}} Event: 5 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.8]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorGender]Hint: Visit the [color=green]Vet House[/color] in [color=Green]East Scarp[/color] between late afternoon and mid evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorGender]Hint: Visit the [color=green]Vet House[/color] in [color=Green]East Scarp[/color] between 3pm and 9pm.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Hector 1250]Requirement: 5 Hearts with [color=red]{{TrueName}}[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorGender]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8247,7 +8300,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]{{TrueName}} Event: 5 Hearts pt 3[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.9]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet3]Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between early evening and late evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet3]Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between 5pm and 10pm.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Hector 1250]Requirement: 5 Hearts with [color=red]{{TrueName}}[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorVet3]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8259,7 +8312,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]{{TrueName}} Event: 6 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.10]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorDND]Hint: Visit [color=green]Hector's Tower[/color] between mid morning and late evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorDND]Hint: Visit [color=green]Hector's Tower[/color] between 8am and 10pm.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Hector 1500]Requirement: 6 Hearts with [color=red]{{TrueName}}[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorDND]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8271,7 +8324,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]{{TrueName}} Event: 7 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.11]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1750, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorRiver1]Hint: Visit [color=green]East Scarp[/color] between mid morning and early evening on a sunny day.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1750, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorRiver1]Hint: Visit [color=green]East Scarp[/color] between 8am and 6pm.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Hector 1750]Requirement: 7 Hearts with [color=red]{{TrueName}}[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorRiver1]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8297,7 +8350,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]{{TrueName}} Event: 7 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.12]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1750]Hint: Visit [color=green]Hector's Tower[/color] between mid morning and late evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 1750]Hint: Visit [color=green]Hector's Tower[/color] between 8am and 10pm.[/if]
 [else]Requirement: 7 Hearts with [color=red]{{TrueName}}[/color][/else]
 [/else]
 [/if]
@@ -8317,7 +8370,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]{{TrueName}} Event: 8 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.13]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 2000]Hint: Visit [color=green]Hector's Tower[/color] between mid morning and late evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 2000]Hint: Visit [color=green]Hector's Tower[/color] between 8am and 10pm.[/if]
 [else]Requirement: 8 Hearts with [color=red]{{TrueName}}[/color][/else]
 [/else]
 [/if]
@@ -8326,7 +8379,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]{{TrueName}} Event: 9 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.14]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 2250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorRiver3]Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between mid morning and late afternoon.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 2250, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorRiver3]Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between 8am and 4pm.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Hector 2250]Requirement: 9 Hearts with [color=red]{{TrueName}}[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorRiver3]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8338,7 +8391,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]{{TrueName}} Event: 10 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.15]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorHeal]Hint: Visit the [color=green]Vet House[/color] in [color=green]East Scarp[/color] between late afternoon and late evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorHeal]Hint: Visit the [color=green]Vet House[/color] in [color=green]East Scarp[/color] between 3pm and 10pm[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Hector 2500]Requirement: 10 Hearts with [color=red]{{TrueName}}[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorHeal]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8350,7 +8403,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]{{TrueName}} Event: 10 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Hector 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorHeal2]Hint: Visit the [color=green]Deep Mountains[/color] between mid morning and late evening.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorHeal2]Hint: Visit the [color=green]Deep Mountains[/color] between 8am and 10pm.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Hector 2500]Requirement: 10 Hearts with [color=red]{{TrueName}}[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorHeal2]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
@@ -8371,7 +8424,7 @@ Be sure to keep saving these after the special order is complete. They will defi
   "guidebook.chapter.COT.DruidicsSkill": "[center][font=dialogue]Druidics[/font][/center]
 [offset=200,0][image=SMAPI/kcc.sns/assets/druidics/druid.png:0,0,16,16:4]You've unlocked the Druidics skill! Druidics can be leveled up by farming and foraging.
  
-Each level, you will increase your transformed movement speed and regeneration speed, as well as the drop rate of Druidic Essence.
+Each level, you will increase your transformed movement speed and regeneration speed, as well as the drop rate of [link=COT/DruidicEssence]Druidic Essence[/link].
  
 [font=dialogue]Unlocks[/font]
 > Level 1 - Unlocks two forms:
@@ -8390,7 +8443,7 @@ Recipe Unlocks:
 > Level 4 - Unlocks the recipes:
   = [itemtooltip=(O)DN.SnS_ancientelderberry.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:128,48,16,16] [color=blue]Ancient Elderberry Seeds[/color][/itemtooltip]
  
-> Level 5 - See [color=black]Professions[/color] later on this page.
+> Level 5 - See the [link=COT/DruidicsProfessions]Druidics Professions[/link] page.
  
 > Level 6 - Unlocks the recipes:
   = [itemtooltip=(O)DN.SnS_ancientbottlegourd.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:0,64,16,16] [color=blue]Ancient Bottle Gourd Seeds[/color][/itemtooltip] 
@@ -8405,23 +8458,44 @@ Recipe Unlocks:
   = [itemtooltip=(O)DN.SnS_ancientglowinghuckleberry.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:32,16,16,16] [color=blue]Ancient Glowing Huckleberry Seeds[/color][/itemtooltip]
   = [itemtooltip=(O)DN.SnS_ancienthuckleberryicecream][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:144,32,16,16] [color=blue]Ancient Huckleberry Ice Cream[/color][/itemtooltip]
  
-> Level 10 - See [color=black]Professions[/color] later on this page.
+> Level 10 - See the [link=COT/DruidicsProfessions]Druidics Professions[/link] page.",
+
+"guidebook.chapter.COT.DruidicsProfessions": "[center][font=dialogue]Professions[/font][/center]
+  
+Like vanilla skills, the Druidics skill provides professions that change the gameplay experience at levels 5 and 10.
  
-[font=dialogue]Professions[/font]
-[color=DarkBlue]-Level 5-[/color]
-= [icon=SMAPI/kcc.sns/assets/druidics/skilledshapeshifter.png:0,0,16,16][color=MediumBlue]Skilled Shapeshifter[/color] - Adds stamina regeneration ability to shapeshifting, after not moving for a few seconds.
-= [icon=SMAPI/kcc.sns/assets/druidics/ancientagronomist.png:0,0,16,16][color=MediumBlue]Ancient Agronomist[/color] - Reduces cost of creating ancient druidic seeds by one essence.
+[font=dialogue]Level 5[/font]
+= [icon=SMAPI/kcc.sns/assets/druidics/skilledshapeshifter.png:0,0,16,16] [color=MediumBlue]Skilled Shapeshifter[/color]
+    Adds stamina regeneration ability to
+    shapeshifting. Occurs after not moving
+    for a few seconds.
+= [icon=SMAPI/kcc.sns/assets/druidics/ancientagronomist.png:0,0,16,16] [color=MediumBlue]Ancient Agronomist[/color]
+    Reduces cost of creating ancient
+    druidic seeds by one essence.
  
-[color=DarkBlue]-Level 10-[/color]
+[font=dialogue]Level 10[/font]
 [color=MediumBlue]Skilled Shapeshifter Track[/color]
-= [icon=SMAPI/kcc.sns/assets/druidics/stagpath.png:0,0,16,16][color=blue]Stag's Path[/color] - Adds health regeneration to stamina regeneration with double the speed.
-= [icon=SMAPI/kcc.sns/assets/druidics/wolfpath.png:0,0,16,16][color=blue]Wolf's Path[/color] - Adds ability to fight while shapeshifted, as well as a defense and attack buff. 
-  > Unlocks the [texttooltip=Shapeshift (Wolf):Transform into a wolf, giving a speed boost and a buff to your foraging skill. 
+= [icon=SMAPI/kcc.sns/assets/druidics/stagpath.png:0,0,16,16] [color=blue]Stag's Path[/color] 
+    Adds health regeneration to stamina
+    regeneration with double the speed.
+= [icon=SMAPI/kcc.sns/assets/druidics/wolfpath.png:0,0,16,16] [color=blue]Wolf's Path[/color] 
+    Adds ability to fight while shapeshifted,
+    as well as a defense and attack buff. 
+    Unlocks the [texttooltip=Shapeshift (Wolf):Transform into a wolf, giving a speed boost and a buff to your foraging skill. 
 Also gains combat abilities.][icon=SMAPI/kcc.sns/assets/druidics/wolfpath.png:0,0,16,16] [color=purple]Shapeshift (Wolf)[/color][/texttooltip] ability.
+    (Usable with the [link=Title/Mechanics]Adventure Bar[/link])
  
 [color=MediumBlue]Ancient Agronomist Track[/color]
-= [icon=SMAPI/kcc.sns/assets/druidics/branchofmidgard.png:0,0,16,16][color=blue]Branch of Midgard[/color] - All ancient crops grow 10% faster, and all artisan goods derived from them are worth 10% more. Stacks with Artisan and Agriculturist.
-= [icon=SMAPI/kcc.sns/assets/druidics/branchofyggdrasil.png:0,0,16,16][color=blue]Branch of Yggdrasil[/color] - Druidic essences have an additional 10% chance to drop. Druidic crops water surrounding crops with the same range as a Quality Sprinkler.",
+= [icon=SMAPI/kcc.sns/assets/druidics/branchofmidgard.png:0,0,16,16] [color=blue]Branch of Midgard[/color]
+    All ancient crops grow 10% faster, and
+    all artisan goods derived from them are
+    worth 10% more. 
+    > Stacks with Artisan and Agriculturist.
+= [icon=SMAPI/kcc.sns/assets/druidics/branchofyggdrasil.png:0,0,16,16] [color=blue]Branch of Yggdrasil[/color]
+     Druidic essences have an additional 10%
+     chance to drop. Druidic crops water 
+     surrounding crops with the same range 
+     as a Quality Sprinkler.",
 
 "guidebook.chapter.UP.name": "Under Pressure",
 "guidebook.chapter.UP.Intro": "[center][font=dialogue]Introduction[/font][/center]
@@ -8644,7 +8718,7 @@ keeps enemies away for 30 seconds.
 > Unlimited daily use
 > Aether cost: 10
  ][icon=SMAPI/kcc.sns/assets/abilities.png:80,0,16,16][color=purple]Enduring Melody[/color][/texttooltip].
-> Level 5 - Unlocks one of two songs based on your profession choice:
+> Level 5 - Unlocks one of two songs based on your [link=UP/BardicsProfessions]profession[/link] choice:
  
   = College of Eloquence - [texttooltip=Rogues' Humorsque:Offers a buff depending on who it's played to.
  
@@ -8680,16 +8754,19 @@ obelisks you've acquired.
 > Unlimited daily use
 > Aether cost: 15
  ][icon=SMAPI/kcc.sns/assets/abilities.png:48,16,16,16][color=purple]A Walk in Adante[/color][/texttooltip].
-> Level 10 - Upgrades your song choice at level 5.
+> Level 10 - Upgrades your song choice at level 5.",
+
+"guidebook.chapter.UP.BardicsProfessions": "[center][font=dialogue]Professions[/font][/center]
  
-[font=dialogue]Professions[/font]
-[color=DarkBlue]-Level 5-[/color]
-= [color=MediumBlue]College of Eloquence[/color]
+Like vanilla skills, the Bardics skill provides professions that change the gameplay experience at levels 5 and 10.
+ 
+[font=dialogue]Level 5[/font]
+= [icon=SMAPI/kcc.sns/assets/bardics/CollegeOfEloquence.png:0,0,16,16] [color=MediumBlue]College of Eloquence[/color]
     Learns the song [icon=SMAPI/kcc.sns/assets/abilities.png:96,0,16,16][color=purple]Rogues' Humorsque[/color].
-= [color=MediumBlue]College of Valor[/color]
+= [icon=SMAPI/kcc.sns/assets/bardics/CollegeOfValor.png:0,0,16,16] [color=MediumBlue]College of Valor[/color]
     Learns the song [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color].
  
-[color=DarkBlue]-Level 10-[/color]
+[font=dialogue]Level 10[/font]
 [color=MediumBlue]College of Eloquence Track[/color]
 = [icon=SMAPI/kcc.sns/assets/bardics/animatedperformance.png:0,0,16,16] [color=Blue]Animated Performance[/color]
     Strength of Bardic buffs are doubled.
@@ -8701,7 +8778,87 @@ obelisks you've acquired.
     Damage of [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color] is doubled.
 = [icon=SMAPI/kcc.sns/assets/bardics/wordsofmajesty.png:0,0,16,16] [color=Blue]Words of Majesty[/color]
     Damage of [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color] is extended
-    to the entire location."
+    to the entire location.",
+
+"guidebook.chapter.TOP.name": "The Other Promise",
+"guidebook.chapter.TOP.Intro": "[center][font=dialogue]Introduction[/font][/center]
+   
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
+
+"guidebook.chapter.TOP.Roslin": "[nospacing]
+[nextposition=0,10][center=300][font=dialogue]Roslin[/font][/center]
+[offset=118,50][image=Characters/Roslin:0,0,16,32:4]
+[offset=-118,144][center=300]Pronouns: She/Her[/center]
+[offset=0,32][center=300]Birthday: Spring 26[/center]
+[nextposition=322,16][image=Portraits/Roslin:0,0,64,64:4]
+[nextposition=0,288]
+[/nospacing]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nisi ut aliquip ex ea commodo consequat.",
+
+"guidebook.chapter.TOP.Dandelion": "[nospacing]
+[nextposition=0,10][center=300][font=dialogue]Dandelion[/font][/center]
+[offset=118,50][image=Characters/Dandelion:0,0,16,32:4]
+[offset=-118,144][center=300]Pronouns: She/Her[/center]
+[offset=0,32][center=300]Birthday: Summer 16[/center]
+[nextposition=322,16][image=Portraits/Dandelion:0,0,64,64:4]
+[nextposition=0,288]
+[/nospacing]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nisi ut aliquip ex ea commodo consequat.",
+
+"guidebook.chapter.TOP.Solomon": "[nospacing]
+[nextposition=0,10][center=300][font=dialogue]Solomon[/font][/center]
+[offset=118,50][image=Characters/Solomon:0,0,16,32:4]
+[offset=-118,144][center=300]Pronouns: He/Him[/center]
+[offset=0,32][center=300]Birthday: ???[/center]
+[nextposition=322,16][image=Portraits/Solomon:0,0,64,64:4]
+[nextposition=0,288]
+[/nospacing]
+Probably mention he's unfriendable. Lorem impsum dalor whatever consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+
+"guidebook.chapter.TOP.Events": "events
+Pain and agony awaits
+(i'm being dramatic)",
+
+"guidebook.chapter.TOP.SorcererSkill": "sorcerer skill
+Data collection required",
+
+"guidebook.chapter.TOP.SorcererProfessions": "professions
+Data collection required",
+
+"guidebook.chapter.TOP.ElementalEssences": "elemental essences
+Data collection required",
+
+"guidebook.chapter.TOP.DeepDark": "Deep Dark
+Fucking Kill Me This Place Needs Its Own Wiki
+ 
+(im being dramatic again)
+(...slightly)
+(might do well with its own tab....)",
+
+"guidebook.chapter.Epilogue.name": "Epilogue",
+
+"guidebook.chapter.Epilogue.Intro": "[center][font=dialogue]Introduction[/font][/center]
+   
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
+
+"guidebook.chapter.Epilogue.Events": "events
+less pain and agony awaits
+(I'm being less dramatic)",
+
+"guidebook.chapter.Epilogue.PaladinSkill": "skill
+data collection required",
+
+"guidebook.chapter.Epilogue.PaladinProfessions": "professions
+data collection required",
+
+"guidebook.chapter.Epilogue.Shields": "Shields
+Data collection required",
+
+"guidebook.chapter.Epilogue.FinalMessage": "[center][font=dialogue]Final Message[/font][/center]
+   
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+
+
 
 
 }

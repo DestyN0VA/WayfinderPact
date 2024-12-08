@@ -21,18 +21,22 @@
                             "Condition": "TRUE",
                             "Pages": [
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.Title.TitlePage |ConfigMenuLinks={{ConfigMenuLinks}} {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.Title.TitlePage |ConfigMenuLinks={{ConfigMenuLinks}}}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.Title.Introduction {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.Title.Introduction}}"
                                 },
                                 {
                                     "Id": "Mechanics",
-                                    "Contents": "{{i18n: guidebook.chapter.Title.NewMechanics {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.Title.NewMechanics}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.Title.TableOfContents {{HectorPronouns}}}}"
-                                }
+                                    "Contents": "{{i18n: guidebook.chapter.Title.TableOfContents}}",
+                                },
+                                {
+                                    "Id": "Cheats",
+                                    "Contents": "{{i18n: guidebook.chapter.Title.Cheats}}"
+                                },
                             ]
                         },
                         "NEA": {
@@ -48,22 +52,36 @@
                             "Pages": [
                                 {
                                     "Id": "Intro",
-                                    "Contents": "{{i18n: guidebook.chapter.NEA.Intro {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.NEA.Intro}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.NEA.Mateo {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.NEA.Mateo}}"
                                 },
                                 {
                                     "Contents": "{{i18n: guidebook.chapter.NEA.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}}}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.NEA.Underforge}}"
+                                    "Id": "ArtificerSkill",
+                                    "Contents": "{{i18n: guidebook.chapter.NEA.ArtificerSkill}}",
+                                   // "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18"
                                 },
                                 {
-                                    "Id": "ArtificerSkill",
-                                    "Contents": "{{i18n: guidebook.chapter.NEA.ArtificerSkill {{HectorPronouns}}}}",
+                                    "Id": "ArtificerProfessions",
+                                    "Contents": "{{i18n: guidebook.chapter.NEA.ArtificerProfessions}}",
                                    // "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18"
-                                }
+                                },
+                                {
+                                    "Id": "Underforge",
+                                    "Contents": "{{i18n: guidebook.chapter.NEA.Underforge}}",
+                                    // "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18"
+                                    
+                                },
+                                {
+                                    "Id": "Armor",
+                                    "Contents": "{{i18n: guidebook.chapter.NEA.Armor}}",
+                                    // "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18"
+                                    
+                                },
                             ]
                         },
                         "COT": {
@@ -82,20 +100,26 @@
                                     "Contents": "{{i18n: guidebook.chapter.COT.Intro{{HectorPronouns}} }}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.COT.Hector |DailyPronouns={{HectorPN1}}/{{HectorPN2}} {{HectorPronouns}} |TrueName={{TrueName}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.COT.Hector {{HectorPronouns}} |TrueName={{TrueName}}}}"
                                 },
                                 {
                                     "Contents": "{{i18n: guidebook.chapter.COT.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}} |TrueName={{TrueName}}}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.COT.DruidicEssence {{HectorPronouns}} |TrueName={{TrueName}}}}",
-                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.12"
+                                    "Id": "DruidicsSkill",
+                                    "Contents": "{{i18n: guidebook.chapter.COT.DruidicsSkill}}",
+                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16"
                                 },
                                 {
-                                    "Id": "DruidicsSkill",
-                                    "Contents": "{{i18n: guidebook.chapter.COT.DruidicsSkill {{HectorPronouns}} |TrueName={{TrueName}}}}",
+                                    "Id": "DruidicsProfessions",
+                                    "Contents": "{{i18n: guidebook.chapter.COT.DruidicsProfessions}}",
                                     //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16"
-                                }
+                                },
+                                {
+                                    "Id": "DruidicEssence",
+                                    "Contents": "{{i18n: guidebook.chapter.COT.DruidicEssence}}",
+                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.12"
+                                },
                             ]
                         },
                         "UP": {
@@ -121,7 +145,12 @@
                                 },
                                 {
                                     "Id": "BardicsSkill",
-                                    "Contents": "{{i18n: guidebook.chapter.UP.BardicsSkill |HorseName={{KCC.SnS/HorseName}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.UP.BardicsSkill |HorseName={{KCC.SnS/HorseName}}}}",
+                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14"
+                                },
+                                {
+                                    "Id": "BardicsProfessions",
+                                    "Contents": "{{i18n: guidebook.chapter.UP.BardicsProfessions |HorseName={{KCC.SnS/HorseName}}}}",
                                     //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14"
                                 }
                             ]
@@ -142,13 +171,26 @@
                                     "Contents": "{{i18n: guidebook.chapter.TOP.Intro}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.TOP.Roslin {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.TOP.Roslin}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.TOP.Dandelion {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.TOP.Dandelion}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.TOP.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.TOP.Solomon}}"
+                                },
+                                {
+                                    "Contents": "{{i18n: guidebook.chapter.TOP.Events |VariableTimegate={{VariableTimegate}}}}"
+                                },
+                                {
+                                    "Id": "SorcererSkill",
+                                    "Contents": "{{i18n: guidebook.chapter.TOP.SorcererSkill}}",
+                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6"
+                                },
+                                {
+                                    "Id": "SorcererProfessions",
+                                    "Contents": "{{i18n: guidebook.chapter.TOP.SorcererProfessions}}",
+                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6"
                                 },
                                 {
                                     "Contents": "{{i18n: guidebook.chapter.TOP.ElementalEssences}}",
@@ -158,16 +200,6 @@
                                     "Contents": "{{i18n: guidebook.chapter.TOP.DeepDark}}",
                                     //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Roslin.6"
                                 },
-                                {
-                                    "Id": "SorcererSkill",
-                                    "Contents": "{{i18n: guidebook.chapter.TOP.SorcererSkill}}",
-                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6"
-                                },
-                                {
-                                    "Id": "PaladinSkill",
-                                    "Contents": "{{i18n: guidebook.chapter.TOP.PaladinSkill}}",
-                                    //"Condition": "ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\""
-                                }
                             ]
                         },
                         "Epilogue": {
@@ -186,10 +218,20 @@
                                     "Contents": "{{i18n: guidebook.chapter.Epilogue.Intro}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.Epilogue.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.Epilogue.Events |VariableTimegate={{VariableTimegate}}}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.Epilogue.FinalMessage {{HectorPronouns}}}}"
+                                    "Id": "PaladinSkill",
+                                    "Contents": "{{i18n: guidebook.chapter.Epilogue.PaladinSkill}}",
+                                    //"Condition": "ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\""
+                                },
+                                {
+                                    "Id": "PaladinProfessions",
+                                    "Contents": "{{i18n: guidebook.chapter.Epilogue.PaladinProfessions}}",
+                                    //"Condition": "ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\""
+                                },
+                                {
+                                    "Contents": "{{i18n: guidebook.chapter.Epilogue.FinalMessage}}"
                                 }
                             ]
                         }

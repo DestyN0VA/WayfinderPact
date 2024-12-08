@@ -882,7 +882,7 @@
     },
     {
       "Name": "HectorPronouns",
-      "Value": "|HPN1={{HectorPN1}} |HPN2={{HectorPN2}} |HPN3={{HectorPN3}} |HPN4={{HectorPN4}}"
+      "Value": "|HPN1={{Lowercase:{{HectorPN1}}}} |HPN2={{Lowercase:{{HectorPN2}}}} |HPN3={{Lowercase:{{HectorPN3}}}} |HPN4={{Lowercase:{{HectorPN4}}}} |CHPN1={{HectorPN1}} |CHPN2={{HectorPN2}} |CHPN3={{HectorPN3}} |CHPN4={{HectorPN4}}"
     },
     {
       "Name": "DynamicDnDClass",
