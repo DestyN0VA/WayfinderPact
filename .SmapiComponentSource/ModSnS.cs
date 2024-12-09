@@ -11,6 +11,7 @@ using RadialMenu;
 using SpaceCore;
 using SpaceShared.APIs;
 using StardewModdingAPI;
+using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
 using StardewValley;
 using StardewValley.BellsAndWhistles;
@@ -33,23 +34,6 @@ using System.Runtime.CompilerServices;
 
 namespace SwordAndSorcerySMAPI
 {
-    public class SteelShieldRecipe : CustomCraftingRecipe
-    {
-        public override string Description => ItemRegistry.GetDataOrErrorItem("(W)DN.SnS_SteelShield").Description;
-
-        public override Texture2D IconTexture => ItemRegistry.GetDataOrErrorItem("(W)DN.SnS_SteelShield").GetTexture();
-
-        public override Rectangle? IconSubrect => ItemRegistry.GetDataOrErrorItem("(W)DN.SnS_SteelShield").GetSourceRect();
-
-        private IngredientMatcher[] ingreds = [new ObjectIngredientMatcher("(O)335", 5), new ObjectIngredientMatcher("(O)388", 25)];
-        public override IngredientMatcher[] Ingredients => ingreds;
-
-        public override Item CreateResult()
-        {
-            return ItemRegistry.Create("(W)DN.SnS_SteelShield");
-        }
-    }
-
     public class FinalePartnerInfo
     {
         public string IntermissionEventId { get; set; }
@@ -235,6 +219,8 @@ namespace SwordAndSorcerySMAPI
 
         public bool LltkToggleRightClick = false;
         public KeybindList LltkToggleKeybind = new(new Keybind(SButton.None));
+        public string LltkDifficulty = "Medium";
+
 
         public KeybindList AbilityBar1Slot1 = new(new Keybind(SButton.LeftControl, SButton.D1));
         public KeybindList AbilityBar1Slot2 = new(new Keybind(SButton.LeftControl, SButton.D2));
@@ -705,15 +691,20 @@ namespace SwordAndSorcerySMAPI
                 if (Game1.player.knowsRecipe("DN.SnS_LightbringerArrow") && !Game1.player.knowsRecipe("DN.SnS_LightbringerBullet"))
                     Game1.player.craftingRecipes.Add("DN.SnS_LightbringerBullet", 0);
             }
-
-
         }
 
-        private void Input_ButtonPressed(object sender, StardewModdingAPI.Events.ButtonPressedEventArgs e)
+        private void Input_ButtonPressed(object sender, ButtonPressedEventArgs e)
         {
+            if (!Context.IsWorldReady) return;
+
+            bool LLTKDifficulty = Game1.getFarm().grandpaScore.Value == 4 &&
+                (Config.LltkDifficulty.EqualsIgnoreCase("Easy") || Game1.player.achievements.Contains(42)) &&
+                (!Config.LltkDifficulty.EqualsIgnoreCase("Hard") || Utility.percentGameComplete() >= 0.5);
+
             if (e.Button.IsActionButton() && Game1.currentLocation is Farm farm &&
-                e.Cursor.GrabTile == farm.GetGrandpaShrinePosition().ToVector2() &&
-                farm.grandpaScore.Value == 4 && !Game1.player.GetFarmerExtData().hasTakenLoreWeapon.Value)
+                e.Cursor.GrabTile == farm.GetGrandpaShrinePosition().ToVector2() && 
+                !Game1.player.GetFarmerExtData().hasTakenLoreWeapon.Value &&
+                LLTKDifficulty)
             {
                 Game1.player.addItemByMenuIfNecessaryElseHoldUp(new MeleeWeapon("DN.SnS_longlivetheking"));
                 Game1.player.GetFarmerExtData().hasTakenLoreWeapon.Value = true;
@@ -1012,7 +1003,7 @@ namespace SwordAndSorcerySMAPI
                     }
 
                     double perc = x;
-                    string manaStr = $"{(int)(10*x)}/10";
+                    string manaStr = $"{MathF.Round((float)(10*x), mode: MidpointRounding.ToPositiveInfinity)}/10";
                     IClickableMenu.drawTextureBox(b, (int)pos.X, (int)pos.Y, 64 * 4 + 24, 32 + 12 + 12, Color.White);
                     b.Draw(Game1.staminaRect, new Rectangle((int)pos.X + 12, (int)pos.Y + 12, (int)(64 * 4 * perc), 32), Utility.StringToColor($"{ModSnS.Config.Red} {ModSnS.Config.Green} {ModSnS.Config.Blue}") ?? Color.Aqua);
                     b.DrawString(Game1.smallFont, manaStr, new Vector2(pos.X + 12 + 64 * 4 / 2 - Game1.smallFont.MeasureString(manaStr).X / 2, (int)pos.Y + 12), Utility.StringToColor($"{ModSnS.Config.TextRed} {ModSnS.Config.TextGreen} {ModSnS.Config.TextBlue}") ?? Color.Black);
@@ -1022,7 +1013,8 @@ namespace SwordAndSorcerySMAPI
                 gmcm.AddParagraph(ModManifest, I18n.Config_Section_Lltk_Text);
                 gmcm.AddBoolOption(ModManifest, () => Config.LltkToggleRightClick, (val) => Config.LltkToggleRightClick = val, I18n.Config_LltkToggleRightClick_Name, I18n.Config_LltkToggleRightClick_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.LltkToggleKeybind, (val) => Config.LltkToggleKeybind = val, I18n.Config_LltkToggleKeybind_Name, I18n.Config_LltkToggleKeybind_Description);
-                
+                gmcm.AddTextOption(ModManifest, () => Config.LltkDifficulty, (val) => Config.LltkDifficulty = val, I18n.Config_LltkDifficulty_Name, I18n.Config_LltkDifficulty_Description, ["Easy", "Medium", "Hard"]);    
+            
                 gmcm.AddSectionTitle(ModManifest, I18n.Section_Keybinds_Name, I18n.Section_Keybinds_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.ConfigureAdventureBar, (val) => Config.ConfigureAdventureBar = val, I18n.Keybind_ConfigureBar_Name, I18n.Keybind_ConfigureBar_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.ToggleAdventureBar, (val) => Config.ToggleAdventureBar = val, I18n.Keybind_ToggleBar_Name, I18n.Keybind_ToggleBar_Description);
@@ -1052,8 +1044,6 @@ namespace SwordAndSorcerySMAPI
             }
 
             Skills.RegisterSkill(RogueSkill = new RogueSkill());
-            CustomCraftingRecipe.CraftingRecipes.Add("DN.SnS_Bow", new BowCraftingRecipe());
-            CustomCraftingRecipe.CraftingRecipes.Add("DN.SnS_SteelShield", new SteelShieldRecipe());
 
             sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
             sc.RegisterSerializerType(typeof(ThrownShield));

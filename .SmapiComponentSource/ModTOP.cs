@@ -1288,7 +1288,7 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(GameLocation), nameof(GameLocation.monsterDrop))]
     public static class DropVariousMonsterEssencesPatch
     {
-        public static void Postfix(GameLocation __instance, Monster monster, int x, int y, Farmer who)
+        public static void Postfix(GameLocation __instance, Monster monster, int x, int y)
         {
             if (!Game1.player.eventsSeen.Contains("SnS.Ch4.Roslin.1"))
                 return;

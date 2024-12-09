@@ -27,11 +27,11 @@ public static class ShieldCategoryName
 {
     public static void Postfix(MeleeWeapon __instance, ref string __result)
     {
-        if (__instance.GetData().CustomFields?.ContainsKey("DN.SnS_Shield") ?? false)
+        if (__instance.GetData()?.CustomFields?.ContainsKey("DN.SnS_Shield") ?? false)
         {
             __result = I18n.ShieldCategory();
         }
-        if (__instance.GetData().CustomFields?.ContainsKey("DN.SnS_Boomerang") ?? false)
+        if (__instance.GetData()?.CustomFields?.ContainsKey("DN.SnS_Boomerang") ?? false)
         {
             __result = I18n.BoomerangeCategory();
         }
@@ -43,11 +43,11 @@ public static class ShieldCategoryColor
 {
     public static void Postfix(Tool __instance, ref Color __result)
     {
-        if (__instance is MeleeWeapon && ((__instance as MeleeWeapon).GetData().CustomFields?.ContainsKey("DN.SnS_Shield") ?? false))
+        if (__instance is MeleeWeapon && ((__instance as MeleeWeapon).GetData()?.CustomFields?.ContainsKey("DN.SnS_Shield") ?? false))
         {
-            __result = Color.CornflowerBlue;
+            __result = Color.BlueViolet;
         }
-        if (__instance is MeleeWeapon && ((__instance as MeleeWeapon).GetData().CustomFields?.ContainsKey("DN.SnS_Boomerang") ?? false))
+        if (__instance is MeleeWeapon && ((__instance as MeleeWeapon).GetData()?.CustomFields?.ContainsKey("DN.SnS_Boomerang") ?? false))
         {
             __result = Color.MonoGameOrange;
         }
@@ -119,7 +119,7 @@ public static class DualWieldingDrawPatch
             return;
 
         var __instance = f.CurrentTool as MeleeWeapon;
-        if ((__instance.GetData().CustomFields?.ContainsKey("DN.SnS_Shield") ?? false))
+        if ((__instance.GetData()?.CustomFields?.ContainsKey("DN.SnS_Shield") ?? false))
             return;
 
         var lastUser = __instance?.lastUser;
@@ -127,7 +127,7 @@ public static class DualWieldingDrawPatch
             return;
 
         var offhand = lastUser.GetOffhand();
-        if (offhand == null || (offhand.GetData().CustomFields?.ContainsKey("DN.SnS_Shield") ?? false))
+        if (offhand == null || (offhand.GetData()?.CustomFields?.ContainsKey("DN.SnS_Shield") ?? false))
             return;
         
         doingDualWieldCall = true;
@@ -218,7 +218,7 @@ public static class DualWieldingOffhandParryPatch
         {
             ret.Add(insn);
             if (insn.opcode == OpCodes.Stloc && (int) insn.operand == local ||
-                 insn.opcode.ToString().StartsWith("stloc.") && insn.opcode.ToString().Substring("stloc.".Length) == local.ToString() )
+                 insn.opcode.ToString().StartsWith("stloc.") && insn.opcode.ToString().Substring("stloc.".Length) == local.ToString())
             {
                 ret.Add(new(OpCodes.Ldloc, local));
                 ret.Add(new(OpCodes.Ldarg_0));

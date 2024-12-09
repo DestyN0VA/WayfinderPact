@@ -33,6 +33,7 @@
                     "SpousePatio": {
                         "MapAsset": "{{HectorSpousePatioOnOff}}"
                     },
+                    "SpouseWantsChildren": "false",
                     "Home": [
                         {
                             "ID": "Hector - Tower",

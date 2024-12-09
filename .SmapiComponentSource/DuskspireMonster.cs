@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
+using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Companions;
 using StardewValley.Monsters;
@@ -9,6 +10,8 @@ using StardewValley.Projectiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
+using System.Reflection;
 
 namespace SwordAndSorcerySMAPI;
 public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") : Monster(name, pos)
@@ -16,6 +19,13 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
     private readonly NetEvent0 laughEvent = new();
     private readonly NetEvent1Field<bool, NetBool> swingEvent = new();
     private readonly NetFloat noMovementTime = [];
+
+    private int[] Up = [8, 9, 10, 11];
+    private int[] Down = [0, 1, 2, 3];
+    private int[] Left = [12, 13, 14, 15];
+    private int[] Right = [4, 5, 6, 7];
+    private int WalkTimer = 0;
+    private int currWalkIndex = 0;
 
     private int prevFrame = 0;
     private Vector2 lastPos = Vector2.Zero;
@@ -88,7 +98,6 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
                         "26", "25", "27", "14", "13"
                     ];
 
-                    Game1.playSound("SnS.DuskspireLaugh_NoLoop");
                     for (int i = 0; i < 16; ++i)
                     {
                         float angle = (360 / 16 * i) * MathF.PI / 180;
@@ -123,6 +132,8 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
                     {
                         doingLaugh = false;
                         laughEvent.Fire();
+                        DelayedAction.playSoundAfterDelay("SnS_DuskspireLaugh_NoLoop", 500, currentLocation, Position);
+                        Game1.playSound("SnS.DuskspireLaugh_NoLoop");
                         noMovementTime.Value = 66 * 75;
                     }
                     else if (dist < Sprite.SpriteWidth * Game1.pixelZoom / 2 - 75)
@@ -146,9 +157,8 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
             }
         }
 
-        if (noMovementTime.Value <= 0)
+        if (noMovementTime.Value <= 0 && WalkTimer <= 0)
         {
-
             Vector2 posDiff = Position - lastPos;
             int dir;
             if (stunTime.Value > 0)
@@ -169,15 +179,17 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
             }
             switch (dir)
             {
-                case Game1.up: Sprite.AnimateUp(time, -45); break;
-                case Game1.down: Sprite.AnimateDown(time, -45); break;
-                case Game1.left: Sprite.AnimateLeft(time, -45); break;
-                case Game1.right: Sprite.AnimateRight(time, -45); break;
+                case Game1.up: Sprite.CurrentFrame = Up[currWalkIndex]; break;
+                case Game1.down: Sprite.CurrentFrame = Down[currWalkIndex]; break;
+                case Game1.left: Sprite.CurrentFrame = Left[currWalkIndex]; break;
+                case Game1.right: Sprite.CurrentFrame = Right[currWalkIndex]; break;
             }
+            currWalkIndex++;
+            WalkTimer = 75;
         }
         else
         {
-            //Sprite.animateOnce(time);
+            WalkTimer -= time.ElapsedGameTime.Milliseconds;
         }
 
         ModSnS.DuskspireDeathPos = Position - new Vector2(4, 4) * 64;
@@ -249,6 +261,135 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
                 return false;
             }
             return true;
+        }
+    }
+
+    [HarmonyPatch(typeof(Bat), "updateAnimation")]
+    public static class DropletDoesntSparkle
+    {
+        public static bool Prefix(Bat __instance, GameTime time)
+        {
+            if (__instance.Name != "Stygium Droplet") return true;
+
+            if (__instance.focusedOnFarmers || __instance.withinPlayerThreshold(6) || __instance.seenPlayer.Value || __instance.magmaSprite.Value)
+            {
+                __instance.Sprite.Animate(time, 0, 4, 80f);
+                if (__instance.cursedDoll.Value)
+                {
+                    __instance.shakeTimer -= time.ElapsedGameTime.Milliseconds;
+                    if (__instance.shakeTimer < 0)
+                    {
+                        __instance.shakeTimer = 50;
+                        if (__instance.magmaSprite.Value)
+                        {
+                            __instance.shakeTimer = (__instance.lungeTimer > 0) ? 50 : 100;
+                        }
+                    }
+                    IReflectedProperty<List<Vector2>> previousPositions = ModSnS.instance.Helper.Reflection.GetProperty<List<Vector2>>(__instance, "previousPositions", true);
+                    List<Vector2> pP = previousPositions.GetValue();
+                    pP.Add(__instance.Position);
+                    if (pP.Count > 8)
+                    {
+                        pP.RemoveAt(0);
+                    }
+                    previousPositions.SetValue(pP);
+                }
+            }
+            else
+            {
+                __instance.Sprite.currentFrame = 4;
+                __instance.Halt();
+            }
+            ModSnS.instance.Helper.Reflection.GetMethod(__instance, "resetAnimationSpeed", true).Invoke();
+            return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(Bat), nameof(Bat.takeDamage))]
+    public static class DropletDoesntSparkle2
+    {
+        public static bool Prefix(Bat __instance, int damage, int xTrajectory, int yTrajectory, double addedPrecision, Farmer who, ref int __result)
+        {
+            if (__instance.Name != "Stygium Droplet") return true;
+
+            if (__instance.Age == 789)
+            {
+                __result = -1;
+                return false;
+            }
+            __instance.lungeVelocity = Vector2.Zero;
+            if (__instance.lungeTimer > 0)
+            {
+                __instance.nextLunge = __instance.lungeFrequency;
+                __instance.lungeTimer = 0;
+            }
+            else if (__instance.nextLunge < 1000)
+            {
+                __instance.nextLunge = 1000;
+            }
+            int actualDamage = Math.Max(1, damage - __instance.resilience.Value);
+            __instance.seenPlayer.Value = true;
+            if (Game1.random.NextDouble() < __instance.missChance.Value - __instance.missChance.Value * addedPrecision)
+            {
+                actualDamage = -1;
+            }
+            else
+            {
+                __instance.Health -= actualDamage;
+                __instance.setTrajectory(xTrajectory / 3, yTrajectory / 3);
+                __instance.wasHitCounter.Value = 500;
+                if (__instance.magmaSprite.Value)
+                {
+                    __instance.currentLocation.playSound("magma_sprite_hit");
+                }
+                else
+                {
+                    __instance.currentLocation.playSound("hitEnemy");
+                }
+                if (__instance.Health <= 0)
+                {
+                    __instance.deathAnimation();
+                    if (!__instance.magmaSprite.Value)
+                    {
+                        Game1.Multiplayer.broadcastSprites(__instance.currentLocation, new TemporaryAnimatedSprite(44, __instance.Position, Color.DarkMagenta, 10));
+                    }
+                    if (__instance.cursedDoll.Value)
+                    {
+                        Vector2 pixelPosition = __instance.Position;
+                        if (__instance.magmaSprite.Value)
+                        {
+                            __instance.currentLocation.playSound("magma_sprite_die");
+                        }
+                        else
+                        {
+                            __instance.currentLocation.playSound("rockGolemHit");
+                        }
+                        if (__instance.hauntedSkull.Value)
+                        {
+                            Game1.Multiplayer.broadcastSprites(who.currentLocation, new TemporaryAnimatedSprite(__instance.Sprite.textureName.Value, new Rectangle(0, 32, 16, 16), 2000f, 1, 9999, pixelPosition, flicker: false, flipped: false, 1f, 0.02f, Color.White, 4f, 0f, 0f, 0f)
+                            {
+                                motion = new Vector2((float)xTrajectory / 4f, Game1.random.Next(-12, -7)),
+                                acceleration = new Vector2(0f, 0.4f),
+                                rotationChange = (float)Game1.random.Next(-200, 200) / 1000f
+                            });
+                        }
+                        else if (who != null && !__instance.magmaSprite.Value)
+                        {
+                            Game1.Multiplayer.broadcastSprites(who.currentLocation, new TemporaryAnimatedSprite("LooseSprites\\Cursors", new Rectangle(388, 1894, 24, 22), 40f, 6, 9999, pixelPosition, flicker: false, flipped: true, 1f, 0f, Color.Black * 0.67f, 4f, 0f, 0f, 0f)
+                            {
+                                motion = new Vector2(8f, -4f)
+                            });
+                        }
+                    }
+                    else
+                    {
+                        __instance.currentLocation.playSound("batScreech");
+                    }
+                }
+            }
+            __instance.addedSpeed = Game1.random.Next(-1, 1);
+            __result = actualDamage;
+            return false;
         }
     }
 

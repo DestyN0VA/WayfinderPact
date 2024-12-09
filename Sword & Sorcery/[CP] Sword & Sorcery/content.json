@@ -665,10 +665,7 @@
     },
     {
       "Name": "HectorRelationshipStatus",
-      "Value": "false",
-      "When": {
-        "HasFlag |contains=HectorRomanticFlag": false
-      }
+      "Value": "false"
     },
     {
       "Name": "HectorRelationshipStatus",
@@ -707,10 +704,7 @@
     },
     {
       "Name": "TrueName",
-      "Value": "{{i18n:Core.Hector.Name}}",
-      "When": {
-        "HasSeenEvent |contains=SnS.Ch2.Hector.16": false
-      }
+      "Value": "{{i18n:Core.Hector.Name}}"
     },
     {
       "Name": "TrueName",
@@ -1405,7 +1399,7 @@
       }
     },
     {
-      "Name": "MateoSpouseRoomOnOff",
+      "Name": "HectorSpouseRoomOnOff",
       "Value": "SpouseRoomEmpty",
       "When": {
         "HectorSpouseRoomConfig": false
@@ -1763,10 +1757,7 @@
     },
     {
       "Name": "HectorIsland",
-      "Value": "false",
-      "When": {
-        "HasSeenEvent |contains=SnS.Ch2.Hector.6": false
-      }
+      "Value": "false"
     },
     {
       "Name": "HectorIsland",

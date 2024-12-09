@@ -417,7 +417,7 @@ namespace MageDelve.Mercenaries
             }
         }
 
-        internal void ApplyAnimation(string tileSheet, int startFrame, float frameLength, int frameCount, int loops)
+        internal void ApplyAnimation(string tileSheet, int startFrame, float frameLength, int loops)
         {
             spriteStack.Push(Sprite);
             Sprite = new AnimatedSprite(tileSheet, startFrame, 16, 32);
@@ -439,7 +439,6 @@ namespace MageDelve.Mercenaries
 
             int mapW = loc.Map.Layers[0].LayerSize.Width;
             int mapH = loc.Map.Layers[0].LayerSize.Height;
-            var buildings = loc.Map.GetLayer("Buildings");
             pathfindSolids = new bool[mapW * mapH];
             for (int i = 0; i < pathfindSolids.Length; ++i)
             {

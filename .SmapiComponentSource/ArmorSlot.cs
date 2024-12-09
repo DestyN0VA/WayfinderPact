@@ -17,7 +17,7 @@ namespace SwordAndSorcerySMAPI
 
         internal static ConditionalWeakTable< Farmer, Holder > values = new();
 
-        public static void set_armorSlot( this Farmer farmer, NetRef<Item> newVal )
+        public static void set_armorSlot(this Farmer farmer, NetRef<Item> newVal)
         {
             // We don't actually want a setter for this one, since it should be readonly
             // Net types are weird

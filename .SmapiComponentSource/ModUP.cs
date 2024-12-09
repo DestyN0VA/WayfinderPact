@@ -853,7 +853,7 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(NPC), nameof(NPC.grantConversationFriendship))]
     public static class NpcFriendshipBardicsExpPatch
     {
-        public static void Postfix( NPC __instance, int amount )
+        public static void Postfix(int amount)
         {
             if (!Game1.player.eventsSeen.Contains(ModUP.BardicsEventId))
                 return;

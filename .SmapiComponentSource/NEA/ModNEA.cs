@@ -1,14 +1,10 @@
-﻿using SpaceShared.APIs;
-using HarmonyLib;
-//using NeverEndingAdventure.HarmonyPatches;
+﻿using HarmonyLib;
 using NeverEndingAdventure.Utils;
 using SpaceCore.Events;
 using StardewValley;
 using StardewModdingAPI;
-using StardewModdingAPI.Events;
 using System;
 using StardewValley.Buffs;
-using System.Linq;
 using StardewValley.Objects;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -53,14 +49,11 @@ namespace NeverEndingAdventure
             //Harmony harmony = new(this.ModManifest.UniqueID);
             //UntimedSO.ApplyPatch(harmony, Helper);
 
-            // Subscribing to SpaceEvents
-            SpaceEvents.OnEventFinished += SpaceEvents_OnEventFinished;
-            SpaceEvents.BeforeGiftGiven += SpaceEvents_BeforeGiftGiven;
-
             harmony.Patch(AccessTools.Method(typeof(Ring), nameof(Ring.CanCombine)),
                 postfix: new HarmonyMethod(typeof(ModNEA), nameof(PreventRingCombining)));
 
         }
+
         private static void PreventRingCombining(Ring __instance, Ring ring, ref bool __result)
         {
             if (__instance.ItemId == MateoGuildBadge || ring.ItemId == MateoGuildBadge ||
@@ -68,32 +61,6 @@ namespace NeverEndingAdventure
             {
                 __result = false;
             }
-        }
-
-        private void SpaceEvents_BeforeGiftGiven(object sender, EventArgsBeforeReceiveObject e)
-        {
-            if (e.Gift.Name == "Wilted Bouquet" && e.Npc.Name == "Mateo")
-            {
-                BreakupMateo(Game1.player);
-            }
-        }
-        private static void BreakupMateo(Farmer who)
-        {
-            //Removes romance mail flag if player has it, preventing the player from dating them again.
-            if (who.mailReceived.Remove("MateoRomanticFlag"))
-                who.mailReceived.Add("MateoHeartbreak");
-        }
-        private void SpaceEvents_OnEventFinished(object sender, EventArgs e)
-        {
-            if (Game1.CurrentEvent.id.Equals(12369014))
-            {
-                DatingMateo(Game1.player);
-            }
-        }
-        private static void DatingMateo(Farmer who)
-        {
-            Friendship friendship = who.friendshipData["Mateo"];
-            friendship.Status = FriendshipStatus.Dating;
         }
     }
 
