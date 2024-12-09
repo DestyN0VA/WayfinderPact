@@ -9,6 +9,10 @@
     "shield-category": "Shield",
     "shield-block-text": "Shield Block: {{cooldown}}",
 
+    "boomerange-category": "Angry Throwing Stick",
+
+    "cptoken.horse": "Horse",
+
     "ui-slot.armor": "Armor",
     "ui-slot.offhand": "Offhand",
 

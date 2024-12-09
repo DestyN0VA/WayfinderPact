@@ -4,13 +4,19 @@
             "LogName": "Deep Dark Dungeon Maps",
             "Action": "Load",
             "Target": "Maps/DeepDark1, Maps/DeepDark2, Maps/DeepDark3, Maps/DeepDark4, Maps/DeepDark5, Maps/DeepDark6, Maps/DeepDark7, Maps/DeepDark8, Maps/DeepDark9, Maps/DeepDark10, Maps/DeepDark11, Maps/DeepDark12, Maps/DeepDark13, Maps/DeepDark14, Maps/DeepDark15, Maps/DeepDark16, Maps/DeepDark17, Maps/DeepDark18, Maps/DeepDark19, Maps/DeepDark20, Maps/DeepDark21, Maps/DeepDark22, Maps/DeepDark23, Maps/DeepDark24, Maps/DeepDark25, Maps/DeepDark26, Maps/DeepDark27, Maps/DeepDark28, Maps/DeepDark29, Maps/DeepDark30, Maps/DeepDarkMushroomEntrance, Maps/DeepDarkLakeEntrance",
-            "FromFile": "Assets/Maps/DeepDark/Floors/{{TargetWithoutPath}}.tmx"
+            "FromFile": "Assets/Maps/DeepDark/{{TargetWithoutPath}}.tmx"
         },
         {
             "LogName": "Deep Dark Tilesheets",
             "Action": "Load",
-            "Target": "maps/DeepDarkTiles_1, maps/DeepDarkTiles_2, maps/DeepDarkTiles_3, maps/custommush1_animation, maps/DeepDark-algaesheet, maps/DeepDark-bubbles, maps/DeepDark-cobwebs, maps/DeepDark-Fires, maps/DeepDark-fog, maps/DeepDark-fog_cyan, maps/DeepDark-rocks, maps/DeepDark-roots, maps/DeepDark-watercaustics, maps/DeepDark-watercaustics_fading, maps/DeepDark-waterfall",
+            "Target": "maps/DeepDarkTiles_1, maps/DeepDarkTiles_2, maps/DeepDarkTiles_3, maps/custommush1_animation, maps/DeepDark-algaesheet, maps/DeepDark-bubbles, maps/DeepDark-cobwebs, maps/DeepDark-Fires, maps/DeepDark-fog, maps/DeepDark-fog_cyan, maps/DeepDark-rocks, maps/DeepDark-roots, maps/DeepDark-watercaustics, maps/DeepDark-watercaustics_fading, maps/DeepDark-waterfall, maps/DeepDark-rocks",
             "FromFile": "Assets/Tilesheets/DeepDark/{{TargetWithoutPath}}.png"
+          },
+          {
+            "LogName": "Deep Dark Monster Textures",
+            "Action": "Load",
+            "Target": "Monsters/DN.SnS/StygiumMiner, Monsters/DN.SnS/StygiumMiner_Mage, Monsters/DN.SnS/StygiumDroplet, Monsters/DN.SnS/StygiumLeviathan, Monsters/DN.SnS/StygiumBat, Monsters/DN.SnS/StygiumCrab, Monsters/DN.SnS/StygiumGolem_Blue, Monsters/DN.SnS/StygiumGolem_Purple, Monsters/DN.SnS/StygiumHead, Monsters/DN.SnS/StygiumMushroom, Monsters/DN.SnS/StygiumRex, Monsters/DN.SnS/StygiumSerpent, Monsters/DN.SnS/StygiumSkeleton, Monsters/DN.SnS/StygiumSkeleton_Rare, Monsters/DN.SnS/StygiumSkull, Monsters/DN.SnS/StygiumSquid",
+            "FromFile": "Assets/Monsters/{{TargetWithoutPath}}.png"
           },
         {
             "LogName": "Deep Dark Location (Dungeon Placeholder)",
@@ -42,7 +48,7 @@
                     "CanBePlacedOutdoors": true,
                     "CanBePlacedIndoors": true,
                     "IsLamp": false,
-                    "Texture": "{{InternalAssetKey: assets/Items & Crops/DeepDark_Treasure.png}}",
+                    "Texture": "Textures/DN.SnS/DeepDark_Treasure",
                     "SpriteIndex": 0,
                     "ContextTags": null,
                     "CustomFields": null
@@ -61,7 +67,7 @@
                     "Type": "Litter",
                     "Category": -999,
                     "Price": 0,
-                    "Texture": "{{InternalAssetKey: Assets/Tilesheets/DeepDark/DeepDark-rocks.png}}",
+                    "Texture": "maps/DeepDark-rocks",
                     "SpriteIndex": 35,
                     "Edibility": -300
                 },
@@ -72,7 +78,7 @@
                   "Type": "Basic",
                   "Category": -15,
                   "Price": 500,
-                  "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+                  "Texture": "Textures/DN.SnS/SnSObjects",
                   "SpriteIndex": 100,
                   "ExcludeFromRandomSale": true,
                   "ContextTags": [
@@ -88,7 +94,7 @@
                     "Type": "Basic",
                     "Category": -15,
                     "Price": 5000,
-                    "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+                    "Texture": "Textures/DN.SnS/SnSObjects",
                     "SpriteIndex": 99,
                     "ExcludeFromRandomSale": true,
                     "ContextTags": [
@@ -104,7 +110,7 @@
                     "Type": "Basic",
                     "Category": -28,
                     "Price": 2500,
-                    "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+                    "Texture": "Textures/DN.SnS/SnSObjects",
                     "SpriteIndex": 120,
                     "ExcludeFromRandomSale": true
                 }
@@ -254,7 +260,7 @@
                     "LargeMinableHealth": 15,
                     "LargeMinableSizeX": 2,
                     "LargeMinableSizeY": 2,
-                    "LargeMinableTexture": "{{InternalAssetKey: Assets/Tilesheets/DeepDark/DeepDark-rocks.png}}",
+                    "LargeMinableTexture": "maps/DeepDark-rocks",
                     "LargeMinableSpriteIndex": 2,
                     "LargeMinableDrops": [
                         [
@@ -397,110 +403,110 @@
                     "Type": "Monster",
                     "MonsterType": "RockCrab",
                     "MonsterName": "Stygium Crab",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium Blue Crab.png}}",
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumCrab",
                     "MonsterAdditionalData": {}
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Skeleton": {
                     "Type": "Monster",
                     "MonsterType": "Skeleton",
                     "MonsterName": "Stygium Skeleton",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium_skeleton.png}}",
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumSkeleton",
                     "MonsterAdditionalData": {}
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Skeleton_Rare": {
                     "Type": "Monster",
                     "MonsterType": "Skeleton",
                     "MonsterName": "Stygium Party Skeleton",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium_skeleton_partyhat.png}}",
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumSkeleton_Rare",
                     "MonsterAdditionalData": {}
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Dino": {
                     "Type": "Monster",
                     "MonsterType": "DinoMonster",
                     "MonsterName": "Stygium Rex",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium Rex.png}}",
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumRex",
                     "MonsterAdditionalData": {}
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Golem": {
                     "Type": "Monster",
                     "MonsterType": "RockGolem",
                     "MonsterName": "Stygium Golem",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium Golem.png}}",
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumGolem_Purple",
                     "MonsterAdditionalData": {}
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Golem_Blue": {
                     "Type": "Monster",
                     "MonsterType": "RockGolem",
                     "MonsterName": "Stygium Golem (Blue)",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium Golem Blue.png}}",
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumGolem_Blue",
                     "MonsterAdditionalData": {}
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Bat": {
                     "Type": "Monster",
                     "MonsterType": "Bat",
                     "MonsterName": "Stygium Bat",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium Bat.png}}",
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumBat",
                     "MonsterAdditionalData": {}
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Skeleton_Miner": {
                     "Type": "Monster",
                     "MonsterType": "Skeleton",
                     "MonsterName": "Stygium Miner",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Skeleton_Miner.png}}",
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumMiner",
                     "MonsterAdditionalData": {}
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_MetalHead": {
                     "Type": "Monster",
                     "MonsterType": "MetalHead",
                     "MonsterName": "Stygium Head",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium Metal Head.png}}",
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumHead",
                     "MonsterAdditionalData": {}
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Bat_HauntedSkull": {
                     "Type": "Monster",
                     "MonsterType": "Skull",
                     "MonsterName": "Stygium Skull",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Haunted Skull_dangerous.png}}",
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumSkull",
                     "MonsterAdditionalData": {}
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_RockCrab_Mushroom": {
                     "Type": "Monster",
                     "MonsterType": "RockCrab",
                     "MonsterName": "Stygium False Mushroom",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/False Mushroom.png}}",
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumMushroom",
                     "MonsterAdditionalData": {}
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Skeleton_MinerMage": {
                     "Type": "Monster",
                     "MonsterType": "Skeleton",
                     "MonsterName": "Stygium Miner Mage",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Skeleton_Miner_Mage.png}}",
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumMiner_Mage",
                     "MonsterAdditionalData": { "IsMage": true }
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Serpent": {
                     "Type": "Monster",
                     "MonsterType": "Serpent",
                     "MonsterName": "Stygium Serpent",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Iridium Serpent.png}}"
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumSerpent"
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Leviathan": {
                     "Type": "Monster",
                     "MonsterType": "Serpent",
                     "MonsterName": "Stygium Leviathan",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Stygium Leviathan.png}}",
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumLeviathan",
                     "MonsterAdditionalData": { "SegmentCount": 5 }
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Squid": {
                     "Type": "Monster",
                     "MonsterType": "BlueSquid",
                     "MonsterName": "Stygium Squid",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Blue Squid.png}}"
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumSquid"
                 },
                 "{{ModID}}_SpawnDeepDark_Monster_Droplet": {
                     "Type": "Monster",
                     "MonsterType": "MagmaSprite",
                     "MonsterName": "Stygium Droplet",
-                    "MonsterTextureOverride": "{{InternalAssetKey: Assets/Maps/DeepDark/Monsters/Stygium Droplet.png}}"
+                    "MonsterTextureOverride": "Monsters/DN.SnS/StygiumDroplet"
                 }
             }
         },
@@ -1045,7 +1051,7 @@
                     "SalePrice": 35000,
                     "DisplayName": "{{i18n: tool.stygium-hoe.name}}",
                     "Description": "{{i18n: tool.stygium-hoe.description}}",
-                    "Texture": "{{InternalAssetKey: assets/Items & Crops/StygiumTools.png}}",
+                    "Texture": "Textures/DN.SnS/StygiumTools",
                     "SpriteIndex": 6,
                     "MenuSpriteIndex": 17,
                     "UpgradeLevel": 5,
@@ -1062,7 +1068,7 @@
                     "SalePrice": 35000,
                     "DisplayName": "{{i18n: tool.stygium-pickaxe.name}}",
                     "Description": "{{i18n: tool.stygium-pickaxe.description}}",
-                    "Texture": "{{InternalAssetKey: assets/Items & Crops/StygiumTools.png}}",
+                    "Texture": "Textures/DN.SnS/StygiumTools",
                     "SpriteIndex": 18,
                     "MenuSpriteIndex": 29,
                     "UpgradeLevel": 5,
@@ -1079,7 +1085,7 @@
                     "SalePrice": 35000,
                     "DisplayName": "{{i18n: tool.stygium-axe.name}}",
                     "Description": "{{i18n: tool.stygium-axe.description}}",
-                    "Texture": "{{InternalAssetKey: assets/Items & Crops/StygiumTools.png}}",
+                    "Texture": "Textures/DN.SnS/StygiumTools",
                     "SpriteIndex": 30,
                     "MenuSpriteIndex": 41,
                     "UpgradeLevel": 5,
@@ -1096,7 +1102,7 @@
                     "SalePrice": 35000,
                     "DisplayName": "{{i18n: tool.stygium-watering-can.name}}",
                     "Description": "{{i18n: tool.stygium-watering-can.description}}",
-                    "Texture": "{{InternalAssetKey: assets/Items & Crops/StygiumTools.png}}",
+                    "Texture": "Textures/DN.SnS/StygiumTools",
                     "SpriteIndex": 42,
                     "MenuSpriteIndex": 50,
                     "UpgradeLevel": 5,
@@ -1113,7 +1119,7 @@
                     "SalePrice": 50000,
                     "DisplayName": "{{i18n: tool.blessed-hoe.name}}",
                     "Description": "{{i18n: tool.blessed-hoe.description}}",
-                    "Texture": "{{InternalAssetKey: assets/Items & Crops/BlessedTools.png}}",
+                    "Texture": "Textures/DN.SnS/BlessedTools",
                     "SpriteIndex": 6,
                     "MenuSpriteIndex": 17,
                     "UpgradeLevel": 6,
@@ -1130,7 +1136,7 @@
                     "SalePrice": 50000,
                     "DisplayName": "{{i18n: tool.blessed-pickaxe.name}}",
                     "Description": "{{i18n: tool.blessed-pickaxe.description}}",
-                    "Texture": "{{InternalAssetKey: assets/Items & Crops/BlessedTools.png}}",
+                    "Texture": "Textures/DN.SnS/BlessedTools",
                     "SpriteIndex": 18,
                     "MenuSpriteIndex": 29,
                     "UpgradeLevel": 6,
@@ -1147,7 +1153,7 @@
                     "SalePrice": 50000,
                     "DisplayName": "{{i18n: tool.blessed-axe.name}}",
                     "Description": "{{i18n: tool.blessed-axe.description}}",
-                    "Texture": "{{InternalAssetKey: assets/Items & Crops/BlessedTools.png}}",
+                    "Texture": "Textures/DN.SnS/BlessedTools",
                     "SpriteIndex": 30,
                     "MenuSpriteIndex": 41,
                     "UpgradeLevel": 6,
@@ -1164,7 +1170,7 @@
                     "SalePrice": 50000,
                     "DisplayName": "{{i18n: tool.blessed-watering-can.name}}",
                     "Description": "{{i18n: tool.blessed-watering-can.description}}",
-                    "Texture": "{{InternalAssetKey: assets/Items & Crops/BlessedTools.png}}",
+                    "Texture": "Textures/DN.SnS/BlessedTools",
                     "SpriteIndex": 42,
                     "MenuSpriteIndex": 50,
                     "UpgradeLevel": 6,

@@ -1,9 +1,12 @@
 {
   "Changes": [
     {
+      "LogName": "Sword & Shield (S&S hahaha)",
       "Action": "EditData",
       "Target": "Data/Weapons",
       "Entries": {
+
+    //SWORDS
         "{{ModID}}_keytoscarp": {
           "Name": "{{ModID}}_keytoscarp",
           "DisplayName": "{{i18n: weapon.keytoscarp.name}}",
@@ -17,17 +20,12 @@
           "CritChance": 0.07,
           "CritMultiplier": 3.0,
           "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 21,
           "CanBeLostOnDeath": false,
           "Price": "30000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_twobecomeone": {
           "Name": "{{ModID}}_twobecomeone",
           "DisplayName": "{{i18n: weapon.twobecomeone.name}}",
@@ -41,18 +39,12 @@
           "CritChance": 0.07,
           "CritMultiplier": 3.0,
           "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 22,
           "CanBeLostOnDeath": false,
           "Price": "60000"
-
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_savethequeen": {
           "Name": "{{ModID}}_savethequeen",
           "DisplayName": "{{i18n: weapon.savethequeen.name}}",
@@ -66,17 +58,12 @@
           "CritChance": 0.1,
           "CritMultiplier": 3.0,
           "Type": 1,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 23,
           "CanBeLostOnDeath": false,
           "Price": "25000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_oathkeeper": {
           "Name": "{{ModID}}_oathkeeper",
           "DisplayName": "{{i18n: weapon.oathkeeper.name}}",
@@ -90,17 +77,12 @@
           "CritChance": 0.1,
           "CritMultiplier": 4.0,
           "Type": 1,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 24,
           "CanBeLostOnDeath": false,
           "Price": "50000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_savetheking": {
           "Name": "{{ModID}}_savetheking",
           "DisplayName": "{{i18n: weapon.savetheking.name}}",
@@ -114,17 +96,12 @@
           "CritChance": 0.03,
           "CritMultiplier": 3.0,
           "Type": 2,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 25,
           "CanBeLostOnDeath": false,
           "Price": "25000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_waytothedawn": {
           "Name": "{{ModID}}_waytothedawn",
           "DisplayName": "{{i18n: weapon.waytothedawn.name}}",
@@ -138,17 +115,12 @@
           "CritChance": 0.03,
           "CritMultiplier": 3.0,
           "Type": 2,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 26,
           "CanBeLostOnDeath": false,
           "Price": "50000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_eldadagordagger": {
           "Name": "{{ModID}}_eldadagordagger",
           "DisplayName": "{{i18n: weapon.eldadagordagger.name}}",
@@ -162,19 +134,14 @@
           "CritChance": 0.02,
           "CritMultiplier": 2.0,
           "Type": 2,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 34,
           "MineBaseLevel": 60,
           "MineMinLevel": 60,
           "CanBeLostOnDeath": true,
           "Price": "5000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_glaewndilsword": {
           "Name": "{{ModID}}_glaewndilsword",
           "DisplayName": "{{i18n: weapon.glaewndilsword.name}}",
@@ -188,19 +155,14 @@
           "CritChance": 0.02,
           "CritMultiplier": 3.0,
           "Type": 2,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 35,
           "MineBaseLevel": 60,
           "MineMinLevel": 60,
           "CanBeLostOnDeath": true,
           "Price": "5000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_thondrondhammer": {
           "Name": "{{ModID}}_thondrondhammer",
           "DisplayName": "{{i18n: weapon.thondrondhammer.name}}",
@@ -214,19 +176,14 @@
           "CritChance": 0.03,
           "CritMultiplier": 3.0,
           "Type": 2,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 36,
           "MineBaseLevel": 60,
           "MineMinLevel": 60,
           "CanBeLostOnDeath": true,
           "Price": "5000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_longlivetheking": {
           "Name": "{{ModID}}_longlivetheking",
           "DisplayName": "{{i18n: weapon.longlivetheking.name}}",
@@ -240,34 +197,24 @@
           "CritChance": 0.1,
           "CritMultiplier": 3.0,
           "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 45,
           "CanBeLostOnDeath": false
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_longlivetheking_gun": {
           "Name": "{{ModID}}_longlivetheking_gun",
           "DisplayName": "{{i18n: weapon.longlivetheking-gun.name}}",
           "Description": "{{i18n: weapon.longlivetheking-gun.description}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 90,
           "Speed": 308, // All slingshots have this for some reason?,
           "CustomFields": {
             "Bow": true,
             "Bullets": true
           }
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+        },
+        
         "{{ModID}}_spellbinder": {
           "Name": "{{ModID}}_spellbinder",
           "DisplayName": "{{i18n: weapon.spellbinder.name}}",
@@ -281,17 +228,12 @@
           "CritChance": 0.06,
           "CritMultiplier": 3.0,
           "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 65,
           "CanBeLostOnDeath": true,
           "Price": "15000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_threewishes": {
           "Name": "{{ModID}}_threewishes",
           "DisplayName": "{{i18n: weapon.threewishes.name}}",
@@ -305,17 +247,12 @@
           "CritChance": 0.03,
           "CritMultiplier": 3.0,
           "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 66,
           "CanBeLostOnDeath": true,
           "Price": "15000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_ladyluck": {
           "Name": "{{ModID}}_ladyluck",
           "DisplayName": "{{i18n: weapon.ladyluck.name}}",
@@ -329,17 +266,12 @@
           "CritChance": 0.03,
           "CritMultiplier": 3.0,
           "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 67,
           "CanBeLostOnDeath": true,
           "Price": "15000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_mrhandy": {
           "Name": "{{ModID}}_mrhandy",
           "DisplayName": "{{i18n: weapon.mrhandy.name}}",
@@ -353,19 +285,14 @@
           "CritChance": 0.03,
           "CritMultiplier": 3.0,
           "Type": 2,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 68,
           "MineBaseLevel": 60,
           "MineMinLevel": 60,
           "CanBeLostOnDeath": true,
           "Price": "5000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_bondofflame": {
           "Name": "{{ModID}}_bondofflame",
           "DisplayName": "{{i18n: weapon.bondofflame.name}}",
@@ -379,17 +306,12 @@
           "CritChance": 0.03,
           "CritMultiplier": 3.0,
           "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 69,
           "CanBeLostOnDeath": true,
           "Price": "15000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_destinysembrace": {
           "Name": "{{ModID}}_destinysembrace",
           "DisplayName": "{{i18n: weapon.destinysembrace.name}}",
@@ -403,17 +325,12 @@
           "CritChance": 0.03,
           "CritMultiplier": 3.0,
           "Type": 2,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 70,
           "CanBeLostOnDeath": true,
           "Price": "15000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_sweetmemories": {
           "Name": "{{ModID}}_sweetmemories",
           "DisplayName": "{{i18n: weapon.sweetmemories.name}}",
@@ -427,17 +344,12 @@
           "CritChance": 0.03,
           "CritMultiplier": 3.0,
           "Type": 2,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 71,
           "CanBeLostOnDeath": true,
           "Price": "15000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_axewaquestion": {
           "Name": "{{ModID}}_axewaquestion",
           "DisplayName": "{{i18n: weapon.axewaquestion.name}}",
@@ -451,19 +363,14 @@
           "CritChance": 0.03,
           "CritMultiplier": 3.0,
           "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 72,
           "MineBaseLevel": 60,
           "MineMinLevel": 60,
           "CanBeLostOnDeath": true,
           "Price": "5000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_guardianbell": {
           "Name": "{{ModID}}_guardianbell",
           "DisplayName": "{{i18n: weapon.guardianbell.name}}",
@@ -477,17 +384,12 @@
           "CritChance": 0.03,
           "CritMultiplier": 3.0,
           "Type": 2,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 73,
           "CanBeLostOnDeath": true,
           "Price": "15000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_absolem": {
           "Name": "{{ModID}}_absolem",
           "DisplayName": "{{i18n: weapon.absolem.name}}",
@@ -501,19 +403,14 @@
           "CritChance": 0.03,
           "CritMultiplier": 3.0,
           "Type": 2,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 74,
           "MineBaseLevel": 80,
           "MineMinLevel": 80,
           "CanBeLostOnDeath": true,
           "Price": "5000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_mallymkun": {
           "Name": "{{ModID}}_mallymkun",
           "DisplayName": "{{i18n: weapon.mallymkun.name}}",
@@ -527,19 +424,14 @@
           "CritChance": 0.03,
           "CritMultiplier": 3.0,
           "Type": 2,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 75,
           "MineBaseLevel": 80,
           "MineMinLevel": 80,
           "CanBeLostOnDeath": true,
           "Price": "7000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_chilisauce": {
           "Name": "{{ModID}}_chilisauce",
           "DisplayName": "{{i18n: weapon.chilisauce.name}}",
@@ -553,285 +445,14 @@
           "CritChance": 0.02,
           "CritMultiplier": 3.0,
           "Type": 2,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 51,
           "MineBaseLevel": 60,
           "MineMinLevel": 60,
           "CanBeLostOnDeath": true,
           "Price": "5000"
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
-        "{{ModID}}_PaladinShield": {
-          "Name": "{{ModID}}_PaladinShield",
-          "DisplayName": "{{i18n: weapon.paladin-shield.name}}",
-          "Description": "{{i18n: weapon.paladin-shield.description}}",
-          "MinDamage": 80,
-          "MaxDamage": 100,
-          "Knockback": 1,
-          "Speed": 2,
-          "Precision": 90,
-          "Defense": 2,
-          "CritChance": 0.02,
-          "CritMultiplier": 3.0,
-          "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 16,
-          "CanBeLostOnDeath": false,
-          "Price": "5000",
-          "CustomFields": { "{{ModID}}_Shield": true }
-        },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
-        "{{ModID}}_ArtificerShield": {
-          "Name": "{{ModID}}_ArtificerShield",
-          "DisplayName": "{{i18n: weapon.artificer-shield.name}}",
-          "Description": "{{i18n: weapon.artificer-shield.description}}",
-          "MinDamage": 80,
-          "MaxDamage": 100,
-          "Knockback": 1,
-          "Speed": 2,
-          "Precision": 90,
-          "Defense": 2,
-          "CritChance": 0.02,
-          "CritMultiplier": 3.0,
-          "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 103,
-          "CanBeLostOnDeath": false,
-          "Price": "5000",
-          "CustomFields": { "{{ModID}}_Shield": true }
-        },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
-        "{{ModID}}_DruidShield": {
-          "Name": "{{ModID}}_DruidShield",
-          "DisplayName": "{{i18n: weapon.druid-shield.name}}",
-          "Description": "{{i18n: weapon.druid-shield.description}}",
-          "MinDamage": 80,
-          "MaxDamage": 100,
-          "Knockback": 1,
-          "Speed": 2,
-          "Precision": 90,
-          "Defense": 2,
-          "CritChance": 0.02,
-          "CritMultiplier": 3.0,
-          "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 104,
-          "CanBeLostOnDeath": false,
-          "Price": "5000",
-          "CustomFields": { "{{ModID}}_Shield": true }
-        },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
-        "{{ModID}}_BardShield": {
-          "Name": "{{ModID}}_BardShield",
-          "DisplayName": "{{i18n: weapon.bard-shield.name}}",
-          "Description": "{{i18n: weapon.bard-shield.description}}",
-          "MinDamage": 80,
-          "MaxDamage": 100,
-          "Knockback": 1,
-          "Speed": 2,
-          "Precision": 90,
-          "Defense": 2,
-          "CritChance": 0.02,
-          "CritMultiplier": 3.0,
-          "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 105,
-          "CanBeLostOnDeath": false,
-          "Price": "5000",
-          "CustomFields": { "{{ModID}}_Shield": true }
-        },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
-        "{{ModID}}_SorcererShield": {
-          "Name": "{{ModID}}_SorcererShield",
-          "DisplayName": "{{i18n: weapon.sorcerer-shield.name}}",
-          "Description": "{{i18n: weapon.sorcerer-shield.description}}",
-          "MinDamage": 80,
-          "MaxDamage": 100,
-          "Knockback": 1,
-          "Speed": 2,
-          "Precision": 90,
-          "Defense": 2,
-          "CritChance": 0.02,
-          "CritMultiplier": 3.0,
-          "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 106,
-          "CanBeLostOnDeath": false,
-          "Price": "5000",
-          "CustomFields": { "{{ModID}}_Shield": true }
-        },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
-        "{{ModID}}_CopperShield": {
-          "Name": "{{ModID}}_CopperShield",
-          "DisplayName": "{{i18n: weapon.copper-shield.name}}",
-          "Description": "{{i18n: weapon.copper-shield.description}}",
-          "MinDamage": 10,
-          "MaxDamage": 15,
-          "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 121,
-          "CanBeLostOnDeath": false,
-          "Price": "5000",
-          "CustomFields": { "{{ModID}}_Shield": true }
-        },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
-        "{{ModID}}_IronShield": {
-          "Name": "{{ModID}}_IronShield",
-          "DisplayName": "{{i18n: weapon.steel-shield.name}}",
-          "Description": "{{i18n: weapon.steel-shield.description}}",
-          "MinDamage": 20,
-          "MaxDamage": 25,
-          "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 107,
-          "CanBeLostOnDeath": false,
-          "Price": "5000",
-          "CustomFields": { "{{ModID}}_Shield": true }
-        },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
-        "{{ModID}}_GoldShield": {
-          "Name": "{{ModID}}_GoldShield",
-          "DisplayName": "{{i18n: weapon.gold-shield.name}}",
-          "Description": "{{i18n: weapon.gold-shield.description}}",
-          "MinDamage": 25,
-          "MaxDamage": 30,
-          "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 122,
-          "CanBeLostOnDeath": false,
-          "Price": "5000",
-          "CustomFields": { "{{ModID}}_Shield": true }
-        },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
-        "{{ModID}}_IridiumShield": {
-          "Name": "{{ModID}}_IridiumShield",
-          "DisplayName": "{{i18n: weapon.iridium-shield.name}}",
-          "Description": "{{i18n: weapon.iridium-shield.description}}",
-          "MinDamage": 35,
-          "MaxDamage": 40,
-          "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 123,
-          "CanBeLostOnDeath": false,
-          "Price": "5000",
-          "CustomFields": { "{{ModID}}_Shield": true }
-        },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
-        "{{ModID}}_RadioactiveShield": {
-          "Name": "{{ModID}}_RadioactiveShield",
-          "DisplayName": "{{i18n: weapon.radioactive-shield.name}}",
-          "Description": "{{i18n: weapon.radioactive-shield.description}}",
-          "MinDamage": 45,
-          "MaxDamage": 50,
-          "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 124,
-          "CanBeLostOnDeath": false,
-          "Price": "5000",
-          "CustomFields": { "{{ModID}}_Shield": true }
-        },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
-        "{{ModID}}_StygiumShield": {
-          "Name": "{{ModID}}_StygiumShield",
-          "DisplayName": "{{i18n: weapon.stygium-shield.name}}",
-          "Description": "{{i18n: weapon.stygium-shield.description}}",
-          "MinDamage": 55,
-          "MaxDamage": 60,
-          "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 125,
-          "CanBeLostOnDeath": false,
-          "Price": "5000",
-          "CustomFields": { "{{ModID}}_Shield": true }
-        },
-      }
-    },
-    /*
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
-        "{{ModID}}_LltkShield": {
-          "Name": "{{ModID}}_LltkShield",
-          "DisplayName": "{{i18n: weapon.lltk-shield.name}}",
-          "Description": "{{i18n: weapon.lltk-shield.description}}",
-          "MinDamage": 100,
-          "MaxDamage": 125,
-          "Knockback": 1,
-          "Speed": 6,
-          "Precision": 100,
-          "Defense": 3,
-          "CritChance": 0.1,
-          "CritMultiplier": 3.0,
-          "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 108,
-          "CanBeLostOnDeath": false,
-          "Price": "5000",
-          "CustomFields": { "{{ModID}}_Shield": true }
-        },
-      }
-    },
-    */
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
+
         "{{ModID}}_StygiumBlade": {
           "Name": "{{ModID}}_StygiumBlade",
           "DisplayName": "{{i18n: weapon.stygium-blade.name}}",
@@ -845,17 +466,11 @@
           "CritChance": 0.275,
           "CritMultiplier": 3.5,
           "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/StygiumTools.png}}",
+          "Texture": "Textures/DN.SnS/StygiumTools",
           "SpriteIndex": 0,
           "CanBeLostOnDeath": false,
           "Price": 100000
         },
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Weapons",
-      "Entries": {
         "{{ModID}}_ElysiumBlade": {
           "Name": "{{ModID}}_ElysiumBlade",
           "DisplayName": "{{i18n: weapon.elysium-blade.name}}",
@@ -869,11 +484,230 @@
           "CritChance": 0.35,
           "CritMultiplier": 4.0,
           "Type": 3,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/BlessedTools.png}}",
+          "Texture": "Textures/DN.SnS/BlessedTools",
           "SpriteIndex": 0,
           "CanBeLostOnDeath": false,
           "Price": 25000
         },
+
+        "{{ModID}}_StilesBoomerang": {
+          "Name": "{{ModID}}_StilesBoomerang",
+          "DisplayName": "{{i18n: weapon.stiles-boomerang.name}}",
+          "Description": "{{i18n: weapon.stiles-boomerang.description}}",
+          "MinDamage": 10,
+          "MaxDamage": 15,
+          "Type": 3,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 126,
+          "CanBeLostOnDeath": false,
+          "Price": "150",
+          "CustomFields": { "{{ModID}}_Shield": true, "{{ModID}}_Boomerang": true }
+        },
+
+      //SHIELDS
+          "{{ModID}}_PaladinShield": {
+            "Name": "{{ModID}}_PaladinShield",
+            "DisplayName": "{{i18n: weapon.paladin-shield.name}}",
+            "Description": "{{i18n: weapon.paladin-shield.description}}",
+            "MinDamage": 80,
+            "MaxDamage": 100,
+            "Knockback": 1,
+            "Speed": 2,
+            "Precision": 90,
+            "Defense": 2,
+            "CritChance": 0.02,
+            "CritMultiplier": 3.0,
+            "Type": 3,
+            "Texture": "Textures/DN.SnS/SnSObjects",
+            "SpriteIndex": 16,
+            "CanBeLostOnDeath": false,
+            "Price": "5000",
+            "CustomFields": { "{{ModID}}_Shield": true }
+          },
+  
+          "{{ModID}}_ArtificerShield": {
+            "Name": "{{ModID}}_ArtificerShield",
+            "DisplayName": "{{i18n: weapon.artificer-shield.name}}",
+            "Description": "{{i18n: weapon.artificer-shield.description}}",
+            "MinDamage": 80,
+            "MaxDamage": 100,
+            "Knockback": 1,
+            "Speed": 2,
+            "Precision": 90,
+            "Defense": 2,
+            "CritChance": 0.02,
+            "CritMultiplier": 3.0,
+            "Type": 3,
+            "Texture": "Textures/DN.SnS/SnSObjects",
+            "SpriteIndex": 103,
+            "CanBeLostOnDeath": false,
+            "Price": "5000",
+            "CustomFields": { "{{ModID}}_Shield": true },
+  
+          "{{ModID}}_DruidShield": {
+            "Name": "{{ModID}}_DruidShield",
+            "DisplayName": "{{i18n: weapon.druid-shield.name}}",
+            "Description": "{{i18n: weapon.druid-shield.description}}",
+            "MinDamage": 80,
+            "MaxDamage": 100,
+            "Knockback": 1,
+            "Speed": 2,
+            "Precision": 90,
+            "Defense": 2,
+            "CritChance": 0.02,
+            "CritMultiplier": 3.0,
+            "Type": 3,
+            "Texture": "Textures/DN.SnS/SnSObjects",
+            "SpriteIndex": 104,
+            "CanBeLostOnDeath": false,
+            "Price": "5000",
+            "CustomFields": { "{{ModID}}_Shield": true }
+          },
+  
+          "{{ModID}}_BardShield": {
+            "Name": "{{ModID}}_BardShield",
+            "DisplayName": "{{i18n: weapon.bard-shield.name}}",
+            "Description": "{{i18n: weapon.bard-shield.description}}",
+            "MinDamage": 80,
+            "MaxDamage": 100,
+            "Knockback": 1,
+            "Speed": 2,
+            "Precision": 90,
+            "Defense": 2,
+            "CritChance": 0.02,
+            "CritMultiplier": 3.0,
+            "Type": 3,
+            "Texture": "Textures/DN.SnS/SnSObjects",
+            "SpriteIndex": 105,
+            "CanBeLostOnDeath": false,
+            "Price": "5000",
+            "CustomFields": { "{{ModID}}_Shield": true }
+          },
+  
+          "{{ModID}}_SorcererShield": {
+            "Name": "{{ModID}}_SorcererShield",
+            "DisplayName": "{{i18n: weapon.sorcerer-shield.name}}",
+            "Description": "{{i18n: weapon.sorcerer-shield.description}}",
+            "MinDamage": 80,
+            "MaxDamage": 100,
+            "Knockback": 1,
+            "Speed": 2,
+            "Precision": 90,
+            "Defense": 2,
+            "CritChance": 0.02,
+            "CritMultiplier": 3.0,
+            "Type": 3,
+            "Texture": "Textures/DN.SnS/SnSObjects",
+            "SpriteIndex": 106,
+            "CanBeLostOnDeath": false,
+            "Price": "5000",
+            "CustomFields": { "{{ModID}}_Shield": true }
+          },
+
+          /*"{{ModID}}_LltkShield": {
+            "Name": "{{ModID}}_LltkShield",
+            "DisplayName": "{{i18n: weapon.lltk-shield.name}}",
+            "Description": "{{i18n: weapon.lltk-shield.description}}",
+            "MinDamage": 100,
+            "MaxDamage": 125,
+            "Knockback": 1,
+            "Speed": 6,
+            "Precision": 100,
+            "Defense": 3,
+            "CritChance": 0.1,
+            "CritMultiplier": 3.0,
+            "Type": 3,
+            "Texture": "Textures/DN.SnS/SnSObjects",
+            "SpriteIndex": 108,
+            "CanBeLostOnDeath": false,
+            "Price": "5000",
+            "CustomFields": { "{{ModID}}_Shield": true }
+          },*/
+  
+          "{{ModID}}_CopperShield": {
+            "Name": "{{ModID}}_CopperShield",
+            "DisplayName": "{{i18n: weapon.copper-shield.name}}",
+            "Description": "{{i18n: weapon.copper-shield.description}}",
+            "MinDamage": 10,
+            "MaxDamage": 15,
+            "Type": 3,
+            "Texture": "Textures/DN.SnS/SnSObjects",
+            "SpriteIndex": 121,
+            "CanBeLostOnDeath": false,
+            "Price": "5000",
+            "CustomFields": { "{{ModID}}_Shield": true }
+          },
+  
+          "{{ModID}}_IronShield": {
+            "Name": "{{ModID}}_IronShield",
+            "DisplayName": "{{i18n: weapon.steel-shield.name}}",
+            "Description": "{{i18n: weapon.steel-shield.description}}",
+            "MinDamage": 20,
+            "MaxDamage": 25,
+            "Type": 3,
+            "Texture": "Textures/DN.SnS/SnSObjects",
+            "SpriteIndex": 107,
+            "CanBeLostOnDeath": false,
+            "Price": "5000",
+            "CustomFields": { "{{ModID}}_Shield": true }
+          },
+  
+          "{{ModID}}_GoldShield": {
+            "Name": "{{ModID}}_GoldShield",
+            "DisplayName": "{{i18n: weapon.gold-shield.name}}",
+            "Description": "{{i18n: weapon.gold-shield.description}}",
+            "MinDamage": 25,
+            "MaxDamage": 30,
+            "Type": 3,
+            "Texture": "Textures/DN.SnS/SnSObjects",
+            "SpriteIndex": 122,
+            "CanBeLostOnDeath": false,
+            "Price": "5000",
+            "CustomFields": { "{{ModID}}_Shield": true }
+          },
+  
+          "{{ModID}}_IridiumShield": {
+            "Name": "{{ModID}}_IridiumShield",
+            "DisplayName": "{{i18n: weapon.iridium-shield.name}}",
+            "Description": "{{i18n: weapon.iridium-shield.description}}",
+            "MinDamage": 35,
+            "MaxDamage": 40,
+            "Type": 3,
+            "Texture": "Textures/DN.SnS/SnSObjects",
+            "SpriteIndex": 123,
+            "CanBeLostOnDeath": false,
+            "Price": "5000",
+            "CustomFields": { "{{ModID}}_Shield": true }
+          },
+  
+          "{{ModID}}_RadioactiveShield": {
+            "Name": "{{ModID}}_RadioactiveShield",
+            "DisplayName": "{{i18n: weapon.radioactive-shield.name}}",
+            "Description": "{{i18n: weapon.radioactive-shield.description}}",
+            "MinDamage": 45,
+            "MaxDamage": 50,
+            "Type": 3,
+            "Texture": "Textures/DN.SnS/SnSObjects",
+            "SpriteIndex": 124,
+            "CanBeLostOnDeath": false,
+            "Price": "5000",
+            "CustomFields": { "{{ModID}}_Shield": true }
+          },
+  
+          "{{ModID}}_StygiumShield": {
+            "Name": "{{ModID}}_StygiumShield",
+            "DisplayName": "{{i18n: weapon.stygium-shield.name}}",
+            "Description": "{{i18n: weapon.stygium-shield.description}}",
+            "MinDamage": 55,
+            "MaxDamage": 60,
+            "Type": 3,
+            "Texture": "Textures/DN.SnS/SnSObjects",
+            "SpriteIndex": 125,
+            "CanBeLostOnDeath": false,
+            "Price": "5000",
+            "CustomFields": { "{{ModID}}_Shield": true }
+          }
+        }
       }
     },
     {
@@ -886,7 +720,7 @@
         "{{ModID}}_GoldShield": "{{ModID}}_IronShield 1 336 10/hoot/0 1/false/default/{{i18n: weapon.gold-shield.name}}",
         "{{ModID}}_IridiumShield": "{{ModID}}_GoldShield 1 337 10/hoot/0 1/false/default/{{i18n: weapon.iridium-shield.name}}",
         "{{ModID}}_RadioactiveShield": "{{ModID}}_IridiumShield 1 910 10/hoot/0 1/false/default/{{i18n: weapon.radioactive-shield.name}}",
-        "{{ModID}}_StygiumShield": "{{ModID}}_RadioactiveShield 1 {{ModID}}_StygiumBar 10/hoot/0 1/false/default/{{i18n: weapon.stygium-shield.name}}",
+        "{{ModID}}_StygiumShield": "{{ModID}}_RadioactiveShield 1 {{ModID}}_StygiumBar 10/hoot/0 1/false/default/{{i18n: weapon.stygium-shield.name}}"
       }
     },
     {
@@ -988,7 +822,7 @@
               "Amount": 10
             }
           ]
-        },
+        }
       }
     }
   ]

@@ -204,7 +204,7 @@
           "VisualTheme": [
             {
               "Condition": null,
-              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderTexture": "Textures/DN.SnS/SnSShopBG",
               "WindowBorderSourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -217,7 +217,7 @@
               "DialogueBackgroundSourceRect": null,
               "DialogueColor": null,
               "DialogueShadowColor": null,
-              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemRowBackgroundSourceRect": {
                 "X": 18,
                 "Y": 115,
@@ -226,7 +226,7 @@
               },
               "ItemRowBackgroundHoverColor": "Blue",
               "ItemRowTextColor": "Violet",
-              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemIconBackgroundSourceRect": {
                 "X": 0,
                 "Y": 115,
@@ -531,7 +531,7 @@
           "VisualTheme": [
             {
               "Condition": null,
-              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderTexture": "Textures/DN.SnS/SnSShopBG",
               "WindowBorderSourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -544,7 +544,7 @@
               "DialogueBackgroundSourceRect": null,
               "DialogueColor": null,
               "DialogueShadowColor": null,
-              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemRowBackgroundSourceRect": {
                 "X": 18,
                 "Y": 115,
@@ -553,7 +553,7 @@
               },
               "ItemRowBackgroundHoverColor": "Blue",
               "ItemRowTextColor": "Violet",
-              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemIconBackgroundSourceRect": {
                 "X": 0,
                 "Y": 115,
@@ -670,7 +670,7 @@
           "VisualTheme": [
             {
               "Condition": null,
-              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderTexture": "Textures/DN.SnS/SnSShopBG",
               "WindowBorderSourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -683,7 +683,7 @@
               "DialogueBackgroundSourceRect": null,
               "DialogueColor": null,
               "DialogueShadowColor": null,
-              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemRowBackgroundSourceRect": {
                 "X": 18,
                 "Y": 115,
@@ -692,7 +692,7 @@
               },
               "ItemRowBackgroundHoverColor": "Blue",
               "ItemRowTextColor": "Violet",
-              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemIconBackgroundSourceRect": {
                 "X": 0,
                 "Y": 115,
@@ -852,7 +852,7 @@
           "VisualTheme": [
             {
               "Condition": null,
-              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderTexture": "Textures/DN.SnS/SnSShopBG",
               "WindowBorderSourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -865,7 +865,7 @@
               "DialogueBackgroundSourceRect": null,
               "DialogueColor": null,
               "DialogueShadowColor": null,
-              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemRowBackgroundSourceRect": {
                 "X": 18,
                 "Y": 115,
@@ -874,7 +874,7 @@
               },
               "ItemRowBackgroundHoverColor": "Blue",
               "ItemRowTextColor": "Violet",
-              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemIconBackgroundSourceRect": {
                 "X": 0,
                 "Y": 115,
@@ -1042,7 +1042,7 @@
           "VisualTheme": [
             {
               "Condition": null,
-              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderTexture": "Textures/DN.SnS/SnSShopBG",
               "WindowBorderSourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -1055,7 +1055,7 @@
               "DialogueBackgroundSourceRect": null,
               "DialogueColor": null,
               "DialogueShadowColor": null,
-              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemRowBackgroundSourceRect": {
                 "X": 18,
                 "Y": 115,
@@ -1064,7 +1064,7 @@
               },
               "ItemRowBackgroundHoverColor": "Blue",
               "ItemRowTextColor": "Violet",
-              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemIconBackgroundSourceRect": {
                 "X": 0,
                 "Y": 115,
@@ -1155,7 +1155,7 @@
           "VisualTheme": [
             {
               "Condition": null,
-              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderTexture": "Textures/DN.SnS/SnSShopBG",
               "WindowBorderSourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -1168,7 +1168,7 @@
               "DialogueBackgroundSourceRect": null,
               "DialogueColor": null,
               "DialogueShadowColor": null,
-              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemRowBackgroundSourceRect": {
                 "X": 18,
                 "Y": 115,
@@ -1177,7 +1177,7 @@
               },
               "ItemRowBackgroundHoverColor": "Blue",
               "ItemRowTextColor": "Violet",
-              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemIconBackgroundSourceRect": {
                 "X": 0,
                 "Y": 115,
@@ -1280,7 +1280,7 @@
           "VisualTheme": [
             {
               "Condition": null,
-              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderTexture": "Textures/DN.SnS/SnSShopBG",
               "WindowBorderSourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -1293,7 +1293,7 @@
               "DialogueBackgroundSourceRect": null,
               "DialogueColor": null,
               "DialogueShadowColor": null,
-              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemRowBackgroundSourceRect": {
                 "X": 18,
                 "Y": 115,
@@ -1302,7 +1302,7 @@
               },
               "ItemRowBackgroundHoverColor": "Blue",
               "ItemRowTextColor": "Violet",
-              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemIconBackgroundSourceRect": {
                 "X": 0,
                 "Y": 115,
@@ -1349,7 +1349,7 @@
           "VisualTheme": [
             {
               "Condition": null,
-              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderTexture": "Textures/DN.SnS/SnSShopBG",
               "WindowBorderSourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -1362,7 +1362,7 @@
               "DialogueBackgroundSourceRect": null,
               "DialogueColor": null,
               "DialogueShadowColor": null,
-              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemRowBackgroundSourceRect": {
                 "X": 18,
                 "Y": 115,
@@ -1371,7 +1371,7 @@
               },
               "ItemRowBackgroundHoverColor": "Blue",
               "ItemRowTextColor": "Violet",
-              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemIconBackgroundSourceRect": {
                 "X": 0,
                 "Y": 115,
@@ -1537,7 +1537,7 @@
           "VisualTheme": [
             {
               "Condition": null,
-              "WindowBorderTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "WindowBorderTexture": "Textures/DN.SnS/SnSShopBG",
               "WindowBorderSourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -1550,7 +1550,7 @@
               "DialogueBackgroundSourceRect": null,
               "DialogueColor": null,
               "DialogueShadowColor": null,
-              "ItemRowBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemRowBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemRowBackgroundSourceRect": {
                 "X": 18,
                 "Y": 115,
@@ -1559,7 +1559,7 @@
               },
               "ItemRowBackgroundHoverColor": "Blue",
               "ItemRowTextColor": "Violet",
-              "ItemIconBackgroundTexture": "{{InternalAssetKey: assets/Items & Crops/SnSShopBG.png}}",
+              "ItemIconBackgroundTexture": "Textures/DN.SnS/SnSShopBG",
               "ItemIconBackgroundSourceRect": {
                 "X": 0,
                 "Y": 115,

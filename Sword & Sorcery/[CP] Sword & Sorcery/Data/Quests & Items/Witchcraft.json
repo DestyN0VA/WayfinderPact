@@ -11,7 +11,7 @@
           "Type": "Basic",
           "Category": -28,
           "Price": 15,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 86,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -25,7 +25,7 @@
           "Type": "Basic",
           "Category": -28,
           "Price": 15,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 87,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -39,7 +39,7 @@
           "Type": "Basic",
           "Category": -28,
           "Price": 15,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 88,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -53,7 +53,7 @@
           "Type": "Basic",
           "Category": -28,
           "Price": 15,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 89,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -67,7 +67,7 @@
           "Type": "Crafting",
           "Category": -24,
           "Price": 0,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/TeleportCircle.png}}",
+          "Texture": "Textures/DN.SnS/TeleportCircle",
           "SpriteIndex": 0,
           "Edibility": -300,
           "ExcludeFromShippingCollection": true,
@@ -82,7 +82,7 @@
           "Price": 250,
           "Edibility": 0,
           "IsDrink": true,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 91,
           "ExcludeFromShippingCollection": true
         },
@@ -98,7 +98,7 @@
           "Description": "{{i18n: witchcraft.wall-of-force.description}}",
           "Fragility": 2,
           "IsLamp": true,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSMachines.png}}",
+          "Texture": "Textures/DN.SnS/SnSMachines",
           "SpriteIndex": 3,
         }
       }
@@ -110,12 +110,12 @@
         "{{ModId}}_TeleportCircleFloor": {
           "Id": "{{ModId}}_TeleportCircleFloor",
           "ItemId": "{{ModID}}_TeleportCircle",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/TeleportCircle.png}}",
+          "Texture": "Textures/DN.SnS/TeleportCircle",
           "Corner": {
             "X": 0,
             "Y": 0
           },
-          "WinterTexture": "{{InternalAssetKey: assets/Items & Crops/TeleportCircle.png}}",
+          "WinterTexture": "Textures/DN.SnS/TeleportCircle",
           "WinterCorner": {
             "X": 0,
             "Y": 0

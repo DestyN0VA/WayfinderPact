@@ -7,6 +7,25 @@
       "Target": "LooseSprites/CAGemojis",
       "FromFile": "assets/CAGemojis.png"
     },
+    {
+      "LogName": "Loads Texture Files",
+      "Action": "Load",
+      "Target": "Textures/DN.SnS/SnSObjects, Textures/DN.SnS/SnSCrops, Textures/DN.SnS/StygiumTools, Textures/DN.SnS/SnSArsenal, Textures/DN.SnS/SnSBooks, Textures/DN.SnS/SnSMachines, Textures/DN.SnS/SnSShopBG, Textures/DN.SnS/SnSTrees, Textures/DN.SnS/BlessedTools, Textures/DN.SnS/TeleportCircle, Textures/DN.SnS/SnSMushroomTree, Textures/DN.SnS/DeepDark_Treasure",
+      "FromFile": "Assets/Items & Crops/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Loads Shop Portraits",
+      "Action": "Load",
+      "Target": "ShopPortraits/DN.SnS/CGEmblem, ShopPortraits/DN.SnS/TheMeadowLark",
+      "FromFile": "Assets/TemporaryActors/Portraits/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Loads Witchcraft Teleportation Images",
+      "Action": "Load",
+      "Target": "Textures/DN.SnS/TeleportationCircle1, Textures/DN.SnS/TeleportationCircle2, Textures/DN.SnS/TeleportationCircle3, Textures/DN.SnS/TeleportationCircle4",
+      "FromFile": "Assets/WitchcraftResearch/{{TargetWithoutPath}}.png"
+    },
+
     // SECRET NOTE
     {
       "LogName": "Loads Mateo's Secret Note Image",
@@ -42,23 +61,12 @@
         "Hector": {
           "IgnoreMarriageSchedule": true,
           "SeparateDatability": true
-        }
-      }
-    },
-    // Other separate datability
-    {
-      "Action": "EditData",
-      "Target": "spacechase0.SpaceCore/NpcExtensionData",
-      "Entries": {
+        },
+
         "Mateo": {
           "SeparateDatability": true
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "spacechase0.SpaceCore/NpcExtensionData",
-      "Entries": {
+        },
+
         "Cirrus": {
           "SeparateDatability": true
         }

@@ -17,20 +17,14 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 0,
           "ContextTags": [
             "color_cyan",
             "category_vegetable",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
         "{{ModID}}_ancientamaranth.seed": {
           "Name": "Ancient Amaranth Seeds",
           "DisplayName": "{{i18n: crop.ancientamaranth.seed.name}}",
@@ -42,7 +36,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 9
         }
       }
@@ -70,7 +64,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
+          "Texture": "Textures/DN.SnS/SnSCrops",
           "SpriteIndex": 0
         }
       }
@@ -92,20 +86,15 @@
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 2,
           "ContextTags": [
             "color_cyan",
             "category_vegetable",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_ancientepiphyticfern.seed": {
           "Name": "Ancient Amaranth Seeds",
           "DisplayName": "{{i18n: crop.ancientepiphyticfern.seed.name}}",
@@ -117,7 +106,7 @@
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 11
         }
       }
@@ -147,7 +136,7 @@
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
           "ExtraHarvestChance": 0.03,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
+          "Texture": "Textures/DN.SnS/SnSCrops",
           "SpriteIndex": 2
         }
       }
@@ -169,20 +158,15 @@
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 4,
           "ContextTags": [
             "color_cyan",
             "category_vegetable",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_glowingpolyporemushrooms.seed": {
           "Name": "Ancient Glowing Polypore Mushroom Spores",
           "DisplayName": "{{i18n: crop.ancientglowingpolyporemushrooms.seed.name}}",
@@ -194,7 +178,7 @@
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
           "Price": 2,
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 13
         }
       }
@@ -222,7 +206,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
+          "Texture": "Textures/DN.SnS/SnSCrops",
           "SpriteIndex": 4
         }
       }
@@ -244,20 +228,15 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 1,
           "ContextTags": [
             "color_cyan",
             "category_flowers",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_ancientwildfairyrose.seed": {
           "Name": "Ancient Wild Fairy Rose Seeds",
           "DisplayName": "{{i18n: crop.ancientwildfairyrose.seed.name}}",
@@ -269,7 +248,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 10
         }
       }
@@ -298,7 +277,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
+          "Texture": "Textures/DN.SnS/SnSCrops",
           "SpriteIndex": 6
         }
       }
@@ -320,20 +299,14 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 37,
           "ContextTags": [
             "color_cyan",
             "category_fruits",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
         "{{ModID}}_ancientelderberry.seed": {
           "Name": "Ancient Elderberry Seeds",
           "DisplayName": "{{i18n: crop.ancientelderberry.seed.name}}",
@@ -345,7 +318,7 @@
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 38
         }
       }
@@ -374,7 +347,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
+          "Texture": "Textures/DN.SnS/SnSCrops",
           "SpriteIndex": 8
         }
       }
@@ -393,7 +366,7 @@
           "Price": 220,
           "Edibility": 50,
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 39,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
@@ -402,14 +375,9 @@
             "color_cyan",
             "category_fruits",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_ancientbottlegourd.seed": {
           "Name": "Ancient Bottle Gourd",
           "DisplayName": "{{i18n: crop.ancientbottlegourd.seed.name}}",
@@ -421,7 +389,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 40
         }
       }
@@ -449,7 +417,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
+          "Texture": "Textures/DN.SnS/SnSCrops",
           "SpriteIndex": 10
         }
       }
@@ -471,20 +439,15 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 41,
           "ContextTags": [
             "color_cyan",
             "category_fruits",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_ancientgiantappleberry.seed": {
           "Name": "Ancient Giant Apple Berry",
           "DisplayName": "{{i18n: crop.ancientgiantappleberry.seed.name}}",
@@ -496,7 +459,7 @@
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 42
         }
       }
@@ -524,7 +487,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
+          "Texture": "Textures/DN.SnS/SnSCrops",
           "SpriteIndex": 12
         }
       }
@@ -546,20 +509,15 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 43,
           "ContextTags": [
             "color_cyan",
             "category_flowers",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_ancientazuredetura.seed": {
           "Name": "Ancient Azure Detura Flower",
           "DisplayName": "{{i18n: crop.ancientazuredetura.seed.name}}",
@@ -571,7 +529,7 @@
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 44
         }
       }
@@ -597,7 +555,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
+          "Texture": "Textures/DN.SnS/SnSCrops",
           "SpriteIndex": 14
         }
       }
@@ -619,20 +577,15 @@
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 3,
           "ContextTags": [
             "color_cyan",
             "category_fruits",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_ancientglowinghuckleberry.seed": {
           "Name": "Ancient Glowing Huckleberry Seeds",
           "DisplayName": "{{i18n: crop.ancientglowinghuckleberry.seed.name}}",
@@ -644,7 +597,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 12
         }
       }
@@ -663,7 +616,7 @@
               "ItemId": "{{ModID}}_ancientglowinghuckleberry"
             }
           ],
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSTrees.png}}",
+          "Texture": "Textures/DN.SnS/SnSTrees",
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
@@ -688,20 +641,15 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 83,
           "ContextTags": [
             "color_cyan",
             "category_flowers",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_ancientsweettealeaves.seed": {
           "Name": "Ancient Sweet Tea Bush Seeds",
           "DisplayName": "{{i18n: crop.ancientsweettealeaves.seed.name}}",
@@ -713,7 +661,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 85
         }
       }
@@ -725,7 +673,7 @@
         "{{ModID}}_ancientsweettealeaves.seed": {
           "Seasons": [
             "summer",
-            "winter",
+            "winter"
             
           ],
           "DaysInPhase": [
@@ -742,7 +690,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "CountForMonoculture": "{{CountForFarmingAchievements}}",
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSCrops.png}}",
+          "Texture": "Textures/DN.SnS/SnSCrops",
           "SpriteIndex": 16
         }
       }
@@ -761,7 +709,7 @@
         "Ancient Bottle Gourd Seeds": "{{ModID}}_druidicessence {{DruidicsCost4}}/what is this for?/{{ModID}}_ancientbottlegourd.seed 1/false/null/{{i18n:AncientSeed.Hector.BottleGourd}}",
         "Ancient Giant Apple Berry Seeds": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_ancientgiantappleberry.seed 1/false/null/{{i18n:AncientSeed.Hector.AppleBerry}}",
         "Ancient Azure Detura Seeds": "{{ModID}}_druidicessence {{DruidicsCost4}}/what is this for?/{{ModID}}_ancientazuredetura.seed 1/false/null/{{i18n:AncientSeed.Hector.Detura}}",
-        "Ancient Sweet Tea Bush Seeds": "{{ModID}}_druidicessence {{DruidicsCost10}}/what is this for?/{{ModID}}_ancientsweettealeaves.seed 1/false/e SnS.Ch3.Dandelion.3/{{i18n:AncientSeed.Hector.SweetTea}}",
+        "Ancient Sweet Tea Bush Seeds": "{{ModID}}_druidicessence {{DruidicsCost10}}/what is this for?/{{ModID}}_ancientsweettealeaves.seed 1/false/e SnS.Ch3.Dandelion.3/{{i18n:AncientSeed.Hector.SweetTea}}"
       }
     },
     // GIANT VARIATIONS 
@@ -803,195 +751,195 @@
       "Target": "spacechase0.SpaceCore/ObjectExtensionData",
       "Entries": {
         "{{ModID}}_ancientamaranth": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientepiphyticfern": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_glowingpolyporemushrooms": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientwildfairyrose": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientglowinghuckleberry": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientamaranth.seed": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientepiphyticfern.seed": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_glowingpolyporemushrooms.seed": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientwildfairyrose.seed": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientglowinghuckleberry.seed": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientelderberry": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientelderberry.seed": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientbottlegourd": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientbottlegourd.seed": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientgiantappleberry": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientgiantappleberry.seed": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientazuredetura": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientazuredetura.seed": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientsweettealeaves": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientsweettealeaves.seed": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
+          }
         },
         "{{ModID}}_ancientsweettea": {
-          "CategoryTextOverride": "Druidic",
+          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
             "B": 218,
             "A": 255
-          },
-        },
+          }
+        }
       }
-    },
+    }
   ]
 }

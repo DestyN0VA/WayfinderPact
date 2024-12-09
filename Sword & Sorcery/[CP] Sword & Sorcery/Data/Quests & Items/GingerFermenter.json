@@ -13,7 +13,7 @@
 					"CanBePlacedOutdoors": true,
 					"CanBePlacedIndoors": true,
 					"IsLamp": false,
-					"Texture": "{{InternalAssetKey: assets/Items & Crops/SnSMachines.png}}",
+					"Texture": "Textures/DN.SnS/SnSMachines",
 					"SpriteIndex": 0,
 					"CustomFields": {}
 				}

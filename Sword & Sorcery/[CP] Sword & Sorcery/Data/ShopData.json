@@ -9,7 +9,7 @@
           "Owners": [
             {
               "Name": "AnyOrNone",
-              "Portrait": "{{InternalAssetKey:Assets/TemporaryActors/Portraits/CGEmblem.png}}",
+              "Portrait": "ShopPortraits/DN.SnS/CGEmblem",
               "Dialogues": [
                 {
                   "Id": "{{ModID}}_CAGArtifactLedger",
@@ -355,7 +355,7 @@
             {
               "Name": "AnyOrNone",
               "Condition": "TIME 1200 2000",
-              "Portrait": "{{InternalAssetKey:Assets/TemporaryActors/Portraits/TheMeadowLark.png}}",
+              "Portrait": "ShopPortraits/DN.SnS/TheMeadowLark",
               "Dialogues": [
                 {
                   "Dialogue": "{{i18n:miscellaneous.LMCafe.message}}"

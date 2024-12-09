@@ -1182,7 +1182,7 @@ namespace SwordAndSorcerySMAPI
                     string playerhorsename = Game1.player.horseName.Value;
 
                     if (playerhorsename == null)
-                        return [$"Horse"];
+                        return [I18n.Cptoken_Horse()];
 
                     else
                         return [$"{playerhorsename}"];

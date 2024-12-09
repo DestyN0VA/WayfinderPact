@@ -29,7 +29,11 @@ public static class ShieldCategoryName
     {
         if (__instance.GetData().CustomFields?.ContainsKey("DN.SnS_Shield") ?? false)
         {
-            __result = "Shield";
+            __result = I18n.ShieldCategory();
+        }
+        if (__instance.GetData().CustomFields?.ContainsKey("DN.SnS_Boomerang") ?? false)
+        {
+            __result = I18n.BoomerangeCategory();
         }
     }
 }
@@ -42,6 +46,10 @@ public static class ShieldCategoryColor
         if (__instance is MeleeWeapon && ((__instance as MeleeWeapon).GetData().CustomFields?.ContainsKey("DN.SnS_Shield") ?? false))
         {
             __result = Color.CornflowerBlue;
+        }
+        if (__instance is MeleeWeapon && ((__instance as MeleeWeapon).GetData().CustomFields?.ContainsKey("DN.SnS_Boomerang") ?? false))
+        {
+            __result = Color.MonoGameOrange;
         }
     }
 }

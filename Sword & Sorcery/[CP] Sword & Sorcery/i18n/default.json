@@ -6880,6 +6880,9 @@ ________      ________ _   _ _______ _____
   "weapon.chilisauce.name": "Chili Sauce",
   "weapon.chilisauce.description": "A joyous blade, named after a particularly heroic... sheep.",
 
+  "weapon.stiles-boomerang.name": "Stiles's Boomerang",
+  "weapon.stiles-boomerang.description": "He always comes back. Who's a good boy?",
+
   "magicitem.druidictotemfetish.name": "Druidic Totem Fetish",
   "magicitem.druidictotemfetish.description": "A delicate totem, carved from wood. Despite it's size, it has a hold over the weather...",
 
@@ -7090,6 +7093,13 @@ ________      ________ _   _ _______ _____
   "weapon.stygium-blade.description": "A blade forged of stygium. Hurts to hold.",
   "weapon.elysium-blade.name": "Elysium Blade",
   "weapon.elysium-blade.description": "A stygium blade, purified.",
+
+  "catgeory.raremineral": "Rare Mineral",
+  "catgeory.potion": "Potion",
+  "catgeory.druidic": "Druidic",
+  "catgeory.sheild": "Shield",
+  "catgeory.snack": "Snack",
+  "catgeory.corruptedobject": "Corrupted Object",
 
   "witchcraft.earth-essence.name": "Earth Essence",
   "witchcraft.earth-essence.description": "Essence of the earth.",
