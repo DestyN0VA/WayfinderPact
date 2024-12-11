@@ -68,22 +68,22 @@
                         "Description": "{{i18n: witchcraft.research.teleportation-circle.description.0}}",
                     },
                     {
-                        "Image": "{{InternalAssetKey: Assets/WitchcraftResearch/TeleportationCircle1.png}}",
+                        "Image": "Textures/DN.SnS/TeleportationCircle1",
                     },
                     {
                         "Description": "{{i18n: witchcraft.research.teleportation-circle.description.2}}",
                     },
                     {
-                        "Image": "{{InternalAssetKey: Assets/WitchcraftResearch/TeleportationCircle2.png}}",
+                        "Image": "Textures/DN.SnS/TeleportationCircle2",
                     },
                     {
                         "Description": "{{i18n: witchcraft.research.teleportation-circle.description.4}}",
                     },
                     {
-                        "Image": "{{InternalAssetKey: Assets/WitchcraftResearch/TeleportationCircle3.png}}",
+                        "Image": "Textures/DN.SnS/TeleportationCircle3",
                     },
                     {
-                        "Image": "{{InternalAssetKey: Assets/WitchcraftResearch/TeleportationCircle4.png}}",
+                        "Image": "Textures/DN.SnS/TeleportationCircle4",
                         "Description": "{{i18n: witchcraft.research.teleportation-circle.description.6}}",
                     }
                 ],

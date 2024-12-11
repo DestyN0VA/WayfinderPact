@@ -16,20 +16,15 @@
           "Price": 125,
           "Edibility": 15,
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 92,
           "ContextTags": [
             "color_red",
             "fish_salmonofknowledge",
             "fish_river"
           ]
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+        },
+
         "{{ModID}}_Fastitocalon": {
           "Name": "{{ModID}}_Fastitocalon",
           "DisplayName": "{{i18n:fish.fastitocalon.name}}",
@@ -42,20 +37,15 @@
           "Price": 300,
           "Edibility": 15,
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 93,
           "ContextTags": [
             "color_green",
             "fish_fastitocalon",
             "fish_river"
           ]
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+        },
+
         "{{ModID}}_PallidSailfin": {
           "Name": "{{ModID}}_PallidSailfin",
           "DisplayName": "{{i18n:fish.pallidsailfin.name}}",
@@ -68,20 +58,15 @@
           "Price": 225,
           "Edibility": 15,
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 94,
           "ContextTags": [
             "color_brown",
             "fish_pallidsailfin",
             "fish_river"
           ]
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+        },
+
         "{{ModID}}_GiantDragonfish": {
           "Name": "{{ModID}}_GiantDragonfish",
           "DisplayName": "{{i18n:fish.giantdragonfish.name}}",
@@ -94,20 +79,15 @@
           "Price": 175,
           "Edibility": 15,
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 95,
           "ContextTags": [
             "color_blue",
             "fish_giantdragonfish",
             "fish_river"
           ]
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+        },
+
         "{{ModID}}_FiveLinedConstellationFish": {
           "Name": "{{ModID}}_FiveLinedConstellationFish",
           "DisplayName": "{{i18n:fish.fivelinedconstellationfish.name}}",
@@ -120,20 +100,15 @@
           "Price": 215,
           "Edibility": 15,
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 96,
           "ContextTags": [
             "color_blue",
             "fish_fivelinedconstellationfish",
             "fish_river"
           ]
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+        },
+
         "{{ModID}}_GoldieTheBatteryPoweredFish": {
           "Name": "{{ModID}}_GoldieTheBatteryPoweredFish",
           "DisplayName": "{{i18n:fish.goldiethebatterypoweredfish.name}}",
@@ -146,7 +121,7 @@
           "Price": 2000,
           "Edibility": 15,
           "IsDrink": false,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 109,
           "ContextTags": [
             "color_blue",
@@ -246,13 +221,8 @@
               "(O)DN.SnS_ancientglowinghuckleberry 7"
             ]
           }
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/FishPondData",
-      "Entries": {
+        },
+
         "{{ModID}}_Fastitocalon": {
           "ID": "{{ModID}}_Fastitocalon",
           "Precedence": 0,
@@ -307,13 +277,8 @@
               "(O)DN.SnS_ancientglowinghuckleberry 7"
             ]
           }
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/FishPondData",
-      "Entries": {
+        },
+
         "{{ModID}}_PallidSailfin": {
           "ID": "{{ModID}}_PallidSailfin",
           "Precedence": 0,
@@ -368,13 +333,8 @@
               "(O)DN.SnS_ancientglowinghuckleberry 7"
             ]
           }
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/FishPondData",
-      "Entries": {
+        },
+
         "{{ModID}}_GiantDragonfish": {
           "ID": "{{ModID}}_GiantDragonfish",
           "Precedence": 0,
@@ -429,13 +389,8 @@
               "(O)DN.SnS_ancientglowinghuckleberry 7"
             ]
           }
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/FishPondData",
-      "Entries": {
+        },
+
         "{{ModID}}_FiveLinedConstellationFish": {
           "ID": "{{ModID}}_FiveLinedConstellationFish",
           "Precedence": 0,
@@ -490,13 +445,8 @@
               "(O)DN.SnS_ancientglowinghuckleberry 7"
             ]
           }
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/FishPondData",
-      "Entries": {
+        },
+
         "{{ModID}}_GoldieTheBatteryPoweredFish": {
           "ID": "{{ModID}}_GoldieTheBatteryPoweredFish",
           "Precedence": 0,
@@ -537,17 +487,17 @@
           ],
           "PopulationGates": {
             "3": [
-              "(O)787 3",
+              "(O)787 3"
             ],
             "5": [
-              "(O)787 5",
+              "(O)787 5"
             ],
             "7": [
-              "(O)787 7",
+              "(O)787 7"
             ]
           }
         }
       }
-    },
+    }
   ]
 }

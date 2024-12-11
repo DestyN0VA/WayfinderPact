@@ -15,20 +15,15 @@
           "Edibility": -200,
           "IsDrink": false,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 110,
           "ContextTags": [
             "color_dark_blue",
             "category_forage",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_mushroom2": {
           "Name": "Stygium-Tainted Fungus (Type B)",
           "DisplayName": "{{i18n: forage.mushroom2.name}}",
@@ -39,20 +34,15 @@
           "Edibility": -200,
           "IsDrink": false,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 111,
           "ContextTags": [
             "color_dark_blue",
             "category_forage",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_mushroom3": {
           "Name": "Stygium-Tainted Fungus (Type C)",
           "DisplayName": "{{i18n: forage.mushroom3.name}}",
@@ -63,20 +53,15 @@
           "Edibility": -200,
           "IsDrink": false,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 112,
           "ContextTags": [
             "color_dark_blue",
             "category_forage",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_mushroom4": {
           "Name": "Stygium-Tainted Fungus (Type D)",
           "DisplayName": "{{i18n: forage.mushroom4.name}}",
@@ -87,21 +72,15 @@
           "Edibility": -200,
           "IsDrink": false,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 113,
           "ContextTags": [
             "color_dark_blue",
             "category_forage",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    // FORAGE 
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_taintedcrocus": {
           "Name": "Stygium-Tainted Crocus",
           "DisplayName": "{{i18n: forage.taintedcrocus.name}}",
@@ -112,20 +91,15 @@
           "Edibility": 15,
           "IsDrink": false,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 115,
           "ContextTags": [
             "color_dark_blue",
             "category_forage",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_taintedcorn": {
           "Name": "Stygium-Tainted Corn",
           "DisplayName": "{{i18n: forage.taintedcorn.name}}",
@@ -136,20 +110,15 @@
           "Edibility": 15,
           "IsDrink": false,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 117,
           "ContextTags": [
             "color_dark_blue",
             "category_forage",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_taintedgrasses": {
           "Name": "Stygium-Tainted Grasses",
           "DisplayName": "{{i18n: forage.taintedgrasses.name}}",
@@ -160,57 +129,15 @@
           "Edibility": 15,
           "IsDrink": false,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 116,
           "ContextTags": [
             "color_dark_blue",
             "category_forage",
             "seedmaker_banned"
-          ],
-        }
-      }
-    },
-    // CRAFTING RECIPES
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
-        "{{ModID}}_farafieldsnack": {
-          "Name": "{{ModID}}_farafieldsnack",
-          "DisplayName": "{{i18n: food.farafieldsnack.name}}",
-          "Description": "{{i18n: food.farafieldsnack.description}}",
-          "Type": "Crafting",
-          "Category": 0,
-          "Price": 100,
-          "Edibility": 150,
-          "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
-          "Buffs": [
-            {
-              "Duration": 300,
-              "CustomAttributes": {
-                "FarmingLevel": 0,
-                "FishingLevel": 0,
-                "MiningLevel": 0,
-                "LuckLevel": 0,
-                "ForagingLevel": 0,
-                "MaxStamina": 1,
-                "MagneticRadius": 0,
-                "Speed": 1,
-                "Defense": 1,
-                "Attack": 1
-              }
-            }
-          ],
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
-          "SpriteIndex": 118
-        }
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Entries": {
+          ]
+        },
+
         "{{ModID}}_mushroomtreeseed": {
           "Name": "{{ModID}}_mushroomtreeseed",
           "DisplayName": "{{i18n: food.mushroomtreeseed.name}}",
@@ -221,7 +148,7 @@
           "Edibility": 250,
           "IsDrink": false,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSObjects.png}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 114
         }
       }
@@ -231,7 +158,7 @@
       "Target": "Data/CraftingRecipes",
       "Entries": {
         "{{ModID}}_farafieldsnack": "{{ModID}}_taintedcrocus 1 {{ModID}}_taintedcorn 1 {{ModID}}_taintedgrasses 1/what is this for?/{{ModID}}_farafieldsnack 1/false/{{i18n:food.farafieldsnack.name}}",
-        "{{ModID}}_mushroomtreeseed": "{{ModID}}_mushroom1 3 {{ModID}}_mushroom2 3 {{ModID}}_mushroom3 3 {{ModID}}_mushroom4 3/what is this for?/{{ModID}}_mushroomtreeseed 1/false/{{i18n:food.mushroomtreeseed.name}}",
+        "{{ModID}}_mushroomtreeseed": "{{ModID}}_mushroom1 3 {{ModID}}_mushroom2 3 {{ModID}}_mushroom3 3 {{ModID}}_mushroom4 3/what is this for?/{{ModID}}_mushroomtreeseed 1/false/{{i18n:food.mushroomtreeseed.name}}"
       }
     },
     {
@@ -243,7 +170,7 @@
         {
           "Condition": null,
           "Season": null,
-          "Texture": "{{InternalAssetKey: assets/Items & Crops/SnSMushroomTree.png}}"
+          "Texture": "Textures/DN.SnS/SnSMushroomTree"
         }
       ],
       "SeedItemId": "(O){{ModID}}_mushroomtreeseed",
@@ -362,7 +289,7 @@
           "QualityModifierMode": 0,
           "ModData": null,
           "PerItemCondition": null
-        },
+        }
       ],
       "TapItems": [
         {
@@ -476,13 +403,13 @@
           "QualityModifierMode": 0,
           "ModData": null,
           "PerItemCondition": null
-        },
+        }
       ],
       "ShakeItems": null,
       "CustomFields": null,
       "GrowsMoss": false
-    },
+    }
   }
-},
-  ]
+}
+]
 }

@@ -25,23 +25,6 @@ using StardewValley.SaveMigrations;
 
 namespace SwordAndSorcerySMAPI
 {
-    public class BowCraftingRecipe : CustomCraftingRecipe
-    {
-        public override string Description => ItemRegistry.GetDataOrErrorItem("(W)DN.SnS_Bow").Description;
-
-        public override Texture2D IconTexture => ItemRegistry.GetDataOrErrorItem("(W)DN.SnS_Bow").GetTexture();
-
-        public override Rectangle? IconSubrect => ItemRegistry.GetDataOrErrorItem("(W)DN.SnS_Bow").GetSourceRect();
-
-        private IngredientMatcher[] ingreds = [new ObjectIngredientMatcher("(O)709", 10)];
-        public override IngredientMatcher[] Ingredients => ingreds;
-
-        public override Item CreateResult()
-        {
-            return ItemRegistry.Create("(W)DN.SnS_Bow");
-        }
-    }
-
     public static partial class Extensions
     {
         public static bool IsBow(this Slingshot slingshot)
@@ -76,7 +59,7 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(Slingshot), nameof(Slingshot.PerformFire))]
     public static class SlingshotBowProjectileEffectsPatch
     {
-        public static void Prefix(Slingshot __instance, GameLocation location, Farmer who, ref object __state)
+        public static void Prefix(Slingshot __instance, GameLocation location, ref object __state)
         {
             if (!__instance.IsBow())
                 return;
@@ -172,7 +155,7 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(BasicProjectile), nameof(BasicProjectile.behaviorOnCollisionWithMonster))]
     public static class BasicProjectileBowAmmoCollisionPatch
     {
-        public static void Postfix(BasicProjectile __instance, NPC n, GameLocation location)
+        public static void Postfix(BasicProjectile __instance, NPC n)
         {
             if (n is not Monster m)
                 return;
@@ -185,15 +168,15 @@ namespace SwordAndSorcerySMAPI
                     break;
                 case "(O)DN.SnS_IcicleArrow":
                 case "(O)DN.SnS_IcicleBullet":
-                    IcicleAffector(__instance, m);
+                    IcicleAffector(m);
                     break;
                 case "(O)DN.SnS_WindwakerArrow":
                 case "(O)DN.SnS_WindwakerBullet":
-                    WindwakerAffector(__instance, m);
+                    WindwakerAffector(m);
                     break;
                 case "(O)DN.SnS_LightbringerArrow":
                 case "(O)DN.SnS_LightbringerBullet":
-                    LightbringerAffector(__instance, m);
+                    LightbringerAffector(m);
                     break;
             }
         }
@@ -205,7 +188,7 @@ namespace SwordAndSorcerySMAPI
             DelayedAction.functionAfterDelay(() => { if (m.Health > 0) m.currentLocation.damageMonster(m.GetBoundingBox(), proj.damageToFarmer.Value / 2, proj.damageToFarmer.Value / 2 + 1, isBomb: true, proj.GetPlayerWhoFiredMe(m.currentLocation)); }, 3000);
         }
 
-        private static void IcicleAffector(BasicProjectile proj, Monster m)
+        private static void IcicleAffector(Monster m)
         {
             if (m is not DuskspireMonster || m.stunTime.Value <= 0)
             {
@@ -214,12 +197,12 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        private static void WindwakerAffector(BasicProjectile proj, Monster m)
+        private static void WindwakerAffector(Monster m)
         {
             m.setTrajectory(new Vector2(m.xVelocity * 3, m.yVelocity * 3));
         }
 
-        private static void LightbringerAffector(BasicProjectile proj, Monster m)
+        private static void LightbringerAffector(Monster m)
         {
             if (m is DuskspireMonster)
             {

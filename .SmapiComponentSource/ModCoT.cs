@@ -302,43 +302,6 @@ namespace CircleOfThornsSMAPI
         }
     }
 
-    // Engagement event
-    [HarmonyPatch(typeof(NPC), "engagementResponse")]
-    public static class NpcEngagementResponseButForHectorPatch
-    {
-        public static void Postfix(NPC __instance, Farmer who, bool asRoommate)
-        {
-            if (__instance.Name != "Hector")
-                return;
-
-            if (Game1.activeClickableMenu is DialogueBox db)
-            {
-                db.dialogueFinished = true;
-                db.closeDialogue();
-                Game1.activeClickableMenu = null;
-                Game1.dialogueUp = false;
-            }
-
-            Game1.PlayEvent("SnS.Ch2.Hector.17", false, false);
-        }
-    }
-
-    // No kids
-    [HarmonyPatch(typeof(NPC), nameof(NPC.canGetPregnant))]
-    public static class NPCCanGetPregnantNotHectorPatch
-    {
-        public static bool Prefix(NPC __instance, ref bool __result)
-        {
-            if (__instance.Name == "Hector")
-            {
-                __result = false;
-                return false;
-            }
-
-            return true;
-        }
-    }
-
     // Fruit tree stuff
     [HarmonyPatch(typeof(FruitTree), nameof(FruitTree.IsInSeasonHere))]
     public static class FruitTreeHuckleberrySeasonPatch
@@ -364,7 +327,6 @@ namespace CircleOfThornsSMAPI
             if (__instance.treeId.Value != "DN.SnS_ancientglowinghuckleberry.seed")
                 return true;
 
-            Season season = Game1.GetSeasonForLocation(__instance.Location);
             if ((bool)__instance.GreenHouseTileTree)
             {
                 spriteBatch.Draw(Game1.mouseCursors, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f, __instance.Tile.Y * 64f)), new Rectangle(669, 1957, 16, 16), Color.White, 0f, Vector2.Zero, 4f, SpriteEffects.None, 1E-08f);
@@ -524,7 +486,7 @@ namespace CircleOfThornsSMAPI
     [HarmonyPatch(typeof(FarmerRenderer), nameof(FarmerRenderer.draw), new Type[] { typeof(SpriteBatch), typeof(FarmerSprite), typeof(Rectangle), typeof(Vector2), typeof(Vector2), typeof(float), typeof(Color), typeof(float), typeof(Farmer) } )]
     public static class FarmerRendererPatch
     {
-        public static bool Prefix(SpriteBatch b, FarmerSprite farmerSprite, Rectangle sourceRect, Vector2 position, Vector2 origin, float layerDepth, Color overrideColor, float rotation, Farmer who)
+        public static bool Prefix(SpriteBatch b, Vector2 position, Vector2 origin, float layerDepth, Color overrideColor, float rotation, Farmer who)
         {
             if (Game1.CurrentEvent != null && Game1.currentMinigame is not FinalePhase1Minigame)
             {
@@ -619,7 +581,7 @@ namespace CircleOfThornsSMAPI
     [HarmonyPatch(typeof(Crop), nameof(Crop.harvest))]
     public static class CropHarvestDropEssencesPatch
     {
-        public static void Postfix(Crop __instance, int xTile, int yTile, JunimoHarvester junimoHarvester, bool __result)
+        public static void Postfix(int xTile, int yTile, JunimoHarvester junimoHarvester, bool __result)
         {
             if (!Game1.player.eventsSeen.Contains(ModCoT.DropEssencesEventId))
                 return;
@@ -749,7 +711,7 @@ namespace CircleOfThornsSMAPI
     [HarmonyPatch(typeof(StardewValley.Object), "getPriceAfterMultipliers")]
     public static class ObjectPriceMultiplierForMidgardPatch
     {
-        public static void Postfix(StardewValley.Object __instance, float startPrice, long specificPlayerID, ref float __result)
+        public static void Postfix(StardewValley.Object __instance, long specificPlayerID, ref float __result)
         {
             float saleMultiplier = 1f;
             foreach (Farmer player in Game1.getAllFarmers())
@@ -793,7 +755,7 @@ namespace CircleOfThornsSMAPI
                 }
                 saleMultiplier = Math.Max(saleMultiplier, multiplier);
             }
-            __result = __result * saleMultiplier;
+            __result *= saleMultiplier;
         }
     }
 
