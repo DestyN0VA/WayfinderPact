@@ -29,6 +29,7 @@ using SpaceCore.Spawnables;
 using StardewValley.Inventories;
 using System.Xml;
 using StardewValley.Projectiles;
+using SpaceCore.UI;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -356,7 +357,7 @@ namespace SwordAndSorcerySMAPI
 
                 Color[] cols = [Color.White, Color.White, Color.White, Color.White, Color.White, Color.White, Color.White, Color.White];
 
-                Texture2D texture = Game1.content.Load<Texture2D>("SMAPI/DN.SnS/assets/Items & Crops/SnSObjects.png");
+                Texture2D texture = Game1.content.Load<Texture2D>("Textures/DN.SnS/SnSObjects");
 
                 Rectangle[] srcRects =
                 [
@@ -373,7 +374,7 @@ namespace SwordAndSorcerySMAPI
                 int soFar = 0;
                 void makeNote()
                 {
-                    TemporaryAnimatedSprite tas = new("SMAPI/DN.SnS/assets/Items & Crops/SnSObjects.png", srcRects[soFar], center * Game1.tileSize + new Vector2(0, -96), false, 0, cols[soFar])
+                    TemporaryAnimatedSprite tas = new("Textures/DN.SnS/SnSObjects", srcRects[soFar], center * Game1.tileSize + new Vector2(0, -96), false, 0, cols[soFar])
                     {
                         layerDepth = 1,
                         scale = 4,

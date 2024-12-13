@@ -440,7 +440,7 @@ namespace SwordAndSorcerySMAPI
             {
                 Name = I18n.Ability_LltkToggle_Name,
                 Description = I18n.Ability_LltkToggle_Description,
-                TexturePath = "SMAPI/dn.sns/assets/Items & Crops/SnSObjects.png",
+                TexturePath = "Textures/DN.SnS/SnSObjects",
                 SpriteIndex = 45,
                 KnownCondition = "PLAYER_HAS_MAIL Current DN.SnS_ObtainedLLTK",
                 HiddenIfLocked = true,
@@ -1839,6 +1839,41 @@ namespace SwordAndSorcerySMAPI
                 }
                 __result = true;
             }
+        }
+    }
+
+    [HarmonyPatch(typeof(Tool), "tilesAffected")]
+    public static class ElysiumHoldUprageTiles
+    {
+        public static void Postfix(Tool __instance, Vector2 tileLocation, int power, Farmer who, ref List<Vector2> __result)
+        {
+            if (!__instance.Name.ContainsIgnoreCase("Blessed") || power < 6) return;
+
+            int radius = power - 4;
+
+            List<Vector2> tilesAffected = [];
+            Vector2 center = Vector2.Zero;
+            switch (who.FacingDirection)
+            {
+                case 0:
+                    center = new(tileLocation.X, tileLocation.Y - radius);
+                    break;
+                case 1:
+                    center = new(tileLocation.X + radius, tileLocation.Y);
+                    break;
+                case 2:
+                    center = new(tileLocation.X, tileLocation.Y + radius);
+                    break;
+                case 3:
+                    center = new(tileLocation.X - radius, tileLocation.Y);
+                    break;
+            }
+
+            for (int x = (int)center.X - radius; x <= (int)center.X + radius; x++)
+                for (int y = (int)center.Y - radius; y <= (int)center.Y + radius; y++)
+                    tilesAffected.Add(new(x, y));
+
+            __result = tilesAffected;
         }
     }
 

@@ -137,7 +137,7 @@ public partial class ModSnS
     public const string DataKey_BladeCoating = "swordandsorcery/BladeCoating";
     public const string DataKey_BladeAlloying = "swordandsorcery/BladeAlloying";
 
-    public static string SpriteSheetPath = "SMAPI/dn.sns/assets/Items & Crops/SnSArsenal.png";
+    public static string SpriteSheetPath = "Textures/DN.SnS/SnSArsenal";
 
     public static Dictionary<string, string> ExquisiteGemMappings = new()
     {
