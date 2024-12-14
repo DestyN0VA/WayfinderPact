@@ -29,6 +29,7 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
 
     private int prevFrame = 0;
     private Vector2 lastPos = Vector2.Zero;
+    private Vector2 DeathPos = Vector2.Zero;
     private bool flippedSwing = false;
     private bool doingLaugh = false;
 
@@ -111,11 +112,10 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
             }
 
             if (noMovementTime.Value > 0)
-                noMovementTime.Value -= (float)time.ElapsedGameTime.TotalMilliseconds;
+                noMovementTime.Value -= time.ElapsedGameTime.Milliseconds;
             if (stunTime.Value > 0)
             {
-                Sprite.AnimateDown(time, -45);
-                stunTime.Value -= (int)time.ElapsedGameTime.TotalMilliseconds;
+                stunTime.Value -= time.ElapsedGameTime.Milliseconds;
                 noMovementTime.Value = stunTime.Value;
             }
 
@@ -132,14 +132,16 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
                     {
                         doingLaugh = false;
                         laughEvent.Fire();
-                        DelayedAction.playSoundAfterDelay("SnS_DuskspireLaugh_NoLoop", 500, currentLocation, Position);
+                        Sprite.animateOnce(time);
+                        DelayedAction.playSoundAfterDelay("SnS.DuskspireLaugh_NoLoop", 500, currentLocation, Position);
                         Game1.playSound("SnS.DuskspireLaugh_NoLoop");
-                        noMovementTime.Value = 66 * 75;
+                        noMovementTime.Value = 67 * 70;
                     }
                     else if (dist < Sprite.SpriteWidth * Game1.pixelZoom / 2 - 75)
                     {
                         swingEvent.Fire(farmer.Position.X > Position.X);
-                        noMovementTime.Value = 100 * 10;
+                        Sprite.animateOnce(time);
+                        noMovementTime.Value = 11 * 70;
                     }
                     else
                     {
@@ -159,6 +161,7 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
 
         if (noMovementTime.Value <= 0 && WalkTimer <= 0)
         {
+            Sprite.StopAnimation();
             Vector2 posDiff = Position - lastPos;
             int dir;
             if (stunTime.Value > 0)
@@ -177,6 +180,7 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
                 else
                     dir = Game1.right;
             }
+
             switch (dir)
             {
                 case Game1.up: Sprite.CurrentFrame = Up[currWalkIndex]; break;
@@ -185,6 +189,8 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
                 case Game1.right: Sprite.CurrentFrame = Right[currWalkIndex]; break;
             }
             currWalkIndex++;
+            if (currWalkIndex >= 4)
+                currWalkIndex = 0;
             WalkTimer = 75;
         }
         else
@@ -192,7 +198,7 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
             WalkTimer -= time.ElapsedGameTime.Milliseconds;
         }
 
-        ModSnS.DuskspireDeathPos = Position - new Vector2(4, 4) * 64;
+        DeathPos = Position - new Vector2(4, 4) * 64;
         lastPos = Position;
     }
 
@@ -200,7 +206,7 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
     {
         if (Name != "Duskspire Remnant")
             Game1.playSound("SnS.DuskspireDeath");
-        var pos = ModSnS.DuskspireDeathPos;
+        var pos = DeathPos;
         TemporaryAnimatedSprite DuskspireDeath = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 0, 96, 96), 75, 84, 0, pos, false, false) { scale = 4 };
         TemporaryAnimatedSprite DuskspireHeart = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 2016, 96, 96), 75, 16, 5, pos, false, false) { scale = 4 };
         currentLocation.TemporarySprites.Add(DuskspireDeath);
@@ -213,9 +219,9 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
     {
         List<FarmerSprite.AnimationFrame> frames = [];
         List<FarmerSprite.AnimationFrame> actualFrames = [];
-        for (int i = 0; i < 8 * 4 + 1; ++i)
+        for (int i = 0; i < 33; ++i)
         {
-            frames.Add(new(52 + i, 75));
+            frames.Add(new(52 + i, 70));
         }
 
         actualFrames.AddRange(frames);
@@ -230,16 +236,12 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
         List<FarmerSprite.AnimationFrame> frames = [];
         for (int i = 0; i < 10; ++i)
         {
-            frames.Add(new(40 + i, 75));
+            frames.Add(new(40 + i, 70));
         }
         Sprite.setCurrentAnimation(frames);
-        foreach (Farmer f in Game1.getAllFarmers().Where(f => f.currentLocation.Name == "EastScarp_DuskspireLair"))
-        {
+        foreach (Farmer f in Game1.getAllFarmers().Where(f => f.currentLocation == currentLocation))
             if (f.GetBoundingBox().Intersects(GetBoundingBox()))
-            {
                 f.takeDamage(DamageToFarmer, false, this);
-            }
-        }
         flippedSwing = arg;
     }
 

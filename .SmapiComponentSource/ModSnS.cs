@@ -42,7 +42,32 @@ namespace SwordAndSorcerySMAPI
 
     public class FarmerExtData
     {
+        public readonly NetInt form = new(0);
+        public readonly NetBool transformed = new(false);
+        public readonly NetFloat expRemainder = new(0);
+        public double noMovementTimer = 0;
+
+        public bool isResting => noMovementTimer >= 3;
+
+        public static int FormGetter(Farmer farmer)
+        {
+            return farmer.GetFarmerExtData().form.Value;
+        }
+        public static void FormSetter(Farmer farmer, int val)
+        {
+            farmer.GetFarmerExtData().form.Value = val;
+        }
+        public static float ExpRemainderGetter(Farmer farmer)
+        {
+            return farmer.GetFarmerExtData().expRemainder.Value;
+        }
+        public static void ExpRemainderSetter(Farmer farmer, float val)
+        {
+            farmer.GetFarmerExtData().expRemainder.Value = val;
+        }
+
         public readonly NetBool hasTakenLoreWeapon = new(false);
+
         public static void SetHasTakenLoreWeapon(Farmer farmer, NetBool val)
         {
         }
@@ -217,6 +242,8 @@ namespace SwordAndSorcerySMAPI
         public KeybindList ConfigureAdventureBar = new(SButton.U);
         public KeybindList ToggleAdventureBar = new(new Keybind(SButton.LeftControl, SButton.U));
 
+        public bool EarlyPaladinUnlock = true;
+
         public bool LltkToggleRightClick = false;
         public KeybindList LltkToggleKeybind = new(new Keybind(SButton.None));
         public string LltkDifficulty = "Medium";
@@ -259,7 +286,6 @@ namespace SwordAndSorcerySMAPI
         public static ISpaceCoreApi sc;
         public static IRadialMenuApi radial;
 
-        public static Vector2 DuskspireDeathPos;
         public static int AetherRestoreTimer = 0;
 
         private Harmony harmony;
@@ -978,6 +1004,7 @@ namespace SwordAndSorcerySMAPI
                 gmcm.Register(ModManifest, () => Config = new(), () => Helper.WriteConfig(Config));
 
                 gmcm.AddSectionTitle(ModManifest, I18n.Config_Section_Balancing);
+                gmcm.AddBoolOption(ModManifest, () => Config.EarlyPaladinUnlock, (val) => Config.EarlyPaladinUnlock = val, I18n.Config_EarlyPaladinUnlock_Name, I18n.Config_EarlyPaladinUnlock_Description);
                 gmcm.AddNumberOption(ModManifest, () => Config.MonsterHealthBuff, (val) => Config.MonsterHealthBuff = val, I18n.Config_MonsterHealthBuff_Name, I18n.Config_MonsterHealthBuff_Description, 1.0f, 3.0f, 0.05f, f => ((int)((f - 1.0) * 100)).ToString());
 
                 gmcm.AddSectionTitle(ModManifest, I18n.Section_AetherBar_Name, I18n.Section_AetherBar_Description);
@@ -1686,7 +1713,7 @@ namespace SwordAndSorcerySMAPI
 
             var ext = Game1.player.GetFarmerExtData();
             if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||
-                Game1.player.GetArmorItem() == null ||
+                (Game1.player.GetArmorItem() == null && (Game1.player.GetOffhand().GetData()?.CustomFields?.ContainsKey("DN.SnS_Shield") ?? false)) ||
                 ext.armorUsed.Value >= (Game1.player.GetArmorItem().GetArmorAmount() ?? -1))
                 return true;
 
