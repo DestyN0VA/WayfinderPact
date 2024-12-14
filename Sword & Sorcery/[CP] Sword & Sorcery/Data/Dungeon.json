@@ -1243,6 +1243,19 @@
                 
 
             }
+        },
+
+        //giving the droplets bubbles instead of the uhhhh, fire, cause I was too lazy to figure out how to get rid of the fire C# side, aka tedi was also here
+        {
+            "LogName": "Stygium Droplet Bubbles",
+            "Action": "EditImage",
+            "Target": "Characters/Monsters/Magma Sprite, Characters/Monsters/Magma Sparker",
+            "FromFile": "Assets/Monsters/DropletBubbles.png",
+            "ToArea": { "X": 0, "Y": 64, "Width": 64, "Height": 16 },
+            "When": {
+                "LocationName": "EastScarp_DeepDarkDungeon"
+            },
+            "Update": "OnLocationChange"
         }
     ]
 }
