@@ -42,7 +42,32 @@ namespace SwordAndSorcerySMAPI
 
     public class FarmerExtData
     {
+        public readonly NetInt form = new(0);
+        public readonly NetBool transformed = new(false);
+        public readonly NetFloat expRemainder = new(0);
+        public double noMovementTimer = 0;
+
+        public bool isResting => noMovementTimer >= 3;
+
+        public static int FormGetter(Farmer farmer)
+        {
+            return farmer.GetFarmerExtData().form.Value;
+        }
+        public static void FormSetter(Farmer farmer, int val)
+        {
+            farmer.GetFarmerExtData().form.Value = val;
+        }
+        public static float ExpRemainderGetter(Farmer farmer)
+        {
+            return farmer.GetFarmerExtData().expRemainder.Value;
+        }
+        public static void ExpRemainderSetter(Farmer farmer, float val)
+        {
+            farmer.GetFarmerExtData().expRemainder.Value = val;
+        }
+
         public readonly NetBool hasTakenLoreWeapon = new(false);
+
         public static void SetHasTakenLoreWeapon(Farmer farmer, NetBool val)
         {
         }
@@ -217,6 +242,8 @@ namespace SwordAndSorcerySMAPI
         public KeybindList ConfigureAdventureBar = new(SButton.U);
         public KeybindList ToggleAdventureBar = new(new Keybind(SButton.LeftControl, SButton.U));
 
+        public bool EarlyPaladinUnlock = true;
+
         public bool LltkToggleRightClick = false;
         public KeybindList LltkToggleKeybind = new(new Keybind(SButton.None));
         public string LltkDifficulty = "Medium";
@@ -259,7 +286,6 @@ namespace SwordAndSorcerySMAPI
         public static ISpaceCoreApi sc;
         public static IRadialMenuApi radial;
 
-        public static Vector2 DuskspireDeathPos;
         public static int AetherRestoreTimer = 0;
 
         private Harmony harmony;
@@ -393,7 +419,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.Display.RenderedWorld += Display_RenderedWorld;
             Helper.Events.Input.ButtonPressed += Input_ButtonPressed;
             Helper.Events.World.NpcListChanged += World_NpcListChanged;
-            Helper.Events.World.LocationListChanged += World_LocationListChanged; ;
+            Helper.Events.World.LocationListChanged += World_LocationListChanged;
 
             GameLocation.RegisterTileAction("SwordAndSorceryOrderBoard", (loc, args, farmer, point) =>
             {
@@ -440,7 +466,7 @@ namespace SwordAndSorcerySMAPI
             {
                 Name = I18n.Ability_LltkToggle_Name,
                 Description = I18n.Ability_LltkToggle_Description,
-                TexturePath = "SMAPI/dn.sns/assets/Items & Crops/SnSObjects.png",
+                TexturePath = "Textures/DN.SnS/SnSObjects",
                 SpriteIndex = 45,
                 KnownCondition = "PLAYER_HAS_MAIL Current DN.SnS_ObtainedLLTK",
                 HiddenIfLocked = true,
@@ -978,6 +1004,7 @@ namespace SwordAndSorcerySMAPI
                 gmcm.Register(ModManifest, () => Config = new(), () => Helper.WriteConfig(Config));
 
                 gmcm.AddSectionTitle(ModManifest, I18n.Config_Section_Balancing);
+                gmcm.AddBoolOption(ModManifest, () => Config.EarlyPaladinUnlock, (val) => Config.EarlyPaladinUnlock = val, I18n.Config_EarlyPaladinUnlock_Name, I18n.Config_EarlyPaladinUnlock_Description);
                 gmcm.AddNumberOption(ModManifest, () => Config.MonsterHealthBuff, (val) => Config.MonsterHealthBuff = val, I18n.Config_MonsterHealthBuff_Name, I18n.Config_MonsterHealthBuff_Description, 1.0f, 3.0f, 0.05f, f => ((int)((f - 1.0) * 100)).ToString());
 
                 gmcm.AddSectionTitle(ModManifest, I18n.Section_AetherBar_Name, I18n.Section_AetherBar_Description);
@@ -1182,9 +1209,18 @@ namespace SwordAndSorcerySMAPI
 
             // This late because of accessing SpaceCore's local variable API
             harmony.PatchAll(Assembly.GetExecutingAssembly());
+
+            // This is like, don't, don't do this normally kids, like please don't. Don't harmony patch other mods. It's fragile, and stupid, but this was the easy way out and I like me some shortcuts.
+            if (Helper.ModRegistry.IsLoaded("leclair.bettercrafting"))
+            {
+                harmony.Patch(
+                    AccessTools.TypeByName("Leclair.Stardew.Common.CraftingHelper").GetMethod("ConsumeIngredients"), 
+                    prefix: new HarmonyMethod(typeof(CraftingRecipeFlashOfGeniusPatch), nameof(CraftingRecipeFlashOfGeniusPatch.Prefix))
+                    );
+            }
         }
 
-        private void GameLoop_UpdateTicking(object sender, StardewModdingAPI.Events.UpdateTickingEventArgs e)
+        private void GameLoop_UpdateTicking(object sender, UpdateTickingEventArgs e)
         {
 
             if (!Context.IsWorldReady)
@@ -1683,11 +1719,10 @@ namespace SwordAndSorcerySMAPI
             {
                 __instance.GetFarmerExtData().mana.Value += (int)MathF.Min(Game1.random.Next(5,10), __instance.GetFarmerExtData().maxMana.Value - __instance.GetFarmerExtData().mana.Value);
             }
-
+            int ArmorAmount = Game1.player.CurrentItem.GetArmorAmount() ?? Game1.player.GetArmorItem().GetArmorAmount() ?? Game1.player.GetOffhand().GetArmorAmount() ?? -1;
             var ext = Game1.player.GetFarmerExtData();
             if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||
-                Game1.player.GetArmorItem() == null ||
-                ext.armorUsed.Value >= (Game1.player.GetArmorItem().GetArmorAmount() ?? -1))
+                ext.armorUsed.Value >= ArmorAmount)
                 return true;
 
             bool flag = (damager == null || !damager.isInvincible()) && (damager == null || (damager is not GreenSlime && damager is not BigSlime) || !__instance.isWearingRing("520"));
@@ -1839,6 +1874,41 @@ namespace SwordAndSorcerySMAPI
                 }
                 __result = true;
             }
+        }
+    }
+
+    [HarmonyPatch(typeof(Tool), "tilesAffected")]
+    public static class ElysiumHoldUprageTiles
+    {
+        public static void Postfix(Tool __instance, Vector2 tileLocation, int power, Farmer who, ref List<Vector2> __result)
+        {
+            if (!__instance.Name.ContainsIgnoreCase("Blessed") || power < 6) return;
+
+            int radius = power - 4;
+
+            List<Vector2> tilesAffected = [];
+            Vector2 center = Vector2.Zero;
+            switch (who.FacingDirection)
+            {
+                case 0:
+                    center = new(tileLocation.X, tileLocation.Y - radius);
+                    break;
+                case 1:
+                    center = new(tileLocation.X + radius, tileLocation.Y);
+                    break;
+                case 2:
+                    center = new(tileLocation.X, tileLocation.Y + radius);
+                    break;
+                case 3:
+                    center = new(tileLocation.X - radius, tileLocation.Y);
+                    break;
+            }
+
+            for (int x = (int)center.X - radius; x <= (int)center.X + radius; x++)
+                for (int y = (int)center.Y - radius; y <= (int)center.Y + radius; y++)
+                    tilesAffected.Add(new(x, y));
+
+            __result = tilesAffected;
         }
     }
 

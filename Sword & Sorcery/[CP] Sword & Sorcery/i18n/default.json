@@ -8094,20 +8094,20 @@ Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between 8am and 
 You can go to the [color=green]Underforge[/color] in the [color=green]Coastal Adventurer's Guild[/color] by going through a door to the right of the main room. Here, you can attach three different types of items to your weapon to make them stronger. You can do this by using the forge in the top left of the map.
  
 You can attach 25 pure ore to a weapon to improve it's damage:
-   > [itemtooltip=(O)DN.SnS_PureCopperOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:64,32,16,16] [color=blue]Pure Copper Ore[/color][/itemtooltip] - +5% damage
-   > [itemtooltip=(O)DN.SnS_PureIronOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,32,16,16] [color=blue]Pure Iron Ore[/color][/itemtooltip] - +10% damage
-   > [itemtooltip=(O)DN.SnS_PureGoldOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:96,32,16,16] [color=blue]Pure Gold Ore[/color][/itemtooltip] - +15% damage
-   > [itemtooltip=(O)DN.SnS_PureIridiumOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,48,16,16] [color=blue]Pure Iridium Ore[/color][/itemtooltip] - +20% damage
-   > [itemtooltip=(O)DN.SnS_PureRadioactiveOre][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,48,16,16] [color=blue]Pure Radioactive Ore[/color][/itemtooltip] - +25% damage
+   > [itemtooltip=(O)DN.SnS_PureCopperOre][icon=Textures/DN.SnS/SnSArsenal:64,32,16,16] [color=blue]Pure Copper Ore[/color][/itemtooltip] - +5% damage
+   > [itemtooltip=(O)DN.SnS_PureIronOre][icon=Textures/DN.SnS/SnSArsenal:80,32,16,16] [color=blue]Pure Iron Ore[/color][/itemtooltip] - +10% damage
+   > [itemtooltip=(O)DN.SnS_PureGoldOre][icon=Textures/DN.SnS/SnSArsenal:96,32,16,16] [color=blue]Pure Gold Ore[/color][/itemtooltip] - +15% damage
+   > [itemtooltip=(O)DN.SnS_PureIridiumOre][icon=Textures/DN.SnS/SnSArsenal:0,48,16,16] [color=blue]Pure Iridium Ore[/color][/itemtooltip] - +20% damage
+   > [itemtooltip=(O)DN.SnS_PureRadioactiveOre][icon=Textures/DN.SnS/SnSArsenal:16,48,16,16] [color=blue]Pure Radioactive Ore[/color][/itemtooltip] - +25% damage
  
 You can attach an exquisite gem to a weapon to give it new effects:
-   > [itemtooltip=(O)DN.SnS_ExquisiteEmerald][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,0,16,16] [color=blue]Exquisite Emerald[/color][/itemtooltip] - [texttooltip=Evasive:Increases your speed by +1.5 for 5 seconds after hitting an enemy.][color=purple]Evasive[/color][/texttooltip]
-   > [itemtooltip=(O)DN.SnS_ExquisiteTopaz][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,0,16,16] [color=blue]Exquisite Topaz[/color][/itemtooltip] - [texttooltip=Defensive:Reduces incoming damage by 15%.][color=purple]Defensive[/color][/texttooltip]
-   > [itemtooltip=(O)DN.SnS_ExquisiteRuby][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,0,16,16] [color=blue]Exquisite Ruby[/color][/itemtooltip] - [texttooltip=Harming:Deals an extra 10% damage to an enemy once every second for 3 seconds after hitting it.][color=purple]Harming[/color][/texttooltip]
-   > [itemtooltip=(O)DN.SnS_ExquisiteJade][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,0,16,16] [color=blue]Exquisite Jade[/color][/itemtooltip] - [texttooltip=Restful:Grants +2 stamina upon hitting an enemy.][color=purple]Restful[/color][/texttooltip]
-   > [itemtooltip=(O)DN.SnS_ExquisiteAmethyst][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:64,0,16,16] [color=blue]Exquisite Amethyst[/color][/itemtooltip] - [texttooltip=Freezing:15% chance of freezing an enemy on hit.][color=purple]Freezing[/color][/texttooltip]
-   > [itemtooltip=(O)DN.SnS_ExquisiteDiamond][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,0,16,16] [color=blue]Exquisite Diamond[/color][/itemtooltip] - [texttooltip=Healthy:Grants +1 health upon hitting an enemy.][color=purple]Healthy[/color][/texttooltip]
-   > [itemtooltip=(O)DN.SnS_ExquisiteAquamarine][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:96,0,16,16] [color=blue]Exquisite Aquamarine[/color][/itemtooltip] - [texttooltip=Critical:Provides a 15% chance of a critical hit when hitting an enemy.
+   > [itemtooltip=(O)DN.SnS_ExquisiteEmerald][icon=Textures/DN.SnS/SnSArsenal:0,0,16,16] [color=blue]Exquisite Emerald[/color][/itemtooltip] - [texttooltip=Evasive:Increases your speed by +1.5 for 5 seconds after hitting an enemy.][color=purple]Evasive[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteTopaz][icon=Textures/DN.SnS/SnSArsenal:16,0,16,16] [color=blue]Exquisite Topaz[/color][/itemtooltip] - [texttooltip=Defensive:Reduces incoming damage by 15%.][color=purple]Defensive[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteRuby][icon=Textures/DN.SnS/SnSArsenal:32,0,16,16] [color=blue]Exquisite Ruby[/color][/itemtooltip] - [texttooltip=Harming:Deals an extra 10% damage to an enemy once every second for 3 seconds after hitting it.][color=purple]Harming[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteJade][icon=Textures/DN.SnS/SnSArsenal:48,0,16,16] [color=blue]Exquisite Jade[/color][/itemtooltip] - [texttooltip=Restful:Grants +2 stamina upon hitting an enemy.][color=purple]Restful[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteAmethyst][icon=Textures/DN.SnS/SnSArsenal:64,0,16,16] [color=blue]Exquisite Amethyst[/color][/itemtooltip] - [texttooltip=Freezing:15% chance of freezing an enemy on hit.][color=purple]Freezing[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteDiamond][icon=Textures/DN.SnS/SnSArsenal:80,0,16,16] [color=blue]Exquisite Diamond[/color][/itemtooltip] - [texttooltip=Healthy:Grants +1 health upon hitting an enemy.][color=purple]Healthy[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteAquamarine][icon=Textures/DN.SnS/SnSArsenal:96,0,16,16] [color=blue]Exquisite Aquamarine[/color][/itemtooltip] - [texttooltip=Critical:Provides a 15% chance of a critical hit when hitting an enemy.
 (If the hit is already a critical hit, the damage will be multiplied again.][color=purple]Critical[/color][/texttooltip]
  
 You can attach a large amount of certain monster loot to a weapon to give it new effects:
@@ -8125,23 +8125,23 @@ You've unlocked the Artificer skill! Artificer can be leveled up killing monster
  
 [font=dialogue]Unlocks[/font]
 > Level 1 - Recipe unlocks: 
- = [itemtooltip=(O)DN.SnS_ClothArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,48,16,16] [color=blue]Cloth Armor[/color][/itemtooltip]
- = [itemtooltip=(W)DN.SnS_Bow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,80,16,16] [color=blue]Bow[/color][/itemtooltip]
- = [itemtooltip=(O)DN.SnS_Arrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,64,16,16] [color=blue]Arrow[/color][/itemtooltip]
+ = [itemtooltip=(O)DN.SnS_ClothArmor][icon=Textures/DN.SnS/SnSArsenal:32,48,16,16] [color=blue]Cloth Armor[/color][/itemtooltip]
+ = [itemtooltip=(W)DN.SnS_Bow][icon=Textures/DN.SnS/SnSArsenal:32,80,16,16] [color=blue]Bow[/color][/itemtooltip]
+ = [itemtooltip=(O)DN.SnS_Arrow][icon=Textures/DN.SnS/SnSArsenal:16,64,16,16] [color=blue]Arrow[/color][/itemtooltip]
   
 > Level 2 - Recipe & Mechanic unlocks:
  = Pure ore now has a chance to
     drop from their respective ore
     nodes for use in the [link=NEA/Underforge]Underforge[/link].
- = [itemtooltip=(O)DN.SnS_CopperArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,48,16,16] [color=blue]Copper Armor[/color][/itemtooltip]
- = [itemtooltip=(O)DN.SnS_IronArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:64,48,16,16] [color=blue]Iron Armor[/color][/itemtooltip]
- = [itemtooltip=(O)DN.SnS_GoldArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,48,16,16] [color=blue]Gold Armor[/color][/itemtooltip]
- = [itemtooltip=(O)DN.SnS_IridiumArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:96,48,16,16] [color=blue]Iridium Armor[/color][/itemtooltip]
- = [itemtooltip=(O)DN.SnS_RadioactiveArmor][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,64,16,16] [color=blue]Radioactive Armor[/color][/itemtooltip]
+ = [itemtooltip=(O)DN.SnS_CopperArmor][icon=Textures/DN.SnS/SnSArsenal:48,48,16,16] [color=blue]Copper Armor[/color][/itemtooltip]
+ = [itemtooltip=(O)DN.SnS_IronArmor][icon=Textures/DN.SnS/SnSArsenal:64,48,16,16] [color=blue]Iron Armor[/color][/itemtooltip]
+ = [itemtooltip=(O)DN.SnS_GoldArmor][icon=Textures/DN.SnS/SnSArsenal:80,48,16,16] [color=blue]Gold Armor[/color][/itemtooltip]
+ = [itemtooltip=(O)DN.SnS_IridiumArmor][icon=Textures/DN.SnS/SnSArsenal:96,48,16,16] [color=blue]Iridium Armor[/color][/itemtooltip]
+ = [itemtooltip=(O)DN.SnS_RadioactiveArmor][icon=Textures/DN.SnS/SnSArsenal:0,64,16,16] [color=blue]Radioactive Armor[/color][/itemtooltip]
   
 > Level 3 - Recipe unlocks:
-  = [itemtooltip=(O)DN.SnS_FirestormArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:32,64,16,16] [color=blue]Firestorm Arrow[/color][/itemtooltip]
-  = [itemtooltip=(O)DN.SnS_IcicleArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:48,64,16,16] [color=blue]Icicle Arrow[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_FirestormArrow][icon=Textures/DN.SnS/SnSArsenal:32,64,16,16] [color=blue]Firestorm Arrow[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_IcicleArrow][icon=Textures/DN.SnS/SnSArsenal:48,64,16,16] [color=blue]Icicle Arrow[/color][/itemtooltip]
    
 > Level 4 - Mechanic unlocks:
   = Exquisite gems now have a chance
@@ -8156,13 +8156,13 @@ You've unlocked the Artificer skill! Artificer can be leveled up killing monster
      of certain monster loot.
    
 > Level 7 Recipe unlocks:
-  = [itemtooltip=(O)DN.SnS_WindwakerArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:80,64,16,16] [color=blue]Windwaker Arrow[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_WindwakerArrow][icon=Textures/DN.SnS/SnSArsenal:80,64,16,16] [color=blue]Windwaker Arrow[/color][/itemtooltip]
    
 > Level 8 - Recipe unlocks:
-  = [itemtooltip=(O)DN.SnS_RicochetArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:0,80,16,16] [color=blue]Ricochet Arrow[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_RicochetArrow][icon=Textures/DN.SnS/SnSArsenal:0,80,16,16] [color=blue]Ricochet Arrow[/color][/itemtooltip]
    
 > Level 9 - Recipe unlocks:
-  = [itemtooltip=(O)DN.SnS_LightbringerArrow][icon=SMAPI/dn.sns/assets/items & crops/snsarsenal.png:16,80,16,16] [color=blue]Lightbringer Arrow[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_LightbringerArrow][icon=Textures/DN.SnS/SnSArsenal:16,80,16,16] [color=blue]Lightbringer Arrow[/color][/itemtooltip]
  
   > Level 10 - See the [link=NEA/ArtificerProfessions]Artificer Professions[/link] page.",
 
@@ -8369,8 +8369,8 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [font=dialogue]Special Order: Collect Druidic Essences[/font]
 [if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.River2]You collected the druidic essences.[/if]
 [else]Deliver the following items to the altar outside of [color=green]Hector's Tower[/color] in the [color=green]Deep Mountains[/color]:
-> 100 [itemtooltip=(O)DN.SnS_druidicessence][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip]
-[itemtooltip=(O)DN.SnS_druidicessence][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip] can be found from tilling soil, watering crops, harvesting crops, and cutting grass.
+> 100 [itemtooltip=(O)DN.SnS_druidicessence][icon=Textures/DN.SnS/SnSObjects:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip]
+[itemtooltip=(O)DN.SnS_druidicessence][icon=Textures/DN.SnS/SnSObjects:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip] can be found from tilling soil, watering crops, harvesting crops, and cutting grass.
 [if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.River2]You seem to be missing the special order.
 [onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.River2]Click here to re-add it to your journal.[/onceaction][/if]
 [/else]
@@ -8422,7 +8422,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [/if]",
   "guidebook.chapter.COT.DruidicEssence": "[center][font=dialogue]Druidic Essence[/font][/center]
    
-At this point, you've unlocked [itemtooltip=(O)DN.SnS_druidicessence][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip]. This is used for a special order during the story, as well as for crafting as you progress in the [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=COT/DruidicsSkill]Druidics[/link] skill[/if][else]Druidics skill (locked)[/else].
+At this point, you've unlocked [itemtooltip=(O)DN.SnS_druidicessence][icon=Textures/DN.SnS/SnSObjects:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip]. This is used for a special order during the story, as well as for crafting as you progress in the [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=COT/DruidicsSkill]Druidics[/link] skill[/if][else]Druidics skill (locked)[/else].
  
 You can gather this item in the following ways:
 > Tilling soil
@@ -8444,29 +8444,29 @@ You may not use tools or attack while transformed.][icon=SMAPI/kcc.sns/assets/dr
 You may not use tools or attack while transformed.][icon=SMAPI/kcc.sns/assets/druidics/druid1.png:0,0,10,10] [color=purple]Shapeshift (Doe)[/color][/texttooltip]
 
 Recipe Unlocks:
-  = [itemtooltip=(O)DN.SnS_ancientamaranth.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:144,0,16,16] [color=blue]Ancient Amaranth Seeds[/color][/itemtooltip]
-  = [itemtooltip=(O)DN.SnS_ancientepiphyticfern.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:16,16,16,16] [color=blue]Ancient Epiphytic Fern Seeds[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ancientamaranth.seed][icon=Textures/DN.SnS/SnSObjects:144,0,16,16] [color=blue]Ancient Amaranth Seeds[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ancientepiphyticfern.seed][icon=Textures/DN.SnS/SnSObjects:16,16,16,16] [color=blue]Ancient Epiphytic Fern Seeds[/color][/itemtooltip]
 > Level 2 - Unlocks the recipes:
-  = [itemtooltip=(O)DN.SnS_glowingpolyporemushrooms.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:48,16,16,16] [color=blue]Ancient Glowing Polypore Mushroom Spores[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_glowingpolyporemushrooms.seed][icon=Textures/DN.SnS/SnSObjects:48,16,16,16] [color=blue]Ancient Glowing Polypore Mushroom Spores[/color][/itemtooltip]
 > Level 3 - Unlocks the recipes:
-  = [itemtooltip=(O)DN.SnS_ancientwildfairyrose.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:0,16,16,16] [color=blue]Ancient Wild Fairy Rose Seeds[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ancientwildfairyrose.seed][icon=Textures/DN.SnS/SnSObjects:0,16,16,16] [color=blue]Ancient Wild Fairy Rose Seeds[/color][/itemtooltip]
 > Level 4 - Unlocks the recipes:
-  = [itemtooltip=(O)DN.SnS_ancientelderberry.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:128,48,16,16] [color=blue]Ancient Elderberry Seeds[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ancientelderberry.seed][icon=Textures/DN.SnS/SnSObjects:128,48,16,16] [color=blue]Ancient Elderberry Seeds[/color][/itemtooltip]
  
 > Level 5 - See the [link=COT/DruidicsProfessions]Druidics Professions[/link] page.
  
 > Level 6 - Unlocks the recipes:
-  = [itemtooltip=(O)DN.SnS_ancientbottlegourd.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:0,64,16,16] [color=blue]Ancient Bottle Gourd Seeds[/color][/itemtooltip] 
-  = [itemtooltip=(O)DN.SnS_lavaeelandstirfriedancientbottlegourd][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:0,48,16,16] [color=blue]Lava Eel & Bottle Gourd[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ancientbottlegourd.seed][icon=Textures/DN.SnS/SnSObjects:0,64,16,16] [color=blue]Ancient Bottle Gourd Seeds[/color][/itemtooltip] 
+  = [itemtooltip=(O)DN.SnS_lavaeelandstirfriedancientbottlegourd][icon=Textures/DN.SnS/SnSObjects:0,48,16,16] [color=blue]Lava Eel & Bottle Gourd[/color][/itemtooltip]
 > Level 7 - Unlocks the recipes:
-  = [itemtooltip=(O)DN.SnS_ancientgiantappleberry.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:32,64,16,16] [color=blue]Ancient Giant Apple Berry Seeds[/color][/itemtooltip]
-  = [itemtooltip=(O)DN.SnS_mushroomsredsauce][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:112,32,16,16] [color=blue]Fried Polypore Mushrooms & Red Sauce[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ancientgiantappleberry.seed][icon=Textures/DN.SnS/SnSObjects:32,64,16,16] [color=blue]Ancient Giant Apple Berry Seeds[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_mushroomsredsauce][icon=Textures/DN.SnS/SnSObjects:112,32,16,16] [color=blue]Fried Polypore Mushrooms & Red Sauce[/color][/itemtooltip]
 > Level 8 - Unlocks the recipes: 
-  = [itemtooltip=(O)DN.SnS_ancientazuredetura.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:64,64,16,16] [color=blue]Ancient Azure Detura[/color][/itemtooltip]
-  = [itemtooltip=(O)DN.SnS_ferngreensandpineapple][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:128,32,16,16] [color=blue]Fern Greens and Pineapple[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ancientazuredetura.seed][icon=Textures/DN.SnS/SnSObjects:64,64,16,16] [color=blue]Ancient Azure Detura[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ferngreensandpineapple][icon=Textures/DN.SnS/SnSObjects:128,32,16,16] [color=blue]Fern Greens and Pineapple[/color][/itemtooltip]
 > Level 9 - Unlocks the recipes:
-  = [itemtooltip=(O)DN.SnS_ancientglowinghuckleberry.seed][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:32,16,16,16] [color=blue]Ancient Glowing Huckleberry Seeds[/color][/itemtooltip]
-  = [itemtooltip=(O)DN.SnS_ancienthuckleberryicecream][icon=SMAPI/dn.sns/assets/items & crops/snsobjects.png:144,32,16,16] [color=blue]Ancient Huckleberry Ice Cream[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ancientglowinghuckleberry.seed][icon=Textures/DN.SnS/SnSObjects:32,16,16,16] [color=blue]Ancient Glowing Huckleberry Seeds[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ancienthuckleberryicecream][icon=Textures/DN.SnS/SnSObjects:144,32,16,16] [color=blue]Ancient Huckleberry Ice Cream[/color][/itemtooltip]
  
 > Level 10 - See the [link=COT/DruidicsProfessions]Druidics Professions[/link] page.",
 

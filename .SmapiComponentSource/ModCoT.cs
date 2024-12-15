@@ -2,66 +2,23 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
-using SpaceCore.Events;
-using SpaceCore.Interface;
 using SpaceShared.APIs;
 using StardewModdingAPI;
-using StardewModdingAPI.Utilities;
 using StardewValley;
 using StardewValley.Characters;
-using StardewValley.Menus;
 using StardewValley.TerrainFeatures;
 using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 
 using SwordAndSorcerySMAPI;
 using SpaceCore;
-using StardewValley.GameData.HomeRenovations;
-using static System.Net.Mime.MediaTypeNames;
-using NeverEndingAdventure.Utils;
+using FarmerExtData = SwordAndSorcerySMAPI.FarmerExtData;
 
 namespace CircleOfThornsSMAPI
 {
-    public class FarmerExtData
-    {
-        public readonly NetInt form = new(0);
-        public readonly NetBool transformed = new(false);
-        public readonly NetFloat expRemainder = new(0);
-        public double noMovementTimer = 0;
-
-        public bool isResting => noMovementTimer >= 3;
-
-        public static int FormGetter(Farmer farmer)
-        {
-            return farmer.GetFarmerExtData().form.Value;
-        }
-        public static void FormSetter(Farmer farmer, int val)
-        {
-            farmer.GetFarmerExtData().form.Value = val;
-        }
-        public static float ExpRemainderGetter(Farmer farmer)
-        {
-            return farmer.GetFarmerExtData().expRemainder.Value;
-        }
-        public static void ExpRemainderSetter(Farmer farmer, float val)
-        {
-            farmer.GetFarmerExtData().expRemainder.Value = val;
-        }
-    }
-
-    public static class Extensions
-    {
-        public static FarmerExtData GetFarmerExtData(this Farmer instance)
-        {
-            return ModCoT.farmerData.GetOrCreateValue(instance);
-        }
-    }
-
     public class ModCoT
     {
         public static ModCoT Instance;
@@ -459,7 +416,7 @@ namespace CircleOfThornsSMAPI
         {
             if (who.GetFarmerExtData().transformed.Value)
             {
-                if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftWolf) && who.CurrentTool is not MeleeWeapon)
+                if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftWolf))
                     return true;
                 return false;
             }
@@ -474,106 +431,12 @@ namespace CircleOfThornsSMAPI
         {
             if (__instance.GetFarmerExtData().transformed.Value)
             {
-                if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftWolf) && __instance.CurrentTool is not MeleeWeapon)
+                if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftWolf))
                     return true;
                 return false;
             }
             return true;
 
-        }
-    }
-
-    [HarmonyPatch(typeof(FarmerRenderer), nameof(FarmerRenderer.draw), new Type[] { typeof(SpriteBatch), typeof(FarmerSprite), typeof(Rectangle), typeof(Vector2), typeof(Vector2), typeof(float), typeof(Color), typeof(float), typeof(Farmer) } )]
-    public static class FarmerRendererPatch
-    {
-        public static bool Prefix(SpriteBatch b, Vector2 position, Vector2 origin, float layerDepth, Color overrideColor, float rotation, Farmer who)
-        {
-            if (Game1.CurrentEvent != null && Game1.currentMinigame is not FinalePhase1Minigame)
-            {
-                if (Game1.player.currentLocation.currentEvent != null && !Game1.player.currentLocation.currentEvent.isFestival)
-                    return true;
-            }
-
-            //b.Draw(Game1.staminaRect, Game1.GlobalToLocal(Game1.viewport, who.GetBoundingBox()), null, Color.Red);
-
-            var data = who.GetFarmerExtData();
-            if (!data.transformed.Value)
-                return true;
-
-            int[] offsetHatX = new int[5] { 6, 13, 6, -4, -1 };
-            int[][] offsetHatY = new int[5][]
-                {
-                    new int[ 7 ] { 8, 8, 9, 9, 8, 8, 8 }, // up
-                    new int[ 7 ] { 7, 7, 8, 8, 7, 7, 7 }, // right
-                    new int[ 7 ] { 15, 15, 15, 16, 15, 15, 15 }, // down
-                    new int[ 7 ] { 7, 7, 8, 8, 7, 7, 7 }, // left
-                    new int[ 7 ] { 7, 8, 10, 12, 12, 10, 8 }, // rest
-                };
-
-            Texture2D tex = ModCoT.formTexs[data.form.Value][0];
-            Texture2D eyeTex = ModCoT.formTexs[data.form.Value][1];
-
-            Rectangle frame = default( Rectangle );
-            SpriteEffects fx = SpriteEffects.None;
-            int f = 0;
-            if (data.isResting)
-            {
-                if (data.noMovementTimer > 3 && data.noMovementTimer < 3.375)
-                {
-                    f = (int)((data.noMovementTimer - 3) / 0.125f);
-                    frame = new Rectangle(f * 32, 128, 32, 32);
-                }
-                else
-                {
-                    f = 3;
-                    frame = new Rectangle(3 * 32, 128, 32, 32);
-                }
-            }
-            else
-            {
-                switch (who.FacingDirection)
-                {
-                    case Game1.down : frame = new(0,  0, 32, 32); break;
-                    case Game1.right: frame = new(0, 32, 32, 32); break;
-                    case Game1.up   : frame = new(0, 64, 32, 32); break;
-                    case Game1.left : frame = new(0, 96, 32, 32); break;
-                }
-
-                if (data.noMovementTimer == 0)
-                {
-                    f = Game1.currentGameTime.TotalGameTime.Milliseconds % 700 / 100;
-                    frame = new(frame.X + 32 * f, frame.Y, frame.Width, frame.Height);
-                }
-            }
-            b.Draw(tex, position + new Vector2( 0, 24 ), frame, overrideColor, rotation, origin + new Vector2( 8, 0 ), Vector2.One * Game1.pixelZoom, fx, layerDepth);
-            b.Draw(eyeTex, position + new Vector2( 0, 24 ), frame, who.newEyeColor.Value, rotation, origin + new Vector2( 8, 0 ), Vector2.One * Game1.pixelZoom, fx, layerDepth + 0.001f);
-
-            if (who.hat.Value != null)
-            {
-                var hatData = ItemRegistry.GetData(who.hat.Value.QualifiedItemId);
-                var hatRect = new Rectangle(20 * (int)hatData.SpriteIndex % hatData.GetTexture().Width, 20 * (int)hatData.SpriteIndex / hatData.GetTexture().Width * 20 * 4, 20, 20);
-
-                if (!data.isResting)
-                {
-                    switch (who.FacingDirection)
-                    {
-                        case Game1.down: break;
-                        case Game1.right: hatRect.Offset(0, 20); break;
-                        case Game1.up: hatRect.Offset(0, 60); break;
-                        case Game1.left: hatRect.Offset(0, 40); break;
-                    }
-                }
-                else hatRect.Offset(0, 40);
-
-                int offsetInd = who.FacingDirection;
-                if (data.isResting) offsetInd = 4;
-
-                Vector2 offset = new(offsetHatX[offsetInd], offsetHatY[offsetInd][f]);
-                Vector2 p = position + new Vector2(0, 24) + offset * Game1.pixelZoom + new Vector2(0, -10) * Game1.pixelZoom;
-                b.Draw(FarmerRenderer.hatsTexture, p, hatRect, Color.White, rotation, origin + new Vector2(8, 0), Vector2.One * Game1.pixelZoom, fx, layerDepth + 0.002f);
-            }
-
-            return false;
         }
     }
 

@@ -33,6 +33,8 @@
   "config.lltk-difficulty.description": "Changes the requirements for acquiring the Long Live The King weapon.\nEasy: Lighting up all 4 candles in Grandpa's evaluation.\nMedium: Easy + Acquiring the Infinity Blade.\nHard: Medium + 50% Perfection.\nDefault: Medium",
 
   "config.section.balancing": "Balancing",
+  "config.early-paladin-unlock.name": "Early Paladin Unlock",
+  "config.early-paladin-unlock.description": "Whether the Paladin Skill is unlocked by default (true) or during the Finale Intermission (false).",
   "config.monster-health-buff.name": "Monster Health Buff",
   "config.monster-health-buff.description": "Buff monster health by a percentage (but not in the mines below level 20). This is to account for dual-wielding being available.",
   "config.section.lltk": "Long Live the King Config",

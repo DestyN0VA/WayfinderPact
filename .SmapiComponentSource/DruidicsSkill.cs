@@ -92,7 +92,7 @@ namespace CircleOfThornsSMAPI
                     null,
                     new string[] { "Ancient Bottle Gourd Seeds", "DN.SnS_lavaeelandstirfriedancientbottlegourd" },
                     new string[] { "Ancient Giant Apple Berry Seeds", "DN.SnS_mushroomsredsauce" },
-                    new string[] { "Ancient Azure Detura", "DN.SnS_ferngreensandpineapple" },
+                    new string[] { "Ancient Azure Detura Seeds", "DN.SnS_ferngreensandpineapple" },
                     new string[] { "Ancient Glowing Huckleberry Seeds", "DN.SnS_ancienthuckleberryicecream" },
                     null,
                 };
