@@ -1215,7 +1215,7 @@ namespace SwordAndSorcerySMAPI
             {
                 harmony.Patch(
                     AccessTools.TypeByName("Leclair.Stardew.Common.CraftingHelper").GetMethod("ConsumeIngredients"), 
-                    prefix: new HarmonyMethod(typeof(CraftingRecipeFlashOfGeniusPatchBC), nameof(CraftingRecipeFlashOfGeniusPatchBC.Prefix))
+                    prefix: new HarmonyMethod(typeof(CraftingRecipeFlashOfGeniusPatch), nameof(CraftingRecipeFlashOfGeniusPatch.Prefix))
                     );
             }
         }
@@ -1742,21 +1742,6 @@ namespace SwordAndSorcerySMAPI
     {
         public static bool Prefix()
         {
-            Log.Warn($"HasCraftedFree: {!ModSnS.State.HasCraftedFree}, has profession: {Game1.player.HasCustomProfession(RogueSkill.ProfessionCrafting)}, result: {!ModSnS.State.HasCraftedFree && Game1.player.HasCustomProfession(RogueSkill.ProfessionCrafting)}");
-            if (!ModSnS.State.HasCraftedFree && Game1.player.HasCustomProfession(RogueSkill.ProfessionCrafting))
-            {
-                ModSnS.State.HasCraftedFree = true;
-                return false;
-            }
-            return true;
-        }
-    }
-
-    public static class CraftingRecipeFlashOfGeniusPatchBC
-    {
-        public static bool Prefix()
-        {
-            Log.Warn($"HasCraftedFree: {!ModSnS.State.HasCraftedFree}, has profession: {Game1.player.HasCustomProfession(RogueSkill.ProfessionCrafting)}, result: {!ModSnS.State.HasCraftedFree && Game1.player.HasCustomProfession(RogueSkill.ProfessionCrafting)}");
             if (!ModSnS.State.HasCraftedFree && Game1.player.HasCustomProfession(RogueSkill.ProfessionCrafting))
             {
                 ModSnS.State.HasCraftedFree = true;
