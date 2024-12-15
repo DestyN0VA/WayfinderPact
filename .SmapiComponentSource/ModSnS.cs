@@ -419,7 +419,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.Display.RenderedWorld += Display_RenderedWorld;
             Helper.Events.Input.ButtonPressed += Input_ButtonPressed;
             Helper.Events.World.NpcListChanged += World_NpcListChanged;
-            Helper.Events.World.LocationListChanged += World_LocationListChanged; ;
+            Helper.Events.World.LocationListChanged += World_LocationListChanged;
 
             GameLocation.RegisterTileAction("SwordAndSorceryOrderBoard", (loc, args, farmer, point) =>
             {
@@ -1209,9 +1209,18 @@ namespace SwordAndSorcerySMAPI
 
             // This late because of accessing SpaceCore's local variable API
             harmony.PatchAll(Assembly.GetExecutingAssembly());
+
+            // This is like, don't, don't do this normally kids, like please don't. Don't harmony patch other mods. It's fragile, and stupid, but this was the easy way out and I like me some shortcuts.
+            if (Helper.ModRegistry.IsLoaded("leclair.bettercrafting"))
+            {
+                harmony.Patch(
+                    AccessTools.TypeByName("Leclair.Stardew.Common.CraftingHelper").GetMethod("ConsumeIngredients"), 
+                    prefix: new HarmonyMethod(typeof(CraftingRecipeFlashOfGeniusPatchBC), nameof(CraftingRecipeFlashOfGeniusPatchBC.Prefix))
+                    );
+            }
         }
 
-        private void GameLoop_UpdateTicking(object sender, StardewModdingAPI.Events.UpdateTickingEventArgs e)
+        private void GameLoop_UpdateTicking(object sender, UpdateTickingEventArgs e)
         {
 
             if (!Context.IsWorldReady)
@@ -1710,11 +1719,10 @@ namespace SwordAndSorcerySMAPI
             {
                 __instance.GetFarmerExtData().mana.Value += (int)MathF.Min(Game1.random.Next(5,10), __instance.GetFarmerExtData().maxMana.Value - __instance.GetFarmerExtData().mana.Value);
             }
-
+            int ArmorAmount = Game1.player.CurrentItem.GetArmorAmount() ?? Game1.player.GetArmorItem().GetArmorAmount() ?? Game1.player.GetOffhand().GetArmorAmount() ?? -1;
             var ext = Game1.player.GetFarmerExtData();
             if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||
-                (Game1.player.GetArmorItem() == null && (Game1.player.GetOffhand().GetData()?.CustomFields?.ContainsKey("DN.SnS_Shield") ?? false)) ||
-                ext.armorUsed.Value >= (Game1.player.GetArmorItem().GetArmorAmount() ?? -1))
+                ext.armorUsed.Value >= ArmorAmount)
                 return true;
 
             bool flag = (damager == null || !damager.isInvincible()) && (damager == null || (damager is not GreenSlime && damager is not BigSlime) || !__instance.isWearingRing("520"));
@@ -1734,6 +1742,21 @@ namespace SwordAndSorcerySMAPI
     {
         public static bool Prefix()
         {
+            Log.Warn($"HasCraftedFree: {!ModSnS.State.HasCraftedFree}, has profession: {Game1.player.HasCustomProfession(RogueSkill.ProfessionCrafting)}, result: {!ModSnS.State.HasCraftedFree && Game1.player.HasCustomProfession(RogueSkill.ProfessionCrafting)}");
+            if (!ModSnS.State.HasCraftedFree && Game1.player.HasCustomProfession(RogueSkill.ProfessionCrafting))
+            {
+                ModSnS.State.HasCraftedFree = true;
+                return false;
+            }
+            return true;
+        }
+    }
+
+    public static class CraftingRecipeFlashOfGeniusPatchBC
+    {
+        public static bool Prefix()
+        {
+            Log.Warn($"HasCraftedFree: {!ModSnS.State.HasCraftedFree}, has profession: {Game1.player.HasCustomProfession(RogueSkill.ProfessionCrafting)}, result: {!ModSnS.State.HasCraftedFree && Game1.player.HasCustomProfession(RogueSkill.ProfessionCrafting)}");
             if (!ModSnS.State.HasCraftedFree && Game1.player.HasCustomProfession(RogueSkill.ProfessionCrafting))
             {
                 ModSnS.State.HasCraftedFree = true;

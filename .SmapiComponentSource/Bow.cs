@@ -89,20 +89,24 @@ namespace SwordAndSorcerySMAPI
                     v.X *= -1f;
                     v.Y *= -1f;
                 }
-                location.projectiles.Add(new BasicProjectile((int)(1 * (float)(dmg + Game1.random.Next(-(dmg / 2), dmg + 2)) * (1f + who.buffs.AttackMultiplier)), -1, 0, 0, (float)(Math.PI / (double)(64f + (float)Game1.random.Next(-63, 64))), 0f - v.X, 0f - v.Y, __instance.GetShootOrigin(who) - new Vector2(32f, 32f), __instance.GetAmmoCollisionSound(ammo), null, null, explode: false, damagesMonsters: true, location, who, __instance.GetAmmoCollisionBehavior(ammo), ammo.ItemId)
+                DelayedAction.functionAfterDelay(() =>
                 {
-                    IgnoreLocationCollision = (Game1.currentLocation.currentEvent != null || Game1.currentMinigame != null)
-                });
+                    location.projectiles.OnValueAdded += Projectiles_OnValueAdded;
+                    location.projectiles.Add(new BasicProjectile((int)(1 * (float)(dmg + Game1.random.Next(-(dmg / 2), dmg + 2)) * (1f + who.buffs.AttackMultiplier)), -1, 0, 0, (float)(Math.PI / (double)(64f + (float)Game1.random.Next(-63, 64))), 0f - v.X, 0f - v.Y, __instance.GetShootOrigin(who) - new Vector2(32f, 32f), __instance.GetAmmoCollisionSound(ammo), null, null, explode: false, damagesMonsters: true, location, who, __instance.GetAmmoCollisionBehavior(ammo), ammo.ItemId)
+                    {
+                        IgnoreLocationCollision = (Game1.currentLocation.currentEvent != null || Game1.currentMinigame != null)
+                    });
+                    location.projectiles.OnValueAdded -= Projectiles_OnValueAdded;
+                }, 150);
             }
             location.projectiles.OnValueAdded -= Projectiles_OnValueAdded;
         }
-
-        private static void Projectiles_OnValueAdded(StardewValley.Projectiles.Projectile value)
+        private static void Projectiles_OnValueAdded(Projectile value)
         {
             value.boundingBoxWidth.Value = 48 - 8;
-            if (value.itemId.Value.ToLower().Contains("stygium") && value is BasicProjectile basic)
+            if (value is BasicProjectile basic && (basic.itemId?.Value?.ToLower().Contains("stygium") ?? false)) 
                 basic.damageToFarmer.Value = (int)(basic.damageToFarmer.Value * 1.5);
-            if (value.itemId.Value.Contains("Bullet")) // Hack
+            if (value.itemId?.Value?.Contains("Bullet") ?? false) // Hack
             {
                 value.xVelocity.Value *= 2;
                 value.yVelocity.Value *= 2;
@@ -113,7 +117,7 @@ namespace SwordAndSorcerySMAPI
                 value.startingRotation.Value = MathF.Atan2(value.yVelocity.Value, value.xVelocity.Value) + 0.785398f;
             }
             value.ignoreObjectCollisions.Value = true;
-            if (value.itemId.Value == "(O)DN.SnS_RicochetArrow" || value.itemId.Value == "(O)DN.SnS_RicochetBullet")
+            if ((value.itemId?.Value?.Equals("(O)DN.SnS_RicochetArrow") ?? false) || (value.itemId?.Value?.Equals("(O)DN.SnS_RicochetBullet") ?? false))
                 value.bouncesLeft.Value = 5;
         }
     }
@@ -123,7 +127,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Postfix(Projectile __instance)
         {
-            if (__instance.itemId.Value != "(O)DN.SnS_RicochetArrow") return;
+            if (!__instance.itemId?.Value?.ContainsIgnoreCase("arrow") ?? true) return;
 
             IReflectedProperty<float> rotation = ModSnS.instance.Helper.Reflection.GetProperty<float>(__instance, "rotation", true);
 
@@ -207,6 +211,7 @@ namespace SwordAndSorcerySMAPI
             if (m is DuskspireMonster)
             {
                 Game1.showRedMessage(I18n.Arrow_Lightbringer_Duskspire());
+                return;
             }
 
             for (int i = 0; i < 10; ++i)
