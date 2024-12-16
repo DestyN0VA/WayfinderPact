@@ -28,13 +28,13 @@ namespace SwordAndSorcerySMAPI
             this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(85, 33, 145);
 
             // Level 5
-            BardicsSkill.ProfessionBuff = new GenericProfession(skill: this, id: "BuffSong", name: I18n.Bardics_Profession_Npcbuff, description: () => I18n.Bardics_Level_Song(I18n.Bardics_Song_Npcbuff_Name())+"\n" + I18n.Bardics_Song_Npcbuff_Description())
+            BardicsSkill.ProfessionBuff = new GenericProfession(skill: this, id: "BuffSong", name: I18n.Bardics_Profession_Npcbuff, description: () => I18n.Bardics_Song_Npcbuff_Name() + I18n.Bardics_Level_Song_Dash() + I18n.Bardics_Song_Npcbuff_Description_NoDetails())
             {
                 Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/CollegeOfEloquence.png")
             };
             this.Professions.Add(BardicsSkill.ProfessionBuff);
 
-            BardicsSkill.ProfessionAttack = new GenericProfession(skill: this, id: "AttackSong", name: I18n.Bardics_Profession_Attack, description: () => I18n.Bardics_Level_Song(I18n.Bardics_Song_Attack_Name()) + "\n" + I18n.Bardics_Song_Attack_Description())
+            BardicsSkill.ProfessionAttack = new GenericProfession(skill: this, id: "AttackSong", name: I18n.Bardics_Profession_Attack, description: () => I18n.Bardics_Song_Attack_Name() + I18n.Bardics_Level_Song_Dash() + I18n.Bardics_Song_Attack_Description_NoDetails())
             {
                 Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/CollegeOfValor.png")
             };
@@ -88,15 +88,15 @@ namespace SwordAndSorcerySMAPI
             if (level > 10) return []; // Walk of Life
             string[] songMapping =
             {
-                I18n.Bardics_Song_Buff_Name() + "\n" + I18n.Bardics_Song_Buff_Description(),
-                I18n.Bardics_Song_Battle_Name() + "\n" + I18n.Bardics_Song_Battle_Description(),
-                I18n.Bardics_Song_Restoration_Name() + "\n" + I18n.Bardics_Song_Restoration_Description(),
-                I18n.Bardics_Song_Protection_Name() + "\n" + I18n.Bardics_Song_Protection_Description(),
+                I18n.Bardics_Level_Song_Learned() + I18n.Bardics_Song_Buff_Name() + "\n\n" + I18n.Bardics_Song_Buff_Description(),
+                I18n.Bardics_Level_Song_Learned() + I18n.Bardics_Song_Battle_Name() + "\n\n" + I18n.Bardics_Song_Battle_Description(),
+                I18n.Bardics_Level_Song_Learned() + I18n.Bardics_Song_Restoration_Name() + "\n\n" + I18n.Bardics_Song_Restoration_Description(),
+                I18n.Bardics_Level_Song_Learned() + I18n.Bardics_Song_Protection_Name() + "\n\n" + I18n.Bardics_Song_Protection_Description(),
                 "",
-                I18n.Bardics_Song_Time_Name() + "\n" + I18n.Bardics_Song_Time_Description(),
-                I18n.Bardics_Song_Horse_Name( Game1.player.horseName.Value ) + "\n" + I18n.Bardics_Song_Horse_Description(),
-                I18n.Bardics_Song_Crops_Name() + "\n" + I18n.Bardics_Song_Crops_Description(),
-                I18n.Bardics_Song_Obelisk_Name() + "\n" + I18n.Bardics_Song_Obelisk_Description(),
+                I18n.Bardics_Level_Song_Learned() + I18n.Bardics_Song_Time_Name() + "\n\n" + I18n.Bardics_Song_Time_Description(),
+                I18n.Bardics_Level_Song_Learned() + I18n.Bardics_Song_Horse_Name( Game1.player.horseName.Value ?? I18n.Cptoken_Horse() ) + "\n\n" + I18n.Bardics_Song_Horse_Description(),
+                I18n.Bardics_Level_Song_Learned() + I18n.Bardics_Song_Crops_Name() + "\n\n" + I18n.Bardics_Song_Crops_Description(),
+                I18n.Bardics_Level_Song_Learned() + I18n.Bardics_Song_Obelisk_Name() + "\n\n" + I18n.Bardics_Song_Obelisk_Description(),
                 "",
             };
 

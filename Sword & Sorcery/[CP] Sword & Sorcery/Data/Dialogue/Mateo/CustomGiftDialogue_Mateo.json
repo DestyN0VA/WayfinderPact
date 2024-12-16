@@ -74,7 +74,7 @@
         "AcceptGift_(O)126": "{{i18n:Gifts.Mateo.GiftReaction.StrangeDoll}}",
         "AcceptGift_(O)127": "{{i18n:Gifts.Mateo.GiftReaction.StrangeDoll}}",
         // ITEM REJECTIONS 
-        "RejectItem_(O)458": "{{i18n:Mateo.GiftReject.Bouquet}}",
+        "RejectItem_(O)458": "{{i18n:Mateo.GiftReject.Bouquet}}"
       }
     },
     {
@@ -97,7 +97,7 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Mateo",
       "Entries": { // DATING COOLDOWN
-        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantCooldown}}",
+        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantCooldown}}"
       },
       "When": {
         "HasConversationTopic |contains=MateoMarriageCountdown": true
@@ -118,7 +118,7 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Mateo",
       "Entries": { // MARRIAGE PENDANT REACT NO FARMHOUSE UPGRADE
-        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantFarmhouse}}",
+        "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantFarmhouse}}"
       },
       "When": {
         "HasConversationTopic |contains=MateoMarriageCountdown": false,

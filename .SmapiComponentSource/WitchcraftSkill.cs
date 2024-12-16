@@ -94,7 +94,7 @@ namespace SwordAndSorcerySMAPI
 
             WitchcraftSkill.ProfessionAetherBuff = new AetherBuffProfession(skill: this, id: "AetherBuff", name: I18n.Witchcraft_Profession_AetherBuff_Name, description: I18n.Witchcraft_Profession_AetherBuff_Description)
             {
-                Icon = ModTOP.StuffTexture.CopySubrect(new Rectangle(90, 0, 16, 16)),
+                Icon = ModTOP.StuffTexture.CopySubrect(new Rectangle(96, 0, 16, 16)),
             };
             this.Professions.Add(WitchcraftSkill.ProfessionAetherBuff);
 

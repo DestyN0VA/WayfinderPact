@@ -8851,9 +8851,71 @@ Fucking Kill Me This Place Needs Its Own Wiki
    
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
 
-"guidebook.chapter.Epilogue.Events": "events
-less pain and agony awaits
-(I'm being less dramatic)",
+"guidebook.chapter.Epilogue.Events": "[center][font=dialogue]The Story Thus Far:[/font][/center]
+ 
+[font=dialogue]Epilogue Pt 1[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Dandelion]Complete![/if]
+[else]Hint: Visit [color=green]The Lions Mane[/color] between 8am and 10pm after defeating the Duskspire Behemoth.[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Dandelion]
+[font=dialogue]Epilogue Pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Mateo]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current DandelionProposes]Hint: Visit [color=green]the East Scarp Coastal Guild[/color] between between 8am and 10pm.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Requirement: 10 Hearts with [color=red]Mateo[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current DandelionProposes]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Mateo]
+[font=dialogue]Epilogue Pt 3[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Hector]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Hector 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current WyattReturns]Hint: Visit [color=green]the East Scarp Vet House[/color] between between 8am and 10pm.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Hector 2000]Requirement: 10 Hearts with [color=red]Hector[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current WyattReturns]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Hector]
+[font=dialogue]Epilogue Pt 4[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Cirrus]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Cirrus 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current HectorPromotion]Hint: Visit [color=green]the East Scarp Deep Mountains[/color] between between 8am and 10pm.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Cirrus 2000]Requirement: 10 Hearts with [color=red]Cirrus[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current HectorPromotion]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Cirrus]
+[font=dialogue]Epilogue Pt 5[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Roslin]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Roslin 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current CirrusAndMom]Hint: Visit [color=green]the East Scarp Coastal Guild[/color] between between 8am and 10pm.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Roslin 2000]Requirement: 10 Hearts with [color=red]Roslin[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current CirrusAndMom]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]
+ 
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Roslin]
+[font=dialogue]The End[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.End]Complete![/if]
+[else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current RosalionWedding]Hint: Visit [color=green]the East Scarp Coastal Guild[/color] between between 8am and 10pm.[/if]
+[else]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Requirement: 10 Hearts with [color=red]Mateo[/color][/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current RosalionWedding]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[/else]
+[/else]
+[/if]",
 
 "guidebook.chapter.Epilogue.PaladinSkill": "skill
 data collection required",

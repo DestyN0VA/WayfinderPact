@@ -74,7 +74,7 @@ namespace SwordAndSorcerySMAPI
                 Game1.drawObjectDialogue(I18n.Harp_BadSong());
                 return;
             }
-            usedBattleToday ++;
+            usedBattleToday++;
 
             int strMult = Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffStrength) ? 2 : 1;
             int duration = Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffDuration) ? Buff.ENDLESS : (7 * 6 * 6 * 1000);
@@ -97,7 +97,7 @@ namespace SwordAndSorcerySMAPI
                 Game1.drawObjectDialogue(I18n.Harp_BadSong());
                 return;
             }
-            usedRestorationToday ++;
+            usedRestorationToday++;
 
             Game1.playSound("healSound");
             Game1.player.health = Math.Min(Game1.player.health + (int)(Game1.player.maxHealth * 0.25), Game1.player.maxHealth);
@@ -119,28 +119,28 @@ namespace SwordAndSorcerySMAPI
                 return;
 
             int oldTimer = protectionTimer;
-            protectionTimer -= (int) Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds;
-            if ( protectionTimer < 0 )
+            protectionTimer -= (int)Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds;
+            if (protectionTimer < 0)
             {
                 ModUP.Instance.Helper.Events.GameLoop.UpdateTicked -= ProtectionFunctionality;
             }
 
-            if ( oldTimer % 1000 < protectionTimer % 1000 )
+            if (oldTimer % 1000 < protectionTimer % 1000)
             {
-                foreach ( Monster monster in Game1.player.currentLocation.characters.ToList().Where( npc => npc is Monster m ).Cast<Monster>() )
+                foreach (Monster monster in Game1.player.currentLocation.characters.ToList().Where(npc => npc is Monster m).Cast<Monster>())
                 {
-                    if ( Vector2.Distance( Game1.player.StandingPixel.ToVector2(), monster.StandingPixel.ToVector2() ) < Game1.tileSize * 6 )
+                    if (Vector2.Distance(Game1.player.StandingPixel.ToVector2(), monster.StandingPixel.ToVector2()) < Game1.tileSize * 6)
                     {
                         var traj = (monster.StandingPixel.ToVector2() - Game1.player.StandingPixel.ToVector2());
                         traj.Normalize();
                         monster.takeDamage(0, (int)(traj.X * 50), (int)(traj.Y * -50), false, 0, Game1.player);
-                        if ( Game1.IsClient )
+                        if (Game1.IsClient)
                         {
                             ModUP.Instance.Helper.Multiplayer.SendMessage(new MonsterKnockbackMessage()
                             {
                                 MonsterId = monster.id,
                                 Trajectory = (traj * 50).ToPoint(),
-                            }, ModUP.MultiplayerMessage_MonsterKnockback, new string[] { ModUP.Instance.ModManifest.UniqueID } );
+                            }, ModUP.MultiplayerMessage_MonsterKnockback, new string[] { ModUP.Instance.ModManifest.UniqueID });
                         }
                     }
                 }
@@ -156,7 +156,7 @@ namespace SwordAndSorcerySMAPI
                 Game1.drawObjectDialogue(I18n.Harp_BadSong());
                 return;
             }
-            usedTimeToday ++;
+            usedTimeToday++;
 
             if (timeTimer < 0)
             {
@@ -181,7 +181,7 @@ namespace SwordAndSorcerySMAPI
 
         internal static void HorseSong()
         {
-            if ( Game1.IsClient )
+            if (Game1.IsClient)
             {
                 ModUP.Instance.Helper.Multiplayer.SendMessage("", ModUP.MultiplayerMessage_HorseWarp, new string[] { ModUP.Instance.ModManifest.UniqueID }, new long[] { Game1.MasterPlayer.UniqueMultiplayerID });
             }
@@ -214,18 +214,18 @@ namespace SwordAndSorcerySMAPI
 
             int grewCount = 0;
 
-            for ( int ix = -3; ix <= 3; ++ix )
+            for (int ix = -3; ix <= 3; ++ix)
             {
                 for (int iy = -3; iy <= 3; ++iy)
                 {
                     int x = Game1.player.TilePoint.X + ix;
                     int y = Game1.player.TilePoint.Y + iy;
 
-                    if ( Game1.player.currentLocation.terrainFeatures.TryGetValue( new Vector2( x, y ), out TerrainFeature tf ) )
+                    if (Game1.player.currentLocation.terrainFeatures.TryGetValue(new Vector2(x, y), out TerrainFeature tf))
                     {
-                        if ( tf is HoeDirt hd )
+                        if (tf is HoeDirt hd)
                         {
-                            if ( hd.crop != null && !hd.crop.modData.ContainsKey( $"{ModUP.Instance.ModManifest.UniqueID}_BardicsCropSongBuff" ) )
+                            if (hd.crop != null && !hd.crop.modData.ContainsKey($"{ModUP.Instance.ModManifest.UniqueID}_BardicsCropSongBuff"))
                             {
                                 hd.crop.modData.Add($"{ModUP.Instance.ModManifest.UniqueID}_BardicsCropSongBuff", "hoot");
 
@@ -265,9 +265,9 @@ namespace SwordAndSorcerySMAPI
                 }
             }
 
-            if ( grewCount > 0 )
+            if (grewCount > 0)
             {
-                usedCropsToday ++;
+                usedCropsToday++;
                 Game1.addHUDMessage(new HUDMessage(I18n.Bardics_Song_Crops_Message(grewCount)));
             }
         }
@@ -287,7 +287,7 @@ namespace SwordAndSorcerySMAPI
                 opts.Add("Return Scepter");
 
             List<Response> responses = new();
-            foreach ( var entry in opts )
+            foreach (var entry in opts)
             {
                 responses.Add(new(entry, I18n.GetByKey($"bardics.song.obelisk.{entry.Replace(" ", "")}")));
             }
@@ -295,9 +295,9 @@ namespace SwordAndSorcerySMAPI
             Game1.drawObjectQuestionDialogue(I18n.Bardics_Song_Obelisk_Name(), responses.ToArray());
             Game1.currentLocation.afterQuestion = (Farmer who, string key) =>
             {
-                if ( opts.Contains( key ) )
+                if (opts.Contains(key))
                 {
-                    if ( key == "Return Scepter" )
+                    if (key == "Return Scepter")
                     {
                         FarmHouse home = Utility.getHomeOfFarmer(Game1.player);
                         if (home != null)
@@ -325,10 +325,10 @@ namespace SwordAndSorcerySMAPI
             if (Game1.player.HasCustomProfession(BardicsSkill.ProfessionAttackRange))
                 dist = float.MaxValue;
 
-            foreach ( var monster_ in Game1.player.currentLocation.characters.Where( c => c is Monster ) )
+            foreach (var monster_ in Game1.player.currentLocation.characters.Where(c => c is Monster))
             {
                 var monster = monster_ as Monster;
-                if ( Vector2.Distance( monster.StandingPixel.ToVector2(), Game1.player.StandingPixel.ToVector2() ) <= dist )
+                if (Vector2.Distance(monster.StandingPixel.ToVector2(), Game1.player.StandingPixel.ToVector2()) <= dist)
                 {
                     Vector2 traj = (monster.StandingPixel.ToVector2() - Game1.player.StandingPixel.ToVector2());
                     traj.Normalize();
@@ -411,20 +411,20 @@ namespace SwordAndSorcerySMAPI
             foreach (var npc in Game1.currentLocation.characters.Where(c => c.IsVillager))
             {
                 float dist = Vector2.Distance(npc.StandingPixel.ToVector2(), Game1.player.StandingPixel.ToVector2());
-                if ( dist < distSoFar )
+                if (dist < distSoFar)
                 {
                     target = npc;
                     distSoFar = dist;
                 }
             }
 
-            if (!buffs.ContainsKey(target?.Name ?? "" ))
+            if (!buffs.ContainsKey(target?.Name ?? ""))
             {
                 Game1.drawObjectDialogue(I18n.Harp_BadSong());
                 return;
             }
             BuffEffects effects = buffs[target.Name]();
-            if ( Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffStrength ) )
+            if (Game1.player.HasCustomProfession(BardicsSkill.ProfessionBuffStrength))
             {
                 effects.CombatLevel.Value *= 2;
                 effects.FarmingLevel.Value *= 2;
@@ -448,7 +448,7 @@ namespace SwordAndSorcerySMAPI
 
             // TODO: Icon
             Game1.player.applyBuff(new Buff("npcsong", "npcsong", I18n.Bardics_Song_Npcbuff_Buff(target.Name), duration, effects: effects));
-            usedNpcSong ++;
+            usedNpcSong++;
         }
     }
 
@@ -502,7 +502,7 @@ namespace SwordAndSorcerySMAPI
             Game1.player.faceDirection(Game1.down);
             Game1.player.performPlayerEmote("music");
             Game1.player.isEmoteAnimating = false;
-            Game1.player.noMovementPause = 150*9;
+            Game1.player.noMovementPause = 150 * 9;
             Game1.player.FarmerSprite.endOfAnimationFunction += (f) => { songStuff(); Game1.player.CanMove = true; };
         }
 
@@ -521,8 +521,8 @@ namespace SwordAndSorcerySMAPI
                 new() { new SongEntry() { Name = I18n.Bardics_Song_Restoration_Name, Function = SongEntry.RestorationSong } },
                 new() { new SongEntry() { Name = I18n.Bardics_Song_Protection_Name, Function = SongEntry.ProtectionSong } },
                 new() {}, // level 5
-                new() { new SongEntry() { Name = I18n.Bardics_Song_Time_Name, Function = SongEntry.TimeSong } }, 
-                new() { new SongEntry() { Name = () => I18n.Bardics_Song_Horse_Name( Game1.player.horseName.Value ), Function = SongEntry.HorseSong } },
+                new() { new SongEntry() { Name = I18n.Bardics_Song_Time_Name, Function = SongEntry.TimeSong } },
+                new() { new SongEntry() { Name = () => I18n.Bardics_Song_Horse_Name( Game1.player.horseName.Value ?? I18n.Cptoken_Horse() ), Function = SongEntry.HorseSong } },
                 new() { new SongEntry() { Name = I18n.Bardics_Song_Crops_Name, Function = SongEntry.CropSong } },
                 new() { new SongEntry() { Name = I18n.Bardics_Song_Obelisk_Name, Function = SongEntry.ObeliskSong } },
                 new() {},
@@ -648,7 +648,7 @@ namespace SwordAndSorcerySMAPI
             });
             Ability.Abilities.Add("song_horse", new Ability("song_horse")
             {
-                Name = () => I18n.Bardics_Song_Horse_Name( Game1.player.horseName.Value ),
+                Name = () => I18n.Bardics_Song_Horse_Name(Game1.player.horseName.Value ?? I18n.Cptoken_Horse()),
                 Description = I18n.Bardics_Song_Horse_Description,
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
                 SpriteIndex = 9,
@@ -684,7 +684,7 @@ namespace SwordAndSorcerySMAPI
                 SpriteIndex = 11,
                 ManaCost = () => 15,
                 KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.BARDICS_LEVEL Current 9",
-                UnlockHint = () => I18n.Ability_Bardics_UnlockHint( 9 ),
+                UnlockHint = () => I18n.Ability_Bardics_UnlockHint(9),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModUP.Skill, 25);
@@ -717,12 +717,12 @@ namespace SwordAndSorcerySMAPI
                     Game1.playSound("miniharp_note", soFar * 175);
                     ++soFar;
                 }
-                for ( int i = 0; i < cols.Length; ++i )
+                for (int i = 0; i < cols.Length; ++i)
                 {
                     DelayedAction.functionAfterDelay(() =>
                     {
                         makeNote();
-                    }, i * 429 );
+                    }, i * 429);
                 }
                 for (int i_ = 0; i_ < 8000; i_ += 16)
                 {
@@ -742,7 +742,7 @@ namespace SwordAndSorcerySMAPI
                     DelayedAction.functionAfterDelay(() =>
                     {
                         Console.WriteLine(i + " " + getSpeed() + " " + getLength());
-                        foreach ( var tas in tass )
+                        foreach (var tas in tass)
                         {
                             var p = tas.Position - center * Game1.tileSize;
                             float angle = MathF.Atan2(p.Y, p.X);
@@ -751,12 +751,12 @@ namespace SwordAndSorcerySMAPI
 
                             if (i >= 4000 && i <= 6000)
                                 tas.scaleChange = 0.025f;
-                            else if ( i >= 6000 && i <= 8000 )
+                            else if (i >= 6000 && i <= 8000)
                             {
                                 tas.scaleChange = -0.1f;
                             }
 
-                            if ( tas.scale < 0 || getLength() < 0 )
+                            if (tas.scale < 0 || getLength() < 0)
                             {
                                 @event.aboveMapSprites.Remove(tas);
                             }
@@ -792,7 +792,7 @@ namespace SwordAndSorcerySMAPI
             if (e.FromModID != ModManifest.UniqueID)
                 return;
 
-            switch ( e.Type )
+            switch (e.Type)
             {
                 case MultiplayerMessage_MonsterKnockback:
                     {
@@ -803,7 +803,7 @@ namespace SwordAndSorcerySMAPI
                     break;
                 case MultiplayerMessage_HorseWarp:
                     {
-                        if ( Game1.IsClient )
+                        if (Game1.IsClient)
                         {
                             var msg = e.ReadAs<HorseWarpMessage>();
                             Game1.warpFarmer(msg.Location, msg.Tile.X, msg.Tile.Y, false);
@@ -824,13 +824,13 @@ namespace SwordAndSorcerySMAPI
                                 return true;
                             });
 
-                            if ( horse != null )
+                            if (horse != null)
                             {
-                                Helper.Multiplayer.SendMessage( new HorseWarpMessage()
+                                Helper.Multiplayer.SendMessage(new HorseWarpMessage()
                                 {
                                     Location = horse.currentLocation.NameOrUniqueName,
                                     Tile = horse.TilePoint,
-                                }, MultiplayerMessage_HorseWarp, [ ModManifest.UniqueID ], [ e.FromPlayerID ] );
+                                }, MultiplayerMessage_HorseWarp, [ModManifest.UniqueID], [e.FromPlayerID]);
                             }
                         }
                     }
