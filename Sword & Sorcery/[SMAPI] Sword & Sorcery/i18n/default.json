@@ -91,6 +91,9 @@
     "ability.shadowstep.name": "Shadowstep",
     "ability.shadowstep.description": "Hide in the shadows, making your next strike a critical.^Aether Cost: 15",
 
+    "ability.remoteguide.name": "Remote Handbook",
+    "ability.remoteguide.description": "Opens the S&S player handbook.",
+
     "ability.shapeshift.name.buck": "Shapeshift (Buck)",
     "ability.shapeshift.name.doe": "Shapeshift (Doe)",
     "ability.shapeshift.name.wolf": "Shapeshift (Wolf)",

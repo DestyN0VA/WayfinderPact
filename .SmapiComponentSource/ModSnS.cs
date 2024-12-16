@@ -24,6 +24,7 @@ using StardewValley.Monsters;
 using StardewValley.SpecialOrders;
 using StardewValley.SpecialOrders.Objectives;
 using StardewValley.Tools;
+using StardewValley.Triggers;
 using SwordAndSorcerySMAPI.Alchemy;
 using System;
 using System.Collections.Generic;
@@ -459,6 +460,23 @@ namespace SwordAndSorcerySMAPI
                 Function = () =>
                 {
                     Game1.player.GetFarmerExtData().inShadows.Value = true;
+                }
+            });
+            
+            Ability.Abilities.Add("remoteguide", new Ability("remoteguide")
+            {
+                Name = I18n.Ability_Remoteguide_Name,
+                Description = I18n.Ability_Remoteguide_Description,
+                TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
+                SpriteIndex = 1,
+                KnownCondition = $"PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18",
+                HiddenIfLocked = true,
+                ManaCost = () => 0,
+                Function = () =>
+                {
+                    string openguide = "spacechase0.SpaceCore_OpenGuidebook DN.SnS";
+                    if (!TriggerActionManager.TryRunAction(openguide, out string error, out Exception ex))
+                        Log.Error($"Failed running action '{openguide}': {error}", ex);
                 }
             });
 

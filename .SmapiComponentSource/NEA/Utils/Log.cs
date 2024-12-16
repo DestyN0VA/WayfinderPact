@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Diagnostics;
 
 using StardewModdingAPI;
@@ -61,9 +62,14 @@ namespace NeverEndingAdventure.Utils
         }
 
         [DebuggerHidden]
-        public static void Error(string str)
+        public static void Error(string str, System.Exception ex)
         {
             Monitor.Log(str, LogLevel.Error);
+        }
+
+        internal static void Error(string v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
