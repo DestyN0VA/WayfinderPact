@@ -97,7 +97,7 @@
     "ability.shapeshift.name.buck": "Shapeshift (Buck)",
     "ability.shapeshift.name.doe": "Shapeshift (Doe)",
     "ability.shapeshift.name.wolf": "Shapeshift (Wolf)",
-    "ability.shapeshift.description": "Shapeshift into an animal, providing various benefits.^Aether cost: 5 + 1 per three seconds",
+    "ability.shapeshift.description": "Shapeshift into an animal, providing various benefits.\n\nAether cost: 5 + 1 per three seconds",
     "ability.shapeshift.unlock-hint": "Unlock with Druidics level 1",
 
     "ability.bardics.unlock-hint": "Unlock at Bardics level {{level}}",
