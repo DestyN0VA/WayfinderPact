@@ -107,14 +107,14 @@
                                     "Contents": "{{i18n: guidebook.chapter.COT.Hector {{HectorPronouns}} |TrueName={{TrueName}}}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.COT.Book{{BookFormDT}}}}",
+                                    "Contents": "{{i18n: guidebook.chapter.COT.Book{{BookFormDT}} {{HectorPronouns}} |TrueName={{TrueName}}}}"
                                 },
                                 {
                                     "Contents": "{{i18n: guidebook.chapter.COT.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}} |TrueName={{TrueName}}}}"
                                 },
                                 {
                                     "Id": "DruidicsSkill",
-                                    "Contents": "{{i18n: guidebook.chapter.COT.DruidicsSkill}}",
+                                    "Contents": "{{i18n: guidebook.chapter.COT.DruidicsSkill}}"
                                     //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16"
                                 },
                                 {

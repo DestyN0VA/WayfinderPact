@@ -8223,7 +8223,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [nextposition=0,288]
 [/nospacing]
 {{TrueName}} is an elusive Druid living in a dilapidated old tower. Seemingly having been around as long as the land itself, this knowledgeable yet bitey shapeshifter has a lot to learn about social graces. However, {{HPN1}} has a lot to offer those who prove themselves trustworthy.",
-"guidebook.chapter.COT.Book{{BookFormDT}}": "[nospacing]
+"guidebook.chapter.COT.Book": "[nospacing]
 [nextposition=0,10][center=300][font=dialogue]Book[/font][/center]
 [offset={{BookOffset}},50][image=Characters/{{BookForm}}:0,0,{{BookSize}},32:4]
 [offset=-118,144][center=300]Pronouns: She/Her[/center]
@@ -8231,7 +8231,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [nextposition=322,16][image=Portraits/{{BookForm}}:0,0,64,64:4]
 [nextposition=0,288]
 [/nospacing]
-A mysterious grimoire with a hidden catalogue of power, including shapeshifting and druidics. She cares deeply for {{TrueName}} and is determined to watch over him - and seemingly has been for many, many years with no intention of leaving the Druid's side.",
+A mysterious grimoire with a hidden catalogue of power, including shapeshifting and druidics. She cares deeply for {{TrueName}} and is determined to watch over {{HPN2}} - and seemingly has been for many, many years with no intention of leaving the Druid's side.",
   "guidebook.chapter.COT.Events": "[center][font=dialogue]Story so far[/font][/center]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14]
