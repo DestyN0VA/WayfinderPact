@@ -2424,5 +2424,17 @@
       "Value": "thefrenchdodo.sakurainterfaceredux_tabs",
       "When": { "HasMod": "thefrenchdodo.sakurainterfaceredux" }
     },
+    {
+      "Name": "BookFormDT",
+      "Value": "|BookForm=HectorBook |BookOffset=whateveruusedforemeritus |BookSize=32",
+    },
+    {
+      "Name": "BookFormDT",
+      "Value": "|BookForm=BookDryad |BookOffset=118 |BookSize=16",
+      "When": {
+        "Weather": "Sun",
+        "HasSeenEvent |contains=SnS.Ch3.Cirrus.11": true
+      }
+    },
   ]
 }

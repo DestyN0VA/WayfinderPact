@@ -7927,6 +7927,15 @@ This first chapter of S&S introduces you to Mateo, a charming rogue with a sordi
 [nextposition=0,288]
 [/nospacing]
 Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town. Not only are they a skilled Rogue, but they have an inclination for blacksmithing. A good leader and better friend who'll always have your back.",
+"guidebook.chapter.NEA.Emeritus": "[nospacing]
+[nextposition=0,10][center=300][font=dialogue]Emeritus[/font][/center]
+[offset=90,50][image=Characters/MateoEmeritus:0,0,32,32:4]
+[offset=-118,144][center=300]Pronouns: He/Him[/center]
+[offset=0,32][center=300]Not Friendable[/center]
+[nextposition=322,16][image=Portraits/MateoEmeritus:0,0,64,64:4]
+[nextposition=0,288]
+[/nospacing]
+Emeritus is a jovial Pepper Rex who hatches with one goal: to protect East Scarp from the crab menace. He's the most loyal sidekick there is, and loves the occasional kiss on the forehead. He'll return it with bonus slobber!",
   "guidebook.chapter.NEA.Events": "[center][font=dialogue]The Story Thus Far:[/font][/center]
    
 [font=dialogue]Mateo Event: 0 Hearts pt 1[/font]
@@ -8214,6 +8223,15 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [nextposition=0,288]
 [/nospacing]
 {{TrueName}} is an elusive Druid living in a dilapidated old tower. Seemingly having been around as long as the land itself, this knowledgeable yet bitey shapeshifter has a lot to learn about social graces. However, {{HPN1}} has a lot to offer those who prove themselves trustworthy.",
+"guidebook.chapter.COT.Book{{BookFormDT}}": "[nospacing]
+[nextposition=0,10][center=300][font=dialogue]Book[/font][/center]
+[offset={{BookOffset}},50][image=Characters/{{BookForm}}:0,0,{{BookSize}},32:4]
+[offset=-118,144][center=300]Pronouns: She/Her[/center]
+[offset=0,32][center=300]Not Friendable[/center]
+[nextposition=322,16][image=Portraits/{{BookForm}}:0,0,64,64:4]
+[nextposition=0,288]
+[/nospacing]
+A mysterious grimoire with a hidden catalogue of power, including shapeshifting and druidics. She cares deeply for {{TrueName}} and is determined to watch over him - and seemingly has been for many, many years with no intention of leaving the Druid's side.",
   "guidebook.chapter.COT.Events": "[center][font=dialogue]Story so far[/font][/center]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14]
@@ -8793,7 +8811,7 @@ Like vanilla skills, the Bardics skill provides professions that change the game
 "guidebook.chapter.TOP.name": "The Other Promise",
 "guidebook.chapter.TOP.Intro": "[center][font=dialogue]Introduction[/font][/center]
    
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
+The forth chapter of S&S revolves around a quest to rescue Dandelion, the heroic partner of questionable Sorcerer, Roslin, her and her patron, Solomon. Uncover the secrets of the Arcane, master the use of Elemental Essences, become a Sorcerer yourself, become an Alchemist, become a Paladin (if you aren't already) and lay waste to the haunted beast hidden in the Deep Dark underneath The Scarp. ",
 
 "guidebook.chapter.TOP.Roslin": "[nospacing]
 [nextposition=0,10][center=300][font=dialogue]Roslin[/font][/center]
@@ -8803,7 +8821,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 [nextposition=322,16][image=Portraits/Roslin:0,0,64,64:4]
 [nextposition=0,288]
 [/nospacing]
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nisi ut aliquip ex ea commodo consequat.",
+Roslin is a skilled Sorcerer hailing from the city of Amon'Zod, a desert city a continent away. Her deal with the Shadowfolk, Solomon, has bolstered her elemental Mastery beyond what most mortals are able to achieve.",
 
 "guidebook.chapter.TOP.Dandelion": "[nospacing]
 [nextposition=0,10][center=300][font=dialogue]Dandelion[/font][/center]
@@ -8813,17 +8831,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 [nextposition=322,16][image=Portraits/Dandelion:0,0,64,64:4]
 [nextposition=0,288]
 [/nospacing]
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nisi ut aliquip ex ea commodo consequat.",
+Dandelion is a Paladin who's got a tumultuous relatoinship with her Oath, and apparent difficulty keeping track of her limbs. Despite her heroic tendencies, she aches to lay her sword and shield down by the flowers.",
 
 "guidebook.chapter.TOP.Solomon": "[nospacing]
 [nextposition=0,10][center=300][font=dialogue]Solomon[/font][/center]
 [offset=118,50][image=Characters/Solomon:0,0,16,32:4]
 [offset=-118,144][center=300]Pronouns: He/Him[/center]
-[offset=0,32][center=300]Birthday: ???[/center]
+[offset=0,32][center=300]Not Friendable[/center]
 [nextposition=322,16][image=Portraits/Solomon:0,0,64,64:4]
 [nextposition=0,288]
 [/nospacing]
-Probably mention he's unfriendable. Lorem impsum dalor whatever consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+Solomon is annoying on a good day. Troublesome, crass, and mischevious, this Shadowfolk is an expert in the occult. He's got quite an ego about it, though, one which may not entirely be warrented. He is intrinsically connected to Roslin.",
 
 "guidebook.chapter.TOP.Events": "events
 Pain and agony awaits
@@ -9012,7 +9030,7 @@ Fucking Kill Me This Place Needs Its Own Wiki
 
 "guidebook.chapter.Epilogue.Intro": "[center][font=dialogue]Introduction[/font][/center]
    
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
+Wrap up S&S's story in this final chapter, with a series of epilogues for each major NPC meant to put a bow on this lengthy tale. ",
 
 "guidebook.chapter.Epilogue.Events": "[center][font=dialogue]The Story Thus Far:[/font][/center]
  
@@ -9091,7 +9109,7 @@ Data collection required",
 
 "guidebook.chapter.Epilogue.FinalMessage": "[center][font=dialogue]Final Message[/font][/center]
    
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+This project is dedicated to the memory of TheLoreSeeker, a beloved community member who made a point to encourage people's wildest ideas. He may no longer be with us, but he lives on in the content of those he inspired. Thank you, to him and everyone else who contributed to S&S. And especially to you, the player, for seeing this story all the way to the end. Signed with love, DestyNova."
 
 
 

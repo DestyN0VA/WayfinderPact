@@ -58,6 +58,10 @@
                                     "Contents": "{{i18n: guidebook.chapter.NEA.Mateo}}"
                                 },
                                 {
+                                    "Contents": "{{i18n: guidebook.chapter.NEA.Emeritus}}",
+                                    "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.12"
+                                },
+                                {
                                     "Contents": "{{i18n: guidebook.chapter.NEA.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}}}}"
                                 },
                                 {
@@ -101,6 +105,9 @@
                                 },
                                 {
                                     "Contents": "{{i18n: guidebook.chapter.COT.Hector {{HectorPronouns}} |TrueName={{TrueName}}}}"
+                                },
+                                {
+                                    "Contents": "{{i18n: guidebook.chapter.COT.Book{{BookFormDT}}}}",
                                 },
                                 {
                                     "Contents": "{{i18n: guidebook.chapter.COT.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}} |TrueName={{TrueName}}}}"
