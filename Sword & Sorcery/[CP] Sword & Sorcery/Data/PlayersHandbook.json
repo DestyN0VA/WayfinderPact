@@ -193,8 +193,14 @@
                                     //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6"
                                 },
                                 {
+                                    "Id": "ElementalEssences",
                                     "Contents": "{{i18n: guidebook.chapter.TOP.ElementalEssences}}",
                                     //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Roslin.1"
+                                },
+                                {
+                                    "Id": "AlchemyTransmutation",
+                                    "Contents": "{{i18n: guidebook.chapter.TOP.AlchemyTransmutation}}",
+                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6"
                                 },
                                 {
                                     "Contents": "{{i18n: guidebook.chapter.TOP.DeepDark}}",

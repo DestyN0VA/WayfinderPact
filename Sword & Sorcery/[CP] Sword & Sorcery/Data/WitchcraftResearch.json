@@ -528,7 +528,7 @@
                     "(O){{ModID}}_WaterEssence": 15,
                 }
             },
-            "{{ModId}}_Spell_MistyStep":
+           /* "{{ModId}}_Spell_MistyStep":
             {
                 "Type": "Spell",
                 "Name": "{{i18n: witchcraft.research.misty-step.name}}",
@@ -541,7 +541,7 @@
                     "(O){{ModID}}_AirEssence": 15,
                     "(O){{ModID}}_WaterEssence": 15,
                 }
-            },
+            },*/
             "{{ModId}}_Spell_PocketChest":
             {
                 "Type": "Spell",

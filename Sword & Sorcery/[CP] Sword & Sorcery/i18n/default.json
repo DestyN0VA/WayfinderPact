@@ -8702,9 +8702,9 @@ Juliet and Jessie is not installed. Skipping event.",
 [/nospacing]
 Cirrus is well-known all across the Ferngill Republic for her addictive lyrics and memorable melodies. This glamrock star has seen it all; most often, the bottom of a bottle... but she's sober now, and looking for a fresh start away from the chaos of celebrity life. ",
 "guidebook.chapter.UP.BardicsSkill": "[center][font=dialogue]Bardics[/font][/center]
-[offset=200,0][image=SMAPI/kcc.sns/assets/bardics/icon.png:0,0,10,10:4]You've unlocked the Bardics skill! Bardics can be leveled up by talking to NPCs and performing songs from your adventure bar. 
+[offset=200,0][image=SMAPI/kcc.sns/assets/bardics/icon.png:0,0,10,10:4]You've unlocked the Bardics skill! Bardics can be leveled up by talking to NPCs and performing songs from your [link=Title/Mechanics]Adventure Bar[/link]. 
  
-Each level, you gain 10 max aether and a new song for the adventure bar. These songs cast various effects, hover for more details.
+Each level, you gain 10 max Aether and a new song for the adventure bar. These songs cast various effects, hover for more details.
  
 [font=dialogue]Unlocks[/font]
 > Level 1 - Unlocks [texttooltip=Fantasia Alla Marcia:Grants a random passive buff. 
@@ -8829,14 +8829,177 @@ Probably mention he's unfriendable. Lorem impsum dalor whatever consectetur adip
 Pain and agony awaits
 (i'm being dramatic)",
 
-"guidebook.chapter.TOP.SorcererSkill": "sorcerer skill
-Data collection required",
+"guidebook.chapter.TOP.SorcererSkill": "[center][font=dialogue]Sorcery[/font][/center]
+[offset=200,0][image=SMAPI/kcc.sns/assets/witchcraft/icon.png:0,0,10,10:4]You've unlocked the Sorcery skill! Sorcery can be leveled up by casting Sorcery spells from the [link=Title/Mechanics]Adventure Bar[/link].
+ 
+Each level, you will gain 10 max Aether. You learn new spells by studying from your Magical Grimoire located to the right side of your Adventure Bar menu.
+ 
+[font=dialogue]Spells[/font]
+(Hover for more details)
+> [texttooltip=Remote Handbook:Opens the S&S player handbook. 
+ 
+> Aether cost: 0
+][icon=SMAPI/kcc.sns/assets/spells.png:16,0,16,16][color=purple]Remote Handbook[/color][/texttooltip]
 
-"guidebook.chapter.TOP.SorcererProfessions": "professions
-Data collection required",
+> [texttooltip=Haste:Speeds you up. 
+ 
+> Aether cost: 3
+][icon=SMAPI/kcc.sns/assets/spells.png:0,0,16,16][color=purple]Haste[/color][/texttooltip]
 
-"guidebook.chapter.TOP.ElementalEssences": "elemental essences
-Data collection required",
+> [texttooltip=Polymorph:Turn an enemy into a slime for 10 seconds.
+Killing it will make it revert back to its normal form.
+ 
+> Aether cost: 5
+][icon=SMAPI/kcc.sns/assets/spells.png:48,0,16,16][color=purple]Polymorph[/color][/texttooltip]
+
+> [texttooltip=Stasis:Prevents you from moving, acting, or taking
+damage for three seconds.
+ 
+> Aether cost: 10
+][icon=SMAPI/kcc.sns/assets/spells.png:64,0,16,16][color=purple]Stasis[/color][/texttooltip]
+
+> [texttooltip=Mage Armor:Increases your maximum armor points for the day.
+ 
+> Aether cost: 5
+][icon=SMAPI/kcc.sns/assets/spells.png:80,0,16,16][color=purple]Mage Armor[/color][/texttooltip]
+
+> [texttooltip=Banishment:Send an enemy to another realm for 20 seconds.
+ 
+> Aether cost: 8
+][icon=SMAPI/kcc.sns/assets/spells.png:112,0,16,16][color=purple]Banishment[/color][/texttooltip]
+
+> [texttooltip=Lightning Bolt:Fire a bolt of lightning at the closest enemy
+that can chain into other enemies.
+ 
+> Aether cost: 10
+][icon=SMAPI/kcc.sns/assets/spells.png:0,16,16,16][color=purple]Lightning Bolt[/color][/texttooltip]
+
+> [texttooltip=Fireball:Cast a ticking time-bomb fireball directed
+towards your cursor.
+ 
+> Aether cost: 10
+][icon=SMAPI/kcc.sns/assets/spells.png:16,16,16,16][color=purple]Fireball[/color][/texttooltip]
+
+> [texttooltip=Magic Missle:Fire three projectiles that home in on the enemy.
+ 
+> Aether cost: 10
+][icon=SMAPI/kcc.sns/assets/spells.png:32,16,16,16][color=purple]Magic Missle[/color][/texttooltip]
+
+> [texttooltip=Icebolt:Launch an icicle to freeze enemies around your cursor in an AOE.
+ 
+> Aether cost: 10
+][icon=SMAPI/kcc.sns/assets/spells.png:64,16,16,16][color=purple]Icebolt[/color][/texttooltip]
+
+> [texttooltip=Revive Plant:Revive a 5x5 area of crops around you.
+ 
+> Aether cost: 15
+][icon=SMAPI/kcc.sns/assets/spells.png:80,16,16,16][color=purple]Revive Plant[/color][/texttooltip]
+
+> [texttooltip=Mirror Image:Summon three illusory duplicates, which
+have a chance of taking a hit for you.
+ 
+> Aether cost: 15
+][icon=SMAPI/kcc.sns/assets/spells.png:96,16,16,16][color=purple]Mirror Image[/color][/texttooltip]
+
+> [texttooltip=Find Familiar:Summon a small pet to follow you for
+the day, increasing your luck.
+ 
+> Aether cost: 10
+][icon=SMAPI/kcc.sns/assets/spells.png:112,16,16,16][color=purple]Find Familiar[/color][/texttooltip]
+
+> [texttooltip=Ghostly Projection:Move without colliding for 15 seconds.
+At the end, teleport back to where you were
+upon initial cast.
+ 
+> Aether cost: 7
+][icon=SMAPI/kcc.sns/assets/spells.png:0,32,16,16][color=purple]Ghostly Projection[/color][/texttooltip]
+
+> [texttooltip=Pocket Chest:Opens a chest in dimensional pocket, bound to you.
+Nobody else can access this chest.
+ 
+> Aether cost: 0
+][icon=SMAPI/kcc.sns/assets/spells.png:32,32,16,16][color=purple]Pocket Chest[/color][/texttooltip]
+
+> [texttooltip=Pocket Dimension:Teleports you to a pocket dimension
+which you can use as you like. 
+It acts as a greenhouse.
+ 
+> Aether cost: 0
+][icon=SMAPI/kcc.sns/assets/spells.png:48,32,16,16][color=purple]Pocket Dimension[/color][/texttooltip]
+ 
+Learning a new spell requires specific amounts of [link=TOP/ElementalEssences]Elemental Essences[/link], viewable from the Magical Grimoire.
+ 
+Unlocking Sorcery also gives you access to [link=TOP/AlchemyTransmutation]Alchemy and Transmutation[/link].
+",
+
+"guidebook.chapter.TOP.SorcererProfessions": "[center][font=dialogue]Professions[/font][/center]
+  
+Like vanilla skills, the Sorcerer skill provides professions that change the gameplay experience at levels 5 and 10.
+ 
+[font=dialogue]Level 5[/font]
+= [icon=SMAPI/kcc.sns/assets/witchcraft/stuff.png:16,0,16,16] [color=MediumBlue]Hedge Witch[/color]
+    Double chance for elemental essence
+    drops. Transmuting essences now 
+    costs 2 essences.
+= [icon=SMAPI/kcc.sns/assets/witchcraft/stuff.png:32,0,16,16] [color=MediumBlue]Magus[/color]
+    25% spell damage Increase. Damaging
+    spells aether cost slightly reduced.
+ 
+[font=dialogue]Level 10[/font]
+[color=MediumBlue]Hedge Witch Track[/color]
+= [icon=SMAPI/kcc.sns/assets/witchcraft/stuff.png:48,0,16,16] [color=blue]Master Alchemist[/color]
+    All Alchemy recipes have their essence 
+    requirements halved. Transmutation 
+    now costs 1 essence.
+= [icon=SMAPI/kcc.sns/assets/witchcraft/stuff.png:64,0,16,16] [color=blue]Master Alkahestrist[/color]
+    Teleportation circle essence cost
+    reduced to 0.
+ 
+[color=MediumBlue]Magus Track[/color]
+= [icon=SMAPI/kcc.sns/assets/witchcraft/stuff.png:80,0,16,16] [color=blue]Abjurant Champion[/color]
+    Immune to damage briefly after casting. 
+    25% increase damage buff.
+= [icon=SMAPI/kcc.sns/assets/witchcraft/stuff.png:96,0,16,16] [color=blue]Umbral Strider[/color]
+    75 point increase to max Aether, and
+    restores some aether upon taking damage.",
+
+"guidebook.chapter.TOP.ElementalEssences": "[center][font=dialogue]Elemental Essences[/font][/center]
+ 
+Upon meeting with Roslin in first event of Chapter 4, the Elemental Essences of[itemtooltip=(O)DN.SnS_EarthEssence][icon=Textures/DN.SnS/SnSObjects:96,128,16,16][color=brown]Earth[/color][/itemtooltip],[itemtooltip=(O)DN.SnS_AirEssence][icon=Textures/DN.SnS/SnSObjects:112,128,16,16][color=cornflowerblue]Air[/color][/itemtooltip],[itemtooltip=(O)DN.SnS_FireEssence][icon=Textures/DN.SnS/SnSObjects:144,128,16,16][color=Red]Fire[/color][/itemtooltip] and[itemtooltip=(O)DN.SnS_WaterEssence][icon=Textures/DN.SnS/SnSObjects:128,128,16,16][color=blue]Water[/color][/itemtooltip] will begin dropping around you.
+ 
+Essences are used in quests, learning spells & alchemical recipes and using the [texttooltip=Teleportation Circle:Allows you to set up warp between two in-game locations.
+Usage documented in the Magical Grimoire after learning.][color=purple]Teleportation Circle[/color][/texttooltip].
+ 
+Collection method:
+>[itemtooltip=(O)DN.SnS_EarthEssence][icon=Textures/DN.SnS/SnSObjects:96,128,16,16][color=brown]Earth[/color][/itemtooltip] - Mining
+>[itemtooltip=(O)DN.SnS_AirEssence][icon=Textures/DN.SnS/SnSObjects:112,128,16,16][color=cornflowerblue]Air[/color][/itemtooltip] - Defeating flying enemies
+>[itemtooltip=(O)DN.SnS_FireEssence][icon=Textures/DN.SnS/SnSObjects:144,128,16,16][color=Red]Fire[/color][/itemtooltip] - Defeating volcano enemies
+>[itemtooltip=(O)DN.SnS_WaterEssence][icon=Textures/DN.SnS/SnSObjects:128,128,16,16][color=blue]Water[/color][/itemtooltip] - Fishing
+ 
+[itemtooltip=(O)DN.SnS_druidicessence][icon=Textures/DN.SnS/SnSObjects:80,0,16,16][color=Green]Druidic[/color][/itemtooltip],[itemtooltip=(O)768][icon=maps/springobjects:0,512,16,16][color=chocolate]Solar[/color][/itemtooltip] and [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16][color=purple]Void[/color][/itemtooltip] all count as elemental essences.",
+
+"guidebook.chapter.TOP.AlchemyTransmutation": "[center][font=dialogue]Alchemy & Transmutation[/font][/center]
+ 
+[font=dialogue]Alchemy[/font]
+Upon unlocking Sorcery, you will also gain the ability to learn how to make alchemical potions via the Philosopher's Stone menu. Like spells, these recipes are learned by exchanging [link=TOP/ElementalEssences]Elemental Essences[/link] in via sorcery research in the Magical Grimoire.
+ 
+All potions apply buffs that last for 11 minutes and 40 seconds.
+ 
+>Verdant - Tastes weirdly like the potion The Wizard gave you... +5 Foraging
+>Scarlet - Let the hate flow through you. +5 Attack
+>Heather - Zoom, zoom, zoom! +5 Speed
+>Zydrate - Comes in a little glass vial. +3 Speed, Def, Attack
+>Pistachio - Helps you feel very inspired to get farmwork done! +5 farming
+>Dahlia - Almost as pretty in color as the flower it's made from. +1 farming, fishing mining
+>Slushie - Wow! All that sugar makes for great energy. +10 max stamina
+>Matrix - Perfect for a day in the mines. +5 mining, +3 magnetic radius
+>McDougal - The luckiest thing you'll ever drink. +5 Luck
+>Toirneach - For those tricky combat scenarios. +4 Mining, +4 def
+ 
+[font=dialogue]Transmutation[/font]
+If you find yourself in need of a specific [link=TOP/ElementalEssences]Elemental Essences[/link], you can transmutate one essence into another from the Transmutation menu in your Magical Grimoire.
+ 
+The conversation ratio for essences is 1:1 and will pull from the first available essence in your inventory.",
 
 "guidebook.chapter.TOP.DeepDark": "Deep Dark
 Fucking Kill Me This Place Needs Its Own Wiki
