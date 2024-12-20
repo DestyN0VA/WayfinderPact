@@ -16,6 +16,10 @@ using System.Runtime.CompilerServices;
 using SwordAndSorcerySMAPI;
 using SpaceCore;
 using FarmerExtData = SwordAndSorcerySMAPI.FarmerExtData;
+using StardewValley.Extensions;
+using StardewValley.GameData.Crops;
+using StardewValley.Objects;
+using SpaceCore.Guidebooks;
 
 namespace CircleOfThornsSMAPI
 {
@@ -444,11 +448,88 @@ namespace CircleOfThornsSMAPI
     [HarmonyPatch(typeof(Crop), nameof(Crop.harvest))]
     public static class CropHarvestDropEssencesPatch
     {
-        public static void Postfix(int xTile, int yTile, JunimoHarvester junimoHarvester, bool __result)
+        public static void Prefix(Crop __instance, int xTile, int yTile, HoeDirt soil, out bool __state, JunimoHarvester junimoHarvester = null, bool isForcedScytheHarvest = false)
+        {
+            __state = false;
+            if (__instance.dead.Value)
+            {
+                return;
+            }
+            bool success = false;
+            if (__instance.forageCrop.Value)
+            {
+                StardewValley.Object o = null;
+                int experience = 3;
+                if (__instance.whichForageCrop.Value == "2")
+                {
+                    return;
+                }
+                if (junimoHarvester != null)
+                {
+                    return;
+                }
+                if (isForcedScytheHarvest)
+                {
+                    return;
+                }
+                if (AddItemToInvBool(o))
+                {
+                    return;
+                }
+            }
+            else if (__instance.currentPhase.Value >= __instance.phaseDays.Count - 1 && (!__instance.fullyGrown.Value || __instance.dayOfCurrentPhase.Value <= 0))
+            {
+                if (__instance.indexOfHarvest.Value == null)
+                {
+                    return;
+                }
+                CropData data = __instance.GetData();
+                Item harvestedItem = __instance.programColored.Value ? new ColoredObject(__instance.indexOfHarvest.Value, 1, __instance.tintColor.Value)
+                {
+                    Quality = 0
+                } : ItemRegistry.Create(__instance.indexOfHarvest.Value, 1, 0);
+                HarvestMethod harvestMethod = data?.HarvestMethod ?? HarvestMethod.Grab;
+                if (harvestMethod == HarvestMethod.Scythe || isForcedScytheHarvest)
+                {
+                    success = true;
+                }
+                else if (junimoHarvester != null || (harvestedItem != null && Game1.player.addItemToInventoryBool(harvestedItem.getOne())))
+                {
+                    success = true;
+                }
+            }
+            __state = success;
+        }
+
+        public static bool AddItemToInvBool(Item item, bool makeActiveObject = false)
+        {
+            if (item == null)
+            {
+                return false;
+            }
+
+            if (Game1.player.IsLocalPlayer)
+            {
+                Item item2 = null;
+                Game1.player.GetItemReceiveBehavior(item, out var needsInventorySpace, out var _);
+                if (needsInventorySpace)
+                {
+                    item2 = Game1.player.addItemToInventory(item);
+                }
+
+                bool flag = item2?.Stack != item.Stack || item is SpecialItem;
+
+                return flag;
+            }
+
+            return false;
+        }
+
+        public static void Postfix(int xTile, int yTile, JunimoHarvester junimoHarvester, bool __result, bool __state)
         {
             if (!Game1.player.eventsSeen.Contains(ModCoT.DropEssencesEventId))
                 return;
-            if (!__result)
+            if (!__state)
                 return;
 
             float mult = 0.1f / 8;
