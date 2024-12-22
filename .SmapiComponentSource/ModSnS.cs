@@ -1223,6 +1223,35 @@ namespace SwordAndSorcerySMAPI
                         return [$"{playerhorsename}"];
 
                 });
+
+                CP.RegisterToken(ModManifest, "PaladinUnlocked", () =>
+                {
+                    if (!Context.IsWorldReady)
+                        return null;
+
+                    return [new PaladinSkill().ShouldShowOnSkillsPage.ToString()];
+                });
+
+                CP.RegisterToken(ModManifest, "SpecialOrderBoardBook", () =>
+                {
+                    if (!Context.IsWorldReady)
+                        return null;
+                    List<string> possibleBooks = [];
+                    if (RogueSkill.ShouldShowOnSkillsPage)
+                        possibleBooks.Add("artificerbook");
+                    if (new DruidicsSkill().ShouldShowOnSkillsPage)
+                        possibleBooks.Add("druidbook");
+                    if (new BardicsSkill().ShouldShowOnSkillsPage)
+                        possibleBooks.Add("bardbook");
+                    if (new WitchcraftSkill().ShouldShowOnSkillsPage)
+                        possibleBooks.Add("sorcerybook");
+                    if (new PaladinSkill().ShouldShowOnSkillsPage)
+                        possibleBooks.Add("paladinbook");
+
+                    if (possibleBooks.Count > 0)
+                        return [$"DN.SnS_{possibleBooks[Game1.random.Next(possibleBooks.Count)]}"];
+                    return ["SkillBook_4"];
+                });
             }
 
             // This late because of accessing SpaceCore's local variable API

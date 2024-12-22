@@ -78,7 +78,7 @@
                         {
                             "Type": "Object",
                             "Data": {
-                                "Item": "{{SpecialOrderBoardRewards}}",
+                                "Item": "{{KCC.SnS/SpecialOrderBoardBook}}",
                                 "Amount": 1
                             }
                         },
@@ -165,7 +165,7 @@
                         {
                             "Type": "Object",
                             "Data": {
-                                "Item": "{{SpecialOrderBoardRewards}}",
+                                "Item": "{{KCC.SnS/SpecialOrderBoardBook}}",
                                 "Amount": 1
                             }
                         },
@@ -252,7 +252,7 @@
                         {
                             "Type": "Object",
                             "Data": {
-                                "Item": "{{SpecialOrderBoardRewards}}",
+                                "Item": "{{KCC.SnS/SpecialOrderBoardBook}}",
                                 "Amount": 1
                             }
                         },
@@ -339,7 +339,7 @@
                         {
                             "Type": "Object",
                             "Data": {
-                                "Item": "{{SpecialOrderBoardRewards}}",
+                                "Item": "{{KCC.SnS/SpecialOrderBoardBook}}",
                                 "Amount": 1
                             }
                         },
@@ -438,7 +438,7 @@
                         {
                             "Type": "Object",
                             "Data": {
-                                "Item": "{{SpecialOrderBoardRewards}}",
+                                "Item": "{{KCC.SnS/SpecialOrderBoardBook}}",
                                 "Amount": 4
                             }
                         },
