@@ -2219,7 +2219,14 @@
     },
     {
       "Name": "SpecialOrderBoardRewards",
-      "Value": "{{ModID}}_artificerbook"
+      "Value": "SkillBook_4"
+    },
+    {
+      "Name": "SpecialOrderBoardRewards",
+      "Value": "{{ModID}}_artificerbook",
+      "When": {
+        "HasSeenEvent |contains=SnS.Ch2.Mateo.18": true,
+      },
     },
     {
       "Name": "SpecialOrderBoardRewards",
