@@ -16,6 +16,7 @@
     {
       "LogName": "Loads Shop Portraits",
       "Action": "Load",
+      "Priority": "Low",
       "Target": "ShopPortraits/DN.SnS/CGEmblem, ShopPortraits/DN.SnS/TheMeadowLark",
       "FromFile": "Assets/TemporaryActors/Portraits/{{TargetWithoutPath}}.png"
     },

@@ -1,44 +1,17 @@
 {
     "Changes": [
+        //Only Portraits
         {
             "Action": "Load",
-            "Target": "Portraits/CGEmblem",
-            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/CGEmblem.png"
+            "Priority": "Low",
+            "Target": "Portraits/CGEmblem, Portraits/MateoWyatt",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/{{TargetWithoutPath}}.png"
         },
+        //Only Sprites
         {
             "Action": "Load",
-            "Target": "Characters/MateoMarlon, Portraits/MateoMarlon",
-            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/MateoMarlon.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/MateoGunther, Portraits/MateoGunther",
-            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/MateoGunther.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/MateoEmeritus, Portraits/MateoEmeritus",
-            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/MateoEmeritus.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/MateoKrobus, Portraits/MateoKrobus",
-            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/MateoKrobus.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/MateoFinale",
-            "FromFile": "assets/TemporaryActors/Characters/MateoFinale{{MateoHorns}}.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/StygiumPendant",
-            "FromFile": "assets/TemporaryActors/Characters/StygiumPendant.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/GuildBadge",
-            "FromFile": "assets/TemporaryActors/Characters/GuildBadge.png"
+            "Target": "Characters/StygiumPendant, Characters/GuildBadge, Characters/HectorBadger, Characters/HectorOpossum, Characters/HectorRaccoon, Characters/HectorSkunk, Characters/ThornedCircletFragment, Characters/LumisteriaCloset, Characters/PizzaVan, Characters/AetherdrakeScale, Characters/PlanetariumBus, Characters/PlanetariumScreen, Characters/ForgedD20, Characters/DandelionShield, Characters/SolomonGrimoire, Characters/Duskspire, Characters/OneForAll, Characters/RockPile, Characters/WeddingArch, Characters/KeyArt, Characters/DestysKeychain",
+            "FromFile": "assets/TemporaryActors/Characters/{{TargetWithoutPath}}.png"
         },
         {
             "Action": "Load",
@@ -47,8 +20,8 @@
         },
         {
             "Action": "Load",
-            "Target": "Characters/HectorBook, Portraits/HectorBook",
-            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/HectorBook.png"
+            "Target": "Characters/MateoFinale",
+            "FromFile": "assets/TemporaryActors/Characters/MateoFinale{{MateoHorns}}.png"
         },
         {
             "Action": "Load",
@@ -57,123 +30,21 @@
         },
         {
             "Action": "Load",
-            "Target": "Characters/HectorBadger, Characters/HectorOpossum, Characters/HectorRaccoon, Characters/HectorSkunk",
-            "FromFile": "assets/TemporaryActors/{{Target}}.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/ThornedCircletFragment",
-            "FromFile": "assets/TemporaryActors/Characters/ThornedCircletFragment.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/LumisteriaCloset",
-            "FromFile": "assets/TemporaryActors/Characters/LumisteriaCloset.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/BookDryad, Portraits/BookDryad",
-            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/BookDryad.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/PizzaVan",
-            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/PizzaVan.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/AetherdrakeScale",
-            "FromFile": "assets/TemporaryActors/Characters/AetherdrakeScale.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/PlanetariumBus",
-            "FromFile": "assets/TemporaryActors/Characters/PlanetariumBus.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/PlanetariumScreen",
-            "FromFile": "assets/TemporaryActors/Characters/PlanetariumScreen.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/FakeDandelion, Portraits/FakeDandelion",
-            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/FakeDandelion.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/FakeRoslin, Portraits/FakeRoslin",
-            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/FakeRoslin.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/FakeSolomon, Portraits/FakeSolomon", // UNIQUE SIZE: 43 X 45
-            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/FakeSolomon.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/ForgedD20",
-            "FromFile": "assets/TemporaryActors/Characters/ForgedD20.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Portraits/YoungMateo, Characters/YoungMateo",
-            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/YoungMateo{{MateoHorns}}.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Portraits/BlacksmithMateo, Characters/BlacksmithMateo",
-            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/BlacksmithMateo{{MateoHorns}}.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/DandelionShield",
-            "FromFile": "assets/TemporaryActors/Characters/DandelionShield.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/SolomonGrimoire",
-            "FromFile": "assets/TemporaryActors/Characters/SolomonGrimoire.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/Duskspire",
-            "FromFile": "assets/TemporaryActors/Characters/Duskspire.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/OneForAll",
-            "FromFile": "assets/TemporaryActors/Characters/OneForAll.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/RockPile",
-            "FromFile": "assets/TemporaryActors/Characters/RockPile.png"
-        },
-        {
-            "Action": "Load",
             "Target": "Characters/MateoWyatt",
             "FromFile": "assets/TemporaryActors/Characters/{{MateoWyattActor}}"
         },
+        //Portraits and Sprites
         {
             "Action": "Load",
-            "Target": "Portraits/MateoWyatt",
-            "FromFile": "assets/TemporaryActors/Portraits/MateoWyatt.png"
+            "Priority": "Low",
+            "Target": "Characters/MateoMarlon, Portraits/MateoMarlon, Characters/MateoGunther, Portraits/MateoGunther, Characters/MateoEmeritus, Portraits/MateoEmeritus, Characters/MateoKrobus, Portraits/MateoKrobus, Characters/HectorBook, Portraits/HectorBook, Characters/BookDryad, Portraits/BookDryad, Characters/FakeDandelion, Portraits/FakeDandelion, Characters/FakeRoslin, Portraits/FakeRoslin, Characters/FakeSolomon, Portraits/FakeSolomon",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/{{TargetWithoutPath}}.png"
         },
         {
             "Action": "Load",
-            "Target": "Characters/WeddingArch", // UNIQUE SIZE: 125 X 80
-            "FromFile": "assets/TemporaryActors/Characters/WeddingArch.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/KeyArt", // UNIQUE SIZE: 327 X 279
-            "FromFile": "assets/TemporaryActors/Characters/KeyArt.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/DestysKeychain",
-            "FromFile": "assets/TemporaryActors/Characters/DestysKeychain.png"
-        },
+            "Priority": "Low",
+            "Target": "Portraits/YoungMateo, Characters/YoungMateo, Portraits/BlacksmithMateo, Characters/BlacksmithMateo",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/{{TargetWithoutPath}}{{MateoHorns}}.png"
+        }
     ]
 }
