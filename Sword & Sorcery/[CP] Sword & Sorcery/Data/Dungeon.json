@@ -930,7 +930,7 @@
                             "TriggerActionsOnEntry": [
                                 "{{ModID}}_SpawnDeepDarkStuff_Mushrooms"
                             ],
-                            "LocationDataEntry": "EastScarp_DeepDark"
+                            "LocationDataEntry": "EastScarp_DeepDarkDungeon"
                         }
                         /*"DuskspireLairEntrance": {
                             "LevelRange": { "Begin": 21, "End": 21 },
