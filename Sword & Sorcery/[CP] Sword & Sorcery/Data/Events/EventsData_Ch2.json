@@ -222,7 +222,7 @@
 			"Target": "Data/Events/EastScarp_VetHouse",
 			"Entries": { 
 	  
-			  "SnS.Ch2.Hector.18/e SnS.Ch2.Hector.17/f Hector 3000/t 1500 2200/F": "{{season}}_day_ambient/-100 -100/farmer 12 27 0 Hector 10 24 3 RichieTheMacaw 8 21 2 Jacob 8 24 1/skippable/playSound doorOpen/viewport 10 26/globalFadeToClear/emote farmer 8/advancedMove farmer false 0 -3 3 10/speak Jacob \"{{i18n:Events.S&S.Ch2.12H.Jacob.1}}\"/speak Hector \"{{i18n:Events.S&S.Ch2.12H.Hector.1}}\"/speak Jacob \"{{i18n:Events.S&S.Ch2.12H.Jacob.2}}\"/faceDirection farmer 2/animate farmer true true 200 102 103/emote Hector 56 true/emote Jacob 32/pause 1000/stopAnimation farmer/faceDirection farmer 3/speak Jacob \"{{i18n:Events.S&S.Ch2.12H.Jacob.3}}\"/pause 250/emote Hector 8/pause 250/speak Hector \"{{i18n:Events.S&S.Ch2.12H.Hector.2}}\"/speak Jacob \"{{i18n:Events.S&S.Ch2.12H.Jacob.4}}\"/emote Hector 40/faceDirection Hector 1/quickQuestion #{{i18n:Events.S&S.Ch2.12H.Q1.Answer.1}}#{{i18n:Events.S&S.Ch2.12H.Q1.Answer.2}}(break)friendship Hector 25\\speak Hector \"{{i18n:Events.S&S.Ch2.12H.Q1.Response.1}}\"(break)friendship Hector 50\\speak Hector \"{{i18n:Events.S&S.Ch2.12H.Q1.Response.2}}\"/pause 250/faceDirection Hector 3/speak Hector \"{{i18n:Events.S&S.Ch2.12H.Hector.3}}\"/speak Jacob \"{{i18n:Events.S&S.Ch2.12H.Jacob.5}}\"/fade/viewport -100 -100/message \"{{i18n:Events.S&S.Ch2.12H.Message.1}}\"/speak Hector \"{{i18n:Events.S&S.Ch2.12H.Hector.4}}\"/playSound parrot/stopAdvancedMoves/end"
+			  "SnS.Ch2.Hector.18/e SnS.Ch2.Hector.17/f Hector 3000/t 1200 2200/F": "{{season}}_day_ambient/-100 -100/farmer 12 27 0 Hector 10 24 3 RichieTheMacaw 8 21 2 Jacob 8 24 1/skippable/playSound doorOpen/viewport 10 26/globalFadeToClear/emote farmer 8/advancedMove farmer false 0 -3 3 10/speak Jacob \"{{i18n:Events.S&S.Ch2.12H.Jacob.1}}\"/speak Hector \"{{i18n:Events.S&S.Ch2.12H.Hector.1}}\"/speak Jacob \"{{i18n:Events.S&S.Ch2.12H.Jacob.2}}\"/faceDirection farmer 2/animate farmer true true 200 102 103/emote Hector 56 true/emote Jacob 32/pause 1000/stopAnimation farmer/faceDirection farmer 3/speak Jacob \"{{i18n:Events.S&S.Ch2.12H.Jacob.3}}\"/pause 250/emote Hector 8/pause 250/speak Hector \"{{i18n:Events.S&S.Ch2.12H.Hector.2}}\"/speak Jacob \"{{i18n:Events.S&S.Ch2.12H.Jacob.4}}\"/emote Hector 40/faceDirection Hector 1/quickQuestion #{{i18n:Events.S&S.Ch2.12H.Q1.Answer.1}}#{{i18n:Events.S&S.Ch2.12H.Q1.Answer.2}}(break)friendship Hector 25\\speak Hector \"{{i18n:Events.S&S.Ch2.12H.Q1.Response.1}}\"(break)friendship Hector 50\\speak Hector \"{{i18n:Events.S&S.Ch2.12H.Q1.Response.2}}\"/pause 250/faceDirection Hector 3/speak Hector \"{{i18n:Events.S&S.Ch2.12H.Hector.3}}\"/speak Jacob \"{{i18n:Events.S&S.Ch2.12H.Jacob.5}}\"/fade/viewport -100 -100/message \"{{i18n:Events.S&S.Ch2.12H.Message.1}}\"/speak Hector \"{{i18n:Events.S&S.Ch2.12H.Hector.4}}\"/playSound parrot/stopAdvancedMoves/end"
 			}
 	  
 		},
@@ -271,7 +271,7 @@
 				"{{ModID}}_GreenRain": {
 					"Id": "{{ModID}}_GreenRain",
 					"Trigger": "LocationChanged",
-					"Condition": "LOCATION_NAME Here EastScarp_DeepMountains, WEATHER Here GreenRain, PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.13, PLAYER_FRIENDSHIP_POINTS Current Mateo 2500, TIME 0600 2000, !IS_FESTIVAL_DAY Any",
+					"Condition": "LOCATION_NAME Here EastScarp_DeepMountains, WEATHER Here GreenRain, PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.13, PLAYER_FRIENDSHIP_POINTS Current Hector 2500, TIME 0600 2000, !IS_FESTIVAL_DAY Any",
 					"Actions": [
 						"spacechase0.SpaceCore_PlayEvent SnS.Hector.GreenRain",
 					]
