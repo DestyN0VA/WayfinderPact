@@ -101,6 +101,9 @@ namespace SwordAndSorcerySMAPI
 
             if (level > 10) return ret;
 
+            if (level % 5 != 0)
+                ret.Add(I18n.Level_Health(5) + "\n");
+
             switch ( level )
             {
                 case 2:
@@ -116,9 +119,6 @@ namespace SwordAndSorcerySMAPI
                     ret.Add(I18n.PaladinSkill_Unlock_8().Replace('^', '\n'));
                     break;
             }
-
-            if (level % 5 != 0)
-                ret.Add(I18n.Level_Health(5));
 
             return ret;
         }

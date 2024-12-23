@@ -562,7 +562,7 @@
         "{{ModID}}_RadioactiveArmor": "{{ModID}}_PureRadioactiveOre 10 {{ModID}}_IridiumArmor 1/hoot/{{ModID}}_RadioactiveArmor 1/false/null/{{i18n:arsenal.radioactive-armor.name}}",
         "{{ModID}}_StygiumArmor": "{{ModID}}_StygiumBar 25/hoot/{{ModID}}_StygiumArmor 1/false/null/{{i18n:arsenal.stygium-armor.name}}",
         "{{ModID}}_ElysiumArmor": "{{ModID}}_StygiumArmor 1 {{ModID}}_DuskspireHeart 1/hoot/{{ModID}}_ElysiumArmor 1/false/null/{{i18n:arsenal.elysium-armor.name}}",
-        "{{ModID}}_Bow": "709 10/hoot/0 1/false/null",
+        "{{ModID}}_Bow": "709 10/hoot/0 1/false/{{i18n:arsenal.bow.name}}",
         "{{ModID}}_Arrow": "388 1 390 1/hoot/{{ModID}}_Arrow 1/false/null",
         "{{ModID}}_FirestormArrow": "{{ModID}}_Arrow 1 93 10/hoot/{{ModID}}_FirestormArrow 1/false/null",
         "{{ModID}}_IcicleArrow": "{{ModID}}_Arrow 1 84 1/hoot/{{ModID}}_IcicleArrow 1/false/null",

@@ -62,7 +62,7 @@
                                     "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.12"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.NEA.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.NEA.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}} |GalaxySwordExtras={{i18n: guidebook.chapter.GalaxySwordExtras.{{GalaxySwordExtras}}}}}}"
                                 },
                                 {
                                     "Id": "ArtificerSkill",
@@ -110,7 +110,7 @@
                                     "Contents": "{{i18n: guidebook.chapter.COT.Book{{BookFormDT}} {{HectorPronouns}} |TrueName={{TrueName}}}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.COT.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}} |TrueName={{TrueName}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.COT.Events {{TrollHeritageEvents}} |VariableTimegate={{VariableTimegate}} {{HectorPronouns}} |TrueName={{TrueName}}}}"
                                 },
                                 {
                                     "Id": "DruidicsSkill",
@@ -148,7 +148,7 @@
                                     "Contents": "{{i18n: guidebook.chapter.UP.Cirrus}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.UP.Events |VariableTimegate={{VariableTimegate}} |JulietJessie={{i18n:guidebook.UP.Events.JJ.{{HasMod: |contains=LemurKat.JulietHouse.NPC}}}} }}"
+                                    "Contents": "{{i18n: guidebook.chapter.UP.Events {{TrollHeritageEvents}} |CirrusExtras={{i18n: guidebook.chapter.CirrusExtras.{{CirrusExtras}}}} |VariableTimegate={{VariableTimegate}} |JulietJessie={{i18n:guidebook.UP.Events.JJ.{{HasMod: |contains=LemurKat.JulietHouse.NPC}}}} }}"
                                 },
                                 {
                                     "Id": "BardicsSkill",
@@ -187,7 +187,7 @@
                                     "Contents": "{{i18n: guidebook.chapter.TOP.Solomon}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.TOP.Events |VariableTimegate={{VariableTimegate}}}}"
+                                    "Contents": "{{i18n: guidebook.chapter.TOP.Events {{TrollHeritageEvents}} |VariableTimegate={{VariableTimegate}} |IsRSVInstalled={{i18n: guidebook.chapter.TOP.RoslinEssence.{{HasMod|Contains=Rafseazz.RSVCP}}}} |IsChocoboValleyInstalled={{i18n:guidebook.chapter.TOP.DandelionShield.{{HasMod|Contains=Kitsutsune.Chocobovalley}}}}}}"
                                 },
                                 {
                                     "Id": "SorcererSkill",
