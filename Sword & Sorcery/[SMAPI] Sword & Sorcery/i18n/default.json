@@ -299,7 +299,7 @@
     "paladin-skill.profession.shield-armor-1.description": "Shields give an additional base +25 (for a total of 50) armor when equipped.",
     "paladin-skill.profession.shield-throw-lightning.name": "The Sun'll Shine\nOn Us Again",
     "paladin-skill.profession.shield-throw-lightning.description": "On being hit by a thrown shield, nearby enemies will be struck by lightning.",
-    "paladin-skill.profession.shield-throw-hit-3.name": "They Have An Army\nWe Have {{farmerName}}",
+    "paladin-skill.profession.shield-throw-hit-3.name": "They Have An Army\nWe Have A {{farmerName}}",
     "paladin-skill.profession.shield-throw-hit-3.description": "Shield throw will now hit three targets at full damage.",
     "paladin-skill.profession.shield-armor-2.name": "I Can Do\nThis All Day",
     "paladin-skill.profession.shield-armor-2.description": "Doubles the base Armor gained from shields for a total of 100 points when equipped.",

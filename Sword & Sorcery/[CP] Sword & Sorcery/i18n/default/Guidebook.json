@@ -54,7 +54,7 @@ The adventure bar can be hidden with the configured keybinding (default: Ctrl+U)
 2. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=COT/DruidicsSkill]Druidics[/link][/if][else]Druidics (locked)[/else]
 3. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=UP/BardicsSkill]Bardics[/link][/if][else]Bardics (locked)[/else]
 4. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6][link=TOP/SorcererSkill]Sorcerer[/link][/if][else]Sorcerer (locked)[/else]
-4. [if=ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\"][link=TOP/PaladinSkill]Paladin[/link][/if][else]Paladin (locked)[/else]",
+4. [if=ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\"][link=Epilogue/PaladinSkill]Paladin[/link][/if][else]Paladin (locked)[/else]",
   "guidebook.chapter.Title.TableOfContents": "[center][font=dialogue]Table of Contents[/font][/center]
 1. [link=NEA/Intro]Never Ending Adventure[/link]
 2. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=COT/Intro]Circle of Thorns[/link][/if][else]Circle of Thorns (locked)[/else]
@@ -1613,11 +1613,70 @@ Wrap up S&S's story in this final chapter, with a series of epilogues for each m
 [/else]
 [/if]",
 
-"guidebook.chapter.Epilogue.PaladinSkill": "skill
-data collection required",
+"guidebook.chapter.Epilogue.PaladinSkill": "[center][font=dialogue]Paladin[/font][/center]
+[offset=200,0][image=SMAPI/kcc.sns/assets/paladin/icon.png:0,0,10,10:4]You've unlocked the Paladin skill! Paladin can be leveled up by talking to NPCs and completing quests. 
+ 
+Each level, you gain 10 max health and unlock a new upgrade for Dandelion's [itemtooltip=(W)DN.SnS_PaladinShield][icon=Textures/DN.SnS/SnSObjects:96,16,16,16] [color=blue]Paladin Shield[/color][/itemtooltip]. Apply upgrades on the anvil at the [link=NEA/Underforge]Underforge[/link].
+ 
+[font=dialogue]Unlocks[/font]
+> Level 2
+[itemtooltip=(W)DN.SnS_ArtificerShield][icon=Textures/DN.SnS/SnSObjects:48,160,16,16] [color=chocolate]Artificer Shield Upgrade[/color][/itemtooltip]
+     Increases projectile damage.
+ 
+> Level 4
+[itemtooltip=(W)DN.SnS_DruidShield][icon=Textures/DN.SnS/SnSObjects:64,160,16,16] [color=green]Druid Shield Upgrade[/color][/itemtooltip]
+     Shape-shifting no longer costs
+     Aether to maintain.
+ 
+> Level 5 - See the [link=Epilogue/PaladinProfessions]Paladin Professions[/link] page.
+ 
+> Level 6
+[itemtooltip=(W)DN.SnS_BardShield][icon=Textures/DN.SnS/SnSObjects:80,160,16,16] [color=purple]Bardics Shield Upgrade[/color][/itemtooltip]
+     One-use per day songs can now
+     be used a second time.
+ 
+> Level 8
+[itemtooltip=(W)DN.SnS_SorcererShield][icon=Textures/DN.SnS/SnSObjects:96,160,16,16] [color=red]Sorcerer Shield Upgrade[/color][/itemtooltip]
+     Random chance of causing a
+     magical shockwave when a 
+     thrown shield hits an enemy.
+ 
+> Level 10 - See the [link=Epilogue/PaladinProfessions]Paladin Professions[/link] page.",
 
-"guidebook.chapter.Epilogue.PaladinProfessions": "professions
-data collection required",
+"guidebook.chapter.Epilogue.PaladinProfessions": "[center][font=dialogue]Professions[/font][/center]
+  
+Like vanilla skills, the Paladin skill provides professions that change the gameplay experience at levels 5 and 10.
+ 
+[font=dialogue]Level 5[/font]
+= [icon=SMAPI/kcc.sns/assets/paladin/onyourleft.png:0,0,16,16] [color=MediumBlue]On Your Left[/color]
+    Throwing your shield now hits a 
+    second target at half damage.
+ 
+= [icon=SMAPI/kcc.sns/assets/paladin/fighttoendthefight.png:0,0,16,16] [color=MediumBlue]Fight to End the Fight[/color]
+    Shields give an additional base +25 
+    (for a total of 50) armor when equipped.
+ 
+[font=dialogue]Level 10[/font]
+[color=MediumBlue]On Your Left Track[/color]
+= [icon=SMAPI/kcc.sns/assets/paladin/thesunwillshineonusagain.png:0,0,16,16] [color=blue]The Sun'll Shine On Us Again[/color] 
+    On being hit by a thrown shield, nearby 
+    enemies will be struck by lightning.
+ 
+= [icon=SMAPI/kcc.sns/assets/paladin/TheyHaveAnArmyWeHaveAFarmerName.png:0,0,16,16] [color=blue]The Have An Army, We Have A @[/color] 
+    Shield throw will now hit three targets
+    at full damage.
+ 
+[color=MediumBlue]Fight to End the Fight Track[/color]
+= [icon=SMAPI/kcc.sns/assets/paladin/icandothisallday.png:0,0,16,16] [color=blue]I Can Do This All Day[/color]
+    Doubles the base Armor gained from 
+    shields for a total of 100 points 
+    when equipped.
+  
+= [icon=SMAPI/kcc.sns/assets/paladin/yougethurthurtemback.png:0,0,16,16] [color=blue]You Get Hurt, Hurt Em Back[/color]
+    If you have Armor Points when you take
+    take damage and have a Shield equipped, 
+    automatically deal damage back at your
+    enemies.",
 
 "guidebook.chapter.Epilogue.Shields": "Shields
 Data collection required",
