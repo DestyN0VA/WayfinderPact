@@ -208,11 +208,7 @@
                                     "Id": "AlchemyTransmutation",
                                     "Contents": "{{i18n: guidebook.chapter.TOP.AlchemyTransmutation}}",
                                     //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6"
-                                },
-                                {
-                                    "Contents": "{{i18n: guidebook.chapter.TOP.DeepDark}}",
-                                    //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Roslin.6"
-                                },
+                                }
                             ]
                         },
                         "Epilogue": {
@@ -245,6 +241,43 @@
                                 },
                                 {
                                     "Contents": "{{i18n: guidebook.chapter.Epilogue.FinalMessage}}"
+                                }
+                            ]
+                        },
+                        "DeepDark": {
+                            "Name": "{{i18n: guidebook.chapter.DeepDark.Name}}",
+                            "TabIconTexture": "Mods/Sword & Sorcery/GuidebookTabs",
+                            "TabIconRect": {
+                                "X": 0,
+                                "Y": 48,
+                                "Width": 16,
+                                "Height": 16
+                            },
+                            //"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.7"
+                            "Pages": [
+                                {
+                                    "Id": "Intro",
+                                    "Contents": "{{i18n: guidebook.chapter.DeepDark.Intro}}"
+                                },
+                                {
+                                    "Id": "Monsters",
+                                    "Contents": "{{i18n: guidebook.chapter.DeepDark.Monsters}}"
+                                },
+                                {
+                                    "Id": "Floors",
+                                    "Contents": "{{i18n: guidebook.chapter.DeepDark.Floors}}"
+                                },
+                                {
+                                    "Id": "Stygium",
+                                    "Contents": "{{i18n: guidebook.chapter.DeepDark.Stygium}}"
+                                },
+                                {
+                                    "Id": "Elysium",
+                                    "Contents": "{{i18n: guidebook.chapter.DeepDark.Elysium}}"
+                                },
+                                {
+                                    "Id": "Duskspire",
+                                    "Contents": "{{i18n: guidebook.chapter.DeepDark.Duskspire}}"
                                 }
                             ]
                         }

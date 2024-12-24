@@ -1685,6 +1685,253 @@ Data collection required",
    
 This project is dedicated to the memory of TheLoreSeeker, a beloved community member who made a point to encourage people's wildest ideas. He may no longer be with us, but he lives on in the content of those he inspired. Thank you, to him and everyone else who contributed to S&S. And especially to you, the player, for seeing this story all the way to the end. Signed with love, DestyNova.",
 
+"guidebook.chapter.DeepDark.Name": "The Deep Dark",
+"guidebook.chapter.DeepDark.Intro": "[center][font=dialogue]Introduction[/font][/center]
+ 
+The Deep Dark is a late-game 30 floor dungeon crawling with powerful monsters and the rare ore, [Link=DeepDark/Stygium]Stygium[/link]. Here you'll find beautiful maps, custom forage and new monsters with unique item drop pools. Once you reach the end you'll face off against the mod's final boss: The [Link=DeepDark/Duskspire]Duskspire Behemoth[/link].
+ 
+It's advised you prepare yourself with Sword & Sorcery's new mechanics and late-game vanilla mechanics before tackling this location.",
+"guidebook.chapter.DeepDark.Monsters": "[center][font=dialogue]Monsters & Drops[/font][/center]
+ 
+All monsters in the Deep Dark are based on an existing monster. They will also drop trinkets and special items associated with the base vanilla monster in addition to the list below. (Ex. Stygium Rex drops Pepper Rex eggs)
+
+Stygium Crab
+ * Void Essence (100%)
+ * Stygium Ore (3%)
+ * 717 - Crab (50%)
+ * 732 - Crab Cakes (30%)
+ * 810 - Crab Shell Ring (1%)
+
+Stygium Skeleton
+ * Void Essence (100%)
+ * Stygium Ore (3%)
+ * Tainted Corn (5%)
+ * 105 Chewing Stick (1%)
+ * 881 Bone Framgement (100%)
+ * 243 Miners Treat  (1%)
+
+Stygium Party Skeleton
+ * Void Essence (100%)
+ * Stygium Ore (100%)
+ * 105 Chewing Stick (1%)
+ * 881 Bone Framgement (100%)
+ * 243 Miners Treat  (1%)
+ * 279 Magic Rock Candy (100%)
+ * 74 Prismatic Shard (1%)
+
+Stygium Rex
+ * Void Essence (100%)
+ * Stygium Ore (3%)
+ * Tainted Grasses (20%)
+
+Stygium Golem (Purple)
+ * Void Essence (100%)
+ * Stygium Ore (3%)
+ * Tainted Grasses (50%)
+ * Omni Geode (10%)
+ * Amethyst (5%)
+
+Stygium Golem (Blue)
+ * Void Essence (100%)
+ * Stygium Ore (3%)
+ * Tainted Grasses (50%)
+ * Omni Geode (10%)
+ * Diamond (1%)
+ * Frozen Tear (5%)
+
+Stygium Bat
+ * Void Essence (100%)
+ * Stygium Ore (3%)
+ * 767 Bat Wing (100%)
+ * 522 Vampire Ring (1%)
+
+Stygium Miner
+ * Void Essence (100%)
+ * Stygium Ore (5%)
+ * Tainted Corn (5%)
+ * 105 Chewing Stick (1%)
+ * 881 Bone Fragment (100%)
+ * 243 Miners Treat (1%)
+ * 286 Cherry Bomb (5%)
+ * 287 Bomb (3%)
+ * 288 Mega Bomb (1%)
+
+Stygium Head
+ * Void Essence (100%)
+ * Stygium Ore (3%)
+ * 380 Iron Ore (10%)
+ * 335 Iron Bar (5%)
+ * 121 Dwarvish Helm (1%)
+
+Stygium Skull
+ * Void Essence (100%)
+ * Stygium Ore (3%)
+ * 881 Bone Fragment (100%)
+ * 581 Perhistoric Skull (5%)
+ 
+Stygium False Mushroom
+ * Void Essence (100%)
+ * Stygium Ore (3%)
+ * Tainted Mush 1 (25%)
+ * Tainted Mush 2 (25%)
+ * Tainted Mush 3 (25%)
+ * Tainted Mush 4 (25%)
+
+Stygium Miner Mage
+ * Void Essence (100%)
+ * Stygium Ore (5%)
+ * Tainted Corn (5%)
+ * 105 Chewing Stick (1%)
+ * 881 Bone Fragment (100%)
+ * 243 Miners Treat (1%)
+ * 84 Frozen Tear (5%)
+
+Stygium Serpent 
+ * Void Essence (100%)
+ * Stygium Ore (3%)
+ * 148 Eel (10%)
+ * 225 Fried Eel (5%)
+
+Stygium Leviathan (\"Rare, behaves like a mini boss\")
+ * Void Essence (100%)
+ * Stygium Ore x3 (100%)
+ * 166 Treasure Chest (100%)
+ * 799 Spook Fish (10%)
+ * 242 Dish O The Sea(5%)
+ * 681 Rain Totem (10%)
+ * 560 Ocean Stone (50%)
+ * 117 Anchor (20%)
+ * 74 Prismatic Shard (2%)
+
+Stygium Squid
+ * Void Essence (100%)
+ * Stygium Ore (3%)
+ * 798 Midnight Squid (10%)
+ * 814 Squid Ink (20%)
+ * 921 Squid Ink Ravioli (5%)
+ * 681 Rain Totem (1%)
+
+Stygium Droplet
+ * Void Essence (100%)
+ * Stygium Ore (3%)
+ * 561 Ghost Crystal (20%)
+ * 265 Seafoam Pudding (10%)
+ * 895 Green Fireworks (5%)
+ * 681 Rain Totem (1%)
+
+Duskspire Behemoth
+ * Duskspire Heart (100%)
+",
+"guidebook.chapter.DeepDark.Floors": "[center][font=dialogue]Floors[/font][/center]
+ 
+1-9 - Darkness
+    MONSTER SPAWNS
+        COMMON
+         * Stygium Bat
+         * Stygium Miner
+         * Stygium Head
+        UNCOMMON
+         * Stygium Crab
+         * Stygium Golem (Purple)
+         * Stygium Rex
+         * Stygium Skeleton
+        RARE
+         * Stygium Party Skeleton
+ 
+    FORAGE
+    * Tainted Corn
+    * Tainted Grasses
+    * Tainted Crocus
+10-19 - Mushrooms
+    MONSTER SPAWNS
+        COMMON
+         * Stygium Squid
+         * stygium Skeleton
+         * Stygium Golem (Blue)
+         * Stygium Golem (Purple)
+
+        UNCOMMON
+         * Stygium Droplet
+         * Stygium Rex
+         * Stygium Crab
+
+        RARE
+         * Stygium Party Skeleton
+         * Stygium Leviathan
+ 
+    FORAGE
+    * Tainted Mushroom 1
+    * Tainted Mushroom 2
+    * Tainted Mushroom 3
+    * Tainted Mushroom 4
+    * Tainted Mushroom Tree Seed
+20-30 - Lakes
+    MONSTER SPAWNS
+        COMMON
+         * Stygium False Mushroom
+         * Stygium Skeleton
+         * Stygium Golem (Blue)
+        UNCOMMON
+         * Stygium Rex
+         * Skeleton Miner Mage
+         * Stygium Serpent
+         * Stygium Skull
+        RARE
+         * Stygium Party Skeleton
+ 
+    FORAGE
+    * Rainbow shell
+    * Clam
+    * Tainted Crocus
+    * Tainted Mushroom 3
+    * Prismatic Shard (1/1000 chance)",
+"guidebook.chapter.DeepDark.Stygium": "[center][font=dialogue]Stygium[/font][/center]
+ 
+Stygium is a rare and powerful ore that spawns only within the Deep Dark. It is used to further upgrade your tools past [color=purple]Iridium[/color] tier. Be warned, the increased strength comes with a cost.
+ 
+[font=dialogue]Stygium Resources[/font]
+> [itemtooltip=(O)DN.SnS_StygiumOreStone][icon=maps/DeepDark-rocks:144,32,16,16] [color=blue]Stygium Nodes[/color][/itemtooltip] - Spawn in the Deep Dark
+> [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] [color=blue]Stygium Ore[/color][/itemtooltip] - Drops from Stygium Nodes
+> [itemtooltip=(O)DN.SnS_StygiumBar][icon=Textures/DN.SnS/SnSObjects:144,144,16,16] [color=blue]Stygium Bars[/color][/itemtooltip] - Smelted from Stygium Ore
+ 
+[font=dialogue]Stygium Gear[/font]
+Stygium Tools are made by upgrading any [color=purple]Iridium[/color] tool with [itemtooltip=(O)DN.SnS_StygiumBar][icon=Textures/DN.SnS/SnSObjects:144,144,16,16][color=blue]Stygium Bars[/color][/itemtooltip] at Clint's. This will improve the tool as expected for the next tier.
+ 
+Stygium Gear List
+> [itemtooltip=(T)DN.SnS_StygiumPickaxe][icon=Textures/DN.SnS/StygiumTools:80,32,16,16] [color=blue]Stygium Pickaxe[/color][/itemtooltip]
+> [itemtooltip=(T)DN.SnS_StygiumHoe][icon=Textures/DN.SnS/StygiumTools:80,64,16,16] [color=blue]Stygium Hoe[/color][/itemtooltip]
+> [itemtooltip=(T)DN.SnS_StygiumAxe][icon=Textures/DN.SnS/StygiumTools:80,32,16,16] [color=blue]Stygium Axe[/color][/itemtooltip]
+> [itemtooltip=(T)DN.SnS_StygiumWateringCan][icon=Textures/DN.SnS/StygiumTools:48,128,16,16] [color=blue]Stygium Watering Can[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_StygiumBlade][icon=Textures/DN.SnS/StygiumTools:0,0,16,16] [color=blue]Stygium Blade[/color][/itemtooltip] (Recipe: Lion's Mane)
+> [itemtooltip=(W)DN.SnS_StygiumShield][icon=Textures/DN.SnS/SnSObjects:80,192,16,16] [color=blue]Stygium Shield[/color][/itemtooltip] (Recipe: Default)
+> [itemtooltip=(O)DN.SnS_StygiumArmor][icon=Textures/DN.SnS/SnSArsenal:0,112,16,16] [color=blue]Stygium Armor[/color][/itemtooltip] (Recipe: Artificer level-up)
+ 
+Note: Improved range for chargable tools is 5x5.
+ 
+[font=dialogue]Stygium Poisoning[/font]
+When a Stygium item is worn or held it applies a de-buff, [icon=Textures/DN.SnS/SnSObjects:112,192,16,16] [color=purple]Stygium Poisoning[/color]. This de-buff drops the player's defense and luck until the tool is upgraded to the [link=DeepDark/Elysium]Elysium[/link] tier.",
+
+"guidebook.chapter.DeepDark.Elysium": "[center][font=dialogue]Elysium[/font][/center]
+ 
+Stygium tools can be purified by being combined with a [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16][color=blue]Duskspire Heart[/color][/itemtooltip] at Clint's. This removes the [icon=Textures/DN.SnS/SnSObjects:112,192,16,16] [color=purple]Stygium Poisoning[/color] de-buff and improves the tool.
+ 
+Elysium Gear List
+> [itemtooltip=(T)DN.SnS_BlessedPickaxe][icon=Textures/DN.SnS/BlessedTools:80,32,16,16] [color=blue]Elysium Pickaxe[/color][/itemtooltip]
+> [itemtooltip=(T)DN.SnS_BlessedHoe][icon=Textures/DN.SnS/BlessedTools:80,64,16,16] [color=blue]Elysium Hoe[/color][/itemtooltip]
+> [itemtooltip=(T)DN.SnS_BlessedAxe][icon=Textures/DN.SnS/BlessedTools:80,32,16,16] [color=blue]Elysium Axe[/color][/itemtooltip]
+> [itemtooltip=(T)DN.SnS_BlessedWateringCan][icon=Textures/DN.SnS/BlessedTools:48,128,16,16] [color=blue]Elysium Watering Can[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_ElysiumBlade][icon=Textures/DN.SnS/BlessedTools:0,0,16,16] [color=blue]Elysium Blade[/color][/itemtooltip] (Recipe: Lion's Mane)
+> [itemtooltip=(O)DN.SnS_ElysiumArmor][icon=Textures/DN.SnS/SnSArsenal:16,112,16,16] [color=blue]Elysium Armor[/color][/itemtooltip] (Recipe: Artificer level-up)
+ 
+Notes: 
+> The [itemtooltip=(W)DN.SnS_StygiumShield][icon=Textures/DN.SnS/SnSObjects:80,192,16,16][color=blue]Stygium Shield[/color][/itemtooltip] cannot be upgraded into an Elysium Shield as the [itemtooltip=(W)DN.SnS_PaladinShield][icon=Textures/DN.SnS/SnSObjects:96,16,16,16][color=blue]Paladin Shield[/color][/itemtooltip] serves that purpose mechanically.
+ 
+> Improved range for chargable tools is 7x7.",
+"guidebook.chapter.DeepDark.Duskspire": "[center][font=dialogue]Duskspire Behemoth[/font][/center]
+[offset=200,0][image=Textures/DN.SnS/SnSMonsterIcons:23,66,18,13:4]The Duskspire is the final boss at the end of the Deep Dark mine. When you initially fight the Duskspire, it is a two stage fight. The first state simulates a turn-based JRPG, while the second is an arena fight using the game's typical combat mechanics.
+ 
+When defeated, the Duskspire drops [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16][color=blue]Duskspire Hearts[/color][/itemtooltip], which are used to purify [Link=DeepDark/Stygium]Stygium Tools[/link]. The Duskspire can then be re-fought in a weaker form to obtain more Duskspire Hearts. This fight resets every Monday.",
+
 //Conditional Event Extras
 
 "guidebook.chapter.MateoTrollHeritage.1.true": " 

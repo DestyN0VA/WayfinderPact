@@ -9,13 +9,13 @@
         {
             "LogName": "Deep Dark Tilesheets",
             "Action": "Load",
-            "Target": "maps/DeepDarkTiles_1, maps/DeepDarkTiles_2, maps/DeepDarkTiles_3, maps/custommush1_animation, maps/DeepDark-algaesheet, maps/DeepDark-bubbles, maps/DeepDark-cobwebs, maps/DeepDark-Fires, maps/DeepDark-fog, maps/DeepDark-fog_cyan, maps/DeepDark-rocks, maps/DeepDark-roots, maps/DeepDark-watercaustics, maps/DeepDark-watercaustics_fading, maps/DeepDark-waterfall, maps/DeepDark-rocks",
+            "Target": "maps/DeepDarkTiles_1, maps/DeepDarkTiles_2, maps/DeepDarkTiles_3, maps/custommush1_animation, maps/DeepDark-algaesheet, maps/DeepDark-bubbles, maps/DeepDark-cobwebs, maps/DeepDark-Fires, maps/DeepDark-fog, maps/DeepDark-fog_cyan, maps/DeepDark-rocks, maps/DeepDark-roots, maps/DeepDark-watercaustics, maps/DeepDark-watercaustics_fading, maps/DeepDark-waterfall",
             "FromFile": "Assets/Tilesheets/DeepDark/{{TargetWithoutPath}}.png"
           },
           {
             "LogName": "Deep Dark Monster Textures",
             "Action": "Load",
-            "Target": "Monsters/DN.SnS/StygiumMiner, Monsters/DN.SnS/StygiumMiner_Mage, Monsters/DN.SnS/StygiumDroplet, Monsters/DN.SnS/StygiumLeviathan, Monsters/DN.SnS/StygiumBat, Monsters/DN.SnS/StygiumCrab, Monsters/DN.SnS/StygiumGolem_Blue, Monsters/DN.SnS/StygiumGolem_Purple, Monsters/DN.SnS/StygiumHead, Monsters/DN.SnS/StygiumMushroom, Monsters/DN.SnS/StygiumRex, Monsters/DN.SnS/StygiumSerpent, Monsters/DN.SnS/StygiumSkeleton, Monsters/DN.SnS/StygiumSkeleton_Rare, Monsters/DN.SnS/StygiumSkull, Monsters/DN.SnS/StygiumSquid",
+            "Target": "Monsters/DN.SnS/StygiumMiner, Monsters/DN.SnS/StygiumMiner_Mage, Monsters/DN.SnS/StygiumDroplet, Monsters/DN.SnS/StygiumLeviathan, Monsters/DN.SnS/StygiumBat, Monsters/DN.SnS/StygiumCrab, Monsters/DN.SnS/StygiumGolem_Blue, Monsters/DN.SnS/StygiumGolem_Purple, Monsters/DN.SnS/StygiumHead, Monsters/DN.SnS/StygiumMushroom, Monsters/DN.SnS/StygiumRex, Monsters/DN.SnS/StygiumSerpent, Monsters/DN.SnS/StygiumSkeleton, Monsters/DN.SnS/StygiumSkeleton_Rare, Monsters/DN.SnS/StygiumSkull, Monsters/DN.SnS/StygiumSquid, Textures/DN.SnS/SnSMonsterIcons",
             "FromFile": "Assets/Monsters/{{TargetWithoutPath}}.png"
           },
         {
@@ -1040,9 +1040,10 @@
             "Entries": {
                 "{{ModID}}_StygiumPoisoning": {
                     "DisplayName": "{{i18n:buff.stygium-poisoning}}",
-                    "IconTexture": "TileSheets\\BuffsIcons",
-                    "IconSpriteIndex": 26,
-                    "CustomFields": { "spacechase0.SpaceCore/HealthRegeneration": -2 }
+                    "IconTexture": "Textures/DN.SnS/SnSObjects",
+                    "IconSpriteIndex": 127,
+                    "isDebuff": true,
+                    "Effects": { "LuckLevel": -10.0, "Defense": -10.0 }                  
                 }
             }
         },
