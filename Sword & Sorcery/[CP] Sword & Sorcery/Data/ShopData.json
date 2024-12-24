@@ -395,7 +395,7 @@
                 "(O)348",
                 "(O)346",
                 "(O)459",
-                "(O)303",
+                "(O)303"
               ]
             },
             {
@@ -868,24 +868,7 @@
               "Price": 15000,
               "IsRecipe": true,
               "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Roslin.6, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModID}}_ElysiumBlade"
-            },
-            {
-              "Id": "Stygium Armor",
-              "AvailableStock": 1,
-              "AvailableStockLimit": "Player",
-              "ItemId": "{{ModID}}_StygiumArmor", 
-              "Price": 20000,
-              "IsRecipe": true,
-              "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Roslin.6"
-            },
-            {
-              "Id": "Elysium Armor",
-              "AvailableStock": 1,
-              "ItemId": "{{ModID}}_ElysiumArmor", 
-              "Price": 25000,
-              "IsRecipe": true,
-              "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Roslin.6, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModID}}_StygiumArmor"
-            },
+            }
           ]
         }
       }

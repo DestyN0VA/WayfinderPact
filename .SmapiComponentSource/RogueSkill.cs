@@ -91,16 +91,16 @@ namespace SwordAndSorcerySMAPI
             string[][] craftingRecipes =
             [
                 [],
-                ["DN.SnS_ClothArmor", "DN.SnS_Bow", "DN.SnS_Arrow"],
-                ["DN.SnS_CopperArmor", "DN.SnS_IronArmor", "DN.SnS_GoldArmor", "DN.SnS_IridiumArmor", "DN.SnS_RadioactiveArmor"],
-                ["DN.SnS_FirestormArrow", "DN.SnS_IcicleArrow"],
-                ["DN.SnS_ExquisiteEmerald", "DN.SnS_ExquisiteRuby", "DN.SnS_ExquisiteTopaz", "DN.SnS_ExquisiteAquamarine", "DN.SnS_ExquisiteAmethyst", "DN.SnS_ExquisiteJade", "DN.SnS_ExquisiteDiamond"],
-                [],
-                [],
-                ["DN.SnS_WindwakerArrow"],
-                ["DN.SnS_RicochetArrow"],
-                ["DN.SnS_LightbringerArrow"],
-                [],
+                ["DN.SnS_ClothArmor", "DN.SnS_Bow", "DN.SnS_Arrow"], //1
+                [], //2
+                ["DN.SnS_CopperArmor", "DN.SnS_FirestormArrow", "DN.SnS_IcicleArrow"], //3
+                ["DN.SnS_IronArmor"], //4
+                [], //5
+                ["DN.SnS_WindwakerArrow"], //6
+                ["DN.SnS_GoldArmor"], //7
+                ["DN.SnS_IridiumArmor", "DN.SnS_RicochetArrow"], //8
+                ["DN.SnS_RadioactiveArmor", "DN.SnS_StygiumArmor", "DN.SnS_ElysiumArmor", "DN.SnS_LightbringerArrow"], //9
+                [], //10
             ];
 
             foreach (var recipe in craftingRecipes[level])
@@ -116,53 +116,47 @@ namespace SwordAndSorcerySMAPI
 
             if (level > 10) return ret;
 
+            if (level % 5 != 0)
+                ret.Add(I18n.Level_Health(3) + "\n");
 
             switch ( level )
             {
                 case 1:
                     ret.Add(I18n.RogueSkill_Unlock_1());
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ClothArmor", false).DisplayName));
+                    ret.Add(I18n.Recipe_BowIsBeingStupid());
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_Arrow", false).DisplayName));
                     break;
                 case 2:
                     ret.Add(I18n.RogueSkill_Unlock_2().Replace('^','\n'));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_CopperArmor", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_IronArmor", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_GoldArmor", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_IridiumArmor", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_RadioactiveArmor", false).DisplayName));
                     break;
                 case 3:
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_CopperArmor", false).DisplayName));
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_FirestormArrow", false).DisplayName));
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_IcicleArrow", false).DisplayName));
                     break;
                 case 4:
                     ret.Add(I18n.RogueSkill_Unlock_4().Replace('^', '\n'));
-                    /*
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteEmerald", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteRuby", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteTopaz", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteAquamarine", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteAmethyst", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteJade", false).DisplayName));
-                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ExquisiteDiamond", false).DisplayName));
-                    */
+                    ret.Add("\n" + I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_IronArmor", false).DisplayName));
                     break;
                 case 6:
-                    ret.Add(I18n.RogueSkill_Unlock_6());
-                    break;
-                case 7:
+                    ret.Add(I18n.RogueSkill_Unlock_6() + "\n");
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_WindwakerArrow", false).DisplayName));
                     break;
+                case 7:
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_GoldArmor", false).DisplayName));
+                    break;
                 case 8:
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_IridiumArmor", false).DisplayName));
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_RicochetArrow", false).DisplayName));
                     break;
                 case 9:
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_RadioactiveArmor", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_StygiumArmor", false).DisplayName));
+                    ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_ElysiumArmor", false).DisplayName));
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_LightbringerArrow", false).DisplayName));
                     break;
             }
-
-            if (level % 5 != 0)
-                ret.Add(I18n.Level_Health(3));
 
             return ret;
         }

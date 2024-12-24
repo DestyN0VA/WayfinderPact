@@ -2388,7 +2388,7 @@
     },
     {
       "Name": "BookFormDT",
-      "Value": "|BookForm=HectorBook |BookOffset=90 |BookSize=32",
+      "Value": "|BookForm=HectorBook |BookOffset=90 |BookSize=32"
     },
     {
       "Name": "BookFormDT",
@@ -2398,5 +2398,21 @@
         "HasSeenEvent |contains=SnS.Ch3.Cirrus.11": true
       }
     },
+    {
+      "Name": "TrollHeritageEvents",
+      "Value": "|TrollEvent1={{i18n: guidebook.chapter.MateoTrollHeritage.1.{{MateoTrollHeritage}}}} |TrollEvent2={{i18n: guidebook.chapter.MateoTrollHeritage.2.{{MateoTrollHeritage}}}} |TrollEvent3={{i18n: guidebook.chapter.MateoTrollHeritage.3.{{MateoTrollHeritage}}}}"
+    },
+    { "Name": "CirrusExtras", "Value": false },
+    {
+      "Name": "CirrusExtras",
+      "Value": true,
+      "When": { "Query: '{{PlayerGender}}' = 'Female' OR {{HasMod|contains=Hana.GenderNeutralityMod}}": true }
+    },
+    { "Name": "GalaxySwordExtras", "Value": false },
+    {
+      "Name": "GalaxySwordExtras",
+      "Value": true,
+      "When": { "HasFlag |contains=galaxySword": false, "HasFlag |contains=ccVault": true }
+    }
   ]
 }

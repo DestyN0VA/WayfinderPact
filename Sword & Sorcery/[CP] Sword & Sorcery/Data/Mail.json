@@ -16,7 +16,10 @@
                 "DandelionGreensThanks":"{{i18n:Mail.Dandelion.Letter1}}",
                 "MateoHoodie":"{{i18n:Mail.Mateo.Letter5}}",
                 "HectorHoodie":"{{i18n:Mail.Hector.Letter3}}",
-                "CirrusHoodie":"{{i18n:Mail.Cirrus.Letter0}}"
+                "CirrusHoodie":"{{i18n:Mail.Cirrus.Letter0}}",
+				"MissingRecipe1":"{{i18n:Mail.MissingRecipe1}}",
+				"MissingRecipe2":"{{i18n:Mail.MissingRecipe2}}",
+				"MissingRecipe3":"{{i18n:Mail.MissingRecipe3}}"
             }
         },
         // TRIGGER ACTIONS
@@ -71,6 +74,30 @@
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.15",
 					"Actions": [
 						"AddMail Current CirrusHoodie tomorrow"
+					]
+				},
+				"{{ModID}}_MissingRecipe1": {
+					"Id": "{{ModID}}_MissingRecipe1",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_DESTYNOVA.SWORDANDSORCERY.ROGUE_LEVEL Current 10, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModID}}_ElysiumArmor",
+					"Actions": [
+						"AddMail Current MissingRecipe1 now"
+					]
+				},
+				"{{ModID}}_MissingRecipe2": {
+					"Id": "{{ModID}}_MissingRecipe2",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_DESTYNOVA.SWORDANDSORCERY.ROGUE_LEVEL Current 10, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModID}}_StygiumArmor",
+					"Actions": [
+						"AddMail Current MissingRecipe2 now"
+					]
+				},
+				"{{ModID}}_MissingRecipe3": {
+					"Id": "{{ModID}}_MissingRecipe3",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_DESTYNOVA.SWORDANDSORCERY.ROGUE_LEVEL Current 6, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModID}}_WindwakerArrow",
+					"Actions": [
+						"AddMail Current MissingRecipe3 now"
 					]
 				}
 			}
