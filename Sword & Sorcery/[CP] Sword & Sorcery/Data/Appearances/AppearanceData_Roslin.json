@@ -64,7 +64,7 @@
             "FromFile": "Assets/Portraits/Roslin/Pendant_Overlay.png",
             "PatchMode": "Overlay",
             "Update": "OnLocationChange",
-            "When": { "HasSeenEvent |contains=SnS.Ch5.Dandelion.1": true }
+            "When": { "HasSeenEvent |contains=SnS.Ch5.Dandelion.1": true, "HasMod |contains=McJoan.Roslin": false }
         }
     ]
 }

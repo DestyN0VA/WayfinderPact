@@ -88,7 +88,8 @@
             "Update": "OnLocationChange",
             "When": {
                 "Relationship:Hector |contains=Married": true,
-                "MermaidPendantHairclip": true
+                "MermaidPendantHairclip": true,
+                "HasMod |contains=McJoan.Hector": false
             }
         },
             // Heterochromia Overlays
@@ -101,7 +102,8 @@
             "FromFile": "assets/{{TargetPathOnly}}/Hector/heterochromia_mf.png",
             "When": {
                 "HectorHeterochromatic": true,
-                "TrueShape |contains=trueshape": false
+                "TrueShape |contains=trueshape": false,
+                "HasMod |contains=McJoan.Hector": false
             }
         },
         {
@@ -113,7 +115,8 @@
             "FromFile": "assets/{{TargetPathOnly}}/Hector/heterochromia_tf.png",
             "When": {
                 "HectorHeterochromatic": true,
-                "TrueShape": "trueshape"
+                "TrueShape": "trueshape",
+                "HasMod |contains=McJoan.Hector": false
             }
         },
         {
@@ -125,7 +128,8 @@
             "FromFile": "assets/Portraits/Hector/heterochromia_mf_hooded.png",
             "When": {
                 "HectorHeterochromatic": true,
-                "TrueShape |contains=trueshape": false
+                "TrueShape |contains=trueshape": false,
+                "HasMod |contains=McJoan.Hector": false
             }
         },
         {
@@ -137,7 +141,8 @@
             "FromFile": "assets/Portraits/Hector/heterochromia_tf_hooded.png",
             "When": {
                 "HectorHeterochromatic": true,
-                "TrueShape": "trueshape"
+                "TrueShape": "trueshape",
+                "HasMod |contains=McJoan.Hector": false
             }
         },
         {
@@ -147,7 +152,7 @@
             "Target": "Portraits/Hector_TrueUp",
             "PatchMode": "Overlay",
             "FromFile": "assets/Portraits/Hector/heterochromia_tf_hooded.png",
-            "When": { "HectorHeterochromatic": true }
+            "When": { "HectorHeterochromatic": true, "HasMod |contains=McJoan.Hector": false }
         },
         {
             "LogName": "Heterochromatic Eyes - TrueDown Portrait",
@@ -156,7 +161,7 @@
             "Target": "Portraits/Hector_TrueDown",
             "PatchMode": "Overlay",
             "FromFile": "assets/Portraits/Hector/heterochromia_tf.png",
-            "When": { "HectorHeterochromatic": true }
+            "When": { "HectorHeterochromatic": true, "HasMod |contains=McJoan.Hector": false }
         },
         {
             "LogName": "Heterochromatic Eyes - Characters",
@@ -174,7 +179,7 @@
             "Target": "Portraits/HectorWolf, Portraits/MysteryWolf, Portraits/Hector_wolf",
             "PatchMode": "Overlay",
             "FromFile": "Assets/Portraits/Hector/heterochromia_wolf.png",
-            "When": { "HectorHeterochromatic": true }
+            "When": { "HectorHeterochromatic": true, "HasMod |contains=McJoan.Hector": false }
         }
     ]
 }

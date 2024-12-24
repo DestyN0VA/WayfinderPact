@@ -90,7 +90,7 @@
             "PatchMode": "Overlay",
             "FromFile": "Assets/Portraits/Mateo/scar_overlay_mateo.png",
             "Update": "OnLocationChange",
-            "When": { "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true }
+            "When": { "HasSeenEvent |contains=SnS.Ch1.Mateo.9": true, "HasMod |contains=McJoan.Mateo": false }
         },
         {   
             "LogName": "Mermaid Pendant Earring",
@@ -100,7 +100,8 @@
             "PatchMode": "Overlay",
             "FromFile": "Assets/Portraits/Mateo/pendant_overlay_mateo.png",
             "Update": "OnLocationChange",
-            "When": { "Relationship:Mateo |contains=Married": true, "MermaidPendantEarring": true }
+            "When": { "Relationship:Mateo |contains=Married": true, "MermaidPendantEarring": true,
+                      "HasMod |contains=McJoan.Mateo": false }
         },
         {   
             "LogName": "Mateo's Troll Heritage Portrait Overlay",
@@ -109,7 +110,7 @@
             "Target": "Portraits/Mateo, Portraits/Mateo_beach, Portraits/Mateo_Seasonal_1, Portraits/Mateo_Seasonal_2, Portraits/Mateo_Seasonal_3, Portraits/Mateo_Seasonal_4, Portraits/Mateo_Seasonal_5, Portraits/Mateo_Seasonal_6, Portraits/Mateo_Seasonal_7, Portraits/Mateo_Seasonal_8, Portraits/Mateo_Seasonal_9, Portraits/Mateo_Seasonal_10, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
             "PatchMode": "Overlay",
             "FromFile": "Assets/Portraits/Mateo/{{Horns}}_Overlay_Mateo.png",
-            "When": { "MateoTrollHeritage": true }
+            "When": { "MateoTrollHeritage": true, "HasMod |contains=McJoan.Mateo": false }
         },
         {
             "LogName": "Mateo's Troll Heritage Portrait Overlay Stage 1 - Armor",
@@ -118,7 +119,8 @@
             "Target": "Portraits/Armor_Mateo",
             "PatchMode":"Overlay",
             "FromFile": "Assets/Portraits/Mateo/Armor_Horns1_Overlay_Mateo.png",
-            "When": { "MateoTrollHeritage": true, "Horns |contains=Horns1": true }
+            "When": { "MateoTrollHeritage": true, "Horns |contains=Horns1": true,
+                      "HasMod |contains=McJoan.Mateo": false }
         },
         {
             "LogName": "Mateo's Troll Heritage Portrait Overlay Other Stages - Armor",
@@ -127,7 +129,8 @@
             "Target": "Portraits/Armor_Mateo",
             "PatchMode":"Overlay",
             "FromFile": "Assets/Portraits/Mateo/{{Horns}}_Overlay_Mateo.png",
-            "When": { "MateoTrollHeritage": true, "Horns |contains=Horns1": false }
+            "When": { "MateoTrollHeritage": true, "Horns |contains=Horns1": false,
+                      "HasMod |contains=McJoan.Mateo": false }
         },
         {
             "LogName": "Mateo's Troll Heritage Portrait Overlay Googles Patch - Armor",
@@ -136,7 +139,7 @@
             "Target": "Portraits/Armor_Mateo",
             "PatchMode":"Overlay",
             "FromFile": "Assets/Portraits/Mateo/Armor_Goggles_Overlay_Mateo.png",
-            "When": { "MateoTrollHeritage": true }
+            "When": { "MateoTrollHeritage": true, "HasMod |contains=McJoan.Mateo": false }
         },
         {   
             "LogName": "Mateo's Troll Heritage Sprite Overlay",

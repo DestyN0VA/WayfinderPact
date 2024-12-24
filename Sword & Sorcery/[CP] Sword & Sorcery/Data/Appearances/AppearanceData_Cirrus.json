@@ -27,19 +27,37 @@
             "LogName": "Cirrus Hair Color",
             "Action": "EditImage",
             "Priority": "Early",
-            "Target": "Portraits/Cirrus, Characters/Cirrus, Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock, Characters/spring_Cirrus, Characters/summer_Cirrus, Characters/fall_Cirrus, Characters/Cirrus_beach, Characters/Cirrus_Glamrock",
+            "Target": "Characters/Cirrus, Characters/spring_Cirrus, Characters/summer_Cirrus, Characters/fall_Cirrus, Characters/Cirrus_beach, Characters/Cirrus_Glamrock",
             "PatchMode": "Overlay",
             "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Hair/{{CirrusHairColor}}.png",
+            "When": { "HasFile:{{FromFile}}": true }
+        },
+        {
+            "LogName": "Cirrus Hair Color",
+            "Action": "EditImage",
+            "Priority": "Early",
+            "Target": "Portraits/Cirrus, Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Hair/{{CirrusHairColor}}.png",
+            "When": { "HasFile:{{FromFile}}": true, "HasMod |contains=McJoan.Cirrus": false }
+        },
+        {
+            "LogName": "Cirrus Hair Color Winter",
+            "Action": "EditImage",
+            "Priority": "Early",
+            "Target": "Characters/winter_Cirrus",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Hair/{{CirrusHairColor}}_winter.png",
             "When": { "HasFile:{{FromFile}}": true }
         },
         {
             "LogName": "Cirrus Hair Color Winter",
             "Action": "EditImage",
             "Priority": "Early",
-            "Target": "Portraits/winter_Cirrus, Characters/winter_Cirrus",
+            "Target": "Portraits/winter_Cirrus",
             "PatchMode": "Overlay",
             "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Hair/{{CirrusHairColor}}_winter.png",
-            "When": { "HasFile:{{FromFile}}": true }
+            "When": { "HasFile:{{FromFile}}": true, "HasMod |contains=McJoan.Cirrus": false }
         },
         {
             "LogName": "Cirrus Makeup Overlay",
@@ -51,7 +69,8 @@
             "Update": "OnLocationChange",
             "When": {
                 "HasSeenEvent |contains=SnS.Ch3.Cirrus.10": true,
-                "CirrusExtras": true
+                "CirrusExtras": true,
+                "HasMod |contains=McJoan.Cirrus": false
             }
         },
         {   
@@ -62,7 +81,11 @@
             "PatchMode": "Overlay",
             "FromFile": "assets/portraits/Cirrus/{{season}}_pendant_overlay_Cirrus.png",
             "Update": "OnLocationChange",
-            "When": { "Relationship:Cirrus |contains=Married": true, "MermaidPendantChoker": true }
+            "When": {
+                "Relationship:Cirrus |contains=Married": true,
+                "MermaidPendantChoker": true,
+                "HasMod |contains=McJoan.Cirrus": false
+            }
         }
     ]
 }
