@@ -1898,9 +1898,9 @@ Stygium is a rare and powerful ore that spawns only within the Deep Dark. It is 
 Stygium Tools are made by upgrading any [color=purple]Iridium[/color] tool with [itemtooltip=(O)DN.SnS_StygiumBar][icon=Textures/DN.SnS/SnSObjects:144,144,16,16][color=blue]Stygium Bars[/color][/itemtooltip] at Clint's. This will improve the tool as expected for the next tier.
  
 Stygium Gear List
-> [itemtooltip=(T)DN.SnS_StygiumPickaxe][icon=Textures/DN.SnS/StygiumTools:80,32,16,16] [color=blue]Stygium Pickaxe[/color][/itemtooltip]
-> [itemtooltip=(T)DN.SnS_StygiumHoe][icon=Textures/DN.SnS/StygiumTools:80,64,16,16] [color=blue]Stygium Hoe[/color][/itemtooltip]
-> [itemtooltip=(T)DN.SnS_StygiumAxe][icon=Textures/DN.SnS/StygiumTools:80,32,16,16] [color=blue]Stygium Axe[/color][/itemtooltip]
+> [itemtooltip=(T)DN.SnS_StygiumPickaxe][icon=Textures/DN.SnS/StygiumTools:80,64,16,16] [color=blue]Stygium Pickaxe[/color][/itemtooltip]
+> [itemtooltip=(T)DN.SnS_StygiumHoe][icon=Textures/DN.SnS/StygiumTools:80,32,16,16] [color=blue]Stygium Hoe[/color][/itemtooltip]
+> [itemtooltip=(T)DN.SnS_StygiumAxe][icon=Textures/DN.SnS/StygiumTools:80,96,16,16] [color=blue]Stygium Axe[/color][/itemtooltip]
 > [itemtooltip=(T)DN.SnS_StygiumWateringCan][icon=Textures/DN.SnS/StygiumTools:48,128,16,16] [color=blue]Stygium Watering Can[/color][/itemtooltip]
 > [itemtooltip=(W)DN.SnS_StygiumBlade][icon=Textures/DN.SnS/StygiumTools:0,0,16,16] [color=blue]Stygium Blade[/color][/itemtooltip] (Recipe: Lion's Mane)
 > [itemtooltip=(W)DN.SnS_StygiumShield][icon=Textures/DN.SnS/SnSObjects:80,192,16,16] [color=blue]Stygium Shield[/color][/itemtooltip] (Recipe: Default)
@@ -1916,9 +1916,9 @@ When a Stygium item is worn or held it applies a de-buff, [icon=Textures/DN.SnS/
 Stygium tools can be purified by being combined with a [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16][color=blue]Duskspire Heart[/color][/itemtooltip] at Clint's. This removes the [icon=Textures/DN.SnS/SnSObjects:112,192,16,16] [color=purple]Stygium Poisoning[/color] de-buff and improves the tool.
  
 Elysium Gear List
-> [itemtooltip=(T)DN.SnS_BlessedPickaxe][icon=Textures/DN.SnS/BlessedTools:80,32,16,16] [color=blue]Elysium Pickaxe[/color][/itemtooltip]
-> [itemtooltip=(T)DN.SnS_BlessedHoe][icon=Textures/DN.SnS/BlessedTools:80,64,16,16] [color=blue]Elysium Hoe[/color][/itemtooltip]
-> [itemtooltip=(T)DN.SnS_BlessedAxe][icon=Textures/DN.SnS/BlessedTools:80,32,16,16] [color=blue]Elysium Axe[/color][/itemtooltip]
+> [itemtooltip=(T)DN.SnS_BlessedPickaxe][icon=Textures/DN.SnS/BlessedTools:80,64,16,16] [color=blue]Elysium Pickaxe[/color][/itemtooltip]
+> [itemtooltip=(T)DN.SnS_BlessedHoe][icon=Textures/DN.SnS/BlessedTools:80,32,16,16] [color=blue]Elysium Hoe[/color][/itemtooltip]
+> [itemtooltip=(T)DN.SnS_BlessedAxe][icon=Textures/DN.SnS/BlessedTools:80,96,16,16] [color=blue]Elysium Axe[/color][/itemtooltip]
 > [itemtooltip=(T)DN.SnS_BlessedWateringCan][icon=Textures/DN.SnS/BlessedTools:48,128,16,16] [color=blue]Elysium Watering Can[/color][/itemtooltip]
 > [itemtooltip=(W)DN.SnS_ElysiumBlade][icon=Textures/DN.SnS/BlessedTools:0,0,16,16] [color=blue]Elysium Blade[/color][/itemtooltip] (Recipe: Lion's Mane)
 > [itemtooltip=(O)DN.SnS_ElysiumArmor][icon=Textures/DN.SnS/SnSArsenal:16,112,16,16] [color=blue]Elysium Armor[/color][/itemtooltip] (Recipe: Artificer level-up)
