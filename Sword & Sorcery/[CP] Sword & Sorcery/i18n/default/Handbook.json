@@ -1518,21 +1518,21 @@ Upon unlocking Sorcery, you will also gain the ability to learn how to make alch
  
 All potions apply buffs that last for 11 minutes and 40 seconds.
  
->Verdant - Tastes weirdly like the potion The Wizard gave you... +5 Foraging
->Scarlet - Let the hate flow through you. +5 Attack
->Heather - Zoom, zoom, zoom! +5 Speed
->Zydrate - Comes in a little glass vial. +3 Speed, Def, Attack
->Pistachio - Helps you feel very inspired to get farmwork done! +5 farming
->Dahlia - Almost as pretty in color as the flower it's made from. +1 farming, fishing mining
->Slushie - Wow! All that sugar makes for great energy. +10 max stamina
->Matrix - Perfect for a day in the mines. +5 mining, +3 magnetic radius
->McDougal - The luckiest thing you'll ever drink. +5 Luck
->Toirneach - For those tricky combat scenarios. +4 Mining, +4 def
+>[itemtooltip=(O)DN.SnS_verdantpotion][icon=Textures/DN.SnS/SnSObjects:80,80,16,16][color=purple]Verdant[/color] - +5 Foraging
+>[itemtooltip=(O)DN.SnS_scarletpotion][icon=Textures/DN.SnS/SnSObjects:96,80,16,16][color=purple]Scarlet[/color] - +5 Attack
+>[itemtooltip=(O)DN.SnS_heatherpotion][icon=Textures/DN.SnS/SnSObjects:112,80,16,16][color=purple]Heather[/color] - +5 Speed
+>[itemtooltip=(O)DN.SnS_zydratepotion][icon=Textures/DN.SnS/SnSObjects:128,80,16,16][color=purple]Zydrate[/color] - +3 Speed, Defense, Attack
+>[itemtooltip=(O)DN.SnS_pistachiopotion][icon=Textures/DN.SnS/SnSObjects:144,80,16,16][color=purple]Pistachio[/color] - +5 Farming
+>[itemtooltip=(O)DN.SnS_dahliapotion][icon=Textures/DN.SnS/SnSObjects:0,96,16,16][color=purple]Dahlia[/color] - +1 Farming, Fishing, Mining
+>[itemtooltip=(O)DN.SnS_slushiepotion][icon=Textures/DN.SnS/SnSObjects:16,96,16,16][color=purple]Slushie[/color] - +10 Max Stamina
+>[itemtooltip=(O)DN.SnS_matrixpotion][icon=Textures/DN.SnS/SnSObjects:32,96,16,16][color=purple]Matrix[/color] - +5 Mining, +3 Magnetism
+>[itemtooltip=(O)DN.SnS_mcdougalpotion][icon=Textures/DN.SnS/SnSObjects:48,96,16,16][color=purple]McDougal[/color] - +5 Luck
+>[itemtooltip=(O)DN.SnS_toirneachpotion][icon=Textures/DN.SnS/SnSObjects:64,96,16,16][color=purple]Toirneach[/color] - +4 Mining, +4 Defense
  
 [font=dialogue]Transmutation[/font]
-If you find yourself in need of a specific [link=TOP/ElementalEssences]Elemental Essences[/link], you can transmutate one essence into another from the Transmutation menu in your Magical Grimoire.
+If you find yourself in need of a specific [link=TOP/ElementalEssences]Elemental Essence[/link], you can transmutate one essence into another from the Transmutation menu in your Magical Grimoire.
  
-The conversation ratio for essences is 1:1 and will pull from the first available essence in your inventory.",
+The conversation ratio for essences is 4:1 (Default), 2:1 ([link=TOP/SorcererProfessions]Hedge Witch[/link]) or 1:1 ([link=TOP/SorcererProfessions]Master Alchemist[/link]) and will pull from the first available essence in your inventory.",
 
 "guidebook.chapter.TOP.DeepDark": "Deep Dark
 Fucking Kill Me This Place Needs Its Own Wiki
