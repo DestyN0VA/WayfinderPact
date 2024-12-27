@@ -149,7 +149,7 @@ namespace SwordAndSorcerySMAPI
 
         public static bool IsArmorItem(this Item item)
         {
-            return (item.GetArmorAmount(includeMageArmor: false) ?? -1) > 0;
+            return item.GetArmorAmount(false, false) != null;
         }
 
         public static bool IsShieldItem(this MeleeWeapon mw)
@@ -157,7 +157,7 @@ namespace SwordAndSorcerySMAPI
             return (mw.GetData()?.CustomFields?.ContainsKey("DN.SnS_Shield") ?? false);
         }
 
-        public static int? GetArmorAmount(this Item item, bool includeMageArmor = true)
+        public static int? GetArmorAmount(this Item item, bool includeArmor = true, bool includeMageArmor = true)
         {
             int ArmorAmount = 0;
             int ShieldAmount = 0;
@@ -175,7 +175,7 @@ namespace SwordAndSorcerySMAPI
 
             ArmorAmount = (int)(GetAmount(item) * (Game1.player.HasCustomProfession(RogueSkill.ProfessionArmorCap) ? 1.5f : 1));
 
-            int FinalAmount = ArmorAmount + ShieldAmount + (includeMageArmor ? MageArmor : 0);
+            int FinalAmount = ArmorAmount + (includeArmor ? ShieldAmount : 0) + (includeMageArmor ? MageArmor : 0);
             
             return FinalAmount == 0 ? null : FinalAmount;
         }
@@ -477,7 +477,7 @@ namespace SwordAndSorcerySMAPI
                     Game1.player.GetFarmerExtData().inShadows.Value = true;
                 }
             });
-            
+
             Ability.Abilities.Add("remoteguide", new Ability("remoteguide")
             {
                 Name = I18n.Ability_Remoteguide_Name,
@@ -517,7 +517,7 @@ namespace SwordAndSorcerySMAPI
                 int newMax = int.Parse(args[0]);
                 Game1.player.mailReceived.Add($"DN.SnS.MaxMana_{newMax}");
                 Game1.player.GetFarmerExtData().maxMana.Value = newMax;
-                });
+            });
             Helper.ConsoleCommands.Add("sns_refillaether", "...", (cmd, args) => Game1.player.GetFarmerExtData().mana.Value = Game1.player.GetFarmerExtData().maxMana.Value);
             Helper.ConsoleCommands.Add("sns_repairarmor", "...", (cmd, args) => Game1.player.GetFarmerExtData().armorUsed.Value = 0);
             Helper.ConsoleCommands.Add("sns_finishorders", "...", (cmd, args) =>
@@ -642,7 +642,7 @@ namespace SwordAndSorcerySMAPI
 
             // Remove Seasonal Offerings Special Orders
             Game1.player.team.specialOrders.RemoveWhere(o => o.questKey.Value.StartsWithIgnoreCase("CAGQuest.UntimedSpecialOrder.Pentacle"));
-            
+
             // Legacy armor slot migration
 
             foreach (var player in Game1.getAllFarmers())
@@ -682,7 +682,7 @@ namespace SwordAndSorcerySMAPI
         }
 
         private static void RecalculateAether()
-        {var ext = Game1.player.GetFarmerExtData();
+        { var ext = Game1.player.GetFarmerExtData();
 
             int maxMana = 0;
 
@@ -724,7 +724,7 @@ namespace SwordAndSorcerySMAPI
             }
 
             if (Game1.player.mailReceived.Any(m => m.StartsWith("DN.SnS.MaxMana_")) && int.TryParse(Game1.player.mailReceived.First(m => m.StartsWith("DN.SnS.MaxMana_")).Split('_')[1], out int OverridenMaxMana))
-                maxMana = OverridenMaxMana;              
+                maxMana = OverridenMaxMana;
 
             ext.maxMana.Value = maxMana;
         }
@@ -773,7 +773,7 @@ namespace SwordAndSorcerySMAPI
                 (!Config.LltkDifficulty.EqualsIgnoreCase("Hard") || Utility.percentGameComplete() >= 0.5);
 
             if (e.Button.IsActionButton() && Game1.currentLocation is Farm farm &&
-                e.Cursor.GrabTile == farm.GetGrandpaShrinePosition().ToVector2() && 
+                e.Cursor.GrabTile == farm.GetGrandpaShrinePosition().ToVector2() &&
                 !Game1.player.GetFarmerExtData().hasTakenLoreWeapon.Value &&
                 LLTKDifficulty)
             {
@@ -863,7 +863,7 @@ namespace SwordAndSorcerySMAPI
         private void Display_RenderedWorld(object sender, StardewModdingAPI.Events.RenderedWorldEventArgs e)
         {
             if (!Game1.player.eventsSeen.Contains("SnS.Ch1.Mateo.12") ||
-                 Game1.player.team.acceptedSpecialOrderTypes.Contains("SwordSorcery")  ||
+                 Game1.player.team.acceptedSpecialOrderTypes.Contains("SwordSorcery") ||
                  Game1.eventUp)
             {
                 return;
@@ -884,7 +884,7 @@ namespace SwordAndSorcerySMAPI
 
             if (e.NameWithoutLocale.IsEquivalentTo("DN.SnS/FinalePartners"))
                 e.LoadFrom(() => new Dictionary<string, FinalePartnerInfo>(), StardewModdingAPI.Events.AssetLoadPriority.Exclusive);
-         
+
             string[] recolors =
             [
                 "daisyniko.earthyinterface",
@@ -1075,7 +1075,7 @@ namespace SwordAndSorcerySMAPI
                     }
 
                     double perc = x;
-                    string manaStr = $"{MathF.Round((float)(10*x), mode: MidpointRounding.ToPositiveInfinity)}/10";
+                    string manaStr = $"{MathF.Round((float)(10 * x), mode: MidpointRounding.ToPositiveInfinity)}/10";
                     IClickableMenu.drawTextureBox(b, (int)pos.X, (int)pos.Y, 64 * 4 + 24, 32 + 12 + 12, Color.White);
                     b.Draw(Game1.staminaRect, new Rectangle((int)pos.X + 12, (int)pos.Y + 12, (int)(64 * 4 * perc), 32), Utility.StringToColor($"{ModSnS.Config.Red} {ModSnS.Config.Green} {ModSnS.Config.Blue}") ?? Color.Aqua);
                     b.DrawString(Game1.smallFont, manaStr, new Vector2(pos.X + 12 + 64 * 4 / 2 - Game1.smallFont.MeasureString(manaStr).X / 2, (int)pos.Y + 12), Utility.StringToColor($"{ModSnS.Config.TextRed} {ModSnS.Config.TextGreen} {ModSnS.Config.TextBlue}") ?? Color.Black);
@@ -1085,8 +1085,8 @@ namespace SwordAndSorcerySMAPI
                 gmcm.AddParagraph(ModManifest, I18n.Config_Section_Lltk_Text);
                 gmcm.AddBoolOption(ModManifest, () => Config.LltkToggleRightClick, (val) => Config.LltkToggleRightClick = val, I18n.Config_LltkToggleRightClick_Name, I18n.Config_LltkToggleRightClick_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.LltkToggleKeybind, (val) => Config.LltkToggleKeybind = val, I18n.Config_LltkToggleKeybind_Name, I18n.Config_LltkToggleKeybind_Description);
-                gmcm.AddTextOption(ModManifest, () => Config.LltkDifficulty, (val) => Config.LltkDifficulty = val, I18n.Config_LltkDifficulty_Name, I18n.Config_LltkDifficulty_Description, ["Easy", "Medium", "Hard"]);    
-            
+                gmcm.AddTextOption(ModManifest, () => Config.LltkDifficulty, (val) => Config.LltkDifficulty = val, I18n.Config_LltkDifficulty_Name, I18n.Config_LltkDifficulty_Description, ["Easy", "Medium", "Hard"]);
+
                 gmcm.AddSectionTitle(ModManifest, I18n.Section_Keybinds_Name, I18n.Section_Keybinds_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.ConfigureAdventureBar, (val) => Config.ConfigureAdventureBar = val, I18n.Keybind_ConfigureBar_Name, I18n.Keybind_ConfigureBar_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.ToggleAdventureBar, (val) => Config.ToggleAdventureBar = val, I18n.Keybind_ToggleBar_Name, I18n.Keybind_ToggleBar_Description);
@@ -1121,13 +1121,13 @@ namespace SwordAndSorcerySMAPI
             sc.RegisterSerializerType(typeof(ThrownShield));
             sc.RegisterCustomProperty(typeof(Farmer), "shieldSlot", typeof(NetRef<Item>), AccessTools.Method(typeof(Farmer_ArmorSlot), nameof(Farmer_ArmorSlot.get_armorSlot)), AccessTools.Method(typeof(Farmer_ArmorSlot), nameof(Farmer_ArmorSlot.set_armorSlot)));
             sc.RegisterCustomProperty(typeof(Farmer), "takenLoreWeapon", typeof(NetBool), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.HasTakenLoreWeapon)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetHasTakenLoreWeapon)));
-            sc.RegisterCustomProperty(typeof(Farmer), "adventureBar", typeof(NetArray<string,NetString>), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.GetAdventureBar)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetAdventureBar)));
+            sc.RegisterCustomProperty(typeof(Farmer), "adventureBar", typeof(NetArray<string, NetString>), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.GetAdventureBar)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetAdventureBar)));
             sc.RegisterCustomProperty(typeof(Farmer), "maxMana", typeof(NetInt), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.GetMaxMana)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetMaxMana)));
             sc.RegisterCustomProperty(typeof(Farmer), "expRemainderRogue", typeof(NetFloat), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderRogueGetter)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderRogueSetter)));
 
             sc.RegisterEquipmentSlot(ModManifest,
                 $"{ModManifest.UniqueID}_Armor",
-                item => item == null || item.IsArmorItem(),
+                item => item == null || (item.IsArmorItem() && (item is not MeleeWeapon w || !w.IsShieldItem())),
                 I18n.UiSlot_Armor,
                 Game1.content.Load<Texture2D>("DN.SnS/ArmorSlot"));
 
