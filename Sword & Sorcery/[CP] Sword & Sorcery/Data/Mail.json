@@ -19,7 +19,8 @@
                 "CirrusHoodie":"{{i18n:Mail.Cirrus.Letter0}}",
 				"MissingRecipe1":"{{i18n:Mail.MissingRecipe1}}",
 				"MissingRecipe2":"{{i18n:Mail.MissingRecipe2}}",
-				"MissingRecipe3":"{{i18n:Mail.MissingRecipe3}}"
+				"MissingRecipe3":"{{i18n:Mail.MissingRecipe3}}",
+				"MissingRecipe4":"{{i18n:Mail.MissingRecipe4}}"
             }
         },
         // TRIGGER ACTIONS
@@ -99,7 +100,16 @@
 					"Actions": [
 						"AddMail Current MissingRecipe3 now"
 					]
-				}
+				},
+				/*"{{ModID}}_MissingRecipe4": {
+					"Id": "{{ModID}}_MissingRecipe4",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_DESTYNOVA.SWORDANDSORCERY.DRUIDICS_LEVEL Current 8, !PLAYER_HAS_CRAFTING_RECIPE Current \"Ancient Azure Detura Seeds\"",
+					"Actions": [
+						"AddMail Current MissingRecipe4 now",
+						"MarkCraftingRecipeKnown Current \"Ancient Azure Detura Seeds\" true"
+					]
+				}*/
 			}
 		}        
     ]
