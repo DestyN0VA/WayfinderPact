@@ -1688,139 +1688,141 @@ This project is dedicated to the memory of TheLoreSeeker, a beloved community me
 "guidebook.chapter.DeepDark.Name": "The Deep Dark",
 "guidebook.chapter.DeepDark.Intro": "[center][font=dialogue]Introduction[/font][/center]
  
-The Deep Dark is a late-game 30 floor dungeon crawling with powerful monsters and the rare ore, [Link=DeepDark/Stygium]Stygium[/link]. Here you'll find beautiful maps, custom forage and new monsters with unique item drop pools. Once you reach the end you'll face off against the mod's final boss: The [Link=DeepDark/Duskspire]Duskspire Behemoth[/link].
+The Deep Dark is a late-game 30 floor dungeon crawling with powerful [link=DeepDark/Monsters]monsters[/link] and the rare ore, [Link=DeepDark/Stygium]Stygium[/link]. Here you'll find beautiful maps, custom forage and new monsters with unique item drop pools. Once you reach the end you'll face off against the mod's final boss: The [Link=DeepDark/Duskspire]Duskspire Behemoth[/link].
  
 It's advised you prepare yourself with Sword & Sorcery's new mechanics and late-game vanilla mechanics before tackling this location.",
 "guidebook.chapter.DeepDark.Monsters": "[center][font=dialogue]Monsters & Drops[/font][/center]
  
-All monsters in the Deep Dark are based on an existing monster. They will also drop trinkets and special items associated with the base vanilla monster in addition to the list below. (Ex. Stygium Rex drops Pepper Rex eggs)
-
-Stygium Crab
- * Void Essence (100%)
- * Stygium Ore (3%)
- * 717 - Crab (50%)
- * 732 - Crab Cakes (30%)
- * 810 - Crab Shell Ring (1%)
-
-Stygium Skeleton
- * Void Essence (100%)
- * Stygium Ore (3%)
- * Tainted Corn (5%)
- * 105 Chewing Stick (1%)
- * 881 Bone Framgement (100%)
- * 243 Miners Treat  (1%)
-
-Stygium Party Skeleton
- * Void Essence (100%)
- * Stygium Ore (100%)
- * 105 Chewing Stick (1%)
- * 881 Bone Framgement (100%)
- * 243 Miners Treat  (1%)
- * 279 Magic Rock Candy (100%)
- * 74 Prismatic Shard (1%)
-
-Stygium Rex
- * Void Essence (100%)
- * Stygium Ore (3%)
- * Tainted Grasses (20%)
-
-Stygium Golem (Purple)
- * Void Essence (100%)
- * Stygium Ore (3%)
- * Tainted Grasses (50%)
- * Omni Geode (10%)
- * Amethyst (5%)
-
-Stygium Golem (Blue)
- * Void Essence (100%)
- * Stygium Ore (3%)
- * Tainted Grasses (50%)
- * Omni Geode (10%)
- * Diamond (1%)
- * Frozen Tear (5%)
-
-Stygium Bat
- * Void Essence (100%)
- * Stygium Ore (3%)
- * 767 Bat Wing (100%)
- * 522 Vampire Ring (1%)
-
-Stygium Miner
- * Void Essence (100%)
- * Stygium Ore (5%)
- * Tainted Corn (5%)
- * 105 Chewing Stick (1%)
- * 881 Bone Fragment (100%)
- * 243 Miners Treat (1%)
- * 286 Cherry Bomb (5%)
- * 287 Bomb (3%)
- * 288 Mega Bomb (1%)
-
-Stygium Head
- * Void Essence (100%)
- * Stygium Ore (3%)
- * 380 Iron Ore (10%)
- * 335 Iron Bar (5%)
- * 121 Dwarvish Helm (1%)
-
-Stygium Skull
- * Void Essence (100%)
- * Stygium Ore (3%)
- * 881 Bone Fragment (100%)
- * 581 Perhistoric Skull (5%)
+All monsters in the Deep Dark are based on an existing monster. In addition to the following list, monsters will also drop trinkets and special items associated with the base vanilla monster.
+(Ex. Stygium Rex drops Pepper Rex eggs)
  
-Stygium False Mushroom
- * Void Essence (100%)
- * Stygium Ore (3%)
- * Tainted Mush 1 (25%)
- * Tainted Mush 2 (25%)
- * Tainted Mush 3 (25%)
- * Tainted Mush 4 (25%)
-
-Stygium Miner Mage
- * Void Essence (100%)
- * Stygium Ore (5%)
- * Tainted Corn (5%)
- * 105 Chewing Stick (1%)
- * 881 Bone Fragment (100%)
- * 243 Miners Treat (1%)
- * 84 Frozen Tear (5%)
-
-Stygium Serpent 
- * Void Essence (100%)
- * Stygium Ore (3%)
- * 148 Eel (10%)
- * 225 Fried Eel (5%)
-
-Stygium Leviathan (\"Rare, behaves like a mini boss\")
- * Void Essence (100%)
- * Stygium Ore x3 (100%)
- * 166 Treasure Chest (100%)
- * 799 Spook Fish (10%)
- * 242 Dish O The Sea(5%)
- * 681 Rain Totem (10%)
- * 560 Ocean Stone (50%)
- * 117 Anchor (20%)
- * 74 Prismatic Shard (2%)
-
-Stygium Squid
- * Void Essence (100%)
- * Stygium Ore (3%)
- * 798 Midnight Squid (10%)
- * 814 Squid Ink (20%)
- * 921 Squid Ink Ravioli (5%)
- * 681 Rain Totem (1%)
-
-Stygium Droplet
- * Void Essence (100%)
- * Stygium Ore (3%)
- * 561 Ghost Crystal (20%)
- * 265 Seafoam Pudding (10%)
- * 895 Green Fireworks (5%)
- * 681 Rain Totem (1%)
-
-Duskspire Behemoth
- * Duskspire Heart (100%)
+[icon=Textures/DN.SnS/SnSMonsterIcons:16,0,16,16] [color=blue]Stygium Crab[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (3%)
+ > [itemtooltip=(O)717][icon=maps/springobjects:336,464,16,16] Crab[/itemtooltip] (30%)
+ > [itemtooltip=(O)732][icon=maps/springobjects:192,480,16,16] Crab Cakes[/itemtooltip] (10%)
+ > [itemtooltip=(O)810][icon=maps/springobjects:288,528,16,16] Crabshell Ring[/itemtooltip] (1%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:64,16,16,16] [color=blue]Stygium Rex[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (3%)
+ > [itemtooltip=(O)DN.SnS_taintedgrasses][icon=Textures/DN.SnS/SnSObjects:96,176,16,16] Tainted Grasses[/itemtooltip] (20%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:48,0,16,16] [color=blue]Stygium Golem (Purple)[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (3%)
+ > [itemtooltip=(O)DN.SnS_taintedgrasses][icon=Textures/DN.SnS/SnSObjects:96,176,16,16] Tainted Grasses[/itemtooltip] (30%)
+ > [itemtooltip=(O)749][icon=maps/springobjects:80,496,16,16] Omni Geode[/itemtooltip] (10%)
+ > [itemtooltip=(O)66][icon=maps/springobjects:288,32,16,16] Amethyst[/itemtooltip] (5%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:64,0,16,16] [color=blue]Stygium Golem (Blue)[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (3%)
+ > [itemtooltip=(O)DN.SnS_taintedgrasses][icon=Textures/DN.SnS/SnSObjects:96,176,16,16] Tainted Grasses[/itemtooltip] (30%)
+ > [itemtooltip=(O)749][icon=maps/springobjects:80,496,16,16] Omni Geode[/itemtooltip] (10%)
+ > [itemtooltip=(O)84][icon=maps/springobjects:192,48,16,16] Frozen Tear[/itemtooltip] (5%)
+ > [itemtooltip=(O)72][icon=maps/springobjects:0,48,16,16] Diamond[/itemtooltip] (1%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:0,0,16,16] [color=blue]Stygium Bat[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (3%)
+ > [itemtooltip=(O)767][icon=maps/springobjects:368,496,16,16] Bat Wing[/itemtooltip] (100%)
+ > [itemtooltip=(O)522][icon=maps/springobjects:288,336,16,16] Vampire Ring[/itemtooltip] (1%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:32,48,16,16] [color=blue]Stygium Head[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (3%)
+ > [itemtooltip=(O)380][icon=maps/springobjects:320,240,16,16] Iron Ore[/itemtooltip] (10%)
+ > [itemtooltip=(O)709][icon=Maps/springobjects:368,208,16,16] Iron Bar[/itemtooltip] (5%)
+ > [itemtooltip=(O)121][icon=maps/springobjects:16,80,16,16] Dwarvish Helm[/itemtooltip] (1%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:64,32,16,16] [color=blue]Stygium Skull[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (3%)
+ > [itemtooltip=(O)881][icon=maps/springobjects:272,576,16,16] Bone Fragment[/itemtooltip] (100%)
+ > [itemtooltip=(O)581][icon=maps/springobjects:80,384,16,16] Perhistoric Skull[/itemtooltip] (5%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:32,16,16,16] [color=blue]Stygium False Mushroom[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (3%)
+ > [itemtooltip=(O)DN.SnS_mushroom1][icon=Textures/DN.SnS/SnSObjects:0,176,16,16] Tainted Mushroom (Type A)[/itemtooltip] (25%)
+ > [itemtooltip=(O)DN.SnS_mushroom2][icon=Textures/DN.SnS/SnSObjects:16,176,16,16] Tainted Mushroom (Type B)[/itemtooltip] (25%)
+ > [itemtooltip=(O)DN.SnS_mushroom3][icon=Textures/DN.SnS/SnSObjects:32,176,16,16] Tainted Mushroom (Type C)[/itemtooltip] (25%)
+ > [itemtooltip=(O)DN.SnS_mushroom4][icon=Textures/DN.SnS/SnSObjects:48,176,16,16] Tainted Mushroom (Type D)[/itemtooltip] (25%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:0,48,16,16] [color=blue]Stygium Squid[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (3%)
+ > [itemtooltip=(O)798][icon=maps/springobjects:96,528,16,16] Midnight Squid[/itemtooltip] (10%)
+ > [itemtooltip=(O)814][icon=maps/springobjects:352,528,16,16] Squid Ink[/itemtooltip] (20%)
+ > [itemtooltip=(O)921][icon=maps/springobjects:144,608,16,16] Squid Ink Ravioli[/itemtooltip] (5%)
+ > [itemtooltip=(O)681][icon=maps/springobjects:144,448,16,16] Rain Totem[/itemtooltip] (1%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:32,0,16,16] [color=blue]Stygium Droplet[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (3%)
+ > [itemtooltip=(O)561][icon=maps/springobjects:144,368,16,16] Ghost Crystal[/itemtooltip] (20%)
+ > [itemtooltip=(O)265][icon=maps/springobjects:16,176,16,16] Seafoam Pudding[/itemtooltip] (10%)
+ > [itemtooltip=(O)1][icon=maps/springobjects:112,592,16,16] Green Fireworks[/itemtooltip] (5%)
+ > [itemtooltip=(O)895][icon=maps/springobjects:144,448,16,16] Rain Totem[/itemtooltip] (1%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:48,32,16,16] [color=blue]Stygium Serpent[/color] 
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (3%)
+ > [itemtooltip=(O)148][icon=maps/springobjects:64,96,16,16] Eel[/itemtooltip] (10%)
+ > [itemtooltip=(O)225][icon=maps/springobjects:144,144,16,16] Fried[/itemtooltip] (5%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:0,32,16,16] [color=blue]Stygium Miner[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (5%)
+ > [itemtooltip=(O)DN.SnS_taintedcorn][icon=Textures/DN.SnS/SnSObjects:112,176,16,16] Tainted Corn[/itemtooltip] (5%)
+ > [itemtooltip=(O)105][icon=maps/springobjects:144,64,16,16] Chewing Stick[/itemtooltip] (1%)
+ > [itemtooltip=(O)881][icon=maps/springobjects:272,576,16,16] Bone Fragment[/itemtooltip] (100%)
+ > [itemtooltip=(O)243][icon=maps/springobjects:48,160,16,16] Miner's Treat[/itemtooltip] (1%)
+ > [itemtooltip=(O)286][icon=maps/springobjects:352,176,16,16] Cherry Bomb[/itemtooltip] (5%)
+ > [itemtooltip=(O)287][icon=maps/springobjects:368,176,16,16] Bomb[/itemtooltip] (3%)
+ > [itemtooltip=(O)288][icon=maps/springobjects:0,192,16,16] Mega Bomb[/itemtooltip] (1%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:16,32,16,16] [color=blue]Stygium Miner Mage[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (5%)
+ > [itemtooltip=(O)DN.SnS_taintedcorn][icon=Textures/DN.SnS/SnSObjects:112,176,16,16] Tainted Corn[/itemtooltip] (5%)
+ > [itemtooltip=(O)105][icon=maps/springobjects:144,64,16,16] Chewing Stick[/itemtooltip] (1%)
+ > [itemtooltip=(O)881][icon=maps/springobjects:272,576,16,16] Bone Fragment[/itemtooltip] (100%)
+ > [itemtooltip=(O)243][icon=maps/springobjects:48,160,16,16] Miner's Treat[/itemtooltip] (1%)
+ > [itemtooltip=(O)84][icon=maps/springobjects:192,48,16,16] Frozen Tear[/itemtooltip] (5%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:0,16,16,16] [color=blue]Stygium Skeleton[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (3%)
+ > [itemtooltip=(O)DN.SnS_taintedcorn][icon=Textures/DN.SnS/SnSObjects:112,176,16,16] Tainted Corn[/itemtooltip] (5%)
+ > [itemtooltip=(O)105][icon=maps/springobjects:144,64,16,16] Chewing Stick[/itemtooltip] (1%)
+ > [itemtooltip=(O)881][icon=maps/springobjects:272,576,16,16] Bone Fragment[/itemtooltip] (100%)
+ > [itemtooltip=(O)243][icon=maps/springobjects:48,160,16,16] Miner's Treat[/itemtooltip] (1%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:16,16,16,16] [color=purple]Stygium Skeleton (Rare)[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_taintedcorn][icon=Textures/DN.SnS/SnSObjects:112,176,16,16] Tainted Corn[/itemtooltip] (5%)
+ > [itemtooltip=(O)105][icon=maps/springobjects:144,64,16,16] Chewing Stick[/itemtooltip] (1%)
+ > [itemtooltip=(O)881][icon=maps/springobjects:272,576,16,16] Bone Fragment[/itemtooltip] (100%)
+ > [itemtooltip=(O)243][icon=maps/springobjects:48,160,16,16] Miner's Treat[/itemtooltip] (1%)
+ > [itemtooltip=(O)279][icon=maps/springobjects:240,176,16,16] Magic Rock Candy[/itemtooltip] (100%)
+ > [itemtooltip=(O)74][icon=maps/springobjects:32,48,16,16] Prismatic Shard[/itemtooltip] (1%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:32,32,16,16] [color=purple]Stygium Leviathan (Rare Mini-Boss)[/color]
+ > [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] Void Essence[/itemtooltip] (100%)
+ > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] Stygium Ore x3[/itemtooltip] (100%)
+ > [itemtooltip=(O)166][icon=maps/springobjects:352,96,16,16] Treasure Chest[/itemtooltip] (100%)
+ > [itemtooltip=(O)799][icon=maps/springobjects:112,528,16,16] Spook Fish[/itemtooltip] (10%)
+ > [itemtooltip=(O)242][icon=maps/springobjects:32,160,16,16] Dish O' The Sea[/itemtooltip] (5%)
+ > [itemtooltip=(O)895][icon=maps/springobjects:144,448,16,16] Rain Totem[/itemtooltip] (10%)
+ > [itemtooltip=(O)560][icon=maps/springobjects:128,368,16,16] Ocean Stone[/itemtooltip] (50%)
+ > [itemtooltip=(O)117][icon=maps/springobjects:336,64,16,16] Anchor[/itemtooltip] (20%)
+ > [itemtooltip=(O)74][icon=maps/springobjects:32,48,16,16] Prismatic Shard[/itemtooltip] (2%)
+ 
+[icon=Textures/DN.SnS/SnSMonsterIcons:0,64,16,16] [color=purple]Duskspire Behemoth (Final Boss)[/color]
+ > [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16]Duskspire Heart[/itemtooltip] (100%)
 ",
 "guidebook.chapter.DeepDark.Floors": "[center][font=dialogue]Floors[/font][/center]
  
