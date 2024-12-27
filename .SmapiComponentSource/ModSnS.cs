@@ -2,6 +2,7 @@
 using ContentPatcher;
 using HarmonyLib;
 using MageDelve.Mercenaries;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
@@ -18,6 +19,7 @@ using StardewValley.BellsAndWhistles;
 using StardewValley.Extensions;
 using StardewValley.GameData.Objects;
 using StardewValley.GameData.SpecialOrders;
+using StardewValley.GameData.Weapons;
 using StardewValley.Locations;
 using StardewValley.Menus;
 using StardewValley.Monsters;
@@ -157,30 +159,42 @@ namespace SwordAndSorcerySMAPI
 
         public static int? GetArmorAmount(this Item item, bool includeMageArmor = true)
         {
-            int mageArmor = Game1.player.GetFarmerExtData().mageArmor ? 50 : 0;
+            int ArmorAmount = 0;
+            int ShieldAmount = 0;
+            int MageArmor = Game1.player.GetFarmerExtData().mageArmor ? 50 : 0;
 
-            int shields = 0;
             if (Game1.player.CurrentTool is MeleeWeapon mw1 && mw1.IsShieldItem())
-                ++shields;
+                ShieldAmount += GetAmount(mw1);
             if (Game1.player.GetOffhand() is MeleeWeapon mw2 && mw2.IsShieldItem())
-                ++shields;
+                ShieldAmount += GetAmount(mw2);
 
-            int armorAmt = 25;
-            if (Game1.player.HasCustomProfession(PaladinSkill.ProfessionShieldArmor1))
-                armorAmt += 25;
             if (Game1.player.HasCustomProfession(PaladinSkill.ProfessionShieldArmor2))
-                armorAmt += 50;
-            mageArmor += armorAmt * shields;
+                ShieldAmount *= 4;
+            else if (Game1.player.HasCustomProfession(PaladinSkill.ProfessionShieldArmor1))
+                ShieldAmount *= 2;
 
-            if (!includeMageArmor)
-                mageArmor = 0;
+            ArmorAmount = (int)(GetAmount(item) * (Game1.player.HasCustomProfession(RogueSkill.ProfessionArmorCap) ? 1.5f : 1));
 
-            if (item != null && ItemRegistry.GetDataOrErrorItem(item.QualifiedItemId).RawData is ObjectData data &&
-                ( data.CustomFields?.TryGetValue("ArmorValue", out string valStr) ?? false ) && int.TryParse(valStr, out int val))
+            int FinalAmount = ArmorAmount + ShieldAmount + (includeMageArmor ? MageArmor : 0);
+            
+            return FinalAmount == 0 ? null : FinalAmount;
+        }
+
+        public static int GetAmount(Item item)
+        {
+            if (item is MeleeWeapon)
             {
-                return (int)( val * ( Game1.player.HasCustomProfession( RogueSkill.ProfessionArmorCap ) ? 1.5f : 1)) + mageArmor;
+                if (item != null && ItemRegistry.GetDataOrErrorItem(item.QualifiedItemId).RawData is WeaponData data &&
+                        (data.CustomFields?.TryGetValue("ArmorValue", out string valStr) ?? false) && int.TryParse(valStr, out int val))
+                    return val;
+                else
+                    return 25;
             }
-            return mageArmor == 0 ? null : mageArmor;
+            else if (item != null && ItemRegistry.GetDataOrErrorItem(item.QualifiedItemId).RawData is ObjectData data &&
+                (data.CustomFields?.TryGetValue("ArmorValue", out string valStr) ?? false) && int.TryParse(valStr, out int val))
+                return val;
+            
+            return 0;
         }
     }
 
@@ -412,6 +426,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
             Helper.Events.GameLoop.UpdateTicking += GameLoop_UpdateTicking;
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
+            Helper.Events.GameLoop.DayEnding += GameLoop_DayEnding;
             Helper.Events.GameLoop.TimeChanged += GameLoop_TimeChanged;
             Helper.Events.GameLoop.SaveCreated += GameLoop_SaveCreated;
             Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
@@ -561,7 +576,19 @@ namespace SwordAndSorcerySMAPI
             InitArsenal();
         }
 
-        private void Content_AssetsInvalidated(object sender, StardewModdingAPI.Events.AssetsInvalidatedEventArgs e)
+        private void GameLoop_DayEnding(object sender, DayEndingEventArgs e)
+        {
+            Utility.ForEachCharacter((npc) =>
+            {
+                if (npc is Monster && npc is DuskspireMonster m)
+                {
+                    m.currentLocation.characters.Remove(m);
+                }
+                return true;
+            });
+        }
+
+        private void Content_AssetsInvalidated(object sender, AssetsInvalidatedEventArgs e)
         {
             if (e.NamesWithoutLocale.Any(l => l.BaseName.EqualsIgnoreCase("DN.SnS/AlchemyRecipe")))
             {
@@ -569,7 +596,7 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        private void World_LocationListChanged(object sender, StardewModdingAPI.Events.LocationListChangedEventArgs e)
+        private void World_LocationListChanged(object sender, LocationListChangedEventArgs e)
         {
             foreach (var loc in e.Added)
             {
