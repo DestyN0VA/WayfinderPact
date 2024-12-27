@@ -308,7 +308,7 @@
 				"Id": "DN.SnS_blueberrygingerbeer",
 				"Triggers": [
 				  {
-					"RequiredItemId": "(O)DN.SnS_blueberryegingerbeer",
+					"RequiredItemId": "(O)DN.SnS_blueberrygingerbeer",
 					"RequiredCount": 1
 				  }
 				],
