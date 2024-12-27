@@ -7851,9 +7851,10 @@ ________      ________ _   _ _______ _____
   "Strings.Monsters.DuskspireRemnant": "Duskspire Remnant",
 
   //Error Correction Mail
-  "Mail.MissingRecipe1": "Good morning, @!^^It seems like you're missing a recipe... Allow us to correct that!^^Sincerely,^S&S Team.%item craftingRecipe DN.SnS_ElysiumArmor%%[#]S&S Missing Recipe Elysium Armor",
-  "Mail.MissingRecipe2": "Good morning, @!^^It seems like you're missing a recipe... Allow us to correct that!^^Sincerely,^S&S Team.%item craftingRecipe DN.SnS_StygiumArmor%%[#]S&S Missing Recipe Stygium Armor",
-  "Mail.MissingRecipe3": "Good morning, @!^^It seems like you're missing a recipe... Allow us to correct that!^^Sincerely,^S&S Team.%item craftingRecipe DN.SnS_WindwakerArrow%%[#]S&S Missing Recipe Windwaker Arrow"
+  "Mail.MissingRecipe1": "Good morning, @!^^It seems like you're missing a recipe... Allow us to correct that!^^-Sincerely,^S&S Team.%item craftingRecipe DN.SnS_ElysiumArmor%%[#]S&S Missing Recipe Elysium Armor",
+  "Mail.MissingRecipe2": "Good morning, @!^^It seems like you're missing a recipe... Allow us to correct that!^^-Sincerely,^S&S Team.%item craftingRecipe DN.SnS_StygiumArmor%%[#]S&S Missing Recipe Stygium Armor",
+  "Mail.MissingRecipe3": "Good morning, @!^^It seems like you're missing a recipe... Allow us to correct that!^^-Sincerely,^S&S Team.%item craftingRecipe DN.SnS_WindwakerArrow%%[#]S&S Missing Recipe Windwaker Arrow",
+  "Mail.MissingRecipe4": "Good morning, @!^^It seems like you're missing a recipe... Allow us to correct that!^^-Sincerely,^S&S Team.^^(The recipe for Ancient Azure Detura Seeds has been automatically added to your crafting menu.)[#]S&S Missing Recipe Ancient Azure Detura Seeds"
 
 
 }
