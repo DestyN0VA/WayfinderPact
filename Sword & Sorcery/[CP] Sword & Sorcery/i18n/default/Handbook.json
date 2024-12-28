@@ -1738,7 +1738,7 @@ This project is dedicated to the memory of TheLoreSeeker, a beloved community me
 "guidebook.chapter.DeepDark.Name": "The Deep Dark",
 "guidebook.chapter.DeepDark.Intro": "[center][font=dialogue]Introduction[/font][/center]
  
-The Deep Dark is a late-game 30 floor dungeon crawling with powerful [link=DeepDark/Monsters]monsters[/link] and the rare ore, [Link=DeepDark/Stygium]Stygium[/link]. Here you'll find beautiful maps, custom forage and new monsters with unique item drop pools. Once you reach the end you'll face off against the mod's final boss: The [Link=DeepDark/Duskspire]Duskspire Behemoth[/link].
+The Deep Dark is a late-game 30 [link=DeepDark/Floors]floor[/link] dungeon crawling with powerful [link=DeepDark/Monsters]monsters[/link] and the rare ore, [Link=DeepDark/Stygium]Stygium[/link]. Here you'll find beautiful maps, custom forage and new monsters with unique item drop pools. Once you reach the end you'll face off against the mod's final boss: The [Link=DeepDark/Duskspire]Duskspire Behemoth[/link].
  
 It's advised you prepare yourself with Sword & Sorcery's new mechanics and late-game vanilla mechanics before tackling this location.",
 "guidebook.chapter.DeepDark.Monsters": "[center][font=dialogue]Monsters & Drops[/font][/center]
@@ -1876,67 +1876,81 @@ All monsters in the Deep Dark are based on an existing monster. In addition to t
 ",
 "guidebook.chapter.DeepDark.Floors": "[center][font=dialogue]Floors[/font][/center]
  
-1-9 - Darkness
+[font=dialogue][color=black]Darkness (Floors 1-9)[/color][/font]
     MONSTER SPAWNS
-        COMMON
-         * Stygium Bat
-         * Stygium Miner
-         * Stygium Head
-        UNCOMMON
-         * Stygium Crab
-         * Stygium Golem (Purple)
-         * Stygium Rex
-         * Stygium Skeleton
-        RARE
-         * Stygium Party Skeleton
+        Common
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:0,0,16,16] Stygium Bat
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:0,32,16,16] Stygium Miner
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:32,48,16,16] Stygium Head
+        Uncommon
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:16,0,16,16] Stygium Crab
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:48,0,16,16] Stygium Golem (Purple)
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:64,16,16,16] Stygium Rex
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:0,16,16,16] Stygium Skeleton
+        Rare
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:16,16,16,16] [color=purple]Stygium Skeleton (Rare)[/color]
  
     FORAGE
-    * Tainted Corn
-    * Tainted Grasses
-    * Tainted Crocus
-10-19 - Mushrooms
+    > [itemtooltip=(O)DN.SnS_taintedcorn][icon=Textures/DN.SnS/SnSObjects:112,176,16,16] Tainted Corn[/itemtooltip]
+    > [itemtooltip=(O)DN.SnS_taintedgrasses][icon=Textures/DN.SnS/SnSObjects:96,176,16,16] Tainted Grasses[/itemtooltip] 
+    > [itemtooltip=(O)DN.SnS_taintedcrocus][icon=Textures/DN.SnS/SnSObjects:80,176,16,16] Tainted Crocus[/itemtooltip] 
+ 
+    RESOURCE NODES
+    > [itemtooltip=(O)847][icon=maps/springobjects:112,560,16,16] Stone[/itemtooltip]
+    > [itemtooltip=(O)DN.SnS_StygiumOreStone][icon=maps/DeepDark-rocks:144,32,16,16] Stygium[/itemtooltip]
+  
+[color=DarkSlateGray][font=dialogue]Mushrooms (Floors 10-19)[/font][/color]
     MONSTER SPAWNS
-        COMMON
-         * Stygium Squid
-         * stygium Skeleton
-         * Stygium Golem (Blue)
-         * Stygium Golem (Purple)
-
-        UNCOMMON
-         * Stygium Droplet
-         * Stygium Rex
-         * Stygium Crab
-
-        RARE
-         * Stygium Party Skeleton
-         * Stygium Leviathan
+        Common
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:32,16,16,16] Stygium False Mushroom
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:0,16,16,16] Stygium Skeleton
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:64,0,16,16] Stygium Golem (Blue)
+        Uncommon
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:64,16,16,16] Stygium Rex
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:16,32,16,16] Skeleton Miner Mage
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:48,32,16,16] Stygium Serpent
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:64,32,16,16] Stygium Skull
+        Rare
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:16,16,16,16] [color=purple]Stygium Skeleton (Rare)[/color]
  
     FORAGE
-    * Tainted Mushroom 1
-    * Tainted Mushroom 2
-    * Tainted Mushroom 3
-    * Tainted Mushroom 4
-    * Tainted Mushroom Tree Seed
-20-30 - Lakes
+         > [itemtooltip=(O)DN.SnS_mushroom1][icon=Textures/DN.SnS/SnSObjects:0,176,16,16] Tainted Mushroom (Type A)[/itemtooltip]
+         > [itemtooltip=(O)DN.SnS_mushroom2][icon=Textures/DN.SnS/SnSObjects:16,176,16,16] Tainted Mushroom (Type B)[/itemtooltip]
+         > [itemtooltip=(O)DN.SnS_mushroom3][icon=Textures/DN.SnS/SnSObjects:32,176,16,16] Tainted Mushroom (Type C)[/itemtooltip]
+         > [itemtooltip=(O)DN.SnS_mushroom4][icon=Textures/DN.SnS/SnSObjects:48,176,16,16] Tainted Mushroom (Type D)[/itemtooltip]
+  
+    RESOURCE NODES
+    > [itemtooltip=(O)847][icon=maps/springobjects:112,560,16,16] Stone[/itemtooltip]
+    > [itemtooltip=(O)DN.SnS_StygiumOreStone][icon=maps/DeepDark-rocks:144,32,16,16] Stygium[/itemtooltip]
+    > [itemtooltip=(O)DN.SnS_mushroomtreeseed][icon=Textures/DN.SnS/SnSObjects:64,176,16,16] Tainted Mushroom Tree[/itemtooltip]
+ 
+[color=MidnightBlue][font=dialogue]Lakes (Floors 20-30)[/font][/color]
     MONSTER SPAWNS
-        COMMON
-         * Stygium False Mushroom
-         * Stygium Skeleton
-         * Stygium Golem (Blue)
-        UNCOMMON
-         * Stygium Rex
-         * Skeleton Miner Mage
-         * Stygium Serpent
-         * Stygium Skull
-        RARE
-         * Stygium Party Skeleton
+        Common
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:0,48,16,16] Stygium Squid
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:0,16,16,16] Stygium Skeleton
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:64,0,16,16] Stygium Golem (Blue)
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:48,0,16,16] Stygium Golem (Purple)
+
+        Uncommon
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:32,0,16,16] Stygium Droplet
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:64,16,16,16] Stygium Rex
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:16,0,16,16] Stygium Crab
+
+        Rare
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:16,16,16,16] [color=purple]Stygium Skeleton (Rare)[/color]
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:32,32,16,16] [color=purple]Stygium Leviathan (Mini-Boss)[/color]
  
     FORAGE
     * Rainbow shell
     * Clam
     * Tainted Crocus
     * Tainted Mushroom 3
-    * Prismatic Shard (1/1000 chance)",
+    * Prismatic Shard (1/1000 chance)
+ 
+    RESOURCE NODES
+    > [itemtooltip=(O)847][icon=maps/springobjects:112,560,16,16] Stone[/itemtooltip]
+    > [itemtooltip=(O)DN.SnS_StygiumOreStone][icon=maps/DeepDark-rocks:144,32,16,16] Stygium[/itemtooltip]",
 "guidebook.chapter.DeepDark.Stygium": "[center][font=dialogue]Stygium[/font][/center]
  
 Stygium is a rare and powerful ore that spawns only within the Deep Dark. It is used to further upgrade your tools past [color=purple]Iridium[/color] tier. Be warned, the increased strength comes with a cost.
@@ -1993,7 +2007,7 @@ When defeated, the Duskspire drops [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=T
 3. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=UP/BardicsSkill]Bardics[/link][/if][else]Bardics (locked)[/else]
 4. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6][link=TOP/SorcererSkill]Sorcerer[/link][/if][else]Sorcerer (locked)[/else]
 4. [if=ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\"][link=Epilogue/PaladinSkill]Paladin[/link][/if][else]Paladin (locked)[/else]",
-"guidebook.chapter.Mechanics.PlusButton": "Plus Button",
+"guidebook.chapter.Mechanics.PlusButton": "Equipment Slots Offhand, Armor",
 "guidebook.chapter.Mechanics.AdventureBar": "[font=dialogue]Adventure Bar[/font]
  
 On the left side of your screen, you can see two columns with a bar underneath. This is the Adventure Bar. The columns repesent ability slots that you can activate with keybindings. The bar underneath is your Aether, which is consumed to use most abilities. To use an ability, use the keybinding configured for that slot. (default: Ctrl+NUMBER or Shift+NUMBER, though these can be configured in GMCM). If you're using a gamepad, the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod can also be used to trigger configured abilities.
@@ -2010,6 +2024,25 @@ Sword & Sorcery introduces a dual-wielding feature, allowing you to attack with 
  
 [image=spacechase0.SpaceCore/ExtraEquipmentIcon]
 After that, you should see a slot labelled [color=black]Offhand[/color]. Place your desired secondary weapon in that slot. Now, whenever you swing your weapon or use your weapon ability in your hotbar, both will be used.",
+"guidebook.chapter.Mechanics.Powers": "[font=dialogue]Powers[/font]
+Sword & Sorcery introduces 5 new powers to the game. 2 can be aquired every playthrough, while 3 require marrying one of the mod's romance candidates.
+ 
+icon Handmade D20
+> Desc
+> Gifted by Mateo
+icon Magical Grimoire
+> Desc
+> Gifted by Solomon
+icon Stygium-Forged Mermaid's Pendant
+> Desc
+> Gifted by Mateo after marriage
+icon Thorned Circlet Fragment
+> Desc
+> Gifted by Hector after marriage
+icon Aetherdrake Scale
+> Desc
+> Gifted by Cirrus after marriage
+",
 
 //Conditional Event Extras
 "guidebook.chapter.MateoTrollHeritage.1.true": " 

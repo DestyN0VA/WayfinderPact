@@ -296,8 +296,8 @@
                                     "Contents": "{{i18n: guidebook.chapter.Mechanics.Skills}}"
                                 },
                                 {
-                                    "Id": "PlusButton",
-                                    "Contents": "{{i18n: guidebook.chapter.Mechanics.PlusButton}}"
+                                    "Id": "EquipmentSlots",
+                                    "Contents": "{{i18n: guidebook.chapter.Mechanics.EquipmentSlots}}"
                                 },
                                 {
                                     "Id": "AdventureBar",
@@ -310,6 +310,10 @@
                                 {
                                     "Id": "DualWielding",
                                     "Contents": "{{i18n: guidebook.chapter.Mechanics.DualWielding}}"
+                                },
+                                {
+                                    "Id": "Powers",
+                                    "Contents": "{{i18n: guidebook.chapter.Mechanics.Powers}}"
                                 }
                             ]
                         }
