@@ -26,42 +26,92 @@
 [/nospacing]",
   "guidebook.chapter.Title.Introduction": "[center][font=dialogue]Introduction[/font][/center]
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  "guidebook.chapter.Title.NewMechanics": "[center][font=dialogue]New Mechanics[/font][/center]
-[font=dialogue]Dual Wielding[/font]
-Sword & Sorcery introduces a dual-wielding feature, allowing you to attack with two weapons at once. To equip a weapon in your off-hand slot, open your inventory and click a button to the left of the window that looks like the following:
- 
-[image=spacechase0.SpaceCore/ExtraEquipmentIcon]
-After that, you should see a slot labelled [color=black]Offhand[/color]. Place your desired secondary weapon in that slot. Now, whenever you swing your weapon or use your weapon ability in your hotbar, both will be used.
- 
-[font=dialogue]Armor[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18]
-After reaching level 1 [link=NEA/ArtificerSkill]Artificer[/link], you can craft armor for the armor slot on the equipment menu (this is the same menu with the dual wielding offhand slot, explained in the last section). Armor acts as an extra buffer that absorbs damage before your health bar. It automatically repairs itself at the beginning of each day.
-[/if]
-[else](locked)[/else]
- 
-[font=dialogue]Adventure Bar[/font]
-[if=PLAYER_HAS_MAIL Current SnS_AdventureBar]
-On the left side of your screen, you can see two columns with a bar underneath. This is the Adventure Bar. The columns repesent ability slots that you can activate with keybindings. The bar underneath is your Aether, which is consumed to use most abilities. To use an ability, use the keybinding configured for that slot. (default: Ctrl+NUMBER or Shift+NUMBER, though these can be configured in GMCM). If you're using a gamepad, the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod can also be used to trigger configured abilities.
- 
-You can change what abilities are in which slots by using the Adventure Bar Menu keybinding (default: U). You will unlock different abilities throughout the story of the Sword & Sorcery.
- 
-The adventure bar can be hidden with the configured keybinding (default: Ctrl+U).
-[/if]
-[else](locked)[/else]
- 
-[font=dialogue]New Skills[/font]
-2. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18][link=NEA/ArtificerSkill]Artificer[/link][/if][else]Artificer (locked)[/else]
-2. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=COT/DruidicsSkill]Druidics[/link][/if][else]Druidics (locked)[/else]
-3. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=UP/BardicsSkill]Bardics[/link][/if][else]Bardics (locked)[/else]
-4. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6][link=TOP/SorcererSkill]Sorcerer[/link][/if][else]Sorcerer (locked)[/else]
-4. [if=ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\"][link=Epilogue/PaladinSkill]Paladin[/link][/if][else]Paladin (locked)[/else]",
-  "guidebook.chapter.Title.TableOfContents": "[center][font=dialogue]Table of Contents[/font][/center]
+
+  "guidebook.chapter.Title.TableOfContents": "[center][font=dialogue]Table of Contents - Story[/font][/center]
 1. [link=NEA/Intro]Never Ending Adventure[/link]
 2. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=COT/Intro]Circle of Thorns[/link][/if][else]Circle of Thorns (locked)[/else]
 3. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=UP/Intro]Under Pressure[/link][/if][else]Under Pressure (locked)[/else]
 4. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=TOP/Intro]The Other Promise[/link][/if][else]The Other Promise (locked)[/else]
 5. [if=PLAYER_HAS_MAIL Current DuskspireDefeated][link=Epilogue/Intro]Epilogue[/link][/if][else]Epilogue (locked)[/else]",
-"guidebook.chapter.Title.Cheats": "document cheats here",
+"guidebook.chapter.Title.FAQ": "FAQ: 
+
+How do I advance the story and learn the skills, spells, recipes, etc? 
+This entire mod progresses linearly. See all of Mateo's events, meet {{TrueName}}. See all of {{TrueName}}'s events, meet Cirrus. See all of Cirrus' events, meet Roslin. See most of Roslin's events, meet Dandelion. See their remaining events, and proceed to the final dungeon and the associated final boss. By then, you will have unlocked most of everything. What remains will be documented here in this trusty guide.
+
+Where are the fish? 
+Most fish added by S&S are in available in either {{TrueName}}'s Grove (the map with the big tree, accessible via the ritual circle in the Druid Tower after their 10h event) or the Pocket Dimension, and are not time restricted.
+The Salmon of Knowledge is available in Spring and Summer in any weather.
+Fastitocalon is available in all seasons in any weather.
+The Pallid Sailfin is available in Spring and Winter in sunny weather.
+The Giant Dragonfish is available in Fall and Winter in rainy weather.
+The Five Lined Constellation Fish is available in Summer and Fall in sunny weather. 
+Goldie the Battery Powered Fish is always available in the tiny pond in the Druid Tower.
+ 
+How do I get all of the food recipes? 
+Autumnal Stew: Mailed by Mateo.
+Salish Bourbon: Mailed by Mateo.
+Dandelion Greens: Mailed by Dandelion.
+Mushrooms and Red Sauce: via Druidics skill. 
+Fern Greens and Pineapple: via Druidics skill. 
+Ancient Huckleberry ice Cream: via Druidics skill. 
+Lava Eel Stir Fried Ancient Bottle Gourd: via Druidics skill. 
+Portfire Drake Sparkler: Given by Cirrus during an event. 
+Zuzu Style Pizza: Given by Cirrus during an event. 
+Zuzu Style Bagel with Lox: Given by Cirrus during an event. 
+Zuzu Style Cheesecake: Given by Cirrus during an event. 
+Zuzu Style Clam Chowder: Given by Cirrus during an event. 
+Ancient Sweet Tea: Given by Dandelion during an event. 
+Farafield Snack: Purchased from the Lion's Mane after unlocking The Deep Dark. 
+
+add ren fair stuff
+
+What are the Ginger Beer flavors? 
+Orange, blueberry, pineapple, rhubarb, strawberry, peach, ancient elderberry, ancient appleberry, ancient huckleberry, ancient fruit. 
+
+How do I get Mateo, {{TrueName}}, and Cirrus' hoodies?
+Marry them. 
+
+How do I turn off the Adventure Bar?
+Ctrl+U is the default hotkey. This can be changed in the SMAPI portion of the S&S config. 
+
+{{TrueName}}'s seasonal quests have disappeared!
+They were removed permanently in 2.1.0. You can now pregress as intended without them.
+
+The plus doesn't match my recolor! 
+This menu is used by S&S but is added by Spacecore. S&S covers most major recolors, but in case you'd like to add one, it can be targeted via: spacechase0.SpaceCore/ExtraEquipmentIcon 
+
+Will Sword & Sorcery ever have a standalone Skills component?
+No. If you are interested in mechanics-only mods, there are other alternatives. S&S is, first and foremost, a content expansion. 
+
+Is Sword & Sorcery compatible with multiple spouse mods?
+Use at your own risk, and report associated issues to the respective authors - not the S&S team. S&S's romanceable NPCs are not designed to be polyamorous, and {{TrueName}} is monogamous by design due to mechanical reasons. ",
+"guidebook.chapter.Title.Cheats": "Arsenal
+sns_encrustweapon ItemID - Encrusts held weapon
+sns_coatweapon ItemID  - Coats held weapon
+sns_alloyweapon ItemID - Alloys held weapon
+Aether
+sns_setmaxaether # - Sets max Aether, use reset in place of # to return to default. Not permanent, recalculates next day.
+sns_refillaether - Refills Aether bar
+Menus
+sns_transmute - Opens transmutation menu
+sns_research - Opens witchcraft/alchemy research menu
+sns_shieldmenu - Opens shield menu (idk how this thing works)
+sns_alchemy - Opens Alchemy menu
+sns_arsenal - Opens arsenal (Encrust/Coat/Alloy) menu
+Skills
+player_giveexp SkillID EXPAmount - Sets EXP for custom skills
+ID List:
+DestyNova.SwordAndSorcery.Rogue
+DestyNova.SwordAndSorcery.Druidics
+DestyNova.SwordAndSorcery.Bardics
+DestyNova.SwordAndSorcery.Witchcraft
+DestyNova.SwordAndSorcery.Paladin
+Misc
+sns_repairarmor - Restores armor points to max
+sns_finishorders - Finishes active SnS special orders
+sns_startfinalephase2 - Starts Phase 2 of Duskspire fight
+sns_playsong SongID# - Plays specified song (WHERE ARE THESE IDS REEE)",
+
   "guidebook.chapter.NEA.name": "Never Ending Adventure",
   "guidebook.chapter.NEA.Intro": "[center][font=dialogue]Introduction[/font][/center]
    
@@ -1934,8 +1984,34 @@ Notes:
  
 When defeated, the Duskspire drops [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16][color=blue]Duskspire Hearts[/color][/itemtooltip], which are used to purify [Link=DeepDark/Stygium]Stygium Tools[/link]. The Duskspire can then be re-fought in a weaker form to obtain more Duskspire Hearts. This fight resets every Monday.",
 
-//Conditional Event Extras
+"guidebook.chapter.Mechanics.Name": "Mechanics",
+"guidebook.chapter.Mechanics.Skills": "table of contents, have a spot to jump to the skills
+ 
+[font=dialogue]New Skills[/font]
+2. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18][link=NEA/ArtificerSkill]Artificer[/link][/if][else]Artificer (locked)[/else]
+2. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=COT/DruidicsSkill]Druidics[/link][/if][else]Druidics (locked)[/else]
+3. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=UP/BardicsSkill]Bardics[/link][/if][else]Bardics (locked)[/else]
+4. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6][link=TOP/SorcererSkill]Sorcerer[/link][/if][else]Sorcerer (locked)[/else]
+4. [if=ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\"][link=Epilogue/PaladinSkill]Paladin[/link][/if][else]Paladin (locked)[/else]",
+"guidebook.chapter.Mechanics.PlusButton": "Plus Button",
+"guidebook.chapter.Mechanics.AdventureBar": "[font=dialogue]Adventure Bar[/font]
+ 
+On the left side of your screen, you can see two columns with a bar underneath. This is the Adventure Bar. The columns repesent ability slots that you can activate with keybindings. The bar underneath is your Aether, which is consumed to use most abilities. To use an ability, use the keybinding configured for that slot. (default: Ctrl+NUMBER or Shift+NUMBER, though these can be configured in GMCM). If you're using a gamepad, the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod can also be used to trigger configured abilities.
+ 
+You can change what abilities are in which slots by using the Adventure Bar Menu keybinding (default: U). You will unlock different abilities throughout the story of the Sword & Sorcery.
+ 
+The adventure bar can be hidden with the configured keybinding (default: Ctrl+U).",
+"guidebook.chapter.Mechanics.ShieldsArmor": "
+[font=dialogue]Armor[/font]
+ 
+After reaching level 1 [link=NEA/ArtificerSkill]Artificer[/link], you can craft armor for the armor slot on the equipment menu. Armor acts as an extra buffer that absorbs damage before your health bar. It automatically repairs itself at the beginning of each day.",
+"guidebook.chapter.Mechanics.DualWielding": "[font=dialogue]Dual Wielding[/font]
+Sword & Sorcery introduces a dual-wielding feature, allowing you to attack with two weapons at once. To equip a weapon in your off-hand slot, open your inventory and click a button to the left of the window that looks like the following:
+ 
+[image=spacechase0.SpaceCore/ExtraEquipmentIcon]
+After that, you should see a slot labelled [color=black]Offhand[/color]. Place your desired secondary weapon in that slot. Now, whenever you swing your weapon or use your weapon ability in your hotbar, both will be used.",
 
+//Conditional Event Extras
 "guidebook.chapter.MateoTrollHeritage.1.true": " 
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.1]
 [font=dialogue]Mateo & Eyvinder: Part 1 (Extra)[/font]

@@ -27,11 +27,11 @@
                                     "Contents": "{{i18n: guidebook.chapter.Title.Introduction}}"
                                 },
                                 {
-                                    "Id": "Mechanics",
-                                    "Contents": "{{i18n: guidebook.chapter.Title.NewMechanics}}"
+                                    "Contents": "{{i18n: guidebook.chapter.Title.TableOfContents}}",
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.Title.TableOfContents}}",
+                                    "Id": "FAQ",
+                                    "Contents": "{{i18n: guidebook.chapter.Title.FAQ}}"
                                 },
                                 {
                                     "Id": "Cheats",
@@ -278,6 +278,38 @@
                                 {
                                     "Id": "Duskspire",
                                     "Contents": "{{i18n: guidebook.chapter.DeepDark.Duskspire}}"
+                                }
+                            ]
+                        },
+                        "Mechanics": {
+                            "Name": "{{i18n: guidebook.chapter.Mechanics.Name}}",
+                            "TabIconTexture": "Mods/Sword & Sorcery/GuidebookTabs",
+                            "TabIconRect": {
+                                "X": 0,
+                                "Y": 64,
+                                "Width": 16,
+                                "Height": 16
+                            },
+                            "Pages": [
+                                {
+                                    "Id": "Skills",
+                                    "Contents": "{{i18n: guidebook.chapter.Mechanics.Skills}}"
+                                },
+                                {
+                                    "Id": "PlusButton",
+                                    "Contents": "{{i18n: guidebook.chapter.Mechanics.PlusButton}}"
+                                },
+                                {
+                                    "Id": "AdventureBar",
+                                    "Contents": "{{i18n: guidebook.chapter.Mechanics.AdventureBar}}"
+                                },
+                                {
+                                    "Id": "ShieldsArmor",
+                                    "Contents": "{{i18n: guidebook.chapter.Mechanics.ShieldsArmor}}"
+                                },
+                                {
+                                    "Id": "DualWielding",
+                                    "Contents": "{{i18n: guidebook.chapter.Mechanics.DualWielding}}"
                                 }
                             ]
                         }
