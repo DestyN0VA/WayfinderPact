@@ -16,7 +16,8 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "exquisite_gem",
-            "not_museum_donatable"
+            "not_museum_donatable",
+            "color_green"
           ]
         },
         "{{ModID}}_ExquisiteRuby": {
@@ -31,7 +32,8 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "exquisite_gem",
-            "not_museum_donatable"
+            "not_museum_donatable",
+            "color_red"
           ]
         },
         "{{ModID}}_ExquisiteTopaz": {
@@ -46,7 +48,8 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "exquisite_gem",
-            "not_museum_donatable"
+            "not_museum_donatable",
+            "color_dark_orange"
           ]
         },
         "{{ModID}}_ExquisiteJade": {
@@ -61,7 +64,8 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "exquisite_gem",
-            "not_museum_donatable"
+            "not_museum_donatable",
+            "color_jade"
           ]
         },
         "{{ModID}}_ExquisiteAquamarine": {
@@ -76,7 +80,8 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "exquisite_gem",
-            "not_museum_donatable"
+            "not_museum_donatable",
+            "color_aqua"
           ]
         },
         "{{ModID}}_ExquisiteAmethyst": {
@@ -91,7 +96,8 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "exquisite_gem",
-            "not_museum_donatable"
+            "not_museum_donatable",
+            "color_dark_purple"
           ]
         },
         "{{ModID}}_ExquisiteDiamond": {
@@ -106,7 +112,8 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "exquisite_gem",
-            "not_museum_donatable"
+            "not_museum_donatable",
+              "color_white"
           ]
         },
         /*
@@ -135,7 +142,8 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "ore_item",
-            "pure_ore"
+            "pure_ore",
+            "color_copper"
           ]
         },
         "{{ModID}}_PureIronOre": {
@@ -150,7 +158,8 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "ore_item",
-            "pure_ore"
+            "pure_ore",
+            "color_iron"
           ]
         },
         "{{ModID}}_PureGoldOre": {
@@ -165,7 +174,8 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "ore_item",
-            "pure_ore"
+            "pure_ore",
+            "color_gold"
           ]
         },
         "{{ModID}}_PureIridiumOre": {
@@ -180,7 +190,8 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "ore_item",
-            "pure_ore"
+            "pure_ore",
+            "color_iridium"
           ]
         },
         "{{ModID}}_PureRadioactiveOre": {
@@ -195,7 +206,8 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "ore_item",
-            "pure_ore"
+            "pure_ore",
+            "color_lime"
           ]
         },
         "{{ModID}}_ClothArmor": {
@@ -210,7 +222,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "armor_item"
+            "armor_item",
+            "color_brown"
           ],
           "CustomFields": {
             "ArmorValue": 25
@@ -228,7 +241,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "armor_item"
+            "armor_item",
+            "color_copper"
           ],
           "CustomFields": {
             "ArmorValue": 50
@@ -246,7 +260,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "armor_item"
+            "armor_item",
+            "color_iron"
           ],
           "CustomFields": {
             "ArmorValue": 75
@@ -264,7 +279,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "armor_item"
+            "armor_item",
+            "color_gold"
           ],
           "CustomFields": {
             "ArmorValue": 100
@@ -282,7 +298,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "armor_item"
+            "armor_item",
+            "color_iridium"
           ],
           "CustomFields": {
             "ArmorValue": 125
@@ -300,7 +317,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "armor_item"
+            "armor_item",
+            "color_lime"
           ],
           "CustomFields": {
             "ArmorValue": 150
@@ -318,7 +336,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "armor_item"
+            "armor_item",
+            "color_dark_blue"
           ],
           "CustomFields": {
             "ArmorValue": 175
@@ -336,7 +355,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "armor_item"
+            "armor_item",
+            "color_light_cyan"
           ],
           "CustomFields": {
             "ArmorValue": 200
@@ -354,7 +374,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "arrow_item"
+            "arrow_item",
+            "color_gray"
           ]
         },
         "{{ModID}}_FirestormArrow": {
@@ -369,7 +390,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "arrow_item"
+            "arrow_item",
+            "color_orange"
           ]
         },
         "{{ModID}}_IcicleArrow": {
@@ -384,7 +406,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "arrow_item"
+            "arrow_item",
+            "color_blue"
           ]
         },
         "{{ModID}}_WindwakerArrow": {
@@ -399,7 +422,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "arrow_item"
+            "arrow_item",
+            "color_dark_blue"
           ]
         },
         "{{ModID}}_RicochetArrow": {
@@ -414,7 +438,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "arrow_item"
+            "arrow_item",
+            "color_gray"
           ]
         },
         "{{ModID}}_LightbringerArrow": {
@@ -429,7 +454,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "arrow_item"
+            "arrow_item",
+            "color_yellow"
           ]
         },
         "{{ModID}}_Bullet": {
@@ -444,7 +470,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "bullet_item"
+            "bullet_item",
+            "color_gray"
           ]
         },
         "{{ModID}}_FirestormBullet": {
@@ -459,7 +486,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "bullet_item"
+            "bullet_item",
+            "color_orange"
           ]
         },
         "{{ModID}}_IcicleBullet": {
@@ -474,7 +502,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "bullet_item"
+            "bullet_item",
+            "color_blue"
           ]
         },
         "{{ModID}}_WindwakerBullet": {
@@ -489,7 +518,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "bullet_item"
+            "bullet_item",
+            "color_dark_blue"
           ]
         },
         "{{ModID}}_RicochetBullet": {
@@ -504,7 +534,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "bullet_item"
+            "bullet_item",
+            "color_gray"
           ]
         },
         "{{ModID}}_LightbringerBullet": {
@@ -519,7 +550,8 @@
           "ExcludeFromShippingCollection": true,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "bullet_item"
+            "bullet_item",
+            "color_yellow"
           ]
         }
       }
@@ -562,7 +594,7 @@
         "{{ModID}}_RadioactiveArmor": "{{ModID}}_PureRadioactiveOre 10 {{ModID}}_IridiumArmor 1/hoot/{{ModID}}_RadioactiveArmor 1/false/null/{{i18n:arsenal.radioactive-armor.name}}",
         "{{ModID}}_StygiumArmor": "{{ModID}}_StygiumBar 25/hoot/{{ModID}}_StygiumArmor 1/false/null/{{i18n:arsenal.stygium-armor.name}}",
         "{{ModID}}_ElysiumArmor": "{{ModID}}_StygiumArmor 1 {{ModID}}_DuskspireHeart 1/hoot/{{ModID}}_ElysiumArmor 1/false/null/{{i18n:arsenal.elysium-armor.name}}",
-        "{{ModID}}_Bow": "709 10/hoot/0 1/false/{{i18n:arsenal.bow.name}}",
+        "{{ModID}}_Bow": "709 10/hoot/0 1/false/{{i18n: arsenal.bow.name}}",
         "{{ModID}}_Arrow": "388 1 390 1/hoot/{{ModID}}_Arrow 1/false/null",
         "{{ModID}}_FirestormArrow": "{{ModID}}_Arrow 1 93 10/hoot/{{ModID}}_FirestormArrow 1/false/null",
         "{{ModID}}_IcicleArrow": "{{ModID}}_Arrow 1 84 1/hoot/{{ModID}}_IcicleArrow 1/false/null",

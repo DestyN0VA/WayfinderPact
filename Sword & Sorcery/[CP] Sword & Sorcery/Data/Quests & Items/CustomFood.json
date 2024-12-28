@@ -34,7 +34,11 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 17
+          "SpriteIndex": 17,
+          "ContextTags": [
+            "alcohol_item",
+            "color_dark_orange"
+          ]
         },
 
         "{{ModID}}_autumnalstew": {
@@ -65,7 +69,12 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 18
+          "SpriteIndex": 18,
+          "ContextTags": [
+            "allergen_dairy",
+            "food_nonvegan",
+            "color_dark_orange"
+          ]
         },
 
         "{{ModID}}_dandeliongreens": {
@@ -96,7 +105,13 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 19
+          "SpriteIndex": 19,
+          "ContextTags": [
+            "allergen_dairy",
+            "allergen_egg",
+            "food_nonvegan",
+            "color_sand"
+          ]
         },
 
         "{{ModID}}_portfiredrakesparkler": {
@@ -127,7 +142,10 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 20
+          "SpriteIndex": 20,
+          "ContextTags": [
+            "color_prismatic"
+          ]
         },
 
         "{{ModID}}_mushroomsredsauce": {
@@ -158,7 +176,10 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 27
+          "SpriteIndex": 27,
+          "ContextTags": [
+            "color_red"
+          ]
         },
 
         "{{ModID}}_ferngreensandpineapple": {
@@ -189,7 +210,11 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 28
+          "SpriteIndex": 28,
+          "ContextTags": [
+            "food_sweet",
+            "color_sand"
+          ]
         },
 
         "{{ModID}}_ancienthuckleberryicecream": {
@@ -220,7 +245,14 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 29
+          "SpriteIndex": 29,
+          "ContextTags": [
+            "allergen_dairy",
+            "food_sweet",
+            "food_nonvegan",
+            "food_ice_cream",
+            "color_sand"
+          ]
         },
 
         "{{ModID}}_lavaeelandstirfriedancientbottlegourd": {
@@ -251,7 +283,13 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 30
+          "SpriteIndex": 30,
+          "ContextTags": [
+            "color_dark_red",
+            "allergen_fish",
+            "food_seafood",
+            "food_nonvegan"
+          ]
         },
 
         "{{ModID}}_zuzustylepizza": {
@@ -282,7 +320,14 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 46
+          "SpriteIndex": 46,
+          "ContextTags": [
+            "color_dark_yellow",
+            "allergen_dairy",
+            "food_nonvegan",
+            "allergen_gluten",
+            "food_party"
+          ]
         },
 
         "{{ModID}}_zuzustylebagelwithlox": {
@@ -313,7 +358,15 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 47
+          "SpriteIndex": 47,
+          "ContextTags": [
+            "color_dark_yellow",
+            "allergen_fish",
+            "food_seafood",
+            "food_nonvegan",
+            "allergen_dairy",
+            "allergen_gluten"
+          ]
         },
 
         "{{ModID}}_zuzustylecheesecake": {
@@ -344,7 +397,15 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 48
+          "SpriteIndex": 48,
+          "ContextTags": [
+            "color_sand",
+            "food_nonvegan",
+            "allergen_dairy",
+            "allergen_egg",
+            "food_sweet",
+            "food_bakery"
+          ]
         },
 
         "{{ModID}}_zuzustyleclamchowder": {
@@ -375,7 +436,14 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 49
+          "SpriteIndex": 49,
+          "ContextTags": [
+            "color_orange",
+            "food_nonvegan",
+            "allergen_shellfish",
+            "food_soup",
+            "food_seafood"
+          ]
         },
 
         "{{ModID}}_fountainsoda": {
@@ -406,7 +474,10 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 53
+          "SpriteIndex": 53,
+          "ContextTags": [
+           "color_cyan"
+          ]
         },
 
         "{{ModID}}_freshpopcorn": {
@@ -437,7 +508,11 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 54
+          "SpriteIndex": 54,
+          "ContextTags": [
+            "color_red",
+            "food_party"
+          ]
         },
 
         "{{ModID}}_ancientsweettea": {
@@ -468,7 +543,11 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 84
+          "SpriteIndex": 84,
+          "ContextTags": [
+            "color_green",
+            "food_sweet"
+          ]
         },
 
         "{{ModID}}_farafieldsnack": {
@@ -499,7 +578,10 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 118
+          "SpriteIndex": 118,
+          "ContextTags": [
+            "color_dark_cyan"
+          ]
         },
 
     //POTIONS
@@ -531,7 +613,11 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 55
+          "SpriteIndex": 55,
+          "ContextTags": [
+            "color_lime",
+            "sns_potion_item"
+          ]
         },
 
         "{{ModID}}_scarletpotion": {
@@ -562,7 +648,11 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 56
+          "SpriteIndex": 56,
+          "ContextTags": [
+            "color_red",
+            "sns_potion_item"
+          ]
         },
 
         "{{ModID}}_heatherpotion": {
@@ -593,7 +683,11 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 57
+          "SpriteIndex": 57,
+          "ContextTags": [
+            "color_dark_pink",
+            "sns_potion_item"
+          ]
         },
 
         "{{ModID}}_zydratepotion": {
@@ -624,7 +718,11 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 58
+          "SpriteIndex": 58,
+          "ContextTags": [
+            "color_dark_cyan",
+            "sns_potion_item"
+          ]
         },
 
         "{{ModID}}_pistachiopotion": {
@@ -655,7 +753,11 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 59
+          "SpriteIndex": 59,
+          "ContextTags": [
+            "color_yellow_green",
+            "sns_potion_item"
+          ]
         },
 
         "{{ModID}}_dahliapotion": {
@@ -686,7 +788,11 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 60
+          "SpriteIndex": 60,
+          "ContextTags": [
+            "color_pale_violet_red",
+            "sns_potion_item"
+          ]
         },
 
         "{{ModID}}_slushiepotion": {
@@ -717,7 +823,11 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 61
+          "SpriteIndex": 61,
+          "ContextTags": [
+            "color_salmon",
+            "sns_potion_item"
+          ]
         },
 
         "{{ModID}}_matrixpotion": {
@@ -748,7 +858,11 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 62
+          "SpriteIndex": 62,
+          "ContextTags": [
+            "color_dark_red",
+            "sns_potion_item"
+          ]
         },
 
         "{{ModID}}_mcdougalpotion": {
@@ -779,7 +893,11 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 63
+          "SpriteIndex": 63,
+          "ContextTags": [
+            "color_sea_green",
+            "sns_potion_item"
+          ]
         },
 
         "{{ModID}}_toirneachpotion": {
@@ -810,7 +928,11 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 64
+          "SpriteIndex": 64,
+          "ContextTags": [
+            "color_purple",
+            "sns_potion_item"
+          ]
         },
 
   //GINGER BEERS
@@ -842,7 +964,12 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 76
+          "SpriteIndex": 76,
+          "ContextTags": [
+            "color_orange",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
         },
 
         "{{ModID}}_blueberrygingerbeer": {
@@ -873,7 +1000,12 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 77
+          "SpriteIndex": 77,
+          "ContextTags": [
+            "color_blue",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
         },
 
         "{{ModID}}_pineapplegingerbeer": {
@@ -904,7 +1036,12 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 78
+          "SpriteIndex": 78,
+          "ContextTags": [
+            "color_dark_yellow",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
         },
 
         "{{ModID}}_rhubarbgingerbeer": {
@@ -935,7 +1072,12 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 79
+          "SpriteIndex": 79,
+          "ContextTags": [
+            "color_dark_red",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
         },
 
         "{{ModID}}_strawberrygingerbeer": {
@@ -966,7 +1108,12 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 80
+          "SpriteIndex": 80,
+          "ContextTags": [
+            "color_dark_red",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
         },
 
         "{{ModID}}_peachgingerbeer": {
@@ -997,7 +1144,12 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 81
+          "SpriteIndex": 81,
+          "ContextTags": [
+            "color_pink",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
         },
 
         "{{ModID}}_ancientelderberrygingerbeer": {
@@ -1028,7 +1180,12 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 82
+          "SpriteIndex": 82,
+          "ContextTags": [
+            "color_dark_cyan",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
         },
 
         "{{ModID}}_ancientappleberrygingerbeer": {
@@ -1059,7 +1216,12 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 82
+          "SpriteIndex": 82,
+          "ContextTags": [
+            "color_dark_cyan",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
         },
 
         "{{ModID}}_ancienthuckleberrygingerbeer": {
@@ -1090,7 +1252,12 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 82
+          "SpriteIndex": 82,
+          "ContextTags": [
+            "color_dark_cyan",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
         },
 
         "{{ModID}}_ancientfruitgingerbeer": {
@@ -1121,7 +1288,12 @@
             }
           ],
           "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 82
+          "SpriteIndex": 82,
+          "ContextTags": [
+            "color_dark_cyan",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
         }
       }
     },

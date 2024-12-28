@@ -76,40 +76,7 @@
 					"Actions": [
 						"AddMail Current CirrusHoodie tomorrow"
 					]
-				},
-				"{{ModID}}_MissingRecipe1": {
-					"Id": "{{ModID}}_MissingRecipe1",
-					"Trigger": "DayStarted",
-					"Condition": "PLAYER_DESTYNOVA.SWORDANDSORCERY.ROGUE_LEVEL Current 10, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModID}}_ElysiumArmor",
-					"Actions": [
-						"AddMail Current MissingRecipe1 now"
-					]
-				},
-				"{{ModID}}_MissingRecipe2": {
-					"Id": "{{ModID}}_MissingRecipe2",
-					"Trigger": "DayStarted",
-					"Condition": "PLAYER_DESTYNOVA.SWORDANDSORCERY.ROGUE_LEVEL Current 10, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModID}}_StygiumArmor",
-					"Actions": [
-						"AddMail Current MissingRecipe2 now"
-					]
-				},
-				"{{ModID}}_MissingRecipe3": {
-					"Id": "{{ModID}}_MissingRecipe3",
-					"Trigger": "DayStarted",
-					"Condition": "PLAYER_DESTYNOVA.SWORDANDSORCERY.ROGUE_LEVEL Current 6, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModID}}_WindwakerArrow",
-					"Actions": [
-						"AddMail Current MissingRecipe3 now"
-					]
-				},
-				/*"{{ModID}}_MissingRecipe4": {
-					"Id": "{{ModID}}_MissingRecipe4",
-					"Trigger": "DayStarted",
-					"Condition": "PLAYER_DESTYNOVA.SWORDANDSORCERY.DRUIDICS_LEVEL Current 8, !PLAYER_HAS_CRAFTING_RECIPE Current \"Ancient Azure Detura Seeds\"",
-					"Actions": [
-						"AddMail Current MissingRecipe4 now",
-						"MarkCraftingRecipeKnown Current \"Ancient Azure Detura Seeds\" true"
-					]
-				}*/
+				}
 			}
 		}        
     ]

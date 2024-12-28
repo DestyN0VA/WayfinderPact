@@ -5,7 +5,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_druidicessence": {
-          "Name": "Druidic Essence",
+          "Name": "{{ModID}}_druidicessencee",
           "DisplayName": "{{i18n: magicitem.druidicessence.name}}",
           "Description": "{{i18n: magicitem.druidicessence.description}}",
           "Type": "Basic",
@@ -16,11 +16,11 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 5,
-          "ContextTags": [ "essence_item" ]
+          "ContextTags": [ "essence_item", "sns_essence_item", "color_dark_cyan" ]
         },
 
         "{{ModID}}_adventureguildbadge": {
-          "Name": "Adventurer's Guild Membership Badge",
+          "Name": "{{ModID}}_adventureguildbadge",
           "DisplayName": "{{i18n: magicitem.adventureguildbadge.name}}",
           "Description": "{{i18n: magicitem.adventureguildbadge.description}}",
           "Type": "Ring",
@@ -34,7 +34,7 @@
         },
 
         "{{ModID}}_destykeychain": {
-          "Name": "Desty's Keychain",
+          "Name": "{{ModID}}_destykeychain",
           "DisplayName": "{{i18n: magicitem.destykeychain.name}}",
           "Description": "{{i18n: magicitem.destykeychain.description}}",
           "Type": "Basic",

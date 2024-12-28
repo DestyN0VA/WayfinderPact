@@ -7,7 +7,7 @@
     "Target": "Data/Objects",
     "Entries": {
       "{{ModID}}_artificerbook": {
-        "Name": "Tasha's Artificer Handbook",
+        "Name": "{{ModID}}_artificerbook",
         "DisplayName": "{{i18n: magicitem.artificerbook.name}}",
         "Description": "{{i18n: magicitem.artificerbook.description}}",
         "Type": "asdf",
@@ -18,11 +18,14 @@
         "ExcludeFromShippingCollection": true,
         "Texture": "Textures/DN.SnS/SnSBooks",
         "SpriteIndex": "{{ArtificerBookSpriteIndex}}",
-        "ContextTags": ["DestyNova.SwordAndSorcery.Rogue"]
+        "ContextTags": [
+          "book_item",
+          "DestyNova.SwordAndSorcery.Rogue"
+        ]
       },
 
       "{{ModID}}_druidbook": {
-        "Name": "Halsin's Guide to Druidics",
+        "Name": "{{ModID}}_druidbook",
         "DisplayName": "{{i18n: magicitem.druidbook.name}}",
         "Description": "{{i18n: magicitem.druidbook.description}}",
         "Type": "asdf",
@@ -33,11 +36,14 @@
         "ExcludeFromShippingCollection": true,
         "Texture": "Textures/DN.SnS/SnSBooks",
         "SpriteIndex": "{{DruidBookSpriteIndex}}",
-        "ContextTags": ["DestyNova.SwordAndSorcery.Druidics"]
+        "ContextTags": [
+          "book_item",
+          "DestyNova.SwordAndSorcery.Druidics"
+        ]
       },
 
       "{{ModID}}_bardbook": {
-        "Name": "Volothamp's Songbook",
+        "Name": "{{ModID}}_bardbook",
         "DisplayName": "{{i18n: magicitem.bardbook.name}}",
         "Description": "{{i18n: magicitem.bardbook.description}}",
         "Type": "asdf",
@@ -48,11 +54,14 @@
         "ExcludeFromShippingCollection": true,
         "Texture": "Textures/DN.SnS/SnSBooks",
         "SpriteIndex": "{{BardBookSpriteIndex}}",
-        "ContextTags": ["DestyNova.SwordAndSorcery.Bardics"]
+        "ContextTags": [
+          "book_item",
+          "DestyNova.SwordAndSorcery.Bardics"
+        ]
       },
 
       "{{ModID}}_sorcerybook": {
-        "Name": "Xanathar's Guide to Everything",
+        "Name": "{{ModID}}_sorcerybook",
         "DisplayName": "{{i18n: magicitem.sorcerybook.name}}",
         "Description": "{{i18n: magicitem.sorcerybook.description}}",
         "Type": "asdf",
@@ -63,11 +72,14 @@
         "ExcludeFromShippingCollection": true,
         "Texture": "Textures/DN.SnS/SnSBooks",
         "SpriteIndex": "{{SorcererBookSpriteIndex}}",
-        "ContextTags": ["DestyNova.SwordAndSorcery.Witchcraft"]
+        "ContextTags": [
+          "book_item",
+          "DestyNova.SwordAndSorcery.Witchcraft"
+        ]
       },
 
       "{{ModID}}_paladinbook": {
-        "Name": "Valtari's Ravenloft Dossier",
+        "Name": "{{ModID}}_paladinbook",
         "DisplayName": "{{i18n: magicitem.paladinbook.name}}",
         "Description": "{{i18n: magicitem.paladinbook.description}}",
         "Type": "asdf",
@@ -78,7 +90,10 @@
         "ExcludeFromShippingCollection": true,
         "Texture": "Textures/DN.SnS/SnSBooks",
         "SpriteIndex": "{{PaladinBookSpriteIndex}}",
-        "ContextTags": ["DestyNova.SwordAndSorcery.Paladin"]
+        "ContextTags": [
+          "book_item",
+          "DestyNova.SwordAndSorcery.Paladin"
+        ]
       }
     }
   },

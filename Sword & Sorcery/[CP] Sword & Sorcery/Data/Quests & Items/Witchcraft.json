@@ -5,7 +5,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_EarthEssence": {
-          "Name": "Earth Essence",
+          "Name": "{{ModID}}_EarthEssence",
           "DisplayName": "{{i18n: witchcraft.earth-essence.name}}",
           "Description": "{{i18n: witchcraft.earth-essence.description}}",
           "Type": "Basic",
@@ -15,11 +15,13 @@
           "SpriteIndex": 86,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "essence_item"
+            "essence_item",
+            "sns_essence_item",
+            "color_dark_brown"
           ]
         },
         "{{ModID}}_AirEssence": {
-          "Name": "Air Essence",
+          "Name": "{{ModID}}_AirEssence",
           "DisplayName": "{{i18n: witchcraft.air-essence.name}}",
           "Description": "{{i18n: witchcraft.air-essence.description}}",
           "Type": "Basic",
@@ -29,11 +31,13 @@
           "SpriteIndex": 87,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "essence_item"
+            "essence_item",
+            "color_cyan",
+            "sns_essence_item"
           ]
         },
         "{{ModID}}_WaterEssence": {
-          "Name": "Water Essence",
+          "Name": "{{ModID}}_WaterEssence",
           "DisplayName": "{{i18n: witchcraft.water-essence.name}}",
           "Description": "{{i18n: witchcraft.water-essence.description}}",
           "Type": "Basic",
@@ -43,11 +47,13 @@
           "SpriteIndex": 88,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "essence_item"
+            "essence_item",
+            "sns_essence_item",
+            "color_light_cyan"
           ]
         },
         "{{ModID}}_FireEssence": {
-          "Name": "Fire Essence",
+          "Name": "{{ModID}}_FireEssence",
           "DisplayName": "{{i18n: witchcraft.fire-essence.name}}",
           "Description": "{{i18n: witchcraft.fire-essence.description}}",
           "Type": "Basic",
@@ -57,7 +63,9 @@
           "SpriteIndex": 89,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
-            "essence_item"
+            "essence_item",
+            "sns_essence_item",
+            "color_red"
           ]
         },
         "{{ModID}}_TeleportCircle": {
@@ -84,8 +92,12 @@
           "IsDrink": true,
           "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 91,
-          "ExcludeFromShippingCollection": true
-        },
+          "ExcludeFromShippingCollection": true,
+          "ContextTags": [
+            "sns_potion_item",
+            "color_poppyseed"
+          ]
+        }
       }
     },
     {
@@ -93,13 +105,13 @@
       "Target": "Data/BigCraftables",
       "Entries": {
         "{{ModID}}_WallOfForce": {
-          "Name": "Wall of Force",
+          "Name": "{{ModID}}_WallOfForce",
           "DisplayName": "{{i18n: witchcraft.wall-of-force.name}}",
           "Description": "{{i18n: witchcraft.wall-of-force.description}}",
           "Fragility": 2,
           "IsLamp": true,
           "Texture": "Textures/DN.SnS/SnSMachines",
-          "SpriteIndex": 3,
+          "SpriteIndex": 3
         }
       }
     },
@@ -128,7 +140,7 @@
           "ShadowType": "Contoured",
           "CornerSize": 4,
           "FarmSpeedBuff": -1.0
-        },
+        }
       }
     },
     // CRAFTING RECIPES 
@@ -139,6 +151,6 @@
         "{{ModID}}_TeleportCircle": "{{ModID}}_WaterEssence 10 {{ModID}}_AirEssence 10 {{ModID}}_EarthEssence 10 {{ModID}}_FireEssence 10 769 25/hoot/{{ModID}}_TeleportCircle 1/false/null",
         "{{ModID}}_ReturnPotion": "{{ModID}}_WaterEssence 1 {{ModID}}_AirEssence 1 {{ModID}}_EarthEssence 1 {{ModID}}_FireEssence 1 769 5/hoot/{{ModID}}_ReturnPotion 1/false/null"
       }
-    },
+    }
   ]
 }

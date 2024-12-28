@@ -6,7 +6,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_ancientamaranth": {
-          "Name": "Ancient Amaranth",
+          "Name": "{{ModID}}_ancientamaranth",
           "DisplayName": "{{i18n: crop.ancientamaranth.name}}",
           "Description": "{{i18n: crop.ancientamaranth.description}}",
           "Type": "Vegetable",
@@ -21,12 +21,11 @@
           "SpriteIndex": 0,
           "ContextTags": [
             "color_cyan",
-            "category_vegetable",
             "seedmaker_banned"
           ]
         },
         "{{ModID}}_ancientamaranth.seed": {
-          "Name": "Ancient Amaranth Seeds",
+          "Name": "{{ModID}}_ancientamaranth.seed",
           "DisplayName": "{{i18n: crop.ancientamaranth.seed.name}}",
           "Description": "{{i18n: crop.ancientamaranth.seed.description}}",
           "Type": "Seeds",
@@ -75,7 +74,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_ancientepiphyticfern": {
-          "Name": "Ancient Epiphytic Fern",
+          "Name": "{{ModID}}_ancientepiphyticfern",
           "DisplayName": "{{i18n: crop.ancientepiphyticfern.name}}",
           "Description": "{{i18n: crop.ancientepiphyticfern.description}}",
           "Type": "Vegetable",
@@ -90,13 +89,12 @@
           "SpriteIndex": 2,
           "ContextTags": [
             "color_cyan",
-            "category_vegetable",
             "seedmaker_banned"
           ]
         },
 
         "{{ModID}}_ancientepiphyticfern.seed": {
-          "Name": "Ancient Amaranth Seeds",
+          "Name": "{{ModID}}_ancientepiphyticfern.seed",
           "DisplayName": "{{i18n: crop.ancientepiphyticfern.seed.name}}",
           "Description": "{{i18n: crop.ancientepiphyticfern.seed.description}}",
           "Type": "Seeds",
@@ -147,7 +145,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_glowingpolyporemushrooms": {
-          "Name": "Ancient Glowing Polypore Mushroom",
+          "Name": "{{ModID}}_glowingpolyporemushrooms",
           "DisplayName": "{{i18n: crop.ancientglowingpolyporemushrooms.name}}",
           "Description": "{{i18n: crop.ancientglowingpolyporemushrooms.description}}",
           "Type": "Vegetable",
@@ -162,13 +160,12 @@
           "SpriteIndex": 4,
           "ContextTags": [
             "color_cyan",
-            "category_vegetable",
             "seedmaker_banned"
           ]
         },
 
         "{{ModID}}_glowingpolyporemushrooms.seed": {
-          "Name": "Ancient Glowing Polypore Mushroom Spores",
+          "Name": "{{ModID}}_glowingpolyporemushrooms.seed",
           "DisplayName": "{{i18n: crop.ancientglowingpolyporemushrooms.seed.name}}",
           "Description": "{{i18n: crop.ancientglowingpolyporemushrooms.seed.description}}",
           "Type": "Seeds",
@@ -217,7 +214,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_ancientwildfairyrose": {
-          "Name": "Ancient Wild Fairy Rose",
+          "Name": "{{ModID}}_ancientwildfairyrose",
           "DisplayName": "{{i18n: crop.ancientwildfairyrose.name}}",
           "Description": "{{i18n: crop.ancientwildfairyrose.description}}",
           "Type": "Flower",
@@ -232,13 +229,12 @@
           "SpriteIndex": 1,
           "ContextTags": [
             "color_cyan",
-            "category_flowers",
             "seedmaker_banned"
           ]
         },
 
         "{{ModID}}_ancientwildfairyrose.seed": {
-          "Name": "Ancient Wild Fairy Rose Seeds",
+          "Name": "{{ModID}}_ancientwildfairyrose.seed",
           "DisplayName": "{{i18n: crop.ancientwildfairyrose.seed.name}}",
           "Description": "{{i18n: crop.ancientwildfairyrose.seed.description}}",
           "Type": "Seeds",
@@ -288,7 +284,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_ancientelderberry": {
-          "Name": "Ancient Elderberry",
+          "Name": "{{ModID}}_ancientelderberry",
           "DisplayName": "{{i18n: crop.ancientelderberry.name}}",
           "Description": "{{i18n: crop.ancientelderberry.description}}",
           "Type": "Fruit",
@@ -303,12 +299,11 @@
           "SpriteIndex": 37,
           "ContextTags": [
             "color_cyan",
-            "category_fruits",
             "seedmaker_banned"
           ]
         },
         "{{ModID}}_ancientelderberry.seed": {
-          "Name": "Ancient Elderberry Seeds",
+          "Name": "{{ModID}}_ancientelderberry.seed",
           "DisplayName": "{{i18n: crop.ancientelderberry.seed.name}}",
           "Description": "{{i18n: crop.ancientelderberry.seed.description}}",
           "Type": "Seeds",
@@ -358,7 +353,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_ancientbottlegourd": {
-          "Name": "Ancient Bottle Gourd",
+          "Name": "{{ModID}}_ancientbottlegourd",
           "DisplayName": "{{i18n: crop.ancientbottlegourd.name}}",
           "Description": "{{i18n: crop.ancientbottlegourd.description}}",
           "Type": "Vegetable",
@@ -373,13 +368,12 @@
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
           "ContextTags": [
             "color_cyan",
-            "category_fruits",
             "seedmaker_banned"
           ]
         },
 
         "{{ModID}}_ancientbottlegourd.seed": {
-          "Name": "Ancient Bottle Gourd",
+          "Name": "{{ModID}}_ancientbottlegourd.seed",
           "DisplayName": "{{i18n: crop.ancientbottlegourd.seed.name}}",
           "Description": "{{i18n: crop.ancientbottlegourd.seed.description}}",
           "Type": "Seeds",
@@ -428,7 +422,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_ancientgiantappleberry": {
-          "Name": "Ancient Giant Apple Berry",
+          "Name": "{{ModID}}_ancientgiantappleberry",
           "DisplayName": "{{i18n: crop.ancientgiantappleberry.name}}",
           "Description": "{{i18n: crop.ancientgiantappleberry.description}}",
           "Type": "Fruit",
@@ -449,7 +443,7 @@
         },
 
         "{{ModID}}_ancientgiantappleberry.seed": {
-          "Name": "Ancient Giant Apple Berry",
+          "Name": "{{ModID}}_ancientgiantappleberry.seed",
           "DisplayName": "{{i18n: crop.ancientgiantappleberry.seed.name}}",
           "Description": "{{i18n: crop.ancientgiantappleberry.seed.description}}",
           "Type": "Seeds",
@@ -498,7 +492,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_ancientazuredetura": {
-          "Name": "Ancient Azure Detura Flower",
+          "Name": "{{ModID}}_ancientazuredetura",
           "DisplayName": "{{i18n: crop.ancientazuredetura.name}}",
           "Description": "{{i18n: crop.ancientazuredetura.description}}",
           "Type": "Flower",
@@ -513,13 +507,12 @@
           "SpriteIndex": 43,
           "ContextTags": [
             "color_cyan",
-            "category_flowers",
             "seedmaker_banned"
           ]
         },
 
         "{{ModID}}_ancientazuredetura.seed": {
-          "Name": "Ancient Azure Detura Flower",
+          "Name": "{{ModID}}_ancientazuredetura.seed",
           "DisplayName": "{{i18n: crop.ancientazuredetura.seed.name}}",
           "Description": "{{i18n: crop.ancientazuredetura.seed.description}}",
           "Type": "Seeds",
@@ -566,7 +559,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_ancientglowinghuckleberry": {
-          "Name": "Ancient Glowing Huckleberry",
+          "Name": "{{ModID}}_ancientglowinghuckleberry",
           "DisplayName": "{{i18n: crop.ancientglowinghuckleberry.name}}",
           "Description": "{{i18n: crop.ancientglowinghuckleberry.description}}",
           "Type": "Fruit",
@@ -581,13 +574,12 @@
           "SpriteIndex": 3,
           "ContextTags": [
             "color_cyan",
-            "category_fruits",
             "seedmaker_banned"
           ]
         },
 
         "{{ModID}}_ancientglowinghuckleberry.seed": {
-          "Name": "Ancient Glowing Huckleberry Seeds",
+          "Name": "{{ModID}}_ancientglowinghuckleberry.seed",
           "DisplayName": "{{i18n: crop.ancientglowinghuckleberry.seed.name}}",
           "Description": "{{i18n: crop.ancientglowinghuckleberry.seed.description}}",
           "Type": "Seeds",
@@ -630,7 +622,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_ancientsweettealeaves": {
-          "Name": "Ancient Sweet Tea Leaves",
+          "Name": "{{ModID}}_ancientsweettealeaves",
           "DisplayName": "{{i18n: crop.ancientsweettealeaves.name}}",
           "Description": "{{i18n: crop.ancientsweettealeaves.description}}",
           "Type": "Flower",
@@ -645,13 +637,12 @@
           "SpriteIndex": 83,
           "ContextTags": [
             "color_cyan",
-            "category_flowers",
             "seedmaker_banned"
           ]
         },
 
         "{{ModID}}_ancientsweettealeaves.seed": {
-          "Name": "Ancient Sweet Tea Bush Seeds",
+          "Name": "{{ModID}}_ancientsweettealeaves.seed",
           "DisplayName": "{{i18n: crop.ancientsweettealeaves.seed.name}}",
           "Description": "{{i18n: crop.ancientsweettealeaves.seed.description}}",
           "Type": "Seeds",
@@ -700,16 +691,16 @@
       "Action": "EditData",
       "Target": "Data/CraftingRecipes",
       "Entries": {
-        "Ancient Amaranth Seeds": "{{ModID}}_druidicessence {{DruidicsCost4}}/what is this for?/{{ModID}}_ancientamaranth.seed 1/false/null/{{i18n:AncientSeed.Hector.Amaranth}}",
-        "Ancient Epiphytic Fern Seeds": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_ancientepiphyticfern.seed 1/false/null/{{i18n:AncientSeed.Hector.Fern}}",
-        "Ancient Glowing Huckleberry Seeds": "{{ModID}}_druidicessence {{DruidicsCost10}}/what is this for?/{{ModID}}_ancientglowinghuckleberry.seed 1/false/null/{{i18n:AncientSeed.Hector.Huckleberry}}",
-        "Ancient Glowing Polypore Mushroom Spores": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_glowingpolyporemushrooms.seed 1/false/null/{{i18n:AncientSeed.Hector.Mushroom}}",
-        "Ancient Wild Fairy Rose Seeds": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_ancientwildfairyrose.seed 1/false/null/{{i18n:AncientSeed.Hector.FairyRose}}",
-        "Ancient Elderberry Seeds": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_ancientelderberry.seed 1/false/null/{{i18n:AncientSeed.Hector.Elderberry}}",
-        "Ancient Bottle Gourd Seeds": "{{ModID}}_druidicessence {{DruidicsCost4}}/what is this for?/{{ModID}}_ancientbottlegourd.seed 1/false/null/{{i18n:AncientSeed.Hector.BottleGourd}}",
-        "Ancient Giant Apple Berry Seeds": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_ancientgiantappleberry.seed 1/false/null/{{i18n:AncientSeed.Hector.AppleBerry}}",
-        "Ancient Azure Detura Seeds": "{{ModID}}_druidicessence {{DruidicsCost4}}/what is this for?/{{ModID}}_ancientazuredetura.seed 1/false/null/{{i18n:AncientSeed.Hector.Detura}}",
-        "Ancient Sweet Tea Bush Seeds": "{{ModID}}_druidicessence {{DruidicsCost10}}/what is this for?/{{ModID}}_ancientsweettealeaves.seed 1/false/e SnS.Ch3.Dandelion.3/{{i18n:AncientSeed.Hector.SweetTea}}"
+        "{{ModID}}_ancientamaranth.seed": "{{ModID}}_druidicessence {{DruidicsCost4}}/what is this for?/{{ModID}}_ancientamaranth.seed 1/false/null/{{i18n:AncientSeed.Hector.Amaranth}}",
+        "{{ModID}}_ancientepiphyticfern.seed": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_ancientepiphyticfern.seed 1/false/null/{{i18n:AncientSeed.Hector.Fern}}",
+        "{{ModID}}_ancientglowinghuckleberry.seed": "{{ModID}}_druidicessence {{DruidicsCost10}}/what is this for?/{{ModID}}_ancientglowinghuckleberry.seed 1/false/null/{{i18n:AncientSeed.Hector.Huckleberry}}",
+        "{{ModID}}_glowingpolyporemushrooms.seed": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_glowingpolyporemushrooms.seed 1/false/null/{{i18n:AncientSeed.Hector.Mushroom}}",
+        "{{ModID}}_ancientwildfairyrose.seed": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_ancientwildfairyrose.seed 1/false/null/{{i18n:AncientSeed.Hector.FairyRose}}",
+        "{{ModID}}_ancientelderberry.seed": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_ancientelderberry.seed 1/false/null/{{i18n:AncientSeed.Hector.Elderberry}}",
+        "{{ModID}}_ancientbottlegourd.seed": "{{ModID}}_druidicessence {{DruidicsCost4}}/what is this for?/{{ModID}}_ancientbottlegourd.seed 1/false/null/{{i18n:AncientSeed.Hector.BottleGourd}}",
+        "{{ModID}}_ancientgiantappleberry.seed": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_ancientgiantappleberry.seed 1/false/null/{{i18n:AncientSeed.Hector.AppleBerry}}",
+        "{{ModID}}_ancientazuredetura.seed": "{{ModID}}_druidicessence {{DruidicsCost4}}/what is this for?/{{ModID}}_ancientazuredetura.seed 1/false/null/{{i18n:AncientSeed.Hector.Detura}}",
+        "{{ModID}}_ancientsweettealeaves.seed": "{{ModID}}_druidicessence {{DruidicsCost10}}/what is this for?/{{ModID}}_ancientsweettealeaves.seed 1/false/e SnS.Ch3.Dandelion.3/{{i18n:AncientSeed.Hector.SweetTea}}"
       }
     },
     // GIANT VARIATIONS 

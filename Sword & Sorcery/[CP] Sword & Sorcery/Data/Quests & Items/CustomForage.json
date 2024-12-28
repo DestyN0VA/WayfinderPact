@@ -6,7 +6,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModID}}_mushroom1": {
-          "Name": "Stygium-Tainted Fungus (Type A)",
+          "Name": "{{ModID}}_mushroom1",
           "DisplayName": "{{i18n: forage.mushroom1.name}}",
           "Description": "{{i18n: forage.mushroom.description}}",
           "Type": "Forage",
@@ -25,7 +25,7 @@
         },
 
         "{{ModID}}_mushroom2": {
-          "Name": "Stygium-Tainted Fungus (Type B)",
+          "Name": "{{ModID}}_mushroom2",
           "DisplayName": "{{i18n: forage.mushroom2.name}}",
           "Description": "{{i18n: forage.mushroom.description}}",
           "Type": "Forage",
@@ -44,7 +44,7 @@
         },
 
         "{{ModID}}_mushroom3": {
-          "Name": "Stygium-Tainted Fungus (Type C)",
+          "Name": "{{ModID}}_mushroom3",
           "DisplayName": "{{i18n: forage.mushroom3.name}}",
           "Description": "{{i18n: forage.mushroom.description}}",
           "Type": "Forage",
@@ -63,7 +63,7 @@
         },
 
         "{{ModID}}_mushroom4": {
-          "Name": "Stygium-Tainted Fungus (Type D)",
+          "Name": "{{ModID}}_mushroom4",
           "DisplayName": "{{i18n: forage.mushroom4.name}}",
           "Description": "{{i18n: forage.mushroom.description}}",
           "Type": "Forage",
@@ -82,7 +82,7 @@
         },
 
         "{{ModID}}_taintedcrocus": {
-          "Name": "Stygium-Tainted Crocus",
+          "Name": "{{ModID}}_taintedcrocus",
           "DisplayName": "{{i18n: forage.taintedcrocus.name}}",
           "Description": "{{i18n: forage.taintedcrocus.description}}",
           "Type": "Forage",
@@ -101,7 +101,7 @@
         },
 
         "{{ModID}}_taintedcorn": {
-          "Name": "Stygium-Tainted Corn",
+          "Name": "{{ModID}}_taintedcorn",
           "DisplayName": "{{i18n: forage.taintedcorn.name}}",
           "Description": "{{i18n: forage.taintedcorn.description}}",
           "Type": "Forage",
@@ -120,7 +120,7 @@
         },
 
         "{{ModID}}_taintedgrasses": {
-          "Name": "Stygium-Tainted Grasses",
+          "Name": "{{ModID}}_taintedgrasses",
           "DisplayName": "{{i18n: forage.taintedgrasses.name}}",
           "Description": "{{i18n: forage.taintedgrasses.description}}",
           "Type": "Forage",

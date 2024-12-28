@@ -7064,29 +7064,31 @@ ________      ________ _   _ _______ _____
   "tool.blessed-watering-can.name": "Elysium Watering Can",
   "tool.blessed-watering-can.description": "[LocalizedText Strings\\Tools:WateringCan_Description]",
   "weapon.paladin-shield.name": "Paladin Shield",
-  "weapon.paladin-shield.description": "A shield from Dandelion the paladin.",
+  "weapon.paladin-shield.description": "A shield from Dandelion the paladin.\n\nAdds 35 Armor Points when equipped to the Offhand slot.",
   "weapon.artificer-shield.name": "Artificer Shield",
-  "weapon.artificer-shield.description": "A shield from Dandelion the paladin, modified with artificer powers.",
+  "weapon.artificer-shield.description": "A shield from Dandelion the paladin, modified with artificer powers.\n\nAdds 35 Armor Points when equipped to the Offhand slot.",
   "weapon.druid-shield.name": "Druidic Shield",
-  "weapon.druid-shield.description": "A shield from Dandelion the paladin, modified with druidic powers.",
+  "weapon.druid-shield.description": "A shield from Dandelion the paladin, modified with druidic powers.\n\nAdds 35 Armor Points when equipped to the Offhand slot.",
   "weapon.bard-shield.name": "Bardic Shield",
-  "weapon.bard-shield.description": "A shield from Dandelion the paladin, modified with bardic powers.",
+  "weapon.bard-shield.description": "A shield from Dandelion the paladin, modified with bardic powers.\n\nAdds 35 Armor Points when equipped to the Offhand slot.",
   "weapon.sorcerer-shield.name": "Sorcerer Shield",
-  "weapon.sorcerer-shield.description": "A shield from Dandelion the paladin, modified with sorcerer powers.",
+  "weapon.sorcerer-shield.description": "A shield from Dandelion the paladin, modified with sorcerer powers.\n\nAdds 35 Armor Points when equipped to the Offhand slot.",
+  "weapon.wooden-shield.name": "Wooden Shield",
+  "weapon.wooden-shield.description": "A flimsy wooden shield.\n\nAdds 2 Armor Points when equipped to the Offhand slot.",
   "weapon.copper-shield.name": "Copper Shield",
-  "weapon.copper-shield.description": "A basic copper shield.",
+  "weapon.copper-shield.description": "A basic copper shield.\n\nAdds 5 Armor Points when equipped to the Offhand slot.",
   "weapon.steel-shield.name": "Iron Shield",
-  "weapon.steel-shield.description": "A basic iron shield.",
+  "weapon.steel-shield.description": "A basic iron shield.\n\nAdds 10 Armor Points when equipped to the Offhand slot.",
   "weapon.gold-shield.name": "Gold Shield",
-  "weapon.gold-shield.description": "A basic gold shield.",
+  "weapon.gold-shield.description": "A basic gold shield.\n\nAdds 15 Armor Points when equipped to the Offhand slot.",
   "weapon.iridium-shield.name": "Iridium Shield",
-  "weapon.iridium-shield.description": "A well-crafted iridium shield.",
+  "weapon.iridium-shield.description": "A well-crafted iridium shield.\n\nAdds 20 Armor Points when equipped to the Offhand slot.",
   "weapon.radioactive-shield.name": "Radioactive Shield",
-  "weapon.radioactive-shield.description": "A well-crafted radioactive shield.",
+  "weapon.radioactive-shield.description": "A well-crafted radioactive shield.\n\nAdds 25 Armor Points when equipped to the Offhand slot.",
   "weapon.stygium-shield.name": "Stygium Shield",
-  "weapon.stygium-shield.description": "A well-crafted, lead-lined stygium shield. Curses on touch.",
+  "weapon.stygium-shield.description": "A well-crafted, lead-lined stygium shield. Curses on touch.\n\nAdds 30 Armor Points when equipped to the Offhand slot.",
   "weapon.lltk-shield.name": "Long Live The King (Shield)",
-  "weapon.lltk-shield.description": "A shield previously wielded by Linden Hawthorn, the Prairie King. Just holding it makes you feel like you've got big shoes to fill.",
+  "weapon.lltk-shield.description": "A shield previously wielded by Linden Hawthorn, the Prairie King. Just holding it makes you feel like you've got big shoes to fill.\n\nAdds 40 Armor Points when equipped to the Offhand slot.",
   "object.duskspire-heart.name": "Duskspire Heart",
   "object.duskspire-heart.description": "The only untainted part of the Duskspire Behemoth... perhaps it's resilient to corruption!",
   "weapon.stygium-blade.name": "Stygium Blade",
@@ -7850,11 +7852,7 @@ ________      ________ _   _ _______ _____
   "Strings.Monsters.DuskspireBehemoth": "Duskspire Behemoth",
   "Strings.Monsters.DuskspireRemnant": "Duskspire Remnant",
 
-  //Error Correction Mail
-  "Mail.MissingRecipe1": "Good morning, @!^^It seems like you're missing a recipe... Allow us to correct that!^^-Sincerely,^S&S Team.%item craftingRecipe DN.SnS_ElysiumArmor%%[#]S&S Missing Recipe Elysium Armor",
-  "Mail.MissingRecipe2": "Good morning, @!^^It seems like you're missing a recipe... Allow us to correct that!^^-Sincerely,^S&S Team.%item craftingRecipe DN.SnS_StygiumArmor%%[#]S&S Missing Recipe Stygium Armor",
-  "Mail.MissingRecipe3": "Good morning, @!^^It seems like you're missing a recipe... Allow us to correct that!^^-Sincerely,^S&S Team.%item craftingRecipe DN.SnS_WindwakerArrow%%[#]S&S Missing Recipe Windwaker Arrow",
-  "Mail.MissingRecipe4": "Good morning, @!^^It seems like you're missing a recipe... Allow us to correct that!^^-Sincerely,^S&S Team.^^(The recipe for Ancient Azure Detura Seeds has been automatically added to your crafting menu.)[#]S&S Missing Recipe Ancient Azure Detura Seeds"
-
-
+  //Faire Mail
+  "Mail.DN.SnS_FaireFoodMail": "Food from the Faire", //Change this i just didn't want it to be empty in case we forgot - Axell
+  "Mail.DN.SnS_FaireFoodMail.Title": "Welcome to the Valley, farmer!^^Unforuntately you just missed out on the Ferngill Renaissance Faire.^^However we'd still like you be able to enjoy the delectable delights we had to offer. Enclosed are several recipes, enjoy!^^  - Thomas Turkielegg"
 }

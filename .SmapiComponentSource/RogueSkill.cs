@@ -8,9 +8,11 @@ using Microsoft.Xna.Framework.Graphics;
 using SpaceCore;
 using StardewValley;
 using StardewValley.Menus;
+using static SpaceCore.Skills;
 
 namespace SwordAndSorcerySMAPI
 {
+    
     public class RogueSkill : Skills.Skill
     {
         public static GenericProfession ProfessionArmorRecovery;
@@ -80,6 +82,44 @@ namespace SwordAndSorcerySMAPI
         {
             return I18n.RogueSkill_Name();
         }
+
+        private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
+        {
+            var RogueSkill = new RogueSkill();
+            string[][] recipes =
+                new string[][]
+                {
+                    null,
+                    new string[] { "DN.SnS_ClothArmor", "DN.SnS_Bow", "DN.SnS_Arrow" },
+                    null,
+                    new string[] { "DN.SnS_CopperArmor", "DN.SnS_FirestormArrow", "DN.SnS_IcicleArrow" },
+                    new string[] { "DN.SnS_IronArmor" },
+                    null,
+                    new string[] { "DN.SnS_WindwakerArrow" },
+                    new string[] { "DN.SnS_GoldArmor" },
+                    new string[] { "DN.SnS_IridiumArmor", "DN.SnS_RicochetArrow" },
+                    new string[] { "DN.SnS_RadioactiveArmor", "DN.SnS_StygiumArmor", "DN.SnS_ElysiumArmor", "DN.SnS_LightbringerArrow" },
+                    null,
+                };
+            for (int level = 1; level <= Game1.player.GetCustomSkillLevel(RogueSkill); ++level)
+            {
+                if (recipes[level] != null)
+                {
+                    Game1.player.craftingRecipes.TryAdd(recipes[level][0], 0);
+                    if (recipes[level].Length == 2)
+                    {
+                        if (level == 1)
+                        {
+                            Game1.player.craftingRecipes.TryAdd(recipes[level][1], 0);
+                        }
+                        else
+                        {
+                            Game1.player.cookingRecipes.TryAdd(recipes[level][1], 0);
+                        }
+                    }
+                }
+            }
+        }
         public override void DoLevelPerk(int level)
         {
             base.DoLevelPerk(level);
@@ -109,6 +149,7 @@ namespace SwordAndSorcerySMAPI
                     Game1.player.craftingRecipes.Add(recipe, 0);
             }
         }
+
 
         public override List<string> GetExtraLevelUpInfo(int level)
         {

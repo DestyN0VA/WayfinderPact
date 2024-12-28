@@ -1,12 +1,6 @@
 {
   "Changes": [
     {
-      "LogName": "Load Violet Moon Ren Fair food",
-      "Action": "Load",
-      "Target": "Mods/DN.SnS/VioletMoonFood",
-      "FromFile": "Assets/Items & Crops/DN.SnS_VioletMoon_Food.png"
-    },
-    {
       "LogName": "Violet Moon Foods",
       "Action": "EditData",
       "Target": "Data/Objects",

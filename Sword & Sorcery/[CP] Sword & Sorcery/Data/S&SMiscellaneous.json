@@ -10,7 +10,7 @@
     {
       "LogName": "Loads Texture Files",
       "Action": "Load",
-      "Target": "Textures/DN.SnS/SnSObjects, Textures/DN.SnS/SnSCrops, Textures/DN.SnS/StygiumTools, Textures/DN.SnS/SnSArsenal, Textures/DN.SnS/SnSBooks, Textures/DN.SnS/SnSMachines, Textures/DN.SnS/SnSShopBG, Textures/DN.SnS/SnSTrees, Textures/DN.SnS/BlessedTools, Textures/DN.SnS/TeleportCircle, Textures/DN.SnS/SnSMushroomTree, Textures/DN.SnS/DeepDark_Treasure",
+      "Target": "Textures/DN.SnS/SnSObjects, Textures/DN.SnS/SnSCrops, Textures/DN.SnS/StygiumTools, Textures/DN.SnS/SnSArsenal, Textures/DN.SnS/SnSBooks, Textures/DN.SnS/SnSMachines, Textures/DN.SnS/SnSShopBG, Textures/DN.SnS/SnSTrees, Textures/DN.SnS/BlessedTools, Textures/DN.SnS/TeleportCircle, Textures/DN.SnS/SnSMushroomTree, Textures/DN.SnS/DeepDark_Treasure, Textures/DN.SnS/VioletMoonFood",
       "FromFile": "Assets/Items & Crops/{{TargetWithoutPath}}.png"
     },
     {
@@ -51,7 +51,7 @@
       "Action": "EditData",
       "Target": "Data/SecretNotes",
       "Entries": {
-        "113": "!image 16",
+        "113": "!image 16"
       }
     },
     // REMOVES HECTOR'S MARRIAGE SCHEDULE - and separate datability
@@ -116,13 +116,13 @@
     {
       "Action": "Load",
       "Target": "Maps/SpouseRoomEmpty",
-      "FromFile": "Assets/Maps/SpouseRoomEmpty.tmx",
+      "FromFile": "Assets/Maps/SpouseRoomEmpty.tmx"
     },
     // BLANK SPOUSE PATIO 
     {
       "Action": "Load",
       "Target": "Maps/SpousePatioEmpty",
-      "FromFile": "assets/Maps/SpousePatioEmpty.tmx",
+      "FromFile": "assets/Maps/SpousePatioEmpty.tmx"
     },
     // REMOVES ENGAGEMENT EVENTS FROM EVENT LOOKUP 
     {
@@ -134,8 +134,8 @@
         "SnS.Ch2.Hector.17": "T"
       },
       "When": {
-        "HasMod": "shekurika.EventLookup",
-      },
+        "HasMod": "shekurika.EventLookup"
+      }
     },
     // VIBRANT PASTORAL COMPAT
     {
@@ -143,7 +143,7 @@
       "Target": "Maps/Lumisteria_Extras",
       "FromFile": "Assets/VPRCompat/Lumisteria_Extras.png",
       "When": {
-        "HasMod |contains=grapeponta.VibrantPastoralRecolor": false,
+        "HasMod |contains=grapeponta.VibrantPastoralRecolor": false
       }
     },
     {
@@ -151,7 +151,7 @@
       "Target": "Maps/Lumisteria_Extras",
       "FromFile": "Assets/VPRCompat/Lumisteria_Extras_VP.png",
       "When": {
-        "HasMod |contains=grapeponta.VibrantPastoralRecolor": true,
+        "HasMod |contains=grapeponta.VibrantPastoralRecolor": true
       }
     },
     {
@@ -159,7 +159,7 @@
       "Target": "Maps/FlashShifter_Extras",
       "FromFile": "Assets/VPRCompat/FlashShifter_Extras.png",
       "When": {
-        "HasMod |contains=grapeponta.VibrantPastoralRecolor": false,
+        "HasMod |contains=grapeponta.VibrantPastoralRecolor": false
       }
     },
     {
@@ -167,7 +167,7 @@
       "Target": "Maps/FlashShifter_Extras",
       "FromFile": "Assets/VPRCompat/FlashShifter_Extras_VP.png",
       "When": {
-        "HasMod |contains=grapeponta.VibrantPastoralRecolor": true,
+        "HasMod |contains=grapeponta.VibrantPastoralRecolor": true
       }
     },
     // SPACECORE COMPAT

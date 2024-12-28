@@ -152,15 +152,15 @@ namespace CircleOfThornsSMAPI
                 new string[][]
                 {
                     null,
-                    new string[] { "Ancient Amaranth Seeds", "Ancient Epiphytic Fern Seeds" },
-                    new string[] { "Ancient Glowing Polypore Mushroom Spores" },
-                    new string[] { "Ancient Wild Fairy Rose Seeds" },
-                    new string[] { "Ancient Elderberry Seeds" },
+                    new string[] { "DN.SnS_ancientamaranth.seed", "DN.SnS_ancientepiphyticfern.seed" },
+                    new string[] { "DN.SnS_glowingpolyporemushrooms.seed" },
+                    new string[] { "DN.SnS_ancientwildfairyrose.seed" },
+                    new string[] { "DN.SnS_ancientelderberry.seed" },
                     null,
-                    new string[] { "Ancient Bottle Gourd Seeds", "DN.SnS_lavaeelandstirfriedancientbottlegourd" },
-                    new string[] { "Ancient Giant Apple Berry Seeds", "DN.SnS_mushroomsredsauce" },
-                    new string[] { "Ancient Azure Detura", "DN.SnS_ferngreensandpineapple" },
-                    new string[] { "Ancient Glowing Huckleberry Seeds", "DN.SnS_ancienthuckleberryicecream" },
+                    new string[] { "DN.SnS_ancientbottlegourd.seed", "DN.SnS_lavaeelandstirfriedancientbottlegourd" },
+                    new string[] { "DN.SnS_ancientgiantappleberry.seed", "DN.SnS_mushroomsredsauce" },
+                    new string[] { "DN.SnS_ancientazuredetura.seed", "DN.SnS_ferngreensandpineapple" },
+                    new string[] { "DN.SnS_ancientglowinghuckleberry.seed", "DN.SnS_ancienthuckleberryicecream" },
                     null,
                 };
             for (int level = 1; level <= Game1.player.GetCustomSkillLevel(Skill); ++level)
