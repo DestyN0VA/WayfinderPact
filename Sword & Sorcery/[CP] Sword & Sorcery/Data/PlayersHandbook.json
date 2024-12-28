@@ -31,11 +31,11 @@
                                 },
                                 {
                                     "Id": "FAQ",
-                                    "Contents": "{{i18n: guidebook.chapter.Title.FAQ}}"
+                                    "Contents": "{{i18n: guidebook.chapter.Title.FAQ|TrueName={{TrueName}}}}"
                                 },
                                 {
                                     "Id": "Cheats",
-                                    "Contents": "{{i18n: guidebook.chapter.Title.Cheats}}"
+                                    "Contents": "{{i18n: guidebook.chapter.Title.Cheats|HorseName={{KCC.SnS/HorseName}}}}"
                                 },
                             ]
                         },

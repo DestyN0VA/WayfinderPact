@@ -110,7 +110,18 @@ Misc
 sns_repairarmor - Restores armor points to max
 sns_finishorders - Finishes active SnS special orders
 sns_startfinalephase2 - Starts Phase 2 of Duskspire fight
-sns_playsong SongID# - Plays specified song (WHERE ARE THESE IDS REEE)",
+sns_playsong SongID# - Plays specified song
+
+Fantasia Alla Marcia - song_buff
+Battlefield Overture - song_battle
+Invigorating Encore - song_restoration
+Enduring Melody - song_protection
+Rogues' Humorsque - song_npcbuff
+Scherzo D'Inganno - song_attack
+Ballad of Chronomancy - song_time
+Track of {{HorseName}} - song_horse
+Druid's Lullaby - song_crop
+A Walk In Adante - song_obelisk",
 
   "guidebook.chapter.NEA.name": "Never Ending Adventure",
   "guidebook.chapter.NEA.Intro": "[center][font=dialogue]Introduction[/font][/center]
