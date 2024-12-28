@@ -2007,7 +2007,7 @@ When defeated, the Duskspire drops [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=T
 3. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=UP/BardicsSkill]Bardics[/link][/if][else]Bardics (locked)[/else]
 4. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6][link=TOP/SorcererSkill]Sorcerer[/link][/if][else]Sorcerer (locked)[/else]
 4. [if=ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\"][link=Epilogue/PaladinSkill]Paladin[/link][/if][else]Paladin (locked)[/else]",
-"guidebook.chapter.Mechanics.PlusButton": "Equipment Slots Offhand, Armor",
+"guidebook.chapter.Mechanics.EquipmentSlots": "Equipment Slots Offhand, Armor",
 "guidebook.chapter.Mechanics.AdventureBar": "[font=dialogue]Adventure Bar[/font]
  
 On the left side of your screen, you can see two columns with a bar underneath. This is the Adventure Bar. The columns repesent ability slots that you can activate with keybindings. The bar underneath is your Aether, which is consumed to use most abilities. To use an ability, use the keybinding configured for that slot. (default: Ctrl+NUMBER or Shift+NUMBER, though these can be configured in GMCM). If you're using a gamepad, the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod can also be used to trigger configured abilities.
