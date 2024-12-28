@@ -7852,7 +7852,7 @@ ________      ________ _   _ _______ _____
   "Strings.Monsters.DuskspireBehemoth": "Duskspire Behemoth",
   "Strings.Monsters.DuskspireRemnant": "Duskspire Remnant",
 
-  //Faire Mail
-  "Mail.DN.SnS_FaireFoodMail": "Food from the Faire", //Change this i just didn't want it to be empty in case we forgot - Axell
-  "Mail.DN.SnS_FaireFoodMail.Title": "Welcome to the Valley, farmer!^^Unforuntately you just missed out on the Ferngill Renaissance Faire.^^However we'd still like you be able to enjoy the delectable delights we had to offer. Enclosed are several recipes, enjoy!^^  - Thomas Turkielegg"
+  //
+  "Mail.DN.SnS_FaireFoodMail": "Welcome to the Valley, farmer!^^Unforuntately you just missed out on the Ferngill Renaissance Faire.^^However we'd still like you to be able to enjoy the delectable delights we had to offer. Enclosed are several recipes, enjoy!^^  - Thomas Turkielegg", 
+  "Mail.DN.SnS_FaireFoodMail.Title": "Food from the Faire"
 }
