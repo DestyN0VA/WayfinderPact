@@ -9,21 +9,14 @@
  
  */
 
-  "Mail.PHB": "Hello, @!^^Thank you for your purchase of the Player's Handbook. Contained within is everything you need to know for Sword & Sorcery, 2nd Edition. Play your way with new skills, quests, NPCs, locations, and more!^^May the dice favor you kindly,^Sorcerers of the Sound%item id DN.SnS_PlayersHandbook%%[#]Player's Handbook",
+ "Mail.PHB": "Hello, @!^^Thank you for your purchase of the Player's Handbook. Contained within is everything you need to know for Sword & Sorcery, 2nd Edition. Play your way with new skills, quests, NPCs, locations, and more!^^May the dice favor you kindly,^Sorcerers of the Sound%item id DN.SnS_PlayersHandbook%%[#]Player's Handbook",
 
-  "Furniture.PlayersHandbook": "S&S Player's Handbook",
+ "Furniture.PlayersHandbook": "S&S Player's Handbook",
 
-  "guidebook.chapter.Miscellaneous.Name": "Miscellaneous",
-  "guidebook.chapter.Mechanics.Name": "Mechanics",
-  "guidebook.chapter.Characters.name": "Characters",
-  "guidebook.chapter.Dedication.name": "Dedication",
-  "guidebook.chapter.Title.name": "Introduction",
-  "guidebook.chapter.Chapters.name": "Chapters",
-  "guidebook.chapter.Skills.name": "Skills",
-  "guidebook.chapter.DeepDark.Name": "The Deep Dark",
-  "guidebook.title": "Sword & Sorcery",
-  "guidebook.chapter.Title.TitlePage.ConfigLinks": "[nospacing][nextposition=0,40][center=300][font=dialogue][texttooltip=:Opens GMCM for the Content Patcher component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig DN.SnS]CP Config[/action][/texttooltip][/font][/center][offset=300,0][center=300][font=dialogue][texttooltip=:Opens GMCM for the SMAPI component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig KCC.SnS]SMAPI Config[/action][/texttooltip][/font][/center][/nospacing]",
-  "guidebook.chapter.Title.TitlePage": "{{ConfigMenuLinks}}
+ "guidebook.title": "Sword & Sorcery",
+ "guidebook.chapter.Title.name": "Introduction",
+ "guidebook.chapter.Title.TitlePage.ConfigLinks": "[nospacing][nextposition=0,40][center=300][font=dialogue][texttooltip=:Opens GMCM for the Content Patcher component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig DN.SnS]CP Config[/action][/texttooltip][/font][/center][offset=300,0][center=300][font=dialogue][texttooltip=:Opens GMCM for the SMAPI component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig KCC.SnS]SMAPI Config[/action][/texttooltip][/font][/center][/nospacing]",
+ "guidebook.chapter.Title.TitlePage": "{{ConfigMenuLinks}}
 [nospacing][nextposition=120,110][image=SMAPI/dn.sns/assets/guidebook/logo.png:null:1][nextposition=0,null][offset=0,250][/nospacing]
 [nospacing]
 [center=200][font=dialogue][link=https://www.patreon.com/profile/creators?u=12021226]Patreon[/link][/font][/center]
@@ -31,72 +24,97 @@
 [offset=200,0][center=200][font=dialogue][link=https://ko-fi.com/destynova]Ko-fi[/link][/font][/center]
 [nextposition=0,null]
 [/nospacing]",
-  "guidebook.chapter.Title.Introduction": "[center][font=dialogue]Introduction[/font][/center]
-chapter jump list
-1
-2
-3
-4
-5",
+ "guidebook.chapter.Title.Introduction": "[center][font=dialogue]Introduction[/font][/center]
+Sword & Sorcery is a vanilla adjacent, magical adventure inspired by the likes of Dungeons & Dragons, Balder's Gate, and Final Fantasy. Follow the complex story of the Coastal Adventurer's Guild as it's members learn, grow and change thanks to The Farmer's intervention. It starts with a lone tent on the beach, and ends in a battle to save East Scarp from the remnants of a tragedy long thought passed.",
 
-  "guidebook.chapter.Title.TableOfContents": "[center][font=dialogue]Table of Contents - Story[/font][/center]
+ "guidebook.chapter.Title.TableOfContents": "[center][font=dialogue]Table of Contents - Story[/font][/center]
 1. [link=NEA/Intro]Never Ending Adventure[/link]
 2. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=COT/Intro]Circle of Thorns[/link][/if][else]Circle of Thorns (locked)[/else]
 3. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=UP/Intro]Under Pressure[/link][/if][else]Under Pressure (locked)[/else]
 4. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=TOP/Intro]The Other Promise[/link][/if][else]The Other Promise (locked)[/else]
 5. [if=PLAYER_HAS_MAIL Current DuskspireDefeated][link=Epilogue/Intro]Epilogue[/link][/if][else]Epilogue (locked)[/else]",
-"guidebook.chapter.Title.FAQ": "FAQ: 
+"guidebook.chapter.Title.FAQ": "[center][font=dialogue]Frequently Asked Questions:[/font][/center]
 
-How do I advance the story and learn the skills, spells, recipes, etc? 
-This entire mod progresses linearly. See all of Mateo's events, meet {{TrueName}}. See all of {{TrueName}}'s events, meet Cirrus. See all of Cirrus' events, meet Roslin. See most of Roslin's events, meet Dandelion. See their remaining events, and proceed to the final dungeon and the associated final boss. By then, you will have unlocked most of everything. What remains will be documented here in this trusty guide.
+[color=maroon]How do I advance the story?[/color]
+This entire mod progresses linearly. See all of Mateo's events, meet {{TrueName}}. See all of {{TrueName}}'s events, meet Cirrus. See all of Cirrus' events, meet Roslin. See most of Roslin's events, meet Dandelion. See their remaining events, and proceed to the final dungeon and the associated final boss. By then, you will have unlocked most of everything. What remains will be documented here.
 
-Where are the fish? 
-Most fish added by S&S are in available in either {{TrueName}}'s Grove (the map with the big tree, accessible via the ritual circle in the Druid Tower after their 10h event) or the Pocket Dimension, and are not time restricted.
-The Salmon of Knowledge is available in Spring and Summer in any weather.
-Fastitocalon is available in all seasons in any weather.
-The Pallid Sailfin is available in Spring and Winter in sunny weather.
-The Giant Dragonfish is available in Fall and Winter in rainy weather.
-The Five Lined Constellation Fish is available in Summer and Fall in sunny weather. 
-Goldie the Battery Powered Fish is always available in the tiny pond in the Druid Tower.
- 
-How do I get all of the food recipes? 
-Autumnal Stew: Mailed by Mateo.
-Salish Bourbon: Mailed by Mateo.
-Dandelion Greens: Mailed by Dandelion.
-Mushrooms and Red Sauce: via Druidics skill. 
-Fern Greens and Pineapple: via Druidics skill. 
-Ancient Huckleberry ice Cream: via Druidics skill. 
-Lava Eel Stir Fried Ancient Bottle Gourd: via Druidics skill. 
-Portfire Drake Sparkler: Given by Cirrus during an event. 
-Zuzu Style Pizza: Given by Cirrus during an event. 
-Zuzu Style Bagel with Lox: Given by Cirrus during an event. 
-Zuzu Style Cheesecake: Given by Cirrus during an event. 
-Zuzu Style Clam Chowder: Given by Cirrus during an event. 
-Ancient Sweet Tea: Given by Dandelion during an event. 
-Farafield Snack: Purchased from the Lion's Mane after unlocking The Deep Dark. 
+[color=maroon]Where are the fish?[/color]
+Most fish added by S&S are in available in either the [color=green]Druid's Grove[/color] or the [color=green]Pocket Dimension[/color], and are not time restricted.
 
-add ren fair stuff
+> [itemtooltip=(O)DN.SnS_SalmonOfKnowledge][icon=Textures/DN.SnS/SnSObjects:32,144,16,16] Salmon of Knowledge[/itemtooltip]: 
+Available in Spring and Summer in any weather.
+> [itemtooltip=(O)DN.SnS_Fastitocalon][icon=Textures/DN.SnS/SnSObjects:48,144,16,16] Fastitocalon[/itemtooltip]: 
+Always available in any season, any weather.
+> [itemtooltip=(O)DN.SnS_PallidSailfin][icon=Textures/DN.SnS/SnSObjects:64,144,16,16] Pallid Sailfin[/itemtooltip]: 
+Available in Spring and Winter in Sunny weather.
+> [itemtooltip=(O)DN.SnS_GiantDragonfish][icon=Textures/DN.SnS/SnSObjects:80,144,16,16] Giant Dragonfish[/itemtooltip]: 
+Available in Fall and Winter in Rainy weather.
+> [itemtooltip=(O)DN.SnS_FiveLinedConstellationFish][icon=Textures/DN.SnS/SnSObjects:96,144,16,16] Five Lined Constellation Fish[/itemtooltip]: 
+Available in Summer and Fall in Sunny weather.
+> [itemtooltip=(O)DN.SnS_GoldieTheBatteryPoweredFish][icon=Textures/DN.SnS/SnSObjects:144,160,16,16] Goldie the Battery Powered Fish[/itemtooltip]: 
+Always available in the [color=green]Druid Tower[/color].
 
-What are the Ginger Beer flavors? 
-Orange, blueberry, pineapple, rhubarb, strawberry, peach, ancient elderberry, ancient appleberry, ancient huckleberry, ancient fruit. 
+[color=maroon]How do I get all of the food recipes?[/color]
+Some are sent in the mail, some are part of ranking the Druidics Skill, most are given during events, and one is sold at the Lion's Mane after unlocking the Deep Dark.
 
-How do I get Mateo, {{TrueName}}, and Cirrus' hoodies?
+> [itemtooltip=(O)DN.SnS_Steak_on_a_Stake][icon=Textures/DN.SnS/VioletMoonFood:0,0,16,16] Stake on a Stake[/itemtooltip]: Mailed by Stiles.
+> [itemtooltip=(O)DN.SnS_ScotchEgg][icon=Textures/DN.SnS/VioletMoonFood:16,0,16,16] Scotch Egg[/itemtooltip]: Mailed by Stiles.
+> [itemtooltip=(O)DN.SnS_Hand_Pressed_Apple_Cider][icon=Textures/DN.SnS/VioletMoonFood:32,0,16,16] Hand-Pressed Apple Cider[/itemtooltip]: Mailed by Stiles.
+> [itemtooltip=(O)DN.SnS_Fruit_Hand_Pie][icon=Textures/DN.SnS/VioletMoonFood:48,0,16,16] Fruit Hand Pie[/itemtooltip]: Mailed by Stiles.
+> [itemtooltip=(O)DN.SnS_Smoked_TurkeyLeg][icon=Textures/DN.SnS/VioletMoonFood:64,0,16,16] Smoked Turkey Leg[/itemtooltip]: Mailed by Stiles.
+> [itemtooltip=(O)DN.SnS_autumnalstew][icon=Textures/DN.SnS/SnSObjects:128,16,16,16] Autumnal Stew[/itemtooltip]: Mailed by Mateo.
+> [itemtooltip=(O)DN.SnS_salishbourbon][icon=Textures/DN.SnS/SnSObjects:112,16,16,16] Salish Bourbon[/itemtooltip]: Mailed by Mateo.
+> [itemtooltip=(O)DN.SnS_dandeliongreens][icon=Textures/DN.SnS/SnSObjects:144,16,16,16] Dandelion Greens[/itemtooltip]: Mailed by Dandelion.
+> [itemtooltip=(O)DN.SnS_mushroomsredsauce][icon=Textures/DN.SnS/SnSObjects:112,32,16,16] Mushrooms and Red Sauce[/itemtooltip]: via Druidics.
+> [itemtooltip=(O)DN.SnS_ferngreensandpineapple][icon=Textures/DN.SnS/SnSObjects:128,32,16,16] Fern Greens and Pineapple[/itemtooltip]: via Druidics.
+> [itemtooltip=(O)DN.SnS_ancienthuckleberryicecream][icon=Textures/DN.SnS/SnSObjects:144,32,16,16] Ancient Huckleberry Ice Cream[/itemtooltip]: via Druidics.
+> [itemtooltip=(O)DN.SnS_lavaeelandstirfriedancientbottlegourd][icon=Textures/DN.SnS/SnSObjects:0,48,16,16] Lava Eel & Bottle Gourd[/itemtooltip]: via Druidics.
+> [itemtooltip=(O)DN.SnS_portfiredrakesparkler][icon=Textures/DN.SnS/SnSObjects:0,32,16,16] Portfire Drake Sparkler[/itemtooltip]: Given by Cirrus.
+> [itemtooltip=(O)DN.SnS_zuzustylepizza][icon=Textures/DN.SnS/SnSObjects:96,64,16,16] ZuZu Style Pizza[/itemtooltip]: Given by Cirrus.
+> [itemtooltip=(O)DN.SnS_zuzustylebagelwithlox][icon=Textures/DN.SnS/SnSObjects:112,64,16,16] ZuZu Style Bagel with Lox[/itemtooltip]: Given by Cirrus.
+> [itemtooltip=(O)DN.SnS_zuzustylecheesecake][icon=Textures/DN.SnS/SnSObjects:128,64,16,16] ZuZu Style Cheesecake[/itemtooltip]: Given by Cirrus.
+> [itemtooltip=(O)DN.SnS_zuzustyleclamchowder][icon=Textures/DN.SnS/SnSObjects:144,64,16,16] ZuZu Style Clam Chowder[/itemtooltip]: Given by Cirrus.
+> [itemtooltip=(O)DN.SnS_ancientsweettea][icon=Textures/DN.SnS/SnSObjects:64,128,16,16] Ancient Sweet Tea[/itemtooltip]: Given by Dandelion.
+> [itemtooltip=(O)DN.SnS_farafieldsnack][icon=Textures/DN.SnS/SnSObjects:128,176,16,16] Farafield Snack[/itemtooltip]: The Lion's Mane.
+
+[color=maroon]What are the Ginger Beer flavors?[/color]
+You can craft Old-Fashioned Fermenters after learning how from Cirrus. Add ginger and fruit to make flavored Ginger Beer, which can be aged.
+
+> [itemtooltip=(O)DN.SnS_orangegingerbeer][icon=Textures/DN.SnS/SnSObjects:96,112,16,16] Orange Flavored Ginger Beer[/itemtooltip]
+> [itemtooltip=(O)DN.SnS_blueberrygingerbeer][icon=Textures/DN.SnS/SnSObjects:112,112,16,16] Blueberry Flavored Ginger Beer[/itemtooltip]
+> [itemtooltip=(O)DN.SnS_pineapplegingerbeer][icon=Textures/DN.SnS/SnSObjects:128,112,16,16] Pineapple Flavored Ginger Beer[/itemtooltip]
+> [itemtooltip=(O)DN.SnS_rhubarbgingerbeer][icon=Textures/DN.SnS/SnSObjects:144,112,16,16] Rhubarb Flavored Ginger Beer[/itemtooltip]
+> [itemtooltip=(O)DN.SnS_strawberrygingerbeer][icon=Textures/DN.SnS/SnSObjects:0,128,16,16] Strawberry Flavored Ginger Beer[/itemtooltip]
+> [itemtooltip=(O)DN.SnS_peachgingerbeer][icon=Textures/DN.SnS/SnSObjects:16,128,16,16] Peach Flavored Ginger Beer[/itemtooltip]
+> [itemtooltip=(O)DN.SnS_ancientfruitgingerbeer][icon=Textures/DN.SnS/SnSObjects:32,128,16,16] Ancient Fruit Flavored Ginger Beer[/itemtooltip]
+> [itemtooltip=(O)DN.SnS_ancienthuckleberrygingerbeer][icon=Textures/DN.SnS/SnSObjects:32,128,16,16] Ancient Huckleberry Flavored Ginger Beer[/itemtooltip]
+> [itemtooltip=(O)DN.SnS_ancientappleberrygingerbeer][icon=Textures/DN.SnS/SnSObjects:32,128,16,16] Ancient Appleberry Flavored Ginger Beer[/itemtooltip]
+> [itemtooltip=(O)DN.SnS_ancientelderberrygingerbeer][icon=Textures/DN.SnS/SnSObjects:32,128,16,16] Ancient Elderberry Flavored Ginger Beer[/itemtooltip]
+
+[color=maroon]How do I get Mateo, {{TrueName}}, and Cirrus' hoodies?[/color]
 Marry them. 
 
-How do I turn off the Adventure Bar?
+[color=maroon]How do I turn off the Adventure Bar?[/color]
 Ctrl+U is the default hotkey. This can be changed in the SMAPI portion of the S&S config. 
 
-{{TrueName}}'s seasonal quests have disappeared!
-They were removed permanently in 2.1.0. You can now pregress as intended without them.
+[color=maroon]{{TrueName}}'s seasonal quests have disappeared![/color]
+They were removed permanently in 2.1.0. You can now progress as intended without them.
 
-The plus doesn't match my recolor! 
-This menu is used by S&S but is added by Spacecore. S&S covers most major recolors, but in case you'd like to add one, it can be targeted via: spacechase0.SpaceCore/ExtraEquipmentIcon 
+[color=maroon]The plus doesn't match my recolor![/color] 
+This menu is used by S&S but is added by Spacecore. S&S covers most major recolors, but in case you'd like to add one, it can be targeted: 
+> spacechase0.SpaceCore/ExtraEquipmentIcon 
 
-Will Sword & Sorcery ever have a standalone Skills component?
+[color=maroon]Another UI element doesn't match my recolor![/color] 
+If it's your recolor and you've made the assets for it, please let us know and we can include it. If you have a request, please reach out on Discord or in the Nexus comments.
+
+[color=maroon]Is there a standalone Skills component?[/color]
 No. If you are interested in mechanics-only mods, there are other alternatives. S&S is, first and foremost, a content expansion. 
 
-Is Sword & Sorcery compatible with multiple spouse mods?
-Use at your own risk, and report associated issues to the respective authors - not the S&S team. S&S's romanceable NPCs are not designed to be polyamorous, and {{TrueName}} is monogamous by design due to mechanical reasons. ",
+[color=maroon]Is S&S compatible with multiple spouse mods?[/color]
+Use at your own risk, and report associated issues to the respective authors - not the S&S team. S&S's romanceable NPCs are not designed to be polyamorous, and {{TrueName}} is monogamous by design due to mechanical reasons.
+
+[color=maroon]Who is Stiles Siddell?[/color]
+A character planned for Sword & Sorcery: Final Mix, a standalone remake of this mod.",
 "guidebook.chapter.Title.Cheats": "Arsenal
 sns_encrustweapon ItemID - Encrusts held weapon
 sns_coatweapon ItemID  - Coats held weapon
