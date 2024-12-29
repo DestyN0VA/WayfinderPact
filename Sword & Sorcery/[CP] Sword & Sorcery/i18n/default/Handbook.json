@@ -13,8 +13,15 @@
 
   "Furniture.PlayersHandbook": "S&S Player's Handbook",
 
-  "guidebook.title": "Sword & Sorcery",
+  "guidebook.chapter.Miscellaneous.Name": "Miscellaneous",
+  "guidebook.chapter.Mechanics.Name": "Mechanics",
+  "guidebook.chapter.Characters.name": "Characters",
+  "guidebook.chapter.Dedication.name": "Dedication",
   "guidebook.chapter.Title.name": "Introduction",
+  "guidebook.chapter.Chapters.name": "Chapters",
+  "guidebook.chapter.Skills.name": "Skills",
+  "guidebook.chapter.DeepDark.Name": "The Deep Dark",
+  "guidebook.title": "Sword & Sorcery",
   "guidebook.chapter.Title.TitlePage.ConfigLinks": "[nospacing][nextposition=0,40][center=300][font=dialogue][texttooltip=:Opens GMCM for the Content Patcher component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig DN.SnS]CP Config[/action][/texttooltip][/font][/center][offset=300,0][center=300][font=dialogue][texttooltip=:Opens GMCM for the SMAPI component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig KCC.SnS]SMAPI Config[/action][/texttooltip][/font][/center][/nospacing]",
   "guidebook.chapter.Title.TitlePage": "{{ConfigMenuLinks}}
 [nospacing][nextposition=120,110][image=SMAPI/dn.sns/assets/guidebook/logo.png:null:1][nextposition=0,null][offset=0,250][/nospacing]
@@ -25,7 +32,12 @@
 [nextposition=0,null]
 [/nospacing]",
   "guidebook.chapter.Title.Introduction": "[center][font=dialogue]Introduction[/font][/center]
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+chapter jump list
+1
+2
+3
+4
+5",
 
   "guidebook.chapter.Title.TableOfContents": "[center][font=dialogue]Table of Contents - Story[/font][/center]
 1. [link=NEA/Intro]Never Ending Adventure[/link]
@@ -122,9 +134,8 @@ Ballad of Chronomancy - song_time
 Track of {{HorseName}} - song_horse
 Druid's Lullaby - song_crop
 A Walk In Adante - song_obelisk",
-
-  "guidebook.chapter.NEA.name": "Never Ending Adventure",
-  "guidebook.chapter.NEA.Intro": "[center][font=dialogue]Introduction[/font][/center]
+  "guidebook.chapter.NEA.Intro": "[center][font=dialogue]Chapter 1[/font][/center]
+  [center][font=dialogue]Never Ending Adventure[/font][/center]
    
 This first chapter of S&S introduces you to Mateo, a charming rogue with a sordid history. Unravel their connection to the Museum's missing contents, help them reconnect with the townsfolk, learn the Artificer skill, unlock the Underforge, the Arsenal system, and found a new branch of the Adventurer's Guild.",
   "guidebook.chapter.NEA.Mateo": "[nospacing]
@@ -450,11 +461,8 @@ Your first attack after using the ability is an automatic critical hit.][icon=SM
     hits on the same creature do slightly
     more damage each time.",
 
-"guidebook.chapter.NEA.Armor": "Armor
-Explain what the fuck these do, add info on the new ones",
-
-  "guidebook.chapter.COT.name": "Circle of Thorns",
-  "guidebook.chapter.COT.Intro": "[center][font=dialogue]Introduction[/font][/center]
+  "guidebook.chapter.COT.Intro": "[center][font=dialogue]Chapter 2[/font][/center]
+  [center][font=dialogue]Circle of Thorns[/font][/center]
  
 The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} as 'Hector'; a druid deeply rooted to the earth itself. Learn about what has this wolf snapping at the hand that feeds {{HPN2}} - gain the trust of one of the Valley's nature guardians and purify a river corrupted by pollution, learn the Druid skill, collect Druidic Essences, and unlock the True Grove and the secrets it hides.",
   "guidebook.chapter.COT.Hector": "[nospacing]
@@ -475,7 +483,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [nextposition=0,288]
 [/nospacing]
 A mysterious grimoire with a hidden catalogue of power, including shapeshifting and druidics. She cares deeply for {{TrueName}} and is determined to watch over {{HPN2}} - and seemingly has been for many, many years with no intention of leaving the Druid's side.",
-  "guidebook.chapter.COT.Events": "[center][font=dialogue]Story so far[/font][/center]
+"guidebook.chapter.COT.Events": "[center][font=dialogue]Story so far[/font][/center]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14]
 [font=dialogue]{{TrueName}} Event: 0 Hearts[/font]
@@ -825,8 +833,8 @@ Also gains combat abilities.][icon=SMAPI/kcc.sns/assets/druidics/wolfpath.png:0,
      surrounding crops with the same range 
      as a Quality Sprinkler.",
 
-"guidebook.chapter.UP.name": "Under Pressure",
-"guidebook.chapter.UP.Intro": "[center][font=dialogue]Introduction[/font][/center]
+"guidebook.chapter.UP.Intro": "[center][font=dialogue]Chapter 3[/font][/center]
+[center][font=dialogue]Under Pressure[/font][/center]
  
 The third chapter of S&S follows Cirrus, a pop-rock star known all across the Ferngill Republic. Help her set boundaries with her ill-intentioned mother, form authentic relationships with the residents of East Scarp and Pelican Town, maintain a work-life balance, build The Lion's Mane, and discover her true magical prowess...",
 "guidebook.chapter.UP.Events": "[center][font=dialogue]The Story Thus Far:[/font][/center]
@@ -1157,8 +1165,8 @@ Like vanilla skills, the Bardics skill provides professions that change the game
     Damage of [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color] is extended
     to the entire location.",
 
-"guidebook.chapter.TOP.name": "The Other Promise",
-"guidebook.chapter.TOP.Intro": "[center][font=dialogue]Introduction[/font][/center]
+"guidebook.chapter.TOP.Intro": "[center][font=dialogue]Chapter 4[/font][/center]
+[center][font=dialogue]The Other Promise[/font][/center]
    
 The forth chapter of S&S revolves around a quest to rescue Dandelion, the heroic partner of questionable Sorcerer, Roslin, her and her patron, Solomon. Uncover the secrets of the Arcane, master the use of Elemental Essences, become a Sorcerer yourself, become an Alchemist, become a Paladin (if you aren't already) and lay waste to the haunted beast hidden in the Deep Dark underneath The Scarp. ",
 
@@ -1180,7 +1188,7 @@ Roslin is a skilled Sorcerer hailing from the city of Amon'Zod, a desert city a 
 [nextposition=322,16][image=Portraits/Dandelion:0,0,64,64:4]
 [nextposition=0,288]
 [/nospacing]
-Dandelion is a Paladin who's got a tumultuous relatoinship with her Oath, and apparent difficulty keeping track of her limbs. Despite her heroic tendencies, she aches to lay her sword and shield down by the flowers.",
+Dandelion is a Paladin who's got a tumultuous relationship with her Oath, and apparent difficulty keeping track of her limbs. Despite her heroic tendencies, she aches to lay her sword and shield down by the flowers.",
 
 "guidebook.chapter.TOP.Solomon": "[nospacing]
 [nextposition=0,10][center=300][font=dialogue]Solomon[/font][/center]
@@ -1602,9 +1610,10 @@ Fucking Kill Me This Place Needs Its Own Wiki
 (...slightly)
 (might do well with its own tab....)",
 
-"guidebook.chapter.Epilogue.name": "Epilogue",
 
-"guidebook.chapter.Epilogue.Intro": "[center][font=dialogue]Introduction[/font][/center]
+
+"guidebook.chapter.Epilogue.Intro": "[center][font=dialogue]Chapter 5[/font][/center]
+[center][font=dialogue]Epilogue[/font][/center]
    
 Wrap up S&S's story in this final chapter, with a series of epilogues for each major NPC meant to put a bow on this lengthy tale. ",
 
@@ -1739,14 +1748,10 @@ Like vanilla skills, the Paladin skill provides professions that change the game
     automatically deal damage back at your
     enemies.",
 
-"guidebook.chapter.Epilogue.Shields": "Shields
-Data collection required",
-
 "guidebook.chapter.Epilogue.FinalMessage": "[center][font=dialogue]Final Message[/font][/center]
    
 This project is dedicated to the memory of TheLoreSeeker, a beloved community member who made a point to encourage people's wildest ideas. He may no longer be with us, but he lives on in the content of those he inspired. Thank you, to him and everyone else who contributed to S&S. And especially to you, the player, for seeing this story all the way to the end. Signed with love, DestyNova.",
 
-"guidebook.chapter.DeepDark.Name": "The Deep Dark",
 "guidebook.chapter.DeepDark.Intro": "[center][font=dialogue]Introduction[/font][/center]
  
 The Deep Dark is a late-game 30 [link=DeepDark/Floors]floor[/link] dungeon crawling with powerful [link=DeepDark/Monsters]monsters[/link] and the rare ore, [Link=DeepDark/Stygium]Stygium[/link]. Here you'll find beautiful maps, custom forage and new monsters with unique item drop pools. Once you reach the end you'll face off against the mod's final boss: The [Link=DeepDark/Duskspire]Duskspire Behemoth[/link].
@@ -2009,7 +2014,8 @@ Notes:
  
 When defeated, the Duskspire drops [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16][color=blue]Duskspire Hearts[/color][/itemtooltip], which are used to purify [Link=DeepDark/Stygium]Stygium Tools[/link]. The Duskspire can then be re-fought in a weaker form to obtain more Duskspire Hearts. This fight resets every Monday.",
 
-"guidebook.chapter.Mechanics.Name": "Mechanics",
+"guidebook.chapter.Mechanics.TableOfContents": "description and quick links to everything here",
+
 "guidebook.chapter.Mechanics.Skills": "table of contents, have a spot to jump to the skills
  
 [font=dialogue]New Skills[/font]
@@ -2019,17 +2025,53 @@ When defeated, the Duskspire drops [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=T
 4. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6][link=TOP/SorcererSkill]Sorcerer[/link][/if][else]Sorcerer (locked)[/else]
 4. [if=ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\"][link=Epilogue/PaladinSkill]Paladin[/link][/if][else]Paladin (locked)[/else]",
 "guidebook.chapter.Mechanics.EquipmentSlots": "Equipment Slots Offhand, Armor",
-"guidebook.chapter.Mechanics.AdventureBar": "[font=dialogue]Adventure Bar[/font]
+"guidebook.chapter.Mechanics.SMAPIConfigLink.On": "[color=purple][texttooltip=:Opens GMCM for the SMAPI component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig KCC.SnS]SMAPI Config[/action][/texttooltip][/color]",
+"guidebook.chapter.Mechanics.SMAPIConfigLink.Off": "SMAPI Config",
+"guidebook.chapter.Mechanics.AdventureBar": "[center][font=dialogue]Adventure Bar[/font][/center]
  
-On the left side of your screen, you can see two columns with a bar underneath. This is the Adventure Bar. The columns repesent ability slots that you can activate with keybindings. The bar underneath is your Aether, which is consumed to use most abilities. To use an ability, use the keybinding configured for that slot. (default: Ctrl+NUMBER or Shift+NUMBER, though these can be configured in GMCM). If you're using a gamepad, the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod can also be used to trigger configured abilities.
+After obtaining [link=Skills/ArtificerProfessions]Shadowstep[/link] or [link=Skills/DruidicsSkill]Shapeshifting[/link], you will unlock the [color=Navy]Adventure Bar[/color], which hosts your abilities and displays your current [color=Navy]Aether[/color].
  
-You can change what abilities are in which slots by using the Adventure Bar Menu keybinding (default: U). You will unlock different abilities throughout the story of the Sword & Sorcery.
+You can change which abilities you have equipped through the [color=Navy]Adventure Bar Menu[/color]. You will unlock different abilities throughout the story of Sword & Sorcery.
  
-The adventure bar can be hidden with the configured keybinding (default: Ctrl+U).",
-"guidebook.chapter.Mechanics.ShieldsArmor": "
+[font=dialogue]Using the Adventure Bar[/font]
+You can use the Adventure Bar abilities using the [color=Navy]CTRL/SHIFT + Row Number[color] keybinds and access the Adventure Bar Menu by pressing [color=Navy]U[/color]. When using a controller the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod is highly recommended. You can also hide the Adventure Bar by pressing [color=Navy]CTRL + U[/color], you cannot use abilities while the Adventure Bar is hidden.
+All keybinds can be changed through the {{Config}}.",
+"guidebook.chapter.Mechanics.ShieldsArmor": "[center][font=dialogue]Armor Points[/font][/center]
+ 
+Armor Points act as an extra buffer that absorbs damage before you lose health from your health bar. Armor Points come from [color=Navy]Armor[/color] and [color=Navy]Shields[/color]. It automatically replenishes at the beginning of each day.
+ 
 [font=dialogue]Armor[/font]
+After reaching [link=Skills/ArtificerSkill]Artificer[/link] level 1, you can craft armor for the [color=Navy]Armor Slot[/color] on your [link=Mechanics/EquipmentSlots]Equipment Menu[/link]. Armor is the main method for gaining Armor Points.
  
-After reaching level 1 [link=NEA/ArtificerSkill]Artificer[/link], you can craft armor for the armor slot on the equipment menu. Armor acts as an extra buffer that absorbs damage before your health bar. It automatically repairs itself at the beginning of each day.",
+> All Armor
+ = [itemtooltip=(O)DN.SnS_ClothArmor][icon=Textures/DN.SnS/SnSArsenal:32,48,16,16] [color=blue]Cloth Armor[/color][/itemtooltip] - Provides 25 Armor Points
+ = [itemtooltip=(O)DN.SnS_CopperArmor][icon=Textures/DN.SnS/SnSArsenal:48,48,16,16] [color=blue]Copper Armor[/color][/itemtooltip] - Provides 50 Armor Points
+ = [itemtooltip=(O)DN.SnS_IronArmor][icon=Textures/DN.SnS/SnSArsenal:64,48,16,16] [color=blue]Iron Armor[/color][/itemtooltip] - Provides 75 Armor Points
+ = [itemtooltip=(O)DN.SnS_GoldArmor][icon=Textures/DN.SnS/SnSArsenal:80,48,16,16] [color=blue]Gold Armor[/color][/itemtooltip] - Provides 100 Armor Points
+ = [itemtooltip=(O)DN.SnS_IridiumArmor][icon=Textures/DN.SnS/SnSArsenal:96,48,16,16] [color=blue]Iridium Armor[/color][/itemtooltip] - Provides 125 Armor Points
+ = [itemtooltip=(O)DN.SnS_RadioactiveArmor][icon=Textures/DN.SnS/SnSArsenal:0,64,16,16] [color=blue]Radioactive Armor[/color][/itemtooltip] - Provides 150 Armor Points
+ = [itemtooltip=(O)DN.SnS_StygiumArmor][icon=Textures/DN.SnS/SnSArsenal:0,112,16,16] [color=blue]Stygium Armor[/color][/itemtooltip] - Provides 175 Armor Points
+ = [itemtooltip=(O)DN.SnS_ElysiumArmor][icon=Textures/DN.SnS/SnSArsenal:16,112,16,16] [color=blue]Elysium Armor[/color][/itemtooltip] - Provides 200 Armor Points
+ 
+[font=dialogue]Shields[/font]
+Shields are a new type of weapon available to the player. They can be used as a melee weapon to directly hit enemies, or be thrown using right click (or the Controller equivalent) to hit an enemy and deal damage on impact. They additionally provide Armor Points to absorb damage and can be equipped in the [color=Navy]Shield Slot[/color] in your [link=Mechanics/EquipmentSlots]Equipment Menu[/link].
+ 
+> Normal Shields (Always available to craft.)
+ = [itemtooltip=(W)DN.SnS_WoodenShield][icon=Textures/DN.SnS/SnSObjects:128,192,16,16] [color=blue]Wooden Shield[/color][/itemtooltip] - Provides 2 Armor Points
+ = [itemtooltip=(W)DN.SnS_CopperShield][icon=Textures/DN.SnS/SnSObjects:16,192,16,16] [color=blue]Copper Shield[/color][/itemtooltip] - Provides 5 Armor Points
+ = [itemtooltip=(W)DN.SnS_IronShield][icon=Textures/DN.SnS/SnSObjects:112,160,16,16] [color=blue]Iron Shield[/color][/itemtooltip] - Provides 10 Armor Points
+ = [itemtooltip=(W)DN.SnS_GoldShield][icon=Textures/DN.SnS/SnSObjects:32,192,16,16] [color=blue]Gold Shield[/color][/itemtooltip] - Provides 15 Armor Points
+ = [itemtooltip=(W)DN.SnS_IridiumShield][icon=Textures/DN.SnS/SnSObjects:48,192,16,16] [color=blue]Iridium Shield[/color][/itemtooltip] - Provides 20 Armor Points
+ = [itemtooltip=(W)DN.SnS_RadioactiveShield][icon=Textures/DN.SnS/SnSObjects:64,192,16,16] [color=blue]Radioactive Shield[/color][/itemtooltip] - Provides 25 Armor Points
+ = [itemtooltip=(W)DN.SnS_StygiumShield][icon=Textures/DN.SnS/SnSObjects:80,192,16,16] [color=blue]Stygium Shield[/color][/itemtooltip] - Provides 30 Armor Points
+ 
+ > Skill Shields (Available after the [link=DeepDark/Duskspire]Final Boss[/link] fight and the [link=Skills/PaladinSkill]Paladin Skill[/link].)
+ = [itemtooltip=(W)DN.SnS_PaladinShield][icon=Textures/DN.SnS/SnSObjects:96,16,16,16] [color=blue]Paladin Shield[/color][/itemtooltip] - Provides 35 Armor Points.
+ = [itemtooltip=(W)DN.SnS_ArtificerShield][icon=Textures/DN.SnS/SnSObjects:48,160,16,16] [color=blue]Artificer Shield[/color][/itemtooltip] - Provides 35 Armor Points.
+ = [itemtooltip=(W)DN.SnS_DruidShield][icon=Textures/DN.SnS/SnSObjects:64,160,16,16] [color=blue]Druid Shield[/color][/itemtooltip] - Provides 35 Armor Points. 
+ = [itemtooltip=(W)DN.SnS_BardShield][icon=Textures/DN.SnS/SnSObjects:80,160,16,16] [color=blue]Bardics Shield[/color][/itemtooltip] - Provides 35 Armor Points.
+ = [itemtooltip=(W)DN.SnS_SorcererShield][icon=Textures/DN.SnS/SnSObjects:96,160,16,16] [color=blue]Sorcerer Shield[/color][/itemtooltip] - Provides 35 Armor Points.
+",
 "guidebook.chapter.Mechanics.DualWielding": "[font=dialogue]Dual Wielding[/font]
 Sword & Sorcery introduces a dual-wielding feature, allowing you to attack with two weapons at once. To equip a weapon in your off-hand slot, open your inventory and click a button to the left of the window that looks like the following:
  

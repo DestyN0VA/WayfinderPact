@@ -612,22 +612,22 @@
             "Price": "5000",
             "CustomFields": { "{{ModID}}_Shield": true, "ArmorValue": 35 }
           },*/
-          "{{ModID}}_WoodenShield": {
-            "Name": "{{ModID}}_WoodenShield",
-            "DisplayName": "{{i18n: weapon.wooden-shield.name}}",
-            "Description": "{{i18n: weapon.wooden-shield.description}}",
-            "MinDamage": 2,
-            "MaxDamage": 3,
-            "Type": 3,
-            "Texture": "Textures/DN.SnS/SnSObjects",
-            "SpriteIndex": 128,
-            "CanBeLostOnDeath": true,
-            "Price": "500",
-            "CustomFields": {
-              "{{ModID}}_Shield": true,
-              "ArmorValue": 2
-            }
-          },
+        "{{ModID}}_WoodenShield": {
+          "Name": "{{ModID}}_WoodenShield",
+          "DisplayName": "{{i18n: weapon.wooden-shield.name}}",
+          "Description": "{{i18n: weapon.wooden-shield.description}}",
+          "MinDamage": 2,
+          "MaxDamage": 3,
+          "Type": 3,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 128,
+          "CanBeLostOnDeath": true,
+          "Price": "500",
+          "CustomFields": {
+            "{{ModID}}_Shield": true,
+            "ArmorValue": 2
+          }
+        },
         "{{ModID}}_CopperShield": {
           "Name": "{{ModID}}_CopperShield",
           "DisplayName": "{{i18n: weapon.copper-shield.name}}",
