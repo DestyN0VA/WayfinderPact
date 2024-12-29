@@ -137,7 +137,7 @@ namespace SwordAndSorcerySMAPI
                         {
                             monster.invincibleCountdown = -1;
                             
-                            Game1.Multiplayer.broadcastSprites(location, new TemporaryAnimatedSprite(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/ThorLightning.png").BaseName, new Rectangle(0, 0, 32, 48), 75, 16, 0, Utility.PointToVector2(monster.GetBoundingBox().Center), false, false) { scale = 4 } );
+                            Game1.Multiplayer.broadcastSprites(location, new TemporaryAnimatedSprite(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/ThorLightning.png").BaseName, new Rectangle(0, 0, 32, 48), 75, 16, 0, monster.Position - new Vector2(64, 96), false, false) { scale = 4 } );
                         }
                     }
                     location.damageMonster(new Rectangle((int)position.X - Game1.tileSize * 3 / 2, (int)position.Y - Game1.tileSize * 3 / 2, Game1.tileSize * 3, Game1.tileSize * 3), this.Damage.Value, this.Damage.Value, false, (Farmer)this.theOneWhoFiredMe.Get(location), true);
@@ -203,7 +203,7 @@ namespace SwordAndSorcerySMAPI
             else
             {
                 if (TargetMonster.Get(location) != null)
-                    Target.Value = TargetMonster.Get(location).Position;
+                    Target.Value = Utility.PointToVector2(TargetMonster.Get(location).GetBoundingBox().Center);
             }
 
             base.update(time, location);

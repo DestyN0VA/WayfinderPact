@@ -33,10 +33,10 @@
 [offset=200,0][center=200][font=dialogue][link=https://ko-fi.com/destynova]Ko-fi[/link][/font][/center]
 [nextposition=0,null]
 [/nospacing]",
-"guidebook.chapter.Title.Introduction": "[center][font=dialogue]About[/font][/center]
+"guidebook.chapter.Title.Introduction": "[center][font=dialogue][offset=0,8]About[/font][/center]
  
 Sword & Sorcery is a vanilla adjacent, magical adventure inspired by the likes of Dungeons & Dragons, Balder's Gate, and Final Fantasy. Follow the complex story of the Coastal Adventurer's Guild as it's members learn, grow and change thanks to The Farmer's intervention. It starts with a lone tent on the beach, and ends in a battle to save East Scarp from the remnants of a tragedy long thought passed.",
-  "guidebook.chapter.Chapters.JumpList": "[center][font=dialogue]Introduction[/font][/center]
+  "guidebook.chapter.Chapters.JumpList": "[center][font=dialogue][offset=0,8]Introduction[/font][/center]
 chapter jump list
 1
 2
@@ -45,7 +45,7 @@ chapter jump list
 5",
 
   "guidebook.chapter.Title.TableOfContents": "redo all of this",
-"guidebook.chapter.Title.FAQ": "[center][font=dialogue]Frequently Asked Questions:[/font][/center]
+"guidebook.chapter.Title.FAQ": "[center][font=dialogue][offset=0,8]Frequently Asked Questions:[/font][/center]
  
 [color=maroon]How do I advance the story?[/color]
 This entire mod progresses linearly. See all of Mateo's events, meet {{TrueName}}. See all of {{TrueName}}'s events, meet Cirrus. See all of Cirrus' events, meet Roslin. See most of Roslin's events, meet Dandelion. See their remaining events, and proceed to the final dungeon and the associated final boss. By then, you will have unlocked most of everything. What remains will be documented here.
@@ -150,7 +150,7 @@ Ballad of Chronomancy - song_time
 Track of {{HorseName}} - song_horse
 Druid's Lullaby - song_crop
 A Walk In Adante - song_obelisk",
-  "guidebook.chapter.NEA.Intro": "[center][font=dialogue]Chapter 1[/font][/center]
+  "guidebook.chapter.NEA.Intro": "[center][font=dialogue][offset=0,8]Chapter 1[/font][/center]
   [center][font=dialogue]Never Ending Adventure[/font][/center]
    
 This first chapter of S&S introduces you to Mateo, a charming rogue with a sordid history. Unravel their connection to the Museum's missing contents, help them reconnect with the townsfolk, learn the Artificer skill, unlock the Underforge, the Arsenal system, and found a new branch of the Adventurer's Guild.",
@@ -172,7 +172,7 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 [nextposition=0,288]
 [/nospacing]
 Emeritus is a jovial Pepper Rex who hatches with one goal: to protect East Scarp from the crab menace. He's the most loyal sidekick there is, and loves the occasional kiss on the forehead. He'll return it with bonus slobber!",
-  "guidebook.chapter.NEA.Events": "[center][font=dialogue]The Story Thus Far:[/font][/center]
+  "guidebook.chapter.NEA.Events": "[center][font=dialogue][offset=0,8]The Story Thus Far:[/font][/center]
    
 [font=dialogue]Mateo Event: 0 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.0]Complete![/if]
@@ -366,7 +366,7 @@ Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between 8am and 
 [/else]
 [/if]", 
 
-"guidebook.chapter.NEA.Underforge": "[center][font=dialogue]Underforge[/font][/center]
+"guidebook.chapter.NEA.Underforge": "[center][font=dialogue][offset=0,8]Underforge[/font][/center]
  
 You can go to the [color=green]Underforge[/color] in the [color=green]Coastal Adventurer's Guild[/color] by going through a door to the right of the main room. Here, you can attach three different types of items to your weapon to make them stronger. You can do this by using the forge in the top left of the map.
  
@@ -396,7 +396,7 @@ You can attach a large amount of certain monster loot to a weapon to give it new
  
 You can choose one item type from each category above.",
 
-"guidebook.chapter.NEA.ArtificerSkill": "[center][font=dialogue]Artificer[/font][/center]
+"guidebook.chapter.NEA.ArtificerSkill": "[center][font=dialogue][offset=0,8]Artificer[/font][/center]
  
 You've unlocked the Artificer skill! Artificer can be leveled up killing monsters and mining.
  
@@ -445,7 +445,7 @@ You've unlocked the Artificer skill! Artificer can be leveled up killing monster
  
 > Level 10 - See the [link=Skills/ArtificerProfessions]Artificer Professions[/link] page.",
 
-"guidebook.chapter.NEA.ArtificerProfessions": "[center][font=dialogue]Professions[/font][/center]
+"guidebook.chapter.NEA.ArtificerProfessions": "[center][font=dialogue][offset=0,8]Professions[/font][/center]
   
 Like vanilla skills, the Artificer skill provides professions that change the gameplay experience at levels 5 and 10.
  
@@ -477,7 +477,7 @@ Your first attack after using the ability is an automatic critical hit.][icon=SM
     hits on the same creature do slightly
     more damage each time.",
 
-  "guidebook.chapter.COT.Intro": "[center][font=dialogue]Chapter 2[/font][/center]
+  "guidebook.chapter.COT.Intro": "[center][font=dialogue][offset=0,8]Chapter 2[/font][/center]
   [center][font=dialogue]Circle of Thorns[/font][/center]
  
 The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} as 'Hector'; a druid deeply rooted to the earth itself. Learn about what has this wolf snapping at the hand that feeds {{HPN2}} - gain the trust of one of the Valley's nature guardians and purify a river corrupted by pollution, learn the Druid skill, collect Druidic Essences, and unlock the True Grove and the secrets it hides.",
@@ -499,7 +499,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 [nextposition=0,288]
 [/nospacing]
 A mysterious grimoire with a hidden catalogue of power, including shapeshifting and druidics. She cares deeply for {{TrueName}} and is determined to watch over {{HPN2}} - and seemingly has been for many, many years with no intention of leaving the Druid's side.",
-"guidebook.chapter.COT.Events": "[center][font=dialogue]The Story Thus Far:[/font][/center]
+"guidebook.chapter.COT.Events": "[center][font=dialogue][offset=0,8]The Story Thus Far:[/font][/center]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14]
 [font=dialogue]{{TrueName}} Event: 0 Hearts[/font]
@@ -762,7 +762,7 @@ A mysterious grimoire with a hidden catalogue of power, including shapeshifting 
 [/else]
 [/if]
 [/if]",
-  "guidebook.chapter.COT.DruidicEssence": "[center][font=dialogue]Druidic Essence[/font][/center]
+  "guidebook.chapter.COT.DruidicEssence": "[center][font=dialogue][offset=0,8]Druidic Essence[/font][/center]
    
 At this point, you've unlocked [itemtooltip=(O)DN.SnS_druidicessence][icon=Textures/DN.SnS/SnSObjects:80,0,16,16] [color=blue]Druidic Essence[/color][/itemtooltip]. This is used for a special order during the story, as well as for crafting as you progress in the [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Skills/DruidicsSkill]Druidics[/link] skill[/if][else]Druidics skill (locked)[/else].
  
@@ -773,7 +773,7 @@ You can gather this item in the following ways:
 > Cutting grass
  
 Be sure to keep saving these after the special order is complete. They will definitely come in handy!",
-  "guidebook.chapter.COT.DruidicsSkill": "[center][font=dialogue]Druidics[/font][/center]
+  "guidebook.chapter.COT.DruidicsSkill": "[center][font=dialogue][offset=0,8]Druidics[/font][/center]
 [offset=200,0][image=SMAPI/kcc.sns/assets/druidics/druid.png:0,0,16,16:4]You've unlocked the Druidics skill! Druidics can be leveled up by farming and foraging.
  
 Each level, you will increase your transformed movement speed and regeneration speed, as well as the drop rate of [link=Mechanics/DruidicEssence]Druidic Essence[/link].
@@ -812,7 +812,7 @@ Recipe Unlocks:
  
 > Level 10 - See the [link=Skills/DruidicsProfessions]Druidics Professions[/link] page.",
 
-"guidebook.chapter.COT.DruidicsProfessions": "[center][font=dialogue]Professions[/font][/center]
+"guidebook.chapter.COT.DruidicsProfessions": "[center][font=dialogue][offset=0,8]Professions[/font][/center]
   
 Like vanilla skills, the Druidics skill provides professions that change the gameplay experience at levels 5 and 10.
  
@@ -849,11 +849,11 @@ Also gains combat abilities.][icon=SMAPI/kcc.sns/assets/druidics/wolfpath.png:0,
      surrounding crops with the same range 
      as a Quality Sprinkler.",
 
-"guidebook.chapter.UP.Intro": "[center][font=dialogue]Chapter 3[/font][/center]
+"guidebook.chapter.UP.Intro": "[center][font=dialogue][offset=0,8]Chapter 3[/font][/center]
 [center][font=dialogue]Under Pressure[/font][/center]
  
 The third chapter of S&S follows Cirrus, a pop-rock star known all across the Ferngill Republic. Help her set boundaries with her ill-intentioned mother, form authentic relationships with the residents of East Scarp and Pelican Town, maintain a work-life balance, build The Lion's Mane, and discover her true magical prowess...",
-"guidebook.chapter.UP.Events": "[center][font=dialogue]The Story Thus Far:[/font][/center]
+"guidebook.chapter.UP.Events": "[center][font=dialogue][offset=0,8]The Story Thus Far:[/font][/center]
  
 [font=dialogue]Cirrus Event: 0 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.1]Complete![/if]
@@ -1092,7 +1092,7 @@ Juliet and Jessie is not installed. Skipping event.",
 [nextposition=0,288]
 [/nospacing]
 Cirrus is well-known all across the Ferngill Republic for her addictive lyrics and memorable melodies. This glamrock star has seen it all; most often, the bottom of a bottle... but she's sober now, and looking for a fresh start away from the chaos of celebrity life. ",
-"guidebook.chapter.UP.BardicsSkill": "[center][font=dialogue]Bardics[/font][/center]
+"guidebook.chapter.UP.BardicsSkill": "[center][font=dialogue][offset=0,8]Bardics[/font][/center]
 [offset=200,0][image=SMAPI/kcc.sns/assets/bardics/icon.png:0,0,10,10:4]You've unlocked the Bardics skill! Bardics can be leveled up by talking to NPCs and performing songs from your [link=Mechanics/AdventureBar]Adventure Bar[/link]. 
  
 Each level, you gain 10 max Aether and a new song for the adventure bar. These songs cast various effects, hover for more details.
@@ -1157,7 +1157,7 @@ obelisks you've acquired.
  ][icon=SMAPI/kcc.sns/assets/abilities.png:48,16,16,16][color=purple]A Walk in Adante[/color][/texttooltip].
 > Level 10 - Upgrades your song choice at level 5.",
 
-"guidebook.chapter.UP.BardicsProfessions": "[center][font=dialogue]Professions[/font][/center]
+"guidebook.chapter.UP.BardicsProfessions": "[center][font=dialogue][offset=0,8]Professions[/font][/center]
  
 Like vanilla skills, the Bardics skill provides professions that change the gameplay experience at levels 5 and 10.
  
@@ -1181,7 +1181,7 @@ Like vanilla skills, the Bardics skill provides professions that change the game
     Damage of [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color] is extended
     to the entire location.",
 
-"guidebook.chapter.TOP.Intro": "[center][font=dialogue]Chapter 4[/font][/center]
+"guidebook.chapter.TOP.Intro": "[center][font=dialogue][offset=0,8]Chapter 4[/font][/center]
 [center][font=dialogue]The Other Promise[/font][/center]
    
 The forth chapter of S&S revolves around a quest to rescue Dandelion, the heroic partner of questionable Sorcerer, Roslin, her and her patron, Solomon. Uncover the secrets of the Arcane, master the use of Elemental Essences, become a Sorcerer yourself, become an Alchemist, become a Paladin (if you aren't already) and lay waste to the haunted beast hidden in the Deep Dark underneath The Scarp. ",
@@ -1216,7 +1216,7 @@ Dandelion is a Paladin who's got a tumultuous relationship with her Oath, and ap
 [/nospacing]
 Solomon is annoying on a good day. Troublesome, crass, and mischevious, this Shadowfolk is an expert in the occult. He's got quite an ego about it, though, one which may not entirely be warrented. He is intrinsically connected to Roslin.",
 
-"guidebook.chapter.TOP.Events": "[center][font=dialogue]The Story Thus Far:[/font][/center]
+"guidebook.chapter.TOP.Events": "[center][font=dialogue][offset=0,8]The Story Thus Far:[/font][/center]
  
 [font=dialogue]Roslin Event: 0 Heart[/font]
 [if=!PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Roslin]
@@ -1447,7 +1447,7 @@ Please view \"Dandelion & Roslin: Pt 1-3\".[/if]
 > 15 [itemtooltip=(O)709][icon=Maps/springobjects:16,224,16,16] [color=blue]Iron Bars[/color][/itemtooltip]
 ",
 
-"guidebook.chapter.TOP.SorcererSkill": "[center][font=dialogue]Sorcery[/font][/center]
+"guidebook.chapter.TOP.SorcererSkill": "[center][font=dialogue][offset=0,8]Sorcery[/font][/center]
 [offset=200,0][image=SMAPI/kcc.sns/assets/witchcraft/icon.png:0,0,10,10:4]You've unlocked the Sorcery skill! Sorcery can be leveled up by casting Sorcery spells from the [link=Mechanics/AdventureBar]Adventure Bar[/link].
  
 Each level, you will gain 10 max Aether. You learn new spells by studying from your Magical Grimoire located to the right side of your Adventure Bar menu.
@@ -1550,7 +1550,7 @@ Learning a new spell requires specific amounts of [link=Mechanics/ElementalEssen
 Unlocking Sorcery also gives you access to [link=Mechanics/AlchemyTransmutation]Alchemy and Transmutation[/link].
 ",
 
-"guidebook.chapter.TOP.SorcererProfessions": "[center][font=dialogue]Professions[/font][/center]
+"guidebook.chapter.TOP.SorcererProfessions": "[center][font=dialogue][offset=0,8]Professions[/font][/center]
   
 Like vanilla skills, the Sorcerer skill provides professions that change the gameplay experience at levels 5 and 10.
  
@@ -1581,7 +1581,7 @@ Like vanilla skills, the Sorcerer skill provides professions that change the gam
     75 point increase to max Aether, and
     restores some aether upon taking damage.",
 
-"guidebook.chapter.TOP.ElementalEssences": "[center][font=dialogue]Elemental Essences[/font][/center]
+"guidebook.chapter.TOP.ElementalEssences": "[center][font=dialogue][offset=0,8]Elemental Essences[/font][/center]
  
 Upon meeting with Roslin in first event of Chapter 4, the Elemental Essences of[itemtooltip=(O)DN.SnS_EarthEssence][icon=Textures/DN.SnS/SnSObjects:96,128,16,16][color=brown]Earth[/color][/itemtooltip],[itemtooltip=(O)DN.SnS_AirEssence][icon=Textures/DN.SnS/SnSObjects:112,128,16,16][color=cornflowerblue]Air[/color][/itemtooltip],[itemtooltip=(O)DN.SnS_FireEssence][icon=Textures/DN.SnS/SnSObjects:144,128,16,16][color=Red]Fire[/color][/itemtooltip] and[itemtooltip=(O)DN.SnS_WaterEssence][icon=Textures/DN.SnS/SnSObjects:128,128,16,16][color=blue]Water[/color][/itemtooltip] will begin dropping around you.
  
@@ -1596,7 +1596,7 @@ Collection method:
  
 [itemtooltip=(O)DN.SnS_druidicessence][icon=Textures/DN.SnS/SnSObjects:80,0,16,16][color=Green]Druidic[/color][/itemtooltip],[itemtooltip=(O)768][icon=maps/springobjects:0,512,16,16][color=chocolate]Solar[/color][/itemtooltip] and [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16][color=purple]Void[/color][/itemtooltip] all count as elemental essences.",
 
-"guidebook.chapter.TOP.AlchemyTransmutation": "[center][font=dialogue]Alchemy & Transmutation[/font][/center]
+"guidebook.chapter.TOP.AlchemyTransmutation": "[center][font=dialogue][offset=0,8]Alchemy & Transmutation[/font][/center]
  
 [font=dialogue]Alchemy[/font]
 Upon unlocking Sorcery, you will also gain the ability to learn how to make alchemical potions via the Philosopher's Stone menu. Like spells, these recipes are learned by exchanging [link=Mechanics/ElementalEssences]Elemental Essences[/link] in via sorcery research in the Magical Grimoire.
@@ -1619,21 +1619,12 @@ If you find yourself in need of a specific [link=Mechanics/ElementalEssences]Ele
  
 The conversation ratio for essences is 4:1 (Default), 2:1 ([link=Skills/SorcererProfessions]Hedge Witch[/link]) or 1:1 ([link=Skills/SorcererProfessions]Master Alchemist[/link]) and will pull from the first available essence in your inventory.",
 
-"guidebook.chapter.TOP.DeepDark": "Deep Dark
-Fucking Kill Me This Place Needs Its Own Wiki
- 
-(im being dramatic again)
-(...slightly)
-(might do well with its own tab....)",
-
-
-
-"guidebook.chapter.Epilogue.Intro": "[center][font=dialogue]Chapter 5[/font][/center]
+"guidebook.chapter.Epilogue.Intro": "[center][font=dialogue][offset=0,8]Chapter 5[/font][/center]
 [center][font=dialogue]Epilogue[/font][/center]
    
 Wrap up S&S's story in this final chapter, with a series of epilogues for each major NPC meant to put a bow on this lengthy tale. ",
 
-"guidebook.chapter.Epilogue.Events": "[center][font=dialogue]The Story Thus Far:[/font][/center]
+"guidebook.chapter.Epilogue.Events": "[center][font=dialogue][offset=0,8]The Story Thus Far:[/font][/center]
  
 [font=dialogue]Epilogue Pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Dandelion]Complete![/if]
@@ -1699,7 +1690,7 @@ Wrap up S&S's story in this final chapter, with a series of epilogues for each m
 [/else]
 [/if]",
 
-"guidebook.chapter.Epilogue.PaladinSkill": "[center][font=dialogue]Paladin[/font][/center]
+"guidebook.chapter.Epilogue.PaladinSkill": "[center][font=dialogue][offset=0,8]Paladin[/font][/center]
 [offset=200,0][image=SMAPI/kcc.sns/assets/paladin/icon.png:0,0,10,10:4]You've unlocked the Paladin skill! Paladin can be leveled up by talking to NPCs and completing quests. 
  
 Each level, you gain 10 max health and unlock a new upgrade for Dandelion's [itemtooltip=(W)DN.SnS_PaladinShield][icon=Textures/DN.SnS/SnSObjects:96,16,16,16] [color=blue]Paladin Shield[/color][/itemtooltip]. Apply upgrades on the anvil at the [link=Mechanics/Underforge]Underforge[/link].
@@ -1729,7 +1720,7 @@ Each level, you gain 10 max health and unlock a new upgrade for Dandelion's [ite
  
 > Level 10 - See the [link=Skills/PaladinProfessions]Paladin Professions[/link] page.",
 
-"guidebook.chapter.Epilogue.PaladinProfessions": "[center][font=dialogue]Professions[/font][/center]
+"guidebook.chapter.Epilogue.PaladinProfessions": "[center][font=dialogue][offset=0,8]Professions[/font][/center]
   
 Like vanilla skills, the Paladin skill provides professions that change the gameplay experience at levels 5 and 10.
  
@@ -1764,17 +1755,17 @@ Like vanilla skills, the Paladin skill provides professions that change the game
     automatically deal damage back at your
     enemies.",
 
-"guidebook.chapter.Epilogue.FinalMessage": "[center][font=dialogue]Final Message[/font][/center]
+"guidebook.chapter.Epilogue.FinalMessage": "[center][font=dialogue][offset=0,8]Final Message[/font][/center]
  
 [image=Mods/Sword & Sorcery/InMemoryOfLoreSeeker]
 This project is dedicated to the memory of TheLoreSeeker, a beloved community member who made a point to encourage people's wildest ideas. He may no longer be with us, but he lives on in the content of those he inspired. Thank you, to him and everyone else who contributed to S&S. And especially to you, the player, {{IsModComplete}}. Signed with love, DestyNova.",
 
-"guidebook.chapter.DeepDark.Intro": "[center][font=dialogue]Introduction[/font][/center]
+"guidebook.chapter.DeepDark.Intro": "[center][font=dialogue][offset=0,8]Introduction[/font][/center]
  
 The Deep Dark is a late-game 30 [link=DeepDark/Floors]floor[/link] dungeon crawling with powerful [link=DeepDark/Monsters]monsters[/link] and the rare ore, [Link=DeepDark/Stygium]Stygium[/link]. Here you'll find beautiful maps, custom forage and new monsters with unique item drop pools. Once you reach the end you'll face off against the mod's final boss: The [Link=DeepDark/Duskspire]Duskspire Behemoth[/link].
  
 It's advised you prepare yourself with Sword & Sorcery's new mechanics and late-game vanilla mechanics before tackling this location.",
-"guidebook.chapter.DeepDark.Monsters": "[center][font=dialogue]Monsters & Drops[/font][/center]
+"guidebook.chapter.DeepDark.Monsters": "[center][font=dialogue][offset=0,8]Monsters & Drops[/font][/center]
  
 All monsters in the Deep Dark are based on an existing monster. In addition to the following list, monsters will also drop trinkets and special items associated with the base vanilla monster.
 (Ex. Stygium Rex drops Pepper Rex eggs)
@@ -1907,7 +1898,7 @@ All monsters in the Deep Dark are based on an existing monster. In addition to t
 [icon=Textures/DN.SnS/SnSMonsterIcons:0,64,16,16] [color=purple]Duskspire Behemoth (Final Boss)[/color]
  > [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16]Duskspire Heart[/itemtooltip] (100%)
 ",
-"guidebook.chapter.DeepDark.Floors": "[center][font=dialogue]Floors[/font][/center]
+"guidebook.chapter.DeepDark.Floors": "[center][font=dialogue][offset=0,8]Floors[/font][/center]
  
 [font=dialogue][color=black]Darkness (Floors 1-9)[/color][/font]
     MONSTER SPAWNS
@@ -1984,7 +1975,7 @@ All monsters in the Deep Dark are based on an existing monster. In addition to t
     RESOURCE NODES
     > [itemtooltip=(O)847][icon=maps/springobjects:112,560,16,16] Stone[/itemtooltip]
     > [itemtooltip=(O)DN.SnS_StygiumOreStone][icon=maps/DeepDark-rocks:144,32,16,16] Stygium[/itemtooltip]",
-"guidebook.chapter.DeepDark.Stygium": "[center][font=dialogue]Stygium[/font][/center]
+"guidebook.chapter.DeepDark.Stygium": "[center][font=dialogue][offset=0,8]Stygium[/font][/center]
  
 Stygium is a rare and powerful ore that spawns only within the Deep Dark. It is used to further upgrade your tools past [color=purple]Iridium[/color] tier. Be warned, the increased strength comes with a cost.
  
@@ -2010,7 +2001,7 @@ Note: Improved range for chargable tools is 5x5.
 [font=dialogue]Stygium Poisoning[/font]
 When a Stygium item is worn or held it applies a de-buff, [icon=Textures/DN.SnS/SnSObjects:112,192,16,16] [color=purple]Stygium Poisoning[/color]. This de-buff drops the player's defense and luck until the tool is upgraded to the [link=DeepDark/Elysium]Elysium[/link] tier.",
 
-"guidebook.chapter.DeepDark.Elysium": "[center][font=dialogue]Elysium[/font][/center]
+"guidebook.chapter.DeepDark.Elysium": "[center][font=dialogue][offset=0,8]Elysium[/font][/center]
  
 Stygium tools can be purified by being combined with a [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16][color=blue]Duskspire Heart[/color][/itemtooltip] at Clint's. This removes the [icon=Textures/DN.SnS/SnSObjects:112,192,16,16] [color=purple]Stygium Poisoning[/color] de-buff and improves the tool.
  
@@ -2026,29 +2017,63 @@ Notes:
 > The [itemtooltip=(W)DN.SnS_StygiumShield][icon=Textures/DN.SnS/SnSObjects:80,192,16,16][color=blue]Stygium Shield[/color][/itemtooltip] cannot be upgraded into an Elysium Shield as the [itemtooltip=(W)DN.SnS_PaladinShield][icon=Textures/DN.SnS/SnSObjects:96,16,16,16][color=blue]Paladin Shield[/color][/itemtooltip] serves that purpose mechanically.
  
 > Improved range for chargable tools is 7x7.",
-"guidebook.chapter.DeepDark.Duskspire": "[center][font=dialogue]Duskspire Behemoth[/font][/center]
+"guidebook.chapter.DeepDark.Duskspire": "[center][font=dialogue][offset=0,8]Duskspire Behemoth[/font][/center]
 [offset=200,0][image=Textures/DN.SnS/SnSMonsterIcons:23,66,18,13:4]The Duskspire is the final boss at the end of the Deep Dark mine. When you initially fight the Duskspire, it is a two stage fight. The first state simulates a turn-based JRPG, while the second is an arena fight using the game's typical combat mechanics.
  
 When defeated, the Duskspire drops [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16][color=blue]Duskspire Hearts[/color][/itemtooltip], which are used to purify [Link=DeepDark/Stygium]Stygium Tools[/link]. The Duskspire can then be re-fought in a weaker form to obtain more Duskspire Hearts. This fight resets every Monday.",
 
-"guidebook.chapter.Mechanics.TableOfContents": "description and quick links to everything here",
+"guidebook.chapter.Mechanics.TableOfContents": "[center][font=dialogue][offset=0,8]Introduction[/font][/center]
+ 
+Learn about the different mechanics you'll encounter throughout the story of Swords & Sorcery.
+ 
+[font=dialogue]Table Of Contents[/font]
+> [link=Mechanics/AdventureBar]The Adventure Bar[/link]
+> [link=Mechanics/EquipmentSlots]Equipment Slots[/link]
+> [link=Mechanics/ShieldsArmor]Armor Points, Armor & Shields[/link]
+> [link=Mechanics/DualWielding]Dual Wielding[/link]
+> [link=Mechanics/Underforge]The Underforge[/link]
+> [link=Mechanics/Powers]Powers[/link]
+> [link=Mechanics/Keychains]Keychains[/link]
+> [link=Mechanics/DruidicEssence]Druidic Essences[/link]
+> [link=Mechanics/ElementalEssences]Elemental Essences[/link]
+> [link=Mechanics/AlchemyTransmutation]Alchemy & Transmutation[/link]
+> [link=Mechanics/GingerBeer]Ginger Beer Fermentation[/link]
+",
 
 "guidebook.chapter.Mechanics.Skills": "table of contents, have a spot to jump to the skills
  
 completely redo this",
-"guidebook.chapter.Mechanics.EquipmentSlots": "Equipment Slots Offhand, Armor",
 "guidebook.chapter.Mechanics.SMAPIConfigLink.On": "[color=purple][texttooltip=:Opens GMCM for the SMAPI component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig KCC.SnS]SMAPI Config[/action][/texttooltip][/color]",
 "guidebook.chapter.Mechanics.SMAPIConfigLink.Off": "SMAPI Config",
-"guidebook.chapter.Mechanics.AdventureBar": "[center][font=dialogue]Adventure Bar[/font][/center]
+"guidebook.chapter.Mechanics.AdventureBar": "[center][font=dialogue][offset=0,8]Adventure Bar[/font][/center]
  
 After obtaining [link=Skills/ArtificerProfessions]Shadowstep[/link] or [link=Skills/DruidicsSkill]Shapeshifting[/link], you will unlock the [color=Navy]Adventure Bar[/color], which hosts your abilities and displays your current [color=Navy]Aether[/color].
  
 You can change which abilities you have equipped through the [color=Navy]Adventure Bar Menu[/color]. You will unlock different abilities throughout the story of Sword & Sorcery.
  
 [font=dialogue]Using the Adventure Bar[/font]
-You can use the Adventure Bar abilities using the [color=Navy]CTRL/SHIFT + Row Number[color] keybinds and access the Adventure Bar Menu by pressing [color=Navy]U[/color]. When using a controller the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod is highly recommended. You can also hide the Adventure Bar by pressing [color=Navy]CTRL + U[/color], you cannot use abilities while the Adventure Bar is hidden.
+> Use the Adventure Bar abilities using the [color=Navy]CTRL/SHIFT + Row Number[color] keybinds.
+> Access the Adventure Bar Menu by pressing [color=Navy]U[/color]. 
+ = When using a controller the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod is highly recommended. 
+> You can also hide the Adventure Bar by pressing [color=Navy]CTRL + U[/color]. 
+ = You cannot use abilities while the Adventure Bar is hidden.
+ 
 All keybinds can be changed through the {{Config}}.",
-"guidebook.chapter.Mechanics.ShieldsArmor": "[center][font=dialogue]Armor Points[/font][/center]
+"guidebook.chapter.Mechanics.EquipmentSlots": "
+[center][font=dialogue][offset=0,8]Equipment Slots[/font]
+[offset=0,8][image=spacechase0.SpaceCore/ExtraEquipmentIcon][/center] 
+[offset=0,-20]Sword & Sorcery uses SpaceCore's [color=Navy]Equipment Menu[/color] in order to add two new equipment slots for you to use:
+> The [icon=Textures/DN.SnS/SnSArsenal:0,112,16,16] [color=blue]Armor Slot[/color]
+> The [icon=Textures/DN.SnS/SnSObjects:80,64,16,16] [color=blue]Offhand Slot[/color]
+ = Small Note: As of writing, you must not be holding your armor or offhand weapon when you open the menu. This is a limitation of SpaceCore's Equipment Menu.
+ [offset=0,16]
+[font=dialogue]Armor Slot[/font] [offset=0,-36][image=DN.SnS/ArmorSlot]
+[offset=0,4]You can equip [link=Mechanics/ShieldsArmor]Armor[/link] in the Armor Slot to gain a protective buff through [link=Mechanics/ShieldsArmor]Armor Points[/link].
+ [offset=0,16]
+[font=dialogue]Offhand Slot[/font] [offset=0,-36][image=DN.SnS/OffhandSlot]
+[offset=0,4]You can equip [color=Navy]Weapons[/color], including [link=Mechanics/ShieldsArmor]Shields[/link], in the Offhand Slot, allowing you to [link=Mechanics/DualWielding]Dual Wield[/link] weapons.
+",
+"guidebook.chapter.Mechanics.ShieldsArmor": "[center][font=dialogue][offset=0,8]Armor Points[/font][/center]
  
 Armor Points act as an extra buffer that absorbs damage before you lose health from your health bar. Armor Points come from [color=Navy]Armor[/color] and [color=Navy]Shields[/color]. It automatically replenishes at the beginning of each day.
  
@@ -2084,32 +2109,36 @@ Shields are a new type of weapon available to the player. They can be used as a 
  = [itemtooltip=(W)DN.SnS_BardShield][icon=Textures/DN.SnS/SnSObjects:80,160,16,16] [color=blue]Bardics Shield[/color][/itemtooltip] +35 Armor Points.
  = [itemtooltip=(W)DN.SnS_SorcererShield][icon=Textures/DN.SnS/SnSObjects:96,160,16,16] [color=blue]Sorcerer Shield[/color][/itemtooltip] +35 Armor Points.
 ",
-"guidebook.chapter.Mechanics.DualWielding": "[font=dialogue]Dual Wielding[/font]
-Sword & Sorcery introduces a dual-wielding feature, allowing you to attack with two weapons at once. To equip a weapon in your off-hand slot, open your inventory and click a button to the left of the window that looks like the following:
+"guidebook.chapter.Mechanics.DualWielding": "[center][font=dialogue][offset=0,8]Dual Wielding[/font][/center]
  
-[image=spacechase0.SpaceCore/ExtraEquipmentIcon]
-After that, you should see a slot labelled [color=black]Offhand[/color]. Place your desired secondary weapon in that slot. Now, whenever you swing your weapon or use your weapon ability in your hotbar, both will be used.",
-"guidebook.chapter.Mechanics.Powers": "[center][font=dialogue]Powers[/font][/center]
-Sword & Sorcery introduces 5 new powers to the game. 2 can be aquired every playthrough, while 3 require marrying one of the mod's romance candidates.
+Sword & Sorcery introduces [color=Navy]Dual Wielding[/color], allowing you to use two weapons at once. You can equip a second weapon for dual wielding through the [link=Mechanics/EquipmentSlots]Equipment Menu[/link].
  
-icon Handmade D20
-> Desc
-> Gifted by Mateo
-icon Magical Grimoire
-> Desc
-> Gifted by Solomon
-icon Stygium-Forged Mermaid's Pendant
-> Desc
-> Gifted by Mateo after marriage
-icon Thorned Circlet Fragment
-> Desc
-> Gifted by Hector after marriage
-icon Aetherdrake Scale
-> Desc
-> Gifted by Cirrus after marriage
+> When Dual Wielding, both weapons will swing at the same time dealing damage. 
+> Weapons' special ability (ie. sword blocking) will activate for both weapons.
+> Weapon stats like Speed, Defense, Weight, Crit. Chance and Crit. Power will be ignored for the offhand weapon. 
+> Weapon enchantments will also be ignored for the offhand weapon.
 ",
+"guidebook.chapter.Mechanics.Powers": "[center][font=dialogue][offset=0,8]Powers[/font][/center]
+Sword & Sorcery introduces 5 new powers to the game. 2 can be aquired every playthrough, while the other 3 require marrying one of the mod's romance candidates.
+ 
+[texttooltip=Handmade D20:A gift from Mateo. Once a day, if you pass out with the D20 in your possession, you will revive with half of your max health.][icon=Textures/DN.SnS/SnSObjects:0,80,16,16] [color=blue]Handmade D20[/color][/texttooltip]
+ = Gifted by Mateo
+ 
+[texttooltip=Magical Grimoire:Bound by hand for you by Solomon. Use it to research new spells.][icon=Textures/DN.SnS/SnSObjects:128,144,16,16] [color=blue]Magical Grimoire[/color]
+ = Gifted by Solomon
+ 
+[texttooltip=Stygium-Forged Mermaid's Pendant:Mateo made this for you with love. Adds +2 Magnetic Radius, +10% damage, +3 Defense, and +1 Luck.][icon=Textures/DN.SnS/SnSObjects:112,0,16,16] [color=blue]Stygium-Forged Mermaid's Pendant[/color]
+ = Gifted by Mateo after marriage
+ 
+[texttooltip=Thorned Circlet Fragment:The broken horn off Hector's circlet. Radiates with Druidic power, doubling your Druidic Essence drops.][icon=Textures/DN.SnS/SnSObjects:128,0,16,16] [color=blue]Thorned Circlet Fragment[/color]
+ = Gifted by Hector after marriage
+ 
+[texttooltip=Aetherdrake Scale:An heirloom from Cirrus that's warm to the touch. Gives +25 Aether, +1 Magnetic Radius, +3 Defense and +1 Luck.][icon=Textures/DN.SnS/SnSObjects:32,80,16,16] [color=blue]Aetherdrake Scale[/color]
+ = Gifted by Cirrus after marriage
+",
+"guidebook.chapter.Mechanics.LLTK & Keychains": "[center][font=dialogue][offset=0,8]Keychains[/font][/center]",
 
-"guidebook.chapter.Mechanics.GingerBeer": "[center][font=dialogue]Ginger Beer Fermentation[/font][/center][image=Textures/DN.SnS/SnSMachines:0,0,16,32:3]You can craft [itemtooltip=(BC)DN.SnS_oldfashionedfermenter][color=blue]Old-Fashioned Fermenters[/color][/itemtooltip] after learning how from Cirrus in [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]Chapter 4[/link][/if][else]Chapter 4[/else]. Add ginger and fruit to make flavored Ginger Beer, which can be aged.
+"guidebook.chapter.Mechanics.GingerBeer": "[center][font=dialogue][offset=0,8]Ginger Beer Fermentation[/font][/center][image=Textures/DN.SnS/SnSMachines:0,0,16,32:3]You can craft [itemtooltip=(BC)DN.SnS_oldfashionedfermenter][color=blue]Old-Fashioned Fermenters[/color][/itemtooltip] after learning how from Cirrus in [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]Chapter 4[/link][/if][else]Chapter 4[/else]. Add ginger and fruit to make flavored Ginger Beer, which can be aged.
  
 Ginger Beer List:
 > [itemtooltip=(O)DN.SnS_orangegingerbeer][icon=Textures/DN.SnS/SnSObjects:96,112,16,16] [color=blue]Orange Flavored Ginger Beer[/color][/itemtooltip]
@@ -2121,7 +2150,8 @@ Ginger Beer List:
 > [itemtooltip=(O)DN.SnS_ancientfruitgingerbeer][icon=Textures/DN.SnS/SnSObjects:32,128,16,16] [color=blue]Ancient Fruit Flavored Ginger Beer[/color][/itemtooltip]
 > [itemtooltip=(O)DN.SnS_ancienthuckleberrygingerbeer][icon=Textures/DN.SnS/SnSObjects:32,128,16,16] [color=blue]Ancient Huckleberry Flavored Ginger Beer[/color][/itemtooltip]
 > [itemtooltip=(O)DN.SnS_ancientappleberrygingerbeer][icon=Textures/DN.SnS/SnSObjects:32,128,16,16] [color=blue]Ancient Appleberry Flavored Ginger Beer[/color][/itemtooltip]
-> [itemtooltip=(O)DN.SnS_ancientelderberrygingerbeer][icon=Textures/DN.SnS/SnSObjects:32,128,16,16] [color=blue]Ancient Elderberry Flavored Ginger Beer[/color][/itemtooltip]",
+> [itemtooltip=(O)DN.SnS_ancientelderberrygingerbeer][icon=Textures/DN.SnS/SnSObjects:32,128,16,16] [color=blue]Ancient Elderberry Flavored Ginger Beer[/color][/itemtooltip]
+",
 
 //Conditional Event Extras
 "guidebook.chapter.MateoTrollHeritage.1.true": " 

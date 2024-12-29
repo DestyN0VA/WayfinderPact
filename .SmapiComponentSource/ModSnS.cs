@@ -2,7 +2,6 @@
 using ContentPatcher;
 using HarmonyLib;
 using MageDelve.Mercenaries;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
@@ -17,6 +16,7 @@ using StardewModdingAPI.Utilities;
 using StardewValley;
 using StardewValley.BellsAndWhistles;
 using StardewValley.Extensions;
+using StardewValley.GameData;
 using StardewValley.GameData.Objects;
 using StardewValley.GameData.SpecialOrders;
 using StardewValley.GameData.Weapons;
@@ -1316,7 +1316,7 @@ namespace SwordAndSorcerySMAPI
                         Game1.addMail("DN.SnS_IntermissionShield", true, false);
                     }
                     Game1.currentLocation.characters.Add(State.FinaleBoss = new DuskspireMonster(new Vector2( 18, 13 ) * Game1.tileSize));
-                    Game1.changeMusicTrack("SnS.DuskspirePhase2");
+                    Game1.changeMusicTrack("SnS.DuskspirePhase2", true, MusicContext.ImportantSplitScreenMusic);
 
                     string partner = null;
                     var partnerInfos = Game1.content.Load<Dictionary<string, FinalePartnerInfo>>("DN.SnS/FinalePartners");
@@ -1386,7 +1386,7 @@ namespace SwordAndSorcerySMAPI
                                 Game1.screenGlowOnce(Color.White, false);
                             }
 
-                            if (Game1.getAllFarmers().Any(f => f.currentLocation == Game1.getLocationFromName("EastScarp_DuskspireLair") && f.Items.Count > 0 && f.Items.Any(f => f.QualifiedItemId == "(O)DN.SnS_DuskspireHeart")))
+                            if (Game1.getAllFarmers().Any(f => f.currentLocation == Game1.getLocationFromName("EastScarp_DuskspireLair") && f.Items.Count > 0 && f.Items.Any(f => f?.QualifiedItemId == "(O)DN.SnS_DuskspireHeart")))
                             {
                                 Game1.player.GetCurrentMercenaries().Clear();
                                 var partnerInfos = Game1.content.Load<Dictionary<string, FinalePartnerInfo>>("DN.SnS/FinalePartners");
