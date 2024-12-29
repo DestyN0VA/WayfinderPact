@@ -12,6 +12,7 @@ using StardewValley.Projectiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -24,6 +25,7 @@ namespace SwordAndSorcerySMAPI
                 Game1.player.draw(b);
         }
     }
+
 
     public class BattlerInfo
     {
@@ -44,6 +46,7 @@ namespace SwordAndSorcerySMAPI
 
         public Vector2 BasePosition { get; set; }
         public string OrigTexture { get; set; }
+
     }
 
     public class BattleProjectile
@@ -60,6 +63,7 @@ namespace SwordAndSorcerySMAPI
         public Vector2? ReturnTo { get; set; }
 
         public Action OnHit { get; set; }
+
     }
 
     internal class FinalePhase1Minigame : IMinigame
@@ -100,6 +104,7 @@ namespace SwordAndSorcerySMAPI
             return choices[new Random((int)(Game1.player.UniqueMultiplayerID + TurnCounter)).Next(choices.Count)];
 
         }
+
 
         public FinalePhase1Minigame(Event @event, EventContext context)
         {
@@ -280,6 +285,45 @@ namespace SwordAndSorcerySMAPI
                         AbilityName = I18n.FinaleMinigame_Ability_BombThrow_Name,
                         AbilityDescription = I18n.FinaleMinigame_Ability_BombThrow_Description,
                         AbilityManaCost = 5,
+                    }
+                },
+                { "SenS", new BattlerInfo()
+                    {
+                        BaseDefense = 3,
+                        Mana = 50,
+                        MaxMana = 50,
+                        AbilityFunc = (_) =>
+                        {
+                            Game1.playSound("shadowpeep");
+
+                            string[] SenRandomBooks = { "(O)Book_Void", "(O)Book_Trash", "(O)PurpleBook", "(O)SkillBook_0", "(O)SkillBook_1", "(O)SkillBook_2", "(O)SkillBook_3", "(O)SkillBook_4", "(O)Book_Crabbing", "(O)Book_Bombs", "(O)Book_Roe", "(O)Book_WildSeeds", "(O)Book_Woodcutting", "(O)Book_Woodcutting", "(O)Book_Defense", "(O)Book_Friendship", "(O)Book_Speed", "(O)Book_Speed2", "(O)Book_Marlon", "(O)Book_PriceCatalogue", "(O)Book_QueenOfSauce", "(O)Book_Diamonds", "(O)Book_Mystery", "(O)Book_AnimalCatalogue", "(O)Book_Artifact", "(O)Book_Horse", "(O)Book_Grass" };
+                            String GetRandomBook()
+                            {
+                                Random randomizer = new Random();
+                                sindex = randomizer.Next(SenRandomBooks.Length);
+                                string randombook = SenRandomBooks[sindex];
+                                return randombook;
+                            }
+
+                            Projectiles.Add( new BattleProjectile()
+                            {                        
+                                Texture = ItemRegistry.GetDataOrErrorItem(GetRandomBook()).GetTexture(),
+                                SourceRect = ItemRegistry.GetDataOrErrorItem(GetRandomBook()).GetSourceRect(),
+                                Position = CurrentTurn.StandingPixel.ToVector2() - new Vector2( 0, 48 ),
+                                Target = Battlers.First( c => c.Name == "Duskspire" ).StandingPixel.ToVector2(),
+                                OnHit = () =>
+                                {
+                                    DuskspireHealth -= 30;
+                                    //DuskspireFrameOverride = 25;
+                                    Game1.playSound("woodWhack");
+
+                                }
+                            } );
+                             --MovingActorForTurn;
+                        },
+                        AbilityName = I18n.FinaleMinigame_Ability_StolenLibraryBook_Name,
+                        AbilityDescription = I18n.FinaleMinigame_Ability_StolenLibraryBook_Description,
+                        AbilityManaCost = 10,
                     }
                 },
             };
@@ -513,6 +557,8 @@ namespace SwordAndSorcerySMAPI
         }
 
         private bool waitingForProjectiles = false;
+        private int sindex;
+
         public bool tick(GameTime time)
         {
             foreach (var character in Battlers)

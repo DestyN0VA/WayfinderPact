@@ -23,6 +23,10 @@
         "MadDog.HashtagBearFam.Gunnar": {
           "IntermissionEventId": "SnS.Ch4.Intermission.Gunnar",
           "VictoryEventId": "SnS.Ch4.Victory.Gunnar"
+        },
+        "SenS": {
+          "IntermissionEventId": "SnS.Ch4.Intermission.Sen",
+          "VictoryEventId": "SnS.Ch4.Victory.Sen"
         }
       }
     }

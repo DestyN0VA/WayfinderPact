@@ -2036,12 +2036,25 @@
       }
     },
     {
+      "Name": "SenFinalePeep",
+      "Value": "pause 1"
+    },
+    {
+      "Name": "SenFinalePeep",
+      "Value": "playsound shadowpeep",
+      "When": { "HasMod |contains=7thAxis.LitD.CP, 7thAxis.DitR": true }
+    },
+    {
+      "Name": "LivingWithSen", 
+      "Value": "{{Query: '{{spouse}}' = 'SenS' OR '{{roommate}}' = 'SenS'}}"
+  },
+    {
       "Name": "CombatWarps",
-      "Value": "warp Mateo 12 10/warp farmer 12 12/warp Dandelion 12 14/warp Hector 12 16/warp Cirrus 10 12/warp Roslin 10 14"
+      "Value": "warp Mateo 12 10/warp farmer 12 12/warp Dandelion 12 14/warp Hector 12 16/warp Cirrus 10 12/warp Roslin 10 14/warp SenS? 10 16"
     },
     {
       "Name": "CombatWarps",
-      "Value": "warp Mateo 12 10/warp farmer 12 12/warp Dandelion 12 14/warp Hector 12 16/warp Cirrus 10 10/warp Roslin 10 12/warp MadDog.HashtagBearFam.Gunnar 10 14",
+      "Value": "warp Mateo 12 10/warp farmer 12 12/warp Dandelion 12 14/warp Hector 12 16/warp Cirrus 10 10/warp Roslin 10 12/warp MadDog.HashtagBearFam.Gunnar 10 14/warp SenS? 10 16",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true
       }

@@ -6107,6 +6107,46 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Dandelion.7.Krobus.54": "...Okay!$7",
   "Events.SnS.Ch4.Dandelion.7.Mateo.55": "What have I done... Well, I'm glad they're getting along.$80",
 
+  //Finale Sen
+    //Not Married or Rooming
+  "Events.SnS.Ch4.Finale.Sen.01.false": "I have absolutely no idea what's going on, I just want the tremors under my cave to stop!$u",
+  "Events.SnS.Ch4.Finale.Sen.02.false": "OH SWEET MOTHER OF SLIMEBALLS WHAT DID I GET MYSELF INTO???$9",
+  "Events.SnS.Ch4.Finale.Sen.03.false": "I'M DEFINITELY PANICKING-$9",
+    //Married or Rooming
+  "Events.SnS.Ch4.Finale.Sen.01.true": "Goodness gracious, you're always getting yourself into the most dangerous situations, @...$s",
+  "Events.SnS.Ch4.Finale.Sen.02.true": "OH SWEET MOTHER OF SLIMEBALLS @, WHAT DID YOU GET US INTO???$9",
+  "Events.SnS.Ch4.Finale.Sen.03.true": "I'M DEFINITELY PANICKING-$9",
+
+  //Intermission Sen
+  "Events.SnS.Ch4.Intermission.Sen.01": "Yeah, you've contracted crunchy arm! Don't push it. Scram, skedaddle!$u",
+  "Events.SnS.Ch4.Intermission.Sen.02": "Maybe you should get outta here too? You're looking about as green as your hair...$s#$b#I'm holding up, though. Can't say the same about those the library books I \"borrowed\".$8",
+  "Events.SnS.Ch4.Intermission.Sen.03": "Actually, this sounds like a death wish?$u#$b#Is it really a good idea to book this alone???$u",
+  "Events.SnS.Ch4.Intermission.Sen.04": "Urgh... Well stay safe, won't you?$s",
+  "Events.SnS.Ch4.Intermission.Sen.05": "No, @! You're asking for a death wish!$a#$b#I simply refuse to allow you to go this alone.$a",
+  "Events.SnS.Ch4.Intermission.Sen.06": "Then stick with me, Sen. Just like you always have.",
+  "Events.SnS.Ch4.Intermission.Sen.07": "Of course. I'd never leave you to face something... something like that alone!$u#$b#I might not be a trained like the rest of you, but Skrell taught me a thing or two growing up.$a",
+  "Events.SnS.Ch4.Intermission.Sen.08": "You're not much of a fighter, Sen...",
+  "Events.SnS.Ch4.Intermission.Sen.09": "Hey, we've been through so much together! You're gonna underestimate me now?$u#$b#You saw the guy who raised me, right? I'm sticking with you till the end, no if ands or buts!$a",
+  "Events.SnS.Ch4.Intermission.Sen.10": "Sigh... you really are always running around playing hero, huh?$s#$b#Well, I guess you're not \"playing\". You really are a hero...$l#$b#Ahg! There it is. Let's do this, you and me! I'm fresh outta books, but Mateo gave me a spare sword.$a",
+
+  //Victory Sen - put him in his umbrella hat when outside....
+  "Events.SnS.Ch4.Victory.Sen.01": "We... we did it.#$b#We really did it, @!$7#$b#Goodness that was EXHILARATING! I was so terrified going into this but... wow.$h#$b#Bring that beast back so I can swing my sword at it again, hahahahaha!$7",
+  "Events.SnS.Ch4.Victory.Sen.02": "Golly, we're always going on wacky adventures together, huh...?$h#$b#Let's never let that change, @.$12",
+  //Pause, step forward
+  "Events.SnS.Ch4.Victory.Sen.03": "Thank you, @. For always staying by my side, for expanding my horizons.$l#$b#I... I think I know how to achieve my dreams now.",
+  //Turn to face farmer
+  "Events.SnS.Ch4.Victory.Sen.04": "I hope you'll stay with me to help me chase them, my dearest {{RelationshipTerm}}.", //pass in token, starshine or friend.
+  //Dynamic token for kiss based on platonic/romantic living together status
+  "Events.SnS.Ch4.Victory.Sen.05": "Woohoo! We survived!$h#$b#Is it just me, or did that monster look kinda like me?$6",
+  "Events.SnS.Ch4.Victory.Sen.06": "Oh thank goodness you've made it out alive!$u#$b#I was about to come crawling back down there, but this gaggle of weirdos stopped me...$8",
+  "Events.SnS.Ch4.Victory.Sen.07": "I guess this means I can finally go back to knitting and reading in peace, hm?$h",
+  "Events.SnS.Ch4.Victory.Sen.08": "I don't sleep, actually.$8#$b#But I'll never say no to free food!$h",
+  "Events.SnS.Ch4.Victory.Sen.09": "That's so beautiful and sweet. You really have the sweetest friends, @...$l#$b#Sniff...sniff...$s",
+  "Events.SnS.Ch4.Victory.Sen.10": "Waahhh haaah haaaaa!!! Wahhhh!!!$10#$b#I'm so proud of you, @!$10",
+  "Events.SnS.Ch4.Victory.Sen.11": "WAAAaaaahhh!$10#$b#Oh Sen get some emotional self-control!$s#$b#Let's head home and rest, shall we? I think we've deserve it after today.$h",
+  "Events.SnS.Ch4.Victory.Sen.12": "...Er, Mateo?#$b#Please don't tell the library man about the books, okay?$8#$b#@ will purchase new ones to replace them. I *was* intending to return them, I swear!$h",
+  "Events.SnS.Ch4.Victory.Sen.13": "Wait what-", //Farmer
+
   // FINALE 
   "Events.SnS.Ch4.Finale.Mateo.01": "Did you see any sign of the Duskspire Behemoth, @?$37",
   "Events.SnS.Ch4.Finale.Roslin.02": "I don't trust our luck.$16",

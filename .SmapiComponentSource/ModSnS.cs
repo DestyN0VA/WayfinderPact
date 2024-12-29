@@ -1329,6 +1329,14 @@ namespace SwordAndSorcerySMAPI
                             break;
                         }
                     }
+                    foreach (string key in partnerInfos.Keys)
+                    {
+                        if (Game1.player.friendshipData.TryGetValue(key, out var data) && data.IsRoommate())
+                        {
+                            partner = key;
+                            break;
+                        }
+                    }
 
                     if (partner == null)
                     {
@@ -1388,6 +1396,14 @@ namespace SwordAndSorcerySMAPI
                                 foreach (string key in partnerInfos.Keys)
                                 {
                                     if (Game1.player.friendshipData.TryGetValue(key, out var data) && data.IsDating())
+                                    {
+                                        partnerInfo = partnerInfos[key];
+                                        break;
+                                    }
+                                }
+                                foreach (string key in partnerInfos.Keys)
+                                {
+                                    if (Game1.player.friendshipData.TryGetValue(key, out var data) && data.IsRoommate())
                                     {
                                         partnerInfo = partnerInfos[key];
                                         break;
