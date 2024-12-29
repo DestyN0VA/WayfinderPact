@@ -19,7 +19,7 @@
     {
       "LogName": "Loads Natural Tilesheets",
       "Action": "Load",
-      "Target": "Maps/DestyCommission_TreeNormal, Maps/DN.SnS_BigFern, Maps/DN.SnS_CropDecor, Maps/DN.SnS_EastScarp_Forest, Maps/DN.SnS_Water, Maps/EastScarp_Hector, Maps/Nova_WaterFall",
+      "Target": "Maps/DestyCommission_TreeNormal, Maps/DN.SnS_BigFern, Maps/DN.SnS_CropDecor, Maps/DN.SnS_EastScarp_Forest, Maps/DN.SnS_Water, Maps/EastScarp_Hector, Maps/Nova_WaterFall, Maps/DN.SNS_MountainBackground, Maps/DN.SnS_NightSky",
       "FromFile": "Assets/Tilesheets/Nature/{{TargetWithoutPath}}.png"
     },
     //Tilesets
@@ -33,7 +33,7 @@
     {
       "LogName": "Loads Other Tilesheets",
       "Action": "Load",
-      "Target": "Maps/DN.SnS_Motes, Maps/DN.SNS_MountainBackground, Maps/DN.SnS_NightSky, Maps/DN.SnS_PurpleOverlay, Maps/MadDog_PlanetariumScreen",
+      "Target": "Maps/DN.SnS_Motes, Maps/DN.SnS_PurpleOverlay, Maps/MadDog_PlanetariumScreen",
       "FromFile": "Assets/Tilesheets/Other/{{TargetWithoutPath}}.png"
     },
   //MAP LOADS
