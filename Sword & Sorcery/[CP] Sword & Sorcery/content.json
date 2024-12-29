@@ -2274,6 +2274,15 @@
       "When": { "HasMod": "spacechase0.GenericModConfigMenu" }
     },
     {
+      "Name": "SMAPIConfigLink",
+      "Value": "{{i18n: guidebook.chapter.Mechanics.SMAPIConfigLink.Off}}"
+    },
+    {
+      "Name": "SMAPIConfigLink",
+      "Value": "{{i18n: guidebook.chapter.Mechanics.SMAPIConfigLink.On}}",
+      "When": { "HasMod": "spacechase0.GenericModConfigMenu" }
+    },
+    {
       "Name": "PocketDimensionUpgrade",
       "Value": "1"
     },

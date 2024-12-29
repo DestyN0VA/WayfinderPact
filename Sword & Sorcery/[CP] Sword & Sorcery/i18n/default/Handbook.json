@@ -450,9 +450,6 @@ Your first attack after using the ability is an automatic critical hit.][icon=SM
     hits on the same creature do slightly
     more damage each time.",
 
-"guidebook.chapter.NEA.Armor": "Armor
-Explain what the fuck these do, add info on the new ones",
-
   "guidebook.chapter.COT.name": "Circle of Thorns",
   "guidebook.chapter.COT.Intro": "[center][font=dialogue]Introduction[/font][/center]
  
@@ -2019,13 +2016,17 @@ When defeated, the Duskspire drops [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=T
 4. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6][link=TOP/SorcererSkill]Sorcerer[/link][/if][else]Sorcerer (locked)[/else]
 4. [if=ANY \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Mateo\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Hector\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Cirrus\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.Gunnar\" \"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Intermission.SoloFarmer\"][link=Epilogue/PaladinSkill]Paladin[/link][/if][else]Paladin (locked)[/else]",
 "guidebook.chapter.Mechanics.EquipmentSlots": "Equipment Slots Offhand, Armor",
-"guidebook.chapter.Mechanics.AdventureBar": "[font=dialogue]Adventure Bar[/font]
+"guidebook.chapter.Mechanics.SMAPIConfigLink.On": "[color=purple][texttooltip=:Opens GMCM for the SMAPI component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig KCC.SnS]SMAPI Config[/action][/texttooltip][/color]",
+"guidebook.chapter.Mechanics.SMAPIConfigLink.Off": "SMAPI Config",
+"guidebook.chapter.Mechanics.AdventureBar": "[center][font=dialogue]Adventure Bar[/font][/center]
  
-On the left side of your screen, you can see two columns with a bar underneath. This is the Adventure Bar. The columns repesent ability slots that you can activate with keybindings. The bar underneath is your Aether, which is consumed to use most abilities. To use an ability, use the keybinding configured for that slot. (default: Ctrl+NUMBER or Shift+NUMBER, though these can be configured in GMCM). If you're using a gamepad, the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod can also be used to trigger configured abilities.
+After obtaining [link=NEA/ArtificerProfessions]Shadowstep[/link] or [link=COT/DruidicsSkill]Shapeshifting[/link], you will unlock the [color=Navy]Adventure Bar[/color], which hosts your abilities and displays your current [color=Navy]Aether[/color].
  
-You can change what abilities are in which slots by using the Adventure Bar Menu keybinding (default: U). You will unlock different abilities throughout the story of the Sword & Sorcery.
+You can change which abilities you have equipped through the [color=Navy]Adventure Bar Menu[/color]. You will unlock different abilities throughout the story of Sword & Sorcery.
  
-The adventure bar can be hidden with the configured keybinding (default: Ctrl+U).",
+[font=dialogue]Using the Adventure Bar[/font]
+You can use the Adventure Bar abilities using the [color=Navy]CTRL/SHIFT + Row Number[color] keybinds and access the Adventure Bar Menu by pressing [color=Navy]U[/color]. When using a controller the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod is highly recommended. You can also hide the Adventure Bar by pressing [color=Navy]CTRL + U[/color], you cannot use abilities while the Adventure Bar is hidden.
+All keybinds can be changed through the {{Config}}.",
 "guidebook.chapter.Mechanics.ShieldsArmor": "
 [font=dialogue]Armor[/font]
  
