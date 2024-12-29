@@ -1575,8 +1575,8 @@
  <tileset firstgid="2268" name="z_DestyCommission_TreeNormal" tilewidth="16" tileheight="16" tilecount="900" columns="30">
   <image source="DestyCommission_TreeNormal.png" width="480" height="480"/>
  </tileset>
- <tileset firstgid="3168" name="z_MountainBackground" tilewidth="16" tileheight="16" tilecount="1794" columns="39">
-  <image source="MountainBackground.png" width="639" height="751"/>
+ <tileset firstgid="3168" name="z_DN.SNS_MountainBackground" tilewidth="16" tileheight="16" tilecount="1794" columns="39">
+  <image source="DN.SNS_MountainBackground.png" width="639" height="751"/>
  </tileset>
  <tileset firstgid="4962" name="z_Nova_WaterFall" tilewidth="16" tileheight="16" tilecount="119" columns="17">
   <image source="Nova_WaterFall.png" width="272" height="112"/>
@@ -1965,8 +1965,8 @@
  <tileset firstgid="8773" name="z_spring_mod_lumisteria_tilesheetsoutdoor_tiles" tilewidth="16" tileheight="16" tilecount="1500" columns="25">
   <image source="spring_mod_lumisteria_tilesheetsoutdoor_tiles.png" width="400" height="960"/>
  </tileset>
- <tileset firstgid="10273" name="BigFern" tilewidth="16" tileheight="16" tilecount="30" columns="3">
-  <image source="BigFern.png" width="48" height="160"/>
+ <tileset firstgid="10273" name="DN.SnS_BigFern" tilewidth="16" tileheight="16" tilecount="30" columns="3">
+  <image source="DN.SnS_BigFern.png" width="48" height="160"/>
  </tileset>
  <layer id="1" name="Back" width="30" height="72">
   <data encoding="base64" compression="zlib">

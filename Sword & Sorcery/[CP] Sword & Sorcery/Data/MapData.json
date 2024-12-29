@@ -1,5 +1,42 @@
 {
   "Changes": [
+  //MAP TILESHEET LOADS
+    //Buildings
+    {
+      "LogName": "Loads Building Tilesheets",
+      "Action": "Load",
+      "Target": "Maps/winter_CoastalGuild, Maps/summer_CoastalGuild, Maps/spring_CoastalGuild, Maps/fall_CoastalGuild, Maps/winter_CoastalGuildUpgrade, Maps/summer_CoastalGuildUpgrade, Maps/spring_CoastalGuildUpgrade, Maps/fall_CoastalGuildUpgrade, Maps/winter_LionsMane, Maps/summer_LionsMane, Maps/spring_LionsMane, Maps/fall_LionsMane, Maps/winter_LionsManeBroken, Maps/summer_LionsManeBroken, Maps/spring_LionsManeBroken, Maps/fall_LionsManeBroken, Maps/winter_MateoTent, Maps/summer_MateoTent, Maps/spring_MateoTent, Maps/fall_MateoTent, Maps/winter_PizzaVan, Maps/summer_PizzaVan, Maps/spring_PizzaVan, Maps/fall_PizzaVan, Maps/winter_z_Hector, Maps/summer_z_Hector, Maps/spring_z_Hector, Maps/fall_z_Hector, Maps/DN.SnS_ESBoat, Maps/DN.SnS_TravelingHouse",
+      "FromFile": "Assets/Tilesheets/Buildings/{{TargetWithoutPath}}.png"
+    },
+    //Caves
+    {
+      "LogName": "Loads Cave Tilesheets",
+      "Action": "Load",
+      "Target": "Maps/DN.SnS_mine_backup, Maps/DN.SnS_mine_lava, Maps/DN.SnS_volcano_dungeon",
+      "FromFile": "Assets/Tilesheets/Caves/{{TargetWithoutPath}}.png"
+    },
+    //Nature
+    {
+      "LogName": "Loads Natural Tilesheets",
+      "Action": "Load",
+      "Target": "Maps/DestyCommission_TreeNormal, Maps/DN.SnS_BigFern, Maps/DN.SnS_CropDecor, Maps/DN.SnS_EastScarp_Forest, Maps/DN.SnS_Water, Maps/EastScarp_Hector, Maps/Nova_WaterFall",
+      "FromFile": "Assets/Tilesheets/Nature/{{TargetWithoutPath}}.png"
+    },
+    //Tilesets
+    {
+      "LogName": "Loads Tilesets",
+      "Action": "Load",
+      "Target": "Maps/Desty_Hector_Tilesheet, Maps/DN.SnS_Festivals, Maps/DN.SnS_Logophile_Rugs, Maps/DN.SnS_thefrenchdodo-tilesheet-books, Maps/DN.SnS_Underforge, Maps/DN.SnS_VioletMoon_Booths, Maps/LionsMane, Maps/MadDog_Extras, Maps/MateoCustom, Maps/Matts_tent_by_Tiara, Maps/NEACustom, Maps/PizzaVanInterior, Maps/PlanetariumCustomInterior, Maps/roslin_wizard_furniture",
+      "FromFile": "Assets/Tilesheets/Tilesets/{{TargetWithoutPath}}.png"
+    },
+    //Other
+    {
+      "LogName": "Loads Other Tilesheets",
+      "Action": "Load",
+      "Target": "Maps/DN.SnS_Motes, Maps/DN.SNS_MountainBackground, Maps/DN.SnS_NightSky, Maps/DN.SnS_PurpleOverlay, Maps/MadDog_PlanetariumScreen",
+      "FromFile": "Assets/Tilesheets/Other/{{TargetWithoutPath}}.png"
+    },
+  //MAP LOADS
     {
       "Action": "Load",
       "Target": "Maps/EastScarp_MateoHome, Maps/EastScarp_CoastalGuild, Maps/EastScarp_DruidTower, Maps/EastScarp_DruidGrove, Maps/EastScarp_RiverStage1, Maps/EastScarp_RiverStage2, Maps/EastScarp_RiverStage3, Maps/EastScarp_RiverStage4, Maps/EastScarp_DateMine, Maps/EastScarp_LavaMine, Maps/EastScarp_IntroMine, Maps/EastScarp_HectorForest, Maps/EastScarp_VanInterior, Maps/EastScarp_LionsMane, Maps/EastScarp_Planetarium, Maps/EastScarp_Underforge, Maps/EastScarp_DeepDarkEntrance, Maps/EastScarp_DeepDarkLv1, Maps/EastScarp_DeepDarkLv2, Maps/EastScarp_DeepDarkLv3, Maps/EastScarp_DeepDarkLv4, Maps/EastScarp_DeepDarkLv5, Maps/EastScarp_DuskspireLair, Maps/SolomonMagicalCavern, Maps/PocketDimension1, Maps/PocketDimension2, Maps/PocketDimension3, Maps/PocketDimension4, Maps/VioletMoon, Maps/VioletMoon_Blank",

@@ -18,8 +18,8 @@
    </animation>
   </tile>
  </tileset>
- <tileset firstgid="1485" name="mine_lava" tilewidth="16" tileheight="16" tilecount="320" columns="16">
-  <image source="mine_lava.png" width="256" height="320"/>
+ <tileset firstgid="1485" name="DN.SnS_mine_lava" tilewidth="16" tileheight="16" tilecount="320" columns="16">
+  <image source="DN.SnS_mine_lava.png" width="256" height="320"/>
  </tileset>
  <tileset firstgid="1805" name="FlashShifter_Extras" tilewidth="16" tileheight="16" tilecount="208" columns="16">
   <image source="FlashShifter_Extras.png" width="256" height="208"/>
@@ -98,7 +98,7 @@
   </tile>
  </tileset>
  <tileset firstgid="3988" name="Water" tilewidth="16" tileheight="16" tilecount="6" columns="2">
-  <image source="Water.png" width="32" height="48"/>
+  <image source="DN.SnS_Water" width="32" height="48"/>
  </tileset>
  <tileset firstgid="3994" name="MadDog_Extras" tilewidth="16" tileheight="16" tilecount="104" columns="8">
   <image source="MadDog_Extras.png" width="128" height="208"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="50" height="22" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="1">
- <tileset firstgid="1" name="mine_lava" tilewidth="16" tileheight="16" tilecount="320" columns="16">
-  <image source="mine_lava.png" width="256" height="320"/>
+ <tileset firstgid="1" name="DN.SnS_mine_lava" tilewidth="16" tileheight="16" tilecount="320" columns="16">
+  <image source="DN.SnS_mine_lava.png" width="256" height="320"/>
   <tile id="0">
    <properties>
     <property name="Type" value="Dirt"/>
@@ -303,8 +303,8 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="321" name="volcano_dungeon" tilewidth="16" tileheight="16" tilecount="576" columns="16">
-  <image source="volcano_dungeon.png" width="256" height="576"/>
+ <tileset firstgid="321" name="DN.SnS_volcano_dungeon" tilewidth="16" tileheight="16" tilecount="576" columns="16">
+  <image source="DN.SnS_volcano_dungeon.png" width="256" height="576"/>
   <tile id="320">
    <animation>
     <frame tileid="320" duration="100"/>

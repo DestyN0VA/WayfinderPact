@@ -1074,8 +1074,8 @@
    </animation>
   </tile>
  </tileset>
- <tileset firstgid="929" name="Motes" tilewidth="16" tileheight="16" tilecount="6" columns="3">
-  <image source="Motes.png" width="48" height="32"/>
+ <tileset firstgid="929" name="DN.SnS_Motes" tilewidth="16" tileheight="16" tilecount="6" columns="3">
+  <image source="DN.SnS_Motes.png" width="48" height="32"/>
   <tile id="0">
    <animation>
     <frame tileid="0" duration="400"/>

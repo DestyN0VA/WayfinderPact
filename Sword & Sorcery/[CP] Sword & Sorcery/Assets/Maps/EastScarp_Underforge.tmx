@@ -6,8 +6,8 @@
   <property name="TreatAsOutdoors" value="T"/>
   <property name="indoorWater" value="T"/>
  </properties>
- <tileset firstgid="1" name="mine_backup" tilewidth="16" tileheight="16" tilecount="384" columns="16">
-  <image source="mine_backup.png" width="256" height="384"/>
+ <tileset firstgid="1" name="DN.SnS_mine_backup" tilewidth="16" tileheight="16" tilecount="384" columns="16">
+  <image source="DN.SnS_mine_backup.png" width="256" height="384"/>
   <tile id="240">
    <properties>
     <property name="Type" value="Wood"/>
@@ -323,8 +323,8 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="912" name="Underforge.png" tilewidth="16" tileheight="16" tilecount="1836" columns="36">
-  <image source="Underforge.png" width="576" height="816"/>
+ <tileset firstgid="912" name="DN.SnS_Underforge.png" tilewidth="16" tileheight="16" tilecount="1836" columns="36">
+  <image source="DN.SnS_Underforge.png" width="576" height="816"/>
   <tile id="34">
    <animation>
     <frame tileid="34" duration="1000"/>
@@ -1778,8 +1778,8 @@
  <tileset firstgid="8191" name="spring_Shadows" tilewidth="16" tileheight="16" tilecount="475" columns="19">
   <image source="spring_Shadows.png" width="304" height="400"/>
  </tileset>
- <tileset firstgid="8666" name="volcano_dungeon" tilewidth="16" tileheight="16" tilecount="576" columns="16">
-  <image source="volcano_dungeon.png" width="256" height="576"/>
+ <tileset firstgid="8666" name="DN.SnS_volcano_dungeon" tilewidth="16" tileheight="16" tilecount="576" columns="16">
+  <image source="DN.SnS_volcano_dungeon.png" width="256" height="576"/>
   <tile id="320">
    <animation>
     <frame tileid="320" duration="100"/>
@@ -2023,7 +2023,7 @@
   </object>
   <object id="5" name="TileData" x="336" y="192" width="48" height="16">
    <properties>
-    <property name="Action" value="Message Underforge"/>
+    <property name="Action" value="Message DN.SnS_Underforge"/>
    </properties>
   </object>
   <object id="8" name="TileData" x="208" y="80" width="16" height="16">

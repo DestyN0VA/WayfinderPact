@@ -6,8 +6,8 @@
  <tileset firstgid="2177" name="paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
   <image source="paths.png" width="64" height="144"/>
  </tileset>
- <tileset firstgid="2213" name="thefrenchdodo-tilesheet-books" tilewidth="16" tileheight="16" tilecount="88" columns="11">
-  <image source="thefrenchdodo-tilesheet-books.png" width="176" height="128"/>
+ <tileset firstgid="2213" name="DN.SnS_thefrenchdodo-tilesheet-books" tilewidth="16" tileheight="16" tilecount="88" columns="11">
+  <image source="DN.SnS_thefrenchdodo-tilesheet-books.png" width="176" height="128"/>
  </tileset>
  <tileset firstgid="2301" name="NEACustom" tilewidth="16" tileheight="16" tilecount="140" columns="7">
   <image source="NEACustom.png" width="112" height="320"/>

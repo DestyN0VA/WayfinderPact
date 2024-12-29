@@ -192,8 +192,8 @@
  <tileset firstgid="2012" name="springobjects" tilewidth="16" tileheight="16" tilecount="936" columns="24">
   <image source="springobjects.png" width="384" height="624"/>
  </tileset>
- <tileset firstgid="2948" name="EastScarp_Forest" tilewidth="16" tileheight="16" tilecount="612" columns="34">
-  <image source="EastScarp_Forest.png" width="552" height="288"/>
+ <tileset firstgid="2948" name="DN.SnS_EastScarp_Forest" tilewidth="16" tileheight="16" tilecount="612" columns="34">
+  <image source="DN.SnS_EastScarp_Forest.png" width="552" height="288"/>
   <tile id="189">
    <animation>
     <frame tileid="189" duration="400"/>
@@ -414,8 +414,8 @@
  <tileset firstgid="8072" name="DestyCommission_TreeNormal" tilewidth="16" tileheight="16" tilecount="900" columns="30">
   <image source="DestyCommission_TreeNormal.png" width="480" height="480"/>
  </tileset>
- <tileset firstgid="8972" name="BigFern" tilewidth="16" tileheight="16" tilecount="30" columns="3">
-  <image source="BigFern.png" width="48" height="160"/>
+ <tileset firstgid="8972" name="DN.SnS_BigFern" tilewidth="16" tileheight="16" tilecount="30" columns="3">
+  <image source="DN.SnS_BigFern.png" width="48" height="160"/>
  </tileset>
  <layer id="1" name="Back" width="40" height="40">
   <properties>

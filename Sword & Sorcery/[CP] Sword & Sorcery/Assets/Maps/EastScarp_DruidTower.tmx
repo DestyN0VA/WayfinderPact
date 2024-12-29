@@ -58,8 +58,8 @@
  <tileset firstgid="3725" name="spring_outdoorsTileSheet" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
   <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
  </tileset>
- <tileset firstgid="5700" name="CropDecor" tilewidth="16" tileheight="16" tilecount="128" columns="8">
-  <image source="CropDecor.png" width="128" height="256"/>
+ <tileset firstgid="5700" name="DN.SnS_CropDecor" tilewidth="16" tileheight="16" tilecount="128" columns="8">
+  <image source="DN.SnS_CropDecor.png" width="128" height="256"/>
  </tileset>
  <layer id="1" name="Back" width="13" height="40">
   <data encoding="csv">

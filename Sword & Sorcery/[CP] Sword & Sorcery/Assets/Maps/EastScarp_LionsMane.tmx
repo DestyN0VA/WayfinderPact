@@ -87,8 +87,8 @@
    </animation>
   </tile>
  </tileset>
- <tileset firstgid="9581" name="Logophile_Rugs" tilewidth="16" tileheight="16" tilecount="684" columns="18">
-  <image source="Logophile_Rugs.png" width="288" height="610"/>
+ <tileset firstgid="9581" name="DN.SnS_Logophile_Rugs" tilewidth="16" tileheight="16" tilecount="684" columns="18">
+  <image source="DN.SnS_Logophile_Rugs.png" width="288" height="610"/>
  </tileset>
  <tileset firstgid="10265" name="PizzaVanInterior" tilewidth="16" tileheight="16" tilecount="304" columns="19">
   <image source="PizzaVanInterior.png" width="304" height="256"/>
