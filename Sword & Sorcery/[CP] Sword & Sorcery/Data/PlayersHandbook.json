@@ -43,6 +43,7 @@
                             "Condition": "TRUE",
                             "Pages": [
                                 {
+                                    "Id": "TableOfContents",
                                     "Contents": "{{i18n: guidebook.chapter.Chapters.JumpList}}"
                                 },
                                 {
@@ -227,6 +228,10 @@
                                 {
                                     "Id": "AlchemyTransmutation",
                                     "Contents": "{{i18n: guidebook.chapter.TOP.AlchemyTransmutation}}"
+                                },
+                                {
+                                    "Id": "GingerBeer",
+                                    "Contents": "{{i18n: guidebook.chapter.Mechanics.GingerBeer}}"
                                 }
                             ]
                         },
