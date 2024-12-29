@@ -6762,7 +6762,7 @@ ________      ________ _   _ _______ _____
   "magicitem.argentisshield.name": "Empowered Argentis Shield",
   "magicitem.argentisshield.description": "Fully restored to it's former power, this shield empowers you to protect your friends and loved ones.",
 
-  "magicitem.destykeychain.name": "Desty's Keychain",
+  "magicitem.destykeychain.name": "Stiles' Keychain",
   "magicitem.destykeychain.description": "An unusual keychain for Long Live The King, in the shape of an X.",
 
   "food.salishbourbon.name": "Salish Sea Bourbon",
@@ -6880,7 +6880,7 @@ ________      ________ _   _ _______ _____
   "weapon.chilisauce.name": "Chili Sauce",
   "weapon.chilisauce.description": "A joyous blade, named after a particularly heroic... sheep.",
 
-  "weapon.stiles-boomerang.name": "Stiles's Boomerang",
+  "weapon.stiles-boomerang.name": "Stiles' Boomerang",
   "weapon.stiles-boomerang.description": "He always comes back. Who's a good boy?",
 
   "magicitem.druidictotemfetish.name": "Druidic Totem Fetish",
@@ -7853,6 +7853,6 @@ ________      ________ _   _ _______ _____
   "Strings.Monsters.DuskspireRemnant": "Duskspire Remnant",
 
   //
-  "Mail.DN.SnS_FaireFoodMail": "Welcome to the Valley, farmer!^^Unforuntately you just missed out on the Ferngill Renaissance Faire.^^However we'd still like you to be able to enjoy the delectable delights we had to offer. Enclosed are several recipes, enjoy!^^  - Thomas Turkielegg", 
+  "Mail.DN.SnS_FaireFoodMail": "Welcome to the Valley, farmer!^^Unforuntately you just missed out on the Ferngill Renaissance Faire.^^However,  I thought it'd be fun for you to have some of the recipes we make! Please enjoy.^^  - Stiles Siddell", 
   "Mail.DN.SnS_FaireFoodMail.Title": "Food from the Faire"
 }
