@@ -72,7 +72,8 @@ namespace SwordAndSorcerySMAPI
             Game1.player.playNearbySoundLocal("daggerswipe");
 
             AnimatedSprite.endOfAnimationBehavior endOfAnimFunc = __instance.triggerDefenseSwordFunction;
-            switch (__instance.lastUser?.FacingDirection)
+            __instance.lastUser ??= Game1.player;
+            switch (__instance.lastUser.FacingDirection)
             {
                 case 0:
                     ((FarmerSprite)__instance.lastUser.Sprite).animateOnce(252, 250, 1, endOfAnimFunc);

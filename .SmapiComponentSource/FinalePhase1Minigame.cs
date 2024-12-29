@@ -3,7 +3,6 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using NeverEndingAdventure.Utils;
-using StardewModdingAPI;
 using StardewValley;
 using StardewValley.BellsAndWhistles;
 using StardewValley.Menus;
@@ -12,7 +11,6 @@ using StardewValley.Projectiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -77,6 +75,7 @@ namespace SwordAndSorcerySMAPI
 
         public Character CurrentTurn { get; set; }
         public BattlerInfo CurrentBattler => BattlerData.TryGetValue(CurrentTurn.Name, out var info) ? info : DuskspireDummyInfo;
+        public string OrigRoslinTexture { get; set; }
 
         public List<Character> Battlers { get; set; } = [];
         public Dictionary<string, BattlerInfo> BattlerData { get; set; } = [];
@@ -306,7 +305,7 @@ namespace SwordAndSorcerySMAPI
                             }
 
                             Projectiles.Add( new BattleProjectile()
-                            {                        
+                            {
                                 Texture = ItemRegistry.GetDataOrErrorItem(GetRandomBook()).GetTexture(),
                                 SourceRect = ItemRegistry.GetDataOrErrorItem(GetRandomBook()).GetSourceRect(),
                                 Position = CurrentTurn.StandingPixel.ToVector2() - new Vector2( 0, 48 ),
@@ -351,10 +350,19 @@ namespace SwordAndSorcerySMAPI
 
             Battlers.AddRange(@event.actors);
             Battlers.Insert(1, Game1.player);
+            Character c = Battlers.First(c => c.Name == "Roslin");
+            c.Sprite.SpriteWidth = 43;
+            c.Sprite.SpriteHeight = 45;
+            OrigRoslinTexture = c.Sprite.textureName.Value;
+            c.Sprite.LoadTexture("Characters/FakeSolomon");
+            c.Sprite.UpdateSourceRect();
+            c.Position += new Vector2(-64f, -13f);
+            BattlerData["Roslin"].BasePosition = c.Position;
+
 
             foreach (var battler in BattlerData.ToArray())
             {
-                if (battler.Value.BasePosition == default) // Optional NPC isn't in the event (Gunnar if Bearfam isn't installed)
+                if (battler.Value.BasePosition == default) // Optional NPC isn't in the event (Gunnar & Sen)
                 {
                     BattlerData.Remove(battler.Key);
                 }
@@ -630,16 +638,19 @@ namespace SwordAndSorcerySMAPI
 
             if (MovingActorForTurn == 1)
             {
+                CurrentTurn.isCharging = true;
                 CurrentTurn.SetMovingRight(true);
                 CurrentTurn.MovePosition(time, Game1.viewport, Game1.currentLocation);
                 if ((CurrentTurn.Position - CurrentBattler.BasePosition).X >= 64)
                 {
                     CurrentTurn.Halt();
+                    CurrentTurn.isCharging = true;
                     MovingActorForTurn--;
                 }
             }
             else if (MovingActorForTurn == -1)
             {
+                CurrentTurn.isCharging = true;
                 CurrentTurn.SetMovingLeft(true);
                 CurrentTurn.MovePosition(time, Game1.viewport, Game1.currentLocation);
                 if ((CurrentTurn.Position - CurrentBattler.BasePosition).X <= 0)
@@ -713,7 +724,6 @@ namespace SwordAndSorcerySMAPI
             b.Draw(Game1.staminaRect, new Rectangle(0, 0, windowSize.X, windowSize.Y), Color.Black);
             b.End();
             */
-
             if (CurrentTurn != DuskspireActor)
             {
                 DuskspireFrameTimer += (float)Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds;
@@ -823,6 +833,12 @@ namespace SwordAndSorcerySMAPI
 
         public void unload()
         {
+            Character c = Battlers.First(c => c.Name == "Roslin");
+            c.Sprite.SpriteWidth = 16;
+            c.Sprite.SpriteHeight = 32;
+            c.Sprite.LoadTexture(OrigRoslinTexture);
+            c.Sprite.UpdateSourceRect();
+
             if (DuskspireHealth > 0)
             {
                 Game1.player.health = -999;
