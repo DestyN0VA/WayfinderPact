@@ -14,7 +14,7 @@
                             "TabIconTexture": "Mods/Sword & Sorcery/GuidebookTabs",
                             "TabIconRect": {
                                 "X": 0,
-                                "Y": 0,
+                                "Y": 32,
                                 "Width": 16,
                                 "Height": 16
                             },
@@ -24,10 +24,10 @@
                                     "Contents": "{{i18n: guidebook.chapter.Title.TitlePage |ConfigMenuLinks={{ConfigMenuLinks}}}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.Title.Introduction}}"
+                                    "Contents": "{{i18n: guidebook.chapter.Title.TableOfContents}}"
                                 },
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.Title.TableOfContents}}"
+                                    "Contents": "{{i18n: guidebook.chapter.Title.Introduction}}"
                                 }
                             ]
                         },
@@ -36,14 +36,14 @@
                             "TabIconTexture": "Mods/Sword & Sorcery/GuidebookTabs",
                             "TabIconRect": {
                                 "X": 16,
-                                "Y": 0,
+                                "Y": 16,
                                 "Width": 16,
                                 "Height": 16
                             },
                             "Condition": "TRUE",
                             "Pages": [
                                 {
-                                    "Contents": "{{i18n: guidebook.chapter.Title.Introduction}}"
+                                    "Contents": "{{i18n: guidebook.chapter.Chapters.JumpList}}"
                                 },
                                 {
                                     "Id": "IntroNEA",
@@ -90,7 +90,7 @@
                             "TabIconTexture": "Mods/Sword & Sorcery/GuidebookTabs",
                             "TabIconRect": {
                                 "X": 0,
-                                "Y": 16,
+                                "Y": 0,
                                 "Width": 16,
                                 "Height": 16
                             },
@@ -126,7 +126,7 @@
                             "TabIconTexture": "Mods/Sword & Sorcery/GuidebookTabs",
                             "TabIconRect": {
                                 "X": 16,
-                                "Y": 16,
+                                "Y": 0,
                                 "Width": 16,
                                 "Height": 16
                             },
@@ -271,7 +271,7 @@
                             "TabIconTexture": "Mods/Sword & Sorcery/GuidebookTabs",
                             "TabIconRect": {
                                 "X": 0,
-                                "Y": 64,
+                                "Y": 16,
                                 "Width": 16,
                                 "Height": 16
                             },
@@ -290,15 +290,15 @@
                             "Name": "{{i18n: guidebook.chapter.Dedication.Name}}",
                             "TabIconTexture": "Mods/Sword & Sorcery/GuidebookTabs",
                             "TabIconRect": {
-                                "X": 0,
-                                "Y": 64,
+                                "X": 16,
+                                "Y": 32,
                                 "Width": 16,
                                 "Height": 16
                             },
                             "Pages": [
                                 {
                                     "Id": "LoreSeeker",
-                                    "Contents": "{{i18n: guidebook.chapter.Epilogue.FinalMessage}}"
+                                    "Contents": "{{i18n: guidebook.chapter.Epilogue.FinalMessage |IsModComplete={{i18n: guidebook.chapter.Dedication.IsModComplete.{{HasSeenEvent|contains=SnS.Ch5.End}}}}}}"
                                 }
                             ]
                         }
@@ -317,8 +317,8 @@
         {
             "LogName": "Load Furniture Image",
             "Action": "Load",
-            "Target": "Mods/Sword & Sorcery/GuidebookItem",
-            "FromFile": "Assets/Guidebook/book.png"
+            "Target": "Mods/Sword & Sorcery/GuidebookItem, Mods/Sword & Sorcery/InMemoryOfLoreSeeker",
+            "FromFile": "Assets/Guidebook/{{TargetWithoutPath}}.png"
         },
         {
             "LogName": "Create Furniture",

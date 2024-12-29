@@ -9,14 +9,23 @@
  
  */
 
- "Mail.PHB": "Hello, @!^^Thank you for your purchase of the Player's Handbook. Contained within is everything you need to know for Sword & Sorcery, 2nd Edition. Play your way with new skills, quests, NPCs, locations, and more!^^May the dice favor you kindly,^Sorcerers of the Sound%item id DN.SnS_PlayersHandbook%%[#]Player's Handbook",
+  "Mail.PHB": "Hello, @!^^Thank you for your purchase of the Player's Handbook. Contained within is everything you need to know for Sword & Sorcery, 2nd Edition. Play your way with new skills, quests, NPCs, locations, and more!^^May the dice favor you kindly,^Sorcerers of the Sound%item id DN.SnS_PlayersHandbook%%[#]Player's Handbook",
 
- "Furniture.PlayersHandbook": "S&S Player's Handbook",
+  "Furniture.PlayersHandbook": "S&S Player's Handbook",
 
- "guidebook.title": "Sword & Sorcery",
- "guidebook.chapter.Title.name": "Introduction",
- "guidebook.chapter.Title.TitlePage.ConfigLinks": "[nospacing][nextposition=0,40][center=300][font=dialogue][texttooltip=:Opens GMCM for the Content Patcher component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig DN.SnS]CP Config[/action][/texttooltip][/font][/center][offset=300,0][center=300][font=dialogue][texttooltip=:Opens GMCM for the SMAPI component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig KCC.SnS]SMAPI Config[/action][/texttooltip][/font][/center][/nospacing]",
- "guidebook.chapter.Title.TitlePage": "{{ConfigMenuLinks}}
+  "guidebook.chapter.Miscellaneous.Name": "Miscellaneous",
+  "guidebook.chapter.Mechanics.Name": "Mechanics",
+  "guidebook.chapter.Characters.name": "Characters",
+  "guidebook.chapter.Dedication.name": "Dedication",
+  "guidebook.chapter.Dedication.IsModComplete.true": "for giving this project a chance",
+  "guidebook.chapter.Dedication.IsModComplete.false": "for seeing this story all the way to the end",
+  "guidebook.chapter.Title.name": "Introduction",
+  "guidebook.chapter.Chapters.name": "Chapters",
+  "guidebook.chapter.Skills.name": "Skills",
+  "guidebook.chapter.DeepDark.Name": "The Deep Dark",
+  "guidebook.title": "Sword & Sorcery",
+  "guidebook.chapter.Title.TitlePage.ConfigLinks": "[nospacing][nextposition=0,40][center=300][font=dialogue][texttooltip=:Opens GMCM for the Content Patcher component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig DN.SnS]CP Config[/action][/texttooltip][/font][/center][offset=300,0][center=300][font=dialogue][texttooltip=:Opens GMCM for the SMAPI component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig KCC.SnS]SMAPI Config[/action][/texttooltip][/font][/center][/nospacing]",
+  "guidebook.chapter.Title.TitlePage": "{{ConfigMenuLinks}}
 [nospacing][nextposition=120,110][image=SMAPI/dn.sns/assets/guidebook/logo.png:null:1][nextposition=0,null][offset=0,250][/nospacing]
 [nospacing]
 [center=200][font=dialogue][link=https://www.patreon.com/profile/creators?u=12021226]Patreon[/link][/font][/center]
@@ -24,23 +33,30 @@
 [offset=200,0][center=200][font=dialogue][link=https://ko-fi.com/destynova]Ko-fi[/link][/font][/center]
 [nextposition=0,null]
 [/nospacing]",
- "guidebook.chapter.Title.Introduction": "[center][font=dialogue]Introduction[/font][/center]
+"guidebook.chapter.Title.Introduction": "[center][font=dialogue]Introduction[/font][/center]
 Sword & Sorcery is a vanilla adjacent, magical adventure inspired by the likes of Dungeons & Dragons, Balder's Gate, and Final Fantasy. Follow the complex story of the Coastal Adventurer's Guild as it's members learn, grow and change thanks to The Farmer's intervention. It starts with a lone tent on the beach, and ends in a battle to save East Scarp from the remnants of a tragedy long thought passed.",
+  "guidebook.chapter.Chapters.JumpList": "[center][font=dialogue]Introduction[/font][/center]
+chapter jump list
+1
+2
+3
+4
+5",
 
- "guidebook.chapter.Title.TableOfContents": "[center][font=dialogue]Table of Contents - Story[/font][/center]
+  "guidebook.chapter.Title.TableOfContents": "[center][font=dialogue]Table of Contents - Story[/font][/center]
 1. [link=NEA/Intro]Never Ending Adventure[/link]
 2. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=COT/Intro]Circle of Thorns[/link][/if][else]Circle of Thorns (locked)[/else]
 3. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=UP/Intro]Under Pressure[/link][/if][else]Under Pressure (locked)[/else]
 4. [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=TOP/Intro]The Other Promise[/link][/if][else]The Other Promise (locked)[/else]
 5. [if=PLAYER_HAS_MAIL Current DuskspireDefeated][link=Epilogue/Intro]Epilogue[/link][/if][else]Epilogue (locked)[/else]",
 "guidebook.chapter.Title.FAQ": "[center][font=dialogue]Frequently Asked Questions:[/font][/center]
-
+ 
 [color=maroon]How do I advance the story?[/color]
 This entire mod progresses linearly. See all of Mateo's events, meet {{TrueName}}. See all of {{TrueName}}'s events, meet Cirrus. See all of Cirrus' events, meet Roslin. See most of Roslin's events, meet Dandelion. See their remaining events, and proceed to the final dungeon and the associated final boss. By then, you will have unlocked most of everything. What remains will be documented here.
-
+ 
 [color=maroon]Where are the fish?[/color]
 Most fish added by S&S are in available in either the [color=green]Druid's Grove[/color] or the [color=green]Pocket Dimension[/color], and are not time restricted.
-
+ 
 > [itemtooltip=(O)DN.SnS_SalmonOfKnowledge][icon=Textures/DN.SnS/SnSObjects:32,144,16,16] Salmon of Knowledge[/itemtooltip]: 
 Available in Spring and Summer in any weather.
 > [itemtooltip=(O)DN.SnS_Fastitocalon][icon=Textures/DN.SnS/SnSObjects:48,144,16,16] Fastitocalon[/itemtooltip]: 
@@ -53,10 +69,10 @@ Available in Fall and Winter in Rainy weather.
 Available in Summer and Fall in Sunny weather.
 > [itemtooltip=(O)DN.SnS_GoldieTheBatteryPoweredFish][icon=Textures/DN.SnS/SnSObjects:144,160,16,16] Goldie the Battery Powered Fish[/itemtooltip]: 
 Always available in the [color=green]Druid Tower[/color].
-
+ 
 [color=maroon]How do I get all of the food recipes?[/color]
 Some are sent in the mail, some are part of ranking the Druidics Skill, most are given during events, and one is sold at the Lion's Mane after unlocking the Deep Dark.
-
+ 
 > [itemtooltip=(O)DN.SnS_Steak_on_a_Stake][icon=Textures/DN.SnS/VioletMoonFood:0,0,16,16] Stake on a Stake[/itemtooltip]: Mailed by Stiles.
 > [itemtooltip=(O)DN.SnS_ScotchEgg][icon=Textures/DN.SnS/VioletMoonFood:16,0,16,16] Scotch Egg[/itemtooltip]: Mailed by Stiles.
 > [itemtooltip=(O)DN.SnS_Hand_Pressed_Apple_Cider][icon=Textures/DN.SnS/VioletMoonFood:32,0,16,16] Hand-Pressed Apple Cider[/itemtooltip]: Mailed by Stiles.
@@ -76,10 +92,10 @@ Some are sent in the mail, some are part of ranking the Druidics Skill, most are
 > [itemtooltip=(O)DN.SnS_zuzustyleclamchowder][icon=Textures/DN.SnS/SnSObjects:144,64,16,16] ZuZu Style Clam Chowder[/itemtooltip]: Given by Cirrus.
 > [itemtooltip=(O)DN.SnS_ancientsweettea][icon=Textures/DN.SnS/SnSObjects:64,128,16,16] Ancient Sweet Tea[/itemtooltip]: Given by Dandelion.
 > [itemtooltip=(O)DN.SnS_farafieldsnack][icon=Textures/DN.SnS/SnSObjects:128,176,16,16] Farafield Snack[/itemtooltip]: The Lion's Mane.
-
+ 
 [color=maroon]What are the Ginger Beer flavors?[/color]
 You can craft Old-Fashioned Fermenters after learning how from Cirrus. Add ginger and fruit to make flavored Ginger Beer, which can be aged.
-
+ 
 > [itemtooltip=(O)DN.SnS_orangegingerbeer][icon=Textures/DN.SnS/SnSObjects:96,112,16,16] Orange Flavored Ginger Beer[/itemtooltip]
 > [itemtooltip=(O)DN.SnS_blueberrygingerbeer][icon=Textures/DN.SnS/SnSObjects:112,112,16,16] Blueberry Flavored Ginger Beer[/itemtooltip]
 > [itemtooltip=(O)DN.SnS_pineapplegingerbeer][icon=Textures/DN.SnS/SnSObjects:128,112,16,16] Pineapple Flavored Ginger Beer[/itemtooltip]
@@ -90,29 +106,29 @@ You can craft Old-Fashioned Fermenters after learning how from Cirrus. Add ginge
 > [itemtooltip=(O)DN.SnS_ancienthuckleberrygingerbeer][icon=Textures/DN.SnS/SnSObjects:32,128,16,16] Ancient Huckleberry Flavored Ginger Beer[/itemtooltip]
 > [itemtooltip=(O)DN.SnS_ancientappleberrygingerbeer][icon=Textures/DN.SnS/SnSObjects:32,128,16,16] Ancient Appleberry Flavored Ginger Beer[/itemtooltip]
 > [itemtooltip=(O)DN.SnS_ancientelderberrygingerbeer][icon=Textures/DN.SnS/SnSObjects:32,128,16,16] Ancient Elderberry Flavored Ginger Beer[/itemtooltip]
-
+ 
 [color=maroon]How do I get Mateo, {{TrueName}}, and Cirrus' hoodies?[/color]
 Marry them. 
-
+ 
 [color=maroon]How do I turn off the Adventure Bar?[/color]
 Ctrl+U is the default hotkey. This can be changed in the SMAPI portion of the S&S config. 
-
+ 
 [color=maroon]{{TrueName}}'s seasonal quests have disappeared![/color]
 They were removed permanently in 2.1.0. You can now progress as intended without them.
-
+ 
 [color=maroon]The plus doesn't match my recolor![/color] 
 This menu is used by S&S but is added by Spacecore. S&S covers most major recolors, but in case you'd like to add one, it can be targeted: 
 > spacechase0.SpaceCore/ExtraEquipmentIcon 
-
+ 
 [color=maroon]Another UI element doesn't match my recolor![/color] 
 If it's your recolor and you've made the assets for it, please let us know and we can include it. If you have a request, please reach out on Discord or in the Nexus comments.
-
+ 
 [color=maroon]Is there a standalone Skills component?[/color]
 No. If you are interested in mechanics-only mods, there are other alternatives. S&S is, first and foremost, a content expansion. 
-
+ 
 [color=maroon]Is S&S compatible with multiple spouse mods?[/color]
 Use at your own risk, and report associated issues to the respective authors - not the S&S team. S&S's romanceable NPCs are not designed to be polyamorous, and {{TrueName}} is monogamous by design due to mechanical reasons.
-
+ 
 [color=maroon]Who is Stiles Siddell?[/color]
 A character planned for Sword & Sorcery: Final Mix, a standalone remake of this mod.",
 "guidebook.chapter.Title.Cheats": "Arsenal
@@ -398,7 +414,7 @@ You can attach a large amount of certain monster loot to a weapon to give it new
  
 You can choose one item type from each category above.",
 
-"guidebook.chapter.NEA.ArtificerSkill": "[center][font=dialogue]Artificer Skill[/font][/center]
+"guidebook.chapter.NEA.ArtificerSkill": "[center][font=dialogue]Artificer[/font][/center]
  
 You've unlocked the Artificer skill! Artificer can be leveled up killing monsters and mining.
  
@@ -1767,8 +1783,10 @@ Like vanilla skills, the Paladin skill provides professions that change the game
     enemies.",
 
 "guidebook.chapter.Epilogue.FinalMessage": "[center][font=dialogue]Final Message[/font][/center]
-   
-This project is dedicated to the memory of TheLoreSeeker, a beloved community member who made a point to encourage people's wildest ideas. He may no longer be with us, but he lives on in the content of those he inspired. Thank you, to him and everyone else who contributed to S&S. And especially to you, the player, for seeing this story all the way to the end. Signed with love, DestyNova.",
+ 
+[image=Mods/Sword & Sorcery/InMemoryOfLoreSeeker]
+    
+This project is dedicated to the memory of TheLoreSeeker, a beloved community member who made a point to encourage people's wildest ideas. He may no longer be with us, but he lives on in the content of those he inspired. Thank you, to him and everyone else who contributed to S&S. And especially to you, the player, {{IsModComplete}}. Signed with love, DestyNova.",
 
 "guidebook.chapter.DeepDark.Intro": "[center][font=dialogue]Introduction[/font][/center]
  
