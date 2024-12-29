@@ -2029,17 +2029,49 @@ When defeated, the Duskspire drops [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=T
 "guidebook.chapter.Mechanics.SMAPIConfigLink.Off": "SMAPI Config",
 "guidebook.chapter.Mechanics.AdventureBar": "[center][font=dialogue]Adventure Bar[/font][/center]
  
-After obtaining [link=NEA/ArtificerProfessions]Shadowstep[/link] or [link=COT/DruidicsSkill]Shapeshifting[/link], you will unlock the [color=Navy]Adventure Bar[/color], which hosts your abilities and displays your current [color=Navy]Aether[/color].
+After obtaining [link=Skills/ArtificerProfessions]Shadowstep[/link] or [link=Skills/DruidicsSkill]Shapeshifting[/link], you will unlock the [color=Navy]Adventure Bar[/color], which hosts your abilities and displays your current [color=Navy]Aether[/color].
  
 You can change which abilities you have equipped through the [color=Navy]Adventure Bar Menu[/color]. You will unlock different abilities throughout the story of Sword & Sorcery.
  
 [font=dialogue]Using the Adventure Bar[/font]
 You can use the Adventure Bar abilities using the [color=Navy]CTRL/SHIFT + Row Number[color] keybinds and access the Adventure Bar Menu by pressing [color=Navy]U[/color]. When using a controller the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod is highly recommended. You can also hide the Adventure Bar by pressing [color=Navy]CTRL + U[/color], you cannot use abilities while the Adventure Bar is hidden.
 All keybinds can be changed through the {{Config}}.",
-"guidebook.chapter.Mechanics.ShieldsArmor": "
-[font=dialogue]Armor[/font]
+"guidebook.chapter.Mechanics.ShieldsArmor": "[center][font=dialogue]Armor Points[/font][/center]
  
-After reaching level 1 [link=NEA/ArtificerSkill]Artificer[/link], you can craft armor for the armor slot on the equipment menu. Armor acts as an extra buffer that absorbs damage before your health bar. It automatically repairs itself at the beginning of each day.",
+Armor Points act as an extra buffer that absorbs damage before you lose health from your health bar. Armor Points come from [color=Navy]Armor[/color] and [color=Navy]Shields[/color]. It automatically replenishes at the beginning of each day.
+ 
+[font=dialogue]Armor[/font]
+After reaching [link=Skills/ArtificerSkill]Artificer[/link] level 1, you can craft armor for the [color=Navy]Armor Slot[/color] on your [link=Mechanics/EquipmentSlots]Equipment Menu[/link]. Armor is the main method for gaining Armor Points.
+ 
+> All Armor
+ = [itemtooltip=(O)DN.SnS_ClothArmor][icon=Textures/DN.SnS/SnSArsenal:32,48,16,16] [color=blue]Cloth Armor[/color][/itemtooltip] - Provides 25 Armor Points
+ = [itemtooltip=(O)DN.SnS_CopperArmor][icon=Textures/DN.SnS/SnSArsenal:48,48,16,16] [color=blue]Copper Armor[/color][/itemtooltip] - Provides 50 Armor Points
+ = [itemtooltip=(O)DN.SnS_IronArmor][icon=Textures/DN.SnS/SnSArsenal:64,48,16,16] [color=blue]Iron Armor[/color][/itemtooltip] - Provides 75 Armor Points
+ = [itemtooltip=(O)DN.SnS_GoldArmor][icon=Textures/DN.SnS/SnSArsenal:80,48,16,16] [color=blue]Gold Armor[/color][/itemtooltip] - Provides 100 Armor Points
+ = [itemtooltip=(O)DN.SnS_IridiumArmor][icon=Textures/DN.SnS/SnSArsenal:96,48,16,16] [color=blue]Iridium Armor[/color][/itemtooltip] - Provides 125 Armor Points
+ = [itemtooltip=(O)DN.SnS_RadioactiveArmor][icon=Textures/DN.SnS/SnSArsenal:0,64,16,16] [color=blue]Radioactive Armor[/color][/itemtooltip] - Provides 150 Armor Points
+ = [itemtooltip=(O)DN.SnS_StygiumArmor][icon=Textures/DN.SnS/SnSArsenal:0,112,16,16] [color=blue]Stygium Armor[/color][/itemtooltip] - Provides 175 Armor Points
+ = [itemtooltip=(O)DN.SnS_ElysiumArmor][icon=Textures/DN.SnS/SnSArsenal:16,112,16,16] [color=blue]Elysium Armor[/color][/itemtooltip] - Provides 200 Armor Points
+ 
+[font=dialogue]Shields[/font]
+Shields are a new type of weapon available to the player. They can be used as a melee weapon to directly hit enemies, or be thrown using right click (or the Controller equivalent) to hit an enemy and deal damage on impact. They additionally provide Armor Points to absorb damage and can be equipped in the [color=Navy]Shield Slot[/color] in your [link=Mechanics/EquipmentSlots]Equipment Menu[/link].
+ 
+> Normal Shields (Always available to craft.)
+ = [itemtooltip=(W)DN.SnS_WoodenShield][icon=Textures/DN.SnS/SnSObjects:128,192,16,16] [color=blue]Wooden Shield[/color][/itemtooltip] - Provides 2 Armor Points
+ = [itemtooltip=(W)DN.SnS_CopperShield][icon=Textures/DN.SnS/SnSObjects:16,192,16,16] [color=blue]Copper Shield[/color][/itemtooltip] - Provides 5 Armor Points
+ = [itemtooltip=(W)DN.SnS_IronShield][icon=Textures/DN.SnS/SnSObjects:112,160,16,16] [color=blue]Iron Shield[/color][/itemtooltip] - Provides 10 Armor Points
+ = [itemtooltip=(W)DN.SnS_GoldShield][icon=Textures/DN.SnS/SnSObjects:32,192,16,16] [color=blue]Gold Shield[/color][/itemtooltip] - Provides 15 Armor Points
+ = [itemtooltip=(W)DN.SnS_IridiumShield][icon=Textures/DN.SnS/SnSObjects:48,192,16,16] [color=blue]Iridium Shield[/color][/itemtooltip] - Provides 20 Armor Points
+ = [itemtooltip=(W)DN.SnS_RadioactiveShield][icon=Textures/DN.SnS/SnSObjects:64,192,16,16] [color=blue]Radioactive Shield[/color][/itemtooltip] - Provides 25 Armor Points
+ = [itemtooltip=(W)DN.SnS_StygiumShield][icon=Textures/DN.SnS/SnSObjects:80,192,16,16] [color=blue]Stygium Shield[/color][/itemtooltip] - Provides 30 Armor Points
+ 
+ > Skill Shields (Available after the [link=DeepDark/Duskspire]Final Boss[/link] fight and the [link=Skills/PaladinSkill]Paladin Skill[/link].)
+ = [itemtooltip=(W)DN.SnS_PaladinShield][icon=Textures/DN.SnS/SnSObjects:96,16,16,16] [color=blue]Paladin Shield[/color][/itemtooltip] - Provides 35 Armor Points.
+ = [itemtooltip=(W)DN.SnS_ArtificerShield][icon=Textures/DN.SnS/SnSObjects:48,160,16,16] [color=blue]Artificer Shield[/color][/itemtooltip] - Provides 35 Armor Points.
+ = [itemtooltip=(W)DN.SnS_DruidShield][icon=Textures/DN.SnS/SnSObjects:64,160,16,16] [color=blue]Druid Shield[/color][/itemtooltip] - Provides 35 Armor Points. 
+ = [itemtooltip=(W)DN.SnS_BardShield][icon=Textures/DN.SnS/SnSObjects:80,160,16,16] [color=blue]Bardics Shield[/color][/itemtooltip] - Provides 35 Armor Points.
+ = [itemtooltip=(W)DN.SnS_SorcererShield][icon=Textures/DN.SnS/SnSObjects:96,160,16,16] [color=blue]Sorcerer Shield[/color][/itemtooltip] - Provides 35 Armor Points.
+",
 "guidebook.chapter.Mechanics.DualWielding": "[font=dialogue]Dual Wielding[/font]
 Sword & Sorcery introduces a dual-wielding feature, allowing you to attack with two weapons at once. To equip a weapon in your off-hand slot, open your inventory and click a button to the left of the window that looks like the following:
  
