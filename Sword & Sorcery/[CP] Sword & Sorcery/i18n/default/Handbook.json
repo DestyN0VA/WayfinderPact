@@ -45,7 +45,7 @@ The Chapters of this story, all the way from a lone tent on the beach to a battl
  = [link=Chapters/NEA]Events[/link]
  
 > [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=Chapters/IntroCOT]Circle Of Thorns[/link][/if][else]Circle Of Thorns [color=DarkRed](Locked)[/color][/else]
- = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=Chapters/IntroCOT]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
+ = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=Chapters/COT]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
  
 > [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Chapters/IntroUP]Under Pressure[/link][/if][else]Under Pressure [color=DarkRed](Locked)[/color][/else]
  = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Chapters/UP]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
@@ -102,7 +102,7 @@ Available in Summer and Fall in Sunny weather.
 Always available in the [color=green]Druid Tower[/color].
  
 [color=maroon]How do I get all of the food recipes?[/color]
-Some are sent in the mail, some are part of ranking the [link=Skills/DrudicsSkill]Druidics Skill[/link], most are given during events, and one is sold at the Lion's Mane after unlocking the [link=DeepDark/TableOfContents]Deep Dark[/link].
+Some are sent in the mail, some are part of ranking the [link=Skills/DruidicsSkill]Druidics Skill[/link], most are given during events, and one is sold at the Lion's Mane after unlocking the [link=DeepDark/TableOfContents]Deep Dark[/link].
  
 > [itemtooltip=(O)DN.SnS_Steak_on_a_Stake][icon=Textures/DN.SnS/VioletMoonFood:0,0,16,16] [color=blue]Stake on a Stake[/color][/itemtooltip]: Mailed by Stiles.
 > [itemtooltip=(O)DN.SnS_ScotchEgg][icon=Textures/DN.SnS/VioletMoonFood:16,0,16,16] [color=blue]Scotch Egg[/color][/itemtooltip]: Mailed by Stiles.
@@ -1797,7 +1797,7 @@ This project is dedicated to the memory of TheLoreSeeker, a beloved community me
 
 "guidebook.chapter.DeepDark.Intro": "[center][font=dialogue][offset=0,8]Introduction[/font][/center]
  
-The Deep Dark is a late-game 30 [link=DeepDark/Floors]floor[/link] dungeon crawling with powerful [link=DeepDark/Monsters]monsters[/link] and the rare ore, [Link=DeepDark/Stygium]Stygium[/link]. Here you'll find beautiful maps, custom forage and new monsters with unique item drop pools. Once you reach the end you'll face off against the mod's final boss: The [Link=DeepDark/Duskspire]Duskspire Behemoth[/link].
+The Deep Dark is a late-game 30 floor dungeon crawling with powerful monsters and the rare ore, Stygium. Here you'll find beautiful maps, custom forage and new monsters with unique item drop pools. Once you reach the end you'll face off against the mod's final boss: The Duskspire Behemoth.
  
 It's advised you prepare yourself with Sword & Sorcery's new mechanics and late-game vanilla mechanics before tackling this location.
  

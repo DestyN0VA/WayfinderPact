@@ -22,6 +22,8 @@ using static StardewValley.FarmerRenderer;
 using static StardewValley.FarmerSprite;
 using StardewValley.Minigames;
 using StardewValley.SaveMigrations;
+using StardewValley.Objects.Trinkets;
+using System.Linq;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -261,7 +263,7 @@ namespace SwordAndSorcerySMAPI
             if (slot == 0)
                 return o.HasContextTag("bullet_item");
             else
-                return o.HasContextTag("keychain_item");
+                return o.HasContextTag("keychain_item") || (o is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false));
         }
     }
 
@@ -298,6 +300,8 @@ namespace SwordAndSorcerySMAPI
                     if (oldObj != null)
                     {
                         __instance.attachments[slot] = null;
+                        if (slot != 0 && oldObj is Trinket t)
+                            (__instance.lastUser ?? Game1.player).trinketItems.Remove(t);
                         Game1.playSound("dwop");
                         __result = oldObj;
                         return false;
@@ -309,7 +313,7 @@ namespace SwordAndSorcerySMAPI
             int originalStack = o.Stack;
             for (int slot = 0; slot < __instance.attachments.Length; slot++)
             {
-                if (!CanThisBeAttached(o, slot))
+                if (!SlingshowBowAmmoAttachPatch1.CanThisBeAttached(o, slot))
                 {
                     continue;
                 }
@@ -317,6 +321,8 @@ namespace SwordAndSorcerySMAPI
                 if (oldObj == null)
                 {
                     __instance.attachments[slot] = o;
+                    if (slot != 0 && o is Trinket t)
+                        (__instance.lastUser ?? Game1.player).trinketItems.Add(t);
                     o = null;
                     break;
                 }
@@ -340,9 +346,11 @@ namespace SwordAndSorcerySMAPI
             {
                 Object oldObj = __instance.attachments[slot];
                 __instance.attachments[slot] = null;
-                if (CanThisBeAttached(o, slot))
+                if (SlingshowBowAmmoAttachPatch1.CanThisBeAttached(o, slot))
                 {
                     __instance.attachments[slot] = o;
+                    if (slot != 0 && o is Trinket t)
+                        (__instance.lastUser ?? Game1.player).trinketItems.Add(t);
                     Game1.playSound("button1");
                     __result = oldObj;
                     return false;
@@ -351,14 +359,6 @@ namespace SwordAndSorcerySMAPI
             }
             __result = o;
             return false;
-        }
-
-        public static bool CanThisBeAttached(Object o, int slot)
-        {
-            if (slot == 0)
-                return o.HasContextTag("bullet_item");
-            else
-                return o.HasContextTag("keychain_item");
         }
     }
 

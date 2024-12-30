@@ -13,7 +13,10 @@
           "Texture": "Textures/DN.SnS/SnSObjects",
           "SheetIndex": 101,
           "DropsNaturally": false,
-          "CanBeReforged": false
+          "CanBeReforged": false,
+          "CustomFields": {
+            "Keychain_item": "true",
+          }
         },
       }
     },
