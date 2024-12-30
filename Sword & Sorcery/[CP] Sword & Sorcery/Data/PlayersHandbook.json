@@ -51,6 +51,7 @@
                   "Contents": "{{i18n: guidebook.chapter.NEA.Intro}}"
                 },
                 {
+                  "Id": "NEA",
                   "Contents": "{{i18n: guidebook.chapter.NEA.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}} |GalaxySwordExtras={{i18n: guidebook.chapter.GalaxySwordExtras.{{GalaxySwordExtras}}}}}}"
                 },
                 {
@@ -59,6 +60,7 @@
                   "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14"
                 },
                 {
+                  "Id": "COT",
                   "Contents": "{{i18n: guidebook.chapter.COT.Events {{TrollHeritageEvents}} |VariableTimegate={{VariableTimegate}} {{HectorPronouns}} |TrueName={{TrueName}}}}",
                   "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14"
                 },
@@ -78,7 +80,7 @@
                   "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14"
                 },
                 {
-                  "ID": "Top",
+                  "ID": "TOP",
                   "Contents": "{{i18n: guidebook.chapter.TOP.Events {{TrollHeritageEvents}} |VariableTimegate={{VariableTimegate}} |IsRSVInstalled={{i18n: guidebook.chapter.TOP.RoslinEssence.{{HasMod|Contains=Rafseazz.RSVCP}}}} |IsChocoboValleyInstalled={{i18n:guidebook.chapter.TOP.DandelionShield.{{HasMod|Contains=Kitsutsune.Chocobovalley}}}}}}",
                   "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14"
                 },
@@ -105,28 +107,40 @@
               },
               "Pages": [
                 {
+                  "Id": "TableOfContents",
+                  "Contents": "{{i18n: guidebook.chapter.Characters.TableOfContents |TrueName={{TrueName}}}}"
+                },
+                {
+                  "Id": "Mateo",
                   "Contents": "{{i18n: guidebook.chapter.NEA.Mateo}}"
                 },
                 {
-                  "Contents": "{{i18n: guidebook.chapter.COT.Hector {{HectorPronouns}} |TrueName={{TrueName}}}}"
-                },
-                {
-                  "Contents": "{{i18n: guidebook.chapter.UP.Cirrus}}"
-                },
-                {
-                  "Contents": "{{i18n: guidebook.chapter.TOP.Roslin}}"
-                },
-                {
-                  "Contents": "{{i18n: guidebook.chapter.TOP.Dandelion}}"
-                },
-                {
-                  "Contents": "{{i18n: guidebook.chapter.TOP.Solomon}}"
-                },
-                {
+                  "Id": "Emeritus",
                   "Contents": "{{i18n: guidebook.chapter.NEA.Emeritus}}"
                 },
                 {
+                  "Id": "Hector",
+                  "Contents": "{{i18n: guidebook.chapter.COT.Hector {{HectorPronouns}} |TrueName={{TrueName}}}}"
+                },
+                {
+                  "Id": "Book",
                   "Contents": "{{i18n: guidebook.chapter.COT.Book{{BookFormDT}} {{HectorPronouns}} |TrueName={{TrueName}}}}"
+                },
+                {
+                  "Id": "Cirrus",
+                  "Contents": "{{i18n: guidebook.chapter.UP.Cirrus}}"
+                },
+                {
+                  "Id": "Roslin",
+                  "Contents": "{{i18n: guidebook.chapter.TOP.Roslin}}"
+                },
+                {
+                  "Id": "Solomon",
+                  "Contents": "{{i18n: guidebook.chapter.TOP.Solomon}}"
+                },
+                {
+                  "Id": "Dandelion",
+                  "Contents": "{{i18n: guidebook.chapter.TOP.Dandelion}}"
                 }
               ]
             },
@@ -141,7 +155,7 @@
               },
               "Pages": [
                 {
-                  "Id": "Skills",
+                  "Id": "TableOfContents",
                   "Contents": "{{i18n: guidebook.chapter.Mechanics.Skills}}"
                 },
                 {
@@ -178,7 +192,7 @@
                 },
                 {
                   "Id": "PaladinSkill",
-                  "Contents": "{{i18n: guidebook.chapter.Epilogue.PaladinSkill}}"
+                  "Contents": "{{i18n: guidebook.chapter.Epilogue.PaladinSkill|Config={{SMAPIConfigLink}}}}"
                 },
                 {
                   "Id": "PaladinProfessions",
@@ -221,12 +235,8 @@
                   "Contents": "{{i18n: guidebook.chapter.NEA.Underforge}}"
                 },
                 {
-                  "Id": "Powers",
-                  "Contents": "{{i18n: guidebook.chapter.Mechanics.Powers}}"
-                },
-                {
                   "Id": "LLTKKeychains",
-                  "Contents": "{{i18n: guidebook.chapter.Mechanics.LLTK & Keychains}}"
+                  "Contents": "{{i18n: guidebook.chapter.Mechanics.LLTK & Keychains|Config={{SMAPIConfigLink}}}}"
                 },
                 {
                   "Id": "DruidicEssence",
@@ -243,6 +253,10 @@
                 {
                   "Id": "GingerBeer",
                   "Contents": "{{i18n: guidebook.chapter.Mechanics.GingerBeer}}"
+                },
+                {
+                  "Id": "Powers",
+                  "Contents": "{{i18n: guidebook.chapter.Mechanics.Powers}}"
                 }
               ]
             },
@@ -257,12 +271,8 @@
               },
               "Pages": [
                 {
-                  "Id": "Intro",
+                  "Id": "TableOfContents",
                   "Contents": "{{i18n: guidebook.chapter.DeepDark.Intro}}"
-                },
-                {
-                  "Id": "Monsters",
-                  "Contents": "{{i18n: guidebook.chapter.DeepDark.Monsters}}"
                 },
                 {
                   "Id": "Floors",
@@ -275,6 +285,10 @@
                 {
                   "Id": "Elysium",
                   "Contents": "{{i18n: guidebook.chapter.DeepDark.Elysium}}"
+                },
+                {
+                  "Id": "Monsters",
+                  "Contents": "{{i18n: guidebook.chapter.DeepDark.Monsters}}"
                 },
                 {
                   "Id": "Duskspire",
