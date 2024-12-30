@@ -95,6 +95,12 @@
         "Query: {{RSVMaterials}} AND {{HasMod |contains=Rafseazz.RSVCP}}": true
       }
     },
+    {
+      "LogName": "Trinket Tinker Compat",
+      "Action": "Include",
+      "FromFile": "Data/Trinkets.json",
+      "When": { "HasMod": "mushymato.TrinketTinker" }
+    },
     // TRIGGER ACTIONS
     {
       "LogName": "Overrides Seen Today Flag Removal",
@@ -2435,6 +2441,12 @@
       "Name": "GalaxySwordExtras",
       "Value": true,
       "When": { "HasFlag |contains=galaxySword": false, "HasFlag |contains=ccVault": true }
+    },
+    { "Name": "KeyChainType", "Value": "(O){{ModID}}_destykeychain" },
+    {
+      "Name": "KeyChainType",
+      "Value": "(TR){{ModId}}_OwlBoy",
+      "When": { "HasMod": "mushymato.TrinketTinker" }
     }
   ]
 }

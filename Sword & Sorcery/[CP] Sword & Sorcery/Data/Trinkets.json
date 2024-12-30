@@ -1,0 +1,187 @@
+{ //
+  "$schema": "https://smapi.io/schemas/content-patcher.json",
+  "Changes": [
+    {
+      "LogName": "Owl: Trinkets",
+      "Action": "EditData",
+      "Target": "Data/Trinkets",
+      "Entries": {
+        "{{ModId}}_OwlBoy": {
+          "Id": "{{ModId}}_OwlBoy",
+          "DisplayName": "{{i18n: magicitem.destykeychain.name}}",
+          "Description": "{{i18n: magicitem.destykeychain.description.Trinket}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SheetIndex": 101,
+          "DropsNaturally": false,
+          "CanBeReforged": false
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+          "{{ModID}}_OwlBoyIcon": {
+              "Name": "{{ModID}}_OwlBoyIcon",
+              "DisplayName": "{{i18n: magicitem.OwlBoyIcon.name}}",
+              "Description": "{{i18n: magicitem.OwlBoyIcon.description}}",
+              "Type": "Basic",
+              "Category": 0,
+              "Price": 0,
+              "Edibility": -300,
+              "IsDrink": false,
+              "ExcludeFromRandomSale": true,
+              "ExcludeFromShippingCollection": true,
+              "Buff": null,
+              "Texture": "Textures/DN.SnS/SnSObjects",
+              "SpriteIndex": 129
+          }
+      }
+  },
+    {
+      "LogName": "Owlboy Buff",
+      "Action": "EditData",
+      "Target": "Data/Buffs",
+      "Entries": {
+        "{{ModId}}_OwlBoyBuff": {
+          "DisplayName": "{{i18n:buff.owlboybuff}}",
+          "Duration": 20000,
+          "MaxDuration": -1,
+          "IconTexture": "Textures/DN.SnS/SnSObjects",
+          "IconSpriteIndex": 102,
+          "Effects": { "Attack": 20 }
+        }
+        }
+      },
+    {
+      "LogName": "Owl: Tinker",
+      "Action": "EditData",
+      "Target": "mushymato.TrinketTinker/Tinker",
+      "Entries": {
+        "{{ModId}}_OwlBoy": {
+          "Variants": [
+            {
+              "Texture": "Characters/DN.SnS_OwlBoy",
+              "Width": 19,
+              "Height": 15,
+              "ShadowScale": 0
+            }
+          ],
+          "Motion": {
+            "MotionClass": "Hover",
+            "AlwaysMoving": true,
+            "DirectionMode": "DRUL",
+            "FrameLength": 4,
+            "Anchors": [
+              {
+                "Mode": "Forage",
+                "Range": 320
+              },
+              {
+                "Mode": "Crop",
+                "Range": 240
+              },
+            ],
+            "AnimClips": {
+              "Perching": {
+                "FrameStart": 16,
+                "FrameLength": 1
+              },
+              "AbilityProc": {
+                "FrameStart": 20,
+                "FrameLength": 2,
+                "Interval": 900
+                
+              }
+            },
+            "Args": {
+              "Magnitude": 16,
+              "Period": 800,
+              "PerchingTimeout": 9000,
+              "PerchingOffset": "0,16"
+            }
+          },
+          "Abilities": [
+            [
+              {
+                "AbilityClass": "ItemDrop",
+                "Proc": "Footstep",
+                "ProcSound": "pickUpItem",
+                "Condition": "SYNCED_RANDOM tick StilesBoomerang .0004",
+                "Args": {
+                  "ID": "StilesBoomerang",
+                  "ItemId": "(W){{ModID}}_StilesBoomerang",
+                }
+              },
+              {
+                "AbilityClass": "Action",
+                "Proc": "Footstep",
+                "ProcSound": "owl",
+                "ProcOneshotAnim": "AbilityProc",
+                "Condition": "SYNCED_RANDOM tick OwlBoyTalk1 .001",
+                "Args": { "Action": "spacechase0.SpaceCore_ShowHudMessage \"{{i18n: magicitem.destykeychain.dialogue.{{Random: {{Range: 1, 21}}|key=OB1}}}}\" (O){{ModID}}_OwlBoyIcon" }
+              },
+              {
+                "AbilityClass": "Action",
+                "Proc": "Footstep",
+                "ProcSound": "owl",
+                "ProcOneshotAnim": "AbilityProc",
+                "Condition": "SYNCED_RANDOM tick OwlBoyTalk2 .001",
+                "Args": { "Action": "spacechase0.SpaceCore_ShowHudMessage \"{{i18n: magicitem.destykeychain.dialogue.{{Random: {{Range: 1, 21}}|key=OB2}}}}\" (O){{ModID}}_OwlBoyIcon" }
+              },
+              {
+                "AbilityClass": "Action",
+                "Proc": "Footstep",
+                "ProcSound": "owl",
+                "ProcOneshotAnim": "AbilityProc",
+                "Condition": "SYNCED_RANDOM tick OwlBoyTalk3 .001",
+                "Args": { "Action": "spacechase0.SpaceCore_ShowHudMessage \"{{i18n: magicitem.destykeychain.dialogue.{{Random: {{Range: 1, 21}}|key=OB3}}}}\" (O){{ModID}}_OwlBoyIcon" }
+              },
+              {
+                "AbilityClass": "Action",
+                "Proc": "Footstep",
+                "ProcSound": "owl",
+                "ProcOneshotAnim": "AbilityProc",
+                "Condition": "SYNCED_RANDOM tick OwlBoyTalk4 .001",
+                "Args": { "Action": "spacechase0.SpaceCore_ShowHudMessage \"{{i18n: magicitem.destykeychain.dialogue.{{Random: {{Range: 1, 21}}|key=OB4}}}}\" (O){{ModID}}_OwlBoyIcon" }
+              },
+              {
+                "AbilityClass": "Action",
+                "Proc": "Footstep",
+                "ProcSound": "owl",
+                "ProcOneshotAnim": "AbilityProc",
+                "Condition": "SYNCED_RANDOM tick OwlBoyTalk5 .001",
+                "Args": { "Action": "spacechase0.SpaceCore_ShowHudMessage \"{{i18n: magicitem.destykeychain.dialogue.{{Random: {{Range: 1, 21}}|key=OB5}}}}\" (O){{ModID}}_OwlBoyIcon" }
+              },
+              {
+                "AbilityClass": "HarvestForage",
+                "Proc": "Timer",
+                "ProcTimer": 250,
+                "ProcSound": "harvest",
+                "Args": { "Range": 2 }
+              },
+              {
+                "AbilityClass": "Buff",
+                "Proc": "Timer",
+                "ProcTimer": 19000,
+                "ProcSound": "owl",
+                "ProcOneshotAnim": "AbilityProc",
+                "Args": { "BuffId": "{{ModId}}_OwlBoyBuff" }
+              },
+              {
+                "AbilityClass": "Buff",
+                "Proc": "Always",
+                "Args": { "BuffId": "{{ModId}}_OwlBoyBuff" }
+              },
+              {
+                "AbilityClass": "Action",
+                "Proc": "Always",
+                "Args": { "Action": "spacechase0.SpaceCore_ShowHudMessage \"{{i18n: magicitem.destykeychain.dialogue.Hi}}\" (O){{ModID}}_OwlBoyIcon" }
+              }
+            ],
+          ]
+        },
+      }
+    }
+  ]
+}

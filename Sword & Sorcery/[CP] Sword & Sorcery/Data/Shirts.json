@@ -25,14 +25,8 @@
           "HasSleeves": true,
           "CanChooseDuringCharacterCustomization": false,
           "CustomFields": {}
-        }
-      }
-    },
-    {
-      "LogName": "Add Shirts",
-      "Action": "EditData",
-      "Target": "Data/Shirts",
-      "Entries": {
+        },
+
         "DN.SnS_Hector_Hoodie": {
           "Name": "DN.SnS_Hector_Hoodie",
           "DisplayName": "{{i18n:DN.SnS_Hector_Hoodie.Name}}",
@@ -46,14 +40,8 @@
           "HasSleeves": true,
           "CanChooseDuringCharacterCustomization": false,
           "CustomFields": {}
-        }
-      }
-    },
-    {
-      "LogName": "Add Shirts",
-      "Action": "EditData",
-      "Target": "Data/Shirts",
-      "Entries": {
+        },
+
         "DN.SnS_Cirrus_Hoodie": {
           "Name": "DN.SnS_Cirrus_Hoodie",
           "DisplayName": "{{i18n:DN.SnS_Cirrus_Hoodie.Name}}",
@@ -66,15 +54,8 @@
           "IsPrismatic": false,
           "HasSleeves": true,
           "CanChooseDuringCharacterCustomization": false,
-          "CustomFields": {}
-        }
-      }
-    },
-    {
-      "LogName": "Add Shirts",
-      "Action": "EditData",
-      "Target": "Data/Shirts",
-      "Entries": {
+          "CustomFields": {},
+
         "DN.SnS_Hector_Hoodie_Unzipped": {
           "Name": "DN.SnS_Hector_Hoodie_Unzipped",
           "DisplayName": "{{i18n:DN.SnS_Hector_Hoodie.Name}}",
@@ -88,9 +69,9 @@
           "HasSleeves": true,
           "CanChooseDuringCharacterCustomization": false,
           "CustomFields": {}
+          }
         }
       }
     }
-
   ]
 }

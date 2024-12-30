@@ -6802,8 +6802,33 @@ ________      ________ _   _ _______ _____
   "magicitem.argentisshield.name": "Empowered Argentis Shield",
   "magicitem.argentisshield.description": "Fully restored to it's former power, this shield empowers you to protect your friends and loved ones.",
 
+  "magicitem.OwlBoyIcon.name": "Owl Boy Icon",
+  "magicitem.OwlBoyIcon.description": "Hoot? You're a cheater!",
   "magicitem.destykeychain.name": "Stiles' Keychain",
   "magicitem.destykeychain.description": "An unusual keychain for Long Live The King, in the shape of an X.",
+  "magicitem.destykeychain.description.Trinket": "An unusual keychain for Long Live The King, in the shape of an X.\n\nSummons Stiles' Owl\n= Gathers forage\n= Finds grown crops\n= Applies \"Stiles' Buff\"\n= Hoots and talks!",
+  "magicitem.destykeychain.dialogue.Hi": "Hello! Hoot!",
+  "magicitem.destykeychain.dialogue.1": " Hoot hoot?",
+  "magicitem.destykeychain.dialogue.2": "Hoot hoot hoot!",
+  "magicitem.destykeychain.dialogue.3": "Where are we going, hoot?",
+  "magicitem.destykeychain.dialogue.4": "Hoot hoot hoot. Owl Boy says hello!",
+  "magicitem.destykeychain.dialogue.5": "Hoot. How are you? Are you tired?",
+  "magicitem.destykeychain.dialogue.6": "Hoot hoot hoot! Remember to stay hydrated.",
+  "magicitem.destykeychain.dialogue.7": "Hoot hoot! Just keep walking, walking, walking!",
+  "magicitem.destykeychain.dialogue.8": "Hoot! You've got this!",
+  "magicitem.destykeychain.dialogue.9": "Let's go exploring! Hoot!",
+  "magicitem.destykeychain.dialogue.10": "HOOT HOOT HOOT.",
+  "magicitem.destykeychain.dialogue.11": "Watch out for monsters, hoot.",
+  "magicitem.destykeychain.dialogue.12": "Who's a good Owl Boy? Me! Hoot!",
+  "magicitem.destykeychain.dialogue.13": "You can say a happy owl is... having a hoot!",
+  "magicitem.destykeychain.dialogue.14": "Hoot?! Hoot!!! Give me attention!",
+  "magicitem.destykeychain.dialogue.15": "Can we go see Stiles? Hoot?",
+  "magicitem.destykeychain.dialogue.16": "Keeping eyes peeled for forage! Hoot!",
+  "magicitem.destykeychain.dialogue.17": "Your footsteps are loud. Hoot!",
+  "magicitem.destykeychain.dialogue.18": "Mice mice mice... no mice to hunt...",
+  "magicitem.destykeychain.dialogue.19": "Today is going to be a good day! HOOT!",
+  "magicitem.destykeychain.dialogue.20": "You're nice! Hoot!",
+  "magicitem.destykeychain.dialogue.21": "Owl Boy loves you! Hoot!",
 
   "food.salishbourbon.name": "Salish Sea Bourbon",
   "food.salishbourbon.description": "Mateo's favorite drink, made at a small brewery in the Fern Islands.",
@@ -7213,6 +7238,9 @@ ________      ________ _   _ _______ _____
   "witchcraft.research.philosophers-stone.description": "Adds an icon to the Adventure Bar Menu (default U). When clicked, opens a new menu allowing you to transmute essences into other essences.",
 
   "buff.destybuff": "Do not stand by in the presence of evil.",
+  "buff.owlboybuff": "Stiles' Buff (Hoot?)",
+
+
 
   "DN.SnS_Mateo_Hoodie.Name": "Mateo's Hoodie",
   "DN.SnS_Mateo_Hoodie.Description": "Sick hoodie, adventurer!",

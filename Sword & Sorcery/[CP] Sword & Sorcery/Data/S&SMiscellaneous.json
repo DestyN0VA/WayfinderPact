@@ -26,6 +26,12 @@
       "Target": "Textures/DN.SnS/TeleportationCircle1, Textures/DN.SnS/TeleportationCircle2, Textures/DN.SnS/TeleportationCircle3, Textures/DN.SnS/TeleportationCircle4",
       "FromFile": "Assets/WitchcraftResearch/{{TargetWithoutPath}}.png"
     },
+    {
+      "LogName": "Loads Companion Sprites",
+      "Action": "Load",
+      "Target": "Characters/DN.SnS_OwlBoy",
+      "FromFile": "Assets/Companions/{{TargetWithoutPath}}.png"
+    },
 
     // SECRET NOTE
     {
