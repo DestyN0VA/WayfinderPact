@@ -379,10 +379,10 @@ namespace SwordAndSorcerySMAPI
                 if (SlingshowBowAmmoAttachPatch1.CanThisBeAttached(o, slot))
                 {
                     __instance.attachments[slot] = o;
-                    if (slot != 0 && o is Trinket t1)
-                        (__instance.lastUser ?? Game1.player).trinketItems.Add(t1);
                     if (slot != 0 && oldObj is Trinket t2)
                         (__instance.lastUser ?? Game1.player).trinketItems.RemoveWhere(t => t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false);
+                    if (slot != 0 && o is Trinket t1)
+                        (__instance.lastUser ?? Game1.player).trinketItems.Add(t1);
                     Game1.playSound("button1");
                     __result = oldObj;
                     return false;
