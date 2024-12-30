@@ -24,6 +24,7 @@ using StardewValley.Minigames;
 using StardewValley.SaveMigrations;
 using StardewValley.Objects.Trinkets;
 using System.Linq;
+using StardewValley.Menus;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -227,7 +228,7 @@ namespace SwordAndSorcerySMAPI
         }
     }
 
-    [HarmonyPatch(typeof(Slingshot), nameof(Slingshot.canThisBeAttached) )]
+    [HarmonyPatch(typeof(Slingshot), nameof(Slingshot.canThisBeAttached))]
     public static class SlingshowBowAmmoAttachPatch1
     {
         public static void Postfix(Slingshot __instance, StardewValley.Object o, ref bool __result)
@@ -260,10 +261,34 @@ namespace SwordAndSorcerySMAPI
 
         public static bool CanThisBeAttached(Object o, int slot)
         {
+            if (o == null) return true;
             if (slot == 0)
                 return o.HasContextTag("bullet_item");
             else
                 return o.HasContextTag("keychain_item") || (o is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false));
+        }
+    }
+    [HarmonyPatch(typeof(Tool), nameof(Tool.canThisBeAttached), [typeof(Object)])]
+    public static class LLTKBulletsAndKeychainAttaching
+    {
+        public static void Postfix(Tool __instance, Object o, ref bool __result)
+        {
+            if (__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking"))
+            {
+                __instance.AttachmentSlotsCount = 2;
+                NetObjectArray<Object> netObjectArray = __instance.attachments;
+                if (netObjectArray != null && netObjectArray.Count > 0)
+                {
+                    for (int slot = 0; slot < __instance.attachments.Length; slot++)
+                    {
+                        if (SlingshowBowAmmoAttachPatch1.CanThisBeAttached(o, slot))
+                        {
+                            __result = true;
+                            break;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -272,11 +297,16 @@ namespace SwordAndSorcerySMAPI
     {
         public static bool Prefix(Tool __instance, SpriteBatch b, int x, int y)
         {
-            if (__instance.ItemId != "DN.SnS_longlivetheking_gun") return true;
+            if (!__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking_gun") && !__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking")) return true;
 
             __instance.AttachmentSlotsCount = 2;
-
-            y += (__instance.enchantments.Count > 0) ? 8 : 4;
+            if (__instance is not MeleeWeapon)
+                y += (__instance.enchantments.Count > 0) ? 8 : 4;
+            else
+            {
+                y -= 132;
+                x += 260;
+            }
 
             ModSnS.instance.Helper.Reflection.GetMethod(__instance, "DrawAttachmentSlot", true).Invoke([0, b, x, y]);
             y += 68;
@@ -290,8 +320,8 @@ namespace SwordAndSorcerySMAPI
     {
         public static bool Prefix(Tool __instance, Object o, ref Object __result)
         {
-            if (!__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking_gun")) return true;
-
+            if (!__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking_gun") && !__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking")) return true;
+            __instance.AttachmentSlotsCount = 2;
             if (o == null)
             {
                 for (int slot = 0; slot < __instance.attachments.Length; slot++)
@@ -301,7 +331,7 @@ namespace SwordAndSorcerySMAPI
                     {
                         __instance.attachments[slot] = null;
                         if (slot != 0 && oldObj is Trinket t)
-                            (__instance.lastUser ?? Game1.player).trinketItems.Remove(t);
+                            (__instance.lastUser ?? Game1.player).trinketItems.RemoveWhere(t => t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false);
                         Game1.playSound("dwop");
                         __result = oldObj;
                         return false;
@@ -349,8 +379,10 @@ namespace SwordAndSorcerySMAPI
                 if (SlingshowBowAmmoAttachPatch1.CanThisBeAttached(o, slot))
                 {
                     __instance.attachments[slot] = o;
-                    if (slot != 0 && o is Trinket t)
-                        (__instance.lastUser ?? Game1.player).trinketItems.Add(t);
+                    if (slot != 0 && o is Trinket t1)
+                        (__instance.lastUser ?? Game1.player).trinketItems.Add(t1);
+                    if (slot != 0 && oldObj is Trinket t2)
+                        (__instance.lastUser ?? Game1.player).trinketItems.RemoveWhere(t => t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false);
                     Game1.playSound("button1");
                     __result = oldObj;
                     return false;
@@ -362,7 +394,23 @@ namespace SwordAndSorcerySMAPI
         }
     }
 
-    [HarmonyPatch(typeof(Slingshot), nameof(Slingshot.drawInMenu), [typeof(SpriteBatch), typeof(Vector2), typeof(float), typeof(float), typeof(float), typeof( StackDrawType), typeof( Color), typeof(bool)] )]
+    [HarmonyPatch(typeof(InventoryPage), nameof(InventoryPage.receiveLeftClick))]
+    public static class InventoryPageNoTrinketKeychainInTrinketSlot
+    {
+        public static bool Prefix(InventoryPage __instance, int x, int y)
+        {
+            foreach (ClickableComponent c in __instance.equipmentIcons)
+            {
+                if (!c.containsPoint(x, y))
+                    continue;
+                if (c.name == "Trinket" && Game1.player.CursorSlotItem is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))
+                    return false;
+            }
+            return true;
+        }
+    }
+
+    [HarmonyPatch(typeof(Slingshot), nameof(Slingshot.drawInMenu), [typeof(SpriteBatch), typeof(Vector2), typeof(float), typeof(float), typeof(float), typeof(StackDrawType), typeof(Color), typeof(bool)])]
     public static class SlingshotBowDrawPatch
     {
         public static bool Prefix(Slingshot __instance, SpriteBatch spriteBatch, Vector2 location, float scaleSize, float transparency, float layerDepth, StackDrawType drawStackNumber, Color color, bool drawShadow)
@@ -379,6 +427,80 @@ namespace SwordAndSorcerySMAPI
             __instance.DrawMenuIcons(spriteBatch, location, scaleSize, transparency, layerDepth, drawStackNumber, color);
 
             return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(MeleeWeapon), nameof(MeleeWeapon.drawInMenu), [typeof(SpriteBatch), typeof(Vector2), typeof(float), typeof(float), typeof(float), typeof(StackDrawType), typeof(Color), typeof(bool)])]
+    public static class MeleeWeaponSetAttachmentCountForLLTK
+    {
+        public static void Postfix(MeleeWeapon __instance)
+        {
+            if (__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking")) __instance.AttachmentSlotsCount = 2;
+        }
+    }
+
+    [HarmonyPatch(typeof(Tool), "GetAttachmentSlotSprite")]
+    public static class LLTKSlotSprites
+    {
+        public static void Postfix(Tool __instance, int slot, out Texture2D texture, out Rectangle sourceRect)
+        {
+            texture = Game1.menuTexture;
+            sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, __instance.ItemId != "DN.SnS_longlivetheking" ? 10 : (slot == 0 ? 43 : 41));
+        }
+    }
+
+    [HarmonyPatch(typeof(Slingshot), "GetAttachmentSlotSprite")]
+    public static class LLTKGunSlotSprites
+    {
+        public static void Postfix(Tool __instance, int slot, out Texture2D texture, out Rectangle sourceRect)
+        {
+            texture = Game1.menuTexture;
+            sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, slot == 0 ? 43 : 41);
+        }
+    }
+
+    [HarmonyPatch(typeof(Object), nameof(Object.getCategoryName))]
+    public static class ObjectKeychainCategoryName
+    {
+        public static void Postfix(Object __instance, ref string __result)
+        {
+            if (__instance.HasContextTag("keychain_item"))
+            {
+                __result = I18n.KeychainCategory();
+            }
+        }
+    }
+    [HarmonyPatch(typeof(Object), nameof(Object.getCategoryColor))]
+    public static class ObjectKeychainCategoryColor
+    {
+        public static void Postfix(Object __instance, ref Color __result)
+        {
+            if (__instance.HasContextTag("keychain_item"))
+            {
+                __result = Color.DarkSlateGray;
+            }
+        }
+    }
+    [HarmonyPatch(typeof(Trinket), nameof(Trinket.getCategoryName))]
+    public static class TrinketKeychainCategoryName
+    {
+        public static void Postfix(Trinket __instance, ref string __result)
+        {
+            if (__instance.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false)
+            {
+                __result = I18n.KeychainCategory();
+            }
+        }
+    }
+    [HarmonyPatch(typeof(Trinket), nameof(Trinket.getCategoryColor))]
+    public static class TrinketKeychainCategoryColor
+    {
+        public static void Postfix(Trinket __instance, ref Color __result)
+        {
+            if (__instance.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false)
+            {
+                __result = Color.DarkSlateGray;
+            }
         }
     }
 
