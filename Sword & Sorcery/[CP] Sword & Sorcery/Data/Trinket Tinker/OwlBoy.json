@@ -14,9 +14,7 @@
           "SheetIndex": 101,
           "DropsNaturally": false,
           "CanBeReforged": false,
-          "CustomFields": {
-            "Keychain_item": "true",
-          }
+          "CustomFields": { "Keychain_item": "true" }
         },
       }
     },

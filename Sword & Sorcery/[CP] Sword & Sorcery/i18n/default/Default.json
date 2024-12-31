@@ -6829,6 +6829,9 @@ ________      ________ _   _ _______ _____
   "magicitem.destykeychain.dialogue.20": "You're nice! Hoot!",
   "magicitem.destykeychain.dialogue.21": "Owl Boy loves you! Hoot!",
 
+  "magicitem.EmeritusKeychain.name": "Emeritus Keychain",
+  "magicitem.EmeritusKeychain.description": "A keychain for Long Live The King, in the shape of Emeritus! How cute!\n\nSummons Emeritus\n= Shoots fireballs\n= Gathers forage\n= Finds items in mine\n= Applies \"Dino Digs\" buff",
+
   "food.salishbourbon.name": "Salish Sea Bourbon",
   "food.salishbourbon.description": "Mateo's favorite drink, made at a small brewery in the Fern Islands.",
 
