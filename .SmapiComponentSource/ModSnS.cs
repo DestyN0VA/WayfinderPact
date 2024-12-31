@@ -1297,9 +1297,9 @@ namespace SwordAndSorcerySMAPI
 
         private void GameLoop_UpdateTicking(object sender, UpdateTickingEventArgs e)
         {
-
             if (!Context.IsWorldReady)
                 return;
+
             var tItems = Game1.player.trinketItems;
             if (tItems.Count > 2)
             {
@@ -1311,7 +1311,7 @@ namespace SwordAndSorcerySMAPI
                 {
                     for (; count > 5; count--)
                         tItems.RemoveAt(tItems.IndexOf(tItems.First(t => t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false)));
-                } 
+                }
             }
 
             if (!Game1.player.mailReceived.Contains("DN.SnS_IntermissionShield") && Game1.player.eventsSeen.Any(m => m.StartsWith("SnS.Ch4.Victory")))
@@ -1402,6 +1402,7 @@ namespace SwordAndSorcerySMAPI
 
                             if (Game1.getAllFarmers().Any(f => f.currentLocation == Game1.getLocationFromName("EastScarp_DuskspireLair") && f.Items.Any(f => f is not null && f.QualifiedItemId == "(O)DN.SnS_DuskspireHeart")))
                             {
+                                Game1.stopMusicTrack(MusicContext.ImportantSplitScreenMusic);
                                 Game1.player.GetCurrentMercenaries().Clear();
                                 var partnerInfos = Game1.content.Load<Dictionary<string, FinalePartnerInfo>>("DN.SnS/FinalePartners");
 
@@ -1574,7 +1575,7 @@ namespace SwordAndSorcerySMAPI
                 Game1.addMail("GaveWitchCraftLvl1", true);
             }
 
-            if (new PaladinSkill().ShouldShowOnSkillsPage && !Game1.player.hasOrWillReceiveMail("GavePaladinLvl1"))
+            if (ModTOP.PaladinSkill.ShouldShowOnSkillsPage && !Game1.player.hasOrWillReceiveMail("GavePaladinLvl1"))
             {
                 sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Paladin", 100);
                 Game1.addMail("GavePaladinLvl1", true);

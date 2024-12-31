@@ -12,8 +12,6 @@ using StardewValley;
 using StardewValley.Menus;
 using StardewValley.Quests;
 using StardewValley.SpecialOrders;
-using SwordAndSorcerySMAPI;
-using StardewValley.SpecialOrders.Rewards;
 
 namespace SwordAndSorcerySMAPI
 {
