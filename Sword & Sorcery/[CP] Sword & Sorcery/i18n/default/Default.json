@@ -6115,37 +6115,36 @@ ________      ________ _   _ _______ _____
     //Married or Rooming
   "Events.SnS.Ch4.Finale.Sen.01.true": "Goodness gracious, you're always getting yourself into the most dangerous situations, @...$s",
   "Events.SnS.Ch4.Finale.Sen.02.true": "OH SWEET MOTHER OF SLIMEBALLS @, WHAT DID YOU GET US INTO???$9",
-  "Events.SnS.Ch4.Finale.Sen.03.true": "I'M DEFINITELY PANICKING-$9",
+  "Events.SnS.Ch4.Finale.Sen.03.true": "I'M DEFINITELY PANICKING-$9#$b#@, PREPARE MY BOOKS!$9",
+
+  "Events.SnS.Ch4.Finale.ExtraNPCS.MateoSpeak": "No, she's right. You've been through enough.$8#$b#{{ExtraNPCs}} How are you doing?$16",
+  "Events.SnS.Ch4.Finale.ExtraNPCS.true": "Everyone.",
+  "Events.SnS.Ch4.Finale.ExtraNPCS.false": "Biróg, Cirrus.",
 
   //Intermission Sen
-  "Events.SnS.Ch4.Intermission.Sen.01": "Yeah, you've contracted crunchy arm! Don't push it. Scram, skedaddle!$u",
-  "Events.SnS.Ch4.Intermission.Sen.02": "Maybe you should get outta here too? You're looking about as green as your hair...$s#$b#I'm holding up, though. Can't say the same about those the library books I \"borrowed\".$8",
-  "Events.SnS.Ch4.Intermission.Sen.03": "Actually, this sounds like a death wish?$u#$b#Is it really a good idea to book this alone???$u",
-  "Events.SnS.Ch4.Intermission.Sen.04": "Urgh... Well stay safe, won't you?$s",
-  "Events.SnS.Ch4.Intermission.Sen.05": "No, @! You're asking for a death wish!$a#$b#I simply refuse to allow you to go this alone.$a",
-  "Events.SnS.Ch4.Intermission.Sen.06": "Then stick with me, Sen. Just like you always have.",
-  "Events.SnS.Ch4.Intermission.Sen.07": "Of course. I'd never leave you to face something... something like that alone!$u#$b#I might not be a trained like the rest of you, but Skrell taught me a thing or two growing up.$a",
-  "Events.SnS.Ch4.Intermission.Sen.08": "You're not much of a fighter, Sen...",
-  "Events.SnS.Ch4.Intermission.Sen.09": "Hey, we've been through so much together! You're gonna underestimate me now?$u#$b#You saw the guy who raised me, right? I'm sticking with you till the end, no if ands or buts!$a",
-  "Events.SnS.Ch4.Intermission.Sen.10": "Sigh... you really are always running around playing hero, huh?$s#$b#Well, I guess you're not \"playing\". You really are a hero...$l#$b#Ahg! There it is. Let's do this, you and me! I'm fresh outta books, but Mateo gave me a spare sword.$a",
+  "Events.SnS.Ch4.Intermission.Sen.01": "Maybe you should get outta here too? You're looking about as green as your hair...$s#$b#I'm holding up. Can't say the same about those the library books I 'borrowed'.$8",
+  "Events.SnS.Ch4.Intermission.Sen.02": "Actually, this sounds like a death wish!?$u#$b#Is it really a good idea to book this alone?$u",
+  "Events.SnS.Ch4.Intermission.Sen.03": "Urgh... Just stay safe, okay?$s",
+  "Events.SnS.Ch4.Intermission.Sen.04": "No, @! You're asking for a death wish!$a#$b#I simply refuse to allow you to go this alone.$a",
+  "Events.SnS.Ch4.Intermission.Sen.05": "Then stick with me, Sen. Just like you always have.",
+  "Events.SnS.Ch4.Intermission.Sen.06": "Of course. I'd never leave you to face something... something like that alone!$u#$b#I might not be a trained like the rest of you, but Skrell taught me a thing or two growing up.$a",
+  "Events.SnS.Ch4.Intermission.Sen.07": "You're not much of a fighter, Sen...",
+  "Events.SnS.Ch4.Intermission.Sen.08": "Hey, we've been through so much together! You're gonna underestimate me now?$u#$b#You saw the guy who raised me, right? I'm sticking with you till the end. No if ands or buts!$a",
+  "Events.SnS.Ch4.Intermission.Sen.09": "Sigh... you really are always running around playing hero, huh?#$b#Well, I guess you're not 'playing'. You really are a hero...$l",
+  "Events.SnS.Ch4.Intermission.Sen.10": "Ahg! There it is!$u#$b#Let's do this, you and me! I'm fresh outta books, but Mateo gave me a spare sword!$a",
+  "Events.SnS.Ch4.Intermission.Sen.11": "Heroes...? Plural?$6#$b#...#$b#You lot don't have anything to worry about. We've got this!$a",
+  "Events.SnS.Ch4.Intermission.Sen.12": "Then join me, Sen. So I won't have to be alone.",
 
-  //Victory Sen - put him in his umbrella hat when outside....
+  //Victory Sen
   "Events.SnS.Ch4.Victory.Sen.01": "We... we did it.#$b#We really did it, @!$7#$b#Goodness that was EXHILARATING! I was so terrified going into this but... wow.$h#$b#Bring that beast back so I can swing my sword at it again, hahahahaha!$7",
-  "Events.SnS.Ch4.Victory.Sen.02": "Golly, we're always going on wacky adventures together, huh...?$h#$b#Let's never let that change, @.$12",
-  //Pause, step forward
-  "Events.SnS.Ch4.Victory.Sen.03": "Thank you, @. For always staying by my side, for expanding my horizons.$l#$b#I... I think I know how to achieve my dreams now.",
-  //Turn to face farmer
-  "Events.SnS.Ch4.Victory.Sen.04": "I hope you'll stay with me to help me chase them, my dearest {{RelationshipTerm}}.", //pass in token, starshine or friend.
-  //Dynamic token for kiss based on platonic/romantic living together status
+  "Events.SnS.Ch4.Victory.Sen.03": "We should geat back to the surface before your friends start to worry.$8#$b#...You know...#$b#I... I think I know how I want to to achieve my dreams now. I hope you'll stick with me to help me chase them.$h",
   "Events.SnS.Ch4.Victory.Sen.05": "Woohoo! We survived!$h#$b#Is it just me, or did that monster look kinda like me?$6",
-  "Events.SnS.Ch4.Victory.Sen.06": "Oh thank goodness you've made it out alive!$u#$b#I was about to come crawling back down there, but this gaggle of weirdos stopped me...$8",
-  "Events.SnS.Ch4.Victory.Sen.07": "I guess this means I can finally go back to knitting and reading in peace, hm?$h",
-  "Events.SnS.Ch4.Victory.Sen.08": "I don't sleep, actually.$8#$b#But I'll never say no to free food!$h",
-  "Events.SnS.Ch4.Victory.Sen.09": "That's so beautiful and sweet. You really have the sweetest friends, @...$l#$b#Sniff...sniff...$s",
-  "Events.SnS.Ch4.Victory.Sen.10": "Waahhh haaah haaaaa!!! Wahhhh!!!$10#$b#I'm so proud of you, @!$10",
-  "Events.SnS.Ch4.Victory.Sen.11": "WAAAaaaahhh!$10#$b#Oh Sen get some emotional self-control!$s#$b#Let's head home and rest, shall we? I think we've deserve it after today.$h",
-  "Events.SnS.Ch4.Victory.Sen.12": "...Er, Mateo?#$b#Please don't tell the library man about the books, okay?$8#$b#@ will purchase new ones to replace them. I *was* intending to return them, I swear!$h",
-  "Events.SnS.Ch4.Victory.Sen.13": "Wait what-", //Farmer
+  "Events.SnS.Ch4.Victory.Sen.06": "Oh thank goodness you've made it out alive!$u#$b#I guess this means I can finally go back to knitting and reading in peace, hm?$h",
+  "Events.SnS.Ch4.Victory.Sen.07": "Well I don't sleep, buuuuut I'll never say no to free food!$7",
+  "Events.SnS.Ch4.Victory.Sen.08": "That's so sweet. You really have the sweetest friends, @...$l#$b#...Sniff...sniff...$s",
+  "Events.SnS.Ch4.Victory.Sen.10": "WAAAaaaahhh! I'm so proud of you, @!$10#$b#Oh Sen get some emotional self-control!$s#$b#Let's head back and rest, shall we? I think we've deserve it after today.$h",
+  "Events.SnS.Ch4.Victory.Sen.11": "...Er, Mateo?#$b#Please don't tell the library man about the books, okay?$8#$b#@ will purchase new ones to replace them. I *was* intending to return them, I swear!$h",
+  "Events.SnS.Ch4.Victory.Sen.12": "Wait what-", //Farmer
 
   // FINALE 
   "Events.SnS.Ch4.Finale.Mateo.01": "Did you see any sign of the Duskspire Behemoth, @?$37",
@@ -6320,7 +6319,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Intermission.SoloFarmer.Hector.09": "...I trust them to finish this.$18",
   "Events.SnS.Ch4.Intermission.SoloFarmer.Cirrus.10": "So do I. @'s the most powerful out of the lot of us.$22",
   "Events.SnS.Ch4.Intermission.SoloFarmer.Mateo.08": "So do I. @'s the most powerful out of the lot of us.$22",
-  "Events.SnS.Ch4.Victory.Mateo.Mateo.01": "We did it, Sunshine. The Duskspire Behemoth is defeated, and East Scarp is safe from it's tyranny.$14#$b#You know, I never would have guessed you and I would come quite this far, quite literally saving The Valley together. But I'm very happy for it. So happy, in fact, I-$15",
+  "Events.SnS.Ch4.Victory.Mateo.Mateo.01": "We did it, Sunshine. The Duskspire Behemoth is defeated, and East Scarp is safe from its tyranny.$14#$b#You know, I never would have guessed you and I would come quite this far, quite literally saving The Valley together. But I'm very happy for it. So happy, in fact, I-$15",
   "Events.SnS.Ch4.Victory.Mateo.Mateo.02": "Let's get out of here and celebrate properly, @. The others are waiting - and besides, those rocks can't be THAT difficult to shimmy past...$12",
   "Events.SnS.Ch4.Victory.Mateo.Hector.03": "You're back...$13",
   "Events.SnS.Ch4.Victory.Mateo.Cirrus.04": "You're home.$10",
@@ -6416,7 +6415,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Victory.SoloFarmer.Mateo.15": "You've been with the Guild since it was made. You're a founder, and you're part of Pelican Town's branch, but...$15#$b#I just wanted you to know that I consider you one of mine.$14",
   "Events.SnS.Ch4.Victory.SoloFarmer.Mateo.16": "With that being said... @, do you swear, under oath, to continue to uplift the people around you...$76#$b#By being the Heart of the Valley?$78",
   "Events.SnS.Ch4.Victory.SoloFarmer.Mateo.17": "Rest well, @. You've earned it.$12",
-  "Events.SnS.Ch4.Victory.FarmerGuildmaster.Mateo.01": "We did it, @! The Duskspire Behemoth is defeated, and East Scarp is safe from it's tyranny.$1#$b#You know, I never would have guessed you and I would come quite this far, quite literally saving The Valley together. But I'm very happy for it.$12#$b#I'm honored, beyond words, to be your best friend.$76",
+  "Events.SnS.Ch4.Victory.FarmerGuildmaster.Mateo.01": "We did it, @! The Duskspire Behemoth is defeated, and East Scarp is safe from its tyranny.$1#$b#You know, I never would have guessed you and I would come quite this far, quite literally saving The Valley together. But I'm very happy for it.$12#$b#I'm honored, beyond words, to be your best friend.$76",
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Mateo.02": "Let's get out of here and celebrate properly, @. The others are waiting - and besides, those rocks can't be THAT difficult to shimmy past.$78",
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Hector.03": "You're back...$13",
   "Events.SnS.Ch4.Victory.FarmerGuildmaster.Cirrus.04": "You're home.$10",

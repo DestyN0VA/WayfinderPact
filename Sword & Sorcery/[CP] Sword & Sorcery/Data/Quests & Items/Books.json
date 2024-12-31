@@ -321,7 +321,7 @@
       "ID": "(O){{ModID}}_paladinbook"
     },
     "When": {
-      "Query": "({{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Mateo}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Hector}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Cirrus}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Gunnar}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.SoloFarmer}}) = TRUE"
+      "Query": "({{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Mateo}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Hector}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Cirrus}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Gunnar}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.SoloFarmer}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Sen}}) = TRUE"
     }
   },
   {
@@ -338,7 +338,7 @@
       "ID": "(O){{ModID}}_paladinbook"
     },
     "When": {
-      "Query": "({{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Mateo}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Hector}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Cirrus}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Gunnar}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.SoloFarmer}}) = TRUE"
+      "Query": "({{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Mateo}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Hector}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Cirrus}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Gunnar}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.SoloFarmer}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Sen}}) = TRUE"
     }
   },
   {
@@ -355,7 +355,7 @@
       "ID": "(O){{ModID}}_paladinbook"
     },
     "When": {
-      "Query": "({{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Mateo}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Hector}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Cirrus}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Gunnar}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.SoloFarmer}}) = TRUE"
+      "Query": "({{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Mateo}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Hector}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Cirrus}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Gunnar}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.SoloFarmer}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Sen}}) = TRUE"
     }
   }
 ]
