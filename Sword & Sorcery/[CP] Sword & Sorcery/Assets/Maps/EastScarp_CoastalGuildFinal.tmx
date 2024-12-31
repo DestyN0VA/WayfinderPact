@@ -357,7 +357,7 @@
   </object>
   <object id="32" name="TileData" x="320" y="208" width="16" height="16">
    <properties>
-    <property name="Action" value="Warp 24 5 EastScarp_DN.SnS_Underforge"/>
+    <property name="Action" value="Warp 24 5 EastScarp_Underforge"/>
    </properties>
   </object>
   <object id="33" name="TileData" x="400" y="224" width="16" height="16">
