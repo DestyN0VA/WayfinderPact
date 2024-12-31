@@ -35,6 +35,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Threading;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -227,6 +228,7 @@ namespace SwordAndSorcerySMAPI
         public bool DoingBossDeathAnim { get; set; } = false;
         public bool FinishedBoxxDeathAnim { get; set; } = false;
         public int DeathAnimTimer { get; set; } = 6300;
+        public Dictionary<ulong, Trinket> KeychainTrinkets { get; set; } = [];
 
         public class PolymorphData
         {
@@ -1300,19 +1302,28 @@ namespace SwordAndSorcerySMAPI
             if (!Context.IsWorldReady)
                 return;
 
-            var tItems = Game1.player.trinketItems;
-            if (tItems.Count > 2)
+            foreach (Tool LLTK in Game1.player.Items.Where(i => (i?.QualifiedItemId.ContainsIgnoreCase("DN.SnS_longlivetheking") ?? false) && i is Tool t && t.attachments.Any(i => i is Trinket)).Cast<Tool>())
             {
-                int count = 0;
-                foreach (var t in tItems)
-                    if (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false)
-                        count++;
-                if (count > 5)
+                LLTK.AttachmentSlotsCount = 2;
+                if (LLTK.attachments[1] is Trinket t)
                 {
-                    for (; count > 5; count--)
-                        tItems.RemoveAt(tItems.IndexOf(tItems.First(t => t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false)));
+                    if (State.KeychainTrinkets.ContainsKey(Game1.uniqueIDForThisGame))
+                        State.KeychainTrinkets[Game1.uniqueIDForThisGame] = t;
+                    else State.KeychainTrinkets.Add(Game1.uniqueIDForThisGame, t);
+                    break;
                 }
             }
+            if (Game1.player.Items.Where(i => (i?.QualifiedItemId.ContainsIgnoreCase("DN.SnS_longlivetheking") ?? false) && i is Tool t && t.attachments.Any(i => i is Trinket)).Count() <= 0)
+            {
+                State.KeychainTrinkets.Remove(Game1.uniqueIDForThisGame);
+            }
+
+            if (State.KeychainTrinkets.TryGetValue(Game1.uniqueIDForThisGame, out Trinket kt))
+            {
+                if (!Game1.player.trinketItems.Any(t => t?.BaseName == kt.BaseName))
+                    Game1.player.trinketItems.Add(kt);
+            }
+            else Game1.player.trinketItems.RemoveWhere(t => t?.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false);
 
             if (!Game1.player.mailReceived.Contains("DN.SnS_IntermissionShield") && Game1.player.eventsSeen.Any(m => m.StartsWith("SnS.Ch4.Victory")))
             {

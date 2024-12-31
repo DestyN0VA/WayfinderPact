@@ -25,6 +25,8 @@ using StardewValley.SaveMigrations;
 using StardewValley.Objects.Trinkets;
 using System.Linq;
 using StardewValley.Menus;
+using Microsoft.Xna.Framework.Input;
+using System.Net;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -330,8 +332,6 @@ namespace SwordAndSorcerySMAPI
                     if (oldObj != null)
                     {
                         __instance.attachments[slot] = null;
-                        if (slot != 0 && oldObj is Trinket t)
-                            (__instance.lastUser ?? Game1.player).trinketItems.RemoveWhere(t => t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false);
                         Game1.playSound("dwop");
                         __result = oldObj;
                         return false;
@@ -351,8 +351,6 @@ namespace SwordAndSorcerySMAPI
                 if (oldObj == null)
                 {
                     __instance.attachments[slot] = o;
-                    if (slot != 0 && o is Trinket t)
-                        (__instance.lastUser ?? Game1.player).trinketItems.Add(t);
                     o = null;
                     break;
                 }
@@ -379,10 +377,6 @@ namespace SwordAndSorcerySMAPI
                 if (SlingshowBowAmmoAttachPatch1.CanThisBeAttached(o, slot))
                 {
                     __instance.attachments[slot] = o;
-                    if (slot != 0 && oldObj is Trinket t2)
-                        (__instance.lastUser ?? Game1.player).trinketItems.RemoveWhere(t => t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false);
-                    if (slot != 0 && o is Trinket t1)
-                        (__instance.lastUser ?? Game1.player).trinketItems.Add(t1);
                     Game1.playSound("button1");
                     __result = oldObj;
                     return false;
@@ -406,6 +400,14 @@ namespace SwordAndSorcerySMAPI
                 if (c.name == "Trinket" && Game1.player.CursorSlotItem is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))
                     return false;
             }
+
+            if (__instance.inventory.getItemAt(x, y) is Trinket trinket && (trinket.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false) && Game1.oldKBState.IsKeyDown(Keys.LeftShift))
+                return false;
+
+            if (ModSnS.instance.Helper.Reflection.GetMethod(__instance, "checkHeldItem", true).Invoke<bool>([null]) && Game1.oldKBState.IsKeyDown(Keys.LeftShift))
+                if (ModSnS.instance.Helper.Reflection.GetMethod(__instance, "checkHeldItem", true).Invoke<bool>((Item i) => i is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))) 
+                    return false;
+
             return true;
         }
     }
