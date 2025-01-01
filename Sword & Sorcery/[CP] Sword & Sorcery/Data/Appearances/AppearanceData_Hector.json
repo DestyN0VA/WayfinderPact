@@ -49,7 +49,7 @@
             "Action": "Load",
             "Priority": "Low",
             "Target": "Characters/Hector_Wolf",
-            "FromFile": "assets/TemporaryActors/Characters/HectorWolf.png"
+            "FromFile": "assets/TemporaryActors/Characters/HectorWolf.{{HectorHeterochromatic}}.png"
         },
         {
             "LogName": "TrueShape (Hood Down) for Events - Hector",

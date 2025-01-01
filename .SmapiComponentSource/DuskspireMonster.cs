@@ -29,7 +29,6 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
 
     private int prevFrame = 0;
     private Vector2 lastPos = Vector2.Zero;
-    private Vector2 DeathPos = Vector2.Zero;
     private bool flippedSwing = false;
     private bool doingLaugh = false;
 
@@ -198,15 +197,17 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
             WalkTimer -= time.ElapsedGameTime.Milliseconds;
         }
 
-        DeathPos = Position - new Vector2(4, 4) * 64;
         lastPos = Position;
     }
 
     protected override void sharedDeathAnimation()
     {
         if (Name != "Duskspire Remnant")
-            Game1.playSound("SnS.DuskspireDeath");
-        var pos = DeathPos;
+        {
+            DelayedAction.playMusicAfterDelay("SnS.DuskspireDeath", 100);
+        }
+        DelayedAction.playSoundAfterDelay("SnS.DuskspireLaugh_NoLoop", 500, currentLocation, Position, local: true);
+        var pos = Position - new Vector2(Sprite.getWidth()/2, Sprite.getHeight()/2);
         TemporaryAnimatedSprite DuskspireDeath = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 0, 96, 96), 75, 84, 0, pos, false, false) { scale = 4 };
         TemporaryAnimatedSprite DuskspireHeart = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 2016, 96, 96), 75, 16, 5, pos, false, false) { scale = 4 };
         currentLocation.TemporarySprites.Add(DuskspireDeath);
@@ -239,9 +240,12 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
             frames.Add(new(40 + i, 70));
         }
         Sprite.setCurrentAnimation(frames);
+        Rectangle Dusktangle = GetBoundingBox();
+        Dusktangle.Inflate(32, 0);
         foreach (Farmer f in Game1.getAllFarmers().Where(f => f.currentLocation == currentLocation))
-            if (f.GetBoundingBox().Intersects(GetBoundingBox()))
+            if (f.GetBoundingBox().Intersects(Dusktangle) && f.CanBeDamaged())
                 f.takeDamage(DamageToFarmer, false, this);
+
         flippedSwing = arg;
     }
 

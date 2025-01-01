@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Input;
 using NeverEndingAdventure.Utils;
 using StardewValley;
 using StardewValley.BellsAndWhistles;
+using StardewValley.GameData;
 using StardewValley.Menus;
 using StardewValley.Minigames;
 using StardewValley.Projectiles;
@@ -71,8 +72,6 @@ namespace SwordAndSorcerySMAPI
         public Event Event { get; }
         public EventContext Context { get; }
 
-        public Texture2D BossSprite { get; set; }
-
         public Character CurrentTurn { get; set; }
         public BattlerInfo CurrentBattler => BattlerData.TryGetValue(CurrentTurn.Name, out var info) ? info : DuskspireDummyInfo;
         public string OrigRoslinTexture { get; set; }
@@ -99,8 +98,8 @@ namespace SwordAndSorcerySMAPI
 
         private BattlerInfo ChooseNonFarmerAlly()
         {
-            List<BattlerInfo> choices = new(BattlerData.Where( kvp => kvp.Key != Game1.player.Name ).Select( kvp => kvp.Value ) );
-            return choices[new Random((int)(Game1.player.UniqueMultiplayerID + TurnCounter)).Next(choices.Count)];
+            List<BattlerInfo> choices = new(BattlerData.Where( kvp => kvp.Key != Game1.player.Name && kvp.Key != "Hector").Select( kvp => kvp.Value ) );
+            return choices[new Random((int)(Game1.player.UniqueMultiplayerID + TurnCounter + Game1.stats.DaysPlayed)).Next(choices.Count)];
 
         }
 
@@ -109,8 +108,6 @@ namespace SwordAndSorcerySMAPI
         {
             Event = @event;
             Context = context;
-
-            BossSprite = Game1.content.Load<Texture2D>("Characters/Monsters/Angry Roger");
 
             CurrentTurn = @event.actors.First();
 
@@ -731,7 +728,7 @@ namespace SwordAndSorcerySMAPI
                 {
                     DuskspireFrameTimer -= 75;
                     int[] frames = [28, 29, 30, 31, 32, 33, 34, 35, 36, 35, 34, 33, 32, 31, 30, 29];
-                    
+
                     DuskspireActor.Sprite.CurrentFrame = frames[DuskspireFrame];
                     DuskspireFrame++;
 
@@ -755,12 +752,9 @@ namespace SwordAndSorcerySMAPI
             foreach (var proj in Projectiles)
             {
                 proj.Rotation += proj.RotationSpeed;
-                b.Draw(proj.Texture, Game1.GlobalToLocal( proj.Position ), proj.SourceRect, Color.White, proj.Rotation, proj.SourceRect.Size.ToVector2() / 2, 4, SpriteEffects.None, 1);
+                b.Draw(proj.Texture, Game1.GlobalToLocal(proj.Position), proj.SourceRect, Color.White, proj.Rotation, proj.SourceRect.Size.ToVector2() / 2, 4, SpriteEffects.None, 1);
             }
 
-            IClickableMenu.drawTextureBox(b, (int)DuskspireActor.Tile.X * 64 + 256 + 64, (int)DuskspireActor.Tile.Y * 64, 64 * 4 + 24, 64, Color.White);
-            SpriteText.drawString(b, $"<{DuskspireHealth}/1000", (int)DuskspireActor.Tile.X * 64 + 256 + 64 + 24, (int)DuskspireActor.Tile.Y * 64 + 12);
-            SpriteText.drawStringWithScrollCenteredAt(b, "Duskspire", (int)DuskspireActor.Tile.X * 64 + 398 + 64 * 2 - (int)Game1.smallFont.MeasureString($"{DuskspireHealth}/1000").X / 2, (int)DuskspireActor.Tile.Y * 64 + 64 + 12);
             /*
             Vector2 bossPos = new Vector2(18, 13);
             Rectangle bossSrc = new Rectangle(0, 96, 32, 32);
@@ -771,7 +765,7 @@ namespace SwordAndSorcerySMAPI
             if (CurrentTurn != null & CurrentTurn != DuskspireActor)
             {
                 var rect = new Rectangle(324, 477, 7, 19);
-                b.Draw(Game1.mouseCursors, Game1.GlobalToLocal(CurrentTurn.StandingPixel.ToVector2() - new Vector2(12, 200 + 8 * MathF.Sin( (float) Game1.currentGameTime.TotalGameTime.TotalSeconds * 4 ))), rect, Color.White, 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.FlipVertically, 1);
+                b.Draw(Game1.mouseCursors, Game1.GlobalToLocal(CurrentTurn.StandingPixel.ToVector2() - new Vector2(12, 200 + 8 * MathF.Sin((float)Game1.currentGameTime.TotalGameTime.TotalSeconds * 4))), rect, Color.White, 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.FlipVertically, 1);
 
                 int y = Game1.viewport.Height - 200 - 16 - 64;
 
@@ -793,18 +787,24 @@ namespace SwordAndSorcerySMAPI
                 }
 
                 int x = Game1.viewport.Width - 450 - 16;
-
+                if (CurrentChoice != 1)
+                {
+                    IClickableMenu.drawTextureBox(b, x + 170, y + 200, 280, 64, Color.White);
+                    SpriteText.drawString(b, $"<{DuskspireHealth}/1000", x + 194, y + 212);
+                    SpriteText.drawStringWithScrollCenteredAt(b, "Duskspire", x + 450 / 2 + 35, y + 132, 280);
+                }
                 if (CurrentChoice == 1)
                 {
                     IClickableMenu.drawTextureBox(b, x, y + 64, 450, 200, Color.White);
 
-                    SpriteText.drawStringWithScrollCenteredAt(b, $"{CurrentBattler.AbilityName()} ={CurrentBattler.AbilityManaCost}", x + 450 / 2 - 50, y, 450);
-                    Utility.drawTextWithShadow(b, Game1.parseText(CurrentBattler.AbilityDescription(), Game1.smallFont, 450 - 32 * 2), Game1.smallFont, new Vector2( x + 32, y + 96 ), Color.Black );
+                    SpriteText.drawStringWithScrollCenteredAt(b, $"{CurrentBattler.AbilityName()} ={CurrentBattler.AbilityManaCost}", x + 450 / 2 - 100, y, 550);
+                    Utility.drawTextWithShadow(b, Game1.parseText(CurrentBattler.AbilityDescription(), Game1.smallFont, 450 - 32 * 2), Game1.smallFont, new Vector2(x + 32, y + 96), Color.Black);
+
+                    IClickableMenu.drawTextureBox(b, x + 170, y - 76, 280, 64, Color.White);
+                    SpriteText.drawString(b, $"<{DuskspireHealth}/1000", x + 194, y - 64);
+                    SpriteText.drawStringWithScrollCenteredAt(b, "Duskspire", x + 450 / 2 + 35, y - 144, 280);
                 }
             }
-
-            //SpriteText.drawStringHorizontallyCenteredAt(b, "Click to simulate victory", windowSize.X / 2, windowSize.Y / 2);
-
             b.End();
         }
 

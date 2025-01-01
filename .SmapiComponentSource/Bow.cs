@@ -412,6 +412,22 @@ namespace SwordAndSorcerySMAPI
         }
     }
 
+    [HarmonyPatch(typeof(InventoryPage), nameof(InventoryPage.ShouldShowJunimoNoteIcon))]
+    public static class InventoryPageRemoveKeychainTrinketIfNeeded
+    {
+        public static void Postfix(InventoryPage __instance)
+        {
+            int num = Farmer.MaximumTrinkets;
+            for (int i = 0; i < num; i++)
+            {
+                if (Game1.player.trinketItems.Count - 1 >= i && (Game1.player.trinketItems[i]?.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))
+                {
+                    Game1.player.trinketItems[i] = null;
+                }
+            }
+        }
+    }
+
     [HarmonyPatch(typeof(Slingshot), nameof(Slingshot.drawInMenu), [typeof(SpriteBatch), typeof(Vector2), typeof(float), typeof(float), typeof(float), typeof(StackDrawType), typeof(Color), typeof(bool)])]
     public static class SlingshotBowDrawPatch
     {
@@ -472,6 +488,7 @@ namespace SwordAndSorcerySMAPI
             }
         }
     }
+
     [HarmonyPatch(typeof(Object), nameof(Object.getCategoryColor))]
     public static class ObjectKeychainCategoryColor
     {
@@ -483,6 +500,7 @@ namespace SwordAndSorcerySMAPI
             }
         }
     }
+
     [HarmonyPatch(typeof(Trinket), nameof(Trinket.getCategoryName))]
     public static class TrinketKeychainCategoryName
     {
@@ -494,6 +512,7 @@ namespace SwordAndSorcerySMAPI
             }
         }
     }
+
     [HarmonyPatch(typeof(Trinket), nameof(Trinket.getCategoryColor))]
     public static class TrinketKeychainCategoryColor
     {
@@ -502,6 +521,42 @@ namespace SwordAndSorcerySMAPI
             if (__instance.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false)
             {
                 __result = Color.DarkSlateGray;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Object), nameof(Object.canBeTrashed))]
+    public static class TrinketNoTrashing
+    {
+        public static void Postfix(Trinket __instance, ref bool __result)
+        {
+            if (__instance is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))
+            {
+                __result = false;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Item), nameof(Item.CanBeLostOnDeath))]
+    public static class TrinketNoLosingOnDeath
+    {
+        public static void Postfix(Trinket __instance, ref bool __result)
+        {
+            if (__instance is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))
+            {
+                __result = false;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Trinket), nameof(Trinket.canBeGivenAsGift))]
+    public static class TrinketNoGifting
+    {
+        public static void Postfix(Trinket __instance, ref bool __result)
+        {
+            if (__instance.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false)
+            {
+                __result = false;
             }
         }
     }

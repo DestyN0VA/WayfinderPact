@@ -1313,6 +1313,7 @@ namespace SwordAndSorcerySMAPI
                     break;
                 }
             }
+
             if (Game1.player.Items.Where(i => (i?.QualifiedItemId.ContainsIgnoreCase("DN.SnS_longlivetheking") ?? false) && i is Tool t && t.attachments.Any(i => i is Trinket)).Count() <= 0)
             {
                 State.KeychainTrinkets.Remove(Game1.uniqueIDForThisGame);
@@ -1321,7 +1322,11 @@ namespace SwordAndSorcerySMAPI
             if (State.KeychainTrinkets.TryGetValue(Game1.uniqueIDForThisGame, out Trinket kt))
             {
                 if (!Game1.player.trinketItems.Any(t => t?.BaseName == kt.BaseName))
+                {
+                    while (Game1.player.trinketItems.Count <= Farmer.MaximumTrinkets)
+                        Game1.player.trinketItems.Add(null);
                     Game1.player.trinketItems.Add(kt);
+                }
             }
             else Game1.player.trinketItems.RemoveWhere(t => t?.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false);
 
@@ -1341,7 +1346,8 @@ namespace SwordAndSorcerySMAPI
                         Game1.addMail("DN.SnS_IntermissionShield", true, false);
                     }
                     Game1.currentLocation.characters.Add(State.FinaleBoss = new DuskspireMonster(new Vector2( 18, 13 ) * Game1.tileSize));
-                    Game1.changeMusicTrack("SnS.DuskspirePhase2", true, MusicContext.ImportantSplitScreenMusic);
+
+                    DelayedAction.playMusicAfterDelay("SnS.DuskspirePhase2", 500, true);
 
                     string partner = null;
                     var partnerInfos = Game1.content.Load<Dictionary<string, FinalePartnerInfo>>("DN.SnS/FinalePartners");
