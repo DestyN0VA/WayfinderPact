@@ -36,6 +36,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading;
+using Object = StardewValley.Object;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -228,7 +229,7 @@ namespace SwordAndSorcerySMAPI
         public bool DoingBossDeathAnim { get; set; } = false;
         public bool FinishedBoxxDeathAnim { get; set; } = false;
         public int DeathAnimTimer { get; set; } = 6300;
-        public Dictionary<ulong, Trinket> KeychainTrinkets { get; set; } = [];
+        public List<Trinket> KeychainTrinkets { get; set; } = [];
 
         public class PolymorphData
         {
@@ -434,6 +435,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.GameLoop.SaveCreated += GameLoop_SaveCreated;
             Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
             Helper.Events.Player.Warped += Player_Warped;
+            Helper.Events.Player.InventoryChanged += Player_InventoryChanged;
             Helper.Events.Display.RenderedHud += Display_RenderedHud;
             Helper.Events.Display.RenderedWorld += Display_RenderedWorld;
             Helper.Events.Input.ButtonPressed += Input_ButtonPressed;
@@ -508,6 +510,7 @@ namespace SwordAndSorcerySMAPI
                 HiddenIfLocked = true,
                 ManaCost = () => 0,
                 Function = () => SwapLltk(),
+                CanUse = () => Game1.player.ActiveItem?.QualifiedItemId.ContainsIgnoreCase("(W)DN.SnS_longlivetheking") ?? false
             });
 
             Helper.ConsoleCommands.Add("sns_setmaxaether", "Sets Max Aether to the provided amount, or resets to default with the 'reset' argument", (cmd, args) => {
@@ -579,6 +582,30 @@ namespace SwordAndSorcerySMAPI
             InitArsenal();
         }
 
+        private void Player_InventoryChanged(object sender, InventoryChangedEventArgs e)
+        {
+            if (e.Removed.Any(i => i.QualifiedItemId.ContainsIgnoreCase("(W)DN.SnS_longlivetheking")) && e.Added.Any(i => i.QualifiedItemId.ContainsIgnoreCase("(W)DN.SnS_longlivetheking")))
+                return;
+
+            if (e.Removed.Any(i => i is MeleeWeapon or Slingshot && i.ItemId.ContainsIgnoreCase("DN.SnS_longlivetheking")))
+                foreach (Item i in e.Removed.Where(i => i is MeleeWeapon or Slingshot && i.ItemId.ContainsIgnoreCase("DN.SnS_longlivetheking")))
+                {
+                    if (i is not Tool) continue;
+                    Tool LLTK = i as Tool;
+                    LLTK.AttachmentSlotsCount = 2;
+                    if (LLTK.attachments[1] is Trinket) KeychainsAndTrinkets.HandleTrinketEquipUnequip(null, LLTK.attachments[1]);
+                }
+
+            if (e.Added.Any(i => i is MeleeWeapon or Slingshot && i.ItemId.ContainsIgnoreCase("DN.SnS_longlivetheking")))
+                foreach (Item i in e.Added.Where(i => i is MeleeWeapon or Slingshot && i.ItemId.ContainsIgnoreCase("DN.SnS_longlivetheking")))
+                {
+                    if (i is not Tool) continue;
+                    Tool LLTK = i as Tool;
+                    LLTK.AttachmentSlotsCount = 2;
+                    if (LLTK.attachments[1] is Trinket) KeychainsAndTrinkets.HandleTrinketEquipUnequip(LLTK.attachments[1], null);
+                }
+        }
+
         private void GameLoop_DayEnding(object sender, DayEndingEventArgs e)
         {
             Utility.ForEachCharacter((npc) =>
@@ -634,14 +661,16 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        private void GameLoop_SaveCreated(object sender, StardewModdingAPI.Events.SaveCreatedEventArgs e)
+        private void GameLoop_SaveCreated(object sender, SaveCreatedEventArgs e)
         {
             Game1.player.mailReceived.OnValueAdded += OnMailReceived;
         }
 
-        private void GameLoop_SaveLoaded(object sender, StardewModdingAPI.Events.SaveLoadedEventArgs e)
+        private void GameLoop_SaveLoaded(object sender, SaveLoadedEventArgs e)
         {
             Game1.player.mailReceived.OnValueAdded += OnMailReceived;
+
+            State.KeychainTrinkets = [];
 
             // Remove Seasonal Offerings Special Orders
             Game1.player.team.specialOrders.RemoveWhere(o => o.questKey.Value.StartsWithIgnoreCase("CAGQuest.UntimedSpecialOrder.Pentacle"));
@@ -676,7 +705,7 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        private void GameLoop_TimeChanged(object sender, StardewModdingAPI.Events.TimeChangedEventArgs e)
+        private void GameLoop_TimeChanged(object sender, TimeChangedEventArgs e)
         {
             if (e.NewTime % 100 == 0)
             {
@@ -732,7 +761,7 @@ namespace SwordAndSorcerySMAPI
             ext.maxMana.Value = maxMana;
         }
 
-        private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
+        private void GameLoop_DayStarted(object sender, DayStartedEventArgs e)
         {
             if (!Game1.player.knowsRecipe("DN.SnS_SteelShield"))
                 Game1.player.craftingRecipes.Add("DN.SnS_SteelShield", 0);
@@ -821,45 +850,38 @@ namespace SwordAndSorcerySMAPI
             if (Game1.player.ActiveItem == null)
                 return false;
 
-            if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking")
+            if (Game1.player.ActiveItem.QualifiedItemId.EqualsIgnoreCase("(W)DN.SnS_longlivetheking"))
             {
                 var w = new Slingshot("DN.SnS_longlivetheking_gun");
                 Game1.player.CurrentTool.CopyEnchantments(Game1.player.CurrentTool, w);
                 w.modData.Set(Game1.player.CurrentTool.modData.Pairs);
-                if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
+                w.AttachmentSlotsCount = 2;
+                for (int i = 0; i < 2; i++)
                 {
-                    w.attachments.SetCount(2);
-                    w.attachments[0] = (StardewValley.Object)Game1.player.CurrentTool.attachments[0].getOne();
-                    w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
-                    if (Game1.player.CurrentTool.attachments.Count > 1 && Game1.player.CurrentTool.attachments[1] != null)
+                    if (Game1.player.CurrentTool.attachments[i] != null)
                     {
-                        w.attachments[1] = (StardewValley.Object)Game1.player.CurrentTool.attachments[1].getOne();
-                        w.attachments[1].Stack = Game1.player.CurrentTool.attachments[1].Stack;
+                        w.attachments[i] = Game1.player.CurrentTool.attachments[i];
                     }
                 }
                 Game1.player.Items[Game1.player.CurrentToolIndex] = w;
                 return true;
             }
-            else if (Game1.player.ActiveItem.QualifiedItemId == "(W)DN.SnS_longlivetheking_gun")
+            else if (Game1.player.ActiveItem.QualifiedItemId.EqualsIgnoreCase("(W)DN.SnS_longlivetheking_gun"))
             {
                 var w = new MeleeWeapon("DN.SnS_longlivetheking");
                 Game1.player.CurrentTool.CopyEnchantments(Game1.player.CurrentTool, w);
                 w.modData.Set(Game1.player.CurrentTool.modData.Pairs);
-                if (Game1.player.CurrentTool.attachments.Count > 0 && Game1.player.CurrentTool.attachments[0] != null)
+                w.AttachmentSlotsCount = 2;
+                for (int i = 0; i < 2; i++)
                 {
-                    w.attachments.SetCount(2);
-                    w.attachments[0] = (StardewValley.Object)Game1.player.CurrentTool.attachments[0].getOne();
-                    w.attachments[0].Stack = Game1.player.CurrentTool.attachments[0].Stack;
-                    if (Game1.player.CurrentTool.attachments.Count > 1 && Game1.player.CurrentTool.attachments[1] != null)
+                    if (Game1.player.CurrentTool.attachments[i] != null)
                     {
-                        w.attachments[1] = (StardewValley.Object)Game1.player.CurrentTool.attachments[1].getOne();
-                        w.attachments[1].Stack = Game1.player.CurrentTool.attachments[1].Stack;
+                        w.attachments[i] = Game1.player.CurrentTool.attachments[i];
                     }
                 }
                 Game1.player.Items[Game1.player.CurrentToolIndex] = w;
                 return true;
             }
-
             return false;
         }
 
@@ -1211,7 +1233,7 @@ namespace SwordAndSorcerySMAPI
                     if (!Context.IsWorldReady)
                         return null;
 
-                    if (Game1.stats.Get("CirrusCooldown") == 0 && Game1.random.NextBool(1/3))
+                    if (Game1.stats.Get("CirrusCooldown") == 0 && Game1.random.NextBool(1 / 3))
                     {
                         Game1.stats.Increment("CirrusCooldown", 6);
                         Game1.stats.Increment("CirrusHair", 1);
@@ -1291,7 +1313,7 @@ namespace SwordAndSorcerySMAPI
             if (Helper.ModRegistry.IsLoaded("leclair.bettercrafting"))
             {
                 harmony.Patch(
-                    AccessTools.TypeByName("Leclair.Stardew.Common.CraftingHelper").GetMethod("ConsumeIngredients"), 
+                    AccessTools.TypeByName("Leclair.Stardew.Common.CraftingHelper").GetMethod("ConsumeIngredients"),
                     prefix: new HarmonyMethod(typeof(CraftingRecipeFlashOfGeniusPatch), nameof(CraftingRecipeFlashOfGeniusPatch.Prefix))
                     );
             }
@@ -1302,33 +1324,23 @@ namespace SwordAndSorcerySMAPI
             if (!Context.IsWorldReady)
                 return;
 
+            /*List<Trinket> trinkets = [];
+
             foreach (Tool LLTK in Game1.player.Items.Where(i => (i?.QualifiedItemId.ContainsIgnoreCase("DN.SnS_longlivetheking") ?? false) && i is Tool t && t.attachments.Any(i => i is Trinket)).Cast<Tool>())
             {
-                LLTK.AttachmentSlotsCount = 2;
-                if (LLTK.attachments[1] is Trinket t)
-                {
-                    if (State.KeychainTrinkets.ContainsKey(Game1.uniqueIDForThisGame))
-                        State.KeychainTrinkets[Game1.uniqueIDForThisGame] = t;
-                    else State.KeychainTrinkets.Add(Game1.uniqueIDForThisGame, t);
-                    break;
-                }
+                Trinket t = LLTK.attachments.First(t => t is Trinket) as Trinket;
+                trinkets.Add(t);
+                if (!State.KeychainTrinkets.Any(t1 => t1.Name == t.Name))
+                    t.Apply(Game1.player);
             }
 
-            if (Game1.player.Items.Where(i => (i?.QualifiedItemId.ContainsIgnoreCase("DN.SnS_longlivetheking") ?? false) && i is Tool t && t.attachments.Any(i => i is Trinket)).Count() <= 0)
+            foreach (Trinket t in State.KeychainTrinkets)
             {
-                State.KeychainTrinkets.Remove(Game1.uniqueIDForThisGame);
+                if (!trinkets.Any(t1 => t1.Name == t.Name))
+                    t.Unapply(Game1.player);
             }
 
-            if (State.KeychainTrinkets.TryGetValue(Game1.uniqueIDForThisGame, out Trinket kt))
-            {
-                if (!Game1.player.trinketItems.Any(t => t?.BaseName == kt.BaseName))
-                {
-                    while (Game1.player.trinketItems.Count <= Farmer.MaximumTrinkets)
-                        Game1.player.trinketItems.Add(null);
-                    Game1.player.trinketItems.Add(kt);
-                }
-            }
-            else Game1.player.trinketItems.RemoveWhere(t => t?.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false);
+            State.KeychainTrinkets = trinkets;*/
 
             if (!Game1.player.mailReceived.Contains("DN.SnS_IntermissionShield") && Game1.player.eventsSeen.Any(m => m.StartsWith("SnS.Ch4.Victory")))
             {

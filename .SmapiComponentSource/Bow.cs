@@ -243,7 +243,7 @@ namespace SwordAndSorcerySMAPI
                 {
                     for (int slot = 0; slot < __instance.attachments.Length; slot++)
                     {
-                        if (CanThisBeAttached(o, slot))
+                        if (KeychainsAndTrinkets.CanThisBeAttached(o, slot))
                         {
                             __result = true;
                             break;
@@ -260,15 +260,6 @@ namespace SwordAndSorcerySMAPI
                 __result = o.HasContextTag("arrow_item");
             }
         }
-
-        public static bool CanThisBeAttached(Object o, int slot)
-        {
-            if (o == null) return true;
-            if (slot == 0)
-                return o.HasContextTag("bullet_item");
-            else
-                return o.HasContextTag("keychain_item") || (o is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false));
-        }
     }
     [HarmonyPatch(typeof(Tool), nameof(Tool.canThisBeAttached), [typeof(Object)])]
     public static class LLTKBulletsAndKeychainAttaching
@@ -283,7 +274,7 @@ namespace SwordAndSorcerySMAPI
                 {
                     for (int slot = 0; slot < __instance.attachments.Length; slot++)
                     {
-                        if (SlingshowBowAmmoAttachPatch1.CanThisBeAttached(o, slot))
+                        if (KeychainsAndTrinkets.CanThisBeAttached(o, slot))
                         {
                             __result = true;
                             break;
@@ -324,66 +315,15 @@ namespace SwordAndSorcerySMAPI
         {
             if (!__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking_gun") && !__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking")) return true;
             __instance.AttachmentSlotsCount = 2;
-            if (o == null)
-            {
-                for (int slot = 0; slot < __instance.attachments.Length; slot++)
-                {
-                    Object oldObj = __instance.attachments[slot];
-                    if (oldObj != null)
-                    {
-                        __instance.attachments[slot] = null;
-                        Game1.playSound("dwop");
-                        __result = oldObj;
-                        return false;
-                    }
-                }
-                __result = null;
-                return false;
-            }
-            int originalStack = o.Stack;
-            for (int slot = 0; slot < __instance.attachments.Length; slot++)
-            {
-                if (!SlingshowBowAmmoAttachPatch1.CanThisBeAttached(o, slot))
-                {
-                    continue;
-                }
-                Object oldObj = __instance.attachments[slot];
-                if (oldObj == null)
-                {
-                    __instance.attachments[slot] = o;
-                    o = null;
-                    break;
-                }
-                if (oldObj.canStackWith(o))
-                {
-                    o.Stack = oldObj.addToStack(o);
-                    if (o.Stack < 1)
-                    {
-                        o = null;
-                        break;
-                    }
-                }
-            }
-            if (o == null || o.Stack != originalStack)
-            {
-                Game1.playSound("button1");
-                __result = o;
-                return false;
-            }
-            for (int slot = 0; slot < __instance.attachments.Length; slot++)
-            {
-                Object oldObj = __instance.attachments[slot];
-                __instance.attachments[slot] = null;
-                if (SlingshowBowAmmoAttachPatch1.CanThisBeAttached(o, slot))
-                {
-                    __instance.attachments[slot] = o;
-                    Game1.playSound("button1");
-                    __result = oldObj;
-                    return false;
-                }
-                __instance.attachments[slot] = oldObj;
-            }
-            __result = o;
+
+            KeychainsAndTrinkets.TryAttach(__instance, o, out Object attached, out Object onHand, out int? Slot);
+
+            if (Slot.HasValue)
+                __instance.attachments[Slot.Value] = attached;
+            __result = onHand;
+
+            KeychainsAndTrinkets.HandleTrinketEquipUnequip(attached, onHand);
+
             return false;
         }
     }
@@ -409,22 +349,6 @@ namespace SwordAndSorcerySMAPI
                     return false;
 
             return true;
-        }
-    }
-
-    [HarmonyPatch(typeof(InventoryPage), nameof(InventoryPage.ShouldShowJunimoNoteIcon))]
-    public static class InventoryPageRemoveKeychainTrinketIfNeeded
-    {
-        public static void Postfix(InventoryPage __instance)
-        {
-            int num = Farmer.MaximumTrinkets;
-            for (int i = 0; i < num; i++)
-            {
-                if (Game1.player.trinketItems.Count - 1 >= i && (Game1.player.trinketItems[i]?.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))
-                {
-                    Game1.player.trinketItems[i] = null;
-                }
-            }
         }
     }
 
@@ -463,101 +387,28 @@ namespace SwordAndSorcerySMAPI
         public static void Postfix(Tool __instance, int slot, out Texture2D texture, out Rectangle sourceRect)
         {
             texture = Game1.menuTexture;
-            sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, __instance.ItemId != "DN.SnS_longlivetheking" ? 10 : (slot == 0 ? 43 : 41));
+            if (__instance.QualifiedItemId == "(W)DN.SnS_longlivetheking")
+                sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, __instance.attachments[slot] != null ? 10 : (slot == 0 ? 41 : 43));
+            else
+                sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, 10);
         }
     }
+    /*
+            if (base.attachments[0] == null)
+            {
+                sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, 43);
+            }*/
 
     [HarmonyPatch(typeof(Slingshot), "GetAttachmentSlotSprite")]
     public static class LLTKGunSlotSprites
     {
-        public static void Postfix(Tool __instance, int slot, out Texture2D texture, out Rectangle sourceRect)
+        public static void Postfix(Slingshot __instance, int slot, out Texture2D texture, out Rectangle sourceRect)
         {
             texture = Game1.menuTexture;
-            sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, slot == 0 ? 43 : 41);
-        }
-    }
-
-    [HarmonyPatch(typeof(Object), nameof(Object.getCategoryName))]
-    public static class ObjectKeychainCategoryName
-    {
-        public static void Postfix(Object __instance, ref string __result)
-        {
-            if (__instance.HasContextTag("keychain_item"))
-            {
-                __result = I18n.KeychainCategory();
-            }
-        }
-    }
-
-    [HarmonyPatch(typeof(Object), nameof(Object.getCategoryColor))]
-    public static class ObjectKeychainCategoryColor
-    {
-        public static void Postfix(Object __instance, ref Color __result)
-        {
-            if (__instance.HasContextTag("keychain_item"))
-            {
-                __result = Color.DarkSlateGray;
-            }
-        }
-    }
-
-    [HarmonyPatch(typeof(Trinket), nameof(Trinket.getCategoryName))]
-    public static class TrinketKeychainCategoryName
-    {
-        public static void Postfix(Trinket __instance, ref string __result)
-        {
-            if (__instance.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false)
-            {
-                __result = I18n.KeychainCategory();
-            }
-        }
-    }
-
-    [HarmonyPatch(typeof(Trinket), nameof(Trinket.getCategoryColor))]
-    public static class TrinketKeychainCategoryColor
-    {
-        public static void Postfix(Trinket __instance, ref Color __result)
-        {
-            if (__instance.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false)
-            {
-                __result = Color.DarkSlateGray;
-            }
-        }
-    }
-
-    [HarmonyPatch(typeof(Object), nameof(Object.canBeTrashed))]
-    public static class TrinketNoTrashing
-    {
-        public static void Postfix(Trinket __instance, ref bool __result)
-        {
-            if (__instance is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))
-            {
-                __result = false;
-            }
-        }
-    }
-
-    [HarmonyPatch(typeof(Item), nameof(Item.CanBeLostOnDeath))]
-    public static class TrinketNoLosingOnDeath
-    {
-        public static void Postfix(Trinket __instance, ref bool __result)
-        {
-            if (__instance is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))
-            {
-                __result = false;
-            }
-        }
-    }
-
-    [HarmonyPatch(typeof(Trinket), nameof(Trinket.canBeGivenAsGift))]
-    public static class TrinketNoGifting
-    {
-        public static void Postfix(Trinket __instance, ref bool __result)
-        {
-            if (__instance.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false)
-            {
-                __result = false;
-            }
+            if (__instance.QualifiedItemId == "(W)DN.SnS_longlivetheking_gun")
+                sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, __instance.attachments[slot] != null ? 10 : (slot == 0 ? 41 : 43));
+            else 
+                sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, __instance.attachments[0] == null ? 43 : 10);
         }
     }
 
