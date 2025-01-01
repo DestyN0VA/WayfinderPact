@@ -2,7 +2,7 @@
   "Changes": [
   //Tinket data
     {
-      "LogName": "Pipo: Trinket",
+      "LogName": "Emeritus Trinket",
       "Action": "EditData",
       "Target": "Data/Trinkets",
       "Entries": {
@@ -81,7 +81,7 @@
               "Texture": "Characters/MateoEmeritus",
               "Width": 32,
               "Height": 32,
-              "ShadowScale": 2
+              "ShadowScale": 0
             }
           ],
           "Motion": {
@@ -127,7 +127,8 @@
                   "SpriteHeight": 16,
                   "IgnoreObjectCollisions": true,
                   "Min": 30,
-                  "Max": 60
+                  "Max": 60,
+                  "Filters": [ "Shadow Guy", "Shadow Shaman", "Shadow Sniper", "Shadow Brute" ]
                 }
               },
               {
@@ -149,7 +150,8 @@
                   "SpriteHeight": 32,
                   "IgnoreObjectCollisions": true,
                   "Min": 100,
-                  "Max": 250
+                  "Max": 250,
+                  "Filters": [ "Shadow Guy", "Shadow Shaman", "Shadow Sniper", "Shadow Brute" ]
                 }
               },
               {

@@ -98,7 +98,7 @@
     {
       "LogName": "Trinket Tinker Compat",
       "Action": "Include",
-      "FromFile": "Data/Trinket Tinker/OwlBoy.json, Data/Trinket Tinker/Emeritus.json",
+      "FromFile": "Data/Trinket Tinker/OwlBoy.json, Data/Trinket Tinker/Emeritus.json, Data/Trinket Tinker/HectorWolf.json",
       "When": { "HasMod": "mushymato.TrinketTinker" }
     },
     // TRIGGER ACTIONS

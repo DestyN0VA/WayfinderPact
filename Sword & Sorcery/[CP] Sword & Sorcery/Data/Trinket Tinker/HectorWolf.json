@@ -1,0 +1,128 @@
+{
+  "Changes": [
+  //Tinket data
+    {
+      "LogName": "Hector trinket",
+      "Action": "EditData",
+      "Target": "Data/Trinkets",
+      "Entries": {
+        "{{ModId}}_HectorWolfKeychain": {
+          "Id": "{{ModId}}_EmeritusKeychain",
+          "DisplayName": "TEST",
+          "Description": "TEST",
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SheetIndex": 132,
+          "DropsNaturally": false,
+          "CanBeReforged": false,
+          "CustomFields": { "Keychain_item": "true" }
+        }
+      }
+    },
+  /*  {
+      "Action": "EditData",
+      "Target": "mushymato.TrinketTinker/TAS",
+      "Entries": {
+        "{{ModId}}_FireBall": {
+          "Id": "{{ModId}}_FireBall",
+          "Texture": "Characters/EmeritusFireball",
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 16,
+            "Height": 16
+          },
+          "Frames": 16,
+          "Interval": 15,
+          "PositionOffset": "-9,-7"
+        },
+      }
+    },*/
+    //TRinket buff
+   {
+      "LogName": "Dino Digs",
+      "Action": "EditData",
+      "Target": "Data/Buffs",
+      "Entries": {
+        "{{ModId}}_DruidicDestiny": {
+          "DisplayName": "TEST",
+          "Duration": 20000,
+          "MaxDuration": -1,
+          "IconTexture": "Textures/DN.SnS/SnSObjects",
+          "IconSpriteIndex": 132,
+          "Effects": {
+            "FarmingLevel": 3.0,
+            "ForagingLevel": 3.0,
+            "Defense": 3.0
+          }
+        }
+        }
+      },
+    {
+      "LogName": "Hector Wolf trinket",
+      "Action": "EditData",
+      "Target": "mushymato.TrinketTinker/Tinker",
+      "Entries": {
+        "{{ModId}}_HectorWolfKeychain": {
+          "Variants": [
+            {
+              "Texture": "Characters/Hector_Wolf",
+              "Width": 32,
+              "Height": 32,
+              "ShadowScale": 0
+            }
+          ],
+          "Motion": {
+            "MotionClass": "Lerp",
+            "DirectionMode": "DRUL",
+            "FrameLength": 4,
+            "AnimClips": {
+              "Idle.1": {
+                  "FrameStart": 20,
+                  "FrameLength": 16,
+                  "Interval": 300
+              },
+            },
+            "Args": {
+              "Min": 64,
+              "Rate": 500,
+              "MoveSync": true
+            }
+          },
+          "Abilities": [
+            [
+             /* {
+                "AbilityClass": "ItemDrop",
+                "Proc": "Footstep",
+                "ProcSound": "pickUpItem",
+                "Condition": "SYNCED_RANDOM tick EmeritusDropsMine .02, LOCATION_IS_MINES Here",
+                "Args": {
+                  "ID": "MineDrops",
+                  "RandomItemId": [
+                    "(O)382", "(O)382", "(O)382", "(O)382", "(O)382", "(O)380", "(O)380", "(O)380", "(O)380", "(O)380", "(O)378", "(O)378", "(O)378", "(O)378", "(O)378", "(O)384", "(O)384", "(O)384", "(O)384", "(O)909", "(O)386", "(O)386", "(O)72", "(O)259", "(O)259", "(O)259", "(O)259", "(O)259", "(O)259" ]
+                }
+              },*/
+              {
+                "AbilityClass": "Buff",
+                "Proc": "Timer",
+                "ProcTimer": 19000,
+                "Args": { "BuffId": "{{ModId}}_DruidicDestiny" }
+              },
+              {
+                "AbilityClass": "Buff",
+                "Proc": "Always",
+                "Args": { "BuffId": "{{ModId}}_DruidicDestiny" }
+              },
+              {
+                "AbilityClass": "HarvestForage",
+                "Proc": "Timer",
+                "ProcTimer": 250,
+                "ProcSound": "harvest",
+                "Args": { "Range": 2 }
+              }
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}
