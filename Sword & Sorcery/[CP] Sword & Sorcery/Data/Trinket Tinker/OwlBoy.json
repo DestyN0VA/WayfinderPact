@@ -1,23 +1,5 @@
-{ //
-  "$schema": "https://smapi.io/schemas/content-patcher.json",
+{ 
   "Changes": [
-    {
-      "LogName": "Owl: Trinkets",
-      "Action": "EditData",
-      "Target": "Data/Trinkets",
-      "Entries": {
-        "{{ModId}}_OwlBoy": {
-          "Id": "{{ModId}}_OwlBoy",
-          "DisplayName": "{{i18n: magicitem.destykeychain.name}}",
-          "Description": "{{i18n: magicitem.destykeychain.description.Trinket}}",
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SheetIndex": 101,
-          "DropsNaturally": false,
-          "CanBeReforged": false,
-          "CustomFields": { "Keychain_item": "true" }
-        },
-      }
-    },
     {
       "Action": "EditData",
       "Target": "Data/Objects",
@@ -59,7 +41,7 @@
       "Action": "EditData",
       "Target": "mushymato.TrinketTinker/Tinker",
       "Entries": {
-        "{{ModId}}_OwlBoy": {
+        "{{ModId}}_OwlBoyKeychain": {
           "Variants": [
             {
               "Texture": "Characters/DN.SnS_OwlBoy",
@@ -83,16 +65,32 @@
                 "Range": 240
               },
             ],
-            "AnimClips": {
-              "Perching": {
+           "AnimClips": {
+              "Perching.1": {
                 "FrameStart": 16,
+                "FrameLength": 1
+              },
+              "Perching.2": {
+                "FrameStart": 17,
+                "FrameLength": 1
+              },
+              "Perching.3": {
+                "FrameStart": 19,
+                "FrameLength": 1
+              },
+              "Perching.4": {
+                "FrameStart": 18,
                 "FrameLength": 1
               },
               "AbilityProc": {
                 "FrameStart": 20,
                 "FrameLength": 2,
                 "Interval": 900
-                
+              },
+              "AbilityProc2": {
+                "FrameStart": 20,
+                "FrameLength": 2,
+                "Interval": 200
               }
             },
             "Args": {
@@ -112,6 +110,28 @@
                 "Args": {
                   "ID": "StilesBoomerang",
                   "ItemId": "(W){{ModID}}_StilesBoomerang",
+                }
+              },
+              {
+                "Proc": "Timer",
+                "ProcTimer": 2000,
+                "AbilityClass": "Projectile",
+                "ProcOneshotAnim": "AbilityProc2",
+                "ProcSound": "slingshot",
+                "Args": {
+                  "StunTime": 150,
+                  "Range": 1500,
+                  "Texture": "Textures/DN.SnS/SnSArsenal",
+                  "SpriteIndex": 51,
+                  "Acceleration": 2,
+                  "MinVelocity": 2,
+                  "MaxVelocity": 24,
+                  "SpriteWidth": 16,
+                  "SpriteHeight": 16,
+                  "IgnoreObjectCollisions": true,
+                  "Min": 25,
+                  "Max": 35,
+                  "Filters": [ "Shadow Guy", "Shadow Shaman", "Shadow Sniper", "Shadow Brute" ]
                 }
               },
               {

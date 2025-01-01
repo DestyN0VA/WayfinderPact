@@ -2,23 +2,6 @@
   "Changes": [
   //Tinket data
     {
-      "LogName": "Emeritus Trinket",
-      "Action": "EditData",
-      "Target": "Data/Trinkets",
-      "Entries": {
-        "{{ModId}}_EmeritusKeychain": {
-          "Id": "{{ModId}}_EmeritusKeychain",
-          "DisplayName": "{{i18n: magicitem.EmeritusKeychain.name}}",
-          "Description": "{{i18n: magicitem.EmeritusKeychain.description}}",
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SheetIndex": 130,
-          "DropsNaturally": false,
-          "CanBeReforged": false,
-          "CustomFields": { "Keychain_item": "true" }
-        }
-      }
-    },
-    {
       "Action": "EditData",
       "Target": "mushymato.TrinketTinker/TAS",
       "Entries": {
@@ -57,7 +40,7 @@
       "Target": "Data/Buffs",
       "Entries": {
         "{{ModId}}_DinoDigs": {
-          "DisplayName": "Dino Digs",
+          "DisplayName": "{{i18n: buff.emeritusbuff}}",
           "Duration": 20000,
           "MaxDuration": -1,
           "IconTexture": "Textures/DN.SnS/SnSObjects",

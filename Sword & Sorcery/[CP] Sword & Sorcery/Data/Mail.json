@@ -17,10 +17,10 @@
                 "MateoHoodie":"{{i18n:Mail.Mateo.Letter5}}",
                 "HectorHoodie":"{{i18n:Mail.Hector.Letter3}}",
                 "CirrusHoodie":"{{i18n:Mail.Cirrus.Letter0}}",
-				"MissingRecipe1":"{{i18n:Mail.MissingRecipe1}}",
-				"MissingRecipe2":"{{i18n:Mail.MissingRecipe2}}",
-				"MissingRecipe3":"{{i18n:Mail.MissingRecipe3}}",
-				"MissingRecipe4":"{{i18n:Mail.MissingRecipe4}}"
+				"HectorKeychain": "{{i18n:Mail.HectorKeychain}}",
+				"BookKeychain": "{{i18n:Mail.BookKeychain}}",
+				"EmeritusKeychain": "{{i18n:Mail.EmeritusKeychain}}",
+			    "OwlBoyKeychain": "{{i18n:Mail.OwlBoyKeychain}}"
             }
         },
         // TRIGGER ACTIONS
@@ -76,8 +76,34 @@
 					"Actions": [
 						"AddMail Current CirrusHoodie tomorrow"
 					]
+				},
+				"{{ModID}}_EmeritusKeychain": {
+					"Id": "{{ModID}}_EmeritusKeychain",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14, PLAYER_HAS_MAIL Current DN.SnS_ObtainedLLTK, RANDOM 0.1, {{HasMod |Contains=mushymato.TrinketTinker}}",
+					"Actions": [ "AddMail Current EmeritusKeychain tomorrow" ]
+				},
+				"{{ModID}}_HectorKeychain": {
+					"Id": "{{ModID}}_HectorKeychain",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.15, PLAYER_HAS_MAIL Current DN.SnS_ObtainedLLTK, RANDOM 0.1, {{HasMod |Contains=mushymato.TrinketTinker}}",
+					"Actions": [ "AddMail Current HectorKeychain tomorrow" ]
+				},
+				"{{ModID}}_BookKeychain": {
+					"Id": "{{ModID}}_BookKeychain",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14, PLAYER_HAS_MAIL Current DN.SnS_ObtainedLLTK, RANDOM 0.1, {{HasMod |Contains=mushymato.TrinketTinker}}",
+					"Actions": [ "AddMail Current BookKeychain tomorrow" ]
+				},
+				"{{ModID}}_OwlBoyKeychain": {
+					"Id": "{{ModID}}_OwlBoyKeychain",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.End, !PLAYER_HAS_MAIL Current ReceivedTTOwlBoy Any, {{HasMod |Contains=mushymato.TrinketTinker}}",
+					"Actions": [ "AddMail Current OwlBoyKeychain tomorrow" ]
 				}
 			}
 		}        
     ]
 }
+
+//PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.End, !PLAYER_HAS_MAIL Current ReceivedTTOwlBoy Any, !PLAYER_HAS_ITEM Current (TR)DN.SnS_OwlBoyKeychain 1

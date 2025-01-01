@@ -235,8 +235,12 @@
                   "Contents": "{{i18n: guidebook.chapter.NEA.Underforge}}"
                 },
                 {
-                  "Id": "LLTKKeychains",
-                  "Contents": "{{i18n: guidebook.chapter.Mechanics.LLTK & Keychains|Config={{SMAPIConfigLink}}}}"
+                  "Id": "LLTK",
+                  "Contents": "{{i18n: guidebook.chapter.Mechanics.LLTK |Config={{SMAPIConfigLink}}}}"
+                },
+                {
+                  "Id": "Keychains",
+                  "Contents": "{{i18n: guidebook.chapter.Mechanics.Keychains |TrueName={{TrueName}}|Config={{SMAPIConfigLink}}}}"
                 },
                 {
                   "Id": "DruidicEssence",

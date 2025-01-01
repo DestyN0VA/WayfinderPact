@@ -61,7 +61,7 @@
     {
       "LogName": "Sword & Sorcery - Data Includes",
       "Action": "Include",
-      "FromFile": "Data/FinalePartners.json, Data/AlchemyRecipes.json, Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/CustomForage.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/Books.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Quests & Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json, Data/PlayersHandbook.json, Data/Quests & Items/VioletMoon_FoodOnly.json"
+      "FromFile": "Data/FinalePartners.json, Data/AlchemyRecipes.json, Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/CustomForage.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/Books.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Quests & Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json, Data/WitchcraftResearch.json, Data/Dungeon.json, Data/PlayersHandbook.json, Data/Quests & Items/VioletMoon_FoodOnly.json, Data/Trinket Tinker/TrinketLoads.json"
     },
     {
       "LogName": "Sword & Sorcery - Shield Quest Include",
@@ -98,7 +98,7 @@
     {
       "LogName": "Trinket Tinker Compat",
       "Action": "Include",
-      "FromFile": "Data/Trinket Tinker/OwlBoy.json, Data/Trinket Tinker/Emeritus.json, Data/Trinket Tinker/HectorWolf.json",
+      "FromFile": "Data/Trinket Tinker/OwlBoy.json, Data/Trinket Tinker/Emeritus.json, Data/Trinket Tinker/HectorWolf.json, Data/Trinket Tinker/Book.json",
       "When": { "HasMod": "mushymato.TrinketTinker" }
     },
     // TRIGGER ACTIONS
@@ -2511,10 +2511,10 @@
       "Value": true,
       "When": { "HasFlag |contains=galaxySword": false, "HasFlag |contains=ccVault": true }
     },
-    { "Name": "KeyChainType", "Value": "(O){{ModID}}_destykeychain" },
+    { "Name": "KeyChainType", "Value": "addItem (O){{ModID}}_destykeychain 1" },
     {
       "Name": "KeyChainType",
-      "Value": "(TR){{ModId}}_OwlBoy",
+      "Value": "addItem (TR){{ModId}}_OwlBoyKeychain 1/addMailReceived ReceivedTTOwlBoy",
       "When": { "HasMod": "mushymato.TrinketTinker" }
     }
   ]

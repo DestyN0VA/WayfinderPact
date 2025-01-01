@@ -638,6 +638,7 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/abilities.png").Name,
                 SpriteIndex = 8,
                 ManaCost = () => 35,
+                CanUse = () => SongEntry.usedTimeToday < ModUP.GetSongLimit(),
                 KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.BARDICS_LEVEL Current 6",
                 UnlockHint = () => I18n.Ability_Bardics_UnlockHint(6),
                 Function = () =>

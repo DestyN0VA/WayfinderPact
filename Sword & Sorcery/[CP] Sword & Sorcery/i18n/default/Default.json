@@ -6801,11 +6801,17 @@ ________      ________ _   _ _______ _____
   "magicitem.argentisshield.name": "Empowered Argentis Shield",
   "magicitem.argentisshield.description": "Fully restored to it's former power, this shield empowers you to protect your friends and loved ones.",
 
+  "buff.destybuff": "So Much for Stardust",
+  "buff.owlboybuff": "So Much for Stardust",
+  "buff.hectorbuff": "Aqua Regia",
+  "buff.bookbuff": "Wind of Windermere",
+  "buff.emeritusbuff": "Bite of Passage ",
+
   "magicitem.OwlBoyIcon.name": "Owl Boy Icon",
   "magicitem.OwlBoyIcon.description": "Hoot? You're a cheater!",
   "magicitem.destykeychain.name": "Stiles' Keychain",
   "magicitem.destykeychain.description": "An unusual keychain for Long Live The King, in the shape of an X.",
-  "magicitem.destykeychain.description.Trinket": "An unusual keychain for Long Live The King, in the shape of an X.\n\nSummons Stiles' Owl\n= Gathers forage\n= Finds grown crops\n= Applies \"Stiles' Buff\"\n= Hoots and talks!",
+  "magicitem.destykeychain.description.Trinket": "An unusual keychain for Long Live The King, in the shape of an X.\n\nSummons Stiles' Owl\n= Gathers forage\n= Finds grown crops\n= Attacks monsters\n= Hoots and talks!\n= +Buff \"So Much for Stardust\"",
   "magicitem.destykeychain.dialogue.Hi": "Hello! Hoot!",
   "magicitem.destykeychain.dialogue.1": " Hoot hoot?",
   "magicitem.destykeychain.dialogue.2": "Hoot hoot hoot!",
@@ -6830,7 +6836,13 @@ ________      ________ _   _ _______ _____
   "magicitem.destykeychain.dialogue.21": "Owl Boy loves you! Hoot!",
 
   "magicitem.EmeritusKeychain.name": "Emeritus Keychain",
-  "magicitem.EmeritusKeychain.description": "A keychain for Long Live The King, in the shape of Emeritus! How cute!\n\nSummons Emeritus\n= Shoots fireballs\n= Gathers forage\n= Finds items in mine\n= Applies \"Dino Digs\" buff",
+  "magicitem.EmeritusKeychain.description": "A keychain for Long Live The King, in the shape of Emeritus! How cute!\n\nSummons Emeritus\n= Shoots fireballs\n= Gathers forage\n= Finds items in mine\n= +Buff \"Bite of Passage\"",
+
+  "magicitem.HectorWolfKeychain.name": "Wolf {{TrueName}} Keychain",
+  "magicitem.HectorWolfKeychain.description": "A keychain for Long Live The King, in the shape of {{TrueName}}'s  wolf form!\n\nSummons Wolf {{TrueName}} \n= Gathers forage\n= Gathers crops \n= Stamina recovery\n= +Buff \"Aqua Regia\"",
+
+  "magicitem.BookKeychain.name": "Book Keychain",
+  "magicitem.BookKeychain.description": "A keychain for Long Live The King, in the shape of Book!\n\nSummons Book\n= Finds forage\n= Health Recovery\n= +75 Max Stamina\n= +Buff \"Wind of Windermere\"",
 
   "food.salishbourbon.name": "Salish Sea Bourbon",
   "food.salishbourbon.description": "Mateo's favorite drink, made at a small brewery in the Fern Islands.",
@@ -7238,11 +7250,6 @@ ________      ________ _   _ _______ _____
   "witchcraft.research.pocket-dimension.description": "Teleports you to a pocket dimension which you can use as you like. It acts as a greenhouse.",
   "witchcraft.research.philosophers-stone.name": "Philosopher's Stone",
   "witchcraft.research.philosophers-stone.description": "Adds an icon to the Adventure Bar Menu (default U). When clicked, opens a new menu allowing you to transmute essences into other essences.",
-
-  "buff.destybuff": "Do not stand by in the presence of evil.",
-  "buff.owlboybuff": "Stiles' Buff (Hoot?)",
-
-
 
   "DN.SnS_Mateo_Hoodie.Name": "Mateo's Hoodie",
   "DN.SnS_Mateo_Hoodie.Description": "Sick hoodie, adventurer!",
@@ -7923,6 +7930,15 @@ ________      ________ _   _ _______ _____
   "Strings.Monsters.DuskspireRemnant": "Duskspire Remnant",
 
   //
+  "Mail.DN.SnS_FaireFoodMail.Title": "Food from the Faire",
   "Mail.DN.SnS_FaireFoodMail": "Welcome to the Valley, farmer!^^Unforuntately you just missed out on the Ferngill Renaissance Faire.^^However,  I thought it'd be fun for you to have some of the recipes we make! Please enjoy.^^  - Stiles Siddell", 
-  "Mail.DN.SnS_FaireFoodMail.Title": "Food from the Faire"
+
+  "Mail.HectorKeychain": "Hello, @.^^In case you need help tending to your farm, I wanted you to know that I'm available at your beck and call. It's the least I can do after everything you've done for me.^^   - B %item id (TR)DN.SnS_HectorWolfKeychain%%[#]Biróg Wolf Keychain",
+
+  "Mail.EmeritusKeychain": "Howdy, @!^^If you're ever in need of a protector from The Crab Menace, here's a little something to keep them away. Crustaceans will scuttle in fear from East Scarp's goodest boy!^^   - Teo .%item id (TR)DN.SnS_EmeritusKeychain%%[#]Emeritus Keychain",
+
+  "Mail.BookKeychain": "Hey @! <^^I made you this cute little keychain of Book because she's PERFECT, and Biróg went ahead and enchanted it. Now she'll know when you want to hang out!^^   - Ciri %item id (TR)DN.SnS_BookKeychain%%[#]Book the Dryad Keychain",
+
+  "Mail.OwlBoyKeychain": "Hello @!^^It appears that you might have missed out on the Trinket Tinker version of Stiles' Keychain for the Long Live The King. This version spawns the Owl Boy companion. Enjoy!^^   - S&S Team %item id (TR)DN.SnS_OwlBoyKeychain%%[#]Owl Boy Keychain"
+  
 }
