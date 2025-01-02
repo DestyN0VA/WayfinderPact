@@ -76,12 +76,12 @@ namespace SwordAndSorcerySMAPI
                     var tex = Game1.content.Load<Texture2D>(abil.TexturePath);
 
                     Color col = Color.White;
-                    if (ext.mana.Value < abil.ManaCost() || !abil.CanUse())
+                    if (ext.mana.Value < abil.ManaCost() || !(abil.CanUseForAdventureBar != null ? abil.CanUseForAdventureBar() : abil.CanUse()))
                         col *= 0.5f;
 
                     b.Draw(tex, pos, Game1.getSquareSourceRectForNonStandardTileSheet(tex, 16, 16, abil.SpriteIndex), col, 0, Vector2.Zero, 4, SpriteEffects.None, 1);
 
-                    if  ( new Rectangle( pos.ToPoint(), new Point( 64, 64 ) ).Contains( Game1.getMouseX(), Game1.getMouseY() ) &&
+                    if (new Rectangle( pos.ToPoint(), new Point( 64, 64 ) ).Contains( Game1.getMouseX(), Game1.getMouseY()) &&
                           GameStateQuery.CheckConditions(abil.KnownCondition, new(Game1.currentLocation, Game1.player, null, null, new Random())))
                     {
                         hover = abil;

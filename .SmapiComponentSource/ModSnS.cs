@@ -36,6 +36,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading;
+using static System.Net.Mime.MediaTypeNames;
 using Object = StardewValley.Object;
 
 namespace SwordAndSorcerySMAPI
@@ -116,13 +117,14 @@ namespace SwordAndSorcerySMAPI
         {
         }
 
+        public Dictionary<string, int> Cooldowns = [];
         public readonly NetInt armorUsed = new(0);
         public readonly NetInt mirrorImages = new(0);
         public int currRenderingMirror = 0;
         public bool mageArmor = false;
         public readonly NetBool isGhost = new(false);
         public readonly NetVector2 ghostOrigPosition = new();
-        public readonly NetFloat stasisTimer = new( -1 );
+        public readonly NetFloat stasisTimer = new(-1); 
     }
 
     [HarmonyPatch(typeof(Farmer), "initNetFields")]
@@ -435,7 +437,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.GameLoop.TimeChanged += GameLoop_TimeChanged;
             Helper.Events.GameLoop.SaveCreated += GameLoop_SaveCreated;
             Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
-            Helper.Events.GameLoop.SaveLoaded += KeychainsAndTrinkets.SaveLoaded;
+            Helper.Events.GameLoop.DayStarted += KeychainsAndTrinkets.DayStarted;
             Helper.Events.Player.Warped += Player_Warped;
             Helper.Events.Player.InventoryChanged += Player_InventoryChanged;
             Helper.Events.Display.RenderedHud += Display_RenderedHud;
@@ -512,7 +514,7 @@ namespace SwordAndSorcerySMAPI
                 HiddenIfLocked = true,
                 ManaCost = () => 0,
                 Function = () => SwapLltk(),
-                CanUse = () => Game1.player.ActiveItem?.QualifiedItemId.ContainsIgnoreCase("(W)DN.SnS_longlivetheking") ?? false
+                CanUse = () => (Game1.player.ActiveItem?.QualifiedItemId.ContainsIgnoreCase("(W)DN.SnS_longlivetheking") ?? false)
             });
 
             Helper.ConsoleCommands.Add("sns_setmaxaether", "Sets Max Aether to the provided amount, or resets to default with the 'reset' argument", (cmd, args) => {
@@ -798,6 +800,8 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
+        public static bool ForUse = false;
+
         private void Input_ButtonPressed(object sender, ButtonPressedEventArgs e)
         {
             if (!Context.IsWorldReady) return;
@@ -845,11 +849,48 @@ namespace SwordAndSorcerySMAPI
                     }
                 }
             }
+
+            var ext = Game1.player.GetFarmerExtData();
+            bool hasBar = Game1.onScreenMenus.Any(m => m is AdventureBar);
+            if (hasBar && Game1.activeClickableMenu == null && !Game1.IsChatting)
+            {
+                KeybindList[][] binds =
+                [
+                    [ Config.AbilityBar1Slot1, Config.AbilityBar2Slot1 ],
+                    [ Config.AbilityBar1Slot2, Config.AbilityBar2Slot2 ],
+                    [ Config.AbilityBar1Slot3, Config.AbilityBar2Slot3 ],
+                    [ Config.AbilityBar1Slot4, Config.AbilityBar2Slot4 ],
+                    [ Config.AbilityBar1Slot5, Config.AbilityBar2Slot5 ],
+                    [ Config.AbilityBar1Slot6, Config.AbilityBar2Slot6 ],
+                    [ Config.AbilityBar1Slot7, Config.AbilityBar2Slot7 ],
+                    [ Config.AbilityBar1Slot8, Config.AbilityBar2Slot8 ],
+                ];
+
+                string abilId = null;
+                for (int islot = 0; islot < 8; ++islot)
+                {
+                    if (abilId != null) break;
+                    
+                    for (int i = 0; i < 2; i++)
+                    {
+                        if (abilId != null) break;
+                        if (binds[islot][i].JustPressed())
+                            abilId = ext.adventureBar[i * 8 + islot];
+                    }
+                    ForUse = true;
+                    if (abilId != null && Ability.Abilities.TryGetValue(abilId, out var abil) && abil.ManaCost() <= ext.mana.Value && abil.CanUse())
+                    {
+                        ext.mana.Value -= abil.ManaCost();
+                        CastAbility(abil);
+                    }
+                    ForUse = false;
+                }
+            }
         }
 
         private bool SwapLltk()
         {
-            if (Game1.player.ActiveItem == null)
+            if (Game1.player.ActiveItem == null || !StopLLTKSwitchWhileAnimating.CanSwitch)
                 return false;
 
             if (Game1.player.ActiveItem.QualifiedItemId.EqualsIgnoreCase("(W)DN.SnS_longlivetheking"))
@@ -1540,44 +1581,9 @@ namespace SwordAndSorcerySMAPI
             {
                 Game1.activeClickableMenu = new AdventureBarConfigureMenu();
             }
-            if ( e.IsOneSecond && !hasBar && !AdventureBar.Hide && Game1.player.hasOrWillReceiveMail( "SnS_AdventureBar" ) )
+            if ( e.IsOneSecond && !hasBar && !AdventureBar.Hide && Game1.player.hasOrWillReceiveMail("SnS_AdventureBar") )
             {
                 Game1.onScreenMenus.Add(new AdventureBar(editing: false));
-            }
-            else if (hasBar && Game1.activeClickableMenu == null && !Game1.IsChatting)
-            {
-                KeybindList[][] binds =
-                [
-                    [ Config.AbilityBar1Slot1, Config.AbilityBar2Slot1 ],
-                    [ Config.AbilityBar1Slot2, Config.AbilityBar2Slot2 ],
-                    [ Config.AbilityBar1Slot3, Config.AbilityBar2Slot3 ],
-                    [ Config.AbilityBar1Slot4, Config.AbilityBar2Slot4 ],
-                    [ Config.AbilityBar1Slot5, Config.AbilityBar2Slot5 ],
-                    [ Config.AbilityBar1Slot6, Config.AbilityBar2Slot6 ],
-                    [ Config.AbilityBar1Slot7, Config.AbilityBar2Slot7 ],
-                    [ Config.AbilityBar1Slot8, Config.AbilityBar2Slot8 ],
-                ];
-
-                for (int islot = 0; islot < 8; ++islot)
-                {
-                    string abilId = null;
-                    if (binds[islot][1].JustPressed())
-                    {
-                        Helper.Input.SuppressActiveKeybinds(binds[islot][1]);
-                        abilId = ext.adventureBar[8 + islot];
-                    }
-                    else if (binds[islot][0].JustPressed())
-                    {
-                        Helper.Input.SuppressActiveKeybinds(binds[islot][0]);
-                        abilId = ext.adventureBar[islot];
-                    }
-
-                    if (abilId != null && Ability.Abilities.TryGetValue(abilId ?? "", out var abil) && abil.ManaCost() <= ext.mana.Value && abil.CanUse())
-                    {
-                        ext.mana.Value -= abil.ManaCost();
-                        CastAbility(abil);
-                    }
-                }
             }
 
             sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");

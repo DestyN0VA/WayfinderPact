@@ -999,6 +999,8 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => 5,
                 KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Polymorph",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
+                CanUse = () => NotOnCooldown("spell_polymorph", Cooldown: 10000),
+                CanUseForAdventureBar = () => NotOnCooldown("spell_polymorph", TickCooldown: false),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.Skill, 5 * WitchcraftExpMultiplier);
@@ -1015,6 +1017,8 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => 10,
                 KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Stasis",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
+                CanUse = () => NotOnCooldown("spell_stasis", Cooldown: 6000),
+                CanUseForAdventureBar = () => NotOnCooldown("spell_stasis", TickCooldown: false),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.Skill, 10 * WitchcraftExpMultiplier);
@@ -1065,6 +1069,8 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => 8,
                 KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Banishment",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
+                CanUse = () => NotOnCooldown("spell_banishment", Cooldown: 10000),
+                CanUseForAdventureBar = () => NotOnCooldown("spell_banishment", TickCooldown: false),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.Skill, 8 * WitchcraftExpMultiplier);
@@ -1097,6 +1103,8 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => 15,
                 KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_MirrorImage",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
+                CanUse = () => NotOnCooldown("spell_mirrorimage", Cooldown: 10000),
+                CanUseForAdventureBar = () => NotOnCooldown("spell_mirrorimage", TickCooldown: false),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.Skill, 15 * WitchcraftExpMultiplier);
@@ -1129,7 +1137,8 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => 7,
                 KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_GhostlyProjection",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
-                CanUse = () => !Game1.player.companions.Any(c => c is FamiliarCompanion),
+                CanUse = () => !Game1.player.companions.Any(c => c is FamiliarCompanion) && NotOnCooldown("spell_ghostlyprojection", Cooldown: 20000),
+                CanUseForAdventureBar = () => !Game1.player.companions.Any(c => c is FamiliarCompanion) && NotOnCooldown("spell_ghostlyprojection", TickCooldown: false),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.Skill, 7 * WitchcraftExpMultiplier);
@@ -1178,6 +1187,8 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => { return 10 - (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionSpellDamage) ? 2 : 0); },
                 KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Fireball",
                 UnlockHint = I18n.Ability_Witchcraft_SpellUnlockHint,
+                CanUse = () => NotOnCooldown("spell_fireball", Cooldown: 3000),
+                CanUseForAdventureBar = () => NotOnCooldown("spell_fireball", TickCooldown: false),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.Skill, 10 * WitchcraftExpMultiplier);
@@ -1195,6 +1206,8 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => { return 10 - (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionSpellDamage) ? 2 : 0); },
                 KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_Icebolt",
                 UnlockHint = I18n.Ability_Witchcraft_SpellUnlockHint,
+                CanUse = () => NotOnCooldown("spell_icebolt", Cooldown: 10000),
+                CanUseForAdventureBar = () => NotOnCooldown("spell_icebolt", TickCooldown: false),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.Skill, 10 * WitchcraftExpMultiplier);
@@ -1212,6 +1225,8 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => { return 10 - (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionSpellDamage) ? 2 : 0); },
                 KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_MagicMissle",
                 UnlockHint = I18n.Ability_Witchcraft_SpellUnlockHint,
+                CanUse = () => NotOnCooldown("spell_magicmissle", Cooldown: 2000),
+                CanUseForAdventureBar = () => NotOnCooldown("spell_magicmissle", TickCooldown: false),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.Skill, 10 * WitchcraftExpMultiplier);
@@ -1228,6 +1243,8 @@ namespace SwordAndSorcerySMAPI
                 ManaCost = () => { return 10 - (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionSpellDamage) ? 2 : 0); },
                 KnownCondition = $"PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Spell_LightningBolt",
                 UnlockHint = I18n.Ability_Witchcraft_SpellUnlockHint,
+                CanUse = () => NotOnCooldown("spell_lightningbolt", Cooldown: 3000),
+                CanUseForAdventureBar = () => NotOnCooldown("spell_lightningbolt", TickCooldown: false),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.Skill, 10 * WitchcraftExpMultiplier);
@@ -1235,7 +1252,37 @@ namespace SwordAndSorcerySMAPI
                 }
             });
         }
+
+        internal static bool NotOnCooldown(string abilId, int Cooldown = 0, bool TickCooldown = true)
+        {
+            var data = Game1.player.GetFarmerExtData();
+
+            if (!data.Cooldowns.ContainsKey(abilId))
+            {
+                data.Cooldowns.Add(abilId, Cooldown);
+                return true;
+            }
+            else
+            {
+                if (data.Cooldowns[abilId] <= 0)
+                {
+                    if (TickCooldown)
+                        data.Cooldowns[abilId] = Cooldown;
+                    return true;
+                }
+                else
+                {
+                    if (TickCooldown)
+                    {
+                        string AbilName = Ability.Abilities[abilId].Name.Invoke();
+                        Game1.addHUDMessage(new HUDMessage(I18n.Witchcraft_Spell_Cooldown(AbilName, (int)MathF.Round(data.Cooldowns[abilId] / 1000, MidpointRounding.ToPositiveInfinity) + (data.Cooldowns[abilId] == Cooldown ? 0 : 1))));
+                    }
+                    return false;
+                }
+            }
+        }
     }
+
 
     [HarmonyPatch(typeof(GameLocation), nameof(GameLocation.OnStoneDestroyed))]
     public static class DropEarthEssencePatch2

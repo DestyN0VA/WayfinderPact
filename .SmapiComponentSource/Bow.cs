@@ -319,9 +319,10 @@ namespace SwordAndSorcerySMAPI
             KeychainsAndTrinkets.TryAttach(__instance, o, out Object attached, out Object onHand, out int? Slot);
 
             if (Slot.HasValue)
+            {
                 __instance.attachments[Slot.Value] = attached;
+            }
             __result = onHand;
-
             KeychainsAndTrinkets.HandleTrinketEquipUnequip(attached, onHand);
 
             return false;
@@ -388,7 +389,7 @@ namespace SwordAndSorcerySMAPI
         {
             texture = Game1.menuTexture;
             if (__instance.QualifiedItemId == "(W)DN.SnS_longlivetheking")
-                sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, __instance.attachments[slot] != null ? 10 : (slot == 0 ? 41 : 43));
+                sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, __instance.attachments[slot] != null ? 10 : (slot != 0 ? 70 : 43));
             else
                 sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, 10);
         }
@@ -406,7 +407,7 @@ namespace SwordAndSorcerySMAPI
         {
             texture = Game1.menuTexture;
             if (__instance.QualifiedItemId == "(W)DN.SnS_longlivetheking_gun")
-                sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, __instance.attachments[slot] != null ? 10 : (slot == 0 ? 41 : 43));
+                sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, __instance.attachments[slot] != null ? 10 : (slot != 0 ? 70 : 43));
             else 
                 sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, __instance.attachments[0] == null ? 43 : 10);
         }

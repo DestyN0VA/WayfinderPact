@@ -96,6 +96,7 @@ namespace CircleOfThornsSMAPI
                 ManaCost = () => Game1.player.GetFarmerExtData().transformed.Value ? 0 : 5,
                 KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.DRUIDICS_LEVEL Current 1",
                 UnlockHint = I18n.Ability_Shapeshift_UnlockHint,
+                CanUse = () => !Game1.player.isRidingHorse(),
                 Function = () =>
                 {
                     var ext = Game1.player.GetFarmerExtData();
@@ -113,6 +114,7 @@ namespace CircleOfThornsSMAPI
                 ManaCost = () => Game1.player.GetFarmerExtData().transformed.Value ? 0 : 5,
                 KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.DRUIDICS_LEVEL Current 1",
                 UnlockHint = I18n.Ability_Shapeshift_UnlockHint,
+                CanUse = () => !Game1.player.isRidingHorse(),
                 Function = () =>
                 {
                     var ext = Game1.player.GetFarmerExtData();
@@ -130,6 +132,7 @@ namespace CircleOfThornsSMAPI
                 ManaCost = () => Game1.player.GetFarmerExtData().transformed.Value ? 0 : 5,
                 KnownCondition = $"PLAYER_DESTYNOVA.SWORDANDSORCERY.DRUIDICS_LEVEL Current 1, PLAYER_HAS_WOLF_FORM Current",
                 HiddenIfLocked = true,
+                CanUse = () => !Game1.player.isRidingHorse(),
                 Function = () =>
                 {
                     var ext = Game1.player.GetFarmerExtData();
@@ -375,6 +378,12 @@ namespace CircleOfThornsSMAPI
         {
             var data = __instance.GetFarmerExtData();
 
+            foreach (string key in data.Cooldowns.Keys)
+            {
+                if (data.Cooldowns[key] <= 0) continue;
+                else data.Cooldowns[key] -= time.ElapsedGameTime.Milliseconds;
+            }
+
             if (__instance.movementDirections.Count > 0)
             {
                 data.noMovementTimer = 0;
@@ -382,6 +391,26 @@ namespace CircleOfThornsSMAPI
             }
             else
                 data.noMovementTimer += time.ElapsedGameTime.TotalSeconds;
+        }
+    }
+
+    [HarmonyPatch(typeof(Horse), nameof(Horse.checkAction))]
+    public static class HorseNoRidingIfTransformed
+    {
+        public static bool Prefix(Horse __instance, Farmer who, GameLocation l)
+        {
+            if (who != null && !who.canMove)
+            {
+                return true;
+            }
+            if (ModSnS.instance.Helper.Reflection.GetField<int>(__instance, "munchingCarrotTimer", true).GetValue() > 0)
+            {
+                return true;
+            }
+            if (__instance.rider == null)
+                if (who.GetFarmerExtData().transformed.Value)
+                    return false;
+            return true;
         }
     }
 

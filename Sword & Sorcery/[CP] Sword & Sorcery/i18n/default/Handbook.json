@@ -1511,12 +1511,14 @@ Each level, you will gain 10 max Aether. You learn new spells by studying from y
 Killing it will make it revert back to its normal form.
  
 > Aether cost: 5
+> Cooldown: 10 seconds.
 ][icon=SMAPI/kcc.sns/assets/spells.png:48,0,16,16][color=purple]Polymorph[/color][/texttooltip]
 
 > [texttooltip=Stasis:Prevents you from moving, acting, or taking
 damage for three seconds.
  
 > Aether cost: 10
+> Cooldown: 6 seconds.
 ][icon=SMAPI/kcc.sns/assets/spells.png:64,0,16,16][color=purple]Stasis[/color][/texttooltip]
 
 > [texttooltip=Mage Armor:Increases your maximum armor points for the day.
@@ -1527,39 +1529,46 @@ damage for three seconds.
 > [texttooltip=Banishment:Send an enemy to another realm for 20 seconds.
  
 > Aether cost: 8
+> Cooldown: 10 seconds.
 ][icon=SMAPI/kcc.sns/assets/spells.png:112,0,16,16][color=purple]Banishment[/color][/texttooltip]
 
 > [texttooltip=Lightning Bolt:Fire a bolt of lightning at the closest enemy
 that can chain into other enemies.
  
 > Aether cost: 10
+> Cooldown: 3 seconds.
 ][icon=SMAPI/kcc.sns/assets/spells.png:0,16,16,16][color=purple]Lightning Bolt[/color][/texttooltip]
 
 > [texttooltip=Fireball:Cast a ticking time-bomb fireball directed
 towards your cursor.
  
 > Aether cost: 10
+> Cooldown: 3 seconds.
 ][icon=SMAPI/kcc.sns/assets/spells.png:16,16,16,16][color=purple]Fireball[/color][/texttooltip]
 
 > [texttooltip=Magic Missle:Fire three projectiles that home in on the enemy.
  
 > Aether cost: 10
+> Cooldown: 3 seconds.
 ][icon=SMAPI/kcc.sns/assets/spells.png:32,16,16,16][color=purple]Magic Missle[/color][/texttooltip]
 
 > [texttooltip=Icebolt:Launch an icicle to freeze enemies around your cursor in an AOE.
  
 > Aether cost: 10
+> Cooldown: 1 seconds.
 ][icon=SMAPI/kcc.sns/assets/spells.png:64,16,16,16][color=purple]Icebolt[/color][/texttooltip]
 
 > [texttooltip=Revive Plant:Revive a 5x5 area of crops around you.
  
 > Aether cost: 15
+> Cooldown: 10 seconds.
 ][icon=SMAPI/kcc.sns/assets/spells.png:80,16,16,16][color=purple]Revive Plant[/color][/texttooltip]
 
 > [texttooltip=Mirror Image:Summon three illusory duplicates, which
 have a chance of taking a hit for you.
  
 > Aether cost: 15
+> Cooldown: 10 seconds.
 ][icon=SMAPI/kcc.sns/assets/spells.png:96,16,16,16][color=purple]Mirror Image[/color][/texttooltip]
 
 > [texttooltip=Find Familiar:Summon a small pet to follow you for
@@ -1573,6 +1582,7 @@ At the end, teleport back to where you were
 upon initial cast.
  
 > Aether cost: 7
+> Cooldown: 20 seconds.
 ][icon=SMAPI/kcc.sns/assets/spells.png:0,32,16,16][color=purple]Ghostly Projection[/color][/texttooltip]
 
 > [texttooltip=Pocket Chest:Opens a chest in dimensional pocket, bound to you.

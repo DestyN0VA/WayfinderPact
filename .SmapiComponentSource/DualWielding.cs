@@ -55,6 +55,19 @@ public static class ShieldCategoryColor
 }
 
 [HarmonyPatch(typeof(MeleeWeapon), "doAnimateSpecialMove")]
+public static class StopLLTKSwitchWhileAnimating
+{
+    public static bool CanSwitch = true;
+    public static void Prefix(MeleeWeapon __instance)
+    {
+        CanSwitch = false;
+    }
+    public static void Postfix()
+    {
+        DelayedAction.functionAfterDelay(() => CanSwitch = true, MeleeWeapon.defenseCooldown);
+    }
+}
+[HarmonyPatch(typeof(MeleeWeapon), "doAnimateSpecialMove")]
 public static class DualWieldingSpecialMovePatch
 {
     internal static ConditionalWeakTable<MeleeWeapon, FarmerSprite> fakeSprites = new();

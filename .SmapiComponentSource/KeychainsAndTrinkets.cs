@@ -15,20 +15,23 @@ namespace SwordAndSorcerySMAPI
     public class KeychainsAndTrinkets
     {
 
-        public static void SaveLoaded(object? sender, SaveLoadedEventArgs e)
+        public static void DayStarted(object? sender, DayStartedEventArgs e)
         {
             foreach (Item i in Game1.player.Items.Where(o => o is MeleeWeapon or Slingshot && o.QualifiedItemId.ContainsIgnoreCase("(W)DN.SnS_longlivetheking")))
             {
                 Tool LLTK = i as Tool;
                 if (LLTK.attachments[1] is Trinket t)
+                {
+                    t.Unapply(Game1.player);
                     t.Apply(Game1.player);
+                }
             }
         }
 
         public static void TryAttach(Tool LLTK, Object held, out Object attached, out Object OnHand, out int? Slot)
         {
             attached = null;
-            OnHand = null;
+            OnHand = held;
             Slot = null;
 
             if (held == null)
@@ -53,7 +56,7 @@ namespace SwordAndSorcerySMAPI
                     attached = held;
                     OnHand = null;
                     Slot = i;
-                    Game1.playSound("dwop");
+                    Game1.playSound("button1");
                     return;
                 }
                 else if (LLTK.attachments[i].canStackWith(held))

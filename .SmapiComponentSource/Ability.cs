@@ -25,6 +25,7 @@ namespace SwordAndSorcerySMAPI
         public bool HiddenIfLocked { get; set; } = false;
         public Func<int> ManaCost { get; set; } = () => 10;
         public Func<bool> CanUse { get; set; } = () => true;
+        public Func<bool>? CanUseForAdventureBar { get; set; }
         public Action Function { get; set; }
 
         public Ability(string id) { Id = id; }
