@@ -8,6 +8,7 @@ using System;
 using Object = StardewValley.Object;
 using StardewModdingAPI.Events;
 using StardewValley.Tools;
+using StardewValley.Menus;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -17,15 +18,22 @@ namespace SwordAndSorcerySMAPI
 
         public static void DayStarted(object? sender, DayStartedEventArgs e)
         {
+            while (Game1.player.trinketItems.Count <= Farmer.MaximumTrinkets)
+                Game1.player.trinketItems.Add(null);
+
             foreach (Item i in Game1.player.Items.Where(o => o is MeleeWeapon or Slingshot && o.QualifiedItemId.ContainsIgnoreCase("(W)DN.SnS_longlivetheking")))
             {
                 Tool LLTK = i as Tool;
                 if (LLTK.attachments[1] is Trinket t)
                 {
-                    t.Unapply(Game1.player);
-                    t.Apply(Game1.player);
+                    HandleTrinketEquipUnequip(t, null);
                 }
             }
+        }
+
+        public static void DayEnding(object? sender, DayEndingEventArgs e)
+        {
+            Game1.player.trinketItems.RemoveWhere(t => t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false);
         }
 
         public static void TryAttach(Tool LLTK, Object held, out Object attached, out Object OnHand, out int? Slot)
@@ -104,9 +112,9 @@ namespace SwordAndSorcerySMAPI
         public static void HandleTrinketEquipUnequip(Object? New, Object? Old)
         {
             if (New != null && New is Trinket NewTrinket)
-                NewTrinket.Apply(Game1.player);
+                Game1.player.trinketItems.Add(NewTrinket);
             if (Old != null && Old is Trinket OldTrinket)
-                OldTrinket.Unapply(Game1.player);
+                Game1.player.trinketItems.Remove(OldTrinket);
         }
     }
 

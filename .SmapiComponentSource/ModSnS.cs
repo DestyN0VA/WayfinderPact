@@ -433,11 +433,12 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
             Helper.Events.GameLoop.UpdateTicking += GameLoop_UpdateTicking;
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
+            Helper.Events.GameLoop.DayStarted += KeychainsAndTrinkets.DayStarted;
             Helper.Events.GameLoop.DayEnding += GameLoop_DayEnding;
+            Helper.Events.GameLoop.DayEnding += KeychainsAndTrinkets.DayEnding;
             Helper.Events.GameLoop.TimeChanged += GameLoop_TimeChanged;
             Helper.Events.GameLoop.SaveCreated += GameLoop_SaveCreated;
             Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
-            Helper.Events.GameLoop.DayStarted += KeychainsAndTrinkets.DayStarted;
             Helper.Events.Player.Warped += Player_Warped;
             Helper.Events.Player.InventoryChanged += Player_InventoryChanged;
             Helper.Events.Display.RenderedHud += Display_RenderedHud;
