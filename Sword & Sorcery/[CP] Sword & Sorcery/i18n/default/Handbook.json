@@ -83,7 +83,7 @@ The Chapters of this story, all the way from a lone tent on the beach to a battl
 "guidebook.chapter.Title.FAQ": "[center][font=dialogue][offset=0,8]Frequently Asked Questions:[/font][/center]
  
 [color=maroon]How do I advance the story?[/color]
-This entire mod progresses linearly. See all of Mateo's events, meet {{TrueName}}. See all of {{TrueName}}'s events, meet Cirrus. See all of Cirrus' events, meet Roslin. See most of Roslin's events, meet Dandelion. See their remaining events, and proceed to the final dungeon and the associated final boss. By then, you will have unlocked most of everything. What remains will be documented here.
+This entire mod progresses linearly. See all of [link=Characters/Mateo]Mateo's[/link] events, meet [link=Characters/Hector]{{TrueName}}[/link]. See all of {{TrueName}}'s events, meet [link=Characters/Cirrus]Cirrus[/link]. See all of Cirrus' events, meet [link=Characters/Roslin]Roslin[/link]. See most of Roslin's events, meet [link=Characters/Dandelion]Dandelion[/link]. See their remaining events, and proceed to the [link=DeepDark/TableOfContents]final dungeon[/link] and the associated [link=DeepDark/DuskspireBehemoth]final boss[/link]. By then, you will have unlocked most of everything. What remains will be documented here.
  
 [color=maroon]Where are the fish?[/color]
 Most fish added by S&S are in available in either the [color=green]Druid's Grove[/color] or the [color=green]Pocket Dimension[/color], and are not time restricted.
@@ -128,7 +128,7 @@ Some are sent in the mail, some are part of ranking the [link=Skills/DruidicsSki
 Marry them. 
  
 [color=maroon]How do I turn off the Adventure Bar?[/color]
-Ctrl+U is the default hotkey. This can be changed in the SMAPI portion of the S&S config. 
+Ctrl+U is the default hotkey. This can be changed in the S&S {{Config}}. 
  
 [color=maroon]{{TrueName}}'s seasonal quests have disappeared![/color]
 They were removed permanently in 2.1.0. You can now progress as intended without them.
@@ -138,7 +138,7 @@ This menu is used by S&S but is added by Spacecore. S&S covers most major recolo
 > spacechase0.SpaceCore/ExtraEquipmentIcon 
  
 [color=maroon]Another UI element doesn't match my recolor![/color] 
-If it's your recolor and you've made the assets for it, please let us know and we can include it. If you have a request, please reach out on Discord or in the Nexus comments.
+If it's your recolor and you've made the assets for it, please let us know and we can include it. If you have a request, please reach out on [link=https://discord.gg/sdv-east-scarp-community-702333912722178059]Discord[/link] or in the [link=https://www.nexusmods.com/stardewvalley/mods/12369?tab=posts]Nexus comments[/link].
  
 [color=maroon]Is there a standalone Skills component?[/color]
 No. If you are interested in mechanics-only mods, there are other alternatives. S&S is, first and foremost, a content expansion. 
@@ -1227,7 +1227,7 @@ Like vanilla skills, the Bardics skill provides professions that change the game
 "guidebook.chapter.TOP.Intro": "[center][font=dialogue][offset=0,8]Chapter 4[/font][/center]
 [center][font=dialogue]The Other Promise[/font][/center]
    
-The forth chapter of S&S revolves around a quest to rescue Dandelion, the heroic partner of questionable Sorcerer, Roslin, her and her patron, Solomon. Uncover the secrets of the Arcane, master the use of Elemental Essences, become a Sorcerer yourself, become an Alchemist, become a Paladin (if you aren't already) and lay waste to the haunted beast hidden in the Deep Dark underneath The Scarp. ",
+The forth chapter of S&S revolves around a quest to rescue Dandelion, the heroic partner of questionable Sorcerer, Roslin, her and her patron, Solomon. Uncover the secrets of the Arcane, master the use of [link=Mechanics/ElementalEssences]Elemental Essences[/link], become a Sorcerer yourself, become an Alchemist, become a [link=Skills/PaladinSkill]Paladin[/link] (if you aren't already) and lay waste to the haunted beast hidden in the [link=DeepDark/TableOfContents]Deep Dark[/link] underneath The Scarp. ",
 
 "guidebook.chapter.TOP.Roslin": "[nospacing]
 [nextposition=0,10][center=300][font=dialogue]Roslin[/font][/center]
@@ -1634,8 +1634,8 @@ Usage documented in the Magical Grimoire after learning.][color=purple]Teleporta
 Collection method:
 >[itemtooltip=(O)DN.SnS_EarthEssence][icon=Textures/DN.SnS/SnSObjects:96,128,16,16][color=brown]Earth[/color][/itemtooltip] - Mining
 >[itemtooltip=(O)DN.SnS_AirEssence][icon=Textures/DN.SnS/SnSObjects:112,128,16,16][color=cornflowerblue]Air[/color][/itemtooltip] - Defeating flying enemies
->[itemtooltip=(O)DN.SnS_FireEssence][icon=Textures/DN.SnS/SnSObjects:144,128,16,16][color=Red]Fire[/color][/itemtooltip] - Defeating volcano enemies
->[itemtooltip=(O)DN.SnS_WaterEssence][icon=Textures/DN.SnS/SnSObjects:128,128,16,16][color=blue]Water[/color][/itemtooltip] - Fishing
+>[itemtooltip=(O)DN.SnS_FireEssence][icon=Textures/DN.SnS/SnSObjects:144,128,16,16][color=Red]Fire[/color][/itemtooltip] - Defeating volcano enemies, lava fishing
+>[itemtooltip=(O)DN.SnS_WaterEssence][icon=Textures/DN.SnS/SnSObjects:128,128,16,16][color=blue]Water[/color][/itemtooltip] - Fishing, ocean crab pots, panning, S&S fish in ponds
  
 [itemtooltip=(O)DN.SnS_druidicessence][icon=Textures/DN.SnS/SnSObjects:80,0,16,16][color=Green]Druidic[/color][/itemtooltip],[itemtooltip=(O)768][icon=maps/springobjects:0,512,16,16][color=chocolate]Solar[/color][/itemtooltip] and [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16][color=purple]Void[/color][/itemtooltip] all count as elemental essences.",
 
@@ -1962,11 +1962,11 @@ All monsters in the Deep Dark are based on an existing monster. In addition to t
 [font=dialogue][color=black]Darkness (Floors 1-9)[/color][/font]
     MONSTER SPAWNS
         Common
-         > [icon=Textures/DN.SnS/SnSMonsterIcons:0,0,16,16] Stygium Bat
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:16,0,16,16] Stygium Crab
          > [icon=Textures/DN.SnS/SnSMonsterIcons:0,32,16,16] Stygium Miner
          > [icon=Textures/DN.SnS/SnSMonsterIcons:32,48,16,16] Stygium Head
         Uncommon
-         > [icon=Textures/DN.SnS/SnSMonsterIcons:16,0,16,16] Stygium Crab
+         > [icon=Textures/DN.SnS/SnSMonsterIcons:0,0,16,16] Stygium Bat
          > [icon=Textures/DN.SnS/SnSMonsterIcons:48,0,16,16] Stygium Golem (Purple)
          > [icon=Textures/DN.SnS/SnSMonsterIcons:64,16,16,16] Stygium Rex
          > [icon=Textures/DN.SnS/SnSMonsterIcons:0,16,16,16] Stygium Skeleton
@@ -1980,7 +1980,9 @@ All monsters in the Deep Dark are based on an existing monster. In addition to t
  
     RESOURCE NODES
     > [itemtooltip=(O)847][icon=maps/springobjects:112,560,16,16] Stone[/itemtooltip]
-    > [itemtooltip=(O)DN.SnS_StygiumOreStone][icon=maps/DeepDark-rocks:144,32,16,16] Stygium[/itemtooltip]
+    > [itemtooltip=(O)DN.SnS_StygiumOreStone][icon=maps/DeepDark-rocks:96,32,16,16] Stygium[/itemtooltip]
+    > [itemtooltip=(O)DN.SnS_StygiumOreStone4][icon=maps/DeepDark-rocks:64,32,16,16] Stygium + Quartz[/itemtooltip]
+    [offset=0,10]> [itemtooltip=(BC)DN.SnS_DeepDarkChest][icon=Textures/DN.SnS/DeepDark_Treasure:0,7,16,22] Stygium Sword Loot Chest[/itemtooltip]
   
 [color=DarkSlateGray][font=dialogue]Mushrooms (Floors 10-19)[/font][/color]
     MONSTER SPAWNS
@@ -1997,15 +1999,17 @@ All monsters in the Deep Dark are based on an existing monster. In addition to t
          > [icon=Textures/DN.SnS/SnSMonsterIcons:16,16,16,16] [color=purple]Stygium Skeleton (Rare)[/color]
  
     FORAGE
-         > [itemtooltip=(O)DN.SnS_mushroom1][icon=Textures/DN.SnS/SnSObjects:0,176,16,16] Tainted Mushroom (Type A)[/itemtooltip]
-         > [itemtooltip=(O)DN.SnS_mushroom2][icon=Textures/DN.SnS/SnSObjects:16,176,16,16] Tainted Mushroom (Type B)[/itemtooltip]
-         > [itemtooltip=(O)DN.SnS_mushroom3][icon=Textures/DN.SnS/SnSObjects:32,176,16,16] Tainted Mushroom (Type C)[/itemtooltip]
-         > [itemtooltip=(O)DN.SnS_mushroom4][icon=Textures/DN.SnS/SnSObjects:48,176,16,16] Tainted Mushroom (Type D)[/itemtooltip]
+    > [itemtooltip=(O)DN.SnS_mushroom1][icon=Textures/DN.SnS/SnSObjects:0,176,16,16] Tainted Mushroom (Type A)[/itemtooltip]
+    > [itemtooltip=(O)DN.SnS_mushroom2][icon=Textures/DN.SnS/SnSObjects:16,176,16,16] Tainted Mushroom (Type B)[/itemtooltip]
+    > [itemtooltip=(O)DN.SnS_mushroom3][icon=Textures/DN.SnS/SnSObjects:32,176,16,16] Tainted Mushroom (Type C)[/itemtooltip]
+    > [itemtooltip=(O)DN.SnS_mushroom4][icon=Textures/DN.SnS/SnSObjects:48,176,16,16] Tainted Mushroom (Type D)[/itemtooltip]
   
     RESOURCE NODES
     > [itemtooltip=(O)847][icon=maps/springobjects:112,560,16,16] Stone[/itemtooltip]
-    > [itemtooltip=(O)DN.SnS_StygiumOreStone][icon=maps/DeepDark-rocks:144,32,16,16] Stygium[/itemtooltip]
+    > [itemtooltip=(O)DN.SnS_StygiumOreStone][icon=maps/DeepDark-rocks:96,32,16,16] Stygium[/itemtooltip]
+    > [itemtooltip=(O)DN.SnS_StygiumOreStone4][icon=maps/DeepDark-rocks:64,32,16,16] Stygium + Quartz[/itemtooltip]    
     > [itemtooltip=(O)DN.SnS_mushroomtreeseed][icon=Textures/DN.SnS/SnSObjects:64,176,16,16] Tainted Mushroom Tree[/itemtooltip]
+    [offset=0,10]> [itemtooltip=(BC)DN.SnS_DeepDarkChest][icon=Textures/DN.SnS/DeepDark_Treasure:0,7,16,22] Stygium Sword Loot Chest[/itemtooltip]
  
 [color=MidnightBlue][font=dialogue]Lakes (Floors 20-30)[/font][/color]
     MONSTER SPAWNS
@@ -2033,13 +2037,15 @@ All monsters in the Deep Dark are based on an existing monster. In addition to t
  
     RESOURCE NODES
     > [itemtooltip=(O)847][icon=maps/springobjects:112,560,16,16] Stone[/itemtooltip]
-    > [itemtooltip=(O)DN.SnS_StygiumOreStone][icon=maps/DeepDark-rocks:144,32,16,16] Stygium[/itemtooltip]",
+    > [itemtooltip=(O)DN.SnS_StygiumOreStone][icon=maps/DeepDark-rocks:96,32,16,16] Stygium[/itemtooltip],
+    > [itemtooltip=(O)DN.SnS_StygiumOreStone4][icon=maps/DeepDark-rocks:64,32,16,16] Stygium + Quartz[/itemtooltip]
+    [offset=0,10]> [itemtooltip=(BC)DN.SnS_DeepDarkChest][icon=Textures/DN.SnS/DeepDark_Treasure:0,7,16,22] Stygium Sword Loot Chest[/itemtooltip]    ",
 "guidebook.chapter.DeepDark.Stygium": "[center][font=dialogue][offset=0,8]Stygium[/font][/center]
  
 Stygium is a rare and powerful ore that spawns only within the Deep Dark. It is used to further upgrade your tools past [color=purple]Iridium[/color] tier. Be warned, the increased strength comes with a cost.
  
 [font=dialogue]Stygium Resources[/font]
-> [itemtooltip=(O)DN.SnS_StygiumOreStone][icon=maps/DeepDark-rocks:144,32,16,16] [color=blue]Stygium Nodes[/color][/itemtooltip] - Spawn in the Deep Dark
+> [itemtooltip=(O)DN.SnS_StygiumOreStone][icon=maps/DeepDark-rocks:96,32,16,16] [color=blue]Stygium Nodes[/color][/itemtooltip] - Spawn in the Deep Dark
 > [itemtooltip=(O)DN.SnS_StygiumOre][icon=Textures/DN.SnS/SnSObjects:0,160,16,16] [color=blue]Stygium Ore[/color][/itemtooltip] - Drops from Stygium Nodes
 > [itemtooltip=(O)DN.SnS_StygiumBar][icon=Textures/DN.SnS/SnSObjects:144,144,16,16] [color=blue]Stygium Bars[/color][/itemtooltip] - Smelted from Stygium Ore
  

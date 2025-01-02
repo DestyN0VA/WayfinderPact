@@ -651,6 +651,7 @@
   "Gifts.Mateo.GiftReaction.GoldenMask": "This has a substantial monetary and historical value, but it doesn't belong to you or I. $37[124]",
   "Gifts.Mateo.GiftReaction.GoldenRelic": "This has a substantial monetary and historical value, but it doesn't belong to you or I. $37[125]",
   "Gifts.Mateo.GiftReaction.StrangeDoll": "To be honest, even I have no idea what this is - besides haunted.$37[126]",
+  "Gifts.Mateo.GiftReaction.StrangeDoll2": "To be honest, even I have no idea what this is - besides haunted.$37[127]",
 
   // BIRTHDAY - PLATONIC
   "Gifts.Mateo.GiftReaction.Pumpkin.Birthday.Platonic": "You remembered my birthday? #And is this freshly grown? Thank you, I'll carve it up right away! $1",
@@ -7458,6 +7459,8 @@ ________      ________ _   _ _______ _____
 
   "machine.oldfashionedfermenter.name": "Old-Fashioned Fermenter",
   "machine.oldfashionedfermenter.description": "A jar for controlled, non-alcoholic fermentation for making Ginger Beer!",
+  "deep-dark-chest.name": "Deep Dark Loot Chest",
+  "deep-dark-chest.description": "A chest that spawns in the deep dark.",
 
   //maddogchange
   "config.Player Pronouns 1.name": "Player Pronouns 1",
@@ -7588,6 +7591,16 @@ ________      ________ _   _ _______ _____
   "config.CirrusRainbowHair.values.Orange": "Orange",
   "config.CirrusRainbowHair.values.Yellow": "Yellow",
   "config.CirrusRainbowHair.values.Blue": "Blue",
+
+  "config.CirrusRainbowEyes.name": "CirrusRainbowEyes",
+  "config.CirrusRainbowEyes.description": "Gives Cirrus a variety of colored contacts, or optionally choose a static one.",
+
+  "config.CirrusRainbowEyes.values.DailyRandom": "DailyRandom",
+  "config.CirrusRainbowEyes.values.Purple": "Purple",
+  "config.CirrusRainbowEyes.values.Blue": "Blue",
+  "config.CirrusRainbowEyes.values.Brown": "Brown",
+  "config.CirrusRainbowEyes.values.Gray": "Gray",
+  "config.CirrusRainbowEyes.values.Green": "Green",
 
   "config.CirrusSmokeyEye.name": "CirrusSmokeyEye",
   "config.CirrusSmokeyEye.description": "Always give Cirrus Smokey eyeshadow when she wears makeup.",
@@ -7906,6 +7919,9 @@ ________      ________ _   _ _______ _____
   "Strings.DeepDark.DDLakeSign9": "\"What does the owl say when he's having a good time?\"#\"What a hoot!\" - Owl Boy",
   "Strings.DeepDark.DDLakeSign10": "\"Haha, made you look! Hooty hoot HOOT!\" - Owl Boy",
   "Strings.DeepDark.DDTipTable": "You consider leaving a tip, but there are too many feathers in the pouch.",
+  "Strings.DeepDark.DDSecretSign": "\"Hoot HOOT! What are you doing in my house???\" - Owl Boy",
+  "Strings.DeepDark.DDSecretChest": "The chest is stuck shut with feathers.",
+  "Strings.DeepDark.DDOwlBoySeat": "A seat fit for an Owl Boy.",
   "Strings.DeepDark.DDDeadGuy": "You take a moment of silence to pay your respects.",
   "Strings.DeepDark.DDBackpack": "The backpack is empty, save for a note that reads \"turn back\".",
 

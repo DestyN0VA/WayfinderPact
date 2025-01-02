@@ -312,7 +312,7 @@
               "Pages": [
                 {
                   "Id": "FAQ",
-                  "Contents": "{{i18n: guidebook.chapter.Title.FAQ|TrueName={{TrueName}}}}"
+                  "Contents": "{{i18n: guidebook.chapter.Title.FAQ|Config={{SMAPIConfigLink}}|TrueName={{TrueName}}}}"
                 },
                 {
                   "Id": "Cheats",

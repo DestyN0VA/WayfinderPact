@@ -31,7 +31,7 @@
           "Duration": 20000,
           "MaxDuration": -1,
           "IconTexture": "Textures/DN.SnS/SnSObjects",
-          "IconSpriteIndex": 102,
+          "IconSpriteIndex": 129,
           "Effects": { "Attack": 20 }
         }
         }
@@ -63,7 +63,7 @@
               {
                 "Mode": "Crop",
                 "Range": 240
-              },
+              }
             ],
            "AnimClips": {
               "Perching.1": {
@@ -109,7 +109,7 @@
                 "Condition": "SYNCED_RANDOM tick StilesBoomerang .0004",
                 "Args": {
                   "ID": "StilesBoomerang",
-                  "ItemId": "(W){{ModID}}_StilesBoomerang",
+                  "ItemId": "(W){{ModID}}_StilesBoomerang"
                 }
               },
               {
@@ -129,8 +129,8 @@
                   "SpriteWidth": 16,
                   "SpriteHeight": 16,
                   "IgnoreObjectCollisions": true,
-                  "Min": 25,
-                  "Max": 35,
+                  "Min": 45,
+                  "Max": 65,
                   "Filters": [ "Shadow Guy", "Shadow Shaman", "Shadow Sniper", "Shadow Brute" ]
                 }
               },
@@ -199,9 +199,9 @@
                 "Proc": "Always",
                 "Args": { "Action": "spacechase0.SpaceCore_ShowHudMessage \"{{i18n: magicitem.destykeychain.dialogue.Hi}}\" (O){{ModID}}_OwlBoyIcon" }
               }
-            ],
+            ]
           ]
-        },
+        }
       }
     }
   ]

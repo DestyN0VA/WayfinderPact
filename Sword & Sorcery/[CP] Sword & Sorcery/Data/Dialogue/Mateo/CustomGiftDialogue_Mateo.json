@@ -72,7 +72,7 @@
         "AcceptGift_(O)124": "{{i18n:Gifts.Mateo.GiftReaction.GoldenMask}}",
         "AcceptGift_(O)125": "{{i18n:Gifts.Mateo.GiftReaction.GoldenRelic}}",
         "AcceptGift_(O)126": "{{i18n:Gifts.Mateo.GiftReaction.StrangeDoll}}",
-        "AcceptGift_(O)127": "{{i18n:Gifts.Mateo.GiftReaction.StrangeDoll}}",
+        "AcceptGift_(O)127": "{{i18n:Gifts.Mateo.GiftReaction.StrangeDoll2}}",
         // ITEM REJECTIONS 
         "RejectItem_(O)458": "{{i18n:Mateo.GiftReject.Bouquet}}"
       }

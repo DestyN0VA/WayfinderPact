@@ -60,6 +60,24 @@
             "When": { "HasFile:{{FromFile}}": true, "HasMod |contains=McJoan.Cirrus": false }
         },
         {
+            "LogName": "Cirrus Contacts Color",
+            "Action": "EditImage",
+            "Priority": "Early",
+            "Target": "Characters/Cirrus, Characters/spring_Cirrus, Characters/summer_Cirrus, Characters/fall_Cirrus, Characters/winter_Cirrus, Characters/Cirrus_beach, Characters/Cirrus_Glamrock",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Contacts/{{CirrusContacts}}.png",
+            "When": { "HasFile:{{FromFile}}": true }
+        },
+        {
+            "LogName": "Cirrus Contacts Color",
+            "Action": "EditImage",
+            "Priority": "Early",
+            "Target": "Portraits/Cirrus, Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/winter_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Contacts/{{CirrusContacts}}.png",
+            "When": { "HasFile:{{FromFile}}": true, "HasMod |contains=McJoan.Cirrus": false }
+        },
+        {
             "LogName": "Cirrus Makeup Overlay",
             "Action": "EditImage",
             "Priority": "Early",
@@ -68,7 +86,7 @@
             "FromFile": "assets/Portraits/Cirrus/Makeup/{{CirrusMakeup}}_Makeup_Overlay.png",
             "Update": "OnLocationChange",
             "When": {
-                "HasSeenEvent |contains=SnS.Ch3.Cirrus.10": true,
+                "HasSeenEvent |contains=SnS.Ch3.Cirrus.18": true,
                 "CirrusExtras": true,
                 "HasMod |contains=McJoan.Cirrus": false
             }

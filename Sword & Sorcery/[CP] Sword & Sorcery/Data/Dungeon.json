@@ -68,7 +68,95 @@
                     "Category": -999,
                     "Price": 0,
                     "Texture": "maps/DeepDark-rocks",
-                    "SpriteIndex": 35,
+                    "SpriteIndex": 30,
+                    "Edibility": -300
+                },
+                "{{ModID}}_StygiumOreStone1": {
+                    "Name": "Stone",
+                    "DisplayName": "{{i18n:object.stygium-ore-stone.name}}",
+                    "Description": "{{i18n:object.stygium-ore-stone.description}}",
+                    "Type": "Litter",
+                    "Category": -999,
+                    "Price": 0,
+                    "Texture": "maps/DeepDark-rocks",
+                    "SpriteIndex": 24,
+                    "Edibility": -300
+                },
+                "{{ModID}}_StygiumOreStone2": {
+                    "Name": "Stone",
+                    "DisplayName": "{{i18n:object.stygium-ore-stone.name}}",
+                    "Description": "{{i18n:object.stygium-ore-stone.description}}",
+                    "Type": "Litter",
+                    "Category": -999,
+                    "Price": 0,
+                    "Texture": "maps/DeepDark-rocks",
+                    "SpriteIndex": 25,
+                    "Edibility": -300
+                },
+                "{{ModID}}_StygiumOreStone3": {
+                    "Name": "Stone",
+                    "DisplayName": "{{i18n:object.stygium-ore-stone.name}}",
+                    "Description": "{{i18n:object.stygium-ore-stone.description}}",
+                    "Type": "Litter",
+                    "Category": -999,
+                    "Price": 0,
+                    "Texture": "maps/DeepDark-rocks",
+                    "SpriteIndex": 26,
+                    "Edibility": -300
+                },
+                "{{ModID}}_StygiumOreStone4": {
+                    "Name": "Stone",
+                    "DisplayName": "{{i18n:object.stygium-ore-stone.name}}",
+                    "Description": "{{i18n:object.stygium-ore-stone.description}}",
+                    "Type": "Litter",
+                    "Category": -999,
+                    "Price": 0,
+                    "Texture": "maps/DeepDark-rocks",
+                    "SpriteIndex": 27,
+                    "Edibility": -300
+                },
+                "{{ModID}}_StygiumOreStone5": {
+                    "Name": "Stone",
+                    "DisplayName": "{{i18n:object.stygium-ore-stone.name}}",
+                    "Description": "{{i18n:object.stygium-ore-stone.description}}",
+                    "Type": "Litter",
+                    "Category": -999,
+                    "Price": 0,
+                    "Texture": "maps/DeepDark-rocks",
+                    "SpriteIndex": 28,
+                    "Edibility": -300
+                },
+                "{{ModID}}_StygiumOreStone6": {
+                    "Name": "Stone",
+                    "DisplayName": "{{i18n:object.stygium-ore-stone.name}}",
+                    "Description": "{{i18n:object.stygium-ore-stone.description}}",
+                    "Type": "Litter",
+                    "Category": -999,
+                    "Price": 0,
+                    "Texture": "maps/DeepDark-rocks",
+                    "SpriteIndex": 29,
+                    "Edibility": -300
+                },
+                "{{ModID}}_StygiumOreStone8": {
+                    "Name": "Stone",
+                    "DisplayName": "{{i18n:object.stygium-ore-stone.name}}",
+                    "Description": "{{i18n:object.stygium-ore-stone.description}}",
+                    "Type": "Litter",
+                    "Category": -999,
+                    "Price": 0,
+                    "Texture": "maps/DeepDark-rocks",
+                    "SpriteIndex": 31,
+                    "Edibility": -300
+                },
+                "{{ModID}}_StygiumOreStone9": {
+                    "Name": "Stone",
+                    "DisplayName": "{{i18n:object.stygium-ore-stone.name}}",
+                    "Description": "{{i18n:object.stygium-ore-stone.description}}",
+                    "Type": "Litter",
+                    "Category": -999,
+                    "Price": 0,
+                    "Texture": "maps/DeepDark-rocks",
+                    "SpriteIndex": 32,
                     "Edibility": -300
                 },
                 "{{ModID}}_StygiumOre": {
@@ -207,8 +295,190 @@
                                 "Weight": 1.0,
                                 "Value": {
                                     "ItemId": "(O){{ModID}}_StygiumOre",
+                                    "MinStack": 3,
+                                    "MaxStack": 3
+                                }
+                            }
+                        ]
+                    ],
+                    "MinableExperienceGranted": 23
+                },
+                "{{ModID}}_SpawnDeepDark_Minable_StygiumOre1": {
+                    "Type": "Minable",
+                    "MinableTool": "Pickaxe",
+                    "MinableObjectId": "{{ModID}}_StygiumOreStone1",
+                    "MineableHealth": 32,
+                    "MinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O){{ModID}}_StygiumOre",
+                                    "MinStack": 1,
+                                    "MaxStack": 1
+                                }
+                            }
+                        ]
+                    ],
+                    "MinableExperienceGranted": 23
+                },
+                "{{ModID}}_SpawnDeepDark_Minable_StygiumOre2": {
+                    "Type": "Minable",
+                    "MinableTool": "Pickaxe",
+                    "MinableObjectId": "{{ModID}}_StygiumOreStone2",
+                    "MineableHealth": 32,
+                    "MinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O){{ModID}}_StygiumOre",
+                                    "MinStack": 1,
+                                    "MaxStack": 1
+                                }
+                            }
+                        ]
+                    ],
+                    "MinableExperienceGranted": 23
+                },
+                "{{ModID}}_SpawnDeepDark_Minable_StygiumOre3": {
+                    "Type": "Minable",
+                    "MinableTool": "Pickaxe",
+                    "MinableObjectId": "{{ModID}}_StygiumOreStone3",
+                    "MineableHealth": 32,
+                    "MinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O){{ModID}}_StygiumOre",
+                                    "MinStack": 1,
+                                    "MaxStack": 1
+                                }
+                            }
+                        ],
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)80",
                                     "MinStack": 1,
                                     "MaxStack": 3
+                                }
+                            }
+                        ]
+                    ],
+                    "MinableExperienceGranted": 23
+                },
+                "{{ModID}}_SpawnDeepDark_Minable_StygiumOre4": {
+                    "Type": "Minable",
+                    "MinableTool": "Pickaxe",
+                    "MinableObjectId": "{{ModID}}_StygiumOreStone4",
+                    "MineableHealth": 32,
+                    "MinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O){{ModID}}_StygiumOre",
+                                    "MinStack": 1,
+                                    "MaxStack": 1
+                                }
+                            }
+                        ],
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)80",
+                                    "MinStack": 1,
+                                    "MaxStack": 3
+                                }
+                            }
+                        ]
+                    ],
+                    "MinableExperienceGranted": 23
+                },
+                "{{ModID}}_SpawnDeepDark_Minable_StygiumOre5": {
+                    "Type": "Minable",
+                    "MinableTool": "Pickaxe",
+                    "MinableObjectId": "{{ModID}}_StygiumOreStone5",
+                    "MineableHealth": 32,
+                    "MinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O){{ModID}}_StygiumOre",
+                                    "MinStack": 1,
+                                    "MaxStack": 1
+                                }
+                            }
+                        ],
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)80",
+                                    "MinStack": 1,
+                                    "MaxStack": 3
+                                }
+                            }
+                        ]
+                    ],
+                    "MinableExperienceGranted": 23
+                },
+                "{{ModID}}_SpawnDeepDark_Minable_StygiumOre6": {
+                    "Type": "Minable",
+                    "MinableTool": "Pickaxe",
+                    "MinableObjectId": "{{ModID}}_StygiumOreStone6",
+                    "MineableHealth": 32,
+                    "MinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O){{ModID}}_StygiumOre",
+                                    "MinStack": 1,
+                                    "MaxStack": 1
+                                }
+                            }
+                        ]
+                    ],
+                    "MinableExperienceGranted": 23
+                },
+                "{{ModID}}_SpawnDeepDark_Minable_StygiumOre8": {
+                    "Type": "Minable",
+                    "MinableTool": "Pickaxe",
+                    "MinableObjectId": "{{ModID}}_StygiumOreStone8",
+                    "MineableHealth": 32,
+                    "MinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O){{ModID}}_StygiumOre",
+                                    "MinStack": 1,
+                                    "MaxStack": 1
+                                }
+                            }
+                        ]
+                    ],
+                    "MinableExperienceGranted": 23
+                },
+                "{{ModID}}_SpawnDeepDark_Minable_StygiumOre9": {
+                    "Type": "Minable",
+                    "MinableTool": "Pickaxe",
+                    "MinableObjectId": "{{ModID}}_StygiumOreStone9",
+                    "MineableHealth": 32,
+                    "MinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O){{ModID}}_StygiumOre",
+                                    "MinStack": 1,
+                                    "MaxStack": 1
                                 }
                             }
                         ]
@@ -261,7 +531,7 @@
                     "LargeMinableSizeX": 2,
                     "LargeMinableSizeY": 2,
                     "LargeMinableTexture": "maps/DeepDark-rocks",
-                    "LargeMinableSpriteIndex": 2,
+                    "LargeMinableSpriteIndex": 4,
                     "LargeMinableDrops": [
                         [
                             {
@@ -270,6 +540,188 @@
                                     "ItemId": "(O)390",
                                     "MinStack": 7,
                                     "MaxStack": 25
+                                }
+                            }
+                        ]
+                    ],
+                    "LargeMinableExperienceGranted": 10
+                },
+                "{{ModID}}_SpawnDeepDark_LargeMinable_BigStone1": {
+                    "Type": "LargeMinable",
+                    "LargeMinableTool": "Pickaxe",
+                    "LargeMinableHealth": 30,
+                    "LargeMinableSizeX": 2,
+                    "LargeMinableSizeY": 2,
+                    "LargeMinableTexture": "maps/DeepDark-rocks",
+                    "LargeMinableSpriteIndex": 0,
+                    "LargeMinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O){{ModID}}_StygiumOre",
+                                    "MinStack": 5,
+                                    "MaxStack": 5
+                                }
+                            }
+                        ],
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)390",
+                                    "MinStack": 10,
+                                    "MaxStack": 30
+                                }
+                            }
+                        ]
+                    ],
+                    "LargeMinableExperienceGranted": 10
+                },
+                "{{ModID}}_SpawnDeepDark_LargeMinable_BigStone2": {
+                    "Type": "LargeMinable",
+                    "LargeMinableTool": "Pickaxe",
+                    "LargeMinableHealth": 15,
+                    "LargeMinableSizeX": 2,
+                    "LargeMinableSizeY": 2,
+                    "LargeMinableTexture": "maps/DeepDark-rocks",
+                    "LargeMinableSpriteIndex": 2,
+                    "LargeMinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O){{ModID}}_StygiumOre",
+                                    "MinStack": 3,
+                                    "MaxStack": 3
+                                }
+                            }
+                        ],
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)390",
+                                    "MinStack": 7,
+                                    "MaxStack": 25
+                                }
+                            }
+                        ]
+                    ],
+                    "LargeMinableExperienceGranted": 10
+                },
+                "{{ModID}}_SpawnDeepDark_LargeMinable_BigStone3": {
+                    "Type": "LargeMinable",
+                    "LargeMinableTool": "Pickaxe",
+                    "LargeMinableHealth": 15,
+                    "LargeMinableSizeX": 2,
+                    "LargeMinableSizeY": 2,
+                    "LargeMinableTexture": "maps/DeepDark-rocks",
+                    "LargeMinableSpriteIndex": 6,
+                    "LargeMinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O){{ModID}}_StygiumOre",
+                                    "MinStack": 3,
+                                    "MaxStack": 3
+                                }
+                            }
+                        ],
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)390",
+                                    "MinStack": 7,
+                                    "MaxStack": 25
+                                }
+                            }
+                        ]
+                    ],
+                    "LargeMinableExperienceGranted": 10
+                },
+                "{{ModID}}_SpawnDeepDark_LargeMinable_BigStone4": {
+                    "Type": "LargeMinable",
+                    "LargeMinableTool": "Pickaxe",
+                    "LargeMinableHealth": 15,
+                    "LargeMinableSizeX": 2,
+                    "LargeMinableSizeY": 2,
+                    "LargeMinableTexture": "maps/DeepDark-rocks",
+                    "LargeMinableSpriteIndex": 8,
+                    "LargeMinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O){{ModID}}_StygiumOre",
+                                    "MinStack": 1,
+                                    "MaxStack": 1
+                                }
+                            }
+                        ],
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)390",
+                                    "MinStack": 7,
+                                    "MaxStack": 25
+                                }
+                            }
+                        ]
+                    ],
+                    "LargeMinableExperienceGranted": 10
+                },
+                "{{ModID}}_SpawnDeepDark_LargeMinable_BigStone5": {
+                    "Type": "LargeMinable",
+                    "LargeMinableTool": "Pickaxe",
+                    "LargeMinableHealth": 15,
+                    "LargeMinableSizeX": 2,
+                    "LargeMinableSizeY": 2,
+                    "LargeMinableTexture": "maps/DeepDark-rocks",
+                    "LargeMinableSpriteIndex": 10,
+                    "LargeMinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)390",
+                                    "MinStack": 7,
+                                    "MaxStack": 25
+                                }
+                            }
+                        ]
+                    ],
+                    "LargeMinableExperienceGranted": 10
+                },
+                "{{ModID}}_SpawnDeepDark_LargeMinable_LongBoiNode": {
+                    "Type": "LargeMinable",
+                    "LargeMinableTool": "Pickaxe",
+                    "LargeMinableHealth": 20,
+                    "LargeMinableSizeX": 1,
+                    "LargeMinableSizeY": 2,
+                    "LargeMinableTexture": "maps/DeepDark-rocks",
+                    "LargeMinableSpriteIndex": 33,
+                    "LargeMinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O){{ModID}}_StygiumOre",
+                                    "MinStack": 3,
+                                    "MaxStack": 3
+                                }
+                            }
+                        ],
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)390",
+                                    "MinStack": 2,
+                                    "MaxStack": 5
                                 }
                             }
                         ]
@@ -520,10 +972,6 @@
                         {
                             "SpawnableIds": [
                                 {
-                                    "Weight": 0.2,
-                                    "Value": "{{ModID}}_SpawnDeepDark_Minable_StygiumOre"
-                                },
-                                {
                                     "Weight": 1.0,
                                     "Value": "{{ModID}}_SpawnDeepDark_Minable_Stone2"
                                 },
@@ -532,27 +980,93 @@
                                     "Value": "{{ModID}}_SpawnDeepDark_Minable_Stone1"
                                 }
                             ],
-                            "Minimum": 12,
-                            "Maximum": 54
+                            "Minimum": 50,
+                            "Maximum": 75
                         },
                         {
                             "SpawnableIds": [
                                 {
-                                    "Weight": 0.1,
-                                    "Value": "{{ModID}}_SpawnDeepDark_LargeMinable_BigStone"
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Minable_StygiumOre"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Minable_StygiumOre1"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Minable_StygiumOre2"
+                                },
+                                {
+                                    "Weight": 0.5,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Minable_StygiumOre3"
+                                },
+                                {
+                                    "Weight": 0.5,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Minable_StygiumOre4"
+                                },
+                                {
+                                    "Weight": 0.5,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Minable_StygiumOre5"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Minable_StygiumOre6"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Minable_StygiumOre8"
+                                },
+                                {
+                                    "Weight": 0.3,
+                                    "Value": "{{ModID}}_SpawnDeepDark_Minable_StygiumOre9"
                                 }
                             ],
-                            "Minimum": -4, // Trick to make none spawning more common
-                            "Maximum": 3
+                            "Minimum": 1,
+                            "Maximum": 10
                         },
                         {
                             "SpawnableIds": [
                                 {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_LargeMinable_BigStone"
+                                },
+                                {
+                                    "Weight": 0.05,
+                                    "Value": "{{ModID}}_SpawnDeepDark_LargeMinable_BigStone1"
+                                },
+                                {
                                     "Weight": 0.1,
+                                    "Value": "{{ModID}}_SpawnDeepDark_LargeMinable_BigStone2"
+                                },
+                                {
+                                    "Weight": 0.1,
+                                    "Value": "{{ModID}}_SpawnDeepDark_LargeMinable_BigStone3"
+                                },
+                                {
+                                    "Weight": 0.8,
+                                    "Value": "{{ModID}}_SpawnDeepDark_LargeMinable_BigStone4"
+                                },
+                                {
+                                    "Weight": 1.0,
+                                    "Value": "{{ModID}}_SpawnDeepDark_LargeMinable_BigStone5"
+                                },
+                                {
+                                    "Weight": 0.05,
+                                    "Value": "{{ModID}}_SpawnDeepDark_LargeMinable_LongBoiNode"
+                                }
+                            ],
+                            "Minimum": 1,
+                            "Maximum": 10
+                        },
+                        {
+                            "SpawnableIds": [
+                                {
+                                    "Weight": 1.0,
                                     "Value": "{{ModID}}_SpawnDeepDark_LootChest"
                                 }
                             ],
-                            "Minimum": -148,
+                            "Minimum": -100,
                             "Maximum": 1
                         }
                     ]
@@ -562,7 +1076,7 @@
                         {
                             "SpawnableIds": [
                                 {
-                                    "Weight": 1.0,
+                                    "Weight": 2.0,
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_RockCrab"
                                 },
                                 {
@@ -582,15 +1096,15 @@
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Golem"
                                 },
                                 {
-                                    "Weight": 2.0,
+                                    "Weight": 0.5,
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Bat"
                                 },
                                 {
-                                    "Weight": 3.0,
+                                    "Weight": 2.0,
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_Skeleton_Miner"
                                 },
                                 {
-                                    "Weight": 3.0,
+                                    "Weight": 2.0,
                                     "Value": "{{ModID}}_SpawnDeepDark_Monster_MetalHead"
                                 }
                             ],
@@ -604,8 +1118,8 @@
                                     "Value": "{{ModID}}_SpawnDeepDark_Forage_OtherTainted"
                                 }
                             ],
-                            "Minimum": -5,
-                            "Maximum": 5
+                            "Minimum": 1,
+                            "Maximum": 4
                         }
                     ]
                 },
@@ -656,7 +1170,7 @@
                                     "Value": "{{ModID}}_SpawnDeepDark_Tree_Mushroom"
                                 }
                             ],
-                            "Minimum": -2,
+                            "Minimum": 2,
                             "Maximum": 4
                         },
                         {
@@ -666,7 +1180,7 @@
                                     "Value": "{{ModID}}_SpawnDeepDark_Forage_Mushrooms"
                                 }
                             ],
-                            "Minimum": -5,
+                            "Minimum": 1,
                             "Maximum": 4
                         }
                     ]
@@ -756,7 +1270,7 @@
                                     "Value": "{{ModID}}_SpawnDeepDark_Forage_Lakes"
                                 }
                             ],
-                            "Minimum": -5,
+                            "Minimum": 1,
                             "Maximum": 4
                         }
                     ]
@@ -1245,6 +1759,9 @@
                 "DDLakeSign9": "{{i18n:Strings.DeepDark.DDLakeSign9}}",
                 "DDLakeSign10": "{{i18n:Strings.DeepDark.DDLakeSign10}}",
                 "DDTipTable": "{{i18n:Strings.DeepDark.DDTipTable}}",
+                "DDSecretSign": "{{i18n:Strings.DeepDark.DDSecretSign}}",
+                "DDSecretChest": "{{i18n:Strings.DeepDark.DDSecretChest}}",
+                "DDOwlBoySeat": "{{i18n:Strings.DeepDark.DDOwlBoySeat}}",
                 "DDDeadGuy": "{{i18n:Strings.DeepDark.DDDeadGuy}}",
                 "DDBackpack": "{{i18n:Strings.DeepDark.DDBackpack}}"
             }
