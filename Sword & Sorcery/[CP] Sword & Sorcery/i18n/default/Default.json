@@ -52,7 +52,7 @@
   // FESTIVALS
   "Core.Mateo.EggFestival": "The egg festival is tomorrow! The first big event to ring in the new year, huh?$15#$b#Hope your egg-hunting skills are sharp, @, I hear you've got some pretty tough competition.$14",
   "Core.Mateo.FlowerDance": "I love dancing, actually. I was big into the club scene back in college, but -$12#$b#Well, that's a very different sort of dancing, usually with a lot more liquor.$13",
-  "Core.Mateo.Luau": "I really appreciate the sentiment of the luau - tradition is a really important thing, of course -$10#$b#But doesn't it just seem really short sighted to blindly throw a ton of different things into one soup? I love taking risks, but that seems a little much.$9",
+  "Core.Mateo.Luau": "I really appreciate the sentiment of the festival tomorrow - tradition is a really important thing, of course -$10#$b#But doesn't it just seem really short sighted to blindly throw a ton of different things into one soup? I love taking risks, but that seems a little much.$9",
   "Core.Mateo.MoonlightJelly": "Tomorrow's celebration is my second favorite, next to Spirit's Eve.$0#$b#I can see the Jellies from the cove. It's breathtaking.$12",
   "Core.Mateo.SDVFair": "The fair is tomorrow, @! Are you going to bring pumpkins?$11#$b#And...Other...important...produce?$21#$b#I'm just saying, if I was voting and it was all pumpkins, you'd win.$15",
   "Core.Mateo.SpiritsEve": "So, there are a few rules to be followed on Spirit's Eve, back from when I was a kid.$19#$b#One, always check your candy. Two, always wear a costume. Three, always have treats on hand to give out.$11#$b#Finally, never blow out a Jack o' Lantern before midnight. That's the most important one.$19",
@@ -437,7 +437,7 @@
   // SPECIAL DATES - SUMMER
   "Marriage.Mateo.Summer": "It's that time of year where I can justifiably wear an open shirt! Not that anyone has ever bothered me about it, but I've always been a little nervous that all the scars will scare the kids or something.$14#$b#Plus, I know you appreciate the view, Sunshine.$15",
   "Marriage.Mateo.Summer1": "It's already so hot out. Don't let the humidity get to you, Sunshine. Be sure to drink lots of water.$0",
-  "Marriage.Mateo.Summer11": "I've got a little bit of pumpkin puree for the Luau today! I'm sure anything from %farm will be a fantastic addition - you've got a taste for these sorts of things.$0#$b#I do wonder how that soup manages to taste good with all the different stuff thrown in it, though.$37",
+  "Marriage.Mateo.Summer11": "I've got a little bit of pumpkin puree for the festival today! I'm sure anything from %farm will be a fantastic addition - you've got a taste for these sorts of things.$0#$b#I do wonder how that soup manages to taste good with all the different stuff thrown in it, though.$37",
   "Marriage.Mateo.Summer28": "The moonlight jellies are an ecological wonder, aren't they? I'm excited to see them every year.$4#$b#Their faint glow means that Fall is coming soon, and besides that, nothing makes me happier than getting to spend an evening on the beach with everyone. Especially you, @.$27",
 
   // SPECIAL DATES - FALL
