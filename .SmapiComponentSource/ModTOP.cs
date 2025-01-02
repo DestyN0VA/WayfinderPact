@@ -1258,17 +1258,24 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(FishingRod), "doneFishing")]
     public static class DropWaterEssencePatch1
     {
-        public static void Postfix(Farmer who, bool consumeBaitAndTackle)
+        public static void Postfix(FishingRod __instance, Farmer who, bool consumeBaitAndTackle)
         {
             if (!Game1.player.eventsSeen.Contains("SnS.Ch4.Roslin.1"))
                 return;
             int mult = Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionEssenceDrops) ? 2 : 1;
 
+            string[] Essence = ["(O)DN.SnS_WaterEssence", "(O)DN.SnS_FireEssence"];
+            int EssenceToDrop = 0;
+            if ((who.currentLocation is MineShaft ms && ms.mineLevel == 100) || who.currentLocation is Caldera or VolcanoDungeon)
+            {
+                EssenceToDrop = 1;
+            }
+
             long farmerId = who?.UniqueMultiplayerID ?? 0;
             if (Game1.random.NextDouble() < .35 * mult)
             {
-                Game1.createObjectDebris("(O)DN.SnS_WaterEssence", (int)who.Tile.X, (int)who.Tile.Y, farmerId, who.currentLocation);
-                Game1.createObjectDebris("(O)DN.SnS_WaterEssence", (int)who.Tile.X, (int)who.Tile.Y, farmerId, who.currentLocation);
+                Game1.createObjectDebris(Essence[EssenceToDrop], (int)who.Tile.X, (int)who.Tile.Y, farmerId, who.currentLocation);
+                Game1.createObjectDebris(Essence[EssenceToDrop], (int)who.Tile.X, (int)who.Tile.Y, farmerId, who.currentLocation);
             }
         }
     }

@@ -52,6 +52,7 @@ namespace SwordAndSorcerySMAPI
         public readonly NetBool transformed = new(false);
         public readonly NetFloat expRemainder = new(0);
         public double noMovementTimer = 0;
+        public double MovementTimer = 0;
 
         public bool isResting => noMovementTimer >= 3;
 
@@ -434,6 +435,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.GameLoop.TimeChanged += GameLoop_TimeChanged;
             Helper.Events.GameLoop.SaveCreated += GameLoop_SaveCreated;
             Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
+            Helper.Events.GameLoop.SaveLoaded += KeychainsAndTrinkets.SaveLoaded;
             Helper.Events.Player.Warped += Player_Warped;
             Helper.Events.Player.InventoryChanged += Player_InventoryChanged;
             Helper.Events.Display.RenderedHud += Display_RenderedHud;
