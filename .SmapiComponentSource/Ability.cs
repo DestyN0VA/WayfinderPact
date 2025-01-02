@@ -7,6 +7,7 @@ using StardewModdingAPI;
 using StardewValley;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using static StardewValley.FarmerSprite;
 
@@ -33,12 +34,27 @@ namespace SwordAndSorcerySMAPI
 
 
     [HarmonyPatch(typeof(FarmerRenderer), nameof(FarmerRenderer.draw), new Type[] { typeof(SpriteBatch), typeof(FarmerSprite.AnimationFrame ), typeof(int ), typeof(Rectangle ), typeof(Vector2 ), typeof(Vector2 ), typeof(float ), typeof(int ), typeof(Color ), typeof(float ), typeof(float ), typeof(Farmer) })]
-    public static class FarmerRendererShadowstepPatch
+    public static class FarmerRendererShadowstepAndTransformingPatch
     {
         internal static bool transparent = false;
+
+        internal static int Index = 0;
+        internal static Rectangle[][] SourceRects = [
+            [new(32, 64, 32, 32), new(64, 64, 32, 32), new(96, 64, 32, 32), new(128, 64, 32, 32), new(160, 64, 32, 32), new(192, 64, 32, 32)],
+            [new(32, 32, 32, 32), new(64, 32, 32, 32), new(96, 32, 32, 32), new(128, 32, 32, 32), new(160, 32, 32, 32), new(192, 32, 32, 32)],
+            [new(32, 0, 32, 32), new(64, 0, 32, 32), new(96, 0, 32, 32), new(128, 0, 32, 32), new(160, 0, 32, 32), new(192, 0, 32, 32)],
+            [new(32, 96, 32, 32), new(64, 96, 32, 32), new(96, 96, 32, 32), new(128, 96, 32, 32), new(160, 96, 32, 32), new(192, 96, 32, 32)]
+            ];
+
+
         public static bool Prefix(FarmerRenderer __instance, SpriteBatch b, FarmerSprite.AnimationFrame animationFrame, int currentFrame, Rectangle sourceRect, Vector2 position, Vector2 origin, float layerDepth, ref Color overrideColor, float rotation, float scale, Farmer who)
         {
             var ext = who.GetFarmerExtData();
+
+            if (ext.noMovementTimer != 0)
+            {
+                Index = 0;
+            }
 
             Texture2D tex = ModCoT.formTexs[ext.form.Value][0];
             Texture2D eTex = ModCoT.formTexs[ext.form.Value][1];
@@ -74,15 +90,18 @@ namespace SwordAndSorcerySMAPI
                     int f1 = 0;
                     if (ext.isResting)
                     {
-                        if (ext.noMovementTimer > 3 && ext.noMovementTimer < 3.375)
+                        if (ext.noMovementTimer > 3 && ext.noMovementTimer < (ext.form.Value != 2 ? 3.375 : 3.750))
                         {
                             f1 = (int)((ext.noMovementTimer - 3) / 0.125f);
                             frame = new Rectangle(f1 * 32, 128, 32, 32);
                         }
                         else
                         {
-                            f1 = 3;
-                            frame = new Rectangle(3 * 32, 128, 32, 32);
+                            if (ext.form.Value != 2)
+                                f1 = (int)(ext.noMovementTimer % 6000 / 240) == 0 ? 4 : 3;
+                            else
+                                f1 = 6;
+                            frame = new Rectangle(f1 * 32, 128, 32, 32);
                         }
                     }
                     else
@@ -97,8 +116,7 @@ namespace SwordAndSorcerySMAPI
 
                         if (ext.noMovementTimer == 0)
                         {
-                            f1 = Game1.currentGameTime.TotalGameTime.Milliseconds % 700 / 100;
-                            frame = new(frame.X + 32 * f1, frame.Y, frame.Width, frame.Height);
+                            frame = SourceRects[who.FacingDirection][Index];
                         }
                     }
 
@@ -173,15 +191,18 @@ namespace SwordAndSorcerySMAPI
             int f = 0;
             if (data.isResting)
             {
-                if (data.noMovementTimer > 3 && data.noMovementTimer < 3.375)
+                if (data.noMovementTimer > 3 && data.noMovementTimer < (data.form.Value != 2 ? 3.375 : 3.750))
                 {
                     f = (int)((data.noMovementTimer - 3) / 0.125f);
                     frame = new Rectangle(f * 32, 128, 32, 32);
                 }
                 else
                 {
-                    f = 3;
-                    frame = new Rectangle(3 * 32, 128, 32, 32);
+                    if (data.form.Value != 2)
+                        f = (int)(data.noMovementTimer % 6000 / 240) == 0 ? 4 : 3;
+                    else
+                        f = 6;
+                    frame = new Rectangle(f * 32, 128, 32, 32);
                 }
             }
             else
@@ -196,8 +217,14 @@ namespace SwordAndSorcerySMAPI
 
                 if (data.noMovementTimer == 0)
                 {
-                    f = Game1.currentGameTime.TotalGameTime.Milliseconds % 700 / 100;
-                    frame = new(frame.X + 32 * f, frame.Y, frame.Width, frame.Height);
+                    if (data.MovementTimer >= 120)
+                    {
+                        Index++;
+                        data.MovementTimer = 0;
+                    }
+                    if (Index > 5)
+                        Index = 0;
+                    frame = SourceRects[who.FacingDirection][Index];
                 }
             }
             b.Draw(tex, position + new Vector2(0, 24), frame, overrideColor, rotation, origin + new Vector2(8, 0), Vector2.One * Game1.pixelZoom, fx, layerDepth);
@@ -225,7 +252,12 @@ namespace SwordAndSorcerySMAPI
 
                 Vector2 offset = new(offsetHatX[offsetInd], offsetHatY[offsetInd][f]);
                 Vector2 p = position + new Vector2(0, 24) + offset * Game1.pixelZoom + new Vector2(0, -10) * Game1.pixelZoom;
-                b.Draw(FarmerRenderer.hatsTexture, p, hatRect, Color.White, rotation, origin + new Vector2(8, 0), Vector2.One * Game1.pixelZoom, fx, layerDepth + 0.002f);
+                var Hats = DataLoader.Hats(Game1.content);
+                Hats.TryGetValue(who.hat.Value.ItemId, out var hat);
+                Texture2D HatTex = FarmerRenderer.hatsTexture;
+                if (hat.Split('/').Count() >= 8 && Game1.content.DoesAssetExist<Texture2D>(hat.Split('/')[7]))
+                    HatTex = Game1.content.Load<Texture2D>(hat.Split('/')[7]);
+                b.Draw(HatTex, p, hatRect, Color.White, rotation, origin + new Vector2(8, 0), Vector2.One * Game1.pixelZoom, fx, layerDepth + 0.002f);
             }
             return false;
         }
@@ -239,7 +271,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepPatch.transparent || ModTOP.drawingBanished)
+            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.drawingBanished)
                 color *= 0.5f;
         }
     }
@@ -248,7 +280,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepPatch.transparent || ModTOP.drawingBanished)
+            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.drawingBanished)
                 color *= 0.5f;
         }
     }
@@ -257,7 +289,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepPatch.transparent || ModTOP.drawingBanished)
+            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.drawingBanished)
                 color *= 0.5f;
         }
     }
@@ -266,7 +298,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepPatch.transparent || ModTOP.drawingBanished)
+            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.drawingBanished)
                 color *= 0.5f;
         }
     }
@@ -275,7 +307,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepPatch.transparent || ModTOP.drawingBanished)
+            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.drawingBanished)
                 color *= 0.5f;
         }
     }

@@ -6,12 +6,25 @@ using System.Linq;
 using Microsoft.Xna.Framework;
 using System;
 using Object = StardewValley.Object;
+using StardewModdingAPI.Events;
+using StardewValley.Tools;
 
 namespace SwordAndSorcerySMAPI
 {
 
     public class KeychainsAndTrinkets
     {
+
+        public static void SaveLoaded(object? sender, SaveLoadedEventArgs e)
+        {
+            foreach (Item i in Game1.player.Items.Where(o => o is MeleeWeapon or Slingshot && o.QualifiedItemId.ContainsIgnoreCase("(W)DN.SnS_longlivetheking")))
+            {
+                Tool LLTK = i as Tool;
+                if (LLTK.attachments[1] is Trinket t)
+                    t.Apply(Game1.player);
+            }
+        }
+
         public static void TryAttach(Tool LLTK, Object held, out Object attached, out Object OnHand, out int? Slot)
         {
             attached = null;
