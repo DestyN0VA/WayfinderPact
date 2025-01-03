@@ -51,6 +51,13 @@
             "Action": "Load",
             "Priority": "Low",
             "Target": "Portraits/Armor_Mateo, Portraits/MateoMine",
+            "FromFile": "Assets/Portraits/Mateo/Armor_Mateo.png"
+        },
+        {
+            "LogName": "Armor Portraits - Mateo",
+            "Action": "Load",
+            "Priority": "Medium",
+            "Target": "Portraits/Armor_Mateo, Portraits/MateoMine",
             "FromFile": "Assets/Portraits/Mateo/{{MateoArmor}}"
         },
         {
