@@ -33,7 +33,7 @@ namespace SwordAndSorcerySMAPI
 
         public static void DayEnding(object? sender, DayEndingEventArgs e)
         {
-            Game1.player.trinketItems.RemoveWhere(t => t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false);
+            Game1.player?.trinketItems?.RemoveWhere(t => t?.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false);
         }
 
         public static void TryAttach(Tool LLTK, Object held, out Object attached, out Object OnHand, out int? Slot)

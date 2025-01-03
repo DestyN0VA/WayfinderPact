@@ -200,7 +200,7 @@ namespace SwordAndSorcerySMAPI
                 else
                 {
                     if (data.form.Value != 2)
-                        f = (int)(data.noMovementTimer % 6000 / 240) == 0 ? 4 : 3;
+                        f = 3;
                     else
                         f = 6;
                     frame = new Rectangle(f * 32, 128, 32, 32);
@@ -218,7 +218,7 @@ namespace SwordAndSorcerySMAPI
 
                 if (data.noMovementTimer == 0)
                 {
-                    if (data.MovementTimer >= 120)
+                    if (data.MovementTimer >= 100)
                     {
                         Index++;
                         data.MovementTimer = 0;
