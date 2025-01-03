@@ -24,6 +24,7 @@ namespace SwordAndSorcerySMAPI
             foreach (Item i in Game1.player.Items.Where(o => o is MeleeWeapon or Slingshot && o.QualifiedItemId.ContainsIgnoreCase("(W)DN.SnS_longlivetheking")))
             {
                 Tool LLTK = i as Tool;
+                LLTK.AttachmentSlotsCount = 2;
                 if (LLTK.attachments[1] is Trinket t)
                 {
                     HandleTrinketEquipUnequip(t, null);

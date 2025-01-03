@@ -140,7 +140,7 @@
       "Action": "EditData",
       "Target": "Data/CookingRecipes",
       "Entries": {
-        "DN.SnS_ScotchEgg": "246 1 684 1 -5 1/1 10/DN.SnS_ScotchEgg/null/{{i18n:DN.SnS.SnS_ScotchEgg}}", //flour bug meat any egg
+        "DN.SnS_ScotchEgg": "246 1 684 1 -5 1/1 10/DN.SnS_ScotchEgg/null/{{i18n:DN.SnS.ScotchEgg}}", //flour bug meat any egg
         "DN.SnS_Steak_on_a_Stake": "684 1 169 1/1 10/DN.SnS_Steak_on_a_Stake/null/{{i18n:DN.SnS.Steak_on_a_Stake}}", //bug meat driftwood
         "DN.SnS_Fruit_Hand_Pie": "-79 1 246 1 -5 1/1 10/DN.SnS_Fruit_Hand_Pie/null/{{i18n:DN.SnS.Fruit_Hand_Pie}}", //any fruit flour
         "DN.SnS_Smoked_TurkeyLeg": "382 1 684 1/1 10/DN.SnS_Smoked_TurkeyLeg/null/{{i18n:DN.SnS.Smoked_TurkeyLeg}}", //coal bug meat

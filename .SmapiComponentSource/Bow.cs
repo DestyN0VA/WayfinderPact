@@ -378,7 +378,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Postfix(MeleeWeapon __instance)
         {
-            if (__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking")) __instance.AttachmentSlotsCount = 2;
+            if (__instance?.ItemId?.EqualsIgnoreCase("DN.SnS_longlivetheking") ?? false) __instance.AttachmentSlotsCount = 2;
         }
     }
 
