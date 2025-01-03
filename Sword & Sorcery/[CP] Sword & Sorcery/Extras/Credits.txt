@@ -4,13 +4,13 @@ DUNGEON MASTER (PROJECT LEAD):
 ➜ DestyN0VA, the Shield: Content Patcher component, narrative design, mechanical design, character design, assets, maps, events, dialogue, etc
 
 ADVENTURING PARTY (2.0 CONTRIBUTORS): 
-➜ KittyCatCasey, the Wand: C# Component, mechanical design
+➜ 7thAxis, the Glaive: Dialogue code overhaul/additional optimization code, help with code (C# and CP), Deep Dark overhaul, pronoun code, Solomon portraits/sprites, majority of Deep Dark assets, additional assets, item/aquarium fish sprite refreshes, trinkets, guidebook, bugfxing
+➜ EnderTedi, the Staff: Additional assets throughout the mod, help w/ code (C# and CP), wedding events, guidebook, bugfixing 
 ➜ MADDOGOFBLANK, the Dagger: Additional assets throughout the mod, Violet Moon Festival primary contributor, extensive help w/ code, bugfixing
-➜ 7thAxis, the Glaive: Dialogue code overhaul/additional optimization code, pronoun code, Solomon portraits/sprites, majority of Deep Dark assets, item/aquarium fish sprite refreshes
-➜ TheFrenchDodo, the Halberd: Emeritus' sprite, books seen throughout the guild, Mateo and Hector's new themes and all other music, Deep Dark monsters
+➜ TheFrenchDodo, the Halberd: Emeritus' sprite, books seen throughout the guild, Mateo and Hector's new themes and most other music, Deep Dark monsters
 ➜ TenebrousNova, the Zweihander: Help w/ event code, i18n, and the majority of new maps incl. Deep Dark maps, playtesting 
-➜ EnderTedi, the Staff: Additional assets throughout the mod, help w/ code (C# and CP), wedding events, bugfixing 
 ➜ TheMainDaine, the Harp: Additional portrait/sprite art, playtesting and dialogue editing 
+➜ KittyCatCasey, the Wand: C# Component, mechanical design
 ➜ TheLoreSeeker, An Adventurer's Spirit: Emeritus' and Book's portraits, scope creep
 
 ADDITIONAL/PRIOR CONTRIBUTORS: 
