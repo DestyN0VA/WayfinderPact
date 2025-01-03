@@ -20,6 +20,8 @@ using StardewValley.Extensions;
 using StardewValley.GameData.Crops;
 using StardewValley.Objects;
 using SpaceCore.Guidebooks;
+using System.Reflection.Emit;
+using NeverEndingAdventure.Utils;
 
 namespace CircleOfThornsSMAPI
 {
@@ -480,88 +482,29 @@ namespace CircleOfThornsSMAPI
     [HarmonyPatch(typeof(Crop), nameof(Crop.harvest))]
     public static class CropHarvestDropEssencesPatch
     {
-        public static void Prefix(Crop __instance, int xTile, int yTile, HoeDirt soil, out bool __state, JunimoHarvester junimoHarvester = null, bool isForcedScytheHarvest = false)
+
+        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> insns)
         {
-            __state = false;
-            if (__instance.dead.Value)
-            {
-                return;
-            }
-            bool success = false;
-            if (__instance.forageCrop.Value)
-            {
-                StardewValley.Object o = null;
-                int experience = 3;
-                if (__instance.whichForageCrop.Value == "2")
-                {
-                    return;
-                }
-                if (junimoHarvester != null)
-                {
-                    return;
-                }
-                if (isForcedScytheHarvest)
-                {
-                    return;
-                }
-                if (AddItemToInvBool(o))
-                {
-                    return;
-                }
-            }
-            else if (__instance.currentPhase.Value >= __instance.phaseDays.Count - 1 && (!__instance.fullyGrown.Value || __instance.dayOfCurrentPhase.Value <= 0))
-            {
-                if (__instance.indexOfHarvest.Value == null)
-                {
-                    return;
-                }
-                CropData data = __instance.GetData();
-                Item harvestedItem = __instance.programColored.Value ? new ColoredObject(__instance.indexOfHarvest.Value, 1, __instance.tintColor.Value)
-                {
-                    Quality = 0
-                } : ItemRegistry.Create(__instance.indexOfHarvest.Value, 1, 0);
-                HarvestMethod harvestMethod = data?.HarvestMethod ?? HarvestMethod.Grab;
-                if (harvestMethod == HarvestMethod.Scythe || isForcedScytheHarvest)
-                {
-                    success = true;
-                }
-                else if (junimoHarvester != null || (harvestedItem != null && Game1.player.addItemToInventoryBool(harvestedItem.getOne())))
-                {
-                    success = true;
-                }
-            }
-            __state = success;
+            CodeMatcher match = new(insns);
+            object operand = insns.ToList().First(i => i.opcode == OpCodes.Ldarg_S).operand;
+
+            match.MatchEndForward([
+                new(OpCodes.Ldloc_0),
+                new(OpCodes.Brfalse)
+                ]).Advance(1)
+                .Insert([
+                new(OpCodes.Ldarg_1),
+                new(OpCodes.Ldarg_2),
+                new(OpCodes.Ldarg_S, operand),
+                new(OpCodes.Call, AccessTools.Method(typeof(CropHarvestDropEssencesPatch), nameof(DropEssence)))
+                ]);
+
+            return match.Instructions();
         }
 
-        public static bool AddItemToInvBool(Item item, bool makeActiveObject = false)
-        {
-            if (item == null)
-            {
-                return false;
-            }
-
-            if (Game1.player.IsLocalPlayer)
-            {
-                Item item2 = null;
-                Game1.player.GetItemReceiveBehavior(item, out var needsInventorySpace, out var _);
-                if (needsInventorySpace)
-                {
-                    item2 = Game1.player.addItemToInventory(item);
-                }
-
-                bool flag = item2?.Stack != item.Stack || item is SpecialItem;
-
-                return flag;
-            }
-
-            return false;
-        }
-
-        public static void Postfix(int xTile, int yTile, JunimoHarvester junimoHarvester, bool __result, bool __state)
+        public static void DropEssence(int xTile, int yTile, JunimoHarvester junimoHarvester = null)
         {
             if (!Game1.player.eventsSeen.Contains(ModCoT.DropEssencesEventId))
-                return;
-            if (!__state)
                 return;
 
             float mult = 0.1f / 8;
