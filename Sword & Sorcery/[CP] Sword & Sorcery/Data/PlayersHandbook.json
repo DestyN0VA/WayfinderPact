@@ -269,7 +269,7 @@
                 {
                   "Id": "Shops",
                   "Contents": "{{i18n: guidebook.chapter.Mechanics.Shops}}"
-                },
+                }
               ]
             },
             "DeepDark": {

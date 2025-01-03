@@ -79,7 +79,7 @@
               "Howl": {
                 "FrameStart": 20,
                 "FrameLength": 16,
-                "Interval": 300
+                "Interval": 200
             },
             },
             "Args": {
