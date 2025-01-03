@@ -378,6 +378,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Postfix(MeleeWeapon __instance)
         {
+            if (Game1.activeClickableMenu is ItemGrabMenu) return;
             if (__instance?.ItemId?.EqualsIgnoreCase("DN.SnS_longlivetheking") ?? false) __instance.AttachmentSlotsCount = 2;
         }
     }
