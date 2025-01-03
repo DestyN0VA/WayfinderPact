@@ -35,25 +35,25 @@
 [/nospacing]",
 "guidebook.chapter.Title.Introduction": "[center][font=dialogue][offset=0,8]About[/font][/center]
  
-Sword & Sorcery is a vanilla adjacent, magical adventure inspired by the likes of Dungeons & Dragons, Balder's Gate, and Final Fantasy. Follow the complex story of the Coastal Adventurer's Guild as it's members learn, grow and change thanks to The Farmer's intervention. It starts with a lone tent on the beach, and ends in a battle to save East Scarp from the remnants of a tragedy long thought passed.",
+Sword & Sorcery is a vanilla adjacent, magical adventure inspired by the likes of Dungeons & Dragons, Baldur's Gate, and Final Fantasy. Follow the complex story of the Coastal Adventurer's Guild as it's members learn, grow and change thanks to The Farmer's intervention. It starts with a lone tent on the beach, and ends in a battle to save East Scarp from the remnants of a tragedy long thought passed.",
   "guidebook.chapter.Chapters.JumpList": "[center][font=dialogue][offset=0,8]Introduction[/font][/center]
  
 The Chapters of this story, all the way from a lone tent on the beach to a battle to save East Scarp from the remnants of a tragedy long thought passed to a series of epilogues for all the major NPCs.
  
 [font=dialogue]Table Of Contents[/font]
-> [link=Chapters/IntroNEA]Never Ending Adventure[/link] ([link=Characters/Mateo]Mateo[/link])
+> [link=Chapters/IntroNEA]Never Ending Adventure[/link] - ([link=Characters/Mateo]Mateo[/link])
  = [link=Chapters/NEA]Events[/link]
  
-> [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=Chapters/IntroCOT]Circle Of Thorns[/link][/if][else]Circle Of Thorns [color=DarkRed](Locked)[/color][/else] ([link=Characters/Hector]Hector[/link])
+> [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=Chapters/IntroCOT]Circle Of Thorns[/link][/if][else]Circle Of Thorns[/else] - ([link=Characters/Hector]Hector[/link])
  = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=Chapters/COT]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
  
-> [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Chapters/IntroUP]Under Pressure[/link][/if][else]Under Pressure [color=DarkRed](Locked)[/color][/else] ([link=Characters/Cirrus]Cirrus[/link])
+> [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Chapters/IntroUP]Under Pressure[/link][/if][else]Under Pressure[/else] - ([link=Characters/Cirrus]Cirrus[/link])
  = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Chapters/UP]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
  
-> [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]The Other Promise[/link][/if][else]The Other Promise [color=DarkRed](Locked)[/color][/else] ([link=Characters/Roslin]Roslin[/link] & [link=Characters/Dandelion]Dandelion[/link])
+> [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]The Other Promise[/link][/if][else]The Other Promise[/else] - ([link=Characters/Roslin]Roslin[/link] & [link=Characters/Dandelion]Dandelion[/link])
  = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/TOP]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
  
-> [if=PLAYER_HAS_MAIL Current DuskspireDefeated][link=Chapters/IntroEpilogue]Epilogue[/link][/if][else]Epilogue [color=DarkRed](Locked)[/color][/else]
+> [if=PLAYER_HAS_MAIL Current DuskspireDefeated][link=Chapters/IntroEpilogue]Epilogue[/link][/if][else]Epilogue[/else]
  = [if=PLAYER_HAS_MAIL Current DuskspireDefeated][link=Chapters/Epilogue]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
 ",
 
