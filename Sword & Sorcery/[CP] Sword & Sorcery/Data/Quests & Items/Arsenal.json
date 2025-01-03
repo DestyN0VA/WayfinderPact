@@ -15,6 +15,7 @@
           "SpriteIndex": 0,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
+            "item_exquisite_emerald",
             "exquisite_gem",
             "not_museum_donatable",
             "color_green"
@@ -31,6 +32,7 @@
           "SpriteIndex": 2,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
+            "item_exquisite_ruby",
             "exquisite_gem",
             "not_museum_donatable",
             "color_red"
@@ -47,6 +49,7 @@
           "SpriteIndex": 1,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
+            "item_exquisite_topaz",
             "exquisite_gem",
             "not_museum_donatable",
             "color_dark_orange"
@@ -63,6 +66,7 @@
           "SpriteIndex": 3,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
+            "item_exquisite_jade",
             "exquisite_gem",
             "not_museum_donatable",
             "color_jade"
@@ -79,6 +83,7 @@
           "SpriteIndex": 6,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
+            "item_exquisite_aquamarine",
             "exquisite_gem",
             "not_museum_donatable",
             "color_aqua"
@@ -95,6 +100,7 @@
           "SpriteIndex": 4,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
+            "item_exquisite_amethyst",
             "exquisite_gem",
             "not_museum_donatable",
             "color_dark_purple"
@@ -111,6 +117,7 @@
           "SpriteIndex": 5,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
+            "item_exquisite_diamond",
             "exquisite_gem",
             "not_museum_donatable",
               "color_white"
