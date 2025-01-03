@@ -7851,6 +7851,8 @@ ________      ________ _   _ _______ _____
   "DN.SnS.Hand_Pressed_Apple_Cider.Description": "This cider will warm you from the top of your head to the tips of your toes on a brisk autumn day.",
   "DN.SnS.Smoked_TurkeyLeg": "Jumbo Smoked Turkey Leg",
   "DN.SnS.Smoked_TurkeyLeg.Description": "Smoked over hickory and apple wood chips for over twelve hours, these turkey legs are fit for royalty!",
+  "DN.SnS.AnyFruit": "Any Fruit",
+  "DN.SnS.AnyEgg": "Any Egg",
 
   // MEEP 
   "MEEP.BookOutside.1": "Oh, hello dearest @! How are you doing on this fine day? I hope your tasklist is short and your belly is full of delicious snacks.$1",
