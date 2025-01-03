@@ -16,6 +16,7 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "essence_item",
+            "item_earth_essence",
             "sns_essence_item",
             "color_dark_brown"
           ]
@@ -32,8 +33,9 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "essence_item",
-            "color_cyan",
-            "sns_essence_item"
+            "item_air_essence",
+            "sns_essence_item",
+            "color_cyan"
           ]
         },
         "{{ModID}}_WaterEssence": {
@@ -48,6 +50,7 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "essence_item",
+            "item_water_essence",
             "sns_essence_item",
             "color_light_cyan"
           ]
@@ -64,6 +67,7 @@
           "ExcludeFromRandomSale": true,
           "ContextTags": [
             "essence_item",
+            "item_fire_essence",
             "sns_essence_item",
             "color_red"
           ]

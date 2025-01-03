@@ -16,7 +16,7 @@
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 5,
-          "ContextTags": [ "essence_item", "sns_essence_item", "color_dark_cyan" ]
+          "ContextTags": [ "essence_item", "item_druidic_essence", "sns_essence_item", "color_dark_cyan" ]
         },
 
         "{{ModID}}_adventureguildbadge": {
