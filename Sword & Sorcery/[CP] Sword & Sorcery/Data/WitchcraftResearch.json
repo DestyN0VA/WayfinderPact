@@ -245,7 +245,7 @@
                     "(O){{ModID}}_AirEssence": 20,
                 }
             },
-            "{{ModId}}_Recipe_ReturnPotion":
+            "{{ModId}}_Recipe_ReturnPotion1":
             {
                 "Type": "AlchemyRecipe",
                 "Value": "{{ModId}}_ReturnPotion",
@@ -259,7 +259,7 @@
                     "(O){{ModID}}_EarthEssence": 15,
                     "(O){{ModID}}_AirEssence": 15,
                     "(O){{ModID}}_FireEssence": 15,
-                    "(O){{ModID}}_WaterEssence": 15,
+                    "(O){{ModID}}_WaterEssence": 15
                 }
             },
             "{{ModId}}_Spell_Haste":

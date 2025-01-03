@@ -96,7 +96,7 @@
           },
           "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_McDougalPotion"
         },
-        "ToirneachPotion": {
+        "VerdantPotion": {
           "OutputItem": "(O){{ModID}}_verdantpotion",
           "OutPutQuantity": 1,
           "Ingredients": {
@@ -105,7 +105,29 @@
             "(O)768": 10,
             "(O)769": 10
           },
+          "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_VerdantPotion"
+        },
+        "ToirneachPotion": {
+          "OutputItem": "(O){{ModID}}_toirneachpotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_AirEssence": 10,
+            "(O)768": 3,
+            "(O)769": 3
+          },
           "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_ToirneachPotion"
+        },
+        "ReturnPotion": {
+          "OutputItem": "(O){{ModID}}_ReturnPotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_AirEssence": 5,
+            "(O){{ModID}}_WaterEssence": 5,
+            "(O){{ModID}}_EarthEssence": 5,
+            "(O){{ModID}}_FireEssence": 5,
+            "(O)769": 10
+          },
+          "UnlockConditions": "PLAYER_HAS_MAIL Current WitchcraftResearch_DN.SnS_Recipe_ReturnPotion1"
         }
       }
     }

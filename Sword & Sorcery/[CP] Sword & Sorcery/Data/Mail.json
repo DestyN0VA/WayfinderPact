@@ -86,7 +86,7 @@
 				"{{ModID}}_HectorKeychain": {
 					"Id": "{{ModID}}_HectorKeychain",
 					"Trigger": "DayEnding",
-					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.15, PLAYER_HAS_MAIL Current DN.SnS_ObtainedLLTK, RANDOM 0.1, {{HasMod |Contains=mushymato.TrinketTinker}}",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16, PLAYER_HAS_MAIL Current DN.SnS_ObtainedLLTK, RANDOM 0.1, {{HasMod |Contains=mushymato.TrinketTinker}}",
 					"Actions": [ "AddMail Current HectorKeychain tomorrow" ]
 				},
 				"{{ModID}}_BookKeychain": {

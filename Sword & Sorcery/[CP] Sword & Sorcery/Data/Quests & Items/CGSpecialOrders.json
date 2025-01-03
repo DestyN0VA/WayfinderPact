@@ -244,7 +244,7 @@
                     ],
                     "Rewards": [
                         {
-                            "Type": "30",
+                            "Type": "Money",
                             "Data": {
                                 "Amount": "15000"
                             }
@@ -415,6 +415,26 @@
                                     "RequiredTags": "",
                                     "Value": "Target|Stygium Serpant|LocalizedName|[Mateo.SpecialOrders.AQ5_11_LocalizedName]"
                                 },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium False Mushroom|LocalizedName|[Mateo.SpecialOrders.AQ5_11_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Droplet|LocalizedName|[Mateo.SpecialOrders.AQ5_12_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Leviathan|LocalizedName|[Mateo.SpecialOrders.AQ5_13_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Party Skeleton|LocalizedName|[Mateo.SpecialOrders.AQ5_14_LocalizedName]"
+                                },
+                                {
+                                    "RequiredTags": "",
+                                    "Value": "Target|Stygium Squid|LocalizedName|[Mateo.SpecialOrders.AQ5_15_LocalizedName]"
+                                },
                             ]
                         }
                     ],
@@ -502,6 +522,10 @@
                 "Mateo.SpecialOrders.AQ5_9_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.9.LocalizedName}}",
                 "Mateo.SpecialOrders.AQ5_10_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.10.LocalizedName}}",
                 "Mateo.SpecialOrders.AQ5_11_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.11.LocalizedName}}",
+                "Mateo.SpecialOrders.AQ5_12_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.12.LocalizedName}}",
+                "Mateo.SpecialOrders.AQ5_13_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.13.LocalizedName}}",
+                "Mateo.SpecialOrders.AQ5_14_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.14.LocalizedName}}",
+                "Mateo.SpecialOrders.AQ5_15_LocalizedName":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.15.LocalizedName}}",
                 "Mateo.SpecialOrders.AQ1_Name":"{{i18n:Quests.Mateo.SpecialOrders.AQ1.Name}}",
                 "Mateo.SpecialOrders.AQ1_Text":"{{i18n:Quests.Mateo.SpecialOrders.AQ1.Text}}",
                 "Mateo.SpecialOrders.AQ1.Objective_0_Text":"{{i18n:Quests.Mateo.SpecialOrders.AQ1.Objective.0.Text}}",

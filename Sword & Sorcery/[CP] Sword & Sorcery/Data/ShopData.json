@@ -667,7 +667,7 @@
               "ItemId": "{{ModID}}_farafieldsnack", 
               "Price": 1000,
               "IsRecipe": true,
-              "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Roslin.6"
+              "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Dandelion.7"
             },
           ]
         }
@@ -848,11 +848,60 @@
               "Price": 15000
             },
             {
+              "Id": "{{ModId}}_LMA18",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "ItemID": "(W)DN.SnS_axewaquestion",
+              "Price": 10000
+            },
+            {
+              "Id": "{{ModId}}_LMA19",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "ItemID": "(W)DN.SnS_mallymkun",
+              "Price": 10000
+            },
+            {
+              "Id": "{{ModId}}_LMA20",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "ItemID": "(W)DN.SnS_absolem",
+              "Price": 10000
+            },
+            {
+              "Id": "{{ModId}}_LMA21",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "ItemID": "(W)DN.SnS_mrhandy",
+              "Price": 8000
+            },
+            {
+              "Id": "{{ModId}}_LMA22",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "ItemID": "(W)DN.SnS_eldadagordagger",
+              "Price": 8000
+            },
+            {
+              "Id": "{{ModId}}_LMA23",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "ItemID": "(W)DN.SnS_glaewndilsword",
+              "Price": 8000
+            },
+            {
+              "Id": "{{ModId}}_LMA24",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "ItemID": "(W)DN.SnS_thondrondhammer",
+              "Price": 8000
+            },
+            {
               "Id": "Stygium Mushroom Tree Seed",
               "ItemId": "{{ModID}}_mushroomtreeseed", 
               "Price": 1000,
               "IsRecipe": true,
-              "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Roslin.6"
+              "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Dandelion.7"
             },
             {
               "Id": "Stygium Blade",
@@ -860,14 +909,14 @@
               "AvailableStockLimit": "Player",
               "ItemId": "(W){{ModID}}_StygiumBlade", 
               "Price": 10000,
-              "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Roslin.6"
+              "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Dandelion.7"
             },
             {
               "Id": "Elysium Blade",
               "ItemId": "{{ModID}}_ElysiumBlade", 
               "Price": 15000,
               "IsRecipe": true,
-              "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Roslin.6, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModID}}_ElysiumBlade"
+              "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Dandelion.7, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModID}}_ElysiumBlade"
             }
           ]
         }

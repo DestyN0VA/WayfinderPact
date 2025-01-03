@@ -41,16 +41,16 @@ Sword & Sorcery is a vanilla adjacent, magical adventure inspired by the likes o
 The Chapters of this story, all the way from a lone tent on the beach to a battle to save East Scarp from the remnants of a tragedy long thought passed to a series of epilogues for all the major NPCs.
  
 [font=dialogue]Table Of Contents[/font]
-> [link=Chapters/IntroNEA]Never Ending Adventure[/link]
+> [link=Chapters/IntroNEA]Never Ending Adventure[/link] ([link=Characters/Mateo]Mateo[/link])
  = [link=Chapters/NEA]Events[/link]
  
-> [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=Chapters/IntroCOT]Circle Of Thorns[/link][/if][else]Circle Of Thorns [color=DarkRed](Locked)[/color][/else]
+> [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=Chapters/IntroCOT]Circle Of Thorns[/link][/if][else]Circle Of Thorns [color=DarkRed](Locked)[/color][/else] ([link=Characters/Hector]Hector[/link])
  = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=Chapters/COT]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
  
-> [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Chapters/IntroUP]Under Pressure[/link][/if][else]Under Pressure [color=DarkRed](Locked)[/color][/else]
+> [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Chapters/IntroUP]Under Pressure[/link][/if][else]Under Pressure [color=DarkRed](Locked)[/color][/else] ([link=Characters/Cirrus]Cirrus[/link])
  = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Chapters/UP]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
  
-> [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]The Other Promise[/link][/if][else]The Other Promise [color=DarkRed](Locked)[/color][/else]
+> [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]The Other Promise[/link][/if][else]The Other Promise [color=DarkRed](Locked)[/color][/else] ([link=Characters/Roslin]Roslin[/link] & [link=Characters/Dandelion]Dandelion[/link])
  = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/TOP]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
  
 > [if=PLAYER_HAS_MAIL Current DuskspireDefeated][link=Chapters/IntroEpilogue]Epilogue[/link][/if][else]Epilogue [color=DarkRed](Locked)[/color][/else]
@@ -74,16 +74,46 @@ The Chapters of this story, all the way from a lone tent on the beach to a battl
 > [link=DeepDark/TableOfContents]The Deep Dark[/link]
  = The ins and outs of the Deep Dark dungeon explained.
  
-> [link=Miscellaneous/FAQ]FAQ & Cheats[/link]
+> [link=Miscellaneous/TableOfContents]FAQ & Cheats[/link]
  = Answering your questions and providing a few useful cheats.
  
 > [link=Dedication/LoreSeeker]Dedication[/link]
  = A dedication for someone great.
 ",
-"guidebook.chapter.Title.FAQ": "[center][font=dialogue][offset=0,8]Frequently Asked Questions:[/font][/center]
+"guidebook.chapter.Misc.TableOfContents": "[center][font=dialogue][offset=0,8]Miscellaneous[/font][/center]
+ 
+Have questions about the mod? We have answers.
+ 
+[font=dialogue]Table Of Contents[/font]
+> Frequently Asked Questions
+ = [link=Miscellaneous/FAQNPCs]NPCs[/link]
+ = [link=Miscellaneous/FAQItems]Items[/link]
+ = [link=Miscellaneous/FAQOther]Other[/link]
+ 
+> Other
+ = [link=Miscellaneous/Cheats]Cheats[/link]",
+"guidebook.chapter.Title.FAQ.NPCs": "[center][font=dialogue][offset=0,8]Frequently Asked Questions[/font][/center]
+[center][font=dialogue]NPCs[/font][/center]
  
 [color=maroon]How do I advance the story?[/color]
 This entire mod progresses linearly. See all of [link=Characters/Mateo]Mateo's[/link] events, meet [link=Characters/Hector]{{TrueName}}[/link]. See all of {{TrueName}}'s events, meet [link=Characters/Cirrus]Cirrus[/link]. See all of Cirrus' events, meet [link=Characters/Roslin]Roslin[/link]. See most of Roslin's events, meet [link=Characters/Dandelion]Dandelion[/link]. See their remaining events, and proceed to the [link=DeepDark/TableOfContents]final dungeon[/link] and the associated [link=DeepDark/DuskspireBehemoth]final boss[/link]. By then, you will have unlocked most of everything. What remains will be documented here.
+ 
+[color=maroon]What are the NPC's schedules?[/color]
+Due to their complexity, schedules are not documented here. Please use [link=https://www.nexusmods.com/stardewvalley/mods/239]NPC Map Locations[/link] or [link=https://www.nexusmods.com/stardewvalley/mods/19305]Schedule Viewer[/link] if you need help locating the NPCs.
+ 
+[color=maroon]What are the NPC's gift tastes?[/color]
+Due to the variability of gift tastes, they are not documented here. Please use [link=https://www.nexusmods.com/stardewvalley/mods/541]Lookup Anything[/link] and the F1 key on the NPC to automatically show their gift tastes.
+ 
+[color=maroon]How do I date/marry [link=Characters/Mateo]Mateo[/link], [link=Characters/Hector]Hector[/link] or [link=Characters/Cirrus]Cirrus[/link]?[/color]
+You can only date these NPCs after completing their specific [link=Chapters/TableOfContents]chapter[/link]. Trying to gift them a bouquet before this will result in rejection. You must also date the NPC for {{DatingCooldown}} days before you're allowed to marry them.
+ 
+[color=maroon]How do I get [link=Characters/Mateo]Mateo[/link], [link=Characters/Hector]{{TrueName}}[/link], and [link=Characters/Cirrus]Cirrus'[/link] hoodies?[/color]
+Marry them.
+ 
+[color=maroon]Who is Stiles Siddell?[/color]
+A character planned for Sword & Sorcery: Final Mix, a standalone remake of this mod. In this version, she is a falconer at the Ferngill Renaissance Faire who has some occasional off-screen interactions.",
+"guidebook.chapter.Title.FAQ.Items": "[center][font=dialogue][offset=0,8]Frequently Asked Questions[/font][/center]
+[center][font=dialogue]Items[/font][/center]
  
 [color=maroon]Where are the fish?[/color]
 Most fish added by S&S are in available in either the [color=green]Druid's Grove[/color] or the [color=green]Pocket Dimension[/color], and are not time restricted.
@@ -122,10 +152,9 @@ Some are sent in the mail, some are part of ranking the [link=Skills/DruidicsSki
 > [itemtooltip=(O)DN.SnS_zuzustylecheesecake][icon=Textures/DN.SnS/SnSObjects:128,64,16,16] [color=blue]ZuZu Style Cheesecake[/color][/itemtooltip]: Given by Cirrus.
 > [itemtooltip=(O)DN.SnS_zuzustyleclamchowder][icon=Textures/DN.SnS/SnSObjects:144,64,16,16] [color=blue]ZuZu Style Clam Chowder[/color][/itemtooltip]: Given by Cirrus.
 > [itemtooltip=(O)DN.SnS_ancientsweettea][icon=Textures/DN.SnS/SnSObjects:64,128,16,16] [color=blue]Ancient Sweet Tea[/color][/itemtooltip]: Given by Dandelion.
-> [itemtooltip=(O)DN.SnS_farafieldsnack][icon=Textures/DN.SnS/SnSObjects:128,176,16,16] [color=blue]Farafield Snack[/color][/itemtooltip]: The Lion's Mane.
- 
-[color=maroon]How do I get Mateo, {{TrueName}}, and Cirrus' hoodies?[/color]
-Marry them. 
+> [itemtooltip=(O)DN.SnS_farafieldsnack][icon=Textures/DN.SnS/SnSObjects:128,176,16,16] [color=blue]Farafield Snack[/color][/itemtooltip]: The Lion's Mane.",
+"guidebook.chapter.Title.FAQ.Other": "[center][font=dialogue][offset=0,8]Frequently Asked Questions[/font][/center]
+[center][font=dialogue]Other[/font][/center]
  
 [color=maroon]How do I turn off the Adventure Bar?[/color]
 Ctrl+U is the default hotkey. This can be changed in the S&S {{Config}}. 
@@ -146,9 +175,10 @@ No. If you are interested in mechanics-only mods, there are other alternatives. 
 [color=maroon]Is S&S compatible with multiple spouse mods?[/color]
 Use at your own risk, and report associated issues to the respective authors - not the S&S team. S&S's romanceable NPCs are not designed to be polyamorous, and {{TrueName}} is monogamous by design due to mechanical reasons.
  
-[color=maroon]Who is Stiles Siddell?[/color]
-A character planned for Sword & Sorcery: Final Mix, a standalone remake of this mod. In this version, she is a falconer at the Ferngill Renaissance Faire who has some occasional off-screen interactions.",
-"guidebook.chapter.Title.Cheats": "[center][font=dialogue][offset=0,8]Cheats:[/font][/center]
+[color=maroon]I found a bug! What do I do?[/color]
+Please report the bug on [link=https://discord.gg/sdv-east-scarp-community-702333912722178059]Discord[/link] or on [link=https://www.nexusmods.com/stardewvalley/mods/12369?tab=bugs]Nexus[/link].",
+
+"guidebook.chapter.Title.Cheats": "[center][font=dialogue][offset=0,8]Cheats[/font][/center]
  
 [color=maroon]How do I use cheat codes?[/color]
 Type them into the SMAPI console (black box that appears when you load) and hit enter. These are primarily for testing purposes, please don't report errors/bugs that are a direct result of their use.
@@ -1636,7 +1666,7 @@ Like vanilla skills, the Sorcerer skill provides professions that change the gam
 
 "guidebook.chapter.TOP.ElementalEssences": "[center][font=dialogue][offset=0,8]Elemental Essences[/font][/center]
  
-Upon meeting with Roslin in first event of Chapter 4, the Elemental Essences of[itemtooltip=(O)DN.SnS_EarthEssence][icon=Textures/DN.SnS/SnSObjects:96,128,16,16][color=brown]Earth[/color][/itemtooltip],[itemtooltip=(O)DN.SnS_AirEssence][icon=Textures/DN.SnS/SnSObjects:112,128,16,16][color=cornflowerblue]Air[/color][/itemtooltip],[itemtooltip=(O)DN.SnS_FireEssence][icon=Textures/DN.SnS/SnSObjects:144,128,16,16][color=Red]Fire[/color][/itemtooltip] and[itemtooltip=(O)DN.SnS_WaterEssence][icon=Textures/DN.SnS/SnSObjects:128,128,16,16][color=blue]Water[/color][/itemtooltip] will begin dropping around you.
+Upon meeting with Roslin in first event of [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]Chapter 4[/link][/if][else]Chapter 4[/else], the Elemental Essences of[itemtooltip=(O)DN.SnS_EarthEssence][icon=Textures/DN.SnS/SnSObjects:96,128,16,16][color=brown]Earth[/color][/itemtooltip],[itemtooltip=(O)DN.SnS_AirEssence][icon=Textures/DN.SnS/SnSObjects:112,128,16,16][color=cornflowerblue]Air[/color][/itemtooltip],[itemtooltip=(O)DN.SnS_FireEssence][icon=Textures/DN.SnS/SnSObjects:144,128,16,16][color=Red]Fire[/color][/itemtooltip] and[itemtooltip=(O)DN.SnS_WaterEssence][icon=Textures/DN.SnS/SnSObjects:128,128,16,16][color=blue]Water[/color][/itemtooltip] will begin dropping around you.
  
 Essences are used in quests, learning spells, alchemical recipes and using the [texttooltip=Teleportation Circle:Allows you to set up warp between two in-game locations.
 Usage documented in the Magical Grimoire after learning.][color=purple]Teleportation Circle[/color][/texttooltip].
@@ -1654,7 +1684,7 @@ Collection method:
 [font=dialogue]Alchemy[/font]
 Upon unlocking Sorcery, you will also gain the ability to learn how to make alchemical potions via the Philosopher's Stone menu. Like spells, these recipes are learned by exchanging [link=Mechanics/ElementalEssences]Elemental Essences[/link] in via sorcery research in the Magical Grimoire.
  
-All potions apply buffs that last for 11 minutes and 40 seconds.
+All buff potions apply buffs that last for 11 minutes and 40 seconds.
  
 >[itemtooltip=(O)DN.SnS_verdantpotion][icon=Textures/DN.SnS/SnSObjects:80,80,16,16][color=purple]Verdant[/color][/itemtooltip] - +5 Foraging
 >[itemtooltip=(O)DN.SnS_scarletpotion][icon=Textures/DN.SnS/SnSObjects:96,80,16,16][color=purple]Scarlet[/color][/itemtooltip] - +5 Attack
@@ -1666,6 +1696,10 @@ All potions apply buffs that last for 11 minutes and 40 seconds.
 >[itemtooltip=(O)DN.SnS_matrixpotion][icon=Textures/DN.SnS/SnSObjects:32,96,16,16][color=purple]Matrix[/color][/itemtooltip] - +5 Mining, +3 Magnetism
 >[itemtooltip=(O)DN.SnS_mcdougalpotion][icon=Textures/DN.SnS/SnSObjects:48,96,16,16][color=purple]McDougal[/color][/itemtooltip] - +5 Luck
 >[itemtooltip=(O)DN.SnS_toirneachpotion][icon=Textures/DN.SnS/SnSObjects:64,96,16,16][color=purple]Toirneach[/color][/itemtooltip] - +4 Mining, +4 Defense
+>[itemtooltip=(O)DN.SnS_ReturnPotion][icon=Textures/DN.SnS/SnSObjects:16,144,16,16][color=purple]Potion of Return[/color][/itemtooltip] 
+  = Creates a portal on your farm
+     that returns you to the last
+     place you drank the potion.
  
 [font=dialogue]Transmutation[/font]
 If you find yourself in need of a specific [link=Mechanics/ElementalEssences]Elemental Essence[/link], you can transmutate one essence into another from the Transmutation menu in your Magical Grimoire.
@@ -1820,7 +1854,7 @@ Signed with love, DestyNova.",
  
 The Deep Dark is a late-game 30 floor dungeon crawling with powerful monsters and the rare ore, Stygium. Here you'll find beautiful maps, custom forage and new monsters with unique item drop pools. Once you reach the end you'll face off against the mod's final boss: The Duskspire Behemoth.
  
-It's advised you prepare yourself with Sword & Sorcery's new mechanics and late-game vanilla mechanics before tackling this location.
+It's advised you prepare yourself with Sword & Sorcery's new mechanics and late-game vanilla mechanics before tackling this location. It unlocks at the end of [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]Chapter 4[/link][/if][else]Chapter 4[/else].
  
 [font=dialogue]Table Of Contents[/font]
 > The Floors
@@ -2067,7 +2101,7 @@ Stygium Gear List
 > [itemtooltip=(T)DN.SnS_StygiumHoe][icon=Textures/DN.SnS/StygiumTools:80,32,16,16] [color=blue]Stygium Hoe[/color][/itemtooltip]
 > [itemtooltip=(T)DN.SnS_StygiumAxe][icon=Textures/DN.SnS/StygiumTools:80,96,16,16] [color=blue]Stygium Axe[/color][/itemtooltip]
 > [itemtooltip=(T)DN.SnS_StygiumWateringCan][icon=Textures/DN.SnS/StygiumTools:48,128,16,16] [color=blue]Stygium Watering Can[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_StygiumBlade][icon=Textures/DN.SnS/StygiumTools:0,0,16,16] [color=blue]Stygium Blade[/color][/itemtooltip] (Recipe: Lion's Mane)
+> [itemtooltip=(W)DN.SnS_StygiumBlade][icon=Textures/DN.SnS/StygiumTools:0,0,16,16] [color=blue]Stygium Blade[/color][/itemtooltip]
 > [itemtooltip=(W)DN.SnS_StygiumShield][icon=Textures/DN.SnS/SnSObjects:80,192,16,16] [color=blue]Stygium Shield[/color][/itemtooltip] (Recipe: Default)
 > [itemtooltip=(O)DN.SnS_StygiumArmor][icon=Textures/DN.SnS/SnSArsenal:0,112,16,16] [color=blue]Stygium Armor[/color][/itemtooltip] (Recipe: Artificer level-up)
  
@@ -2095,7 +2129,9 @@ Notes:
 "guidebook.chapter.DeepDark.Duskspire": "[center][font=dialogue][offset=0,8]Duskspire Behemoth[/font][/center]
 [offset=200,0][image=Textures/DN.SnS/SnSMonsterIcons:23,66,18,13:4]The Duskspire is the final boss at the end of the Deep Dark mine. When you initially fight the Duskspire, it is a two stage fight. The first state simulates a turn-based JRPG, while the second is an arena fight using the game's typical combat mechanics.
  
-When defeated, the Duskspire drops [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16][color=blue]Duskspire Hearts[/color][/itemtooltip], which are used to purify [Link=DeepDark/Stygium]Stygium Tools[/link]. The Duskspire can then be re-fought in a weaker form to obtain more Duskspire Hearts. This fight resets every Monday.",
+When defeated, the Duskspire drops [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16][color=blue]Duskspire Hearts[/color][/itemtooltip], which are used to purify [Link=DeepDark/Stygium]Stygium Tools[/link]. The Duskspire can then be re-fought in a weaker form to obtain more Duskspire Hearts. This fight resets every Monday.
+ 
+In phase 2, if you in a relationship with [link=Characters/Mateo]Mateo[/link], [link=Characters/Hector]Hector[/link], [link=Characters/Cirrus]Cirrus[/link], Gunnar or [link=https://www.nexusmods.com/stardewvalley/mods/10770?tab=description]Sen[/link], they will fight along side you. ",
 
 "guidebook.chapter.Mechanics.TableOfContents": "[center][font=dialogue][offset=0,8]Introduction[/font][/center]
  
@@ -2122,8 +2158,10 @@ Learn about the different mechanics you'll encounter throughout the story of Swo
  = [link=Mechanics/AlchemyTransmutation]Alchemy & Transmutation[/link]
  
 > Miscellaneous
+ = [link=Mechanics/SpecialOrderBoard]East Scarp Special Order Board[/link]
  = [link=Mechanics/GingerBeer]Ginger Beer Fermentation[/link]
  = [link=Mechanics/Powers]Powers[/link]
+ = [link=Mechanics/Shops]Shops[/link]
 ",
 
 "guidebook.chapter.Mechanics.Skills": "[center][font=dialogue][offset=0,8]Introduction[/font][/center]
@@ -2148,6 +2186,93 @@ All of the Sword & Sorcery Skills, their professions and what they provide, all 
 ",
 "guidebook.chapter.Mechanics.SMAPIConfigLink.On": "[color=purple][texttooltip=:Opens GMCM for the SMAPI component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig KCC.SnS]SMAPI Config[/action][/texttooltip][/color]",
 "guidebook.chapter.Mechanics.SMAPIConfigLink.Off": "SMAPI Config",
+
+"guidebook.chapter.Mechanics.SpecialOrderBoard": "[center][font=dialogue][offset=0,8]ES Special Order Board[/font][/center]
+ 
+After building the [color=green]East Scarp Coastal Guild[/color] during [link=Chapters/IntroNEA]Chapter 1[/link], you will gain the ability to take on monster slayer quests. Rewards typically include gold and S&S oriented skill books that grant experience. A new book is added to the pool every time you unlock a new [link=Skills/TableOfContents]S&S skill[/link].
+ 
+Potential Book List
+{{BookTextures}}
+> [itemtooltip=(O)SkillBook_4][icon=TileSheets/Objects_2:96,176,16,16] [color=blue]Combat Quarterly[/color][/itemtooltip] - Until [link=Skills/ArtificerSkill]Artificer[/link] unlock
+ 
+Note:
+These books can also be purchased from the vanilla book seller after the associated [link=Skills/TableOfContents]skill[/link] has been unlocked.
+",
+
+"guidebook.chapter.Mechanics.Shops.BookTextures.Lumina": "> [itemtooltip=(O)DN.SnS_artificerbook][icon=Textures/DN.SnS/SnSBooks:0,0,16,16] [color=blue]Tasha's Artificer Handbook[/color][/itemtooltip] - [link=Skills/ArtificerSkill]Artificer[/link]
+> [itemtooltip=(O)DN.SnS_druidbook][icon=Textures/DN.SnS/SnSBooks:16,0,16,16] [color=blue]Halsin's Guide to Druidics[/color][/itemtooltip] - [link=Skills/DruidicsSkill]Druidics[/link]
+> [itemtooltip=(O)DN.SnS_bardbook][icon=Textures/DN.SnS/SnSBooks:32,0,16,16] [color=blue]Volothamp's Songbook[/color][/itemtooltip] - [link=Skills/BardicsSkill]Bardics[/link]
+> [itemtooltip=(O)DN.SnS_sorcerybook][icon=Textures/DN.SnS/SnSBooks:48,0,16,16] [color=blue]Xanathar's Guide to Everything[/color][/itemtooltip] - [link=Skills/SorcererSkill]Sorcery[/link]
+> [itemtooltip=(O)DN.SnS_paladinbook][icon=Textures/DN.SnS/SnSBooks:64,0,16,16] [color=blue]Valtari's Ravenloft Dossier[/color][/itemtooltip] - [link=Skills/PaladinSkill]Paladin[/link]",
+"guidebook.chapter.Mechanics.Shops.BookTextures.Daine": "> [itemtooltip=(O)DN.SnS_artificerbook][icon=Textures/DN.SnS/SnSBooks:0,16,16,16] [color=blue]Tasha's Artificer Handbook[/color][/itemtooltip] - [link=Skills/ArtificerSkill]Artificer[/link]
+> [itemtooltip=(O)DN.SnS_druidbook][icon=Textures/DN.SnS/SnSBooks:16,16,16,16] [color=blue]Halsin's Guide to Druidics[/color][/itemtooltip] - [link=Skills/DruidicsSkill]Druidics[/link]
+> [itemtooltip=(O)DN.SnS_bardbook][icon=Textures/DN.SnS/SnSBooks:32,16,16,16] [color=blue]Volothamp's Songbook[/color][/itemtooltip] - [link=Skills/BardicsSkill]Bardics[/link]
+> [itemtooltip=(O)DN.SnS_sorcerybook][icon=Textures/DN.SnS/SnSBooks:48,16,16,16] [color=blue]Xanathar's Guide to Everything[/color][/itemtooltip] - [link=Skills/SorcererSkill]Sorcery[/link]
+> [itemtooltip=(O)DN.SnS_paladinbook][icon=Textures/DN.SnS/SnSBooks:64,16,16,16] [color=blue]Valtari's Ravenloft Dossier[/color][/itemtooltip] - [link=Skills/PaladinSkill]Paladin[/link]",
+
+"guidebook.chapter.Mechanics.Shops": "[center][font=dialogue][offset=0,8]Shops[/font][/center]
+ 
+[font=dialogue]Mateo's Ledger[/font]
+- Always open -
+ 
+After building the [color=green]East Scarp Coastal Guild[/color] for [link=Characters/Mateo]Mateo[/link] in [link=Chapters/IntroNEA]Chapter 1[/link], you gain access to Mateo's Ledger. Here you can trade[itemtooltip=(O)881][icon=maps/springobjects:272,576,16,16]Bone Fragments[/itemtooltip] for various minerals and artifacts you might be missing for the [color=green]Pelican Town Museum[/color].
+ 
+[font=dialogue]Lion's Mane Cafe[/font]
+- Open from 12pm to 8pm - 
+ 
+After helping [link=Characters/Cirrus]Cirrus[/link] repair the [color=green]Lions Mane[/color] in [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Chapters/IntroUP]Chapter 3[/link][/if][else]Chapter 3[/else], you gain access to the Lion's Mane Cafe. In this shop you can purchase various foods exclusive to Sword and Sorcery, as well as various base game dishes.
+ 
+S&S Unique Stock List
+> [itemtooltip=(O)DN.SnS_autumnalstew][icon=Textures/DN.SnS/SnSObjects:128,16,16,16] [color=blue]Autumnal Stew[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_salishbourbon][icon=Textures/DN.SnS/SnSObjects:112,16,16,16] [color=blue]Salish Bourbon[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_dandeliongreens][icon=Textures/DN.SnS/SnSObjects:144,16,16,16] [color=blue]Dandelion Greens[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_portfiredrakesparkler][icon=Textures/DN.SnS/SnSObjects:0,32,16,16] [color=blue]Portfire Drake Sparkler[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_zuzustylepizza][icon=Textures/DN.SnS/SnSObjects:96,64,16,16] [color=blue]ZuZu Style Pizza[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_zuzustylebagelwithlox][icon=Textures/DN.SnS/SnSObjects:112,64,16,16] [color=blue]ZuZu Style Bagel with Lox[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_zuzustylecheesecake][icon=Textures/DN.SnS/SnSObjects:128,64,16,16] [color=blue]ZuZu Style Cheesecake[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_zuzustyleclamchowder][icon=Textures/DN.SnS/SnSObjects:144,64,16,16] [color=blue]ZuZu Style Clam Chowder[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_farafieldsnack][icon=Textures/DN.SnS/SnSObjects:128,176,16,16] [color=blue]Farafield Snack[/color][/itemtooltip] (Recipe)
+ 
+[font=dialogue]Lion's Mane Armory[/font]
+- Open from 12pm to 8pm -
+ 
+After [link=Characters/Dandelion]Dandelion[/link] returns in [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]Chapter 4[/link][/if][else]Chapter 4[/else], you gain access to the Lion's Mane Armory. Here you can purchase various [link=Mechanics/AlchemyTransmutation]potions[/link] and weapons exclusive to Sword and Sorcery.
+ 
+S&S Unique Stock List
+> [itemtooltip=(O)DN.SnS_verdantpotion][icon=Textures/DN.SnS/SnSObjects:80,80,16,16][color=blue] Verdant Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_scarletpotion][icon=Textures/DN.SnS/SnSObjects:96,80,16,16][color=blue] Scarlet Potion[/color][/itemtooltip] 
+> [itemtooltip=(O)DN.SnS_heatherpotion][icon=Textures/DN.SnS/SnSObjects:112,80,16,16][color=blue] Heather Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_zydratepotion][icon=Textures/DN.SnS/SnSObjects:128,80,16,16][color=blue] Zydrate Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_pistachiopotion][icon=Textures/DN.SnS/SnSObjects:144,80,16,16][color=blue] Pistachio Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_dahliapotion][icon=Textures/DN.SnS/SnSObjects:0,96,16,16][color=blue] Dahlia Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_slushiepotion][icon=Textures/DN.SnS/SnSObjects:16,96,16,16][color=blue] Slushie Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_matrixpotion][icon=Textures/DN.SnS/SnSObjects:32,96,16,16][color=blue] Matrix Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_mcdougalpotion][icon=Textures/DN.SnS/SnSObjects:48,96,16,16][color=blue] McDougal Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_toirneachpotion][icon=Textures/DN.SnS/SnSObjects:64,96,16,16][color=blue] Toirneach Potion[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_keytoscarp][icon=Textures/DN.SnS/SnSObjects:16,32,16,16][color=blue] Key To the Scarp[/color][/itemtooltip] 
+> [itemtooltip=(W)DN.SnS_savethequeen][icon=Textures/DN.SnS/SnSObjects:48,32,16,16][color=blue] Save the Queen[/color][/itemtooltip] 
+> [itemtooltip=(W)DN.SnS_savetheking][icon=Textures/DN.SnS/SnSObjects:80,32,16,16][color=blue] Save the King[/color][/itemtooltip] 
+> [itemtooltip=(W)DN.SnS_twobecomeone][icon=Textures/DN.SnS/SnSObjects:32,32,16,16][color=blue] Two Become One[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_oathkeeper][icon=Textures/DN.SnS/SnSObjects:64,32,16,16][color=blue] Oath Keeper[/color][/itemtooltip] 
+> [itemtooltip=(W)DN.SnS_waytothedawn][icon=Textures/DN.SnS/SnSObjects:96,32,16,16][color=blue] Way to the Dawn[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_spellbinder][icon=Textures/DN.SnS/SnSObjects:80,96,16,16][color=blue] Spell Binder[/color][/itemtooltip] 
+> [itemtooltip=(W)DN.SnS_threewishes][icon=Textures/DN.SnS/SnSObjects:96,96,16,16][color=blue] Three Wishes[/color][/itemtooltip] 
+> [itemtooltip=(W)DN.SnS_ladyluck][icon=Textures/DN.SnS/SnSObjects:112,96,16,16][color=blue] Lady Luck[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_bondofflame][icon=Textures/DN.SnS/SnSObjects:144,96,16,16][color=blue] Bond of Flame[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_destinysembrace][icon=Textures/DN.SnS/SnSObjects:0,112,16,16][color=blue] Destiny's Embrace[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_sweetmemories][icon=Textures/DN.SnS/SnSObjects:16,112,16,16][color=blue] Sweet Memories[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_guardianbell][icon=Textures/DN.SnS/SnSObjects:48,112,16,16][color=blue] Guardian Bell[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_axewaquestion][icon=Textures/DN.SnS/SnSObjects:32,112,16,16][color=blue] Axe You A Question[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_mallymkun][icon=Textures/DN.SnS/SnSObjects:80,112,16,16][color=blue] Mallymkun[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_absolem][icon=Textures/DN.SnS/SnSObjects:64,112,16,16][color=blue] Absolem[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_mrhandy][icon=Textures/DN.SnS/SnSObjects:128,96,16,16][color=blue] Mr. Handy[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_eldadagordagger][icon=Textures/DN.SnS/SnSObjects:64,48,16,16][color=blue] Eldadagor Dagger[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_glaewndilsword][icon=Textures/DN.SnS/SnSObjects:80,48,16,16][color=blue] Glaewndil Sword[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_thondrondhammer][icon=Textures/DN.SnS/SnSObjects:96,48,16,16][color=blue] Thondrond Hammer[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_StygiumBlade][icon=Textures/DN.SnS/StygiumTools:0,0,16,16][color=blue] Stygium Blade[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_ElysiumBlade][icon=Textures/DN.SnS/BlessedTools:0,0,16,16][color=blue] Elysium Blade[/color][/itemtooltip] (Recipe)
+> [itemtooltip=(O)DN.SnS_mushroomtreeseed][icon=Textures/DN.SnS/SnSObjects:64,176,16,16][color=blue] Tainted Mushroom Tree Seed[/color][/itemtooltip] (Recipe)",
+
 "guidebook.chapter.Mechanics.AdventureBar": "[center][font=dialogue][offset=0,8]Adventure Bar[/font][/center]
  
 After obtaining [link=Skills/ArtificerProfessions]Shadowstep[/link] or [link=Skills/DruidicsSkill]Shapeshifting[/link], you will unlock the [color=Navy]Adventure Bar[/color], which hosts your abilities and displays your current [color=Navy]Aether[/color].

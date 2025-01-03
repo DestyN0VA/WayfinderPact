@@ -131,7 +131,7 @@
                   "IgnoreObjectCollisions": true,
                   "Min": 45,
                   "Max": 65,
-                  "Filters": [ "Shadow Guy", "Shadow Shaman", "Shadow Sniper", "Shadow Brute" ]
+                  "Filters": [ "Shadow Guy", "Shadow Shaman", "Shadow Sniper", "Shadow Brute", "Stygium Crab", "Rock Crab", "Truffle Crab", "Lava Crab", "Iridium Crab", "Stygium False Mushroom" ]
                 }
               },
               {

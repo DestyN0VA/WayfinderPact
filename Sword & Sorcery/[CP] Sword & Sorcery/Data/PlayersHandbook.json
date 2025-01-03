@@ -255,13 +255,21 @@
                   "Contents": "{{i18n: guidebook.chapter.TOP.AlchemyTransmutation}}"
                 },
                 {
+                  "Id": "SpecialOrderBoard",
+                  "Contents": "{{i18n: guidebook.chapter.Mechanics.SpecialOrderBoard|BookTextures={{i18n: guidebook.chapter.Mechanics.Shops.BookTextures.{{BookTextures}}}}}}"
+                },
+                {
                   "Id": "GingerBeer",
                   "Contents": "{{i18n: guidebook.chapter.Mechanics.GingerBeer}}"
                 },
                 {
                   "Id": "Powers",
                   "Contents": "{{i18n: guidebook.chapter.Mechanics.Powers}}"
-                }
+                },
+                {
+                  "Id": "Shops",
+                  "Contents": "{{i18n: guidebook.chapter.Mechanics.Shops}}"
+                },
               ]
             },
             "DeepDark": {
@@ -311,8 +319,20 @@
               },
               "Pages": [
                 {
-                  "Id": "FAQ",
-                  "Contents": "{{i18n: guidebook.chapter.Title.FAQ|Config={{SMAPIConfigLink}}|TrueName={{TrueName}}}}"
+                  "Id": "TableofContents",
+                  "Contents": "{{i18n: guidebook.chapter.Misc.TableOfContents}}"
+                },
+                {
+                  "Id": "FAQNPCs",
+                  "Contents": "{{i18n: guidebook.chapter.Title.FAQ.NPCs|DatingCooldown={{DatingLength}}|Config={{SMAPIConfigLink}}|TrueName={{TrueName}}}}"
+                },
+                {
+                  "Id": "FAQItems",
+                  "Contents": "{{i18n: guidebook.chapter.Title.FAQ.Items}}"
+                },
+                {
+                  "Id": "FAQOther",
+                  "Contents": "{{i18n: guidebook.chapter.Title.FAQ.Other|TrueName={{TrueName}}|Config={{SMAPIConfigLink}}}}"
                 },
                 {
                   "Id": "Cheats",

@@ -623,7 +623,7 @@
   "Gifts.Mateo.GiftReaction.DwarfScrollI": "Dwarvish is a rich, complex language. Having these scrolls accessible to everyone is invaluable so that more people can learn.$0 [96]",
   "Gifts.Mateo.GiftReaction.DwarfScrollII": "Dwarvish is a rich, complex language. Having these scrolls accessible to everyone is invaluable so that more people can learn.$0[97]",
   "Gifts.Mateo.GiftReaction.DwarfScrollIII": "Dwarvish is a rich, complex language. Having these scrolls accessible to everyone is invaluable so that more people can learn.$0[98]",
-  "Gifts.Mateo.GiftReaction.Dwarf_ScrollIV": "Dwarvish is a rich, complex language. Having these scrolls accessible to everyone is invaluable so that more people can learn.$0[99]",
+  "Gifts.Mateo.GiftReaction.DwarfScrollIV": "Dwarvish is a rich, complex language. Having these scrolls accessible to everyone is invaluable so that more people can learn.$0[99]",
   "Gifts.Mateo.GiftReaction.ChippedAmphora": "This is a relic of a culture we're still pretty unfamiliar with.$0[100]",
   "Gifts.Mateo.GiftReaction.Arrowhead": "This is a relic of a culture we're still pretty unfamiliar with.$0[101]",
   "Gifts.Mateo.GiftReaction.LostBook": "You shouldn't have this.$37[102]",
@@ -1041,6 +1041,10 @@
   "Quests.Mateo.SpecialOrders.AQ5.9.LocalizedName": "Stygium False Mushrooms",
   "Quests.Mateo.SpecialOrders.AQ5.10.LocalizedName": "Stygium Miner Mages",
   "Quests.Mateo.SpecialOrders.AQ5.11.LocalizedName": "Stygium Serpants",
+  "Quests.Mateo.SpecialOrders.AQ5.12.LocalizedName": "Stygium Droplets",
+  "Quests.Mateo.SpecialOrders.AQ5.13.LocalizedName": "Stygium Leviathans",
+  "Quests.Mateo.SpecialOrders.AQ5.14.LocalizedName": "Rare Stygium Skeletons",
+  "Quests.Mateo.SpecialOrders.AQ5.15.LocalizedName": "Stygium Stygium Squids",
 
   // COASTAL GUILD SPECIAL ORDERS - BOARD OBJECTIVES
   "Quests.Mateo.SpecialOrders.AQ1.Name": "From the Guildmaster:",

@@ -1430,6 +1430,15 @@
             "A": 255
           }
         },
+        "{{ModID}}_ReturnPotion": {
+          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
         // CUSTOM SNACK CATEGORY 
         "{{ModID}}_fountainsoda": {
           "CategoryTextOverride": "{{i18n:catgeory.snack}}",
