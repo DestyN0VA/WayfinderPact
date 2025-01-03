@@ -423,11 +423,11 @@
       "Action": "EditData",
       "Target": "Data/TriggerActions",
       "Entries": {
-        "{{ModID}}_SendPlayersHandbook": {
-          "Id": "{{ModID}}_SendPlayersHandbook",
+        "{{ModID}}_SendPlayersHandbook1": {
+          "Id": "{{ModID}}_SendPlayersHandbook1",
           "Trigger": "DayStarted",
           "Actions": [
-            "AddMail Current DestyLetter tomorrow"
+            "AddMail Current DestyLetter now"
           ]
         }
       }
