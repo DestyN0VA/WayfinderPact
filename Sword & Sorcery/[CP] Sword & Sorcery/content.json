@@ -2038,15 +2038,6 @@
       "Value": "pause 1"
     },
     {
-      "Name": "SnS.Ch4.Intermissions.SenExtra.4",
-      "Value": "changeSprite SenS SenbrellaSnS",
-      "When": { "HasMod |contains=7thAxis.LitD.CP, 7thAxis.DitR": true }
-    },
-    {
-      "Name": "SnS.Ch4.Intermissions.SenExtra.5",
-      "Value": "pause 1"
-    },
-    {
       "Name": "SnS.Ch4.Intermissions.SenExtra.5",
       "Value": "emote SenS 32 true/pause 200/emote farmer 32 true",
       "When": {
