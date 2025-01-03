@@ -264,7 +264,7 @@ namespace SwordAndSorcerySMAPI
         public KeybindList ConfigureAdventureBar = new(SButton.U);
         public KeybindList ToggleAdventureBar = new(new Keybind(SButton.LeftControl, SButton.U));
 
-        public bool EarlyPaladinUnlock = true;
+        public bool EarlyPaladinUnlock = false;
 
         public bool LltkToggleRightClick = false;
         public KeybindList LltkToggleKeybind = new(new Keybind(SButton.None));
