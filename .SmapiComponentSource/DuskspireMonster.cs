@@ -206,13 +206,13 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
         {
             DelayedAction.playMusicAfterDelay("SnS.DuskspireDeath", 100);
         }
-        DelayedAction.playSoundAfterDelay("SnS.DuskspireLaugh_NoLoop", 500, currentLocation, Position, local: true);
-        var pos = Position - new Vector2(Sprite.getWidth()/2, Sprite.getHeight()/2);
+        DelayedAction.playSoundAfterDelay("SnS.DuskspireLaugh_NoLoop", 1000, currentLocation, Position, local: true);
+        var pos = Position - new Vector2(Sprite.SpriteWidth * Game1.pixelZoom / 2, Sprite.SpriteHeight * Game1.pixelZoom);
         TemporaryAnimatedSprite DuskspireDeath = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 0, 96, 96), 75, 84, 0, pos, false, false) { scale = 4 };
         TemporaryAnimatedSprite DuskspireHeart = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 2016, 96, 96), 75, 16, 5, pos, false, false) { scale = 4 };
         currentLocation.TemporarySprites.Add(DuskspireDeath);
         DelayedAction.addTemporarySpriteAfterDelay(DuskspireHeart, Game1.getLocationFromName("EastScarp_DuskspireLair"), 6300);
-        DelayedAction.functionAfterDelay(() => Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_DuskspireHeart"), Position, Game1.down, currentLocation), 12300);
+        DelayedAction.functionAfterDelay(() => Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_DuskspireHeart"), Utility.PointToVector2(StandingPixel), Game1.down, currentLocation), 12300);
         currentLocation.modData.Add("DN.SnS_DuskspireFaught", "true");
     }
 
