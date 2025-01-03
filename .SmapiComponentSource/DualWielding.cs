@@ -18,7 +18,7 @@ public static class DualWieldExtensions
 {
     public static MeleeWeapon GetOffhand(this Farmer farmer)
     {
-        return ModSnS.sc.GetItemInEquipmentSlot(farmer, $"{ModSnS.instance.ModManifest.UniqueID}_Offhand") as MeleeWeapon;
+        return ModSnS.sc.GetItemInEquipmentSlot(farmer, $"{ModSnS.instance.ModManifest.UniqueID}_Offhand") as MeleeWeapon ?? null;
     }
 }
 

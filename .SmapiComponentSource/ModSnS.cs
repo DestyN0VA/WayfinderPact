@@ -160,7 +160,7 @@ namespace SwordAndSorcerySMAPI
 
         public static bool IsShieldItem(this MeleeWeapon mw)
         {
-            return (mw.GetData()?.CustomFields?.ContainsKey("DN.SnS_Shield") ?? false);
+            return mw?.GetData()?.CustomFields?.ContainsKey("DN.SnS_Shield") ?? false;
         }
 
         public static int? GetArmorAmount(this Item item, bool includeArmor = true, bool includeMageArmor = true)
@@ -170,9 +170,9 @@ namespace SwordAndSorcerySMAPI
             int MageArmor = Game1.player.GetFarmerExtData().mageArmor ? 50 : 0;
 
             if (Game1.player.CurrentTool is MeleeWeapon mw1 && mw1.IsShieldItem())
-                ShieldAmount += GetAmount(mw1);
+                ShieldAmount += GetAmount(mw1) ?? 0;
             if (Game1.player.GetOffhand() is MeleeWeapon mw2 && mw2.IsShieldItem())
-                ShieldAmount += GetAmount(mw2);
+                ShieldAmount += GetAmount(mw2) ?? 0;
 
             if (Game1.player.HasCustomProfession(PaladinSkill.ProfessionShieldArmor2))
                 ShieldAmount *= 4;
@@ -186,18 +186,18 @@ namespace SwordAndSorcerySMAPI
             return FinalAmount == 0 ? null : FinalAmount;
         }
 
-        public static int GetAmount(Item item)
+        public static int? GetAmount(Item item)
         {
             if (item is MeleeWeapon)
             {
                 if (item != null && ItemRegistry.GetDataOrErrorItem(item.QualifiedItemId).RawData is WeaponData data &&
-                        (data.CustomFields?.TryGetValue("ArmorValue", out string valStr) ?? false) && int.TryParse(valStr, out int val))
+                        (data?.CustomFields?.TryGetValue("ArmorValue", out string valStr) ?? false) && int.TryParse(valStr, out int val))
                     return val;
                 else
                     return 25;
             }
             else if (item != null && ItemRegistry.GetDataOrErrorItem(item.QualifiedItemId).RawData is ObjectData data &&
-                (data.CustomFields?.TryGetValue("ArmorValue", out string valStr) ?? false) && int.TryParse(valStr, out int val))
+                (data?.CustomFields?.TryGetValue("ArmorValue", out string valStr) ?? false) && int.TryParse(valStr, out int val))
                 return val;
             
             return 0;
@@ -1857,23 +1857,22 @@ namespace SwordAndSorcerySMAPI
     {
         public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager)
         {
-
             if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && __instance.CanBeDamaged() && __instance.GetFarmerExtData().maxMana.Value > __instance.GetFarmerExtData().mana.Value)
             {
                 __instance.GetFarmerExtData().mana.Value += (int)MathF.Min(Game1.random.Next(5,10), __instance.GetFarmerExtData().maxMana.Value - __instance.GetFarmerExtData().mana.Value);
             }
-            int ArmorAmount = Game1.player.CurrentItem.GetArmorAmount() ?? Game1.player.GetArmorItem().GetArmorAmount() ?? Game1.player.GetOffhand().GetArmorAmount() ?? -1;
+            int ArmorAmount = Game1.player.CurrentItem?.GetArmorAmount() ?? Game1.player.GetArmorItem()?.GetArmorAmount() ?? Game1.player.GetOffhand()?.GetArmorAmount() ?? -1;
             var ext = Game1.player.GetFarmerExtData();
             if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||
                 ext.armorUsed.Value >= ArmorAmount)
                 return true;
 
+            bool num = damager != null && !damager.isInvincible() && !overrideParry;
             bool flag = (damager == null || !damager.isInvincible()) && (damager == null || (damager is not GreenSlime && damager is not BigSlime) || !__instance.isWearingRing("520"));
             if (!flag) return true;
 
             __instance.playNearbySoundAll("parry");
-
-            ext.armorUsed.Value = Math.Min(Game1.player.GetArmorItem().GetArmorAmount().Value, ext.armorUsed.Value + damage);
+            ext.armorUsed.Value = Math.Min(ArmorAmount, ext.armorUsed.Value + damage);
             damage = 0;
 
             return true;

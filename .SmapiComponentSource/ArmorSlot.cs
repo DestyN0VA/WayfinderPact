@@ -32,7 +32,7 @@ namespace SwordAndSorcerySMAPI
 
         public static Item GetArmorItem(this Farmer farmer)
         {
-            return ModSnS.sc.GetItemInEquipmentSlot(farmer, $"{ModSnS.instance.ModManifest.UniqueID}_Armor");
+            return ModSnS.sc.GetItemInEquipmentSlot(farmer, $"{ModSnS.instance.ModManifest.UniqueID}_Armor") ?? null;
         }
 
         public static void SetArmorItem(this Farmer farmer, Item item)
