@@ -80,11 +80,11 @@
                 "FrameStart": 20,
                 "FrameLength": 16,
                 "Interval": 200
-            },
+            }
             },
             "Args": {
               "Min": 64,
-              "Rate": 500,
+              "Rate": 400,
               "MoveSync": true
             }
           },

@@ -7,10 +7,14 @@
                 "{{ModId}}.Emeritus": {
                     "DisplayName": "{{i18n:Strings.Names.Emeritus}}",
                     "House": "Barn",
-                    "Texture": "Characters/MateoEmeritus",
+                    "Texture": "Characters/MateoEmeritus_MEEP",
                     "SpriteWidth": 32,
                     "SpriteHeight": 32,
-                    "SleepFrame": 16
+                    "SleepFrame": 24,
+                    "UseFlippedRightForLeft": false,
+                    "UseDoubleUniqueAnimationFrames": true,
+                    "ShadowWhenBaby": { "Visible": false },
+                    "ShadowWhenAdult": { "Visible": false }
                 }
             }
         },
@@ -30,8 +34,7 @@
                     "HomeTileX": 90,
                     "HomeTileY": 100,
                     "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Mateo.12, WEATHER EastScarp_Village Sun"
-                },
-                
+                },                
                 "{{ModId}}.Emeritus_Inside": {
                     "AnimalId": "{{ModId}}.Emeritus",
                     "Age": 1,

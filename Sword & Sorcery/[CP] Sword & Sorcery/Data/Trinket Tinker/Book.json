@@ -49,8 +49,10 @@
             "Args": {
               "Magnitude": 16,
               "Period": 800,
+              "Min": 64,
+              "Rate": 200,
               "PerchingTimeout": 9000,
-              "PerchingOffset": "32,15"
+              "PerchingOffset": "32,32"
             }
           },
           "Abilities": [
