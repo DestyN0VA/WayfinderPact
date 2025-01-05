@@ -371,15 +371,23 @@
     {
       "LogName": "Load Furniture Image",
       "Action": "Load",
-      "Target": "Mods/Sword & Sorcery/GuidebookItem, Mods/Sword & Sorcery/InMemoryOfLoreSeeker",
+      "Target": "Mods/Sword & Sorcery/Handbook_Table_Oak, Mods/Sword & Sorcery/InMemoryOfLoreSeeker",
       "FromFile": "Assets/Guidebook/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Furniture Overlay",
+      "Action": "EditImage",
+      "Target": "Mods/Sword & Sorcery/Handbook_Table_Oak",
+      "FromFile": "Assets/Guidebook/Handbook_Table_{{HandbookColorScheme}}.png",
+      "PatchMode": "Overlay",
+      "When": { "HandbookColorScheme|Contains=Oak": false }
     },
     {
       "LogName": "Create Furniture",
       "Action": "EditData",
       "Target": "Data/Furniture",
       "Entries": {
-        "{{ModID}}_PlayersHandbook": "{{ModID}}_PlayersHandbook/decor/1 2/1 1/1/500/2/{{i18n:Furniture.PlayersHandbook}}/{{PlayersHandbookColor}}/Mods\\Sword & Sorcery\\GuidebookItem/true"
+        "{{ModID}}_PlayersHandbook": "{{ModID}}_PlayersHandbook/decor/1 2/1 1/1/500/2/{{i18n:Furniture.PlayersHandbook}}/0/Mods\\Sword & Sorcery\\Handbook_Table_Oak/true"
       }
     },
     {

@@ -3198,7 +3198,7 @@ ________      ________ _   _ _______ _____
 
   // BIRTHDAYS
   "Core.Cirrus.Fall25": "It's Mateo's birthday today! Some home-cooked food will do them some good. I'll get right on that!$1",
-  "Core.Cirrus.Winter21": "It's Biróg's birthday today! I bet {{HectorPN1}} would appreciate some love today, even if {{HectorPN1}}  pretends not to want the attention.$1",
+  "Core.Cirrus.Winter21": "It's Biróg's birthday today! I bet {{HPN1}} would appreciate some love today, even if {{HPN1}}  pretends not to want the attention.$1",
 
   // END OF SEASON
   "Core.Cirrus.SpringEnd": "I won't pretend to know anything about farming, but I can say I'm looking forward to cooking stuff up with your Summer stock.$4",
@@ -6132,7 +6132,7 @@ ________      ________ _   _ _______ _____
   "Events.SnS.Ch4.Intermission.Sen.03": "Urgh... Just stay safe, okay?$s",
   "Events.SnS.Ch4.Intermission.Sen.04": "No, @! You're asking for a death wish!$a#$b#I simply refuse to allow you to go this alone.$a",
   "Events.SnS.Ch4.Intermission.Sen.05": "Then stick with me, Sen. Just like you always have.",
-  "Events.SnS.Ch4.Intermission.Sen.06": "Of course. I'd never leave you to face something... something like that alone!$u#$b#I might not be a trained like the rest of you, but Skrell taught me a thing or two growing up.$a",
+  "Events.SnS.Ch4.Intermission.Sen.06": "Of course. I'd never leave you to face something... something like that alone!$u#$b#I might not be trained like the rest of you, but Skrell taught me a thing or two growing up.$a",
   "Events.SnS.Ch4.Intermission.Sen.07": "You're not much of a fighter, Sen...",
   "Events.SnS.Ch4.Intermission.Sen.08": "Hey, we've been through so much together! You're gonna underestimate me now?$u#$b#You saw the guy who raised me, right? I'm sticking with you till the end. No if ands or buts!$a",
   "Events.SnS.Ch4.Intermission.Sen.09": "Sigh... you really are always running around playing hero, huh?#$b#Well, I guess you're not 'playing'. You really are a hero...$l",
@@ -7671,12 +7671,12 @@ ________      ________ _   _ _______ _____
   "config.Castertype.values.Alchahestrist": "Alchahestrist",
   "config.Castertype.values.Bard": "Bard",
 
-  "config.PlayersHandbookColorScheme.name": "PlayersHandbookColorScheme",
-  "config.PlayersHandbookColorScheme.description": "Changes the textures of S&S Skill Books.",
-  "config.PlayersHandbookColorScheme.values.Black/Red": "Black/Red",
-  "config.PlayersHandbookColorScheme.values.White/Blue": "White/Blue",
-  "config.PlayersHandbookColorScheme.values.Cream/Green": "Cream/Green",
-  "config.PlayersHandbookColorScheme.values.Brown/Purple": "Brown/Purple",
+  "config.HandbookColorScheme.name": "PlayersHandbookColorScheme",
+  "config.HandbookColorScheme.description": "Changes the textures of S&S Skill Books.",
+  "config.HandbookColorScheme.values.Oak": "Oak",
+  "config.HandbookColorScheme.values.Walnut": "Walnut",
+  "config.HandbookColorScheme.values.Birch": "Birch",
+  "config.HandbookColorScheme.values.Mahogany": "Mahogany",
 
   "config.EquipmentMenuConfig.name": "EquipmentMenuConfig",
   "config.EquipmentMenuConfig.description": "Recolors the Equipment Menu added by Spacecore to match Bog's Forest UI, DaisyNiko's Earthy UI, Enteis' Natural Dark Wood UI, Nom0ri's Vintage UI V2 for 1.6, Shinchan's Purple UI, SQBR's StarryBlue UI, or TheFrenchDodo's Sakura Interface Redux.",

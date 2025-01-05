@@ -16,7 +16,7 @@
                     "BirthDay": 18,
                     "HomeRegion": "Town",
                     "CanBeRomanced": "{{CirrusRelationshipStatus}}",
-                    "ExcludeFromPerfectionScore": false,
+                    "PerfectionScore": true,
                     "EndSlideShow": "TrailingGroup",
                     "SpawnIfMissing": true,
                     "IntroductionsQuest": false,

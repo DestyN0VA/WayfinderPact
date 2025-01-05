@@ -116,7 +116,7 @@
         "movieTheater": "{{i18n:Core.Cirrus.MovieTheater}}",
         // BIRTHDAYS
         "fall_25": "{{i18n:Core.Cirrus.Fall25}}",
-        "winter_21": "{{i18n:Core.Cirrus.Winter21}}",
+        "winter_21": "{{i18n:Core.Cirrus.Winter21{{HectorPronouns}}}}",
         // END OF SEASON
         "spring_28": "{{i18n:Core.Cirrus.SpringEnd}}",
         "summer_28": "{{i18n:Core.Cirrus.SummerEnd}}",

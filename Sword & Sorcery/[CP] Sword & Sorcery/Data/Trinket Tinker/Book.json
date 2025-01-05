@@ -61,6 +61,7 @@
                 "AbilityClass": "Health",
                 "Proc": "Timer",
                 "ProcTimer": 25000,
+                "ProcOneshotAnim": "Perching",
                 "ProcTAS": [ "{{ModId}}_HectorStaminaRestore" ],
                 "ProcSound": "healSound",
                 "Args": { "Min": 0.15, "Max": 0.15 }

@@ -79,7 +79,8 @@
               "Howl": {
                 "FrameStart": 20,
                 "FrameLength": 16,
-                "Interval": 200
+                "Interval": 200,
+                "PauseMovement": true
             }
             },
             "Args": {

@@ -17,7 +17,7 @@
                     "HomeRegion": "Town",
                     "CanBeRomanced": "{{MateoRelationshipStatus}}",
                     "LoveInterest": "Aideen",
-                    "ExcludeFromPerfectionScore": false,
+                    "PerfectionScore": true,
                     "EndSlideShow": "TrailingGroup",
                     "SpawnIfMissing": true,
                     "SocialTab": "UnknownUntilMet",

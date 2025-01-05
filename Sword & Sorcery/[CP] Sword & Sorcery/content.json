@@ -434,9 +434,9 @@
       "Description": "Changes the textures of S&S Skill Books.",
       "Section": "Miscellaneous"
     },
-    "PlayersHandbookColorScheme": {
-      "AllowValues": "Black/Red, White/Blue, Cream/Green, Brown/Purple",
-      "Default": "Black/Red",
+    "HandbookColorScheme": {
+      "AllowValues": "Oak, Walnut, Birch, Mahogany",
+      "Default": "Oak",
       "AllowBlank": false,
       "Description": "Changes the the color scheme of the 'Player's Handbook' furniture item.",
       "Section": "Miscellaneous"
@@ -611,6 +611,10 @@
     },
     {
       "Name": "MateoRelationshipStatus",
+      "Value": "false"
+    },
+    {
+      "Name": "MateoRelationshipStatus",
       "Value": "false",
       "When": {
         "Query: {{HasFlag |contains=RivalHearts_AideenMateo}} OR NOT {{HasFlag |contains=MateoRomanticFlag}}": true
@@ -619,9 +623,7 @@
     {
       "Name": "MateoRelationshipStatus",
       "Value": "true",
-      "When": {
-        "HasFlag": "MateoRomanticFlag"
-      }
+      "When": { "HasFlag": "MateoRomanticFlag" }
     },
     {
       "Name": "MateoHospitalScene_Setup",
@@ -2389,34 +2391,6 @@
       "Value": "{{KCC.SnS/PocketDimensionUpgrade}}",
       "When": {
         "HasValue: {{KCC.SnS/PocketDimensionUpgrade}}": true
-      }
-    },
-    {
-      "Name": "PlayersHandbookColor",
-      "Value": "0",
-      "When": {
-        "PlayersHandbookColorScheme": "Black/Red"
-      }
-    },
-    {
-      "Name": "PlayersHandbookColor",
-      "Value": "1",
-      "When": {
-        "PlayersHandbookColorScheme": "White/Blue"
-      }
-    },
-    {
-      "Name": "PlayersHandbookColor",
-      "Value": "2",
-      "When": {
-        "PlayersHandbookColorScheme": "Cream/Green"
-      }
-    },
-    {
-      "Name": "PlayersHandbookColor",
-      "Value": "3",
-      "When": {
-        "PlayersHandbookColorScheme": "Brown/Purple"
       }
     },
     {

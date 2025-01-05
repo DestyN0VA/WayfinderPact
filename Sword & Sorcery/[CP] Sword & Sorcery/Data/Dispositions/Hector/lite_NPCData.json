@@ -16,7 +16,7 @@
                     "BirthDay": 21,
                     "HomeRegion": "Town",
                     "CanBeRomanced": "{{HectorRelationshipStatus}}",
-                    "ExcludeFromPerfectionScore": false,
+                    "PerfectionScore": true,
                     "EndSlideShow": "TrailingGroup",
                     "SpawnIfMissing": true,
                     "IntroductionsQuest": false,
