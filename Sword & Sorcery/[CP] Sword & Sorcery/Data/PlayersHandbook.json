@@ -44,7 +44,7 @@
               "Pages": [
                 {
                   "Id": "TableOfContents",
-                  "Contents": "{{i18n: guidebook.chapter.Chapters.JumpList}}"
+                  "Contents": "{{i18n: guidebook.chapter.Chapters.JumpList|TrueName={{TrueName}}}}"
                 },
                 {
                   "Id": "IntroNEA",
@@ -52,7 +52,7 @@
                 },
                 {
                   "Id": "NEA",
-                  "Contents": "{{i18n: guidebook.chapter.NEA.Events |VariableTimegate={{VariableTimegate}} {{HectorPronouns}} |GalaxySwordExtras={{i18n: guidebook.chapter.GalaxySwordExtras.{{GalaxySwordExtras}}}}}}"
+                  "Contents": "{{i18n: guidebook.chapter.NEA.Events |TrueName={{TrueName}} |VariableTimegate={{VariableTimegate}} {{HectorPronouns}} |GalaxySwordExtras={{i18n: guidebook.chapter.GalaxySwordExtras.{{GalaxySwordExtras}}}}}}"
                 },
                 {
                   "Id": "IntroCOT",
@@ -71,7 +71,7 @@
                 },
                 {
                   "ID": "UP",
-                  "Contents": "{{i18n: guidebook.chapter.UP.Events {{TrollHeritageEvents}} |CirrusExtras={{i18n: guidebook.chapter.CirrusExtras.{{CirrusExtras}}}} |VariableTimegate={{VariableTimegate}} |JulietJessie={{i18n:guidebook.UP.Events.JJ.{{HasMod: |contains=LemurKat.JulietHouse.NPC}}}} }}",
+                  "Contents": "{{i18n: guidebook.chapter.UP.Events |TrueName={{TrueName}} {{TrollHeritageEvents}} |CirrusExtras={{i18n: guidebook.chapter.CirrusExtras.{{CirrusExtras}}}} |VariableTimegate={{VariableTimegate}} |JulietJessie={{i18n:guidebook.UP.Events.JJ.{{HasMod: |contains=LemurKat.JulietHouse.NPC}}}} }}",
                   "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16"
                 },
                 {
@@ -81,7 +81,7 @@
                 },
                 {
                   "ID": "TOP",
-                  "Contents": "{{i18n: guidebook.chapter.TOP.Events {{TrollHeritageEvents}} |VariableTimegate={{VariableTimegate}} |IsRSVInstalled={{i18n: guidebook.chapter.TOP.RoslinEssence.{{HasMod|Contains=Rafseazz.RSVCP}}}} |IsChocoboValleyInstalled={{i18n:guidebook.chapter.TOP.DandelionShield.{{HasMod|Contains=Kitsutsune.Chocobovalley}}}}}}",
+                  "Contents": "{{i18n: guidebook.chapter.TOP.Events |TrueName={{TrueName}} {{TrollHeritageEvents}} |VariableTimegate={{VariableTimegate}} |IsRSVInstalled={{i18n: guidebook.chapter.TOP.RoslinEssence.{{HasMod|Contains=Rafseazz.RSVCP}}}} |IsChocoboValleyInstalled={{i18n:guidebook.chapter.TOP.DandelionShield.{{HasMod|Contains=Kitsutsune.Chocobovalley}}}}}}",
                   "Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14"
                 },
                 {
@@ -264,7 +264,7 @@
                 },
                 {
                   "Id": "Powers",
-                  "Contents": "{{i18n: guidebook.chapter.Mechanics.Powers}}"
+                  "Contents": "{{i18n: guidebook.chapter.Mechanics.Powers|TrueName={{TrueName}}}}"
                 },
                 {
                   "Id": "Shops",
@@ -304,7 +304,7 @@
                 },
                 {
                   "Id": "Duskspire",
-                  "Contents": "{{i18n: guidebook.chapter.DeepDark.Duskspire}}"
+                  "Contents": "{{i18n: guidebook.chapter.DeepDark.Duskspire|TrueName={{TrueName}}}}"
                 }
               ]
             },
@@ -371,7 +371,7 @@
     {
       "LogName": "Load Furniture Image",
       "Action": "Load",
-      "Target": "Mods/Sword & Sorcery/Handbook_Table_Oak, Mods/Sword & Sorcery/InMemoryOfLoreSeeker",
+      "Target": "Mods/Sword & Sorcery/Handbook_Table_Oak, Mods/Sword & Sorcery/BearFamKeychain, Mods/Sword & Sorcery/InMemoryOfLoreSeeker,",
       "FromFile": "Assets/Guidebook/{{TargetWithoutPath}}.png"
     },
     {

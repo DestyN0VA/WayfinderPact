@@ -34,7 +34,7 @@
             "FromFile": "Assets/Portraits/Dandelion/{{TargetWithoutPath}}_pendant.png",
             "PatchMode": "Overlay",
             "Update": "OnLocationChange",
-            "When": { "HasSeenEvent |contains=SnS.Ch5.Dandelion.1": true, "HasMod |contains=McJoan.Dandelion": false }
+            "When": { "HasSeenEvent |contains=SnS.Ch5.Dandelion": true, "HasMod |contains=McJoan.Dandelion": false }
         }
     ]
 }
