@@ -2500,6 +2500,18 @@
       "Name": "KeyChainType",
       "Value": "addItem (TR){{ModId}}_OwlBoyKeychain 1/addMailReceived ReceivedTTOwlBoy",
       "When": { "HasMod": "mushymato.TrinketTinker" }
+    },
+    { "Name": "StygiumArmorIngredient", "Value": "{{ModID}}_IridiumArmor" },
+    {
+      "Name": "StygiumArmorIngredient",
+      "Value": "{{ModID}}_RadioactiveArmor",
+      "When": { "HasFlag": "reachedBottomOfHardMines" }
+    },
+    { "Name": "StygiumShieldIngredient", "Value": "(W){{ModID}}_IridiumShield" },
+    {
+      "Name": "StygiumShieldIngredient",
+      "Value": "(W){{ModID}}_RadioactiveShield",
+      "When": { "HasFlag": "reachedBottomOfHardMines" }
     }
   ]
 }

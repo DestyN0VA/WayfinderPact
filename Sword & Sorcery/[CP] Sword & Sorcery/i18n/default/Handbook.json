@@ -2337,7 +2337,8 @@ Shields are a new type of weapon available to the player. They can be used as a 
  = [itemtooltip=(W)DN.SnS_DruidShield][icon=Textures/DN.SnS/SnSObjects:64,160,16,16] [color=blue]Druid Shield[/color][/itemtooltip] +35 Armor Points. 
  = [itemtooltip=(W)DN.SnS_BardShield][icon=Textures/DN.SnS/SnSObjects:80,160,16,16] [color=blue]Bardics Shield[/color][/itemtooltip] +35 Armor Points.
  = [itemtooltip=(W)DN.SnS_SorcererShield][icon=Textures/DN.SnS/SnSObjects:96,160,16,16] [color=blue]Sorcerer Shield[/color][/itemtooltip] +35 Armor Points.
-",
+ 
+Note: The crafting recipes for [itemtooltip=(W)DN.SnS_StygiumShield][icon=Textures/DN.SnS/SnSObjects:80,192,16,16][color=blue]Stygium Shield[/color][/itemtooltip] and [itemtooltip=(O)DN.SnS_StygiumArmor][icon=Textures/DN.SnS/SnSArsenal:0,112,16,16][color=blue]Stygium Armor[/color] will change to require radioactive tier ingredients if you've reached the bottom of the [color=green]Dangerous Mines[/color].[/itemtooltip]",
 "guidebook.chapter.Mechanics.DualWielding": "[center][font=dialogue][offset=0,8]Dual Wielding[/font][/center]
  
 Sword & Sorcery introduces [color=Navy]Dual Wielding[/color], allowing you to use two weapons at once. You can equip a second weapon for dual wielding through the [link=Mechanics/EquipmentSlots]Equipment Menu[/link].

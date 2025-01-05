@@ -846,7 +846,7 @@
           "Ingredients": [
             {
               "Type": "Item",
-              "Value": "(W){{ModID}}_RadioactiveShield",
+              "Value": "{{StygiumShieldIngredient}}",
               "Amount": 1
             },
             {
