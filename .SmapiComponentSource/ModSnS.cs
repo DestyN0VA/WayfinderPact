@@ -1866,7 +1866,7 @@ namespace SwordAndSorcerySMAPI
             if (num && playerParryable)
                 return;
 
-            if (overrideParry || !__instance.CanBeDamaged() || !flag)
+            if (__instance != Game1.player ||  overrideParry || !__instance.CanBeDamaged() || !flag)
                 return;
 
             if (ArmorAmount > 0 && ext.armorUsed.Value < ArmorAmount)
