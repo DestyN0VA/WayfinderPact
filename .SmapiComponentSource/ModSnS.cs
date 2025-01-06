@@ -9,6 +9,7 @@ using NeverEndingAdventure;
 using NeverEndingAdventure.Utils;
 using RadialMenu;
 using SpaceCore;
+using SpaceCore.Dungeons;
 using SpaceShared.APIs;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
@@ -1632,18 +1633,13 @@ namespace SwordAndSorcerySMAPI
             abil.Function();
         }
 
-        private void Player_Warped(object sender, StardewModdingAPI.Events.WarpedEventArgs e)
+        private void Player_Warped(object sender, WarpedEventArgs e)
         {
             if (State.MyThrown.Count > 0)
             {
                 foreach (var entry in State.MyThrown)
                     entry.Dead = true;
                 State.MyThrown.Clear();
-            }
-
-            if (Game1.player.eventsSeen.Contains(ModSnS.ShadowstepEventReq))
-            {
-                //ModSnS.State.InShadows = true;
             }
 
             var ext = Game1.player.GetFarmerExtData();
@@ -1660,7 +1656,7 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        private void Display_RenderedHud(object sender, StardewModdingAPI.Events.RenderedHudEventArgs e)
+        private void Display_RenderedHud(object sender, RenderedHudEventArgs e)
         {
             if (!Context.IsWorldReady || Game1.CurrentEvent != null)
                 return;
@@ -1855,27 +1851,55 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(Farmer), nameof(Farmer.takeDamage))]
     public static class FarmerArmorBlocksDamagePatch
     {
-        public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager)
+        public static void Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager, ref bool __state)
         {
+            __state = false;
             if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && __instance.CanBeDamaged() && __instance.GetFarmerExtData().maxMana.Value > __instance.GetFarmerExtData().mana.Value)
-            {
                 __instance.GetFarmerExtData().mana.Value += (int)MathF.Min(Game1.random.Next(5,10), __instance.GetFarmerExtData().maxMana.Value - __instance.GetFarmerExtData().mana.Value);
-            }
-            int ArmorAmount = Game1.player.CurrentItem?.GetArmorAmount() ?? Game1.player.GetArmorItem()?.GetArmorAmount() ?? Game1.player.GetOffhand()?.GetArmorAmount() ?? -1;
-            var ext = Game1.player.GetFarmerExtData();
-            if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||
-                ext.armorUsed.Value >= ArmorAmount)
-                return true;
 
+            int ArmorAmount = __instance.GetArmorItem()?.GetArmorAmount() ?? -1;
+            var ext = __instance.GetFarmerExtData();
             bool num = damager != null && !damager.isInvincible() && !overrideParry;
             bool flag = (damager == null || !damager.isInvincible()) && (damager == null || (damager is not GreenSlime && damager is not BigSlime) || !__instance.isWearingRing("520"));
-            if (!flag) return true;
+            bool playerParryable = __instance.CurrentTool is MeleeWeapon && ((MeleeWeapon)__instance.CurrentTool).isOnSpecial && (int)((MeleeWeapon)__instance.CurrentTool).type.Value == 3;
 
-            __instance.playNearbySoundAll("parry");
-            ext.armorUsed.Value = Math.Min(ArmorAmount, ext.armorUsed.Value + damage);
-            damage = 0;
+            if (num && playerParryable)
+                return;
 
-            return true;
+            if (overrideParry || !__instance.CanBeDamaged() || !flag)
+                return;
+
+            if (ArmorAmount > 0 && ext.armorUsed.Value < ArmorAmount)
+            {
+                __instance.playNearbySoundAll("parry");
+                ext.armorUsed.Value = Math.Min(ArmorAmount, ext.armorUsed.Value + damage);
+                damager?.parried(0, __instance);
+                __instance.temporarilyInvincible = true;
+                __instance.flashDuringThisTemporaryInvincibility = true;
+                __instance.temporaryInvincibilityTimer = 0;
+                __instance.currentTemporaryInvincibilityDuration = 1200 + __instance.GetEffectsOfRingMultiplier("861") * 400;
+            }
+            else if (ext.mirrorImages.Value != 0 && Game1.random.Next(ext.mirrorImages.Value + 1) != 0)
+            {
+                Vector2 spot = Game1.player.StandingPixel.ToVector2();
+                float rad = (float)-Game1.currentGameTime.TotalGameTime.TotalSeconds / 3 * 2;
+                rad += MathF.PI * 2 / 3 * (ext.mirrorImages.Value - 1);
+                spot += new Vector2(MathF.Cos(rad) * Game1.tileSize, MathF.Sin(rad) * Game1.tileSize);
+
+                ext.mirrorImages.Value -= 1;
+                for (int i = 0; i < 8; ++i)
+                {
+                    Vector2 diff = new Vector2(Game1.random.Next(96) - 48, Game1.random.Next(96) - 48);
+                    __instance.currentLocation.TemporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Rectangle(0, 320, 64, 64), 50f, 8, 0, spot - new Vector2(32, 48) + diff, flicker: false, flipped: false));
+                }
+                __instance.playNearbySoundAll("coldSpell");
+                __instance.temporarilyInvincible = true;
+                __instance.flashDuringThisTemporaryInvincibility = true;
+                __instance.temporaryInvincibilityTimer = 0;
+                __instance.currentTemporaryInvincibilityDuration = 1200 + __instance.GetEffectsOfRingMultiplier("861") * 400;
+            }
+
+            return;
         }
     }
 

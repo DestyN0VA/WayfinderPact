@@ -172,7 +172,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Postfix(Object __instance, ref bool __result)
         {
-            if (__instance != null && __instance is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))
+            if (__instance != null && (__instance.HasContextTag("keychain_item") || (__instance is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))))
             {
                 __result = false;
             }
@@ -184,7 +184,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Postfix(Item __instance, ref bool __result)
         {
-            if (__instance != null && __instance is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))
+            if (__instance != null && (__instance.HasContextTag("keychain_item") || (__instance is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))))
             {
                 __result = false;
             }
@@ -200,6 +200,16 @@ namespace SwordAndSorcerySMAPI
             {
                 __result = false;
             }
+        }
+    }
+
+    [HarmonyPatch(typeof(Object), nameof(Object.canBeGivenAsGift))]
+    public static class ObjectNoGifting
+    {
+        public static void Postfix(Object __instance, ref bool __result)
+        {
+            if (__instance != null && __instance.HasContextTag("keychain_item"))
+                __result = false;
         }
     }
 }
