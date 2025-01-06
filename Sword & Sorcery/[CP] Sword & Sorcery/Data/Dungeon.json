@@ -1716,6 +1716,28 @@
                     "PlayRandomAmbientSounds": false,
                     "CopyWeatherFromLocation": "Desert",
                     "DefaultMusic": "Volcano_Ambient",
+                    "AllowRainTotem": false,
+                    "MaxPassOutCost": 3500,
+                    "ReviveLocations": [
+                        {
+                            "Id": "Default",
+                            "Condition": null,
+                            "Location": "Hospital",
+                            "Position": {
+                              "X": 20,
+                              "Y": 12
+                            }
+                        }
+                      ],
+                      "PassOutMail": [
+                        {
+                          "Id": "Default",
+                          "Condition": null,
+                          "Mail": "passedOut2",
+                          "MaxPassOutCost": 3500,
+                          "SkipRandomSelection": false
+                        }
+                      ],
                     "CustomFields": {}
                 },
 
@@ -1724,18 +1746,84 @@
                     "PlayRandomAmbientSounds": false,
                     "CopyWeatherFromLocation": "Desert",
                     "DefaultMusic": "SnS.DeepDarkDark",
+                    "AllowRainTotem": false,
+                    "MaxPassOutCost": 2500,
+                    "ReviveLocations": [
+                        {
+                            "Id": "Default",
+                            "Condition": null,
+                            "Location": "Hospital",
+                            "Position": {
+                              "X": 20,
+                              "Y": 12
+                            }
+                        }
+                      ],
+                      "PassOutMail": [
+                        {
+                          "Id": "Default",
+                          "Condition": null,
+                          "Mail": "passedOut2",
+                          "MaxPassOutCost": 2500,
+                          "SkipRandomSelection": false
+                        }
+                      ],
                     "CustomFields": {}
                 },
                 "SnSDeepDarkMushrooms": {
                     "PlayRandomAmbientSounds": false,
                     "CopyWeatherFromLocation": "Desert",
                     "DefaultMusic": "SnS.DeepDarkMushrooms",
+                    "AllowRainTotem": false,
+                    "MaxPassOutCost": 2500,
+                    "ReviveLocations": [
+                        {
+                            "Id": "Default",
+                            "Condition": null,
+                            "Location": "Hospital",
+                            "Position": {
+                              "X": 20,
+                              "Y": 12
+                            }
+                        }
+                      ],
+                      "PassOutMail": [
+                        {
+                          "Id": "Default",
+                          "Condition": null,
+                          "Mail": "passedOut2",
+                          "MaxPassOutCost": 2500,
+                          "SkipRandomSelection": false
+                        }
+                      ],
                     "CustomFields": {}
                 },
                 "SnSDeepDarkLakes": {
                     "PlayRandomAmbientSounds": false,
                     "CopyWeatherFromLocation": "Desert",
                     "DefaultMusic": "SnS.DeepDarkLakes",
+                    "AllowRainTotem": false,
+                    "MaxPassOutCost": 2500,
+                    "ReviveLocations": [
+                        {
+                            "Id": "Default",
+                            "Condition": null,
+                            "Location": "Hospital",
+                            "Position": {
+                              "X": 20,
+                              "Y": 12
+                            }
+                        }
+                      ],
+                      "PassOutMail": [
+                        {
+                          "Id": "Default",
+                          "Condition": null,
+                          "Mail": "passedOut2",
+                          "MaxPassOutCost": 2500,
+                          "SkipRandomSelection": false
+                        }
+                      ],
                     "CustomFields": {}
                 }
             }
