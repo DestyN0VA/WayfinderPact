@@ -1371,49 +1371,6 @@ namespace SwordAndSorcerySMAPI
 
     // NOTE: Transparency for mirror image rendering is in the Shadowstep patch (since they share the transparency variable)
 
-    [HarmonyPatch(typeof(Farmer), nameof(Farmer.takeDamage))]
-    public static class FarmerMirrorImageDamagePatch
-    {
-        [HarmonyPriority(Priority.HigherThanNormal)]
-        public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager)
-        {
-            var ext = Game1.player.GetFarmerExtData();
-            if (__instance != Game1.player || overrideParry || !Game1.player.CanBeDamaged() ||
-                ext.mirrorImages.Value <= 0)
-                return true;
-
-            bool flag = (damager == null || !damager.isInvincible()) && (damager == null || (damager is not GreenSlime && damager is not BigSlime) || !__instance.isWearingRing("520"));
-            if (!flag) return true;
-
-            if (Game1.random.Next(ext.mirrorImages.Value + 1) != 0)
-            {
-                Vector2 spot = Game1.player.StandingPixel.ToVector2();
-                float rad = (float)-Game1.currentGameTime.TotalGameTime.TotalSeconds / 3 * 2;
-                /*
-                switch (ext.mirrorImages.Value)
-                {
-                    case 1: spot -= new Vector2(0, Game1.tileSize); break;
-                    case 2: spot += new Vector2(-Game1.tileSize, Game1.tileSize); break;
-                    case 3: spot += new Vector2(Game1.tileSize, Game1.tileSize); break;
-                }
-                */
-                rad += MathF.PI * 2 / 3 * (ext.mirrorImages.Value - 1);
-                spot += new Vector2(MathF.Cos(rad) * Game1.tileSize, MathF.Sin(rad) * Game1.tileSize);
-
-                ext.mirrorImages.Value -= 1;
-                for (int i = 0; i < 8; ++i)
-                {
-                    Vector2 diff = new Vector2(Game1.random.Next(96) - 48, Game1.random.Next(96) - 48);
-                    Game1.player.currentLocation.TemporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Rectangle(0, 320, 64, 64), 50f, 8, 0, spot - new Vector2(32, 48) + diff, flicker: false, flipped: false));
-                }
-                __instance.playNearbySoundAll("coldSpell");
-
-                damage = 0;
-            }
-            return true;
-        }
-    }
-
     [HarmonyPatch(typeof(Flooring), nameof(Flooring.doCollisionAction))]
     public static class FlooringTeleportCirclePatch
     {
