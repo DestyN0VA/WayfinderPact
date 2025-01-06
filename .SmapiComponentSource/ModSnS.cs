@@ -964,6 +964,8 @@ namespace SwordAndSorcerySMAPI
                 "nom0ri.vintageuifix",
                 "Sqbr.StarryBlueUI",
                 "Bos.UIInterface",
+                "VinillaBean.LavenderDreams",
+                "silvermoonchan.PurpleGalaxyUI"
             ];
 
             if (e.NameWithoutLocale.IsEquivalentTo("DN.SnS/ArmorSlot"))

@@ -2429,6 +2429,16 @@
       "When": { "HasMod": "thefrenchdodo.sakurainterfaceredux", "EquipmentMenuConfig": true }
     },
     {
+      "Name": "SpaceCoreRecolors",
+      "Value": "VinillaBean.LavenderDreams_equipmentmenu",
+      "When": { "HasMod": "VinillaBean.LavenderDreams", "EquipmentMenuConfig": true }
+    },
+    {
+      "Name": "SpaceCoreRecolors",
+      "Value": "silvermoonchan.PurpleGalaxyUI_equipmentmenu",
+      "When": { "HasMod": "silvermoonchan.PurpleGalaxyUI", "EquipmentMenuConfig": true }
+    },
+    {
       "Name": "GuidebookRecolors",
       "Value": "Tabs"
     },
@@ -2466,6 +2476,16 @@
       "Name": "GuidebookRecolors",
       "Value": "thefrenchdodo.sakurainterfaceredux_tabs",
       "When": { "HasMod": "thefrenchdodo.sakurainterfaceredux" }
+    },
+    {
+      "Name": "GuidebookRecolors",
+      "Value": "VinillaBean.LavenderDreams_tabs",
+      "When": { "HasMod": "VinillaBean.LavenderDreams" }
+    },
+    {
+      "Name": "GuidebookRecolors",
+      "Value": "silvermoonchan.PurpleGalaxyUI_tabs",
+      "When": { "HasMod": "silvermoonchan.PurpleGalaxyUI" }
     },
     {
       "Name": "BookFormDT",

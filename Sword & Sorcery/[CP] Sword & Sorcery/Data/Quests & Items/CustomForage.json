@@ -527,7 +527,8 @@
       "CustomFields": null,
       "GrowsMoss": false
     }
-  }
+  },
+  "When": { "HasSeenEvent": "SnS.Ch4.Dandelion.7" }
 }
 ]
 }
