@@ -128,6 +128,9 @@ public static class DualWieldingDrawPatch
         int type,
         bool isOnSpecial)
     {
+        if (f != Game1.player) return;
+
+        playerPosition = f.getLocalPosition(Game1.viewport) + f.jitter + f.armOffset;
         if (doingDualWieldCall)
             return;
 

@@ -373,12 +373,12 @@ namespace SwordAndSorcerySMAPI
         }
     }
 
-    [HarmonyPatch(typeof(MeleeWeapon), nameof(MeleeWeapon.drawInMenu), [typeof(SpriteBatch), typeof(Vector2), typeof(float), typeof(float), typeof(float), typeof(StackDrawType), typeof(Color), typeof(bool)])]
+    [HarmonyPatch(typeof(MeleeWeapon), nameof(MeleeWeapon.drawTooltip))]
     public static class MeleeWeaponSetAttachmentCountForLLTK
     {
         public static void Postfix(MeleeWeapon __instance)
         {
-            if (Game1.activeClickableMenu is ItemGrabMenu) return;
+            if (__instance?.ItemId?.EqualsIgnoreCase("DN.SnS_longlivetheking") ?? false && __instance.AttachmentSlotsCount != 2)
             if (__instance?.ItemId?.EqualsIgnoreCase("DN.SnS_longlivetheking") ?? false) __instance.AttachmentSlotsCount = 2;
         }
     }

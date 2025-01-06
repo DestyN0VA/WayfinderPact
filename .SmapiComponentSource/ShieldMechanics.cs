@@ -37,6 +37,9 @@ namespace SwordAndSorcerySMAPI
             if (!__instance.IsShieldItem())
                 return true;
 
+            if (__instance.lastUser != Game1.player) 
+                return true;
+
             Vector2 diff = ModSnS.instance.Helper.Input.GetCursorPosition().AbsolutePixels - Game1.player.StandingPixel.ToVector2();
             if (diff.Length() > 0 && diff.Length() > 5 * Game1.tileSize)
             {

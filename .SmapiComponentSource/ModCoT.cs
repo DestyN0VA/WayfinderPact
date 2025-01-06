@@ -373,7 +373,7 @@ namespace CircleOfThornsSMAPI
         }
     }
 
-    [HarmonyPatch(typeof(Farmer), "updateCommon")]
+    [HarmonyPatch(typeof(Farmer), "Update")]
     public static class FarmerUpdatePatch
     {
         public static void Postfix(Farmer __instance, GameTime time)
