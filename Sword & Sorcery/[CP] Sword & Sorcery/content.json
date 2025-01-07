@@ -2411,7 +2411,7 @@
     {
       "Name": "SpaceCoreRecolors",
       "Value": "nom0ri.vintageuifix_equipmentmenu",
-      "When": { "HasMod": "nom0ri.vintageuifix", "EquipmentMenuConfig": true }
+      "When": { "HasMod |contains= ManaKirel.VintageInterface2, nom0ri.vintageuifix": true, "EquipmentMenuConfig": true }
     },
     {
       "Name": "SpaceCoreRecolors",
@@ -2460,7 +2460,7 @@
     {
       "Name": "GuidebookRecolors",
       "Value": "nom0ri.vintageuifix_tabs",
-      "When": { "HasMod": "nom0ri.vintageuifix" }
+      "When": { "HasMod |contains= ManaKirel.VintageInterface2, nom0ri.vintageuifix": true }
     },
     {
       "Name": "GuidebookRecolors",
