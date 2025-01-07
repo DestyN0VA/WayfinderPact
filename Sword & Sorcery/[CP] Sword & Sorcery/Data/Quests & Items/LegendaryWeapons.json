@@ -730,7 +730,7 @@
       "Action": "EditData",
       "Target": "Data/CraftingRecipes",
       "Entries": {
-        "{{ModID}}_ElysiumBlade": "{{ModID}}_StygiumBlade 1 {{ModID}}_DuskspireHeart 1/hoot/{{ModID}}_ElysiumBlade 1/false/default/{{i18n: weapon.elysium-blade.name}}",
+        "{{ModID}}_ElysiumBlade": "{{ModID}}_StygiumBlade 1 {{ModID}}_DuskspireHeart 1/hoot/{{ModID}}_ElysiumBlade 1/false/none/{{i18n: weapon.elysium-blade.name}}",
         "{{ModID}}_WoodenShield": "388 10/hoot/{{ModID}}_WoodenShield 1/false/default/{{i18n: weapon.wooden-shield.name}}",
         "{{ModID}}_CopperShield": "334 10 {{ModID}}_WoodenShield/hoot/{{ModID}}_CopperShield 1/false/default/{{i18n: weapon.copper-shield.name}}",
         "{{ModID}}_IronShield": "{{ModID}}_CopperShield 1 335 10/hoot/0 1/false/default/{{i18n: weapon.steel-shield.name}}",
