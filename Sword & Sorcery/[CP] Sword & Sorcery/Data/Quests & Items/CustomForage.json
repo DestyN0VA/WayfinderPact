@@ -136,8 +136,10 @@
           "SpriteIndex": 110,
           "ContextTags": [
             "color_dark_blue",
-            "category_forage",
-            "seedmaker_banned"
+            "forage_item_cave",
+            "seedmaker_banned",
+            "vpp_forageThrowGame_banned",
+            "Kedi_VPP_Poisonous_Mushroom"
           ]
         },
 
@@ -155,8 +157,10 @@
           "SpriteIndex": 111,
           "ContextTags": [
             "color_dark_blue",
-            "category_forage",
-            "seedmaker_banned"
+            "forage_item_cave",
+            "seedmaker_banned",
+            "vpp_forageThrowGame_banned",
+            "Kedi_VPP_Poisonous_Mushroom"
           ]
         },
 
@@ -174,8 +178,10 @@
           "SpriteIndex": 112,
           "ContextTags": [
             "color_dark_blue",
-            "category_forage",
-            "seedmaker_banned"
+            "forage_item_cave",
+            "seedmaker_banned",
+            "vpp_forageThrowGame_banned",
+            "Kedi_VPP_Poisonous_Mushroom"          
           ]
         },
 
@@ -193,8 +199,10 @@
           "SpriteIndex": 113,
           "ContextTags": [
             "color_dark_blue",
-            "category_forage",
-            "seedmaker_banned"
+            "forage_item_cave",
+            "seedmaker_banned",
+            "vpp_forageThrowGame_banned",
+            "Kedi_VPP_Poisonous_Mushroom"
           ]
         },
 
@@ -212,8 +220,9 @@
           "SpriteIndex": 115,
           "ContextTags": [
             "color_dark_blue",
-            "category_forage",
-            "seedmaker_banned"
+            "forage_item_cave",
+            "seedmaker_banned",
+            "vpp_forageThrowGame_banned"
           ]
         },
 
@@ -231,8 +240,9 @@
           "SpriteIndex": 117,
           "ContextTags": [
             "color_dark_blue",
-            "category_forage",
-            "seedmaker_banned"
+            "forage_item_cave",
+            "seedmaker_banned",
+            "vpp_forageThrowGame_banned"
           ]
         },
 
@@ -250,8 +260,9 @@
           "SpriteIndex": 116,
           "ContextTags": [
             "color_dark_blue",
-            "category_forage",
-            "seedmaker_banned"
+            "forage_item_cave",
+            "seedmaker_banned",
+            "vpp_forageThrowGame_banned"
           ]
         },
 
@@ -262,7 +273,7 @@
           "Type": "Crafting",
           "Category": -74,
           "Price": 100,
-          "Edibility": 250,
+          "Edibility": -200,
           "IsDrink": false,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "Textures/DN.SnS/SnSObjects",
