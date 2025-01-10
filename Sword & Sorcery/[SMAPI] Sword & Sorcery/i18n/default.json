@@ -6,6 +6,11 @@
   "hero-relic.legendary.name": "Legendary Hero's Relic",
   "hero-relic.legendary.description": "...",
 
+  "AdventureBar-Hide.name": "Toggle Adventure Bar",
+  "AdventureBar-Hide.description": "Hide or show the Adventure Bar on your screen",
+  "AdventureBarConfigMenu.name": "Adventure Bar Config Menu",
+  "AdventureBarConfigMenu.description": "Open the Adventure Bar Config Menu",
+
   "shield-category": "Shield",
   "shield-block-text": "Shield Block: {{cooldown}}",
 
