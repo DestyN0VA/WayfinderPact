@@ -33,7 +33,7 @@ namespace SwordAndSorcerySMAPI
         public static Dictionary<string, Ability> Abilities { get; } = new();
     }
 
-
+    [HarmonyBefore("PeacefulEnd.FashionSense")]
     [HarmonyPatch(typeof(FarmerRenderer), nameof(FarmerRenderer.draw), new Type[] { typeof(SpriteBatch), typeof(FarmerSprite.AnimationFrame ), typeof(int ), typeof(Rectangle ), typeof(Vector2 ), typeof(Vector2 ), typeof(float ), typeof(int ), typeof(Color ), typeof(float ), typeof(float ), typeof(Farmer) })]
     public static class FarmerRendererShadowstepAndTransformingPatch
     {
@@ -47,7 +47,7 @@ namespace SwordAndSorcerySMAPI
             [new(32, 96, 32, 32), new(64, 96, 32, 32), new(96, 96, 32, 32), new(128, 96, 32, 32), new(160, 96, 32, 32), new(192, 96, 32, 32)]
             ];
 
-
+        [HarmonyBefore("PeacefulEnd.FashionSense")]
         public static bool Prefix(FarmerRenderer __instance, SpriteBatch b, FarmerSprite.AnimationFrame animationFrame, int currentFrame, Rectangle sourceRect, Vector2 position, Vector2 origin, float layerDepth, ref Color overrideColor, float rotation, float scale, Farmer who)
         {
             var ext = who.GetFarmerExtData();
