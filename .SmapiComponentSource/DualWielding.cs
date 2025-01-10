@@ -251,7 +251,7 @@ public static class DualWieldingOffhandParryPatch
     {
         var offhand = instance.GetOffhand();
 
-        if ( offhand != null && ( ((instance.CurrentTool as MeleeWeapon)?.isOnSpecial ?? false) || MeleeWeapon.daggerHitsLeft >= 1 ) && offhand.type.Value == MeleeWeapon.defenseSword )
+        if (offhand != null && (((instance.CurrentTool as MeleeWeapon)?.isOnSpecial ?? false) || MeleeWeapon.daggerHitsLeft >= 1) && offhand.type.Value == MeleeWeapon.defenseSword)
         {
             return true;
         }
@@ -260,6 +260,15 @@ public static class DualWieldingOffhandParryPatch
     }
 }
 
+
+[HarmonyPatch(typeof(MeleeWeapon), nameof(MeleeWeapon.triggerClubFunction))]
+public static class ClubRemoveIsOnSpecial
+{
+    public static void Postfix(MeleeWeapon __instance)
+    {
+        __instance.isOnSpecial = false;
+    }
+}
 [HarmonyPatch(typeof(MeleeWeapon), "doDaggerFunction")]
 public static class DualWieldingDaggerSpecialDetectionPatch
 {

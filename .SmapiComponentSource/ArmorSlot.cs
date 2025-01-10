@@ -1,17 +1,10 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection.Emit;
 using System.Runtime.CompilerServices;
 using HarmonyLib;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Netcode;
 using SpaceCore.Dungeons;
 using StardewValley;
-using StardewValley.Locations;
-using StardewValley.Menus;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -88,10 +81,7 @@ namespace SwordAndSorcerySMAPI
 
         public static bool ShouldShowHealth()
         {
-            if (Game1.currentLocation.NameOrUniqueName == "EastScarp_DuskspireLair" || Game1.currentLocation.GetDungeonExtData().spaceCoreDungeonId.Value != null)
-                return true;
-            else
-                return false;
+            return Game1.currentLocation.NameOrUniqueName == "EastScarp_DuskspireLair" || Game1.currentLocation.GetDungeonExtData().spaceCoreDungeonId.Value != null;
         }
     }
 }

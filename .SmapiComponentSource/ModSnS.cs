@@ -1929,27 +1929,33 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(Farmer), nameof(Farmer.takeDamage))]
     public static class FarmerArmorBlocksDamagePatch
     {
-        public static void Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager, ref bool __state)
+        public static bool Prefix(Farmer __instance, ref int damage, bool overrideParry, Monster damager)
         {
-            __state = false;
+            if (__instance.GetFarmerExtData().stasisTimer.Value > 0)
+            {
+                return false;
+            }
+
             if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && __instance.CanBeDamaged() && __instance.GetFarmerExtData().maxMana.Value > __instance.GetFarmerExtData().mana.Value)
                 __instance.GetFarmerExtData().mana.Value += (int)MathF.Min(Game1.random.Next(5,10), __instance.GetFarmerExtData().maxMana.Value - __instance.GetFarmerExtData().mana.Value);
 
-            int ArmorAmount = __instance.GetArmorItem()?.GetArmorAmount() ?? -1;
+            int ArmorAmount = __instance.GetArmorItem().GetArmorAmount() ?? -1;
             var ext = __instance.GetFarmerExtData();
+            Log.Warn($"{ArmorAmount}, {ext.armorUsed.Value}");
             bool num = damager != null && !damager.isInvincible() && !overrideParry;
             bool flag = (damager == null || !damager.isInvincible()) && (damager == null || (damager is not GreenSlime && damager is not BigSlime) || !__instance.isWearingRing("520"));
             bool playerParryable = __instance.CurrentTool is MeleeWeapon && ((MeleeWeapon)__instance.CurrentTool).isOnSpecial && (int)((MeleeWeapon)__instance.CurrentTool).type.Value == 3;
 
             if (num && playerParryable)
-                return;
+                return true;
 
             if (__instance != Game1.player ||  overrideParry || !__instance.CanBeDamaged() || !flag)
-                return;
+                return true;
 
             if (ArmorAmount > 0 && ext.armorUsed.Value < ArmorAmount)
             {
                 __instance.playNearbySoundAll("parry");
+                Log.Warn($"{ArmorAmount}");
                 ext.armorUsed.Value = Math.Min(ArmorAmount, ext.armorUsed.Value + damage);
                 damager?.parried(0, __instance);
                 __instance.temporarilyInvincible = true;
@@ -1977,7 +1983,15 @@ namespace SwordAndSorcerySMAPI
                 __instance.currentTemporaryInvincibilityDuration = 1200 + __instance.GetEffectsOfRingMultiplier("861") * 400;
             }
 
-            return;
+            return true;
+        }
+
+        public static void Postfix(Farmer __instance)
+        {
+            if (__instance.ActiveItem is MeleeWeapon mw && mw.type.Value == 2 && mw.isOnSpecial)
+            {
+
+            }
         }
     }
 

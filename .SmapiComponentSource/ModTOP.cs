@@ -1419,21 +1419,6 @@ namespace SwordAndSorcerySMAPI
         }
     }
 
-    [HarmonyPatch(typeof(Farmer), nameof(Farmer.takeDamage))]
-    public static class FarmerStasisNoDamagePatch
-    {
-        [HarmonyPriority(Priority.HigherThanNormal)]
-        public static bool Prefix(Farmer __instance)
-        {
-            if (__instance.GetFarmerExtData().stasisTimer.Value > 0)
-            {
-                return false;
-            }
-
-            return true;
-        }
-    }
-
     [HarmonyPatch(typeof(GameLocation), nameof(GameLocation.drawAboveAlwaysFrontLayer))]
     public static class GameLocationDrawBanishedPart2Patch
     {
