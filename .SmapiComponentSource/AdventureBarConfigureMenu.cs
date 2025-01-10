@@ -162,7 +162,11 @@ namespace SwordAndSorcerySMAPI
                 UpdateAbilities();
             ui.Update();
         }
-
+        protected override void cleanupBeforeExit()
+        {
+            base.cleanupBeforeExit();
+            ModSnS.UpdateIconicIcons();
+        }
         public override void draw(SpriteBatch b)
         {
             base.draw(b);

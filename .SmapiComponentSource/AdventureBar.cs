@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using StardewModdingAPI.Events;
 using StardewValley;
 using StardewValley.Menus;
+using SwordAndSorcerySMAPI.Integrations;
 using System;
 using System.Collections.Generic;
 using System.Linq;

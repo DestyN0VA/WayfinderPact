@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
-using RadialMenu;
 using StardewValley;
+using SwordAndSorcerySMAPI.Integrations;
 using System.Collections.Generic;
 using System.Linq;
 

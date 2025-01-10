@@ -4,7 +4,7 @@ using StardewModdingAPI;
 using StardewValley;
 using System.Collections.Generic;
 
-namespace RadialMenu;
+namespace SwordAndSorcerySMAPI.Integrations;
 
 /// <summary>
 /// Public API for mod integrations.
@@ -102,7 +102,7 @@ public interface IRadialMenuItem
     /// The amount available.
     /// </summary>
     /// <remarks>
-    /// For inventory, this is the actual <see cref="StardewValley.Item.Stack"/>. For other types of menu items, it can
+    /// For inventory, this is the actual <see cref="Item.Stack"/>. For other types of menu items, it can
     /// be used to indicate any "number of uses available". Any non-<c>null</c> value will render as digits at the
     /// bottom-right of the item icon/sprite in the menu.
     /// </remarks>
@@ -122,7 +122,7 @@ public interface IRadialMenuItem
     /// <remarks>
     /// If not specified, the icon area will instead display monogram text based on the <see cref="Title"/>.
     /// </remarks>
-    Texture2D? Texture => null;
+    Texture2D Texture => null;
 
     /// <summary>
     /// The area within the <see cref="Texture"/> containing this specific item's icon/sprite that should be displayed
@@ -238,7 +238,7 @@ public enum MenuItemActivationResult
     /// <para>
     /// Confirmation delays normally are - and generally should be - used for any actions that immediately return
     /// control to the player; actions that <b>do not</b> open a menu, play an animation, fade to black, or trigger any
-    /// other effect that would cause <see cref="StardewModdingAPI.Context.CanPlayerMove"/> to evaluate to <c>false</c>.
+    /// other effect that would cause <see cref="Context.CanPlayerMove"/> to evaluate to <c>false</c>.
     /// </para>
     /// <para>
     /// Delays provide a brief window for the player to release the buttons that were used to select/activate the menu

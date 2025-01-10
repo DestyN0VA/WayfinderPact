@@ -1,5 +1,4 @@
 ﻿using CircleOfThornsSMAPI;
-using ContentPatcher;
 using HarmonyLib;
 using MageDelve.Mercenaries;
 using Microsoft.Xna.Framework;
@@ -7,7 +6,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Netcode;
 using NeverEndingAdventure;
 using NeverEndingAdventure.Utils;
-using RadialMenu;
 using SpaceCore;
 using SpaceCore.Dungeons;
 using SpaceShared.APIs;
@@ -30,6 +28,7 @@ using StardewValley.SpecialOrders.Objectives;
 using StardewValley.Tools;
 using StardewValley.Triggers;
 using SwordAndSorcerySMAPI.Alchemy;
+using SwordAndSorcerySMAPI.Integrations;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -308,6 +307,7 @@ namespace SwordAndSorcerySMAPI
 
         public static ISpaceCoreApi sc;
         public static IRadialMenuApi radial;
+        public static IIconicFrameworkApi iconic;
 
         public static int AetherRestoreTimer = 0;
 
@@ -440,6 +440,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.GameLoop.TimeChanged += GameLoop_TimeChanged;
             Helper.Events.GameLoop.SaveCreated += GameLoop_SaveCreated;
             Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
+            Helper.Events.GameLoop.ReturnedToTitle += GameLoop_ReturnedToTitle;
             Helper.Events.Player.Warped += Player_Warped;
             Helper.Events.Player.InventoryChanged += Player_InventoryChanged;
             Helper.Events.Display.RenderedHud += Display_RenderedHud;
@@ -588,6 +589,23 @@ namespace SwordAndSorcerySMAPI
             InitArsenal();
         }
 
+        private void GameLoop_ReturnedToTitle(object sender, ReturnedToTitleEventArgs e)
+        {
+            if (iconic == null) return;
+
+            if (!IconicIcon)
+            {
+                iconic.AddToolbarIcon("AdventureBarConfigMenu", "", new(0, 0, 16, 16), I18n.AdventureBarConfigMenu_Name, I18n.AdventureBarConfigMenu_Description);
+                iconic.AddToolbarIcon("HideAdventureBar", "", new(0, 0, 16, 16), I18n.AdventureBarHide_Name, I18n.AdventureBarHide_Description);
+                IconicIcon = false;
+            }
+
+            foreach (string icon in AdvBarIconic)
+                iconic.RemoveToolbarIcon(icon);
+
+            AdvBarIconic = [];
+        }
+
         private void Player_InventoryChanged(object sender, InventoryChangedEventArgs e)
         {
             if (e.Removed.Any(i => i.QualifiedItemId.ContainsIgnoreCase("(W)DN.SnS_longlivetheking")) && e.Added.Any(i => i.QualifiedItemId.ContainsIgnoreCase("(W)DN.SnS_longlivetheking")))
@@ -692,6 +710,8 @@ namespace SwordAndSorcerySMAPI
                     armorSlot.Value = null;
                 }
             }
+
+            UpdateIconicIcons();
         }
 
         private void OnMailReceived(string value)
@@ -1113,9 +1133,9 @@ namespace SwordAndSorcerySMAPI
         private double Perc;
         private double wait = 0;
 
-        private void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)
+        private void GameLoop_GameLaunched(object sender, GameLaunchedEventArgs e)
         {
-            var gmcm = Helper.ModRegistry.GetApi<SpaceShared.APIs.IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
+            var gmcm = Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
             if (gmcm != null)
             {
                 gmcm.Register(ModManifest, () => Config = new(), () => Helper.WriteConfig(Config));
@@ -1181,8 +1201,14 @@ namespace SwordAndSorcerySMAPI
                 // shield throw is going away
             }
 
+
+            iconic = Helper.ModRegistry.GetApi<IIconicFrameworkApi>("furyx639.ToolbarIcons");
+            {
+                iconic.Subscribe(IconicIconPressedEvent);
+            }
+
             radial = Helper.ModRegistry.GetApi<IRadialMenuApi>("focustense.RadialMenu");
-            if (radial != null)
+            if (radial != null && iconic == null)
             {
                 radial.RegisterCustomMenuPage(ModManifest, "AdventureBar", new AdventureBarRadialMenuPageFactory());
             }
@@ -1366,10 +1392,60 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
+        public void IconicIconPressedEvent(IIconPressedEventArgs e)
+        {
+            if (e.Id == "HideAdventureBar")
+                AdventureBar.Hide = !AdventureBar.Hide;
+            else if (e.Id == "AdventureBarConfigMenu")
+                Game1.activeClickableMenu = new AdventureBarConfigureMenu();
+            else if (AdvBarIconic.Contains(e.Id) && Ability.Abilities.TryGetValue(e.Id, out var abil) && abil.ManaCost() <= Game1.player.GetFarmerExtData().mana.Value && abil.CanUse())
+            {
+                Game1.player.GetFarmerExtData().mana.Value -= abil.ManaCost();
+                CastAbility(abil);
+            }
+        }
+
+        public static List<string> AdvBarIconic = [];
+
+        public static void UpdateIconicIcons()
+        {
+            if (iconic == null) return;
+            
+            if (AdvBarIconic.Count > 0)
+                foreach (string icon in AdvBarIconic)
+                    iconic.RemoveToolbarIcon(icon);
+
+            AdvBarIconic = Game1.player.GetFarmerExtData().adventureBar.Where(a => a != null).ToList();
+
+            if (AdvBarIconic.Count > 0)
+                foreach (string icon in AdvBarIconic)
+                {
+                    Ability abil = Ability.Abilities[icon];
+                    string texPath = abil.TexturePath;
+                    Texture2D tex = Game1.content.Load<Texture2D>(texPath);
+                    Rectangle sourceRect = Game1.getSquareSourceRectForNonStandardTileSheet(tex, 16, 16, abil.SpriteIndex);
+                    Func<string> Name = abil.Name;
+                    Func<string> Description = abil.Description;
+                    iconic.AddToolbarIcon(icon, texPath, sourceRect, Name, Description);
+                }
+        }
+
+        public static bool IconicIcon = false;
+
         private void GameLoop_UpdateTicking(object sender, UpdateTickingEventArgs e)
         {
             if (!Context.IsWorldReady)
                 return;
+
+            if (iconic != null && Game1.player.hasOrWillReceiveMail("SnS_AdventureBar"))
+            {
+                if (!IconicIcon)
+                {
+                    iconic.AddToolbarIcon("AdventureBarConfigMenu", "Textures/DN.SnS/SnSObjects", new(32, 160, 16, 16), I18n.AdventureBarConfigMenu_Name, I18n.AdventureBarConfigMenu_Description);
+                    iconic.AddToolbarIcon("HideAdventureBar", "Textures/DN.SnS/SnSObjects", new(32, 160, 16, 16), I18n.AdventureBarHide_Name, I18n.AdventureBarHide_Description);
+                    IconicIcon = true;
+                }
+            }
 
             /*List<Trinket> trinkets = [];
 
@@ -1983,49 +2059,6 @@ namespace SwordAndSorcerySMAPI
             {
                 ++__result;
             }
-        }
-    }
-
-    [HarmonyPatch(typeof(IClickableMenu), nameof(IClickableMenu.drawTextureBox), [typeof(SpriteBatch), typeof(Texture2D), typeof(Rectangle), typeof(int), typeof(int), typeof(int), typeof(int), typeof(Color), typeof(float), typeof(bool), typeof(float) ])]
-    public static class ShopTextureBoxForVioletMoonHackPatch
-    {
-        public static bool Prefix(SpriteBatch b, Texture2D texture, Rectangle sourceRect, int x, int y, int width, int height, Color color, float scale, bool drawShadow, float draw_layer)
-        {
-            if (Game1.activeClickableMenu is ShopMenu s && s.VisualTheme.WindowBorderTexture == texture && s.VisualTheme.WindowBorderSourceRect == sourceRect &&
-                 sourceRect == new Rectangle(0, 0, 270, 115) && Game1.CurrentEvent.isFestival && Game1.CurrentEvent.id == "festival_fall1")
-            {
-                int cornerSizeX = sourceRect.Width / 3;
-                int cornerSizeY = sourceRect.Height/ 3;
-                float shadow_layer = draw_layer - 0.03f;
-                if (draw_layer < 0f)
-                {
-                    draw_layer = 0.8f - (float)y * 1E-06f;
-                    shadow_layer = 0.77f;
-                }
-                if (drawShadow)
-                {
-                    b.Draw(texture, new Vector2(x + width - (int)((float)cornerSizeX * scale) - 8, y + 8), new Rectangle(sourceRect.X + cornerSizeX * 2, sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, scale, SpriteEffects.None, shadow_layer);
-                    b.Draw(texture, new Vector2(x - 8, y + height - (int)((float)cornerSizeY * scale) + 8), new Rectangle(sourceRect.X, cornerSizeY * 2 + sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, scale, SpriteEffects.None, shadow_layer);
-                    b.Draw(texture, new Vector2(x + width - (int)((float)cornerSizeX * scale) - 8, y + height - (int)((float)cornerSizeY * scale) + 8), new Rectangle(sourceRect.X + cornerSizeX * 2, cornerSizeY * 2 + sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, scale, SpriteEffects.None, shadow_layer);
-                    b.Draw(texture, new Rectangle(x + (int)((float)cornerSizeX * scale) - 8, y + 8, width - (int)((float)cornerSizeX * scale) * 2, (int)((float)cornerSizeY * scale)), new Rectangle(sourceRect.X + cornerSizeX, sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, SpriteEffects.None, shadow_layer);
-                    b.Draw(texture, new Rectangle(x + (int)((float)cornerSizeX * scale) - 8, y + height - (int)((float)cornerSizeY * scale) + 8, width - (int)((float)cornerSizeX * scale) * 2, (int)((float)cornerSizeY * scale)), new Rectangle(sourceRect.X + cornerSizeX, cornerSizeY * 2 + sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, SpriteEffects.None, shadow_layer);
-                    b.Draw(texture, new Rectangle(x - 8, y + (int)((float)cornerSizeY * scale) + 8, (int)((float)cornerSizeX * scale), height - (int)((float)cornerSizeY * scale) * 2), new Rectangle(sourceRect.X, cornerSizeY + sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, SpriteEffects.None, shadow_layer);
-                    b.Draw(texture, new Rectangle(x + width - (int)((float)cornerSizeX * scale) - 8, y + (int)((float)cornerSizeY * scale) + 8, (int)((float)cornerSizeX * scale), height - (int)((float)cornerSizeY * scale) * 2), new Rectangle(sourceRect.X + cornerSizeX * 2, cornerSizeY + sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, SpriteEffects.None, shadow_layer);
-                    b.Draw(texture, new Rectangle((int)((float)cornerSizeX * scale / 2f) + x - 8, (int)((float)cornerSizeY * scale / 2f) + y + 8, width - (int)((float)cornerSizeX * scale), height - (int)((float)cornerSizeY * scale)), new Rectangle(cornerSizeX + sourceRect.X, cornerSizeY + sourceRect.Y, cornerSizeX, cornerSizeY), Color.Black * 0.4f, 0f, Vector2.Zero, SpriteEffects.None, shadow_layer);
-                }
-                b.Draw(texture, new Rectangle((int)((float)cornerSizeX * scale) + x, (int)((float)cornerSizeY * scale) + y, width - (int)((float)cornerSizeX * scale * 2f), height - (int)((float)cornerSizeY * scale * 2f)), new Rectangle(cornerSizeX + sourceRect.X, cornerSizeY + sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, SpriteEffects.None, draw_layer);
-                b.Draw(texture, new Vector2(x, y), new Rectangle(sourceRect.X, sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, scale, SpriteEffects.None, draw_layer);
-                b.Draw(texture, new Vector2(x + width - (int)((float)cornerSizeX * scale), y), new Rectangle(sourceRect.X + cornerSizeX * 2, sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, scale, SpriteEffects.None, draw_layer);
-                b.Draw(texture, new Vector2(x, y + height - (int)((float)cornerSizeY * scale)), new Rectangle(sourceRect.X, cornerSizeY * 2 + sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, scale, SpriteEffects.None, draw_layer);
-                b.Draw(texture, new Vector2(x + width - (int)((float)cornerSizeX * scale), y + height - (int)((float)cornerSizeY * scale)), new Rectangle(sourceRect.X + cornerSizeX * 2, cornerSizeY * 2 + sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, scale, SpriteEffects.None, draw_layer);
-                b.Draw(texture, new Rectangle(x + (int)((float)cornerSizeX * scale), y, width - (int)((float)cornerSizeX * scale) * 2, (int)((float)cornerSizeY * scale)), new Rectangle(sourceRect.X + cornerSizeX, sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, SpriteEffects.None, draw_layer);
-                b.Draw(texture, new Rectangle(x + (int)((float)cornerSizeX * scale), y + height - (int)((float)cornerSizeY * scale), width - (int)((float)cornerSizeX * scale) * 2, (int)((float)cornerSizeY * scale)), new Rectangle(sourceRect.X + cornerSizeX, cornerSizeY * 2 + sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, SpriteEffects.None, draw_layer);
-                b.Draw(texture, new Rectangle(x, y + (int)((float)cornerSizeY * scale), (int)((float)cornerSizeX * scale), height - (int)((float)cornerSizeY * scale) * 2), new Rectangle(sourceRect.X, cornerSizeY + sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, SpriteEffects.None, draw_layer);
-                b.Draw(texture, new Rectangle(x + width - (int)((float)cornerSizeX * scale), y + (int)((float)cornerSizeY * scale), (int)((float)cornerSizeX * scale), height - (int)((float)cornerSizeY * scale) * 2), new Rectangle(sourceRect.X + cornerSizeX * 2, cornerSizeY + sourceRect.Y, cornerSizeX, cornerSizeY), color, 0f, Vector2.Zero, SpriteEffects.None, draw_layer);
-                return false;
-            }
-
-            return true;
         }
     }
 
