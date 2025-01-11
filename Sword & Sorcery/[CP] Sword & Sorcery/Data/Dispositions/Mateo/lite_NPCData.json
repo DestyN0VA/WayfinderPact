@@ -119,8 +119,8 @@
                         {
                             "ID": "Beach",
                             "IsIslandAttire": true,
-                            "Portrait": "Portraits/Mateo_beach",
-                            "Sprite": "Characters/Mateo_beach",
+                            "Portrait": "Portraits/Mateo_Beach",
+                            "Sprite": "Characters/Mateo_Beach",
                             "Precedence": -20
                         },
                         {
@@ -140,7 +140,7 @@
                         {
                             "ID": "Shirtless",
                             "Condition": "Any \"EVENT_ID SnS.Ch1.Mateo.19\"",
-                            "Portrait": "Portraits/Mateo_beach",
+                            "Portrait": "Portraits/Mateo_Beach",
                             "Sprite": "Characters/Shirtless_Mateo",
                             "Precedence": -20
                         }

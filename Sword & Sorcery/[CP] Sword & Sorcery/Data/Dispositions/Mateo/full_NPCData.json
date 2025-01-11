@@ -72,126 +72,59 @@
                         },
                     ],
                     "Appearance": [
+                        //Spring
                         {
                             "ID": "Spring Outfit 1",
                             "Condition": "SEASON Spring",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_1",
-                            "Sprite": "Characters/Mateo_Seasonal_1"
+                            "Portrait": "Portraits/Mateo_Seasonal_Spring",
+                            "Sprite": "Characters/Mateo_Seasonal_Spring"
                         },
-                        {
-                            "ID": "Spring Outfit 2",
-                            "Condition": "SEASON Spring",
-                            "Precedence": -10,
-                            "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_2",
-                            "Sprite": "Characters/Mateo_Seasonal_2"
-                        },
-                        {
-                            "ID": "Spring Outfit 3",
-                            "Condition": "SEASON Spring",
-                            "Precedence": -10,
-                            "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_3",
-                            "Sprite": "Characters/Mateo_Seasonal_3"
-                        },
+                        //Summer
                         {
                             "ID": "Summer Outfit 1",
                             "Condition": "SEASON Summer",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_4",
-                            "Sprite": "Characters/Mateo_Seasonal_4"
+                            "Portrait": "Portraits/Mateo_Seasonal_Summer",
+                            "Sprite": "Characters/Mateo_Seasonal_Summer"
                         },
-                        {
-                            "ID": "Summer Outfit 2",
-                            "Condition": "SEASON Summer",
-                            "Precedence": -10,
-                            "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_5",
-                            "Sprite": "Characters/Mateo_Seasonal_5"
-                        },
-                        {
-                            "ID": "Summer Outfit 3",
-                            "Condition": "SEASON Summer",
-                            "Precedence": -10,
-                            "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_6",
-                            "Sprite": "Characters/Mateo_Seasonal_6"
-                        },
+                        //Fall
                         {
                             "ID": "Fall Outfit 1",
                             "Condition": "SEASON Fall",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_1",
-                            "Sprite": "Characters/Mateo_Seasonal_1"
+                            "Portrait": "Portraits/Mateo_Seasonal_Fall_1",
+                            "Sprite": "Characters/Mateo_Seasonal_Fall_1"
                         },
                         {
                             "ID": "Fall Outfit 2",
                             "Condition": "SEASON Fall",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_2",
-                            "Sprite": "Characters/Mateo_Seasonal_2"
+                            "Portrait": "Portraits/Mateo_Seasonal_Fall_2",
+                            "Sprite": "Characters/Mateo_Seasonal_Fall_2"
                         },
-                        {
-                            "ID": "Fall Outfit 3",
-                            "Condition": "SEASON Fall",
-                            "Precedence": -10,
-                            "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_3",
-                            "Sprite": "Characters/Mateo_Seasonal_3"
-                        },
-                        {
-                            "ID": "Fall Outfit 4",
-                            "Condition": "SEASON Fall",
-                            "Precedence": -10,
-                            "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_7",
-                            "Sprite": "Characters/Mateo_Seasonal_7"
-                        },
-                        {
-                            "ID": "Fall Outfit 5",
-                            "Condition": "SEASON Fall",
-                            "Precedence": -10,
-                            "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_10",
-                            "Sprite": "Characters/Mateo_Seasonal_10"
-                        },
+                        //Winter
                         {
                             "ID": "Winter Outfit 1",
                             "Condition": "SEASON Winter",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_8",
-                            "Sprite": "Characters/Mateo_Seasonal_8"
+                            "Portrait": "Portraits/Mateo_Seasonal_Winter",
+                            "Sprite": "Characters/Mateo_Seasonal_Winter"
                         },
                         {
                             "ID": "Winter Outfit 2",
                             "Condition": "SEASON Winter",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_9",
-                            "Sprite": "Characters/Mateo_Seasonal_9"
+                            "Portrait": "Portraits/Mateo_Seasonal_Fall_2",
+                            "Sprite": "Characters/Mateo_Seasonal_Fall_2"
                         },
-                        {
-                            "ID": "Winter Outfit 3",
-                            "Condition": "SEASON Winter",
-                            "Precedence": -10,
-                            "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_3",
-                            "Sprite": "Characters/Mateo_Seasonal_3"
-                        },
-                        {
-                            "ID": "Winter Outfit 4",
-                            "Condition": "SEASON Winter",
-                            "Precedence": -10,
-                            "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_10",
-                            "Sprite": "Characters/Mateo_Seasonal_10"
-                        },
+                        //Other stuff
                         {
                             "ID": "Egg Festival & SDV Fair",
                             "Condition": "ANY \"EVENT_ID festival_spring13\" \"EVENT_ID festival_fall16\"",
@@ -229,8 +162,8 @@
                         {
                             "ID": "Beach",
                             "IsIslandAttire": true,
-                            "Portrait": "Portraits/Mateo_beach",
-                            "Sprite": "Characters/Mateo_beach",
+                            "Portrait": "Portraits/Mateo_Beach",
+                            "Sprite": "Characters/Mateo_Beach",
                             "Precedence": -20
                         },
                         {
@@ -250,7 +183,7 @@
                         {
                             "ID": "Shirtless",
                             "Condition": "Any \"EVENT_ID SnS.Ch1.Mateo.19\"",
-                            "Portrait": "Portraits/Mateo_beach",
+                            "Portrait": "Portraits/Mateo_Beach",
                             "Sprite": "Characters/Shirtless_Mateo",
                             "Precedence": -20
                         }

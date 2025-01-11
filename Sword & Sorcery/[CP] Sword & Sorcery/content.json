@@ -455,6 +455,13 @@
       "Description": "Gives Mateo horns and unique eye color based on their parentage.",
       "Section": "Overlays"
     },
+    "MateoTail": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "Description": "Gives Mateo a tail.\n\n\"Mateo Troll Heritage\" must be set to true for this to take effect.",
+      "Section": "Overlays"
+    },
     "CirrusRainbowHair": {
       "AllowValues": "RealisticRandom, DailyRandom, Brown, Red, Orange, Yellow, Blue",
       "Default": "Blue",
