@@ -326,14 +326,14 @@
       "AllowValues": "Old, New",
       "Default": "New",
       "AllowBlank": false,
-      "Description": "Toggles between a new varient of Mateo's theme (TheFrenchDodo) and the original varient (HarvzBack).",
+      "Description": "Toggles between a new variant of Mateo's theme (TheFrenchDodo) and the original variant (HarvzBack).",
       "Section": "Miscellaneous"
     },
     "HectorThemeConfig": {
       "AllowValues": "Old, New",
       "Default": "New",
       "AllowBlank": false,
-      "Description": "Toggles between a new varient of Hector's theme (TheFrenchDodo) and the original varient (HarvzBack).",
+      "Description": "Toggles between a new variant of Hector's theme (TheFrenchDodo) and the original variant (HarvzBack).",
       "Section": "Miscellaneous"
     },
     /*"SkipIntroQuest_Setting": {

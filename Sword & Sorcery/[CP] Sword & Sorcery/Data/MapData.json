@@ -106,7 +106,7 @@
           "ArtifactSpots": [],
           "FishAreas": {
             "ESDruidTowerPond": {
-              "DisplayName": "{{i18n:miscellaneous.mapname.ESDruidTowerePond}}",
+              "DisplayName": "{{i18n:miscellaneous.mapname.ESDruidTowerPond}}",
               "Position": null,
               "CrabPotFishTypes": [],
               "CrabPotJunkChance": 0.0

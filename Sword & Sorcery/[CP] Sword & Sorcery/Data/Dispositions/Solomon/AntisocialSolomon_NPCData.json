@@ -62,9 +62,10 @@
         {
             "LogName": "Default Portraits & Sprites - Solomon",
             "Action": "Load",
+            "Priority": "Low",
             "Target": "Characters/Solomon, Portraits/Solomon",
             "FromFile": "Assets/{{Target}}/Solomon.png"
-        },
+        }
     ]
 }
     

@@ -93,6 +93,35 @@
                 "Interval": 200
               }
             },
+            "SpeechBubbles": {
+              "OwlBoyTalks": {
+                "Text": "{{i18n: magicitem.destykeychain.dialogue.21}}",
+                "Color": "Purple",
+                "RandomSpeech": [ 
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.1}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.2}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.3}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.4}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.5}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.6}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.7}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.8}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.9}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.10}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.11}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.12}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.13}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.14}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.15}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.16}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.17}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.18}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.19}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.20}}", "Color": "Purple" },
+                  { "Text": "{{i18n: magicitem.destykeychain.dialogue.21}}", "Color": "Purple" }
+              ]
+              }
+            },
             "Args": {
               "Magnitude": 16,
               "Period": 800,
@@ -139,40 +168,9 @@
                 "Proc": "Footstep",
                 "ProcSound": "owl",
                 "ProcOneshotAnim": "AbilityProc",
-                "Condition": "SYNCED_RANDOM tick OwlBoyTalk1 .001",
-                "Args": { "Action": "spacechase0.SpaceCore_ShowHudMessage \"{{i18n: magicitem.destykeychain.dialogue.{{Random: {{Range: 1, 21}}|key=OB1}}}}\" (O){{ModID}}_OwlBoyIcon" }
-              },
-              {
-                "AbilityClass": "Action",
-                "Proc": "Footstep",
-                "ProcSound": "owl",
-                "ProcOneshotAnim": "AbilityProc",
-                "Condition": "SYNCED_RANDOM tick OwlBoyTalk2 .001",
-                "Args": { "Action": "spacechase0.SpaceCore_ShowHudMessage \"{{i18n: magicitem.destykeychain.dialogue.{{Random: {{Range: 1, 21}}|key=OB2}}}}\" (O){{ModID}}_OwlBoyIcon" }
-              },
-              {
-                "AbilityClass": "Action",
-                "Proc": "Footstep",
-                "ProcSound": "owl",
-                "ProcOneshotAnim": "AbilityProc",
-                "Condition": "SYNCED_RANDOM tick OwlBoyTalk3 .001",
-                "Args": { "Action": "spacechase0.SpaceCore_ShowHudMessage \"{{i18n: magicitem.destykeychain.dialogue.{{Random: {{Range: 1, 21}}|key=OB3}}}}\" (O){{ModID}}_OwlBoyIcon" }
-              },
-              {
-                "AbilityClass": "Action",
-                "Proc": "Footstep",
-                "ProcSound": "owl",
-                "ProcOneshotAnim": "AbilityProc",
-                "Condition": "SYNCED_RANDOM tick OwlBoyTalk4 .001",
-                "Args": { "Action": "spacechase0.SpaceCore_ShowHudMessage \"{{i18n: magicitem.destykeychain.dialogue.{{Random: {{Range: 1, 21}}|key=OB4}}}}\" (O){{ModID}}_OwlBoyIcon" }
-              },
-              {
-                "AbilityClass": "Action",
-                "Proc": "Footstep",
-                "ProcSound": "owl",
-                "ProcOneshotAnim": "AbilityProc",
-                "Condition": "SYNCED_RANDOM tick OwlBoyTalk5 .001",
-                "Args": { "Action": "spacechase0.SpaceCore_ShowHudMessage \"{{i18n: magicitem.destykeychain.dialogue.{{Random: {{Range: 1, 21}}|key=OB5}}}}\" (O){{ModID}}_OwlBoyIcon" }
+                "ProcSpeechBubble": "OwlBoyTalks",
+                "Condition": "SYNCED_RANDOM tick OwlBoyTalk1 .01",
+                "Args": { "Action": "IncrementStat OwlBoyTalks 1" }
               },
               {
                 "AbilityClass": "HarvestForage",

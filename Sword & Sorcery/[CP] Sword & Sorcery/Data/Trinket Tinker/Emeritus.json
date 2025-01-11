@@ -77,6 +77,26 @@
                   "FrameLength": 3,
                   "Interval": 300
               },
+              "Swim.1": {
+                "FrameStart": 32,
+                "FrameLength": 2,
+                "Interval": 300
+              },
+              "Swim.2": {
+                "FrameStart": 28,
+                "FrameLength": 2,
+                "Interval": 300
+              },
+              "Swim.3": {
+                "FrameStart": 34,
+                "FrameLength": 2,
+                "Interval": 300
+              },
+              "Swim.4": {
+                "FrameStart": 30,
+                "FrameLength": 2,
+                "Interval": 300
+              },
               "Fireball": {
                 "FrameStart": 16,
                 "FrameLength": 7,

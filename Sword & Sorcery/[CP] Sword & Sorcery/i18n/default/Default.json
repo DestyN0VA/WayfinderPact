@@ -6817,7 +6817,7 @@ ________      ________ _   _ _______ _____
   "magicitem.destykeychain.name": "Stiles' Keychain",
   "magicitem.destykeychain.description": "An unusual keychain for Long Live The King, in the shape of an X.",
   "magicitem.destykeychain.description.Trinket": "An unusual keychain for Long Live The King, in the shape of an X.\n\nSummons Stiles' Owl\n= Gathers forage\n= Finds grown crops\n= Attacks monsters\n= Hoots and talks!\n= +Buff \"So Much for Stardust\"",
-  "magicitem.destykeychain.dialogue.Hi": "Hello! Hoot!",
+  "magicitem.destykeychain.dialogue.Hi": "Owl Boy has joined the party! Hoot!",
   "magicitem.destykeychain.dialogue.1": " Hoot hoot?",
   "magicitem.destykeychain.dialogue.2": "Hoot hoot hoot!",
   "magicitem.destykeychain.dialogue.3": "Where are we going, hoot?",

@@ -76,6 +76,26 @@
                   "FrameLength": 1,
                   "Interval": 300
               },
+              "Swim.1": {
+                "FrameStart": 36,
+                "FrameLength": 2,
+                "Interval": 300
+              },
+              "Swim.2": {
+                "FrameStart": 36,
+                "FrameLength": 2,
+                "Interval": 300
+              },
+              "Swim.3": {
+                "FrameStart": 34,
+                "FrameLength": 2,
+                "Interval": 300
+              },
+              "Swim.4": {
+                "FrameStart": 34,
+                "FrameLength": 2,
+                "Interval": 300
+              },
               "Howl": {
                 "FrameStart": 20,
                 "FrameLength": 16,
@@ -85,7 +105,7 @@
             },
             "Args": {
               "Min": 64,
-              "Rate": 400,
+              "Rate": 300,
               "MoveSync": true
             }
           },
