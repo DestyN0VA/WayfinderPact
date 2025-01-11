@@ -55,7 +55,7 @@
   "Core.Mateo.Luau": "I really appreciate the sentiment of the festival tomorrow - tradition is a really important thing, of course -$10#$b#But doesn't it just seem really short sighted to blindly throw a ton of different things into one soup? I love taking risks, but that seems a little much.$9",
   "Core.Mateo.MoonlightJelly": "Tomorrow's celebration is my second favorite, next to Spirit's Eve.$0#$b#I can see the Jellies from the cove. It's breathtaking.$12",
   "Core.Mateo.SDVFair": "The fair is tomorrow, @! Are you going to bring pumpkins?$11#$b#And...Other...important...produce?$21#$b#I'm just saying, if I was voting and it was all pumpkins, you'd win.$15",
-  "Core.Mateo.SpiritsEve": "So, there are a few rules to be followed on Spirit's Eve, back from when I was a kid.$19#$b#One, always check your candy. Two, always wear a costume. Three, always have treats on hand to give out.$11#$b#Finally, never blow out a Jack o' Lantern before midnight. That's the most important one.$19",
+  "Core.Mateo.SpiritsEve": "So, there are a few rules to be followed on Spirit's Eve, back from when I was a kid.$1#$b#One, always check your candy. Two, always wear a costume. Three, always have treats on hand to give out.$13#$b#Finally, never blow out a Jack o' Lantern before midnight. That's the most important one.$14",
   "Core.Mateo.IceFestival": "Festival of Ice tomorrow, huh?$14#$b#I'm not one for fishing, by any means. But I can throw a mean snowball - and, hey, if you can dodge an Iridium Bat...$15",
   "Core.Mateo.NightMarket": "Oh, that's right. The Night Market's going on.$3#$b#I forgot. Maybe I'll stop by and see if they've got anything from Gotoro for sale. Someone's bound to have smuggled in something interesting, huh?$36",
   "Core.Mateo.WinterStar": "There's so much pressure for the Feast of the Winter Star.$22#$b#I don't know what to get anyone! Except you, Marlon and Gunther... Guess it's not just the gifts, but the spirit of the season.$23",
@@ -752,7 +752,7 @@
   // SDV FAIR
   "Festivals.Mateo.fall16.False.1": "Tch, that bell didn't stand a chance! I'm sorry, I couldn't hear you over the sound of these guns.$13#$b#%Mateo playfully flexes.",
   "Festivals.Mateo.fall16.False.2": "You're talking to the several-year bell ringing champion, @. Swinging a sword around all the time does the body a whole lotta good.$13",
-  "Festivals.Mateo.fall16.False.3": "I'm inclined to strength and dexterity. I use this festival to grow my collection of questionable prize plushes.$70",
+  "Festivals.Mateo.fall16.False.3": "I'm inclined to strength and dexterity. I use this festival to grow my collection of questionable prize plushes.$35",
   "Festivals.Mateo.fall16.True.1": "You've got this in the bag, Sunshine. I'll win the strength contest, you'll win the display competition - and then we'll both go home and celebrate. Sounds good?$28",
   "Festivals.Mateo.fall16.True.2": "The strength game was the journey, but being strong enough to manhandle you is the prize.$82",
   "Festivals.Mateo.fall16.True.3": "If there was darts or axe throwing, I'd nail that almost as well as I nail you! Hey, stop laughing -$36",
