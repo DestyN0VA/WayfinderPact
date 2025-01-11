@@ -33,7 +33,7 @@
                     ],
                     "HomeTileX": 90,
                     "HomeTileY": 100,
-                    "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Mateo.12, WEATHER EastScarp_Village Sun"
+                    "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Mateo.12, WEATHER EastScarp_Village Sun, !PLAYER_NPC_RELATIONSHIP Current Mateo Married"
                 },                
                 "{{ModId}}.Emeritus_Inside": {
                     "AnimalId": "{{ModId}}.Emeritus",
@@ -46,7 +46,20 @@
                     ],
                     "HomeTileX": 2,
                     "HomeTileY": 17,
-                    "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Mateo.12, !WEATHER EastScarp_Village Sun"
+                    "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Mateo.12, !WEATHER EastScarp_Village Sun, !PLAYER_NPC_RELATIONSHIP Current Mateo Married"
+                },
+                "{{ModId}}.Emeritus_MateoMarried": {
+                    "AnimalId": "{{ModId}}.Emeritus",
+                    "Age": 1,
+                    "LocationId": "Farmhouse",
+                    "DisplayName": "{{i18n:Strings.Names.Emeritus}}",
+                    "PortraitTexture": "Portraits/MateoEmeritus",
+                    "PetMessage": [
+                        "{{i18n:MEEP.EmeritusFarmhouse.{{Random: {{Range: 1, 8}}|key=EmDialogueF}}}}"
+                    ],
+                    "HomeTileX": 26,
+                    "HomeTileY": 27,
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Mateo Married"
                 }
             }
         }
