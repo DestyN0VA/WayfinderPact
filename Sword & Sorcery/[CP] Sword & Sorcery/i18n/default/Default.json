@@ -7586,6 +7586,11 @@ ________      ________ _   _ _______ _____
   "config.MateoTrollHeritage.values.true": "true",
   "config.MateoTrollHeritage.values.false": "false",
 
+  "config.MateoTail.name": "MateoTail",
+  "config.MateoTail.description": "Gives Mateo a tail.\n\n\"Mateo Troll Heritage\" must be set to true for this to take effect.",
+  "config.MateoTail.values.true": "true",
+  "config.MateoTail.values.false": "false",
+
   "config.CirrusRainbowHair.name": "CirrusRainbowHair",
   "config.CirrusRainbowHair.description": "Gives Cirrus a variety of dyed hair colors, or optionally choose a static one.\nRealisticRandom gives a delay between hair color changes.",
   "config.CirrusRainbowHair.values.RealisticRandom": "RealisticRandom",
