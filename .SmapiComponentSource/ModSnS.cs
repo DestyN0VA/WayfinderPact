@@ -1203,6 +1203,7 @@ namespace SwordAndSorcerySMAPI
 
 
             iconic = Helper.ModRegistry.GetApi<IIconicFrameworkApi>("furyx639.ToolbarIcons");
+            if (iconic != null) 
             {
                 iconic.Subscribe(IconicIconPressedEvent);
             }
