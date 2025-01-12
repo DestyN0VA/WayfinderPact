@@ -967,13 +967,13 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        private void Content_AssetRequested(object sender, StardewModdingAPI.Events.AssetRequestedEventArgs e)
+        private void Content_AssetRequested(object sender, AssetRequestedEventArgs e)
         {
             if (e.NameWithoutLocale.IsEquivalentTo("DN.SnS/AlchemyRecipes"))
-                e.LoadFrom(() => new Dictionary<string, AlchemyData>(), StardewModdingAPI.Events.AssetLoadPriority.Exclusive);
+                e.LoadFrom(() => new Dictionary<string, AlchemyData>(), AssetLoadPriority.Exclusive);
 
             if (e.NameWithoutLocale.IsEquivalentTo("DN.SnS/FinalePartners"))
-                e.LoadFrom(() => new Dictionary<string, FinalePartnerInfo>(), StardewModdingAPI.Events.AssetLoadPriority.Exclusive);
+                e.LoadFrom(() => new Dictionary<string, FinalePartnerInfo>(), AssetLoadPriority.Exclusive);
 
             string[] recolors =
             [
@@ -985,7 +985,8 @@ namespace SwordAndSorcerySMAPI
                 "Sqbr.StarryBlueUI",
                 "Bos.UIInterface",
                 "VinillaBean.LavenderDreams",
-                "silvermoonchan.PurpleGalaxyUI"
+                "silvermoonchan.PurpleGalaxyUI",
+                "ManaKirel.VintageInterface2"
             ];
 
             if (e.NameWithoutLocale.IsEquivalentTo("DN.SnS/ArmorSlot"))
@@ -993,12 +994,12 @@ namespace SwordAndSorcerySMAPI
                 string ArmorSlot = "assets/armor-bg.png";
                 foreach (var recolor in recolors)
                 {
-                    if (Helper.ModRegistry.IsLoaded(recolor) && File.Exists(Path.Combine(Helper.DirectoryPath, "assets", "armor-bg", recolor + ".png")))
+                    if (Helper.ModRegistry.IsLoaded(recolor) && File.Exists(Path.Combine(Helper.DirectoryPath, "assets", "armor-bg", (recolor == recolors[9] ? recolors[4] : recolor) + ".png")))
                     {
-                        ArmorSlot = $"assets/armor-bg/{recolor}.png";
+                        ArmorSlot = $"assets/armor-bg/{(recolor == recolors[9] ? recolors[4] : recolor)}.png";
                     }
                 }
-                e.LoadFromModFile<Texture2D>(ArmorSlot, StardewModdingAPI.Events.AssetLoadPriority.Exclusive);
+                e.LoadFromModFile<Texture2D>(ArmorSlot, AssetLoadPriority.Exclusive);
             }
 
             if (e.NameWithoutLocale.IsEquivalentTo("DN.SnS/OffhandSlot"))
@@ -1006,12 +1007,12 @@ namespace SwordAndSorcerySMAPI
                 string OffhandSlot = "assets/offhand-bg.png";
                 foreach (var recolor in recolors)
                 {
-                    if (Helper.ModRegistry.IsLoaded(recolor) && File.Exists(Path.Combine(Helper.DirectoryPath, "assets", "armor-bg", recolor + "_offhand.png")))
+                    if (Helper.ModRegistry.IsLoaded(recolor) && File.Exists(Path.Combine(Helper.DirectoryPath, "assets", "armor-bg", (recolor == recolors[9] ? recolors[4] : recolor) + "_offhand.png")))
                     {
-                        OffhandSlot = $"assets/armor-bg/{recolor}_offhand.png";
+                        OffhandSlot = $"assets/armor-bg/{(recolor == recolors[9] ? recolors[4] : recolor)}_offhand.png";
                     }
                 }
-                e.LoadFromModFile<Texture2D>(OffhandSlot, StardewModdingAPI.Events.AssetLoadPriority.Exclusive);
+                e.LoadFromModFile<Texture2D>(OffhandSlot, AssetLoadPriority.Exclusive);
             }
 
             /*
@@ -1839,61 +1840,7 @@ namespace SwordAndSorcerySMAPI
         {
             if (orderType == "" && forceRefresh)
             {
-                SNSUpdateAvailability();
-            }
-        }
-
-        private static void SNSUpdateAvailability()
-        {
-            string orderType = "SwordSorcery";
-            bool forceRefresh = true;
-
-            foreach (SpecialOrder order in Game1.player.team.availableSpecialOrders)
-            {
-                if ((order.questDuration.Value == QuestDuration.TwoDays || order.questDuration.Value == QuestDuration.ThreeDays) && !Game1.player.team.acceptedSpecialOrderTypes.Contains(order.orderType.Value))
-                {
-                    order.SetDuration(order.questDuration.Value);
-                }
-            }
-            if (!forceRefresh)
-            {
-                foreach (SpecialOrder availableSpecialOrder in Game1.player.team.availableSpecialOrders)
-                {
-                    if (availableSpecialOrder.orderType.Value == orderType)
-                    {
-                        return;
-                    }
-                }
-            }
-            SpecialOrder.RemoveAllSpecialOrders(orderType);
-            List<string> keyQueue = new List<string>();
-            foreach (KeyValuePair<string, SpecialOrderData> pair in DataLoader.SpecialOrders(Game1.content))
-            {
-                if (pair.Value.OrderType == orderType && SpecialOrder.CanStartOrderNow(pair.Key, pair.Value))
-                {
-                    keyQueue.Add(pair.Key);
-                }
-            }
-            List<string> keysIncludingCompleted = new List<string>(keyQueue);
-            if (orderType == "")
-            {
-                //keyQueue.RemoveAll((string id) => Game1.player.team.completedSpecialOrders.Contains(id));
-            }
-            Random r = Utility.CreateRandom(Game1.uniqueIDForThisGame, (double)Game1.stats.DaysPlayed * 1.3);
-            for (int i = 0; i < 2; i++)
-            {
-                if (keyQueue.Count == 0)
-                {
-                    if (keysIncludingCompleted.Count == 0)
-                    {
-                        break;
-                    }
-                    keyQueue = new List<string>(keysIncludingCompleted);
-                }
-                string key = r.ChooseFrom(keyQueue);
-                Game1.player.team.availableSpecialOrders.Add(SpecialOrder.GetSpecialOrder(key, r.Next()));
-                keyQueue.Remove(key);
-                keysIncludingCompleted.Remove(key);
+                SpecialOrder.UpdateAvailableSpecialOrders("SwordSorcery", forceRefresh);
             }
         }
     }
