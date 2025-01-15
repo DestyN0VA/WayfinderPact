@@ -1889,7 +1889,6 @@ namespace SwordAndSorcerySMAPI
 
             int ArmorAmount = __instance.GetArmorItem().GetArmorAmount() ?? -1;
             var ext = __instance.GetFarmerExtData();
-            Log.Warn($"{ArmorAmount}, {ext.armorUsed.Value}");
             bool num = damager != null && !damager.isInvincible() && !overrideParry;
             bool flag = (damager == null || !damager.isInvincible()) && (damager == null || (damager is not GreenSlime && damager is not BigSlime) || !__instance.isWearingRing("520"));
             bool playerParryable = __instance.CurrentTool is MeleeWeapon && ((MeleeWeapon)__instance.CurrentTool).isOnSpecial && (int)((MeleeWeapon)__instance.CurrentTool).type.Value == 3;
