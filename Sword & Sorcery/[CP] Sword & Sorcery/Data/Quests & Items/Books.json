@@ -11,7 +11,7 @@
         "DisplayName": "{{i18n: magicitem.artificerbook.name}}",
         "Description": "{{i18n: magicitem.artificerbook.description}}",
         "Type": "asdf",
-        "Category": -103,
+        "Category": "{{ArtificerBookCat}}",
         "Price": 500,
         "Edibility": -300,
         "IsDrink": false,
@@ -29,7 +29,7 @@
         "DisplayName": "{{i18n: magicitem.druidbook.name}}",
         "Description": "{{i18n: magicitem.druidbook.description}}",
         "Type": "asdf",
-        "Category": -103,
+        "Category": "{{DruidBookCat}}",
         "Price": 500,
         "Edibility": -300,
         "IsDrink": false,
@@ -47,7 +47,7 @@
         "DisplayName": "{{i18n: magicitem.bardbook.name}}",
         "Description": "{{i18n: magicitem.bardbook.description}}",
         "Type": "asdf",
-        "Category": -103,
+        "Category": "{{BardBookCat}}",
         "Price": 500,
         "Edibility": -300,
         "IsDrink": false,
@@ -65,7 +65,7 @@
         "DisplayName": "{{i18n: magicitem.sorcerybook.name}}",
         "Description": "{{i18n: magicitem.sorcerybook.description}}",
         "Type": "asdf",
-        "Category": -103,
+        "Category": "{{SorceryBookCat}}",
         "Price": 500,
         "Edibility": -300,
         "IsDrink": false,
@@ -83,7 +83,7 @@
         "DisplayName": "{{i18n: magicitem.paladinbook.name}}",
         "Description": "{{i18n: magicitem.paladinbook.description}}",
         "Type": "asdf",
-        "Category": -103,
+        "Category": "{{PaladinBookCat}}",
         "Price": 500,
         "Edibility": -300,
         "IsDrink": false,
@@ -320,9 +320,7 @@
     "Entries": {
       "ID": "(O){{ModID}}_paladinbook"
     },
-    "When": {
-      "Query": "({{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Mateo}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Hector}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Cirrus}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Gunnar}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.SoloFarmer}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Sen}}) = TRUE"
-    }
+      "When": { "KCC.SnS/PaladinUnlocked": true }
   },
   {
     "LogName": "Paladin skill book shop entry (2)",
@@ -337,9 +335,7 @@
     "Entries": {
       "ID": "(O){{ModID}}_paladinbook"
     },
-    "When": {
-      "Query": "({{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Mateo}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Hector}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Cirrus}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Gunnar}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.SoloFarmer}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Sen}}) = TRUE"
-    }
+    "When": { "KCC.SnS/PaladinUnlocked": true }
   },
   {
     "LogName": "Paladin skill book shop entry (3)",
@@ -354,9 +350,7 @@
     "Entries": {
       "ID": "(O){{ModID}}_paladinbook"
     },
-    "When": {
-      "Query": "({{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Mateo}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Hector}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Cirrus}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Gunnar}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.SoloFarmer}} OR {{HasSeenEvent: Current |contains=SnS.Ch4.Intermission.Sen}}) = TRUE"
-    }
+    "When": { "KCC.SnS/PaladinUnlocked": true }
   }
 ]
 }

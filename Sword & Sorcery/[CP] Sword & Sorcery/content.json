@@ -2553,6 +2553,27 @@
       "Name": "StygiumShieldIngredient",
       "Value": "(W){{ModID}}_RadioactiveShield",
       "When": { "HasFlag": "reachedBottomOfHardMines" }
-    }
+    },
+    //RESOURCE CHICKENS STOP STEALING OUR BOOKS EARLY,
+    { "Name": "ArtificerBookCat", "Value": "0"},
+    { "Name": "ArtificerBookCat", "Value": "-103",
+       "When": { "HasSeenEvent": "SnS.Ch1.Mateo.18" } },
+
+    { "Name": "DruidBookCat", "Value": "0"},
+    { "Name": "DruidBookCat", "Value": "-103",
+        "When": { "HasSeenEvent": "SnS.Ch2.Hector.16" } },
+
+
+    { "Name": "BardBookCat", "Value": "0"},
+    { "Name": "BardBookCat", "Value": "-103",
+        "When": { "HasSeenEvent": "SnS.Ch3.Cirrus.14" } },
+
+    { "Name": "SorceryBookCat", "Value": "0"},
+    { "Name": "SorceryBookCat", "Value": "-103",
+        "When": { "HasSeenEvent": "SnS.Ch4.Dandelion.6" } },
+
+    { "Name": "PaladinBookCat", "Value": "0"},
+    { "Name": "PaladinBookCat", "Value": "-103",
+        "When": { "KCC.SnS/PaladinUnlocked": true } }
   ]
 }
