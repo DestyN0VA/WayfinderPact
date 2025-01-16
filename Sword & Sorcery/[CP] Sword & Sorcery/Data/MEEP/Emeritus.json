@@ -57,8 +57,8 @@
                     "PetMessage": [
                         "{{i18n:MEEP.EmeritusFarmhouse.{{Random: {{Range: 1, 8}}|key=EmDialogueF}}}}"
                     ],
-                    "HomeTileX": 26,
-                    "HomeTileY": 27,
+                    "HomeTileX": "{{EmeritusSpawnPointX}}",
+                    "HomeTileY": "{{EmeritusSpawnPointY}}",
                     "Condition": "PLAYER_NPC_RELATIONSHIP Current Mateo Married"
                 }
             }

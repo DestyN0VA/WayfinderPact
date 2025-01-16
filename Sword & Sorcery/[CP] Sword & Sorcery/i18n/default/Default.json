@@ -7688,6 +7688,12 @@ ________      ________ _   _ _______ _____
   "config.EquipmentMenuConfig.values.true": "true",
   "config.EquipmentMenuConfig.values.false": "false",
 
+  "config.EmeritusSpawnPointX.name": "EmeritusSpawnPointX",
+  "config.EmeritusSpawnPointX.description": "Select the X coordinate for Emeritus' spawn point in the farm house if you marry Mateo.",
+
+  "config.EmeritusSpawnPointY.name": "EmeritusSpawnPointY",
+  "config.EmeritusSpawnPointY.description": "Select the Y coordinate for Emeritus' spawn point in the farm house if you marry Mateo.",
+
   "Furniture.SpousePortrait.Mateo": "Mateo's Portrait",
   "Furniture.SpousePortrait.Hector": "Biróg's Portrait",
   "Furniture.SpousePortrait.Cirrus": "Cirrus's Portrait",

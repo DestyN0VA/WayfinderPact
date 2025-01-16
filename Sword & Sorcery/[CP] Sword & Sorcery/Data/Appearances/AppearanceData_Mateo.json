@@ -114,7 +114,7 @@
             "LogName": "Mateo's Troll Heritage Portrait Overlay",
             "Action": "EditImage",
             "Priority": "Early",
-            "Target": "Portraits/Mateo_Seasonal_Spring, Portraits/Mateo_Seasonal_Summer, Portraits/Mateo_Seasonal_Winter, Portraits/Mateo_Seasonal_Fall_1, Portraits/Mateo_Seasonal_Fall_2, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo",
+            "Target": "Portraits/Mateo_Seasonal_Spring, Portraits/Mateo_Seasonal_Summer, Portraits/Mateo_Seasonal_Winter, Portraits/Mateo_Seasonal_Fall_1, Portraits/Mateo_Seasonal_Fall_2, Portraits/EggFair_Mateo, Portraits/FlowerDance_Mateo, Portraits/IceFestWinterStar_Mateo, Portraits/LuauMoonlight_Mateo, Portraits/DateNight_Mateo, Portraits/Mateo_Beach",
             "PatchMode": "Overlay",
             "FromFile": "Assets/Portraits/Mateo/{{Horns}}_Overlay_Mateo.png",
             "When": { "MateoTrollHeritage": true, "HasMod |contains=McJoan.Mateo": false }

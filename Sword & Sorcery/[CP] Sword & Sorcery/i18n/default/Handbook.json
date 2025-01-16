@@ -447,14 +447,20 @@ Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between 8am and 
  
 You can go to the [color=green]Underforge[/color] in the [color=green]Coastal Adventurer's Guild[/color] by going through a door to the right of the main room. Here, you can attach three different types of items to your weapon to make them stronger. You can do this by using the forge in the top left of the map.
  
-You can attach 25 pure ore to a weapon to improve it's damage:
+[font=dialogue]Blade Alloying[/font]
+Attach 25 pure ore to a weapon to improve weapon damage:
+ 
    > [itemtooltip=(O)DN.SnS_PureCopperOre][icon=Textures/DN.SnS/SnSArsenal:64,32,16,16] [color=blue]Pure Copper Ore[/color][/itemtooltip] - +5% damage
    > [itemtooltip=(O)DN.SnS_PureIronOre][icon=Textures/DN.SnS/SnSArsenal:80,32,16,16] [color=blue]Pure Iron Ore[/color][/itemtooltip] - +10% damage
    > [itemtooltip=(O)DN.SnS_PureGoldOre][icon=Textures/DN.SnS/SnSArsenal:96,32,16,16] [color=blue]Pure Gold Ore[/color][/itemtooltip] - +15% damage
    > [itemtooltip=(O)DN.SnS_PureIridiumOre][icon=Textures/DN.SnS/SnSArsenal:0,48,16,16] [color=blue]Pure Iridium Ore[/color][/itemtooltip] - +20% damage
    > [itemtooltip=(O)DN.SnS_PureRadioactiveOre][icon=Textures/DN.SnS/SnSArsenal:16,48,16,16] [color=blue]Pure Radioactive Ore[/color][/itemtooltip] - +25% damage
  
-You can attach an exquisite gem to a weapon to give it new effects:
+Note: Pure Ores can be smelted in a furnace to recieve 3-5 pieces of their non-pure form.
+ 
+[font=dialogue]Exquisite Gem Socket[/font]
+Attach an exquisite gem to a weapon for new effects:
+ 
    > [itemtooltip=(O)DN.SnS_ExquisiteEmerald][icon=Textures/DN.SnS/SnSArsenal:0,0,16,16] [color=blue]Exquisite Emerald[/color][/itemtooltip] - [texttooltip=Evasive:Increases your speed by +1.5 for 5 seconds after hitting an enemy.][color=purple]Evasive[/color][/texttooltip]
    > [itemtooltip=(O)DN.SnS_ExquisiteTopaz][icon=Textures/DN.SnS/SnSArsenal:16,0,16,16] [color=blue]Exquisite Topaz[/color][/itemtooltip] - [texttooltip=Defensive:Reduces incoming damage by 15%.][color=purple]Defensive[/color][/texttooltip]
    > [itemtooltip=(O)DN.SnS_ExquisiteRuby][icon=Textures/DN.SnS/SnSArsenal:32,0,16,16] [color=blue]Exquisite Ruby[/color][/itemtooltip] - [texttooltip=Harming:Deals an extra 10% damage to an enemy once every second for 3 seconds after hitting it.][color=purple]Harming[/color][/texttooltip]
@@ -464,14 +470,14 @@ You can attach an exquisite gem to a weapon to give it new effects:
    > [itemtooltip=(O)DN.SnS_ExquisiteAquamarine][icon=Textures/DN.SnS/SnSArsenal:96,0,16,16] [color=blue]Exquisite Aquamarine[/color][/itemtooltip] - [texttooltip=Critical:Provides a 15% chance of a critical hit when hitting an enemy.
 (If the hit is already a critical hit, the damage will be multiplied again.][color=purple]Critical[/color][/texttooltip]
  
-You can attach a large amount of certain monster loot to a weapon to give it new effects:
+[font=dialogue]Weapon Coating[/font]
+Attach a large amount of certain monster loot to a weapon for new effects:
+ 
    > 999 [itemtooltip=(O)766][icon=Maps/springobjects:352,496,16,16] [color=blue]Slime[/color][/itemtooltip] - [texttooltip=Slimy:Slows down enemies upon hit. Works once per enemy.][color=purple]Slimy[/color][/texttooltip]
    > 300 [itemtooltip=(O)769][icon=Maps/springobjects:16,512,16,16] [color=blue]Void Essence[/color][/itemtooltip] - [texttooltip=Shadow Duplicates:Basic attacks affect all four cardinal directions. (Attacks in the other directions are invisible.)][color=purple]Shadow Duplicates[/color][/texttooltip]
    > 300 [itemtooltip=(O)768][icon=Maps/springobjects:0,512,16,16] [color=blue]Solar Essence[/color][/itemtooltip] - [texttooltip=Explosive Demise:Upon killing a mob, they blow up. No damage to farmer.][color=purple]Explosive Demise[/color][/texttooltip]
    > 300 [itemtooltip=(O)684][icon=Maps/springobjects:192,448,16,16] [color=blue]Bug Meat[/color][/itemtooltip] - [texttooltip=Greedy:Mob drops are rolled twice.][color=purple]Greedy[/color][/texttooltip]
-   > 500 [itemtooltip=(O)767][icon=Maps/springobjects:368,496,16,16] [color=blue]Bat Wing[/color][/itemtooltip] - [texttooltip=Floating:You can attack across stones and other objects.][color=purple]Floating[/color][/texttooltip]
- 
-You can choose one item type from each category above.",
+   > 500 [itemtooltip=(O)767][icon=Maps/springobjects:368,496,16,16] [color=blue]Bat Wing[/color][/itemtooltip] - [texttooltip=Floating:You can attack across stones and other objects.][color=purple]Floating[/color][/texttooltip]",
 
 "guidebook.chapter.NEA.ArtificerSkill": "[center][font=dialogue][offset=0,8]Artificer[/font][/center]
 [offset=200,0][image=SMAPI/kcc.sns/assets/rogue/icon.png:0,0,10,10:5]One of the Sword & Sorcery skills, unlocked during the [link=Mechanics/Underforge]Underforge[/link] Mateo event. Artificer can be leveled up killing monsters and mining.
