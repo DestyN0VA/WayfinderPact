@@ -445,10 +445,12 @@ Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between 8am and 
 
 "guidebook.chapter.NEA.Underforge": "[center][font=dialogue][offset=0,8]Underforge[/font][/center]
  
-You can go to the [color=green]Underforge[/color] in the [color=green]Coastal Adventurer's Guild[/color] by going through a door to the right of the main room. Here, you can attach three different types of items to your weapon to make them stronger. You can do this by using the forge in the top left of the map.
- 
+After unlocking the [link=Skills/ArtificerSkill]Artificer[/link] skill, you can enter the [color=green]Underforge[/color] inside the [color=green]Coastal Adventurer's Guild[/color] by going through the door to the right. In the top left corner you'll find the forge.
+  
+Here, you can attach three different types of enhancement items to your weapon once you've reached the appropriate level in the [link=Skills/ArtificerSkill]Artificer[/link] skill.
+  
 [font=dialogue]Blade Alloying[/font]
-Attach 25 pure ore to a weapon to improve weapon damage:
+Attach 25 pure ore to improve damage:
  
    > [itemtooltip=(O)DN.SnS_PureCopperOre][icon=Textures/DN.SnS/SnSArsenal:64,32,16,16] [color=blue]Pure Copper Ore[/color][/itemtooltip] - +5% damage
    > [itemtooltip=(O)DN.SnS_PureIronOre][icon=Textures/DN.SnS/SnSArsenal:80,32,16,16] [color=blue]Pure Iron Ore[/color][/itemtooltip] - +10% damage
@@ -459,7 +461,7 @@ Attach 25 pure ore to a weapon to improve weapon damage:
 Note: Pure Ores can be smelted in a furnace to recieve 3-5 pieces of their non-pure form.
  
 [font=dialogue]Exquisite Gem Socket[/font]
-Attach an exquisite gem to a weapon for new effects:
+Attach an exquisite gem for new effects:
  
    > [itemtooltip=(O)DN.SnS_ExquisiteEmerald][icon=Textures/DN.SnS/SnSArsenal:0,0,16,16] [color=blue]Exquisite Emerald[/color][/itemtooltip] - [texttooltip=Evasive:Increases your speed by +1.5 for 5 seconds after hitting an enemy.][color=purple]Evasive[/color][/texttooltip]
    > [itemtooltip=(O)DN.SnS_ExquisiteTopaz][icon=Textures/DN.SnS/SnSArsenal:16,0,16,16] [color=blue]Exquisite Topaz[/color][/itemtooltip] - [texttooltip=Defensive:Reduces incoming damage by 15%.][color=purple]Defensive[/color][/texttooltip]
@@ -471,7 +473,7 @@ Attach an exquisite gem to a weapon for new effects:
 (If the hit is already a critical hit, the damage will be multiplied again.][color=purple]Critical[/color][/texttooltip]
  
 [font=dialogue]Weapon Coating[/font]
-Attach a large amount of certain monster loot to a weapon for new effects:
+Attach monster loot for new effects:
  
    > 999 [itemtooltip=(O)766][icon=Maps/springobjects:352,496,16,16] [color=blue]Slime[/color][/itemtooltip] - [texttooltip=Slimy:Slows down enemies upon hit. Works once per enemy.][color=purple]Slimy[/color][/texttooltip]
    > 300 [itemtooltip=(O)769][icon=Maps/springobjects:16,512,16,16] [color=blue]Void Essence[/color][/itemtooltip] - [texttooltip=Shadow Duplicates:Basic attacks affect all four cardinal directions. (Attacks in the other directions are invisible.)][color=purple]Shadow Duplicates[/color][/texttooltip]
