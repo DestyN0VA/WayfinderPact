@@ -41,7 +41,7 @@
 
   "config.section.balancing": "Balancing",
   "config.early-paladin-unlock.name": "Early Paladin Unlock",
-  "config.early-paladin-unlock.description": "Whether the Paladin Skill is unlocked by default (true) or during the Finale Intermission (false).",
+  "config.early-paladin-unlock.description": "Whether the Paladin Skill is unlocked by default (false) or during the Finale Intermission (true).",
   "config.monster-health-buff.name": "Monster Health Buff",
   "config.monster-health-buff.description": "Buff monster health by a percentage (but not in the mines below level 20). This is to account for dual-wielding being available.",
   "config.section.lltk": "Long Live the King Config",
