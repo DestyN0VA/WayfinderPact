@@ -455,7 +455,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": true,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 300,
@@ -489,7 +489,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": true,
           "Buffs": [
             {
               "Duration": 300,
