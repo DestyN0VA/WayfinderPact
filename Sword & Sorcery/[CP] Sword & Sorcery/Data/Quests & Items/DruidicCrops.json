@@ -931,6 +931,41 @@
           }
         }
       }
-    }
+    },
+    //WILD FLOWERS MOD STOP STEALING THINGS PLEASE,
+    {
+      "Action": "EditData",
+      "Target": "Mods/jpp.WildFlowersReimagined/IgnoreList",
+      "TargetField": [ "Flowers"],
+      "Entries": {
+        "{{ModID}}_ancientamaranth": "{{ModID}}_ancientamaranth",
+        "{{ModID}}_ancientepiphyticfern": "{{ModID}}_ancientepiphyticfern",
+        "{{ModID}}_ancientglowinghuckleberry": "{{ModID}}_ancientglowinghuckleberry",
+        "{{ModID}}_glowingpolyporemushrooms": "{{ModID}}_glowingpolyporemushrooms",
+        "{{ModID}}_ancientwildfairyrose": "{{ModID}}_ancientwildfairyrose",
+        "{{ModID}}_ancientbottlegourd": "{{ModID}}_ancientbottlegourd",
+        "{{ModID}}_ancientelderberry": "{{ModID}}_ancientelderberry",
+        "{{ModID}}_ancientgiantappleberry": "{{ModID}}_ancientgiantappleberry",
+        "{{ModID}}_ancientazuredetura": "{{ModID}}_ancientazuredetura",
+        "{{ModID}}_ancientsweettealeaves": "{{ModID}}_ancientsweettealeaves"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Mods/jpp.WildFlowersReimagined/IgnoreList",
+      "TargetField": [ "Seeds"],
+      "Entries": {
+        "{{ModID}}_ancientamaranth.seed": "{{ModID}}_ancientamaranth.seed",
+        "{{ModID}}_ancientepiphyticfern.seed": "{{ModID}}_ancientepiphyticfern.seed",
+        "{{ModID}}_ancientglowinghuckleberry.seed": "{{ModID}}_ancientglowinghuckleberry.seed",
+        "{{ModID}}_glowingpolyporemushrooms.seed": "{{ModID}}_glowingpolyporemushrooms.seed",
+        "{{ModID}}_ancientwildfairyrose.seed": "{{ModID}}_ancientwildfairyrose.seed",
+        "{{ModID}}_ancientbottlegourd.seed": "{{ModID}}_ancientbottlegourd.seed",
+        "{{ModID}}_ancientelderberry.seed": "{{ModID}}_ancientelderberry.seed",
+        "{{ModID}}_ancientgiantappleberry.seed": "{{ModID}}_ancientgiantappleberry.seed",
+        "{{ModID}}_ancientazuredetura.seed": "{{ModID}}_ancientazuredetura.seed",
+        "{{ModID}}_ancientsweettealeaves.seed": "{{ModID}}_ancientsweettealeaves.seed"
+      }
+      },
   ]
 }
