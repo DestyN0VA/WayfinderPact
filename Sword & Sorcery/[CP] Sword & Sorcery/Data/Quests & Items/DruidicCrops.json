@@ -21,7 +21,8 @@
           "SpriteIndex": 0,
           "ContextTags": [
             "color_cyan",
-            "seedmaker_banned"
+            "seedmaker_banned",
+            "sns_druidiccrop_item"
           ]
         },
         "{{ModID}}_ancientamaranth.seed": {
@@ -89,7 +90,9 @@
           "SpriteIndex": 2,
           "ContextTags": [
             "color_cyan",
-            "seedmaker_banned"
+            "seedmaker_banned",
+            "sns_druidiccrop_item"
+            
           ]
         },
 
@@ -160,7 +163,8 @@
           "SpriteIndex": 4,
           "ContextTags": [
             "color_cyan",
-            "seedmaker_banned"
+            "seedmaker_banned",
+            "sns_druidiccrop_item"
           ]
         },
 
@@ -229,7 +233,8 @@
           "SpriteIndex": 1,
           "ContextTags": [
             "color_cyan",
-            "seedmaker_banned"
+            "seedmaker_banned",
+            "sns_druidiccrop_item"
           ]
         },
 
@@ -299,7 +304,8 @@
           "SpriteIndex": 37,
           "ContextTags": [
             "color_cyan",
-            "seedmaker_banned"
+            "seedmaker_banned",
+            "sns_druidiccrop_item"
           ]
         },
         "{{ModID}}_ancientelderberry.seed": {
@@ -368,7 +374,8 @@
           "CountForPolyculture": "{{CountForFarmingAchievements}}",
           "ContextTags": [
             "color_cyan",
-            "seedmaker_banned"
+            "seedmaker_banned",
+            "sns_druidiccrop_item"
           ]
         },
 
@@ -438,7 +445,8 @@
           "ContextTags": [
             "color_cyan",
             "category_fruits",
-            "seedmaker_banned"
+            "seedmaker_banned",
+            "sns_druidiccrop_item"
           ]
         },
 
@@ -507,7 +515,8 @@
           "SpriteIndex": 43,
           "ContextTags": [
             "color_cyan",
-            "seedmaker_banned"
+            "seedmaker_banned",
+            "sns_druidiccrop_item"
           ]
         },
 
@@ -574,7 +583,8 @@
           "SpriteIndex": 3,
           "ContextTags": [
             "color_cyan",
-            "seedmaker_banned"
+            "seedmaker_banned",
+            "sns_druidiccrop_item"
           ]
         },
 
@@ -637,7 +647,8 @@
           "SpriteIndex": 83,
           "ContextTags": [
             "color_cyan",
-            "seedmaker_banned"
+            "seedmaker_banned",
+            "sns_druidiccrop_item"
           ]
         },
 
