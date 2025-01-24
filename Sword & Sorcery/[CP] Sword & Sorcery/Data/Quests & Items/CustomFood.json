@@ -178,7 +178,8 @@
           "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 27,
           "ContextTags": [
-            "color_red"
+            "color_red",
+            "sns_druidicfood_item"
           ]
         },
 
@@ -213,7 +214,8 @@
           "SpriteIndex": 28,
           "ContextTags": [
             "food_sweet",
-            "color_sand"
+            "color_sand",
+            "sns_druidicfood_item"
           ]
         },
 
@@ -251,7 +253,8 @@
             "food_sweet",
             "food_nonvegan",
             "food_ice_cream",
-            "color_sand"
+            "color_sand",
+            "sns_druidicfood_item"
           ]
         },
 
@@ -288,7 +291,8 @@
             "color_dark_red",
             "allergen_fish",
             "food_seafood",
-            "food_nonvegan"
+            "food_nonvegan",
+            "sns_druidicfood_item"
           ]
         },
 
@@ -326,7 +330,8 @@
             "allergen_dairy",
             "food_nonvegan",
             "allergen_gluten",
-            "food_party"
+            "food_party",
+            "sns_zuzufood_item"
           ]
         },
 
@@ -365,7 +370,8 @@
             "food_seafood",
             "food_nonvegan",
             "allergen_dairy",
-            "allergen_gluten"
+            "allergen_gluten",
+            "sns_zuzufood_item"
           ]
         },
 
@@ -404,7 +410,8 @@
             "allergen_dairy",
             "allergen_egg",
             "food_sweet",
-            "food_bakery"
+            "food_bakery",
+            "sns_zuzufood_item"
           ]
         },
 
@@ -442,7 +449,8 @@
             "food_nonvegan",
             "allergen_shellfish",
             "food_soup",
-            "food_seafood"
+            "food_seafood",
+            "sns_zuzufood_item"
           ]
         },
 
