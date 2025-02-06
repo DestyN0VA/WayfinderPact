@@ -390,12 +390,6 @@ public class ArsenalMenu : IClickableMenu
                 return;
             }
 
-            if (Game1.player.CursorSlotItem != null &&
-                Game1.player.CursorSlotItem.Stack < ModSnS.CoatingQuantities[Game1.player.CursorSlotItem.QualifiedItemId])
-            {
-                return;
-            }
-
             ModifierSlotShenanigans(coatingSlot, Game1.player.CursorSlotItem,
                 Game1.player.CursorSlotItem != null
                     ? ModSnS.CoatingQuantities[Game1.player.CursorSlotItem.QualifiedItemId]
