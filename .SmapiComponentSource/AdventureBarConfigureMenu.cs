@@ -101,6 +101,11 @@ namespace SwordAndSorcerySMAPI
             bar.xPositionOnScreen = xPositionOnScreen - bar.width - 12;
         }
 
+        public override bool overrideSnappyMenuCursorMovementBan()
+        {
+            return true;
+        }
+
         private void UpdateAbilities()
         {
             foreach (var img in abilImages)

@@ -317,13 +317,24 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
+        private int scrollCounter = 0;
         public override void update(GameTime time)
         {
             base.update(time);
-
             ui.Update();
-            UpdateComponentVisibility(); 
 
+            UpdateComponentVisibility();
+
+            if (Game1.input.GetGamePadState().ThumbSticks.Right.Y != 0)
+            {
+                if (++scrollCounter == 5)
+                {
+                    scrollCounter = 0;
+                    this.ResearchList.Scrollbar.ScrollBy(-Math.Sign(Game1.input.GetGamePadState().ThumbSticks.Right.Y));
+                }
+            }
+
+            else scrollCounter = 0;
             if (deferSwitch != null)
             {
                 SwitchToResearch(deferSwitch.Value.id, deferSwitch.Value.page);

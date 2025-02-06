@@ -7,7 +7,6 @@ using Netcode;
 using NeverEndingAdventure;
 using NeverEndingAdventure.Utils;
 using SpaceCore;
-using SpaceCore.Dungeons;
 using SpaceShared.APIs;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
@@ -17,7 +16,6 @@ using StardewValley.BellsAndWhistles;
 using StardewValley.Extensions;
 using StardewValley.GameData;
 using StardewValley.GameData.Objects;
-using StardewValley.GameData.SpecialOrders;
 using StardewValley.GameData.Weapons;
 using StardewValley.Locations;
 using StardewValley.Menus;
@@ -35,9 +33,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Threading;
-using static System.Net.Mime.MediaTypeNames;
-using Object = StardewValley.Object;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -950,7 +945,7 @@ namespace SwordAndSorcerySMAPI
             return false;
         }
 
-        private void Display_RenderedWorld(object sender, StardewModdingAPI.Events.RenderedWorldEventArgs e)
+        private void Display_RenderedWorld(object sender, RenderedWorldEventArgs e)
         {
             if (!Game1.player.eventsSeen.Contains("SnS.Ch1.Mateo.12") ||
                  Game1.player.team.acceptedSpecialOrderTypes.Contains("SwordSorcery") ||
@@ -1014,121 +1009,6 @@ namespace SwordAndSorcerySMAPI
                 }
                 e.LoadFromModFile<Texture2D>(OffhandSlot, AssetLoadPriority.Exclusive);
             }
-
-            /*
-            if (e.NameWithoutLocale.IsEquivalentTo("Data/ObjectInformation"))
-            {
-                e.Edit((asset) =>
-                {
-                    var dict = asset.AsDictionary<string, ObjectData>().Data;
-                    dict.Add("DestyNova.SwordAndSorcery_BrokenHeroRelic", new ObjectData()
-                    {
-                        Name = "BrokenHeroRelic",
-                        Price = 500,
-                        Edibility = 300,
-                        Category = StardewValley.Object.metalResources,
-                        Type = "Metal",
-                        DisplayName = I18n.HeroRelic_Broken_Name(),
-                        Description = I18n.HeroRelic_Broken_Description(),
-                        Texture = "DestyNova.SwordAndSorcery\\shields.png",
-                        SpriteIndex = 0,
-                        ContextTags = { "not_giftable" },
-                        ExcludeFromShippingCollection = true,
-                    });
-                    dict.Add("DestyNova.SwordAndSorcery_RepairedHeroRelic", new ObjectData()
-                    {
-                        Name = "RepairedHeroRelic",
-                        Price = 500,
-                        Edibility = 300,
-                        Category = StardewValley.Object.metalResources,
-                        Type = "Metal",
-                        DisplayName = I18n.HeroRelic_Repaired_Name(),
-                        Description = I18n.HeroRelic_Repaired_Description(),
-                        Texture = "DestyNova.SwordAndSorcery\\shields.png",
-                        SpriteIndex = 1,
-                        ContextTags = { "not_giftable" },
-                        ExcludeFromShippingCollection = true,
-                    });
-                    dict.Add("DestyNova.SwordAndSorcery_LegendaryHeroRelic", new ObjectData()
-                    {
-                        Name = "LegendaryHeroRelic",
-                        Price = 500,
-                        Edibility = 300,
-                        Category = StardewValley.Object.metalResources,
-                        Type = "Metal",
-                        DisplayName = I18n.HeroRelic_Legendary_Name(),
-                        Description = I18n.HeroRelic_Legendary_Description(),
-                        Texture = "DestyNova.SwordAndSorcery\\shields.png",
-                        SpriteIndex = 2,
-                        ContextTags = { "not_giftable" },
-                        ExcludeFromShippingCollection = true,
-                    });
-                });
-            }
-            else if (e.NameWithoutLocale.IsEquivalentTo("Data/Tools"))
-            {
-                e.Edit((asset) =>
-                {
-                    var dict = asset.AsDictionary<string, ToolData>().Data;
-
-                    dict.Add("DestyNova.SwordAndSorcery_Harp", new()
-                    {
-                        ClassName = "WarpHarp, SwordAndSorcerySMAPI",
-                        Name = "Harp",
-                        DisplayName = I18n.Harp_Name(),
-                        Description = I18n.Harp_Description(),
-                        Texture = "DestyNova.SwordAndSorcery/harp.png",
-                        CanBeLostOnDeath = false
-                    });
-                });
-            }
-            else if (e.NameWithoutLocale.IsEquivalentTo("spacechase0.SpaceCore/ObjectExtensionData"))
-            {
-                e.Edit((asset) =>
-                {
-                    var dict = asset.AsDictionary<string, ObjectExtensionData>().Data;
-
-                    ObjectExtensionData data = new()
-                    {
-                        CategoryTextOverride = I18n.ShieldCategory(),
-                        CanBeShipped = false,
-                        CanBeTrashed = false,
-                        MaxStackSizeOverride = 1
-                    };
-
-                    dict.Add("DestyNova.SwordAndSorcery_BrokenHeroRelic", data);
-                    dict.Add("DestyNova.SwordAndSorcery_RepairedHeroRelic", data);
-                    dict.Add("DestyNova.SwordAndSorcery_LegendaryHeroRelic", data);
-                });
-            }
-            else if (e.NameWithoutLocale.IsEquivalentTo("DestyNova.SwordAndSorcery/shields.png"))
-            {
-                e.LoadFromModFile<Texture2D>("assets/shield-item.png", StardewModdingAPI.Events.AssetLoadPriority.Medium);
-            }
-            else if (e.NameWithoutLocale.IsEquivalentTo("DestyNova.SwordAndSorcery/harp.png"))
-            {
-                e.LoadFromModFile<Texture2D>("assets/harp.png", StardewModdingAPI.Events.AssetLoadPriority.Medium);
-            }
-            else if (e.NameWithoutLocale.IsEquivalentTo("DestyNova.SwordAndSorcery/HarpSongs"))
-            {
-                e.LoadFrom(() =>
-                {
-                    var songs = new Dictionary<string, SongData>();
-
-#if !NDEBUG
-                    songs.Add("test", new()
-                    {
-                        DisplayName = "Test Song",
-                        WarpLocationName = "FarmHouse",
-                        WarpLocationTile = new(5, 7),
-                        Notes = { SongData.Note.Up, SongData.Note.Down, SongData.Note.Left, SongData.Note.Right }
-                    });
-#endif
-
-                    return songs;
-                }, StardewModdingAPI.Events.AssetLoadPriority.Medium);
-            }
-            */
         }
 
         private double Perc;
@@ -1902,7 +1782,6 @@ namespace SwordAndSorcerySMAPI
             if (ArmorAmount > 0 && ext.armorUsed.Value < ArmorAmount)
             {
                 __instance.playNearbySoundAll("parry");
-                Log.Warn($"{ArmorAmount}");
                 ext.armorUsed.Value = Math.Min(ArmorAmount, ext.armorUsed.Value + damage);
                 damager?.parried(0, __instance);
                 __instance.temporarilyInvincible = true;

@@ -7,11 +7,8 @@ using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceCore;
-using SpaceCore.Spawnables;
 using SpaceCore.UI;
-using StardewModdingAPI;
 using StardewModdingAPI.Events;
-using StardewModdingAPI.Framework.ModLoading.Rewriters.StardewValley_1_6;
 using StardewValley;
 using StardewValley.Buffs;
 using StardewValley.Enchantments;
@@ -19,6 +16,10 @@ using StardewValley.Extensions;
 using StardewValley.Menus;
 using StardewValley.Monsters;
 using StardewValley.Tools;
+using Object = StardewValley.Object;
+using StardewModdingAPI;
+using StardewValley.Minigames;
+using System.Runtime;
 
 namespace SwordAndSorcerySMAPI;
 
@@ -194,7 +195,7 @@ public partial class ModSnS
         Helper.ConsoleCommands.Add("sns_alloyweapon", "...", (cmd, args) => (Game1.player.CurrentTool as MeleeWeapon)?.SetBladeAlloying(args[0]));
         Helper.ConsoleCommands.Add("sns_arsenal", "...", (cmd, args) => Game1.activeClickableMenu = new ArsenalMenu());
 
-        SpaceCore.CustomForgeRecipe.Recipes.Add(new SecondEnchantmentForgeRecipe());
+        CustomForgeRecipe.Recipes.Add(new SecondEnchantmentForgeRecipe());
 
         GameLocation.RegisterTileAction("OpenArsenalUI", (loc, args, who, Tile) =>
         {
@@ -229,7 +230,7 @@ public class ArsenalMenu : IClickableMenu
     private InventoryMenu invMenu;
 
     public ArsenalMenu()
-    :   base( Game1.uiViewport.Width / 2 - 350 - IClickableMenu.borderWidth, Game1.uiViewport.Height / 2 - 150 - 100 - IClickableMenu.borderWidth, 700 + IClickableMenu.borderWidth * 2, 300 + IClickableMenu.borderWidth * 2 )
+    : base(Game1.uiViewport.Width / 2 - 350 - IClickableMenu.borderWidth, Game1.uiViewport.Height / 2 - 150 - 100 - IClickableMenu.borderWidth, 700 + IClickableMenu.borderWidth * 2, 300 + IClickableMenu.borderWidth * 2)
     {
         invMenu = new(Game1.uiViewport.Width / 2 - 72 * 5 - 36 + 8, yPositionOnScreen + height, true, highlightMethod:
             (item) =>
@@ -238,7 +239,6 @@ public class ArsenalMenu : IClickableMenu
                         ModSnS.CoatingIconMapping.ContainsKey(item.QualifiedItemId) ||
                         ModSnS.AlloyIconMapping.ContainsKey(item.QualifiedItemId));
             });
-
         ui = new RootElement();
         StaticContainer container = new()
         {
@@ -250,7 +250,7 @@ public class ArsenalMenu : IClickableMenu
         weaponSlot = new ItemSlot()
         {
             LocalPosition = new(100, height / 2 - 96 / 2),
-            ItemDisplay = new MeleeWeapon("0" ),
+            ItemDisplay = new MeleeWeapon("0"),
             TransparentItemDisplay = true,
         };
         this.weaponSlot.Callback = this.weaponSlot.SecondaryCallback = (elem) =>
@@ -262,50 +262,73 @@ public class ArsenalMenu : IClickableMenu
                 return;
 
             if (weaponSlot.Item != null)
-            {
-                SyncSlotsToWeapon();
-            }
+                ApplySlots();
+
+            ResetSlots();
 
             (this.weaponSlot.Item, Game1.player.CursorSlotItem) = (Game1.player.CursorSlotItem, this.weaponSlot.Item);
 
-            SyncWeaponToSlots();
         };
         container.AddChild(this.weaponSlot);
 
-        void ModifierSlotShenanigans(ItemSlot modifierSlot, int reqQty)
+        void ModifierSlotShenanigans(ItemSlot modifierSlot, Item cursorItem, int reqQty, out Item Held, out Item Slot)
         {
-            if (this.weaponSlot.Item == null)
+            Item slotItem = modifierSlot.Item;
+
+            Held = cursorItem;
+            Slot = slotItem;
+
+            if (weaponSlot.Item == null || (cursorItem == null && slotItem == null))
                 return;
 
-            if (Game1.player.CursorSlotItem == null && modifierSlot.Item == null)
-                return;
-
-            if (Game1.player.CursorSlotItem?.QualifiedItemId != modifierSlot.Item?.QualifiedItemId &&
-                (modifierSlot.Item != null && (Game1.player.CursorSlotItem?.Stack ?? reqQty) != reqQty))
-                return;
-
-            Game1.playSound("dwop");
-
-            string cursorId = Game1.player.CursorSlotItem?.QualifiedItemId;
-            if (cursorId == null)
+            if (cursorItem == null)
             {
-                Game1.player.CursorSlotItem = modifierSlot.Item;
-                modifierSlot.Item = null;
+                Held = slotItem;
+                Slot = null;
+                Game1.playSound("dwop");
+                return;
             }
-            else if (modifierSlot.Item != null)
+            else if (slotItem == null)
             {
-                (Game1.player.CursorSlotItem, modifierSlot.Item) = (modifierSlot.Item, Game1.player.CursorSlotItem);
-            }
-            else
-            {
-                modifierSlot.Item = Game1.player.CursorSlotItem.getOne();
-                modifierSlot.Item.Stack = reqQty;
-                if (Game1.player.CursorSlotItem.Stack <= reqQty)
-                    Game1.player.CursorSlotItem = null;
+                int LeftOver = cursorItem.Stack - reqQty;
+                Slot = cursorItem;
+                Slot.Stack = Math.Min(reqQty, cursorItem.Stack);
+                if (LeftOver > 0)
+                {
+                    Held = cursorItem.getOne();
+                    Held.Stack = LeftOver;
+                }
                 else
-                    Game1.player.CursorSlotItem.Stack -= reqQty;
+                    Held = null;
+                Game1.playSound("button1");
+                return;
             }
-            this.SyncSlotsToWeapon();
+            else if (cursorItem.canStackWith(slotItem) && slotItem.Stack < reqQty)
+            {
+                int ToTake = reqQty - slotItem.Stack;
+                int LeftOver = cursorItem.Stack - ToTake;
+                int NewStack = slotItem.Stack + ToTake;
+
+                Slot = slotItem;
+                Slot.Stack = NewStack;
+
+                if (LeftOver > 0)
+                {
+                    Held = cursorItem;
+                    Held.Stack = LeftOver;
+                }
+                else
+                    Held = null;
+                Game1.playSound("button1");
+                return;
+            }
+            else if (cursorItem.Stack <= reqQty)
+            {
+                Held = slotItem;
+                Slot = cursorItem;
+                Game1.playSound("button1");
+                return;
+            }
         }
 
         string spacing = "  ";
@@ -315,7 +338,7 @@ public class ArsenalMenu : IClickableMenu
         {
             LocalPosition = new(250, height / 4 - 64 / 2),
             BoxIsThin = true,
-            ItemDisplay = new StardewValley.Object("DN.SnS_ExquisiteDiamond", 1),
+            ItemDisplay = ItemRegistry.Create("(O)DN.SnS_ExquisiteDiamond"),
             TransparentItemDisplay = true,
             UserData = $"{I18n.Anvil_ValidOptions()}:\n{string.Join(newline, ModSnS.ExquisiteGemMappings.Values.Select(s => (spacing + ItemRegistry.GetData(s).DisplayName)))}"
         };
@@ -332,7 +355,9 @@ public class ArsenalMenu : IClickableMenu
                 Game1.addHUDMessage(new HUDMessage(I18n.Anvil_NotHere()));
                 return;
             }
-            ModifierSlotShenanigans(gemSlot, 1);
+            ModifierSlotShenanigans(gemSlot, Game1.player.CursorSlotItem, 1, out var Held, out var Slot);
+            Game1.player.CursorSlotItem = Held;
+            gemSlot.Item = Slot;
         };
         container.AddChild(gemSlot);
         var gemLabel = new SpaceCore.UI.Label()
@@ -346,7 +371,7 @@ public class ArsenalMenu : IClickableMenu
         {
             LocalPosition = new(250, height / 4 * 2 - 64 / 2),
             BoxIsThin = true,
-            ItemDisplay = new StardewValley.Object("766", 1),
+            ItemDisplay = ItemRegistry.Create("(O)766"),
             TransparentItemDisplay = true,
             UserData = $"{I18n.Anvil_ValidOptions()}:\n{string.Join(newline, ModSnS.CoatingIconMapping.Keys.Select(s => (spacing + ItemRegistry.GetData(s).DisplayName)))}"
         };
@@ -366,16 +391,18 @@ public class ArsenalMenu : IClickableMenu
             }
 
             if (Game1.player.CursorSlotItem != null &&
-                Game1.player.CursorSlotItem.Stack < ModSnS.CoatingQuantities[ Game1.player.CursorSlotItem.QualifiedItemId ])
+                Game1.player.CursorSlotItem.Stack < ModSnS.CoatingQuantities[Game1.player.CursorSlotItem.QualifiedItemId])
             {
-                Game1.addHUDMessage(new HUDMessage(I18n.Anvil_NotEnough(ModSnS.CoatingQuantities[ Game1.player.CursorSlotItem.QualifiedItemId ])));
                 return;
             }
 
-            ModifierSlotShenanigans(coatingSlot,
+            ModifierSlotShenanigans(coatingSlot, Game1.player.CursorSlotItem,
                 Game1.player.CursorSlotItem != null
                     ? ModSnS.CoatingQuantities[Game1.player.CursorSlotItem.QualifiedItemId]
-                    : 1);
+                    : 1,
+                out var Held, out var Slot);
+            Game1.player.CursorSlotItem = Held;
+            coatingSlot.Item = Slot;
         };
         container.AddChild(coatingSlot);
         var coatingLabel = new SpaceCore.UI.Label()
@@ -389,7 +416,7 @@ public class ArsenalMenu : IClickableMenu
         {
             LocalPosition = new(250, height / 4 * 3 - 64 / 2),
             BoxIsThin = true,
-            ItemDisplay = new StardewValley.Object("334", 1),
+            ItemDisplay = ItemRegistry.Create("(O)DN.SnS_PureCopperOre"),
             TransparentItemDisplay = true,
             UserData = $"{I18n.Anvil_ValidOptions()}:\n{string.Join(newline, ModSnS.AlloyIconMapping.Keys.Select(s => (spacing + ItemRegistry.GetData(s).DisplayName)))}"
         };
@@ -408,14 +435,9 @@ public class ArsenalMenu : IClickableMenu
                 return;
             }
 
-            if (Game1.player.CursorSlotItem != null &&
-                Game1.player.CursorSlotItem.Stack < 25)
-            {
-                Game1.addHUDMessage(new HUDMessage(I18n.Anvil_NotEnough(25)));
-                return;
-            }
-
-            ModifierSlotShenanigans(alloyingSlot, 25);
+            ModifierSlotShenanigans(alloyingSlot, Game1.player.CursorSlotItem, 25, out var Held, out var Slot);
+            Game1.player.CursorSlotItem = Held;
+            alloyingSlot.Item = Slot;
         };
         container.AddChild(alloyingSlot);
         var alloyingLabel = new SpaceCore.UI.Label()
@@ -424,6 +446,11 @@ public class ArsenalMenu : IClickableMenu
             String = Game1.player.GetCustomSkillLevel( ModSnS.RogueSkill ) >= 2 ? I18n.Anvil_Alloying() : I18n.Anvil_Locked(2),
         };
         container.AddChild(alloyingLabel);
+    }
+
+    public override bool overrideSnappyMenuCursorMovementBan()
+    {
+        return true;
     }
 
     public override void update(GameTime time)
@@ -515,6 +542,12 @@ public class ArsenalMenu : IClickableMenu
         base.cleanupBeforeExit();
         if (this.weaponSlot.Item != null)
             Game1.player.addItemByMenuIfNecessary(this.weaponSlot.Item);
+        if (this.alloyingSlot.Item != null)
+            Game1.player.addItemByMenuIfNecessary(this.alloyingSlot.Item);
+        if (this.coatingSlot.Item != null)
+            Game1.player.addItemByMenuIfNecessary(this.coatingSlot.Item);
+        if (this.gemSlot.Item != null)
+            Game1.player.addItemByMenuIfNecessary(this.gemSlot.Item);
     }
 
     public override void emergencyShutDown()
@@ -522,33 +555,64 @@ public class ArsenalMenu : IClickableMenu
         base.emergencyShutDown();
         if (this.weaponSlot.Item != null)
             Game1.player.addItemByMenuIfNecessary(this.weaponSlot.Item);
+        if (this.alloyingSlot.Item != null)
+            Game1.player.addItemByMenuIfNecessary(this.alloyingSlot.Item);
+        if (this.coatingSlot.Item != null)
+            Game1.player.addItemByMenuIfNecessary(this.coatingSlot.Item);
+        if (this.gemSlot.Item != null)
+            Game1.player.addItemByMenuIfNecessary(this.gemSlot.Item);
     }
 
-    private void SyncSlotsToWeapon()
+    private void ApplySlots()
     {
-        if (this.weaponSlot.Item == null)
-            return;
-
-        (this.weaponSlot.Item as MeleeWeapon).SetExquisiteGemstone(this.gemSlot.Item?.QualifiedItemId);
-        (this.weaponSlot.Item as MeleeWeapon).SetBladeCoating(this.coatingSlot.Item?.QualifiedItemId);
-        (this.weaponSlot.Item as MeleeWeapon).SetBladeAlloying(this.alloyingSlot.Item?.QualifiedItemId);
-    }
-
-    private void SyncWeaponToSlots()
-    {
-        if (this.weaponSlot.Item == null)
+        if (gemSlot.Item != null)
         {
-            this.gemSlot.Item = null;
-            this.coatingSlot.Item = null;
-            this.alloyingSlot.Item = null;
-            return;
+            (this.weaponSlot.Item as MeleeWeapon).SetExquisiteGemstone(this.gemSlot.Item?.QualifiedItemId);
+            gemSlot.Item = null;
+        }
+        if (coatingSlot.Item != null)
+        {
+            if (coatingSlot.Item.Stack == ModSnS.CoatingQuantities[coatingSlot.Item.QualifiedItemId])
+            {
+                (this.weaponSlot.Item as MeleeWeapon).SetBladeCoating(this.coatingSlot.Item?.QualifiedItemId);
+                coatingSlot.Item = null;
+            }
+            else
+                Game1.addHUDMessage(new HUDMessage(I18n.Anvil_NotEnough(ModSnS.CoatingQuantities[Game1.player.CursorSlotItem.QualifiedItemId], coatingSlot.Item.DisplayName)));
+        }
+        if (alloyingSlot.Item != null)
+        {
+            if (alloyingSlot.Item.Stack == 25)
+            {
+                (this.weaponSlot.Item as MeleeWeapon).SetBladeAlloying(this.alloyingSlot.Item?.QualifiedItemId);
+                alloyingSlot.Item = null;
+            }
+            else
+                Game1.addHUDMessage(new HUDMessage(I18n.Anvil_NotEnough(25, alloyingSlot.Item.DisplayName)));
+        }
+    }
+
+    private void ResetSlots()
+    {
+        List<Item> itemsToAdd = new();
+        if (gemSlot.Item != null)
+        {
+            itemsToAdd.Add(gemSlot.Item);
+            gemSlot.Item = null;
+        }
+        if (coatingSlot.Item != null)
+        {
+            itemsToAdd.Add(coatingSlot.Item);
+            coatingSlot.Item = null;
+        }
+        if (alloyingSlot.Item != null)
+        {
+            itemsToAdd.Add(alloyingSlot.Item);
+            alloyingSlot.Item = null;
         }
 
-        var mw = this.weaponSlot.Item as MeleeWeapon;
-
-        this.gemSlot.Item = mw.GetExquisiteGemstone() != null ? new StardewValley.Object(mw.GetExquisiteGemstone(), 1) : null;
-        this.coatingSlot.Item = mw.GetBladeCoating() != null ? new StardewValley.Object(mw.GetBladeCoating(), ModSnS.CoatingQuantities[ mw.GetBladeCoating() ] ) : null;
-        this.alloyingSlot.Item = mw.GetBladeAlloying() != null ? new StardewValley.Object(mw.GetBladeAlloying(), 25) : null;
+        if (itemsToAdd.Count > 0)
+            Game1.player.addItemsByMenuIfNecessary(itemsToAdd);
     }
 }
 

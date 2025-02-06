@@ -134,7 +134,7 @@
   "anvil.coating": "Weapon Coating",
   "anvil.alloying": "Blade Alloying",
   "anvil.not-here": "That can't go here.",
-  "anvil.not-enough": "You need {{qty}} of that for this effect.",
+  "anvil.not-enough": "You need {{qty}} of {{item}} for this effect.",
   "anvil.locked": "Locked until Artificer {{level}}",
   "tooltip.gem.(O)DN.SnS_ExquisiteEmerald": "Evasive",
   "tooltip.gem.(O)DN.SnS_ExquisiteRuby": "Harming",

@@ -111,6 +111,12 @@ public class ShieldSigilMenu : IClickableMenu
             container.AddChild(sub[i]);
         }
     }
+
+    public override bool overrideSnappyMenuCursorMovementBan()
+    {
+        return true;
+    }
+
     public int timer = 5000;
     public override void update(GameTime time)
     {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -7,21 +8,23 @@ using SpaceCore.UI;
 using StardewValley;
 using StardewValley.Extensions;
 using StardewValley.Menus;
+using Object = StardewValley.Object;
 
 namespace SwordAndSorcerySMAPI.Alchemy
 {
     public class AlchemyRecipesMenu : IClickableMenu
     {
         private RootElement ui;
+        private Table table;
         private List<ItemWithBorder> recipes = new();
 
-        public AlchemyRecipesMenu()
+        public AlchemyRecipesMenu(FancyAlchemyMenu parent)
         : base(Game1.uiViewport.Width / 2 - 320, Game1.uiViewport.Height / 2 - 240, 640, 480, true)
         {
             ui = new();
             ui.LocalPosition = new(xPositionOnScreen, yPositionOnScreen);
 
-            Table table = new()
+            table = new()
             {
                 RowHeight = 110,
                 Size = new(640, 480),
@@ -55,9 +58,6 @@ namespace SwordAndSorcerySMAPI.Alchemy
                     UserData = fake,
                     Callback = (e) =>
                     {
-                        var parent = GetParentMenu() as FancyAlchemyMenu;
-                        if (parent == null) return;
-
                         if (parent.ingreds.Any(slot => slot.Item != null))
                             return;
                         if (!doesFarmerHaveIngredientsInInventory(fake.recipeList))
@@ -70,7 +70,6 @@ namespace SwordAndSorcerySMAPI.Alchemy
                         {
                             for (int i = 0; i < recipe.Value.Ingredients[item]; ++i)
                             {
-                                if (parent.ingreds[i].Item != null) continue;
                                 int? cat = null;
                                 if (int.TryParse(item, out int cat1))
                                     cat = cat1;
@@ -121,6 +120,28 @@ namespace SwordAndSorcerySMAPI.Alchemy
             ui.AddChild(table);
         }
 
+        public override bool overrideSnappyMenuCursorMovementBan()
+        {
+            return true;
+        }
+
+        private int scrollCounter = 0;
+        public override void update(GameTime time)
+        {
+            base.update(time);
+            ui.Update();
+
+            if (Game1.input.GetGamePadState().ThumbSticks.Right.Y != 0)
+            {
+                if (++scrollCounter == 5)
+                {
+                    scrollCounter = 0;
+                    this.table.Scrollbar.ScrollBy(-Math.Sign(Game1.input.GetGamePadState().ThumbSticks.Right.Y));
+                }
+            }
+            else scrollCounter = 0;
+        }
+
         public static bool doesFarmerHaveIngredientsInInventory(Dictionary<string, int> recipeList)
         {
             foreach (KeyValuePair<string, int> recipe in recipeList)
@@ -141,12 +162,6 @@ namespace SwordAndSorcerySMAPI.Alchemy
             }
 
             return true;
-        }
-
-        public override void update(GameTime time)
-        {
-            base.update(time);
-            ui.Update();
         }
 
         public override void draw(SpriteBatch b)

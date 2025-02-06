@@ -92,6 +92,11 @@ namespace SwordAndSorcerySMAPI
             UpdateEssenceAvailability();
         }
 
+        public override bool overrideSnappyMenuCursorMovementBan()
+        {
+            return true;
+        }
+
         internal void UpdateEssenceAvailability()
         {
             foreach (var essence in Essences)

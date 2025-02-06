@@ -12,7 +12,7 @@ using StardewValley.Menus;
 
 namespace SwordAndSorcerySMAPI.Alchemy
 {
-    internal class FancyAlchemyMenu : IClickableMenu
+    public class FancyAlchemyMenu : IClickableMenu
     {
         private RootElement ui;
         internal ItemSlot[] ingreds;
@@ -69,12 +69,17 @@ namespace SwordAndSorcerySMAPI.Alchemy
             {
                 Texture = ModTOP.Grimoire,
                 Scale = 4,
-                Callback = (e) => SetChildMenu(new AlchemyRecipesMenu()),
+                Callback = (e) => SetChildMenu(new AlchemyRecipesMenu(this)),
                 LocalPosition = new(32, 32),
             };
             ui.AddChild(recipesButton);
 
             inventory = new InventoryMenu(xPositionOnScreen + 16, yPositionOnScreen + height - 64 * 3 - 16, true, Game1.player.Items);
+        }
+
+        public override bool overrideSnappyMenuCursorMovementBan()
+        {
+            return true;
         }
 
         private void Pixelize(ItemSlot slot)
