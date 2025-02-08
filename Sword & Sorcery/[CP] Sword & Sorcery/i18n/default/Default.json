@@ -7684,7 +7684,7 @@ ________      ________ _   _ _______ _____
   "config.HandbookColorScheme.values.Mahogany": "Mahogany",
 
   "config.EquipmentMenuConfig.name": "EquipmentMenuConfig",
-  "config.EquipmentMenuConfig.description": "Recolors the Equipment Menu added by Spacecore to match Bog's Forest UI, DaisyNiko's Earthy UI, Enteis' Natural Dark Wood UI, Nom0ri's Vintage UI V2 for 1.6, Shinchan's Purple UI, SQBR's StarryBlue UI, or TheFrenchDodo's Sakura Interface Redux.",
+  "config.EquipmentMenuConfig.description": "Recolors the Equipment Menu added by Spacecore to match Bog's Forest UI, DaisyNiko's Earthy UI, Enteis' Natural Dark Wood UI, Nom0ri's Vintage UI V2 for 1.6, Shinchan's Purple UI, SQBR's StarryBlue UI, TheFrenchDodo's Sakura Interface Redux, VinillaBean's Lavender Dreams UI, Silvermoonchan's Purple Galaxy UI, notbelovely's Cozy Accent Interface or justaslime1's Cherry Blossom UI.",
   "config.EquipmentMenuConfig.values.true": "true",
   "config.EquipmentMenuConfig.values.false": "false",
 

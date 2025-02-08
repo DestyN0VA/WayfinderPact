@@ -326,7 +326,7 @@
       "AllowValues": "true,false",
       "Default": "true",
       "AllowBlank": false,
-      "Description": "Recolors the Equipment Menu added by Spacecore to match Bog's Forest UI, DaisyNiko's Earthy UI, Enteis' Natural Dark Wood UI, Nom0ri's Vintage UI V2 for 1.6, Shinchan's Purple UI, SQBR's StarryBlue UI, or TheFrenchDodo's Sakura Interface Redux.",
+      "Description": "Recolors the Equipment Menu added by Spacecore to match Bog's Forest UI, DaisyNiko's Earthy UI, Enteis' Natural Dark Wood UI, Nom0ri's Vintage UI V2 for 1.6, Shinchan's Purple UI, SQBR's StarryBlue UI, TheFrenchDodo's Sakura Interface Redux, VinillaBean's Lavender Dreams UI, Silvermoonchan's Purple Galaxy UI, notbelovely's Cozy Accent Interface or justaslime1's Cherry Blossom UI.",
       "Section": "Miscellaneous"
     },
     "TimegateConfig": {
@@ -2460,6 +2460,16 @@
       "When": { "HasMod": "silvermoonchan.PurpleGalaxyUI", "EquipmentMenuConfig": true }
     },
     {
+      "Name": "SpaceCoreRecolors",
+      "Value": "notbelovely.CAccent_equipmentmenu",
+      "When": { "HasMod": "notbelovely.CAccent", "EquipmentMenuConfig": true }
+    },  
+    {
+      "Name": "SpaceCoreRecolors",
+      "Value": "Slime.SlimeUI_equipmentmenu",
+      "When": { "HasMod": "Slime.SlimeUI", "EquipmentMenuConfig": true }
+    },    
+    {
       "Name": "GuidebookRecolors",
       "Value": "Tabs"
     },
@@ -2507,6 +2517,16 @@
       "Name": "GuidebookRecolors",
       "Value": "silvermoonchan.PurpleGalaxyUI_tabs",
       "When": { "HasMod": "silvermoonchan.PurpleGalaxyUI" }
+    },
+    {
+      "Name": "GuidebookRecolors",
+      "Value": "notbelovely.CAccent_tabs",
+      "When": { "HasMod": "notbelovely.CAccent" }
+    },
+    {
+      "Name": "GuidebookRecolors",
+      "Value": "Slime.SlimeUI_tabs",
+      "When": { "HasMod": "Slime.SlimeUI" }
     },
     {
       "Name": "BookFormDT",

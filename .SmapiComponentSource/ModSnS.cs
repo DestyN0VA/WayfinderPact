@@ -981,7 +981,9 @@ namespace SwordAndSorcerySMAPI
                 "Bos.UIInterface",
                 "VinillaBean.LavenderDreams",
                 "silvermoonchan.PurpleGalaxyUI",
-                "ManaKirel.VintageInterface2"
+                "ManaKirel.VintageInterface2",
+                "notbelovely.CAccent",
+                "Slime.SlimeUI"
             ];
 
             if (e.NameWithoutLocale.IsEquivalentTo("DN.SnS/ArmorSlot"))
