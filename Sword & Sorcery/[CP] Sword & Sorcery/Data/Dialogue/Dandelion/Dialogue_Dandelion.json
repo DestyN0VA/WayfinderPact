@@ -57,21 +57,6 @@
         "HasFlag |contains=SnS_M_Dandelion_OverrideSeenToday": false
       }
     },
-    // 10H OVERRIDE POOL
-    {
-      "LogName": "Dialogue - Dandelion 10h Ending Override",
-      "Action": "EditData",
-      "Update": "OnLocationChange",
-      "Target": "Characters/Dialogue/Dandelion",
-      "Entries": {
-        "{{WeekDay}}": "{{i18n:Core.Dandelion.LionsMane.{{Random:{{Range: 1, 10}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Dandelion_OverrideSeenToday received"
-      },
-      "When": {
-        "Hearts:Dandelion": "10",
-        "Query: {{Random: {{Range: 1, 10}}|key=CLMO}} = 1": true,
-        "HasFlag |contains=SnS_M_Dandelion_OverrideSeenToday": false
-      }
-    },
     // EPILOGUE POOL 
     {
       "LogName": "Dialogue - Dandelion Epilogue Override",
