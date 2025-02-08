@@ -585,14 +585,14 @@
       "Action": "EditData",
       "Target": "Data/CraftingRecipes",
       "Entries": {
-        "{{ModID}}_ExquisiteEmerald": "60 50 74 1/hoot/{{ModID}}_ExquisiteEmerald 1/false/null/{{i18n:arsenal.exquisite-emerald.name}}",
+        /*"{{ModID}}_ExquisiteEmerald": "60 50 74 1/hoot/{{ModID}}_ExquisiteEmerald 1/false/null/{{i18n:arsenal.exquisite-emerald.name}}",
         "{{ModID}}_ExquisiteRuby": "64 50 74 1/hoot/{{ModID}}_ExquisiteRuby 1/false/null/{{i18n:arsenal.exquisite-ruby.name}}",
         "{{ModID}}_ExquisiteTopaz": "68 50 74 1/hoot/{{ModID}}_ExquisiteTopaz 1/false/null/{{i18n:arsenal.exquisite-topaz.name}}",
         "{{ModID}}_ExquisiteAquamarine": "62 50 74 1/hoot/{{ModID}}_ExquisiteAquamarine 1/false/null/{{i18n:arsenal.exquisite-aquamarine.name}}",
         "{{ModID}}_ExquisiteAmethyst": "66 50 74 1/hoot/{{ModID}}_ExquisiteAmethyst 1/false/null/{{i18n:arsenal.exquisite-amethyst.name}}",
         "{{ModID}}_ExquisiteJade": "70 50 74 1/hoot/{{ModID}}_ExquisiteJade 1/false/null/{{i18n:arsenal.exquisite-jade.name}}",
         "{{ModID}}_ExquisiteDiamond": "72 50 74 1/hoot/{{ModID}}_ExquisiteDiamond 1/false/null/{{i18n:arsenal.exquisite-diamond.name}}",
-        //"{{ModID}}_ArcanePrimer": "797 1 896 1/hoot/{{ModID}}_ArcanePrimer 1/false/null/{{i18n:arsenal.arcane-primer.name}}",
+        "{{ModID}}_ArcanePrimer": "797 1 896 1/hoot/{{ModID}}_ArcanePrimer 1/false/null/{{i18n:arsenal.arcane-primer.name}}",*/
         "{{ModID}}_ClothArmor": "428 10/hoot/{{ModID}}_ClothArmor 1/false/null/{{i18n:arsenal.cloth-armor.name}}",
         "{{ModID}}_CopperArmor": "{{ModID}}_PureCopperOre 10 {{ModID}}_ClothArmor 1/hoot/{{ModID}}_CopperArmor 1/false/null/{{i18n:arsenal.copper-armor.name}}",
         "{{ModID}}_IronArmor": "{{ModID}}_PureIronOre 10 {{ModID}}_CopperArmor 1/hoot/{{ModID}}_IronArmor 1/false/null/{{i18n:arsenal.iron-armor.name}}",
