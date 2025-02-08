@@ -1,7 +1,5 @@
 ﻿using HarmonyLib;
-using Microsoft.Build.Utilities;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
 using SpaceCore;
 using StardewValley;
 using StardewValley.Extensions;

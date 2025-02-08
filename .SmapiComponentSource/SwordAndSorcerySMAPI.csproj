@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Leclair.Stardew.ModManifestBuilder" Version="2.4.0" />
+    <PackageReference Include="Leclair.Stardew.ModManifestBuilder" Version="2.4.1" />
     <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.3.2" />
     <PackageReference Include="Pathoschild.Stardew.ModTranslationClassBuilder" Version="2.2.0" />
     <PackageReference Include="System.Drawing.Common" Version="4.7.2" />
@@ -31,6 +31,10 @@
 
 	<ItemGroup>
 		<SMAPIDependency Include="spacechase0.SpaceCore" Version="1.18.0-sdvalpha" Reference="true" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="assets\forgeButton\" />
 	</ItemGroup>
 	
 </Project>

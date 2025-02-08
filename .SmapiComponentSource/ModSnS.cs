@@ -1009,6 +1009,19 @@ namespace SwordAndSorcerySMAPI
                 }
                 e.LoadFromModFile<Texture2D>(OffhandSlot, AssetLoadPriority.Exclusive);
             }
+
+            if (e.NameWithoutLocale.IsEquivalentTo("Textures/DN.SnS/ForgeButton"))
+            {
+                string ForgeButton = "assets/ForgeButton.png";
+                foreach (var recolor in recolors)
+                {
+                    if (Helper.ModRegistry.IsLoaded(recolor) && File.Exists(Path.Combine(Helper.DirectoryPath, "assets", "forgeButton", (recolor == recolors[9] ? recolors[4] : recolor) + "_offhand.png")))
+                    {
+                        ForgeButton = $"assets/forgeButton/{(recolor == recolors[9] ? recolors[4] : recolor)}_ForgeButton.png";
+                    }
+                }
+                e.LoadFromModFile<Texture2D>(ForgeButton, AssetLoadPriority.Exclusive);
+            }
         }
 
         private double Perc;

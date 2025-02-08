@@ -226,8 +226,13 @@ public class ArsenalMenu : IClickableMenu
 {
     private RootElement ui;
     private ItemSlot weaponSlot;
+    private ItemWithBorder weaponPreview;
     private ItemSlot gemSlot, coatingSlot, alloyingSlot;
+    private Image forgeButton;
     private InventoryMenu invMenu;
+    private List<Pixel> pixels = new();
+    private float? animStart;
+    private bool playedSynthesizeSound = true;
 
     public ArsenalMenu()
     : base(Game1.uiViewport.Width / 2 - 350 - IClickableMenu.borderWidth, Game1.uiViewport.Height / 2 - 150 - 100 - IClickableMenu.borderWidth, 700 + IClickableMenu.borderWidth * 2, 300 + IClickableMenu.borderWidth * 2)
@@ -249,10 +254,11 @@ public class ArsenalMenu : IClickableMenu
 
         weaponSlot = new ItemSlot()
         {
-            LocalPosition = new(100, height / 2 - 96 / 2),
+            LocalPosition = new(100, height / 4 - 96 / 2),
             ItemDisplay = new MeleeWeapon("0"),
             TransparentItemDisplay = true,
         };
+
         this.weaponSlot.Callback = this.weaponSlot.SecondaryCallback = (elem) =>
         {
             if (Game1.player.CursorSlotItem != null && Game1.player.CursorSlotItem is not MeleeWeapon)
@@ -261,15 +267,34 @@ public class ArsenalMenu : IClickableMenu
             if (Game1.player.CursorSlotItem == null && this.weaponSlot.Item == null)
                 return;
 
-            if (weaponSlot.Item != null)
-                ApplySlots();
-
-            ResetSlots();
-
             (this.weaponSlot.Item, Game1.player.CursorSlotItem) = (Game1.player.CursorSlotItem, this.weaponSlot.Item);
 
+            UpdatePreview();
         };
+
+        weaponPreview = new ItemSlot()
+        {
+            LocalPosition = new(116, height / 4 * 2 - 64 / 2),
+            ItemDisplay = new MeleeWeapon("0"),
+            TransparentItemDisplay = true,
+            BoxIsThin = true,
+        };
+
+        forgeButton = new()
+        {
+            LocalPosition = new(116, height / 4 * 3 - 64 / 2),
+            Texture = Game1.content.Load<Texture2D>("Textures/DN.SnS/ForgeButton"),
+            TexturePixelArea = new(0, 0, 16, 16),
+            Callback = (elem) =>
+            {
+                ApplySlots();
+            },
+            Scale = 4
+        };
+
         container.AddChild(this.weaponSlot);
+        container.AddChild(this.weaponPreview);
+        container.AddChild(this.forgeButton);
 
         void ModifierSlotShenanigans(ItemSlot modifierSlot, Item cursorItem, int reqQty, out Item Held, out Item Slot)
         {
@@ -278,7 +303,7 @@ public class ArsenalMenu : IClickableMenu
             Held = cursorItem;
             Slot = slotItem;
 
-            if (weaponSlot.Item == null || (cursorItem == null && slotItem == null))
+            if (cursorItem == null && slotItem == null)
                 return;
 
             if (cursorItem == null)
@@ -358,6 +383,8 @@ public class ArsenalMenu : IClickableMenu
             ModifierSlotShenanigans(gemSlot, Game1.player.CursorSlotItem, 1, out var Held, out var Slot);
             Game1.player.CursorSlotItem = Held;
             gemSlot.Item = Slot;
+
+            UpdatePreview();
         };
         container.AddChild(gemSlot);
         var gemLabel = new SpaceCore.UI.Label()
@@ -397,6 +424,8 @@ public class ArsenalMenu : IClickableMenu
                 out var Held, out var Slot);
             Game1.player.CursorSlotItem = Held;
             coatingSlot.Item = Slot;
+
+            UpdatePreview();
         };
         container.AddChild(coatingSlot);
         var coatingLabel = new SpaceCore.UI.Label()
@@ -432,6 +461,8 @@ public class ArsenalMenu : IClickableMenu
             ModifierSlotShenanigans(alloyingSlot, Game1.player.CursorSlotItem, 25, out var Held, out var Slot);
             Game1.player.CursorSlotItem = Held;
             alloyingSlot.Item = Slot;
+
+            UpdatePreview();
         };
         container.AddChild(alloyingSlot);
         var alloyingLabel = new SpaceCore.UI.Label()
@@ -452,6 +483,42 @@ public class ArsenalMenu : IClickableMenu
         base.update(time);
         this.ui.Update();
         this.invMenu.update(time);
+
+        if (animStart != null && pixels.Count == 0)
+        {
+            animStart = null;
+        }
+    }
+
+    private void Pixelize(ItemSlot slot)
+    {
+        var obj = slot.Item as Object;
+        if (obj == null)
+            return;
+
+        var tex = ItemRegistry.GetData(slot.Item.QualifiedItemId).GetTexture();
+        var rect = ItemRegistry.GetData(slot.Item.QualifiedItemId).GetSourceRect();
+
+        var cols = new Color[16 * 16];
+        tex.GetData(0, rect, cols, 0, cols.Length);
+
+        for (int i = 0; i < cols.Length; ++i)
+        {
+            int ix = i % 16;
+            int iy = i / 16;
+
+            float velDir = (float)Game1.random.NextDouble() * 3.14f * 2;
+            Vector2 vel = new Vector2(MathF.Cos(velDir), MathF.Sin(velDir)) * (60 + Game1.random.Next(70));
+
+            pixels.Add(new Pixel()
+            {
+                x = slot.Bounds.Location.X + 16 + ix * Game1.pixelZoom,
+                y = slot.Bounds.Location.Y + 16 + iy * Game1.pixelZoom,
+                color = cols[i],
+                scale = 3 + (float)Game1.random.NextDouble() * 3,
+                velocity = vel,
+            });
+        }
     }
 
     public override void draw(SpriteBatch b)
@@ -478,6 +545,44 @@ public class ArsenalMenu : IClickableMenu
 
         Game1.player.CursorSlotItem?.drawInMenu(b, Game1.getMousePosition().ToVector2(), 1);
 
+        float delta = (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
+        float ts = (float)(Game1.currentGameTime.TotalGameTime.TotalSeconds - animStart ?? 0);
+        if (ts >= 1.4 && !playedSynthesizeSound)
+        {
+            Game1.playSound("spacechase0.MageDelve_alchemy_synthesize");
+            playedSynthesizeSound = true;
+        }
+        if (ts < 0) ts = 0;
+        Vector2 center = weaponSlot.Position + new Vector2(weaponSlot.Width /2, weaponSlot.Height / 2);
+        float velMult = ts * ts * ts * ts * 5;
+        List<Pixel> toRemove = new();
+        for (int i = 0; i < pixels.Count; ++i)
+        {
+            Pixel pixel = pixels[i];
+            float actualScale = (pixel.scale + MathF.Sin(ts * 3) - 3) % 3 + 3;
+
+            Vector2 ppos = new Vector2(pixel.x, pixel.y) + pixel.velocity * delta;
+            pixel.x = ppos.X;
+            pixel.y = ppos.Y;
+            Vector2 toCenter = center - ppos;
+            float dist = Vector2.Distance(center, ppos);
+            pixel.velocity = pixel.velocity * 0.99f + toCenter / dist * velMult;
+
+            b.Draw(Game1.staminaRect, new Vector2(pixel.x, pixel.y), null, pixel.color, 0, Vector2.Zero, actualScale, SpriteEffects.None, 1);
+
+            if (float.IsNaN(dist))
+            {
+                //Console.WriteLine("wat");
+            }
+
+            if (dist < 24 || float.IsNaN(dist))
+            {
+                toRemove.Add(pixel);
+            }
+        }
+        pixels.RemoveAll((p) => toRemove.Contains(p));
+
+
         string GetDescription(Item item)
         {
             string desc = item.getDescription();
@@ -503,6 +608,13 @@ public class ArsenalMenu : IClickableMenu
             if (ItemWithBorder.HoveredElement is ItemSlot slot && slot.Item != null)
             {
                 drawToolTip(b, GetDescription(slot.Item), slot.Item.DisplayName, slot.Item);
+            }
+            else if (ItemWithBorder.HoveredElement.Equals(weaponPreview) && ItemWithBorder.HoveredElement is ItemWithBorder slot1 && slot1.ItemDisplay != null)
+            {
+                if (!slot1.TransparentItemDisplay)
+                    drawToolTip(b, GetDescription(slot1.ItemDisplay), slot1.ItemDisplay.DisplayName, slot1.ItemDisplay);
+                else
+                    drawToolTip(b, I18n.String_ManabarPeview().Replace(':', ' '), null, null);
             }
             else if (ItemWithBorder.HoveredElement.UserData is string s)
             {
@@ -559,17 +671,24 @@ public class ArsenalMenu : IClickableMenu
 
     private void ApplySlots()
     {
+        bool forged = false;
         if (gemSlot.Item != null)
         {
             (this.weaponSlot.Item as MeleeWeapon).SetExquisiteGemstone(this.gemSlot.Item?.QualifiedItemId);
+            Pixelize(gemSlot);
+            Game1.playSound("spacechase0.MageDelve_alchemy_particlize");
             gemSlot.Item = null;
+            forged = true;
         }
         if (coatingSlot.Item != null)
         {
             if (coatingSlot.Item.Stack == ModSnS.CoatingQuantities[coatingSlot.Item.QualifiedItemId])
             {
                 (this.weaponSlot.Item as MeleeWeapon).SetBladeCoating(this.coatingSlot.Item?.QualifiedItemId);
+                Pixelize(coatingSlot);
+                Game1.playSound("spacechase0.MageDelve_alchemy_particlize");
                 coatingSlot.Item = null;
+                forged = true;
             }
             else
                 Game1.addHUDMessage(new HUDMessage(I18n.Anvil_NotEnough(ModSnS.CoatingQuantities[Game1.player.CursorSlotItem.QualifiedItemId], coatingSlot.Item.DisplayName)));
@@ -578,35 +697,54 @@ public class ArsenalMenu : IClickableMenu
         {
             if (alloyingSlot.Item.Stack == 25)
             {
-                (this.weaponSlot.Item as MeleeWeapon).SetBladeAlloying(this.alloyingSlot.Item?.QualifiedItemId);
+                (this.weaponSlot.Item as MeleeWeapon).SetBladeAlloying(this.alloyingSlot.Item.QualifiedItemId);
+                Pixelize(alloyingSlot);
+                Game1.playSound("spacechase0.MageDelve_alchemy_particlize");
                 alloyingSlot.Item = null;
+                forged = true;
             }
             else
                 Game1.addHUDMessage(new HUDMessage(I18n.Anvil_NotEnough(25, alloyingSlot.Item.DisplayName)));
         }
+
+        if (forged)
+        {
+            animStart = (float)Game1.currentGameTime.TotalGameTime.TotalSeconds;
+            playedSynthesizeSound = false;
+            Game1.playSound("bigSelect");
+            Game1.playSound("boulderCrack");
+        }
     }
 
-    private void ResetSlots()
+    private void UpdatePreview()
     {
-        List<Item> itemsToAdd = new();
-        if (gemSlot.Item != null)
+        if (weaponSlot.Item != null)
         {
-            itemsToAdd.Add(gemSlot.Item);
-            gemSlot.Item = null;
-        }
-        if (coatingSlot.Item != null)
-        {
-            itemsToAdd.Add(coatingSlot.Item);
-            coatingSlot.Item = null;
-        }
-        if (alloyingSlot.Item != null)
-        {
-            itemsToAdd.Add(alloyingSlot.Item);
-            alloyingSlot.Item = null;
-        }
+            MeleeWeapon preview = (weaponSlot.Item.getOne() as MeleeWeapon);
 
-        if (itemsToAdd.Count > 0)
-            Game1.player.addItemsByMenuIfNecessary(itemsToAdd);
+            if (gemSlot.Item != null)
+                preview.SetExquisiteGemstone(gemSlot.Item.QualifiedItemId);
+
+            if (coatingSlot.Item != null && coatingSlot.Item.Stack == ModSnS.CoatingQuantities[coatingSlot.Item.QualifiedItemId])
+                preview.SetBladeCoating(coatingSlot.Item.QualifiedItemId);
+
+            if (alloyingSlot.Item != null && alloyingSlot.Item.Stack == 25)
+                preview.SetBladeAlloying(alloyingSlot.Item.QualifiedItemId);
+
+            weaponPreview.TransparentItemDisplay = false;
+            weaponPreview.ItemDisplay = preview;
+            return;
+        }
+        weaponPreview.ItemDisplay = new MeleeWeapon("0");
+        weaponPreview.TransparentItemDisplay = true;
+    }
+    private class Pixel
+    {
+        public float x;
+        public float y;
+        public Color color;
+        public float scale;
+        public Vector2 velocity;
     }
 }
 
@@ -850,6 +988,15 @@ public static class MonsterTakeDamagePatch
                 }
                 break;
         }
+    }
+
+    private class Pixel
+    {
+        public float x;
+        public float y;
+        public Color color;
+        public float scale;
+        public Vector2 velocity;
     }
 }
 
