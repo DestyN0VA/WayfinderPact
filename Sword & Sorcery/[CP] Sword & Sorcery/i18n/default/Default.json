@@ -1077,6 +1077,12 @@ ________      ________ _   _ _______ _____
 
 */
 
+
+  //Day End Question
+  "Events.S&S.EndDay.Question": "End the day?",
+  "Events.S&S.EndDay.Yes": "Yes",
+  "Events.S&S.EndDay.No": "No (Sleep required for world changes to update)",
+
   // 0 HEARTS PT 1 
   "Events.S&S.Ch1.0H2.Mateo.1": "Watch out!",
   "Events.S&S.Ch1.0H2.Mateo.2": "Hail and well met! Haven't seen you around. My name's Mateo, and you are...$0",
