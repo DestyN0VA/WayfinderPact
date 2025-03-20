@@ -81,7 +81,7 @@
                                 "Item": "{{KCC.SnS/SpecialOrderBoardBook}}",
                                 "Amount": 1
                             }
-                        },
+                        }
                     ]
                 } 
             }
@@ -168,7 +168,7 @@
                                 "Item": "{{KCC.SnS/SpecialOrderBoardBook}}",
                                 "Amount": 1
                             }
-                        },
+                        }
                     ]
                 } 
             }
@@ -255,7 +255,7 @@
                                 "Item": "{{KCC.SnS/SpecialOrderBoardBook}}",
                                 "Amount": 1
                             }
-                        },
+                        }
                     ]
                 } 
             }
@@ -342,13 +342,13 @@
                                 "Item": "{{KCC.SnS/SpecialOrderBoardBook}}",
                                 "Amount": 1
                             }
-                        },
+                        }
                     ]
                 } 
             }
         },
 
-        {
+        /*{
             "Action": "EditData",
             "Target": "Data/SpecialOrders",
             "Entries": {
@@ -465,10 +465,8 @@
                     ]
                 } 
             },
-            "When": {
-                "HasSeenEvent": "SnS.Ch4.Dandelion.6",
-              }
-        },
+            "When": { "HasSeenEvent": "SnS.Ch4.Dandelion.7" }
+        },*/
         
         {
             "Action": "EditData",
@@ -540,7 +538,7 @@
                 "Mateo.SpecialOrders.AQ4.Objective_0_Text":"{{i18n:Quests.Mateo.SpecialOrders.AQ4.Objective.0.Text}}",
                 "Mateo.SpecialOrders.AQ5_Name":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.Name}}",
                 "Mateo.SpecialOrders.AQ5_Text":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.Text}}", 
-                "Mateo.SpecialOrders.AQ5.Objective_0_Text":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.Objective.0.Text}}",
+                "Mateo.SpecialOrders.AQ5.Objective_0_Text":"{{i18n:Quests.Mateo.SpecialOrders.AQ5.Objective.0.Text}}"
             }
         }
     ]
