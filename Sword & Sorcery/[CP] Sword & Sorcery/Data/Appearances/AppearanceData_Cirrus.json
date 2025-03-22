@@ -6,20 +6,39 @@
             "LogName": "Default Portraits & Sprites - Cirrus",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Portraits/Cirrus, Characters/Cirrus",
+            "Target": "Characters/Cirrus",
             "FromFile": "assets/{{TargetPathOnly}}/Cirrus/spring_Cirrus.png"
+        },
+        {
+            "LogName": "Default Portraits & Sprites - Cirrus",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Portraits/Cirrus",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Cirrus/spring_Cirrus.png"
         },
         // LOADS
         {
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/winter_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock, Characters/spring_Cirrus, Characters/summer_Cirrus, Characters/fall_Cirrus, Characters/winter_Cirrus, Characters/Cirrus_beach, Characters/Cirrus_Glamrock",
+            "Target": "Characters/spring_Cirrus, Characters/summer_Cirrus, Characters/fall_Cirrus, Characters/winter_Cirrus, Characters/Cirrus_beach, Characters/Cirrus_Glamrock",
             "FromFile": "assets/{{TargetPathOnly}}/Cirrus/{{TargetWithoutPath}}.png"
         },
         {
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Portraits/CirrusMine, Characters/CirrusMine",
+            "Target": "Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/winter_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Cirrus/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Portraits/CirrusMine",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Cirrus/Cirrus_Glamrock.png"
+        },
+        {
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Characters/CirrusMine",
             "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Cirrus_Glamrock.png"
         },
         // OVERLAYS
@@ -38,7 +57,7 @@
             "Priority": "Early",
             "Target": "Portraits/Cirrus, Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock",
             "PatchMode": "Overlay",
-            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Hair/{{CirrusHairColor}}.png",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Cirrus/Hair/{{CirrusHairColor}}.png",
             "When": { "HasFile:{{FromFile}}": true, "HasMod |contains=McJoan.Cirrus": false }
         },
         {
@@ -47,7 +66,7 @@
             "Priority": "Early",
             "Target": "Characters/winter_Cirrus",
             "PatchMode": "Overlay",
-            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Hair/{{CirrusHairColor}}_winter.png",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Cirrus/Hair/{{CirrusHairColor}}_winter.png",
             "When": { "HasFile:{{FromFile}}": true }
         },
         {
@@ -56,7 +75,7 @@
             "Priority": "Early",
             "Target": "Portraits/winter_Cirrus",
             "PatchMode": "Overlay",
-            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Hair/{{CirrusHairColor}}_winter.png",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Cirrus/Hair/{{CirrusHairColor}}_winter.png",
             "When": { "HasFile:{{FromFile}}": true, "HasMod |contains=McJoan.Cirrus": false }
         },
         {
@@ -74,7 +93,7 @@
             "Priority": "Early",
             "Target": "Portraits/Cirrus, Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/winter_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock",
             "PatchMode": "Overlay",
-            "FromFile": "assets/{{TargetPathOnly}}/Cirrus/Contacts/{{CirrusContacts}}.png",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Cirrus/Contacts/{{CirrusContacts}}.png",
             "When": { "HasFile:{{FromFile}}": true, "HasMod |contains=McJoan.Cirrus": false }
         },
         {
@@ -83,7 +102,7 @@
             "Priority": "Early",
             "Target": "Portraits/Cirrus, Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/Cirrus_beach, Portraits/Cirrus_Glamrock, Portraits/winter_Cirrus",
             "PatchMode": "Overlay",
-            "FromFile": "assets/Portraits/Cirrus/Makeup/{{CirrusMakeup}}_Makeup_Overlay.png",
+            "FromFile": "assets/Portraits/{{Portrait Style}}/Cirrus/Makeup/{{CirrusMakeup}}_Makeup_Overlay.png",
             "Update": "OnLocationChange",
             "When": {
                 "HasSeenEvent |contains=SnS.Ch3.Cirrus.18": true,
@@ -97,7 +116,7 @@
             "Priority": "Early",
             "Target": "Portraits/Cirrus, Portraits/spring_Cirrus, Portraits/summer_Cirrus, Portraits/fall_Cirrus, Portraits/winter_Cirrus, Portraits/Cirrus_beach",
             "PatchMode": "Overlay",
-            "FromFile": "assets/portraits/Cirrus/{{season}}_pendant_overlay_Cirrus.png",
+            "FromFile": "assets/portraits/{{Portrait Style}}/Cirrus/{{season}}_pendant_overlay_Cirrus.png",
             "Update": "OnLocationChange",
             "When": {
                 "Relationship:Cirrus |contains=Married": true,

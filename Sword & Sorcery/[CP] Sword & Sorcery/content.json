@@ -182,6 +182,14 @@
   ],
   // CONFIG OPTIONS
   "ConfigSchema": {
+    "Portrait Style": {
+      "AllowValues": "Default, Nyapu",
+      "Default": "Default",
+      "AllowBlank": false,
+      "AllowMultiple": false,
+      "Description": "Sets the mod's portrait style to either default or Nyapu.",
+      "Section": "Portraits"
+    },
     "Player Pronouns 1": {
       "Default": "They",
       "AllowBlank": false,

@@ -7473,6 +7473,11 @@ ________      ________ _   _ _______ _____
   "deep-dark-chest.description": "A chest that spawns in the deep dark.",
 
   //maddogchange
+  "config.Portrait Style.name": "Portrait Style",
+  "config.Portrait Style.description": "Sets the mod's portrait style to either default or Nyapu.",
+  "config.Portrait Style.values.Default": "Default",
+  "config.Portrait Style.values.Nyapu": "Nyapu",
+
   "config.Player Pronouns 1.name": "Player Pronouns 1",
   "config.Player Pronouns 1.description": "Sets the player's desired pronouns.",
   "config.Player Pronouns 2.name": "Player Pronouns 2",
@@ -7622,6 +7627,7 @@ ________      ________ _   _ _______ _____
   "config.CirrusSmokeyEye.values.true": "true",
   "config.CirrusSmokeyEye.values.false": "false",
 
+  "config.section.Portraits.name": "Portraits",
   "config.section.Pronouns.name": "Pronouns",
   "config.section.Pronouns.description": "Pronoun configurations for players.",
   "config.section.Custom Kids.name": "Custom Kids",

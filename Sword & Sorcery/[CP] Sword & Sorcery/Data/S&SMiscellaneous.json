@@ -18,7 +18,7 @@
       "Action": "Load",
       "Priority": "Low",
       "Target": "ShopPortraits/DN.SnS/CGEmblem, ShopPortraits/DN.SnS/TheMeadowLark",
-      "FromFile": "Assets/TemporaryActors/Portraits/{{TargetWithoutPath}}.png"
+      "FromFile": "Assets/TemporaryActors/Portraits/{{Portrait Style}}/{{TargetWithoutPath}}.png"
     },
     {
       "LogName": "Loads Witchcraft Teleportation Images",
@@ -39,7 +39,7 @@
       "LogName": "Loads Mateo's Secret Note Image",
       "Action": "EditImage",
       "Target": "TileSheets/SecretNotesImages",
-      "FromFile": "assets/Photo1.png",
+      "FromFile": "assets/Secret Notes/{{Portrait Style}}/Photo1.png",
       "FromArea": {
         "X": 0,
         "Y": 0,

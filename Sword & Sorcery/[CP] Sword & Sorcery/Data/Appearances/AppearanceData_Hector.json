@@ -5,22 +5,43 @@
             "LogName": "Default Portraits & Sprites - Hector",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Portraits/Hector, Characters/Hector",
+            "Target": "Characters/Hector",
             "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/spring_Hector.png"
+        },
+        {
+            "LogName": "Default Portraits & Sprites - Hector",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Portraits/Hector",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Hector/{{TrueShape}}/spring_Hector.png"
         },
         // LOADS
         {
             "LogName": "Druid Outfit (Hood Up) for Events - Hector",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Portraits/Hector_HoodUp, Characters/Hector_HoodUp",
+            "Target": "Characters/Hector_HoodUp",
             "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_hoodup.png"
+        },
+        {
+            "LogName": "Druid Outfit (Hood Up) for Events - Hector",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Portraits/Hector_HoodUp",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Hector/{{TrueShape}}/Hector_hoodup.png"
         },
         {
             "LogName": "Druid Outfit (Hood Down) for Events - Hector",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Portraits/Hector_HoodDown, Characters/Hector_HoodDown, Portraits/HectorMine, Characters/HectorMine",
+            "Target": "Portraits/Hector_HoodDown, Portraits/HectorMine",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Hector/{{TrueShape}}/Hector_hooddown.png"
+        },
+        {
+            "LogName": "Druid Outfit (Hood Down) for Events - Hector",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Characters/Hector_HoodDown, Characters/HectorMine",
             "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_hooddown.png"
         },
         {
@@ -28,14 +49,14 @@
             "Action": "Load",
             "Priority": "Low",
             "Target": "Portraits/Hector_wolf",
-            "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_wolf.png"
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Hector/{{TrueShape}}/Hector_wolf.png"
         },
         {
             "LogName": "Hector Wolf Tempactor Portrait Load",
             "Action": "Load",
             "Priority": "Low",
             "Target": "Portraits/MysteryWolf",
-            "FromFile": "assets/TemporaryActors/Portraits/HectorWolf.png"
+            "FromFile": "assets/TemporaryActors/Portraits/{{Portrait Style}}/HectorWolf.png"
         },
         {
             "LogName": "Hector Wolf Tempactor Character Load",
@@ -55,27 +76,53 @@
             "LogName": "TrueShape (Hood Down) for Events - Hector",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Characters/Hector_TrueDown, Portraits/Hector_TrueDown",
+            "Target": "Characters/Hector_TrueDown",
             "FromFile": "Assets/{{TargetPathOnly}}/Hector/Hector_TrueDown.png"
+        },
+        {
+            "LogName": "TrueShape (Hood Down) for Events - Hector",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Portraits/Hector_TrueDown",
+            "FromFile": "Assets/{{TargetPathOnly}}/{{Portrait Style}}/Hector/Hector_TrueDown.png"
         },
         {
             "LogName": "TrueShape (Hood Up) for Events - Hector",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Characters/Hector_TrueUp, Portraits/Hector_TrueUp",
+            "Target": "Portraits/Hector_TrueUp",
+            "FromFile": "Assets/{{TargetPathOnly}}/{{Portrait Style}}/Hector/Hector_TrueUp.png"
+        },
+        {
+            "LogName": "TrueShape (Hood Up) for Events - Hector",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Characters/Hector_TrueUp",
             "FromFile": "Assets/{{TargetPathOnly}}/Hector/Hector_TrueUp.png"
         },
         {
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Characters/spring_Hector, Characters/summer_Hector, Characters/fall_Hector, Characters/winter_Hector",
+            "Target": "Characters/spring_Hector, Characters/summer_Hector, Characters/fall_Hector, Characters/winter_Hector",
             "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/{{TargetWithoutPath}}.png"
         },
         {
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Portraits/Hector_beach, Characters/Hector_beach",
+            "Target": "Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Hector/{{TrueShape}}/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Characters/Hector_beach",
             "FromFile": "assets/{{TargetPathOnly}}/Hector/{{TrueShape}}/Hector_beach.png"
+        },
+        {
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Portraits/Hector_beach",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Hector/{{TrueShape}}/Hector_beach.png"
         },
         // OVERLAYS
         {
@@ -84,7 +131,7 @@
             "Priority": "Early",
             "Target": "Portraits/Hector, Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach",
             "PatchMode": "Overlay",
-            "FromFile": "assets/portraits/Hector/pendant_overlay_hector.png",
+            "FromFile": "assets/portraits/{{Portrait Style}}/Hector/pendant_overlay_hector.png",
             "Update": "OnLocationChange",
             "When": {
                 "Relationship:Hector |contains=Married": true,
@@ -99,7 +146,7 @@
             "Priority": "Early",
             "Target": "Portraits/Hector, Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach, Portraits/Hector_HoodDown",
             "PatchMode": "Overlay",
-            "FromFile": "assets/{{TargetPathOnly}}/Hector/heterochromia_mf.png",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Hector/heterochromia_mf.png",
             "When": {
                 "HectorHeterochromatic": true,
                 "TrueShape |contains=trueshape": false,
@@ -112,7 +159,7 @@
             "Priority": "Early",
             "Target": "Portraits/Hector, Portraits/spring_Hector, Portraits/summer_Hector, Portraits/fall_Hector, Portraits/winter_Hector, Portraits/Hector_beach, Portraits/Hector_HoodDown",
             "PatchMode": "Overlay",
-            "FromFile": "assets/{{TargetPathOnly}}/Hector/heterochromia_tf.png",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Hector/heterochromia_tf.png",
             "When": {
                 "HectorHeterochromatic": true,
                 "TrueShape": "trueshape",
@@ -125,7 +172,7 @@
             "Priority": "Early",
             "Target": "Portraits/Hector_HoodUp",
             "PatchMode": "Overlay",
-            "FromFile": "assets/Portraits/Hector/heterochromia_mf_hooded.png",
+            "FromFile": "assets/Portraits/{{Portrait Style}}/Hector/heterochromia_mf_hooded.png",
             "When": {
                 "HectorHeterochromatic": true,
                 "TrueShape |contains=trueshape": false,
@@ -138,7 +185,7 @@
             "Priority": "Early",
             "Target": "Portraits/Hector_HoodUp",
             "PatchMode": "Overlay",
-            "FromFile": "assets/Portraits/Hector/heterochromia_tf_hooded.png",
+            "FromFile": "assets/Portraits/{{Portrait Style}}/Hector/heterochromia_tf_hooded.png",
             "When": {
                 "HectorHeterochromatic": true,
                 "TrueShape": "trueshape",
@@ -151,7 +198,7 @@
             "Priority": "Early",
             "Target": "Portraits/Hector_TrueUp",
             "PatchMode": "Overlay",
-            "FromFile": "assets/Portraits/Hector/heterochromia_tf_hooded.png",
+            "FromFile": "assets/Portraits/{{Portrait Style}}/Hector/heterochromia_tf_hooded.png",
             "When": { "HectorHeterochromatic": true, "HasMod |contains=McJoan.Hector": false }
         },
         {
@@ -160,7 +207,7 @@
             "Priority": "Early",
             "Target": "Portraits/Hector_TrueDown",
             "PatchMode": "Overlay",
-            "FromFile": "assets/Portraits/Hector/heterochromia_tf.png",
+            "FromFile": "assets/Portraits/{{Portrait Style}}/Hector/heterochromia_tf.png",
             "When": { "HectorHeterochromatic": true, "HasMod |contains=McJoan.Hector": false }
         },
         {
@@ -178,7 +225,7 @@
             "Priority": "Early",
             "Target": "Portraits/HectorWolf, Portraits/MysteryWolf, Portraits/Hector_wolf",
             "PatchMode": "Overlay",
-            "FromFile": "Assets/Portraits/Hector/heterochromia_wolf.png",
+            "FromFile": "Assets/Portraits/{{Portrait Style}}/Hector/heterochromia_wolf.png",
             "When": { "HectorHeterochromatic": true, "HasMod |contains=McJoan.Hector": false }
         }
     ]

@@ -6,7 +6,14 @@
             "LogName": "Default Portraits & Sprites - Roslin",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Portraits/Roslin, Characters/Roslin",
+            "Target": "Portraits/Roslin",
+            "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Roslin/HoodDown/fall_Roslin.png"
+        },
+        {
+            "LogName": "Default Portraits & Sprites - Roslin",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Characters/Roslin",
             "FromFile": "assets/{{TargetPathOnly}}/Roslin/HoodDown/fall_Roslin.png"
         },
         
@@ -16,7 +23,7 @@
             "Action": "Load",
             "Priority": "Low",
             "Target": "Portraits/HoodDown/spring_Roslin, Portraits/HoodDown/summer_Roslin, Portraits/HoodDown/fall_Roslin, Portraits/HoodDown/winter_Roslin",
-            "FromFile": "assets/Portraits/Roslin/HoodDown/{{TargetWithoutPath}}.png"
+            "FromFile": "assets/Portraits/{{Portrait Style}}/Roslin/HoodDown/{{TargetWithoutPath}}.png"
         },
         {
             "LogName": "Indoor Characters - Roslin",
@@ -30,7 +37,7 @@
             "Action": "Load",
             "Priority": "Low",
             "Target": "Portraits/HoodUp/spring_Roslin, Portraits/HoodUp/summer_Roslin, Portraits/HoodUp/fall_Roslin, Portraits/HoodUp/winter_Roslin",
-            "FromFile": "assets/Portraits/Roslin/HoodUp/{{TargetWithoutPath}}.png"
+            "FromFile": "assets/Portraits/{{Portrait Style}}/Roslin/HoodUp/{{TargetWithoutPath}}.png"
         },
         {
             "LogName": "Outdoors Characters - Roslin",
@@ -51,17 +58,16 @@
             "Action": "Load",
             "Priority": "Low",
             "Target": "Portraits/Roslin_armored, Portraits/RoslinMine",
-            "FromFile": "assets/Portraits/Roslin/Roslin_armored.png"
+            "FromFile": "assets/Portraits/{{Portrait Style}}/Roslin/Roslin_armored.png"
         },
 
         //Overlay
-
         {
             "LogName": "Pendant Overlay",
             "Action": "EditImage",
             "Priority": "Early",
             "Target": "Portraits/Roslin, Portraits/HoodDown/spring_Roslin, Portraits/HoodDown/summer_Roslin, Portraits/HoodDown/fall_Roslin, Portraits/HoodDown/winter_Roslin, Portraits/HoodUp/spring_Roslin, Portraits/HoodUp/summer_Roslin, Portraits/HoodUp/fall_Roslin, Portraits/HoodUp/winter_Roslin, Portraits/Roslin_armored",
-            "FromFile": "Assets/Portraits/Roslin/Pendant_Overlay.png",
+            "FromFile": "Assets/Portraits/{{Portrait Style}}/Roslin/Pendant_Overlay.png",
             "PatchMode": "Overlay",
             "Update": "OnLocationChange",
             "When": { "HasSeenEvent |contains=SnS.Ch5.Dandelion": true, "HasMod |contains=McJoan.Roslin": false }

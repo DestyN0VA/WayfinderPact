@@ -5,7 +5,19 @@
             "Action": "Load",
             "Priority": "Low",
             "Target": "Portraits/CGEmblem, Portraits/MateoWyatt",
-            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/{{TargetWithoutPath}}.png"
+            "FromFile": "assets/TemporaryActors/Portraits/{{Portrait Style}}/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Portraits/MateoMarlon, Portraits/MateoGunther, Portraits/MateoEmeritus, Portraits/MateoKrobus, Portraits/HectorBook, Portraits/BookDryad, Portraits/FakeDandelion, Portraits/FakeRoslin, Portraits/FakeSolomon",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/{{Portrait Style}}/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Portraits/YoungMateo, Portraits/BlacksmithMateo",
+            "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/{{Portrait Style}}/{{TargetWithoutPath}}{{MateoHorns}}.png"
         },
         //Only Sprites
         {
@@ -33,18 +45,16 @@
             "Target": "Characters/MateoWyatt",
             "FromFile": "assets/TemporaryActors/Characters/{{MateoWyattActor}}"
         },
-        //Portraits and Sprites
         {
             "Action": "Load",
-            "Priority": "Low",
-            "Target": "Characters/MateoMarlon, Portraits/MateoMarlon, Characters/MateoGunther, Portraits/MateoGunther, Characters/MateoEmeritus, Portraits/MateoEmeritus, Characters/MateoKrobus, Portraits/MateoKrobus, Characters/HectorBook, Portraits/HectorBook, Characters/BookDryad, Portraits/BookDryad, Characters/FakeDandelion, Portraits/FakeDandelion, Characters/FakeRoslin, Portraits/FakeRoslin, Characters/FakeSolomon, Portraits/FakeSolomon",
+            "Target": "Characters/MateoMarlon, Characters/MateoGunther, Characters/MateoEmeritus, Characters/MateoKrobus, Characters/HectorBook, Characters/BookDryad, Characters/FakeDandelion, Characters/FakeRoslin, Characters/FakeSolomon",
             "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/{{TargetWithoutPath}}.png"
         },
         {
             "Action": "Load",
-            "Priority": "Low",
-            "Target": "Portraits/YoungMateo, Characters/YoungMateo, Portraits/BlacksmithMateo, Characters/BlacksmithMateo",
+            "Target": "Characters/YoungMateo, Characters/BlacksmithMateo",
             "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/{{TargetWithoutPath}}{{MateoHorns}}.png"
         }
+
     ]
 }
