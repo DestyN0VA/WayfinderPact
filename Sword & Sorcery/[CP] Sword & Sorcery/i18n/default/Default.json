@@ -7478,6 +7478,16 @@ ________      ________ _   _ _______ _____
   "config.Portrait Style.values.Default": "Default",
   "config.Portrait Style.values.Nyapu": "Nyapu",
 
+  "config.Nyapu Critters.name": "Nyapu Critters",
+  "config.Nyapu Critters.description": "Sets Wolf Hector, Emeritus, Book and the Meadowlark's portraits to Nyapu's style.\n\nDoes nothing if \"Portrait Style\" is already set to Nyapu.",
+  "config.Nyapu Critters.values.true": "true",
+  "config.Nyapu Critters.values.false": "false",
+
+  "config.Nyapu Shadowfolk.name": "Nyapu Shadowfolk",
+  "config.Nyapu Shadowfolk.description": "Sets Shadowfolk portraits to Nyapu's style.\n\nDoes nothing if \"Portrait Style\" is already set to Nyapu.",
+  "config.Nyapu Shadowfolk.values.true": "true",
+  "config.Nyapu Shadowfolk.values.false": "false",
+
   "config.Player Pronouns 1.name": "Player Pronouns 1",
   "config.Player Pronouns 1.description": "Sets the player's desired pronouns.",
   "config.Player Pronouns 2.name": "Player Pronouns 2",

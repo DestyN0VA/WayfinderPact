@@ -47,14 +47,14 @@
                             },
                             "Direction": "Down",
                             "Condition": "!PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Roslin.6"
-                        },
+                        }
                     ],
                     "Appearance": [
                         {
                             "ID": "Solomon - Appearance",
                             "Portrait": "Portraits/Solomon",
-                            "Sprite": "Characters/Solomon",
-                        },
+                            "Sprite": "Characters/Solomon"
+                        }
                     ]
                 }
             }
@@ -72,6 +72,13 @@
             "Priority": "Low",
             "Target": "Portraits/Solomon",
             "FromFile": "Assets/Portraits/{{Portrait Style}}/Solomon/Solomon.png"
+        },
+        {
+            "LogName": "Default Portraits & Sprites - Solomon",
+            "Action": "EditImage",
+            "Target": "Portraits/Solomon",
+            "FromFile": "Assets/Portraits/Nyapu/Solomon/Solomon.png",
+            "When": { "Nyapu Shadowfolk": "true" }
         }
     ]
 }

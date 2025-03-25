@@ -14,6 +14,18 @@
             "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/{{Portrait Style}}/{{TargetWithoutPath}}.png"
         },
         {
+            "Action": "EditImage",
+            "Target": "Portraits/MateoKrobus, Portraits/FakeSolomon",
+            "FromFile": "assets/TemporaryActors/Portraits/Nyapu/{{TargetWithoutPath}}.png",
+            "When": { "Nyapu Shadowfolk": "true" }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Portraits/MateoEmeritus, Portraits/HectorBook",
+            "FromFile": "assets/TemporaryActors/Portraits/Nyapu/{{TargetWithoutPath}}.png",
+            "When": { "Nyapu Critters": "true" }
+        },
+        {
             "Action": "Load",
             "Priority": "Low",
             "Target": "Portraits/YoungMateo, Portraits/BlacksmithMateo",

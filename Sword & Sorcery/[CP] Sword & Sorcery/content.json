@@ -190,6 +190,22 @@
       "Description": "Sets the mod's portrait style to either default or Nyapu.",
       "Section": "Portraits"
     },
+    "Nyapu Critters": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "AllowMultiple": false,
+      "Description": "Sets Wolf Hector, Emeritus, Book and the Meadowlark's portraits to Nyapu style.",
+      "Section": "Portraits"
+    },
+    "Nyapu Shadowfolk": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "AllowMultiple": false,
+      "Description": "Sets Shadowfolk portraits to Nyapu style.",
+      "Section": "Portraits"
+    },
     "Player Pronouns 1": {
       "Default": "They",
       "AllowBlank": false,

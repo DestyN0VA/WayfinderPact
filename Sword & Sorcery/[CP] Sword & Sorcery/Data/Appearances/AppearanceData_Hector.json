@@ -52,11 +52,25 @@
             "FromFile": "assets/{{TargetPathOnly}}/{{Portrait Style}}/Hector/{{TrueShape}}/Hector_wolf.png"
         },
         {
+            "LogName": "Hector Wolf Portrait",
+            "Action": "EditImage",
+            "Target": "Portraits/Hector_wolf",
+            "FromFile": "assets/{{TargetPathOnly}}/Nyapu/Hector/{{TrueShape}}/Hector_wolf.png",
+            "When": { "Nyapu Critters": "true" }
+        },
+        {
             "LogName": "Hector Wolf Tempactor Portrait Load",
             "Action": "Load",
             "Priority": "Low",
             "Target": "Portraits/MysteryWolf",
             "FromFile": "assets/TemporaryActors/Portraits/{{Portrait Style}}/HectorWolf.png"
+        },
+        {
+            "LogName": "Hector Wolf Tempactor Portrait Load",
+            "Action": "EditImage",
+            "Target": "Portraits/MysteryWolf",
+            "FromFile": "assets/TemporaryActors/Portraits/Nyapu/HectorWolf.png",
+            "When": { "Nyapu Critters": "true" }
         },
         {
             "LogName": "Hector Wolf Tempactor Character Load",
@@ -227,6 +241,14 @@
             "PatchMode": "Overlay",
             "FromFile": "Assets/Portraits/{{Portrait Style}}/Hector/heterochromia_wolf.png",
             "When": { "HectorHeterochromatic": true, "HasMod |contains=McJoan.Hector": false }
+        },
+        {
+            "LogName": "Heterochromatic Eyes - Wolf",
+            "Action": "EditImage",
+            "Target": "Portraits/HectorWolf, Portraits/MysteryWolf, Portraits/Hector_wolf",
+            "PatchMode": "Overlay",
+            "FromFile": "Assets/Portraits/Nyapu/Hector/heterochromia_wolf.png",
+            "When": { "HectorHeterochromatic": true, "HasMod |contains=McJoan.Hector": false, "Nyapu Critters": "true" }
         }
     ]
 }
