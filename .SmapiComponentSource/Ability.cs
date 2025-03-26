@@ -1,21 +1,15 @@
-﻿using CircleOfThornsSMAPI;
-using HarmonyLib;
-using Microsoft.CodeAnalysis.Text;
+﻿using HarmonyLib;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using StardewModdingAPI;
 using StardewValley;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using static StardewValley.FarmerSprite;
 
 namespace SwordAndSorcerySMAPI
 {
     public class Ability
     {
-        public string Id { get; }
+        public string Id { get; } 
         public Func<string> Name { get; set; }
         public Func<string> Description { get; set; }
         public string TexturePath { get; set; }
@@ -25,16 +19,20 @@ namespace SwordAndSorcerySMAPI
         public bool HiddenIfLocked { get; set; } = false;
         public Func<int> ManaCost { get; set; } = () => 10;
         public Func<bool> CanUse { get; set; } = () => true;
-        public Func<bool>? CanUseForAdventureBar { get; set; }
+        public Func<bool>? CanUseForAdventureBar { get; set;}
         public Action Function { get; set; }
 
-        public Ability(string id) { Id = id; }
+        public static Dictionary<string, Ability> Abilities { get; } = [];
 
-        public static Dictionary<string, Ability> Abilities { get; } = new();
+        public Ability(string id)
+        {
+            Id = id;
+            CanUseForAdventureBar ??= CanUse;
+        }
     }
 
     [HarmonyBefore("PeacefulEnd.FashionSense")]
-    [HarmonyPatch(typeof(FarmerRenderer), nameof(FarmerRenderer.draw), new Type[] { typeof(SpriteBatch), typeof(FarmerSprite.AnimationFrame ), typeof(int ), typeof(Rectangle ), typeof(Vector2 ), typeof(Vector2 ), typeof(float ), typeof(int ), typeof(Color ), typeof(float ), typeof(float ), typeof(Farmer) })]
+    [HarmonyPatch(typeof(FarmerRenderer), nameof(FarmerRenderer.draw), [typeof(SpriteBatch), typeof(FarmerSprite.AnimationFrame), typeof(int), typeof(Rectangle), typeof(Vector2), typeof(Vector2), typeof(float), typeof(int), typeof(Color), typeof(float), typeof(float), typeof(Farmer)])]
     public static class FarmerRendererShadowstepAndTransformingPatch
     {
         internal static bool transparent = false;
@@ -57,9 +55,9 @@ namespace SwordAndSorcerySMAPI
                 Index = 0;
             }
 
-            Texture2D tex = ModCoT.formTexs[ext.form.Value][0];
-            Texture2D eTex = ModCoT.formTexs[ext.form.Value][1];
-            Rectangle frame = default(Rectangle);
+            Texture2D tex = ModCoT.FormTexs[ext.form.Value][0];
+            Texture2D eTex = ModCoT.FormTexs[ext.form.Value][1];
+            Rectangle frame = default;
             SpriteEffects fx = SpriteEffects.None;
 
             if (ext.stasisTimer.Value > 0)
@@ -88,8 +86,8 @@ namespace SwordAndSorcerySMAPI
                 {
                     float rad = (float)-Game1.currentGameTime.TotalGameTime.TotalSeconds / 3 * 2;
 
-                    int f1 = 0;
-                    if (ext.isResting)
+                    int f1;
+                    if (ext.IsResting)
                     {
                         if (ext.noMovementTimer > 3 && ext.noMovementTimer < (ext.form.Value != 2 ? 3.375 : 3.750))
                         {
@@ -180,17 +178,17 @@ namespace SwordAndSorcerySMAPI
             if (!data.transformed.Value)
                 return true;
 
-            int[] offsetHatX = new int[5] { 6, 13, 6, -4, -1 };
-            int[][] offsetHatY = new int[5][]
-                {
-                    new int[ 7 ] { 8, 8, 9, 9, 8, 8, 8 }, // up
-                    new int[ 7 ] { 7, 7, 8, 8, 7, 7, 7 }, // right
-                    new int[ 7 ] { 15, 15, 15, 16, 15, 15, 15 }, // down
-                    new int[ 7 ] { 7, 7, 8, 8, 7, 7, 7 }, // left
-                    new int[ 7 ] { 7, 8, 10, 12, 12, 10, 8 }, // rest
-                };
+            int[] offsetHatX = [6, 13, 6, -4, -1];
+            int[][] offsetHatY =
+                [
+                    [8, 8, 9, 9, 8, 8, 8], // up
+                    [7, 7, 8, 8, 7, 7, 7], // right
+                    [15, 15, 15, 16, 15, 15, 15], // down
+                    [7, 7, 8, 8, 7, 7, 7], // left
+                    [7, 8, 10, 12, 12, 10, 8], // rest
+                ];
             int f = 0;
-            if (data.isResting)
+            if (data.IsResting)
             {
                 if (data.noMovementTimer > 3 && data.noMovementTimer < (data.form.Value != 2 ? 3.375 : 3.750))
                 {
@@ -236,7 +234,7 @@ namespace SwordAndSorcerySMAPI
                 var hatData = ItemRegistry.GetData(who.hat.Value.QualifiedItemId);
                 var hatRect = new Rectangle(20 * (int)hatData.SpriteIndex % hatData.GetTexture().Width, 20 * (int)hatData.SpriteIndex / hatData.GetTexture().Width * 20 * 4, 20, 20);
 
-                if (!data.isResting)
+                if (!data.IsResting)
                 {
                     switch (who.FacingDirection)
                     {
@@ -249,25 +247,25 @@ namespace SwordAndSorcerySMAPI
                 else hatRect.Offset(0, 40);
 
                 int offsetInd = who.FacingDirection;
-                if (data.isResting) offsetInd = 4;
+                if (data.IsResting) offsetInd = 4;
 
                 Vector2 offset = new(offsetHatX[offsetInd], offsetHatY[offsetInd][f]);
                 Vector2 p = position + new Vector2(0, 24) + offset * Game1.pixelZoom + new Vector2(0, -10) * Game1.pixelZoom;
                 var Hats = DataLoader.Hats(Game1.content);
                 Hats.TryGetValue(who.hat.Value.ItemId, out var hat);
                 Texture2D HatTex = FarmerRenderer.hatsTexture;
-                if (hat.Split('/').Count() >= 8 && Game1.content.DoesAssetExist<Texture2D>(hat.Split('/')[7]))
+                if (hat.Split('/').Length >= 8 && Game1.content.DoesAssetExist<Texture2D>(hat.Split('/')[7]))
                     HatTex = Game1.content.Load<Texture2D>(hat.Split('/')[7]);
                 b.Draw(HatTex, p, hatRect, Color.White, rotation, origin + new Vector2(8, 0), Vector2.One * Game1.pixelZoom, fx, layerDepth + 0.002f);
             }
             return false;
         }
-        public static void Postfix(Farmer who)
+        public static void Postfix()
         {
             transparent = false;
         }
     }
-    [HarmonyPatch(typeof(SpriteBatch), nameof(SpriteBatch.Draw), new[] { typeof(Texture2D), typeof(Rectangle), typeof(Rectangle?), typeof(Color), typeof(float), typeof(Vector2), typeof(SpriteEffects), typeof(float) })]
+    [HarmonyPatch(typeof(SpriteBatch), nameof(SpriteBatch.Draw), [typeof(Texture2D), typeof(Rectangle), typeof(Rectangle?), typeof(Color), typeof(float), typeof(Vector2), typeof(SpriteEffects), typeof(float)])]
     public static class SpriteBatchTransparencyChanger1
     {
         public static void Prefix(ref Color color)
@@ -276,7 +274,7 @@ namespace SwordAndSorcerySMAPI
                 color *= 0.5f;
         }
     }
-    [HarmonyPatch(typeof(SpriteBatch), nameof(SpriteBatch.Draw), new[] { typeof(Texture2D), typeof(Rectangle), typeof(Rectangle?), typeof(Color) })]
+    [HarmonyPatch(typeof(SpriteBatch), nameof(SpriteBatch.Draw), [typeof(Texture2D), typeof(Rectangle), typeof(Rectangle?), typeof(Color)])]
     public static class SpriteBatchTransparencyChanger2
     {
         public static void Prefix(ref Color color)
@@ -285,7 +283,7 @@ namespace SwordAndSorcerySMAPI
                 color *= 0.5f;
         }
     }
-    [HarmonyPatch(typeof(SpriteBatch), nameof(SpriteBatch.Draw), new[] { typeof(Texture2D), typeof(Vector2), typeof(Rectangle?), typeof(Color), typeof(float), typeof(Vector2), typeof(Vector2), typeof(SpriteEffects), typeof(float) })]
+    [HarmonyPatch(typeof(SpriteBatch), nameof(SpriteBatch.Draw), [typeof(Texture2D), typeof(Vector2), typeof(Rectangle?), typeof(Color), typeof(float), typeof(Vector2), typeof(Vector2), typeof(SpriteEffects), typeof(float)])]
     public static class SpriteBatchTransparencyChanger3
     {
         public static void Prefix(ref Color color)
@@ -294,7 +292,7 @@ namespace SwordAndSorcerySMAPI
                 color *= 0.5f;
         }
     }
-    [HarmonyPatch(typeof(SpriteBatch), nameof(SpriteBatch.Draw), new[] { typeof(Texture2D), typeof(Vector2), typeof(Rectangle?), typeof(Color), typeof(float), typeof(Vector2), typeof(float), typeof(SpriteEffects), typeof(float) })]
+    [HarmonyPatch(typeof(SpriteBatch), nameof(SpriteBatch.Draw), [typeof(Texture2D), typeof(Vector2), typeof(Rectangle?), typeof(Color), typeof(float), typeof(Vector2), typeof(float), typeof(SpriteEffects), typeof(float)])]
     public static class SpriteBatchTransparencyChanger4
     {
         public static void Prefix(ref Color color)
@@ -303,7 +301,7 @@ namespace SwordAndSorcerySMAPI
                 color *= 0.5f;
         }
     }
-    [HarmonyPatch(typeof(SpriteBatch), nameof(SpriteBatch.Draw), new[] { typeof(Texture2D), typeof(Vector2), typeof(Rectangle?), typeof(Color) })]
+    [HarmonyPatch(typeof(SpriteBatch), nameof(SpriteBatch.Draw), [typeof(Texture2D), typeof(Vector2), typeof(Rectangle?), typeof(Color)])]
     public static class SpriteBatchTransparencyChanger5
     {
         public static void Prefix(ref Color color)

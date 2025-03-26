@@ -1,22 +1,13 @@
 ﻿using HarmonyLib;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using SpaceCore;
-using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Enchantments;
-using StardewValley.ItemTypeDefinitions;
 using StardewValley.Tools;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static StardewValley.FarmerRenderer;
 
 namespace SwordAndSorcerySMAPI
 {
-
     [HarmonyPatch(typeof(MeleeWeapon), "specialCooldown")]
     public static class ShieldThrowSpecialCooldownPatch
     {
@@ -29,27 +20,56 @@ namespace SwordAndSorcerySMAPI
         }
     }
 
+    [HarmonyPatch(typeof(MeleeWeapon), nameof(MeleeWeapon.getCategoryName))]
+    public static class ShieldCategoryName
+    {
+        public static void Postfix(MeleeWeapon __instance, ref string __result)
+        {
+            if (__instance.GetData()?.CustomFields?.ContainsKey("DN.SnS_Shield") ?? false)
+            {
+                __result = I18n.ShieldCategory();
+            }
+            if (__instance.GetData()?.CustomFields?.ContainsKey("DN.SnS_Boomerang") ?? false)
+            {
+                __result = I18n.BoomerangeCategory();
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Tool), nameof(Tool.getCategoryColor))]
+    public static class ShieldCategoryColor
+    {
+        public static void Postfix(Tool __instance, ref Color __result)
+        {
+            if (__instance is MeleeWeapon && ((__instance as MeleeWeapon).GetData()?.CustomFields?.ContainsKey("DN.SnS_Shield") ?? false))
+            {
+                __result = Color.BlueViolet;
+            }
+            if (__instance is MeleeWeapon && ((__instance as MeleeWeapon).GetData()?.CustomFields?.ContainsKey("DN.SnS_Boomerang") ?? false))
+            {
+                __result = Color.MonoGameOrange;
+            }
+        }
+    }
+
     [HarmonyPatch(typeof(MeleeWeapon), "doAnimateSpecialMove")]
     public static class ShieldThrowAnimateSpecialMovePatch
     {
         public static bool Prefix(MeleeWeapon __instance)
         {
-            if (!__instance.IsShieldItem())
+            if (!__instance.IsShieldItem() || __instance.lastUser != Game1.player)
                 return true;
 
-            if (__instance.lastUser != Game1.player) 
-                return true;
-
-            Vector2 diff = ModSnS.instance.Helper.Input.GetCursorPosition().AbsolutePixels - Game1.player.StandingPixel.ToVector2();
-            if (diff.Length() > 0 && diff.Length() > 5 * Game1.tileSize)
+            Vector2 diff = ModSnS.Instance.Helper.Input.GetCursorPosition().AbsolutePixels - Game1.player.StandingPixel.ToVector2();
+            if (diff.Length() > 0 && diff.Length() > 8 * Game1.tileSize)
             {
                 diff.Normalize();
-                diff = diff * 5 * Game1.tileSize;
+                diff = diff * 8 * Game1.tileSize;
             }
             if (diff.Length() < Game1.tileSize || Game1.options.gamepadControls)
             {
                 Vector2[] facings = [-Vector2.UnitY, Vector2.UnitX, Vector2.UnitY, -Vector2.UnitX];
-                diff = facings[Game1.player.FacingDirection] * Game1.tileSize * 5;
+                diff = facings[Game1.player.FacingDirection] * Game1.tileSize * 8;
             }
             Vector2 target = Game1.player.Position + diff;
             float damageMult = 0.5f;
@@ -75,7 +95,6 @@ namespace SwordAndSorcerySMAPI
             Game1.player.playNearbySoundLocal("daggerswipe");
 
             AnimatedSprite.endOfAnimationBehavior endOfAnimFunc = __instance.triggerDefenseSwordFunction;
-            __instance.lastUser ??= Game1.player;
             switch (__instance.lastUser.FacingDirection)
             {
                 case 0:
@@ -96,7 +115,7 @@ namespace SwordAndSorcerySMAPI
                     break;
             }
 
-            ModSnS.instance.Helper.Reflection.GetMethod(__instance, "beginSpecialMove").Invoke(__instance.lastUser);
+            ModSnS.Instance.Helper.Reflection.GetMethod(__instance, "beginSpecialMove").Invoke(__instance.lastUser);
 
             return false;
         }

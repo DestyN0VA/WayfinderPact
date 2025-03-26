@@ -1,6 +1,5 @@
 ﻿using HarmonyLib;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
 using SpaceCore;
@@ -9,27 +8,17 @@ using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Companions;
 using StardewValley.GameData.Pets;
+using StardewValley.Inventories;
 using StardewValley.Locations;
 using StardewValley.Monsters;
 using StardewValley.Objects;
+using StardewValley.Projectiles;
 using StardewValley.TerrainFeatures;
 using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.Tracing;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
-using Microsoft.CodeAnalysis.Emit;
-using StardewValley.Menus;
-using SpaceCore.Spawnables;
-using StardewValley.Inventories;
-using System.Xml;
-using StardewValley.Projectiles;
-using SpaceCore.UI;
 
 namespace SwordAndSorcerySMAPI
 {

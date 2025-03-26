@@ -1,28 +1,20 @@
-﻿using CircleOfThornsSMAPI;
-using HarmonyLib;
+﻿using HarmonyLib;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceCore;
-using SpaceShared.APIs;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
 using StardewValley.Buffs;
 using StardewValley.Buildings;
 using StardewValley.Characters;
-using StardewValley.Enchantments;
 using StardewValley.Locations;
-using StardewValley.Menus;
 using StardewValley.Monsters;
 using StardewValley.TerrainFeatures;
 using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -63,7 +55,7 @@ namespace SwordAndSorcerySMAPI
                 case 3: effects.FishingLevel.Value = 1 * strMult; break;
             }
 
-            Game1.player.applyBuff(new Buff("bardics.buff", "bardics.buff", I18n.Bardics_Song_Buff_Name(), duration, effects: effects, iconTexture: ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/abilities.png"), iconSheetIndex: 2, displayName: I18n.Bardics_Song_Buff_Name(), description: ""));
+            Game1.player.applyBuff(new Buff("bardics.buff", "bardics.buff", I18n.Bardics_Song_Buff_Name(), duration, effects: effects, iconTexture: ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/abilities.png"), iconSheetIndex: 2, displayName: I18n.Bardics_Song_Buff_Name(), description: ""));
         }
 
         internal static int usedBattleToday = 0;
@@ -86,7 +78,7 @@ namespace SwordAndSorcerySMAPI
                 case 1: effects.Defense.Value = 3 * strMult; break;
             }
 
-            Game1.player.applyBuff(new Buff("bardics.battle", "bardics.battle", I18n.Bardics_Song_Battle_Name(), duration, effects: effects, iconTexture: ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/abilities.png"), iconSheetIndex: 3, displayName: I18n.Bardics_Song_Battle_Name()));
+            Game1.player.applyBuff(new Buff("bardics.battle", "bardics.battle", I18n.Bardics_Song_Battle_Name(), duration, effects: effects, iconTexture: ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/abilities.png"), iconSheetIndex: 3, displayName: I18n.Bardics_Song_Battle_Name()));
         }
 
         internal static int usedRestorationToday = 0;
@@ -140,7 +132,7 @@ namespace SwordAndSorcerySMAPI
                             {
                                 MonsterId = monster.id,
                                 Trajectory = (traj * 50).ToPoint(),
-                            }, ModUP.MultiplayerMessage_MonsterKnockback, new string[] { ModUP.Instance.ModManifest.UniqueID });
+                            }, ModUP.MultiplayerMessage_MonsterKnockback, [ModUP.Instance.ModManifest.UniqueID]);
                         }
                     }
                 }
@@ -183,7 +175,7 @@ namespace SwordAndSorcerySMAPI
         {
             if (Game1.IsClient)
             {
-                ModUP.Instance.Helper.Multiplayer.SendMessage("", ModUP.MultiplayerMessage_HorseWarp, new string[] { ModUP.Instance.ModManifest.UniqueID }, new long[] { Game1.MasterPlayer.UniqueMultiplayerID });
+                ModUP.Instance.Helper.Multiplayer.SendMessage("", ModUP.MultiplayerMessage_HorseWarp, [ModUP.Instance.ModManifest.UniqueID], [Game1.MasterPlayer.UniqueMultiplayerID]);
             }
             else
             {
@@ -274,7 +266,7 @@ namespace SwordAndSorcerySMAPI
 
         internal static void ObeliskSong()
         {
-            List<string> opts = new();
+            List<string> opts = [];
             if (Game1.IsBuildingConstructed("Desert Obelisk"))
                 opts.Add("Desert Obelisk");
             if (Game1.IsBuildingConstructed("Water Obelisk"))
@@ -286,13 +278,13 @@ namespace SwordAndSorcerySMAPI
             if (Game1.player.mailReceived.Contains("ReturnScepter"))
                 opts.Add("Return Scepter");
 
-            List<Response> responses = new();
+            List<Response> responses = [];
             foreach (var entry in opts)
             {
                 responses.Add(new(entry, I18n.GetByKey($"bardics.song.obelisk.{entry.Replace(" ", "")}")));
             }
             responses.Add(new("cancel", I18n.Cancel()));
-            Game1.drawObjectQuestionDialogue(I18n.Bardics_Song_Obelisk_Name(), responses.ToArray());
+            Game1.drawObjectQuestionDialogue(I18n.Bardics_Song_Obelisk_Name(), [.. responses]);
             Game1.currentLocation.afterQuestion = (Farmer who, string key) =>
             {
                 if (opts.Contains(key))
@@ -514,19 +506,19 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.Multiplayer.ModMessageReceived += Multiplayer_ModMessageReceived;
 
             Skill = new BardicsSkill();
-            Songs = new()
-            {
-                new() { new SongEntry() { Name = I18n.Bardics_Song_Buff_Name, Function = SongEntry.BuffSong } },
-                new() { new SongEntry() { Name = I18n.Bardics_Song_Battle_Name, Function = SongEntry.BattleSong } },
-                new() { new SongEntry() { Name = I18n.Bardics_Song_Restoration_Name, Function = SongEntry.RestorationSong } },
-                new() { new SongEntry() { Name = I18n.Bardics_Song_Protection_Name, Function = SongEntry.ProtectionSong } },
-                new() {}, // level 5
-                new() { new SongEntry() { Name = I18n.Bardics_Song_Time_Name, Function = SongEntry.TimeSong } },
-                new() { new SongEntry() { Name = () => I18n.Bardics_Song_Horse_Name( Game1.player.horseName.Value ?? I18n.Cptoken_Horse() ), Function = SongEntry.HorseSong } },
-                new() { new SongEntry() { Name = I18n.Bardics_Song_Crops_Name, Function = SongEntry.CropSong } },
-                new() { new SongEntry() { Name = I18n.Bardics_Song_Obelisk_Name, Function = SongEntry.ObeliskSong } },
-                new() {},
-            };
+            Songs =
+            [
+                [new SongEntry() { Name = I18n.Bardics_Song_Buff_Name, Function = SongEntry.BuffSong }],
+                [new SongEntry() { Name = I18n.Bardics_Song_Battle_Name, Function = SongEntry.BattleSong }],
+                [new SongEntry() { Name = I18n.Bardics_Song_Restoration_Name, Function = SongEntry.RestorationSong }],
+                [new SongEntry() { Name = I18n.Bardics_Song_Protection_Name, Function = SongEntry.ProtectionSong }],
+                [], // level 5
+                [new SongEntry() { Name = I18n.Bardics_Song_Time_Name, Function = SongEntry.TimeSong }],
+                [new SongEntry() { Name = () => I18n.Bardics_Song_Horse_Name( Game1.player.horseName.Value ?? I18n.Cptoken_Horse() ), Function = SongEntry.HorseSong }],
+                [new SongEntry() { Name = I18n.Bardics_Song_Crops_Name, Function = SongEntry.CropSong }],
+                [new SongEntry() { Name = I18n.Bardics_Song_Obelisk_Name, Function = SongEntry.ObeliskSong }],
+                [],
+            ];
 
             GameStateQuery.Register("PLAYER_IS_COLLEGE_ELOQUENCE", (args, ctx) =>
             {
@@ -699,9 +691,9 @@ namespace SwordAndSorcerySMAPI
                 ArgUtility.TryGetVector2(args, 1, out Vector2 center, out string error);
                 center.Y -= 0.5f;
 
-                List<TemporaryAnimatedSprite> tass = new();
+                List<TemporaryAnimatedSprite> tass = [];
 
-                @event.aboveMapSprites ??= new();
+                @event.aboveMapSprites ??= [];
 
                 Color[] cols = [Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Cyan, Color.Blue, Color.Purple, Color.Magenta];
 

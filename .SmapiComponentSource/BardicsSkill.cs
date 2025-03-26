@@ -1,8 +1,6 @@
-using System.Collections.Generic;
-using CircleOfThornsSMAPI;
 using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
-using SwordAndSorcerySMAPI;
+using System.Collections.Generic;
 
 namespace SwordAndSorcerySMAPI
 {

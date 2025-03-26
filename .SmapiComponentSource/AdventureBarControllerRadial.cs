@@ -4,9 +4,9 @@ using Netcode;
 using StardewValley;
 using SwordAndSorcerySMAPI.Integrations;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace SwordAndSorcerySMAPI;
+
 internal class AdventureBarRadialMenuPageFactory : IRadialMenuPageFactory
 {
     public IRadialMenuPage CreatePage(Farmer who)
@@ -17,38 +17,30 @@ internal class AdventureBarRadialMenuPageFactory : IRadialMenuPageFactory
 
 internal class AdventureBarRadialMenuPage : IRadialMenuPage
 {
-    private readonly Farmer who;
-
-    private readonly List<AdventureBarRadialMenuItem> items = new();
-    public IReadOnlyList<IRadialMenuItem> Items => items/*.Where( rmi => rmi.IsActive )*/.Cast<IRadialMenuItem>().ToList();
+    private readonly List<IRadialMenuItem> items = [];
+    public IReadOnlyList<IRadialMenuItem> Items => items;
 
     public int SelectedItemIndex => -1;
 
     public AdventureBarRadialMenuPage(Farmer who)
     {
-        this.who = who;
         var ext = who.GetFarmerExtData();
+        items.Add(new AdventureBarRadialMenuOpenConfigMenu());
         for (int i = 0; i < ext.adventureBar.Count; ++i)
         {
-            items.Add(new(who, ext.adventureBar.Fields[ i ]));
+            items.Add(new AdventureBarRadialMenuItem(who, ext.adventureBar.Fields[i]));
         }
     }
 }
 
-internal class AdventureBarRadialMenuItem : IRadialMenuItem
+internal class AdventureBarRadialMenuItem(Farmer who, NetString abilSlot) : IRadialMenuItem
 {
-    private readonly Farmer who;
-    private readonly NetString abilSlot;
-
-    public AdventureBarRadialMenuItem(Farmer who, NetString abilSlot)
-    {
-        this.who = who;
-        this.abilSlot = abilSlot;
-    }
+    private readonly Farmer who = who;
+    private readonly NetString abilSlot = abilSlot;
 
     public bool IsActive => abilSlot.Value != null;
     public Ability CurrentAbility => IsActive ? Ability.Abilities[abilSlot.Value] : null;
-    public bool CanCast => IsActive ? (who.GetFarmerExtData().mana.Value >= CurrentAbility.ManaCost() && CurrentAbility.CanUse()) : false;
+    public bool CanCast => IsActive && (who.GetFarmerExtData().mana.Value >= CurrentAbility.ManaCost() && CurrentAbility.CanUseForAdventureBar());
 
     public string Title => CurrentAbility?.Name() ?? I18n.EmptySlot_Title();
 
@@ -66,10 +58,31 @@ internal class AdventureBarRadialMenuItem : IRadialMenuItem
 
         if (CanCast)
         {
+            CurrentAbility.CanUse();
             who.GetFarmerExtData().mana.Value -= CurrentAbility.ManaCost();
             ModSnS.CastAbility(CurrentAbility);
         }
 
+        return MenuItemActivationResult.Used;
+    }
+}
+
+internal class AdventureBarRadialMenuOpenConfigMenu : IRadialMenuItem
+{
+    public string Title => I18n.AdventureBarConfigMenu_Name();
+
+    public string Description => I18n.AdventureBarConfigMenu_Description();
+
+    public Texture2D? Texture => Game1.content.Load<Texture2D>("Textures/DN.SnS/SnSObjects");
+
+    public Rectangle? SourceRectangle => new(32, 160, 16, 16);
+
+    public MenuItemActivationResult Activate(Farmer who, DelayedActions delayedActions, MenuItemAction requestedAction)
+    {
+        if (delayedActions != DelayedActions.None)
+            return MenuItemActivationResult.Delayed;
+
+        Game1.activeClickableMenu = new AdventureBarConfigureMenu();
         return MenuItemActivationResult.Used;
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using SpaceCore;
 using StardewValley;
+using StardewValley.Buffs;
 using StardewValley.Extensions;
 using StardewValley.Monsters;
 using StardewValley.Objects;
@@ -38,13 +39,13 @@ namespace SwordAndSorcerySMAPI
 
         public static void Haste()
         {
-            var buff = new Buff("spell_haste", "spell_haste", duration: 7000 * 6 * 5, effects: new StardewValley.Buffs.BuffEffects() { Speed = { 1 } }, displayName: I18n.Witchcraft_Spell_Haste_Name() );
+            var buff = new Buff("spell_haste", I18n.Witchcraft_Spell_Haste_Name(), duration: 7000 * 6 * 5, effects: new BuffEffects() { Speed = { 1 } }, displayName: I18n.Witchcraft_Spell_Haste_Name() );
             Game1.player.applyBuff( buff );
         }
 
         public static void Polymorph()
         {
-            Vector2 pos = ModSnS.instance.Helper.Input.GetCursorPosition().AbsolutePixels;
+            Vector2 pos = ModSnS.Instance.Helper.Input.GetCursorPosition().AbsolutePixels;
             if (Game1.options.gamepadControls)
             {
                 pos = Game1.player.Position;
@@ -83,8 +84,10 @@ namespace SwordAndSorcerySMAPI
 
             if (closestMonster != null)
             {
-                var slime = new GreenSlime(closestMonster.Position);
-                slime.focusedOnFarmers = true;
+                var slime = new GreenSlime(closestMonster.Position)
+                {
+                    focusedOnFarmers = true
+                };
 
                 closestMonster.currentLocation.characters.Add(slime);
                 closestMonster.currentLocation.characters.Remove(closestMonster);
@@ -132,7 +135,7 @@ namespace SwordAndSorcerySMAPI
 
         public static void Banish()
         {
-            Vector2 pos = ModSnS.instance.Helper.Input.GetCursorPosition().AbsolutePixels;
+            Vector2 pos = ModSnS.Instance.Helper.Input.GetCursorPosition().AbsolutePixels;
             if (Game1.options.gamepadControls)
             {
                 pos = Game1.player.Position;
@@ -219,7 +222,7 @@ namespace SwordAndSorcerySMAPI
 
                 for (int i = 0; i < 8; ++i)
                 {
-                    Vector2 diff = new Vector2(Game1.random.Next(96) - 48, Game1.random.Next(96) - 48);
+                    Vector2 diff = new(Game1.random.Next(96) - 48, Game1.random.Next(96) - 48);
                     Game1.player.currentLocation.TemporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Rectangle(0, 320, 64, 64), 50f, 8, 0, spot - new Vector2(32, 48) + diff, flicker: false, flipped: false));
                 }
             }
@@ -257,8 +260,10 @@ namespace SwordAndSorcerySMAPI
         {
             string invName = $"{ModTOP.Instance.ModManifest.UniqueID}/PocketChest/{Game1.player.UniqueMultiplayerID}";
 
-            var chest = new Chest();
-            chest.GlobalInventoryId = invName;
+            var chest = new Chest
+            {
+                GlobalInventoryId = invName
+            };
             chest.ShowMenu();
         }
 
@@ -300,8 +305,6 @@ namespace SwordAndSorcerySMAPI
             location.projectiles.Add(Fireball);
             location.playSound("fireball");
 
-            TargetPos = TargetPos - new Vector2(32f, 48f);
-
             Fireballs.Add(new(Fireball, time));
         }
 
@@ -336,8 +339,6 @@ namespace SwordAndSorcerySMAPI
 
             location.projectiles.Add(Icebolt);
             location.playSound("fireball");
-
-            TargetPos = TargetPos - new Vector2(32f, 48f);
 
             Icebolts.Add(new(Icebolt, time));
         }
@@ -406,7 +407,7 @@ namespace SwordAndSorcerySMAPI
             }
             else Monsters.Add(i, [m]);
 
-            TemporaryAnimatedSprite LightningBolt = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/ThorLightning.png").BaseName, new(0, 0, 32, 48), 75, 16, 1, m.Position - new Vector2(64, 64 * 3), false, false) { scale = 4, layerDepth = 1 };
+            TemporaryAnimatedSprite LightningBolt = new(ModSnS.Instance.Helper.ModContent.GetInternalAssetName("assets/ThorLightning.png").BaseName, new(0, 0, 32, 48), 75, 16, 1, m.Position - new Vector2(64, 64 * 3), false, false) { scale = 4, layerDepth = 1 };
             location.TemporarySprites.Add(LightningBolt);
             location.damageMonster(m.GetBoundingBox(), GetSpellDamange(50, 10, out int Max), Max, false, farmer);
             Game1.playSound("thunder");
@@ -422,7 +423,7 @@ namespace SwordAndSorcerySMAPI
                 return;
             }
             else Monsters[DictKey].Add(m);
-            TemporaryAnimatedSprite LightningBolt = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/ThorLightning.png").BaseName, new(0, 0, 32, 48), 75, 16, 1, m.Position - new Vector2(64, 64 * 3), false, false) { scale = 4, layerDepth = 1 };
+            TemporaryAnimatedSprite LightningBolt = new(ModSnS.Instance.Helper.ModContent.GetInternalAssetName("assets/ThorLightning.png").BaseName, new(0, 0, 32, 48), 75, 16, 1, m.Position - new Vector2(64, 64 * 3), false, false) { scale = 4, layerDepth = 1 };
             location.TemporarySprites.Add(LightningBolt);
             location.damageMonster(m.GetBoundingBox(), GetSpellDamange(50 - ((6 - Chain) * 10), 10 - (6 - Chain), out int Max), Max, false, farmer);
             DelayedAction.functionAfterDelay(() => ChainLightningBolt(farmer, location, m, DictKey, Chain - 1), 500);
@@ -436,7 +437,7 @@ namespace SwordAndSorcerySMAPI
         [HarmonyPatch(typeof(Projectile), nameof(Projectile.update))]
         public static class ProjectileSpellsPatch
         {
-            public static void Postfix(Projectile __instance, GameTime time, GameLocation location)
+            public static void Postfix(Projectile __instance, GameLocation location)
             {
                 if (__instance.lightSourceId == "Magic Missle")
                 {
@@ -496,7 +497,7 @@ namespace SwordAndSorcerySMAPI
 
                         List<Monster> BurnMonsters = [];
 
-                        foreach (Monster m in location.characters.Where(c => c is Monster))
+                        foreach (Monster m in location.characters.Where(c => c is Monster).Cast<Monster>())
                         {
                             if (Vector2.Distance(__instance.position.Value, m.Position) <= -5 * 64 || Vector2.Distance(__instance.position.Value, m.Position) >= 5 * 64) continue;
 
@@ -529,7 +530,7 @@ namespace SwordAndSorcerySMAPI
 
                         List<Monster> FreezeMonsters = [];
 
-                        foreach (Monster m in location.characters.Where(c => c is Monster))
+                        foreach (Monster m in location.characters.Where(c => c is Monster).Cast<Monster>())
                         {
                             if (Vector2.Distance(__instance.position.Value, m.Position) <= -5 * 64 || Vector2.Distance(__instance.position.Value, m.Position) >= 5 * 64) continue;
                             FreezeMonsters.Add(m);

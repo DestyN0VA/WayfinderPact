@@ -1,10 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Reflection.Emit;
-using System.Reflection;
-using CircleOfThornsSMAPI;
 using HarmonyLib;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceCore;
@@ -12,6 +5,10 @@ using StardewValley;
 using StardewValley.Menus;
 using StardewValley.Quests;
 using StardewValley.SpecialOrders;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Reflection.Emit;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -27,23 +24,23 @@ namespace SwordAndSorcerySMAPI
         public PaladinSkill()
             : base("DestyNova.SwordAndSorcery.Paladin")
         {
-            this.Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/icon.png");
-            this.SkillsPageIcon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/icon.png");
+            this.Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/paladin/icon.png");
+            this.SkillsPageIcon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/paladin/icon.png");
 
-            this.ExperienceCurve = new[] { 100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000 };
+            this.ExperienceCurve = [100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000];
 
             this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(252, 121, 27);
 
             // Level 5
             PaladinSkill.ProfessionShieldThrowHit2 = new GenericProfession(skill: this, id: "ThrowHit2", name: I18n.PaladinSkill_Profession_ShieldThrowHit2_Name, description: I18n.PaladinSkill_Profession_ShieldThrowHit2_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/OnYourLeft.png")
+                Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/paladin/OnYourLeft.png")
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldThrowHit2);
 
             PaladinSkill.ProfessionShieldArmor1 = new GenericProfession(skill: this, id: "Armor1", name: I18n.PaladinSkill_Profession_ShieldArmor1_Name, description: I18n.PaladinSkill_Profession_ShieldArmor1_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/FightToEndTheFight.png")
+                Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/paladin/FightToEndTheFight.png")
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldArmor1);
 
@@ -52,13 +49,13 @@ namespace SwordAndSorcerySMAPI
             // Level 10 - track A
             PaladinSkill.ProfessionShieldThrowLightning = new GenericProfession(skill: this, id: "ThrowLightning", name: I18n.PaladinSkill_Profession_ShieldThrowLightning_Name, description: I18n.PaladinSkill_Profession_ShieldThrowLightning_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/TheSunWillShineOnUsAgain.png")
+                Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/paladin/TheSunWillShineOnUsAgain.png")
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldThrowLightning);
 
             PaladinSkill.ProfessionShieldThrowHit3 = new GenericProfession(skill: this, id: "ThrowHit3", name: () => I18n.PaladinSkill_Profession_ShieldThrowHit3_Name(Game1.player.Name), description: I18n.PaladinSkill_Profession_ShieldThrowHit3_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/TheyHaveAnArmyWeHaveAFarmerName.png")
+                Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/paladin/TheyHaveAnArmyWeHaveAFarmerName.png")
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldThrowHit3);
 
@@ -67,13 +64,13 @@ namespace SwordAndSorcerySMAPI
             // Level 10 - track B
             PaladinSkill.ProfessionShieldArmor2 = new GenericProfession(skill: this, id: "Armor2", name: I18n.PaladinSkill_Profession_ShieldArmor2_Name, description: I18n.PaladinSkill_Profession_ShieldArmor2_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/ICanDoThisAllDay.png")
+                Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/paladin/ICanDoThisAllDay.png")
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldArmor2);
 
             PaladinSkill.ProfessionShieldRetribution = new GenericProfession(skill: this, id: "Retribution", name: I18n.PaladinSkill_Profession_ShieldRetribution_Name, description: I18n.PaladinSkill_Profession_ShieldRetribution_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/paladin/YouGetHurtHurtEmBack.png")
+                Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/paladin/YouGetHurtHurtEmBack.png")
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldRetribution);
 
@@ -95,7 +92,7 @@ namespace SwordAndSorcerySMAPI
 
         public override List<string> GetExtraLevelUpInfo(int level)
         {
-            List<string> ret = new List<string>();
+            List<string> ret = [];
 
             if (level > 10) return ret;
 
@@ -131,7 +128,7 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(LevelUpMenu), nameof(LevelUpMenu.RevalidateHealth))]
     public static class LevelUpMenuRevalidateHealthPatchAgain
     {
-        public static IEnumerable<CodeInstruction> Transpiler(ILGenerator gen, MethodBase original, IEnumerable<CodeInstruction> insns)
+        public static IEnumerable<CodeInstruction> Transpiler(MethodBase original, IEnumerable<CodeInstruction> insns)
         {
             var ret = new List<CodeInstruction>();
 

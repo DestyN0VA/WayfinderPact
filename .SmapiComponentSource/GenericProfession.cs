@@ -1,18 +1,23 @@
-using System;
 using SpaceCore;
+using System;
 
-namespace CircleOfThornsSMAPI
+namespace SwordAndSorcerySMAPI
 {
-    public class GenericProfession : Skills.Skill.Profession
+    /// <summary>Construct an instance.</summary>
+    /// <param name="skill">The parent skill.</param>
+    /// <param name="id">The unique profession ID.</param>
+    /// <param name="name">The translated profession name.</param>
+    /// <param name="description">The translated profession description.</param>
+    public class GenericProfession(Skills.Skill skill, string id, Func<string> name, Func<string> description) : Skills.Skill.Profession(skill, id)
     {
         /*********
         ** Fields
         *********/
         /// <summary>Get the translated profession name.</summary>
-        private readonly Func<string> GetNameImpl;
+        private readonly Func<string> GetNameImpl = name;
 
         /// <summary>Get the translated profession name.</summary>
-        private readonly Func<string> GetDescriptionImpl;
+        private readonly Func<string> GetDescriptionImpl = description;
 
 
         /*********
@@ -21,25 +26,13 @@ namespace CircleOfThornsSMAPI
         /// <inheritdoc />
         public override string GetName()
         {
-            return this.GetNameImpl();
+            return GetNameImpl();
         }
 
         /// <inheritdoc />
         public override string GetDescription()
         {
-            return this.GetDescriptionImpl();
-        }
-
-        /// <summary>Construct an instance.</summary>
-        /// <param name="skill">The parent skill.</param>
-        /// <param name="id">The unique profession ID.</param>
-        /// <param name="name">The translated profession name.</param>
-        /// <param name="description">The translated profession description.</param>
-        public GenericProfession(SpaceCore.Skills.Skill skill, string id, Func<string> name, Func<string> description)
-            : base(skill, id)
-        {
-            this.GetNameImpl = name;
-            this.GetDescriptionImpl = description;
+            return GetDescriptionImpl();
         }
     }
 }

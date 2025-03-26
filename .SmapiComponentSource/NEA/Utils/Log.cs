@@ -1,8 +1,7 @@
 ﻿
+using StardewModdingAPI;
 using System;
 using System.Diagnostics;
-
-using StardewModdingAPI;
 
 namespace NeverEndingAdventure.Utils
 {

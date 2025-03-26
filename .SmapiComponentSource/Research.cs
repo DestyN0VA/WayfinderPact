@@ -29,19 +29,19 @@ namespace SwordAndSorcerySMAPI
         }
 
         public string Name { get; set; }
-        public List<Page> DocPages { get; set; } = new();
+        public List<Page> DocPages { get; set; } = [];
         public string IconTexture { get; set; }
         public Rectangle IconSourceRect { get; set; }
 
-        public Dictionary<string, int> ResearchCosts { get; set; } = new();
+        public Dictionary<string, int> ResearchCosts { get; set; } = [];
     }
 
     public class ResearchMenu : IClickableMenu
     {
-        public RootElement ui { get; set; }
+        public RootElement Ui { get; set; }
 
         public Table ResearchList { get; set; }
-        public Dictionary<string, StaticContainer> ResearchListRows { get; set; } = new();
+        public Dictionary<string, StaticContainer> ResearchListRows { get; set; } = [];
 
         public StaticContainer DocPageParent { get; set; }
         public Label ResearchTitle { get; set; }
@@ -49,18 +49,18 @@ namespace SwordAndSorcerySMAPI
         public Label CurrentPageDisplay { get; set; }
         public Label RightPageButton { get; set; }
         public Label LearnButton { get; set; }
-        private List<Tuple<ItemWithBorder, int>> components_ = [];
+        private readonly List<Tuple<ItemWithBorder, int>> components_ = [];
 
         public (string id, int page)? deferSwitch = null;
 
-        public Dictionary<string, List<StaticContainer>> DocPages { get; set; } = new();
+        public Dictionary<string, List<StaticContainer>> DocPages { get; set; } = [];
         public string CurrentResearch { get; set; }
         public int CurrentPage { get; set; } = 0;
 
         public ResearchMenu()
         : base(Game1.uiViewport.Width / 2 - 600, Game1.uiViewport.Height / 2 - 300, 1200, 600)
         {
-            ui = new();
+            Ui = new();
 
             var container = new StaticContainer()
             {
@@ -68,7 +68,7 @@ namespace SwordAndSorcerySMAPI
                 Size = new(width, height),
                 //OutlineColor = Color.White,
             };
-            ui.AddChild(container);
+            Ui.AddChild(container);
 
             ResearchList = new Table()
             {
@@ -162,7 +162,7 @@ namespace SwordAndSorcerySMAPI
                         {
                             LocalPosition = new(ResearchList.Width / 2 - (components.Count) * 80 / 2 + 80 * i, 30),
                             ItemDisplay = ItemRegistry.Create(components[i], qty),
-                            TransparentItemDisplay = Game1.player.Items.CountId(components[i]) >= qty ? false : true,
+                            TransparentItemDisplay = Game1.player.Items.CountId(components[i]) < qty,
                             BoxColor = null,
                         };
                         components_.Add(new(slot, qty));
@@ -182,7 +182,7 @@ namespace SwordAndSorcerySMAPI
                 ResearchList.AddRow(rowArray);
                 ResearchListRows.Add(entry.Key, row);
 
-                DocPages.Add(entry.Key, new());
+                DocPages.Add(entry.Key, []);
                 foreach (var docEntry in entry.Value.DocPages)
                 {
                     StaticContainer page = new()
@@ -250,7 +250,7 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        private bool CanLearn(string id)
+        private static bool CanLearn(string id)
         {
             if (Game1.player.hasOrWillReceiveMail($"WitchcraftResearch_{id}"))
                 return false;
@@ -313,7 +313,7 @@ namespace SwordAndSorcerySMAPI
         {
             foreach (var component in components_)
             {
-                component.Item1.TransparentItemDisplay = Game1.player.Items.CountId(component.Item1.ItemDisplay.QualifiedItemId) >= component.Item2 ? false : true;
+                component.Item1.TransparentItemDisplay = Game1.player.Items.CountId(component.Item1.ItemDisplay.QualifiedItemId) < component.Item2;
             }
         }
 
@@ -321,7 +321,7 @@ namespace SwordAndSorcerySMAPI
         public override void update(GameTime time)
         {
             base.update(time);
-            ui.Update();
+            Ui.Update();
 
             UpdateComponentVisibility();
 
@@ -344,7 +344,7 @@ namespace SwordAndSorcerySMAPI
 
         public override void draw(SpriteBatch b)
         {
-            ui.Draw(b);
+            Ui.Draw(b);
 
             if (CurrentResearch != null && !CanLearn(CurrentResearch) && LearnButton.Hover)
             {

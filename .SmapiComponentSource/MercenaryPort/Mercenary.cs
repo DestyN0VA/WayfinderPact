@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Xml.Serialization;
 using MageDelve.Mercenaries.Actions;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -10,6 +6,10 @@ using StardewValley;
 using StardewValley.Enchantments;
 using StardewValley.Monsters;
 using StardewValley.Tools;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Serialization;
 
 namespace MageDelve.Mercenaries
 {

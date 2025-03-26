@@ -1,11 +1,6 @@
-﻿using SwordAndSorcerySMAPI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿#pragma warning disable IDE0130 // Namespace does not match folder structure
 namespace StardewValley.Tools // Required to spawn properly
+#pragma warning restore IDE0130 // Namespace does not match folder structure
 {
     internal class WarpHarp : Tool
     {
@@ -17,10 +12,10 @@ namespace StardewValley.Tools // Required to spawn properly
         public override bool beginUsing(GameLocation location, int x, int y, Farmer who)
         {
             Game1.player.FacingDirection = Game1.down;
-            Game1.player.FarmerSprite.animateOnce(new[]
-            {
+            Game1.player.FarmerSprite.animateOnce(
+            [
                 new FarmerSprite.AnimationFrame(98, 150, secondaryArm: false, flip: false),
-            });
+            ]);
             Game1.player.FarmerSprite.PauseForSingleAnimation = true;
             Game1.activeClickableMenu = null; // TODO
             return base.beginUsing(location, x, y, who);

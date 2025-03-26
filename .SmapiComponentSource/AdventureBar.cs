@@ -1,27 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using StardewModdingAPI.Events;
 using StardewValley;
 using StardewValley.Menus;
-using SwordAndSorcerySMAPI.Integrations;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace SwordAndSorcerySMAPI
 {
 
-    internal class AdventureBar : IClickableMenu
+    internal class AdventureBar(bool editing) : IClickableMenu(0, (Game1.uiViewport.Height - 64 * 8 + 12 * 2) / 2, 64 * 2 + 12 * 2, 64 * 8 + 12 * 2)
     {
-        private bool editing;
+        private readonly bool editing = editing;
 
         public static bool Hide = false;
-
-        public AdventureBar( bool editing )
-            : base( 0, (Game1.uiViewport.Height - 64 * 8 + 12 * 2) / 2, 64 * 2 + 12 * 2, 64 * 8 + 12 * 2 )
-        {
-            this.editing = editing;
-        }
 
         public override void gameWindowSizeChanged(Rectangle oldBounds, Rectangle newBounds)
         {
@@ -30,7 +20,7 @@ namespace SwordAndSorcerySMAPI
             yPositionOnScreen = (Game1.uiViewport.Height - 64 * 8 + 12 * 2) / 2;
         }
 
-        public void tryPlace(ref Ability abil, int x, int y)
+        public void TryPlace(ref Ability abil, int x, int y)
         {
             var ext = Game1.player.GetFarmerExtData();
             for (int ibar = 0; ibar < 2; ++ibar)

@@ -5,7 +5,6 @@ using Microsoft.Xna.Framework.Input;
 using NeverEndingAdventure.Utils;
 using StardewValley;
 using StardewValley.BellsAndWhistles;
-using StardewValley.GameData;
 using StardewValley.Menus;
 using StardewValley.Minigames;
 using StardewValley.Projectiles;
@@ -165,7 +164,7 @@ namespace SwordAndSorcerySMAPI
                                     DuskspireFrameOverride = 25;
                                     Game1.playSound("serpentHit");
                                 }
-                            } );
+                            });
                              --MovingActorForTurn;
                         },
                         AbilityName = I18n.FinaleMinigame_Ability_ShieldThrow_Name,
@@ -185,7 +184,7 @@ namespace SwordAndSorcerySMAPI
 
                             if (CurrentTurn == Game1.player)
                             {
-                                CircleOfThornsSMAPI.ModCoT.farmerData.GetOrCreateValue(Game1.player).transformed.Value = true;
+                                ModCoT.farmerData.GetOrCreateValue(Game1.player).transformed.Value = true;
                             }
                             else
                             {
@@ -292,13 +291,11 @@ namespace SwordAndSorcerySMAPI
                         {
                             Game1.playSound("shadowpeep");
 
-                            string[] SenRandomBooks = { "(O)Book_Void", "(O)Book_Trash", "(O)PurpleBook", "(O)SkillBook_0", "(O)SkillBook_1", "(O)SkillBook_2", "(O)SkillBook_3", "(O)SkillBook_4", "(O)Book_Crabbing", "(O)Book_Bombs", "(O)Book_Roe", "(O)Book_WildSeeds", "(O)Book_Woodcutting", "(O)Book_Woodcutting", "(O)Book_Defense", "(O)Book_Friendship", "(O)Book_Speed", "(O)Book_Speed2", "(O)Book_Marlon", "(O)Book_PriceCatalogue", "(O)Book_QueenOfSauce", "(O)Book_Diamonds", "(O)Book_Mystery", "(O)Book_AnimalCatalogue", "(O)Book_Artifact", "(O)Book_Horse", "(O)Book_Grass" };
-                            String GetRandomBook()
+                            string[] SenRandomBooks = ["(O)Book_Void", "(O)Book_Trash", "(O)PurpleBook", "(O)SkillBook_0", "(O)SkillBook_1", "(O)SkillBook_2", "(O)SkillBook_3", "(O)SkillBook_4", "(O)Book_Crabbing", "(O)Book_Bombs", "(O)Book_Roe", "(O)Book_WildSeeds", "(O)Book_Woodcutting", "(O)Book_Woodcutting", "(O)Book_Defense", "(O)Book_Friendship", "(O)Book_Speed", "(O)Book_Speed2", "(O)Book_Marlon", "(O)Book_PriceCatalogue", "(O)Book_QueenOfSauce", "(O)Book_Diamonds", "(O)Book_Mystery", "(O)Book_AnimalCatalogue", "(O)Book_Artifact", "(O)Book_Horse", "(O)Book_Grass"];
+                            string GetRandomBook()
                             {
-                                Random randomizer = new Random();
-                                sindex = randomizer.Next(SenRandomBooks.Length);
-                                string randombook = SenRandomBooks[sindex];
-                                return randombook;
+                                Random randomizer = Game1.random;
+                                return SenRandomBooks[randomizer.Next(SenRandomBooks.Length)];
                             }
 
                             Projectiles.Add( new BattleProjectile()
@@ -329,7 +326,7 @@ namespace SwordAndSorcerySMAPI
                 if (actor.Name == "Duskspire")
                 {
                     DuskspireActor = actor;
-                    DuskspireActor.Sprite.LoadTexture(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth.png").BaseName);
+                    DuskspireActor.Sprite.LoadTexture(ModSnS.Instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth.png").BaseName);
                     DuskspireActor.Sprite.SourceRect = new Rectangle(0, 7 * 96, 96, 96);
                     DuskspireActor.Sprite.SpriteWidth = DuskspireActor.Sprite.SpriteHeight = 96;
                     DuskspireActor.Sprite.CurrentFrame = 28;
@@ -368,12 +365,13 @@ namespace SwordAndSorcerySMAPI
 
         public string minigameId()
         {
-            return $"{ModSnS.instance.ModManifest.UniqueID}_finale_phase1";
+            return $"{ModSnS.Instance.ModManifest.UniqueID}_finale_phase1";
         }
 
         public void changeScreenSize()
         {
         }
+
         public void receiveKeyPress(Keys k)
         {
             if (CurrentTurn.Name == "Duskspire" || MovingActorForTurn >= -1 && MovingActorForTurn <= 1 || waitingForProjectiles)
@@ -538,7 +536,7 @@ namespace SwordAndSorcerySMAPI
 
                 if (CurrentTurn == Game1.player)
                 {
-                    CircleOfThornsSMAPI.ModCoT.farmerData.GetOrCreateValue(Game1.player).transformed.Value = false;
+                    ModCoT.farmerData.GetOrCreateValue(Game1.player).transformed.Value = false;
                 }
                 else
                 {
@@ -562,7 +560,6 @@ namespace SwordAndSorcerySMAPI
         }
 
         private bool waitingForProjectiles = false;
-        private int sindex;
 
         public bool tick(GameTime time)
         {
@@ -571,7 +568,7 @@ namespace SwordAndSorcerySMAPI
                 character.update(time, Game1.currentLocation);
                 if (character is Farmer f)
                 {
-                    ModSnS.instance.Helper.Reflection.GetMethod(f, "updateCommon").Invoke(time, Game1.currentLocation);
+                    ModSnS.Instance.Helper.Reflection.GetMethod(f, "updateCommon").Invoke(time, Game1.currentLocation);
                 }
             }
 
@@ -723,25 +720,26 @@ namespace SwordAndSorcerySMAPI
             */
             if (CurrentTurn != DuskspireActor)
             {
-                DuskspireFrameTimer += (float)Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds;
-                if (DuskspireFrameTimer >= 75)
+                if (Game1.player.IsMainPlayer)
                 {
-                    DuskspireFrameTimer -= 75;
-                    int[] frames = [28, 29, 30, 31, 32, 33, 34, 35, 36, 35, 34, 33, 32, 31, 30, 29];
-
-                    DuskspireActor.Sprite.CurrentFrame = frames[DuskspireFrame];
-                    DuskspireFrame++;
-
-                    if (DuskspireFrame >= frames.Length)
-                        DuskspireFrame = 0;
+                    DuskspireFrameTimer += (float)Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds;
+                    if (DuskspireFrameTimer >= 75)
+                    {
+                        DuskspireFrameTimer -= 75;
+                        int[] frames = [28, 29, 30, 31, 32, 33, 34, 35, 36, 35, 34, 33, 32, 31, 30, 29];
+                        DuskspireActor.Sprite.CurrentFrame = frames[DuskspireFrame];
+                        DuskspireFrame++;
+                        if (DuskspireFrame >= frames.Length)
+                            DuskspireFrame = 0;
+                    }
+                    if (DuskspireFrameOverride.HasValue)
+                    {
+                        DuskspireActor.Sprite.CurrentFrame = DuskspireFrameOverride.Value;
+                        DuskspireFrameTimer = DuskspireFrameOverride != 25 ? -75 : -300;
+                        DuskspireFrameOverride = null;
+                    }
+                    DuskspireActor.Sprite.UpdateSourceRect();
                 }
-                if (DuskspireFrameOverride.HasValue)
-                {
-                    DuskspireActor.Sprite.CurrentFrame = DuskspireFrameOverride.Value;
-                    DuskspireFrameTimer = DuskspireFrameOverride != 25 ? -75 : -300;
-                    DuskspireFrameOverride = null;
-                }
-                DuskspireActor.Sprite.UpdateSourceRect();
             }
 
             Game1.currentLocation.Map.Update(Game1.currentGameTime.ElapsedGameTime.Milliseconds);
@@ -843,6 +841,7 @@ namespace SwordAndSorcerySMAPI
             {
                 Game1.player.health = -999;
                 Game1.player.eventsSeen.Remove(Event.id);
+                Game1.player.GetFarmerExtData().DoingFinale.Value = false;
 
                 Event.endBehaviors();
 

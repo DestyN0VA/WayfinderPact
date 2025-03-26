@@ -1,18 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Reflection.Emit;
-using System.Reflection;
-using CircleOfThornsSMAPI;
 using HarmonyLib;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceCore;
 using StardewValley;
 using StardewValley.Menus;
-using static SpaceCore.Skills;
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Reflection.Emit;
 
 namespace SwordAndSorcerySMAPI
 {
-    
+
     public class RogueSkill : Skills.Skill
     {
         public static GenericProfession ProfessionArmorRecovery;
@@ -25,23 +23,23 @@ namespace SwordAndSorcerySMAPI
         public RogueSkill()
             : base("DestyNova.SwordAndSorcery.Rogue")
         {
-            this.Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png");
-            this.SkillsPageIcon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png");
+            this.Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png");
+            this.SkillsPageIcon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/icon.png");
 
-            this.ExperienceCurve = new[] { 100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000 };
+            this.ExperienceCurve = [100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000];
 
             this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(252, 121, 27);
 
             // Level 5
             RogueSkill.ProfessionArmorRecovery = new GenericProfession(skill: this, id: "ArmorRecovery", name: I18n.RogueSkill_Profession_ArmorRecovery_Name, description: I18n.RogueSkill_Profession_ArmorRecovery_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/ArtificerSpecialist.png")
+                Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/ArtificerSpecialist.png")
             };
             this.Professions.Add(RogueSkill.ProfessionArmorRecovery);
 
             RogueSkill.ProfessionBowSecondShot = new GenericProfession(skill: this, id: "BowSecondShot", name: I18n.RogueSkill_Profession_RogueishArchetype_Name, description: I18n.RogueSkill_Profession_RogueishArchetype_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/RogueishArchetype.png")
+                Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/RogueishArchetype.png")
             };
             this.Professions.Add(RogueSkill.ProfessionBowSecondShot);
 
@@ -50,13 +48,13 @@ namespace SwordAndSorcerySMAPI
             // Level 10 - track A
             RogueSkill.ProfessionCrafting = new GenericProfession(skill: this, id: "Crafting", name: I18n.RogueSkill_Profession_FlashOfGenius_Name, description: I18n.RogueSkill_Profession_FlashOfGenius_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/FlashOfGenius.png")
+                Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/FlashOfGenius.png")
             };
             this.Professions.Add(RogueSkill.ProfessionCrafting);
 
             RogueSkill.ProfessionArmorCap = new GenericProfession(skill: this, id: "ArmorCap", name: I18n.RogueSkill_Profession_ArmorProficiency_Name, description: I18n.RogueSkill_Profession_ArmorProficiency_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/ArmorProficiency.png")
+                Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/ArmorProficiency.png")
             };
             this.Professions.Add(RogueSkill.ProfessionArmorCap);
 
@@ -65,13 +63,13 @@ namespace SwordAndSorcerySMAPI
             // Level 10 - track B
             RogueSkill.ProfessionShadowStep = new GenericProfession(skill: this, id: "ShadowStep", name: I18n.Ability_Shadowstep_Name, description: I18n.Ability_Shadowstep_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/Shadowstep.png")
+                Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/Shadowstep.png")
             };
             this.Professions.Add(RogueSkill.ProfessionShadowStep);
 
             RogueSkill.ProfessionHuntersMark = new GenericProfession(skill: this, id: "HuntersMark", name: I18n.RogueSkill_Profession_HuntersMark_Name, description: I18n.RogueSkill_Profession_HuntersMark_Description)
             {
-                Icon = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/rogue/HuntersMark.png")
+                Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/HuntersMark.png")
             };
             this.Professions.Add(RogueSkill.ProfessionHuntersMark);
 
@@ -87,20 +85,19 @@ namespace SwordAndSorcerySMAPI
         {
             var RogueSkill = new RogueSkill();
             string[][] recipes =
-                new string[][]
-                {
+                [
                     null,
-                    new string[] { "DN.SnS_ClothArmor", "DN.SnS_Bow", "DN.SnS_Arrow" },
+                    ["DN.SnS_ClothArmor", "DN.SnS_Bow", "DN.SnS_Arrow"],
                     null,
-                    new string[] { "DN.SnS_CopperArmor", "DN.SnS_FirestormArrow", "DN.SnS_IcicleArrow" },
-                    new string[] { "DN.SnS_IronArmor" },
+                    ["DN.SnS_CopperArmor", "DN.SnS_FirestormArrow", "DN.SnS_IcicleArrow"],
+                    ["DN.SnS_IronArmor"],
                     null,
-                    new string[] { "DN.SnS_WindwakerArrow" },
-                    new string[] { "DN.SnS_GoldArmor" },
-                    new string[] { "DN.SnS_IridiumArmor", "DN.SnS_RicochetArrow" },
-                    new string[] { "DN.SnS_RadioactiveArmor", "DN.SnS_StygiumArmor", "DN.SnS_ElysiumArmor", "DN.SnS_LightbringerArrow" },
+                    ["DN.SnS_WindwakerArrow"],
+                    ["DN.SnS_GoldArmor"],
+                    ["DN.SnS_IridiumArmor", "DN.SnS_RicochetArrow"],
+                    ["DN.SnS_RadioactiveArmor", "DN.SnS_StygiumArmor", "DN.SnS_ElysiumArmor", "DN.SnS_LightbringerArrow"],
                     null,
-                };
+                ];
             for (int level = 1; level <= Game1.player.GetCustomSkillLevel(RogueSkill); ++level)
             {
                 if (recipes[level] != null)
@@ -153,7 +150,7 @@ namespace SwordAndSorcerySMAPI
 
         public override List<string> GetExtraLevelUpInfo(int level)
         {
-            List<string> ret = new List<string>();
+            List<string> ret = [];
 
             if (level > 10) return ret;
 
@@ -212,7 +209,7 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(LevelUpMenu), nameof(LevelUpMenu.RevalidateHealth))]
     public static class LevelUpMenuRevalidateHealthPatch
     {
-        public static IEnumerable<CodeInstruction> Transpiler(ILGenerator gen, MethodBase original, IEnumerable<CodeInstruction> insns)
+        public static IEnumerable<CodeInstruction> Transpiler(MethodBase original, IEnumerable<CodeInstruction> insns)
         {
             var ret = new List<CodeInstruction>();
 
@@ -250,7 +247,7 @@ namespace SwordAndSorcerySMAPI
     }
 
     [HarmonyPatch(typeof(Farmer), nameof(Farmer.gainExperience))]
-    public static class FarmerExpInterceptPatch
+    public static class FarmerArtificerExpInterceptPatch
     {
         public static void Postfix(Farmer __instance, int which, int howMuch)
         {

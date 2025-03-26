@@ -2619,5 +2619,6 @@
     { "Name": "PaladinBookCat", "Value": "0"},
     { "Name": "PaladinBookCat", "Value": "-103",
         "When": { "KCC.SnS/PaladinUnlocked": true } }
-  ]
+  ],
+  "EventLimiterExceptions": [ "SnS.Ch1.Mateo.15", "SnS.Ch4.Finale", "SnS.Ch4.Intermission.Mateo", "SnS.Ch4.Intermission.Hector", "SnS.Ch4.Intermission.Cirrus", "SnS.Ch4.Intermission.Gunnar", "SnS.Ch4.Intermission.Sen", "SnS.Ch4.Intermission.SoloFarmer", "SnS.Ch4.Victory.Mateo", "SnS.Ch4.Victory.Hector", "SnS.Ch4.Victory.Cirrus", "SnS.Ch4.Victory.Gunnar", "SnS.Ch4.Victory.Sen", "SnS.Ch4.Victory.SoloFarmer", "SnS.Ch4.Victory.FarmerGuildmaster" ]
 }

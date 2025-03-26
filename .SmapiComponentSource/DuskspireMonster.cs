@@ -1,42 +1,49 @@
 ﻿using HarmonyLib;
+using MageDelve.Mercenaries;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
-using StardewModdingAPI;
+using NeverEndingAdventure.Utils;
 using StardewValley;
 using StardewValley.Companions;
+using StardewValley.GameData;
 using StardewValley.Monsters;
 using StardewValley.Projectiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Emit;
-using System.Reflection;
 
 namespace SwordAndSorcerySMAPI;
+
+//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") : Monster(name, pos)
 {
     private readonly NetEvent0 laughEvent = new();
     private readonly NetEvent1Field<bool, NetBool> swingEvent = new();
     private readonly NetFloat noMovementTime = [];
 
-    private int[] Up = [8, 9, 10, 11];
-    private int[] Down = [0, 1, 2, 3];
-    private int[] Left = [12, 13, 14, 15];
-    private int[] Right = [4, 5, 6, 7];
+    private readonly int[] Down = [0, 1, 2, 3];
+    private readonly int[] Right = [4, 5, 6, 7];
+    private readonly int[] Up = [8, 9, 10, 11];
+    private readonly int[] Left = [12, 13, 14, 15];
     private int WalkTimer = 0;
     private int currWalkIndex = 0;
 
     private int prevFrame = 0;
     private Vector2 lastPos = Vector2.Zero;
     private bool flippedSwing = false;
-    private bool doingLaugh = false;
+    private readonly NetBool doingLaugh = new(false);
+
+    public DuskspireMonster() :
+        this(new Vector2(18, 13) * Game1.tileSize)
+    { }
 
     protected override void initNetFields()
     {
         base.initNetFields();
         NetFields.AddField(laughEvent);
         NetFields.AddField(swingEvent);
+        NetFields.AddField(doingLaugh);
         NetFields.AddField(noMovementTime);
 
         laughEvent.onEvent += LaughEvent_onEvent;
@@ -47,7 +54,7 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
     {
         base.reloadSprite(onlyAppearance);
 
-        Sprite = new AnimatedSprite(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth.png").BaseName, 0, 96, 96);
+        Sprite = new AnimatedSprite(ModSnS.Instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth.png").BaseName, 0, 96, 96);
     }
 
     public override Rectangle GetBoundingBox()
@@ -72,44 +79,58 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
 
     public override void updateMovement(GameLocation location, GameTime time)
     {
+        if (noMovementTime.Value > 0)
+            return;
+        var farmer = findPlayer();
+        if (farmer.currentLocation == location)
+        {
+            Vector2 vel = Utility.getVelocityTowardPlayer(GetBoundingBox().Center, Speed, farmer);
+            //Log.Debug("vel: " + vel);
+            Rectangle bb = GetBoundingBox();
+            bb.X += (int)vel.X;
+            bb.Y += (int)vel.Y;
+            if (true || !location.isCollidingPosition(bb, Game1.viewport, this))
+                Position += vel;
+        }
+
+        if (WalkTimer <= 0)
+            AnimateMovement();
+        else
+            WalkTimer -= time.ElapsedGameTime.Milliseconds;
     }
 
     public override void update(GameTime time, GameLocation location)
     {
+        base.update(time, location);
         Sprite.SpriteWidth = 96;
         Sprite.SpriteHeight = 96;
-        prevFrame = Sprite.CurrentFrame;
-
-        //Health = 99999;
-
-        base.update(time, location);
         laughEvent.Poll();
         swingEvent.Poll();
 
+        if (prevFrame != 61 && Sprite.CurrentFrame == 61)
+        {
+            if (!doingLaugh.Value)
+            {
+                string[] projectileDebuffs =
+                [
+                    // Darkness, nauseous, weakness, jinxed, slimed
+                    "26", "25", "27", "14", "13"
+                ];
+
+                for (int i = 0; i < 16; ++i)
+                {
+                    float angle = (360 / 16 * i) * MathF.PI / 180;
+                    float xVel = MathF.Cos(angle) * 10;
+                    float yVel = MathF.Sin(angle) * 10;
+                    DebuffingProjectile proj = new(projectileDebuffs[Game1.random.Next(projectileDebuffs.Length)], 2, 1, 2, 0, xVel, yVel, Position, location, this, false, false);
+                    location.projectiles.Add(proj);
+                }
+            }
+            doingLaugh.Value = !doingLaugh.Value;
+        }
+
         if (Game1.IsMasterGame)
         {
-            if (prevFrame != 61 && Sprite.CurrentFrame == 61)
-            {
-                if (!doingLaugh)
-                {
-                    string[] projectileDebuffs =
-                    [
-                        // Darkness, nauseous, weakness, jinxed, slimed
-                        "26", "25", "27", "14", "13"
-                    ];
-
-                    for (int i = 0; i < 16; ++i)
-                    {
-                        float angle = (360 / 16 * i) * MathF.PI / 180;
-                        float xVel = MathF.Cos(angle) * 10;
-                        float yVel = MathF.Sin(angle) * 10;
-                        DebuffingProjectile proj = new(projectileDebuffs[Game1.random.Next(projectileDebuffs.Length)], 2, 1, 2, 0, xVel, yVel, Position, location, this, false, false);
-                        location.projectiles.Add(proj);
-                    }
-                }
-                doingLaugh = !doingLaugh;
-            }
-
             if (noMovementTime.Value > 0)
                 noMovementTime.Value -= time.ElapsedGameTime.Milliseconds;
             if (stunTime.Value > 0)
@@ -122,99 +143,120 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
             if (noMovementTime.Value <= 0)
             {
                 var farmer = findPlayer();
-                if ( farmer.currentLocation == location )
+                if (farmer.currentLocation == location)
                 {
-                    float dist = Vector2.Distance(farmer.StandingPixel.ToVector2(), GetBoundingBox().Center.ToVector2());
+                    float dist = Vector2.Distance(farmer.getStandingPosition(), getStandingPosition());
 
-                    //Log.Debug("dist : " + dist);
-                    if (Game1.random.NextDouble() < 1f / (5 * 60))
+                    if (dist <= Sprite.SpriteWidth / 2 - 75)
                     {
-                        doingLaugh = false;
+                        swingEvent.Fire(farmer.Position.X > Position.X);
+                        Sprite.animateOnce(time);
+                    }
+                    else if (Game1.random.NextDouble() < 1f / (5 * 60))
+                    {
+                        doingLaugh.Value = false;
                         laughEvent.Fire();
                         Sprite.animateOnce(time);
                         DelayedAction.playSoundAfterDelay("SnS.DuskspireLaugh_NoLoop", 500, currentLocation, Position);
                         Game1.playSound("SnS.DuskspireLaugh_NoLoop");
-                        noMovementTime.Value = 67 * 70;
-                    }
-                    else if (dist < Sprite.SpriteWidth * Game1.pixelZoom / 2 - 75)
-                    {
-                        swingEvent.Fire(farmer.Position.X > Position.X);
-                        Sprite.animateOnce(time);
-                        noMovementTime.Value = 11 * 70;
-                    }
-                    else
-                    {
-                        Vector2 vel = Utility.getVelocityTowardPlayer(GetBoundingBox().Center, Speed, farmer);
-                        //Log.Debug("vel: " + vel);
-                        Rectangle bb = GetBoundingBox();
-                        bb.X += (int)vel.X;
-                        bb.Y += (int)vel.Y;
-                        if (true || !location.isCollidingPosition(bb, Game1.viewport, this))
-                        {
-                            Position += vel;
-                        }
                     }
                 }
             }
         }
+        lastPos = Position;
+        prevFrame = Sprite.CurrentFrame;
+    }
 
-        if (noMovementTime.Value <= 0 && WalkTimer <= 0)
+    private void AnimateMovement()
+    {
+        if (Sprite.CurrentAnimation != null) return;
+
+        Vector2 posDiff = Position - lastPos;
+        int dir = 0;
+        if (stunTime.Value <= 0)
         {
-            Sprite.StopAnimation();
-            Vector2 posDiff = Position - lastPos;
-            int dir;
-            if (stunTime.Value > 0)
-                dir = Game1.down;
-            else if (Math.Abs(posDiff.Y) > Math.Abs(posDiff.X))
+            if (Math.Abs(posDiff.Y) > Math.Abs(posDiff.X))
             {
                 if (posDiff.Y < 0)
-                    dir = Game1.up;
+                    dir = FacingDirection = Game1.up;
                 else
-                    dir = Game1.down;
+                    dir = FacingDirection = Game1.down;
             }
             else
             {
                 if (posDiff.X < 0)
-                    dir = Game1.left;
+                    dir = FacingDirection = Game1.left;
                 else
-                    dir = Game1.right;
+                    dir = FacingDirection = Game1.right;
             }
+        }
+        switch (dir)
+        {
+            case Game1.up: Sprite.CurrentFrame = Up[currWalkIndex]; break;
+            case Game1.down: Sprite.CurrentFrame = Down[currWalkIndex]; break;
+            case Game1.left: Sprite.CurrentFrame = Left[currWalkIndex]; break;
+            case Game1.right: Sprite.CurrentFrame = Right[currWalkIndex]; break;
+        }
 
-            switch (dir)
+        WalkTimer = stunTime.Value == 0 ? 75 : stunTime.Value;
+        if (WalkTimer > 75)
+            return;
+
+        currWalkIndex++;
+        if (currWalkIndex >= 4)
+            currWalkIndex = 0;
+
+    }
+
+    protected override void localDeathAnimation()
+    {
+        var Pos = Position - new Vector2(Sprite.SpriteWidth * Game1.pixelZoom / 2, Sprite.SpriteHeight * Game1.pixelZoom);
+
+        if (IsFinalBoss())
+        {
+            Game1.screenGlowOnce(Color.White, false);
+            DelayedAction.playMusicAfterDelay("SnS.DuskspireDeath", 100);
+            Game1.addMail("DuskspireDefeated", true, false);
+            DelayedAction.functionAfterDelay(() =>
             {
-                case Game1.up: Sprite.CurrentFrame = Up[currWalkIndex]; break;
-                case Game1.down: Sprite.CurrentFrame = Down[currWalkIndex]; break;
-                case Game1.left: Sprite.CurrentFrame = Left[currWalkIndex]; break;
-                case Game1.right: Sprite.CurrentFrame = Right[currWalkIndex]; break;
-            }
-            currWalkIndex++;
-            if (currWalkIndex >= 4)
-                currWalkIndex = 0;
-            WalkTimer = 75;
+                Game1.player.addItemByMenuIfNecessary(ItemRegistry.Create("(O)DN.SnS_DuskspireHeart"));
+                Game1.stopMusicTrack(MusicContext.ImportantSplitScreenMusic);
+                Game1.player.GetCurrentMercenaries().Clear();
+                var partnerInfos = Game1.content.Load<Dictionary<string, FinalePartnerInfo>>("DN.SnS/FinalePartners");
+
+                FinalePartnerInfo partnerInfo = partnerInfos["default"];
+
+                foreach (string key in partnerInfos.Keys)
+                {
+                    if (Game1.player.friendshipData.TryGetValue(key, out var data) && (data.IsDating() || data.IsRoommate()))
+                    {
+                        partnerInfo = partnerInfos[key];
+                        break;
+                    }
+                }
+                const string GuildmasterEventId = "SnS.Ch4.Victory.FarmerGuildmaster";
+                Game1.PlayEvent(Game1.player.hasOrWillReceiveMail("FarmerGuildmasterBattle") ? GuildmasterEventId : partnerInfo.VictoryEventId, checkPreconditions: false, checkSeen: false);
+                ModSnS.State.FinaleBoss = null;
+            }, 12300);
+            Game1.player.GetFarmerExtData().DoingFinale.Value = true;
         }
         else
-        {
-            WalkTimer -= time.ElapsedGameTime.Milliseconds;
-        }
+            DelayedAction.functionAfterDelay(() =>
+            {
+                Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_DuskspireHeart"), Utility.PointToVector2(StandingPixel), Game1.up, currentLocation);
+            }, 12300);
 
-        lastPos = Position;
-    }
-
-    protected override void sharedDeathAnimation()
-    {
-        if (Name != "Duskspire Remnant")
-        {
-            DelayedAction.playMusicAfterDelay("SnS.DuskspireDeath", 100);
-        }
         DelayedAction.playSoundAfterDelay("SnS.DuskspireLaugh_NoLoop", 1000, currentLocation, Position, local: true);
-        var pos = Position - new Vector2(Sprite.SpriteWidth * Game1.pixelZoom / 2, Sprite.SpriteHeight * Game1.pixelZoom);
-        TemporaryAnimatedSprite DuskspireDeath = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 0, 96, 96), 75, 84, 0, pos, false, false) { scale = 4 };
-        TemporaryAnimatedSprite DuskspireHeart = new(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 2016, 96, 96), 75, 16, 5, pos, false, false) { scale = 4 };
-        currentLocation.TemporarySprites.Add(DuskspireDeath);
-        DelayedAction.addTemporarySpriteAfterDelay(DuskspireHeart, Game1.getLocationFromName("EastScarp_DuskspireLair"), 6300);
-        DelayedAction.functionAfterDelay(() => Game1.createItemDebris(ItemRegistry.Create("(O)DN.SnS_DuskspireHeart"), Utility.PointToVector2(StandingPixel), Game1.down, currentLocation), 12300);
-        currentLocation.modData.Add("DN.SnS_DuskspireFaught", "true");
+        TemporaryAnimatedSprite Duskspire = new(ModSnS.Instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 0, 96, 96), 75, 84, 0, Pos, false, false) { scale = 4 },
+                                Heart = new(ModSnS.Instance.Helper.ModContent.GetInternalAssetName("assets/duskspire-behemoth-death.png").BaseName, new(0, 2016, 96, 96), 75, 16, 5, Pos, false, false) { scale = 4 };
+        DelayedAction.addTemporarySpriteAfterDelay(Duskspire, currentLocation, 0);
+        DelayedAction.addTemporarySpriteAfterDelay(Heart, currentLocation, 6300);
+
+        if (!currentLocation.modData?.ContainsKey("DN.SnS_DuskspireFaught") ?? true)
+            currentLocation.modData.Add("DN.SnS_DuskspireFaught", "true");
     }
+
+    private bool IsFinalBoss() => Name == "Duskspire Behemoth";
 
     private void LaughEvent_onEvent()
     {
@@ -230,23 +272,28 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
         actualFrames.AddRange(frames);
 
         Sprite.setCurrentAnimation(actualFrames);
+        noMovementTime.Value = frames.Count * 70;
+        DelayedAction.functionAfterDelay(() => { Sprite.ClearAnimation(); }, (int)noMovementTime.Value);
     }
 
     private void SwingEvent_onEvent(bool arg)
     {
+        Log.Warn("Doing swing event");
         List<FarmerSprite.AnimationFrame> frames = [];
-        for (int i = 0; i < 10; ++i)
+        for (int i = 0; i < 10; i++)
         {
             frames.Add(new(40 + i, 70));
         }
-        Sprite.setCurrentAnimation(frames);
         Rectangle Dusktangle = GetBoundingBox();
         Dusktangle.Inflate(32, 0);
         foreach (Farmer f in Game1.getAllFarmers().Where(f => f.currentLocation == currentLocation))
             if (f.GetBoundingBox().Intersects(Dusktangle) && f.CanBeDamaged())
                 f.takeDamage(DamageToFarmer, false, this);
-
+        Log.Warn("setting animation");
+        Sprite.setCurrentAnimation(frames);
         flippedSwing = arg;
+        noMovementTime.Value = frames.Count * 70;
+        DelayedAction.functionAfterDelay(() => { Sprite.ClearAnimation(); }, (int)noMovementTime.Value);
     }
 
     public override void draw(SpriteBatch b)

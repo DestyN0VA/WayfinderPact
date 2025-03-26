@@ -4,9 +4,9 @@
 	  <Name>Sword and Sorcery (SMAPI Component)</Name>
 	  <Description>C# code for Sword and Sorcery</Description>
 	  <UniqueId>KCC.SnS</UniqueId>
-	  <Authors>KittyCatCasey, EnderTedi, 7thAxis</Authors>
-	  <Version>2.2.6</Version>
-    <TargetFramework>net6.0</TargetFramework>
+	  <Authors>EnderTedi, 7thAxis, KittyCatCasey</Authors>
+	  <Version>2.3.0</Version>
+	  <TargetFramework>net6.0</TargetFramework>
 	  <EnableHarmony>true</EnableHarmony>
 	  <LangVersion>latest</LangVersion>
 	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>

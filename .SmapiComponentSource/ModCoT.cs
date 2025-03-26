@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
+using SpaceCore;
 using SpaceShared.APIs;
 using StardewModdingAPI;
 using StardewValley;
@@ -11,34 +12,27 @@ using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Runtime.CompilerServices;
 
-using SwordAndSorcerySMAPI;
-using SpaceCore;
-using FarmerExtData = SwordAndSorcerySMAPI.FarmerExtData;
-using StardewValley.Extensions;
-using StardewValley.GameData.Crops;
-using StardewValley.Objects;
-using SpaceCore.Guidebooks;
-using System.Reflection.Emit;
-using NeverEndingAdventure.Utils;
-
-namespace CircleOfThornsSMAPI
+namespace SwordAndSorcerySMAPI
 {
     public class ModCoT
     {
-        public static ModCoT Instance;
+        private static ModCoT instance;
 
-        public static ConditionalWeakTable<Farmer, FarmerExtData> farmerData = new();
+        public readonly static ConditionalWeakTable<Farmer, FarmerExtData> farmerData = [];
         public static Configuration Config { get; set; }
+        public static ModCoT Instance { get => instance; set => instance = value; }
+        public static Texture2D[][] FormTexs { get => formTexs; set => formTexs = value; }
+        public static Texture2D HuckleberryTex { get => huckleberryTex; set => huckleberryTex = value; }
+        public static Texture2D WalletItemTex { get => walletItemTex; set => walletItemTex = value; }
 
-        public static Texture2D[][] formTexs;
+        private static Texture2D[][] formTexs;
 
-        public static Texture2D huckleberryTex;
+        private static Texture2D huckleberryTex;
 
-        public static Texture2D walletItemTex;
-
-        public static IJsonAssetsApi ja;
+        private static Texture2D walletItemTex;
 
         public const string ShapeshiftingEventId = "SnS.Ch2.Hector.16";
         public const string DropEssencesEventId = "SnS.Ch2.Hector.12";
@@ -63,7 +57,7 @@ namespace CircleOfThornsSMAPI
             Game1.player.GetFarmerExtData().noMovementTimer = 0;
             for (int i = 0; i < 8; ++i)
             {
-                Vector2 diff = new Vector2(Game1.random.Next(96) - 48, Game1.random.Next(96) - 48);
+                Vector2 diff = new(Game1.random.Next(96) - 48, Game1.random.Next(96) - 48);
                 Game1.player.currentLocation.TemporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Rectangle(0, 320, 64, 64), 50f, 8, 0, Game1.player.getStandingPosition() - new Vector2(32, 48) + diff, flicker: false, flipped: false));
             }
 
@@ -75,18 +69,17 @@ namespace CircleOfThornsSMAPI
             //I18n.Init(helper.Translation);
 
             Config = Helper.ReadConfig<Configuration>();
-            formTexs = new Texture2D[3][]
-                {
-                    new Texture2D[] { Helper.ModContent.Load<Texture2D>("assets/doe.png"), Helper.ModContent.Load<Texture2D>("assets/doeeyes.png") },
-                    new Texture2D[] { Helper.ModContent.Load<Texture2D>("assets/buck.png"), Helper.ModContent.Load<Texture2D>("assets/buckeyes.png") },
-                    new Texture2D[] { Helper.ModContent.Load<Texture2D>("assets/wolf.png"), Helper.ModContent.Load<Texture2D>("assets/wolfeyes.png") }
-                };
+            formTexs = [
+                    [ Helper.ModContent.Load<Texture2D>("assets/doe.png"), Helper.ModContent.Load<Texture2D>("assets/doeeyes.png") ],
+                    [ Helper.ModContent.Load<Texture2D>("assets/buck.png"), Helper.ModContent.Load<Texture2D>("assets/buckeyes.png") ],
+                    [ Helper.ModContent.Load<Texture2D>("assets/wolf.png"), Helper.ModContent.Load<Texture2D>("assets/wolfeyes.png") ]
+                ];
             huckleberryTex = Helper.ModContent.Load<Texture2D>("assets/huckleberry.png");
             walletItemTex = Helper.ModContent.Load<Texture2D>("assets/wallet-item.png");
 
             GameStateQuery.Register("PLAYER_HAS_WOLF_FORM", (args, ctx) =>
             {
-            return GameStateQuery.Helpers.WithPlayer(ctx.Player, args[1], (f) => f.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftWolf));
+                return GameStateQuery.Helpers.WithPlayer(ctx.Player, args[1], (f) => f.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftWolf));
             });
 
             Ability.Abilities.Add("shapeshift_doe", new Ability("shapeshift_doe")
@@ -153,21 +146,19 @@ namespace CircleOfThornsSMAPI
 
         private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
         {
-            string[][] recipes =
-                new string[][]
-                {
+            string[][] recipes = [
                     null,
-                    new string[] { "DN.SnS_ancientamaranth.seed", "DN.SnS_ancientepiphyticfern.seed" },
-                    new string[] { "DN.SnS_glowingpolyporemushrooms.seed" },
-                    new string[] { "DN.SnS_ancientwildfairyrose.seed" },
-                    new string[] { "DN.SnS_ancientelderberry.seed" },
+                    [ "DN.SnS_ancientamaranth.seed", "DN.SnS_ancientepiphyticfern.seed" ],
+                    [ "DN.SnS_glowingpolyporemushrooms.seed" ],
+                    [ "DN.SnS_ancientwildfairyrose.seed" ],
+                    [ "DN.SnS_ancientelderberry.seed" ],
                     null,
-                    new string[] { "DN.SnS_ancientbottlegourd.seed", "DN.SnS_lavaeelandstirfriedancientbottlegourd" },
-                    new string[] { "DN.SnS_ancientgiantappleberry.seed", "DN.SnS_mushroomsredsauce" },
-                    new string[] { "DN.SnS_ancientazuredetura.seed", "DN.SnS_ferngreensandpineapple" },
-                    new string[] { "DN.SnS_ancientglowinghuckleberry.seed", "DN.SnS_ancienthuckleberryicecream" },
+                    [ "DN.SnS_ancientbottlegourd.seed", "DN.SnS_lavaeelandstirfriedancientbottlegourd" ],
+                    [ "DN.SnS_ancientgiantappleberry.seed", "DN.SnS_mushroomsredsauce" ],
+                    [ "DN.SnS_ancientazuredetura.seed", "DN.SnS_ferngreensandpineapple" ],
+                    [ "DN.SnS_ancientglowinghuckleberry.seed", "DN.SnS_ancienthuckleberryicecream" ],
                     null,
-                };
+                ];
             for (int level = 1; level <= Game1.player.GetCustomSkillLevel(Skill); ++level)
             {
                 if (recipes[level] != null)
@@ -190,7 +181,7 @@ namespace CircleOfThornsSMAPI
 
         private void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)
         {
-            var sc = Helper.ModRegistry.GetApi<SpaceShared.APIs.ISpaceCoreApi>("spacechase0.SpaceCore");
+            var sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
             sc.RegisterCustomProperty(typeof(Farmer), "shapeshiftFormId", typeof(bool), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.FormGetter)), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.FormSetter)));
             sc.RegisterCustomProperty(typeof(Farmer), "druidicsExpRemainder", typeof(float), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderGetter)), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderSetter)));
             Skills.RegisterSkill(Skill);
@@ -201,7 +192,7 @@ namespace CircleOfThornsSMAPI
         private int transformTimer = 0;
         private void GameLoop_UpdateTicking(object sender, StardewModdingAPI.Events.UpdateTickingEventArgs e)
         {
-            if (!Context.IsWorldReady|| Game1.player.currentLocation != null && Game1.player.currentLocation.currentEvent != null && !Game1.player.currentLocation.currentEvent.isFestival)
+            if (!Context.IsWorldReady || Game1.player.currentLocation != null && Game1.player.currentLocation.currentEvent != null && !Game1.player.currentLocation.currentEvent.isFestival)
                 return;
 
             var data = Game1.player.GetFarmerExtData();
@@ -209,12 +200,12 @@ namespace CircleOfThornsSMAPI
             if (data.transformed.Value)
             {
                 transformTimer += (int)Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds;
-                if ( transformTimer >= 3000 )
+                if (transformTimer >= 3000)
                 {
                     transformTimer -= 3000;
                     if (Game1.player.CurrentTool?.QualifiedItemId != "(W)DN.SnS_DruidShield" && Game1.player.GetOffhand()?.QualifiedItemId != "(W)DN.SnS_DruidShield")
                     {
-                        var ext = Extensions.GetFarmerExtData(Game1.player);
+                        var ext = Game1.player.GetFarmerExtData();
                         ext.mana.Value = Math.Max(ext.mana.Value - 1, 0);
                         if (ext.mana.Value <= 0)
                         {
@@ -233,11 +224,11 @@ namespace CircleOfThornsSMAPI
                         duration: 250,
                         effects: new()
                         {
-                            Speed = { 0.5f + Game1.player.GetCustomBuffedSkillLevel( ModCoT.Skill ) * 0.05f },
+                            Speed = { 0.5f + Game1.player.GetCustomBuffedSkillLevel(Skill) * 0.05f },
                             ForagingLevel = { 1 },
                         },
                         displayName: I18n.Shapeshifted(),
-                        iconTexture: ModCoT.Skill.Icon,
+                        iconTexture: Skill.Icon,
                         iconSheetIndex: 0);
                     if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftWolf))
                     {
@@ -251,10 +242,10 @@ namespace CircleOfThornsSMAPI
                     b.millisecondsDuration = 250;
                 }
 
-                if (data.isResting)
+                if (data.IsResting)
                 {
                     regenTimer += Game1.currentGameTime.ElapsedGameTime.Milliseconds * (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftStag) ? 2 : 1);
-                    int timerCap = 200 - Game1.player.GetCustomBuffedSkillLevel(ModCoT.Skill) * 10;
+                    int timerCap = 200 - Game1.player.GetCustomBuffedSkillLevel(Skill) * 10;
                     if (regenTimer >= timerCap)
                     {
                         regenTimer -= timerCap;
@@ -288,16 +279,16 @@ namespace CircleOfThornsSMAPI
     [HarmonyPatch(typeof(FruitTree), nameof(FruitTree.draw))]
     public static class FruitTreeDrawHuckleberryPatch
     {
-        public static bool Prefix(FruitTree __instance, SpriteBatch spriteBatch, NetBool ___falling, float ___shakeTimer, float ___shakeRotation, List<Leaf> ___leaves, float ___alpha )
+        public static bool Prefix(FruitTree __instance, SpriteBatch spriteBatch, NetBool ___falling, float ___shakeTimer, float ___shakeRotation, List<Leaf> ___leaves, float ___alpha)
         {
             if (__instance.treeId.Value != "DN.SnS_ancientglowinghuckleberry.seed")
                 return true;
 
-            if ((bool)__instance.GreenHouseTileTree)
+            if (__instance.GreenHouseTileTree)
             {
                 spriteBatch.Draw(Game1.mouseCursors, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f, __instance.Tile.Y * 64f)), new Rectangle(669, 1957, 16, 16), Color.White, 0f, Vector2.Zero, 4f, SpriteEffects.None, 1E-08f);
             }
-            if ((int)__instance.growthStage.Value < 4)
+            if (__instance.growthStage.Value < 4)
             {
                 /*
                 Vector2 positionOffset = new Vector2((float)Math.Max(-8.0, Math.Min(64.0, Math.Sin((double)(__instance.Tile.X * 200f) / (Math.PI * 2.0)) * -16.0)), (float)Math.Max(-8.0, Math.Min(64.0, Math.Sin((double)(__instance.Tile.X * 200f) / (Math.PI * 2.0)) * -16.0))) / 2f;
@@ -313,11 +304,11 @@ namespace CircleOfThornsSMAPI
                 */
                 Texture2D tex = __instance.texture;
                 Rectangle rect = new(Math.Min(0, 3) * 48, 0, 48, 80);
-                spriteBatch.Draw(tex, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f, __instance.Tile.Y * 64f + 64f)), rect, ((int)__instance.struckByLightningCountdown.Value > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped.Value ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (float)(__instance.getBoundingBox().Bottom - 16) / 10000f + 0.001f - __instance.Tile.X / 1000000f);
+                spriteBatch.Draw(tex, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f, __instance.Tile.Y * 64f + 64f)), rect, __instance.struckByLightningCountdown.Value > 0 ? Color.Gray * ___alpha : Color.White * ___alpha, ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped.Value ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (__instance.getBoundingBox().Bottom - 16) / 10000f + 0.001f - __instance.Tile.X / 1000000f);
             }
             else
             {
-                if (!__instance.stump.Value || (bool)___falling.Value)
+                if (!__instance.stump.Value || ___falling.Value)
                 {
                     Texture2D tex = __instance.texture;
                     Rectangle rect = new(Math.Min(__instance.fruit.Count, 3) * 48, 0, 48, 80);
@@ -329,11 +320,11 @@ namespace CircleOfThornsSMAPI
                     }
                     */
                     //spriteBatch.Draw(FruitTree.texture, Game1.GlobalToLocal(Game1.viewport, new Vector2(tileLocation.X * 64f + 32f, tileLocation.Y * 64f + 64f)), new Rectangle((12 + (__instance.greenHouseTree ? 1 : Utility.getSeasonNumber(season)) * 3) * 16, (int)__instance.treeType * 5 * 16, 48, 64), ((int)__instance.struckByLightningCountdown > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (float)__instance.getBoundingBox(tileLocation).Bottom / 10000f + 0.001f - tileLocation.X / 1000000f);
-                    spriteBatch.Draw(tex, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f, __instance.Tile.Y * 64f + 64f)), rect, ((int)__instance.struckByLightningCountdown.Value > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped.Value ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (float)(__instance.getBoundingBox().Bottom-16) / 10000f + 0.001f - __instance.Tile.X / 1000000f);
+                    spriteBatch.Draw(tex, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f, __instance.Tile.Y * 64f + 64f)), rect, __instance.struckByLightningCountdown.Value > 0 ? Color.Gray * ___alpha : Color.White * ___alpha, ___shakeRotation, new Vector2(24f, 80f), 4f, __instance.flipped.Value ? SpriteEffects.FlipHorizontally : SpriteEffects.None, (__instance.getBoundingBox().Bottom - 16) / 10000f + 0.001f - __instance.Tile.X / 1000000f);
                 }
-                else if ((float)__instance.health.Value >= 1f || (!___falling.Value && (float)__instance.health.Value > -99f))
+                else if ((float)__instance.health.Value >= 1f || !___falling.Value && (float)__instance.health.Value > -99f)
                 {
-                    spriteBatch.Draw(__instance.texture, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f + ((___shakeTimer > 0f) ? ((float)Math.Sin(Math.PI * 2.0 / (double)___shakeTimer) * 2f) : 0f), __instance.Tile.Y * 64f + 64f)), new Rectangle(384, (int)__instance.GetSpriteRowNumber() * 5 * 16 + 48, 48, 32), ((int)__instance.struckByLightningCountdown.Value > 0) ? (Color.Gray * ___alpha) : (Color.White * ___alpha), 0f, new Vector2(24f, 32f), 4f, __instance.flipped.Value ? SpriteEffects.FlipHorizontally : SpriteEffects.None, ((bool)__instance.stump.Value && !___falling.Value) ? ((float)__instance.getBoundingBox().Bottom / 10000f) : ((float)__instance.getBoundingBox().Bottom / 10000f - 0.001f - __instance.Tile.X / 1000000f));
+                    spriteBatch.Draw(__instance.texture, Game1.GlobalToLocal(Game1.viewport, new Vector2(__instance.Tile.X * 64f + 32f + (___shakeTimer > 0f ? (float)Math.Sin(Math.PI * 2.0 / (double)___shakeTimer) * 2f : 0f), __instance.Tile.Y * 64f + 64f)), new Rectangle(384, __instance.GetSpriteRowNumber() * 5 * 16 + 48, 48, 32), __instance.struckByLightningCountdown.Value > 0 ? Color.Gray * ___alpha : Color.White * ___alpha, 0f, new Vector2(24f, 32f), 4f, __instance.flipped.Value ? SpriteEffects.FlipHorizontally : SpriteEffects.None, __instance.stump.Value && !___falling.Value ? __instance.getBoundingBox().Bottom / 10000f : __instance.getBoundingBox().Bottom / 10000f - 0.001f - __instance.Tile.X / 1000000f);
                 }
                 /*
                 for (int i = 0; i < (int)__instance.fruitsOnTree; i++)
@@ -355,13 +346,13 @@ namespace CircleOfThornsSMAPI
             }
             foreach (Leaf j in ___leaves)
             {
-                spriteBatch.Draw(__instance.texture, Game1.GlobalToLocal(Game1.viewport, j.position), new Rectangle((24 + Game1.seasonIndex) * 16, (int)__instance.GetSpriteRowNumber() * 5 * 16, 8, 8), Color.White, j.rotation, Vector2.Zero, 4f, SpriteEffects.None, (float)__instance.getBoundingBox().Bottom / 10000f + 0.01f);
+                spriteBatch.Draw(__instance.texture, Game1.GlobalToLocal(Game1.viewport, j.position), new Rectangle((24 + Game1.seasonIndex) * 16, __instance.GetSpriteRowNumber() * 5 * 16, 8, 8), Color.White, j.rotation, Vector2.Zero, 4f, SpriteEffects.None, __instance.getBoundingBox().Bottom / 10000f + 0.01f);
             }
 
             return false;
         }
     }
-    
+
     // Shapeshift stuff
     [HarmonyPatch(typeof(Farmer), "farmerInit")]
     public static class FarmerInitPatch
@@ -399,13 +390,13 @@ namespace CircleOfThornsSMAPI
     [HarmonyPatch(typeof(Horse), nameof(Horse.checkAction))]
     public static class HorseNoRidingIfTransformed
     {
-        public static bool Prefix(Horse __instance, Farmer who, GameLocation l)
+        public static bool Prefix(Horse __instance, Farmer who)
         {
             if (who != null && !who.canMove)
             {
                 return true;
             }
-            if (ModSnS.instance.Helper.Reflection.GetField<int>(__instance, "munchingCarrotTimer", true).GetValue() > 0)
+            if (ModSnS.Instance.Helper.Reflection.GetField<int>(__instance, "munchingCarrotTimer", true).GetValue() > 0)
             {
                 return true;
             }
@@ -417,7 +408,7 @@ namespace CircleOfThornsSMAPI
     }
 
     [HarmonyPatch(typeof(Farmer), nameof(Farmer.gainExperience))]
-    public static class FarmerExpInterceptPatch
+    public static class FarmerDruidExpInterceptPatch
     {
         public static void Postfix(Farmer __instance, int which, int howMuch)
         {
@@ -428,7 +419,7 @@ namespace CircleOfThornsSMAPI
 
             var data = __instance.GetFarmerExtData();
             float exp = data.expRemainder.Value + howMuch / 2f;
-            __instance.AddCustomSkillExperience(ModCoT.Skill, (int)MathF.Truncate( exp ));
+            __instance.AddCustomSkillExperience(ModCoT.Skill, (int)MathF.Truncate(exp));
             data.expRemainder.Value = exp - MathF.Truncate(exp);
         }
     }
@@ -656,8 +647,7 @@ namespace CircleOfThornsSMAPI
                 float multiplier = 1f;
                 if (player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureMidgard) && __instance.Category == -26)
                 {
-                    string[] ids = new string[]
-                    {
+                    string[] ids = [
                         "DN.SnS_ancientamaranth.object",
                         "DN.SnS_ancientepiphyticfern.object",
                         "DN.SnS_glowingpolyporemushrooms.object",
@@ -666,7 +656,7 @@ namespace CircleOfThornsSMAPI
                         "DN.SnS_ancientbottlegourd.object",
                         "DN.SnS_ancientgiantappleberry.object",
                         "DN.SnS_ancientazuredetura.object"
-                    };
+                    ];
                     if (ids.Contains(__instance.preservedParentSheetIndex.Value))
                     {
                         multiplier *= 1.1f;
@@ -698,7 +688,7 @@ namespace CircleOfThornsSMAPI
                 totalDaysOfCropGrowth += __instance.crop.phaseDays[j];
             }
             float speedIncrease = 0.1f;
-            int daysToRemove = (int)Math.Ceiling((float)totalDaysOfCropGrowth * speedIncrease);
+            int daysToRemove = (int)Math.Ceiling(totalDaysOfCropGrowth * speedIncrease);
             int tries = 0;
             while (daysToRemove > 0 && tries < 3)
             {

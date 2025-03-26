@@ -1,11 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 using MageDelve.Mercenaries.Actions;
-using SpaceShared;
+using System.Collections.Generic;
 
 namespace MageDelve.Mercenaries
 {

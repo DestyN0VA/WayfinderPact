@@ -1,20 +1,20 @@
 ﻿using HarmonyLib;
-using NeverEndingAdventure.Utils;
-using SpaceCore.Events;
-using StardewValley;
-using StardewModdingAPI;
-using System;
-using StardewValley.Buffs;
-using StardewValley.Objects;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System.Text;
+using NeverEndingAdventure.Utils;
+using StardewModdingAPI;
+using StardewValley;
+using StardewValley.Buffs;
+using StardewValley.Objects;
+using System;
 
+#pragma warning disable IDE0130 // Namespace does not match folder structure
 namespace NeverEndingAdventure
+#pragma warning restore IDE0130 // Namespace does not match folder structure
 {
 
     /// <inheritdoc/>
-    internal sealed class ModNEA
+    internal sealed class ModNEA(IMonitor monitor, IManifest manifest, IModHelper helper, Harmony harmony)
     {
         /********* Fields *********/
 
@@ -27,23 +27,15 @@ namespace NeverEndingAdventure
         public static string MateoGuildBadge => "DN.SnS_adventureguildbadge";
         public static string MateoStygiumPendant => "DN.SnS_styguimpendant";
 
-
-        public IMonitor Monitor;
-        public IManifest ModManifest;
-        public IModHelper Helper;
-        public ModNEA(IMonitor monitor, IManifest manifest, IModHelper helper)
-        {
-            Monitor = monitor;
-            ModManifest = manifest;
-            Helper = helper;
-        }
+        public IManifest ModManifest = manifest;
+        public IModHelper Helper = helper;
 
         /// <inheritdoc/>
-        public void Entry(Harmony harmony)
+        public void Entry()
         {
             // this is the entry point to your mod.
             // SMAPI calls this method when it loads your mod.
-            Log.Monitor = this.Monitor; // this binds SMAPI's logging to the Log class so you can use it.
+            Log.Monitor = monitor; // this binds SMAPI's logging to the Log class so you can use it.
 
             // applying harmony patches.
             //Harmony harmony = new(this.ModManifest.UniqueID);
@@ -83,7 +75,7 @@ namespace NeverEndingAdventure
     [HarmonyPatch(typeof(Ring), nameof(Ring.drawTooltip))]
     public static class NeaRingTooltipPatch1
     {
-        public static void Postfix(Ring __instance, SpriteBatch spriteBatch, ref int x, ref int y, SpriteFont font, float alpha, StringBuilder overrideText)
+        public static void Postfix(Ring __instance, SpriteBatch spriteBatch, ref int x, ref int y, SpriteFont font, float alpha)
         {
             if (__instance.GetsEffectOfRing(ModNEA.MateoGuildBadge))
             {
@@ -125,7 +117,7 @@ namespace NeverEndingAdventure
         {
             if (__instance.GetsEffectOfRing(ModNEA.MateoGuildBadge))
             {
-                Point dimensions = new Point(0, startingHeight);
+                Point dimensions = new(0, startingHeight);
                 int extra_rows_needed = 3;
 
                 dimensions.Y += extra_rows_needed * Math.Max((int)font.MeasureString("TT").Y, 48);
@@ -133,7 +125,7 @@ namespace NeverEndingAdventure
             }
             if (__instance.GetsEffectOfRing(ModNEA.MateoStygiumPendant))
             {
-                Point dimensions = new Point(0, startingHeight);
+                Point dimensions = new(0, startingHeight);
                 int extra_rows_needed = 4;
 
                 dimensions.Y += extra_rows_needed * Math.Max((int)font.MeasureString("TT").Y, 48);

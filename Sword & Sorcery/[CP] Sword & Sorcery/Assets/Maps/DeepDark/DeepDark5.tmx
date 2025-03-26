@@ -1745,7 +1745,7 @@
   </object>
   <object id="8" name="TileData" x="528" y="64" width="16" height="16">
    <properties>
-    <property name="Action" value="Warp 3 15 EastScarp_DuskspireLair"/>
+    <property name="Action" value="DN.SnS_DuskspireWarp"/>
    </properties>
   </object>
   <object id="9" name="TileData" x="128" y="128" width="16" height="16">

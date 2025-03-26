@@ -1,9 +1,8 @@
-using System.Collections.Generic;
 using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
-using SwordAndSorcerySMAPI;
+using System.Collections.Generic;
 
-namespace CircleOfThornsSMAPI
+namespace SwordAndSorcerySMAPI
 {
     public class DruidicsSkill : SpaceCore.Skills.Skill
     {
@@ -17,57 +16,57 @@ namespace CircleOfThornsSMAPI
         public DruidicsSkill()
             : base("DestyNova.SwordAndSorcery.Druidics")
         {
-            this.Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/Druid.png");
-            this.SkillsPageIcon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/Druid1.png");
+            Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/Druid.png");
+            SkillsPageIcon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/Druid1.png");
 
-            this.ExperienceCurve = new[] { 100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000 };
+            ExperienceCurve = [100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000];
 
-            this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(48, 162, 218);
+            ExperienceBarColor = new Microsoft.Xna.Framework.Color(48, 162, 218);
 
             // Level 5
-            DruidicsSkill.ProfessionShapeshift = new GenericProfession(skill: this, id: "SkilledShapeshifter", name: I18n.Druidics_Profession_Shapeshifting_Name, description: I18n.Druidics_Profession_Shapeshifting_Description)
+            ProfessionShapeshift = new GenericProfession(skill: this, id: "SkilledShapeshifter", name: I18n.Druidics_Profession_Shapeshifting_Name, description: I18n.Druidics_Profession_Shapeshifting_Description)
             {
                 Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/SkilledShapeshifter.png")
             };
-            this.Professions.Add(DruidicsSkill.ProfessionShapeshift);
+            Professions.Add(ProfessionShapeshift);
 
-            DruidicsSkill.ProfessionAgriculture = new GenericProfession(skill: this, id: "AncientAgronomist", name: I18n.Druidics_Profession_Agriculture_Name, description: I18n.Druidics_Profession_Agriculture_Description)
+            ProfessionAgriculture = new GenericProfession(skill: this, id: "AncientAgronomist", name: I18n.Druidics_Profession_Agriculture_Name, description: I18n.Druidics_Profession_Agriculture_Description)
             {
                 Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/AncientAgronomist.png")
             };
-            this.Professions.Add(DruidicsSkill.ProfessionAgriculture);
+            Professions.Add(ProfessionAgriculture);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(5, DruidicsSkill.ProfessionShapeshift, DruidicsSkill.ProfessionAgriculture));
+            ProfessionsForLevels.Add(new ProfessionPair(5, ProfessionShapeshift, ProfessionAgriculture));
 
             // Level 10 - track A
-            DruidicsSkill.ProfessionShapeshiftStag = new GenericProfession(skill: this, id: "StagPath", name: I18n.Druidics_Profession_ShapeshiftingStag_Name, description: I18n.Druidics_Profession_ShapeshiftingStag_Description)
+            ProfessionShapeshiftStag = new GenericProfession(skill: this, id: "StagPath", name: I18n.Druidics_Profession_ShapeshiftingStag_Name, description: I18n.Druidics_Profession_ShapeshiftingStag_Description)
             {
                 Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/StagPath.png")
             };
-            this.Professions.Add(DruidicsSkill.ProfessionShapeshiftStag);
+            Professions.Add(ProfessionShapeshiftStag);
 
-            DruidicsSkill.ProfessionShapeshiftWolf = new GenericProfession(skill: this, id: "WolfPath", name: I18n.Druidics_Profession_ShapeshiftingWolf_Name, description: I18n.Druidics_Profession_ShapeshiftingWolf_Description)
+            ProfessionShapeshiftWolf = new GenericProfession(skill: this, id: "WolfPath", name: I18n.Druidics_Profession_ShapeshiftingWolf_Name, description: I18n.Druidics_Profession_ShapeshiftingWolf_Description)
             {
                 Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/WolfPath.png")
             };
-            this.Professions.Add(DruidicsSkill.ProfessionShapeshiftWolf);
+            Professions.Add(ProfessionShapeshiftWolf);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(10, DruidicsSkill.ProfessionShapeshiftStag, DruidicsSkill.ProfessionShapeshiftWolf, DruidicsSkill.ProfessionShapeshift));
+            ProfessionsForLevels.Add(new ProfessionPair(10, ProfessionShapeshiftStag, ProfessionShapeshiftWolf, ProfessionShapeshift));
 
             // Level 10 - track B
-            DruidicsSkill.ProfessionAgricultureMidgard = new GenericProfession(skill: this, id: "BranchOfMidgard", name: I18n.Druidics_Profession_AgricultureMidgard_Name, description: I18n.Druidics_Profession_AgricultureMidgard_Description)
+            ProfessionAgricultureMidgard = new GenericProfession(skill: this, id: "BranchOfMidgard", name: I18n.Druidics_Profession_AgricultureMidgard_Name, description: I18n.Druidics_Profession_AgricultureMidgard_Description)
             {
                 Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/BranchOfMidgard.png")
             };
-            this.Professions.Add(DruidicsSkill.ProfessionAgricultureMidgard);
+            Professions.Add(ProfessionAgricultureMidgard);
 
-            DruidicsSkill.ProfessionAgricultureYggdrasil = new GenericProfession(skill: this, id: "BranchOfYggdrasil", name: I18n.Druidics_Profession_AgricultureYggdrasil_Name, description: I18n.Druidics_Profession_AgricultureYggdrasil_Description)
+            ProfessionAgricultureYggdrasil = new GenericProfession(skill: this, id: "BranchOfYggdrasil", name: I18n.Druidics_Profession_AgricultureYggdrasil_Name, description: I18n.Druidics_Profession_AgricultureYggdrasil_Description)
             {
                 Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/druidics/BranchOfYggdrasil.png")
             };
-            this.Professions.Add(DruidicsSkill.ProfessionAgricultureYggdrasil);
+            Professions.Add(ProfessionAgricultureYggdrasil);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(10, DruidicsSkill.ProfessionAgricultureMidgard, DruidicsSkill.ProfessionAgricultureYggdrasil, DruidicsSkill.ProfessionAgriculture));
+            ProfessionsForLevels.Add(new ProfessionPair(10, ProfessionAgricultureMidgard, ProfessionAgricultureYggdrasil, ProfessionAgriculture));
         }
 
         public override string GetName()
@@ -82,20 +81,19 @@ namespace CircleOfThornsSMAPI
             if (level > 10) return; // Walk of Life
 
             string[][] recipes =
-                new string[][]
-                {
+                [
                     null,
-                    new string[] { "DN.SnS_ancientamaranth.seed", "DN.SnS_ancientepiphyticfern.seed" },
-                    new string[] { "DN.SnS_glowingpolyporemushrooms.seed" },
-                    new string[] { "DN.SnS_ancientwildfairyrose.seed" },
-                    new string[] { "DN.SnS_ancientelderberry.seed" },
+                    ["DN.SnS_ancientamaranth.seed", "DN.SnS_ancientepiphyticfern.seed"],
+                    ["DN.SnS_glowingpolyporemushrooms.seed"],
+                    ["DN.SnS_ancientwildfairyrose.seed"],
+                    ["DN.SnS_ancientelderberry.seed"],
                     null,
-                    new string[] { "DN.SnS_ancientbottlegourd.seed", "DN.SnS_lavaeelandstirfriedancientbottlegourd" },
-                    new string[] { "DN.SnS_ancientgiantappleberry.seed", "DN.SnS_mushroomsredsauce" },
-                    new string[] { "DN.SnS_ancientazuredetura.seed", "DN.SnS_ferngreensandpineapple" },
-                    new string[] { "DN.SnS_ancientglowinghuckleberry.seed", "DN.SnS_ancienthuckleberryicecream" },
+                    ["DN.SnS_ancientbottlegourd.seed", "DN.SnS_lavaeelandstirfriedancientbottlegourd"],
+                    ["DN.SnS_ancientgiantappleberry.seed", "DN.SnS_mushroomsredsauce"],
+                    ["DN.SnS_ancientazuredetura.seed", "DN.SnS_ferngreensandpineapple"],
+                    ["DN.SnS_ancientglowinghuckleberry.seed", "DN.SnS_ancienthuckleberryicecream"],
                     null,
-                };
+                ];
 
             if (recipes[level] != null)
             {
@@ -125,25 +123,24 @@ namespace CircleOfThornsSMAPI
             if (level > 10) return []; // Walk of Life
 
             string[][] recipes =
-                new string[][]
-                {
+                [
                     null,
-                    new string[] { "DN.SnS_ancientamaranth.seed", "DN.SnS_ancientepiphyticfern.seed" },
-                    new string[] { "DN.SnS_glowingpolyporemushrooms.seed" },
-                    new string[] { "DN.SnS_ancientwildfairyrose.seed" },
-                    new string[] { "DN.SnS_ancientelderberry.seed" },
+                    ["DN.SnS_ancientamaranth.seed", "DN.SnS_ancientepiphyticfern.seed"],
+                    ["DN.SnS_glowingpolyporemushrooms.seed"],
+                    ["DN.SnS_ancientwildfairyrose.seed"],
+                    ["DN.SnS_ancientelderberry.seed"],
                     null,
-                    new string[] { "DN.SnS_ancientbottlegourd.seed", "DN.SnS_lavaeelandstirfriedancientbottlegourd" },
-                    new string[] { "DN.SnS_ancientgiantappleberry.seed", "DN.SnS_mushroomsredsauce" },
-                    new string[] { "DN.SnS_ancientazuredetura.seed", "DN.SnS_ferngreensandpineapple" },
-                    new string[] { "DN.SnS_ancientglowinghuckleberry.seed", "DN.SnS_ancienthuckleberryicecream" },
+                    ["DN.SnS_ancientbottlegourd.seed", "DN.SnS_lavaeelandstirfriedancientbottlegourd"],
+                    ["DN.SnS_ancientgiantappleberry.seed", "DN.SnS_mushroomsredsauce"],
+                    ["DN.SnS_ancientazuredetura.seed", "DN.SnS_ferngreensandpineapple"],
+                    ["DN.SnS_ancientglowinghuckleberry.seed", "DN.SnS_ancienthuckleberryicecream"],
                     null,
-                };
+                ];
 
-            List<string> ret = new List<string>
-            {
+            List<string> ret =
+            [
                 I18n.Druidics_Level_Generic(bonus: 1)
-            };
+            ];
 
             if (level % 5 != 0)
                 ret.Add(I18n.Level_Manacap(5));

@@ -1,32 +1,27 @@
 ﻿using HarmonyLib;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using Netcode;
 using SpaceCore;
 using StardewModdingAPI;
 using StardewValley;
-using StardewValley.Characters;
 using StardewValley.Extensions;
 using StardewValley.GameData.Weapons;
 using StardewValley.ItemTypeDefinitions;
+using StardewValley.Menus;
 using StardewValley.Monsters;
+using StardewValley.Objects.Trinkets;
 using StardewValley.Projectiles;
 using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using Object = StardewValley.Object;
 using static StardewValley.FarmerRenderer;
 using static StardewValley.FarmerSprite;
-using StardewValley.Minigames;
-using StardewValley.SaveMigrations;
-using StardewValley.Objects.Trinkets;
-using System.Linq;
-using StardewValley.Menus;
-using Microsoft.Xna.Framework.Input;
-using System.Net;
+using Object = StardewValley.Object;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -113,8 +108,9 @@ namespace SwordAndSorcerySMAPI
                 basic.damageToFarmer.Value = (int)(basic.damageToFarmer.Value * 1.5);
             if (value.itemId?.Value?.Contains("Bullet") ?? false) // Hack
             {
-                value.xVelocity.Value *= 2;
-                value.yVelocity.Value *= 2;
+                value.ignoreTravelGracePeriod.Value = true;
+                value.xVelocity.Value *= 2f;
+                value.yVelocity.Value *= 2f;
             }
             else
             {
@@ -134,19 +130,16 @@ namespace SwordAndSorcerySMAPI
         {
             if (!__instance.itemId?.Value?.ContainsIgnoreCase("arrow") ?? true) return;
 
-            IReflectedProperty<float> rotation = ModSnS.instance.Helper.Reflection.GetProperty<float>(__instance, "rotation", true);
+            IReflectedProperty<float> rotation = ModSnS.Instance.Helper.Reflection.GetProperty<float>(__instance, "rotation", true);
 
-            if (rotation != null)
-            {
-                rotation.SetValue(MathF.Atan2(__instance.yVelocity.Value, __instance.xVelocity.Value) + 0.785398f);
-            }
+            rotation?.SetValue(MathF.Atan2(__instance.yVelocity.Value, __instance.xVelocity.Value) + 0.785398f);
         }
     }
 
     [HarmonyPatch(typeof(Slingshot), nameof(Slingshot.GetAmmoDamage))]
     public static class SlingshowBowAmmoDamagePatch
     {
-        public static void Postfix(Slingshot __instance, StardewValley.Object ammunition, ref int __result)
+        public static void Postfix(Slingshot __instance, ref int __result)
         {
             if (__instance.IsBow())
                 __result = 25 + (5 * Game1.player.GetCustomSkillLevel(ModSnS.RogueSkill));
@@ -237,8 +230,7 @@ namespace SwordAndSorcerySMAPI
         {
             if (__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking_gun"))
             {
-                __instance.AttachmentSlotsCount = 2;
-                NetObjectArray<StardewValley.Object> netObjectArray = __instance.attachments;
+                NetObjectArray<Object> netObjectArray = __instance.attachments;
                 if (netObjectArray != null && netObjectArray.Count > 0)
                 {
                     for (int slot = 0; slot < __instance.attachments.Length; slot++)
@@ -268,7 +260,6 @@ namespace SwordAndSorcerySMAPI
         {
             if (__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking"))
             {
-                __instance.AttachmentSlotsCount = 2;
                 NetObjectArray<Object> netObjectArray = __instance.attachments;
                 if (netObjectArray != null && netObjectArray.Count > 0)
                 {
@@ -292,7 +283,6 @@ namespace SwordAndSorcerySMAPI
         {
             if (!__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking_gun") && !__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking")) return true;
 
-            __instance.AttachmentSlotsCount = 2;
             if (__instance is not MeleeWeapon)
                 y += (__instance.enchantments.Count > 0) ? 8 : 4;
             else
@@ -301,9 +291,9 @@ namespace SwordAndSorcerySMAPI
                 x += 260;
             }
 
-            ModSnS.instance.Helper.Reflection.GetMethod(__instance, "DrawAttachmentSlot", true).Invoke([0, b, x, y]);
+            ModSnS.Instance.Helper.Reflection.GetMethod(__instance, "DrawAttachmentSlot", true).Invoke([0, b, x, y]);
             y += 68;
-            ModSnS.instance.Helper.Reflection.GetMethod(__instance, "DrawAttachmentSlot", true).Invoke([1, b, x, y]);
+            ModSnS.Instance.Helper.Reflection.GetMethod(__instance, "DrawAttachmentSlot", true).Invoke([1, b, x, y]);
             return false;
         }
     }
@@ -314,7 +304,6 @@ namespace SwordAndSorcerySMAPI
         public static bool Prefix(Tool __instance, Object o, ref Object __result)
         {
             if (!__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking_gun") && !__instance.ItemId.EqualsIgnoreCase("DN.SnS_longlivetheking")) return true;
-            __instance.AttachmentSlotsCount = 2;
 
             KeychainsAndTrinkets.TryAttach(__instance, o, out Object attached, out Object onHand, out int? Slot);
 
@@ -345,8 +334,8 @@ namespace SwordAndSorcerySMAPI
             if (__instance.inventory.getItemAt(x, y) is Trinket trinket && (trinket.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false) && Game1.oldKBState.IsKeyDown(Keys.LeftShift))
                 return false;
 
-            if (ModSnS.instance.Helper.Reflection.GetMethod(__instance, "checkHeldItem", true).Invoke<bool>([null]) && Game1.oldKBState.IsKeyDown(Keys.LeftShift))
-                if (ModSnS.instance.Helper.Reflection.GetMethod(__instance, "checkHeldItem", true).Invoke<bool>((Item i) => i is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))) 
+            if (ModSnS.Instance.Helper.Reflection.GetMethod(__instance, "checkHeldItem", true).Invoke<bool>([null]) && Game1.oldKBState.IsKeyDown(Keys.LeftShift))
+                if (ModSnS.Instance.Helper.Reflection.GetMethod(__instance, "checkHeldItem", true).Invoke<bool>((Item i) => i is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))) 
                     return false;
 
             return true;
@@ -356,7 +345,7 @@ namespace SwordAndSorcerySMAPI
     [HarmonyPatch(typeof(Slingshot), nameof(Slingshot.drawInMenu), [typeof(SpriteBatch), typeof(Vector2), typeof(float), typeof(float), typeof(float), typeof(StackDrawType), typeof(Color), typeof(bool)])]
     public static class SlingshotBowDrawPatch
     {
-        public static bool Prefix(Slingshot __instance, SpriteBatch spriteBatch, Vector2 location, float scaleSize, float transparency, float layerDepth, StackDrawType drawStackNumber, Color color, bool drawShadow)
+        public static bool Prefix(Slingshot __instance, SpriteBatch spriteBatch, Vector2 location, float scaleSize, float transparency, float layerDepth, StackDrawType drawStackNumber, Color color)
         {
             if (!__instance.IsBow())
                 return true;
@@ -379,7 +368,40 @@ namespace SwordAndSorcerySMAPI
         public static void Postfix(MeleeWeapon __instance)
         {
             if (__instance?.ItemId?.EqualsIgnoreCase("DN.SnS_longlivetheking") ?? false && __instance.AttachmentSlotsCount != 2)
-            if (__instance?.ItemId?.EqualsIgnoreCase("DN.SnS_longlivetheking") ?? false) __instance.AttachmentSlotsCount = 2;
+            {
+                var parent = __instance.attachments.Parent;
+                try
+                {
+                    __instance.attachments.Parent = null;
+                    __instance.AttachmentSlotsCount = 2;
+                }
+                finally
+                {
+                    __instance.attachments.Parent = parent;
+                }
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Tool), nameof(Tool.drawTooltip))]
+    public static class ToolSetAttachmentCountForLLTK
+    {
+        public static void Postfix(Tool __instance)
+        {
+            if (__instance?.ItemId?.ContainsIgnoreCase("DN.SnS_longlivetheking") ?? false && __instance.AttachmentSlotsCount != 2)
+            {
+                INetSerializable parent = null;
+                if (__instance.attachments.Parent != null)
+                {
+                    parent = __instance.attachments.Parent;
+                    __instance.attachments.Parent = null;
+                }
+
+                __instance.AttachmentSlotsCount = 2;
+                
+                if (parent != null)
+                    __instance.attachments.Parent = parent;
+            }
         }
     }
 
@@ -419,8 +441,8 @@ namespace SwordAndSorcerySMAPI
     {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> insns_)
         {
-            List<CodeInstruction> insns = new(insns_);
-            List<CodeInstruction> ret = new();
+            List<CodeInstruction> insns = [..insns_];
+            List<CodeInstruction> ret = [];
 
             int insertCounter = -1;
             for (int i = 0; i < insns.Count; ++i)
@@ -456,7 +478,7 @@ namespace SwordAndSorcerySMAPI
                 return false;
 
 
-            var baseTexture = ModSnS.instance.Helper.Reflection.GetField<Texture2D>(renderer, "baseTexture").GetValue();
+            var baseTexture = ModSnS.Instance.Helper.Reflection.GetField<Texture2D>(renderer, "baseTexture").GetValue();
 
             if (slingshot.IsGun())
             {
@@ -523,7 +545,7 @@ namespace SwordAndSorcerySMAPI
                         frontArmRotation += (float)Math.PI * 2f;
                     }
                 }
-                var tex = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/bow-nostring.png");
+                var tex = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/bow-nostring.png");
                 switch (facingDirection)
                 {
                     case 0:

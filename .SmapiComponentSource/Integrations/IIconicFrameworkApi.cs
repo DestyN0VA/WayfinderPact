@@ -2,11 +2,13 @@ using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using System;
 
-namespace SwordAndSorcerySMAPI.Integrations;
+#pragma warning disable IDE0130 // Namespace does not match folder structure
+namespace LeFauxMods.Common.Integrations.IconicFramework;
+#pragma warning restore IDE0130 // Namespace does not match folder structure
 
 #pragma warning disable
 
-/// <summary>Mod API for Iconic Framework.</summary>
+/// <inheritdoc />
 public interface IIconicFrameworkApi : IIconicFrameworkApiObsolete
 {
     /// <summary>Adds an icon.</summary>
@@ -22,9 +24,37 @@ public interface IIconicFrameworkApi : IIconicFrameworkApiObsolete
         Func<string>? getTitle,
         Func<string>? getDescription);
 
-    /// <summary>Removes an icon.</summary>
+    /// <summary>Adds an icon.</summary>
     /// <param name="id">A unique identifier for the icon.</param>
-    public void RemoveToolbarIcon(string id);
+    /// <param name="texturePath">The path to the texture icon.</param>
+    /// <param name="sourceRect">The source rectangle of the icon.</param>
+    /// <param name="getTitle">Text to appear as the title in the Radial Menu.</param>
+    /// <param name="getDescription">Text to appear when hovering over the icon.</param>
+    /// <param name="onClick">An action to perform when the icon is pressed.</param>
+    /// <param name="onRightClick">An optional secondary action to perform when the icon is pressed.</param>
+    public void AddToolbarIcon(
+        string id,
+        string texturePath,
+        Rectangle? sourceRect,
+        Func<string>? getTitle,
+        Func<string>? getDescription,
+        Action onClick,
+        Action? onRightClick = null);
+
+    /// <summary>Adds or replaces a single icon with a default identifier and onClick action.</summary>
+    /// <param name="texturePath">The path to the texture icon.</param>
+    /// <param name="sourceRect">The source rectangle of the icon.</param>
+    /// <param name="getTitle">Text to appear as the title in the Radial Menu.</param>
+    /// <param name="getDescription">Text to appear when hovering over the icon.</param>
+    /// <param name="onClick">An action to perform when the icon is pressed.</param>
+    /// <param name="onRightClick">An optional secondary action to perform when the icon is pressed.</param>
+    public void AddToolbarIcon(
+        string texturePath,
+        Rectangle? sourceRect,
+        Func<string>? getTitle,
+        Func<string>? getDescription,
+        Action onClick,
+        Action? onRightClick = null);
 
     /// <summary>Subscribes to an event handler.</summary>
     /// <param name="handler">The event handler to subscribe.</param>
@@ -59,5 +89,11 @@ public interface IIconicFrameworkApiObsolete
     /// <param name="hoverText">Text to appear when hovering over the icon.</param>
     [Obsolete(
         "Use AddToolbarIcon(string id, string texturePath, Rectangle? sourceRect, Func<string>? getTitle, Func<string>? getDescription) instead.")]
-    public void AddToolbarIcon(string id, string texturePath, Rectangle? sourceRect, string hoverText);
+    public void AddToolbarIcon(string id, string texturePath, Rectangle? sourceRect, string? hoverText);
+
+    [Obsolete("This no longer has any affect.")]
+    public void RemoveToolbarIcon(string id);
+
+    [Obsolete("This no longer has any affect.")]
+    public void RemoveToolbarIcon();
 }

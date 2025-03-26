@@ -13,19 +13,18 @@ namespace SwordAndSorcerySMAPI
 {
     public class AdventureBarConfigureMenu : IClickableMenu
     {
-        private RootElement ui;
-        private List<Image> abilImages = new();
+        private readonly RootElement ui;
+        private readonly List<Image> abilImages = [];
         private Ability held;
 
-        private AdventureBar bar;
-        private StaticContainer container;
+        private readonly AdventureBar bar;
+        private readonly StaticContainer container;
 
-        private Image grimoire;
-        private Image alchemy;
-        private Image transmutation;
+        private readonly Image grimoire;
+        private readonly Image alchemy;
         public bool RefreshSpells = false;
 
-        public AdventureBarConfigureMenu(bool everything = false)
+        public AdventureBarConfigureMenu()
             : base(Game1.uiViewport.Width / 2 - 432 / 2, Game1.uiViewport.Height / 2 - 432 / 2, 432, 432, true)
         {
             ui = new RootElement();
@@ -40,7 +39,7 @@ namespace SwordAndSorcerySMAPI
 
             var abils = Ability.Abilities.Values.ToList();
             int ip = 0;
-            for ( int i = 0; i < abils.Count; ++i)
+            for (int i = 0; i < abils.Count; ++i)
             {
                 int ix = ip % 6;
                 int iy = ip / 6;
@@ -77,20 +76,10 @@ namespace SwordAndSorcerySMAPI
                 };
                 container.AddChild(grimoire);
 
-                transmutation = new()
-                {
-                    LocalPosition = new(width + 32, 96),
-                    Texture = ModTOP.StuffTexture,
-                    TexturePixelArea = new(16, 0, 16, 16),
-                    Scale = 4,
-                    Callback = (elem) => SetChildMenu(new TransmuteMenu())
-                };
-                container.AddChild(transmutation);
-
                 alchemy = new()
                 {
-                    LocalPosition = new(width + 32, 160),
-                    Texture = ModSnS.instance.Helper.ModContent.Load<Texture2D>("assets/stone.png"),
+                    LocalPosition = new(width + 32, 96),
+                    Texture = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/stone.png"),
                     Scale = 4,
                     Callback = (elem) => SetChildMenu(new FancyAlchemyMenu())
                 };
@@ -149,7 +138,7 @@ namespace SwordAndSorcerySMAPI
             base.receiveLeftClick(x, y, playSound);
             if (held != null)
             {
-                bar.tryPlace(ref held, x, y);
+                bar.TryPlace(ref held, x, y);
             }
         }
 
@@ -157,7 +146,7 @@ namespace SwordAndSorcerySMAPI
         {
             base.receiveRightClick(x, y, playSound);
             Ability abil = null;
-            bar.tryPlace(ref abil, x, y);
+            bar.TryPlace(ref abil, x, y);
         }
 
         public override void update(GameTime time)
@@ -170,7 +159,7 @@ namespace SwordAndSorcerySMAPI
         protected override void cleanupBeforeExit()
         {
             base.cleanupBeforeExit();
-            ModSnS.UpdateIconicIcons();
+            ModSnS.RefreshIconicIcons();
         }
         public override void draw(SpriteBatch b)
         {
@@ -198,11 +187,6 @@ namespace SwordAndSorcerySMAPI
                 if (grimoire?.Hover ?? false)
                 {
                     drawHoverText(b, I18n.OpenGrimoire(), Game1.dialogueFont);
-                }
-                
-                if (transmutation?.Hover ?? false)
-                {
-                    drawHoverText(b, I18n.OpenTransmuation(), Game1.dialogueFont);
                 }
 
                 if (alchemy?.Hover ?? false)

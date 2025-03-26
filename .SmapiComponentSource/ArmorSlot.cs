@@ -1,19 +1,19 @@
-using System.Collections.Generic;
-using System.Reflection.Emit;
-using System.Runtime.CompilerServices;
 using HarmonyLib;
 using Netcode;
 using SpaceCore.Dungeons;
 using StardewValley;
+using System.Collections.Generic;
+using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
 
 namespace SwordAndSorcerySMAPI
 {
     // Legacy data, now uses SpaceCore
     public static class Farmer_ArmorSlot
     {
-        internal class Holder { public readonly NetRef<Item> Value = new(); }
+        internal class Holder { public readonly NetRef<Item> Value = []; }
 
-        internal static ConditionalWeakTable< Farmer, Holder > values = new();
+        internal static ConditionalWeakTable<Farmer, Holder> values = [];
 
         public static void set_armorSlot(this Farmer farmer, NetRef<Item> newVal)
         {
@@ -22,20 +22,20 @@ namespace SwordAndSorcerySMAPI
             // Or do we? Serialization
         }
 
-        public static NetRef<Item> get_armorSlot( this Farmer farmer )
+        public static NetRef<Item> get_armorSlot(this Farmer farmer)
         {
-            var holder = values.GetOrCreateValue( farmer );
+            var holder = values.GetOrCreateValue(farmer);
             return holder.Value;
         }
 
         public static Item GetArmorItem(this Farmer farmer)
         {
-            return ModSnS.sc.GetItemInEquipmentSlot(farmer, $"{ModSnS.instance.ModManifest.UniqueID}_Armor") ?? null;
+            return ModSnS.sc.GetItemInEquipmentSlot(farmer, $"{ModSnS.Instance.ModManifest.UniqueID}_Armor") ?? null;
         }
 
         public static void SetArmorItem(this Farmer farmer, Item item)
         {
-            ModSnS.sc.SetItemInEquipmentSlot(farmer, $"{ModSnS.instance.ModManifest.UniqueID}_Armor", item);
+            ModSnS.sc.SetItemInEquipmentSlot(farmer, $"{ModSnS.Instance.ModManifest.UniqueID}_Armor", item);
         }
     }
 

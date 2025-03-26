@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.PortableExecutable;
-using System.Xml.Serialization;
+using HarmonyLib;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Netcode;
-using NeverEndingAdventure.Utils;
 using SpaceCore;
 using StardewModdingAPI.Events;
 using StardewValley;
@@ -14,6 +10,10 @@ using StardewValley.Monsters;
 using StardewValley.Network;
 using StardewValley.Projectiles;
 using StardewValley.TerrainFeatures;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Serialization;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -35,7 +35,7 @@ namespace SwordAndSorcerySMAPI
             this.Level = level;
             this.Damage = damage;
 
-            ModSnS.instance.Helper.Events.GameLoop.UpdateTicked += Update;
+            ModSnS.Instance.Helper.Events.GameLoop.UpdateTicked += Update;
         }
 
         public void Update(object sender, UpdateTickedEventArgs e)
@@ -73,7 +73,7 @@ namespace SwordAndSorcerySMAPI
 
             if (this.CurrRad >= 1 + (this.Level + 1) * 2)
             {
-                ModSnS.instance.Helper.Events.GameLoop.UpdateTicked -= Update;
+                ModSnS.Instance.Helper.Events.GameLoop.UpdateTicked -= Update;
             }
         }
     }
@@ -82,14 +82,14 @@ namespace SwordAndSorcerySMAPI
     public class ThrownShield : Projectile
     {
         private readonly NetInt Damage = new(3);
-        public readonly NetVector2 Target = new();
+        public readonly NetVector2 Target = [];
         public readonly NetCharacterRef TargetMonster = new();
         private readonly NetFloat Speed = new(1);
-        private readonly NetString ShieldType = new();
+        private readonly NetString ShieldType = [];
         public readonly NetInt Bounces = new(1);
         public bool Dead = false;
         [XmlIgnore]
-        public List<NPC> NpcsHit = new();
+        public List<NPC> NpcsHit = [];
 
         public ThrownShield()
         {
@@ -97,8 +97,8 @@ namespace SwordAndSorcerySMAPI
             this.NetFields.AddField(this.Target, nameof(this.Target));
             this.NetFields.AddField(this.TargetMonster.NetFields);
             this.NetFields.AddField(this.Speed, nameof(this.Speed));
-            this.NetFields.AddField(ShieldType);
-            this.NetFields.AddField(Bounces);
+            this.NetFields.AddField(this.ShieldType);
+            this.NetFields.AddField(this.Bounces);
         }
 
         public ThrownShield(Farmer thrower, int damage, Vector2 target, float speed, string shieldType, int bounces)
@@ -137,14 +137,14 @@ namespace SwordAndSorcerySMAPI
                         {
                             monster.invincibleCountdown = -1;
                             
-                            Game1.Multiplayer.broadcastSprites(location, new TemporaryAnimatedSprite(ModSnS.instance.Helper.ModContent.GetInternalAssetName("assets/ThorLightning.png").BaseName, new Rectangle(0, 0, 32, 48), 75, 16, 0, monster.Position - new Vector2(64, 96), false, false) { scale = 4 } );
+                            Game1.Multiplayer.broadcastSprites(location, new TemporaryAnimatedSprite(ModSnS.Instance.Helper.ModContent.GetInternalAssetName("assets/ThorLightning.png").BaseName, new Rectangle(0, 0, 32, 48), 75, 16, 0, monster.Position - new Vector2(64, 96), false, false) { scale = 4 } );
                         }
                     }
                     location.damageMonster(new Rectangle((int)position.X - Game1.tileSize * 3 / 2, (int)position.Y - Game1.tileSize * 3 / 2, Game1.tileSize * 3, Game1.tileSize * 3), this.Damage.Value, this.Damage.Value, false, (Farmer)this.theOneWhoFiredMe.Get(location), true);
                 }
                 if (ShieldType.Value == "(W)DN.SnS_SorcererShield" && Game1.random.NextDouble() < 0.15)
                 {
-                    new Shockwave(getBoundingBox().Center.ToVector2(), location, 0, Damage.Value);
+                    _ = new Shockwave(getBoundingBox().Center.ToVector2(), location, 0, Damage.Value);
                 }
                 if (n == TargetMonster.Get(location))
                 {
@@ -203,7 +203,7 @@ namespace SwordAndSorcerySMAPI
             else
             {
                 if (TargetMonster.Get(location) != null)
-                    Target.Value = Utility.PointToVector2(TargetMonster.Get(location).GetBoundingBox().Center);
+                    Target.Value = TargetMonster.Get(location).getStandingPosition();
             }
 
             base.update(time, location);

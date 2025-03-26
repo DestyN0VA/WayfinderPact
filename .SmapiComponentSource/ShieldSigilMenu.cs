@@ -1,21 +1,20 @@
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceCore;
 using SpaceCore.UI;
 using StardewValley;
-using StardewValley.Inventories;
 using StardewValley.Menus;
+using System.Collections.Generic;
 
 namespace SwordAndSorcerySMAPI;
 
 public class ShieldSigilMenu : IClickableMenu
 {
-    private RootElement ui;
-    private ItemSlot main;
-    private ItemSlot[] sub = new ItemSlot[4];
+    private readonly RootElement ui;
+    private readonly ItemSlot main;
+    private readonly ItemSlot[] sub = new ItemSlot[4];
 
-    private InventoryMenu invMenu;
+    private readonly InventoryMenu invMenu;
     
     public ShieldSigilMenu()
     :   base( Game1.uiViewport.Width / 2 - 200, Game1.uiViewport.Height / 2 - 200 - 100, 400, 400 )
@@ -82,18 +81,19 @@ public class ShieldSigilMenu : IClickableMenu
         main.LocalPosition = new(200 - main.Bounds.Width / 2, 200 - main.Bounds.Height / 2);
         container.AddChild(main);
 
-        Vector2[] offsets = new Vector2[]
-        {
+        Vector2[] offsets =
+        [
             new( 0, -main.Bounds.Height - 32 ),
             new( -main.Bounds.Width - 32, 0 ),
             new( main.Bounds.Width + 32, 0 ),
             new( 0, main.Bounds.Height + 32 ),
-        };
+        ];
         for (int i_ = 0; i_ < 4; ++i_)
         {
             int i = i_;
             sub[i] = new ItemSlot()
             {
+                LocalPosition = main.LocalPosition + offsets[i],
                 BoxColor = Color.White,
                 BoxIsThin = false,
                 Callback = (elem) =>
@@ -107,7 +107,6 @@ public class ShieldSigilMenu : IClickableMenu
                     }
                 }
             };
-            sub[i].LocalPosition = main.LocalPosition + offsets[i];
             container.AddChild(sub[i]);
         }
     }

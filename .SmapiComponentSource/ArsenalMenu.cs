@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using HarmonyLib;
-using System.Reflection.Emit;
-using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceCore;
@@ -16,10 +11,11 @@ using StardewValley.Extensions;
 using StardewValley.Menus;
 using StardewValley.Monsters;
 using StardewValley.Tools;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection.Emit;
 using Object = StardewValley.Object;
-using StardewModdingAPI;
-using StardewValley.Minigames;
-using System.Runtime;
 
 namespace SwordAndSorcerySMAPI;
 
@@ -56,6 +52,43 @@ public static class ArsenalExtensions
         return null;
     }
     public static void SetBladeAlloying(this MeleeWeapon weapon, string alloyId)
+    {
+        if (weapon.modData.ContainsKey(ModSnS.DataKey_BladeAlloying))
+            weapon.modData.Remove(ModSnS.DataKey_BladeAlloying);
+        weapon.modData.Add(ModSnS.DataKey_BladeAlloying, alloyId);
+    }
+
+    public static string GetExquisiteGemstone(this Slingshot weapon)
+    {
+        if (weapon.modData.TryGetValue(ModSnS.DataKey_ExquisiteGemstone, out string id))
+            return id;
+        return null;
+    }
+    public static void SetExquisiteGemstone(this Slingshot weapon, string exquisiteGemstoneId)
+    {
+        if (weapon.modData.ContainsKey(ModSnS.DataKey_ExquisiteGemstone))
+            weapon.modData.Remove(ModSnS.DataKey_ExquisiteGemstone);
+        weapon.modData.Add(ModSnS.DataKey_ExquisiteGemstone, exquisiteGemstoneId);
+    }
+    public static string GetBladeCoating(this Slingshot weapon)
+    {
+        if (weapon.modData.TryGetValue(ModSnS.DataKey_BladeCoating, out string id))
+            return id;
+        return null;
+    }
+    public static void SetBladeCoating(this Slingshot weapon, string coatingId)
+    {
+        if (weapon.modData.ContainsKey(ModSnS.DataKey_BladeCoating))
+            weapon.modData.Remove(ModSnS.DataKey_BladeCoating);
+        weapon.modData.Add(ModSnS.DataKey_BladeCoating, coatingId);
+    }
+    public static string GetBladeAlloying(this Slingshot weapon)
+    {
+        if (weapon.modData.TryGetValue(ModSnS.DataKey_BladeAlloying, out string id))
+            return id;
+        return null;
+    }
+    public static void SetBladeAlloying(this Slingshot weapon, string alloyId)
     {
         if (weapon.modData.ContainsKey(ModSnS.DataKey_BladeAlloying))
             weapon.modData.Remove(ModSnS.DataKey_BladeAlloying);
@@ -138,29 +171,29 @@ public partial class ModSnS
     public const string DataKey_BladeCoating = "swordandsorcery/BladeCoating";
     public const string DataKey_BladeAlloying = "swordandsorcery/BladeAlloying";
 
-    public static string SpriteSheetPath = "Textures/DN.SnS/SnSArsenal";
+    public const string SpriteSheetPath = "Textures/DN.SnS/SnSArsenal";
 
-    public static Dictionary<string, string> ExquisiteGemMappings = new()
+    public readonly static Dictionary<string, string> ExquisiteGemMappings = new()
     {
-        { StardewValley.Object.emeraldQID, "(O)DN.SnS_ExquisiteEmerald" },
-        { StardewValley.Object.rubyQID, "(O)DN.SnS_ExquisiteRuby" },
-        { StardewValley.Object.topazQID, "(O)DN.SnS_ExquisiteTopaz" },
-        { StardewValley.Object.aquamarineQID, "(O)DN.SnS_ExquisiteAquamarine" },
-        { StardewValley.Object.amethystClusterQID, "(O)DN.SnS_ExquisiteAmethyst" },
-        { StardewValley.Object.sapphireQID /* WHAT? */, "(O)DN.SnS_ExquisiteJade" },
-        { StardewValley.Object.diamondQID, "(O)DN.SnS_ExquisiteDiamond" },
+        { Object.emeraldQID, "(O)DN.SnS_ExquisiteEmerald" },
+        { Object.rubyQID, "(O)DN.SnS_ExquisiteRuby" },
+        { Object.topazQID, "(O)DN.SnS_ExquisiteTopaz" },
+        { Object.aquamarineQID, "(O)DN.SnS_ExquisiteAquamarine" },
+        { Object.amethystClusterQID, "(O)DN.SnS_ExquisiteAmethyst" },
+        { Object.sapphireQID /* WHAT? */, "(O)DN.SnS_ExquisiteJade" },
+        { Object.diamondQID, "(O)DN.SnS_ExquisiteDiamond" },
     };
 
-    public static Dictionary<string, string> PureOreMappings = new()
+    public readonly static Dictionary<string, string> PureOreMappings = new()
     {
-        { StardewValley.Object.copperQID, "(O)DN.SnS_PureCopperOre" },
-        { StardewValley.Object.ironQID, "(O)DN.SnS_PureIronOre" },
-        { StardewValley.Object.goldQID, "(O)DN.SnS_PureGoldOre" },
-        { StardewValley.Object.iridiumQID, "(O)DN.SnS_PureIridiumOre" },
+        { Object.copperQID, "(O)DN.SnS_PureCopperOre" },
+        { Object.ironQID, "(O)DN.SnS_PureIronOre" },
+        { Object.goldQID, "(O)DN.SnS_PureGoldOre" },
+        { Object.iridiumQID, "(O)DN.SnS_PureIridiumOre" },
         { "(O)909", "(O)DN.SnS_PureRadioactiveOre" },
     };
 
-    public static Dictionary<string, int> CoatingIconMapping = new()
+    public readonly static Dictionary<string, int> CoatingIconMapping = new()
     {
         { "(O)766", 13 },
         { "(O)769", 14 },
@@ -168,7 +201,7 @@ public partial class ModSnS
         { "(O)684", 16 },
         { "(O)767", 17 },
     };
-    public static Dictionary<string, int> AlloyIconMapping = new()
+    public readonly static Dictionary<string, int> AlloyIconMapping = new()
     {
         { "(O)DN.SnS_PureCopperOre",  8 },
         { "(O)DN.SnS_PureIronOre",  9 },
@@ -177,7 +210,7 @@ public partial class ModSnS
         { "(O)DN.SnS_PureRadioactiveOre", 12 },
     };
 
-    public static Dictionary<string, int> CoatingQuantities = new()
+    public readonly static Dictionary<string, int> CoatingQuantities = new()
     {
         { "(O)766", 999 },
         { "(O)769", 300 },
@@ -224,13 +257,13 @@ public partial class ModSnS
 
 public class ArsenalMenu : IClickableMenu
 {
-    private RootElement ui;
-    private ItemSlot weaponSlot;
-    private ItemWithBorder weaponPreview;
-    private ItemSlot gemSlot, coatingSlot, alloyingSlot;
-    private Image forgeButton;
-    private InventoryMenu invMenu;
-    private List<Pixel> pixels = new();
+    private readonly RootElement ui;
+    private readonly ItemSlot weaponSlot;
+    private readonly ItemWithBorder weaponPreview;
+    private readonly ItemSlot gemSlot, coatingSlot, alloyingSlot;
+    private readonly Image forgeButton;
+    private readonly InventoryMenu invMenu;
+    private readonly List<Pixel> pixels = [];
     private float? animStart;
     private bool playedSynthesizeSound = true;
 
@@ -296,7 +329,7 @@ public class ArsenalMenu : IClickableMenu
         container.AddChild(this.weaponPreview);
         container.AddChild(this.forgeButton);
 
-        void ModifierSlotShenanigans(ItemSlot modifierSlot, Item cursorItem, int reqQty, out Item Held, out Item Slot)
+        static void ModifierSlotShenanigans(ItemSlot modifierSlot, Item cursorItem, int reqQty, out Item Held, out Item Slot)
         {
             Item slotItem = modifierSlot.Item;
 
@@ -492,8 +525,7 @@ public class ArsenalMenu : IClickableMenu
 
     private void Pixelize(ItemSlot slot)
     {
-        var obj = slot.Item as Object;
-        if (obj == null)
+        if (slot.Item is not Object)
             return;
 
         var tex = ItemRegistry.GetData(slot.Item.QualifiedItemId).GetTexture();
@@ -555,7 +587,7 @@ public class ArsenalMenu : IClickableMenu
         if (ts < 0) ts = 0;
         Vector2 center = weaponSlot.Position + new Vector2(weaponSlot.Width /2, weaponSlot.Height / 2);
         float velMult = ts * ts * ts * ts * 5;
-        List<Pixel> toRemove = new();
+        List<Pixel> toRemove = [];
         for (int i = 0; i < pixels.Count; ++i)
         {
             Pixel pixel = pixels[i];
@@ -583,7 +615,7 @@ public class ArsenalMenu : IClickableMenu
         pixels.RemoveAll((p) => toRemove.Contains(p));
 
 
-        string GetDescription(Item item)
+        static string GetDescription(Item item)
         {
             string desc = item.getDescription();
             if (item.HasContextTag("exquisite_gem"))
@@ -796,7 +828,7 @@ public static class MeleeWeaponTooltipPatch2
     }
 }
 
-[HarmonyPatch(typeof(GameLocation), nameof(GameLocation.damageMonster), new Type[] { typeof(Microsoft.Xna.Framework.Rectangle), typeof(int), typeof(int), typeof(bool), typeof(float), typeof(int), typeof(float), typeof(float), typeof(bool), typeof(Farmer), typeof(bool) })]
+[HarmonyPatch(typeof(GameLocation), nameof(GameLocation.damageMonster), [typeof(Rectangle), typeof(int), typeof(int), typeof(bool), typeof(float), typeof(int), typeof(float), typeof(float), typeof(bool), typeof(Farmer), typeof(bool)])]
 public static class GameLocationDamageMonsterFlagsPatch
 {
     internal static int IsSwinging = 0;
@@ -820,7 +852,7 @@ public static class GameLocationDamageMonsterFlagsPatch
 [HarmonyPatch(typeof(GameLocation), "isMonsterDamageApplicable")]
 public static class GameLocationBatWingDamagePatch
 {
-    public static void Postfix(Farmer who, Monster monster, ref bool __result)
+    public static void Postfix(Farmer who, ref bool __result)
     {
         if (who.CurrentTool is MeleeWeapon mw && mw.GetBladeCoating() == "(O)767")
             __result = true;
@@ -830,13 +862,13 @@ public static class GameLocationBatWingDamagePatch
 [HarmonyPatch(typeof(MeleeWeapon), nameof(MeleeWeapon.DoDamage))]
 public static class MeleeWeaponVoidEssenceCoatingPatch
 {
-    public static void Postfix(MeleeWeapon __instance, GameLocation location, int x, int y, int facingDirection, int power,
+    public static void Postfix(MeleeWeapon __instance, GameLocation location, int x, int y, int facingDirection,
         Farmer who)
     {
         if (__instance.GetBladeCoating() != "(O)769")
             return;
 
-        List<int> facings = new() { 0, 1, 2, 3 };
+        List<int> facings = [0, 1, 2, 3];
         facings.Remove(facingDirection);
         foreach (int newFacing in facings)
         {
@@ -855,10 +887,10 @@ public static class MeleeWeaponVoidEssenceCoatingPatch
     }
 }
 
-[HarmonyPatch(typeof(GameLocation), nameof(GameLocation.damageMonster), new Type[] { typeof(Rectangle), typeof(int), typeof(int), typeof(bool), typeof(float), typeof(int), typeof(float), typeof(float), typeof(bool), typeof(Farmer), typeof(bool) })]
+[HarmonyPatch(typeof(GameLocation), nameof(GameLocation.damageMonster), [typeof(Rectangle), typeof(int), typeof(int), typeof(bool), typeof(float), typeof(int), typeof(float), typeof(float), typeof(bool), typeof(Farmer), typeof(bool)])]
 public static class GameLocationDamageMonsterWorkaroundPatch
 {
-    public static int takeDamageInlineWorkaround(Monster monster, int damage, int xTrajectory, int yTrajectory,
+    public static int TakeDamageInlineWorkaround(Monster monster, int damage, int xTrajectory, int yTrajectory,
         bool isBomb, double addedPrecision, Farmer who)
     {
         MonsterTakeDamagePatch.Prefix(monster, ref damage, who);
@@ -867,19 +899,19 @@ public static class GameLocationDamageMonsterWorkaroundPatch
         return ret;
     }
 
-    public static IEnumerable<CodeInstruction> Transpiler(ILGenerator gen, MethodBase original, IEnumerable<CodeInstruction> insns)
+    public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> insns)
     {
         // Writing a transpiler without a CIL viewer! Fun!
         // Pretty sure there's a utility method for this but I can't find it
 
-        List<CodeInstruction> ret = new();
+        List<CodeInstruction> ret = [];
 
         foreach (var insn in insns)
         {
-            if (insn.Calls(typeof(Monster).GetMethod(nameof(Monster.takeDamage), new Type[] { typeof(int), typeof(int), typeof(int), typeof(bool), typeof(double), typeof(Farmer) })))
+            if (insn.Calls(typeof(Monster).GetMethod(nameof(Monster.takeDamage), [typeof(int), typeof(int), typeof(int), typeof(bool), typeof(double), typeof(Farmer)])))
             {
                 insn.opcode = OpCodes.Call;
-                insn.operand = AccessTools.Method(typeof(GameLocationDamageMonsterWorkaroundPatch), nameof(takeDamageInlineWorkaround));
+                insn.operand = AccessTools.Method(typeof(GameLocationDamageMonsterWorkaroundPatch), nameof(TakeDamageInlineWorkaround));
             }
 
             ret.Add(insn);
@@ -992,11 +1024,11 @@ public static class MonsterTakeDamagePatch
 
     private class Pixel
     {
-        public float x;
-        public float y;
-        public Color color;
-        public float scale;
-        public Vector2 velocity;
+        public float X { get; set; }
+        public float Y { get; set; }
+        public Color Color { get; set; }
+        public float Scale { get; set; }
+        public Vector2 Velocity { get; set; }
     }
 }
 
@@ -1042,10 +1074,10 @@ public static class GameLocationBreakingStoneFlagPatch
     }
 }
 
-[HarmonyPatch(typeof(Game1), nameof(Game1.createObjectDebris), new Type[] { typeof(string), typeof(int), typeof(int), typeof(long), typeof(GameLocation) })]
+[HarmonyPatch(typeof(Game1), nameof(Game1.createObjectDebris), [typeof(string), typeof(int), typeof(int), typeof(long), typeof(GameLocation)])]
 public static class Game1ChangeGemToExquisitePatch
 {
-    public static void Prefix(ref string id, int xTile, int yTile, long whichPlayer, GameLocation location)
+    public static void Prefix(ref string id)
     {
         double chanceMult = 1;
         if (Game1.player.hasOrWillReceiveMail("StygiumPendantPower"))

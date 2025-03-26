@@ -1,46 +1,39 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Threading;
 using HarmonyLib;
 using MageDelve.Mercenaries.Actions;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using SpaceShared;
 using SpaceShared.APIs;
 using StardewModdingAPI;
-using StardewModdingAPI.Enums;
 using StardewModdingAPI.Events;
-using StardewModdingAPI.Toolkit;
 using StardewValley;
 using StardewValley.Enchantments;
-using StardewValley.GameData.Locations;
-using StardewValley.Menus;
 using StardewValley.Monsters;
-using SwordAndSorcerySMAPI;
-using xTile;
+using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
+#pragma warning disable IDE0130 // Namespace does not match folder structure
 namespace MageDelve.Mercenaries
+#pragma warning restore IDE0130 // Namespace does not match folder structure
 {
-    public class MercenaryEngine
+    public class MercenaryEngine(IModHelper helper)
     {
-        public static ConditionalWeakTable<Farmer, List<Vector2>> trails = new();
+        public static ConditionalWeakTable<Farmer, List<Vector2>> trails = [];
 
         public static int TrailingDistance = 10;
 
         private bool timeJustChanged = false;
 
-        public MercenaryEngine()
+        public void InitMercenary()
         {
-            ModSnS.instance.Helper.Events.Content.AssetRequested += this.Content_AssetRequested;
-            ModSnS.instance.Helper.Events.GameLoop.GameLaunched += this.GameLoop_GameLaunched;
-            ModSnS.instance.Helper.Events.Player.Warped += this.Player_Warped;
-            ModSnS.instance.Helper.Events.GameLoop.UpdateTicked += this.GameLoop_UpdateTicked;
-            ModSnS.instance.Helper.Events.Multiplayer.PeerDisconnected += this.Multiplayer_PeerDisconnected;
-            ModSnS.instance.Helper.Events.GameLoop.DayEnding += this.GameLoop_DayEnding;
-            ModSnS.instance.Helper.Events.GameLoop.TimeChanged += this.GameLoop_TimeChanged;
-            ModSnS.instance.Helper.Events.Input.ButtonPressed += this.Input_ButtonPressed;
+            helper.Events.Content.AssetRequested += this.Content_AssetRequested;
+            helper.Events.GameLoop.GameLaunched += this.GameLoop_GameLaunched;
+            helper.Events.Player.Warped += this.Player_Warped;
+            helper.Events.GameLoop.UpdateTicked += this.GameLoop_UpdateTicked;
+            helper.Events.Multiplayer.PeerDisconnected += this.Multiplayer_PeerDisconnected;
+            helper.Events.GameLoop.DayEnding += this.GameLoop_DayEnding;
+            helper.Events.GameLoop.TimeChanged += this.GameLoop_TimeChanged;
+            helper.Events.Input.ButtonPressed += this.Input_ButtonPressed;
 
             MercenaryActionData.ActionTypes.Add("MeleeAttackNearestMonster", (merc, actionData) =>
             {
@@ -61,7 +54,7 @@ namespace MageDelve.Mercenaries
 
                 if (merc.targeting == null)
                 {
-                    List<Monster> targets = new List<Monster>();
+                    List<Monster> targets = [];
                     foreach (var target in Game1.player.currentLocation.characters)
                     {
                         if (target is Monster monster)
@@ -103,7 +96,7 @@ namespace MageDelve.Mercenaries
                     foreach (string enchTypeName in actionParams.WeaponEnchantments)
                     {
                         var enchType = AccessTools.TypeByName(enchTypeName);
-                        var ench = (BaseEnchantment) enchType.GetConstructor(new Type[0]).Invoke( new object[ 0 ] );
+                        var ench = (BaseEnchantment)enchType.GetConstructor([]).Invoke([]);
                         merc.attackWeapon.AddEnchantment(ench);
                     }
                     foreach (var data in actionParams.WeaponModData)
@@ -130,7 +123,7 @@ namespace MageDelve.Mercenaries
 
         private void GameLoop_GameLaunched(object sender, GameLaunchedEventArgs e)
         {
-            var sc = ModSnS.instance.Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
+            var sc = helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
             sc.RegisterSerializerType( typeof( Mercenary ) );
         }
 
@@ -162,7 +155,7 @@ namespace MageDelve.Mercenaries
             foreach (var player in Game1.getOnlineFarmers())
             {
                 int i = 0;
-                List<int> toRemove = new();
+                List<int> toRemove = [];
                 foreach (var merc in player.GetCurrentMercenaries())
                 {
                     if (timeJustChanged)

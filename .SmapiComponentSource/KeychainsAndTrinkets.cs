@@ -1,14 +1,13 @@
 ﻿using HarmonyLib;
-using StardewValley.Objects.Trinkets;
+using Microsoft.Xna.Framework;
+using StardewModdingAPI.Events;
 using StardewValley;
 using StardewValley.Extensions;
-using System.Linq;
-using Microsoft.Xna.Framework;
-using System;
-using Object = StardewValley.Object;
-using StardewModdingAPI.Events;
+using StardewValley.Objects.Trinkets;
 using StardewValley.Tools;
-using StardewValley.Menus;
+using System;
+using System.Linq;
+using Object = StardewValley.Object;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -24,10 +23,9 @@ namespace SwordAndSorcerySMAPI
             foreach (Item i in Game1.player.Items.Where(o => o is MeleeWeapon or Slingshot && o.QualifiedItemId.ContainsIgnoreCase("(W)DN.SnS_longlivetheking")))
             {
                 Tool LLTK = i as Tool;
-                LLTK.AttachmentSlotsCount = 2;
                 if (LLTK.attachments[1] is Trinket t)
                 {
-                    HandleTrinketEquipUnequip(t, null);
+                    HandleTrinketEquipUnequip(New: t);
                 }
             }
         }
@@ -110,7 +108,7 @@ namespace SwordAndSorcerySMAPI
             return NewStack;
         }
 
-        public static void HandleTrinketEquipUnequip(Object? New, Object? Old)
+        public static void HandleTrinketEquipUnequip(Object New = null, Object Old = null)
         {
             if (New != null && New is Trinket NewTrinket)
                 Game1.player.trinketItems.Add(NewTrinket);

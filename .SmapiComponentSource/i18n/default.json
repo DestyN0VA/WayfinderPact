@@ -7,9 +7,12 @@
   "hero-relic.legendary.description": "...",
 
   "AdventureBar-Hide.name": "Toggle Adventure Bar",
-  "AdventureBar-Hide.description": "Hide or show the Adventure Bar on your screen",
+  "AdventureBar-Hide.description": "Hide or show the Adventure Bar on your screen. \nDoes nothing if the Adventure Bar hasn't been unlocked.",
   "AdventureBarConfigMenu.name": "Adventure Bar Config Menu",
-  "AdventureBarConfigMenu.description": "Open the Adventure Bar Config Menu",
+  "AdventureBarConfigMenu.description": "Open the Adventure Bar Config Menu. \nDoes nothing if the Adventure Bar hasn't been unlocked.",
+  "Iconic.UseAbility.name": "No Ability",
+  "Iconic.UseAbility.description": "Ability in Row {{0}} Column {{1}}. \nDoes nothing if the Adventure Bar hasn't been unlocked.",
+  "Iconic.UseAbility.NoAbilityInSlot": "There's no Ability assigned to that slot.",
 
   "shield-category": "Shield",
   "shield-block-text": "Shield Block: {{cooldown}}",
@@ -352,6 +355,9 @@
   "fake-npc.deepdark.hector-mine": "I feel sick...$19",
   "fake-npc.deepdark.cirrus-mine": "I'm not sure what's going to happen, @, but with you here we'll be fine!$17",
   "fake-npc.deepdark.dandelion-mine": "I have big plans for when this is over, @. Just you wait.$18",
-  "fake-npc.deepdark.roslin-mine": "This place is thick with Void magic. It's all-consuming...$16"
+  "fake-npc.deepdark.roslin-mine": "This place is thick with Void magic. It's all-consuming...$16",
 
+  "Alchemy.Label": "Alchemy",
+  "AlchRecipes.Label": "Recipes",
+  "Transmutation.Label": "Transmutation"
 }

@@ -1,55 +1,127 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.SymbolStore;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using NeverEndingAdventure.Utils;
 using SpaceCore;
 using SpaceCore.UI;
 using StardewValley;
+using StardewValley.BellsAndWhistles;
 using StardewValley.Extensions;
 using StardewValley.Menus;
+using StardewValley.Objects;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Object = StardewValley.Object;
 
 namespace SwordAndSorcerySMAPI.Alchemy
 {
     public class FancyAlchemyMenu : IClickableMenu
     {
-        private RootElement ui;
-        internal ItemSlot[] ingreds;
-        private ItemSlot output;
+        private readonly RootElement ui;
+        internal readonly ItemSlot[] ingreds;
+        private readonly ItemSlot output;
 
-        private InventoryMenu inventory;
+        private readonly Table Recipes;
+        private readonly List<ItemWithBorder> RecipesList = [];
 
-        private class Pixel
+        private readonly Table Transmutations;
+        private readonly List<ItemSlot> Essences = [];
+        private readonly List<string> essenceIds = [];
+        private readonly int TransmutationCost = 4;
+
+        private Rectangle RecipesBounds;
+        private Rectangle TransmutationsBounds;
+        private int scrollCounter = 0;
+
+        internal class Pixel(float X, float Y, Color Color, float Scale, Vector2 Velocity, Vector2 Destination, float AnimStart, Action<Pixel> EndAction, bool PlaySound = true)
         {
-            public float x;
-            public float y;
-            public Color color;
-            public float scale;
-            public Vector2 velocity;
-        }
-        private List<Pixel> pixels = new();
+            public float x = X;
+            public float y = Y;
+            public Color color = Color;
+            public float scale = Scale;
+            public Vector2 velocity = Velocity;
+            public Vector2 destination = Destination;
+            public float animStart = AnimStart;
+            public Action<Pixel> endAction = EndAction;
+            public bool playSound = PlaySound;
 
-        private Item held;
-        private float? animStart;
-        private bool playedSynthesizeSound = true;
+            public void Update()
+            {
+                float delta = (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
+                float ts = (float)(Game1.currentGameTime.TotalGameTime.TotalSeconds - animStart);
+                if (ts < 0) ts = 0;
+                float velMult = ts * ts * ts * ts * 5;
+                List<Pixel> toRemove = [];
+                Vector2 center = destination;
+                if (ts >= 1.4 && playSound)
+                {
+                    playSound = false;
+                    Game1.playSound("spacechase0.MageDelve_alchemy_synthesize");
+                }
+                float actualScale = (this.scale + MathF.Sin(ts * 3) - 3) % 3 + 3;
+
+                Vector2 ppos = new Vector2(this.x, this.y) + this.velocity * delta;
+                this.x = ppos.X;
+                this.y = ppos.Y;
+                Vector2 toCenter = center - ppos;
+                float dist = Vector2.Distance(center, ppos);
+                this.velocity = this.velocity * 0.99f + toCenter / dist * velMult;
+
+                if ((dist < 24 || float.IsNaN(dist)) && animStart + 1 <= Game1.currentGameTime.TotalGameTime.TotalSeconds && !playSound)
+                    endAction(this);
+            }
+
+            public void Draw(SpriteBatch b)
+            {
+                float ts = (float)(Game1.currentGameTime.TotalGameTime.TotalSeconds - animStart);
+                if (ts < 0) ts = 0;
+                float actualScale = (this.scale + MathF.Sin(ts * 3) - 3) % 3 + 3;
+                b.Draw(Game1.staminaRect, new Vector2(this.x, this.y), null, this.color, 0, Vector2.Zero, actualScale, SpriteEffects.None, 1);
+            }
+        }
+        private readonly List<Pixel> pixels = [];
 
         public FancyAlchemyMenu()
-        : base(Game1.uiViewport.Width / 2 - (64 * 12 + 32) /2, Game1.uiViewport.Height / 2 - (480 + 250) / 2, 64 * 12 + 32, 480 + 250)
+        : base(Game1.uiViewport.Width / 2 - (64 * 12 + 32) / 2, Game1.uiViewport.Height / 2 - 520 / 2, 64 * 12 + 32, 560)
         {
-            ui = new RootElement();
-            ui.LocalPosition = new Vector2(xPositionOnScreen, yPositionOnScreen);
+            ui = new RootElement()
+            {
+                LocalPosition = new Vector2(xPositionOnScreen, yPositionOnScreen - 24),
+            };
 
-            Vector2 basePoint = new(width / 2, (height - 200) / 2);
+            Vector2 basePoint = new(width / 2, height / 2 + 24.5f);
+
+            Recipes = new()
+            {
+                LocalPosition = new Vector2(basePoint.X - width / 2 - 184, basePoint.Y - height / 2 + 24.5f),
+                RowHeight = 112,
+                Size = new Vector2(96, height)
+            };
+
+            Transmutations = new()
+            {
+                LocalPosition = new Vector2(basePoint.X + width / 2 + 88, basePoint.Y - height / 2 + 24.5f),
+                RowHeight = 112,
+                Size = new Vector2(96, height)
+            };
 
             output = new ItemSlot()
             {
                 LocalPosition = basePoint,
                 TransparentItemDisplay = true,
-                Callback = (e) => DoCraftingIfPossible(),
+                Callback = (e) =>
+                {
+                    if (output.Item == null)
+                        DoCrafting();
+                    else
+                    {
+                        Game1.player.addItemByMenuIfNecessary(output.Item);
+                        output.Item = null;
+                    }
+                }
             };
+
             output.LocalPosition -= new Vector2(output.Width / 2, output.Height / 2);
-            ui.AddChild(output);
 
             ingreds = new ItemSlot[6];
             for (int i = 0; i < 6; ++i)
@@ -59,37 +131,334 @@ namespace SwordAndSorcerySMAPI.Alchemy
                     LocalPosition = basePoint +
                                     new Vector2(MathF.Cos(3.14f * 2 / 6 * i) * 200,
                                                  MathF.Sin(3.14f * 2 / 6 * i) * 200) +
-                                    -new Vector2(output.Width / 2, output.Height / 2),
-                    Callback = (e) => CheckRecipe(),
+                                    -new Vector2(output.Width / 2, output.Height / 2)
                 };
                 ui.AddChild(ingreds[i]);
-            }
-
-            var recipesButton = new Image()
-            {
-                Texture = ModTOP.Grimoire,
-                Scale = 4,
-                Callback = (e) => SetChildMenu(new AlchemyRecipesMenu(this)),
-                LocalPosition = new(32, 32),
             };
-            ui.AddChild(recipesButton);
 
-            inventory = new InventoryMenu(xPositionOnScreen + 16, yPositionOnScreen + height - 64 * 3 - 16, true, Game1.player.Items);
+            ui.AddChild(Recipes);
+            ui.AddChild(Transmutations);
+            ui.AddChild(output);
+
+            PopulateTables(Recipes, Transmutations);
+            SetupScrollBounds();
+
+            Transmutations.Scrollbar.LocalPosition = new Vector2(-Transmutations.Width + 24, 0);
+
+            if (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionEssenceDrops))
+                TransmutationCost = 2;
+            if (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionPhilosopherStone))
+                TransmutationCost = 1;
         }
 
-        public override bool overrideSnappyMenuCursorMovementBan()
+        private void PopulateTables(Table Recipes, Table Trans)
         {
+            var recipes = AlchemyRecipes.Get();
+            foreach (var recipe in recipes)
+            {
+                if (recipe.Value.UnlockConditions is not null && !GameStateQuery.CheckConditions(recipe.Value.UnlockConditions))
+                    continue;
+
+                if (recipe.Value.Ingredients.Keys.Count > 6)
+                {
+                    Log.Error($"Alchemy Recipe {recipe.Key} has more than 6 ingredients. Skipping");
+                    continue;
+                }
+
+                CraftingRecipe fake = new("");
+                fake.recipeList.Clear();
+                fake.itemToProduce.Clear();
+                var tmp = ItemRegistry.Create(recipe.Value.OutputItem, recipe.Value.OutputQuantity);
+                fake.DisplayName = tmp.DisplayName;
+                fake.description = tmp.getDescription();
+                fake.itemToProduce = [recipe.Value.OutputItem];
+                fake.numberProducedPerCraft = recipe.Value.OutputQuantity;
+                fake.recipeList.TryAddMany(recipe.Value.Ingredients);
+
+                ItemWithBorder recipe_ = new()
+                {
+                    ItemDisplay = tmp,
+                    UserData = fake,
+                    Callback = (e) =>
+                    {
+                        TryPlaceIngredients(fake);
+                    },
+                };
+                if (!fake.doesFarmerHaveIngredientsInInventory(GetAdditionalMaterials()))
+                    recipe_.TransparentItemDisplay = true;
+                RecipesList.Add(recipe_);
+                Recipes.AddRow([recipe_]);
+            }
+
+            var items = GetAllEssences();
+            foreach (var essence in items)
+            {
+                ItemSlot essence_ = new()
+                {
+                    ItemDisplay = essence,
+                    //LocalPosition = new(16 + 110, 110 * i + 32 * i),
+                };
+                essence_.Callback = (e) =>
+                {
+                    if (!essence_.TransparentItemDisplay)
+                    {
+                        if (!DoesPlayerHaveSpaceFor(essence))
+                        {
+                            Game1.showRedMessageUsingLoadString("Strings/StringsFromCSFiles:Crop.cs.588");
+                        }
+                        else
+                        {
+                            DoTransmutation(essence, essence_);
+                        }
+                    }
+                };
+                Trans.AddRow([essence_]);
+                Essences.Add(essence_);
+            }
+        }
+
+        private void TryPlaceIngredients(CraftingRecipe fake)
+        {
+            //New
+
+            if (!fake.doesFarmerHaveIngredientsInInventory(GetAdditionalMaterials()))
+                return;
+
+            if (output.Item != null)
+            {
+                Game1.player.addItemByMenuIfNecessary(output.Item);
+                output.Item = null;
+            }
+
+            bool returnItems = false;
+            if (ingreds.Where(i => i.Item != null).Count() != fake.recipeList.Count)
+                returnItems = true;
+
+            for (int i = 0; i < ingreds.Length; i++)
+            {
+                var ingred = ingreds[i];
+                if (ingred.Item == null || fake.recipeList.ContainsKey(ingred.Item.QualifiedItemId))
+                    continue;
+                returnItems = true;
+                break;
+            }
+
+            if (returnItems)
+            {
+                foreach (var ingred in ingreds.Where(i => i.Item != null))
+                {
+                    Game1.player.addItemByMenuIfNecessary(ingred.Item);
+                    ingred.Item = null;
+                }
+                output.ItemDisplay = null;
+            }
+
+            if (!AnySpaceToCraftMore(fake))
+                return;
+
+            List<Item> Ingreds = [];
+            List<Chest> Chests = GetNearbyChests();
+
+            void TryAddItemElseIncreaseStack(Item item)
+            {
+                if (!Ingreds.Any(i => i is not null && i.QualifiedItemId == item.QualifiedItemId))
+                    Ingreds.Add(item.getOne());
+                else
+                    Ingreds.First(i => i.QualifiedItemId == item.QualifiedItemId).Stack++;
+            }
+
+            foreach (string item in fake.recipeList.Keys)
+            {
+                for (int i = 0; i < fake.recipeList[item]; i++)
+                {
+                    if (Game1.player.Items.Any(i => i is not null && i.QualifiedItemId == item))
+                    {
+                        var Item = Game1.player.Items.First(i => i is not null && i.QualifiedItemId == item);
+
+                        TryAddItemElseIncreaseStack(Item);
+
+                        Item.Stack--;
+                        if (Item.Stack <= 0)
+                            Game1.player.Items[Game1.player.Items.IndexOf(Item)] = null;
+
+                        continue;
+                    }
+                    else
+                    { 
+                        var chest = Chests.First(c => c.Items.Any(i => i is not null && i.QualifiedItemId == item));
+                        var Item = chest.Items.First(i => i is not null && i.QualifiedItemId == item);
+
+                        TryAddItemElseIncreaseStack(Item);
+
+                        Item.Stack--;
+                        if (Item.Stack <= 0)
+                            chest.Items[chest.Items.IndexOf(Item)] = null;
+
+                        continue;
+                    }
+                }
+            }
+
+            foreach (var ingred in Ingreds)
+            {
+                if (ingreds.Any(i => i.Item is not null && i.Item.QualifiedItemId == ingred.QualifiedItemId))
+                {
+                    ingreds.First(i => i.Item is not null && i.Item.QualifiedItemId == ingred.QualifiedItemId).Item.Stack += ingred.Stack;
+                }
+                else
+                {
+                    ingreds.First(i => i.Item is null).Item = ingred;
+                }
+            }
+
+            if (output.ItemDisplay == null)
+            {
+                output.ItemDisplay = ItemRegistry.Create(fake.itemToProduce.First());
+                output.ItemDisplay.Stack = fake.numberProducedPerCraft;
+            }
+            else
+            {
+                output.ItemDisplay.Stack += fake.numberProducedPerCraft;
+            }
+        }
+
+        private bool AnySpaceToCraftMore(CraftingRecipe fake)
+        {
+            if (!ingreds.Any(i => i.Item is not null)) 
+                return true;
+
+            if (output.ItemDisplay.Stack + fake.numberProducedPerCraft > output.ItemDisplay.maximumStackSize())
+                return false;
+
+            foreach (var ingred in fake.recipeList)
+            {
+                var slot = ingreds.FirstOrDefault(i => i.Item.QualifiedItemId == ingred.Key);
+                if (slot == default) return false;
+                else if (slot.Item.Stack + ingred.Value > slot.Item.maximumStackSize()) return false;
+            }
+
             return true;
         }
 
-        private void Pixelize(ItemSlot slot)
+        private int GetCraftableCountFor(CraftingRecipe recipe = null, Item essence = null)
         {
-            var obj = slot.Item as StardewValley.Object;
-            if (obj == null)
-                return;
+            if (recipe == null && essence == null)
+                return 0;
 
-            var tex = ItemRegistry.GetData(slot.Item.QualifiedItemId).GetTexture();
-            var rect = ItemRegistry.GetData(slot.Item.QualifiedItemId).GetSourceRect();
+            if (recipe != null)
+                return recipe.getCraftableCount(GetNearbyChests());
+            else
+            {
+                List<string> localEssenceIds = [];
+                localEssenceIds.AddRange(essenceIds);
+                localEssenceIds.Remove(essence.QualifiedItemId);
+
+                int x = 0;
+                foreach (var item in Game1.player.Items.Where(i => i is not null))
+                {
+                    if (localEssenceIds.Contains(item.QualifiedItemId))
+                    {
+                        x += item.Stack;
+                    }
+                }
+
+                foreach (Chest c in GetNearbyChests())
+                    foreach (var item in c.Items.Where(o => o is not null))
+                        if (localEssenceIds.Contains(item.QualifiedItemId))
+                            x += item.Stack;
+
+                return x / TransmutationCost;
+            }
+        }
+
+        private List<Item> GetAllEssences()
+        {
+            List<Item> essences = [];
+            var itemids = ItemRegistry.GetObjectTypeDefinition().GetAllIds().Where(i => i == "768" || i == "769" || ItemRegistry.Create($"(O){i}") is Object o && o.HasContextTag("essence_item"));
+
+            foreach (var itemid in itemids)
+            {
+                essences.Add(ItemRegistry.Create($"(O){itemid}"));
+                if (!essenceIds.Contains($"(O){itemid}"))
+                {
+                    essenceIds.Add($"(O){itemid}");
+                }
+            }
+            return essences;
+        }
+
+        private void DoTransmutation(Item essence, ItemSlot itemSlot)
+        {
+            List<string> localEssenceIds = [];
+            foreach (string essenceId in essenceIds)
+            {
+                localEssenceIds.Add(essenceId.ToLower());
+            }
+            localEssenceIds.Remove(essence.QualifiedItemId.ToLower());
+
+            for (int i = 0; i < TransmutationCost; ++i)
+            {
+                for (int j = 0; j < Game1.player.Items.Count; ++j)
+                {
+                    var invItem = Game1.player.Items[j];
+                    if (invItem == null) continue;
+
+                    if (localEssenceIds.Contains(invItem.QualifiedItemId.ToLower()))
+                    {
+                        invItem.Stack--;
+                        if (invItem.Stack <= 0)
+                            Game1.player.Items[j] = null;
+                        break;
+                    }
+                }
+            }
+            Pixelize(itemSlot, Utility.PointToVector2(itemSlot.Bounds.Center), (float)Game1.currentGameTime.TotalGameTime.TotalSeconds, (p) => { pixels.Remove(p); });
+            Game1.playSound("spacechase0.MageDelve_alchemy_particlize");
+
+            Game1.player.addItemToInventory(essence.getOne());
+        }
+
+        private static bool DoesPlayerHaveSpaceFor(Item item)
+        {
+            if (Game1.player.freeSpotsInInventory() > 0)
+                return true;
+            else if (Game1.player.Items.Any(i => i.canStackWith(item) && i.Stack < (1000 - item.Stack)))
+                return true;
+            return false;
+        }
+
+        private static List<Chest> GetNearbyChests()
+        {
+            List<Chest> chests = [];
+            Rectangle Rect = new(Game1.player.TilePoint + new Point(-2, -2), new Point(5, 5));
+
+            foreach (var kvp in Game1.currentLocation.Objects.Pairs)
+                if (kvp.Value is Chest c && Rect.Contains(kvp.Key))
+                    chests.Add(c);
+
+            Vector2 Pos = Game1.player.Tile;
+
+            chests.Sort((a, b) =>
+            {
+                if (Vector2.Distance(a.TileLocation, Pos) < Vector2.Distance(b.TileLocation, Pos))
+                    return 1;
+                else if (Vector2.Distance(a.TileLocation, Pos) > Vector2.Distance(b.TileLocation, Pos))
+                    return -1;
+                else return 0;
+            });
+
+            return chests;
+        }
+
+        private static IList<Item> GetAdditionalMaterials() => GetNearbyChests().SelectMany(c => c.Items.Where(i => i is not null)).ToList();
+
+        private void Pixelize(ItemSlot slot, Vector2 Dest, float animStart, Action<Pixel> action, bool playSound = true)
+        {
+            if (slot.Item is not Object && slot.ItemDisplay is not Object)
+                return;
+            string id = slot.Item != null ? slot.Item.QualifiedItemId : slot.ItemDisplay.QualifiedItemId;
+            var tex = ItemRegistry.GetData(id).GetTexture();
+            var rect = ItemRegistry.GetData(id).GetSourceRect();
 
             var cols = new Color[16 * 16];
             tex.GetData(0, rect, cols, 0, cols.Length);
@@ -101,288 +470,183 @@ namespace SwordAndSorcerySMAPI.Alchemy
 
                 float velDir = (float)Game1.random.NextDouble() * 3.14f * 2;
                 Vector2 vel = new Vector2(MathF.Cos(velDir), MathF.Sin(velDir)) * (60 + Game1.random.Next(70));
-
-                pixels.Add(new Pixel()
-                {
-                    x = slot.Bounds.Location.X + 16 + ix * Game1.pixelZoom,
-                    y = slot.Bounds.Location.Y + 16 + iy * Game1.pixelZoom,
-                    color = cols[i],
-                    scale = 3 + (float)Game1.random.NextDouble() * 3,
-                    velocity = vel,
-                });
+                pixels.Add(new(
+                    X: slot.Bounds.Location.X + 16 + ix * Game1.pixelZoom,
+                    Y: slot.Bounds.Location.Y + 16 + iy * Game1.pixelZoom,
+                    Color: cols[i],
+                    Scale: 3 + (float)Game1.random.NextDouble() * 3,
+                    Velocity: vel,
+                    Destination: Dest,
+                    AnimStart: animStart,
+                    EndAction: action,
+                    PlaySound: playSound
+                    ));
+                playSound = false;
             }
         }
 
-        private void DoCraftingIfPossible()
+        private void DoCrafting()
         {
-            if (output.Item == null && output.ItemDisplay != null && pixels.Count == 0)
+            if (output.Item == null && output.ItemDisplay != null && !pixels.Any(p => p.destination == Utility.PointToVector2(output.Bounds.Center)))
             {
+                bool play = true;
                 foreach (var ingred in ingreds)
                 {
-                    Pixelize(ingred);
+                    Pixelize(ingred, Utility.PointToVector2(output.Bounds.Center), (float)Game1.currentGameTime.TotalGameTime.TotalSeconds, (p) =>
+                    {
+                        pixels.Remove(p);
+                        if (!pixels.Any(p1 => p1.destination == p.destination))
+                        {
+                            if (output.Item == null && output.ItemDisplay != null)
+                            {
+                                output.Item = output.ItemDisplay;
+                                output.ItemDisplay = null;
+                            }
+                        }
+                    }, play);
+                    play = false;
                 }
                 Game1.playSound("spacechase0.MageDelve_alchemy_particlize");
-                playedSynthesizeSound = false;
-                animStart = (float)Game1.currentGameTime.TotalGameTime.TotalSeconds;
                 foreach (var ingred in ingreds)
                     ingred.Item = null;
             }
         }
 
-        internal void CheckRecipe()
+        private void SetupScrollBounds()
         {
-            this.output.ItemDisplay = null;
-            var recipes = AlchemyRecipes.Get().Values;
-            foreach (var recipeData in recipes)
-            {
-                var recipe = new Tuple<string, int, bool>[6];
-
-                string output = recipeData.OutputItem;
-                int outputQty = recipeData.OutputQuantity;
-
-                int ir = 0;
-                foreach (var ingredData in recipeData.Ingredients)
-                {
-                    recipe[ir] = new(ingredData.Key, ingredData.Value, false);
-                    ir++;
-                }
-                for (; ir < recipe.Length; ++ir)
-                    recipe[ir] = new(null, 0, true); // Invalid ingredient, but marked as found so it doesn't matter
-
-                List<ItemSlot> notUsed = new(ingreds);
-                for (int i = notUsed.Count - 1; i >= 0; --i)
-                {
-                    if (notUsed[i].Item == null)
-                        notUsed.RemoveAt(i);
-                }
-                for (int i = 0; i < ingreds.Length; ++i)
-                {
-                    for (int j = 0; j < recipe.Length; ++j)
-                    {
-                        if (!notUsed.Contains(ingreds[i]))
-                            continue;
-                        if (recipe[j].Item1 == null)
-                            continue;
-
-                        int? cat = null;
-                        if (int.TryParse(recipe[j].Item1, out int cati))
-                            cat = cati;
-                        if (cat.HasValue && cati < 0)
-                        {
-                            if (ingreds[i].Item.Category == cati && ingreds[i].Item.Stack == recipe[j].Item2)
-                            {
-                                recipe[j] = new(recipe[j].Item1, recipe[j].Item2, true);
-                                notUsed.Remove(ingreds[i]);
-                            }
-                        }
-                        else if (ingreds[i].Item.QualifiedItemId == recipe[j].Item1 && recipe[j].Item2 == ingreds[i].Item.Stack && !recipe[j].Item3)
-                        {
-                            recipe[j] = new(recipe[j].Item1, recipe[j].Item2, true);
-                            notUsed.Remove(ingreds[i]);
-                        }
-                    }
-                }
-
-                bool okay = true;
-                for (int i = 0; i < recipe.Length; ++i)
-                {
-                    if (!recipe[i].Item3)
-                    {
-                        okay = false;
-                        break;
-                    }
-                }
-                if (notUsed.Count > 0)
-                    okay = false;
-
-                if (okay)
-                {
-                    this.output.ItemDisplay = ItemRegistry.Create(output, outputQty);
-                    return;
-                }
-            }
+            TransmutationsBounds = Transmutations.Bounds;
+            TransmutationsBounds.Inflate(32, 32);
+            RecipesBounds = Recipes.Bounds;
+            RecipesBounds.Inflate(32, 32);
         }
 
         protected override void cleanupBeforeExit()
         {
+            List<Item> itemsToAdd = [];
             if (output.Item != null)
-                Game1.createItemDebris(output.Item, Game1.player.Position, 0, Game1.player.currentLocation);
+                itemsToAdd.Add(output.Item);
             foreach (var ingred in ingreds)
-            {
                 if (ingred.Item != null)
-                    Game1.createItemDebris(ingred.Item, Game1.player.Position, 0, Game1.player.currentLocation);
-            }
+                    itemsToAdd.Add(ingred.Item);
+
+            if (itemsToAdd.Count > 0)
+                Game1.player.addItemsByMenuIfNecessary(itemsToAdd);
         }
 
-        public override void receiveLeftClick(int x, int y, bool playSound = true)
-        {
-            base.receiveLeftClick(x, y, playSound);
-            held = inventory.leftClick(x, y, held, playSound);
+        public override bool overrideSnappyMenuCursorMovementBan() => true;
 
-            if (ItemWithBorder.HoveredElement is ItemSlot slot)
-            {
-                if (slot != output)
-                {
-                    if (held != null && held is StardewValley.Object)
-                    {
-                        if (slot.Item == null)
-                        {
-                            if (held.Stack > 1)
-                            {
-                                slot.Item = held.getOne();
-                                slot.Item.Stack = 1;
-                                held.Stack--;
-                            }
-                            else
-                            {
-                                slot.Item = held;
-                                held = null;
-                            }
-                        }
-                        else if (slot.Item != null && held.canStackWith(slot.Item))
-                        {
-                            if (held.Stack > 1)
-                            {
-                                slot.Item.Stack++;
-                                held.Stack--;
-                            }
-                            else
-                            {
-                                slot.Item.Stack++;
-                                held = null;
-                            }
-                        }
-                    }
-                    else if (slot.Item != null && held == null)
-                    {
-                        held = slot.Item;
-                        held.Stack = slot.Item.Stack;
-                        slot.Item = null;
-                    }
-                    else if (slot.Item != null && held != null && held is StardewValley.Object)
-                    {
-                        int left = slot.Item.addToStack(held);
-                        if (slot.Item.Stack > 1)
-                        {
-                            left += slot.Item.Stack - 1;
-                            slot.Item.Stack = 1;
-                        }
-                        held.Stack = left;
-                        if (left <= 0)
-                            held = null;
-                    }
-                    CheckRecipe();
-                }
-                else if (output.Item != null)
-                {
-                    if (held == null)
-                    {
-                        held = output.Item;
-                        output.Item = null;
-                    }
-                    else if (held.canStackWith(output.Item) && held.Stack + output.Item.Stack <= 999)
-                    {
-                        held.Stack += output.Item.Stack;
-                        output.Item = null;
-                    }
-                }
-            }
-        }
-
-        public override void receiveRightClick(int x, int y, bool playSound = true)
+        public override void receiveScrollWheelAction(int direction)
         {
-            base.receiveRightClick(x, y, playSound);
-            if (ItemWithBorder.HoveredElement is ItemSlot itemSlot)
-            {
-                if (itemSlot == output && output.Item != null && held != null)
-                {
-                    return;
-                }
-            }
-            
-            held = inventory.rightClick(x, y, held, playSound);
+            if (TransmutationsBounds.Contains(Game1.getMousePosition()))
+                Transmutations.Scrollbar.ScrollBy(direction / -120);
+            if (RecipesBounds.Contains(Game1.getMousePosition()))
+                Recipes.Scrollbar.ScrollBy(direction / -120);
         }
 
         public override void update(GameTime time)
         {
             base.update(time);
             ui.Update();
-            inventory.update(time);
 
-            if (animStart != null && pixels.Count == 0 && output.ItemDisplay != null && output.Item == null)
+            //Controller Scrolling for the alchemy recipes and transmutations side menus
+            if (Game1.input.GetGamePadState().ThumbSticks.Right.Y != 0)
             {
-                animStart = null;
-                output.Item = output.ItemDisplay;
-                output.ItemDisplay = null;
+                int ScrollBy = (int)Game1.input.GetGamePadState().ThumbSticks.Right.Y;
+                if (TransmutationsBounds.Contains(Game1.getMousePosition()))
+                {
+                    if (++scrollCounter == 5)
+                    {
+                        scrollCounter = 0;
+                        Transmutations.Scrollbar.ScrollBy(-Math.Sign(ScrollBy));
+                    }
+                }
+                else if (RecipesBounds.Contains(Game1.getMousePosition()))
+                {
+                    if (++scrollCounter == 5)
+                    {
+                        scrollCounter = 0;
+                        Recipes.Scrollbar.ScrollBy(-Math.Sign(ScrollBy));
+                    }
+                }
             }
+            else scrollCounter = 0;
+
+            //Particle magic
+            for (int i = 0; i < pixels.Count; i++)
+                pixels[i].Update();
         }
-        
+
         public override void draw(SpriteBatch b)
         {
+            base.draw(b);
             drawTextureBox(b, xPositionOnScreen, yPositionOnScreen, width, height, Color.White);
-
             ui.Draw(b);
-            inventory.draw(b);
 
-            float delta = (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
-            float ts = (float)(Game1.currentGameTime.TotalGameTime.TotalSeconds - animStart ?? 0);
-            if (ts < 0) ts = 0;
-            Vector2 center = new(xPositionOnScreen + width / 2, yPositionOnScreen + (height - 200) / 2);
-            float velMult = ts * ts * ts * ts * 5;
-            if (ts >= 1.4 && !playedSynthesizeSound)
+            //Particle magic
+            for (int i = 0; i < pixels.Count; i++)
+                pixels[i].Draw(b);
+
+            //"Recipes" and "Transmutation" labels
+            SpriteText.drawStringWithScrollCenteredAt(b, I18n.AlchRecipes_Label(), (int)Recipes.Position.X + Recipes.Width / 2, (int)Recipes.Position.Y - 100, I18n.Transmutation_Label());
+            SpriteText.drawStringWithScrollCenteredAt(b, I18n.Transmutation_Label(), (int)Transmutations.Position.X + Transmutations.Width / 2, (int)Transmutations.Position.Y - 100);
+
+            //Craftable Count for Essences
+            foreach (var essence in Essences)
             {
-                Game1.playSound("spacechase0.MageDelve_alchemy_synthesize");
-                playedSynthesizeSound = true;
-            }
-            List<Pixel> toRemove = new();
-            for (int i = 0; i < pixels.Count; ++i)
-            {
-                Pixel pixel = pixels[i];
-                float actualScale = (pixel.scale + MathF.Sin(ts * 3) - 3) % 3 + 3;
-
-                Vector2 ppos = new Vector2(pixel.x, pixel.y) + pixel.velocity * delta;
-                pixel.x = ppos.X;
-                pixel.y = ppos.Y;
-                Vector2 toCenter = center - ppos;
-                float dist = Vector2.Distance(center, ppos);
-                pixel.velocity = pixel.velocity * 0.99f + toCenter / dist * velMult;
-
-                b.Draw(Game1.staminaRect, new Vector2(pixel.x, pixel.y), null, pixel.color, 0, Vector2.Zero, actualScale, SpriteEffects.None, 1);
-
-                if (float.IsNaN(dist))
+                if (essence.Position.Y + essence.Height + 32 > Transmutations.Position.Y + Transmutations.Height)
+                    continue;
+                else if (essence.Position.Y < Transmutations.Position.Y)
+                    continue;
+                else
                 {
-                    //Console.WriteLine("wat");
-                }
-
-                if (dist < 24 || float.IsNaN(dist))
-                {
-                    toRemove.Add(pixel);
+                    int Count = GetCraftableCountFor(essence: essence.ItemDisplay);
+                    Utility.drawTextWithShadow(b, $"{Count}", Game1.smallFont, essence.Position + new Vector2(essence.Width / 2 - Game1.smallFont.MeasureString($"{Count}").X / 2, essence.Height + 4), Game1.textColor);
+                    if (essence.TransparentItemDisplay && Count > 0)
+                        essence.TransparentItemDisplay = false;
+                    else if (!essence.TransparentItemDisplay && Count <= 0)
+                        essence.TransparentItemDisplay = true;
                 }
             }
-            pixels.RemoveAll((p) => toRemove.Contains(p));
 
-            held?.drawInMenu(b, Game1.getMousePosition().ToVector2(), 1);
+            //Craftable Count for Recipes
+            foreach (var recipe in RecipesList)
+            {
+                if (recipe.Position.Y + recipe.Height + 32 > Recipes.Position.Y + Recipes.Height)
+                    continue;
+                else if (recipe.Position.Y < Transmutations.Position.Y)
+                    continue;
+                else
+                {
+                    int Count = GetCraftableCountFor(recipe: recipe.UserData as CraftingRecipe);
+                    Utility.drawTextWithShadow(b, $"{Count}", Game1.smallFont, recipe.Position + new Vector2(recipe.Width / 2 - Game1.smallFont.MeasureString($"{Count}").X / 2, recipe.Height + 4), Game1.textColor);
+                    if (recipe.TransparentItemDisplay && Count > 0)
+                        recipe.TransparentItemDisplay = false;
+                    else if (!recipe.TransparentItemDisplay && Count <= 0)
+                        recipe.TransparentItemDisplay = true;
+                }
+            }
 
+            //Tooltips
             if (ItemWithBorder.HoveredElement != null)
             {
                 if (ItemWithBorder.HoveredElement is ItemSlot slot && slot.Item != null)
-                {
-                    drawToolTip(b, slot.Item.getDescription(), slot.Item.DisplayName, slot.Item);
-                }
+                    //Normal Item Tooltips
+                     drawToolTip(b, slot.Item.getDescription(), slot.Item.DisplayName, slot.Item);
                 else if (ItemWithBorder.HoveredElement.ItemDisplay != null)
                 {
-                    drawToolTip(b, ItemWithBorder.HoveredElement.ItemDisplay.getDescription(), ItemWithBorder.HoveredElement.ItemDisplay.DisplayName, ItemWithBorder.HoveredElement.ItemDisplay);
-                }
-            }
-            else
-            {
-                var hover = inventory.hover(Game1.getMouseX(), Game1.getMouseY(), null);
-                if (hover != null)
-                {
-                    drawToolTip(b, inventory.hoverText, inventory.hoverTitle, hover);
+                    if (ItemWithBorder.HoveredElement.UserData != null)
+                    {
+                        //Alchemy Recipe Tooltips with ingredients
+                        var fake = ItemWithBorder.HoveredElement.UserData as CraftingRecipe;
+                        drawHoverText(b, " ", Game1.smallFont, boldTitleText: fake.DisplayName, craftingIngredients: fake, additional_craft_materials: GetAdditionalMaterials());
+                    }
+                    else
+                        //Again Normal Item Tooltips but for ItemSlot.ItemDisplay instead of ItemSlot.Item
+                        drawToolTip(b, ItemWithBorder.HoveredElement.ItemDisplay.getDescription(), ItemWithBorder.HoveredElement.ItemDisplay.DisplayName, ItemWithBorder.HoveredElement.ItemDisplay);
                 }
             }
 
+            //Draw the mouse
             drawMouse(b);
         }
     }

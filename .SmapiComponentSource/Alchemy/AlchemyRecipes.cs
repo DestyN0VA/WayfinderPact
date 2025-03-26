@@ -1,6 +1,6 @@
-using System.Collections.Generic;
 using SpaceCore;
 using StardewValley;
+using System.Collections.Generic;
 
 namespace SwordAndSorcerySMAPI.Alchemy
 {
