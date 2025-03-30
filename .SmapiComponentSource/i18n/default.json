@@ -319,8 +319,8 @@
   "paladin-skill.profession.shield-retribution.description": "If you have Armor Points when you take damage and have a Shield equipped, automatically deal damage back at your enemies.",
 
   "open-grimoire": "Open the Magical Grimoire",
-  "open-alchemy": "Use the Philosopher's Stone. (Alchemy)",
-  "open-transmuation": "Open the Transmutation Menu.",
+  "open-alchemy": "Use the Philosopher's Stone (Alchemy)",
+  "open-transmuation": "Open the Transmutation Menu",
   "transmutation.cost": "Transmutation Cost: {{Cost}} > 1",
 
   "research.crafting-recipe": "Recipe: {{name}}",
