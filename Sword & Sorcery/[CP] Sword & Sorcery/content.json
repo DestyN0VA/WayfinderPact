@@ -37,6 +37,11 @@
       "Action": "Include",
       "FromFile": "Data/Dispositions/Mateo/full_NPCData.json, Data/Dispositions/Hector/full_NPCData.json, Data/Dispositions/Cirrus/full_NPCData.json, Data/Dispositions/Roslin/full_NPCData.json, Data/Dispositions/Dandelion/full_NPCData.json"
     },
+    {
+      "LogName": "3.0 Includes",
+      "Action": "Include",
+      "FromFile": "Data/Events/EventsData_Mateo.json",
+    },
     /*{
       "LogName": "Sword & Sorcery - Disposition Includes (Vanilla)",
       "Action": "Include",
