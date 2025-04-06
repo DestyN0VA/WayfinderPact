@@ -12,6 +12,16 @@
       }
     },
 
+    {
+      "LogName": "Mateo 2 Heart Event (3.0)",
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Entries": {
+
+        "SnS.Ch1.Mateo.2/e SnS.Ch1.Mateo.1/f Mateo 500/t 1700 2500/w sunny/F": "spaceMusic/-100 -100/farmer 90 94 1 Mateo 102 92 0/globalFadeToClear/skippable/speed farmer 3/speed Mateo 3/addConversationTopic MateoLibrary {{VariableTimegate}}/addTemporaryActor MateoGunther 16 32 -999 -999 0 true Character/changeName MateoGunther {{i18n:Strings.Names.Gunther}}/viewport 97 92/move farmer 11 0 2/move farmer 0 -2 0/faceDirection farmer 1 true/faceDirection Mateo 3 false/speak Mateo \"{{i18n:Events.S&S.Ch1.2H.Mateo.1}}\"/emote farmer 32/pause 1000/faceDirection Mateo 0/speak Mateo \"{{i18n:Events.S&S.Ch1.2H.Mateo.2}}\"/pause 200/shake Mateo 500/emote Mateo 28/pause 200/speak Mateo \"{{i18n:Events.S&S.Ch1.2H.Mateo.3}}\"/faceDirection Mateo 3/pause 500/quickQuestion {{i18n:Events.S&S.Ch1.2H.Mateo.Question.1}}#{{i18n:Events.S&S.Ch1.2H.Mateo.Q1.Answer.1}} #{{i18n:Events.S&S.Ch1.2H.Mateo.Q1.Answer.2}}#{{i18n:Events.S&S.Ch1.2H.Mateo.Q1.Answer.3}}(break)friendship Mateo 25\\speak Mateo \"{{i18n:Events.S&S.Ch1.2H.Mateo.Q1.Response.1}}\"(break)speak Mateo \"{{i18n:Events.S&S.Ch1.2H.Mateo.Q1.Response.2}}\"(break)friendship Mateo 25\\speak Mateo \"{{i18n:Events.S&S.Ch1.2H.Mateo.Q1.Response.3}}\"/pause 200/emote Mateo 40/speak Mateo \"{{i18n:Events.S&S.Ch1.2H.Mateo.5}}\"/emote farmer 56/advancedMove Mateo false 0 3 -50 0 3 10/pause 500/advancedMove farmer false 0 2 -50 0 3 10/pause 3000/textAboveHead Mateo \"{{i18n:Events.S&S.Ch1.2H.Mateo.6}}\"/pause 1000/playSound doorClose/faceDirection MateoGunther 2/warp MateoGunther 101 90/emote MateoGunther 40/pause 250/speak MateoGunther \"{{i18n:Events.S&S.Ch1.2H.Gunther.7}}\"/fade/viewport -100 -100/speak Mateo \"{{i18n:Events.S&S.Ch1.2H.Mateo.8}}\"/stopAdvancedMoves/end position 0 54"
+      }
+
+    },
   ]
 
 }
