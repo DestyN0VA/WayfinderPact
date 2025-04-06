@@ -1082,6 +1082,7 @@ ________      ________ _   _ _______ _____
   "Events.S&S.EndDay.Question": "End the day?",
   "Events.S&S.EndDay.Yes": "Yes",
   "Events.S&S.EndDay.No": "No (Sleep required for world changes to update)",
+  "Events.S&S.EndDay.No2": "No",
 
   // 0 HEARTS PT 1 
   "Events.S&S.Ch1.0H2.Mateo.1": "Watch out!",
