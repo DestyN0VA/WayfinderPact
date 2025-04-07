@@ -44,9 +44,12 @@ ADDITIONAL/PRIOR CONTRIBUTORS:
 ➜ JayJayDub: Help w/ compatibility and i18n 
 ➜ Atravita: Mentoring, help w/ C# 
 ➜ Lumisteria: Mentoring, help w/ code
-➜ CleytonKauffman: Deep Dark darkness floors theme: (https://opengameart.org/content/ruined-city-theme)
-➜ Bobjt: Deep Dark mushroom floors theme (https://opengameart.org/content/ghosts-heroes)
-➜ JSKNYC: Deep Dark lake floors theme (https://opengameart.org/content/the-time-has-come)
+➜ CodeManu: Animated portal - https://opengameart.org/content/pixel-fx-pack
+➜ CleytonKauffman: Deep Dark darkness floors theme - https://opengameart.org/content/ruined-city-theme
+➜ Bobjt: Deep Dark mushroom floors theme - https://opengameart.org/content/ghosts-heroes
+➜ JSKNYC: Deep Dark lake floors theme - https://opengameart.org/content/the-time-has-come
+➜ SoundEffectsFactory: Record scratch - https://www.youtube.com/watch?v=zRfmFdaBdyk
+
 ➜ Sword & Sorcery Discord Channel: All the regulars out there, the fan artists, the bugtesters, the supporters - thank you. I likely wouldn't have expanded past Never Ending Adventure without your kindness and appreciation. 
 
 INSPIRATIONS: 

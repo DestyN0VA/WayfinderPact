@@ -165,6 +165,20 @@
                 }
             }
         },
+        {
+            "LogName": "Record Scratch",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "SnS.RecordScratch": {
+                    "ID": "SnS.RecordScratch",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/RecordScratch.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": false
+                },
+            }
+        },
 
         // JUKEBOX DATA 
         {

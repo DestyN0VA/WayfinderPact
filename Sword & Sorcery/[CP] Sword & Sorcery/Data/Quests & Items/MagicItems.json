@@ -33,6 +33,20 @@
           "SpriteIndex": 6
         },
 
+        "{{ModID}}_pressedcrocus": {
+          "Name": "{{ModID}}_pressedcrocus",
+          "DisplayName": "{{i18n: magicitem.pressedcrocus.name}}",
+          "Description": "{{i18n: magicitem.pressedcrocus.description}}",
+          "Type": "Ring",
+          "Category": -96,
+          "Price": 0,
+          "Edibility": -300,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 133
+        },
+
         "{{ModID}}_destykeychain": {
           "Name": "{{ModID}}_destykeychain",
           "DisplayName": "{{i18n: magicitem.destykeychain.name}}",

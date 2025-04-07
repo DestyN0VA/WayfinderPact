@@ -1178,7 +1178,7 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch1.5H1.Gunther.11": "And what about Wyatt? $5",
   "Events.S&S.Ch1.5H1.Mateo.12": "I haven't spoken to him since before I started college.$8",
   "Events.S&S.Ch1.5H1.Marlon.13": "Are you lyin' to me? $2",
-  "Events.S&S.Ch1.5H1.Mateo.14": "No, it's just been so long, and...Guess you could say I wanted to bury it.$16#$b#I'm shouldering the consequences of his actions while he rides out his life on Joja's dollar.$8",
+  "Events.S&S.Ch1.5H1.Mateo.14": "No, it's just been so long, and... Guess you could say I wanted to bury it.$16#$b#I'm shouldering the consequences of his actions while he rides out his life on Joja's dollar.$8",
   "Events.S&S.Ch1.5H1.Gunther.15": "Is that what happened? He sold out?$2",
   "Events.S&S.Ch1.5H1.Mateo.16": "Yeah. I don't know the details, but- $24",
   "Events.S&S.Ch1.5H1.Marlon.17": "...But you helped pack the crates.$5",
@@ -1269,7 +1269,7 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch1.6H1.Mateo.4": "Come on...",
   "Events.S&S.Ch1.6H1.Mateo.5": "Just another tumbler or two...",
   "Events.S&S.Ch1.6H1.Mateo.6": "There you go, Lewis.$1",
-  "Events.S&S.Ch1.6H1.Lewis.3": "I appreciate that you did that for me, Mateo.$0#$b#But...Why do you know how to pick locks?$3#$b#Do I need to be concerned?$5",
+  "Events.S&S.Ch1.6H1.Lewis.3": "I appreciate that you did that for me, Mateo.$0#$b#But... Why do you know how to pick locks?$3#$b#Do I need to be concerned?$5",
   "Events.S&S.Ch1.6H1.Mateo.7": "I learned to impress a guy I had a crush on.^I learned to impress a girl I had a crush on.$13",
   "Events.S&S.Ch1.6H1.Lewis.4": "Are you serious?$5",
   "Events.S&S.Ch1.6H1.Mateo.8": "I just got you back into your house, old man. Stop judging me.$35",
@@ -1282,6 +1282,8 @@ ________      ________ _   _ _______ _____
   "Events.S&S.Ch1.6H2.Mateo.3": "...Well, reserving judgment for someone is a matter of infinite hope, isn't it?$70",
   "Events.S&S.Ch1.6H2.Mateo.4": "You showed me kindness even when I was convinced nobody had any for me. You took the time to chase me down when I was being intentionally scarce.$39#$b#You make me feel seen.$38",
   "Events.S&S.Ch1.6H2.Mateo.5": "I wanted to say thank you for that. That I appreciate and acknowledge that effort. Going out of your way to prove someone wrong...$38#$b#To remind them that they're capable of being cared for... It shows how brilliant of a person you are.$50#$b#And that's something you deserve to hear.$70",
+  "MateoSenMonsterResponse.False": "Not at all. It's nice to meet a Shadow Folk that isn't dead set on chasing me from ore veins.$81",
+  "MateoSenMonsterResponse.True": "Not at all - I'm a bit monsterous myself. though it's nice to meet a Shadow Folk that isn't dead set on chasing me from ore veins.$81",
 
   // 7 HEARTS PT 1
   "Events.S&S.Ch1.7H1.Harvey.1": "Mateo!",
@@ -6783,6 +6785,9 @@ ________      ________ _   _ _______ _____
 
   "magicitem.druidicessence.name": "Druidic Essence",
   "magicitem.druidicessence.description": "Nature's power, manifest. Used to breathe life into new things.",
+
+  "magicitem.pressedcrocus.name": "Pressed Crocus",
+  "magicitem.pressedcrocus.description": "A dried flower, dried between the pages of one of Sen's favorite books.",
 
   "magicitem.adventureguildbadge.name": "Adventurer's Guild Membership Badge",
   "magicitem.adventureguildbadge.description": "The shield-shaped, hand-forged symbol of your guild membership. The number 23 is carved into the back.",
