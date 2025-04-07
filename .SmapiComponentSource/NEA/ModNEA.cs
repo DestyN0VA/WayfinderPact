@@ -26,6 +26,7 @@ namespace NeverEndingAdventure
         /// <summary>The item ID for the Ring of Wide Nets.</summary>
         public static string MateoGuildBadge => "DN.SnS_adventureguildbadge";
         public static string MateoStygiumPendant => "DN.SnS_styguimpendant";
+        public static string SenPressedCrocus => "DN.SnS_pressedcrocus";
 
         public IManifest ModManifest = manifest;
         public IModHelper Helper = helper;
@@ -49,7 +50,7 @@ namespace NeverEndingAdventure
         private static void PreventRingCombining(Ring __instance, Ring ring, ref bool __result)
         {
             if (__instance.ItemId == MateoGuildBadge || ring.ItemId == MateoGuildBadge ||
-                 __instance.ItemId == MateoStygiumPendant || ring.ItemId == MateoStygiumPendant)
+                 __instance.ItemId == MateoStygiumPendant || ring.ItemId == MateoStygiumPendant || __instance.ItemId == SenPressedCrocus || ring.ItemId == SenPressedCrocus )
             {
                 __result = false;
             }
@@ -68,6 +69,11 @@ namespace NeverEndingAdventure
                 effects.Defense.Value += 3;
                 if (__instance.ItemId == ModNEA.MateoStygiumPendant)
                     effects.LuckLevel.Value += 1;
+            }
+            if (__instance.ItemId == ModNEA.SenPressedCrocus)
+            {
+                effects.LuckLevel.Value += 1;
+                effects.ForagingLevel.Value += 1;
             }
         }
     }
@@ -107,6 +113,15 @@ namespace NeverEndingAdventure
                     y += (int)Math.Max(font.MeasureString("TT").Y, 48f);
                 }
             }
+            if (__instance.GetsEffectOfRing(ModNEA.SenPressedCrocus))
+            {
+                Utility.drawWithShadow(spriteBatch, Game1.mouseCursors, new Vector2(x + 16 + 4, y + 16 + 4), new Rectangle(50, 428, 10, 10), Color.White, 0f, Vector2.Zero, 4f, flipped: false, 1f);
+                Utility.drawTextWithShadow(spriteBatch, "+1 Luck", font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
+                y += (int)Math.Max(font.MeasureString("TT").Y, 48f);
+                Utility.drawWithShadow(spriteBatch, Game1.mouseCursors, new Vector2(x + 16 + 4, y + 16 + 4), new Rectangle(60, 428, 10, 10), Color.White, 0f, Vector2.Zero, 4f, flipped: false, 1f);
+                Utility.drawTextWithShadow(spriteBatch, "+1 Foraging", font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
+                y += (int)Math.Max(font.MeasureString("TT").Y, 48f);
+            }
         }
     }
 
@@ -127,6 +142,14 @@ namespace NeverEndingAdventure
             {
                 Point dimensions = new(0, startingHeight);
                 int extra_rows_needed = 4;
+
+                dimensions.Y += extra_rows_needed * Math.Max((int)font.MeasureString("TT").Y, 48);
+                __result = dimensions;
+            }
+            if (__instance.GetsEffectOfRing(ModNEA.SenPressedCrocus))
+            {
+                Point dimensions = new(0, startingHeight);
+                int extra_rows_needed = 2;
 
                 dimensions.Y += extra_rows_needed * Math.Max((int)font.MeasureString("TT").Y, 48);
                 __result = dimensions;
