@@ -28,7 +28,7 @@
           "Price": 0,
           "Edibility": -300,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": true,
           "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 6
         },
@@ -42,7 +42,7 @@
           "Price": 0,
           "Edibility": -300,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": true,
           "Texture": "Textures/DN.SnS/SnSObjects",
           "SpriteIndex": 133
         },
