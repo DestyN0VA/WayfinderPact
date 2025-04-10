@@ -139,6 +139,13 @@
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DeepDark_Lakes.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
+                },
+                "SnS.DeepDarkIntrigue": {
+                    "ID": "SnS.DeepDarkIntrigue",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DeepDark_Intrigue.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
                 }
             }
         },
