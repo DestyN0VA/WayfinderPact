@@ -21,7 +21,9 @@
 */
 
   // NAME & INTRO 
-  "Core.Mateo.Name": "Mateo",
+  "Core.Mateo.Name.Mateo": "Mateo",
+  "Core.Mateo.Name.Val": "Val",
+  "Core.Mateo.Name.Tay": "Tay",
   "Core.Mateo.Introduction": "Hey there, farmer. Why did the archaeologist go bankrupt?$0#$b#Because his career was in ruins.$1",
 
   // COMMUNITY CENTER BUNDLES  
@@ -7498,6 +7500,12 @@ ________      ________ _   _ _______ _____
   "deep-dark-chest.description": "A chest that spawns in the deep dark.",
 
   //maddogchange
+  "config.Mateo Name.name": "Mateo Name",
+  "config.Mateo Name.description": "Sets Mateo's display name.",
+  "config.Mateo Name.values.Mateo": "Mateo",
+  "config.Mateo Name.values.Val": "Val",
+  "config.Mateo Name.values.Tay": "Tay",
+
   "config.Portrait Style.name": "Portrait Style",
   "config.Portrait Style.description": "Sets the mod's portrait style to either Default or Nyapu.",
   "config.Portrait Style.values.Default": "Default",
@@ -7662,6 +7670,7 @@ ________      ________ _   _ _______ _____
   "config.CirrusSmokeyEye.values.true": "true",
   "config.CirrusSmokeyEye.values.false": "false",
 
+  "config.section.NPC Settings.name": "NPC Settings",
   "config.section.Portraits.name": "Portraits",
   "config.section.Pronouns.name": "Pronouns",
   "config.section.Pronouns.description": "Pronoun configurations for players.",

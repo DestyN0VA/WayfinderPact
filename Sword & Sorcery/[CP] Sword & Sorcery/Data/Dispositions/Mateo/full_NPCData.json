@@ -6,7 +6,8 @@
             "Target": "Data/Characters",
             "Entries": {
                 "Mateo": {
-                    "DisplayName": "{{i18n:Core.Mateo.Name}}",
+                    //"DisplayName": "{{i18n:Core.Mateo.Name.Mateo}}",
+                    "DisplayName": "{{i18n:Core.Mateo.Name.{{Mateo Name}}}}",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Polite",
