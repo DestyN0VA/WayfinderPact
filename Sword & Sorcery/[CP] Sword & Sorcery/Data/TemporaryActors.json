@@ -10,7 +10,7 @@
         {
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Portraits/MateoMarlon, Portraits/MateoGunther, Portraits/MateoEmeritus, Portraits/MateoKrobus, Portraits/HectorBook, Portraits/BookDryad, Portraits/FakeDandelion, Portraits/FakeRoslin, Portraits/FakeSolomon",
+            "Target": "Portraits/MateoMarlon, Portraits/MateoGunther, Portraits/MateoEmeritus, Portraits/MateoEmeritus_Baby, Portraits/MateoKrobus, Portraits/HectorBook, Portraits/BookDryad, Portraits/FakeDandelion, Portraits/FakeRoslin, Portraits/FakeSolomon",
             "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/{{Portrait Style}}/{{TargetWithoutPath}}.png"
         },
         {
@@ -21,7 +21,7 @@
         },
         {
             "Action": "EditImage",
-            "Target": "Portraits/MateoEmeritus, Portraits/HectorBook",
+            "Target": "Portraits/MateoEmeritus, Portraits/MateoEmeritus_Baby, Portraits/HectorBook",
             "FromFile": "assets/TemporaryActors/Portraits/Nyapu/{{TargetWithoutPath}}.png",
             "When": { "Nyapu Critters": "true" }
         },
@@ -34,7 +34,7 @@
         //Only Sprites
         {
             "Action": "Load",
-            "Target": "Characters/StygiumPendant, Characters/GuildBadge, Characters/HectorBadger, Characters/HectorOpossum, Characters/HectorRaccoon, Characters/HectorSkunk, Characters/ThornedCircletFragment, Characters/LumisteriaCloset, Characters/PizzaVan, Characters/AetherdrakeScale, Characters/PlanetariumBus, Characters/PlanetariumScreen, Characters/ForgedD20, Characters/DandelionShield, Characters/SolomonGrimoire, Characters/Duskspire, Characters/OneForAll, Characters/RockPile, Characters/WeddingArch, Characters/KeyArt, Characters/DestysKeychain, Characters/SenS_SenbrellaSnS, Characters/EmeritusFireball, Characters/DN.SnS_OwlBoy, Characters/HectorBook_Companion, Characters/RoslinPortalDeepDark, Characters/SenS_SenTrashcanSnS, Characters/SenS_FallenSen, Characters/PressedCrocus, Characters/DinoEgg, Characters/MateoEmeritus_Baby_Hatching, Characters/MateoEmeritus_Baby_Pumpkin, Characters/HectorBook_MEEP, Characters/BookDryad_MEEP, Characters/MateoEmeritus_MEEP, Characters/MateoWyatt_MEEP",
+            "Target": "Characters/StygiumPendant, Characters/GuildBadge, Characters/HectorBadger, Characters/HectorOpossum, Characters/HectorRaccoon, Characters/HectorSkunk, Characters/ThornedCircletFragment, Characters/LumisteriaCloset, Characters/PizzaVan, Characters/AetherdrakeScale, Characters/PlanetariumBus, Characters/PlanetariumScreen, Characters/ForgedD20, Characters/DandelionShield, Characters/SolomonGrimoire, Characters/Duskspire, Characters/OneForAll, Characters/RockPile, Characters/WeddingArch, Characters/KeyArt, Characters/DestysKeychain, Characters/SenS_SenbrellaSnS, Characters/EmeritusFireball, Characters/DN.SnS_OwlBoy, Characters/HectorBook_Companion, Characters/RoslinPortalDeepDark, Characters/SenS_SenTrashcanSnS, Characters/SenS_FallenSen, Characters/PressedCrocus, Characters/DinoEgg, Characters/MateoEmeritus_Baby, Characters/MateoEmeritus_Baby_Hatching, Characters/MateoEmeritus_Baby_Pumpkin, Characters/HectorBook_MEEP, Characters/BookDryad_MEEP, Characters/MateoEmeritus_MEEP, Characters/MateoWyatt_MEEP",
             "FromFile": "assets/TemporaryActors/Characters/{{TargetWithoutPath}}.png"
         },
         {
