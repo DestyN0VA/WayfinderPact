@@ -66,7 +66,32 @@
             "Action": "Load",
             "Target": "Characters/YoungMateo, Characters/BlacksmithMateo",
             "FromFile": "assets/TemporaryActors/{{TargetPathOnly}}/{{TargetWithoutPath}}{{MateoHorns}}.png"
-        }
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Stygium_Duggy, Characters/StygiumBat,Characters/StygiumCrab, Characters/StygiumDroplet, Characters/StygiumGolem_Blue, Characters/StygiumGolem_Purple, Characters/StygiumHead, Characters/StygiumLurk, Characters/StygiumMiner, Characters/StygiumMiner_Mage, Characters/StygiumMushroom, Characters/StygiumMushroom_Duggy, Characters/StygiumRex, Characters/StygiumSentry, Characters/StygiumSerpent, Characters/StygiumSkeleton, Characters/StygiumSkeleton_Rare, Characters/StygiumSkull, Characters/StygiumSquid",
+            "FromFile": "assets/Monsters/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/StygiumRex2, Characters/StygiumRex3",
+            "FromFile": "assets/Monsters/StygiumRex.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/StygiumSkull2",
+            "FromFile": "assets/Monsters/StygiumSkull.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/StygiumHead2",
+            "FromFile": "assets/Monsters/StygiumHead.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/StygiumMiner2",
+            "FromFile": "assets/Monsters/StygiumMiner.png"
+        },
 
     ]
 }
