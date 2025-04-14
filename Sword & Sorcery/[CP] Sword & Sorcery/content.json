@@ -188,7 +188,7 @@
   // CONFIG OPTIONS
   "ConfigSchema": {
     "Mateo Name": {
-      "AllowValues": "Val, Mateo, Tay",
+      "AllowValues": "Val, Mateo, Luis",
       "Default": "Val",
       "AllowBlank": false,
       "AllowMultiple": false,
@@ -2031,6 +2031,17 @@
     },
     {
       "Name": "SnS.Ch4.Intermissions.GunnarExtra.1",
+      "Value": "pause 1"
+    },
+    {
+      "Name": "SenCloakChange",
+      "Value": "changeSprite SenS Cloak/changePortrait SenS cloak",
+      "When": {
+        "HasMod |contains=7thAxis.LitD.CP": true
+      }
+    },
+    {
+      "Name": "SenCloakChange",
       "Value": "pause 1"
     },
     {
