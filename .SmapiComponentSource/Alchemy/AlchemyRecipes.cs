@@ -27,7 +27,7 @@ namespace SwordAndSorcerySMAPI.Alchemy
 
                 foreach (var ingred in value.Ingredients)
                 {
-                    ingreds.Add(ingred.Key, ingred.Value / (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionPhilosopherStone) && ingred.Value > 1 && (ItemRegistry.Create(ingred.Key).HasContextTag("essence_item") || ingred.Key == "(O)768" || ingred.Key == "(O)769") ? 2 : 1));
+                    ingreds.Add(ingred.Key, ingred.Value / (Game1.player.HasCustomProfession(SorcerySkill.ProfessionPhilosopherStone) && ingred.Value > 1 && (ItemRegistry.Create(ingred.Key).HasContextTag("essence_item") || ingred.Key == "(O)768" || ingred.Key == "(O)769") ? 2 : 1));
                 }
 
                 AlchemyData data = new()

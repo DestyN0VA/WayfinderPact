@@ -42,43 +42,43 @@ The Chapters of this story, all the way from a lone tent on the beach to a battl
  
 [font=dialogue]Table Of Contents[/font]
 > [link=Chapters/IntroNEA]Never Ending Adventure[/link] - ([link=Characters/Mateo]Mateo[/link])
- = [link=Chapters/NEA]Events[/link]
+  = [link=Chapters/NEA]Events[/link]
  
 > [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=Chapters/IntroCOT]Circle Of Thorns[/link][/if][else]Circle Of Thorns[/else] - ([link=Characters/Hector]{{TrueName}}[/link])
- = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=Chapters/COT]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
+  = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=Chapters/COT]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
  
 > [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Chapters/IntroUP]Under Pressure[/link][/if][else]Under Pressure[/else] - ([link=Characters/Cirrus]Cirrus[/link])
- = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Chapters/UP]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
+  = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Chapters/UP]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
  
 > [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]The Other Promise[/link][/if][else]The Other Promise[/else] - ([link=Characters/Roslin]Roslin[/link] & [link=Characters/Dandelion]Dandelion[/link])
- = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/TOP]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
+  = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/TOP]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
  
 > [if=PLAYER_HAS_MAIL Current DuskspireDefeated][link=Chapters/IntroEpilogue]Epilogue[/link][/if][else]Epilogue[/else]
- = [if=PLAYER_HAS_MAIL Current DuskspireDefeated][link=Chapters/Epilogue]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
+  = [if=PLAYER_HAS_MAIL Current DuskspireDefeated][link=Chapters/Epilogue]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
 ",
 
 "guidebook.chapter.Title.TableOfContents": "[center][font=dialogue][offset=0,8]Table Of Contents[/font][/center]
  
 > [link=Chapters/TableOfContents]Story Chapters[/link]
- = Lists all of the Story Chapters and events with their requirements as you progress the story.
+  = Lists all of the Story Chapters and events with their requirements as you progress the story.
  
 > [link=Characters/TableOfContents]All The Characters[/link]
- = Sprites, portraits and descriptions for every character in the mod.
+  = Sprites, portraits and descriptions for every character in the mod.
  
 > [link=Skills/TableOfContents]Every Skill[/link]
- = All of the skills added by Sword & Sorcery and their professions.
+  = All of the skills added by Sword & Sorcery and their professions.
  
 > [link=Mechanics/TableOfContents]Mechanics and Explanations[/link]
- = Explaining different mechanics added by Sword & Sorcery.
+  = Explaining different mechanics added by Sword & Sorcery.
  
 > [link=DeepDark/TableOfContents]The Deep Dark[/link]
- = The ins and outs of the Deep Dark dungeon explained.
+  = The ins and outs of the Deep Dark dungeon explained.
  
 > [link=Miscellaneous/TableOfContents]FAQ & Cheats[/link]
- = Answering your questions and providing a few useful cheats.
+  = Answering your questions and providing a few useful cheats.
  
 > [link=Dedication/LoreSeeker]Dedication[/link]
- = A dedication for someone great.
+  = A dedication for someone great.
 ",
 "guidebook.chapter.Misc.TableOfContents": "[center][font=dialogue][offset=0,8]Miscellaneous[/font][/center]
  
@@ -86,12 +86,12 @@ Have questions about the mod? We have answers.
  
 [font=dialogue]Table Of Contents[/font]
 > Frequently Asked Questions
- = [link=Miscellaneous/FAQNPCs]NPCs[/link]
- = [link=Miscellaneous/FAQItems]Items[/link]
- = [link=Miscellaneous/FAQOther]Other[/link]
+  = [link=Miscellaneous/FAQNPCs]NPCs[/link]
+  = [link=Miscellaneous/FAQItems]Items[/link]
+  = [link=Miscellaneous/FAQOther]Other[/link]
  
 > Other
- = [link=Miscellaneous/Cheats]Cheats[/link]",
+  = [link=Miscellaneous/Cheats]Cheats[/link]",
 "guidebook.chapter.Title.FAQ.NPCs": "[center][font=dialogue][offset=0,8]Frequently Asked Questions[/font][/center]
 [center][font=dialogue]NPCs[/font][/center]
  
@@ -193,16 +193,16 @@ Type them into the SMAPI console (black box that appears when you load) and hit 
  
 [color=maroon]Bard[/color] 
 > sns_playsong SongID#
- = Fantasia Alla Marcia - song_buff
- = Battlefield Overture - song_battle
- = Invigorating Encore - song_restoration
- = Enduring Melody - song_protection
- = Rogues' Humorsque - song_npcbuff
- = Scherzo D'Inganno - song_attack
- = Ballad of Chronomancy - song_time
- = Track of {{HorseName}} - song_horse
- = Druid's Lullaby - song_crop
- = A Walk In Adante - song_obelisk
+  = Fantasia Alla Marcia - song_buff
+  = Battlefield Overture - song_battle
+  = Invigorating Encore - song_restoration
+  = Enduring Melody - song_protection
+  = Rogues' Humorsque - song_npcbuff
+  = Scherzo D'Inganno - song_attack
+  = Ballad of Chronomancy - song_time
+  = Track of {{HorseName}} - song_horse
+  = Druid's Lullaby - song_crop
+  = A Walk In Adante - song_obelisk
  
 [color=maroon]Aether[/color] 
 > sns_setmaxaether #
@@ -217,11 +217,11 @@ Type them into the SMAPI console (black box that appears when you load) and hit 
  
 [color=maroon]Skills[/color] 
 > player_giveexp SkillID EXPAmount
- = DestyNova.SwordAndSorcery.Rogue
- = DestyNova.SwordAndSorcery.Druidics 
- = DestyNova.SwordAndSorcery.Bardics
- = DestyNova.SwordAndSorcery.Witchcraft 
- = DestyNova.SwordAndSorcery.Paladin
+  = DestyNova.SwordAndSorcery.Rogue
+  = DestyNova.SwordAndSorcery.Druidics 
+  = DestyNova.SwordAndSorcery.Bardics
+  = DestyNova.SwordAndSorcery.Witchcraft 
+  = DestyNova.SwordAndSorcery.Paladin
  
 [color=maroon]Miscellaneous[/color] 
 > sns_repairarmor
@@ -463,35 +463,35 @@ Note: Pure Ores can be smelted in a furnace to recieve 3-5 pieces of their non-p
 [font=dialogue]Exquisite Gem Socket[/font]
 Attach an exquisite gem for new effects:
  
-   > [itemtooltip=(O)DN.SnS_ExquisiteEmerald][icon=Textures/DN.SnS/SnSArsenal:0,0,16,16] [color=blue]Exquisite Emerald[/color][/itemtooltip] - [texttooltip=Evasive:Increases your speed by +1.5 for 5 seconds after hitting an enemy.][color=purple]Evasive[/color][/texttooltip]
-   > [itemtooltip=(O)DN.SnS_ExquisiteTopaz][icon=Textures/DN.SnS/SnSArsenal:16,0,16,16] [color=blue]Exquisite Topaz[/color][/itemtooltip] - [texttooltip=Defensive:Reduces incoming damage by 15%.][color=purple]Defensive[/color][/texttooltip]
-   > [itemtooltip=(O)DN.SnS_ExquisiteRuby][icon=Textures/DN.SnS/SnSArsenal:32,0,16,16] [color=blue]Exquisite Ruby[/color][/itemtooltip] - [texttooltip=Harming:Deals an extra 10% damage to an enemy once every second for 3 seconds after hitting it.][color=purple]Harming[/color][/texttooltip]
-   > [itemtooltip=(O)DN.SnS_ExquisiteJade][icon=Textures/DN.SnS/SnSArsenal:48,0,16,16] [color=blue]Exquisite Jade[/color][/itemtooltip] - [texttooltip=Restful:Grants +2 stamina upon hitting an enemy.][color=purple]Restful[/color][/texttooltip]
-   > [itemtooltip=(O)DN.SnS_ExquisiteAmethyst][icon=Textures/DN.SnS/SnSArsenal:64,0,16,16] [color=blue]Exquisite Amethyst[/color][/itemtooltip] - [texttooltip=Freezing:15% chance of freezing an enemy on hit.][color=purple]Freezing[/color][/texttooltip]
-   > [itemtooltip=(O)DN.SnS_ExquisiteDiamond][icon=Textures/DN.SnS/SnSArsenal:80,0,16,16] [color=blue]Exquisite Diamond[/color][/itemtooltip] - [texttooltip=Healthy:Grants +1 health upon hitting an enemy.][color=purple]Healthy[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteEmerald][icon=Textures/DN.SnS/SnSArsenal:0,0,16,16] [color=blue]Exquisite Emerald[/color][/itemtooltip] - [texttooltip=Evasive:Increases your speed by +1.5 for 5 seconds after hitting an enemy.] [color=purple]Evasive[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteTopaz][icon=Textures/DN.SnS/SnSArsenal:16,0,16,16] [color=blue]Exquisite Topaz[/color][/itemtooltip] - [texttooltip=Defensive:Reduces incoming damage by 15%.] [color=purple]Defensive[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteRuby][icon=Textures/DN.SnS/SnSArsenal:32,0,16,16] [color=blue]Exquisite Ruby[/color][/itemtooltip] - [texttooltip=Harming:Deals an extra 10% damage to an enemy once every second for 3 seconds after hitting it.] [color=purple]Harming[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteJade][icon=Textures/DN.SnS/SnSArsenal:48,0,16,16] [color=blue]Exquisite Jade[/color][/itemtooltip] - [texttooltip=Restful:Grants +2 stamina upon hitting an enemy.] [color=purple]Restful[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteAmethyst][icon=Textures/DN.SnS/SnSArsenal:64,0,16,16] [color=blue]Exquisite Amethyst[/color][/itemtooltip] - [texttooltip=Freezing:15% chance of freezing an enemy on hit.] [color=purple]Freezing[/color][/texttooltip]
+   > [itemtooltip=(O)DN.SnS_ExquisiteDiamond][icon=Textures/DN.SnS/SnSArsenal:80,0,16,16] [color=blue]Exquisite Diamond[/color][/itemtooltip] - [texttooltip=Healthy:Grants +1 health upon hitting an enemy.] [color=purple]Healthy[/color][/texttooltip]
    > [itemtooltip=(O)DN.SnS_ExquisiteAquamarine][icon=Textures/DN.SnS/SnSArsenal:96,0,16,16] [color=blue]Exquisite Aquamarine[/color][/itemtooltip] - [texttooltip=Critical:Provides a 15% chance of a critical hit when hitting an enemy.
-(If the hit is already a critical hit, the damage will be multiplied again.][color=purple]Critical[/color][/texttooltip]
+(If the hit is already a critical hit, the damage will be multiplied again.] [color=purple]Critical[/color][/texttooltip]
  
 [font=dialogue]Weapon Coating[/font]
 Attach monster loot for new effects:
  
-   > 999 [itemtooltip=(O)766][icon=Maps/springobjects:352,496,16,16] [color=blue]Slime[/color][/itemtooltip] - [texttooltip=Slimy:Slows down enemies upon hit. Works once per enemy.][color=purple]Slimy[/color][/texttooltip]
-   > 300 [itemtooltip=(O)769][icon=Maps/springobjects:16,512,16,16] [color=blue]Void Essence[/color][/itemtooltip] - [texttooltip=Shadow Duplicates:Basic attacks affect all four cardinal directions. (Attacks in the other directions are invisible.)][color=purple]Shadow Duplicates[/color][/texttooltip]
-   > 300 [itemtooltip=(O)768][icon=Maps/springobjects:0,512,16,16] [color=blue]Solar Essence[/color][/itemtooltip] - [texttooltip=Explosive Demise:Upon killing a mob, they blow up. No damage to farmer.][color=purple]Explosive Demise[/color][/texttooltip]
-   > 300 [itemtooltip=(O)684][icon=Maps/springobjects:192,448,16,16] [color=blue]Bug Meat[/color][/itemtooltip] - [texttooltip=Greedy:Mob drops are rolled twice.][color=purple]Greedy[/color][/texttooltip]
-   > 500 [itemtooltip=(O)767][icon=Maps/springobjects:368,496,16,16] [color=blue]Bat Wing[/color][/itemtooltip] - [texttooltip=Floating:You can attack across stones and other objects.][color=purple]Floating[/color][/texttooltip]",
+   > 999 [itemtooltip=(O)766][icon=Maps/springobjects:352,496,16,16] [color=blue]Slime[/color][/itemtooltip] - [texttooltip=Slimy:Slows down enemies upon hit. Works once per enemy.] [color=purple]Slimy[/color][/texttooltip]
+   > 300 [itemtooltip=(O)769][icon=Maps/springobjects:16,512,16,16] [color=blue]Void Essence[/color][/itemtooltip] - [texttooltip=Shadow Duplicates:Basic attacks affect all four cardinal directions. (Attacks in the other directions are invisible.)] [color=purple]Shadow Duplicates[/color][/texttooltip]
+   > 300 [itemtooltip=(O)768][icon=Maps/springobjects:0,512,16,16] [color=blue]Solar Essence[/color][/itemtooltip] - [texttooltip=Explosive Demise:Upon killing a mob, they blow up. No damage to farmer.] [color=purple]Explosive Demise[/color][/texttooltip]
+   > 300 [itemtooltip=(O)684][icon=Maps/springobjects:192,448,16,16] [color=blue]Bug Meat[/color][/itemtooltip] - [texttooltip=Greedy:Mob drops are rolled twice.] [color=purple]Greedy[/color][/texttooltip]
+   > 500 [itemtooltip=(O)767][icon=Maps/springobjects:368,496,16,16] [color=blue]Bat Wing[/color][/itemtooltip] - [texttooltip=Floating:You can attack across stones and other objects.] [color=purple]Floating[/color][/texttooltip]",
 
 "guidebook.chapter.NEA.ArtificerSkill": "[center][font=dialogue][offset=0,8]Artificer[/font][/center]
 [offset=200,0][image=SMAPI/kcc.sns/assets/rogue/icon.png:0,0,10,10:5]One of the Sword & Sorcery skills, unlocked during the [link=Mechanics/Underforge]Underforge[/link] Mateo event. Artificer can be leveled up killing monsters and mining.
  
 [font=dialogue]Unlocks[/font]
 > Level 1 - Recipe unlocks: 
- = [itemtooltip=(O)DN.SnS_ClothArmor][icon=Textures/DN.SnS/SnSArsenal:32,48,16,16] [color=blue]Cloth Armor[/color][/itemtooltip]
- = [itemtooltip=(W)DN.SnS_Bow][icon=Textures/DN.SnS/SnSArsenal:32,80,16,16] [color=blue]Bow[/color][/itemtooltip]
- = [itemtooltip=(O)DN.SnS_Arrow][icon=Textures/DN.SnS/SnSArsenal:16,64,16,16] [color=blue]Arrow[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ClothArmor][icon=Textures/DN.SnS/SnSArsenal:32,48,16,16] [color=blue]Cloth Armor[/color][/itemtooltip]
+  = [itemtooltip=(W)DN.SnS_Bow][icon=Textures/DN.SnS/SnSArsenal:32,80,16,16] [color=blue]Bow[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_Arrow][icon=Textures/DN.SnS/SnSArsenal:16,64,16,16] [color=blue]Arrow[/color][/itemtooltip]
   
 > Level 2 - Mechanic unlocks:
- = Pure ore now has a chance to
+  = Pure ore now has a chance to
     drop from their respective ore
     nodes for use in the [link=Mechanics/Underforge]Underforge[/link].
   
@@ -554,7 +554,7 @@ Like vanilla skills, the Artificer skill provides professions that change the ga
 [color=MediumBlue]Rogueish Archetype Track[/color]
 = [icon=SMAPI/kcc.sns/assets/rogue/Shadowstep.png:0,0,16,16] [color=blue]Shadowstep[/color]
     Grants the [texttooltip=Shadowstep:Become hidden, reducing most monster aggro until you attack.
-Your first attack after using the ability is an automatic critical hit.][icon=SMAPI/kcc.sns/assets/rogue/Shadowstep.png:0,0,16,16][color=purple]Shadowstep[/color][/texttooltip] ability. 
+Your first attack after using the ability is an automatic critical hit.][icon=SMAPI/kcc.sns/assets/rogue/Shadowstep.png:0,0,16,16] [color=purple]Shadowstep[/color][/texttooltip] ability. 
     (Usable with the [link=Mechanics/AdventureBar]Adventure Bar[/link])
 = [icon=SMAPI/kcc.sns/assets/rogue/huntersmark.png:0,0,16,16] [color=blue]Hunter's Mark[/color]
     Once a creature is attacked, consecutive
@@ -876,6 +876,12 @@ Recipe Unlocks:
   = [itemtooltip=(O)DN.SnS_glowingpolyporemushrooms.seed][icon=Textures/DN.SnS/SnSObjects:48,16,16,16] [color=blue]Ancient Glowing Polypore Mushroom Spores[/color][/itemtooltip]
 > Level 3 - Unlocks the recipes:
   = [itemtooltip=(O)DN.SnS_ancientwildfairyrose.seed][icon=Textures/DN.SnS/SnSObjects:0,16,16,16] [color=blue]Ancient Wild Fairy Rose Seeds[/color][/itemtooltip]
+Spell Unlocks:
+  = [texttooltip=Revive Plant:Revive a 5x5 area of crops around you.
+ 
+> Aether cost: 15
+> Cooldown: 10 seconds.
+][icon=SMAPI/kcc.sns/assets/spells.png:80,16,16,16] [color=purple]Revive Plant[/color][/texttooltip]
 > Level 4 - Unlocks the recipes:
   = [itemtooltip=(O)DN.SnS_ancientelderberry.seed][icon=Textures/DN.SnS/SnSObjects:128,48,16,16] [color=blue]Ancient Elderberry Seeds[/color][/itemtooltip]
  
@@ -1182,63 +1188,72 @@ Cirrus is well-known all across the Ferngill Republic for her addictive lyrics a
 Each level, you gain 10 max Aether and a new song for the adventure bar. These songs cast various effects, hover for more details.
  
 [font=dialogue]Unlocks[/font]
-> Level 1 - Unlocks [texttooltip=Fantasia Alla Marcia:Grants a random passive buff. 
+> Level 1 - Unlocks:
+  = [texttooltip=Fantasia Alla Marcia:Grants a random passive buff. 
  
 > Usable once per day
 > Aether cost: 20
-][icon=SMAPI/kcc.sns/assets/abilities.png:32,0,16,16][color=purple]Fantasia Alla Marcia[/color][/texttooltip].
-> Level 2 - Unlocks [texttooltip=Battlefield Overture:Grants either an attack or defense buff.
+][icon=SMAPI/kcc.sns/assets/abilities.png:32,0,16,16] [color=purple]Fantasia Alla Marcia[/color][/texttooltip].
+> Level 2 - Unlocks:
+  = [texttooltip=Battlefield Overture:Grants either an attack or defense buff.
  
 > Usable once per day
 > Aether cost: 20
- ][icon=SMAPI/kcc.sns/assets/abilities.png:48,0,16,16][color=purple]Battlefield Overture[/color][/texttooltip].
-> Level 3 - Unlocks [texttooltip=Invigorating Encore:Restores 25% health and energy.
+ ][icon=SMAPI/kcc.sns/assets/abilities.png:48,0,16,16] [color=purple]Battlefield Overture[/color][/texttooltip].
+> Level 3 - Unlocks:
+  = [texttooltip=Invigorating Encore:Restores 25% health and energy.
  
 > Usable once per day
 > Aether cost: 10
- ][icon=SMAPI/kcc.sns/assets/abilities.png:64,0,16,16][color=purple]Invigorating Encore[/color][/texttooltip].
-> Level 4 - Unlocks [texttooltip=Enduring Melody:Creates a protective sound barrier that
+ ][icon=SMAPI/kcc.sns/assets/abilities.png:64,0,16,16] [color=purple]Invigorating Encore[/color][/texttooltip].
+> Level 4 - Unlocks:
+  = [texttooltip=Enduring Melody:Creates a protective sound barrier that
 keeps enemies away for 30 seconds.
  
 > Unlimited daily use
 > Aether cost: 10
- ][icon=SMAPI/kcc.sns/assets/abilities.png:80,0,16,16][color=purple]Enduring Melody[/color][/texttooltip].
-> Level 5 - Unlocks one of two songs based on your [link=Skills/BardicsProfessions]profession[/link] choice:
+ ][icon=SMAPI/kcc.sns/assets/abilities.png:80,0,16,16] [color=purple]Enduring Melody[/color][/texttooltip].
  
+> Level 5 - Unlocks one of two songs based on your [link=Skills/BardicsProfessions]profession[/link] choice: 
   = College of Eloquence - [texttooltip=Rogues' Humorsque:Offers a buff depending on who it's played to.
  
 > Usable once per day
 > Aether cost: 25
- ][icon=SMAPI/kcc.sns/assets/abilities.png:96,0,16,16][color=purple]Rogues' Humorsque[/color][/texttooltip]
+ ][icon=SMAPI/kcc.sns/assets/abilities.png:96,0,16,16] [color=purple]Rogues' Humorsque[/color][/texttooltip]
   = College of Valor - [texttooltip=Scherzo D'Inganno:Lets out a discordant sound that
 damages all enemies in range.
  
 > Unlimited daily use
 > Aether cost: 20
-][icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color][/texttooltip]
+][icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16] [color=purple]Scherzo D'Inganno[/color][/texttooltip]
  
-> Level 6 - Unlocks [texttooltip=Ballad of Chronomancy:Pauses time for two minutes.
+> Level 6 - Unlocks:
+  = [texttooltip=Ballad of Chronomancy:Pauses time for two minutes.
 
 > Usable once per day
 > Aether cost: 35
- ][icon=SMAPI/kcc.sns/assets/abilities.png:0,16,16,16][color=purple]Ballad of Chronomancy[/color][/texttooltip].
-> Level 7 - Unlocks [texttooltip=Track of {{HorseName}}:Teleports you to your horse. 
+ ][icon=SMAPI/kcc.sns/assets/abilities.png:0,16,16,16] [color=purple]Ballad of Chronomancy[/color][/texttooltip].
+> Level 7 - Unlocks: 
+  = [texttooltip=Track of {{HorseName}}:Teleports you to your horse. 
  
 > Unlimited daily use
 > Aether cost: 10
- ][icon=SMAPI/kcc.sns/assets/abilities.png:16,16,16,16][color=purple]Track of {{HorseName}}[/color][/texttooltip].
-> Level 8 - Unlocks [texttooltip=Druid's Lullaby:Applies a 25% growth rate to crops in a 7x7
+ ][icon=SMAPI/kcc.sns/assets/abilities.png:16,16,16,16] [color=purple]Track of {{HorseName}}[/color][/texttooltip].
+> Level 8 - Unlocks:
+  = [texttooltip=Druid's Lullaby:Applies a 25% growth rate to crops in a 7x7
 area around you, once per crop. 
  
 > Usable once per day
 > Aether cost: 30
-][icon=SMAPI/kcc.sns/assets/abilities.png:32,16,16,16][color=purple]Druid's Lullaby[/color][/texttooltip].
-> Level 9 - Unlocks [texttooltip=A Walk in Adante:Allows remote use of any
+][icon=SMAPI/kcc.sns/assets/abilities.png:32,16,16,16] [color=purple]Druid's Lullaby[/color][/texttooltip].
+> Level 9 - Unlocks:
+  = [texttooltip=A Walk in Adante:Allows remote use of any
 obelisks you've acquired. 
  
 > Unlimited daily use
 > Aether cost: 15
- ][icon=SMAPI/kcc.sns/assets/abilities.png:48,16,16,16][color=purple]A Walk in Adante[/color][/texttooltip].
+ ][icon=SMAPI/kcc.sns/assets/abilities.png:48,16,16,16] [color=purple]A Walk in Adante[/color][/texttooltip].
+ 
 > Level 10 - Upgrades your song choice at level 5.",
 
 "guidebook.chapter.UP.BardicsProfessions": "[center][font=dialogue][offset=0,8]Professions[/font][/center]
@@ -1247,9 +1262,9 @@ Like vanilla skills, the Bardics skill provides professions that change the game
  
 [font=dialogue]Level 5[/font]
 = [icon=SMAPI/kcc.sns/assets/bardics/CollegeOfEloquence.png:0,0,16,16] [color=MediumBlue]College of Eloquence[/color]
-    Learns the song [icon=SMAPI/kcc.sns/assets/abilities.png:96,0,16,16][color=purple]Rogues' Humorsque[/color].
+    Learns the song [icon=SMAPI/kcc.sns/assets/abilities.png:96,0,16,16] [color=purple]Rogues' Humorsque[/color].
 = [icon=SMAPI/kcc.sns/assets/bardics/CollegeOfValor.png:0,0,16,16] [color=MediumBlue]College of Valor[/color]
-    Learns the song [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color].
+    Learns the song [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16] [color=purple]Scherzo D'Inganno[/color].
  
 [font=dialogue]Level 10[/font]
 [color=MediumBlue]College of Eloquence Track[/color]
@@ -1260,9 +1275,9 @@ Like vanilla skills, the Bardics skill provides professions that change the game
  
 [color=MediumBlue]College of Valor Track[/color]
 = [icon=SMAPI/kcc.sns/assets/bardics/wordsofterror.png:0,0,16,16] [color=Blue]Words of Terror[/color]
-    Damage of [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color] is doubled.
+    Damage of [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16] [color=purple]Scherzo D'Inganno[/color] is doubled.
 = [icon=SMAPI/kcc.sns/assets/bardics/wordsofmajesty.png:0,0,16,16] [color=Blue]Words of Majesty[/color]
-    Damage of [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16][color=purple]Scherzo D'Inganno[/color] is extended
+    Damage of [icon=SMAPI/kcc.sns/assets/abilities.png:112,0,16,16] [color=purple]Scherzo D'Inganno[/color] is extended
     to the entire location.",
 
 "guidebook.chapter.TOP.Intro": "[center][font=dialogue][offset=0,8]Chapter 4[/font][/center]
@@ -1319,12 +1334,12 @@ Please view \"Dandelion & Roslin: Pt 1-3\".[/if]
 [font=dialogue]Special Order: Essen-tial Collection![/font]
 [if=PLAYER_SPECIAL_ORDER_COMPLETE Current CAGQuest.UntimedSpecialOrder.RoslinEssence]You gathered [link=Mechanics/ElementalEssences]Elemental Essences[/link] for [color=red]Roslin[/color].[/if]
 [else]Gather [link=Mechanics/ElementalEssences]Elemental Essences[/link] for Roslin:
-> 50 [itemtooltip=(O)DN.SnS_EarthEssence][icon=Textures/DN.SnS/SnSObjects:96,128,16,16][color=brown]Earth Essence[/color][/itemtooltip]
-> 50 [itemtooltip=(O)DN.SnS_AirEssence][icon=Textures/DN.SnS/SnSObjects:112,128,16,16][color=cornflowerblue]Air Essence[/color][/itemtooltip]
-> 50 [itemtooltip=(O)DN.SnS_FireEssence][icon=Textures/DN.SnS/SnSObjects:144,128,16,16][color=Red]Fire Essence[/color][/itemtooltip]
-> 50 [itemtooltip=(O)DN.SnS_WaterEssence][icon=Textures/DN.SnS/SnSObjects:128,128,16,16][color=blue]Water Essence[/color][/itemtooltip]
-> 50 [itemtooltip=(O)DN.SnS_druidicessence][icon=Textures/DN.SnS/SnSObjects:80,0,16,16][color=Green]Druidic Essence[/color][/itemtooltip]
-> 50 [itemtooltip=(O)768][icon=maps/springobjects:0,512,16,16][color=chocolate]Solar Essence[/color][/itemtooltip]
+> 50 [itemtooltip=(O)DN.SnS_EarthEssence][icon=Textures/DN.SnS/SnSObjects:96,128,16,16] [color=brown]Earth Essence[/color][/itemtooltip]
+> 50 [itemtooltip=(O)DN.SnS_AirEssence][icon=Textures/DN.SnS/SnSObjects:112,128,16,16] [color=cornflowerblue]Air Essence[/color][/itemtooltip]
+> 50 [itemtooltip=(O)DN.SnS_FireEssence][icon=Textures/DN.SnS/SnSObjects:144,128,16,16] [color=Red]Fire Essence[/color][/itemtooltip]
+> 50 [itemtooltip=(O)DN.SnS_WaterEssence][icon=Textures/DN.SnS/SnSObjects:128,128,16,16] [color=blue]Water Essence[/color][/itemtooltip]
+> 50 [itemtooltip=(O)DN.SnS_druidicessence][icon=Textures/DN.SnS/SnSObjects:80,0,16,16] [color=Green]Druidic Essence[/color][/itemtooltip]
+> 50 [itemtooltip=(O)768][icon=maps/springobjects:0,512,16,16] [color=chocolate]Solar Essence[/color][/itemtooltip]
 {{IsRSVInstalled}}
  
 [if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.RoslinEssence]You seem to be missing the special order.
@@ -1439,7 +1454,7 @@ Please view \"Dandelion & Roslin: Pt 1-3\".[/if]
 >  1 [itemtooltip=(O)DN.SnS_ExquisiteAquamarine][icon=Textures/DN.SnS/SnSArsenal:96,0,16,16] [color=blue]Exquisite Aquamarine[/color][/itemtooltip]
 {{IsChocoboValleyInstalled}} 
 > 25 [itemtooltip=(O)709][icon=Maps/springobjects:208,464,16,16] [color=blue]Hardwood[/color][/itemtooltip]
-> 50 [itemtooltip=(O)768][icon=maps/springobjects:0,512,16,16][color=blue] Solar Essence[/color][/itemtooltip]
+> 50 [itemtooltip=(O)768][icon=maps/springobjects:0,512,16,16] [color=blue] Solar Essence[/color][/itemtooltip]
  
 [if=!PLAYER_SPECIAL_ORDER_ACTIVE Current CAGQuest.UntimedSpecialOrder.DandelionShield]You seem to be missing the special order.
 [onceaction=AddSpecialOrder CAGQuest.UntimedSpecialOrder.DandelionShield]Click here to re-add it to your journal.[/onceaction][/if]
@@ -1515,9 +1530,9 @@ Please view \"Dandelion & Roslin: Pt 1-3\".[/if]
 [/else]
 [/if]",
 
-"guidebook.chapter.TOP.RoslinEssence.true": "> 50 [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16][color=purple]Void Essence[/color][/itemtooltip]
-> 50 [itemtooltip=(O)Rafseazz.RSVCP_Spiritual_Essence][icon=Mods\\Rafseazz.RSVCP\\Objects\\Objects:64,64,16,16][color=purple]Spiritual Essence[/color][/itemtooltip]",
-"guidebook.chapter.TOP.RoslinEssence.false": "> 50 [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16][color=purple]Void Essence[/color][/itemtooltip]",
+"guidebook.chapter.TOP.RoslinEssence.true": "> 50 [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] [color=purple]Void Essence[/color][/itemtooltip]
+> 50 [itemtooltip=(O)Rafseazz.RSVCP_Spiritual_Essence][icon=Mods\\Rafseazz.RSVCP\\Objects\\Objects:64,64,16,16] [color=purple]Spiritual Essence[/color][/itemtooltip]",
+"guidebook.chapter.TOP.RoslinEssence.false": "> 50 [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] [color=purple]Void Essence[/color][/itemtooltip]",
 
 "guidebook.chapter.TOP.DandelionShield.true": "
 > 25 [itemtooltip=(O)Kitsutsune.Chocobovalley_OrichalcumBar][icon=SMAPI/Kitsutsune.Chocobovalley/Assets/Items/Minerals/OrichalcumBar.png:0,0,16,16] [color=blue]Orichalcum Bars[/color][/itemtooltip]
@@ -1534,114 +1549,100 @@ Please view \"Dandelion & Roslin: Pt 1-3\".[/if]
 "guidebook.chapter.TOP.SorcererSkill": "[center][font=dialogue][offset=0,8]Sorcery[/font][/center]
 [offset=200,0][image=SMAPI/kcc.sns/assets/witchcraft/icon.png:0,0,10,10:5]One of the Sword & Sorcery skills, unlocked during Dandelion & Roslin's 9H event. Sorcery can be leveled up by casting Sorcery spells from the [link=Mechanics/AdventureBar]Adventure Bar[/link].
  
-Each level, you will gain 10 max Aether. You learn new spells by studying from your Magical Grimoire located to the right side of your Adventure Bar menu.
+Each level, you will gain 10 max Aether. You learn new spells by levelling up the Sorcery skill. Unlocking Sorcery also gives you access to [link=Mechanics/AlchemyTransmutation]Alchemy and Transmutation[/link].
  
-[font=dialogue]Spells[/font]
-(Hover for more details)
-> [texttooltip=Remote Handbook:Opens the S&S player handbook. 
- 
-> Aether cost: 0
-][icon=SMAPI/kcc.sns/assets/spells.png:16,0,16,16][color=purple]Remote Handbook[/color][/texttooltip]
-
-> [texttooltip=Haste:Speeds you up. 
+[font=dialogue]Unlocks[/font]
+> Level 1 - Unlocks the spells:
+  = [texttooltip=Haste:Speeds you up. 
  
 > Aether cost: 3
-][icon=SMAPI/kcc.sns/assets/spells.png:0,0,16,16][color=purple]Haste[/color][/texttooltip]
-
-> [texttooltip=Polymorph:Turn an enemy into a slime for 10 seconds.
-Killing it will make it revert back to its normal form.
- 
-> Aether cost: 5
-> Cooldown: 10 seconds.
-][icon=SMAPI/kcc.sns/assets/spells.png:48,0,16,16][color=purple]Polymorph[/color][/texttooltip]
-
-> [texttooltip=Stasis:Prevents you from moving, acting, or taking
-damage for three seconds.
- 
-> Aether cost: 10
-> Cooldown: 6 seconds.
-][icon=SMAPI/kcc.sns/assets/spells.png:64,0,16,16][color=purple]Stasis[/color][/texttooltip]
-
-> [texttooltip=Mage Armor:Increases your maximum armor points for the day.
- 
-> Aether cost: 5
-][icon=SMAPI/kcc.sns/assets/spells.png:80,0,16,16][color=purple]Mage Armor[/color][/texttooltip]
-
-> [texttooltip=Banishment:Send an enemy to another realm for 20 seconds.
- 
-> Aether cost: 8
-> Cooldown: 10 seconds.
-][icon=SMAPI/kcc.sns/assets/spells.png:112,0,16,16][color=purple]Banishment[/color][/texttooltip]
-
-> [texttooltip=Lightning Bolt:Fire a bolt of lightning at the closest enemy
-that can chain into other enemies.
+][icon=SMAPI/kcc.sns/assets/spells.png:0,0,16,16] [color=purple]Haste[/color][/texttooltip]
+  = [texttooltip=Magic Missle:Fire three projectiles that home in on the enemy.
  
 > Aether cost: 10
 > Cooldown: 3 seconds.
-][icon=SMAPI/kcc.sns/assets/spells.png:0,16,16,16][color=purple]Lightning Bolt[/color][/texttooltip]
-
-> [texttooltip=Fireball:Cast a ticking time-bomb fireball directed
+][icon=SMAPI/kcc.sns/assets/spells.png:32,16,16,16] [color=purple]Magic Missle[/color][/texttooltip]
+> Level 2 - Unlocks the spells:
+  = [texttooltip=Pocket Chest:Opens a chest in dimensional pocket, bound to you.
+Nobody else can access this chest.
+ 
+> Aether cost: 0
+][icon=SMAPI/kcc.sns/assets/spells.png:32,32,16,16] [color=purple]Pocket Chest[/color][/texttooltip]
+  = [texttooltip=Mage Armor:Increases your maximum armor points for the day.
+ 
+> Aether cost: 5
+][icon=SMAPI/kcc.sns/assets/spells.png:80,0,16,16] [color=purple]Mage Armor[/color][/texttooltip]
+> Level 3 - Unlocks the spells:
+  = [texttooltip=Find Familiar:Summon a small pet to follow you for
+the day, increasing your luck.
+ 
+> Aether cost: 10
+][icon=SMAPI/kcc.sns/assets/spells.png:112,16,16,16] [color=purple]Find Familiar[/color][/texttooltip]
+  = [texttooltip=Fireball:Cast a ticking time-bomb fireball directed
 towards your cursor.
  
 > Aether cost: 10
 > Cooldown: 3 seconds.
-][icon=SMAPI/kcc.sns/assets/spells.png:16,16,16,16][color=purple]Fireball[/color][/texttooltip]
-
-> [texttooltip=Magic Missle:Fire three projectiles that home in on the enemy.
- 
-> Aether cost: 10
-> Cooldown: 3 seconds.
-][icon=SMAPI/kcc.sns/assets/spells.png:32,16,16,16][color=purple]Magic Missle[/color][/texttooltip]
-
-> [texttooltip=Icebolt:Launch an icicle to freeze enemies around your cursor in an AOE.
- 
-> Aether cost: 10
-> Cooldown: 1 seconds.
-][icon=SMAPI/kcc.sns/assets/spells.png:64,16,16,16][color=purple]Icebolt[/color][/texttooltip]
-
-> [texttooltip=Revive Plant:Revive a 5x5 area of crops around you.
- 
-> Aether cost: 15
-> Cooldown: 10 seconds.
-][icon=SMAPI/kcc.sns/assets/spells.png:80,16,16,16][color=purple]Revive Plant[/color][/texttooltip]
-
-> [texttooltip=Mirror Image:Summon three illusory duplicates, which
+][icon=SMAPI/kcc.sns/assets/spells.png:16,16,16,16] [color=purple]Fireball[/color][/texttooltip]
+> Level 4 - Unlocks the spell:
+  = [texttooltip=Mirror Image:Summon three illusory duplicates, which
 have a chance of taking a hit for you.
  
 > Aether cost: 15
 > Cooldown: 10 seconds.
-][icon=SMAPI/kcc.sns/assets/spells.png:96,16,16,16][color=purple]Mirror Image[/color][/texttooltip]
-
-> [texttooltip=Find Familiar:Summon a small pet to follow you for
-the day, increasing your luck.
+][icon=SMAPI/kcc.sns/assets/spells.png:96,16,16,16] [color=purple]Mirror Image[/color][/texttooltip]
+Recipe Unlocks:
+  = [itemtooltip=(O)DN.SnS_TeleportCircle][icon=Textures/DN.SnS/TeleportCircle:0,0,16,16] [color=blue]Teleport Circle[/color][/itemtooltip]
+ 
+> Level 5 - See the [link=Skills/SorcererProfessions]Sorcery Professions[/link] page.
+ 
+> Level 6 - Unlocks the spells:
+  = [texttooltip=Polymorph:Turn an enemy into a slime for 10 seconds.
+Killing it will make it revert back to its normal form.
+ 
+> Aether cost: 5
+> Cooldown: 10 seconds.
+][icon=SMAPI/kcc.sns/assets/spells.png:48,0,16,16] [color=purple]Polymorph[/color][/texttooltip]
+  = [texttooltip=Lightning Bolt:Fire a bolt of lightning at the closest enemy
+that can chain into other enemies.
  
 > Aether cost: 10
-][icon=SMAPI/kcc.sns/assets/spells.png:112,16,16,16][color=purple]Find Familiar[/color][/texttooltip]
-
-> [texttooltip=Ghostly Projection:Move without colliding for 15 seconds.
+> Cooldown: 3 seconds.
+][icon=SMAPI/kcc.sns/assets/spells.png:0,16,16,16] [color=purple]Lightning Bolt[/color][/texttooltip]
+> Level 7 - Unlocks the spells:
+  = [texttooltip=Stasis:Prevents you from moving, acting, or taking
+damage for three seconds.
+ 
+> Aether cost: 10
+> Cooldown: 6 seconds.
+][icon=SMAPI/kcc.sns/assets/spells.png:64,0,16,16] [color=purple]Stasis[/color][/texttooltip]
+  = [texttooltip=Ghostly Projection:Move without colliding for 15 seconds.
 At the end, teleport back to where you were
 upon initial cast.
  
 > Aether cost: 7
 > Cooldown: 20 seconds.
-][icon=SMAPI/kcc.sns/assets/spells.png:0,32,16,16][color=purple]Ghostly Projection[/color][/texttooltip]
-
-> [texttooltip=Pocket Chest:Opens a chest in dimensional pocket, bound to you.
-Nobody else can access this chest.
+][icon=SMAPI/kcc.sns/assets/spells.png:0,32,16,16] [color=purple]Ghostly Projection[/color][/texttooltip]
+> Level 8 - Unlocks the spells:
+  = [texttooltip=Banishment:Send an enemy to another realm for 20 seconds.
  
-> Aether cost: 0
-][icon=SMAPI/kcc.sns/assets/spells.png:32,32,16,16][color=purple]Pocket Chest[/color][/texttooltip]
-
-> [texttooltip=Pocket Dimension:Teleports you to a pocket dimension
+> Aether cost: 8
+> Cooldown: 10 seconds.
+][icon=SMAPI/kcc.sns/assets/spells.png:112,0,16,16] [color=purple]Banishment[/color][/texttooltip]
+  = [texttooltip=Icebolt:Launch an icicle to freeze enemies around your cursor in an AOE.
+ 
+> Aether cost: 10
+> Cooldown: 1 seconds.
+][icon=SMAPI/kcc.sns/assets/spells.png:64,16,16,16] [color=purple]Icebolt[/color][/texttooltip]
+> Level 9 - Unlocks the spell:
+  = [texttooltip=Pocket Dimension:Teleports you to a pocket dimension
 which you can use as you like. 
 It acts as a greenhouse.
  
 > Aether cost: 0
-][icon=SMAPI/kcc.sns/assets/spells.png:48,32,16,16][color=purple]Pocket Dimension[/color][/texttooltip]
+][icon=SMAPI/kcc.sns/assets/spells.png:48,32,16,16] [color=purple]Pocket Dimension[/color][/texttooltip]
  
-Learning a new spell requires specific amounts of [link=Mechanics/ElementalEssences]Elemental Essences[/link], viewable from the Magical Grimoire.
- 
-Unlocking Sorcery also gives you access to [link=Mechanics/AlchemyTransmutation]Alchemy and Transmutation[/link].
+> Level 10 - See the [link=Skills/SorcererProfessions]Sorcery Professions[/link] page.
 ",
 
 "guidebook.chapter.TOP.SorcererProfessions": "[center][font=dialogue][offset=0,8]Professions[/font][/center]
@@ -1677,18 +1678,18 @@ Like vanilla skills, the Sorcerer skill provides professions that change the gam
 
 "guidebook.chapter.TOP.ElementalEssences": "[center][font=dialogue][offset=0,8]Elemental Essences[/font][/center]
  
-Upon meeting with Roslin in first event of [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]Chapter 4[/link][/if][else]Chapter 4[/else], the Elemental Essences of[itemtooltip=(O)DN.SnS_EarthEssence][icon=Textures/DN.SnS/SnSObjects:96,128,16,16][color=brown]Earth[/color][/itemtooltip],[itemtooltip=(O)DN.SnS_AirEssence][icon=Textures/DN.SnS/SnSObjects:112,128,16,16][color=cornflowerblue]Air[/color][/itemtooltip],[itemtooltip=(O)DN.SnS_FireEssence][icon=Textures/DN.SnS/SnSObjects:144,128,16,16][color=Red]Fire[/color][/itemtooltip] and[itemtooltip=(O)DN.SnS_WaterEssence][icon=Textures/DN.SnS/SnSObjects:128,128,16,16][color=blue]Water[/color][/itemtooltip] will begin dropping around you.
+Upon meeting with Roslin in first event of [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]Chapter 4[/link][/if][else]Chapter 4[/else], the Elemental Essences of[itemtooltip=(O)DN.SnS_EarthEssence][icon=Textures/DN.SnS/SnSObjects:96,128,16,16] [color=brown]Earth[/color][/itemtooltip],[itemtooltip=(O)DN.SnS_AirEssence][icon=Textures/DN.SnS/SnSObjects:112,128,16,16] [color=cornflowerblue]Air[/color][/itemtooltip],[itemtooltip=(O)DN.SnS_FireEssence][icon=Textures/DN.SnS/SnSObjects:144,128,16,16] [color=Red]Fire[/color][/itemtooltip] and[itemtooltip=(O)DN.SnS_WaterEssence][icon=Textures/DN.SnS/SnSObjects:128,128,16,16] [color=blue]Water[/color][/itemtooltip] will begin dropping around you.
  
 Essences are used in quests, learning spells, alchemical recipes and using the [texttooltip=Teleportation Circle:Allows you to set up warp between two in-game locations.
-Usage documented in the Magical Grimoire after learning.][color=purple]Teleportation Circle[/color][/texttooltip].
+Usage documented in the Magical Grimoire after learning.] [color=purple]Teleportation Circle[/color][/texttooltip].
  
 Collection method:
->[itemtooltip=(O)DN.SnS_EarthEssence][icon=Textures/DN.SnS/SnSObjects:96,128,16,16][color=brown]Earth[/color][/itemtooltip] - Mining
->[itemtooltip=(O)DN.SnS_AirEssence][icon=Textures/DN.SnS/SnSObjects:112,128,16,16][color=cornflowerblue]Air[/color][/itemtooltip] - Defeating flying enemies
->[itemtooltip=(O)DN.SnS_FireEssence][icon=Textures/DN.SnS/SnSObjects:144,128,16,16][color=Red]Fire[/color][/itemtooltip] - Defeating volcano enemies, lava fishing
->[itemtooltip=(O)DN.SnS_WaterEssence][icon=Textures/DN.SnS/SnSObjects:128,128,16,16][color=blue]Water[/color][/itemtooltip] - Fishing, ocean crab pots, panning, S&S fish in ponds
+>[itemtooltip=(O)DN.SnS_EarthEssence][icon=Textures/DN.SnS/SnSObjects:96,128,16,16] [color=brown]Earth[/color][/itemtooltip] - Mining
+>[itemtooltip=(O)DN.SnS_AirEssence][icon=Textures/DN.SnS/SnSObjects:112,128,16,16] [color=cornflowerblue]Air[/color][/itemtooltip] - Defeating flying enemies
+>[itemtooltip=(O)DN.SnS_FireEssence][icon=Textures/DN.SnS/SnSObjects:144,128,16,16] [color=Red]Fire[/color][/itemtooltip] - Defeating volcano enemies, lava fishing
+>[itemtooltip=(O)DN.SnS_WaterEssence][icon=Textures/DN.SnS/SnSObjects:128,128,16,16] [color=blue]Water[/color][/itemtooltip] - Fishing, ocean crab pots, panning, S&S fish in ponds
  
-[itemtooltip=(O)DN.SnS_druidicessence][icon=Textures/DN.SnS/SnSObjects:80,0,16,16][color=Green]Druidic[/color][/itemtooltip],[itemtooltip=(O)768][icon=maps/springobjects:0,512,16,16][color=chocolate]Solar[/color][/itemtooltip] and [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16][color=purple]Void[/color][/itemtooltip] all count as elemental essences.",
+[itemtooltip=(O)DN.SnS_druidicessence][icon=Textures/DN.SnS/SnSObjects:80,0,16,16] [color=Green]Druidic[/color][/itemtooltip],[itemtooltip=(O)768][icon=maps/springobjects:0,512,16,16] [color=chocolate]Solar[/color][/itemtooltip] and [itemtooltip=(O)769][icon=maps/springobjects:16,512,16,16] [color=purple]Void[/color][/itemtooltip] all count as elemental essences.",
 
 "guidebook.chapter.TOP.AlchemyTransmutation": "[center][font=dialogue][offset=0,8]Alchemy & Transmutation[/font][/center]
  
@@ -1697,17 +1698,17 @@ Upon unlocking Sorcery, you will also gain the ability to learn how to make alch
  
 All buff potions apply buffs that last for 11 minutes and 40 seconds.
  
->[itemtooltip=(O)DN.SnS_verdantpotion][icon=Textures/DN.SnS/SnSObjects:80,80,16,16][color=purple]Verdant[/color][/itemtooltip] - +5 Foraging
->[itemtooltip=(O)DN.SnS_scarletpotion][icon=Textures/DN.SnS/SnSObjects:96,80,16,16][color=purple]Scarlet[/color][/itemtooltip] - +5 Attack
->[itemtooltip=(O)DN.SnS_heatherpotion][icon=Textures/DN.SnS/SnSObjects:112,80,16,16][color=purple]Heather[/color][/itemtooltip] - +5 Speed
->[itemtooltip=(O)DN.SnS_zydratepotion][icon=Textures/DN.SnS/SnSObjects:128,80,16,16][color=purple]Zydrate[/color][/itemtooltip] - +3 Speed, Defense, Attack
->[itemtooltip=(O)DN.SnS_pistachiopotion][icon=Textures/DN.SnS/SnSObjects:144,80,16,16][color=purple]Pistachio[/color][/itemtooltip] - +5 Farming
->[itemtooltip=(O)DN.SnS_dahliapotion][icon=Textures/DN.SnS/SnSObjects:0,96,16,16][color=purple]Dahlia[/color][/itemtooltip] - +1 Farming, Fishing, Mining
->[itemtooltip=(O)DN.SnS_slushiepotion][icon=Textures/DN.SnS/SnSObjects:16,96,16,16][color=purple]Slushie[/color][/itemtooltip] - +10 Max Stamina
->[itemtooltip=(O)DN.SnS_matrixpotion][icon=Textures/DN.SnS/SnSObjects:32,96,16,16][color=purple]Matrix[/color][/itemtooltip] - +5 Mining, +3 Magnetism
->[itemtooltip=(O)DN.SnS_mcdougalpotion][icon=Textures/DN.SnS/SnSObjects:48,96,16,16][color=purple]McDougal[/color][/itemtooltip] - +5 Luck
->[itemtooltip=(O)DN.SnS_toirneachpotion][icon=Textures/DN.SnS/SnSObjects:64,96,16,16][color=purple]Toirneach[/color][/itemtooltip] - +4 Mining, +4 Defense
->[itemtooltip=(O)DN.SnS_ReturnPotion][icon=Textures/DN.SnS/SnSObjects:16,144,16,16][color=purple]Potion of Return[/color][/itemtooltip] 
+>[itemtooltip=(O)DN.SnS_verdantpotion][icon=Textures/DN.SnS/SnSObjects:80,80,16,16] [color=purple]Verdant[/color][/itemtooltip] - +5 Foraging
+>[itemtooltip=(O)DN.SnS_scarletpotion][icon=Textures/DN.SnS/SnSObjects:96,80,16,16] [color=purple]Scarlet[/color][/itemtooltip] - +5 Attack
+>[itemtooltip=(O)DN.SnS_heatherpotion][icon=Textures/DN.SnS/SnSObjects:112,80,16,16] [color=purple]Heather[/color][/itemtooltip] - +5 Speed
+>[itemtooltip=(O)DN.SnS_zydratepotion][icon=Textures/DN.SnS/SnSObjects:128,80,16,16] [color=purple]Zydrate[/color][/itemtooltip] - +3 Speed, Defense, Attack
+>[itemtooltip=(O)DN.SnS_pistachiopotion][icon=Textures/DN.SnS/SnSObjects:144,80,16,16] [color=purple]Pistachio[/color][/itemtooltip] - +5 Farming
+>[itemtooltip=(O)DN.SnS_dahliapotion][icon=Textures/DN.SnS/SnSObjects:0,96,16,16] [color=purple]Dahlia[/color][/itemtooltip] - +1 Farming, Fishing, Mining
+>[itemtooltip=(O)DN.SnS_slushiepotion][icon=Textures/DN.SnS/SnSObjects:16,96,16,16] [color=purple]Slushie[/color][/itemtooltip] - +10 Max Stamina
+>[itemtooltip=(O)DN.SnS_matrixpotion][icon=Textures/DN.SnS/SnSObjects:32,96,16,16] [color=purple]Matrix[/color][/itemtooltip] - +5 Mining, +3 Magnetism
+>[itemtooltip=(O)DN.SnS_mcdougalpotion][icon=Textures/DN.SnS/SnSObjects:48,96,16,16] [color=purple]McDougal[/color][/itemtooltip] - +5 Luck
+>[itemtooltip=(O)DN.SnS_toirneachpotion][icon=Textures/DN.SnS/SnSObjects:64,96,16,16] [color=purple]Toirneach[/color][/itemtooltip] - +4 Mining, +4 Defense
+>[itemtooltip=(O)DN.SnS_ReturnPotion][icon=Textures/DN.SnS/SnSObjects:16,144,16,16] [color=purple]Potion of Return[/color][/itemtooltip] 
   = Creates a portal on your farm
      that returns you to the last
      place you drank the potion.
@@ -1871,15 +1872,15 @@ It's advised you prepare yourself with Sword & Sorcery's new mechanics and late-
  
 [font=dialogue]Table Of Contents[/font]
 > The Floors
- = [link=DeepDark/Floors]Deep Dark Floors[/link]
+  = [link=DeepDark/Floors]Deep Dark Floors[/link]
  
 > The Materials
- = [link=DeepDark/Stygium]Stygium[/link]
- = [link=DeepDark/Elysium]Elysium[/link]
+  = [link=DeepDark/Stygium]Stygium[/link]
+  = [link=DeepDark/Elysium]Elysium[/link]
  
 > The Monsters
- = [link=DeepDark/Monsters]Monsters[/link]
- = [link=DeepDark/Duskspire]The Final Boss[/link]
+  = [link=DeepDark/Monsters]Monsters[/link]
+  = [link=DeepDark/Duskspire]The Final Boss[/link]
 ",
 "guidebook.chapter.DeepDark.Monsters": "[center][font=dialogue][offset=0,8]Monsters & Drops[/font][/center]
  
@@ -2016,7 +2017,7 @@ All monsters in the Deep Dark are based on an existing monster. In addition to t
 ",
 "guidebook.chapter.DeepDark.Floors": "[center][font=dialogue][offset=0,8]Floors[/font][/center]
  
-[font=dialogue][color=black]Darkness (Floors 1-9)[/color][/font]
+[font=dialogue] [color=black]Darkness (Floors 1-9)[/color][/font]
     MONSTER SPAWNS
         Common
          > [icon=Textures/DN.SnS/SnSMonsterIcons:16,0,16,16] Stygium Crab
@@ -2107,7 +2108,7 @@ Stygium is a rare and powerful ore that spawns only within the Deep Dark. It is 
 > [itemtooltip=(O)DN.SnS_StygiumBar][icon=Textures/DN.SnS/SnSObjects:144,144,16,16] [color=blue]Stygium Bars[/color][/itemtooltip] - Smelted from Stygium Ore
  
 [font=dialogue]Stygium Gear[/font]
-Stygium Tools are made by upgrading any [color=purple]Iridium[/color] tool with [itemtooltip=(O)DN.SnS_StygiumBar][icon=Textures/DN.SnS/SnSObjects:144,144,16,16][color=blue]Stygium Bars[/color][/itemtooltip] at Clint's. This will improve the tool as expected for the next tier.
+Stygium Tools are made by upgrading any [color=purple]Iridium[/color] tool with [itemtooltip=(O)DN.SnS_StygiumBar][icon=Textures/DN.SnS/SnSObjects:144,144,16,16] [color=blue]Stygium Bars[/color][/itemtooltip] at Clint's. This will improve the tool as expected for the next tier.
  
 Stygium Gear List
 > [itemtooltip=(T)DN.SnS_StygiumPickaxe][icon=Textures/DN.SnS/StygiumTools:80,64,16,16] [color=blue]Stygium Pickaxe[/color][/itemtooltip]
@@ -2125,7 +2126,7 @@ When a Stygium item is worn or held it applies a de-buff, [icon=Textures/DN.SnS/
 
 "guidebook.chapter.DeepDark.Elysium": "[center][font=dialogue][offset=0,8]Elysium[/font][/center]
  
-Stygium tools can be purified by being combined with a [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16][color=blue]Duskspire Heart[/color][/itemtooltip] at Clint's. This removes the [icon=Textures/DN.SnS/SnSObjects:112,192,16,16] [color=purple]Stygium Poisoning[/color] de-buff and improves the tool.
+Stygium tools can be purified by being combined with a [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16] [color=blue]Duskspire Heart[/color][/itemtooltip] at Clint's. This removes the [icon=Textures/DN.SnS/SnSObjects:112,192,16,16] [color=purple]Stygium Poisoning[/color] de-buff and improves the tool.
  
 Elysium Gear List
 > [itemtooltip=(T)DN.SnS_BlessedPickaxe][icon=Textures/DN.SnS/BlessedTools:80,64,16,16] [color=blue]Elysium Pickaxe[/color][/itemtooltip]
@@ -2136,13 +2137,13 @@ Elysium Gear List
 > [itemtooltip=(O)DN.SnS_ElysiumArmor][icon=Textures/DN.SnS/SnSArsenal:16,112,16,16] [color=blue]Elysium Armor[/color][/itemtooltip] (Recipe: Artificer level-up)
  
 Notes: 
-> The [itemtooltip=(W)DN.SnS_StygiumShield][icon=Textures/DN.SnS/SnSObjects:80,192,16,16][color=blue]Stygium Shield[/color][/itemtooltip] cannot be upgraded into an Elysium Shield as the [itemtooltip=(W)DN.SnS_PaladinShield][icon=Textures/DN.SnS/SnSObjects:96,16,16,16][color=blue]Paladin Shield[/color][/itemtooltip] serves that purpose mechanically.
+> The [itemtooltip=(W)DN.SnS_StygiumShield][icon=Textures/DN.SnS/SnSObjects:80,192,16,16] [color=blue]Stygium Shield[/color][/itemtooltip] cannot be upgraded into an Elysium Shield as the [itemtooltip=(W)DN.SnS_PaladinShield][icon=Textures/DN.SnS/SnSObjects:96,16,16,16] [color=blue]Paladin Shield[/color][/itemtooltip] serves that purpose mechanically.
  
 > Improved range for chargable tools is 7x7.",
 "guidebook.chapter.DeepDark.Duskspire": "[center][font=dialogue][offset=0,8]Duskspire Behemoth[/font][/center]
 [offset=200,0][image=Textures/DN.SnS/SnSMonsterIcons:23,66,18,13:4]The Duskspire is the final boss at the end of the Deep Dark mine. When you initially fight the Duskspire, it is a two stage fight. The first state simulates a turn-based JRPG, while the second is an arena fight using the game's typical combat mechanics.
  
-When defeated, the Duskspire drops [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16][color=blue]Duskspire Hearts[/color][/itemtooltip], which are used to purify [Link=DeepDark/Stygium]Stygium Tools[/link]. The Duskspire can then be re-fought in a weaker form to obtain more Duskspire Hearts. This fight resets every Monday.
+When defeated, the Duskspire drops [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16] [color=blue]Duskspire Hearts[/color][/itemtooltip], which are used to purify [Link=DeepDark/Stygium]Stygium Tools[/link]. The Duskspire can then be re-fought in a weaker form to obtain more Duskspire Hearts. This fight resets every Monday.
  
 In phase 2, if you in a relationship with [link=Characters/Mateo]Mateo[/link], [link=Characters/Hector]{{TrueName}}[/link], [link=Characters/Cirrus]Cirrus[/link], [link=https://www.nexusmods.com/stardewvalley/mods/16197]Gunnar[/link] or [link=https://www.nexusmods.com/stardewvalley/mods/10770?tab=description]Sen[/link], they will fight along side you. ",
 
@@ -2152,29 +2153,33 @@ Learn about the different mechanics you'll encounter throughout the story of Swo
  
 [font=dialogue]Table Of Contents[/font]
 > The Adventure Bar
- = [link=Mechanics/AdventureBar]The Adventure Bar[/link]
+  = [link=Mechanics/AdventureBar]The Adventure Bar[/link]
  
 > Equipment Slots & Their Uses
- = [link=Mechanics/EquipmentSlots]Equipment Slots[/link]
- = [link=Mechanics/ShieldsArmor]Armor Points, Armor & Shields[/link]
- = [link=Mechanics/DualWielding]Dual Wielding[/link]
+  = [link=Mechanics/EquipmentSlots]Equipment Slots[/link]
+  = [link=Mechanics/ShieldsArmor]Armor Points, Armor & Shields[/link]
+  = [link=Mechanics/DualWielding]Dual Wielding[/link]
  
 > Weapons and Enhancements
- = [link=Mechanics/Underforge]The Underforge[/link]
- = [link=Mechanics/LLTK]Long Live The King[/link]
- = [link=Mechanics/Keychains]LLTK Keychains[/link]
- = [link=Mechanics/DualWielding]Dual Wielding[/link]
+  = [link=Mechanics/Underforge]The Underforge[/link]
+  = [link=Mechanics/LLTK]Long Live The King[/link]
+  = [link=Mechanics/Keychains]LLTK Keychains[/link]
+  = [link=Mechanics/DualWielding]Dual Wielding[/link]
  
-> Essences & Alchemizing
- = [link=Mechanics/DruidicEssence]Druidic Essences[/link]
- = [link=Mechanics/ElementalEssences]Elemental Essences[/link]
- = [link=Mechanics/AlchemyTransmutation]Alchemy & Transmutation[/link]
+> Essences & Alchemy
+  = [link=Mechanics/DruidicEssence]Druidic Essences[/link]
+  = [link=Mechanics/ElementalEssences]Elemental Essences[/link]
+  = [link=Mechanics/AlchemyTransmutation]Alchemy & Transmutation[/link]
+ 
+> Spells & Magic
+  = [link=Mechanics/RemoteSpells]Remote Spells[/link]
+  = [link=Mechanics/TeleportCircle]Teleport Circle[/link]
  
 > Miscellaneous
- = [link=Mechanics/SpecialOrderBoard]East Scarp Special Order Board[/link]
- = [link=Mechanics/GingerBeer]Ginger Beer Fermentation[/link]
- = [link=Mechanics/Powers]Powers[/link]
- = [link=Mechanics/Shops]Shops[/link]
+  = [link=Mechanics/SpecialOrderBoard]East Scarp Special Order Board[/link]
+  = [link=Mechanics/Powers]Powers[/link]
+  = [link=Mechanics/GingerBeer]Ginger Beer Fermentation[/link]
+  = [link=Mechanics/Shops]Shops[/link]
 ",
 
 "guidebook.chapter.Mechanics.Skills": "[center][font=dialogue][offset=0,8]Introduction[/font][/center]
@@ -2183,19 +2188,19 @@ All of the Sword & Sorcery Skills, their professions and what they provide, all 
  
 [font=dialogue]Table Of Contents[/font]
 > [link=Skills/ArtificerSkill][icon=SMAPI/kcc.sns/assets/rogue/icon.png:0,0,10,10:3] Artificer Skill[/link]
- = [link=Skills/ArtificerProfessions]Professions[/link]
+  = [link=Skills/ArtificerProfessions]Professions[/link]
  
 > [link=Skills/DruidicsSkill][icon=SMAPI/kcc.sns/assets/druidics/druid.png:0,0,16,16] Druidics Skill[/link]
- = [link=Skills/DruidicsProfessions]Professions[/link]
+  = [link=Skills/DruidicsProfessions]Professions[/link]
  
 > [link=Skills/BardicsSkill][icon=SMAPI/kcc.sns/assets/bardics/icon.png:0,0,10,10:3] Bardics Skill[/link]
- = [link=Skills/BardicsProfessions]Professions[/link]
+  = [link=Skills/BardicsProfessions]Professions[/link]
  
 > [link=Skills/SorcererSkill][icon=SMAPI/kcc.sns/assets/witchcraft/icon.png:0,0,10,10:3] Sorcery Skill[/link]
- = [link=Skills/SorcererProfessions]Professions[/link]
+  = [link=Skills/SorcererProfessions]Professions[/link]
  
 > [link=Skills/PaladinSkill][icon=SMAPI/kcc.sns/assets/paladin/icon.png:0,0,10,10:3] Paladin Skill[/link]
- = [link=Skills/PaladinProfessions]Professions[/link]
+  = [link=Skills/PaladinProfessions]Professions[/link]
 ",
 "guidebook.chapter.Mechanics.SMAPIConfigLink.On": "[color=purple][texttooltip=:Opens GMCM for the SMAPI component of S&S.][action=spacechase0.GenericModConfigMenu_OpenModConfig KCC.SnS]SMAPI Config[/action][/texttooltip][/color]",
 "guidebook.chapter.Mechanics.SMAPIConfigLink.Off": "SMAPI Config",
@@ -2252,39 +2257,39 @@ S&S Unique Stock List
 After [link=Characters/Dandelion]Dandelion[/link] returns in [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]Chapter 4[/link][/if][else]Chapter 4[/else], you gain access to the Lion's Mane Armory. Here you can purchase various [link=Mechanics/AlchemyTransmutation]potions[/link] and weapons exclusive to Sword and Sorcery.
  
 S&S Unique Stock List
-> [itemtooltip=(O)DN.SnS_verdantpotion][icon=Textures/DN.SnS/SnSObjects:80,80,16,16][color=blue] Verdant Potion[/color][/itemtooltip]
-> [itemtooltip=(O)DN.SnS_scarletpotion][icon=Textures/DN.SnS/SnSObjects:96,80,16,16][color=blue] Scarlet Potion[/color][/itemtooltip] 
-> [itemtooltip=(O)DN.SnS_heatherpotion][icon=Textures/DN.SnS/SnSObjects:112,80,16,16][color=blue] Heather Potion[/color][/itemtooltip]
-> [itemtooltip=(O)DN.SnS_zydratepotion][icon=Textures/DN.SnS/SnSObjects:128,80,16,16][color=blue] Zydrate Potion[/color][/itemtooltip]
-> [itemtooltip=(O)DN.SnS_pistachiopotion][icon=Textures/DN.SnS/SnSObjects:144,80,16,16][color=blue] Pistachio Potion[/color][/itemtooltip]
-> [itemtooltip=(O)DN.SnS_dahliapotion][icon=Textures/DN.SnS/SnSObjects:0,96,16,16][color=blue] Dahlia Potion[/color][/itemtooltip]
-> [itemtooltip=(O)DN.SnS_slushiepotion][icon=Textures/DN.SnS/SnSObjects:16,96,16,16][color=blue] Slushie Potion[/color][/itemtooltip]
-> [itemtooltip=(O)DN.SnS_matrixpotion][icon=Textures/DN.SnS/SnSObjects:32,96,16,16][color=blue] Matrix Potion[/color][/itemtooltip]
-> [itemtooltip=(O)DN.SnS_mcdougalpotion][icon=Textures/DN.SnS/SnSObjects:48,96,16,16][color=blue] McDougal Potion[/color][/itemtooltip]
-> [itemtooltip=(O)DN.SnS_toirneachpotion][icon=Textures/DN.SnS/SnSObjects:64,96,16,16][color=blue] Toirneach Potion[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_keytoscarp][icon=Textures/DN.SnS/SnSObjects:16,32,16,16][color=blue] Key To the Scarp[/color][/itemtooltip] 
-> [itemtooltip=(W)DN.SnS_savethequeen][icon=Textures/DN.SnS/SnSObjects:48,32,16,16][color=blue] Save the Queen[/color][/itemtooltip] 
-> [itemtooltip=(W)DN.SnS_savetheking][icon=Textures/DN.SnS/SnSObjects:80,32,16,16][color=blue] Save the King[/color][/itemtooltip] 
-> [itemtooltip=(W)DN.SnS_twobecomeone][icon=Textures/DN.SnS/SnSObjects:32,32,16,16][color=blue] Two Become One[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_oathkeeper][icon=Textures/DN.SnS/SnSObjects:64,32,16,16][color=blue] Oath Keeper[/color][/itemtooltip] 
-> [itemtooltip=(W)DN.SnS_waytothedawn][icon=Textures/DN.SnS/SnSObjects:96,32,16,16][color=blue] Way to the Dawn[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_spellbinder][icon=Textures/DN.SnS/SnSObjects:80,96,16,16][color=blue] Spell Binder[/color][/itemtooltip] 
-> [itemtooltip=(W)DN.SnS_threewishes][icon=Textures/DN.SnS/SnSObjects:96,96,16,16][color=blue] Three Wishes[/color][/itemtooltip] 
-> [itemtooltip=(W)DN.SnS_ladyluck][icon=Textures/DN.SnS/SnSObjects:112,96,16,16][color=blue] Lady Luck[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_bondofflame][icon=Textures/DN.SnS/SnSObjects:144,96,16,16][color=blue] Bond of Flame[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_destinysembrace][icon=Textures/DN.SnS/SnSObjects:0,112,16,16][color=blue] Destiny's Embrace[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_sweetmemories][icon=Textures/DN.SnS/SnSObjects:16,112,16,16][color=blue] Sweet Memories[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_guardianbell][icon=Textures/DN.SnS/SnSObjects:48,112,16,16][color=blue] Guardian Bell[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_axewaquestion][icon=Textures/DN.SnS/SnSObjects:32,112,16,16][color=blue] Axe You A Question[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_mallymkun][icon=Textures/DN.SnS/SnSObjects:80,112,16,16][color=blue] Mallymkun[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_absolem][icon=Textures/DN.SnS/SnSObjects:64,112,16,16][color=blue] Absolem[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_mrhandy][icon=Textures/DN.SnS/SnSObjects:128,96,16,16][color=blue] Mr. Handy[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_eldadagordagger][icon=Textures/DN.SnS/SnSObjects:64,48,16,16][color=blue] Eldadagor Dagger[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_glaewndilsword][icon=Textures/DN.SnS/SnSObjects:80,48,16,16][color=blue] Glaewndil Sword[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_thondrondhammer][icon=Textures/DN.SnS/SnSObjects:96,48,16,16][color=blue] Thondrond Hammer[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_StygiumBlade][icon=Textures/DN.SnS/StygiumTools:0,0,16,16][color=blue] Stygium Blade[/color][/itemtooltip]
-> [itemtooltip=(W)DN.SnS_ElysiumBlade][icon=Textures/DN.SnS/BlessedTools:0,0,16,16][color=blue] Elysium Blade[/color][/itemtooltip] (Recipe)
-> [itemtooltip=(O)DN.SnS_mushroomtreeseed][icon=Textures/DN.SnS/SnSObjects:64,176,16,16][color=blue] Tainted Mushroom Tree Seed[/color][/itemtooltip] (Recipe)",
+> [itemtooltip=(O)DN.SnS_verdantpotion][icon=Textures/DN.SnS/SnSObjects:80,80,16,16] [color=blue] Verdant Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_scarletpotion][icon=Textures/DN.SnS/SnSObjects:96,80,16,16] [color=blue] Scarlet Potion[/color][/itemtooltip] 
+> [itemtooltip=(O)DN.SnS_heatherpotion][icon=Textures/DN.SnS/SnSObjects:112,80,16,16] [color=blue] Heather Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_zydratepotion][icon=Textures/DN.SnS/SnSObjects:128,80,16,16] [color=blue] Zydrate Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_pistachiopotion][icon=Textures/DN.SnS/SnSObjects:144,80,16,16] [color=blue] Pistachio Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_dahliapotion][icon=Textures/DN.SnS/SnSObjects:0,96,16,16] [color=blue] Dahlia Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_slushiepotion][icon=Textures/DN.SnS/SnSObjects:16,96,16,16] [color=blue] Slushie Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_matrixpotion][icon=Textures/DN.SnS/SnSObjects:32,96,16,16] [color=blue] Matrix Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_mcdougalpotion][icon=Textures/DN.SnS/SnSObjects:48,96,16,16] [color=blue] McDougal Potion[/color][/itemtooltip]
+> [itemtooltip=(O)DN.SnS_toirneachpotion][icon=Textures/DN.SnS/SnSObjects:64,96,16,16] [color=blue] Toirneach Potion[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_keytoscarp][icon=Textures/DN.SnS/SnSObjects:16,32,16,16] [color=blue] Key To the Scarp[/color][/itemtooltip] 
+> [itemtooltip=(W)DN.SnS_savethequeen][icon=Textures/DN.SnS/SnSObjects:48,32,16,16] [color=blue] Save the Queen[/color][/itemtooltip] 
+> [itemtooltip=(W)DN.SnS_savetheking][icon=Textures/DN.SnS/SnSObjects:80,32,16,16] [color=blue] Save the King[/color][/itemtooltip] 
+> [itemtooltip=(W)DN.SnS_twobecomeone][icon=Textures/DN.SnS/SnSObjects:32,32,16,16] [color=blue] Two Become One[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_oathkeeper][icon=Textures/DN.SnS/SnSObjects:64,32,16,16] [color=blue] Oath Keeper[/color][/itemtooltip] 
+> [itemtooltip=(W)DN.SnS_waytothedawn][icon=Textures/DN.SnS/SnSObjects:96,32,16,16] [color=blue] Way to the Dawn[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_spellbinder][icon=Textures/DN.SnS/SnSObjects:80,96,16,16] [color=blue] Spell Binder[/color][/itemtooltip] 
+> [itemtooltip=(W)DN.SnS_threewishes][icon=Textures/DN.SnS/SnSObjects:96,96,16,16] [color=blue] Three Wishes[/color][/itemtooltip] 
+> [itemtooltip=(W)DN.SnS_ladyluck][icon=Textures/DN.SnS/SnSObjects:112,96,16,16] [color=blue] Lady Luck[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_bondofflame][icon=Textures/DN.SnS/SnSObjects:144,96,16,16] [color=blue] Bond of Flame[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_destinysembrace][icon=Textures/DN.SnS/SnSObjects:0,112,16,16] [color=blue] Destiny's Embrace[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_sweetmemories][icon=Textures/DN.SnS/SnSObjects:16,112,16,16] [color=blue] Sweet Memories[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_guardianbell][icon=Textures/DN.SnS/SnSObjects:48,112,16,16] [color=blue] Guardian Bell[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_axewaquestion][icon=Textures/DN.SnS/SnSObjects:32,112,16,16] [color=blue] Axe You A Question[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_mallymkun][icon=Textures/DN.SnS/SnSObjects:80,112,16,16] [color=blue] Mallymkun[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_absolem][icon=Textures/DN.SnS/SnSObjects:64,112,16,16] [color=blue] Absolem[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_mrhandy][icon=Textures/DN.SnS/SnSObjects:128,96,16,16] [color=blue] Mr. Handy[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_eldadagordagger][icon=Textures/DN.SnS/SnSObjects:64,48,16,16] [color=blue] Eldadagor Dagger[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_glaewndilsword][icon=Textures/DN.SnS/SnSObjects:80,48,16,16] [color=blue] Glaewndil Sword[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_thondrondhammer][icon=Textures/DN.SnS/SnSObjects:96,48,16,16] [color=blue] Thondrond Hammer[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_StygiumBlade][icon=Textures/DN.SnS/StygiumTools:0,0,16,16] [color=blue] Stygium Blade[/color][/itemtooltip]
+> [itemtooltip=(W)DN.SnS_ElysiumBlade][icon=Textures/DN.SnS/BlessedTools:0,0,16,16] [color=blue] Elysium Blade[/color][/itemtooltip] (Recipe)
+> [itemtooltip=(O)DN.SnS_mushroomtreeseed][icon=Textures/DN.SnS/SnSObjects:64,176,16,16] [color=blue] Tainted Mushroom Tree Seed[/color][/itemtooltip] (Recipe)",
 
 "guidebook.chapter.Mechanics.AdventureBar": "[center][font=dialogue][offset=0,8]Adventure Bar[/font][/center]
  
@@ -2295,9 +2300,9 @@ You can change which abilities you have equipped through the [color=Navy]Adventu
 [font=dialogue]Using the Adventure Bar[/font]
 > Use the Adventure Bar abilities using the [color=Navy]CTRL/SHIFT + Row Number[color] keybinds.
 > Access the Adventure Bar Menu by pressing [color=Navy]U[/color]. 
- = When using a controller the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod is highly recommended. 
+  = When using a controller the [link=https://www.nexusmods.com/stardewvalley/mods/25257]Radial Menu[/link] mod is highly recommended. 
 > You can also hide the Adventure Bar by pressing [color=Navy]CTRL + U[/color]. 
- = You cannot use abilities while the Adventure Bar is hidden.
+  = You cannot use abilities while the Adventure Bar is hidden.
  
 All keybinds can be changed through the {{Config}}. Additionally you can also configure the Aether bar's colors.",
 "guidebook.chapter.Mechanics.EquipmentSlots": "
@@ -2306,7 +2311,7 @@ All keybinds can be changed through the {{Config}}. Additionally you can also co
 [offset=0,-20]Sword & Sorcery uses SpaceCore's [color=Navy]Equipment Menu[/color] in order to add two new equipment slots for you to use:
 > The [icon=Textures/DN.SnS/SnSArsenal:0,112,16,16] [color=blue]Armor Slot[/color]
 > The [icon=Textures/DN.SnS/SnSObjects:80,64,16,16] [color=blue]Offhand Slot[/color]
- = Small Note: As of writing, you must not be holding your armor or offhand weapon when you open the menu. This is a limitation of SpaceCore's Equipment Menu.
+  = Small Note: As of writing, you must not be holding your armor or offhand weapon when you open the menu. This is a limitation of SpaceCore's Equipment Menu.
  [offset=0,16]
 [font=dialogue]Armor Slot[/font] [offset=0,-36][image=DN.SnS/ArmorSlot]
 [offset=0,4]You can equip [link=Mechanics/ShieldsArmor]Armor[/link] in the Armor Slot to gain a protective buff through [link=Mechanics/ShieldsArmor]Armor Points[/link].
@@ -2323,35 +2328,35 @@ Armor Points act as an extra buffer that absorbs damage before you lose health f
 After reaching [link=Skills/ArtificerSkill]Artificer[/link] level 1, you can craft armor for the [color=Navy]Armor Slot[/color] on your [link=Mechanics/EquipmentSlots]Equipment Menu[/link]. Armor is the main method for gaining Armor Points.
  
 > All Armor
- = [itemtooltip=(O)DN.SnS_ClothArmor][icon=Textures/DN.SnS/SnSArsenal:32,48,16,16] [color=blue]Cloth Armor[/color][/itemtooltip] +25 Armor Points
- = [itemtooltip=(O)DN.SnS_CopperArmor][icon=Textures/DN.SnS/SnSArsenal:48,48,16,16] [color=blue]Copper Armor[/color][/itemtooltip] +50 Armor Points
- = [itemtooltip=(O)DN.SnS_IronArmor][icon=Textures/DN.SnS/SnSArsenal:64,48,16,16] [color=blue]Iron Armor[/color][/itemtooltip] +75 Armor Points
- = [itemtooltip=(O)DN.SnS_GoldArmor][icon=Textures/DN.SnS/SnSArsenal:80,48,16,16] [color=blue]Gold Armor[/color][/itemtooltip] +100 Armor Points
- = [itemtooltip=(O)DN.SnS_IridiumArmor][icon=Textures/DN.SnS/SnSArsenal:96,48,16,16] [color=blue]Iridium Armor[/color][/itemtooltip] +125 Armor Points
- = [itemtooltip=(O)DN.SnS_RadioactiveArmor][icon=Textures/DN.SnS/SnSArsenal:0,64,16,16] [color=blue]Radioactive Armor[/color][/itemtooltip] +150 Armor Points
- = [itemtooltip=(O)DN.SnS_StygiumArmor][icon=Textures/DN.SnS/SnSArsenal:0,112,16,16] [color=blue]Stygium Armor[/color][/itemtooltip] +175 Armor Points
- = [itemtooltip=(O)DN.SnS_ElysiumArmor][icon=Textures/DN.SnS/SnSArsenal:16,112,16,16] [color=blue]Elysium Armor[/color][/itemtooltip] +200 Armor Points
+  = [itemtooltip=(O)DN.SnS_ClothArmor][icon=Textures/DN.SnS/SnSArsenal:32,48,16,16] [color=blue]Cloth Armor[/color][/itemtooltip] +25 Armor Points
+  = [itemtooltip=(O)DN.SnS_CopperArmor][icon=Textures/DN.SnS/SnSArsenal:48,48,16,16] [color=blue]Copper Armor[/color][/itemtooltip] +50 Armor Points
+  = [itemtooltip=(O)DN.SnS_IronArmor][icon=Textures/DN.SnS/SnSArsenal:64,48,16,16] [color=blue]Iron Armor[/color][/itemtooltip] +75 Armor Points
+  = [itemtooltip=(O)DN.SnS_GoldArmor][icon=Textures/DN.SnS/SnSArsenal:80,48,16,16] [color=blue]Gold Armor[/color][/itemtooltip] +100 Armor Points
+  = [itemtooltip=(O)DN.SnS_IridiumArmor][icon=Textures/DN.SnS/SnSArsenal:96,48,16,16] [color=blue]Iridium Armor[/color][/itemtooltip] +125 Armor Points
+  = [itemtooltip=(O)DN.SnS_RadioactiveArmor][icon=Textures/DN.SnS/SnSArsenal:0,64,16,16] [color=blue]Radioactive Armor[/color][/itemtooltip] +150 Armor Points
+  = [itemtooltip=(O)DN.SnS_StygiumArmor][icon=Textures/DN.SnS/SnSArsenal:0,112,16,16] [color=blue]Stygium Armor[/color][/itemtooltip] +175 Armor Points
+  = [itemtooltip=(O)DN.SnS_ElysiumArmor][icon=Textures/DN.SnS/SnSArsenal:16,112,16,16] [color=blue]Elysium Armor[/color][/itemtooltip] +200 Armor Points
  
 [font=dialogue]Shields[/font]
 Shields are a new type of weapon available to the player. They can be used as a melee weapon to directly hit enemies, or be thrown using right click (or the Controller equivalent) to hit an enemy and deal damage on impact. They additionally provide Armor Points to absorb damage and can be equipped in the [color=Navy]Shield Slot[/color] in your [link=Mechanics/EquipmentSlots]Equipment Menu[/link].
  
 > Normal Shields (Always available to craft.)
- = [itemtooltip=(W)DN.SnS_WoodenShield][icon=Textures/DN.SnS/SnSObjects:128,192,16,16] [color=blue]Wooden Shield[/color][/itemtooltip] +2 Armor Points
- = [itemtooltip=(W)DN.SnS_CopperShield][icon=Textures/DN.SnS/SnSObjects:16,192,16,16] [color=blue]Copper Shield[/color][/itemtooltip] +5 Armor Points
- = [itemtooltip=(W)DN.SnS_IronShield][icon=Textures/DN.SnS/SnSObjects:112,160,16,16] [color=blue]Iron Shield[/color][/itemtooltip] +10 Armor Points
- = [itemtooltip=(W)DN.SnS_GoldShield][icon=Textures/DN.SnS/SnSObjects:32,192,16,16] [color=blue]Gold Shield[/color][/itemtooltip] +15 Armor Points
- = [itemtooltip=(W)DN.SnS_IridiumShield][icon=Textures/DN.SnS/SnSObjects:48,192,16,16] [color=blue]Iridium Shield[/color][/itemtooltip] +20 Armor Points
- = [itemtooltip=(W)DN.SnS_RadioactiveShield][icon=Textures/DN.SnS/SnSObjects:64,192,16,16] [color=blue]Radioactive Shield[/color][/itemtooltip] +25 Armor Points
- = [itemtooltip=(W)DN.SnS_StygiumShield][icon=Textures/DN.SnS/SnSObjects:80,192,16,16] [color=blue]Stygium Shield[/color][/itemtooltip] +30 Armor Points
+  = [itemtooltip=(W)DN.SnS_WoodenShield][icon=Textures/DN.SnS/SnSObjects:128,192,16,16] [color=blue]Wooden Shield[/color][/itemtooltip] +2 Armor Points
+  = [itemtooltip=(W)DN.SnS_CopperShield][icon=Textures/DN.SnS/SnSObjects:16,192,16,16] [color=blue]Copper Shield[/color][/itemtooltip] +5 Armor Points
+  = [itemtooltip=(W)DN.SnS_IronShield][icon=Textures/DN.SnS/SnSObjects:112,160,16,16] [color=blue]Iron Shield[/color][/itemtooltip] +10 Armor Points
+  = [itemtooltip=(W)DN.SnS_GoldShield][icon=Textures/DN.SnS/SnSObjects:32,192,16,16] [color=blue]Gold Shield[/color][/itemtooltip] +15 Armor Points
+  = [itemtooltip=(W)DN.SnS_IridiumShield][icon=Textures/DN.SnS/SnSObjects:48,192,16,16] [color=blue]Iridium Shield[/color][/itemtooltip] +20 Armor Points
+  = [itemtooltip=(W)DN.SnS_RadioactiveShield][icon=Textures/DN.SnS/SnSObjects:64,192,16,16] [color=blue]Radioactive Shield[/color][/itemtooltip] +25 Armor Points
+  = [itemtooltip=(W)DN.SnS_StygiumShield][icon=Textures/DN.SnS/SnSObjects:80,192,16,16] [color=blue]Stygium Shield[/color][/itemtooltip] +30 Armor Points
  
  > Skill Shields (Available after the [link=DeepDark/Duskspire]Final Boss[/link] fight and the [link=Skills/PaladinSkill]Paladin Skill[/link].)
- = [itemtooltip=(W)DN.SnS_PaladinShield][icon=Textures/DN.SnS/SnSObjects:96,16,16,16] [color=blue]Paladin Shield[/color][/itemtooltip] +35 Armor Points.
- = [itemtooltip=(W)DN.SnS_ArtificerShield][icon=Textures/DN.SnS/SnSObjects:48,160,16,16] [color=blue]Artificer Shield[/color][/itemtooltip] +35 Armor Points.
- = [itemtooltip=(W)DN.SnS_DruidShield][icon=Textures/DN.SnS/SnSObjects:64,160,16,16] [color=blue]Druid Shield[/color][/itemtooltip] +35 Armor Points. 
- = [itemtooltip=(W)DN.SnS_BardShield][icon=Textures/DN.SnS/SnSObjects:80,160,16,16] [color=blue]Bardics Shield[/color][/itemtooltip] +35 Armor Points.
- = [itemtooltip=(W)DN.SnS_SorcererShield][icon=Textures/DN.SnS/SnSObjects:96,160,16,16] [color=blue]Sorcerer Shield[/color][/itemtooltip] +35 Armor Points.
+  = [itemtooltip=(W)DN.SnS_PaladinShield][icon=Textures/DN.SnS/SnSObjects:96,16,16,16] [color=blue]Paladin Shield[/color][/itemtooltip] +35 Armor Points.
+  = [itemtooltip=(W)DN.SnS_ArtificerShield][icon=Textures/DN.SnS/SnSObjects:48,160,16,16] [color=blue]Artificer Shield[/color][/itemtooltip] +35 Armor Points.
+  = [itemtooltip=(W)DN.SnS_DruidShield][icon=Textures/DN.SnS/SnSObjects:64,160,16,16] [color=blue]Druid Shield[/color][/itemtooltip] +35 Armor Points. 
+  = [itemtooltip=(W)DN.SnS_BardShield][icon=Textures/DN.SnS/SnSObjects:80,160,16,16] [color=blue]Bardics Shield[/color][/itemtooltip] +35 Armor Points.
+  = [itemtooltip=(W)DN.SnS_SorcererShield][icon=Textures/DN.SnS/SnSObjects:96,160,16,16] [color=blue]Sorcerer Shield[/color][/itemtooltip] +35 Armor Points.
  
-Note: The crafting recipes for [itemtooltip=(W)DN.SnS_StygiumShield][icon=Textures/DN.SnS/SnSObjects:80,192,16,16][color=blue]Stygium Shield[/color][/itemtooltip] and [itemtooltip=(O)DN.SnS_StygiumArmor][icon=Textures/DN.SnS/SnSArsenal:0,112,16,16][color=blue]Stygium Armor[/color] will change to require radioactive tier ingredients if you've reached the bottom of the [color=green]Dangerous Mines[/color].[/itemtooltip]",
+Note: The crafting recipes for [itemtooltip=(W)DN.SnS_StygiumShield][icon=Textures/DN.SnS/SnSObjects:80,192,16,16] [color=blue]Stygium Shield[/color][/itemtooltip] and [itemtooltip=(O)DN.SnS_StygiumArmor][icon=Textures/DN.SnS/SnSArsenal:0,112,16,16] [color=blue]Stygium Armor[/color] will change to require radioactive tier ingredients if you've reached the bottom of the [color=green]Dangerous Mines[/color].[/itemtooltip]",
 "guidebook.chapter.Mechanics.DualWielding": "[center][font=dialogue][offset=0,8]Dual Wielding[/font][/center]
  
 Sword & Sorcery introduces [color=Navy]Dual Wielding[/color], allowing you to use two weapons at once. You can equip a second weapon for dual wielding through the [link=Mechanics/EquipmentSlots]Equipment Menu[/link].
@@ -2366,19 +2371,19 @@ Sword & Sorcery introduces [color=Navy]Dual Wielding[/color], allowing you to us
 Sword & Sorcery introduces 5 new powers to the game. 2 can be aquired every playthrough, while the other 3 require marrying one of the mod's romance candidates.
  
 [texttooltip=Handmade D20:A gift from Mateo. Once a day, if you pass out with the D20 in your possession, you will revive with half of your max health.][icon=Textures/DN.SnS/SnSObjects:0,80,16,16] [color=blue]Handmade D20[/color][/texttooltip]
- = Gifted by Mateo
+  = Gifted by Mateo
  
 [texttooltip=Magical Grimoire:Bound by hand for you by Solomon. Use it to research new spells.][icon=Textures/DN.SnS/SnSObjects:128,144,16,16] [color=blue]Magical Grimoire[/color][/texttooltip]
- = Gifted by Solomon
+  = Gifted by Solomon
  
 [texttooltip=Stygium-Forged Mermaid's Pendant:Mateo made this for you with love. Adds +2 Magnetic Radius, +10% damage, +3 Defense, and +1 Luck.][icon=Textures/DN.SnS/SnSObjects:112,0,16,16] [color=blue]Stygium-Forged Mermaid's Pendant[/color][/texttooltip]
- = Gifted by Mateo after marriage
+  = Gifted by Mateo after marriage
  
 [texttooltip=Thorned Circlet Fragment:The broken horn off {{TrueName}}'s circlet. Radiates with Druidic power, doubling your Druidic Essence drops.][icon=Textures/DN.SnS/SnSObjects:128,0,16,16] [color=blue]Thorned Circlet Fragment[/color][/texttooltip]
- = Gifted by {{TrueName}} after marriage
+  = Gifted by {{TrueName}} after marriage
  
 [texttooltip=Aetherdrake Scale:An heirloom from Cirrus that's warm to the touch. Gives +25 Aether, +1 Magnetic Radius, +3 Defense and +1 Luck.][icon=Textures/DN.SnS/SnSObjects:32,80,16,16] [color=blue]Aetherdrake Scale[/color][/texttooltip]
- = Gifted by Cirrus after marriage
+  = Gifted by Cirrus after marriage
 ",
 "guidebook.chapter.Mechanics.LLTK": "[center][font=dialogue][offset=0,24]Long Live The King[/font][/center]
  [offset=48,-32][icon=Textures/DN.SnS/SnSObjects:80,64,16,16:4][offset=348,0][icon=Textures/DN.SnS/SnSObjects:0,144,16,16:4]
@@ -2387,23 +2392,23 @@ Sword & Sorcery introduces 5 new powers to the game. 2 can be aquired every play
  
 > Using the [color=blue]LLTK Swap[/color] ability in your [link=Mechanics/AdventureBar]Adventure Bar[/link].
 > [color=blue]Swap on Right Click[/color], which is turned off by default. You can turn it on in the {{config}}.
- = Turning on Swap on Right Click will prevent you from activating the sword form's block ability.
+  = Turning on Swap on Right Click will prevent you from activating the sword form's block ability.
 > [color=blue]Pressing a keybind[/color]. By default there is no keybind, you have to manually set in in the {{config}}.
  
 [font=dialogue]Getting the LLTK[/font]
 Obtaining the LLTK automatically unlocks the recipes for Bullets as well. The requirements for acquiring the LLTK depend on your {{Config}}. There are 3 difficulties:
  
 > [color=ForestGreen]Easy[/color]
- = Requires all [color=Navy]4 Candles[/color] during Grandpa's (Re)Evaluation in year 3+.
+  = Requires all [color=Navy]4 Candles[/color] during Grandpa's (Re)Evaluation in year 3+.
  
 > [color=SaddleBrown]Medium[/color]
- = Requires all [color=Navy]4 Candles[/color] during Grandpa's (Re)Evaluation in year 3+.
- = Acquiring the [color=Navy]Infinity Blade[/color].
+  = Requires all [color=Navy]4 Candles[/color] during Grandpa's (Re)Evaluation in year 3+.
+  = Acquiring the [color=Navy]Infinity Blade[/color].
  
 > [color=Maroon]Hard[/color]
- = Requires all [color=Navy]4 Candles[/color] during Grandpa's (Re)Evaluation in year 3+.
- = Acquiring the [color=Navy]Infinity Blade[/color].
- = At least [color=Navy]50% Perfection[/color].",
+  = Requires all [color=Navy]4 Candles[/color] during Grandpa's (Re)Evaluation in year 3+.
+  = Acquiring the [color=Navy]Infinity Blade[/color].
+  = At least [color=Navy]50% Perfection[/color].",
 
 "guidebook.chapter.Mechanics.Keychains": "[center][font=dialogue][offset=0,8]LLTK Keychains[/font][/center]
  
@@ -2417,9 +2422,9 @@ If [link=https://www.nexusmods.com/stardewvalley/mods/29073]Trinket Tinker[/link
 Each new keychain has a 10% chance of appearing in the mail after seeing the listed NPC's 10h event and obtaining the LLTK.
  
 > Additional TT Keychains:
- = [itemtooltip=(TR)DN.SnS_EmeritusKeychain][icon=Textures/DN.SnS/SnSObjects:0,208,16,16] [color=Blue]Emeritus Keychain[/color][/itemtooltip] - Mateo
- = [itemtooltip=(TR)DN.SnS_HectorWolfKeychain][icon=Textures/DN.SnS/SnSObjects:32,208,16,16] [color=Blue]Wolf {{TrueName}} Keychain[/color][/itemtooltip] - {{TrueName}}
- = [itemtooltip=(TR)DN.SnS_BookKeychain][icon=Textures/DN.SnS/SnSObjects:16,208,16,16] [color=Blue]Book Keychain[/color][/itemtooltip] - Cirrus
+  = [itemtooltip=(TR)DN.SnS_EmeritusKeychain][icon=Textures/DN.SnS/SnSObjects:0,208,16,16] [color=Blue]Emeritus Keychain[/color][/itemtooltip] - Mateo
+  = [itemtooltip=(TR)DN.SnS_HectorWolfKeychain][icon=Textures/DN.SnS/SnSObjects:32,208,16,16] [color=Blue]Wolf {{TrueName}} Keychain[/color][/itemtooltip] - {{TrueName}}
+  = [itemtooltip=(TR)DN.SnS_BookKeychain][icon=Textures/DN.SnS/SnSObjects:16,208,16,16] [color=Blue]Book Keychain[/color][/itemtooltip] - Cirrus
   
  [font=dialogue]Add-On Compatability[/font]
 Other mods can easily add keychains with unique effects to the gunblade as well.
@@ -2432,7 +2437,7 @@ Effect: +2 Def, Regens +3 Health/Stamina every second
  
 Acquisition: Recive Bear Fam finale letter, have the LLTK.][icon=Mods/Sword & Sorcery/BearFamKeychain:0,0,16,16] [color=blue]BF Commemorative Keychain[/texttooltip][/color] - [link=https://www.nexusmods.com/stardewvalley/mods/16197]Bear Fam[/link]",
 
-"guidebook.chapter.Mechanics.GingerBeer": "[center][font=dialogue][offset=0,8]Ginger Beer Fermentation[/font][/center][image=Textures/DN.SnS/SnSMachines:0,0,16,32:3]You can craft [itemtooltip=(BC)DN.SnS_oldfashionedfermenter][color=blue]Old-Fashioned Fermenters[/color][/itemtooltip] after learning how from Cirrus in [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]Chapter 4[/link][/if][else]Chapter 4[/else]. Add ginger and fruit to make flavored Ginger Beer, which can be aged.
+"guidebook.chapter.Mechanics.GingerBeer": "[center][font=dialogue][offset=0,8]Ginger Beer Fermentation[/font][/center][image=Textures/DN.SnS/SnSMachines:0,0,16,32:3]You can craft [itemtooltip=(BC)DN.SnS_oldfashionedfermenter] [color=blue]Old-Fashioned Fermenters[/color][/itemtooltip] after learning how from Cirrus in [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]Chapter 4[/link][/if][else]Chapter 4[/else]. Add ginger and fruit to make flavored Ginger Beer, which can be aged.
  
 Ginger Beer List:
 > [itemtooltip=(O)DN.SnS_orangegingerbeer][icon=Textures/DN.SnS/SnSObjects:96,112,16,16] [color=blue]Orange Flavored Ginger Beer[/color][/itemtooltip]
@@ -2551,5 +2556,36 @@ Meet every character in the mod, from the major ones to the smaller ones. See th
 > [link=Characters/Roslin][icon=Characters/Roslin:0,3,16,16] Roslin, The Sorcerer[/link]
 > [link=Characters/Solomon][icon=Characters/Solomon:0,3,16,16] Solomon, The Patron[/link]
 > [link=Characters/Dandelion][icon=Characters/Dandelion:0,0,16,16] Dandelion, The Paladin[/link]
+",
+
+"guidebook.chapter.Mechanics.TeleportCircle": "[center][font=dialogue][offset=0,8]The Teleport Circle[/font][/center]
+ 
+The Teleport Circle is unlocked upon reaching [link=Skills/SorcererSkill]Sorcery Skill[/link] level 4, allowing you to teleport to a matching Teleport Circle.
+ 
+To use the Teleport Circle place 4 or more tables of any kind in a 5x5 area around it and put an item on each table. Matching Teleport Circles will link, allowing you to teleport between them.
+[offset=0,32][image=Textures/DN.SnS/TeleportationCircle:null:1]
+Using the Teleport Circle consumes [link=Mechanics/ElementalEssences]Elemental Essences[/link], using 4 elemental essences on each use. The essences can either be in your inventory, or in a chest placed within a 5x5 area of the Teleport Circle.
+The [link=Skills/SorcererProfessions]Master Alkahestrist[/link] profession removes the Essence requirement.
+",
+
+"guidebook.chapter.Mechanics.RemoteSpells": "[center][font=dialogue][offset=0,8]Remote Spells[/font][/center]
+ 
+Remote Spells allow you to access certain S&S Menus through a spell instead of physically going to the location you'd normally access them. Remote Spells cost 0 aether to cast.
+ 
+> [icon=SMAPI/kcc.sns/assets/spells.png:16,0,16,16] [color=purple]Remote Handbook[/color]
+  = Opens the S&S player handbook. 
+  = Unlocked by default.
+ 
+> [icon=SMAPI/kcc.sns/assets/witchcraft/stuff.png:0,0,16,16] [color=purple]Remote Alchemy[/color]
+  = Opens the Alchemy & Transmutation Menu.
+  = Unlocked with the [link=Skills/SorcererSkill]Sorcery Skill[/link].
+ 
+> [icon=Textures/DN.SnS/SnSObjects:16,32,16,16] [color=purple]Remote Underforge[/color]
+  = Opens the Underforge Menu.
+  = Unlocked with the [link=Mechanics/Underforge]Underforge[/link]
+ 
+> [icon=Textures/DN.SnS/SnSObjects:96,16,16,16] [color=purple]Remote Shield Sigil[/color]
+  = Opens the Shield Sigil Menu.
+  = Unlocked with the [link=Skills/PaladinSkill]Paladin Skill[/link]
 "
 }

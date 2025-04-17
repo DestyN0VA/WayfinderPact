@@ -255,16 +255,24 @@
                   "Contents": "{{i18n: guidebook.chapter.TOP.AlchemyTransmutation}}"
                 },
                 {
+                  "Id": "RemoteSpells",
+                  "Contents": "{{i18n: guidebook.chapter.Mechanics.RemoteSpells}}"
+                },
+                {
+                  "Id": "TeleportCircle",
+                  "Contents": "{{i18n: guidebook.chapter.Mechanics.TeleportCircle}}"
+                },
+                {
                   "Id": "SpecialOrderBoard",
                   "Contents": "{{i18n: guidebook.chapter.Mechanics.SpecialOrderBoard|BookTextures={{i18n: guidebook.chapter.Mechanics.Shops.BookTextures.{{BookTextures}}}}}}"
                 },
                 {
-                  "Id": "GingerBeer",
-                  "Contents": "{{i18n: guidebook.chapter.Mechanics.GingerBeer}}"
-                },
-                {
                   "Id": "Powers",
                   "Contents": "{{i18n: guidebook.chapter.Mechanics.Powers|TrueName={{TrueName}}}}"
+                },
+                {
+                  "Id": "GingerBeer",
+                  "Contents": "{{i18n: guidebook.chapter.Mechanics.GingerBeer}}"
                 },
                 {
                   "Id": "Shops",

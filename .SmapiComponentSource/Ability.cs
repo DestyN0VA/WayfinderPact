@@ -15,6 +15,7 @@ namespace SwordAndSorcerySMAPI
         public string TexturePath { get; set; }
         public int SpriteIndex { get; set; }
         public string KnownCondition { get; set; }
+        public Func<bool>? KnownCondition2 { get; set; } = null;
         public Func<string> UnlockHint { get; set; } = () => "...";
         public bool HiddenIfLocked { get; set; } = false;
         public Func<int> ManaCost { get; set; } = () => 10;
@@ -270,7 +271,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.drawingBanished)
+            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.DrawingBanished)
                 color *= 0.5f;
         }
     }
@@ -279,7 +280,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.drawingBanished)
+            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.DrawingBanished)
                 color *= 0.5f;
         }
     }
@@ -288,7 +289,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.drawingBanished)
+            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.DrawingBanished)
                 color *= 0.5f;
         }
     }
@@ -297,7 +298,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.drawingBanished)
+            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.DrawingBanished)
                 color *= 0.5f;
         }
     }
@@ -306,7 +307,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Prefix(ref Color color)
         {
-            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.drawingBanished)
+            if (FarmerRendererShadowstepAndTransformingPatch.transparent || ModTOP.DrawingBanished)
                 color *= 0.5f;
         }
     }

@@ -6,12 +6,12 @@ namespace SwordAndSorcerySMAPI
 {
     public class DruidicsSkill : SpaceCore.Skills.Skill
     {
-        public static GenericProfession ProfessionShapeshift;
-        public static GenericProfession ProfessionAgriculture;
-        public static GenericProfession ProfessionShapeshiftStag;
-        public static GenericProfession ProfessionShapeshiftWolf;
-        public static GenericProfession ProfessionAgricultureMidgard;
-        public static GenericProfession ProfessionAgricultureYggdrasil;
+        public static GenericProfession ProfessionShapeshift { get; set; }
+        public static GenericProfession ProfessionAgriculture { get; set; }
+        public static GenericProfession ProfessionShapeshiftStag { get; set; }
+        public static GenericProfession ProfessionShapeshiftWolf { get; set; }
+        public static GenericProfession ProfessionAgricultureMidgard { get; set; }
+        public static GenericProfession ProfessionAgricultureYggdrasil { get; set; }
 
         public DruidicsSkill()
             : base("DestyNova.SwordAndSorcery.Druidics")
@@ -166,6 +166,9 @@ namespace SwordAndSorcerySMAPI
                 {
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe(recipes[level][2], false).DisplayName));
                 }
+
+                if (level == 3)
+                    ret.Add(I18n.Research_Spell(I18n.Witchcraft_Spell_RevivePlant_Name()));
             }
 
             return ret;

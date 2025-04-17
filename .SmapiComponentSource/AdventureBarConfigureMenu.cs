@@ -20,7 +20,6 @@ namespace SwordAndSorcerySMAPI
         private readonly AdventureBar bar;
         private readonly StaticContainer container;
 
-        private readonly Image grimoire;
         private readonly Image alchemy;
         public bool RefreshSpells = false;
 
@@ -45,7 +44,7 @@ namespace SwordAndSorcerySMAPI
                 int iy = ip / 6;
 
                 var tex = Game1.content.Load<Texture2D>(abils[i].TexturePath);
-                bool known = GameStateQuery.CheckConditions(abils[i].KnownCondition, new(Game1.currentLocation, Game1.player, null, null, new Random()));
+                bool known = abils[i].KnownCondition2 == null ? GameStateQuery.CheckConditions(abils[i].KnownCondition, new(Game1.currentLocation, Game1.player, null, null, new Random())) : abils[i].KnownCondition2();
                 if (!known && abils[i].HiddenIfLocked)
                     continue;
 
@@ -67,18 +66,9 @@ namespace SwordAndSorcerySMAPI
 
             if (Game1.player.eventsSeen.Contains(ModTOP.WitchcraftUnlock))
             {
-                grimoire = new()
-                {
-                    LocalPosition = new(width + 32, 32),
-                    Texture = ModTOP.Grimoire,
-                    Scale = 4,
-                    Callback = (elem) => SetChildMenu(new ResearchMenu()),
-                };
-                container.AddChild(grimoire);
-
                 alchemy = new()
                 {
-                    LocalPosition = new(width + 32, 96),
+                    LocalPosition = new(width + 32, 32),
                     Texture = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/stone.png"),
                     Scale = 4,
                     Callback = (elem) => SetChildMenu(new FancyAlchemyMenu())
@@ -111,7 +101,7 @@ namespace SwordAndSorcerySMAPI
                 int iy = ip / 6;
 
                 var tex = Game1.content.Load<Texture2D>(abils[i].TexturePath);
-                bool known = GameStateQuery.CheckConditions(abils[i].KnownCondition, new(Game1.currentLocation, Game1.player, null, null, new Random()));
+                bool known = abils[i].KnownCondition2 == null ? GameStateQuery.CheckConditions(abils[i].KnownCondition, new(Game1.currentLocation, Game1.player, null, null, new Random())) : abils[i].KnownCondition2();
                 if (!known && abils[i].HiddenIfLocked)
                     continue;
 
@@ -184,10 +174,6 @@ namespace SwordAndSorcerySMAPI
             }
             if (GetChildMenu() == null)
             {
-                if (grimoire?.Hover ?? false)
-                {
-                    drawHoverText(b, I18n.OpenGrimoire(), Game1.dialogueFont);
-                }
 
                 if (alchemy?.Hover ?? false)
                 {

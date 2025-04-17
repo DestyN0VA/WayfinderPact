@@ -213,7 +213,7 @@ namespace SwordAndSorcerySMAPI
         {
             var ret = new List<CodeInstruction>();
 
-            int emhIndex = ModSnS.sc.GetLocalIndexForMethod(original, "expected_max_health")[0];
+            int emhIndex = ModSnS.SpaceCore.GetLocalIndexForMethod(original, "expected_max_health")[0];
 
             bool inserted = false;
             foreach (var insn in insns)

@@ -20,7 +20,7 @@ public static class DualWieldExtensions
 {
     public static MeleeWeapon GetOffhand(this Farmer farmer)
     {
-        return ModSnS.sc.GetItemInEquipmentSlot(farmer, $"{ModSnS.Instance.ModManifest.UniqueID}_Offhand") as MeleeWeapon ?? null;
+        return ModSnS.SpaceCore.GetItemInEquipmentSlot(farmer, $"{ModSnS.Instance.ModManifest.UniqueID}_Offhand") as MeleeWeapon ?? null;
     }
 }
 
@@ -257,7 +257,7 @@ public static class DualWieldingOffhandParryPatch
 {
     public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, MethodBase original)
     {
-        var local = ModSnS.sc.GetLocalIndexForMethod(original, "playerParryable")[0];
+        var local = ModSnS.SpaceCore.GetLocalIndexForMethod(original, "playerParryable")[0];
         List<CodeInstruction> ret = [];
 
         foreach (var insn in instructions)

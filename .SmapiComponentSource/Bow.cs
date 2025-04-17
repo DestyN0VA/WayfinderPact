@@ -334,9 +334,10 @@ namespace SwordAndSorcerySMAPI
             if (__instance.inventory.getItemAt(x, y) is Trinket trinket && (trinket.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false) && Game1.oldKBState.IsKeyDown(Keys.LeftShift))
                 return false;
 
-            if (ModSnS.Instance.Helper.Reflection.GetMethod(__instance, "checkHeldItem", true).Invoke<bool>([null]) && Game1.oldKBState.IsKeyDown(Keys.LeftShift))
-                if (ModSnS.Instance.Helper.Reflection.GetMethod(__instance, "checkHeldItem", true).Invoke<bool>((Item i) => i is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false))) 
-                    return false;
+            if (Constants.TargetPlatform != GamePlatform.Android)
+                if (ModSnS.Instance.Helper.Reflection.GetMethod(__instance, "checkHeldItem", true).Invoke<bool>([null]) && Game1.oldKBState.IsKeyDown(Keys.LeftShift))
+                    if (ModSnS.Instance.Helper.Reflection.GetMethod(__instance, "checkHeldItem", true).Invoke<bool>((Item i) => i is Trinket t && (t.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false)))
+                        return false;
 
             return true;
         }

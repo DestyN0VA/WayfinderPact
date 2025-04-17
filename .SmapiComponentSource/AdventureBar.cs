@@ -74,7 +74,7 @@ namespace SwordAndSorcerySMAPI
                     b.Draw(tex, pos, Game1.getSquareSourceRectForNonStandardTileSheet(tex, 16, 16, abil.SpriteIndex), col, 0, Vector2.Zero, 4, SpriteEffects.None, 1);
 
                     if (new Rectangle( pos.ToPoint(), new Point( 64, 64 ) ).Contains( Game1.getMouseX(), Game1.getMouseY()) &&
-                          GameStateQuery.CheckConditions(abil.KnownCondition, new(Game1.currentLocation, Game1.player, null, null, new Random())))
+                          (abil.KnownCondition2 == null ? GameStateQuery.CheckConditions(abil.KnownCondition, new(Game1.currentLocation, Game1.player, null, null, new Random())) : abil.KnownCondition2()))
                     {
                         hover = abil;
                     }

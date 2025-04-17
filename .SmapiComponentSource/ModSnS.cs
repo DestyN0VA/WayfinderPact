@@ -75,7 +75,8 @@ namespace SwordAndSorcerySMAPI
         public static void SetHasTakenLoreWeapon(Farmer farmer, NetBool val)
         {
         }
-
+#pragma warning restore IDE0060 // Remove unused parameter
+        
         public static NetBool HasTakenLoreWeapon(Farmer farmer)
         {
             return farmer.GetFarmerExtData().hasTakenLoreWeapon;
@@ -84,10 +85,13 @@ namespace SwordAndSorcerySMAPI
         public readonly NetBool inShadows = new(false);
 
         public readonly NetArray<string, NetString> adventureBar = new(8 * 2);
+
+#pragma warning disable IDE0060 // Remove unused parameter
         public static void SetAdventureBar(Farmer farmer, NetArray<string, NetString> val)
         {
         }
-
+#pragma warning restore IDE0060 // Remove unused parameter
+        
         public static NetArray<string, NetString> GetAdventureBar(Farmer farmer)
         {
             return farmer.GetFarmerExtData().adventureBar;
@@ -95,10 +99,13 @@ namespace SwordAndSorcerySMAPI
 
         public readonly NetInt mana = [];
         public readonly NetInt maxMana = [];
+
+#pragma warning disable IDE0060 // Remove unused parameter
         public static void SetMaxMana(Farmer farmer, NetInt val)
         {
         }
-
+#pragma warning restore IDE0060 // Remove unused parameter
+        
         public static NetInt GetMaxMana(Farmer farmer)
         {
             return farmer.GetFarmerExtData().maxMana;
@@ -109,11 +116,13 @@ namespace SwordAndSorcerySMAPI
         {
             return farmer.GetFarmerExtData().expRemainderRogue;
         }
+
+#pragma warning disable IDE0060 // Remove unused parameter
         public static void ExpRemainderRogueSetter(Farmer farmer, NetFloat val)
-#pragma warning restore IDE0060 // Remove unused parameter
         {
         }
-
+#pragma warning restore IDE0060 // Remove unused parameter
+        
         public Dictionary<string, int> Cooldowns = [];
         public readonly NetInt armorUsed = new(0);
         public readonly NetInt mirrorImages = new(0);
@@ -150,7 +159,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static FarmerExtData GetFarmerExtData(this Farmer instance)
         {
-            return ModSnS.farmerData.GetOrCreateValue(instance);
+            return ModSnS.FarmerData.GetOrCreateValue(instance);
         }
 
         public static bool IsArmorItem(this Item item)
@@ -294,23 +303,23 @@ namespace SwordAndSorcerySMAPI
 
         public static ModSnS Instance { get => instance; set => instance = value; }
 
-        public static Texture2D ShieldItemTexture;
-        public static Texture2D SwordOverlay;
+        public static Texture2D ShieldItemTexture { get; set; }
+        public static Texture2D SwordOverlay { get; set; }
 
-        public static ConditionalWeakTable<Farmer, FarmerExtData> farmerData = [];
+        public static ConditionalWeakTable<Farmer, FarmerExtData> FarmerData { get; set; } = [];
 
-        public static RogueSkill RogueSkill;
+        public static RogueSkill RogueSkill { get; set; }
 
         public const string ShadowstepEventReq = "SnS.Ch1.Mateo.18";
 
-        public static ISpaceCoreApi sc;
-        public static IRadialMenuApi radial;
-        public static IStarControlApi starControl;
-        public static IIconicFrameworkApi iconic;
+        public static ISpaceCoreApi SpaceCore { get; set; }
+        public static IRadialMenuApi Radial { get; set; }
+        public static IStarControlApi StarControl { get; set; }
+        public static IIconicFrameworkApi Iconic { get; set; }
 
-        public static int AetherRestoreTimer = 0;
+        public static int AetherRestoreTimer { get; set; } = 0;
 
-        private Harmony harmony;
+        private Harmony Harmony { get; set; }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
         public static float AetherDamageMultiplier()
@@ -520,8 +529,8 @@ namespace SwordAndSorcerySMAPI
 
             Ability.Abilities.Add("remotealchemy", new Ability("remotealchemy")
             {
-                Name = () => "",
-                Description = () => "",
+                Name = I18n.Ability_Remotealchemy_Name,
+                Description = I18n.Ability_Remotealchmey_Description,
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/witchcraft/stuff.png").Name,
                 SpriteIndex = 0,
                 KnownCondition = "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Dandelion.6",
@@ -535,16 +544,31 @@ namespace SwordAndSorcerySMAPI
 
             Ability.Abilities.Add("remoteunderforge", new Ability("remoteunderforge")
             {
-                Name = () => "",
-                Description = () => "",
-                TexturePath = Helper.ModContent.GetInternalAssetName("assets/witchcraft/stuff.png").Name,
-                SpriteIndex = 0,
-                KnownCondition = "PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Mateo.18",
+                Name = I18n.Ability_Remotearsenal_Name,
+                Description = I18n.Ability_Remotearsenal_Description,
+                TexturePath = "Textures/DN.SnS/SnSObjects",
+                SpriteIndex = 21,
+                KnownCondition2 = () => ModTOP.PaladinSkill.ShouldShowOnSkillsPage,
                 HiddenIfLocked = true,
                 ManaCost = () => 0,
                 Function = () =>
                 {
                     Game1.activeClickableMenu ??= new ArsenalMenu();
+                }
+            });
+
+            Ability.Abilities.Add("remoteshieldsigil", new Ability("remoteshieldsigil")
+            {
+                Name = I18n.Ability_Remotesigil_Name,
+                Description = I18n.Ability_Remotesigil_Description,
+                TexturePath = "Textures/DN.SnS/SnSObjects",
+                SpriteIndex = 16,
+                KnownCondition = $"PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Finale",
+                HiddenIfLocked = true,
+                ManaCost = () => 0,
+                Function = () =>
+                {
+                    Game1.activeClickableMenu ??= new ShieldSigilMenu();
                 }
             });
 
@@ -613,15 +637,15 @@ namespace SwordAndSorcerySMAPI
                 State.DoFinale = true;
             });
 
-            harmony = new Harmony(ModManifest.UniqueID);
+            Harmony = new Harmony(ModManifest.UniqueID);
 
             new ModCoT(Monitor, ModManifest, Helper).Entry();
-            new ModNEA(Monitor, ModManifest, Helper, harmony).Entry();
+            new ModNEA(Monitor, ModManifest, Helper, Harmony).Entry();
             new ModUP(Monitor, ModManifest, Helper).Entry();
             new ModTOP(Monitor, ModManifest, Helper).Entry();
             new MercenaryEngine(Helper).InitMercenary();
             new AlchemyEngine(Helper).InitAlchemy();
-
+            Spells.RegisterSpells(helper);
             InitArsenal();
         }
 
@@ -713,14 +737,14 @@ namespace SwordAndSorcerySMAPI
             foreach (var player in Game1.getAllFarmers())
             {
                 var armorSlot = player.get_armorSlot();
-                if (armorSlot.Value != null && sc.GetItemInEquipmentSlot(player, $"{ModManifest.UniqueID}_Armor") == null)
+                if (armorSlot.Value != null && SpaceCore.GetItemInEquipmentSlot(player, $"{ModManifest.UniqueID}_Armor") == null)
                 {
-                    sc.SetItemInEquipmentSlot(player, $"{ModManifest.UniqueID}_Armor", armorSlot.Value);
+                    SpaceCore.SetItemInEquipmentSlot(player, $"{ModManifest.UniqueID}_Armor", armorSlot.Value);
                     armorSlot.Value = null;
                 }
             }
 
-            if (iconic != null)
+            if (Iconic != null)
             {
                 SetUpIconicIcons();
                 RefreshIconicIcons();
@@ -772,7 +796,7 @@ namespace SwordAndSorcerySMAPI
                 else maxMana += 10;
             }
 
-            if (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff))
+            if (Game1.player.HasCustomProfession(SorcerySkill.ProfessionAetherBuff))
             {
                 maxMana += 75;
             }
@@ -799,12 +823,13 @@ namespace SwordAndSorcerySMAPI
             ext.armorUsed.Value = 0;
             State.HasCraftedFree = false;
 
+            if (Game1.player.GetCustomSkillLevel(ModTOP.SorcerySkill) >= 4 && !Game1.player.knowsRecipe("DN.SnS_TeleportCircle"))
+                Game1.player.craftingRecipes.Add("DN.SnS_TeleportCircle", 1);
+
             if (Game1.player.GetFarmerExtData().hasTakenLoreWeapon.Value)
             {
                 if (!Game1.player.knowsRecipe("DN.SnS_Bullet"))
-                {
                     Game1.player.craftingRecipes.Add("DN.SnS_Bullet", 0);
-                }
                 if (Game1.player.knowsRecipe("DN.SnS_FirestormArrow") && !Game1.player.knowsRecipe("DN.SnS_FirestormBullet"))
                     Game1.player.craftingRecipes.Add("DN.SnS_FirestormBullet", 0);
                 if (Game1.player.knowsRecipe("DN.SnS_IcicleArrow") && !Game1.player.knowsRecipe("DN.SnS_IcicleBullet"))
@@ -817,8 +842,6 @@ namespace SwordAndSorcerySMAPI
                     Game1.player.craftingRecipes.Add("DN.SnS_LightbringerBullet", 0);
             }
         }
-
-        public static bool ForUse = false;
 
         private void Input_ButtonPressed(object sender, ButtonPressedEventArgs e)
         {
@@ -837,9 +860,7 @@ namespace SwordAndSorcerySMAPI
                 Game1.player.GetFarmerExtData().hasTakenLoreWeapon.Value = true;
 
                 if (!Game1.player.knowsRecipe("DN.SnS_Bullet"))
-                {
                     Game1.player.craftingRecipes.Add("DN.SnS_Bullet", 0);
-                }
                 if (Game1.player.knowsRecipe("DN.SnS_FirestormArrow") && !Game1.player.knowsRecipe("DN.SnS_FirestormBullet"))
                     Game1.player.craftingRecipes.Add("DN.SnS_FirestormBullet", 0);
                 if (Game1.player.knowsRecipe("DN.SnS_IcicleArrow") && !Game1.player.knowsRecipe("DN.SnS_IcicleBullet"))
@@ -895,13 +916,12 @@ namespace SwordAndSorcerySMAPI
                         if (binds[islot][i].JustPressed())
                             abilId = ext.adventureBar[i * 8 + islot];
                     }
-                    ForUse = true;
-                    if (abilId != null && Ability.Abilities.TryGetValue(abilId, out var abil) && abil.ManaCost() <= ext.mana.Value && abil.CanUse())
-                    {
-                        ext.mana.Value -= abil.ManaCost();
-                        CastAbility(abil);
-                    }
-                    ForUse = false;
+                }
+
+                if (abilId != null && Ability.Abilities.TryGetValue(abilId, out var abil) && abil.ManaCost() <= ext.mana.Value && abil.CanUse())
+                {
+                    ext.mana.Value -= abil.ManaCost();
+                    CastAbility(abil);
                 }
             }
         }
@@ -1099,38 +1119,38 @@ namespace SwordAndSorcerySMAPI
             }
 
             
-            iconic = Helper.ModRegistry.GetApi<IIconicFrameworkApi>("furyx639.ToolbarIcons");
+            Iconic = Helper.ModRegistry.GetApi<IIconicFrameworkApi>("furyx639.ToolbarIcons");
 
-            radial = Helper.ModRegistry.GetApi<IRadialMenuApi>("focustense.RadialMenu");
-            if (iconic == null)
-                    radial?.RegisterCustomMenuPage(ModManifest, "AdventureBar", new AdventureBarRadialMenuPageFactory());
+            Radial = Helper.ModRegistry.GetApi<IRadialMenuApi>("focustense.RadialMenu");
+            if (Iconic == null)
+                    Radial?.RegisterCustomMenuPage(ModManifest, "AdventureBar", new AdventureBarRadialMenuPageFactory());
 
-            starControl = Helper.ModRegistry.GetApi<IStarControlApi>("focustense.StarControl");
-            starControl?.RegisterCustomMenuPage(ModManifest, "AdventureBar", new AdventureBarStarControlPageFactory());
+            StarControl = Helper.ModRegistry.GetApi<IStarControlApi>("focustense.StarControl");
+            StarControl?.RegisterCustomMenuPage(ModManifest, "AdventureBar", new AdventureBarStarControlPageFactory());
 
             Skills.RegisterSkill(RogueSkill = new RogueSkill());
 
-            sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
-            sc.RegisterSerializerType(typeof(ThrownShield));
-            sc.RegisterCustomProperty(typeof(Farmer), "shieldSlot", typeof(NetRef<Item>), AccessTools.Method(typeof(Farmer_ArmorSlot), nameof(Farmer_ArmorSlot.get_armorSlot)), AccessTools.Method(typeof(Farmer_ArmorSlot), nameof(Farmer_ArmorSlot.set_armorSlot)));
-            sc.RegisterCustomProperty(typeof(Farmer), "takenLoreWeapon", typeof(NetBool), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.HasTakenLoreWeapon)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetHasTakenLoreWeapon)));
-            sc.RegisterCustomProperty(typeof(Farmer), "adventureBar", typeof(NetArray<string, NetString>), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.GetAdventureBar)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetAdventureBar)));
-            sc.RegisterCustomProperty(typeof(Farmer), "maxMana", typeof(NetInt), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.GetMaxMana)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetMaxMana)));
-            sc.RegisterCustomProperty(typeof(Farmer), "expRemainderRogue", typeof(NetFloat), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderRogueGetter)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderRogueSetter)));
+            SpaceCore = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
+            SpaceCore.RegisterSerializerType(typeof(ThrownShield));
+            SpaceCore.RegisterCustomProperty(typeof(Farmer), "shieldSlot", typeof(NetRef<Item>), AccessTools.Method(typeof(Farmer_ArmorSlot), nameof(Farmer_ArmorSlot.get_armorSlot)), AccessTools.Method(typeof(Farmer_ArmorSlot), nameof(Farmer_ArmorSlot.set_armorSlot)));
+            SpaceCore.RegisterCustomProperty(typeof(Farmer), "takenLoreWeapon", typeof(NetBool), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.HasTakenLoreWeapon)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetHasTakenLoreWeapon)));
+            SpaceCore.RegisterCustomProperty(typeof(Farmer), "adventureBar", typeof(NetArray<string, NetString>), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.GetAdventureBar)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetAdventureBar)));
+            SpaceCore.RegisterCustomProperty(typeof(Farmer), "maxMana", typeof(NetInt), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.GetMaxMana)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.SetMaxMana)));
+            SpaceCore.RegisterCustomProperty(typeof(Farmer), "expRemainderRogue", typeof(NetFloat), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderRogueGetter)), AccessTools.Method(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderRogueSetter)));
 
-            sc.RegisterEquipmentSlot(ModManifest,
+            SpaceCore.RegisterEquipmentSlot(ModManifest,
                 $"{ModManifest.UniqueID}_Armor",
                 item => item == null || (item.IsArmorItem() && (item is not MeleeWeapon w || !w.IsShieldItem())),
                 I18n.UiSlot_Armor,
                 Game1.content.Load<Texture2D>("DN.SnS/ArmorSlot"));
 
-            sc.RegisterEquipmentSlot(ModManifest,
+            SpaceCore.RegisterEquipmentSlot(ModManifest,
                 $"{ModManifest.UniqueID}_Offhand",
                 item => item == null || (item is MeleeWeapon mw && !mw.isScythe()),
                 I18n.UiSlot_Offhand,
                 Game1.content.Load<Texture2D>("DN.SnS/OffhandSlot"));
 
-            sc.RegisterSpawnableMonster("Skull", (pos, data) =>
+            SpaceCore.RegisterSpawnableMonster("Skull", (pos, data) =>
             {
                 Bat Skull = new(pos);
                 Skull.reloadSprite();
@@ -1142,7 +1162,7 @@ namespace SwordAndSorcerySMAPI
                 return Skull;
             });
 
-            sc.RegisterSpawnableMonster("MagmaSprite", (pos, data) =>
+            SpaceCore.RegisterSpawnableMonster("MagmaSprite", (pos, data) =>
             {
                 Bat MagmaSprite = new(pos);
                 MagmaSprite.reloadSprite();
@@ -1263,7 +1283,7 @@ namespace SwordAndSorcerySMAPI
                         possibleBooks.Add("druidbook");
                     if (ModUP.Skill.ShouldShowOnSkillsPage)
                         possibleBooks.Add("bardbook");
-                    if (ModTOP.Skill.ShouldShowOnSkillsPage)
+                    if (ModTOP.SorcerySkill.ShouldShowOnSkillsPage)
                         possibleBooks.Add("sorcerybook");
                     if (ModTOP.PaladinSkill.ShouldShowOnSkillsPage)
                         possibleBooks.Add("paladinbook");
@@ -1275,12 +1295,12 @@ namespace SwordAndSorcerySMAPI
             }
 
             // This late because of accessing SpaceCore's local variable API
-            harmony.PatchAll(Assembly.GetExecutingAssembly());
+            Harmony.PatchAll(Assembly.GetExecutingAssembly());
 
             // This is like, don't, don't do this normally kids, like please don't. Don't harmony patch other mods. It's fragile, and stupid, but this was the easy way out and I like me some shortcuts.
             if (Helper.ModRegistry.IsLoaded("leclair.bettercrafting"))
             {
-                harmony.Patch(
+                Harmony.Patch(
                     AccessTools.TypeByName("Leclair.Stardew.Common.CraftingHelper").GetMethod("ConsumeIngredients"),
                     prefix: new HarmonyMethod(typeof(CraftingRecipeFlashOfGeniusPatch), nameof(CraftingRecipeFlashOfGeniusPatch.Prefix))
                     );
@@ -1289,14 +1309,14 @@ namespace SwordAndSorcerySMAPI
 
         public static void SetUpIconicIcons()
         {
-            iconic.AddToolbarIcon("AdventureBarConfigMenu", "Textures/DN.SnS/SnSObjects", new(32, 160, 16, 16), I18n.AdventureBarConfigMenu_Name, I18n.AdventureBarConfigMenu_Description, onClick: () =>
+            Iconic.AddToolbarIcon("AdventureBarConfigMenu", "Textures/DN.SnS/SnSObjects", new(32, 160, 16, 16), I18n.AdventureBarConfigMenu_Name, I18n.AdventureBarConfigMenu_Description, onClick: () =>
             {
                 if (!Game1.player.hasOrWillReceiveMail("SnS_AdventureBar"))
                     return;
 
                 Game1.activeClickableMenu ??= new AdventureBarConfigureMenu();
             });
-            iconic.AddToolbarIcon("HideAdventureBar", "Textures/DN.SnS/SnSObjects", new(32, 160, 16, 16), I18n.AdventureBarHide_Name, I18n.AdventureBarHide_Description, onClick: () =>
+            Iconic.AddToolbarIcon("HideAdventureBar", "Textures/DN.SnS/SnSObjects", new(32, 160, 16, 16), I18n.AdventureBarHide_Name, I18n.AdventureBarHide_Description, onClick: () =>
             {
                 if (!Game1.player.hasOrWillReceiveMail("SnS_AdventureBar"))
                     return;
@@ -1308,7 +1328,7 @@ namespace SwordAndSorcerySMAPI
                 for (int j = 0; j < 8; j++)
                 {
                     int AbilNum = 8 * i + j;
-                    iconic.AddToolbarIcon($"DN.SnS_Ability_{AbilNum}", "Textures/DN.SnS/SnSObjects", new(32, 160, 16, 16), I18n.Iconic_UseAbility_Name, () => I18n.Iconic_UseAbility_Description(j + 1, i + 1), onClick: () =>
+                    Iconic.AddToolbarIcon($"DN.SnS_Ability_{AbilNum}", "Textures/DN.SnS/SnSObjects", new(32, 160, 16, 16), I18n.Iconic_UseAbility_Name, () => I18n.Iconic_UseAbility_Description(j + 1, i + 1), onClick: () =>
                     {
                         if (!Game1.player.hasOrWillReceiveMail("SnS_AdventureBar"))
                             return;
@@ -1324,7 +1344,7 @@ namespace SwordAndSorcerySMAPI
 
         public static void RefreshIconicIcons()
         {
-            if (iconic == null) return;
+            if (Iconic == null) return;
 
             var ext = Game1.player.GetFarmerExtData();
             for (int i = 0; i < 2; i++)
@@ -1332,9 +1352,9 @@ namespace SwordAndSorcerySMAPI
                 {
                     int AbilNum = 8 * i + j;
                     if (ext.adventureBar[AbilNum] != null && Ability.Abilities.TryGetValue(ext.adventureBar[AbilNum] ?? "", out var abil))
-                        iconic.AddToolbarIcon($"DN.SnS_Ability_{AbilNum}", abil.TexturePath, Game1.getSourceRectForStandardTileSheet(Game1.content.Load<Texture2D>(abil.TexturePath), abil.SpriteIndex, 16, 16), abil.Name, abil.Description);
+                        Iconic.AddToolbarIcon($"DN.SnS_Ability_{AbilNum}", abil.TexturePath, Game1.getSourceRectForStandardTileSheet(Game1.content.Load<Texture2D>(abil.TexturePath), abil.SpriteIndex, 16, 16), abil.Name, abil.Description);
                     else
-                        iconic.AddToolbarIcon($"DN.SnS_Ability_{AbilNum}", "Textures/DN.SnS/SnSObjects", new(32, 160, 16, 16), I18n.Iconic_UseAbility_Name, () => I18n.Iconic_UseAbility_Description(j + 1, i + 1));
+                        Iconic.AddToolbarIcon($"DN.SnS_Ability_{AbilNum}", "Textures/DN.SnS/SnSObjects", new(32, 160, 16, 16), I18n.Iconic_UseAbility_Name, () => I18n.Iconic_UseAbility_Description(j + 1, i + 1));
                 }
         }
 
@@ -1342,11 +1362,17 @@ namespace SwordAndSorcerySMAPI
         {
             if (!Context.IsWorldReady)
                 return;
-            
+
             if (!Game1.player.mailReceived.Contains("DN.SnS_IntermissionShield") && Game1.player.eventsSeen.Any(m => m.StartsWith("SnS.Ch4.Victory")))
             {
                 Game1.player.addItemByMenuIfNecessary(ItemRegistry.Create("(W)DN.SnS_PaladinShield", 1, 0, false));
                 Game1.addMail("DN.SnS_IntermissionShield", true, false);
+            }
+
+            if (Game1.currentLocation.Name == "EastScarp_DuskspireBehemoth" && Game1.getOnlineFarmers().Any(f => f != Game1.player && f.GetFarmerExtData().DoingFinale.Value))
+            {
+                Game1.warpFarmer("EastScarp_DeepDarkEntrance", 17, 7, 2);
+                Game1.addHUDMessage(new(I18n.DuskspireTeleportOut()));
             }
 
             if (State.DoFinale || State.FinaleBoss != null)
@@ -1506,35 +1532,35 @@ namespace SwordAndSorcerySMAPI
                 Game1.onScreenMenus.Add(new AdventureBar(editing: false));
             }
 
-            sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
+            SpaceCore = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
 
             if (Game1.player.eventsSeen.Contains("SnS.Ch1.Mateo.18") && !Game1.player.hasOrWillReceiveMail("GaveArtificerLvl1"))
             {
-                sc.AddExperienceForCustomSkill(Game1.player, RogueSkill.Id, 100);
+                SpaceCore.AddExperienceForCustomSkill(Game1.player, RogueSkill.Id, 100);
                 Game1.addMail("GaveArtificerLvl1", true);
             }
 
             if (Game1.player.eventsSeen.Contains("SnS.Ch2.Hector.16") && !Game1.player.hasOrWillReceiveMail("GaveDruidicsLvl1"))
             {
-                sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Druidics", 100);
+                SpaceCore.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Druidics", 100);
                 Game1.addMail("GaveDruidicsLvl1", true);
             }
 
             if (Game1.player.eventsSeen.Contains("SnS.Ch3.Cirrus.14") && !Game1.player.hasOrWillReceiveMail("GaveBardicsLvl1"))
             {
-                sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Bardics", 100);
+                SpaceCore.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Bardics", 100);
                 Game1.addMail("GaveBardicsLvl1", true);
             }
 
             if (Game1.player.eventsSeen.Contains(ModTOP.WitchcraftUnlock) && !Game1.player.hasOrWillReceiveMail("GaveWitchCraftLvl1"))
             {
-                sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Witchcraft", 100);
+                SpaceCore.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Witchcraft", 100);
                 Game1.addMail("GaveWitchCraftLvl1", true);
             }
 
             if (ModTOP.PaladinSkill.ShouldShowOnSkillsPage && !Game1.player.hasOrWillReceiveMail("GavePaladinLvl1"))
             {
-                sc.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Paladin", 100);
+                SpaceCore.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Paladin", 100);
                 Game1.addMail("GavePaladinLvl1", true);
             }
 
@@ -1722,7 +1748,7 @@ namespace SwordAndSorcerySMAPI
                 return false;
             }
 
-            if (__instance.HasCustomProfession(WitchcraftSkill.ProfessionAetherBuff) && __instance.CanBeDamaged() && __instance.GetFarmerExtData().maxMana.Value > __instance.GetFarmerExtData().mana.Value)
+            if (__instance.HasCustomProfession(SorcerySkill.ProfessionAetherBuff) && __instance.CanBeDamaged() && __instance.GetFarmerExtData().maxMana.Value > __instance.GetFarmerExtData().mana.Value)
                 __instance.GetFarmerExtData().mana.Value += (int)MathF.Min(Game1.random.Next(5,10), __instance.GetFarmerExtData().maxMana.Value - __instance.GetFarmerExtData().mana.Value);
 
             int ArmorAmount = __instance.GetArmorItem().GetArmorAmount() ?? -1;

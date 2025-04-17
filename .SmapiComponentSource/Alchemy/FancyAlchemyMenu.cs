@@ -145,9 +145,9 @@ namespace SwordAndSorcerySMAPI.Alchemy
 
             Transmutations.Scrollbar.LocalPosition = new Vector2(-Transmutations.Width + 24, 0);
 
-            if (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionEssenceDrops))
+            if (Game1.player.HasCustomProfession(SorcerySkill.ProfessionEssenceDrops))
                 TransmutationCost = 2;
-            if (Game1.player.HasCustomProfession(WitchcraftSkill.ProfessionPhilosopherStone))
+            if (Game1.player.HasCustomProfession(SorcerySkill.ProfessionPhilosopherStone))
                 TransmutationCost = 1;
         }
 

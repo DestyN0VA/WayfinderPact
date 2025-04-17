@@ -6,6 +6,7 @@ using Netcode;
 using NeverEndingAdventure.Utils;
 using StardewValley;
 using StardewValley.Companions;
+using StardewValley.Extensions;
 using StardewValley.GameData;
 using StardewValley.Monsters;
 using StardewValley.Projectiles;
@@ -85,7 +86,6 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
         if (farmer.currentLocation == location)
         {
             Vector2 vel = Utility.getVelocityTowardPlayer(GetBoundingBox().Center, Speed, farmer);
-            //Log.Debug("vel: " + vel);
             Rectangle bb = GetBoundingBox();
             bb.X += (int)vel.X;
             bb.Y += (int)vel.Y;
@@ -139,7 +139,6 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
                 noMovementTime.Value = stunTime.Value;
             }
 
-            //Log.Debug("nmt:" + noMovementTime.Value);
             if (noMovementTime.Value <= 0)
             {
                 var farmer = findPlayer();
@@ -147,7 +146,7 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
                 {
                     float dist = Vector2.Distance(farmer.getStandingPosition(), getStandingPosition());
 
-                    if (dist <= Sprite.SpriteWidth / 2 - 75)
+                    if (dist <= Sprite.SpriteWidth * Game1.pixelZoom / 2 - 75)
                     {
                         swingEvent.Fire(farmer.Position.X > Position.X);
                         Sprite.animateOnce(time);
@@ -278,7 +277,6 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
 
     private void SwingEvent_onEvent(bool arg)
     {
-        Log.Warn("Doing swing event");
         List<FarmerSprite.AnimationFrame> frames = [];
         for (int i = 0; i < 10; i++)
         {
@@ -289,7 +287,6 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
         foreach (Farmer f in Game1.getAllFarmers().Where(f => f.currentLocation == currentLocation))
             if (f.GetBoundingBox().Intersects(Dusktangle) && f.CanBeDamaged())
                 f.takeDamage(DamageToFarmer, false, this);
-        Log.Warn("setting animation");
         Sprite.setCurrentAnimation(frames);
         flippedSwing = arg;
         noMovementTime.Value = frames.Count * 70;
@@ -314,6 +311,16 @@ public class DuskspireMonster(Vector2 pos, string name = "Duskspire Behemoth") :
                 return false;
             }
             return true;
+        }
+    }
+
+    [HarmonyPatch(typeof(Event), nameof(Event.endBehaviors), [typeof(string[]), typeof(GameLocation)])]
+    public static class TeleportOutOfLair
+    {
+        public static void Prefix(Event __instance)
+        {
+            if (__instance.id.ContainsIgnoreCase("SnS.Ch4.Victory."))
+                Game1.warpFarmer("EastScarp_Village", 56, 5, 1);
         }
     }
 }

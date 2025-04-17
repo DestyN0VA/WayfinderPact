@@ -30,8 +30,8 @@
     {
       "LogName": "Loads Witchcraft Teleportation Images",
       "Action": "Load",
-      "Target": "Textures/DN.SnS/TeleportationCircle1, Textures/DN.SnS/TeleportationCircle2, Textures/DN.SnS/TeleportationCircle3, Textures/DN.SnS/TeleportationCircle4",
-      "FromFile": "Assets/WitchcraftResearch/{{TargetWithoutPath}}.png"
+      "Target": "Textures/DN.SnS/TeleportationCircle",
+      "FromFile": "Assets/Guidebook/{{TargetWithoutPath}}.png"
     },
     // Stop Trinkets from Firing in Tori's room
     {

@@ -457,7 +457,7 @@ namespace SwordAndSorcerySMAPI
 
     public class ModUP
     {
-        public static ModUP Instance;
+        public static ModUP Instance { get; set; }
 
         internal const string MultiplayerMessage_MonsterKnockback = "MonsterKnockback";
         internal const string MultiplayerMessage_HorseWarp = "HorseWarp";

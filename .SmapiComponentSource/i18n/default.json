@@ -94,6 +94,7 @@
   "keybind.ability.2.8": "Ability (Bar 2, Slot 8)",
 
   "cannot-warp": "The warp did not work.",
+  "DuskspireTeleportOut": "Someone is about to fight, so you were kicked out.",
   "empty-slot.title": "Empty Ability Slot",
   "empty-slot.description": "This ability slot is empty. Configure it with the adventure bar configure menu.",
 
@@ -103,6 +104,12 @@
 
   "ability.remoteguide.name": "Remote Handbook",
   "ability.remoteguide.description": "Opens the S&S player handbook.\n\nAether cost: 0",
+  "ability.remotearsenal.name": "Remote Underforge",
+  "ability.remotearsenal.description": "Opens the Underforge menu.\n\nAether cost: 0",
+  "ability.remotealchemy.name": "Remote Alchemy",
+  "ability.remotealchmey.description": "Opens the Alchemy menu.\n\nAether cost: 0",
+  "ability.remotesigil.name": "Remote Shield Sigils",
+  "ability.remotesigil.description": "Opens the Shield Sigil menu.\n\nAether cost: 0",
 
   "ability.shapeshift.name.buck": "Shapeshift (Buck)",
   "ability.shapeshift.name.doe": "Shapeshift (Doe)",
@@ -320,7 +327,6 @@
 
   "open-grimoire": "Open the Magical Grimoire",
   "open-alchemy": "Use the Philosopher's Stone (Alchemy)",
-  "open-transmuation": "Open the Transmutation Menu",
   "transmutation.cost": "Transmutation Cost: {{Cost}} > 1",
 
   "research.crafting-recipe": "Recipe: {{name}}",
@@ -350,6 +356,7 @@
   "teleport-circle.error.unknown": "Invalid teleport circle setup.",
   "teleport-circle.error.no-match": "No matching teleport circle found.",
   "teleport-circle.error.missing-essence": "3 essences not found in nearby chest.",
+  "teleport-circle.name": "Teleport Circle",
 
   "fake-npc.deepdark.mateo-mine": "I'm worried, but we've made it this far. Nothing can stop us as long as we stick together.$80",
   "fake-npc.deepdark.hector-mine": "I feel sick...$19",
