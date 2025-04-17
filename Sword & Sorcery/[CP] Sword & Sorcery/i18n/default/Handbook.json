@@ -478,8 +478,8 @@ Attach monster loot for new effects:
    > 999 [itemtooltip=(O)766][icon=Maps/springobjects:352,496,16,16] [color=blue]Slime[/color][/itemtooltip] - [texttooltip=Slimy:Slows down enemies upon hit. Works once per enemy.] [color=purple]Slimy[/color][/texttooltip]
    > 300 [itemtooltip=(O)769][icon=Maps/springobjects:16,512,16,16] [color=blue]Void Essence[/color][/itemtooltip] - [texttooltip=Shadow Duplicates:Basic attacks affect all four cardinal directions. (Attacks in the other directions are invisible.)] [color=purple]Shadow Duplicates[/color][/texttooltip]
    > 300 [itemtooltip=(O)768][icon=Maps/springobjects:0,512,16,16] [color=blue]Solar Essence[/color][/itemtooltip] - [texttooltip=Explosive Demise:Upon killing a mob, they blow up. No damage to farmer.] [color=purple]Explosive Demise[/color][/texttooltip]
-   > 300 [itemtooltip=(O)684][icon=Maps/springobjects:192,448,16,16] [color=blue]Bug Meat[/color][/itemtooltip] - [texttooltip=Greedy:Mob drops are rolled twice.] [color=purple]Greedy[/color][/texttooltip]
-   > 500 [itemtooltip=(O)767][icon=Maps/springobjects:368,496,16,16] [color=blue]Bat Wing[/color][/itemtooltip] - [texttooltip=Floating:You can attack across stones and other objects.] [color=purple]Floating[/color][/texttooltip]",
+   > 500 [itemtooltip=(O)684][icon=Maps/springobjects:192,448,16,16] [color=blue]Bug Meat[/color][/itemtooltip] - [texttooltip=Greedy:Mob drops are rolled twice.] [color=purple]Greedy[/color][/texttooltip]
+   > 300 [itemtooltip=(O)767][icon=Maps/springobjects:368,496,16,16] [color=blue]Bat Wing[/color][/itemtooltip] - [texttooltip=Floating:You can attack across stones and other objects.] [color=purple]Floating[/color][/texttooltip]",
 
 "guidebook.chapter.NEA.ArtificerSkill": "[center][font=dialogue][offset=0,8]Artificer[/font][/center]
 [offset=200,0][image=SMAPI/kcc.sns/assets/rogue/icon.png:0,0,10,10:5]One of the Sword & Sorcery skills, unlocked during the [link=Mechanics/Underforge]Underforge[/link] Mateo event. Artificer can be leveled up killing monsters and mining.
