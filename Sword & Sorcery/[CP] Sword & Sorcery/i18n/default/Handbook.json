@@ -747,7 +747,7 @@ A mysterious grimoire with a hidden catalogue of power, including shapeshifting 
 [/else]
 [/if]
  
-[if=PLAYER_HAS_MAIL Current Hector_SpecialOrders_River1]
+[if=PLAYER_HAS_MAIL Current Hector_SpecialOrders_River1, PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.11]
 [font=dialogue]{{TrueName}} Event: 7 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.12]Complete![/if]
 [else]

@@ -63,7 +63,10 @@
                 "ProcTimer": 25000,
                 "ProcOneshotAnim": "Perching",
                 "ProcTAS": [ "{{ModId}}_HectorStaminaRestore" ],
-                "ProcSound": "healSound",
+                "ProcSound": {
+                  "CueName": "healSound",
+                  "Pitch": [ 0 ]
+                },
                 "Args": { "Min": 0.15, "Max": 0.15 }
               },
               {

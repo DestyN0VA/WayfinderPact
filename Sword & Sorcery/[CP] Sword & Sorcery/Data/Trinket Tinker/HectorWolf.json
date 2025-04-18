@@ -115,13 +115,19 @@
                 "AbilityClass": "HarvestCrop",
                 "Proc": "Timer",
                 "ProcTimer": 300,
-                "ProcSound": "harvest",
+                "ProcSound": {
+                  "CueName": "harvest",
+                  "Pitch": [ 0 ]
+                },
                 "Args": { "Range": 1 }
               },
               {
                 "AbilityClass": "ItemDrop",
                 "Proc": "Sync",
-                "ProcSound": "pickUpItem",
+                "ProcSound": {
+                  "CueName": "pickUpItem",
+                  "Pitch": [ 0 ]
+                },
                 "Condition": "SYNCED_RANDOM tick HectorEssenceDrops .1",
                 "Args": {
                   "ID": "HectorEssenceDrops",
@@ -132,7 +138,10 @@
                 "AbilityClass": "Stamina",
                 "Proc": "Timer",
                 "ProcTimer": 30000,
-                "ProcSound": "dogs",
+                "ProcSound": {
+                  "CueName": "dogs",
+                  "Pitch": [ 0 ]
+                },
                 "ProcOneshotAnim": "Howl",
                 "ProcTAS": [ "{{ModId}}_HectorStaminaRestore" ],
                 "Args": { "Min": 0.15 , "Max": 0.15 }
@@ -152,7 +161,10 @@
                 "AbilityClass": "HarvestForage",
                 "Proc": "Timer",
                 "ProcTimer": 250,
-                "ProcSound": "harvest",
+                "ProcSound": {
+                  "CueName": "harvest",
+                  "Pitch": [ 0 ]
+                },
                 "Args": { "Range": 2 }
               }
             ]

@@ -117,7 +117,10 @@
                 "ProcTimer": 2500,
                 "AbilityClass": "Projectile",
                 "ProcOneshotAnim": "Fireball",
-                "ProcSound": "fireball",
+                "ProcSound": {
+                  "CueName": "fireball",
+                  "Pitch": [ 0 ]
+                },
                 "Args": {
                   "StunTime": 150,
                   "StunTAS": "{{ModId}}_FireBall",
@@ -140,7 +143,10 @@
                 "ProcTimer": 15000,
                 "AbilityClass": "Projectile",
                 "ProcOneshotAnim": "Fireball",
-                "ProcSound": "fireball",
+                "ProcSound": {
+                  "CueName": "fireball",
+                  "Pitch": [ 0 ]
+                },
                 "Args": {
                   "StunTime": 500,
                   "StunTAS": "{{ModId}}_FireBallBig",
@@ -161,7 +167,10 @@
               {
                 "AbilityClass": "ItemDrop",
                 "Proc": "Footstep",
-                "ProcSound": "pickUpItem",
+                "ProcSound": {
+                  "CueName": "pickUpItem",
+                  "Pitch": [ 0 ]
+                },
                 "Condition": "SYNCED_RANDOM tick EmeritusDropsMine .02, LOCATION_IS_MINES Here",
                 "Args": {
                   "ID": "MineDrops",
@@ -172,7 +181,10 @@
               {
                 "AbilityClass": "ItemDrop",
                 "Proc": "Footstep",
-                "ProcSound": "pickUpItem",
+                "ProcSound": {
+                  "CueName": "pickUpItem",
+                  "Pitch": [ 0 ]
+                },
                 "Condition": "SYNCED_RANDOM tick EmeritusDropsSkull .01, LOCATION_IS_SKULL_CAVE Here",
                 "Args": {
                   "ID": "SkullDrops",
@@ -182,7 +194,10 @@
               {
                 "AbilityClass": "ItemDrop",
                 "Proc": "Footstep",
-                "ProcSound": "pickUpItem",
+                "ProcSound": {
+                  "CueName": "pickUpItem",
+                  "Pitch": [ 0 ]
+                },
                 "Condition": "SYNCED_RANDOM tick EmeritusDropsDark .02, LOCATION_CONTEXT Here SnSDeepDarkDark",
                 "Args": {
                   "ID": "DDDarkDrops",
@@ -192,7 +207,10 @@
               {
                 "AbilityClass": "ItemDrop",
                 "Proc": "Footstep",
-                "ProcSound": "pickUpItem",
+                "ProcSound": {
+                  "CueName": "pickUpItem",
+                  "Pitch": [ 0 ]
+                },
                 "Condition": "SYNCED_RANDOM tick EmeritusDropsMush .02, LOCATION_CONTEXT Here SnSDeepDarkMushrooms",
                 "Args": {
                   "ID": "DDMushDrops",
@@ -202,7 +220,10 @@
               {
                 "AbilityClass": "ItemDrop",
                 "Proc": "Footstep",
-                "ProcSound": "pickUpItem",
+                "ProcSound": {
+                  "CueName": "pickUpItem",
+                  "Pitch": [ 0 ]
+                },
                 "Condition": "SYNCED_RANDOM tick EmeritusDropsLakes .02, LOCATION_CONTEXT Here SnSDeepDarkLakes",
                 "Args": {
                   "ID": "DDLakesDrops",
@@ -224,7 +245,10 @@
                 "AbilityClass": "HarvestForage",
                 "Proc": "Timer",
                 "ProcTimer": 250,
-                "ProcSound": "harvest",
+                "ProcSound": {
+                  "CueName": "harvest",
+                  "Pitch": [ 0 ]
+                },
                 "Args": { "Range": 2 }
               }
             ]

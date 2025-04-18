@@ -134,7 +134,10 @@
               {
                 "AbilityClass": "ItemDrop",
                 "Proc": "Footstep",
-                "ProcSound": "pickUpItem",
+                "ProcSound": {
+                  "CueName": "pickUpItem",
+                  "Pitch": [ 0 ]
+                },
                 "Condition": "SYNCED_RANDOM tick StilesBoomerang .0004",
                 "Args": {
                   "ID": "StilesBoomerang",
@@ -146,7 +149,10 @@
                 "ProcTimer": 2000,
                 "AbilityClass": "Projectile",
                 "ProcOneshotAnim": "AbilityProc2",
-                "ProcSound": "slingshot",
+                "ProcSound": {
+                  "CueName": "slingshot",
+                  "Pitch": [ 0 ]
+                },
                 "Args": {
                   "StunTime": 150,
                   "Range": 1500,
@@ -166,7 +172,10 @@
               {
                 "AbilityClass": "Action",
                 "Proc": "Footstep",
-                "ProcSound": "owl",
+                "ProcSound": {
+                  "CueName": "owl",
+                  "Pitch": [ 0 ]
+                },
                 "ProcOneshotAnim": "AbilityProc",
                 "ProcSpeechBubble": "OwlBoyTalks",
                 "Condition": "SYNCED_RANDOM tick OwlBoyTalk1 .01",
@@ -176,14 +185,20 @@
                 "AbilityClass": "HarvestForage",
                 "Proc": "Timer",
                 "ProcTimer": 250,
-                "ProcSound": "harvest",
+                "ProcSound": {
+                  "CueName": "harvest",
+                  "Pitch": [ 0 ]
+                },
                 "Args": { "Range": 2 }
               },
               {
                 "AbilityClass": "Buff",
                 "Proc": "Timer",
                 "ProcTimer": 19000,
-                "ProcSound": "owl",
+                "ProcSound": {
+                  "CueName": "owl",
+                  "Pitch": [ 0 ]
+                },
                 "ProcOneshotAnim": "AbilityProc",
                 "Args": { "BuffId": "{{ModId}}_OwlBoyBuff" }
               },
