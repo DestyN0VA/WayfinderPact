@@ -10,7 +10,7 @@
   "UniqueID": "KCC.SnS",
   "Name": "Sword and Sorcery (SMAPI Component)",
   "Author": "EnderTedi, 7thAxis, KittyCatCasey",
-  "Version": "2.3.0",
+  "Version": "2.3.1",
   "Description": "C# code for Sword and Sorcery",
   "EntryDll": "SwordAndSorcerySMAPI.dll",
   "Dependencies": [
