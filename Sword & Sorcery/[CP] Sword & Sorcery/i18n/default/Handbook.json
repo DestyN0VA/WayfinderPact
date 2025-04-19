@@ -458,7 +458,11 @@ Attach 25 pure ore to improve damage:
    > [itemtooltip=(O)DN.SnS_PureIridiumOre][icon=Textures/DN.SnS/SnSArsenal:0,48,16,16] [color=blue]Pure Iridium Ore[/color][/itemtooltip] - +20% damage
    > [itemtooltip=(O)DN.SnS_PureRadioactiveOre][icon=Textures/DN.SnS/SnSArsenal:16,48,16,16] [color=blue]Pure Radioactive Ore[/color][/itemtooltip] - +25% damage
  
-Note: Pure Ores can be smelted in a furnace to recieve 3-5 pieces of their non-pure form.
+Note: Pure Ores can be smelted into their non-pure ore form:
+ 
+> [color=blue]Furnace[/color]: 3-5 pieces per 1 ore
+> [color=blue]Heavy Furnace[/color]: 75-130 pieces per 25 ore
+
  
 [font=dialogue]Exquisite Gem Socket[/font]
 Attach an exquisite gem for new effects:

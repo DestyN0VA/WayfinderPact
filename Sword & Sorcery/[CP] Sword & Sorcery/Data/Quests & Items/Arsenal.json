@@ -828,6 +828,100 @@
             "MinutesUntilReady": 560
           }
       }
-  }
+  },
+  //Heavy Furnace
+  {
+    "LogName": "Pure Ore Heavy Furnace",
+    "Action": "EditData",
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)HeavyFurnace", "OutputRules" ],
+    "Entries": {
+        "{{ModID}}_PureCopperOre": {
+          "Triggers": [
+            {
+              "RequiredItemId": "(O){{ModID}}_PureCopperOre",
+              "RequiredCount": 25
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "DN.SnS.PureCopper.HeavyFurnace",
+              "ItemId": "(O)378",
+              "MinStack": 75,
+              "MaxStack": 130
+            }
+          ],
+          "MinutesUntilReady": 30
+        },
+        "{{ModID}}_PureIronOre": {
+          "Triggers": [
+            {
+              "RequiredItemId": "(O){{ModID}}_PureIronOre",
+              "RequiredCount": 25
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "DN.SnS.PureIron.HeavyFurnace",
+              "ItemId": "(O)380",
+              "MinStack": 75,
+              "MaxStack": 130
+            }
+          ],
+          "MinutesUntilReady": 120
+        },
+        "{{ModID}}_PureGoldOre": {
+          "Triggers": [
+            {
+              "RequiredItemId": "(O){{ModID}}_PureGoldOre",
+              "RequiredCount": 25
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "DN.SnS.PureGold.HeavyFurnace",
+              "ItemId": "(O)384",
+              "MinStack": 75,
+              "MaxStack": 130
+            }
+          ],
+          "MinutesUntilReady": 300
+        },
+        "{{ModID}}_PureIridiumOre": {
+          "Triggers": [
+            {
+              "RequiredItemId": "(O){{ModID}}_PureIridiumOre",
+              "RequiredCount": 25
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "DN.SnS.PureIridium.HeavyFurnace",
+              "ItemId": "(O)386",
+              "MinStack": 75,
+              "MaxStack": 130
+            }
+          ],
+          "MinutesUntilReady": 480
+        },
+        "{{ModID}}_PureRadioactiveOre": {
+          "Triggers": [
+            {
+              "RequiredItemId": "(O){{ModID}}_PureRadioactiveOre",
+              "RequiredCount": 25
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "DN.SnS.PureRadioactive.HeavyFurnace",
+              "ItemId": "(O)909",
+              "MinStack": 75,
+              "MaxStack": 130
+            }
+          ],
+          "MinutesUntilReady": 560
+        }
+      }
+    }
   ]
 }
