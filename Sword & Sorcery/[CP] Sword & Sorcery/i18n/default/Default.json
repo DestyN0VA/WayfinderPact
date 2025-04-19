@@ -1759,7 +1759,7 @@ ________      ________ _   _ _______ _____
 
   // NAME & INTRO 
   "Core.Hector.Name": "Hector",
-  "Core.Biróg.Name": "Biróg",
+  "Core.Biróg.Name": "Hector",
   "Core.Hector.Introduction": "You have no idea what I'm capable of, farmer. Nor of what I've got in mind for you.",
 
   // DYNAMIC PRONOUNS 
@@ -3215,7 +3215,7 @@ ________      ________ _   _ _______ _____
 */
 
   // NAME & INTRO 
-  "Core.Cirrus.Name": "Cirrus",
+  "Core.Cirrus.Name": "Coriander",
   "Core.Cirrus.Introduction": "Thanks for the save at the saloon, @. I get pretty overwhelmed by people sometimes, even though I know they mean no harm.",
 
   // COMMUNITY CENTER BUNDLES  
