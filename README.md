@@ -5,3 +5,5 @@ The Aether System and S&S's unique mechanical components are not to be redistrib
 Story content is not to be separated from mechanical content and redistributed/reposted/modified **without permission** per DestyNova. 
 
 Art cannot be redistributed/reposted/modified **without permission** per 7thAxis. 
+
+This project is licensed under the terms of GNU AGPLv3.
