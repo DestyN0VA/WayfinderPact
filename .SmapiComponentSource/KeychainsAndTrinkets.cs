@@ -15,7 +15,7 @@ namespace SwordAndSorcerySMAPI
     public class KeychainsAndTrinkets
     {
 
-        public static void DayStarted(object? sender, DayStartedEventArgs e)
+        public static void DayStarted(object sender, DayStartedEventArgs e)
         {
             while (Game1.player.trinketItems.Count <= Farmer.MaximumTrinkets)
                 Game1.player.trinketItems.Add(null);
@@ -30,7 +30,7 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        public static void DayEnding(object? sender, DayEndingEventArgs e)
+        public static void DayEnding(object sender, DayEndingEventArgs e)
         {
             Game1.player?.trinketItems?.RemoveWhere(t => t?.GetTrinketData()?.CustomFields?.Keys?.Any(k => k.EqualsIgnoreCase("keychain_item")) ?? false);
         }

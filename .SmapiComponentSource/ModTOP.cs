@@ -15,6 +15,7 @@ using StardewValley.Objects;
 using StardewValley.Projectiles;
 using StardewValley.TerrainFeatures;
 using StardewValley.Tools;
+using SwordAndSorcerySMAPI.Menus;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -185,8 +186,6 @@ namespace SwordAndSorcerySMAPI
 
         internal static bool DrawingBanished { get; set; } = false;
 
-        public static Dictionary<string, ResearchEntry> Research { get; private set; }
-
         public IMonitor Monitor;
         public IManifest ModManifest;
         public IModHelper Helper;
@@ -270,12 +269,6 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.Input.ButtonPressed += Input_ButtonPressed;
             Helper.Events.Display.RenderedStep += Display_RenderedStep;
             Helper.Events.Content.AssetRequested += Content_AssetRequested;
-            Helper.Events.Content.AssetsInvalidated += Content_AssetInvalidated;
-
-            Helper.ConsoleCommands.Add("sns_research", "Open the witchcraft research menu", (cmd, args) =>
-            {
-                Game1.activeClickableMenu = new ResearchMenu();
-            });
             Helper.ConsoleCommands.Add("sns_shieldmenu", "Open the shield sigil menu", (cmd, args) =>
             {
                 Game1.activeClickableMenu = new ShieldSigilMenu();
@@ -458,22 +451,11 @@ namespace SwordAndSorcerySMAPI
         {
             Skills.RegisterSkill(SorcerySkill);
             Skills.RegisterSkill(PaladinSkill);
-            Research = Game1.content.Load<Dictionary<string, ResearchEntry>>("KCC.SnS/WitchcraftResearch");
-        }
-
-        private void Content_AssetInvalidated(object sender, StardewModdingAPI.Events.AssetsInvalidatedEventArgs e)
-        {
-            if (e.Names.Any(a => a.IsEquivalentTo("KCC.SnS/WitchcraftResearch")))
-                Research = Game1.content.Load<Dictionary<string, ResearchEntry>>("KCC.SnS/WitchcraftResearch");
         }
 
         private void Content_AssetRequested(object sender, StardewModdingAPI.Events.AssetRequestedEventArgs e)
         {
-            if (e.NameWithoutLocale.IsEquivalentTo("KCC.SnS/WitchcraftResearch"))
-            {
-                e.LoadFrom(() => new Dictionary<string, ResearchEntry>(), StardewModdingAPI.Events.AssetLoadPriority.Low);
-            }
-            else if (e.NameWithoutLocale.IsEquivalentTo("KCC.SnS/MonsterExtensionData"))
+            if (e.NameWithoutLocale.IsEquivalentTo("KCC.SnS/MonsterExtensionData"))
             {
                 e.LoadFrom(() => new Dictionary<string, MonsterExtensionData>()
                 {

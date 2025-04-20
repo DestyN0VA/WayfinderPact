@@ -179,6 +179,6 @@ namespace SwordAndSorcerySMAPI
             return I18n.Druidics_Level_Generic(bonus: level);
         }
 
-        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains("SnS.Ch2.Hector.16");
+        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains("SnS.Ch2.Hector.16") || Game1.player.GetFarmerExtData().StartingDruidics;
     }
 }

@@ -118,7 +118,7 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 13,
                 ManaCost = () => 10,
-                KnownCondition = $"PLAYER_{ModCoT.Skill.Id.ToUpper()}_LEVEL Current 3",
+                KnownCondition = $"PLAYER_{ModCoT.DruidSkill.Id.ToUpper()}_LEVEL Current 3",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {

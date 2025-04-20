@@ -27,6 +27,7 @@ using StardewValley.Tools;
 using StardewValley.Triggers;
 using SwordAndSorcerySMAPI.Alchemy;
 using SwordAndSorcerySMAPI.Integrations;
+using SwordAndSorcerySMAPI.Menus;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -133,6 +134,11 @@ namespace SwordAndSorcerySMAPI
         public readonly NetFloat stasisTimer = new(-1);
 
         public NetBool DoingFinale = new(false);
+        public bool StartingArtificer = false;
+        public bool StartingDruidics = false;
+        public bool StartingBardics = false;
+        public bool StartingSorcery = false;
+        public bool StartingPaladin = false;
     }
 
     [HarmonyPatch(typeof(Farmer), "initNetFields")]
@@ -269,8 +275,6 @@ namespace SwordAndSorcerySMAPI
         public KeybindList ConfigureAdventureBar = new(SButton.U);
         public KeybindList ToggleAdventureBar = new(new Keybind(SButton.LeftControl, SButton.U));
 
-        public bool EarlyPaladinUnlock = false;
-
         public bool LltkToggleRightClick = false;
         public KeybindList LltkToggleKeybind = new(new Keybind(SButton.None));
         public string LltkDifficulty = "Medium";
@@ -338,6 +342,12 @@ namespace SwordAndSorcerySMAPI
             Instance = this;
             I18n.Init(Helper.Translation);
             Config = Helper.ReadConfig<Configuration>();
+
+            helper.ConsoleCommands.Add("sns_checkStartingSkills", "...", (cmd, args) =>
+            {
+                var ext = Game1.player.GetFarmerExtData();
+                Log.Warn($"Artificer: {ext.StartingArtificer}, Druidics: {ext.StartingDruidics}, Bardics: {ext.StartingBardics}, Sorcery: {ext.StartingSorcery}, Paladin: {ext.StartingPaladin}");
+            });
 
             Event.RegisterCommand("sns_rogueunlock", (Event @event, string[] args, EventContext context) =>
             {
@@ -1058,7 +1068,6 @@ namespace SwordAndSorcerySMAPI
                 gmcm.Register(ModManifest, () => Config = new(), () => Helper.WriteConfig(Config));
 
                 gmcm.AddSectionTitle(ModManifest, I18n.Config_Section_Balancing);
-                gmcm.AddBoolOption(ModManifest, () => Config.EarlyPaladinUnlock, (val) => Config.EarlyPaladinUnlock = val, I18n.Config_EarlyPaladinUnlock_Name, I18n.Config_EarlyPaladinUnlock_Description);
                 gmcm.AddNumberOption(ModManifest, () => Config.MonsterHealthBuff, (val) => Config.MonsterHealthBuff = val, I18n.Config_MonsterHealthBuff_Name, I18n.Config_MonsterHealthBuff_Description, 1.0f, 3.0f, 0.05f, f => ((int)((f - 1.0) * 100)).ToString());
 
                 gmcm.AddSectionTitle(ModManifest, I18n.Section_AetherBar_Name, I18n.Section_AetherBar_Description);
@@ -1279,9 +1288,9 @@ namespace SwordAndSorcerySMAPI
                     List<string> possibleBooks = [];
                     if (RogueSkill.ShouldShowOnSkillsPage)
                         possibleBooks.Add("artificerbook");
-                    if (ModCoT.Skill.ShouldShowOnSkillsPage)
+                    if (ModCoT.DruidSkill.ShouldShowOnSkillsPage)
                         possibleBooks.Add("druidbook");
-                    if (ModUP.Skill.ShouldShowOnSkillsPage)
+                    if (ModUP.BardicsSkill.ShouldShowOnSkillsPage)
                         possibleBooks.Add("bardbook");
                     if (ModTOP.SorcerySkill.ShouldShowOnSkillsPage)
                         possibleBooks.Add("sorcerybook");
@@ -1296,6 +1305,9 @@ namespace SwordAndSorcerySMAPI
 
             // This late because of accessing SpaceCore's local variable API
             Harmony.PatchAll(Assembly.GetExecutingAssembly());
+
+            Harmony.Patch(AccessTools.Constructor(typeof(CharacterCustomization), [typeof(CharacterCustomization.Source), typeof(bool)]),
+                postfix: new HarmonyMethod(typeof(SkillSelectMenu.CharacterCustomizationPatch1), nameof(SkillSelectMenu.CharacterCustomizationPatch1.Postfix)));
 
             // This is like, don't, don't do this normally kids, like please don't. Don't harmony patch other mods. It's fragile, and stupid, but this was the easy way out and I like me some shortcuts.
             if (Helper.ModRegistry.IsLoaded("leclair.bettercrafting"))

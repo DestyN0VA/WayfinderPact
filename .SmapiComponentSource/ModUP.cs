@@ -466,7 +466,7 @@ namespace SwordAndSorcerySMAPI
 
         public static List<List<SongEntry>> Songs { get; private set; }
 
-        internal static BardicsSkill Skill;
+        internal static BardicsSkill BardicsSkill;
 
         public IMonitor Monitor;
         public IManifest ModManifest;
@@ -505,7 +505,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.GameLoop.UpdateTicked += GameLoop_UpdateTicked;
             Helper.Events.Multiplayer.ModMessageReceived += Multiplayer_ModMessageReceived;
 
-            Skill = new BardicsSkill();
+            BardicsSkill = new BardicsSkill();
             Songs =
             [
                 [new SongEntry() { Name = I18n.Bardics_Song_Buff_Name, Function = SongEntry.BuffSong }],
@@ -541,7 +541,7 @@ namespace SwordAndSorcerySMAPI
                 CanUse = () => SongEntry.usedBuffToday < ModUP.GetSongLimit(),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.Skill, 50);
+                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 50);
                     SongPreamble(() => SongEntry.BuffSong());
                 }
             });
@@ -557,7 +557,7 @@ namespace SwordAndSorcerySMAPI
                 CanUse = () => SongEntry.usedBattleToday < ModUP.GetSongLimit(),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.Skill, 50);
+                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 50);
                     SongPreamble(() => SongEntry.BattleSong());
                 }
             });
@@ -573,7 +573,7 @@ namespace SwordAndSorcerySMAPI
                 CanUse = () => SongEntry.usedRestorationToday < ModUP.GetSongLimit(),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.Skill, 50);
+                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 50);
                     SongPreamble(() => SongEntry.RestorationSong());
                 }
             });
@@ -588,7 +588,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Bardics_UnlockHint(4),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.Skill, 25);
+                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 25);
                     SongPreamble(() => SongEntry.ProtectionSong());
                 }
             });
@@ -604,7 +604,7 @@ namespace SwordAndSorcerySMAPI
                 HiddenIfLocked = true,
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.Skill, 50);
+                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 50);
                     SongPreamble(() => SongEntry.NpcSong());
                 }
             });
@@ -619,7 +619,7 @@ namespace SwordAndSorcerySMAPI
                 HiddenIfLocked = true,
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.Skill, 25);
+                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 25);
                     SongPreamble(() => SongEntry.AttackSong());
                 }
             });
@@ -635,7 +635,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Bardics_UnlockHint(6),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.Skill, 25);
+                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 25);
                     SongPreamble(() => SongEntry.TimeSong());
                 }
             });
@@ -650,7 +650,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Bardics_UnlockHint(7),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.Skill, 25);
+                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 25);
                     SongPreamble(() => SongEntry.HorseSong());
                 }
             });
@@ -665,7 +665,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Bardics_UnlockHint(8),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.Skill, 25);
+                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 25);
                     SongPreamble(() => SongEntry.CropSong());
                 }
             });
@@ -680,7 +680,7 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Bardics_UnlockHint(9),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.Skill, 25);
+                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 25);
                     SongPreamble(() => SongEntry.ObeliskSong());
                 }
             });
@@ -839,7 +839,7 @@ namespace SwordAndSorcerySMAPI
         private void GameLoop_GameLaunched(object sender, GameLaunchedEventArgs e)
         {
             //var sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
-            Skills.RegisterSkill(Skill);
+            Skills.RegisterSkill(BardicsSkill);
         }
     }
 
@@ -851,7 +851,7 @@ namespace SwordAndSorcerySMAPI
             if (!Game1.player.eventsSeen.Contains(ModUP.BardicsEventId))
                 return;
 
-            Game1.player.AddCustomSkillExperience(ModUP.Skill, amount);
+            Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, amount);
         }
     }
 }

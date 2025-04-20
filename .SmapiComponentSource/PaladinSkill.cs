@@ -122,7 +122,7 @@ namespace SwordAndSorcerySMAPI
         {
             return I18n.Level_Health(5 * level);
         }
-        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Any(e => e.StartsWith("SnS.Ch4.Intermission.")) || ModSnS.Config.EarlyPaladinUnlock;
+        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Any(e => e.StartsWith("SnS.Ch4.Intermission.")) || Game1.player.GetFarmerExtData().StartingPaladin;
     }
 
     [HarmonyPatch(typeof(LevelUpMenu), nameof(LevelUpMenu.RevalidateHealth))]

@@ -6,7 +6,7 @@ using StardewValley;
 using StardewValley.Menus;
 using System.Collections.Generic;
 
-namespace SwordAndSorcerySMAPI;
+namespace SwordAndSorcerySMAPI.Menus;
 
 public class ShieldSigilMenu : IClickableMenu
 {
@@ -15,9 +15,9 @@ public class ShieldSigilMenu : IClickableMenu
     private readonly ItemSlot[] sub = new ItemSlot[4];
 
     private readonly InventoryMenu invMenu;
-    
+
     public ShieldSigilMenu()
-    :   base( Game1.uiViewport.Width / 2 - 200, Game1.uiViewport.Height / 2 - 200 - 100, 400, 400 )
+    : base(Game1.uiViewport.Width / 2 - 200, Game1.uiViewport.Height / 2 - 200 - 100, 400, 400)
     {
         List<string> choices =
         [
@@ -29,23 +29,23 @@ public class ShieldSigilMenu : IClickableMenu
         ];
 
         int[] levelChecks = [0, 2, 4, 6, 8];
-        
+
         invMenu = new(Game1.uiViewport.Width / 2 - 72 * 5 - 36 + 8, yPositionOnScreen + height + 32, true, highlightMethod:
             (item) =>
             {
-                return (item == null || choices.Contains(item.QualifiedItemId));
+                return item == null || choices.Contains(item.QualifiedItemId);
             });
-        
+
         ui = new();
 
         StaticContainer container = new()
         {
-            Size = new( 400, 400 ),
-            LocalPosition = new( xPositionOnScreen, yPositionOnScreen ),
+            Size = new(400, 400),
+            LocalPosition = new(xPositionOnScreen, yPositionOnScreen),
             OutlineColor = Color.White,
         };
         ui.AddChild(container);
-        
+
         main = new()
         {
             BoxColor = Color.White,
@@ -126,8 +126,8 @@ public class ShieldSigilMenu : IClickableMenu
 
     public override void draw(SpriteBatch b)
     {
-        
-        IClickableMenu.drawTextureBox(b, this.invMenu.xPositionOnScreen - IClickableMenu.borderWidth, this.invMenu.yPositionOnScreen - IClickableMenu.borderWidth, this.invMenu.width + IClickableMenu.borderWidth * 2, this.invMenu.height + IClickableMenu.borderWidth * 2, Color.White);
+
+        drawTextureBox(b, invMenu.xPositionOnScreen - borderWidth, invMenu.yPositionOnScreen - borderWidth, invMenu.width + borderWidth * 2, invMenu.height + borderWidth * 2, Color.White);
         ui.Draw(b);
         invMenu.draw(b);
 
@@ -135,7 +135,7 @@ public class ShieldSigilMenu : IClickableMenu
         {
             if (ItemWithBorder.HoveredElement is ItemSlot slot && slot.Item != null)
             {
-                drawToolTip(b, slot.Item.getDescription(), slot.Item.DisplayName, slot.Item );
+                drawToolTip(b, slot.Item.getDescription(), slot.Item.DisplayName, slot.Item);
             }
         }
         else
@@ -154,26 +154,26 @@ public class ShieldSigilMenu : IClickableMenu
     public override void receiveLeftClick(int x, int y, bool playSound = true)
     {
         base.receiveLeftClick(x, y, playSound);
-        Game1.player.CursorSlotItem = this.invMenu.leftClick(x, y, Game1.player.CursorSlotItem, playSound);
+        Game1.player.CursorSlotItem = invMenu.leftClick(x, y, Game1.player.CursorSlotItem, playSound);
     }
 
     public override void receiveRightClick(int x, int y, bool playSound = true)
     {
         base.receiveRightClick(x, y, playSound);
-        Game1.player.CursorSlotItem = this.invMenu.rightClick(x, y, Game1.player.CursorSlotItem, playSound);
+        Game1.player.CursorSlotItem = invMenu.rightClick(x, y, Game1.player.CursorSlotItem, playSound);
     }
 
     protected override void cleanupBeforeExit()
     {
         base.cleanupBeforeExit();
-        if (this.main.Item != null)
-            Game1.player.addItemByMenuIfNecessary(this.main.Item);
+        if (main.Item != null)
+            Game1.player.addItemByMenuIfNecessary(main.Item);
     }
 
     public override void emergencyShutDown()
     {
         base.emergencyShutDown();
-        if (this.main.Item != null)
-            Game1.player.addItemByMenuIfNecessary(this.main.Item);
+        if (main.Item != null)
+            Game1.player.addItemByMenuIfNecessary(main.Item);
     }
 }

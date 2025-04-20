@@ -158,6 +158,6 @@ namespace SwordAndSorcerySMAPI
 
         public override string GetSkillPageHoverText(int level) => I18n.Level_Manacap(level * 10);
 
-        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains(ModTOP.WitchcraftUnlock);
+        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains(ModTOP.WitchcraftUnlock) || Game1.player.GetFarmerExtData().StartingSorcery;
     }
 }

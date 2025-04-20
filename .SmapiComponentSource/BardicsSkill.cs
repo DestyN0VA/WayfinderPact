@@ -21,7 +21,7 @@ namespace SwordAndSorcerySMAPI
             this.Icon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/icon.png");
             this.SkillsPageIcon = ModCoT.Instance.Helper.ModContent.Load<Texture2D>("assets/bardics/icon.png");
 
-            this.ExperienceCurve = new[] { 100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000 };
+            this.ExperienceCurve = [100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000];
 
             this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(85, 33, 145);
 
@@ -85,7 +85,7 @@ namespace SwordAndSorcerySMAPI
         {
             if (level > 10) return []; // Walk of Life
             string[] songMapping =
-            {
+            [
                 I18n.Bardics_Level_Song_Learned() + I18n.Bardics_Song_Buff_Name() + "\n\n" + I18n.Bardics_Song_Buff_Description(),
                 I18n.Bardics_Level_Song_Learned() + I18n.Bardics_Song_Battle_Name() + "\n\n" + I18n.Bardics_Song_Battle_Description(),
                 I18n.Bardics_Level_Song_Learned() + I18n.Bardics_Song_Restoration_Name() + "\n\n" + I18n.Bardics_Song_Restoration_Description(),
@@ -96,9 +96,9 @@ namespace SwordAndSorcerySMAPI
                 I18n.Bardics_Level_Song_Learned() + I18n.Bardics_Song_Crops_Name() + "\n\n" + I18n.Bardics_Song_Crops_Description(),
                 I18n.Bardics_Level_Song_Learned() + I18n.Bardics_Song_Obelisk_Name() + "\n\n" + I18n.Bardics_Song_Obelisk_Description(),
                 "",
-            };
+            ];
 
-            List<string> ret = new List<string>();
+            List<string> ret = [];
             if (level % 5 != 0)
                 ret.Add(I18n.Level_Manacap(10));
 
@@ -111,6 +111,6 @@ namespace SwordAndSorcerySMAPI
         {
             return I18n.Level_Manacap(level * 10);
         }
-        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains("SnS.Ch3.Cirrus.14");
+        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains("SnS.Ch3.Cirrus.14") || Game1.player.GetFarmerExtData().StartingBardics;
     }
 }

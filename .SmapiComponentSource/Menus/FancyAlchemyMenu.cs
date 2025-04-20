@@ -8,12 +8,13 @@ using StardewValley.BellsAndWhistles;
 using StardewValley.Extensions;
 using StardewValley.Menus;
 using StardewValley.Objects;
+using SwordAndSorcerySMAPI.Alchemy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using Object = StardewValley.Object;
 
-namespace SwordAndSorcerySMAPI.Alchemy
+namespace SwordAndSorcerySMAPI.Menus
 {
     public class FancyAlchemyMenu : IClickableMenu
     {
@@ -58,14 +59,14 @@ namespace SwordAndSorcerySMAPI.Alchemy
                     playSound = false;
                     Game1.playSound("spacechase0.MageDelve_alchemy_synthesize");
                 }
-                float actualScale = (this.scale + MathF.Sin(ts * 3) - 3) % 3 + 3;
+                float actualScale = (scale + MathF.Sin(ts * 3) - 3) % 3 + 3;
 
-                Vector2 ppos = new Vector2(this.x, this.y) + this.velocity * delta;
-                this.x = ppos.X;
-                this.y = ppos.Y;
+                Vector2 ppos = new Vector2(x, y) + velocity * delta;
+                x = ppos.X;
+                y = ppos.Y;
                 Vector2 toCenter = center - ppos;
                 float dist = Vector2.Distance(center, ppos);
-                this.velocity = this.velocity * 0.99f + toCenter / dist * velMult;
+                velocity = velocity * 0.99f + toCenter / dist * velMult;
 
                 if ((dist < 24 || float.IsNaN(dist)) && animStart + 1 <= Game1.currentGameTime.TotalGameTime.TotalSeconds && !playSound)
                     endAction(this);
@@ -75,8 +76,8 @@ namespace SwordAndSorcerySMAPI.Alchemy
             {
                 float ts = (float)(Game1.currentGameTime.TotalGameTime.TotalSeconds - animStart);
                 if (ts < 0) ts = 0;
-                float actualScale = (this.scale + MathF.Sin(ts * 3) - 3) % 3 + 3;
-                b.Draw(Game1.staminaRect, new Vector2(this.x, this.y), null, this.color, 0, Vector2.Zero, actualScale, SpriteEffects.None, 1);
+                float actualScale = (scale + MathF.Sin(ts * 3) - 3) % 3 + 3;
+                b.Draw(Game1.staminaRect, new Vector2(x, y), null, color, 0, Vector2.Zero, actualScale, SpriteEffects.None, 1);
             }
         }
         private readonly List<Pixel> pixels = [];
@@ -284,7 +285,7 @@ namespace SwordAndSorcerySMAPI.Alchemy
                         continue;
                     }
                     else
-                    { 
+                    {
                         var chest = Chests.First(c => c.Items.Any(i => i is not null && i.QualifiedItemId == item));
                         var Item = chest.Items.First(i => i is not null && i.QualifiedItemId == item);
 
@@ -324,7 +325,7 @@ namespace SwordAndSorcerySMAPI.Alchemy
 
         private bool AnySpaceToCraftMore(CraftingRecipe fake)
         {
-            if (!ingreds.Any(i => i.Item is not null)) 
+            if (!ingreds.Any(i => i.Item is not null))
                 return true;
 
             if (output.ItemDisplay.Stack + fake.numberProducedPerCraft > output.ItemDisplay.maximumStackSize())
@@ -422,7 +423,7 @@ namespace SwordAndSorcerySMAPI.Alchemy
         {
             if (Game1.player.freeSpotsInInventory() > 0)
                 return true;
-            else if (Game1.player.Items.Any(i => i.canStackWith(item) && i.Stack < (1000 - item.Stack)))
+            else if (Game1.player.Items.Any(i => i.canStackWith(item) && i.Stack < 1000 - item.Stack))
                 return true;
             return false;
         }
@@ -631,7 +632,7 @@ namespace SwordAndSorcerySMAPI.Alchemy
             {
                 if (ItemWithBorder.HoveredElement is ItemSlot slot && slot.Item != null)
                     //Normal Item Tooltips
-                     drawToolTip(b, slot.Item.getDescription(), slot.Item.DisplayName, slot.Item);
+                    drawToolTip(b, slot.Item.getDescription(), slot.Item.DisplayName, slot.Item);
                 else if (ItemWithBorder.HoveredElement.ItemDisplay != null)
                 {
                     if (ItemWithBorder.HoveredElement.UserData != null)

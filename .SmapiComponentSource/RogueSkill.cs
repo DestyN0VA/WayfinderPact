@@ -13,12 +13,12 @@ namespace SwordAndSorcerySMAPI
 
     public class RogueSkill : Skills.Skill
     {
-        public static GenericProfession ProfessionArmorRecovery;
-        public static GenericProfession ProfessionBowSecondShot;
-        public static GenericProfession ProfessionCrafting;
-        public static GenericProfession ProfessionArmorCap;
-        public static GenericProfession ProfessionShadowStep;
-        public static GenericProfession ProfessionHuntersMark;
+        public static GenericProfession ProfessionArmorRecovery { get; set; }
+        public static GenericProfession ProfessionBowSecondShot { get; set; }
+        public static GenericProfession ProfessionCrafting { get; set; }
+        public static GenericProfession ProfessionArmorCap { get; set; }
+        public static GenericProfession ProfessionShadowStep { get; set; }
+        public static GenericProfession ProfessionHuntersMark { get; set; }
 
         public RogueSkill()
             : base("DestyNova.SwordAndSorcery.Rogue")
@@ -203,7 +203,7 @@ namespace SwordAndSorcerySMAPI
         {
             return I18n.Level_Health(3 * level);
         }
-        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains("SnS.Ch1.Mateo.18");
+        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains("SnS.Ch1.Mateo.18") || Game1.player.GetFarmerExtData().StartingArtificer;
     }
 
     [HarmonyPatch(typeof(LevelUpMenu), nameof(LevelUpMenu.RevalidateHealth))]

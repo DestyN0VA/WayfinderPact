@@ -39,7 +39,7 @@ namespace SwordAndSorcerySMAPI
         public const string WalletItemEventID = "SnS.Ch2.Hector.19";
 
 
-        internal static DruidicsSkill Skill;
+        internal static DruidicsSkill DruidSkill;
 
         public IMonitor Monitor;
         public IManifest ModManifest;
@@ -141,7 +141,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.GameLoop.UpdateTicking += GameLoop_UpdateTicking;
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
 
-            Skill = new DruidicsSkill();
+            DruidSkill = new DruidicsSkill();
         }
 
         private void GameLoop_DayStarted(object sender, StardewModdingAPI.Events.DayStartedEventArgs e)
@@ -159,7 +159,7 @@ namespace SwordAndSorcerySMAPI
                     [ "DN.SnS_ancientglowinghuckleberry.seed", "DN.SnS_ancienthuckleberryicecream" ],
                     null,
                 ];
-            for (int level = 1; level <= Game1.player.GetCustomSkillLevel(Skill); ++level)
+            for (int level = 1; level <= Game1.player.GetCustomSkillLevel(DruidSkill); ++level)
             {
                 if (recipes[level] != null)
                 {
@@ -184,7 +184,7 @@ namespace SwordAndSorcerySMAPI
             var sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
             sc.RegisterCustomProperty(typeof(Farmer), "shapeshiftFormId", typeof(bool), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.FormGetter)), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.FormSetter)));
             sc.RegisterCustomProperty(typeof(Farmer), "druidicsExpRemainder", typeof(float), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderGetter)), AccessTools.DeclaredMethod(typeof(FarmerExtData), nameof(FarmerExtData.ExpRemainderSetter)));
-            Skills.RegisterSkill(Skill);
+            Skills.RegisterSkill(DruidSkill);
         }
 
         //private double shapeshiftPressedTimer = 0;
@@ -224,11 +224,11 @@ namespace SwordAndSorcerySMAPI
                         duration: 250,
                         effects: new()
                         {
-                            Speed = { 0.5f + Game1.player.GetCustomBuffedSkillLevel(Skill) * 0.05f },
+                            Speed = { 0.5f + Game1.player.GetCustomBuffedSkillLevel(DruidSkill) * 0.05f },
                             ForagingLevel = { 1 },
                         },
                         displayName: I18n.Shapeshifted(),
-                        iconTexture: Skill.Icon,
+                        iconTexture: DruidSkill.Icon,
                         iconSheetIndex: 0);
                     if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftWolf))
                     {
@@ -245,7 +245,7 @@ namespace SwordAndSorcerySMAPI
                 if (data.IsResting)
                 {
                     regenTimer += Game1.currentGameTime.ElapsedGameTime.Milliseconds * (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionShapeshiftStag) ? 2 : 1);
-                    int timerCap = 200 - Game1.player.GetCustomBuffedSkillLevel(Skill) * 10;
+                    int timerCap = 200 - Game1.player.GetCustomBuffedSkillLevel(DruidSkill) * 10;
                     if (regenTimer >= timerCap)
                     {
                         regenTimer -= timerCap;
@@ -419,7 +419,7 @@ namespace SwordAndSorcerySMAPI
 
             var data = __instance.GetFarmerExtData();
             float exp = data.expRemainder.Value + howMuch / 2f;
-            __instance.AddCustomSkillExperience(ModCoT.Skill, (int)MathF.Truncate(exp));
+            __instance.AddCustomSkillExperience(ModCoT.DruidSkill, (int)MathF.Truncate(exp));
             data.expRemainder.Value = exp - MathF.Truncate(exp);
         }
     }
@@ -499,7 +499,7 @@ namespace SwordAndSorcerySMAPI
                 return;
 
             float mult = 0.1f / 8;
-            mult += Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
+            mult += Game1.player.GetCustomSkillLevel(ModCoT.DruidSkill) * 0.001f;
             if (Game1.player.hasOrWillReceiveMail("BrokenCircletPower"))
                 mult += 0.01f;
             if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
@@ -522,7 +522,7 @@ namespace SwordAndSorcerySMAPI
                 return;
 
             float mult = 0.1f / 4;
-            mult += Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
+            mult += Game1.player.GetCustomSkillLevel(ModCoT.DruidSkill) * 0.001f;
             if (Game1.player.hasOrWillReceiveMail("BrokenCircletPower"))
                 mult += 0.01f;
             if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
@@ -545,7 +545,7 @@ namespace SwordAndSorcerySMAPI
                 return;
 
             float mult = 0.1f / 4;
-            mult += Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
+            mult += Game1.player.GetCustomSkillLevel(ModCoT.DruidSkill) * 0.001f;
             if (Game1.player.hasOrWillReceiveMail("BrokenCircletPower"))
                 mult += 0.01f;
             if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
@@ -568,7 +568,7 @@ namespace SwordAndSorcerySMAPI
                 return;
 
             float mult = 0.1f / 2;
-            mult += Game1.player.GetCustomSkillLevel(ModCoT.Skill) * 0.001f;
+            mult += Game1.player.GetCustomSkillLevel(ModCoT.DruidSkill) * 0.001f;
             if (Game1.player.hasOrWillReceiveMail("BrokenCircletPower"))
                 mult += 0.01f;
             if (Game1.player.HasCustomProfession(DruidicsSkill.ProfessionAgricultureYggdrasil))
