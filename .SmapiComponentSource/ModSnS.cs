@@ -14,6 +14,7 @@ using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
 using StardewValley;
 using StardewValley.BellsAndWhistles;
+using StardewValley.Enchantments;
 using StardewValley.Extensions;
 using StardewValley.GameData.Objects;
 using StardewValley.GameData.Weapons;
@@ -133,6 +134,7 @@ namespace SwordAndSorcerySMAPI
         public readonly NetFloat stasisTimer = new(-1);
 
         public NetBool DoingFinale = new(false);
+        public readonly Dictionary<MeleeWeapon, List<BaseEnchantment>> OrigEnchs = [];
     }
 
     [HarmonyPatch(typeof(Farmer), "initNetFields")]
@@ -270,6 +272,8 @@ namespace SwordAndSorcerySMAPI
         public KeybindList ToggleAdventureBar = new(new Keybind(SButton.LeftControl, SButton.U));
 
         public bool EarlyPaladinUnlock = false;
+        public string ShieldThrowMethod = "both";
+        public KeybindList ShieldThrowKeybind = new(new Keybind(SButton.None));
 
         public bool LltkToggleRightClick = false;
         public KeybindList LltkToggleKeybind = new(new Keybind(SButton.None));
@@ -446,6 +450,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.Content.AssetsInvalidated += Content_AssetsInvalidated;
             Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
             Helper.Events.GameLoop.UpdateTicking += GameLoop_UpdateTicking;
+            Helper.Events.GameLoop.UpdateTicking += DualWieldingEnchants.HandleEnchants;
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
             Helper.Events.GameLoop.DayStarted += KeychainsAndTrinkets.DayStarted;
             Helper.Events.GameLoop.DayEnding += GameLoop_DayEnding;
@@ -924,6 +929,77 @@ namespace SwordAndSorcerySMAPI
                     CastAbility(abil);
                 }
             }
+
+            if (Config.ShieldThrowMethod != "Weapon Special" && State.ThrowCooldown <= 0 && Config.ShieldThrowKeybind.JustPressed())
+            {
+                if (Game1.player.CurrentTool is MeleeWeapon weapon && weapon.IsShieldItem())
+                    ThrowShield(weapon);
+                if (Game1.player.GetOffhand().IsShieldItem())
+                    ThrowShield(Game1.player.GetOffhand());
+            }
+        }
+
+        private static void ThrowShield(MeleeWeapon __instance)
+        {
+            if (!__instance.IsShieldItem() || __instance.lastUser != Game1.player)
+                return;
+
+            Vector2 diff = ModSnS.Instance.Helper.Input.GetCursorPosition().AbsolutePixels - Game1.player.StandingPixel.ToVector2();
+            if (diff.Length() > 0 && diff.Length() > 8 * Game1.tileSize)
+            {
+                diff.Normalize();
+                diff = diff * 8 * Game1.tileSize;
+            }
+            if (diff.Length() < Game1.tileSize || Game1.options.gamepadControls)
+            {
+                Vector2[] facings = [-Vector2.UnitY, Vector2.UnitX, Vector2.UnitY, -Vector2.UnitX];
+                diff = facings[Game1.player.FacingDirection] * Game1.tileSize * 8;
+            }
+            Vector2 target = Game1.player.Position + diff;
+            float damageMult = 0.5f;
+            int bounceCount = 1;
+            if (Game1.player.HasCustomProfession(PaladinSkill.ProfessionShieldThrowHit2))
+            {
+                ++bounceCount;
+            }
+            if (Game1.player.HasCustomProfession(PaladinSkill.ProfessionShieldThrowHit3))
+            {
+                ++bounceCount;
+                damageMult = 1;
+            }
+            State.MyThrown.Add(new ThrownShield(Game1.player, (int)((__instance.minDamage.Value + __instance.maxDamage.Value) / 2 * damageMult), target, 15, __instance.QualifiedItemId, bounceCount));
+            Game1.currentLocation.projectiles.Add(State.MyThrown.Last());
+
+            State.ThrowCooldown = 3500;
+            if (__instance.lastUser?.professions.Contains(Farmer.acrobat) ?? false)
+                State.ThrowCooldown /= 2;
+            if (__instance.hasEnchantmentOfType<ArtfulEnchantment>())
+                State.ThrowCooldown /= 2;
+
+            Game1.player.playNearbySoundLocal("daggerswipe");
+
+            AnimatedSprite.endOfAnimationBehavior endOfAnimFunc = __instance.triggerDefenseSwordFunction;
+            switch (__instance.lastUser.FacingDirection)
+            {
+                case 0:
+                    ((FarmerSprite)__instance.lastUser.Sprite).animateOnce(252, 250, 1, endOfAnimFunc);
+                    __instance.Update(0, 0, __instance.lastUser);
+                    break;
+                case 1:
+                    ((FarmerSprite)__instance.lastUser.Sprite).animateOnce(243, 250, 1, endOfAnimFunc);
+                    __instance.Update(1, 0, __instance.lastUser);
+                    break;
+                case 2:
+                    ((FarmerSprite)__instance.lastUser.Sprite).animateOnce(234, 250, 1, endOfAnimFunc);
+                    __instance.Update(2, 0, __instance.lastUser);
+                    break;
+                default:
+                    ((FarmerSprite)__instance.lastUser.Sprite).animateOnce(259, 250, 1, endOfAnimFunc);
+                    __instance.Update(3, 0, __instance.lastUser);
+                    break;
+            }
+
+            Instance.Helper.Reflection.GetMethod(__instance, "beginSpecialMove").Invoke(__instance.lastUser);
         }
 
         private static bool SwapLltk()
@@ -1097,6 +1173,9 @@ namespace SwordAndSorcerySMAPI
                 gmcm.AddTextOption(ModManifest, () => Config.LltkDifficulty, (val) => Config.LltkDifficulty = val, I18n.Config_LltkDifficulty_Name, I18n.Config_LltkDifficulty_Description, ["Easy", "Medium", "Hard"]);
 
                 gmcm.AddSectionTitle(ModManifest, I18n.Section_Keybinds_Name, I18n.Section_Keybinds_Description);
+                gmcm.AddTextOption(ModManifest, () => Config.ShieldThrowMethod, (val) => Config.ShieldThrowMethod = val, I18n.Keybind_ShieldThrowMethod_Name, I18n.Keybind_ShieldThrowMethod_Description, ["Weapon Special", "Both", "Keybind"]);
+                gmcm.AddKeybindList(ModManifest, () => Config.ShieldThrowKeybind, (val) => Config.ShieldThrowKeybind = val, I18n.Keybind_ShieldThrowKeybind_Name, I18n.Keybind_ShieldThrowKeybind_Description);
+                gmcm.AddParagraph(ModManifest, () => "");
                 gmcm.AddKeybindList(ModManifest, () => Config.ConfigureAdventureBar, (val) => Config.ConfigureAdventureBar = val, I18n.Keybind_ConfigureBar_Name, I18n.Keybind_ConfigureBar_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.ToggleAdventureBar, (val) => Config.ToggleAdventureBar = val, I18n.Keybind_ToggleBar_Name, I18n.Keybind_ToggleBar_Description);
                 gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar1Slot1, (val) => Config.AbilityBar1Slot1 = val, I18n.Keybind_Ability_1_1, I18n.Keybind_Ability_Desc);
@@ -1115,7 +1194,6 @@ namespace SwordAndSorcerySMAPI
                 gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar2Slot6, (val) => Config.AbilityBar2Slot6 = val, I18n.Keybind_Ability_2_6, I18n.Keybind_Ability_Desc);
                 gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar2Slot7, (val) => Config.AbilityBar2Slot7 = val, I18n.Keybind_Ability_2_7, I18n.Keybind_Ability_Desc);
                 gmcm.AddKeybindList(ModManifest, () => Config.AbilityBar2Slot8, (val) => Config.AbilityBar2Slot8 = val, I18n.Keybind_Ability_2_8, I18n.Keybind_Ability_Desc);
-                // shield throw is going away
             }
 
             
@@ -1369,7 +1447,7 @@ namespace SwordAndSorcerySMAPI
                 Game1.addMail("DN.SnS_IntermissionShield", true, false);
             }
 
-            if (Game1.currentLocation.Name == "EastScarp_DuskspireBehemoth" && Game1.getOnlineFarmers().Any(f => f != Game1.player && f.GetFarmerExtData().DoingFinale.Value))
+            if (Game1.currentLocation != null && Game1.currentLocation.Name == "EastScarp_DuskspireBehemoth" && Game1.getOnlineFarmers().Any(f => f != Game1.player && f.GetFarmerExtData().DoingFinale.Value))
             {
                 Game1.warpFarmer("EastScarp_DeepDarkEntrance", 17, 7, 2);
                 Game1.addHUDMessage(new(I18n.DuskspireTeleportOut()));
@@ -1384,7 +1462,7 @@ namespace SwordAndSorcerySMAPI
                         Game1.player.addItemByMenuIfNecessary(ItemRegistry.Create("(W)DN.SnS_PaladinShield", 1, 0, false));
                         Game1.addMail("DN.SnS_IntermissionShield", true, false);
                     }
-                    Game1.currentLocation.characters.Add(State.FinaleBoss = new DuskspireMonster(new Vector2(18, 13) * Game1.tileSize));
+                    Game1.getLocationFromName("EastScarp_DuskspireLair").characters.Add(State.FinaleBoss = new DuskspireMonster(new Vector2(18, 13) * Game1.tileSize));
 
                     DelayedAction.playMusicAfterDelay("SnS.DuskspirePhase2", 500, true);
 
@@ -1455,7 +1533,7 @@ namespace SwordAndSorcerySMAPI
             {
                 foreach (var thrown in State.MyThrown.ToList())
                 {
-                    if ((thrown.GetPosition() - thrown.Target.Value).Length() < 16 && (thrown.Bounces.Value <= 0 || thrown.TargetMonster.Get(Game1.currentLocation) == null))
+                    if ((thrown.GetPosition() - thrown.Target.Value).Length() < 16 && (thrown.Bounces.Value <= 0 || thrown.TargetMonster.Get(Game1.player.currentLocation) == null))
                     {
                         var playerPos = Game1.player.getStandingPosition();
                         playerPos.X -= 16;

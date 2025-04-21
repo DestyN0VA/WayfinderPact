@@ -9,17 +9,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using static SpaceCore.Skills;
 
 namespace SwordAndSorcerySMAPI
 {
-    public class PaladinSkill : SpaceCore.Skills.Skill
+    public class PaladinSkill : Skill
     {
-        public static GenericProfession ProfessionShieldThrowHit2;
-        public static GenericProfession ProfessionShieldArmor1;
-        public static GenericProfession ProfessionShieldThrowLightning;
-        public static GenericProfession ProfessionShieldThrowHit3;
-        public static GenericProfession ProfessionShieldArmor2;
-        public static GenericProfession ProfessionShieldRetribution;
+        public static GenericProfession ProfessionShieldThrowHit2 { get; set; }
+        public static GenericProfession ProfessionShieldArmor1 { get; set; }
+        public static GenericProfession ProfessionShieldThrowLightning { get; set; }
+        public static GenericProfession ProfessionShieldThrowHit3 { get; set; }
+        public static GenericProfession ProfessionShieldArmor2 { get; set; }
+        public static GenericProfession ProfessionShieldRetribution { get; set; }
 
         public PaladinSkill()
             : base("DestyNova.SwordAndSorcery.Paladin")
@@ -44,7 +45,7 @@ namespace SwordAndSorcerySMAPI
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldArmor1);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(5, PaladinSkill.ProfessionShieldThrowHit2, PaladinSkill.ProfessionShieldArmor1));
+            this.ProfessionsForLevels.Add(new ProfessionPair(5, ProfessionShieldThrowHit2, ProfessionShieldArmor1));
 
             // Level 10 - track A
             PaladinSkill.ProfessionShieldThrowLightning = new GenericProfession(skill: this, id: "ThrowLightning", name: I18n.PaladinSkill_Profession_ShieldThrowLightning_Name, description: I18n.PaladinSkill_Profession_ShieldThrowLightning_Description)
@@ -59,7 +60,7 @@ namespace SwordAndSorcerySMAPI
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldThrowHit3);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(10, PaladinSkill.ProfessionShieldThrowLightning, PaladinSkill.ProfessionShieldThrowHit3, PaladinSkill.ProfessionShieldThrowHit2));
+            this.ProfessionsForLevels.Add(new ProfessionPair(10, ProfessionShieldThrowLightning, ProfessionShieldThrowHit3, ProfessionShieldThrowHit2));
 
             // Level 10 - track B
             PaladinSkill.ProfessionShieldArmor2 = new GenericProfession(skill: this, id: "Armor2", name: I18n.PaladinSkill_Profession_ShieldArmor2_Name, description: I18n.PaladinSkill_Profession_ShieldArmor2_Description)
@@ -74,7 +75,7 @@ namespace SwordAndSorcerySMAPI
             };
             this.Professions.Add(PaladinSkill.ProfessionShieldRetribution);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(10, PaladinSkill.ProfessionShieldArmor2, PaladinSkill.ProfessionShieldRetribution, PaladinSkill.ProfessionShieldArmor1));
+            this.ProfessionsForLevels.Add(new ProfessionPair(10, ProfessionShieldArmor2, ProfessionShieldRetribution, ProfessionShieldArmor1));
         }
 
         public override string GetName()
