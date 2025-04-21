@@ -5,7 +5,7 @@
 	  <Description>C# code for Sword and Sorcery</Description>
 	  <UniqueId>KCC.SnS</UniqueId>
 	  <Authors>EnderTedi, 7thAxis, KittyCatCasey</Authors>
-	  <Version>2.3.0</Version>
+	  <Version>2.3.3</Version>
 	  <TargetFramework>net6.0</TargetFramework>
 	  <EnableHarmony>true</EnableHarmony>
 	  <LangVersion>latest</LangVersion>
