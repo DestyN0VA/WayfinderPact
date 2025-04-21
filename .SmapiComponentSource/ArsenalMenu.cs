@@ -854,7 +854,7 @@ public static class GameLocationBatWingDamagePatch
 {
     public static void Postfix(Farmer who, ref bool __result)
     {
-        if (who.CurrentTool is MeleeWeapon mw && mw.GetBladeCoating() == "(O)767")
+        if ((who.CurrentTool is MeleeWeapon mw && mw.GetBladeCoating() == "(O)767" ) || (who.GetOffhand() is MeleeWeapon off && off.GetBladeCoating() == "(O)767"))
             __result = true;
     }
 }
@@ -932,11 +932,11 @@ public static class MonsterTakeDamagePatch
         float mult = 1;
         switch (mw.GetBladeAlloying())
         {
-            case "(O)334": mult = 1.05f; break;
-            case "(O)335": mult = 1.10f; break;
-            case "(O)336": mult = 1.15f; break;
-            case "(O)337": mult = 1.20f; break;
-            case "(O)910": mult = 1.25f; break;
+            case "(O)334": mult += 0.05f; break;
+            case "(O)335": mult += 0.10f; break;
+            case "(O)336": mult += 0.15f; break;
+            case "(O)337": mult += 0.20f; break;
+            case "(O)910": mult += 0.25f; break;
         }
 
         switch (mw.GetExquisiteGemstone())
@@ -947,7 +947,27 @@ public static class MonsterTakeDamagePatch
                 break;
         }
 
-        //*
+        if (who.GetOffhand() is MeleeWeapon mw1)
+        {
+            switch (mw1.GetBladeAlloying())
+            {
+                case "(O)334": mult += 0.05f; break;
+                case "(O)335": mult += 0.10f; break;
+                case "(O)336": mult += 0.15f; break;
+                case "(O)337": mult += 0.20f; break;
+                case "(O)910": mult += 0.25f; break;
+            }
+
+            switch (mw.GetExquisiteGemstone())
+            {
+                case "(O)ExquisiteAquamarine":
+                    if (Game1.random.NextDouble() < 0.15)
+                        mult *= mw.critMultiplier.Value * (1 + who.buffs.CriticalPowerMultiplier);
+                    break;
+            }
+        }
+
+
         if (who == Game1.player && who.HasCustomProfession( RogueSkill.ProfessionHuntersMark ))
         {
             if (ModSnS.State.LastAttacked == __instance)
@@ -960,65 +980,121 @@ public static class MonsterTakeDamagePatch
                 ModSnS.State.LastAttackedCounter = 0;
             }
         }
-        //*/
 
         damage = (int)(damage * mult);
     }
     public static void Postfix(Monster __instance, int damage, Farmer who, int __result)
     {
-        if (__result <= 0 || who.CurrentTool is not MeleeWeapon mw)
-            return;
-
-        switch (mw.GetExquisiteGemstone())
+        if (__result > 0)
         {
-            case "(O)DN.SnS_ExquisiteEmerald":
-                who.buffs.Apply(new Buff("exquisiteemerald", duration: 5000,
-                    effects: new BuffEffects() { Speed = { 1.5f } }));
-                break;
-
-            case "(O)DN.SnS_ExquisiteRuby":
-                DelayedAction.functionAfterDelay(() => { if (__instance.Health > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 1000);
-                DelayedAction.functionAfterDelay(() => { if (__instance.Health > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 2000);
-                DelayedAction.functionAfterDelay(() => { if (__instance.Health > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 3000);
-                break;
-
-            case "(O)DN.SnS_ExquisiteJade":
-                if (!GameLocationDamageMonsterFlagsPatch.hasHealedYet)
+            if (who.CurrentTool is MeleeWeapon mw)
+            {
+                switch (mw.GetExquisiteGemstone())
                 {
-                    GameLocationDamageMonsterFlagsPatch.hasHealedYet = true;
-                    who.Stamina += 2;
-                }
-                break;
+                    case "(O)DN.SnS_ExquisiteEmerald":
+                        who.buffs.Apply(new Buff("exquisiteemerald", duration: 5000,
+                            effects: new BuffEffects() { Speed = { 1.5f } }));
+                        break;
 
-            case "(O)DN.SnS_ExquisiteAmethyst":
-                if (Game1.random.NextDouble() < 0.15)
-                    __instance.stunTime.Value = 3000;
-                break;
+                    case "(O)DN.SnS_ExquisiteRuby":
+                        DelayedAction.functionAfterDelay(() => { if (__instance.Health > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 1000);
+                        DelayedAction.functionAfterDelay(() => { if (__instance.Health > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 2000);
+                        DelayedAction.functionAfterDelay(() => { if (__instance.Health > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 3000);
+                        break;
 
-            case "(O)DN.SnS_ExquisiteDiamond":
-                if (!GameLocationDamageMonsterFlagsPatch.hasHealedYet)
-                {
-                    GameLocationDamageMonsterFlagsPatch.hasHealedYet = true;
-                    who.health = Math.Min(who.health + 1, who.maxHealth);
-                }
-                break;
-        }
+                    case "(O)DN.SnS_ExquisiteJade":
+                        if (!GameLocationDamageMonsterFlagsPatch.hasHealedYet)
+                        {
+                            GameLocationDamageMonsterFlagsPatch.hasHealedYet = true;
+                            who.Stamina += 2;
+                        }
+                        break;
 
-        switch (mw.GetBladeCoating())
-        {
-            case "(O)766": // Slime
-                if (!__instance.modData.ContainsKey("DN.SnS_Slimed"))
-                {
-                    __instance.modData.Add("DN.SnS_Slimed", "hoot");
-                    __instance.addedSpeed = -1.5f;
+                    case "(O)DN.SnS_ExquisiteAmethyst":
+                        if (Game1.random.NextDouble() < 0.15)
+                            __instance.stunTime.Value = 3000;
+                        break;
+
+                    case "(O)DN.SnS_ExquisiteDiamond":
+                        if (!GameLocationDamageMonsterFlagsPatch.hasHealedYet)
+                        {
+                            GameLocationDamageMonsterFlagsPatch.hasHealedYet = true;
+                            who.health = Math.Min(who.health + 1, who.maxHealth);
+                        }
+                        break;
                 }
-                break;
-            case "(O)768": // solar essence
-                if (__instance.Health <= 0)
+
+                switch (mw.GetBladeCoating())
                 {
-                    __instance.currentLocation.explode(__instance.Tile, 2, who, false, 25);
+                    case "(O)766": // Slime
+                        if (!__instance.modData.ContainsKey("DN.SnS_Slimed"))
+                        {
+                            __instance.modData.Add("DN.SnS_Slimed", "hoot");
+                            __instance.addedSpeed = -1.5f;
+                        }
+                        break;
+                    case "(O)768": // solar essence
+                        if (__instance.Health <= 0)
+                        {
+                            __instance.currentLocation.explode(__instance.Tile, 2, who, false, 25);
+                        }
+                        break;
                 }
-                break;
+            }
+            if (who.GetOffhand() is MeleeWeapon mw1)
+            {
+                switch (mw1.GetExquisiteGemstone())
+                {
+                    case "(O)DN.SnS_ExquisiteEmerald":
+                        who.buffs.Apply(new Buff("exquisiteemerald", duration: 5000,
+                            effects: new BuffEffects() { Speed = { 1.5f } }));
+                        break;
+
+                    case "(O)DN.SnS_ExquisiteRuby":
+                        DelayedAction.functionAfterDelay(() => { if (__instance.Health > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 1000);
+                        DelayedAction.functionAfterDelay(() => { if (__instance.Health > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 2000);
+                        DelayedAction.functionAfterDelay(() => { if (__instance.Health > 0) __instance.takeDamage((int)(damage * 0.1f), 0, 0, false, 0, "hitEnemy"); }, 3000);
+                        break;
+
+                    case "(O)DN.SnS_ExquisiteJade":
+                        if (!GameLocationDamageMonsterFlagsPatch.hasHealedYet)
+                        {
+                            GameLocationDamageMonsterFlagsPatch.hasHealedYet = true;
+                            who.Stamina += 2;
+                        }
+                        break;
+
+                    case "(O)DN.SnS_ExquisiteAmethyst":
+                        if (Game1.random.NextDouble() < 0.15)
+                            __instance.stunTime.Value = 3000;
+                        break;
+
+                    case "(O)DN.SnS_ExquisiteDiamond":
+                        if (!GameLocationDamageMonsterFlagsPatch.hasHealedYet)
+                        {
+                            GameLocationDamageMonsterFlagsPatch.hasHealedYet = true;
+                            who.health = Math.Min(who.health + 1, who.maxHealth);
+                        }
+                        break;
+                }
+
+                switch (mw1.GetBladeCoating())
+                {
+                    case "(O)766": // Slime
+                        if (!__instance.modData.ContainsKey("DN.SnS_Slimed"))
+                        {
+                            __instance.modData.Add("DN.SnS_Slimed", "hoot");
+                            __instance.addedSpeed = -1.5f;
+                        }
+                        break;
+                    case "(O)768": // solar essence
+                        if (__instance.Health <= 0)
+                        {
+                            __instance.currentLocation.explode(__instance.Tile, 2, who, false, 25);
+                        }
+                        break;
+                }
+            }
         }
     }
 
@@ -1042,6 +1118,11 @@ public static class GameLocationBugMeatCoatingMoreLootPatch
         {
             __instance.monsterDrop(monster, monster.GetBoundingBox().Center.X, monster.GetBoundingBox().Center.Y, who);
         }
+        if (who.GetOffhand() is MeleeWeapon mw2 &&
+           mw2.GetBladeCoating() == "(O)684")
+        {
+            __instance.monsterDrop(monster, monster.GetBoundingBox().Center.X, monster.GetBoundingBox().Center.Y, who);
+        }
     }
 }
 
@@ -1052,6 +1133,12 @@ public static class FarmerLessDamageForExquisiteTopazPatch
     {
         if (__instance.CurrentTool is MeleeWeapon mw &&
             mw.GetExquisiteGemstone() == "(O)DN.SnS_ExquisiteTopaz")
+        {
+            damage = Math.Max(1, (int)(damage * 0.85));
+        }
+
+        if (__instance.GetOffhand() is MeleeWeapon mw1 &&
+            mw1.GetExquisiteGemstone() == "(O)DN.SnS_ExquisiteTopaz")
         {
             damage = Math.Max(1, (int)(damage * 0.85));
         }
