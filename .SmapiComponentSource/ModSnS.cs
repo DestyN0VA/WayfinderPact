@@ -27,6 +27,7 @@ using StardewValley.SpecialOrders.Objectives;
 using StardewValley.Tools;
 using StardewValley.Triggers;
 using SwordAndSorcerySMAPI.Alchemy;
+using SwordAndSorcerySMAPI.IgnoreMarriageSchedule;
 using SwordAndSorcerySMAPI.Integrations;
 using System;
 using System.Collections.Generic;
@@ -447,7 +448,9 @@ namespace SwordAndSorcerySMAPI
             SwordOverlay = Helper.ModContent.Load<Texture2D>("assets/SwordOverlay.png");
 
             Helper.Events.Content.AssetRequested += Content_AssetRequested;
+            Helper.Events.Content.AssetRequested += IgnoreMarriageScheduleAssetManager.AssetRequested;
             Helper.Events.Content.AssetsInvalidated += Content_AssetsInvalidated;
+            Helper.Events.Content.AssetsInvalidated += IgnoreMarriageScheduleAssetManager.AssetInvalidated;
             Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
             Helper.Events.GameLoop.UpdateTicking += GameLoop_UpdateTicking;
             Helper.Events.GameLoop.UpdateTicking += DualWieldingEnchants.HandleEnchants;
