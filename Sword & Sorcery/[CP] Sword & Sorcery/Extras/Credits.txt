@@ -15,6 +15,7 @@ ADVENTURING PARTY (2.0 CONTRIBUTORS):
 
 ADDITIONAL/PRIOR CONTRIBUTORS: 
 ➜ Lemurkat: For East Scarp, for guiding along, and maintaining an incredible little community
+➜ PlatinumCats: Indoor tilesheet 
 ➜ FellowClown: Help with the V2 Mateo portraits and additional assets/portraits/sprites
 ➜ PaulG: Extensive bugfixing for both Content Patcher and C# content 
 ➜ FlashShifter: Use of Stardew Valley Expanded's assets, lots of mentoring 
