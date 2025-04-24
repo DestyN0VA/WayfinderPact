@@ -456,6 +456,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.GameLoop.UpdateTicking += DualWieldingEnchants.HandleEnchants;
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
             Helper.Events.GameLoop.DayStarted += KeychainsAndTrinkets.DayStarted;
+            Helper.Events.GameLoop.DayStarted += IgnoreMarriageScheduleUtil.DayStarted;
             Helper.Events.GameLoop.DayEnding += GameLoop_DayEnding;
             Helper.Events.GameLoop.DayEnding += KeychainsAndTrinkets.DayEnding;
             Helper.Events.GameLoop.TimeChanged += GameLoop_TimeChanged;

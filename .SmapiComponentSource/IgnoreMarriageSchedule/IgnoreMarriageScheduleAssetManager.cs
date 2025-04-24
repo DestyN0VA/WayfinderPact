@@ -5,11 +5,29 @@ using System.Linq;
 
 namespace SwordAndSorcerySMAPI.IgnoreMarriageSchedule
 {
+    public enum FarmVisit
+    {
+        None,
+        Porch,
+        SpousePatio,
+        SpouseRoom,
+        Farmhouse
+    }
+
     public class IgnoreMarriageScheduleAssetModel
     {
         public bool IgnoreMarriageSchedule { get; set; } = false;
         public bool IgnoreMarriageDialogue { get; set; } = false;
-        public string CanVisitFarmToday { get; set; } = null;
+        public FarmVisitsModel FarmVisits { get; set; } = null;
+
+        public class FarmVisitsModel
+        {
+            public string Porch { get; set; }
+            public string SpousePatio { get; set; }
+            public string SpouseRoom { get; set; }
+            public string Farmhouse { get; set; }
+            public string PreferredOrder { get; set; }
+        }
     }
 
     internal class IgnoreMarriageScheduleAssetManager
