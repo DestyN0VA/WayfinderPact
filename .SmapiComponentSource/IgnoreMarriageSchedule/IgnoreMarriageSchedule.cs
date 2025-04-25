@@ -68,6 +68,9 @@ namespace SwordAndSorcerySMAPI.IgnoreMarriageSchedule
 
         public static FarmVisit GetFarmVisitToday(FarmVisitsModel data, Farmer Spouse)
         {
+            if (data == null)
+                return FarmVisit.None;
+
             List<FarmVisit> VisitsToday = [];
 
             TryAddFarmVisit(data.Porch, FarmVisit.Porch, ref VisitsToday, Spouse);
