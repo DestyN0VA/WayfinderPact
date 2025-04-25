@@ -187,14 +187,14 @@
   ],
   // CONFIG OPTIONS
   "ConfigSchema": {
-    "Mateo Name": {
+    /*"Mateo Name": {
       "AllowValues": "Val, Mateo, Luis",
       "Default": "Val",
       "AllowBlank": false,
       "AllowMultiple": false,
       "Description": "Sets Mateo's display name.",
       "Section": "NPC Settings"
-    },
+    },*/
     "Portrait Style": {
       "AllowValues": "Default, Nyapu",
       "Default": "Default",
