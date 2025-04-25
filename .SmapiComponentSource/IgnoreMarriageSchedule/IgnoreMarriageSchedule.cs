@@ -146,7 +146,7 @@ namespace SwordAndSorcerySMAPI.IgnoreMarriageSchedule
 
         static void Postfix(NPC __instance)
         {
-            if (__instance.isMarried() && !IgnoresMarriage(__instance, true))
+            if (__instance.isMarried() && IgnoreMarriageAsset.ContainsKey(__instance.Name) && !IgnoresMarriage(__instance, true))
             {
                 FarmVisit Visit = GetFarmVisitToday(IgnoreMarriageAsset[__instance.Name].FarmVisits, __instance.getSpouse());
                 if (Visit == FarmVisit.None)
