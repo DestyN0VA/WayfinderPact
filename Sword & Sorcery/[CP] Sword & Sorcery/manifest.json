@@ -33,6 +33,10 @@
 			"IsRequired": true
 		},
 		{
+			"UniqueID": "hxw.tilesheets",
+			"IsRequired": true
+		},
+		{
 			"UniqueID": "DecidedlyHuman.MappingExtensionsAndExtraProperties",
 			"IsRequired": true
 		}
