@@ -155,7 +155,7 @@ public static class DualWieldingDrawDuringUsePatch
 }
 
 [HarmonyPatch(typeof(MeleeWeapon), nameof(MeleeWeapon.DoDamage))]
-static class DualWieldingDamagePatch
+static class DualWieldingDoDamagePatch
 {
     readonly static Dictionary<Monster, int> origInvinc = [];
 

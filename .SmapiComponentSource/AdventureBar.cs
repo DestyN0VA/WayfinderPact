@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using StardewValley.Menus;
 using System;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -33,6 +34,26 @@ namespace SwordAndSorcerySMAPI
                     {
                         ext.adventureBar[8 * ibar + islot] = abil?.Id;
                         abil = null;
+                    }
+                }
+            }
+        }
+
+        public override void update(GameTime time)
+        {
+            base.update(time);
+            var ext = Game1.player.GetFarmerExtData();
+            for (int ibar = 0; ibar < 2; ++ibar)
+            {
+                for (int islot = 0; islot < 8; ++islot)
+                {
+
+                    if (!Ability.Abilities.TryGetValue(ext.adventureBar[8 * ibar + islot] ?? "", out Ability abil))
+                        continue;
+
+                    if (!(abil.KnownCondition2 == null ? GameStateQuery.CheckConditions(abil.KnownCondition, new(Game1.currentLocation, Game1.player, null, null, Game1.random)) : abil.KnownCondition2()))
+                    {
+                        ext.adventureBar[8 * ibar + islot] = null;
                     }
                 }
             }
@@ -73,8 +94,8 @@ namespace SwordAndSorcerySMAPI
 
                     b.Draw(tex, pos, Game1.getSquareSourceRectForNonStandardTileSheet(tex, 16, 16, abil.SpriteIndex), col, 0, Vector2.Zero, 4, SpriteEffects.None, 1);
 
-                    if (new Rectangle( pos.ToPoint(), new Point( 64, 64 ) ).Contains( Game1.getMouseX(), Game1.getMouseY()) &&
-                          (abil.KnownCondition2 == null ? GameStateQuery.CheckConditions(abil.KnownCondition, new(Game1.currentLocation, Game1.player, null, null, new Random())) : abil.KnownCondition2()))
+                    if (new Rectangle(pos.ToPoint(), new Point(64, 64)).Contains( Game1.getMouseX(), Game1.getMouseY()) &&
+                          (abil.KnownCondition2 == null ? GameStateQuery.CheckConditions(abil.KnownCondition, new(Game1.currentLocation, Game1.player, null, null, Game1.random)) : abil.KnownCondition2()))
                     {
                         hover = abil;
                     }

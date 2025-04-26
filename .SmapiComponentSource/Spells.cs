@@ -9,6 +9,7 @@ using StardewValley.Extensions;
 using StardewValley.Monsters;
 using StardewValley.Objects;
 using StardewValley.Projectiles;
+using StardewValley.SaveMigrations;
 using StardewValley.TerrainFeatures;
 using System;
 using System.Collections.Generic;
@@ -641,7 +642,7 @@ namespace SwordAndSorcerySMAPI
 
             Vector2 motion = Utility.getVelocityTowardPoint(PlayerPos, TargetPos, speed);
 
-            DebuffingProjectile Fireball = new(null, 10, 0, 5, 0.1f, motion.X, motion.Y, PlayerPos - new Vector2(32f, 48f), location, farmer, hitsMonsters: true, playDefaultSoundOnFire: false);
+            DebuffingProjectile Fireball = new(null, 10, 0, 5, 0.1f, motion.X, motion.Y, PlayerPos - new Vector2(32f, 48f), location, farmer, hitsMonsters: false, playDefaultSoundOnFire: false);
             Fireball.uniqueID.Value = Game1.random.Next();
             Fireball.wavyMotion.Value = false;
             Fireball.piercesLeft.Value = 99999;
@@ -652,6 +653,7 @@ namespace SwordAndSorcerySMAPI
             Fireball.alphaChange.Value = 0.05f;
             Fireball.light.Value = true;
             Fireball.boundingBoxWidth.Value = 32;
+            Fireball.ignoreCharacterCollisions.Value = true;
             location.projectiles.Add(Fireball);
             location.playSound("fireball");
 
@@ -686,6 +688,7 @@ namespace SwordAndSorcerySMAPI
             Icebolt.alphaChange.Value = 0.05f;
             Icebolt.light.Value = true;
             Icebolt.boundingBoxWidth.Value = 32;
+            Icebolt.ignoreCharacterCollisions.Value = true;
 
             location.projectiles.Add(Icebolt);
             location.playSound("fireball");
@@ -699,7 +702,7 @@ namespace SwordAndSorcerySMAPI
             GameLocation location = farmer.currentLocation;
             Vector2 PlayerPos = farmer.Position;
             
-            if (Utility.findClosestMonsterWithinRange(location, PlayerPos, 100 * 64) == null)
+            if (Utility.findClosestMonsterWithinRange(location, PlayerPos, 100 * 64, match: (m) => !ProjectileSpellsPatch.IsPipedSlime(m)) == null)
             {
                 Ability.Abilities.TryGetValue("spell_magicmissle", out Ability abil);
                 farmer.GetFarmerExtData().mana.Value += abil.ManaCost();
@@ -747,7 +750,7 @@ namespace SwordAndSorcerySMAPI
 
             Farmer farmer = Game1.player;
             GameLocation location = farmer.currentLocation;
-            Monster m = Utility.findClosestMonsterWithinRange(location, Game1.player.Position, 15 * 64);
+            Monster m = Utility.findClosestMonsterWithinRange(location, Game1.player.Position, 15 * 64, match: (l) => !ProjectileSpellsPatch.IsPipedSlime(l));
             if (m is null)
             {
                 Ability.Abilities.TryGetValue("spell_lightningbolt", out Ability abil);
@@ -766,7 +769,7 @@ namespace SwordAndSorcerySMAPI
 
         public static void ChainLightningBolt(Farmer farmer, GameLocation location, Monster monster, int DictKey, int Chain)
         {
-            Monster m = Utility.findClosestMonsterWithinRange(location, monster.Position, 15 * 64, match: l => !Monsters[DictKey].Contains(l));
+            Monster m = Utility.findClosestMonsterWithinRange(location, monster.Position, 15 * 64, match: l => !Monsters[DictKey].Contains(l) && !ProjectileSpellsPatch.IsPipedSlime(l));
             if (m is null || Chain <= 0)
             {
                 Monsters.Remove(DictKey);
@@ -814,7 +817,7 @@ namespace SwordAndSorcerySMAPI
                     {
                         if (__instance.acceleration.Value != Vector2.Zero) __instance.acceleration.Value = Vector2.Zero;
                         Vector2 Motion;
-                        Monster m = Utility.findClosestMonsterWithinRange(location, __instance.position.Value, 100 * 64);
+                        Monster m = Utility.findClosestMonsterWithinRange(location, __instance.position.Value, 30 * 64, match: (l) => !ProjectileSpellsPatch.IsPipedSlime(l));
                         if (m is not null)
                         {
                             Motion = Utility.getVelocityTowardPoint(__instance.position.Value, Utility.PointToVector2(m.GetBoundingBox().Center), 10);
@@ -845,17 +848,11 @@ namespace SwordAndSorcerySMAPI
                         location.playSound("explosion");
                         Fireballs.Remove(Fireball);
 
-                        List<Monster> BurnMonsters = [];
-
                         foreach (Monster m in location.characters.Where(c => c is Monster).Cast<Monster>())
                         {
                             if (Vector2.Distance(__instance.position.Value, m.Position) <= -5 * 64 || Vector2.Distance(__instance.position.Value, m.Position) >= 5 * 64) continue;
+                            if (IsPipedSlime(m)) continue;
 
-                            BurnMonsters.Add(m);
-                        }
-
-                        foreach (Monster m in BurnMonsters)
-                        {
                             location.damageMonster(m.GetBoundingBox(), Min, Max, false, Game1.player, true);
 
                             DelayedAction.functionAfterDelay(() => { if (m.Health > 0) location.damageMonster(m.GetBoundingBox(), Min2, Max2, isBomb: false, Game1.player); }, 1000);
@@ -883,11 +880,8 @@ namespace SwordAndSorcerySMAPI
                         foreach (Monster m in location.characters.Where(c => c is Monster).Cast<Monster>())
                         {
                             if (Vector2.Distance(__instance.position.Value, m.Position) <= -5 * 64 || Vector2.Distance(__instance.position.Value, m.Position) >= 5 * 64) continue;
-                            FreezeMonsters.Add(m);
-                        }
+                            if (IsPipedSlime(m)) continue;
 
-                        foreach (Monster m in FreezeMonsters)
-                        {
                             m.stunTime.Value = 6000 / (m is DuskspireMonster ? 2 : 1);
                             Game1.Multiplayer.broadcastSprites(location, new TemporaryAnimatedSprite("LooseSprites\\Cursors2", new Rectangle(118, 227, 16, 13), new Vector2(0f, 0f), flipped: false, 0f, Color.White)
                             {
@@ -909,15 +903,49 @@ namespace SwordAndSorcerySMAPI
                     }
                 }
             }
-        }
-        [HarmonyPatch(typeof(BasicProjectile), nameof(BasicProjectile.behaviorOnCollisionWithMonster))]
-        public static class RemoveMagicMissleDataIfHitMonsters
-        {
-            public static void Postfix(BasicProjectile __instance)
+
+            static IReflectedProperty<HashSet<GreenSlime>> PipedSlimesProp;
+
+            public static bool IsPipedSlime(Monster m)
             {
-                if (__instance.lightSourceId != "Magic Missle") return;
-                MagicMissles.RemoveWhere(p => p.Item1 == __instance);
+                if (m is not GreenSlime || !ModSnS.Instance.Helper.ModRegistry.IsLoaded("DaLion.Professions"))
+                    return false;
+                if (PipedSlimesProp == null)
+                {
+                    Type type = AccessTools.TypeByName("DaLion.Professions.Framework.VirtualProperties.GreenSlime_Piped");
+                    PipedSlimesProp = ModSnS.Instance.Helper.Reflection.GetProperty<HashSet<GreenSlime>>(type, "PipedSlimes");
+                }
+                HashSet<GreenSlime> PipedSlimes = PipedSlimesProp.GetValue();
+                GreenSlime slime = m as GreenSlime;
+                if (PipedSlimes == null || !PipedSlimes.Contains(slime))
+                    return false;
+                return true;
             }
+        }
+
+
+        [HarmonyPatch(typeof(BasicProjectile), nameof(BasicProjectile.behaviorOnCollisionWithMonster))]
+        public static class RemoveMagicMissleDataIfHitMonstersAndAlsoDontHurtPipedSlime
+        {
+            public static bool Prefix(BasicProjectile __instance, NPC n)
+            {
+                if (__instance.lightSourceId != "Magic Missle") return true;
+                if (n is GreenSlime && ProjectileSpellsPatch.IsPipedSlime(n as Monster)) return false;
+                MagicMissles.RemoveWhere(p => p.Item1 == __instance);
+                return true;
+            }
+        }
+
+        [HarmonyPatch(typeof(DebuffingProjectile), nameof(DebuffingProjectile.behaviorOnCollisionWithMonster))]
+        public static class DontHurtPipedSlime
+        {
+            public static bool Prefix(DebuffingProjectile __instance, NPC n)
+            {
+                if (!(Fireballs.Any(f => f.Item1 == __instance) || Icebolts.Any(i => i.Item1 == __instance))) return true;
+                if (n is GreenSlime && ProjectileSpellsPatch.IsPipedSlime(n as Monster)) return false;
+                return true;
+            }
+
         }
     }
 }

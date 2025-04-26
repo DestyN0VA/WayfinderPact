@@ -1162,6 +1162,7 @@ public static class GameLocationBreakingStoneFlagPatch
 }
 
 [HarmonyPatch(typeof(Game1), nameof(Game1.createObjectDebris), [typeof(string), typeof(int), typeof(int), typeof(long), typeof(GameLocation)])]
+[HarmonyBefore("DaLion.Professions")]
 public static class Game1ChangeGemToExquisitePatch
 {
     public static void Prefix(ref string id)

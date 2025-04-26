@@ -1222,7 +1222,7 @@ namespace SwordAndSorcerySMAPI
 
             SpaceCore.RegisterEquipmentSlot(ModManifest,
                 $"{ModManifest.UniqueID}_Armor",
-                item => item == null || (item.IsArmorItem() && (item is not MeleeWeapon w || !w.IsShieldItem())),
+                item => item == null || (item.IsArmorItem() && item is not MeleeWeapon),
                 I18n.UiSlot_Armor,
                 Game1.content.Load<Texture2D>("DN.SnS/ArmorSlot"));
 
@@ -1442,7 +1442,7 @@ namespace SwordAndSorcerySMAPI
 
         private void GameLoop_UpdateTicking(object sender, UpdateTickingEventArgs e)
         {
-            if (!Context.IsWorldReady)
+            if (!Context.IsWorldReady || Game1.player == null)
                 return;
 
             if (!Game1.player.mailReceived.Contains("DN.SnS_IntermissionShield") && Game1.player.eventsSeen.Any(m => m.StartsWith("SnS.Ch4.Victory")))
