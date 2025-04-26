@@ -1,7 +1,11 @@
 using HarmonyLib;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using StardewModdingAPI;
+using StardewModdingAPI.Events;
 using StardewValley;
+using StardewValley.Enchantments;
+using StardewValley.Extensions;
 using StardewValley.ItemTypeDefinitions;
 using StardewValley.Menus;
 using StardewValley.Monsters;
@@ -24,64 +28,55 @@ public static class DualWieldExtensions
     }
 }
 
-/*[HarmonyPatch(typeof(MeleeWeapon), nameof(MeleeWeapon.animateSpecialMove))]
-public static class DualWieldingSpecialMovePatch
+public static class DualWieldingEnchants
 {
-    public static void Postfix(MeleeWeapon __instance)
+    public static void HandleEnchants(object sender, UpdateTickingEventArgs e)
     {
-        if (!__instance.lastUser.IsLocalPlayer || __instance != Game1.player.CurrentTool)
+        if (!Context.IsWorldReady)
             return;
 
-        var offhand = __instance.lastUser.GetOffhand();
-        if (offhand == null)
-            return;
+        var who = Game1.player;
+        var Offhand = who.GetOffhand();
+        var OrigEnchs = who.GetFarmerExtData().OrigEnchs;
 
-        offhand.animateSpecialMove(__instance.lastUser);
-
-        if (offhand.type.Value == __instance.type.Value)
-            return;
-
-        if (offhand.IsShieldItem())
+        if (who.CurrentTool is MeleeWeapon Mainhand && Offhand != null)
         {
-            ModSnS.State.ThrowCooldown = GetActiveWeaponCooldown(__instance);
+            if (!OrigEnchs.ContainsKey(Mainhand))
+                OrigEnchs.Add(Mainhand, [.. Mainhand.enchantments]);
+            if (!OrigEnchs.ContainsKey(Offhand))
+                OrigEnchs.Add(Offhand, [.. Offhand.enchantments]);
+
+            List<MeleeWeapon> NoLongerHeld = OrigEnchs.Keys.Where(m => m != Mainhand && m != Offhand).ToList();
+
+            foreach (var m in NoLongerHeld)
+            {
+                m.enchantments.Set(OrigEnchs[m]);
+                OrigEnchs.Remove(m);
+            }
+
+            List<BaseEnchantment> enchs = [];
+            foreach (var ench in OrigEnchs.Values)
+            {
+                ench.RemoveWhere(enchs.Contains);
+                enchs.AddRange(ench);
+            }
+
+            Mainhand.enchantments.Set(enchs);
+            Offhand.enchantments.Set(enchs);
         }
         else
         {
-            int cooldown = (int)GetActiveWeaponCooldown(__instance);
-            switch (offhand.type.Value)
+            foreach (var kvp in OrigEnchs)
             {
-                case MeleeWeapon.dagger:
-                    MeleeWeapon.daggerCooldown = cooldown;
-                    break;
-                case MeleeWeapon.club:
-                    MeleeWeapon.clubCooldown = cooldown;
-                    break;
-                case MeleeWeapon.stabbingSword:
-                    MeleeWeapon.attackSwordCooldown = cooldown;
-                    break;
-                case MeleeWeapon.defenseSword:
-                    MeleeWeapon.defenseCooldown = cooldown;
-                    break;
+                kvp.Key.enchantments.Set(kvp.Value);
             }
+            OrigEnchs.Clear();
         }
     }
-
-    public static float GetActiveWeaponCooldown(MeleeWeapon weapon)
-    {
-        if (weapon.IsShieldItem()) return ModSnS.State.ThrowCooldown;
-        else return weapon.type.Value switch
-        {
-            MeleeWeapon.dagger => MeleeWeapon.daggerCooldown,
-            MeleeWeapon.club => MeleeWeapon.clubCooldown,
-            MeleeWeapon.defenseSword => MeleeWeapon.defenseSword,
-            MeleeWeapon.stabbingSword => MeleeWeapon.attackSwordCooldown,
-            _ => 0
-        };
-    }
-}*/
+}
 
 [HarmonyPatch(typeof(MeleeWeapon), "doAnimateSpecialMove")]
-static class DualWieldingSpecialMovePatch
+static class DualWieldingDoAnimateSpecialMovePatch
 {
     internal static ConditionalWeakTable<MeleeWeapon, FarmerSprite> fake = [];
 
@@ -133,7 +128,7 @@ static class DualWieldingSpecialMovePatch
             .RemoveInstructions(5)
             .InsertAndAdvance([
                 new(OpCodes.Ldarg_0),
-                new(OpCodes.Call, AccessTools.Method(typeof(DualWieldingSpecialMovePatch), nameof(DoCheck))),
+                new(OpCodes.Call, AccessTools.Method(typeof(DualWieldingDoAnimateSpecialMovePatch), nameof(DoCheck))),
                 new(OpCodes.Brtrue, operand)
                 ]);
 
@@ -142,7 +137,7 @@ static class DualWieldingSpecialMovePatch
 
     public static bool DoCheck(MeleeWeapon w)
     {
-        return (w == w.lastUser.CurrentTool || w == w.lastUser.GetOffhand());
+        return (w == w.lastUser?.CurrentTool || w == w.lastUser?.GetOffhand());
     }
 }
 
@@ -158,42 +153,16 @@ public static class DualWieldingDrawDuringUsePatch
             MeleeWeapon.drawDuringUse(frameOfFarmerAnimation, facingDirection, spriteBatch, playerPosition, f, offhand.GetDrawnItemId(), offhand.type.Value, offhand.isOnSpecial);
     }
 }
-/*
-[HarmonyPatch(typeof(Game1), nameof(Game1.drawTool), [typeof(Farmer), typeof(int)])]
-public static class DualWieldingDrawDuringUseOffhandPatch
-{
-    internal static Vector2[] offsets = [new(0, -16), new(-16, 0), new(0, 16), new(16, 0)];
-
-    static void Postix(Farmer f)
-    {
-        MeleeWeapon Offhand = f.GetOffhand();
-
-        if (Offhand == null || f.CurrentTool is not MeleeWeapon mw || mw.isScythe() || mw.IsShieldItem() || Offhand.IsShieldItem())
-            return;
-
-        Vector2 fPosition = f.getLocalPosition(Game1.viewport) + f.jitter + f.armOffset + offsets[f.FacingDirection];
-        FarmerSprite farmerSprite = (FarmerSprite)f.Sprite;
-
-        if (f.CurrentTool is MeleeWeapon weapon)
-        {
-            weapon.drawDuringUse(farmerSprite.currentAnimationIndex, f.FacingDirection, Game1.spriteBatch, fPosition, f);
-            return;
-        }
-        if (f.FarmerSprite.isUsingWeapon())
-        {
-            MeleeWeapon.drawDuringUse(farmerSprite.currentAnimationIndex, f.FacingDirection, Game1.spriteBatch, fPosition, f, Offhand.CurrentParentTileIndex.ToString(), f.FarmerSprite.getWeaponTypeFromAnimation(), isOnSpecial: false);
-            return;
-        }
-    }
-}*/
 
 [HarmonyPatch(typeof(MeleeWeapon), nameof(MeleeWeapon.DoDamage))]
-static class DualWieldingDamagePatchTest
+static class DualWieldingDamagePatch
 {
     readonly static Dictionary<Monster, int> origInvinc = [];
 
-    static void Prefix(MeleeWeapon __instance, GameLocation location)
+    static void Prefix(MeleeWeapon __instance, GameLocation location, Farmer who)
     {
+        __instance.lastUser ??= who;
+
         if (__instance != __instance.lastUser.CurrentTool || __instance.isScythe())
             return;
 
@@ -204,6 +173,8 @@ static class DualWieldingDamagePatchTest
 
     static void Postfix(MeleeWeapon __instance, GameLocation location, int x, int y, int facingDirection, int power, Farmer who)
     {
+        __instance.lastUser ??= who;
+
         if (__instance != __instance.lastUser.CurrentTool || __instance.isScythe() || __instance.lastUser.GetOffhand() == null)
             return;
 
@@ -317,110 +288,3 @@ public static class DrawShieldCooldownPatch
         return 0;
     }
 }
-/*
-[HarmonyPatch(typeof(MeleeWeapon), "doAnimateSpecialMove")]
-public static class DualWieldingSpecialMovePatch
-{
-    internal static ConditionalWeakTable<MeleeWeapon, FarmerSprite> fakeSprites = [];
-
-    public static bool CanSwitch = true;
-    internal static bool doingDualWieldCall = false;
-
-    public static void Prefix()
-    {
-        CanSwitch = false;
-    }
-
-    public static void Postfix(MeleeWeapon __instance)
-    {
-        DelayedAction.functionAfterDelay(() => CanSwitch = true, MeleeWeapon.defenseCooldown);
-
-        if (doingDualWieldCall)
-            return;
-
-        var lastUser = __instance.lastUser;
-        if (lastUser == null)
-            return;
-
-        var offhand = lastUser.GetOffhand();
-        if (offhand == null)
-            return;
-
-        var fakeSpr = fakeSprites.GetOrCreateValue(offhand);
-        
-        doingDualWieldCall = true;
-        var realSpr = lastUser.Sprite;
-        lastUser.Sprite = fakeSpr;
-        int[] lastCooldowns =
-        [
-            MeleeWeapon.defenseCooldown,
-            MeleeWeapon.clubCooldown,
-            MeleeWeapon.daggerCooldown,
-        ];
-        MeleeWeapon.defenseCooldown = 0;
-        MeleeWeapon.clubCooldown = 0;
-        MeleeWeapon.daggerCooldown = 0;
-        try
-        {
-            ModSnS.Instance.Helper.Reflection.GetMethod(offhand, "doAnimateSpecialMove").Invoke();
-        }
-        finally
-        {
-            lastUser.Sprite = realSpr;
-            MeleeWeapon.defenseCooldown = lastCooldowns[0];
-            MeleeWeapon.clubCooldown = lastCooldowns[1];
-            MeleeWeapon.daggerCooldown = lastCooldowns[2];
-            doingDualWieldCall = false;
-        }
-    }
-}
-
-[HarmonyPatch(typeof(MeleeWeapon), nameof(MeleeWeapon.drawDuringUse), [typeof(int), typeof(int), typeof(SpriteBatch),typeof(Vector2),typeof(Farmer), typeof(string), typeof(int), typeof(bool)])]
-public static class DualWieldingDrawPatch
-{
-    internal static bool doingDualWieldCall = false;
-
-    public static void Postfix(//MeleeWeapon __instance,
-        int frameOfFarmerAnimation,
-        int facingDirection,
-        SpriteBatch spriteBatch,
-        Farmer f)
-    {
-        if (f != Game1.player) return;
-
-        Vector2 playerPosition = f.getLocalPosition(Game1.viewport) + f.jitter + f.armOffset;
-        if (doingDualWieldCall)
-            return;
-
-        var __instance = f.CurrentTool as MeleeWeapon;
-        if ((__instance.GetData()?.CustomFields?.ContainsKey("DN.SnS_Shield") ?? false))
-            return;
-
-        var lastUser = __instance?.lastUser;
-        if (lastUser == null)
-            return;
-
-        var offhand = lastUser.GetOffhand();
-        if (offhand == null || (offhand.GetData()?.CustomFields?.ContainsKey("DN.SnS_Shield") ?? false))
-            return;
-        
-        doingDualWieldCall = true;
-        try
-        {
-            offhand.drawDuringUse(frameOfFarmerAnimation, facingDirection, spriteBatch, playerPosition, f);
-        }
-        finally
-        {
-            doingDualWieldCall = false;
-        }
-    }
-}
-
-[HarmonyPatch(typeof(MeleeWeapon), nameof(MeleeWeapon.triggerClubFunction))]
-public static class ClubRemoveIsOnSpecial
-{
-    public static void Postfix(MeleeWeapon __instance)
-    {
-        __instance.isOnSpecial = false;
-    }
-}*/

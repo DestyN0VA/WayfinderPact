@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using SpaceCore;
 using StardewValley;
 using StardewValley.Enchantments;
+using StardewValley.Extensions;
 using StardewValley.Tools;
 using System.Linq;
 
@@ -59,6 +60,9 @@ namespace SwordAndSorcerySMAPI
         {
             if (!__instance.IsShieldItem() || __instance.lastUser != Game1.player)
                 return true;
+
+            if (ModSnS.Config.ShieldThrowMethod.ToLower() == "keybind")
+                return false;
 
             Vector2 diff = ModSnS.Instance.Helper.Input.GetCursorPosition().AbsolutePixels - Game1.player.StandingPixel.ToVector2();
             if (diff.Length() > 0 && diff.Length() > 8 * Game1.tileSize)

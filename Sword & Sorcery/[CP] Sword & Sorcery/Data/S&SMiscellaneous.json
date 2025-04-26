@@ -74,10 +74,8 @@
       "Target": "spacechase0.SpaceCore/NpcExtensionData",
       "Entries": {
         "Hector": {
-          "IgnoreMarriageSchedule": true,
           "SeparateDatability": true
         },
-
         "Mateo": {
           "SeparateDatability": true
         },
@@ -85,6 +83,26 @@
         "Cirrus": {
           "SeparateDatability": true
         }
+      }
+    },{
+      "Action": "EditData",
+      "Target": "DN.SnS/IgnoreMarriageSchedule",
+      "Entries": {
+        "Hector": {
+          "IgnoreMarriageSchedule": true,
+          "IgnoreMarriageDialogue": true,
+          "FarmVisits": {
+            "SpousePatio": "DAY_OF_WEEK Saturday",
+            "SpouseRoom": "ANY \"DAY_OF_WEEK Tuesday Thursday, !PLAYER_HAS_SEEN_EVENT Target SnS.Ch2.Hector.18\" \"DAY_OF_WEEK Saturday, PLAYER_HAS_SEEN_EVENT Target SnS.Ch2.Hector.18\""
+          }
+        }/*,
+        "Mateo": {
+          "IgnoreMarriageSchedule": true
+        },
+
+        "Cirrus": {
+          "IgnoreMarriageSchedule": true
+        }*/
       }
     },
     // HECTOR POLYAMORY DATA
