@@ -10,6 +10,7 @@
   "AdventureBar-Hide.description": "Hide or show the Adventure Bar on your screen. \nDoes nothing if the Adventure Bar hasn't been unlocked.",
   "AdventureBarConfigMenu.name": "Adventure Bar Config Menu",
   "AdventureBarConfigMenu.description": "Open the Adventure Bar Config Menu. \nDoes nothing if the Adventure Bar hasn't been unlocked.",
+  "Spells.Position-Mouse-Announcement": "Spell requires positioning. Cast another spell, recast or use the Action Button to cancel",
   "Iconic.UseAbility.name": "No Ability",
   "Iconic.UseAbility.description": "Ability in Row {{0}} Column {{1}}. \nDoes nothing if the Adventure Bar hasn't been unlocked.",
   "Iconic.UseAbility.NoAbilityInSlot": "There's no Ability assigned to that slot.",

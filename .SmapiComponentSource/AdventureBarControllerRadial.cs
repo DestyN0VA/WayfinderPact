@@ -40,7 +40,7 @@ internal class AdventureBarRadialMenuItem(Farmer who, NetString abilSlot) : IRad
 
     public bool IsActive => abilSlot.Value != null;
     public Ability CurrentAbility => IsActive ? Ability.Abilities[abilSlot.Value] : null;
-    public bool CanCast => IsActive && (who.GetFarmerExtData().mana.Value >= CurrentAbility.ManaCost() && CurrentAbility.CanUseForAdventureBar());
+    public bool CanCast => IsActive && CurrentAbility.ManaCost() <= who.GetFarmerExtData().mana.Value && CurrentAbility.CanUseForAdventureBar();
 
     public string Title => CurrentAbility?.Name() ?? I18n.EmptySlot_Title();
 
@@ -59,7 +59,6 @@ internal class AdventureBarRadialMenuItem(Farmer who, NetString abilSlot) : IRad
         if (CanCast)
         {
             CurrentAbility.CanUse();
-            who.GetFarmerExtData().mana.Value -= CurrentAbility.ManaCost();
             ModSnS.CastAbility(CurrentAbility);
         }
 

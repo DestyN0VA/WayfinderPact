@@ -1,4 +1,6 @@
 ﻿using HarmonyLib;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.CodeAnalysis.FlowAnalysis;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceCore;
@@ -9,12 +11,10 @@ using StardewValley.Extensions;
 using StardewValley.Monsters;
 using StardewValley.Objects;
 using StardewValley.Projectiles;
-using StardewValley.SaveMigrations;
 using StardewValley.TerrainFeatures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using xTile.Layers;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -38,7 +38,7 @@ namespace SwordAndSorcerySMAPI
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.SorcerySkill, 3 * WitchcraftExpMultiplier);
-                    CastSpell(Color.LimeGreen, () => Spells.Haste());
+                    CastSpell(Ability.Abilities.GetValueOrDefault("spell_haste"), Color.LimeGreen, () => Haste());
                 }
             });
 
@@ -49,14 +49,14 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 3,
                 ManaCost = () => 5,
-                KnownCondition = $"{PlayerSorcerySkillGSQ} 1",
+                KnownCondition = $"{PlayerSorcerySkillGSQ} 6",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 CanUse = () => NotOnCooldown("spell_polymorph", Cooldown: 10000),
                 CanUseForAdventureBar = () => NotOnCooldown("spell_polymorph", TickCooldown: false),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.SorcerySkill, 5 * WitchcraftExpMultiplier);
-                    CastSpell(Color.LimeGreen, () => Spells.Polymorph());
+                    CastSpell(Ability.Abilities.GetValueOrDefault("spell_polymorph"), Color.LimeGreen, () => Polymorph());
                 }
             });
 
@@ -67,14 +67,14 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 4,
                 ManaCost = () => 10,
-                KnownCondition = $"{PlayerSorcerySkillGSQ} 1",
+                KnownCondition = $"{PlayerSorcerySkillGSQ} 7",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 CanUse = () => NotOnCooldown("spell_stasis", Cooldown: 6000),
                 CanUseForAdventureBar = () => NotOnCooldown("spell_stasis", TickCooldown: false),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.SorcerySkill, 10 * WitchcraftExpMultiplier);
-                    CastSpell(Color.Orange, () => Spells.Stasis());
+                    CastSpell(Ability.Abilities.GetValueOrDefault("spell_stasis"), Color.Orange, () => Stasis());
                 }
             });
 
@@ -90,7 +90,7 @@ namespace SwordAndSorcerySMAPI
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.SorcerySkill, 5 * WitchcraftExpMultiplier);
-                    CastSpell(Color.Orange, () => Spells.MageArmor());
+                    CastSpell(Ability.Abilities.GetValueOrDefault("spell_magearmor"), Color.Orange, () => MageArmor());
                 }
             });
 
@@ -101,14 +101,14 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 7,
                 ManaCost = () => 8,
-                KnownCondition = $"{PlayerSorcerySkillGSQ} 1",
+                KnownCondition = $"{PlayerSorcerySkillGSQ} 8",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 CanUse = () => NotOnCooldown("spell_banishment", Cooldown: 10000),
                 CanUseForAdventureBar = () => NotOnCooldown("spell_banishment", TickCooldown: false),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.SorcerySkill, 8 * WitchcraftExpMultiplier);
-                    CastSpell(Color.Orange, () => Spells.Banish());
+                    CastSpell(Ability.Abilities.GetValueOrDefault("spell_banishment"), Color.Orange, () => Banish());
                 }
             });
 
@@ -124,7 +124,7 @@ namespace SwordAndSorcerySMAPI
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.SorcerySkill, 10 * WitchcraftExpMultiplier);
-                    CastSpell(Color.Magenta, () => Spells.RevivePlant());
+                    CastSpell(Ability.Abilities.GetValueOrDefault("spell_reviveplant"), Color.Magenta, () => RevivePlant());
                 }
             });
 
@@ -142,7 +142,7 @@ namespace SwordAndSorcerySMAPI
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.SorcerySkill, 15 * WitchcraftExpMultiplier);
-                    CastSpell(Color.Yellow, () => Spells.MirrorImage());
+                    CastSpell(Ability.Abilities.GetValueOrDefault("spell_mirrorimage"), Color.Yellow, () => MirrorImage());
                 }
             });
 
@@ -158,7 +158,7 @@ namespace SwordAndSorcerySMAPI
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.SorcerySkill, 10 * WitchcraftExpMultiplier);
-                    CastSpell(Color.Aqua, () => Spells.FindFamiliar());
+                    CastSpell(Ability.Abilities.GetValueOrDefault("spell_findfamiliar"), Color.Aqua, () => FindFamiliar());
                 }
             });
 
@@ -169,14 +169,14 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 16,
                 ManaCost = () => 7,
-                KnownCondition = $"{PlayerSorcerySkillGSQ} 1",
+                KnownCondition = $"{PlayerSorcerySkillGSQ} 7",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 CanUse = () => !Game1.player.companions.Any(c => c is FamiliarCompanion) && NotOnCooldown("spell_ghostlyprojection", Cooldown: 20000),
                 CanUseForAdventureBar = () => !Game1.player.companions.Any(c => c is FamiliarCompanion) && NotOnCooldown("spell_ghostlyprojection", TickCooldown: false),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.SorcerySkill, 7 * WitchcraftExpMultiplier);
-                    CastSpell(Color.Aqua, () => Spells.GhostlyProjection());
+                    CastSpell(Ability.Abilities.GetValueOrDefault("spell_ghostlyprojection"), Color.Aqua, () => GhostlyProjection());
                 }
             });
 
@@ -192,7 +192,7 @@ namespace SwordAndSorcerySMAPI
                 Function = () =>
                 {
                     //Game1.player.AddCustomSkillExperience(ModTOP.Skill, 0 * WitchcraftExpMultiplier);
-                    CastSpell(Color.Aqua, () => Spells.PocketChest());
+                    CastSpell(Ability.Abilities.GetValueOrDefault("spell_pocketchest"), Color.Aqua, () => PocketChest());
                 }
             });
 
@@ -203,12 +203,11 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 19,
                 ManaCost = () => 0,
-                KnownCondition = $"{PlayerSorcerySkillGSQ} 1",
+                KnownCondition = $"{PlayerSorcerySkillGSQ} 9",
                 UnlockHint = () => I18n.Ability_Witchcraft_SpellUnlockHint(),
                 Function = () =>
                 {
-                    //Game1.player.AddCustomSkillExperience(ModTOP.Skill, 0 * WitchcraftExpMultiplier);
-                    CastSpell(Color.Aqua, () => Spells.PocketDimension());
+                    CastSpell(Ability.Abilities.GetValueOrDefault("spell_pocketdimension"), Color.Aqua, () => PocketDimension());
                 }
             });
 
@@ -225,9 +224,7 @@ namespace SwordAndSorcerySMAPI
                 CanUseForAdventureBar = () => NotOnCooldown("spell_fireball", TickCooldown: false),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModTOP.SorcerySkill, 10 * WitchcraftExpMultiplier);
-                    var mousepos = Utility.PointToVector2(Game1.getMousePosition());
-                    CastSpell(Color.Red, () => Spells.Fireball(mousepos));
+                    CastSpellWithPosition(Ability.Abilities.GetValueOrDefault("spell_fireball"), 10, Color.Red, () => Fireball(Game1.getMousePosition().ToVector2()));
                 }
             });
 
@@ -238,15 +235,13 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Projectile.projectileSheetName,
                 SpriteIndex = 17,
                 ManaCost = () => { return 10 - (Game1.player.HasCustomProfession(SorcerySkill.ProfessionSpellDamage) ? 2 : 0); },
-                KnownCondition = $"{PlayerSorcerySkillGSQ} 1",
+                KnownCondition = $"{PlayerSorcerySkillGSQ} 8",
                 UnlockHint = I18n.Ability_Witchcraft_SpellUnlockHint,
                 CanUse = () => NotOnCooldown("spell_icebolt", Cooldown: 10000),
                 CanUseForAdventureBar = () => NotOnCooldown("spell_icebolt", TickCooldown: false),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModTOP.SorcerySkill, 10 * WitchcraftExpMultiplier);
-                    var mousepos = Utility.PointToVector2(Game1.getMousePosition());
-                    CastSpell(Color.Blue, () => Spells.Icebolt(mousepos));
+                    CastSpellWithPosition(Ability.Abilities.GetValueOrDefault("spell_icebolt"), 10, Color.Blue, () => Icebolt(Game1.getMousePosition().ToVector2()));
                 }
             });
 
@@ -264,7 +259,7 @@ namespace SwordAndSorcerySMAPI
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.SorcerySkill, 10 * WitchcraftExpMultiplier);
-                    CastSpell(Color.White, Spells.MagicMissle);
+                    CastSpell(Ability.Abilities.GetValueOrDefault("spell_magicmissle"), Color.White, MagicMissle);
                 }
             });
 
@@ -275,14 +270,14 @@ namespace SwordAndSorcerySMAPI
                 TexturePath = Helper.ModContent.GetInternalAssetName("assets/spells.png").Name,
                 SpriteIndex = 8,
                 ManaCost = () => { return 10 - (Game1.player.HasCustomProfession(SorcerySkill.ProfessionSpellDamage) ? 2 : 0); },
-                KnownCondition = $"{PlayerSorcerySkillGSQ} 1",
+                KnownCondition = $"{PlayerSorcerySkillGSQ} 6",
                 UnlockHint = I18n.Ability_Witchcraft_SpellUnlockHint,
                 CanUse = () => NotOnCooldown("spell_lightningbolt", Cooldown: 3000),
                 CanUseForAdventureBar = () => NotOnCooldown("spell_lightningbolt", TickCooldown: false),
                 Function = () =>
                 {
                     Game1.player.AddCustomSkillExperience(ModTOP.SorcerySkill, 10 * WitchcraftExpMultiplier);
-                    CastSpell(Color.Aquamarine, Spells.LightningBolt);
+                    CastSpell(Ability.Abilities.GetValueOrDefault("spell_lightningbolt"), Color.Aquamarine, LightningBolt);
                 }
             });
         }
@@ -316,8 +311,30 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        private static void CastSpell(Color spellColor, Action onCast)
+        internal class PositioningAbil(Ability abil, int xp, Color color, Action onCast)
         {
+            public Ability Ability { get; set; } = abil;
+            public int XP { get; set; } = xp;
+            public Color SpellColor { get; set; } = color;
+            public Action OnCast { get; set; } = onCast;
+        }
+
+        public static PositioningAbil CurrPositioningAbil = null;
+
+        private static void CastSpellWithPosition(Ability abil, int xp, Color spellColor, Action onCast)
+        {
+            if (CurrPositioningAbil == null || CurrPositioningAbil.Ability != abil)
+            {
+                Game1.addHUDMessage(new(I18n.Spells_PositionMouseAnnouncement()));
+                CurrPositioningAbil = new(abil, xp, spellColor, onCast);
+            }
+            else CurrPositioningAbil = null;
+        }
+
+        public static void CastSpell(Ability abil, Color spellColor, Action onCast)
+        {
+            Game1.player.GetFarmerExtData().mana.Value -= abil.ManaCost();
+            CurrPositioningAbil = null;
             ModSnS.State.PreCastFacingDirection = Game1.player.FacingDirection;
             Game1.player.completelyStopAnimatingOrDoingAction();
             Game1.player.faceDirection(Game1.down);
@@ -848,11 +865,17 @@ namespace SwordAndSorcerySMAPI
                         location.playSound("explosion");
                         Fireballs.Remove(Fireball);
 
+                        List<Monster> burnMonsters = [];
                         foreach (Monster m in location.characters.Where(c => c is Monster).Cast<Monster>())
                         {
                             if (Vector2.Distance(__instance.position.Value, m.Position) <= -5 * 64 || Vector2.Distance(__instance.position.Value, m.Position) >= 5 * 64) continue;
                             if (IsPipedSlime(m)) continue;
 
+                            burnMonsters.Add(m);
+                        }
+
+                        foreach (Monster m in burnMonsters)
+                        {
                             location.damageMonster(m.GetBoundingBox(), Min, Max, false, Game1.player, true);
 
                             DelayedAction.functionAfterDelay(() => { if (m.Health > 0) location.damageMonster(m.GetBoundingBox(), Min2, Max2, isBomb: false, Game1.player); }, 1000);
@@ -881,7 +904,11 @@ namespace SwordAndSorcerySMAPI
                         {
                             if (Vector2.Distance(__instance.position.Value, m.Position) <= -5 * 64 || Vector2.Distance(__instance.position.Value, m.Position) >= 5 * 64) continue;
                             if (IsPipedSlime(m)) continue;
+                            FreezeMonsters.Add(m);
+                        }
 
+                        foreach(Monster m in FreezeMonsters)
+                        {
                             m.stunTime.Value = 6000 / (m is DuskspireMonster ? 2 : 1);
                             Game1.Multiplayer.broadcastSprites(location, new TemporaryAnimatedSprite("LooseSprites\\Cursors2", new Rectangle(118, 227, 16, 13), new Vector2(0f, 0f), flipped: false, 0f, Color.White)
                             {

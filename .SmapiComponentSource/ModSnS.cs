@@ -468,6 +468,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.Input.ButtonPressed += Input_ButtonPressed;
             Helper.Events.World.NpcListChanged += World_NpcListChanged;
             Helper.Events.World.LocationListChanged += World_LocationListChanged;
+            Helper.Events.GameLoop.ReturnedToTitle += GameLoop_ReturnedToTitle;
 
             GameLocation.RegisterTileAction("SwordAndSorceryOrderBoard", (loc, args, farmer, point) =>
             {
@@ -658,6 +659,11 @@ namespace SwordAndSorcerySMAPI
             InitArsenal();
         }
 
+        private void GameLoop_ReturnedToTitle(object sender, ReturnedToTitleEventArgs e)
+        {
+            Spells.CurrPositioningAbil = null;
+        }
+
         private void Player_InventoryChanged(object sender, InventoryChangedEventArgs e)
         {
             if (e.Removed.Any(i => i is MeleeWeapon or Slingshot && i.ItemId.ContainsIgnoreCase("DN.SnS_longlivetheking")))
@@ -681,6 +687,8 @@ namespace SwordAndSorcerySMAPI
 
         private void GameLoop_DayEnding(object sender, DayEndingEventArgs e)
         {
+            Spells.CurrPositioningAbil = null;
+
             Utility.ForEachCharacter((npc) =>
             {
                 if (npc is Monster && npc is DuskspireMonster m)
@@ -690,7 +698,7 @@ namespace SwordAndSorcerySMAPI
 
             Helper.Data.WriteGlobalData<Dictionary<string, bool>>("VB.FM_Data", new()
                 {
-                    {"e", Game1.player.eventsSeen.Contains("SnS.Ch4.Finale")},
+                    {"Finale", Game1.player.eventsSeen.Contains("SnS.Ch4.Finale")},
                 });
         }
 
@@ -929,7 +937,6 @@ namespace SwordAndSorcerySMAPI
 
                 if (abilId != null && Ability.Abilities.TryGetValue(abilId, out var abil) && abil.ManaCost() <= ext.mana.Value && abil.CanUse())
                 {
-                    ext.mana.Value -= abil.ManaCost();
                     CastAbility(abil);
                 }
             }
@@ -1418,7 +1425,7 @@ namespace SwordAndSorcerySMAPI
                         var ext = Game1.player.GetFarmerExtData();
                         if (ext.adventureBar[AbilNum] == null)
                             Game1.addHUDMessage(new HUDMessage(I18n.Iconic_UseAbility_NoAbilityInSlot()));
-                        else if (Ability.Abilities.TryGetValue(ext.adventureBar[AbilNum], out var Abil) && Abil.CanUse())
+                        else if (Ability.Abilities.TryGetValue(ext.adventureBar[AbilNum], out var Abil) && Abil.ManaCost() <= ext.mana.Value && Abil.CanUse())
                             CastAbility(Abil);
                     });
                 }
@@ -1444,6 +1451,17 @@ namespace SwordAndSorcerySMAPI
         {
             if (!Context.IsWorldReady || Game1.player == null)
                 return;
+
+            if (Spells.CurrPositioningAbil != null)
+            {
+                if (Game1.didPlayerJustLeftClick())
+                {
+                    Game1.player.AddCustomSkillExperience(ModTOP.SorcerySkill, Spells.CurrPositioningAbil.XP * Spells.WitchcraftExpMultiplier);
+                    Spells.CastSpell(Spells.CurrPositioningAbil.Ability, Spells.CurrPositioningAbil.SpellColor, Spells.CurrPositioningAbil.OnCast);
+                }
+                else if (Game1.didPlayerJustRightClick())
+                    Spells.CurrPositioningAbil = null;
+            }
 
             if (!Game1.player.mailReceived.Contains("DN.SnS_IntermissionShield") && Game1.player.eventsSeen.Any(m => m.StartsWith("SnS.Ch4.Victory")))
             {
@@ -1686,6 +1704,12 @@ namespace SwordAndSorcerySMAPI
         {
             if (!Context.IsWorldReady || Game1.CurrentEvent != null)
                 return;
+
+            if (Spells.CurrPositioningAbil != null)
+            {
+                var tex = Game1.content.Load<Texture2D>(Spells.CurrPositioningAbil.Ability.TexturePath);
+                e.SpriteBatch.Draw(tex, Game1.getMousePosition().ToVector2() + new Vector2(16, 16), Game1.getSquareSourceRectForNonStandardTileSheet(tex, 16, 16, Spells.CurrPositioningAbil.Ability.SpriteIndex), Color.White, 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, 1);
+            }
 
             if (State.BlockCooldown > 0)
             {
