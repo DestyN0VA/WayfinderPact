@@ -6712,7 +6712,7 @@ ________      ________ _   _ _______ _____
   "AncientSeed.Hector.FairyRose": "Ancient Wild Fairy Rose Seeds",
   "AncientSeed.Hector.Elderberry": "Ancient Elderberry Seed",
   "AncientSeed.Hector.BottleGourd": "Ancient Bottle Gourd Seed",
-  "AncientSeed.Hector.AppleBerry": "Ancient Glowing Appleberry Seed",
+  "AncientSeed.Hector.AppleBerry": "Ancient Giant Appleberry Seed",
   "AncientSeed.Hector.Detura": "Ancient Detura Seeds",
   "AncientSeed.Hector.SweetTea": "Ancient Sweet Tea Bush Seeds",
 
@@ -6751,9 +6751,9 @@ ________      ________ _   _ _______ _____
   "crop.ancientbottlegourd.seed.name": "Ancient Bottle Ground",
   "crop.ancientbottlegourd.seed.description": "Grown in Fall. Takes twelve days. Does not regrow.",
 
-  "crop.ancientgiantappleberry.name": "Ancient Giant Apple Berry",
+  "crop.ancientgiantappleberry.name": "Ancient Giant Appleberry",
   "crop.ancientgiantappleberry.description": "It's unusually large. The outside is soft but the inside resembles an apple. Confusing, but tasty.",
-  "crop.ancientgiantappleberry.seed.name": "Ancient Giant Apple Berry Seed",
+  "crop.ancientgiantappleberry.seed.name": "Ancient Giant Appleberry Seed",
   "crop.ancientgiantappleberry.seed.description": "Grown in Spring, Summer, and Fall. Takes ten days. Does not regrow.",
 
   "crop.ancientazuredetura.name": "Ancient Azure Detura Flower",
