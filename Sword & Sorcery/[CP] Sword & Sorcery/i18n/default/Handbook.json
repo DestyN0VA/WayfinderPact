@@ -895,7 +895,7 @@ Spell Unlocks:
   = [itemtooltip=(O)DN.SnS_ancientbottlegourd.seed][icon=Textures/DN.SnS/SnSObjects:0,64,16,16] [color=blue]Ancient Bottle Gourd Seeds[/color][/itemtooltip] 
   = [itemtooltip=(O)DN.SnS_lavaeelandstirfriedancientbottlegourd][icon=Textures/DN.SnS/SnSObjects:0,48,16,16] [color=blue]Lava Eel & Bottle Gourd[/color][/itemtooltip]
 > Level 7 - Unlocks the recipes:
-  = [itemtooltip=(O)DN.SnS_ancientgiantappleberry.seed][icon=Textures/DN.SnS/SnSObjects:32,64,16,16] [color=blue]Ancient Giant Apple Berry Seeds[/color][/itemtooltip]
+  = [itemtooltip=(O)DN.SnS_ancientgiantappleberry.seed][icon=Textures/DN.SnS/SnSObjects:32,64,16,16] [color=blue]Ancient Giant Appleberry Seeds[/color][/itemtooltip]
   = [itemtooltip=(O)DN.SnS_mushroomsredsauce][icon=Textures/DN.SnS/SnSObjects:112,32,16,16] [color=blue]Fried Polypore Mushrooms & Red Sauce[/color][/itemtooltip]
 > Level 8 - Unlocks the recipes: 
   = [itemtooltip=(O)DN.SnS_ancientazuredetura.seed][icon=Textures/DN.SnS/SnSObjects:64,64,16,16] [color=blue]Ancient Azure Detura[/color][/itemtooltip]
