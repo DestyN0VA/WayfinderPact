@@ -39,8 +39,8 @@
                     "PetMessage": [
                         "{{i18n:MEEP.BookOutside.{{Random: {{Range: 1, 5}}|key=BookDialogue}}}}"
                     ],
-                    "HomeTileX": 7,
-                    "HomeTileY": 14,
+                    "HomeTileX": 16,
+                    "HomeTileY": 17,
                     "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch3.Cirrus.11, WEATHER EastScarp_Village Sun"
                 },
                 "{{ModId}}.Book_Inside": {
