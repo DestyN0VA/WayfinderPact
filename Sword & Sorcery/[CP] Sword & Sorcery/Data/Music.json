@@ -146,7 +146,28 @@
                     "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DeepDark_Intrigue.ogg}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
-                }
+                },
+                "SnS.Caramel": {
+                    "ID": "SnS.Caramel",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/Caramel_Full.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+                "SnS.Caramel_1": {
+                    "ID": "SnS.Caramel_1",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/Caramel_1.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+                "SnS.Caramel_2": {
+                    "ID": "SnS.Caramel_2",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/Caramel_2.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
             }
         },
 
