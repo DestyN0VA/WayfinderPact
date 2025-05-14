@@ -33,7 +33,7 @@
                     ],
                     "HomeTileX": 90,
                     "HomeTileY": 100,
-                    "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Mateo.12, WEATHER EastScarp_Village Sun, !PLAYER_NPC_RELATIONSHIP Current Mateo Married"
+                    "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Val.12, WEATHER EastScarp_Village Sun, !PLAYER_NPC_RELATIONSHIP Current Val Married"
                 },                
                 "{{ModId}}.Emeritus_Inside": {
                     "AnimalId": "{{ModId}}.Emeritus",
@@ -46,7 +46,7 @@
                     ],
                     "HomeTileX": 2,
                     "HomeTileY": 17,
-                    "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Mateo.12, !WEATHER EastScarp_Village Sun, !PLAYER_NPC_RELATIONSHIP Current Mateo Married"
+                    "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Val.12, !WEATHER EastScarp_Village Sun, !PLAYER_NPC_RELATIONSHIP Current Val Married"
                 },
                 "{{ModId}}.Emeritus_MateoMarried": {
                     "AnimalId": "{{ModId}}.Emeritus",
@@ -59,7 +59,7 @@
                     ],
                     "HomeTileX": "{{EmeritusSpawnPointX}}",
                     "HomeTileY": "{{EmeritusSpawnPointY}}",
-                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Mateo Married"
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Val Married"
                 }
             }
         }

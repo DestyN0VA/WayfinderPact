@@ -114,7 +114,7 @@ namespace SwordAndSorcerySMAPI
 
             BattlerData = new()
             {
-                { "Mateo", new BattlerInfo()
+                { "Val", new BattlerInfo()
                     {
                         BaseDefense = 8,
                         Mana = 30,

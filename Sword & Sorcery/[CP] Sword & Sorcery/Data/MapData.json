@@ -43,7 +43,7 @@
       "FromFile": "Assets/Maps/{{TargetWithoutPath}}.tmx"
     },
     {
-      "LogName": "Mateo's Tent",
+      "LogName": "Val's Tent",
       "Action": "EditData",
       "Target": "Data/Locations",
       "Entries": {

@@ -1,9 +1,9 @@
 {
   "Changes": [
     {
-      "LogName": "Mateo Loads from Blanks",
+      "LogName": "Val Loads from Blanks",
       "Action": "Load",
-      "Target": "Characters/Dialogue/Mateo, Characters/Dialogue/MarriageDialogueMateo, Characters/Schedules/Mateo",
+      "Target": "Characters/Dialogue/Val, Characters/Dialogue/MarriageDialogueMateo, Characters/Schedules/Val",
       "FromFile": "Data/blank.json"
     },
     {

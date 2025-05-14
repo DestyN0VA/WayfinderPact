@@ -394,7 +394,7 @@ namespace SwordAndSorcerySMAPI
                 //monstermusk//{ "MarlonFey", () => new BuffEffects() { FishingLevel = { 1 } } },
                 { "GuntherSilvian", () => new BuffEffects() { MiningLevel = { 1 } } },
                 //exp gain//{ "Cirrus", () => new BuffEffects() { ForagingLevel = { 1 } } },
-                { "Mateo", () => new BuffEffects() { AttackMultiplier = { 1.1f } } },
+                { "Val", () => new BuffEffects() { AttackMultiplier = { 1.1f } } },
                 //druidics//{ "Hector", () => new BuffEffects() { FarmingLevel = { 1 } } },
             };
 

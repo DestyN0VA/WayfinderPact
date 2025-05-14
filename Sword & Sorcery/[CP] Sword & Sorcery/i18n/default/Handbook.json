@@ -41,11 +41,11 @@ Sword & Sorcery is a vanilla adjacent, magical adventure inspired by the likes o
 The Chapters of this story, all the way from a lone tent on the beach to a battle to save East Scarp from the remnants of a tragedy long thought passed to a series of epilogues for all the major NPCs.
  
 [font=dialogue]Table Of Contents[/font]
-> [link=Chapters/IntroNEA]Never Ending Adventure[/link] - ([link=Characters/Mateo]Mateo[/link])
+> [link=Chapters/IntroNEA]Never Ending Adventure[/link] - ([link=Characters/Val]Val[/link])
   = [link=Chapters/NEA]Events[/link]
  
-> [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=Chapters/IntroCOT]Circle Of Thorns[/link][/if][else]Circle Of Thorns[/else] - ([link=Characters/Hector]{{TrueName}}[/link])
-  = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14][link=Chapters/COT]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
+> [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.14][link=Chapters/IntroCOT]Circle Of Thorns[/link][/if][else]Circle Of Thorns[/else] - ([link=Characters/Hector]{{TrueName}}[/link])
+  = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.14][link=Chapters/COT]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
  
 > [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Chapters/IntroUP]Under Pressure[/link][/if][else]Under Pressure[/else] - ([link=Characters/Cirrus]Cirrus[/link])
   = [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.16][link=Chapters/UP]Events[/link][/if][else]Events [color=DarkRed](Locked)[/color][/else]
@@ -96,7 +96,7 @@ Have questions about the mod? We have answers.
 [center][font=dialogue]NPCs[/font][/center]
  
 [color=maroon]How do I advance the story?[/color]
-This entire mod progresses linearly. See all of [link=Characters/Mateo]Mateo's[/link] events, meet [link=Characters/Hector]{{TrueName}}[/link]. See all of {{TrueName}}'s events, meet [link=Characters/Cirrus]Cirrus[/link]. See all of Cirrus' events, meet [link=Characters/Roslin]Roslin[/link]. See most of Roslin's events, meet [link=Characters/Dandelion]Dandelion[/link]. See their remaining events, and proceed to the [link=DeepDark/TableOfContents]final dungeon[/link] and the associated [link=DeepDark/DuskspireBehemoth]final boss[/link]. By then, you will have unlocked most of everything. What remains will be documented here.
+This entire mod progresses linearly. See all of [link=Characters/Val]Val's[/link] events, meet [link=Characters/Hector]{{TrueName}}[/link]. See all of {{TrueName}}'s events, meet [link=Characters/Cirrus]Cirrus[/link]. See all of Cirrus' events, meet [link=Characters/Roslin]Roslin[/link]. See most of Roslin's events, meet [link=Characters/Dandelion]Dandelion[/link]. See their remaining events, and proceed to the [link=DeepDark/TableOfContents]final dungeon[/link] and the associated [link=DeepDark/DuskspireBehemoth]final boss[/link]. By then, you will have unlocked most of everything. What remains will be documented here.
  
 [color=maroon]What are the NPC's schedules?[/color]
 Due to their complexity, schedules are not documented here. Please use [link=https://www.nexusmods.com/stardewvalley/mods/239]NPC Map Locations[/link] or [link=https://www.nexusmods.com/stardewvalley/mods/19305]Schedule Viewer[/link] if you need help locating the NPCs.
@@ -104,10 +104,10 @@ Due to their complexity, schedules are not documented here. Please use [link=htt
 [color=maroon]What are the NPC's gift tastes?[/color]
 Due to the variability of gift tastes, they are not documented here. Please use [link=https://www.nexusmods.com/stardewvalley/mods/541]Lookup Anything[/link] and the F1 key on the NPC to automatically show their gift tastes.
  
-[color=maroon]How do I date/marry [link=Characters/Mateo]Mateo[/link], [link=Characters/Hector]{{TrueName}}[/link] or [link=Characters/Cirrus]Cirrus[/link]?[/color]
+[color=maroon]How do I date/marry [link=Characters/Val]Val[/link], [link=Characters/Hector]{{TrueName}}[/link] or [link=Characters/Cirrus]Cirrus[/link]?[/color]
 You can only date these NPCs after completing their specific [link=Chapters/TableOfContents]chapter[/link]. Trying to gift them a bouquet before this will result in rejection. You must also date the NPC for {{DatingCooldown}} days before you're allowed to marry them.
  
-[color=maroon]How do I get [link=Characters/Mateo]Mateo[/link], [link=Characters/Hector]{{TrueName}}[/link], and [link=Characters/Cirrus]Cirrus'[/link] hoodies?[/color]
+[color=maroon]How do I get [link=Characters/Val]Val[/link], [link=Characters/Hector]{{TrueName}}[/link], and [link=Characters/Cirrus]Cirrus'[/link] hoodies?[/color]
 Marry them.
  
 [color=maroon]Who is Stiles Siddell?[/color]
@@ -139,8 +139,8 @@ Some are sent in the mail, some are part of ranking the [link=Skills/DruidicsSki
 > [itemtooltip=(O)DN.SnS_Hand_Pressed_Apple_Cider][icon=Textures/DN.SnS/VioletMoonFood:32,0,16,16] [color=blue]Hand-Pressed Apple Cider[/color][/itemtooltip]: Mailed by Stiles.
 > [itemtooltip=(O)DN.SnS_Fruit_Hand_Pie][icon=Textures/DN.SnS/VioletMoonFood:48,0,16,16] [color=blue]Fruit Hand Pie[/color][/itemtooltip]: Mailed by Stiles.
 > [itemtooltip=(O)DN.SnS_Smoked_TurkeyLeg][icon=Textures/DN.SnS/VioletMoonFood:64,0,16,16] [color=blue]Smoked Turkey Leg[/color][/itemtooltip]: Mailed by Stiles.
-> [itemtooltip=(O)DN.SnS_autumnalstew][icon=Textures/DN.SnS/SnSObjects:128,16,16,16] [color=blue]Autumnal Stew[/color][/itemtooltip]: Mailed by Mateo.
-> [itemtooltip=(O)DN.SnS_salishbourbon][icon=Textures/DN.SnS/SnSObjects:112,16,16,16] [color=blue]Salish Bourbon[/color][/itemtooltip]: Mailed by Mateo.
+> [itemtooltip=(O)DN.SnS_autumnalstew][icon=Textures/DN.SnS/SnSObjects:128,16,16,16] [color=blue]Autumnal Stew[/color][/itemtooltip]: Mailed by Val.
+> [itemtooltip=(O)DN.SnS_salishbourbon][icon=Textures/DN.SnS/SnSObjects:112,16,16,16] [color=blue]Salish Bourbon[/color][/itemtooltip]: Mailed by Val.
 > [itemtooltip=(O)DN.SnS_dandeliongreens][icon=Textures/DN.SnS/SnSObjects:144,16,16,16] [color=blue]Dandelion Greens[/color][/itemtooltip]: Mailed by Dandelion.
 > [itemtooltip=(O)DN.SnS_mushroomsredsauce][icon=Textures/DN.SnS/SnSObjects:112,32,16,16] [color=blue]Mushrooms and Red Sauce[/color][/itemtooltip]: via Druidics.
 > [itemtooltip=(O)DN.SnS_ferngreensandpineapple][icon=Textures/DN.SnS/SnSObjects:128,32,16,16] [color=blue]Fern Greens and Pineapple[/color][/itemtooltip]: via Druidics.
@@ -230,16 +230,16 @@ Type them into the SMAPI console (black box that appears when you load) and hit 
   "guidebook.chapter.NEA.Intro": "[center][font=dialogue][offset=0,8]Chapter 1[/font][/center]
   [center][font=dialogue]Never Ending Adventure[/font][/center]
    
-This first chapter of S&S introduces you to Mateo, a charming rogue with a sordid history. Unravel their connection to the Museum's missing contents, help them reconnect with the townsfolk, learn the Artificer skill, unlock the Underforge, the Arsenal system, and found a new branch of the Adventurer's Guild.",
-  "guidebook.chapter.NEA.Mateo": "[nospacing]
-[nextposition=0,10][center=300][font=dialogue]Mateo[/font][/center]
-[offset=118,50][image=Characters/Mateo:0,0,16,32:4]
+This first chapter of S&S introduces you to Val, a charming rogue with a sordid history. Unravel their connection to the Museum's missing contents, help them reconnect with the townsfolk, learn the Artificer skill, unlock the Underforge, the Arsenal system, and found a new branch of the Adventurer's Guild.",
+  "guidebook.chapter.NEA.Val": "[nospacing]
+[nextposition=0,10][center=300][font=dialogue]Val[/font][/center]
+[offset=118,50][image=Characters/Val:0,0,16,32:4]
 [offset=-118,144][center=300]Pronouns: They/Them[/center]
 [offset=0,32][center=300]Birthday: Fall 25[/center]
-[nextposition=322,16][image=Portraits/Mateo:0,0,64,64:4]
+[nextposition=322,16][image=Portraits/Val:0,0,64,64:4]
 [nextposition=0,288]
 [/nospacing]
-Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town. Not only are they a skilled Rogue, but they have an inclination for blacksmithing. A good leader and better friend who'll always have your back.",
+Val is an experienced adventurer with a kind heart who grew up in Pelican Town. Not only are they a skilled Rogue, but they have an inclination for blacksmithing. A good leader and better friend who'll always have your back.",
 "guidebook.chapter.NEA.Emeritus": "[nospacing]
 [nextposition=0,10][center=300][font=dialogue]Emeritus[/font][/center]
 [offset=90,50][image=Characters/MateoEmeritus:0,0,32,32:4]
@@ -251,194 +251,194 @@ Mateo is an experienced adventurer with a kind heart who grew up in Pelican Town
 Emeritus is a jovial Pepper Rex who hatches with one goal: to protect East Scarp from the crab menace. He's the most loyal sidekick there is, and loves the occasional kiss on the forehead. He'll return it with bonus slobber!",
   "guidebook.chapter.NEA.Events": "[center][font=dialogue][offset=0,8]The Story Thus Far:[/font][/center]
    
-[font=dialogue]Mateo Event: 0 Hearts pt 1[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.0]Complete![/if]
+[font=dialogue]Val Event: 0 Hearts pt 1[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.0]Complete![/if]
 [else]Hint: Visit the [color=green]top floor of the Mines[/color] before 12am.[/else]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.0]
-[font=dialogue]Mateo Event: 0 Hearts pt 2[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.1]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.0]
+[font=dialogue]Val Event: 0 Hearts pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.1]Complete![/if]
 [else]Hint: Visit the [color=green]Stardew Valley Museum & Library[/color] between 8am and 1am.[/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.1]
-[font=dialogue]Mateo Event: 2 Hearts[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.2]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.1]
+[font=dialogue]Val Event: 2 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.2]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 500]Hint: Visit [color=green]Pelican Town[/color] between 5pm and 1am in sunny weather.[/if]
-[else]Requirement: 2 Hearts of friendship with [color=red]Mateo[/color][/else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 500]Hint: Visit [color=green]Pelican Town[/color] between 5pm and 1am in sunny weather.[/if]
+[else]Requirement: 2 Hearts of friendship with [color=red]Val[/color][/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.2]
-[font=dialogue]Mateo Event: 4 Hearts[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.3]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.2]
+[font=dialogue]Val Event: 4 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.3]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1000, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoLibrary]Hint: Visit the [color=green]Beach[/color] between 6pm and 12am in sunny weather.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 1000, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoLibrary]Hint: Visit the [color=green]Beach[/color] between 6pm and 12am in sunny weather.[/if]
 [else]
-[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1000]Requirement: 4 Hearts with [color=red]Mateo[/color][/if]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Val 1000]Requirement: 4 Hearts with [color=red]Val[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoLibrary]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
 [/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.3]
-[font=dialogue]Mateo Event: 4 Hearts[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.4]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.3]
+[font=dialogue]Val Event: 4 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.4]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoAdmission]Hint: Visit the [color=green]top floor of the Mines[/color] between 6pm and 1am.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoAdmission]Hint: Visit the [color=green]top floor of the Mines[/color] between 6pm and 1am.[/if]
 [else]
-[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1250]Requirement: 5 Hearts with [color=red]Mateo[/color][/if]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Val 1250]Requirement: 5 Hearts with [color=red]Val[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoAdmission]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
 [/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.4]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.4]
 [font=dialogue]Dandelion & Roslin: Pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Roslin]Complete![/if]
 [else]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.4]Hint: Visit [color=green]Mayor Lewis' house[/color] between between 9am and 6pm.[/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.4]Hint: Visit [color=green]Mayor Lewis' house[/color] between between 9am and 6pm.[/if]
 [else]
 [/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.4]
-[font=dialogue]Mateo Event: 5 Hearts pt 1[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.5]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.4]
+[font=dialogue]Val Event: 5 Hearts pt 1[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.5]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250]Hint: Visit the [color=green]Saloon[/color] between 12pm and 12am.[/if]
-[else]Requirement: 5 Hearts with [color=red]Mateo[/color][/else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 1250]Hint: Visit the [color=green]Saloon[/color] between 12pm and 12am.[/if]
+[else]Requirement: 5 Hearts with [color=red]Val[/color][/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.5]
-[font=dialogue]Mateo Event: 5 Hearts pt 2[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.6]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.5]
+[font=dialogue]Val Event: 5 Hearts pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.6]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoConfrontation]Hint: Visit the [color=green]Adventurer's Guild[/color] between 2pm and 10pm.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoConfrontation]Hint: Visit the [color=green]Adventurer's Guild[/color] between 2pm and 10pm.[/if]
 [else]
-[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1250]Requirement: 5 Hearts with [color=red]Mateo[/color][/if]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Val 1250]Requirement: 5 Hearts with [color=red]Val[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoConfrontation]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
 [/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.6]
-[font=dialogue]Mateo Event: 5 Hearts pt 3[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.7]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.6]
+[font=dialogue]Val Event: 5 Hearts pt 3[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.7]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1500]Hint: Visit [color=green]Pelican Town[/color] between 10am and 6pm.[/if]
-[else]Requirement: 6 Hearts with [color=red]Mateo[/color][/else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 1500]Hint: Visit [color=green]Pelican Town[/color] between 10am and 6pm.[/if]
+[else]Requirement: 6 Hearts with [color=red]Val[/color][/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.7]
-[font=dialogue]Mateo Event: 6 Hearts[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.8]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.7]
+[font=dialogue]Val Event: 6 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.8]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1500]Hint: Visit the [color=green]Forest[/color] between 6pm and 12am in bad weather.[/if]
-[else]Requirement: 6 Hearts with [color=red]Mateo[/color][/else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 1500]Hint: Visit the [color=green]Forest[/color] between 6pm and 12am in bad weather.[/if]
+[else]Requirement: 6 Hearts with [color=red]Val[/color][/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.8]
-[font=dialogue]Mateo Event: 7 Hearts pt 1[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.9]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.8]
+[font=dialogue]Val Event: 7 Hearts pt 1[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.9]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1750, PLAYER_HAS_MET Current Krobus, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoAcceptance]Hint: Visit the [color=green]Hospital[/color] between 9am and 5pm when it isn't Friday.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 1750, PLAYER_HAS_MET Current Krobus, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoAcceptance]Hint: Visit the [color=green]Hospital[/color] between 9am and 5pm when it isn't Friday.[/if]
 [else]
-[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1750]Requirement: 7 Hearts with [color=red]Mateo[/color][/if]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Val 1750]Requirement: 7 Hearts with [color=red]Val[/color][/if]
 [if=!PLAYER_HAS_MET Current Krobus]Requirement: Meet [color=red]Krobus[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoAcceptance]Requirement: Wait {{VariableTimegate}} days after seeing the previous event.[/if]
 [/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.9]
-[font=dialogue]Mateo Event: 7 Hearts pt 2[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.10]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.9]
+[font=dialogue]Val Event: 7 Hearts pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.10]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 1750, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoPain]Hint: Visit [color=green]Pelican Town[/color] between 5pm and 12am when it isn't Friday.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 1750, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoPain]Hint: Visit [color=green]Pelican Town[/color] between 5pm and 12am when it isn't Friday.[/if]
 [else]
-[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 1750]Requirement: 7 Hearts with [color=red]Mateo[/color][/if]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Val 1750]Requirement: 7 Hearts with [color=red]Val[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoPain]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
 [/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.10]
-[font=dialogue]Mateo Event: 8 Hearts pt 1[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.11]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.10]
+[font=dialogue]Val Event: 8 Hearts pt 1[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.11]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoRecovery]Hint: Visit [color=green]East Scarp[/color] between 8am and 6pm in sunny weather.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoRecovery]Hint: Visit [color=green]East Scarp[/color] between 8am and 6pm in sunny weather.[/if]
 [else]
-[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Requirement: 8 Hearts with [color=red]Mateo[/color][/if]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Val 2000]Requirement: 8 Hearts with [color=red]Val[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoRecovery]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
 [/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.11]
-[font=dialogue]Special Order: Mateo's Request[/font]
-[if=PLAYER_SPECIAL_ORDER_COMPLETE Current Mateo.SpecialOrders.BuildGuild]You gathered materials for [color=red]Mateo[/color].[/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.11]
+[font=dialogue]Special Order: Val's Request[/font]
+[if=PLAYER_SPECIAL_ORDER_COMPLETE Current Val.SpecialOrders.BuildGuild]You gathered materials for [color=red]Val[/color].[/if]
 [else]Gather materials for the new branch of the adventurer's guild:
 > 500 [itemtooltip=(O)388][icon=Maps/springobjects:64,256,16,16] [color=blue]Wood[/color][/itemtooltip]
 > 300 [itemtooltip=(O)390][icon=Maps/springobjects:96,256,16,16] [color=blue]Stone[/color][/itemtooltip]
 > 100 [itemtooltip=(O)709][icon=Maps/springobjects:208,464,16,16] [color=blue]Hardwood[/color][/itemtooltip]
-[if=!PLAYER_SPECIAL_ORDER_ACTIVE Current Mateo.SpecialOrders.BuildGuild]You seem to be missing the special order.
-[onceaction=AddSpecialOrder Mateo.SpecialOrders.BuildGuild]Click here to re-add it to your journal.[/onceaction][/if]
+[if=!PLAYER_SPECIAL_ORDER_ACTIVE Current Val.SpecialOrders.BuildGuild]You seem to be missing the special order.
+[onceaction=AddSpecialOrder Val.SpecialOrders.BuildGuild]Click here to re-add it to your journal.[/onceaction][/if]
 [/else]
 [/if]
  
-[if=PLAYER_SPECIAL_ORDER_COMPLETE Current Mateo.SpecialOrders.BuildGuild]
-[font=dialogue]Mateo Event: 8 Hearts pt 2[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.12]Complete![/if]
+[if=PLAYER_SPECIAL_ORDER_COMPLETE Current Val.SpecialOrders.BuildGuild]
+[font=dialogue]Val Event: 8 Hearts pt 2[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.12]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Hint: Visit [color=green]East Scarp[/color] between 8am and 6pm in sunny weather.[/if]
-[else]Requirement: 8 Hearts with [color=red]Mateo[/color][/else]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 2000]Hint: Visit [color=green]East Scarp[/color] between 8am and 6pm in sunny weather.[/if]
+[else]Requirement: 8 Hearts with [color=red]Val[/color][/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.12]
-[font=dialogue]Mateo Event: 10 Hearts[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.12]
+[font=dialogue]Val Event: 10 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.14]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current CGuildComplete]Hint: Visit the [color=green]Railroad[/color] between 5pm and 12am when it isn't Friday.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 2500, !PLAYER_HAS_CONVERSATION_TOPIC Current CGuildComplete]Hint: Visit the [color=green]Railroad[/color] between 5pm and 12am when it isn't Friday.[/if]
 [else]
-[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 2500]Requirement: 10 Hearts with [color=red]Mateo[/color][/if]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Val 2500]Requirement: 10 Hearts with [color=red]Val[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current CGuildComplete]Requirement: Wait a day after the previous event.[/if]
 [/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.14]
 [font=dialogue]Event: Artificer Skill Unlock[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.18]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.18]Complete![/if]
 [else]
 Hint: Visit the [color=green]Coastal Adventurer's Guild[/color] between 8am and 10pm.
 [/else]
 [/if]
  
-[if=PLAYER_NPC_RELATIONSHIP Current Mateo Married Engaged Roommate]
-[font=dialogue]Mateo Event: 12 Hearts[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.16]Complete![/if]
+[if=PLAYER_NPC_RELATIONSHIP Current Val Married Engaged Roommate]
+[font=dialogue]Val Event: 12 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.16]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 3000]Hint: Visit [color=green]the Mines[/color] between between 6am and 12am any season except winter.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 3000]Hint: Visit [color=green]the Mines[/color] between between 6am and 12am any season except winter.[/if]
 [else]
-[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 3000]Requirement: 12 Hearts with [color=red]Mateo[/color][/if]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Val 3000]Requirement: 12 Hearts with [color=red]Val[/color][/if]
 [/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SNS.Ch1.Mateo.16]
-[font=dialogue]Mateo Event: 14 Hearts[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.17]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SNS.Ch1.Val.16]
+[font=dialogue]Val Event: 14 Hearts[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.17]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 3500]Hint: Visit [color=green]the East Scarp[/color] between between 6am and 6pm in rainy, snowy, or storming weather.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 3500]Hint: Visit [color=green]the East Scarp[/color] between between 6am and 6pm in rainy, snowy, or storming weather.[/if]
 [else]
-[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 3500]Requirement: 14 Hearts with [color=red]Mateo[/color][/if]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Val 3500]Requirement: 14 Hearts with [color=red]Val[/color][/if]
 [/else]
 [/else]
 [/if]", 
@@ -485,7 +485,7 @@ Attach monster loot for new effects:
    > 300 [itemtooltip=(O)767][icon=Maps/springobjects:368,496,16,16] [color=blue]Bat Wing[/color][/itemtooltip] - [texttooltip=Floating:You can attack across stones and other objects.] [color=purple]Floating[/color][/texttooltip]",
 
 "guidebook.chapter.NEA.ArtificerSkill": "[center][font=dialogue][offset=0,8]Artificer[/font][/center]
-[offset=200,0][image=SMAPI/kcc.sns/assets/rogue/icon.png:0,0,10,10:5]One of the Sword & Sorcery skills, unlocked during the [link=Mechanics/Underforge]Underforge[/link] Mateo event. Artificer can be leveled up killing monsters and mining.
+[offset=200,0][image=SMAPI/kcc.sns/assets/rogue/icon.png:0,0,10,10:5]One of the Sword & Sorcery skills, unlocked during the [link=Mechanics/Underforge]Underforge[/link] Val event. Artificer can be leveled up killing monsters and mining.
  
 [font=dialogue]Unlocks[/font]
 > Level 1 - Recipe unlocks: 
@@ -588,7 +588,7 @@ The second chapter of S&S reveals the identity of 'B', who introduces {{HPN4}} a
 A mysterious grimoire with a hidden catalogue of power, including shapeshifting and druidics. She cares deeply for {{TrueName}} and is determined to watch over {{HPN2}} - and seemingly has been for many, many years with no intention of leaving the Druid's side.",
 "guidebook.chapter.COT.Events": "[center][font=dialogue][offset=0,8]The Story Thus Far:[/font][/center]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.14]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.14]
 [font=dialogue]{{TrueName}} Event: 0 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.1]Complete![/if]
 [else]Hint: Visit the [color=green]Railroad[/color] between 8am and 10pm.[/else]
@@ -1117,12 +1117,12 @@ The third chapter of S&S follows Cirrus, a pop-rock star known all across the Fe
 [/if]
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.13]
-[font=dialogue]Mateo & Wyatt (Extra)[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Mateo]Complete![/if]
+[font=dialogue]Val & Wyatt (Extra)[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Val]Complete![/if]
 [else]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.13]Hint: Visit [color=green]the Beach[/color] between between 8am and 4pm.[/if]
 [else]
-[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Requirement: 10 Hearts with [color=red]Mateo[/color][/if]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Val 2000]Requirement: 10 Hearts with [color=red]Val[/color][/if]
 [/else]
 [/else]
 [/if]
@@ -1736,17 +1736,17 @@ Wrap up S&S's story in this final chapter, with a series of epilogues for each m
  
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Dandelion]
 [font=dialogue]Epilogue Pt 2[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Mateo]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Val]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current DandelionProposes]Hint: Visit [color=green]the East Scarp Coastal Guild[/color] between between 8am and 10pm.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current DandelionProposes]Hint: Visit [color=green]the East Scarp Coastal Guild[/color] between between 8am and 10pm.[/if]
 [else]
-[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Requirement: 10 Hearts with [color=red]Mateo[/color][/if]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Val 2000]Requirement: 10 Hearts with [color=red]Val[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current DandelionProposes]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
 [/else]
 [/else]
 [/if]
  
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Mateo]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Val]
 [font=dialogue]Epilogue Pt 3[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.Hector]Complete![/if]
 [else]
@@ -1786,9 +1786,9 @@ Wrap up S&S's story in this final chapter, with a series of epilogues for each m
 [font=dialogue]The End[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.End]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current RosalionWedding]Hint: Visit [color=green]the East Scarp Coastal Guild[/color] between between 8am and 10pm.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current RosalionWedding]Hint: Visit [color=green]the East Scarp Coastal Guild[/color] between between 8am and 10pm.[/if]
 [else]
-[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Requirement: 10 Hearts with [color=red]Mateo[/color][/if]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Val 2000]Requirement: 10 Hearts with [color=red]Val[/color][/if]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current RosalionWedding]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
 [/else]
 [/else]
@@ -2148,7 +2148,7 @@ Notes:
  
 When defeated, the Duskspire drops [itemtooltip=(O)DN.SnS_DuskspireHeart][icon=Textures/DN.SnS/SnSObjects:0,192,16,16] [color=blue]Duskspire Hearts[/color][/itemtooltip], which are used to purify [Link=DeepDark/Stygium]Stygium Tools[/link]. The Duskspire can then be re-fought in a weaker form to obtain more Duskspire Hearts. This fight resets every Monday.
  
-In phase 2, if you in a relationship with [link=Characters/Mateo]Mateo[/link], [link=Characters/Hector]{{TrueName}}[/link], [link=Characters/Cirrus]Cirrus[/link], [link=https://www.nexusmods.com/stardewvalley/mods/16197]Gunnar[/link] or [link=https://www.nexusmods.com/stardewvalley/mods/10770?tab=description]Sen[/link], they will fight along side you. ",
+In phase 2, if you in a relationship with [link=Characters/Val]Val[/link], [link=Characters/Hector]{{TrueName}}[/link], [link=Characters/Cirrus]Cirrus[/link], [link=https://www.nexusmods.com/stardewvalley/mods/16197]Gunnar[/link] or [link=https://www.nexusmods.com/stardewvalley/mods/10770?tab=description]Sen[/link], they will fight along side you. ",
 
 "guidebook.chapter.Mechanics.TableOfContents": "[center][font=dialogue][offset=0,8]Introduction[/font][/center]
  
@@ -2233,10 +2233,10 @@ These books can also be purchased from the vanilla book seller after the associa
 
 "guidebook.chapter.Mechanics.Shops": "[center][font=dialogue][offset=0,8]Shops[/font][/center]
  
-[font=dialogue]Mateo's Ledger[/font]
+[font=dialogue]Val's Ledger[/font]
 - Always open -
  
-After building the [color=green]East Scarp Coastal Guild[/color] for [link=Characters/Mateo]Mateo[/link] in [link=Chapters/IntroNEA]Chapter 1[/link], you gain access to Mateo's Ledger. Here you can trade[itemtooltip=(O)881][icon=maps/springobjects:272,576,16,16]Bone Fragments[/itemtooltip] for various minerals and artifacts you might be missing for the [color=green]Pelican Town Museum[/color].
+After building the [color=green]East Scarp Coastal Guild[/color] for [link=Characters/Val]Val[/link] in [link=Chapters/IntroNEA]Chapter 1[/link], you gain access to Val's Ledger. Here you can trade[itemtooltip=(O)881][icon=maps/springobjects:272,576,16,16]Bone Fragments[/itemtooltip] for various minerals and artifacts you might be missing for the [color=green]Pelican Town Museum[/color].
  
 [font=dialogue]Lion's Mane Cafe[/font]
 - Open from 12pm to 8pm - 
@@ -2373,14 +2373,14 @@ Sword & Sorcery introduces [color=Navy]Dual Wielding[/color], allowing you to us
  
 Sword & Sorcery introduces 5 new powers to the game. 2 can be aquired every playthrough, while the other 3 require marrying one of the mod's romance candidates.
  
-[texttooltip=Handmade D20:A gift from Mateo. Once a day, if you pass out with the D20 in your possession, you will revive with half of your max health.][icon=Textures/DN.SnS/SnSObjects:0,80,16,16] [color=blue]Handmade D20[/color][/texttooltip]
-  = Gifted by Mateo
+[texttooltip=Handmade D20:A gift from Val. Once a day, if you pass out with the D20 in your possession, you will revive with half of your max health.][icon=Textures/DN.SnS/SnSObjects:0,80,16,16] [color=blue]Handmade D20[/color][/texttooltip]
+  = Gifted by Val
  
 [texttooltip=Magical Grimoire:Bound by hand for you by Solomon. Use it to research new spells.][icon=Textures/DN.SnS/SnSObjects:128,144,16,16] [color=blue]Magical Grimoire[/color][/texttooltip]
   = Gifted by Solomon
  
-[texttooltip=Stygium-Forged Mermaid's Pendant:Mateo made this for you with love. Adds +2 Magnetic Radius, +10% damage, +3 Defense, and +1 Luck.][icon=Textures/DN.SnS/SnSObjects:112,0,16,16] [color=blue]Stygium-Forged Mermaid's Pendant[/color][/texttooltip]
-  = Gifted by Mateo after marriage
+[texttooltip=Stygium-Forged Mermaid's Pendant:Val made this for you with love. Adds +2 Magnetic Radius, +10% damage, +3 Defense, and +1 Luck.][icon=Textures/DN.SnS/SnSObjects:112,0,16,16] [color=blue]Stygium-Forged Mermaid's Pendant[/color][/texttooltip]
+  = Gifted by Val after marriage
  
 [texttooltip=Thorned Circlet Fragment:The broken horn off {{TrueName}}'s circlet. Radiates with Druidic power, doubling your Druidic Essence drops.][icon=Textures/DN.SnS/SnSObjects:128,0,16,16] [color=blue]Thorned Circlet Fragment[/color][/texttooltip]
   = Gifted by {{TrueName}} after marriage
@@ -2425,7 +2425,7 @@ If [link=https://www.nexusmods.com/stardewvalley/mods/29073]Trinket Tinker[/link
 Each new keychain has a 10% chance of appearing in the mail after seeing the listed NPC's 10h event and obtaining the LLTK.
  
 > Additional TT Keychains:
-  = [itemtooltip=(TR)DN.SnS_EmeritusKeychain][icon=Textures/DN.SnS/SnSObjects:0,208,16,16] [color=Blue]Emeritus Keychain[/color][/itemtooltip] - Mateo
+  = [itemtooltip=(TR)DN.SnS_EmeritusKeychain][icon=Textures/DN.SnS/SnSObjects:0,208,16,16] [color=Blue]Emeritus Keychain[/color][/itemtooltip] - Val
   = [itemtooltip=(TR)DN.SnS_HectorWolfKeychain][icon=Textures/DN.SnS/SnSObjects:32,208,16,16] [color=Blue]Wolf {{TrueName}} Keychain[/color][/itemtooltip] - {{TrueName}}
   = [itemtooltip=(TR)DN.SnS_BookKeychain][icon=Textures/DN.SnS/SnSObjects:16,208,16,16] [color=Blue]Book Keychain[/color][/itemtooltip] - Cirrus
   
@@ -2458,7 +2458,7 @@ Ginger Beer List:
 //Conditional Event Extras
 "guidebook.chapter.MateoTrollHeritage.1.true": " 
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.1]
-[font=dialogue]Mateo & Eyvinder: Part 1 (Extra)[/font]
+[font=dialogue]Val & Eyvinder: Part 1 (Extra)[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Eyvinder]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Eyvinder 1250]Hint: Visit [color=green]the Deep Mountains[/color] between between 8am and 4pm in sunny weather.[/if]
@@ -2469,13 +2469,13 @@ Ginger Beer List:
 [/if]
  ",
 "guidebook.chapter.MateoTrollHeritage.1.false": " 
-[font=dialogue]Mateo & Eyvinder: Part 1 (Extra)[/font]
-Mateo Troll Heritage is not enabled. Skipping event.
+[font=dialogue]Val & Eyvinder: Part 1 (Extra)[/font]
+Val Troll Heritage is not enabled. Skipping event.
  ",
 
 "guidebook.chapter.MateoTrollHeritage.2.true": " 
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Cirrus.1]
-[font=dialogue]Mateo & Eyvinder: Part 2 (Extra)[/font]
+[font=dialogue]Val & Eyvinder: Part 2 (Extra)[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Eyvinder]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Eyvinder 1750]Hint: Visit [color=green]the Deep Mountains[/color] between between 8am and 4pm in sunny weather.[/if]
@@ -2487,13 +2487,13 @@ Mateo Troll Heritage is not enabled. Skipping event.
  ",
  
 "guidebook.chapter.MateoTrollHeritage.2.false": " 
-[font=dialogue]Mateo & Eyvinder: Part 2 (Extra)[/font]
-Mateo Troll Heritage is not enabled. Skipping event.
+[font=dialogue]Val & Eyvinder: Part 2 (Extra)[/font]
+Val Troll Heritage is not enabled. Skipping event.
  ",
  
 "guidebook.chapter.MateoTrollHeritage.3.true": "
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Roslin.1]
-[font=dialogue]Mateo & Eyvinder: Part 3(Extra) [/font]
+[font=dialogue]Val & Eyvinder: Part 3(Extra) [/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Eyvinder]Complete![/if]
 [else]
 [if=PLAYER_FRIENDSHIP_POINTS Current Eyvinder 2000]Hint: Visit [color=green]the Deep Mountains[/color] between between 8am and 4pm in sunny weather.[/if]
@@ -2505,8 +2505,8 @@ Mateo Troll Heritage is not enabled. Skipping event.
  ",
  
 "guidebook.chapter.MateoTrollHeritage.3.false": "
-[font=dialogue]Mateo & Eyvinder: Part 3[/font]
-Mateo Troll Heritage is not enabled. Skipping event.
+[font=dialogue]Val & Eyvinder: Part 3[/font]
+Val Troll Heritage is not enabled. Skipping event.
  ",
 
 "guidebook.chapter.CirrusExtras.true": " 
@@ -2528,13 +2528,13 @@ Player is not female/Gender Neutrality Mod is not installed. Skipping event.
  ",
 
 "guidebook.chapter.GalaxySwordExtras.true": " 
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.12]
-[font=dialogue]Mateo & the Prismatic Shard (Extra)[/font]
-[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Mateo.13]Complete![/if]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.12]
+[font=dialogue]Val & the Prismatic Shard (Extra)[/font]
+[if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.13]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Hint: Visit [color=green]the East Scarp Coastal Guild[/color] between between 8am and 10pm.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 2000]Hint: Visit [color=green]the East Scarp Coastal Guild[/color] between between 8am and 10pm.[/if]
 [else]
-[if=!PLAYER_FRIENDSHIP_POINTS Current Mateo 2000]Requirement: 10 Hearts with [color=red]Mateo[/color][/if]
+[if=!PLAYER_FRIENDSHIP_POINTS Current Val 2000]Requirement: 10 Hearts with [color=red]Val[/color][/if]
 [/else]
 [if=PLAYER_HAS_CONVERSATION_TOPIC Current CGuildComplete]Requirement: Wait a day after the previous event.[/if]
 [/else]
@@ -2542,7 +2542,7 @@ Player is not female/Gender Neutrality Mod is not installed. Skipping event.
  ",
  
 "guidebook.chapter.GalaxySwordExtras.false": " 
-[font=dialogue]Mateo & the Prismatic Shard (Extra)[/font]
+[font=dialogue]Val & the Prismatic Shard (Extra)[/font]
 Only plays if you don't have a Galaxy Sword and have unlocked the Desert. Skipping event.
 ",
 
@@ -2551,7 +2551,7 @@ Only plays if you don't have a Galaxy Sword and have unlocked the Desert. Skippi
 Meet every character in the mod, from the major ones to the smaller ones. See their face, get to know their name and familiarise yourself with them.
  
 [font=dialogue]Table Of Contents[/font]
-> [link=Characters/Mateo][icon=Characters/Mateo:0,0,16,16] Mateo, The Artificer[/link]
+> [link=Characters/Val][icon=Characters/Val:0,0,16,16] Val, The Artificer[/link]
 > [link=Characters/Emeritus][icon=Characters/MateoEmeritus:96,192,16,16] Emeritus, The Pepper Rex[/link]
 > [link=Characters/Hector][icon=Characters/Hector:0,0,16,16] {{TrueName}}, The Druid[/link]
 > [link=Characters/Book][icon=Characters/HectorBook:7,3,16,20] Book, The Dryad[/link]

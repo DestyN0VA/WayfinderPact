@@ -1,7 +1,7 @@
 {
   "Changes": [
     {
-      "LogName": "NO SVE - Mateo's Tent, Guild, Lion's Mane",
+      "LogName": "NO SVE - Val's Tent, Guild, Lion's Mane",
       "Action": "EditData",
       "Target": "Data/WorldMap",
       "When": {
@@ -153,7 +153,7 @@
 
     //Puts the Tent on the Map
     {
-      "LogName": "Edit ES World Map NO SVE Mateo Tent",
+      "LogName": "Edit ES World Map NO SVE Val Tent",
       "Action": "EditImage",
       "When": {
         //"Season": "spring, summer, fall, winter",
@@ -280,7 +280,7 @@
       }
     },
 
-    //Changes the Tooltip text from Mateo's Tent to the Coastal Guild when conditions are met
+    //Changes the Tooltip text from Val's Tent to the Coastal Guild when conditions are met
     {
       "LogName": "NO SVE",
       "Action": "EditData",
@@ -322,7 +322,7 @@
 
 
     {
-      "LogName": "YES SVE - Mateo's Tent, Guild, Lion's Mane",
+      "LogName": "YES SVE - Val's Tent, Guild, Lion's Mane",
       "Action": "EditData",
       "Target": "Data/WorldMap",
       "When": {
@@ -471,7 +471,7 @@
 
     //Puts the Tent on the Map
     {
-      "LogName": "Edit ES World Map YES SVE Mateo Tent",
+      "LogName": "Edit ES World Map YES SVE Val Tent",
       "Action": "EditImage",
       "When": {
         //"Season": "spring, summer, fall, winter",
@@ -598,7 +598,7 @@
       }
     }
     /*,
-    //Changes the Tooltip text from Mateo's Tent to the Coastal Guild when conditions are met
+    //Changes the Tooltip text from Val's Tent to the Coastal Guild when conditions are met
     {
       "LogName": "YES SVE",
       "Action": "EditData",

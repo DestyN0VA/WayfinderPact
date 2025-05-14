@@ -33,7 +33,7 @@
                     ],
                     "HomeTileX": 30,
                     "HomeTileY": 5,
-                    "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch5.Mateo, DAY_OF_WEEK Thu Fri Sat"
+                    "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch5.Val, DAY_OF_WEEK Thu Fri Sat"
                 }            
             }
         }

@@ -10,34 +10,34 @@
 
 */
                 {
-                        "LogName": "Mateo Dialogue - 0-4",
+                        "LogName": "Val Dialogue - 0-4",
                         "Action": "EditData",
-                        "Target": "Characters/Dialogue/Mateo",
+                        "Target": "Characters/Dialogue/Val",
                         "Entries": {
-                                "{{WeekDay}}": "{{i18n:Core.Mateo.{{Season}}.EarlyHeart.{{Random:{{Range: 1, 16}}}}}}"
+                                "{{WeekDay}}": "{{i18n:Core.Val.{{Season}}.EarlyHeart.{{Random:{{Range: 1, 16}}}}}}"
                         }
                 },
                 {
                         "LogName": "Dialogue - 5-10",
                         "Action": "EditData",
-                        "Target": "Characters/Dialogue/Mateo",
+                        "Target": "Characters/Dialogue/Val",
                         "Entries": {
-                                "{{WeekDay}}": "{{i18n:Core.Mateo.{{Season}}.LateHeart.{{Random:{{Range: 1, 18}}}}}}"
+                                "{{WeekDay}}": "{{i18n:Core.Val.{{Season}}.LateHeart.{{Random:{{Range: 1, 18}}}}}}"
                         },
                         "When": {
-                                "Hearts:Mateo": "{{Range: 5, 10}}"
+                                "Hearts:Val": "{{Range: 5, 10}}"
                         }
                 },
                 {
                         "LogName": "Dialogue - Post Guild Override",
                         "Action": "EditData",
                         "Update": "OnLocationChange",
-                        "Target": "Characters/Dialogue/Mateo",
+                        "Target": "Characters/Dialogue/Val",
                         "Entries": {
-                                "{{WeekDay}}": "{{i18n:Core.Mateo.{{Season}}.Relationship.{{MateoRomance}}.{{Random:{{Range: 1, 7}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received"
+                                "{{WeekDay}}": "{{i18n:Core.Val.{{Season}}.Relationship.{{MateoRomance}}.{{Random:{{Range: 1, 7}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received"
                         },
                         "When": {
-                                "Hearts:Mateo": "10",
+                                "Hearts:Val": "10",
                                 "Query: {{Random: {{Range: 1, 3}}|key=MGO}} = 1": true,
                                 "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true,
                                 "HasFlag |contains=SnS_M_Mateo_OverrideSeenToday": false
@@ -45,12 +45,12 @@
                 },
                 // EPILOGUE POOL 
                 {
-                        "LogName": "Dialogue - Mateo Epilogue Override",
+                        "LogName": "Dialogue - Val Epilogue Override",
                         "Action": "EditData",
                         "Update": "OnLocationChange",
-                        "Target": "Characters/Dialogue/Mateo",
+                        "Target": "Characters/Dialogue/Val",
                         "Entries": {
-                                "{{WeekDay}}": "{{i18n:Core.Mateo.Epilogue.{{Random:{{Range: 1, 10}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received"
+                                "{{WeekDay}}": "{{i18n:Core.Val.Epilogue.{{Random:{{Range: 1, 10}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received"
                         },
                         "When": {
                                 "HasSeenEvent |contains=SnS.Ch5.End": true,
@@ -68,101 +68,101 @@
 
 */
                 {
-                        "LogName": "Mateo's Heart Dialogue 1-8",
+                        "LogName": "Val's Heart Dialogue 1-8",
                         "Action": "EditData",
-                        "Target": "Characters/Dialogue/Mateo",
+                        "Target": "Characters/Dialogue/Val",
                         "Entries": {
                                 // NAME & INTRO
-                                "Name:": "{{i18n:Core.Mateo.Name}}",
-                                "Introduction": "{{i18n:Core.Mateo.Introduction}}",
+                                "Name:": "{{i18n:Core.Val.Name}}",
+                                "Introduction": "{{i18n:Core.Val.Introduction}}",
                                 // COMMUNITY CENTER BUNDLES
-                                "joja_Begin": "{{i18n:Core.Mateo.JojaBegin}}",
-                                "cc_Begin": "{{i18n:Core.Mateo.CCBegin}}",
-                                "cc_Bus": "{{i18n:Core.Mateo.CCBus}}",
-                                "cc_Minecart": "{{i18n:Core.Mateo.CCMinecart}}",
-                                "cc_Complete": "{{i18n:Core.Mateo.CCComplete}}",
-                                "movieTheater": "{{i18n:Core.Mateo.MovieTheater}}",
+                                "joja_Begin": "{{i18n:Core.Val.JojaBegin}}",
+                                "cc_Begin": "{{i18n:Core.Val.CCBegin}}",
+                                "cc_Bus": "{{i18n:Core.Val.CCBus}}",
+                                "cc_Minecart": "{{i18n:Core.Val.CCMinecart}}",
+                                "cc_Complete": "{{i18n:Core.Val.CCComplete}}",
+                                "movieTheater": "{{i18n:Core.Val.MovieTheater}}",
                                 // BIRTHDAYS
-                                "winter_12": "{{i18n:Core.Mateo.Winter12}}",
-                                "winter_19": "{{i18n:Core.Mateo.Winter19}}",
+                                "winter_12": "{{i18n:Core.Val.Winter12}}",
+                                "winter_19": "{{i18n:Core.Val.Winter19}}",
                                 // END OF SEASON
-                                "spring_28": "{{i18n:Core.Mateo.SpringEnd}}",
-                                "summer_28": "{{i18n:Core.Mateo.SummerEnd}}",
-                                "fall_28": "{{i18n:Core.Mateo.FallEnd}}",
-                                "winter_28": "{{i18n:Core.Mateo.WinterEnd}}",
+                                "spring_28": "{{i18n:Core.Val.SpringEnd}}",
+                                "summer_28": "{{i18n:Core.Val.SummerEnd}}",
+                                "fall_28": "{{i18n:Core.Val.FallEnd}}",
+                                "winter_28": "{{i18n:Core.Val.WinterEnd}}",
                                 // SVE COMMUNITY DAY
-                                "CommunityCenter4": "{{i18n:Core.Mateo.CommunityCenter4}}",
-                                "CommunityCenter6": "{{i18n:Core.Mateo.CommunityCenter6}}",
-                                "CommunityCenter8": "{{i18n:Core.Mateo.CommunityCenter8}}",
-                                "CommunityCenter10": "{{i18n:Core.Mateo.CommunityCenter10}}",
+                                "CommunityCenter4": "{{i18n:Core.Val.CommunityCenter4}}",
+                                "CommunityCenter6": "{{i18n:Core.Val.CommunityCenter6}}",
+                                "CommunityCenter8": "{{i18n:Core.Val.CommunityCenter8}}",
+                                "CommunityCenter10": "{{i18n:Core.Val.CommunityCenter10}}",
                                 // FESTIVALS
-                                "spring_12": "{{i18n:Core.Mateo.EggFestival}}",
-                                "spring_23": "{{i18n:Core.Mateo.FlowerDance}}",
-                                "summer_10": "{{i18n:Core.Mateo.Luau}}",
-                                "summer_27": "{{i18n:Core.Mateo.MoonlightJelly}}",
-                                "fall_15": "{{i18n:Core.Mateo.SDVFair}}",
-                                "fall_26": "{{i18n:Core.Mateo.SpiritsEve}}",
-                                "winter_7": "{{i18n:Core.Mateo.IceFestival}}",
-                                "winter_16": "{{i18n:Core.Mateo.NightMarket}}",
-                                "winter_24": "{{i18n:Core.Mateo.WinterStar}}",
+                                "spring_12": "{{i18n:Core.Val.EggFestival}}",
+                                "spring_23": "{{i18n:Core.Val.FlowerDance}}",
+                                "summer_10": "{{i18n:Core.Val.Luau}}",
+                                "summer_27": "{{i18n:Core.Val.MoonlightJelly}}",
+                                "fall_15": "{{i18n:Core.Val.SDVFair}}",
+                                "fall_26": "{{i18n:Core.Val.SpiritsEve}}",
+                                "winter_7": "{{i18n:Core.Val.IceFestival}}",
+                                "winter_16": "{{i18n:Core.Val.NightMarket}}",
+                                "winter_24": "{{i18n:Core.Val.WinterStar}}",
                                 // ROMANTIC (POSITIVE)
-                                "give_flowersA": "{{i18n:Core.Mateo.GiveFlowersA}}",
-                                "give_flowersB": "{{i18n:Core.Mateo.GiveFlowersB}}",
-                                "give_pendant": "{{i18n:Core.Mateo.GivePendant}}",
-                                "stardrop_giftA": "{{i18n:Core.Mateo.StardropGiftA}}",
-                                "stardrop_giftB": "{{i18n:Core.Mateo.StardropGiftB}}",
+                                "give_flowersA": "{{i18n:Core.Val.GiveFlowersA}}",
+                                "give_flowersB": "{{i18n:Core.Val.GiveFlowersB}}",
+                                "give_pendant": "{{i18n:Core.Val.GivePendant}}",
+                                "stardrop_giftA": "{{i18n:Core.Val.StardropGiftA}}",
+                                "stardrop_giftB": "{{i18n:Core.Val.StardropGiftB}}",
                                 // ROMANTIC (NEGATIVE)
-                                "danceRejection": "{{i18n:Core.Mateo.DanceRejection}}",
-                                "divorced": "{{i18n:Core.Mateo.Divorced}}",
-                                "breakUp": "{{i18n:Core.Mateo.BreakUp}}",
-                                "dumped_Girls": "{{i18n:Core.Mateo.DumpedGirls}}",
-                                "secondChance_Girls": "{{i18n:Core.Mateo.SecondChanceGirls}}",
-                                "reject_two_heartA": "{{i18n:Core.Mateo.Reject2HA}}",
-                                "reject_two_heartB": "{{i18n:Core.Mateo.Reject2HB}}",
-                                "reject_four_heartA": "{{i18n:Core.Mateo.Reject4HA}}",
-                                "reject_four_heartB": "{{i18n:Core.Mateo.Reject4HB}}",
-                                "engageA": "{{i18n:Core.Mateo.EngageA}}",
-                                "engageB": "{{i18n:Core.Mateo.EngageB}}",
-                                "marriedA": "{{i18n:Core.Mateo.MarriedA}}",
-                                "marriedB": "{{i18n:Core.Mateo.MarriedB}}",
-                                "refusal_no_heartsA": "{{i18n:Core.Mateo.RefusalNoHeartsA}}",
-                                "refusal_no_heartsB": "{{i18n:Core.Mateo.RefusalNoHeartsB}}",
-                                "refusal_knownA": "{{i18n:Core.Mateo.RefusalKnownA}}",
-                                "refusal_knownB": "{{i18n:Core.Mateo.RefusalKnownB}}",
-                                "refusal_botherA": "{{i18n:Core.Mateo.RefusalBotherA}}",
-                                "refusal_botherB": "{{i18n:Core.Mateo.RefusalBotherB}}",
+                                "danceRejection": "{{i18n:Core.Val.DanceRejection}}",
+                                "divorced": "{{i18n:Core.Val.Divorced}}",
+                                "breakUp": "{{i18n:Core.Val.BreakUp}}",
+                                "dumped_Girls": "{{i18n:Core.Val.DumpedGirls}}",
+                                "secondChance_Girls": "{{i18n:Core.Val.SecondChanceGirls}}",
+                                "reject_two_heartA": "{{i18n:Core.Val.Reject2HA}}",
+                                "reject_two_heartB": "{{i18n:Core.Val.Reject2HB}}",
+                                "reject_four_heartA": "{{i18n:Core.Val.Reject4HA}}",
+                                "reject_four_heartB": "{{i18n:Core.Val.Reject4HB}}",
+                                "engageA": "{{i18n:Core.Val.EngageA}}",
+                                "engageB": "{{i18n:Core.Val.EngageB}}",
+                                "marriedA": "{{i18n:Core.Val.MarriedA}}",
+                                "marriedB": "{{i18n:Core.Val.MarriedB}}",
+                                "refusal_no_heartsA": "{{i18n:Core.Val.RefusalNoHeartsA}}",
+                                "refusal_no_heartsB": "{{i18n:Core.Val.RefusalNoHeartsB}}",
+                                "refusal_knownA": "{{i18n:Core.Val.RefusalKnownA}}",
+                                "refusal_knownB": "{{i18n:Core.Val.RefusalKnownB}}",
+                                "refusal_botherA": "{{i18n:Core.Val.RefusalBotherA}}",
+                                "refusal_botherB": "{{i18n:Core.Val.RefusalBotherB}}",
                                 // RESORT
-                                "Resort_Entering": "{{i18n:Core.Mateo.ResortEntering}}",
-                                "Resort_Leaving": "{{i18n:Core.Mateo.ResortLeaving}}",
-                                "Resort_Shore": "{{i18n:Core.Mateo.ResortShore}}",
-                                "Resort_Umbrella": "{{i18n:Core.Mateo.ResortUmbrella}}",
-                                "Resort_Wander": "{{i18n:Core.Mateo.ResortWander}}",
-                                "Resort_Wander_2": "{{i18n:Core.Mateo.ResortWander.2}}",
-                                "Resort_Chair": "{{i18n:Core.Mateo.ResortChair}}",
-                                "Resort_Bar": "{{i18n:Core.Mateo.ResortBar}}",
+                                "Resort_Entering": "{{i18n:Core.Val.ResortEntering}}",
+                                "Resort_Leaving": "{{i18n:Core.Val.ResortLeaving}}",
+                                "Resort_Shore": "{{i18n:Core.Val.ResortShore}}",
+                                "Resort_Umbrella": "{{i18n:Core.Val.ResortUmbrella}}",
+                                "Resort_Wander": "{{i18n:Core.Val.ResortWander}}",
+                                "Resort_Wander_2": "{{i18n:Core.Val.ResortWander.2}}",
+                                "Resort_Chair": "{{i18n:Core.Val.ResortChair}}",
+                                "Resort_Bar": "{{i18n:Core.Val.ResortBar}}",
                                 "Resort_Towel": "{{i18n:Core.MateoResortTowel}}",
-                                "Resort_Towel_2": "{{i18n:Core.Mateo.ResortTowel.2}}",
-                                "Resort_Towel_3": "{{i18n:Core.Mateo.Resort_Towel.3}}",
-                                "Resort": "{{i18n:Core.Mateo.Resort}}",
+                                "Resort_Towel_2": "{{i18n:Core.Val.ResortTowel.2}}",
+                                "Resort_Towel_3": "{{i18n:Core.Val.Resort_Towel.3}}",
+                                "Resort": "{{i18n:Core.Val.Resort}}",
                                 // ADDITIONAL LOCATION DIALOGUE
-                                "Saloon4": "{{i18n:Core.Mateo.Saloon.4h}}",
-                                "Saloon6": "{{i18n:Core.Mateo.Saloon.6h}}",
-                                "Saloon8": "{{i18n:Core.Mateo.Saloon.8h}}",
-                                "Saloon10": "{{i18n:Core.Mateo.Saloon.10h.{{MateoRomance}}}}",
-                                "ArchaeologyHouse4": "{{i18n:Core.Mateo.ArchaeologyHouse.4h}}",
-                                "ArchaeologyHouse6": "{{i18n:Core.Mateo.ArchaeologyHouse.6h}}",
-                                "ArchaeologyHouse8": "{{i18n:Core.Mateo.ArchaeologyHouse.8h}}",
-                                "ArchaeologyHouse10": "{{i18n:Core.Mateo.ArchaeologyHouse.10h.{{MateoRomance}}}}",
-                                "AdventureGuild4": "{{i18n:Core.Mateo.AdventureGuild.4h}}",
-                                "AdventureGuild6": "{{i18n:Core.Mateo.AdventureGuild.6h}}",
-                                "AdventureGuild8": "{{i18n:Core.Mateo.AdventureGuild.8h}}",
-                                "AdventureGuild10": "{{i18n:Core.Mateo.AdventureGuild.10h.{{MateoRomance}}}}",
+                                "Saloon4": "{{i18n:Core.Val.Saloon.4h}}",
+                                "Saloon6": "{{i18n:Core.Val.Saloon.6h}}",
+                                "Saloon8": "{{i18n:Core.Val.Saloon.8h}}",
+                                "Saloon10": "{{i18n:Core.Val.Saloon.10h.{{MateoRomance}}}}",
+                                "ArchaeologyHouse4": "{{i18n:Core.Val.ArchaeologyHouse.4h}}",
+                                "ArchaeologyHouse6": "{{i18n:Core.Val.ArchaeologyHouse.6h}}",
+                                "ArchaeologyHouse8": "{{i18n:Core.Val.ArchaeologyHouse.8h}}",
+                                "ArchaeologyHouse10": "{{i18n:Core.Val.ArchaeologyHouse.10h.{{MateoRomance}}}}",
+                                "AdventureGuild4": "{{i18n:Core.Val.AdventureGuild.4h}}",
+                                "AdventureGuild6": "{{i18n:Core.Val.AdventureGuild.6h}}",
+                                "AdventureGuild8": "{{i18n:Core.Val.AdventureGuild.8h}}",
+                                "AdventureGuild10": "{{i18n:Core.Val.AdventureGuild.10h.{{MateoRomance}}}}",
                                 // GREEN RAIN
-                                "GreenRain": "{{i18n:Core.Mateo.GreenRain}}",
-                                "GreenRainFinished": "{{i18n:Core.Mateo.GreenRainFinished}}",
-                                "GreenRain_2": "{{i18n:Core.Mateo.GreenRain2}}",
+                                "GreenRain": "{{i18n:Core.Val.GreenRain}}",
+                                "GreenRainFinished": "{{i18n:Core.Val.GreenRainFinished}}",
+                                "GreenRain_2": "{{i18n:Core.Val.GreenRain2}}",
                                 // POLYAMORY DIALOGUE
-                                "RejectMermaidPendant_IsPolyamorous_PlayerWithSomeoneMonogamous": "{{i18n:Core.Mateo.MarriedMonogamousNPC}}"
+                                "RejectMermaidPendant_IsPolyamorous_PlayerWithSomeoneMonogamous": "{{i18n:Core.Val.MarriedMonogamousNPC}}"
                         }
                 }
         ]

@@ -5,9 +5,9 @@
             "Action": "EditData",
             "Target": "Data/Characters",
             "Entries": {
-                "Mateo": {
-                    "DisplayName": "{{i18n:Core.Mateo.Name.Mateo}}",
-                    //"DisplayName": "{{i18n:Core.Mateo.Name.{{Mateo Name}}}}",
+                "Val": {
+                    "DisplayName": "{{i18n:Core.Val.Name.Val}}",
+                    //"DisplayName": "{{i18n:Core.Val.Name.{{Val Name}}}}",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Polite",
@@ -42,34 +42,34 @@
                     },
                     "Home": [
                         {
-                            "ID": "Mateo - Coastal Adventurer's Guild",
+                            "ID": "Val - Coastal Adventurer's Guild",
                             "Location": "EastScarp_CoastalGuild",
                             "Tile": {
                                 "X": 8,
                                 "Y": 5
                             },
                             "Direction": "Down",
-                            "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Mateo.12"
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Val.12"
                         },
                         {
-                            "ID": "Mateo - Beach Tent",
+                            "ID": "Val - Beach Tent",
                             "Location": "EastScarp_MateoHome",
                             "Tile": {
                                 "X": 5,
                                 "Y": 6
                             },
                             "Direction": "Down",
-                            "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Mateo.0"
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Val.0"
                         },
                         {
-                            "ID": "Mateo - NPC Waiting Room",
+                            "ID": "Val - NPC Waiting Room",
                             "Location": "EastScarp_TNPCWaitingWarpRoom",
                             "Tile": {
                                 "X": 11,
                                 "Y": 5
                             },
                             "Direction": "Down",
-                            "Condition": "!PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Mateo.0"
+                            "Condition": "!PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Val.0"
                         },
                     ],
                     "Appearance": [
@@ -176,14 +176,14 @@
                         },
                       {
                         "ID": "Armor",
-                        "Condition": "Any \"LOCATION_NAME Target Mine\" \"EVENT_ID SnS.Ch1.Mateo.0\" \"EVENT_ID SnS.Ch1.Mateo.4\" \"EVENT_ID SnS.Ch1.Mateo.9\" \"EVENT_ID SnS.Ch1.Mateo.10\" \"EVENT_ID SnS.Ch1.Mateo.16\" \"EVENT_ID SnS.Ch1.Mateo.17\" \"EVENT_ID 57871051\" \"EVENT_ID MadDog.BearFam.16193001A\" \"EVENT_ID SnS.Ch4.Roslin.6\" \"EVENT_ID SnS.Ch4.Finale\" \"EVENT_ID SnS.Ch4.Intermission.Mateo\" \"EVENT_ID SnS.Ch4.Intermission.Hector\" \"EVENT_ID SnS.Ch4.Intermission.Cirrus\" \"EVENT_ID SnS.Ch4.Intermission.SoloFarmer\" \"EVENT_ID SnS.Ch4.Victory.Mateo\" \"EVENT_ID SnS.Ch4.Victory.Hector\" \"EVENT_ID SnS.Ch4.Victory.Cirrus\" \"EVENT_ID SnS.Ch4.Victory.FarmerGuildmaster\" \"EVENT_ID SnS.Ch4.Victory.SoloFarmer\" \"EVENT_ID SnS.Ch3.Mateo.1\" \"EVENT_ID SnS.Ch4.Intermission.Gunnar\" \"EVENT_ID SnS.Ch5.Roslin.1\" \"EVENT_ID SnS.Ch4.Intermission.Sen\" \"EVENT_ID SnS.Ch4.Victory.Sen\" \"EVENT_ID SnS.Ch1.MateoSen.0\" \"EVENT_ID SnS.Ch1.Mateo.12\" \"EVENT_ID SnS.Ch1.Mateo.Injury\"",
+                        "Condition": "Any \"LOCATION_NAME Target Mine\" \"EVENT_ID SnS.Ch1.Val.0\" \"EVENT_ID SnS.Ch1.Val.4\" \"EVENT_ID SnS.Ch1.Val.9\" \"EVENT_ID SnS.Ch1.Val.10\" \"EVENT_ID SnS.Ch1.Val.16\" \"EVENT_ID SnS.Ch1.Val.17\" \"EVENT_ID 57871051\" \"EVENT_ID MadDog.BearFam.16193001A\" \"EVENT_ID SnS.Ch4.Roslin.6\" \"EVENT_ID SnS.Ch4.Finale\" \"EVENT_ID SnS.Ch4.Intermission.Val\" \"EVENT_ID SnS.Ch4.Intermission.Hector\" \"EVENT_ID SnS.Ch4.Intermission.Cirrus\" \"EVENT_ID SnS.Ch4.Intermission.SoloFarmer\" \"EVENT_ID SnS.Ch4.Victory.Val\" \"EVENT_ID SnS.Ch4.Victory.Hector\" \"EVENT_ID SnS.Ch4.Victory.Cirrus\" \"EVENT_ID SnS.Ch4.Victory.FarmerGuildmaster\" \"EVENT_ID SnS.Ch4.Victory.SoloFarmer\" \"EVENT_ID SnS.Ch3.Val.1\" \"EVENT_ID SnS.Ch4.Intermission.Gunnar\" \"EVENT_ID SnS.Ch5.Roslin.1\" \"EVENT_ID SnS.Ch4.Intermission.Sen\" \"EVENT_ID SnS.Ch4.Victory.Sen\" \"EVENT_ID SnS.Ch1.MateoSen.0\" \"EVENT_ID SnS.Ch1.Val.12\" \"EVENT_ID SnS.Ch1.Val.Injury\"",
                         "Portrait": "Portraits/Armor_Mateo",
                         "Sprite": "Characters/Armor_Mateo",
                         "Precedence": -20
                       },
                         {
                             "ID": "Shirtless",
-                            "Condition": "Any \"EVENT_ID SnS.Ch1.Mateo.19\"",
+                            "Condition": "Any \"EVENT_ID SnS.Ch1.Val.19\"",
                             "Portrait": "Portraits/Mateo_Beach",
                             "Sprite": "Characters/Shirtless_Mateo",
                             "Precedence": -20

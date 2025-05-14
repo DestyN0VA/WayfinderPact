@@ -8,9 +8,9 @@
           "IntermissionEventId": "SnS.Ch4.Intermission.SoloFarmer",
           "VictoryEventId": "SnS.Ch4.Victory.SoloFarmer"
         },
-        "Mateo": {
-          "IntermissionEventId": "SnS.Ch4.Intermission.Mateo",
-          "VictoryEventId": "SnS.Ch4.Victory.Mateo"
+        "Val": {
+          "IntermissionEventId": "SnS.Ch4.Intermission.Val",
+          "VictoryEventId": "SnS.Ch4.Victory.Val"
         },
         "Hector": {
           "IntermissionEventId": "SnS.Ch4.Intermission.Hector",

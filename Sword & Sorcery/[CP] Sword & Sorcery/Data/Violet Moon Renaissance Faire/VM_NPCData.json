@@ -187,7 +187,7 @@
             {
               "Name": "AnyOrNone",
               "Id": "DN.SnS_Mateo_VioletMoon_Dialogue",
-              "Portrait": "Mateo",
+              "Portrait": "Val",
               "Dialogues": [
                 {
                   "Dialogue": "{{i18n:DN.SnS_Violet_Moon_Shop_Mateo}}"
@@ -1393,13 +1393,13 @@
         {
           "Operation": "Append",
           "Target": [ "Entries", "Set-Up_additionalCharacters" ],
-          "Value": "Mateo 30 60 2/Hector 75 60 2/Cirrus 45 48 2/Roslin 56 39 2/Dandelion 56 41 2/Solomon 6 75 2",
+          "Value": "Val 30 60 2/Hector 75 60 2/Cirrus 45 48 2/Roslin 56 39 2/Dandelion 56 41 2/Solomon 6 75 2",
           "Delimiter": "/"
         },
         /*{
           "Operation": "Append",
           "Target": [ "Entries", "MainEvent_additionalCharacters" ],
-          "Value": "Mateo 30 60 2/Hector 75 60 2/Cirrus 45 48 2/Roslin 57 39 2/Dandelion 56 41 2",
+          "Value": "Val 30 60 2/Hector 75 60 2/Cirrus 45 48 2/Roslin 57 39 2/Dandelion 56 41 2",
           "Delimiter": "/"
         },*/
         {
@@ -1578,7 +1578,7 @@
       "Action": "EditData",
       "Target": "Data/Festivals/fall1",
       "Entries": {
-        "Mateo": "{{i18n:VioletMoon.Mateo.{{Random:1++2++3|inputSeparator=++}}}}",
+        "Val": "{{i18n:VioletMoon.Val.{{Random:1++2++3|inputSeparator=++}}}}",
         "Hector": "{{i18n:VioletMoon.Hector.{{Random:1++2++3|inputSeparator=++}}}}",
         "Cirrus": "{{i18n:VioletMoon.Cirrus.{{Random:1++2++3|inputSeparator=++}}}}",
         "Dandelion": "{{i18n:VioletMoon.Dandelion.{{Random:1++2++3|inputSeparator=++}}}}",

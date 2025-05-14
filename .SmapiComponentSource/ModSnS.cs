@@ -319,7 +319,7 @@ namespace SwordAndSorcerySMAPI
 
         public static RogueSkill RogueSkill { get; set; }
 
-        public const string ShadowstepEventReq = "SnS.Ch1.Mateo.18";
+        public const string ShadowstepEventReq = "SnS.Ch1.Val.18";
 
         public static ISpaceCoreApi SpaceCore { get; set; }
         public static IRadialMenuApi Radial { get; set; }
@@ -621,7 +621,7 @@ namespace SwordAndSorcerySMAPI
             {
                 string[] valid =
                 [
-                    "Mateo.SpecialOrders.BuildGuild",
+                    "Val.SpecialOrders.BuildGuild",
                     "CAGQuest.UntimedSpecialOrder.Pentacle1",
                     "CAGQuest.UntimedSpecialOrder.Pentacle2",
                     "CAGQuest.UntimedSpecialOrder.Pentacle3",
@@ -1058,7 +1058,7 @@ namespace SwordAndSorcerySMAPI
 
         private void Display_RenderedWorld(object sender, RenderedWorldEventArgs e)
         {
-            if (!Game1.player.eventsSeen.Contains("SnS.Ch1.Mateo.12") ||
+            if (!Game1.player.eventsSeen.Contains("SnS.Ch1.Val.12") ||
                  Game1.player.team.acceptedSpecialOrderTypes.Contains("SwordSorcery") ||
                  Game1.eventUp)
             {
@@ -1506,7 +1506,7 @@ namespace SwordAndSorcerySMAPI
                     {
                         if (Game1.player.hasOrWillReceiveMail("FarmerGuildmasterBattle"))
                         {
-                            partner = "Mateo";
+                            partner = "Val";
                         }
                     }
 
@@ -1628,7 +1628,7 @@ namespace SwordAndSorcerySMAPI
 
             SpaceCore = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
 
-            if (Game1.player.eventsSeen.Contains("SnS.Ch1.Mateo.18") && !Game1.player.hasOrWillReceiveMail("GaveArtificerLvl1"))
+            if (Game1.player.eventsSeen.Contains("SnS.Ch1.Val.18") && !Game1.player.hasOrWillReceiveMail("GaveArtificerLvl1"))
             {
                 SpaceCore.AddExperienceForCustomSkill(Game1.player, RogueSkill.Id, 100);
                 Game1.addMail("GaveArtificerLvl1", true);
@@ -1784,7 +1784,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Postfix(SpecialOrder __instance, ref bool __result)
         {
-            if (__instance.questKey.Value.StartsWith("CAGQuest.UntimedSpecialOrder") || __instance.questKey.Value == "Mateo.SpecialOrders.BuildGuild")
+            if (__instance.questKey.Value.StartsWith("CAGQuest.UntimedSpecialOrder") || __instance.questKey.Value == "Val.SpecialOrders.BuildGuild")
             {
                 __result = false;
             }
@@ -1809,7 +1809,7 @@ namespace SwordAndSorcerySMAPI
         public static bool Prefix(SpecialOrder __instance)
         {
             // I don't know why this is necessary
-            if (__instance.questKey.Value.StartsWith("CAGQuest.UntimedSpecialOrder") || __instance.questKey.Value == "Mateo.SpecialOrders.BuildGuild")
+            if (__instance.questKey.Value.StartsWith("CAGQuest.UntimedSpecialOrder") || __instance.questKey.Value == "Val.SpecialOrders.BuildGuild")
             {
                 __instance.dueDate.Value = Game1.Date.TotalDays + 999;
                 return false;
@@ -1823,7 +1823,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Postfix(string requester_name, ref KeyValuePair<Texture2D, Rectangle>? __result)
         {
-            List<string> npc = ["Mateo", "Hector", "Cirrus", "Dandelion", "Roslin"];
+            List<string> npc = ["Val", "Hector", "Cirrus", "Dandelion", "Roslin"];
             int x = npc.IndexOf(requester_name);
             if (x == -1)
                 return;
@@ -1930,7 +1930,7 @@ namespace SwordAndSorcerySMAPI
             Point basePoint = new(28, 7);
             Dictionary<string, (string sprite, string portrait, string dialogue)> data = new()
             {
-                { "Mateo", new( "Armor_Mateo", "Armor_Mateo", I18n.FakeNpc_Deepdark_MateoMine() ) },
+                { "Val", new( "Armor_Mateo", "Armor_Mateo", I18n.FakeNpc_Deepdark_MateoMine() ) },
                 { "Hector", new( "Hector_HoodDown", "Hector_HoodDown", I18n.FakeNpc_Deepdark_HectorMine() ) },
                 { "Cirrus", new( "Cirrus_Glamrock", "Cirrus_Glamrock", I18n.FakeNpc_Deepdark_CirrusMine() ) },
                 { "Dandelion", new( "Dandelion_armored", "Dandelion_armored", I18n.FakeNpc_Deepdark_DandelionMine() ) },
@@ -1944,7 +1944,7 @@ namespace SwordAndSorcerySMAPI
                     displayName = NPC.GetDisplayName(entry.Key)
                 };
                 npc.setNewDialogue(new Dialogue(npc, "deepdarkdialogue", entry.Value.dialogue));
-                if (entry.Key == "Mateo")
+                if (entry.Key == "Val")
                 {
                     /*
                     npc.Sprite.setCurrentAnimation(

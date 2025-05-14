@@ -1,6 +1,6 @@
 {
   "Changes": [
-    // MATEO'S TENT 
+    // Val'S TENT 
     {
       "LogName": "Beach Tent Warp",
       "Action": "EditMap",
@@ -72,7 +72,7 @@
       ],
       "When": {
         "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true,
-        "HasSeenEvent |contains=SnS.Ch5.Mateo.1": false
+        "HasSeenEvent |contains=SnS.Ch5.Val.1": false
         
       }
     },
@@ -100,7 +100,7 @@
           }
         }
       ],
-      "When": { "HasSeenEvent |contains=SnS.Ch5.Mateo.1": true }
+      "When": { "HasSeenEvent |contains=SnS.Ch5.Val.1": true }
     },
     // EAST SCARP SPECIAL ORDER BOARD
     {
@@ -116,7 +116,7 @@
       },
       "When": { "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true }
     },
-    // MATEO SPACECORE WARP FIX
+    // Val SPACECORE WARP FIX
     {
       "LogName": "Patches ES to Guild",
       "Action": "EditMap",
@@ -494,7 +494,7 @@
           }
         }
       ],
-      "When": { "HasSeenEvent |contains=SnS.Ch1.Mateo.18": false }
+      "When": { "HasSeenEvent |contains=SnS.Ch1.Val.18": false }
     },
     // ADDS THE UNDERFORGE WARP FROM GUILD
     {
@@ -512,7 +512,7 @@
           }
         }
       ],
-      "When": { "HasSeenEvent |contains=SnS.Ch1.Mateo.18": true }
+      "When": { "HasSeenEvent |contains=SnS.Ch1.Val.18": true }
     },
     // ADDS THE UNDERFORGE WARP TO GUILD
     {
@@ -710,7 +710,7 @@
     ],
       "When": {
         "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true,
-        "HasSeenEvent |contains=SnS.Ch5.Mateo": true
+        "HasSeenEvent |contains=SnS.Ch5.Val": true
       }
     },
     /*

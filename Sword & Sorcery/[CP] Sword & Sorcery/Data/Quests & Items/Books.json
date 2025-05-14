@@ -113,7 +113,7 @@
       "ID": "(O){{ModID}}_artificerbook"
     },
     "When": {
-      "HasSeenEvent": "SnS.Ch1.Mateo.18"
+      "HasSeenEvent": "SnS.Ch1.Val.18"
     }
   },
   {
@@ -130,7 +130,7 @@
       "ID": "(O){{ModID}}_artificerbook"
     },
     "When": {
-      "HasSeenEvent": "SnS.Ch1.Mateo.18"
+      "HasSeenEvent": "SnS.Ch1.Val.18"
     }
   },
   {
@@ -147,7 +147,7 @@
       "ID": "(O){{ModID}}_artificerbook"
     },
     "When": {
-      "HasSeenEvent": "SnS.Ch1.Mateo.18"
+      "HasSeenEvent": "SnS.Ch1.Val.18"
     }
   },
   // DRUID

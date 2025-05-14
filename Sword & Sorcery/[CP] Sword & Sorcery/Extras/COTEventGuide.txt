@@ -4,7 +4,7 @@ Reload the content pack: patch reload DestyNova.Hector.CP
 **MOST EVENTS ARE 1-3 DAYS APART.**
 
 debug ebi SnS.Ch2.Hector.1 - 0 Hearts pt 1 - "HectorIntro"
-After seeing Mateo's 10H event and completing Hector's seasonal quests (unless it's configured off), enter the Railroad at any time. 
+After seeing Val's 10H event and completing Hector's seasonal quests (unless it's configured off), enter the Railroad at any time. 
 
 debug ebi SnS.Ch2.Hector.2 - 1 Heart - "HectorBookIntro" 
 Enter the tower 3 days after seeing the previous event.

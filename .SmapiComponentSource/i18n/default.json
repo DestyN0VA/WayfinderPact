@@ -125,7 +125,7 @@
   "ability.bardics.unlock-hint": "Unlock at Bardics level {{level}}",
 
   // NEA
-  "Mateo.RejectBouquet": "Did Aideen help you put that bouquet together, @? It looks beautiful.",
+  "Val.RejectBouquet": "Did Aideen help you put that bouquet together, @? It looks beautiful.",
   "rogue-skill.name": "Artificer",
   "rogue-skill.unlock.1": "Adds an armor slot and a bow tool.",
   "rogue-skill.unlock.2": "Purified ore now has a chance of dropping from their\nrespective nodes, to be used at the Underforge.",
@@ -363,7 +363,7 @@
   "teleport-circle.error.missing-essence": "3 essences not found in nearby chest.",
   "teleport-circle.name": "Teleport Circle",
 
-  "fake-npc.deepdark.mateo-mine": "I'm worried, but we've made it this far. Nothing can stop us as long as we stick together.$80",
+  "fake-npc.deepdark.Val-mine": "I'm worried, but we've made it this far. Nothing can stop us as long as we stick together.$80",
   "fake-npc.deepdark.hector-mine": "I feel sick...$19",
   "fake-npc.deepdark.cirrus-mine": "I'm not sure what's going to happen, @, but with you here we'll be fine!$17",
   "fake-npc.deepdark.dandelion-mine": "I have big plans for when this is over, @. Just you wait.$18",

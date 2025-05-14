@@ -203,7 +203,7 @@ namespace SwordAndSorcerySMAPI
         {
             return I18n.Level_Health(3 * level);
         }
-        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains("SnS.Ch1.Mateo.18") || Game1.player.GetFarmerExtData().StartingArtificer;
+        public override bool ShouldShowOnSkillsPage => Game1.player.eventsSeen.Contains("SnS.Ch1.Val.18") || Game1.player.GetFarmerExtData().StartingArtificer;
     }
 
     [HarmonyPatch(typeof(LevelUpMenu), nameof(LevelUpMenu.RevalidateHealth))]
@@ -251,7 +251,7 @@ namespace SwordAndSorcerySMAPI
     {
         public static void Postfix(Farmer __instance, int which, int howMuch)
         {
-            if (!__instance.eventsSeen.Contains("SnS.Ch1.Mateo.18")) // TODO: Change event
+            if (!__instance.eventsSeen.Contains("SnS.Ch1.Val.18")) // TODO: Change event
                 return;
             if (which != Farmer.combatSkill && which != Farmer.miningSkill)
                 return;

@@ -10,30 +10,30 @@
                 {   // LOCATION: SET UP (VANILLA)
                     "Operation": "Append",
                     "Target": [  "Entries", "Set-Up_additionalCharacters" ],
-                    "Value": "Mateo 28 54 2",
+                    "Value": "Val 28 54 2",
                     "Delimiter": "/"
                 },
                 {   // LOCATION: MAIN EVENT (VANILLA)
                     "Operation": "Append",
                     "Target": [  "Entries",  "MainEvent_additionalCharacters"  ],
-                    "Value": "Mateo 36 64 3",
+                    "Value": "Val 36 64 3",
                     "Delimiter": "/"
                 },
 				{   // LOCATION: SET UP Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [  "Entries", "Set-Up_additionalCharacters_y2" ],
-                    "Value": "Mateo 28 54 2",
+                    "Value": "Val 28 54 2",
                     "Delimiter": "/"
                 },
                 {   // LOCATION: MAIN EVENT Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [  "Entries",  "MainEvent_additionalCharacters_y2"  ],
-                    "Value": "Mateo 36 64 3",
+                    "Value": "Val 36 64 3",
                     "Delimiter": "/"
                 },
 			],
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": "true",
+				"HasSeenEvent |contains=SnS.Ch1.Val.3": "true",
 				"HasConversationTopic |contains=MateoPain": false,
 			  },	  
         },
@@ -48,30 +48,30 @@
                 {	// LOCATION: SET UP (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","Set-Up_additionalCharacters" ],
-                    "Value": "Mateo 53 31 1",
+                    "Value": "Val 53 31 1",
                     "Delimiter": "/"
                 },
                 {	// LOCATION: MAIN EVENT (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters"  ],
-                    "Value": "Mateo 53 31 1",
+                    "Value": "Val 53 31 1",
                     "Delimiter": "/"
                 },
 				{	// LOCATION: SET UP Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","Set-Up_additionalCharacters_y2" ],
-                    "Value": "Mateo 53 31 1",
+                    "Value": "Val 53 31 1",
                     "Delimiter": "/"
                 },
                 {	// LOCATION: MAIN EVENT Y2 (VANILLA)
                     "Operation": "Append",
                     "Target": [ "Entries","MainEvent_additionalCharacters_y2"  ],
-                    "Value": "Mateo 53 31 1",
+                    "Value": "Val 53 31 1",
                     "Delimiter": "/"
                 },
             ],
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasSeenEvent |contains=SnS.Ch1.Val.3": true,
 				"HasConversationTopic |contains=MateoPain": false,
 			  },  
         },
@@ -80,7 +80,7 @@
 			"Action": "EditData",
 			"Target": "Strings/Events",
 			"Entries": {
-				"SpouseFlowerDanceAccept_Mateo": "{{i18n:Festivals.Mateo.FlowerDance.Accept}}",
+				"SpouseFlowerDanceAccept_Mateo": "{{i18n:Festivals.Val.FlowerDance.Accept}}",
 			}
 		},
 
@@ -93,30 +93,30 @@
 				{	// LOCATION: SET UP (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters"],
-					"Value": "Mateo 15 5 2",
+					"Value": "Val 15 5 2",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","MainEvent_additionalCharacters"],
-					"Value": "Mateo 15 5 2",
+					"Value": "Val 15 5 2",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
-					"Value": "Mateo 17 5 2",
+					"Value": "Val 17 5 2",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","MainEvent_additionalCharacters_y2"],
-					"Value": "Mateo 17 5 2",
+					"Value": "Val 17 5 2",
 					"Delimiter": "/"
 				},
 			],
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasSeenEvent |contains=SnS.Ch1.Val.3": true,
 				"HasConversationTopic |contains=MateoPain": false,
 			  },
 		},
@@ -130,18 +130,18 @@
 				{   // LOCATION: SET UP & MAIN EVENT (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries", "Set-Up_additionalCharacters"],
-					"Value": "Mateo 13 27 1",
+					"Value": "Val 13 27 1",
 					"Delimiter": "/"
 				},
 				{   // LOCATION: SET UP & MAIN EVENT Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
-					"Value": "Mateo 13 27 1",
+					"Value": "Val 13 27 1",
 					"Delimiter": "/"
 				},
 			],
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasSeenEvent |contains=SnS.Ch1.Val.3": true,
 				"HasConversationTopic |contains=MateoPain": false,
 			  },
 		},
@@ -155,18 +155,18 @@
 				{	// LOCATION: SET UP & MAIN EVENT (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters"],
-					"Value": "Mateo 33 81 0",
+					"Value": "Val 33 81 0",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP & MAIN EVENT Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
-					"Value": "Mateo 20 78 1",
+					"Value": "Val 20 78 1",
 					"Delimiter": "/"
 				},
 			],
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasSeenEvent |contains=SnS.Ch1.Val.3": true,
 				"HasConversationTopic |contains=MateoPain": false,
 			  },
 		},
@@ -180,13 +180,13 @@
 				{	// LOCATION: SET UP & MAIN EVENT (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries",	"Set-Up_additionalCharacters"],
-					"Value": "Mateo 25 57 1",
+					"Value": "Val 25 57 1",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP & MAIN EVENT Y2 (VANILLA)
 					 "Operation": "Append",
 					 "Target": ["Entries",	"Set-Up_additionalCharacters_y2"],
-					 "Value": "Mateo 25 57 1",
+					 "Value": "Val 25 57 1",
 					 "Delimiter": "/"
 				 },
 				 ],
@@ -204,30 +204,30 @@
 				{	// LOCATION: SET UP (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters"],
-					"Value": "Mateo 99 40 1",
+					"Value": "Val 99 40 1",
 					"Delimiter": "/"
 				},
                 {   // LOCATION: MAIN EVENT (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Main-Event_additionalCharacters"],
-					"Value": "Mateo 99 40 1",
+					"Value": "Val 99 40 1",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Set-Up_additionalCharacters_y2"],
-					"Value": "Mateo 45 16 1",
+					"Value": "Val 45 16 1",
 					"Delimiter": "/"
 				},
                 {   // LOCATION: MAIN EVENT Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": ["Entries","Main-Event_additionalCharacters_y2"],
-					"Value": "Mateo 45 16 1",
+					"Value": "Val 45 16 1",
 					"Delimiter": "/"
 				},
 			],
 			"When": {
-				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+				"HasSeenEvent |contains=SnS.Ch1.Val.3": true,
 				"HasConversationTopic |contains=MateoPain": false,
 			  },
 		},
@@ -241,13 +241,13 @@
 				{	// LOCATION: SET UP (VANILLA)
 					"Operation": "Append",
 					"Target": [	"Entries","Set-Up_additionalCharacters"	],
-					"Value": "Mateo 22 58 1",
+					"Value": "Val 22 58 1",
 					"Delimiter": "/"
 				},
 				{	// LOCATION: SET UP Y2 (VANILLA)
 					"Operation": "Append",
 					"Target": [	"Entries","Set-Up_additionalCharacters_y2"	],
-					"Value": "Mateo 23 58 1",
+					"Value": "Val 23 58 1",
 					"Delimiter": "/"
 				},
 			],
@@ -265,31 +265,31 @@
 					{ // LOCATION: SET UP
 					  "Operation": "Append",
 					  "Target": ["Entries", "Set-Up_additionalCharacters"],
-					  "Value": "Mateo 100 49 2",
+					  "Value": "Val 100 49 2",
 					  "Delimiter": "/"
 					 },
 					 { // LOCATION: MAIN EVENT
 					  "Operation": "Append",
 					  "Target": ["Entries", "MainEvent_additionalCharacters"],
-					  "Value": "Mateo 77 50 0",
+					  "Value": "Val 77 50 0",
 					  "Delimiter": "/"
 					 },
 					 { // LOCATION: SET UP Y2
 					  "Operation": "Append",
 					  "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
-					  "Value": "Mateo 100 49 2",
+					  "Value": "Val 100 49 2",
 					  "Delimiter": "/"
 					 },
 					 { // LOCATION: MAIN EVENT Y2
 					  "Operation": "Append",
 					  "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
-					  "Value": "Mateo 77 50 0",
+					  "Value": "Val 77 50 0",
 					  "Delimiter": "/"
 					 },
 				],
 				"When": {
 					"HasMod |contains=Rafseazz.RSVCP": true,
-					"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+					"HasSeenEvent |contains=SnS.Ch1.Val.3": true,
 					"HasConversationTopic |contains=MateoPain": false,
 				  },
 		},
@@ -304,31 +304,31 @@
 				 { // LOCATION: SET UP 
 				  "Operation": "Append",
 				  "Target": ["Entries", "Set-Up_additionalCharacters"],
-				  "Value": "Mateo 53 43 3",
+				  "Value": "Val 53 43 3",
 				  "Delimiter": "/"
 				 },
 				 { // LOCATION: MAIN EVENT
 				  "Operation": "Append",
 				  "Target": ["Entries", "MainEvent_additionalCharacters"],
-				  "Value": "Mateo 49 42 3",
+				  "Value": "Val 49 42 3",
 				  "Delimiter": "/"
 				 },
 				 { // LOCATION: SET UP Y2
 				  "Operation": "Append",
 				  "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
-				  "Value": "Mateo 53 43 3",
+				  "Value": "Val 53 43 3",
 				  "Delimiter": "/"
 				 },
 				 { // LOCATION: MAIN EVENT Y2
 				  "Operation": "Append",
 				  "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
-				  "Value": "Mateo 49 42 3",
+				  "Value": "Val 49 42 3",
 				  "Delimiter": "/"
 				 },
 		 	],
 				"When": {
 					"HasMod |contains=Rafseazz.RSVCP": true,
-					"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,
+					"HasSeenEvent |contains=SnS.Ch1.Val.3": true,
 					"HasConversationTopic |contains=MateoPain": false,
 				  },
 		},

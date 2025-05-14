@@ -43,7 +43,7 @@
 
     // SECRET NOTE
     {
-      "LogName": "Loads Mateo's Secret Note Image",
+      "LogName": "Loads Val's Secret Note Image",
       "Action": "EditImage",
       "Target": "TileSheets/SecretNotesImages",
       "FromFile": "assets/Secret Notes/{{Portrait Style}}/Photo1.png",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "LogName": "Loads Mateo's Secret Note",
+      "LogName": "Loads Val's Secret Note",
       "Action": "EditData",
       "Target": "Data/SecretNotes",
       "Entries": {
@@ -76,7 +76,7 @@
         "Hector": {
           "SeparateDatability": true
         },
-        "Mateo": {
+        "Val": {
           "SeparateDatability": true
         },
 
@@ -96,7 +96,7 @@
             "SpouseRoom": "ANY \"DAY_OF_WEEK Tuesday Thursday, !PLAYER_HAS_SEEN_EVENT Target SnS.Ch2.Hector.18\" \"DAY_OF_WEEK Saturday, PLAYER_HAS_SEEN_EVENT Target SnS.Ch2.Hector.18\""
           }
         }/*,
-        "Mateo": {
+        "Val": {
           "IgnoreMarriageSchedule": true
         },
 
@@ -121,7 +121,7 @@
       "Action": "EditData",
       "Target": "Data/Characters",
       "Fields": {
-        "Mateo": {
+        "Val": {
           "Gender": "undefined"
         }
       },
@@ -162,7 +162,7 @@
       "Target": "Mods/shekurika.EventLookup/blocklist",
       "Entries": {
         "SnS.Ch3.Cirrus.15": "T",
-        "SnS.Ch1.Mateo.19": "T",
+        "SnS.Ch1.Val.19": "T",
         "SnS.Ch2.Hector.17": "T"
       },
       "When": {
