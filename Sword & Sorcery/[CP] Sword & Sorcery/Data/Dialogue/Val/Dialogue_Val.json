@@ -34,13 +34,13 @@
                         "Update": "OnLocationChange",
                         "Target": "Characters/Dialogue/Val",
                         "Entries": {
-                                "{{WeekDay}}": "{{i18n:Core.Val.{{Season}}.Relationship.{{MateoRomance}}.{{Random:{{Range: 1, 7}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received"
+                                "{{WeekDay}}": "{{i18n:Core.Val.{{Season}}.Relationship.{{ValRomance}}.{{Random:{{Range: 1, 7}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Val_OverrideSeenToday received"
                         },
                         "When": {
                                 "Hearts:Val": "10",
                                 "Query: {{Random: {{Range: 1, 3}}|key=MGO}} = 1": true,
-                                "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true,
-                                "HasFlag |contains=SnS_M_Mateo_OverrideSeenToday": false
+                                "HasFlag |contains=Val_SpecialOrders_BuildGuildMail": true,
+                                "HasFlag |contains=SnS_M_Val_OverrideSeenToday": false
                         }
                 },
                 // EPILOGUE POOL 
@@ -50,12 +50,12 @@
                         "Update": "OnLocationChange",
                         "Target": "Characters/Dialogue/Val",
                         "Entries": {
-                                "{{WeekDay}}": "{{i18n:Core.Val.Epilogue.{{Random:{{Range: 1, 10}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Mateo_OverrideSeenToday received"
+                                "{{WeekDay}}": "{{i18n:Core.Val.Epilogue.{{Random:{{Range: 1, 10}}|key={{Time}}}}}}#$action AddMail Current SnS_M_Val_OverrideSeenToday received"
                         },
                         "When": {
                                 "HasSeenEvent |contains=SnS.Ch5.End": true,
                                 "Query: {{Random: {{Range: 1, 3}}|key=MEO}} = 1": true,
-                                "HasFlag |contains=SnS_M_Mateo_OverrideSeenToday": false
+                                "HasFlag |contains=SnS_M_Val_OverrideSeenToday": false
                         }
                 },
                 /*
@@ -140,7 +140,7 @@
                                 "Resort_Wander_2": "{{i18n:Core.Val.ResortWander.2}}",
                                 "Resort_Chair": "{{i18n:Core.Val.ResortChair}}",
                                 "Resort_Bar": "{{i18n:Core.Val.ResortBar}}",
-                                "Resort_Towel": "{{i18n:Core.MateoResortTowel}}",
+                                "Resort_Towel": "{{i18n:Core.ValResortTowel}}",
                                 "Resort_Towel_2": "{{i18n:Core.Val.ResortTowel.2}}",
                                 "Resort_Towel_3": "{{i18n:Core.Val.Resort_Towel.3}}",
                                 "Resort": "{{i18n:Core.Val.Resort}}",
@@ -148,15 +148,15 @@
                                 "Saloon4": "{{i18n:Core.Val.Saloon.4h}}",
                                 "Saloon6": "{{i18n:Core.Val.Saloon.6h}}",
                                 "Saloon8": "{{i18n:Core.Val.Saloon.8h}}",
-                                "Saloon10": "{{i18n:Core.Val.Saloon.10h.{{MateoRomance}}}}",
+                                "Saloon10": "{{i18n:Core.Val.Saloon.10h.{{ValRomance}}}}",
                                 "ArchaeologyHouse4": "{{i18n:Core.Val.ArchaeologyHouse.4h}}",
                                 "ArchaeologyHouse6": "{{i18n:Core.Val.ArchaeologyHouse.6h}}",
                                 "ArchaeologyHouse8": "{{i18n:Core.Val.ArchaeologyHouse.8h}}",
-                                "ArchaeologyHouse10": "{{i18n:Core.Val.ArchaeologyHouse.10h.{{MateoRomance}}}}",
+                                "ArchaeologyHouse10": "{{i18n:Core.Val.ArchaeologyHouse.10h.{{ValRomance}}}}",
                                 "AdventureGuild4": "{{i18n:Core.Val.AdventureGuild.4h}}",
                                 "AdventureGuild6": "{{i18n:Core.Val.AdventureGuild.6h}}",
                                 "AdventureGuild8": "{{i18n:Core.Val.AdventureGuild.8h}}",
-                                "AdventureGuild10": "{{i18n:Core.Val.AdventureGuild.10h.{{MateoRomance}}}}",
+                                "AdventureGuild10": "{{i18n:Core.Val.AdventureGuild.10h.{{ValRomance}}}}",
                                 // GREEN RAIN
                                 "GreenRain": "{{i18n:Core.Val.GreenRain}}",
                                 "GreenRainFinished": "{{i18n:Core.Val.GreenRainFinished}}",

@@ -242,10 +242,10 @@ This first chapter of S&S introduces you to Val, a charming rogue with a sordid 
 Val is an experienced adventurer with a kind heart who grew up in Pelican Town. Not only are they a skilled Rogue, but they have an inclination for blacksmithing. A good leader and better friend who'll always have your back.",
 "guidebook.chapter.NEA.Emeritus": "[nospacing]
 [nextposition=0,10][center=300][font=dialogue]Emeritus[/font][/center]
-[offset=90,50][image=Characters/MateoEmeritus:0,0,32,32:4]
+[offset=90,50][image=Characters/ValEmeritus:0,0,32,32:4]
 [offset=-118,144][center=300]Pronouns: He/Him[/center]
 [offset=0,32][center=300]Not Friendable[/center]
-[nextposition=322,16][image=Portraits/MateoEmeritus:0,0,64,64:4]
+[nextposition=322,16][image=Portraits/ValEmeritus:0,0,64,64:4]
 [nextposition=0,288]
 [/nospacing]
 Emeritus is a jovial Pepper Rex who hatches with one goal: to protect East Scarp from the crab menace. He's the most loyal sidekick there is, and loves the occasional kiss on the forehead. He'll return it with bonus slobber!",
@@ -274,10 +274,10 @@ Emeritus is a jovial Pepper Rex who hatches with one goal: to protect East Scarp
 [font=dialogue]Val Event: 4 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.3]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Val 1000, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoLibrary]Hint: Visit the [color=green]Beach[/color] between 6pm and 12am in sunny weather.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 1000, !PLAYER_HAS_CONVERSATION_TOPIC Current ValLibrary]Hint: Visit the [color=green]Beach[/color] between 6pm and 12am in sunny weather.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Val 1000]Requirement: 4 Hearts with [color=red]Val[/color][/if]
-[if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoLibrary]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current ValLibrary]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
 [/else]
 [/else]
 [/if]
@@ -286,10 +286,10 @@ Emeritus is a jovial Pepper Rex who hatches with one goal: to protect East Scarp
 [font=dialogue]Val Event: 4 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.4]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Val 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoAdmission]Hint: Visit the [color=green]top floor of the Mines[/color] between 6pm and 1am.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current ValAdmission]Hint: Visit the [color=green]top floor of the Mines[/color] between 6pm and 1am.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Val 1250]Requirement: 5 Hearts with [color=red]Val[/color][/if]
-[if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoAdmission]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current ValAdmission]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
 [/else]
 [/else]
 [/if]
@@ -317,10 +317,10 @@ Emeritus is a jovial Pepper Rex who hatches with one goal: to protect East Scarp
 [font=dialogue]Val Event: 5 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.6]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Val 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoConfrontation]Hint: Visit the [color=green]Adventurer's Guild[/color] between 2pm and 10pm.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 1250, !PLAYER_HAS_CONVERSATION_TOPIC Current ValConfrontation]Hint: Visit the [color=green]Adventurer's Guild[/color] between 2pm and 10pm.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Val 1250]Requirement: 5 Hearts with [color=red]Val[/color][/if]
-[if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoConfrontation]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current ValConfrontation]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
 [/else]
 [/else]
 [/if]
@@ -347,11 +347,11 @@ Emeritus is a jovial Pepper Rex who hatches with one goal: to protect East Scarp
 [font=dialogue]Val Event: 7 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.9]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Val 1750, PLAYER_HAS_MET Current Krobus, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoAcceptance]Hint: Visit the [color=green]Hospital[/color] between 9am and 5pm when it isn't Friday.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 1750, PLAYER_HAS_MET Current Krobus, !PLAYER_HAS_CONVERSATION_TOPIC Current ValAcceptance]Hint: Visit the [color=green]Hospital[/color] between 9am and 5pm when it isn't Friday.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Val 1750]Requirement: 7 Hearts with [color=red]Val[/color][/if]
 [if=!PLAYER_HAS_MET Current Krobus]Requirement: Meet [color=red]Krobus[/color][/if]
-[if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoAcceptance]Requirement: Wait {{VariableTimegate}} days after seeing the previous event.[/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current ValAcceptance]Requirement: Wait {{VariableTimegate}} days after seeing the previous event.[/if]
 [/else]
 [/else]
 [/if]
@@ -360,10 +360,10 @@ Emeritus is a jovial Pepper Rex who hatches with one goal: to protect East Scarp
 [font=dialogue]Val Event: 7 Hearts pt 2[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.10]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Val 1750, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoPain]Hint: Visit [color=green]Pelican Town[/color] between 5pm and 12am when it isn't Friday.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 1750, !PLAYER_HAS_CONVERSATION_TOPIC Current ValPain]Hint: Visit [color=green]Pelican Town[/color] between 5pm and 12am when it isn't Friday.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Val 1750]Requirement: 7 Hearts with [color=red]Val[/color][/if]
-[if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoPain]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current ValPain]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
 [/else]
 [/else]
 [/if]
@@ -372,10 +372,10 @@ Emeritus is a jovial Pepper Rex who hatches with one goal: to protect East Scarp
 [font=dialogue]Val Event: 8 Hearts pt 1[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.11]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Val 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current MateoRecovery]Hint: Visit [color=green]East Scarp[/color] between 8am and 6pm in sunny weather.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Val 2000, !PLAYER_HAS_CONVERSATION_TOPIC Current ValRecovery]Hint: Visit [color=green]East Scarp[/color] between 8am and 6pm in sunny weather.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Val 2000]Requirement: 8 Hearts with [color=red]Val[/color][/if]
-[if=PLAYER_HAS_CONVERSATION_TOPIC Current MateoRecovery]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current ValRecovery]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
 [/else]
 [/else]
 [/if]
@@ -1368,10 +1368,10 @@ Please view \"Dandelion & Roslin: Pt 1-3\".[/if]
 [font=dialogue]Roslin Event: 2 Hearts[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Roslin.3]Complete![/if]
 [else]
-[if=PLAYER_FRIENDSHIP_POINTS Current Roslin 500, !PLAYER_HAS_CONVERSATION_TOPIC Current RoslinAndMateo]Hint: Visit [color=green]the East Scarp Deep Mountains[/color] between between 8am and 10pm.[/if]
+[if=PLAYER_FRIENDSHIP_POINTS Current Roslin 500, !PLAYER_HAS_CONVERSATION_TOPIC Current RoslinAndVal]Hint: Visit [color=green]the East Scarp Deep Mountains[/color] between between 8am and 10pm.[/if]
 [else]
 [if=!PLAYER_FRIENDSHIP_POINTS Current Roslin 500]Requirement: 2 Hearts with [color=red]Roslin[/color][/if]
-[if=PLAYER_HAS_CONVERSATION_TOPIC Current RoslinAndMateo]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
+[if=PLAYER_HAS_CONVERSATION_TOPIC Current RoslinAndVal]Requirement: Wait {{VariableTimegate}} days after the previous event.[/if]
 [/else]
 [/else]
 [/if]
@@ -2456,7 +2456,7 @@ Ginger Beer List:
 ",
 
 //Conditional Event Extras
-"guidebook.chapter.MateoTrollHeritage.1.true": " 
+"guidebook.chapter.ValTrollHeritage.1.true": " 
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Hector.1]
 [font=dialogue]Val & Eyvinder: Part 1 (Extra)[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Eyvinder]Complete![/if]
@@ -2468,12 +2468,12 @@ Ginger Beer List:
 [/else]
 [/if]
  ",
-"guidebook.chapter.MateoTrollHeritage.1.false": " 
+"guidebook.chapter.ValTrollHeritage.1.false": " 
 [font=dialogue]Val & Eyvinder: Part 1 (Extra)[/font]
 Val Troll Heritage is not enabled. Skipping event.
  ",
 
-"guidebook.chapter.MateoTrollHeritage.2.true": " 
+"guidebook.chapter.ValTrollHeritage.2.true": " 
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Cirrus.1]
 [font=dialogue]Val & Eyvinder: Part 2 (Extra)[/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Eyvinder]Complete![/if]
@@ -2486,12 +2486,12 @@ Val Troll Heritage is not enabled. Skipping event.
 [/if]
  ",
  
-"guidebook.chapter.MateoTrollHeritage.2.false": " 
+"guidebook.chapter.ValTrollHeritage.2.false": " 
 [font=dialogue]Val & Eyvinder: Part 2 (Extra)[/font]
 Val Troll Heritage is not enabled. Skipping event.
  ",
  
-"guidebook.chapter.MateoTrollHeritage.3.true": "
+"guidebook.chapter.ValTrollHeritage.3.true": "
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch2.Roslin.1]
 [font=dialogue]Val & Eyvinder: Part 3(Extra) [/font]
 [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch4.Eyvinder]Complete![/if]
@@ -2504,7 +2504,7 @@ Val Troll Heritage is not enabled. Skipping event.
 [/if]
  ",
  
-"guidebook.chapter.MateoTrollHeritage.3.false": "
+"guidebook.chapter.ValTrollHeritage.3.false": "
 [font=dialogue]Val & Eyvinder: Part 3[/font]
 Val Troll Heritage is not enabled. Skipping event.
  ",
@@ -2552,7 +2552,7 @@ Meet every character in the mod, from the major ones to the smaller ones. See th
  
 [font=dialogue]Table Of Contents[/font]
 > [link=Characters/Val][icon=Characters/Val:0,0,16,16] Val, The Artificer[/link]
-> [link=Characters/Emeritus][icon=Characters/MateoEmeritus:96,192,16,16] Emeritus, The Pepper Rex[/link]
+> [link=Characters/Emeritus][icon=Characters/ValEmeritus:96,192,16,16] Emeritus, The Pepper Rex[/link]
 > [link=Characters/Hector][icon=Characters/Hector:0,0,16,16] {{TrueName}}, The Druid[/link]
 > [link=Characters/Book][icon=Characters/HectorBook:7,3,16,20] Book, The Dryad[/link]
 > [link=Characters/Cirrus][icon=Characters/Cirrus:0,3,16,16] Cirrus, The Bard[/link]

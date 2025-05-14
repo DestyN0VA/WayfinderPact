@@ -7,7 +7,7 @@
                 "{{ModId}}.Emeritus": {
                     "DisplayName": "{{i18n:Strings.Names.Emeritus}}",
                     "House": "Barn",
-                    "Texture": "Characters/MateoEmeritus_MEEP",
+                    "Texture": "Characters/ValEmeritus_MEEP",
                     "SpriteWidth": 32,
                     "SpriteHeight": 32,
                     "SleepFrame": 24,
@@ -27,7 +27,7 @@
                     "Age": 1,
                     "LocationId": "EastScarp_Village",
                     "DisplayName": "{{i18n:Strings.Names.Emeritus}}",
-                    "PortraitTexture": "Portraits/MateoEmeritus",
+                    "PortraitTexture": "Portraits/ValEmeritus",
                     "PetMessage": [
                         "{{i18n:MEEP.EmeritusOutside.{{Random: {{Range: 1, 5}}|key=EmDialogue}}}}"
                     ],
@@ -40,7 +40,7 @@
                     "Age": 1,
                     "LocationId": "EastScarp_CoastalGuild",
                     "DisplayName": "{{i18n:Strings.Names.Emeritus}}",
-                    "PortraitTexture": "Portraits/MateoEmeritus",
+                    "PortraitTexture": "Portraits/ValEmeritus",
                     "PetMessage": [
                         "{{i18n:MEEP.EmeritusInside.{{Random: {{Range: 1, 5}}|key=EmDialogue}}}}"
                     ],
@@ -48,12 +48,12 @@
                     "HomeTileY": 17,
                     "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch1.Val.12, !WEATHER EastScarp_Village Sun, !PLAYER_NPC_RELATIONSHIP Current Val Married"
                 },
-                "{{ModId}}.Emeritus_MateoMarried": {
+                "{{ModId}}.Emeritus_ValMarried": {
                     "AnimalId": "{{ModId}}.Emeritus",
                     "Age": 1,
                     "LocationId": "Farmhouse",
                     "DisplayName": "{{i18n:Strings.Names.Emeritus}}",
-                    "PortraitTexture": "Portraits/MateoEmeritus",
+                    "PortraitTexture": "Portraits/ValEmeritus",
                     "PetMessage": [
                         "{{i18n:MEEP.EmeritusFarmhouse.{{Random: {{Range: 1, 8}}|key=EmDialogueF}}}}"
                     ],

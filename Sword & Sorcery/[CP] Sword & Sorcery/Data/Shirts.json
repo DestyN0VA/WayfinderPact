@@ -12,10 +12,10 @@
       "Action": "EditData",
       "Target": "Data/Shirts",
       "Entries": {
-        "DN.SnS_Mateo_Hoodie": {
-          "Name": "DN.SnS_Mateo_Hoodie",
-          "DisplayName": "{{i18n:DN.SnS_Mateo_Hoodie.Name}}",
-          "Description": "{{i18n:DN.SnS_Mateo_Hoodie.Description}}",
+        "DN.SnS_Val_Hoodie": {
+          "Name": "DN.SnS_Val_Hoodie",
+          "DisplayName": "{{i18n:DN.SnS_Val_Hoodie.Name}}",
+          "Description": "{{i18n:DN.SnS_Val_Hoodie.Description}}",
           "Price": 2500,
           "Texture": "Mods\\DN.SnS\\Shirts",
           "SpriteIndex": 0,

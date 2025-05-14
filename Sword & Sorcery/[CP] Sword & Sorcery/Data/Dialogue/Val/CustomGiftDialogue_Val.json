@@ -20,12 +20,12 @@
         // MINERALS & GEMS
         "AcceptGiftCategory_minerals": "{{i18n:Gifts.Val.GiftReaction.CategoryGemsMinerals}}",
         // LOVES
-        "AcceptGift_(O)74": "{{i18n:Gifts.Val.GiftReaction.PrismaticShard.{{MateoRomance}}}}",
-        "AcceptGift_(O)276": "{{i18n:Gifts.Val.GiftReaction.Pumpkin.{{MateoRomance}}}}",
-        "AcceptGift_(O)746": "{{i18n:Gifts.Val.GiftReaction.JackOLantern.{{MateoRomance}}}}",
-        "AcceptGift_(O)373": "{{i18n:Gifts.Val.GiftReaction.GoldenPumpkin.{{MateoRomance}}}}",
-        "AcceptGift_(O)595": "{{i18n:Gifts.Val.GiftReaction.FairyRose.{{MateoRomance}}}}",
-        "AcceptGift_(O)340": "{{i18n:Gifts.Val.GiftReaction.Honey.{{MateoRomance}}}}",
+        "AcceptGift_(O)74": "{{i18n:Gifts.Val.GiftReaction.PrismaticShard.{{ValRomance}}}}",
+        "AcceptGift_(O)276": "{{i18n:Gifts.Val.GiftReaction.Pumpkin.{{ValRomance}}}}",
+        "AcceptGift_(O)746": "{{i18n:Gifts.Val.GiftReaction.JackOLantern.{{ValRomance}}}}",
+        "AcceptGift_(O)373": "{{i18n:Gifts.Val.GiftReaction.GoldenPumpkin.{{ValRomance}}}}",
+        "AcceptGift_(O)595": "{{i18n:Gifts.Val.GiftReaction.FairyRose.{{ValRomance}}}}",
+        "AcceptGift_(O)340": "{{i18n:Gifts.Val.GiftReaction.Honey.{{ValRomance}}}}",
         "AcceptGift_(O)394": "{{i18n:Gifts.Val.GiftReaction.RainbowShell}}",
         "AcceptGift_(O)731": "{{i18n:Gifts.Val.GiftReaction.MapleBar}}",
         "AcceptGift_(O)WWWA.AutographedPhoto": "{{i18n:Gifts.Val.GiftReaction.AutographedPhoto}}",
@@ -38,9 +38,9 @@
         "AcceptGift_(O)224": "{{i18n:Gifts.Val.GiftReaction.Spaghetti}}",
         "AcceptGift_(O)372": "{{i18n:Gifts.Val.GiftReaction.Clam}}",
         // ALCOHOL 
-        "AcceptGift_(O)346": "{{i18n:Gifts.Val.GiftReaction.Beer.{{MateoRomance}}}}",
-        "AcceptGift_(O)303": "{{i18n:Gifts.Val.GiftReaction.PaleAle.{{MateoRomance}}}}",
-        "AcceptGift_(O)348": "{{i18n:Gifts.Val.GiftReaction.Wine.{{MateoRomance}}}}",
+        "AcceptGift_(O)346": "{{i18n:Gifts.Val.GiftReaction.Beer.{{ValRomance}}}}",
+        "AcceptGift_(O)303": "{{i18n:Gifts.Val.GiftReaction.PaleAle.{{ValRomance}}}}",
+        "AcceptGift_(O)348": "{{i18n:Gifts.Val.GiftReaction.Wine.{{ValRomance}}}}",
         // ARTIFACTS
         "AcceptGift_(O)96": "{{i18n:Gifts.Val.GiftReaction.DwarfScrollI}}",
         "AcceptGift_(O)97": "{{i18n:Gifts.Val.GiftReaction.DwarfScrollII}}",
@@ -82,11 +82,11 @@
       "Target": "Characters/Dialogue/Val",
       "Entries": { // CUSTOM GIFT DIALOGUE - BIRTHDAY
         // BIRTHDAY
-        "AcceptGift_(O)276": "{{i18n:Gifts.Val.GiftReaction.Pumpkin.Birthday.{{MateoRomance}}}}",
-        "AcceptGift_(O)746": "{{i18n:Gifts.Val.GiftReaction.Jack-o-Lantern.Birthday.{{MateoRomance}}}}",
-        "AcceptGift_(O)236": "{{i18n:Gifts.Val.GiftReaction.PumpkinPie.Birthday.{{MateoRomance}}}}",
-        "AcceptGift_(O)608": "{{i18n:Gifts.Val.GiftReaction.PumpkinSoup.Birthday.{{MateoRomance}}}}",
-        "AcceptGift_(O)595": "{{i18n:Gifts.Val.GiftReaction.FairyRose.Birthday.{{MateoRomance}}}}"
+        "AcceptGift_(O)276": "{{i18n:Gifts.Val.GiftReaction.Pumpkin.Birthday.{{ValRomance}}}}",
+        "AcceptGift_(O)746": "{{i18n:Gifts.Val.GiftReaction.Jack-o-Lantern.Birthday.{{ValRomance}}}}",
+        "AcceptGift_(O)236": "{{i18n:Gifts.Val.GiftReaction.PumpkinPie.Birthday.{{ValRomance}}}}",
+        "AcceptGift_(O)608": "{{i18n:Gifts.Val.GiftReaction.PumpkinSoup.Birthday.{{ValRomance}}}}",
+        "AcceptGift_(O)595": "{{i18n:Gifts.Val.GiftReaction.FairyRose.Birthday.{{ValRomance}}}}"
       },
       "When": {
         "Season": "fall",
@@ -100,7 +100,7 @@
         "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantCooldown}}"
       },
       "When": {
-        "HasConversationTopic |contains=MateoMarriageCountdown": true
+        "HasConversationTopic |contains=ValMarriageCountdown": true
       }
     },
     {
@@ -110,7 +110,7 @@
         "RejectItem_(O)460": "{{i18n:miscellaneous.PendantResponse}}#$action spacechase0.SpaceCore_PlayEvent SnS.Ch1.Val.19 false"
       },
       "When": {
-        "HasConversationTopic |contains=MateoMarriageCountdown": false,
+        "HasConversationTopic |contains=ValMarriageCountdown": false,
         "Relationship:Val |contains=Dating": true
       }
     },
@@ -121,7 +121,7 @@
         "RejectItem_(O)460": "{{i18n:miscellaneous.MermaidPendantFarmhouse}}"
       },
       "When": {
-        "HasConversationTopic |contains=MateoMarriageCountdown": false,
+        "HasConversationTopic |contains=ValMarriageCountdown": false,
         "Relationship:Val |contains=Dating": true,
         "FarmhouseUpgrade": "0"
       }

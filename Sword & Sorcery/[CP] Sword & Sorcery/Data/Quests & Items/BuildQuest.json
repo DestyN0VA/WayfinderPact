@@ -64,7 +64,7 @@
 						{
 							"Type": "Mail",
 							"Data": {
-								"MailReceived": "Mateo_SpecialOrders_BuildGuildMail",
+								"MailReceived": "Val_SpecialOrders_BuildGuildMail",
 								"NoLetter": "true"
 							}
 						}

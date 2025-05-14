@@ -181,16 +181,16 @@
       "Action": "EditData",
       "Target": "Data/Shops",
       "Entries": {
-        "DN.SnS_Mateo_VioletMoon": {
-          "Id": "DN.SnS_Mateo_VioletMoon",
+        "DN.SnS_Val_VioletMoon": {
+          "Id": "DN.SnS_Val_VioletMoon",
           "Owners": [
             {
               "Name": "AnyOrNone",
-              "Id": "DN.SnS_Mateo_VioletMoon_Dialogue",
+              "Id": "DN.SnS_Val_VioletMoon_Dialogue",
               "Portrait": "Val",
               "Dialogues": [
                 {
-                  "Dialogue": "{{i18n:DN.SnS_Violet_Moon_Shop_Mateo}}"
+                  "Dialogue": "{{i18n:DN.SnS_Violet_Moon_Shop_Val}}"
                 }
               ]
             }
@@ -373,13 +373,13 @@
               "Price": 1500
             },
             {
-              "Id": "DN.SnS_Mateo_VioletMoon_Femur",
+              "Id": "DN.SnS_Val_VioletMoon_Femur",
               "ItemID": "(W)31",
               "IgnoreShopPriceModifiers": true,
               "Price": 100
             },
             {
-              "Id": "DN.SnS_Mateo_VioletMoon_DwarfHammer",
+              "Id": "DN.SnS_Val_VioletMoon_DwarfHammer",
               "ItemID": "(W)56",
               "IgnoreShopPriceModifiers": true,
               "Price": 650

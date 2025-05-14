@@ -24,8 +24,8 @@ namespace NeverEndingAdventure
         public static Mod Instance { get; private set; }
 
         /// <summary>The item ID for the Ring of Wide Nets.</summary>
-        public static string MateoGuildBadge => "DN.SnS_adventureguildbadge";
-        public static string MateoStygiumPendant => "DN.SnS_styguimpendant";
+        public static string ValGuildBadge => "DN.SnS_adventureguildbadge";
+        public static string ValStygiumPendant => "DN.SnS_styguimpendant";
         public static string SenPressedCrocus => "DN.SnS_pressedcrocus";
 
         public IManifest ModManifest = manifest;
@@ -49,8 +49,8 @@ namespace NeverEndingAdventure
 
         private static void PreventRingCombining(Ring __instance, Ring ring, ref bool __result)
         {
-            if (__instance.ItemId == MateoGuildBadge || ring.ItemId == MateoGuildBadge ||
-                 __instance.ItemId == MateoStygiumPendant || ring.ItemId == MateoStygiumPendant || __instance.ItemId == SenPressedCrocus || ring.ItemId == SenPressedCrocus )
+            if (__instance.ItemId == ValGuildBadge || ring.ItemId == ValGuildBadge ||
+                 __instance.ItemId == ValStygiumPendant || ring.ItemId == ValStygiumPendant || __instance.ItemId == SenPressedCrocus || ring.ItemId == SenPressedCrocus )
             {
                 __result = false;
             }
@@ -62,12 +62,12 @@ namespace NeverEndingAdventure
     {
         public static void Postfix(Ring __instance, BuffEffects effects)
         {
-            if (__instance.ItemId == ModNEA.MateoGuildBadge || __instance.ItemId == ModNEA.MateoStygiumPendant)
+            if (__instance.ItemId == ModNEA.ValGuildBadge || __instance.ItemId == ModNEA.ValStygiumPendant)
             {
                 effects.MagneticRadius.Value += 128;
                 effects.AttackMultiplier.Value += 0.1f;
                 effects.Defense.Value += 3;
-                if (__instance.ItemId == ModNEA.MateoStygiumPendant)
+                if (__instance.ItemId == ModNEA.ValStygiumPendant)
                     effects.LuckLevel.Value += 1;
             }
             if (__instance.ItemId == ModNEA.SenPressedCrocus)
@@ -83,33 +83,33 @@ namespace NeverEndingAdventure
     {
         public static void Postfix(Ring __instance, SpriteBatch spriteBatch, ref int x, ref int y, SpriteFont font, float alpha)
         {
-            if (__instance.GetsEffectOfRing(ModNEA.MateoGuildBadge))
+            if (__instance.GetsEffectOfRing(ModNEA.ValGuildBadge))
             {
                 Utility.drawWithShadow(spriteBatch, Game1.mouseCursors, new Vector2(x + 16 + 4, y + 16 + 4), new Rectangle(110, 428, 10, 10), Color.White, 0f, Vector2.Zero, 4f, flipped: false, 1f);
-                Utility.drawTextWithShadow(spriteBatch, Game1.content.LoadString("Strings\\UI:ItemHover_DefenseBonus", 5 * __instance.GetEffectsOfRingMultiplier(ModNEA.MateoGuildBadge)), font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
+                Utility.drawTextWithShadow(spriteBatch, Game1.content.LoadString("Strings\\UI:ItemHover_DefenseBonus", 5 * __instance.GetEffectsOfRingMultiplier(ModNEA.ValGuildBadge)), font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
                 y += (int)Math.Max(font.MeasureString("TT").Y, 48f);
                 Utility.drawWithShadow(spriteBatch, Game1.mouseCursors, new Vector2(x + 16 + 4, y + 16 + 4), new Rectangle(120, 428, 10, 10), Color.White, 0f, Vector2.Zero, 4f, flipped: false, 1f);
-                Utility.drawTextWithShadow(spriteBatch, "+" + Game1.content.LoadString("Strings\\UI:ItemHover_Buff11", $"{__instance.GetEffectsOfRingMultiplier(ModNEA.MateoGuildBadge) * 10}%"), font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
+                Utility.drawTextWithShadow(spriteBatch, "+" + Game1.content.LoadString("Strings\\UI:ItemHover_Buff11", $"{__instance.GetEffectsOfRingMultiplier(ModNEA.ValGuildBadge) * 10}%"), font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
                 y += (int)Math.Max(font.MeasureString("TT").Y, 48f);
                 Utility.drawWithShadow(spriteBatch, Game1.mouseCursors, new Vector2(x + 16 + 4, y + 16 + 4), new Rectangle(90, 428, 10, 10), Color.White, 0f, Vector2.Zero, 4f, flipped: false, 1f);
-                Utility.drawTextWithShadow(spriteBatch, "+" + Game1.content.LoadString("Strings\\UI:ItemHover_Buff8", __instance.GetEffectsOfRingMultiplier(ModNEA.MateoGuildBadge)), font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
+                Utility.drawTextWithShadow(spriteBatch, "+" + Game1.content.LoadString("Strings\\UI:ItemHover_Buff8", __instance.GetEffectsOfRingMultiplier(ModNEA.ValGuildBadge)), font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
                 y += (int)Math.Max(font.MeasureString("TT").Y, 48f);
             }
-            if (__instance.GetsEffectOfRing(ModNEA.MateoStygiumPendant))
+            if (__instance.GetsEffectOfRing(ModNEA.ValStygiumPendant))
             {
                 Utility.drawWithShadow(spriteBatch, Game1.mouseCursors, new Vector2(x + 16 + 4, y + 16 + 4), new Rectangle(110, 428, 10, 10), Color.White, 0f, Vector2.Zero, 4f, flipped: false, 1f);
-                Utility.drawTextWithShadow(spriteBatch, Game1.content.LoadString("Strings\\UI:ItemHover_DefenseBonus", 5 * __instance.GetEffectsOfRingMultiplier(ModNEA.MateoStygiumPendant)), font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
+                Utility.drawTextWithShadow(spriteBatch, Game1.content.LoadString("Strings\\UI:ItemHover_DefenseBonus", 5 * __instance.GetEffectsOfRingMultiplier(ModNEA.ValStygiumPendant)), font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
                 y += (int)Math.Max(font.MeasureString("TT").Y, 48f);
                 Utility.drawWithShadow(spriteBatch, Game1.mouseCursors, new Vector2(x + 16 + 4, y + 16 + 4), new Rectangle(120, 428, 10, 10), Color.White, 0f, Vector2.Zero, 4f, flipped: false, 1f);
-                Utility.drawTextWithShadow(spriteBatch, "+" + Game1.content.LoadString("Strings\\UI:ItemHover_Buff11", $"{__instance.GetEffectsOfRingMultiplier(ModNEA.MateoStygiumPendant) * 10}%"), font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
+                Utility.drawTextWithShadow(spriteBatch, "+" + Game1.content.LoadString("Strings\\UI:ItemHover_Buff11", $"{__instance.GetEffectsOfRingMultiplier(ModNEA.ValStygiumPendant) * 10}%"), font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
                 y += (int)Math.Max(font.MeasureString("TT").Y, 48f);
                 Utility.drawWithShadow(spriteBatch, Game1.mouseCursors, new Vector2(x + 16 + 4, y + 16 + 4), new Rectangle(90, 428, 10, 10), Color.White, 0f, Vector2.Zero, 4f, flipped: false, 1f);
-                Utility.drawTextWithShadow(spriteBatch, "+" + Game1.content.LoadString("Strings\\UI:ItemHover_Buff8", __instance.GetEffectsOfRingMultiplier(ModNEA.MateoStygiumPendant)), font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
+                Utility.drawTextWithShadow(spriteBatch, "+" + Game1.content.LoadString("Strings\\UI:ItemHover_Buff8", __instance.GetEffectsOfRingMultiplier(ModNEA.ValStygiumPendant)), font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
                 y += (int)Math.Max(font.MeasureString("TT").Y, 48f);
-                if (__instance.GetsEffectOfRing(ModNEA.MateoStygiumPendant))
+                if (__instance.GetsEffectOfRing(ModNEA.ValStygiumPendant))
                 {
                     Utility.drawWithShadow(spriteBatch, Game1.mouseCursors, new Vector2(x + 16 + 4, y + 16 + 4), new Rectangle(50, 428, 10, 10), Color.White, 0f, Vector2.Zero, 4f, flipped: false, 1f);
-                    Utility.drawTextWithShadow(spriteBatch, "+" + Game1.content.LoadString("Strings\\UI:ItemHover_Buff4", __instance.GetEffectsOfRingMultiplier(ModNEA.MateoStygiumPendant)), font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
+                    Utility.drawTextWithShadow(spriteBatch, "+" + Game1.content.LoadString("Strings\\UI:ItemHover_Buff4", __instance.GetEffectsOfRingMultiplier(ModNEA.ValStygiumPendant)), font, new Vector2(x + 16 + 52, y + 16 + 12), Game1.textColor * 0.9f * alpha);
                     y += (int)Math.Max(font.MeasureString("TT").Y, 48f);
                 }
             }
@@ -130,7 +130,7 @@ namespace NeverEndingAdventure
     {
         private static void Postfix(Ring __instance, ref Point __result, SpriteFont font, int startingHeight)
         {
-            if (__instance.GetsEffectOfRing(ModNEA.MateoGuildBadge))
+            if (__instance.GetsEffectOfRing(ModNEA.ValGuildBadge))
             {
                 Point dimensions = new(0, startingHeight);
                 int extra_rows_needed = 3;
@@ -138,7 +138,7 @@ namespace NeverEndingAdventure
                 dimensions.Y += extra_rows_needed * Math.Max((int)font.MeasureString("TT").Y, 48);
                 __result = dimensions;
             }
-            if (__instance.GetsEffectOfRing(ModNEA.MateoStygiumPendant))
+            if (__instance.GetsEffectOfRing(ModNEA.ValStygiumPendant))
             {
                 Point dimensions = new(0, startingHeight);
                 int extra_rows_needed = 4;

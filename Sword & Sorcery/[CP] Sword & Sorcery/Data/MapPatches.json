@@ -5,7 +5,7 @@
       "LogName": "Beach Tent Warp",
       "Action": "EditMap",
       "Target": "Maps/EastScarp_Village",
-      "FromFile": "assets/Maps/EastScarp_MateoTent1.tmx",
+      "FromFile": "assets/Maps/EastScarp_ValTent1.tmx",
       "ToArea": {
         "X": 89,
         "Y": 85,
@@ -20,7 +20,7 @@
           },
           "Layer": "Buildings",
           "SetProperties": {
-            "Action": "Warp 4 9 EastScarp_MateoHome"
+            "Action": "Warp 4 9 EastScarp_ValHome"
           }
         },
         {
@@ -30,11 +30,11 @@
           },
           "Layer": "Buildings",
           "SetProperties": {
-            "Action": "Warp 4 9 EastScarp_MateoHome"
+            "Action": "Warp 4 9 EastScarp_ValHome"
           }
         }
       ],
-      "When": { "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": false }
+      "When": { "HasFlag |contains=Val_SpecialOrders_BuildGuildMail": false }
     },
     // COASTAL GUILD STEP 1
     {
@@ -71,7 +71,7 @@
         }
       ],
       "When": {
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true,
+        "HasFlag |contains=Val_SpecialOrders_BuildGuildMail": true,
         "HasSeenEvent |contains=SnS.Ch5.Val.1": false
         
       }
@@ -114,7 +114,7 @@
         "Width": 3,
         "Height": 2
       },
-      "When": { "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true }
+      "When": { "HasFlag |contains=Val_SpecialOrders_BuildGuildMail": true }
     },
     // Val SPACECORE WARP FIX
     {
@@ -123,7 +123,7 @@
       "Target": "Maps/EastScarp_Village",
       "Update": "OnLocationChange",
       "When": {
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+        "HasFlag |contains=Val_SpecialOrders_BuildGuildMail": true
       },
       "TextOperations": [
         {
@@ -709,7 +709,7 @@
         "10 20 EastScarp_Village 93 94"
     ],
       "When": {
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true,
+        "HasFlag |contains=Val_SpecialOrders_BuildGuildMail": true,
         "HasSeenEvent |contains=SnS.Ch5.Val": true
       }
     },

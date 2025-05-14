@@ -2,7 +2,7 @@
 <map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="45" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="14">
  <properties>
   <property name="BrookSounds" value="20 5 4 18 7 4 6 4 1 7 4 1 9 17 0 35 18 1 14 21 0"/>
-  <property name="Music" value="SnS.MateoTheme"/>
+  <property name="Music" value="SnS.ValTheme"/>
   <property name="TreatAsOutdoors" value="T"/>
   <property name="indoorWater" value="T"/>
  </properties>

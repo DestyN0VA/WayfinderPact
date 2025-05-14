@@ -5,7 +5,7 @@
   <property name="DayTiles" value="Front 7 1 256 Front 7 2 288"/>
   <property name="Doors" value="4 9 1 120"/>
   <property name="Light" value="9 10 4 10 10 4"/>
-  <property name="Music" value="SnS.MateoTheme"/>
+  <property name="Music" value="SnS.ValTheme"/>
   <property name="Warp" value="10 20 EastScarp_Village 94 94"/>
  </properties>
  <tileset firstgid="1" name="Paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">

@@ -61,7 +61,7 @@
         "{{ModId}}_EmeritusKeychain": {
           "Variants": [
             {
-              "Texture": "Characters/MateoEmeritus",
+              "Texture": "Characters/ValEmeritus",
               "Width": 32,
               "Height": 32,
               "ShadowScale": 0

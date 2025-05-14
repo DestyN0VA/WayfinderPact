@@ -46,7 +46,7 @@
 
                 // CH4:
                 "RoslinNeedsHelp": "{{i18n:CT.Hector.RoslinNeedsHelp}}",
-                "RoslinAndMateo": "{{i18n:CT.Hector.RoslinAndMateo}}",
+                "RoslinAndVal": "{{i18n:CT.Hector.RoslinAndVal}}",
                 "RoslinAndHector": "{{i18n:CT.Hector.RoslinAndHector}}",
                 "RoslinAndCirrus": "{{i18n:CT.Hector.RoslinAndCirrus}}",
                 "RoslinAndLewis": "{{i18n:CT.Hector.RoslinAndLewis}}",

@@ -7,19 +7,19 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/{{SVEMarlon}}",
             "Entries": {
-                "MateoCaution": "{{i18n:CT.Marlon.MateoCaution}}",
-                "MateoLibrary": "{{i18n:CT.Marlon.MateoLibrary}}",
-                "MateoAdmission": "{{i18n:CT.Marlon.MateoAdmission}}",
-                "MateoConfrontation": "{{i18n:CT.Marlon.MateoConfrontation}}",
-                "MateoWyatt": "{{i18n:CT.Marlon.MateoWyatt}}",
-                "MateoAcceptance": "{{i18n:CT.Marlon.MateoAcceptance}}",
-                "MateoPain": "{{i18n:CT.Marlon.MateoPain}}",
-                "MateoRecovery": "{{i18n:CT.Marlon.MateoRecovery}}",
+                "ValCaution": "{{i18n:CT.Marlon.ValCaution}}",
+                "ValLibrary": "{{i18n:CT.Marlon.ValLibrary}}",
+                "ValAdmission": "{{i18n:CT.Marlon.ValAdmission}}",
+                "ValConfrontation": "{{i18n:CT.Marlon.ValConfrontation}}",
+                "Valatt": "{{i18n:CT.Marlon.Valatt}}",
+                "ValAcceptance": "{{i18n:CT.Marlon.Valceptance}}",
+                "Valin": "{{i18n:CT.Marlon.Valin}}",
+                "ValRecovery": "{{i18n:CT.Marlon.ValRecovery}}",
                 "CGuildConstruction": "{{i18n:CT.Marlon.CGuildConstruction}}",
                 "CGuildComplete": "{{i18n:CT.Marlon.CGuildComplete}}",
-                "MateoDate": "{{i18n:CT.Marlon.MateoDate}}",
-                "MateoIntegrity": "{{i18n:CT.Marlon.MateoIntegrity}}",
-                "MateoDeclaration": "{{i18n:CT.Marlon.MateoDeclaration}}"
+                "ValDate": "{{i18n:CT.Marlon.ValDate}}",
+                "ValIntegrity": "{{i18n:CT.Marlon.ValIntegrity}}",
+                "ValDeclaration": "{{i18n:CT.Marlon.ValDeclaration}}"
             },
         },
         // GUNTHER
@@ -28,18 +28,18 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/{{SVEGunther}}",
             "Entries": {
-                "MateoCaution": "{{i18n:CT.Gunther.MateoCaution}}",
-                "MateoLibrary": "{{i18n:CT.Gunther.MateoLibrary}}",
-                "MateoAdmission": "{{i18n:CT.Gunther.MateoAdmission}}",
-                "MateoConfrontation": "{{i18n:CT.Gunther.MateoConfrontation}}",
-                "MateoAcceptance": "{{i18n:CT.Gunther.MateoAcceptance}}",
-                "MateoPain": "{{i18n:CT.Gunther.MateoPain}}",
-                "MateoRecovery": "{{i18n:CT.Gunther.MateoRecovery}}",
+                "ValCaution": "{{i18n:CT.Gunther.ValCaution}}",
+                "ValLibrary": "{{i18n:CT.Gunther.ValLibrary}}",
+                "ValAdmission": "{{i18n:CT.Gunther.ValAdmission}}",
+                "ValConfrontation": "{{i18n:CT.Gunther.ValConfrontation}}",
+                "ValAcceptance": "{{i18n:CT.Gunther.ValAcceptance}}",
+                "ValPain": "{{i18n:CT.Gunther.ValPain}}",
+                "ValRecovery": "{{i18n:CT.Gunther.ValRecovery}}",
                 "CGuildConstruction": "{{i18n:CT.Gunther.CGuildConstruction}}",
                 "CGuildComplete": "{{i18n:CT.Gunther.CGuildComplete}}",
-                "MateoDate": "{{i18n:CT.Gunther.MateoDate}}",
-                "MateoIntegrity": "{{i18n:CT.Gunther.MateoIntegrity}}",
-                "MateoDeclaration": "{{i18n:CT.Gunther.MateoDeclaration}}"
+                "ValDate": "{{i18n:CT.Gunther.ValDate}}",
+                "ValIntegrity": "{{i18n:CT.Gunther.ValIntegrity}}",
+                "ValDeclaration": "{{i18n:CT.Gunther.ValDeclaration}}"
             },
         },
         {
@@ -47,12 +47,12 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/Krobus",
             "Entries": {
-                "MateoLibrary": "{{i18n:CT.Krobus.MateoLibrary}}",
-                "MateoConfrontation": "{{i18n:CT.Krobus.MateoConfrontation}}",
-                "MateoPain": "{{i18n:CT.Krobus.MateoPain}}",
-                "MateoRecovery": "{{i18n:CT.Krobus.MateoRecovery}}",
-                "MateoIntegrity": "{{i18n:CT.Krobus.MateoIntegrity}}",
-                "MateoDeclaration": "{{i18n:CT.Krobus.MateoDeclaration}}"
+                "ValLibrary": "{{i18n:CT.Krobus.ValLibrary}}",
+                "ValConfrontation": "{{i18n:CT.Krobus.ValConfrontation}}",
+                "ValPain": "{{i18n:CT.Krobus.ValPain}}",
+                "ValRecovery": "{{i18n:CT.Krobus.ValRecovery}}",
+                "ValIntegrity": "{{i18n:CT.Krobus.ValIntegrity}}",
+                "ValDeclaration": "{{i18n:CT.Krobus.ValDeclaration}}"
             }
         },
         // PIERRE
@@ -61,10 +61,10 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/Pierre",
             "Entries": {
-                "MateoLibrary": "{{i18n:CT.Pierre.MateoLibrary}}",
-                "MateoConfrontation": "{{i18n:CT.Pierre.MateoConfrontation}}",
-                "MateoPain": "{{i18n:CT.Pierre.MateoPain}}",
-                "MateoRecovery": "{{i18n:CT.Pierre.MateoRecovery}}"
+                "ValLibrary": "{{i18n:CT.Pierre.ValLibrary}}",
+                "ValConfrontation": "{{i18n:CT.Pierre.ValConfrontation}}",
+                "ValPain": "{{i18n:CT.Pierre.ValPain}}",
+                "ValRecovery": "{{i18n:CT.Pierre.ValRecovery}}"
             }
         },
         //CAROLINE
@@ -73,9 +73,9 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/Caroline",
             "Entries": {
-                "MateoLibrary": "{{i18n:CT.Caroline.MateoLibrary}}",
-                "MateoConfrontation": "{{i18n:CT.Caroline.MateoConfrontation}}",
-                "MateoRecovery": "{{i18n:CT.Caroline.MateoRecovery}}"
+                "ValLibrary": "{{i18n:CT.Caroline.ValLibrary}}",
+                "ValConfrontation": "{{i18n:CT.Caroline.ValConfrontation}}",
+                "ValRecovery": "{{i18n:CT.Caroline.ValRecovery}}"
             }
         },
         //GUS
@@ -84,11 +84,11 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/Gus",
             "Entries": {
-                "MateoLibrary": "{{i18n:CT.Gus.MateoLibrary}}",
-                "MateoConfrontation": "{{i18n:CT.Gus.MateoConfrontation}}",
-                "MateoAcceptance": "{{i18n:CT.Gus.MateoAcceptance}}",
-                "MateoPain": "{{i18n:CT.Gus.MateoPain}}",
-                "MateoRecovery": "{{i18n:CT.Gus.MateoRecovery}}"
+                "ValLibrary": "{{i18n:CT.Gus.ValLibrary}}",
+                "ValConfrontation": "{{i18n:CT.Gus.ValConfrontation}}",
+                "ValAcceptance": "{{i18n:CT.Gus.ValAcceptance}}",
+                "ValPain": "{{i18n:CT.Gus.ValPain}}",
+                "ValRecovery": "{{i18n:CT.Gus.ValRecovery}}"
             }
         },
         //HALEY
@@ -97,8 +97,8 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/Haley",
             "Entries": {
-                "MateoLibrary": "{{i18n:CT.Haley.MateoLibrary}}",
-                "MateoConfrontation": "{{i18n:CT.Haley.MateoConfrontation}}"
+                "ValLibrary": "{{i18n:CT.Haley.ValLibrary}}",
+                "ValConfrontation": "{{i18n:CT.Haley.ValConfrontation}}"
             }
         },
         //HARVEY
@@ -107,11 +107,11 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/Harvey",
             "Entries": {
-                "MateoLibrary": "{{i18n:CT.Harvey.MateoLibrary}}",
-                "MateoAdmission": "{{i18n:CT.Harvey.MateoAdmission}}",
-                "MateoConfrontation": "{{i18n:CT.Harvey.MateoConfrontation}}",
-                "MateoPain": "{{i18n:CT.Harvey.MateoPain}}",
-                "MateoRecovery": "{{i18n:CT.Harvey.MateoRecovery}}"
+                "ValLibrary": "{{i18n:CT.Harvey.ValLibrary}}",
+                "ValAdmission": "{{i18n:CT.Harvey.ValAdmission}}",
+                "ValConfrontation": "{{i18n:CT.Harvey.ValConfrontation}}",
+                "ValPain": "{{i18n:CT.Harvey.ValPain}}",
+                "ValRecovery": "{{i18n:CT.Harvey.ValRecovery}}"
             }
         },
         // ROBIN
@@ -120,8 +120,8 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/Robin",
             "Entries": {
-                "MateoAdmission": "{{i18n:CT.Robin.MateoAdmission}}",
-                "MateoAcceptance": "{{i18n:CT.Robin.MateoAcceptance}}",
+                "ValAdmission": "{{i18n:CT.Robin.ValAdmission}}",
+                "ValAcceptance": "{{i18n:CT.Robin.ValAcceptance}}",
                 "CGuildConstruction": "{{i18n:CT.Robin.CGuildConstruction}}",
                 "CGuildComplete": "{{i18n:CT.Robin.CGuildComplete}}"
             }
@@ -132,8 +132,8 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/Willy",
             "Entries": {
-                "MateoAdmission": "{{i18n:CT.Willy.MateoAdmission}}",
-                "MateoConfrontation": "{{i18n:CT.Willy.MateoConfrontation}}"
+                "ValAdmission": "{{i18n:CT.Willy.ValAdmission}}",
+                "ValConfrontation": "{{i18n:CT.Willy.ValConfrontation}}"
             }
         },
         // LEWIS
@@ -142,10 +142,10 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/Lewis",
             "Entries": {
-                "MateoLibrary": "{{i18n:CT.Lewis.MateoLibrary}}",
-                "MateoConfrontation": "{{i18n:CT.Lewis.MateoConfrontation}}",
-                "MateoPain": "{{i18n:CT.Lewis.MateoPain}}",
-                "MateoRecovery": "{{i18n:CT.Lewis.MateoRecovery}}",
+                "ValLibrary": "{{i18n:CT.Lewis.ValLibrary}}",
+                "ValConfrontation": "{{i18n:CT.Lewis.ValConfrontation}}",
+                "ValPain": "{{i18n:CT.Lewis.ValPain}}",
+                "ValRecovery": "{{i18n:CT.Lewis.ValRecovery}}",
                 "CGuildConstruction": "{{i18n:CT.Lewis.CGuildConstruction}}",
                 "CGuildComplete": "{{i18n:CT.Lewis.CGuildComplete}}",
             }
@@ -156,8 +156,8 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/Abigail",
             "Entries": {
-                "MateoAdmission": "{{i18n:CT.Abigail.MateoAdmission}}",
-                "MateoConfrontation": "{{i18n:CT.Abigail.MateoConfrontation}}",
+                "ValAdmission": "{{i18n:CT.Abigail.ValAdmission}}",
+                "ValConfrontation": "{{i18n:CT.Abigail.ValConfrontation}}",
             }
         },
         // MARNIE
@@ -166,9 +166,9 @@
             "Action": "EditData",
             "Target": "Characters/Dialogue/Marnie",
             "Entries": {
-                "MateoConfrontation": "{{i18n:CT.Marnie.MateoConfrontation}}",
-                "MateoPain": "{{i18n:CT.Marnie.MateoPain}}",
-                "MateoRecovery": "{{i18n:CT.Marnie.MateoRecovery}}"
+                "ValConfrontation": "{{i18n:CT.Marnie.ValConfrontation}}",
+                "ValPain": "{{i18n:CT.Marnie.ValPain}}",
+                "ValRecovery": "{{i18n:CT.Marnie.ValRecovery}}"
             }
         },
     ]

@@ -114,15 +114,15 @@
             "Action": "EditData",
             "Target": "Data/ExtraDialogue",
             "Entries": {
-                "SummitEvent_Intro_Spouse": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_Intro_Mateo}}", //greeting
-                "SummitEvent_Intro2_Spouse": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_Intro2_Mateo}}",
-                "SummitEvent_Intro2_Spouse_Gruff": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_Intro2_Mateo}}", //Only used if male, make same as SummitEvent_Intro2_Spouse
+                "SummitEvent_Intro_Spouse": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_Intro_Val}}", //greeting
+                "SummitEvent_Intro2_Spouse": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_Intro2_Val}}",
+                "SummitEvent_Intro2_Spouse_Gruff": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_Intro2_Val}}", //Only used if male, make same as SummitEvent_Intro2_Spouse
                 //spouse turn left
-                "SummitEvent_Dialogue1_Spouse": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_Dialogue1_Mateo}}",
-                "SummitEvent_Dialogue1B_Spouse": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_Dialogue2_Mateo}}",
-                "SummitEvent_Dialogue2_Spouse": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_Dialogue3_Mateo}}",
+                "SummitEvent_Dialogue1_Spouse": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_Dialogue1_Val}}",
+                "SummitEvent_Dialogue1B_Spouse": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_Dialogue2_Val}}",
+                "SummitEvent_Dialogue2_Spouse": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_Dialogue3_Val}}",
                 //spouse turn up
-                "SummitEvent_Dialogue3_Mateo": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_Dialogue4_Mateo}}", //change to NPC internal name
+                "SummitEvent_Dialogue3_Val": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_Dialogue4_Val}}", //change to NPC internal name
                 //roll credits
                 "SummitEvent_closingmessage": "{{i18n:CFD.Val.ExtraDialogue_SummitEvent_closingmessage}}" // Qi speaking
             },
@@ -135,7 +135,7 @@
             "Action": "EditData",
             "Target": "Strings/Characters",
             "Entries": {
-                "MovieInvite_Spouse_Mateo": "{{i18n:MovieInvite_Spouse_Mateo}}",
+                "MovieInvite_Spouse_Val": "{{i18n:MovieInvite_Spouse_Val}}",
                 "MovieTheater_LoveConcession_Female": "{{i18n:CFD.Val.MovieTheater_LoveConcession_Female}}",
                 "MovieTheater_LikeConcession_Female": "{{i18n:CFD.Val.MovieTheater_LikeConcession_Female}}",
                 "MovieTheater_DislikeConcession_Female": "{{i18n:CFD.Val.MovieTheater_DislikeConcession_Female}}",

@@ -7,7 +7,7 @@
                 "{{ModId}}.Wyatt": {
                     "DisplayName": "{{i18n:Strings.Names.Wyatt}}",
                     "House": "Barn",
-                    "Texture": "Characters/MateoWyatt_MEEP",
+                    "Texture": "Characters/ValWyatt_MEEP",
                     "SpriteWidth": 16,
                     "SpriteHeight": 32,
                     "SleepFrame": 24,
@@ -27,9 +27,9 @@
                     "Age": 1,
                     "LocationId": "EastScarp_CoastalGuild",
                     "DisplayName": "{{i18n:Strings.Names.Wyatt}}",
-                    "PortraitTexture": "Portraits/MateoWyatt",
+                    "PortraitTexture": "Portraits/ValWyatt",
                     "PetMessage": [
-                        "{{i18n:MEEP.MateoWyatt.{{Random: {{Range: 1, 20}}|key=WyDialogue}}}}"
+                        "{{i18n:MEEP.ValWyatt.{{Random: {{Range: 1, 20}}|key=WyDialogue}}}}"
                     ],
                     "HomeTileX": 30,
                     "HomeTileY": 5,

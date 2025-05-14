@@ -16,7 +16,7 @@
                     "BirthSeason": "Fall",
                     "BirthDay": 25,
                     "HomeRegion": "Town",
-                    "CanBeRomanced": "{{MateoRelationshipStatus}}",
+                    "CanBeRomanced": "{{ValRelationshipStatus}}",
                     "LoveInterest": "Aideen",
                     "PerfectionScore": true,
                     "EndSlideShow": "TrailingGroup",
@@ -35,10 +35,10 @@
                         57
                     ],
                     "SpouseRoom": {
-                        "MapAsset": "{{MateoSpouseRoomOnOff}}"
+                        "MapAsset": "{{ValSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "{{MateoSpousePatioOnOff}}"
+                        "MapAsset": "{{ValSpousePatioOnOff}}"
                     },
                     "Home": [
                         {
@@ -53,7 +53,7 @@
                         },
                         {
                             "ID": "Val - Beach Tent",
-                            "Location": "EastScarp_MateoHome",
+                            "Location": "EastScarp_ValHome",
                             "Tile": {
                                 "X": 5,
                                 "Y": 6
@@ -79,8 +79,8 @@
                             "Condition": "SEASON Spring",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_Spring",
-                            "Sprite": "Characters/Mateo_Seasonal_Spring"
+                            "Portrait": "Portraits/Val_Seasonal_Spring",
+                            "Sprite": "Characters/Val_Seasonal_Spring"
                         },
                         //Summer
                         {
@@ -88,8 +88,8 @@
                             "Condition": "SEASON Summer",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_Summer",
-                            "Sprite": "Characters/Mateo_Seasonal_Summer"
+                            "Portrait": "Portraits/Val_Seasonal_Summer",
+                            "Sprite": "Characters/Val_Seasonal_Summer"
                         },
                         //Fall
                         {
@@ -97,16 +97,16 @@
                             "Condition": "SEASON Fall",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_Fall_1",
-                            "Sprite": "Characters/Mateo_Seasonal_Fall_1"
+                            "Portrait": "Portraits/Val_Seasonal_Fall_1",
+                            "Sprite": "Characters/Val_Seasonal_Fall_1"
                         },
                         {
                             "ID": "Fall Outfit 2",
                             "Condition": "SEASON Fall",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_Fall_2",
-                            "Sprite": "Characters/Mateo_Seasonal_Fall_2"
+                            "Portrait": "Portraits/Val_Seasonal_Fall_2",
+                            "Sprite": "Characters/Val_Seasonal_Fall_2"
                         },
                         //Winter
                         {
@@ -114,78 +114,78 @@
                             "Condition": "SEASON Winter",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_Winter",
-                            "Sprite": "Characters/Mateo_Seasonal_Winter"
+                            "Portrait": "Portraits/Val_Seasonal_Winter",
+                            "Sprite": "Characters/Val_Seasonal_Winter"
                         },
                         {
                             "ID": "Winter Outfit 2",
                             "Condition": "SEASON Winter",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/Mateo_Seasonal_Fall_2",
-                            "Sprite": "Characters/Mateo_Seasonal_Fall_2"
+                            "Portrait": "Portraits/Val_Seasonal_Fall_2",
+                            "Sprite": "Characters/Val_Seasonal_Fall_2"
                         },
                         //Other stuff
                         {
                             "ID": "Egg Festival & SDV Fair",
                             "Condition": "ANY \"EVENT_ID festival_spring13\" \"EVENT_ID festival_fall16\"",
-                            "Portrait": "Portraits/EggFair_Mateo",
-                            "Sprite": "Characters/EggFair_Mateo",
+                            "Portrait": "Portraits/EggFair_Val",
+                            "Sprite": "Characters/EggFair_Val",
                             "Precedence": -20
                         },
                         {
                             "ID": "Flower Dance",
                             "Condition": "EVENT_ID festival_spring24",
-                            "Portrait": "Portraits/FlowerDance_Mateo",
-                            "Sprite": "Characters/FlowerDance_Mateo",
+                            "Portrait": "Portraits/FlowerDance_Val",
+                            "Sprite": "Characters/FlowerDance_Val",
                             "Precedence": -20
                         },
                         {
                             "ID": "Spirit's Eve",
                             "Condition": "EVENT_ID festival_fall27",
-                            "Sprite": "Characters/SpiritsEve_Mateo",
+                            "Sprite": "Characters/SpiritsEve_Val",
                             "Precedence": -20
                         },
                         {
                             "ID": "Luau & Moonlight Jellies",
                             "Condition": "ANY \"EVENT_ID festival_summer11\" \"EVENT_ID festival_summer28\"",
-                            "Portrait": "Portraits/LuauMoonlight_Mateo",
-                            "Sprite": "Characters/LuauMoonlight_Mateo",
+                            "Portrait": "Portraits/LuauMoonlight_Val",
+                            "Sprite": "Characters/LuauMoonlight_Val",
                             "Precedence": -20
                         },
                         {
                             "ID": "Ice Festival & Winter Star",
                             "Condition": "ANY \"EVENT_ID festival_winter8\" \"EVENT_ID festival_winter25\"",
-                            "Portrait": "Portraits/IceFestWinterStar_Mateo",
-                            "Sprite": "Characters/IceFestWinterStar_Mateo",
+                            "Portrait": "Portraits/IceFestWinterStar_Val",
+                            "Sprite": "Characters/IceFestWinterStar_Val",
                             "Precedence": -20
                         },
                         {
                             "ID": "Beach",
                             "IsIslandAttire": true,
-                            "Portrait": "Portraits/Mateo_Beach",
-                            "Sprite": "Characters/Mateo_Beach",
+                            "Portrait": "Portraits/Val_Beach",
+                            "Sprite": "Characters/Val_Beach",
                             "Precedence": -20
                         },
                         {
                             "ID": "Date Night",
                             "Condition": "ANY \"EVENT_ID 57871054\"",
-                            "Portrait": "Portraits/DateNight_Mateo",
-                            "Sprite": "Characters/DateNight_Mateo",
+                            "Portrait": "Portraits/DateNight_Val",
+                            "Sprite": "Characters/DateNight_Val",
                             "Precedence": -20
                         },
                       {
                         "ID": "Armor",
-                        "Condition": "Any \"LOCATION_NAME Target Mine\" \"EVENT_ID SnS.Ch1.Val.0\" \"EVENT_ID SnS.Ch1.Val.4\" \"EVENT_ID SnS.Ch1.Val.9\" \"EVENT_ID SnS.Ch1.Val.10\" \"EVENT_ID SnS.Ch1.Val.16\" \"EVENT_ID SnS.Ch1.Val.17\" \"EVENT_ID 57871051\" \"EVENT_ID MadDog.BearFam.16193001A\" \"EVENT_ID SnS.Ch4.Roslin.6\" \"EVENT_ID SnS.Ch4.Finale\" \"EVENT_ID SnS.Ch4.Intermission.Val\" \"EVENT_ID SnS.Ch4.Intermission.Hector\" \"EVENT_ID SnS.Ch4.Intermission.Cirrus\" \"EVENT_ID SnS.Ch4.Intermission.SoloFarmer\" \"EVENT_ID SnS.Ch4.Victory.Val\" \"EVENT_ID SnS.Ch4.Victory.Hector\" \"EVENT_ID SnS.Ch4.Victory.Cirrus\" \"EVENT_ID SnS.Ch4.Victory.FarmerGuildmaster\" \"EVENT_ID SnS.Ch4.Victory.SoloFarmer\" \"EVENT_ID SnS.Ch3.Val.1\" \"EVENT_ID SnS.Ch4.Intermission.Gunnar\" \"EVENT_ID SnS.Ch5.Roslin.1\" \"EVENT_ID SnS.Ch4.Intermission.Sen\" \"EVENT_ID SnS.Ch4.Victory.Sen\" \"EVENT_ID SnS.Ch1.MateoSen.0\" \"EVENT_ID SnS.Ch1.Val.12\" \"EVENT_ID SnS.Ch1.Val.Injury\"",
-                        "Portrait": "Portraits/Armor_Mateo",
-                        "Sprite": "Characters/Armor_Mateo",
+                        "Condition": "Any \"LOCATION_NAME Target Mine\" \"EVENT_ID SnS.Ch1.Val.0\" \"EVENT_ID SnS.Ch1.Val.4\" \"EVENT_ID SnS.Ch1.Val.9\" \"EVENT_ID SnS.Ch1.Val.10\" \"EVENT_ID SnS.Ch1.Val.16\" \"EVENT_ID SnS.Ch1.Val.17\" \"EVENT_ID 57871051\" \"EVENT_ID MadDog.BearFam.16193001A\" \"EVENT_ID SnS.Ch4.Roslin.6\" \"EVENT_ID SnS.Ch4.Finale\" \"EVENT_ID SnS.Ch4.Intermission.Val\" \"EVENT_ID SnS.Ch4.Intermission.Hector\" \"EVENT_ID SnS.Ch4.Intermission.Cirrus\" \"EVENT_ID SnS.Ch4.Intermission.SoloFarmer\" \"EVENT_ID SnS.Ch4.Victory.Val\" \"EVENT_ID SnS.Ch4.Victory.Hector\" \"EVENT_ID SnS.Ch4.Victory.Cirrus\" \"EVENT_ID SnS.Ch4.Victory.FarmerGuildmaster\" \"EVENT_ID SnS.Ch4.Victory.SoloFarmer\" \"EVENT_ID SnS.Ch3.Val.1\" \"EVENT_ID SnS.Ch4.Intermission.Gunnar\" \"EVENT_ID SnS.Ch5.Roslin.1\" \"EVENT_ID SnS.Ch4.Intermission.Sen\" \"EVENT_ID SnS.Ch4.Victory.Sen\" \"EVENT_ID SnS.Ch1.ValSen.0\" \"EVENT_ID SnS.Ch1.Val.12\" \"EVENT_ID SnS.Ch1.Val.Injury\"",
+                        "Portrait": "Portraits/Armor_Val",
+                        "Sprite": "Characters/Armor_Val",
                         "Precedence": -20
                       },
                         {
                             "ID": "Shirtless",
                             "Condition": "Any \"EVENT_ID SnS.Ch1.Val.19\"",
-                            "Portrait": "Portraits/Mateo_Beach",
-                            "Sprite": "Characters/Shirtless_Mateo",
+                            "Portrait": "Portraits/Val_Beach",
+                            "Sprite": "Characters/Shirtless_Val",
                             "Precedence": -20
                         }
                     ]

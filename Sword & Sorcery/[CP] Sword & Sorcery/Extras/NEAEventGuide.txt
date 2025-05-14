@@ -3,25 +3,25 @@ Reload the content pack: patch reload DestyNova.Val.CP
 
 **ALL EVENTS ARE THREE DAYS APART UNLESS STATED OTHERWISE.**
 
-debug ebi SnS.Ch1.Val.0 - 0 Hearts pt 1 - "MateoCaution"
+debug ebi SnS.Ch1.Val.0 - 0 Hearts pt 1 - "ValCaution"
 Enter the library. 
 
-debug ebi SnS.Ch1.Val.1 - 0 Hearts pt 2 - "MateoRescue" 
+debug ebi SnS.Ch1.Val.1 - 0 Hearts pt 2 - "ValRescue" 
 Enter the mines after seeing the prior event and getting the sword from Marlon. No timegate.  
 
-debug ebi SnS.Ch1.Val.2 - 2 Hearts - "MateoLibrary" 
+debug ebi SnS.Ch1.Val.2 - 2 Hearts - "ValLibrary" 
 Walk into town on a clear night between 8pm and midnight after seeing the prior event.
 
-debug ebi SnS.Ch1.Val.3 - 4 Hearts - "MateoAdmission"
+debug ebi SnS.Ch1.Val.3 - 4 Hearts - "ValAdmission"
 Walk onto the beach on a clear night between 6pm and midnight after seeing the prior event.
 
-debug ebi SnS.Ch1.Val.4 - 5 Hearts pt 1 - "MateoConfrontation"
+debug ebi SnS.Ch1.Val.4 - 5 Hearts pt 1 - "ValConfrontation"
 Enter the mines between 6pm and midnight after seeing the prior event. 
 
-debug ebi SnS.Ch1.Val.5 - 5 Hearts pt 2 - "MateoWyatt" - MISSABLE 
-Enter the saloon while the "MateoConfrontation" conversation topic is active between noon and midnight.
+debug ebi SnS.Ch1.Val.5 - 5 Hearts pt 2 - "ValWyatt" - MISSABLE 
+Enter the saloon while the "ValConfrontation" conversation topic is active between noon and midnight.
 
-debug ebi SnS.Ch1.Val.6 - 5 Hearts pt 3 - "MateoAcceptance"
+debug ebi SnS.Ch1.Val.6 - 5 Hearts pt 3 - "ValAcceptance"
 Enter the Adventurer's Guild between 2pm and 10pm after seeing the prior event.
 
 debug ebi SnS.Ch1.Val.7 - 6 Hearts (No timegate, no conversation topic)
@@ -30,10 +30,10 @@ Walk into town between on a clear day between 10am and 6pm day after seeing the 
 debug ebi SnS.Ch1.Val.8 - 6 Hearts pt 2 (No timegate, no conversation topic) 
 Walk into the forest on a rainy day between 6pm and midnight after seeing the prior event. No timegate. 
  
-debug ebi SnS.Ch1.Val.9 - 7 Hearts - "MateoPain" 
+debug ebi SnS.Ch1.Val.9 - 7 Hearts - "ValPain" 
 Enter the Hospital between 9am and 3pm (not on Friday) after seeing the prior event and having met Krobus. 
 
-debug ebi SnS.Ch1.Val.10 - 7 Hearts pt 2 - "MateoRecovery" 
+debug ebi SnS.Ch1.Val.10 - 7 Hearts pt 2 - "ValRecovery" 
 Walk into the town on a clear night between 8pm and midnight (not on Friday) one week after seeing the prior event. 
 
 debug ebi SnS.Ch1.Val.11 - 8 Hearts pt 1 - "CGuildConstruction" 
@@ -45,14 +45,14 @@ Enter East Scarp on a sunny day between 10am and 6pm after completing the quest 
 debug ebi SnS.Ch1.Val.13 - Bonus - Galaxy Sword - MISSABLE 
 Enter the Coastal Adventurer's Guild after the guild is complete. This event will only play if you've unlocked the bus, but have not yet gotten the Galaxy Sword. 
 
-debug ebi SnS.Ch1.Val.14 - 10 Hearts, Platonic Ending - "MateoIntegrity" 
+debug ebi SnS.Ch1.Val.14 - 10 Hearts, Platonic Ending - "ValIntegrity" 
 Walk into the railroad on a clear night between 8pm and midnight after seeing 8HP (not on Friday). During this event, you will have a PLATONIC and ROMANTIC option. In order for Val to be datable, you need to select the ROMANTIC option. 
 
-debug ebi SnS.Ch1.Val.15 - 10 Hearts pt 2, Romantic Fork - "MateoForest" 
+debug ebi SnS.Ch1.Val.15 - 10 Hearts pt 2, Romantic Fork - "ValForest" 
 Walk into the ES Deep Mountains between 8pm and midnight after selecting the ROMANTIC dialogue option in the prior event. You will automatically be set to DATING status the day after this event plays. 
 
-debug ebi SnS.Ch1.Val.16 - 12 Hearts, Romantic Fork - "MateoDate" 
+debug ebi SnS.Ch1.Val.16 - 12 Hearts, Romantic Fork - "ValDate" 
 Enter the mines anytime except Winter. 
 
-debug ebi SnS.Ch1.Val.17 - 14 Hearts, Romantic Fork - "MateoDeclaration"
+debug ebi SnS.Ch1.Val.17 - 14 Hearts, Romantic Fork - "ValDeclaration"
 Enter East Scarp on a rainy day between 6am and 6pm after seeing the prior event. 

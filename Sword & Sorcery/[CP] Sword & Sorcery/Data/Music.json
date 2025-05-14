@@ -7,10 +7,10 @@
             "Action": "EditData",
             "Target": "Data/AudioChanges",
             "Entries": {
-                "SnS.MateoTheme": {
-                    "ID": "SnS.MateoTheme",
+                "SnS.ValTheme": {
+                    "ID": "SnS.ValTheme",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/{{MateoTheme}}}}" ],
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/{{ValTheme}}}}" ],
                     "StreamedVorbis": true,
                     "Looped": true
                 },
@@ -213,8 +213,8 @@
             "Action": "EditData",
             "Target": "Data/JukeboxTracks",
             "Entries": {
-                "SnS.MateoTheme": {
-                    "Name": "{{i18n:Strings.Music.MateoTheme}}",
+                "SnS.ValTheme": {
+                    "Name": "{{i18n:Strings.Music.ValTheme}}",
                     "Available": null
                 },
                 "SnS.HectorTheme": {

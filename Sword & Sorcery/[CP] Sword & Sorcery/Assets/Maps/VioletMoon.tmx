@@ -4926,7 +4926,7 @@
  <objectgroup id="8" name="Buildings">
   <object id="43" name="TileData" x="480" y="976" width="16" height="16">
    <properties>
-    <property name="Action" value="OpenShop DN.SnS_Mateo_VioletMoon"/>
+    <property name="Action" value="OpenShop DN.SnS_Val_VioletMoon"/>
    </properties>
   </object>
   <object id="49" name="TileData" x="704" y="784" width="16" height="16">

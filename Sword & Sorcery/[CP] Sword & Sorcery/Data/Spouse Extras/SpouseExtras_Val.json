@@ -3,19 +3,19 @@
         // Val'S SPOUSE ROOM
         {
             "Action": "Load",
-            "Target": "Maps/MateoSpouseRoom",
-            "FromFile": "Assets/Maps/MateoSpouseRoom.tmx",
+            "Target": "Maps/ValSpouseRoom",
+            "FromFile": "Assets/Maps/ValSpouseRoom.tmx",
             "When": {
-                "MateoSpouseRoomConfig": true
+                "ValSpouseRoomConfig": true
             }
         },
         // Val'S SPOUSE PATIO 
         {
             "Action": "Load",
-            "Target": "Maps/MateoSpousePatio",
-            "FromFile": "assets/Maps/MateoSpousePatio.tmx",
+            "Target": "Maps/ValSpousePatio",
+            "FromFile": "assets/Maps/ValSpousePatio.tmx",
             "When": {
-                "MateoSpousePatioConfig": true
+                "ValSpousePatioConfig": true
             }
         },
         // MAKES Val'S BED SLEEPABLE WHEN MARRIED
@@ -66,20 +66,20 @@
         {
             "Action": "EditImage",
             "Target": "Characters/Toddler, Characters/Toddler_dark",
-            "FromFile": "assets/Characters/Val/Kids/mateo_soren{{MateoHorns}}.png",
+            "FromFile": "assets/Characters/Val/Kids/Val_soren{{ValHorns}}.png",
             "When": {
                 "Relationship:Val": "Married",
-                "CustomMateoSoren": "true"
+                "CustomValSoren": "true"
             }
         },
         // CUSTOM CHILD - DINAH
         {
             "Action": "EditImage",
             "Target": "Characters/Toddler_girl, Characters/Toddler_girl_dark",
-            "FromFile": "assets/Characters/Val/Kids/mateo_dinah{{MateoHorns}}.png",
+            "FromFile": "assets/Characters/Val/Kids/Val_dinah{{ValHorns}}.png",
             "When": {
                 "Relationship:Val": "Married",
-                "CustomMateoDinah": "true"
+                "CustomValDinah": "true"
             }
         },
     ]

@@ -7,13 +7,13 @@
   <property name="Warp" value="4 24 Town 10 86"/>
  </properties>
  <tileset firstgid="1" name="1" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
-  <image source="../../../../../../../../../../../Users/Shelby/Documents/Modding Resources/BaseGame Tiles/townInterior.png" width="512" height="1088"/>
+  <image source="townInterior.png" width="512" height="1088"/>
  </tileset>
  <tileset firstgid="2177" name="p" tilewidth="16" tileheight="16" tilecount="36" columns="4">
-  <image source="../../../../../../../../../../../Users/Shelby/Documents/Modding Resources/BaseGame Tiles/paths.png" width="64" height="144"/>
+  <image source="paths.png" width="64" height="144"/>
  </tileset>
  <tileset firstgid="2213" name="DN.SnS_FinalMixInteriors" tilewidth="16" tileheight="16" tilecount="1404" columns="18">
-  <image source="../../../../../../../../../../../Users/Shelby/Documents/Modding Resources/BaseGame Tiles/DN.SnS_FinalMixInteriors.png" width="288" height="1248"/>
+  <image source="DN.SnS_FinalMixInteriors.png" width="288" height="1248"/>
   <tile id="922">
    <animation>
     <frame tileid="922" duration="400"/>
@@ -52,7 +52,7 @@
   </tile>
  </tileset>
  <tileset firstgid="3617" name="hime_kitchenclutter" tilewidth="16" tileheight="16" tilecount="210" columns="15">
-  <image source="../../../../../../../../../../../Users/Shelby/Documents/Modding Resources/BaseGame Tiles/[CP] HxW Tilesheets/Assets/Muted/hime_kitchenclutter.png" width="240" height="224"/>
+  <image source="hime_kitchenclutter.png" width="240" height="224"/>
  </tileset>
  <layer id="1" name="Back" width="38" height="27">
   <data encoding="csv">

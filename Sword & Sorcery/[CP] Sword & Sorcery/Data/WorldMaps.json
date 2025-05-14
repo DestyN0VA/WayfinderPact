@@ -10,8 +10,8 @@
       "TargetField": [ "EastScarp", "MapAreas" ],
       "Entries": {
 
-        "MateoHome": {
-          "Id": "MateoHome",
+        "ValHome": {
+          "Id": "ValHome",
           "PixelArea": {
             "X": 208,
             "Y": 114,
@@ -20,14 +20,14 @@
           },
           "Tooltips": [
             {
-              "Id": "MateoHome",
-              "Text": "{{i18n:miscellaneous.mapname.CoastalGuild.{{HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail}}}}"
+              "Id": "ValHome",
+              "Text": "{{i18n:miscellaneous.mapname.CoastalGuild.{{HasFlag |contains=Val_SpecialOrders_BuildGuildMail}}}}"
             }
           ],
           "WorldPositions": [
             {
-              "Id": "MateoHome",
-              "LocationName": "EastScarp_MateoHome",
+              "Id": "ValHome",
+              "LocationName": "EastScarp_ValHome",
               "ExtendedTileArea": null,
               "MapPixelArea": {
                 "X": 208,
@@ -183,7 +183,7 @@
       "When": {
         //"Season": "spring, summer, fall, winter",
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+        "HasFlag |contains=Val_SpecialOrders_BuildGuildMail": true
       },
       "Target": "Mods/Lemurkat.EastScarp/ESWorldMap",
       "PatchMode": "Overlay",
@@ -287,9 +287,9 @@
       "Target": "Data/WorldMap",
       "When": {
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+        "HasFlag |contains=Val_SpecialOrders_BuildGuildMail": true
       },
-      "TargetField": [ "EastScarp", "MapAreas", "MateoHome", "ToolTips", "MateoHome" ],
+      "TargetField": [ "EastScarp", "MapAreas", "ValHome", "ToolTips", "ValHome" ],
       "Entries": {
         "Text": "{{i18n:miscellaneous.mapname.CoastalGuild.True}}"
       }
@@ -331,8 +331,8 @@
       "TargetField": [ "EastScarp", "MapAreas" ],
       "Entries": {
 
-        "MateoHome": {
-          "Id": "MateoHome",
+        "ValHome": {
+          "Id": "ValHome",
           "PixelArea": {
             "X": 128,
             "Y": 114,
@@ -341,14 +341,14 @@
           },
           "Tooltips": [
             {
-              "Id": "MateoHome",
+              "Id": "ValHome",
               "Text": "{{i18n:miscellaneous.mapname.CoastalGuild.False}}"
             }
           ],
           "WorldPositions": [
             {
-              "Id": "MateoHome",
-              "LocationName": "EastScarp_MateoHome",
+              "Id": "ValHome",
+              "LocationName": "EastScarp_ValHome",
               "ExtendedTileArea": null,
               "MapPixelArea": {
                 "X": 128,
@@ -501,7 +501,7 @@
       "When": {
         //"Season": "spring, summer, fall, winter",
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+        "HasFlag |contains=Val_SpecialOrders_BuildGuildMail": true
       },
       "Target": "Mods/Lemurkat.EastScarp/ESWorldMap",
       "PatchMode": "Overlay",
@@ -605,9 +605,9 @@
       "Target": "Data/WorldMap",
       "When": {
         "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+        "HasFlag |contains=Val_SpecialOrders_BuildGuildMail": true
       },
-      "TargetField": [ "EastScarp", "MapAreas", "MateoHome", "ToolTips", "MateoHome" ],
+      "TargetField": [ "EastScarp", "MapAreas", "ValHome", "ToolTips", "ValHome" ],
       "Entries": {
         "Text": "{{i18n:miscellaneous.mapname.CoastalGuild}}"
       }

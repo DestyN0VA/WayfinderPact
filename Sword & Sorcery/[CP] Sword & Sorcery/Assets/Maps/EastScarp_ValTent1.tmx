@@ -5934,8 +5934,8 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="6882" name="spring_MateoTent" tilewidth="16" tileheight="16" tilecount="56" columns="8">
-  <image source="spring_MateoTent.png" width="128" height="112"/>
+ <tileset firstgid="6882" name="spring_ValTent" tilewidth="16" tileheight="16" tilecount="56" columns="8">
+  <image source="spring_ValTent.png" width="128" height="112"/>
  </tileset>
  <layer id="1" name="Back" width="9" height="12">
   <data encoding="csv">

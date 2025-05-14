@@ -3,7 +3,7 @@
     {
       "LogName": "Val Loads from Blanks",
       "Action": "Load",
-      "Target": "Characters/Dialogue/Val, Characters/Dialogue/MarriageDialogueMateo, Characters/Schedules/Val",
+      "Target": "Characters/Dialogue/Val, Characters/Dialogue/MarriageDialogueVal, Characters/Schedules/Val",
       "FromFile": "Data/blank.json"
     },
     {
@@ -39,7 +39,7 @@
     {
       "LogName": "Tent Events Blank",
       "Action": "Load",
-      "Target": "data/events/EastScarp_MateoHome",
+      "Target": "data/events/EastScarp_ValHome",
       "FromFile": "assets/blank.json"
     },
     {
