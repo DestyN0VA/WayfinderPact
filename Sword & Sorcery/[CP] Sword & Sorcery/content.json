@@ -5,7 +5,7 @@
     {
       "LogName": "Sword & Sorcery - Val Includes",
       "Action": "Include",
-      "FromFile": "Data/Appearances/AppearanceData_Mateo.json, Data/Dialogue/Val/Dialogue_Mateo.json, Data/Dialogue/Val/ConcessionTastes_Mateo.json, Data/Dialogue/Val/ConversationTopics_Mateo.json, Data/Dialogue/Val/ConversationTopics_Vanilla.json, Data/Dialogue/Val/CustomFixed_Mateo.json,Data/Dialogue/Val/CustomGiftDialogue_Mateo.json, Data/Dialogue/Val/MarriageDialogue_Mateo.json, Data/Festival Data/FestivalData_Mateo.json, Data/Schedules/Schedule_Mateo.json, Data/Strings/Strings_Mateo.json, Data/Spouse Extras/SpouseExtras_Mateo.json"
+      "FromFile": "Data/Appearances/AppearanceData_Val.json, Data/Dialogue/Val/Dialogue_Val.json, Data/Dialogue/Val/ConcessionTastes_Val.json, Data/Dialogue/Val/ConversationTopics_Val.json, Data/Dialogue/Val/ConversationTopics_Vanilla.json, Data/Dialogue/Val/CustomFixed_Val.json,Data/Dialogue/Val/CustomGiftDialogue_Val.json, Data/Dialogue/Val/MarriageDialogue_Val.json, Data/Festival Data/FestivalData_Val.json, Data/Schedules/Schedule_Val.json, Data/Strings/Strings_Val.json, Data/Spouse Extras/SpouseExtras_Val.json"
     },
     {
       "LogName": "Sword & Sorcery - Hector Includes",
@@ -66,7 +66,7 @@
     {
       "LogName": "3.0 Includes",
       "Action": "Include",
-      "FromFile": "Data/Events/EventsData_Mateo.json, Data/Events/EventsData_Coriander.json",
+      "FromFile": "Data/Events/EventsData_Val.json, Data/Events/EventsData_Coriander.json",
     },
     {
       "LogName": "Sword & Sorcery - Shield Quest Include",
@@ -116,9 +116,9 @@
           "Id": "SnS.TriggerActions.OverrideSeenTodayRemoval",
           "Trigger": "DayStarted",
           "MarkActionApplied": false,
-          "Condition": "Any \"PLAYER_HAS_MAIL Current SnS_M_Mateo_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Hector_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Cirrus_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Roslin_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Dandelion_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Solomon_OverrideSeenToday Any\"",
+          "Condition": "Any \"PLAYER_HAS_MAIL Current SnS_M_Val_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Hector_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Cirrus_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Roslin_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Dandelion_OverrideSeenToday Any\" \"PLAYER_HAS_MAIL Current SnS_M_Solomon_OverrideSeenToday Any\"",
           "Actions": [
-            "RemoveMail Current SnS_M_Mateo_OverrideSeenToday",
+            "RemoveMail Current SnS_M_Val_OverrideSeenToday",
             "RemoveMail Current SnS_M_Hector_OverrideSeenToday",
             "RemoveMail Current SnS_M_Cirrus_OverrideSeenToday",
             "RemoveMail Current SnS_M_Roslin_OverrideSeenToday",
@@ -126,22 +126,22 @@
             "RemoveMail Current SnS_M_Solomon_OverrideSeenToday"
           ]
         },
-        "SnS.TriggerActions.MateoTrollHeritage.True": {
-          "Id": "SnS.TriggerActions.MateoTrollHeritage.True",
+        "SnS.TriggerActions.ValTrollHeritage.True": {
+          "Id": "SnS.TriggerActions.ValTrollHeritage.True",
           "Trigger": "DayStarted",
-          "Condition": "{{MateoTrollHeritage}}",
+          "Condition": "{{ValTrollHeritage}}",
           "Actions": [
-            "AddMail Current SnS.Flag.MateoTrollHeritage received",
-            "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.False false"
+            "AddMail Current SnS.Flag.ValTrollHeritage received",
+            "MarkActionApplied Current SnS.TriggerActions.ValTrollHeritage.False false"
           ]
         },
-        "SnS.TriggerActions.MateoTrollHeritage.False": {
-          "Id": "SnS.TriggerActions.MateoTrollHeritage.False",
+        "SnS.TriggerActions.ValTrollHeritage.False": {
+          "Id": "SnS.TriggerActions.ValTrollHeritage.False",
           "Trigger": "DayStarted",
-          "Condition": "!{{MateoTrollHeritage}}",
+          "Condition": "!{{ValTrollHeritage}}",
           "Actions": [
-            "RemoveMail Current SnS.Flag.MateoTrollHeritage all",
-            "MarkActionApplied Current SnS.TriggerActions.MateoTrollHeritage.True false"
+            "RemoveMail Current SnS.Flag.ValTrollHeritage all",
+            "MarkActionApplied Current SnS.TriggerActions.ValTrollHeritage.True false"
           ]
         },
         /*"{{ModId}}_MigrateIds": {
@@ -155,12 +155,12 @@
           ],
           "HostOnly": true
         },*/
-        "SnS.TriggerActions.RemoveMateoRomanticFlagIfNotDating": {
-          "Id": "SnS.TriggerActions.RemoveMateoRomanticFlagIfNotDating",
+        "SnS.TriggerActions.RemoveValRomanticFlagIfNotDating": {
+          "Id": "SnS.TriggerActions.RemoveValRomanticFlagIfNotDating",
           "Trigger": "DayStarted",
-          "Condition": "PLAYER_HAS_MAIL Current MateoRomanticFlag, !PLAYER_NPC_RELATIONSHIP Current Val Dating Engaged Married, PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.15",
+          "Condition": "PLAYER_HAS_MAIL Current ValRomanticFlag, !PLAYER_NPC_RELATIONSHIP Current Val Dating Engaged Married, PLAYER_HAS_SEEN_EVENT Current SnS.Ch1.Val.15",
           "Actions": [
-            "RemoveMail Current MateoRomanticFlag all" //Technically C# component does this already, but doesn't account for divorce
+            "RemoveMail Current ValRomanticFlag all" //Technically C# component does this already, but doesn't account for divorce
           ],
           "MarkActionApplied": "false"
         },
@@ -246,14 +246,14 @@
       "Description": "Would usually be \"is\" or \"are\", depending on context. Example: She IS so cool! VS. They ARE so cool!",
       "Section": "Pronouns"
     },
-    "CustomMateoSoren": {
+    "CustomValSoren": {
       "AllowValues": "true, false",
       "Default": "true",
       "AllowBlank": false,
       "Description": "Turns on male toddler sprites that look like Val.",
       "Section": "Custom Kids"
     },
-    "CustomMateoDinah": {
+    "CustomValDinah": {
       "AllowValues": "true, false",
       "Default": "true",
       "AllowBlank": false,
@@ -295,14 +295,14 @@
       "Description": "Adds the Mermaid Pendant choker for Cirrus when married.",
       "Section": "Mermaid Pendant Overlays"
     },
-    "MateoSpouseRoomConfig": {
+    "ValSpouseRoomConfig": {
       "AllowValues": "true, false",
       "Default": "true",
       "AllowBlank": false,
       "Description": "Adds a spouse room when married.",
       "Section": "Spouse Rooms"
     },
-    "MateoSpousePatioConfig": {
+    "ValSpousePatioConfig": {
       "AllowValues": "true, false",
       "Default": "true",
       "AllowBlank": false,
@@ -365,7 +365,7 @@
       "Description": "Control the pacing of events by configuring how much time passes between each one.",
       "Section": "Miscellaneous"
     },
-    "MateoThemeConfig": {
+    "ValThemeConfig": {
       "AllowValues": "Old, New",
       "Default": "New",
       "AllowBlank": false,
@@ -491,14 +491,14 @@
       "Description": "Gives Hector Blue/Green heterochromatic eyes.",
       "Section": "Overlays"
     },
-    "MateoTrollHeritage": {
+    "ValTrollHeritage": {
       "AllowValues": "true, false",
       "Default": "false",
       "AllowBlank": false,
       "Description": "Gives Val horns and unique eye color based on their parentage.",
       "Section": "Overlays"
     },
-    "MateoTail": {
+    "ValTail": {
       "AllowValues": "true, false",
       "Default": "false",
       "AllowBlank": false,
@@ -544,40 +544,40 @@
       "Value": "{{WeekDayList |valueAt={{Query: {{Day}}%7}}}}"
     },
     {
-      "Name": "MateoRomance",
+      "Name": "ValRomance",
       "Value": "Romantic",
       "When": {
         "Relationship:Val |contains=Dating, Engaged, Married": true
       }
     },
     {
-      "Name": "MateoRomance",
+      "Name": "ValRomance",
       "Value": "Platonic",
       "When": {
         "Relationship:Val |contains=Dating, Engaged, Married": false
       }
     },
     {
-      "Name": "MateoArmor",
-      "Value": "Armor_Mateo.png",
+      "Name": "ValArmor",
+      "Value": "Armor_Val.png",
       "When": {
         "HasSeenEvent |contains=SnS.Ch1.Val.9": false
       }
     },
     {
-      "Name": "MateoArmor",
-      "Value": "Armor_ScarredMateo.png",
+      "Name": "ValArmor",
+      "Value": "Armor_ScarredVal.png",
       "When": {
         "HasSeenEvent |contains=SnS.Ch1.Val.9": true
       }
     },
     {
-      "Name": "MateoBeach",
-      "Value": "Beach_Mateo.png"
+      "Name": "ValBeach",
+      "Value": "Beach_Val.png"
     },
     {
-      "Name": "MateoBeach",
-      "Value": "Beach_ScarredMateo.png",
+      "Name": "ValBeach",
+      "Value": "Beach_ScarredVal.png",
       "When": {
         "HasSeenEvent |contains=SnS.Ch1.Val.9": true
       }
@@ -615,36 +615,36 @@
       }
     },
     {
-      "Name": "MateoHorns",
+      "Name": "ValHorns",
       "Value": ""
     },
     {
-      "Name": "MateoHorns",
+      "Name": "ValHorns",
       "Value": "_Horns",
       "When": {
-        "MateoTrollHeritage": true
+        "ValTrollHeritage": true
       }
     },
     {
-      "Name": "MateoSenMonsterResponse",
-      "Value": "{{i18n:MateoSenMonsterResponse.False}}"
+      "Name": "ValSenMonsterResponse",
+      "Value": "{{i18n:ValSenMonsterResponse.False}}"
     },
     {
-      "Name": "MateoSenMonsterResponse",
-      "Value": "{{i18n:MateoSenMonsterResponse.True}}",
+      "Name": "ValSenMonsterResponse",
+      "Value": "{{i18n:ValSenMonsterResponse.True}}",
       "When": {
-        "MateoTrollHeritage": true
+        "ValTrollHeritage": true
       }
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
-      "Value": "stopMusic/question fork0 \"{{i18n:Events.S&S.Ch1.RHToggle.Val.1}}#{{i18n:Events.S&S.Ch1.RHToggle.Question.Romantic}}#{{i18n:Events.S&S.Ch1.RHToggle.Question.Platonic}}\"/fork MateoRomantic"
+      "Value": "stopMusic/question fork0 \"{{i18n:Events.S&S.Ch1.RHToggle.Val.1}}#{{i18n:Events.S&S.Ch1.RHToggle.Question.Romantic}}#{{i18n:Events.S&S.Ch1.RHToggle.Question.Platonic}}\"/fork ValRomantic"
     },
     {
       "Name": "TenHeartRivalHeartsToggle",
       "Value": "stopMusic/quickQuestion \"{{i18n:Events.S&S.Ch1.RHToggle.Val.1}}\"#{{i18n:Events.S&S.Ch1.RHToggle.Farmer.1}}#{{i18n:Events.S&S.Ch1.RHToggle.Farmer.2}}(break)speak Val \"{{i18n:Events.S&S.Ch1.RHToggle.Val.2}}\"(break)speak Val \"{{i18n:Events.S&S.Ch1.RHToggle.Val.3}}\"",
       "When": {
-        "Query: {{HasFlag |contains=CirrusRomanticFlag}} OR {{HasFlag |contains=HectorRomanticFlag}} OR {{HasFlag |contains=RivalHearts_AideenMateo}}": "true"
+        "Query: {{HasFlag |contains=CirrusRomanticFlag}} OR {{HasFlag |contains=HectorRomanticFlag}} OR {{HasFlag |contains=RivalHearts_AideenVal}}": "true"
       }
     },
     {
@@ -656,55 +656,55 @@
       }
     },
     {
-      "Name": "MateoSpawn",
-      "Value": "EastScarp_MateoHome 5 6"
+      "Name": "ValSpawn",
+      "Value": "EastScarp_ValHome 5 6"
     },
     {
-      "Name": "MateoSpawn",
+      "Name": "ValSpawn",
       "Value": "EastScarp_CoastalGuild 8 5",
       "When": {
-        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+        "HasFlag |contains=Val_SpecialOrders_BuildGuildMail": true
       }
     },
     {
-      "Name": "MateoAnimation",
-      "Value": "{{Random: Mateo_violin, Mateo_book, Mateo_drink|key=Val-Animation}}"
+      "Name": "ValAnimation",
+      "Value": "{{Random: Val_violin, Val_book, Val_drink|key=Val-Animation}}"
     },
     {
-      "Name": "MateoRelationshipStatus",
+      "Name": "ValRelationshipStatus",
       "Value": "false"
     },
     {
-      "Name": "MateoRelationshipStatus",
+      "Name": "ValRelationshipStatus",
       "Value": "false",
       "When": {
-        "Query: {{HasFlag |contains=RivalHearts_AideenMateo}} OR NOT {{HasFlag |contains=MateoRomanticFlag}}": true
+        "Query: {{HasFlag |contains=RivalHearts_AideenVal}} OR NOT {{HasFlag |contains=ValRomanticFlag}}": true
       }
     },
     {
-      "Name": "MateoRelationshipStatus",
+      "Name": "ValRelationshipStatus",
       "Value": "true",
-      "When": { "HasFlag": "MateoRomanticFlag" }
+      "When": { "HasFlag": "ValRomanticFlag" }
     },
     {
-      "Name": "MateoHospitalScene_Setup",
+      "Name": "ValHospitalScene_Setup",
       "Value": "farmer 10 19 0 Val 21 11 2 Harvey 20 11 1"
     },
     {
-      "Name": "MateoHospitalScene_Setup",
-      "Value": "{{MateoHospitalScene_Setup}} Nova.Eli -100 -100 2",
+      "Name": "ValHospitalScene_Setup",
+      "Value": "{{ValHospitalScene_Setup}} Nova.Eli -100 -100 2",
       "When": {
         "HasMod: |contains=TenebrousNova.EliDylan.CP": true,
         "Eli&DylanExtras": true
       }
     },
     {
-      "Name": "MateoHospitalScene",
-      "Value": "message \"{{i18n:Events.S&S.Ch1.7H1.Message.1}}\"/changeLocation Town/warp farmer 36 57/faceDirection farmer 2/addTemporaryActor MateoKrobus 16 32 39 62 1 true Character/changeName MateoKrobus Krobus/pause 500/playSound doorClose/globalFadeToClear/viewport 35 59/playsound leafrustle/advancedMove MateoKrobus false -3 0 0 -3 4 10/emote farmer 40/pause 100/jump farmer 5 true/emote farmer 16/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.1}}\"/pause 250/emote farmer 32/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.2}}\"/pause 250/emote farmer 36/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.3}}\"/fade/viewport -1000 -1000/mail MateoHospital/end invisible Val"
+      "Name": "ValHospitalScene",
+      "Value": "message \"{{i18n:Events.S&S.Ch1.7H1.Message.1}}\"/changeLocation Town/warp farmer 36 57/faceDirection farmer 2/addTemporaryActor ValKrobus 16 32 39 62 1 true Character/changeName ValKrobus Krobus/pause 500/playSound doorClose/globalFadeToClear/viewport 35 59/playsound leafrustle/advancedMove ValKrobus false -3 0 0 -3 4 10/emote farmer 40/pause 100/jump farmer 5 true/emote farmer 16/speak ValKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.1}}\"/pause 250/emote farmer 32/speak ValKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.2}}\"/pause 250/emote farmer 36/speak ValKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.3}}\"/fade/viewport -1000 -1000/mail ValHospital/end invisible Val"
     },
     {
-      "Name": "MateoHospitalScene",
-      "Value": "speak Harvey \"{{i18n:Events.S&S.Ch1.7H1.Harvey.6}}\"/pause 1000/warp Harvey -100 -100/warp farmer -100 -100/warp Val 20 11/showFrame Val 50/changeLocation EastScarp_LavaMine/bgColor 0 0 0/ambientLight 0 0 0/viewport 17 12/playMusic Upper_Ambient/pause 1000/showFrame Val 51/shake Val 1000/pause 500/showFrame Val 50/playSound stairsdown/pause 300/warp Nova.Eli 6 10/advancedMove Nova.Eli false 0 1 2 10/pause 500/showFrame Nova.Eli 56/pause 750/showFrame Nova.Eli 57/pause 500/emote Nova.Eli 16 true/showFrame Nova.Eli 87/pause 750/showFrame Nova.Eli 0/faceDirection Nova.Eli 1/speed Nova.Eli 5/advancedMove Nova.Eli false 13 0 1 10/textAboveHead Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.1}}\"/pause 1000/textAboveHead Val \"{{i18n:Events.S&S.Ch1.7H1.Val.9}}\"/pause 3000/showFrame Nova.Eli 20/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.2}}\"/showFrame Val 0/pause 1000/shake Val 1000/pause 1000/showFrame Val 51/shake Val 1000/pause 1000/showFrame Val 50/emote Nova.Eli 28/showFrame Nova.Eli 21/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.3}}\"/globalFade/viewport -1000 -1000/pause 1000/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.4}}\"/pause 100/playSound throw/stopMusic/changeLocation Town/warp farmer 36 57/faceDirection Nova.Eli 2/showFrame Nova.Eli 0/warp Nova.Eli 33 57/showFrame Nova.Eli 67/faceDirection farmer 2/addTemporaryActor MateoKrobus 16 32 39 62 1 true Character/changeName MateoKrobus Krobus/pause 500/playSound doorClose/globalFadeToClear/viewport 35 59/playsound leafrustle/advancedMove MateoKrobus false -3 0 0 -3 4 10/emote farmer 40/pause 100/jump farmer 5 true/emote farmer 16/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.1.2}}\"/speed Nova.Eli 2/advancedMove Nova.Eli false 0 2 2 0 4 10/pause 750/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.5}}\"/pause 250/emote farmer 32/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.2}}\"/faceDirection Nova.Eli 1/emote Nova.Eli 28/faceDirection Nova.Eli 0/pause 250/emote farmer 36/speak MateoKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.3}}\"/fade/viewport -1000 -1000/message \"{{i18n:Events.S&S.Ch1.7H1.Message.1}}\"/mail MateoHospital/end invisible Val",
+      "Name": "ValHospitalScene",
+      "Value": "speak Harvey \"{{i18n:Events.S&S.Ch1.7H1.Harvey.6}}\"/pause 1000/warp Harvey -100 -100/warp farmer -100 -100/warp Val 20 11/showFrame Val 50/changeLocation EastScarp_LavaMine/bgColor 0 0 0/ambientLight 0 0 0/viewport 17 12/playMusic Upper_Ambient/pause 1000/showFrame Val 51/shake Val 1000/pause 500/showFrame Val 50/playSound stairsdown/pause 300/warp Nova.Eli 6 10/advancedMove Nova.Eli false 0 1 2 10/pause 500/showFrame Nova.Eli 56/pause 750/showFrame Nova.Eli 57/pause 500/emote Nova.Eli 16 true/showFrame Nova.Eli 87/pause 750/showFrame Nova.Eli 0/faceDirection Nova.Eli 1/speed Nova.Eli 5/advancedMove Nova.Eli false 13 0 1 10/textAboveHead Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.1}}\"/pause 1000/textAboveHead Val \"{{i18n:Events.S&S.Ch1.7H1.Val.9}}\"/pause 3000/showFrame Nova.Eli 20/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.2}}\"/showFrame Val 0/pause 1000/shake Val 1000/pause 1000/showFrame Val 51/shake Val 1000/pause 1000/showFrame Val 50/emote Nova.Eli 28/showFrame Nova.Eli 21/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.3}}\"/globalFade/viewport -1000 -1000/pause 1000/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.4}}\"/pause 100/playSound throw/stopMusic/changeLocation Town/warp farmer 36 57/faceDirection Nova.Eli 2/showFrame Nova.Eli 0/warp Nova.Eli 33 57/showFrame Nova.Eli 67/faceDirection farmer 2/addTemporaryActor ValKrobus 16 32 39 62 1 true Character/changeName ValKrobus Krobus/pause 500/playSound doorClose/globalFadeToClear/viewport 35 59/playsound leafrustle/advancedMove ValKrobus false -3 0 0 -3 4 10/emote farmer 40/pause 100/jump farmer 5 true/emote farmer 16/speak ValKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.1.2}}\"/speed Nova.Eli 2/advancedMove Nova.Eli false 0 2 2 0 4 10/pause 750/speak Nova.Eli \"{{i18n:Events.S&S.Ch1.7H1.NovaEli.5}}\"/pause 250/emote farmer 32/speak ValKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.2}}\"/faceDirection Nova.Eli 1/emote Nova.Eli 28/faceDirection Nova.Eli 0/pause 250/emote farmer 36/speak ValKrobus \"{{i18n:Events.S&S.Ch1.7H1.Krobus.3}}\"/fade/viewport -1000 -1000/message \"{{i18n:Events.S&S.Ch1.7H1.Message.1}}\"/mail ValHospital/end invisible Val",
       "When": {
         "HasMod: |contains=TenebrousNova.EliDylan.CP": true,
         "Eli&DylanExtras": true
@@ -802,14 +802,14 @@
       }
     },
     {
-      "Name": "MateoNickname",
+      "Name": "ValNickname",
       "Value": "@",
       "When": {
         "Relationship:Val |contains=Dating, Engaged, Married": false
       }
     },
     {
-      "Name": "MateoNickname",
+      "Name": "ValNickname",
       "Value": "Sunshine",
       "When": {
         "Relationship:Val |contains=Dating, Engaged, Married": true
@@ -1215,98 +1215,98 @@
       "Name": "TrollHeritageDialogue1",
       "Value": "{{i18n:Events.S&S.Ch1.0H2.Val.3}}",
       "When": {
-        "MateoTrollHeritage": false
+        "ValTrollHeritage": false
       }
     },
     {
       "Name": "TrollHeritageDialogue1",
       "Value": "{{i18n:Events.S&S.Ch1.0H2.Val.3.TrollHeritage}}",
       "When": {
-        "MateoTrollHeritage": true
+        "ValTrollHeritage": true
       }
     },
     {
       "Name": "TrollHeritageDialogue2",
       "Value": "{{i18n:Events.S&S.Ch1.7H1.Val.3}}",
       "When": {
-        "MateoTrollHeritage": false
+        "ValTrollHeritage": false
       }
     },
     {
       "Name": "TrollHeritageDialogue2",
       "Value": "{{i18n:Events.S&S.Ch1.7H1.Val.3.TrollHeritage}}",
       "When": {
-        "MateoTrollHeritage": true
+        "ValTrollHeritage": true
       }
     },
     {
-      "Name": "MateoFlirt1",
+      "Name": "ValFlirt1",
       "Value": "{{i18n:Events.S&S.Ch1.8H1.Val.7}}",
       "When": {
-        "HasFlag |contains=MateoFlirt": false
+        "HasFlag |contains=ValFlirt": false
       }
     },
     {
-      "Name": "MateoFlirt1",
+      "Name": "ValFlirt1",
       "Value": "{{i18n:Events.S&S.Ch1.8H1.Val.7.Flirty{{PlayerPronouns}}}}",
       "When": {
-        "HasFlag |contains=MateoFlirt": true
+        "HasFlag |contains=ValFlirt": true
       }
     },
     {
-      "Name": "MateoFlirt2",
+      "Name": "ValFlirt2",
       "Value": "{{i18n:Events.S&S.Ch1.8H2.Val.13}}",
       "When": {
-        "HasFlag |contains=MateoFlirt": false
+        "HasFlag |contains=ValFlirt": false
       }
     },
     {
-      "Name": "MateoFlirt2",
+      "Name": "ValFlirt2",
       "Value": "{{i18n:Events.S&S.Ch1.8H2.Val.13.Flirty}}",
       "When": {
-        "HasFlag |contains=MateoFlirt": true
+        "HasFlag |contains=ValFlirt": true
       }
     },
     {
-      "Name": "MateoFlirt3",
+      "Name": "ValFlirt3",
       "Value": "{{i18n:Events.S&S.Ch1.B1.Val.4}}",
       "When": {
-        "HasFlag |contains=MateoFlirt": false
+        "HasFlag |contains=ValFlirt": false
       }
     },
     {
-      "Name": "MateoFlirt3",
+      "Name": "ValFlirt3",
       "Value": "{{i18n:Events.S&S.Ch1.B1.Val.4.Flirty}}",
       "When": {
-        "HasFlag |contains=MateoFlirt": true
+        "HasFlag |contains=ValFlirt": true
       }
     },
     {
       "Name": "TrollHeritageDialogue3",
       "Value": "{{i18n:Events.S&S.Ch1.12H.Val.8}}",
       "When": {
-        "MateoTrollHeritage": false
+        "ValTrollHeritage": false
       }
     },
     {
       "Name": "TrollHeritageDialogue3",
       "Value": "{{i18n:Events.S&S.Ch1.12H.Val.8.TrollHeritage}}",
       "When": {
-        "MateoTrollHeritage": true
+        "ValTrollHeritage": true
       }
     },
     {
       "Name": "TrollHeritageDialogue4",
       "Value": "{{i18n:Events.S&S.Ch1.10H.Val.3}}",
       "When": {
-        "MateoTrollHeritage": false
+        "ValTrollHeritage": false
       }
     },
     {
       "Name": "TrollHeritageDialogue4",
       "Value": "{{i18n:Events.S&S.Ch1.10H.Val.3.TrollHeritage}}",
       "When": {
-        "MateoTrollHeritage": true
+        "ValTrollHeritage": true
       }
     },
     {
@@ -1396,15 +1396,15 @@
       "Value": "Gunther"
     },
     {
-      "Name": "MateoFlirt4",
-      "Value": "{{i18n:MateoFlirt.4.1}}",
+      "Name": "ValFlirt4",
+      "Value": "{{i18n:ValFlirt.4.1}}",
       "When": {
         "Relationship:Val |contains=Dating, Engaged, Married": true
       }
     },
     {
-      "Name": "MateoFlirt4",
-      "Value": "{{i18n:MateoFlirt.4.2}}",
+      "Name": "ValFlirt4",
+      "Value": "{{i18n:ValFlirt.4.2}}",
       "When": {
         "Relationship:Val |contains=Dating, Engaged, Married": false
       }
@@ -1424,17 +1424,17 @@
       }
     },
     {
-      "Name": "MateoSpousePatioOnOff",
-      "Value": "MateoSpousePatio",
+      "Name": "ValSpousePatioOnOff",
+      "Value": "ValSpousePatio",
       "When": {
-        "MateoSpousePatioConfig": true
+        "ValSpousePatioConfig": true
       }
     },
     {
-      "Name": "MateoSpousePatioOnOff",
+      "Name": "ValSpousePatioOnOff",
       "Value": "SpousePatioEmpty",
       "When": {
-        "MateoSpousePatioConfig": false
+        "ValSpousePatioConfig": false
       }
     },
     {
@@ -1466,17 +1466,17 @@
       }
     },
     {
-      "Name": "MateoSpouseRoomOnOff",
-      "Value": "MateoSpouseRoom",
+      "Name": "ValSpouseRoomOnOff",
+      "Value": "ValSpouseRoom",
       "When": {
-        "MateoSpouseRoomConfig": true
+        "ValSpouseRoomConfig": true
       }
     },
     {
-      "Name": "MateoSpouseRoomOnOff",
+      "Name": "ValSpouseRoomOnOff",
       "Value": "SpouseRoomEmpty",
       "When": {
-        "MateoSpouseRoomConfig": false
+        "ValSpouseRoomConfig": false
       }
     },
     {
@@ -1523,14 +1523,14 @@
     },
     {
       "Name": "FilteredLanguage2",
-      "Value": "{{i18n:CT.Marlon.MateoPain}}",
+      "Value": "{{i18n:CT.Marlon.ValPain}}",
       "When": {
         "ProfanityFilter": false
       }
     },
     {
       "Name": "FilteredLanguage2",
-      "Value": "{{i18n:CT.Marlon.MateoPain.Filtered}}",
+      "Value": "{{i18n:CT.Marlon.ValPain.Filtered}}",
       "When": {
         "ProfanityFilter": true
       }
@@ -1890,17 +1890,17 @@
       }
     },
     {
-      "Name": "MateoTheme",
-      "Value": "MateoTheme.ogg",
+      "Name": "ValTheme",
+      "Value": "ValTheme.ogg",
       "When": {
-        "MateoThemeConfig": "New"
+        "ValThemeConfig": "New"
       }
     },
     {
-      "Name": "MateoTheme",
-      "Value": "MateoTheme_Old.ogg",
+      "Name": "ValTheme",
+      "Value": "ValTheme_Old.ogg",
       "When": {
-        "MateoThemeConfig": "Old"
+        "ValThemeConfig": "Old"
       }
     },
     {
@@ -1944,7 +1944,7 @@
       "Name": "HectorAlreadyDating",
       "Value": "speak Hector \"{{i18n:Events.S&S.Ch2.10H2.Hector.14.NoRomance}}\"/pause 250/stopMusic/playMusic starshoot/speak Hector \"{{i18n:Events.S&S.Ch2.10H2.Hector.16}}\"",
       "When": {
-        "Query: {{HasFlag |contains=MateoRomanticFlag}} OR {{HasFlag |contains=CirrusRomanticFlag}} OR {{HasMod |contains=ApryllForever.CPPolyamorySweet}} OR {{HasMod |contains=aedenthorn.FreeLove}}": "true"
+        "Query: {{HasFlag |contains=ValRomanticFlag}} OR {{HasFlag |contains=CirrusRomanticFlag}} OR {{HasMod |contains=ApryllForever.CPPolyamorySweet}} OR {{HasMod |contains=aedenthorn.FreeLove}}": "true"
       }
     },
     {
@@ -1961,9 +1961,9 @@
     },
     {
       "Name": "CirrusAlreadyDating",
-      "Value": "quickQuestion {{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorMateo.QuickQuestion.01}}#{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorMateo.QuickQuestion.02}}#{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorMateo.QuickQuestion.03}}(break)speak Cirrus \"{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorMateo.Cirrus.04}}\"(break)speak Cirrus \"{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorMateo.Cirrus.05}}\"",
+      "Value": "quickQuestion {{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorVal.QuickQuestion.01}}#{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorVal.QuickQuestion.02}}#{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorVal.QuickQuestion.03}}(break)speak Cirrus \"{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorVal.Cirrus.04}}\"(break)speak Cirrus \"{{i18n:Events.Events.SnS.Ch3.CirrusAlreadyDating.RomanticHectorVal.Cirrus.05}}\"",
       "When": {
-        "Query: {{HasFlag |contains=MateoRomanticFlag}} OR {{HasFlag |contains=HectorRomanticFlag}}": "true"
+        "Query: {{HasFlag |contains=ValRomanticFlag}} OR {{HasFlag |contains=HectorRomanticFlag}}": "true"
       }
     },
     {
@@ -1975,15 +1975,15 @@
       }
     },
     {
-      "Name": "MateoWyattActor",
-      "Value": "MateoWyatt.png",
+      "Name": "ValWyattActor",
+      "Value": "ValWyatt.png",
       "When": {
         "HasSeenEvent |contains=SnS.Ch3.Val.1": false
       }
     },
     {
-      "Name": "MateoWyattActor",
-      "Value": "MateoWyatt_Old.png",
+      "Name": "ValWyattActor",
+      "Value": "ValWyatt_Old.png",
       "When": {
         "HasSeenEvent |contains=SnS.Ch3.Val.1": true
       }
@@ -2241,11 +2241,11 @@
       }
     },
     {
-      "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.MateoVictory.Offset",
+      "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.ValVictory.Offset",
       "Value": "pause 1"
     },
     {
-      "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.MateoVictory.Offset",
+      "Name": "SnS.Ch4.Victories.GunnarExtra.Warps.ValVictory.Offset",
       "Value": "positionOffset farmer 20 0/positionOffset Val 20 0",
       "When": {
         "HasMod |contains=MadDog.HashtagBearFam": true
@@ -2287,14 +2287,14 @@
     },
     */
     {
-      "Name": "MateoPortraitSpriteIndex",
+      "Name": "ValPortraitSpriteIndex",
       "Value": "0"
     },
     {
-      "Name": "MateoPortraitSpriteIndex",
+      "Name": "ValPortraitSpriteIndex",
       "Value": "12",
       "When": {
-        "MateoTrollHeritage": true
+        "ValTrollHeritage": true
       }
     },
     {
@@ -2390,14 +2390,14 @@
       }
     },
     {
-      "Name": "MateoFatherComment",
+      "Name": "ValFatherComment",
       "Value": "{{i18n:Events.SnS.Ch4.Eyvinder.Val.09.False}}",
       "When": {
         "HasSeenEvent |contains=SnS.Ch5.Val": false
       }
     },
     {
-      "Name": "MateoFatherComment",
+      "Name": "ValFatherComment",
       "Value": "{{i18n:Events.SnS.Ch4.Eyvinder.Val.09.True}}",
       "When": {
         "HasSeenEvent |contains=SnS.Ch5.Val": true
@@ -2593,7 +2593,7 @@
     },
     {
       "Name": "TrollHeritageEvents",
-      "Value": "|TrollEvent1={{i18n: guidebook.chapter.MateoTrollHeritage.1.{{MateoTrollHeritage}}}} |TrollEvent2={{i18n: guidebook.chapter.MateoTrollHeritage.2.{{MateoTrollHeritage}}}} |TrollEvent3={{i18n: guidebook.chapter.MateoTrollHeritage.3.{{MateoTrollHeritage}}}}"
+      "Value": "|TrollEvent1={{i18n: guidebook.chapter.ValTrollHeritage.1.{{ValTrollHeritage}}}} |TrollEvent2={{i18n: guidebook.chapter.ValTrollHeritage.2.{{ValTrollHeritage}}}} |TrollEvent3={{i18n: guidebook.chapter.ValTrollHeritage.3.{{ValTrollHeritage}}}}"
     },
     { "Name": "CirrusExtras", "Value": false },
     {
