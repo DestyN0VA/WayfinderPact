@@ -26,7 +26,7 @@
     {
       "LogName": "Loads Tilesets",
       "Action": "Load",
-      "Target": "Maps/DN.SnS_FinalMixInteriors, Maps/Desty_Hector_Tilesheet, Maps/DN.SnS_Festivals, Maps/DN.SnS_Logophile_Rugs, Maps/DN.SnS_thefrenchdodo-tilesheet-books, Maps/DN.SnS_Underforge, Maps/DN.SnS_VioletMoon_Booths, Maps/LionsMane, Maps/MadDog_Extras, Maps/ValCustom, Maps/Matts_tent_by_Tiara, Maps/NEACustom, Maps/PizzaVanInterior, Maps/PlanetariumCustomInterior, Maps/roslin_wizard_furniture, Maps/spring_DN.SnS_FinalMixBuildings, Maps/summer_DN.SnS_FinalMixBuildings, Maps/fall_DN.SnS_FinalMixBuildings, Maps/winter_DN.SnS_FinalMixBuildings",
+      "Target": "Maps/DN.SnS_FinalMixInteriors, Maps/Desty_Hector_Tilesheet, Maps/DN.SnS_Festivals, Maps/DN.SnS_Logophile_Rugs, Maps/DN.SnS_thefrenchdodo-tilesheet-books, Maps/DN.SnS_Underforge, Maps/DN.SnS_VioletMoon_Booths, Maps/LionsMane, Maps/MadDog_Extras, Maps/ValCustom, Maps/Matts_tent_by_Tiara, Maps/NEACustom, Maps/PizzaVanInterior, Maps/PlanetariumCustomInterior, Maps/roslin_wizard_furniture, Maps/spring_DN.SnS_FinalMixBuildings, Maps/summer_DN.SnS_FinalMixBuildings, Maps/fall_DN.SnS_FinalMixBuildings, Maps/winter_DN.SnS_FinalMixBuildings, Maps/DN.SnS_LavaFall",
       "FromFile": "Assets/Tilesheets/Tilesets/{{TargetWithoutPath}}.png"
     },
     //Other
