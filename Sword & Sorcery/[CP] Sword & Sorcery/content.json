@@ -56,12 +56,12 @@
     {
       "LogName": "Sword & Sorcery - Quest Includes",
       "Action": "Include",
-      "FromFile": "Data/Quests & Items/BuildQuest.json, Data/Quests & Items/BuildQuest2.json, Data/Quests & Items/CGSpecialOrders.json, Data/Quests & Items/RiverQuest.json" //Data/Quests & Items/PentacleQuest.json
+      "FromFile": "Data/Quests/BuildQuest.json, Data/Quests/BuildQuest2.json, Data/Quests/CGSpecialOrders.json, Data/Quests/RiverQuest.json" //Data/Quests & Items/PentacleQuest.json
     },
     {
       "LogName": "Sword & Sorcery - Data Includes", //Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json
       "Action": "Include",
-      "FromFile": "Data/FinalePartners.json, Data/AlchemyRecipes.json, Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Quests & Items/DruidicCrops.json, Data/Quests & Items/MagicItems.json, Data/Quests & Items/Arsenal.json, Data/Quests & Items/Witchcraft.json, Data/Quests & Items/CustomFood.json, Data/Quests & Items/CustomForage.json, Data/Quests & Items/LegendaryWeapons.json, Data/Quests & Items/CustomPowers.json, Data/Quests & Items/Books.json, Data/Quests & Items/GingerFermenter.json, Data/Quests & Items/Fish.json, Data/Quests & Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/WitchcraftResearch.json, Data/Dungeon.json, Data/PlayersHandbook.json, Data/Quests & Items/VioletMoon_FoodOnly.json, Data/Trinket Tinker/TrinketLoads.json"
+      "FromFile": "Data/FinalePartners.json, Data/AlchemyRecipes.json, Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Items/DruidicCrops.json, Data/Items/MagicItems.json, Data/Items/Arsenal.json, Data/Items/Witchcraft.json, Data/Items/CustomFood.json, Data/Items/CustomForage.json, Data/Items/LegendaryWeapons.json, Data/Items/CustomPowers.json, Data/Items/Books.json, Data/Items/GingerFermenter.json, Data/Items/Fish.json, Data/Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/WitchcraftResearch.json, Data/Dungeon.json, Data/PlayersHandbook.json, Data/Items/VioletMoon_FoodOnly.json, Data/Trinket Tinker/TrinketLoads.json"
     }, // Data/MEEP/Wyatt.json - add back for 3.0
     {
       "LogName": "3.0 Includes",
@@ -71,7 +71,7 @@
     {
       "LogName": "Sword & Sorcery - Shield Quest Include",
       "Action": "Include",
-      "FromFile": "Data/Quests & Items/ShieldQuest.json",
+      "FromFile": "Data/Quests/ShieldQuest.json",
       "When": {
         "Query: {{ChocoboValleyMaterials}} AND {{HasMod |contains=Kitsutsune.Chocobovalley}}": false
       }
@@ -79,7 +79,7 @@
     {
       "LogName": "Sword & Sorcery - Shield Quest Include (w/ Chocobo Valley)",
       "Action": "Include",
-      "FromFile": "Data/Quests & Items/ShieldQuest_ChocoboValley.json",
+      "FromFile": "Data/Quests/ShieldQuest_ChocoboValley.json",
       "When": {
         "Query: {{ChocoboValleyMaterials}} AND {{HasMod |contains=Kitsutsune.Chocobovalley}}": true
       }
@@ -87,7 +87,7 @@
     {
       "LogName": "Sword & Sorcery - Essence Quest Include",
       "Action": "Include",
-      "FromFile": "Data/Quests & Items/EssenceQuest.json",
+      "FromFile": "Data/Quests/EssenceQuest.json",
       "When": {
         "Query: {{RSVMaterials}} AND {{HasMod |contains=Rafseazz.RSVCP}}": false
       }
@@ -95,7 +95,7 @@
     {
       "LogName": "Sword & Sorcery - Essence Quest Include (w/ Ridgeside Village)",
       "Action": "Include",
-      "FromFile": "Data/Quests & Items/EssenceQuest_RSV.json",
+      "FromFile": "Data/Quests/EssenceQuest_RSV.json",
       "When": {
         "Query: {{RSVMaterials}} AND {{HasMod |contains=Rafseazz.RSVCP}}": true
       }
