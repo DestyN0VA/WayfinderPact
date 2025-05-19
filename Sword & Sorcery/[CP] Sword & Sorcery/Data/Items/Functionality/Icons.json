@@ -1,7 +1,8 @@
 {
-	"Changes": [
+  "Changes": [
 
-		{
+  //POWERS
+    {
 			"Action": "EditData",
 			"Target": "Data/Powers",
 			"Update": "OnLocationChange",
@@ -109,6 +110,25 @@
 				}
 			},
 			"When": { "HasFlag": "MagicalGrimoirePower" }
-		}
-	]
+		},
+	//Move this later
+    {
+      "Action": "Load",
+      "Target": "Mods/DN.SnS/GiantCrops",
+      "FromFile": "Assets/Items & Crops/SnSGiantCrops.png"
+    },
+	{
+		"LogName": "Load Furniture Image",
+		"Action": "Load",
+		"Priority": "Low",
+		"Target": "Mods/DN.SnS/SnSFurniture",
+		"FromFile": "Assets/Items & Crops/SnSFurniture.png"
+	},
+	{
+		"LogName": "Shirt Sprites",
+		"Action": "Load",
+		"Target": "Mods/DN.SnS/Shirts",
+		"FromFile": "Assets/Items & Crops/SnSShirts.png"
+	}
+]
 }

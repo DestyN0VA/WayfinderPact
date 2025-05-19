@@ -37,6 +37,10 @@
 			"IsRequired": true
 		},
 		{
+			"UniqueID": "mushymato.TrinketTinker",
+			"IsRequired": true
+		},
+		{
 			"UniqueID": "DecidedlyHuman.MappingExtensionsAndExtraProperties",
 			"IsRequired": true
 		}

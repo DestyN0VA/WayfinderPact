@@ -141,7 +141,7 @@
         "{{ModID}}_PallidSailfin": "PallidSailfin/40/floater/6/25/600 2400/winter spring/sunny/688 .6 684 .1/2/.5/.5/0",
         "{{ModID}}_GiantDragonfish": "GiantDragonfish/45/sinker/6/32/600 2400/fall winter/rainy/688 .6 684 .1/2/.5/.5/0",
         "{{ModID}}_FiveLinedConstellationFish": "FiveLinedConstellationFish/25/sinker/2/10/600 2400/summer fall/sunny/688 .6 684 .1/1/.5/.5/0",
-        "{{ModID}}_GoldieTheBatteryPoweredFish": "GoldieTheBatteryPoweredFish/95/sinker/12/48/600 2600/spring summer fall winter/both/688 .6 684 .1/5/.1/.08/0/true",
+        "{{ModID}}_GoldieTheBatteryPoweredFish": "GoldieTheBatteryPoweredFish/95/sinker/12/48/600 2600/spring summer fall winter/both/688 .6 684 .1/5/.1/.08/0/true"
       }
     },
     {

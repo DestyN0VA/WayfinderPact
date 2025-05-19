@@ -1,0 +1,203 @@
+{
+  "Changes": [
+    {
+      "LogName": "Projectile loads",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": { 
+      "{{ModID}}_Arrow": {
+          "Name": "{{ModID}}_Arrow",
+          "DisplayName": "{{i18n: arsenal.arrow.name}}",
+          "Description": "{{i18n: arsenal.arrow.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 5,
+          "Texture": "Textures/DN.SnS/SnSArsenal",
+          "SpriteIndex": 29,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "arrow_item",
+            "color_gray"
+          ]
+        },
+        "{{ModID}}_FirestormArrow": {
+          "Name": "{{ModID}}_FirestormArrow",
+          "DisplayName": "{{i18n: arsenal.firestorm-arrow.name}}",
+          "Description": "{{i18n: arsenal.firestorm-arrow.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "Textures/DN.SnS/SnSArsenal",
+          "SpriteIndex": 30,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "arrow_item",
+            "color_orange"
+          ]
+        },
+        "{{ModID}}_IcicleArrow": {
+          "Name": "{{ModID}}_IcicleArrow",
+          "DisplayName": "{{i18n: arsenal.icicle-arrow.name}}",
+          "Description": "{{i18n: arsenal.icicle-arrow.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "Textures/DN.SnS/SnSArsenal",
+          "SpriteIndex": 31,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "arrow_item",
+            "color_blue"
+          ]
+        },
+        "{{ModID}}_WindwakerArrow": {
+          "Name": "{{ModID}}_WindwakerArrow",
+          "DisplayName": "{{i18n: arsenal.windwaker-arrow.name}}",
+          "Description": "{{i18n: arsenal.windwaker-arrow.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "Textures/DN.SnS/SnSArsenal",
+          "SpriteIndex": 33,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "arrow_item",
+            "color_dark_blue"
+          ]
+        },
+        "{{ModID}}_RicochetArrow": {
+          "Name": "{{ModID}}_RicochetArrow",
+          "DisplayName": "{{i18n: arsenal.ricochet-arrow.name}}",
+          "Description": "{{i18n: arsenal.ricochet-arrow.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "Textures/DN.SnS/SnSArsenal",
+          "SpriteIndex": 35,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "arrow_item",
+            "color_gray"
+          ]
+        },
+        "{{ModID}}_LightbringerArrow": {
+          "Name": "{{ModID}}_LightbringerArrow",
+          "DisplayName": "{{i18n: arsenal.lightbringer-arrow.name}}",
+          "Description": "{{i18n: arsenal.lightbringer-arrow.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "Textures/DN.SnS/SnSArsenal",
+          "SpriteIndex": 36,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "arrow_item",
+            "color_yellow"
+          ]
+        },
+        "{{ModID}}_Bullet": {
+          "Name": "{{ModID}}_Bullet",
+          "DisplayName": "{{i18n: arsenal.bullet.name}}",
+          "Description": "{{i18n: arsenal.bullet.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 5,
+          "Texture": "Textures/DN.SnS/SnSArsenal",
+          "SpriteIndex": 39,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "bullet_item",
+            "color_gray"
+          ]
+        },
+        "{{ModID}}_FirestormBullet": {
+          "Name": "{{ModID}}_FirestormBullet",
+          "DisplayName": "{{i18n: arsenal.firestorm-bullet.name}}",
+          "Description": "{{i18n: arsenal.firestorm-bullet.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "Textures/DN.SnS/SnSArsenal",
+          "SpriteIndex": 40,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "bullet_item",
+            "color_orange"
+          ]
+        },
+        "{{ModID}}_IcicleBullet": {
+          "Name": "{{ModID}}_IcicleBullet",
+          "DisplayName": "{{i18n: arsenal.icicle-bullet.name}}",
+          "Description": "{{i18n: arsenal.icicle-bullet.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "Textures/DN.SnS/SnSArsenal",
+          "SpriteIndex": 41,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "bullet_item",
+            "color_blue"
+          ]
+        },
+        "{{ModID}}_WindwakerBullet": {
+          "Name": "{{ModID}}_WindwakerBullet",
+          "DisplayName": "{{i18n: arsenal.windwaker-bullet.name}}",
+          "Description": "{{i18n: arsenal.windwaker-bullet.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "Textures/DN.SnS/SnSArsenal",
+          "SpriteIndex": 43,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "bullet_item",
+            "color_dark_blue"
+          ]
+        },
+        "{{ModID}}_RicochetBullet": {
+          "Name": "{{ModID}}_RicochetBullet",
+          "DisplayName": "{{i18n: arsenal.ricochet-bullet.name}}",
+          "Description": "{{i18n: arsenal.ricochet-bullet.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "Textures/DN.SnS/SnSArsenal",
+          "SpriteIndex": 44,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "bullet_item",
+            "color_gray"
+          ]
+        },
+        "{{ModID}}_LightbringerBullet": {
+          "Name": "{{ModID}}_LightbringerBullet",
+          "DisplayName": "{{i18n: arsenal.lightbringer-bullet.name}}",
+          "Description": "{{i18n: arsenal.lightbringer-bullet.description}}",
+          "Type": "Basic",
+          "Category": -29,
+          "Price": 10,
+          "Texture": "Textures/DN.SnS/SnSArsenal",
+          "SpriteIndex": 46,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "bullet_item",
+            "color_yellow"
+          ]
+        }
+      }
+    }
+  ]
+}

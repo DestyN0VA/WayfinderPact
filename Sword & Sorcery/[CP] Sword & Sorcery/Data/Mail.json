@@ -20,7 +20,8 @@
 				"HectorKeychain": "{{i18n:Mail.HectorKeychain}}",
 				"BookKeychain": "{{i18n:Mail.BookKeychain}}",
 				"EmeritusKeychain": "{{i18n:Mail.EmeritusKeychain}}",
-			    "OwlBoyKeychain": "{{i18n:Mail.OwlBoyKeychain}}"
+			    "OwlBoyKeychain": "{{i18n:Mail.OwlBoyKeychain}}",
+				"DN.SnS_FaireFoodMail": "{{i18n:Mail.DN.SnS_FaireFoodMail}}%item cookingRecipe DN.SnS_ScotchEgg%% %item cookingRecipe DN.SnS_Steak_on_a_Stake%% %item cookingRecipe DN.SnS_Fruit_Hand_Pie%% %item cookingRecipe DN.SnS_Smoked_TurkeyLeg%% %item cookingRecipe DN.SnS_Hand_Pressed_Apple_Cider%%[letterbg 0][textcolor black][#]{{i18n:Mail.DN.SnS_FaireFoodMail.Title}}"
             }
         },
         // TRIGGER ACTIONS
@@ -100,10 +101,16 @@
 					"Trigger": "DayEnding",
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.End, !PLAYER_HAS_MAIL Current ReceivedTTOwlBoy Any, {{HasMod |Contains=mushymato.TrinketTinker}}",
 					"Actions": [ "AddMail Current OwlBoyKeychain tomorrow" ]
-				}
-			}
-		}        
-    ]
+				},
+				"DN.SnS_VMRecipeLetter": {
+					"Id": "DN.SnS_VMRecipeLetter",
+					"Trigger": "DayEnding",
+					"Location": "Farm",
+					"Condition": "PLAYER_STAT Current daysPlayed 3", 
+					"Actions": [ "AddMail Current DN.SnS_FaireFoodMail tomorrow" ]
+		}
+	}
 }
-
+]
+}
 //PLAYER_HAS_SEEN_EVENT Current SnS.Ch5.End, !PLAYER_HAS_MAIL Current ReceivedTTOwlBoy Any, !PLAYER_HAS_ITEM Current (TR)DN.SnS_OwlBoyKeychain 1

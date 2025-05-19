@@ -38,13 +38,13 @@
               {
                 "Mode": "Forage",
                 "Range": 500
-              },
+              }
             ],
            "AnimClips": {
               "Perching": {
                 "FrameStart": 5,
                 "FrameLength": 31
-              },
+              }
             },
             "Args": {
               "Magnitude": 16,
@@ -80,10 +80,10 @@
                 "AbilityClass": "Buff",
                 "Proc": "Always",
                 "Args": { "BuffId": "{{ModId}}_BookKeychain" }
-              },
-            ],
+              }
+            ]
           ]
-        },
+        }
       }
     }
   ]

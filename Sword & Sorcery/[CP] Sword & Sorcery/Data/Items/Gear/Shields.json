@@ -1,0 +1,234 @@
+{
+  "Changes": [
+    {
+      "LogName": "Shield loads",
+      "Action": "EditData",
+      "Target": "Data/Weapons",
+      "Entries": { 
+        //SHIELDS
+        "{{ModID}}_PaladinShield": {
+          "Name": "{{ModID}}_PaladinShield",
+          "DisplayName": "{{i18n: weapon.paladin-shield.name}}",
+          "Description": "{{i18n: weapon.paladin-shield.description}}",
+          "MinDamage": 80,
+          "MaxDamage": 100,
+          "Knockback": 1,
+          "Speed": 2,
+          "Precision": 90,
+          "Defense": 2,
+          "CritChance": 0.02,
+          "CritMultiplier": 3.0,
+          "Type": 3,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 16,
+          "CanBeLostOnDeath": false,
+          "Price": "5000",
+          "CustomFields": {
+            "{{ModID}}_Shield": true,
+            "ArmorValue": 35
+          }
+        },
+        "{{ModID}}_ArtificerShield": {
+          "Name": "{{ModID}}_ArtificerShield",
+          "DisplayName": "{{i18n: weapon.artificer-shield.name}}",
+          "Description": "{{i18n: weapon.artificer-shield.description}}",
+          "MinDamage": 80,
+          "MaxDamage": 100,
+          "Knockback": 1,
+          "Speed": 2,
+          "Precision": 90,
+          "Defense": 2,
+          "CritChance": 0.02,
+          "CritMultiplier": 3.0,
+          "Type": 3,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 103,
+          "CanBeLostOnDeath": false,
+          "Price": "5000",
+          "CustomFields": {
+            "{{ModID}}_Shield": true,
+            "ArmorValue": 35
+          }
+        },
+        "{{ModID}}_DruidShield": {
+          "Name": "{{ModID}}_DruidShield",
+          "DisplayName": "{{i18n: weapon.druid-shield.name}}",
+          "Description": "{{i18n: weapon.druid-shield.description}}",
+          "MinDamage": 80,
+          "MaxDamage": 100,
+          "Knockback": 1,
+          "Speed": 2,
+          "Precision": 90,
+          "Defense": 2,
+          "CritChance": 0.02,
+          "CritMultiplier": 3.0,
+          "Type": 3,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 104,
+          "CanBeLostOnDeath": false,
+          "Price": "5000",
+          "CustomFields": {
+            "{{ModID}}_Shield": true,
+            "ArmorValue": 35
+          }
+        },
+        "{{ModID}}_BardShield": {
+          "Name": "{{ModID}}_BardShield",
+          "DisplayName": "{{i18n: weapon.bard-shield.name}}",
+          "Description": "{{i18n: weapon.bard-shield.description}}",
+          "MinDamage": 80,
+          "MaxDamage": 100,
+          "Knockback": 1,
+          "Speed": 2,
+          "Precision": 90,
+          "Defense": 2,
+          "CritChance": 0.02,
+          "CritMultiplier": 3.0,
+          "Type": 3,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 105,
+          "CanBeLostOnDeath": false,
+          "Price": "5000",
+          "CustomFields": {
+            "{{ModID}}_Shield": true,
+            "ArmorValue": 35
+          }
+        },
+        "{{ModID}}_SorcererShield": {
+          "Name": "{{ModID}}_SorcererShield",
+          "DisplayName": "{{i18n: weapon.sorcerer-shield.name}}",
+          "Description": "{{i18n: weapon.sorcerer-shield.description}}",
+          "MinDamage": 80,
+          "MaxDamage": 100,
+          "Knockback": 1,
+          "Speed": 2,
+          "Precision": 90,
+          "Defense": 2,
+          "CritChance": 0.02,
+          "CritMultiplier": 3.0,
+          "Type": 3,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 106,
+          "CanBeLostOnDeath": false,
+          "Price": "5000",
+          "CustomFields": {
+            "{{ModID}}_Shield": true,
+            "ArmorValue": 35
+          }
+        },
+        "{{ModID}}_WoodenShield": {
+          "Name": "{{ModID}}_WoodenShield",
+          "DisplayName": "{{i18n: weapon.wooden-shield.name}}",
+          "Description": "{{i18n: weapon.wooden-shield.description}}",
+          "MinDamage": 2,
+          "MaxDamage": 3,
+          "Type": 3,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 128,
+          "CanBeLostOnDeath": true,
+          "Price": "500",
+          "CustomFields": {
+            "{{ModID}}_Shield": true,
+            "ArmorValue": 2
+          }
+        },
+        "{{ModID}}_CopperShield": {
+          "Name": "{{ModID}}_CopperShield",
+          "DisplayName": "{{i18n: weapon.copper-shield.name}}",
+          "Description": "{{i18n: weapon.copper-shield.description}}",
+          "MinDamage": 10,
+          "MaxDamage": 15,
+          "Type": 3,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 121,
+          "CanBeLostOnDeath": false,
+          "Price": "5000",
+          "CustomFields": {
+            "{{ModID}}_Shield": true,
+            "ArmorValue": 5
+          }
+        },
+        "{{ModID}}_IronShield": {
+          "Name": "{{ModID}}_IronShield",
+          "DisplayName": "{{i18n: weapon.steel-shield.name}}",
+          "Description": "{{i18n: weapon.steel-shield.description}}",
+          "MinDamage": 20,
+          "MaxDamage": 25,
+          "Type": 3,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 107,
+          "CanBeLostOnDeath": false,
+          "Price": "5000",
+          "CustomFields": {
+            "{{ModID}}_Shield": true,
+            "ArmorValue": 10
+          }
+        },
+        "{{ModID}}_GoldShield": {
+          "Name": "{{ModID}}_GoldShield",
+          "DisplayName": "{{i18n: weapon.gold-shield.name}}",
+          "Description": "{{i18n: weapon.gold-shield.description}}",
+          "MinDamage": 25,
+          "MaxDamage": 30,
+          "Type": 3,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 122,
+          "CanBeLostOnDeath": false,
+          "Price": "5000",
+          "CustomFields": {
+            "{{ModID}}_Shield": true,
+            "ArmorValue": 15
+          }
+        },
+        "{{ModID}}_IridiumShield": {
+          "Name": "{{ModID}}_IridiumShield",
+          "DisplayName": "{{i18n: weapon.iridium-shield.name}}",
+          "Description": "{{i18n: weapon.iridium-shield.description}}",
+          "MinDamage": 35,
+          "MaxDamage": 40,
+          "Type": 3,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 123,
+          "CanBeLostOnDeath": false,
+          "Price": "5000",
+          "CustomFields": {
+            "{{ModID}}_Shield": true,
+            "ArmorValue": 20
+          }
+        },
+        "{{ModID}}_RadioactiveShield": {
+          "Name": "{{ModID}}_RadioactiveShield",
+          "DisplayName": "{{i18n: weapon.radioactive-shield.name}}",
+          "Description": "{{i18n: weapon.radioactive-shield.description}}",
+          "MinDamage": 45,
+          "MaxDamage": 50,
+          "Type": 3,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 124,
+          "CanBeLostOnDeath": false,
+          "Price": "5000",
+          "CustomFields": {
+            "{{ModID}}_Shield": true,
+            "ArmorValue": 25
+          }
+        },
+        "{{ModID}}_StygiumShield": {
+          "Name": "{{ModID}}_StygiumShield",
+          "DisplayName": "{{i18n: weapon.stygium-shield.name}}",
+          "Description": "{{i18n: weapon.stygium-shield.description}}",
+          "MinDamage": 55,
+          "MaxDamage": 60,
+          "Type": 3,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 125,
+          "CanBeLostOnDeath": false,
+          "Price": "5000",
+          "CustomFields": {
+            "{{ModID}}_Shield": true,
+            "ArmorValue": 30
+          }
+        }
+      }
+    }
+  ]
+}

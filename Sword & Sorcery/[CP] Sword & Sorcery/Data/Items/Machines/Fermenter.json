@@ -257,7 +257,7 @@
 					"AdditionalConsumedItems": [
 						{
 							"ItemID": "(O)829",
-							"RequiredCount": 1,
+							"RequiredCount": 1
 						}
 					],
 					"InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12777]",
@@ -470,14 +470,12 @@
 					  "AgingMultiplier": "4"
 					},
 					"OutputMethod": "StardewValley.Objects.Cask, Stardew Valley: OutputCask",
-					"ItemId": "(O)DN.SnS_ancientelderberrygingerbeer",
+					"ItemId": "(O)DN.SnS_ancientelderberrygingerbeer"
 				  }
 				],
 				"MinutesUntilReady": -1
-			  },
-			  
-	  
+			  }
 			}
-		  },
+		  }
 	]
 }

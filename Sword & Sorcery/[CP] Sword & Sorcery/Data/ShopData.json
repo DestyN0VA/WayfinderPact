@@ -1,5 +1,300 @@
 {
   "Changes": [
+
+    //Spouse Portraits
+    {
+      "LogName": "Add Spouse Portraits to Traveling Cart",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModID}}_ValPortrait": {
+          "Price": 30000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": false,
+          "UseObjectDataPrice": false,
+          "IgnoreShopPriceModifiers": false,
+          "PriceModifierMode": "Stack",
+          "AvailableStockModifiers": null,
+          "AvailableStockModifierMode": "Stack",
+          "Condition": "PLAYER_HEARTS Current Val 14",
+          "Id": "(F){{ModID}}_ValPortrait",
+          "ItemId": "(F){{ModID}}_ValPortrait",
+          "IsRecipe": false,
+          "StackModifierMode": "Stack",
+          "QualityModifierMode": "Stack"
+        },
+        "{{ModID}}_HectorPortrait": {
+          "Price": 30000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": false,
+          "UseObjectDataPrice": false,
+          "IgnoreShopPriceModifiers": false,
+          "PriceModifierMode": "Stack",
+          "AvailableStockModifiers": null,
+          "AvailableStockModifierMode": "Stack",
+          "Condition": "PLAYER_HEARTS Current Hector 14",
+          "Id": "(F){{ModID}}_HectorPortrait",
+          "ItemId": "(F){{ModID}}_HectorPortrait",
+          "IsRecipe": false,
+          "StackModifierMode": "Stack",
+          "QualityModifierMode": "Stack"
+        },
+        "{{ModID}}_CirrusPortrait": {
+          "Price": 30000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": false,
+          "UseObjectDataPrice": false,
+          "IgnoreShopPriceModifiers": false,
+          "PriceModifierMode": "Stack",
+          "AvailableStockModifiers": null,
+          "AvailableStockModifierMode": "Stack",
+          "Condition": "PLAYER_HEARTS Current Cirrus 14",
+          "Id": "(F){{ModID}}_CirrusPortrait",
+          "ItemId": "(F){{ModID}}_CirrusPortrait",
+          "IsRecipe": false,
+          "StackModifierMode": "Stack",
+          "QualityModifierMode": "Stack"
+        }
+      }
+    },
+    //Books
+    //ARTIFICER
+    {
+      "LogName": "Artificer skill book shop entry (1)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook1",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_artificerbook"
+      },
+      "When": { "HasSeenEvent": "SnS.Ch1.Val.18" }
+    },
+    {
+      "LogName": "Artificer skill book shop entry (2)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook2",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_artificerbook"
+      },
+      "When": { "HasSeenEvent": "SnS.Ch1.Val.18" }
+    },
+    {
+      "LogName": "Artificer skill book shop entry (3)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook3",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_artificerbook"
+      },
+      "When": { "HasSeenEvent": "SnS.Ch1.Val.18" }
+    },
+    // DRUID
+    {
+      "LogName": "Druid skill book shop entry (1)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook1",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_druidbook"
+      },
+      "When": { "HasSeenEvent": "SnS.Ch2.Hector.16" }
+    },
+    {
+      "LogName": "Druid skill book shop entry (2)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook2",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_druidbook"
+      },
+      "When": { "HasSeenEvent": "SnS.Ch2.Hector.16" }
+    },
+    {
+      "LogName": "Druid skill book shop entry (3)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook3",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_druidbook"
+      },
+      "When": { "HasSeenEvent": "SnS.Ch2.Hector.16" }
+    },
+    // BARD
+    {
+      "LogName": "Bard skill book shop entry (1)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook1",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_bardbook"
+      },
+      "When": { "HasSeenEvent": "SnS.Ch3.Cirrus.14" }
+    },
+    {
+      "LogName": "Bard skill book shop entry (2)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook2",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_bardbook"
+      },
+      "When": { "HasSeenEvent": "SnS.Ch3.Cirrus.14" }
+    },
+    {
+      "LogName": "Bard skill book shop entry (3)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook3",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_bardbook"
+      },
+      "When": { "HasSeenEvent": "SnS.Ch3.Cirrus.14" }
+    },
+    // SORCERER
+    {
+      "LogName": "Sorcerer skill book shop entry (1)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook1",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_sorcerybook"
+      },
+      "When": { "HasSeenEvent": "SnS.Ch4.Dandelion.6" }
+    },
+    {
+      "LogName": "Sorcerer skill book shop entry (2)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook2",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_sorcerybook"
+      },
+      "When": { "HasSeenEvent": "SnS.Ch4.Dandelion.6" }
+    },
+    {
+      "LogName": "Sorcerer skill book shop entry (3)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook3",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_sorcerybook"
+      },
+      "When": { "HasSeenEvent": "SnS.Ch4.Dandelion.6" }
+    },
+    // PALADIN
+    {
+      "LogName": "Paladin skill book shop entry (1)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook1",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_paladinbook"
+      },
+      "When": { "KCC.SnS/PaladinUnlocked": true }
+    },
+    {
+      "LogName": "Paladin skill book shop entry (2)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook2",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_paladinbook"
+      },
+      "When": { "KCC.SnS/PaladinUnlocked": true }
+    },
+    {
+      "LogName": "Paladin skill book shop entry (3)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Bookseller",
+        "Items",
+        "RandomSkillBook3",
+        "RandomItemId"
+      ],
+      "Entries": {
+        "ID": "(O){{ModID}}_paladinbook"
+      },
+      "When": { "KCC.SnS/PaladinUnlocked": true }
+    },
     // COASTAL ADVENTURER'S GUILD LEDGER 
     {
       "Action": "EditData",
@@ -664,7 +959,7 @@
             },
             {
               "Id": "Far Afield Snack Recipe",
-              "ItemId": "{{ModID}}_farafieldsnack", 
+              "ItemId": "{{ModID}}_farafieldsnack",
               "Price": 1000,
               "IsRecipe": true,
               "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Dandelion.7"
@@ -898,7 +1193,7 @@
             },
             {
               "Id": "Stygium Mushroom Tree Seed",
-              "ItemId": "{{ModID}}_mushroomtreeseed", 
+              "ItemId": "{{ModID}}_mushroomtreeseed",
               "Price": 1000,
               "IsRecipe": true,
               "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Dandelion.7"
@@ -907,13 +1202,13 @@
               "Id": "Stygium Blade",
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
-              "ItemId": "(W){{ModID}}_StygiumBlade", 
+              "ItemId": "(W){{ModID}}_StygiumBlade",
               "Price": 10000,
               "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Dandelion.7"
             },
             {
               "Id": "Elysium Blade",
-              "ItemId": "{{ModID}}_ElysiumBlade", 
+              "ItemId": "{{ModID}}_ElysiumBlade",
               "Price": 15000,
               "IsRecipe": true,
               "Condition": "PLAYER_HAS_SEEN_EVENT Any SnS.Ch4.Dandelion.7, !PLAYER_HAS_CRAFTING_RECIPE Current {{ModID}}_ElysiumBlade"
@@ -926,7 +1221,10 @@
       "LogName": "Gunnar's Adventurer Pack",
       "Action": "EditData",
       "Target": "Data/Shops",
-      "TargetField": [ "{{ModID}}_LMArmory", "Items" ],
+      "TargetField": [
+        "{{ModID}}_LMArmory",
+        "Items"
+      ],
       "When": {
         "HasMod": "MadDog.HashtagBearFam",
         "HasFlag": "MadDog.HashtagBearFam.GunnarsShop"

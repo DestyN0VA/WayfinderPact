@@ -1,8 +1,27 @@
-{ 
+{
   "Changes": [
-    //Always loaded so the GB can access the tool tips
     {
-      "LogName": "Book: Trinkets",
+      "LogName": "Non-TR Keychains",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_destykeychain": {
+          "Name": "{{ModID}}_destykeychain",
+          "DisplayName": "{{i18n: magicitem.destykeychain.name}}",
+          "Description": "{{i18n: magicitem.destykeychain.description}}",
+          "Type": "Basic",
+          "Price": 0,
+          "Edibility": -300,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "ContextTags": [ "keychain_item" ],
+          "SpriteIndex": 101
+        }
+      }
+    },
+    {
+      "LogName": "TR Keychains",
       "Action": "EditData",
       "Target": "Data/Trinkets",
       "Entries": {
@@ -15,14 +34,7 @@
           "DropsNaturally": false,
           "CanBeReforged": false,
           "CustomFields": { "Keychain_item": "true" }
-        }
-      }
-    },
-    {
-      "LogName": "Emeritus: Trinkets",
-      "Action": "EditData",
-      "Target": "Data/Trinkets",
-      "Entries": {
+        },
         "{{ModId}}_EmeritusKeychain": {
           "Id": "{{ModId}}_EmeritusKeychain",
           "DisplayName": "{{i18n: magicitem.EmeritusKeychain.name}}",
@@ -32,14 +44,7 @@
           "DropsNaturally": false,
           "CanBeReforged": false,
           "CustomFields": { "Keychain_item": "true" }
-        }
-      }
-    },
-    {
-      "LogName": "Hector: Trinkets",
-      "Action": "EditData",
-      "Target": "Data/Trinkets",
-      "Entries": {
+        },
         "{{ModId}}_HectorWolfKeychain": {
           "Id": "{{ModId}}_HectorWolfKeychain",
           "DisplayName": "{{i18n: magicitem.HectorWolfKeychain.name |TrueName={{TrueName}}}}",
@@ -49,14 +54,7 @@
           "DropsNaturally": false,
           "CanBeReforged": false,
           "CustomFields": { "Keychain_item": "true" }
-        }
-      }
-    },
-    {
-      "LogName": "Owl: Trinkets",
-      "Action": "EditData",
-      "Target": "Data/Trinkets",
-      "Entries": {
+        },
         "{{ModId}}_OwlBoyKeychain": {
           "Id": "{{ModId}}_OwlBoyKeychain",
           "DisplayName": "{{i18n: magicitem.destykeychain.name}}",
@@ -66,6 +64,31 @@
           "DropsNaturally": false,
           "CanBeReforged": false,
           "CustomFields": { "Keychain_item": "true" }
+        }
+      }
+    },
+
+    //Non-TR Keychain Buffs
+    {
+      "LogName": "Keychain Buff",
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/WearableData",
+      "Entries": {
+        "(O){{ModID}}_destykeychain": {
+          "BuffIdToApply": "{{ModID}}_DestysBuff"
+        }
+      }
+    },
+    {
+      "LogName": "Desty's Buff",
+      "Action": "EditData",
+      "Target": "Data/Buffs",
+      "Entries": {
+        "{{ModID}}_DestysBuff": {
+          "DisplayName": "{{i18n:buff.destybuff}}",
+          "IconTexture": "Textures/DN.SnS/SnSObjects",
+          "IconSpriteIndex": 102,
+          "Effects": { "Attack": 20 }
         }
       }
     }

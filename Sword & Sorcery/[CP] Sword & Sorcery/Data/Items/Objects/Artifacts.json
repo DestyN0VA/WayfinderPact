@@ -1,0 +1,22 @@
+{
+  "Changes": [
+    {
+      "LogName": "Artifact Loads",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_DuskspireHeart": {
+          "Name": "Duskspire Heart",
+          "DisplayName": "{{i18n: object.duskspire-heart.name}}",
+          "Description": "{{i18n: object.duskspire-heart.description}}",
+          "Type": "Basic",
+          "Category": -28,
+          "Price": 2500,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 120,
+          "ExcludeFromRandomSale": true
+        }
+      }
+    }
+  ]
+}

@@ -37,36 +37,25 @@
       "Action": "Include",
       "FromFile": "Data/Dispositions/Val/full_NPCData.json, Data/Dispositions/Hector/full_NPCData.json, Data/Dispositions/Cirrus/full_NPCData.json, Data/Dispositions/Roslin/full_NPCData.json, Data/Dispositions/Dandelion/full_NPCData.json"
     },
-    /*{
-      "LogName": "Sword & Sorcery - Disposition Includes (Vanilla)",
+        {
+      "LogName": "Sword & Sorcery - Item Data Includes",
       "Action": "Include",
-      "FromFile": "Data/Dispositions/Val/vanilla_NPCData.json, Data/Dispositions/Hector/vanilla_NPCData.json, Data/Dispositions/Cirrus/vanilla_NPCData.json, Data/Dispositions/Roslin/vanilla_NPCData.json, Data/Dispositions/Dandelion/vanilla_NPCData.json",
-      "When": {
-        "SeasonalOutfits": "vanilla"
-      }
+      "FromFile": "Data/Items/Functionality/Category_Overrides.json, Data/Items/Functionality/Compat.json, Data/Items/Functionality/Crop_Growth.json, Data/Items/Functionality/Gift_Tastes.json, Data/Items/Functionality/Icons.json, Data/Items/Functionality/Ore_Smelting.json, Data/Items/Functionality/Recipes.json, Data/Items/Functionality/Stygium_Poisoning.json, Data/Items/Gear/Armor.json, Data/Items/Gear/Clothing.json, Data/Items/Gear/Potions.json, Data/Items/Gear/Projectiles.json, Data/Items/Gear/Shields.json, Data/Items/Gear/Tools.json, Data/Items/Gear/Weapons.json, Data/Items/Keychains/Keychains.json, Data/Items/Keychains/Trinket_Emeritus.json, Data/Items/Keychains/Trinket_HectorWolf.json, Data/Items/Keychains/Trinket_Odelia.json, Data/Items/Keychains/Trinket_OwlBoy.json, Data/Items/Machines/Fermenter.json, Data/Items/Machines/Teleport_Circle.json, Data/Items/Objects/Artifacts.json, Data/Items/Objects/Books.json, Data/Items/Objects/Curios.json, Data/Items/Gear/Equips.json, Data/Items/Objects/Fish.json, Data/Items/Objects/Food.json, Data/Items/Objects/Furniture.json, Data/Items/Objects/Harvestables.json,  Data/Items/Objects/Spawnables.json" 
     },
-    {
-      "LogName": "Sword & Sorcery - Disposition Includes (Lite)",
-      "Action": "Include",
-      "FromFile": "Data/Dispositions/Val/lite_NPCData.json, Data/Dispositions/Hector/lite_NPCData.json, Data/Dispositions/Cirrus/lite_NPCData.json, Data/Dispositions/Roslin/lite_NPCData.json, Data/Dispositions/Dandelion/lite_NPCData.json",
-      "When": {
-        "SeasonalOutfits": "lite"
-      }
-    },*/
     {
       "LogName": "Sword & Sorcery - Quest Includes",
       "Action": "Include",
-      "FromFile": "Data/Quests/BuildQuest.json, Data/Quests/BuildQuest2.json, Data/Quests/CGSpecialOrders.json, Data/Quests/RiverQuest.json" //Data/Quests & Items/PentacleQuest.json
+      "FromFile": "Data/Quests/BuildQuest.json, Data/Quests/BuildQuest2.json, Data/Quests/CGSpecialOrders.json, Data/Quests/RiverQuest.json" 
     },
     {
       "LogName": "Sword & Sorcery - Data Includes", //Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json
       "Action": "Include",
-      "FromFile": "Data/FinalePartners.json, Data/AlchemyRecipes.json, Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Shirts.json, Data/Items/DruidicCrops.json, Data/Items/MagicItems.json, Data/Items/Arsenal.json, Data/Items/Witchcraft.json, Data/Items/CustomFood.json, Data/Items/CustomForage.json, Data/Items/LegendaryWeapons.json, Data/Items/CustomPowers.json, Data/Items/Books.json, Data/Items/GingerFermenter.json, Data/Items/Fish.json, Data/Items/Furniture.json, Data/Festival Data/FestivalData_Dialogue.json, Data/WitchcraftResearch.json, Data/Dungeon.json, Data/PlayersHandbook.json, Data/Items/VioletMoon_FoodOnly.json, Data/Trinket Tinker/TrinketLoads.json"
+      "FromFile": "Data/FinalePartners.json, Data/AlchemyRecipes.json, Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Festival Data/FestivalData_Dialogue.json, Data/WitchcraftResearch.json, Data/Dungeon.json, Data/PlayersHandbook.json"
     }, // Data/MEEP/Wyatt.json - add back for 3.0
     {
       "LogName": "3.0 Includes",
       "Action": "Include",
-      "FromFile": "Data/Events/EventsData_Val.json, Data/Events/EventsData_Coriander.json",
+      "FromFile": "Data/Events/EventsData_Val.json, Data/Events/EventsData_Coriander.json"
     },
     {
       "LogName": "Sword & Sorcery - Shield Quest Include",
@@ -99,12 +88,6 @@
       "When": {
         "Query: {{RSVMaterials}} AND {{HasMod |contains=Rafseazz.RSVCP}}": true
       }
-    },
-    {
-      "LogName": "Trinket Tinker Compat",
-      "Action": "Include",
-      "FromFile": "Data/Trinket Tinker/OwlBoy.json, Data/Trinket Tinker/Emeritus.json, Data/Trinket Tinker/HectorWolf.json, Data/Trinket Tinker/Book.json",
-      "When": { "HasMod": "mushymato.TrinketTinker" }
     },
     // TRIGGER ACTIONS
     {
@@ -144,17 +127,6 @@
             "MarkActionApplied Current SnS.TriggerActions.ValTrollHeritage.True false"
           ]
         },
-        /*"{{ModId}}_MigrateIds": {
-          "Id": "{{ModId}}_MigrateIds",
-          "Trigger": "DayStarted",
-          "Actions": [
-            "Pathoschild.ContentPatcher_MigrateIds Items (O)swordandsorcery.ancientamaranth (O){{ModId}}_ancientamaranth (O)swordandsorcery.ancientamaranth.seed (O){{ModId}}_ancientamaranth.seed (O)swordandsorcery.ancientepiphyticfern (O){{ModId}}_ancientepiphyticfern (O)swordandsorcery.ancientepiphyticfern.seed (O){{ModId}}_ancientepiphyticfern.seed (O)swordandsorcery.glowingpolyporemushrooms (O){{ModId}}_glowingpolyporemushrooms (O)swordandsorcery.glowingpolyporemushrooms.seed (O){{ModId}}_glowingpolyporemushrooms.seed (O)swordandsorcery.ancientwildfairyrose (O){{ModId}}_ancientwildfairyrose (O)swordandsorcery.ancientwildfairyrose.seed (O){{ModId}}_ancientwildfairyrose.seed (O)swordandsorcery.ancientelderberry (O){{ModId}}_ancientelderberry (O)swordandsorcery.ancientelderberry.seed (O){{ModId}}_ancientelderberry.seed (O)swordandsorcery.ancientbottlegourd (O){{ModId}}_ancientbottlegourd (O)swordandsorcery.ancientbottlegourd.seed (O){{ModId}}_ancientbottlegourd.seed (O)swordandsorcery.ancientgiantappleberry (O){{ModId}}_ancientgiantappleberry (O)swordandsorcery.ancientgiantappleberry.seed (O){{ModId}}_ancientgiantappleberry.seed (O)swordandsorcery.ancientazuredetura (O){{ModId}}_ancientazuredetura (O)swordandsorcery.ancientazuredetura.seed (O){{ModId}}_ancientazuredetura.seed (O)swordandsorcery.ancientglowinghuckleberry (O){{ModId}}_ancientglowinghuckleberry (O)swordandsorcery.ancientglowinghuckleberry.seed (O){{ModId}}_ancientglowinghuckleberry.seed (O)swordandsorcery.druidicessence (O){{ModId}}_druidicessence (O)swordandsorcery.adventureguildbadge (O){{ModId}}_adventureguildbadge (O)swordandsorcery.brokenshield (O)swordandsorcery.repairedshield (O){{ModId}}_repairedshield (O)swordandsorcery.argentisshield (O){{ModId}}_argentisshield (O)swordandsorcery.druidictotemfetish (O){{ModId}}_druidictotemfetish (O)swordandsorcery.stygiumstatuette (O){{ModId}}_stygiumstatuette (O)swordandsorcery.druidiceldermask (O){{ModId}}_druidiceldermask (O)swordandsorcery.salishburbon (O){{ModId}}_salishbourbon (O)swordandsorcery.autumnalstew (O){{ModId}}_autumnalstew (O)swordandsorcery.dandeliongreens (O){{ModId}}_dandeliongreens (O)swordandsorcery.portfiredrakesparkler (O){{ModId}}_portfiredrakesparkler (O)swordandsorcery.mushroomsredsauce (O){{ModId}}_mushroomsredsauce (O)swordandsorcery.ferngreensandpineapple (O){{ModId}}_ferngreensandpineapple (O)swordandsorcery.ancienthuckleberryicecream (O){{ModId}}_ancienthuckleberryicecream (O)swordandsorcery.lavaeelandstirfriedancientbottlegourd (O){{ModId}}_lavaeelandstirfriedancientbottlegourd (O)swordandsorcery.zuzustylepizza (O){{ModId}}_zuzustylepizza (O)swordandsorcery.zuzustylebagelwithlox (O){{ModId}}_zuzustylebagelwithlox (O)swordandsorcery.zuzustylecheesecake (O){{ModId}}_zuzustylecheesecake (O)swordandsorcery.zuzustyleclamchowder (O){{ModId}}_zuzustyleclamchowder (O)swordandsorcery.fountainsoda (O){{ModId}}_fountainsoda (O)swordandsorcery.freshpopcorn (O){{ModId}}_freshpopcorn",
-            "Pathoschild.ContentPatcher_MigrateIds Items (W)swordandsorcery.keytoscarp (W){{ModId}}_keytoscarp (W)swordandsorcery.twobecomeone (W){{ModId}}_twobecomeone (W)swordandsorcery.savethequeen (W){{ModId}}_savethequeen (W)swordandsorcery.oathkeeper (W){{ModId}}_oathkeeper (W)swordandsorcery.savetheking (W){{ModId}}_savetheking (W)swordandsorcery.waytothedawn (W){{ModId}}_waytothedawn (W)swordandsorcery.eldadagordagger (W){{ModId}}_eldadagordagger (W)swordandsorcery.glaewndilsword (W){{ModId}}_glaewndilsword (W)swordandsorcery.thondrondhammer (W){{ModId}}_thondrondhammer (W)swordandsorcery.longlivetheking (W){{ModId}}_longlivetheking",
-            "Pathoschild.ContentPatcher_MigrateIds CraftingRecipes swordandsorcery.ExquisiteEmerald {{ModId}}_ExquisiteEmerald swordandsorcery.ExquisiteRuby {{ModId}}_ExquisiteRuby swordandsorcery.ExquisiteTopaz {{ModId}}_ExquisiteTopaz swordandsorcery.ExquisiteAquamarine {{ModId}}_ExquisiteAquamarine swordandsorcery.ExquisiteAmethyst {{ModId}}_ExquisiteAmethyst swordandsorcery.ExquisiteJade {{ModId}}_ExquisiteJade swordandsorcery.ExquisiteDiamond {{ModId}}_ExquisiteDiamond swordandsorcery.ArcanePrimer {{ModId}}_ArcanePrimer",
-            "Pathoschild.ContentPatcher_MigrateIds CookingRecipes swordandsorcery.salishburbon {{ModId}}_salishbourbon swordandsorcery.autumnalstew {{ModId}}_autumnalstew swordandsorcery.dandeliongreens {{ModId}}_dandeliongreens swordandsorcery.portfiredrakesparkler {{ModId}}_portfiredrakesparkler swordandsorcery.mushroomsredsauce {{ModId}}_mushroomsredsauce swordandsorcery.ferngreensandpineapple {{ModId}}_ferngreensandpineapple swordandsorcery.ancienthuckleberryicecream {{ModId}}_ancienthuckleberryicecream swordandsorcery.lavaeelandstirfriedancientbottlegourd {{ModId}}_lavaeelandstirfriedancientbottlegourd swordandsorcery.zuzustylepizza {{ModId}}_zuzustylepizza swordandsorcery.zuzustylebagelwithlox {{ModId}}_zuzustylebagelwithlox swordandsorcery.zuzustylecheesecake {{ModId}}_zuzustylecheesecake swordandsorcery.zuzustyleclamchowder {{ModId}}_zuzustyleclamchowder"
-          ],
-          "HostOnly": true
-        },*/
         "SnS.TriggerActions.RemoveValRomanticFlagIfNotDating": {
           "Id": "SnS.TriggerActions.RemoveValRomanticFlagIfNotDating",
           "Trigger": "DayStarted",

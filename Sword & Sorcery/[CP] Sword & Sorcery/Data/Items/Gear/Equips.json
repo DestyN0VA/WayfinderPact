@@ -1,0 +1,62 @@
+{
+  "Changes": [
+    {
+      "LogName": "Equipables",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_adventureguildbadge": {
+          "Name": "{{ModID}}_adventureguildbadge",
+          "DisplayName": "{{i18n: magicitem.adventureguildbadge.name}}",
+          "Description": "{{i18n: magicitem.adventureguildbadge.description}}",
+          "Type": "Ring",
+          "Category": -96,
+          "Price": 0,
+          "Edibility": -300,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 6
+        },
+        "{{ModID}}_pressedcrocus": {
+          "Name": "{{ModID}}_pressedcrocus",
+          "DisplayName": "{{i18n: magicitem.pressedcrocus.name}}",
+          "Description": "{{i18n: magicitem.pressedcrocus.description}}",
+          "Type": "Ring",
+          "Category": -96,
+          "Price": 0,
+          "Edibility": -300,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": 133
+        },
+      },
+    },
+    {
+      "LogName": "Keychain Buff",
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/WearableData",
+      "Entries": {
+        "(O){{ModID}}_destykeychain": {
+          "BuffIdToApply": "{{ModID}}_DestysBuff"
+        }
+      }
+    },
+    {
+      "LogName": "Desty's Buff",
+      "Action": "EditData",
+      "Target": "Data/Buffs",
+      "Entries": {
+        "{{ModID}}_DestysBuff": {
+          "DisplayName": "{{i18n:buff.destybuff}}",
+          "IconTexture": "Textures/DN.SnS/SnSObjects",
+          "IconSpriteIndex": 102,
+          "Effects": {
+            "Attack": 20
+          }
+        }
+      }
+    }
+  ]
+}
