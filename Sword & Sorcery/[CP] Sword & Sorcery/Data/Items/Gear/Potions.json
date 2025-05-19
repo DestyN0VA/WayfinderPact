@@ -14,8 +14,8 @@
           "Price": 250,
           "Edibility": 0,
           "IsDrink": true,
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 91,
+          "Texture": "SnS_Gear/Potions",
+          "SpriteIndex": 0,
           "ExcludeFromShippingCollection": true,
           "ContextTags": [
             "sns_potion_item",
@@ -49,8 +49,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 55,
+          "Texture": "SnS_Gear/Potions",
+          "SpriteIndex": 1,
           "ContextTags": [
             "color_lime",
             "sns_potion_item"
@@ -84,8 +84,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 56,
+          "Texture": "SnS_Gear/Potions",
+          "SpriteIndex": 2,
           "ContextTags": [
             "color_red",
             "sns_potion_item"
@@ -119,8 +119,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 57,
+          "Texture": "SnS_Gear/Potions",
+          "SpriteIndex": 3,
           "ContextTags": [
             "color_dark_pink",
             "sns_potion_item"
@@ -154,8 +154,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 58,
+          "Texture": "SnS_Gear/Potions",
+          "SpriteIndex": 4,
           "ContextTags": [
             "color_dark_cyan",
             "sns_potion_item"
@@ -189,8 +189,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 59,
+          "Texture": "SnS_Gear/Potions",
+          "SpriteIndex": 5,
           "ContextTags": [
             "color_yellow_green",
             "sns_potion_item"
@@ -224,8 +224,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 60,
+          "Texture": "SnS_Gear/Potions",
+          "SpriteIndex": 6,
           "ContextTags": [
             "color_pale_violet_red",
             "sns_potion_item"
@@ -259,8 +259,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 61,
+          "Texture": "SnS_Gear/Potions",
+          "SpriteIndex": 7,
           "ContextTags": [
             "color_salmon",
             "sns_potion_item"
@@ -294,8 +294,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 62,
+          "Texture": "SnS_Gear/Potions",
+          "SpriteIndex": 8,
           "ContextTags": [
             "color_dark_red",
             "sns_potion_item"
@@ -329,8 +329,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 63,
+          "Texture": "SnS_Gear/Potions",
+          "SpriteIndex": 9,
           "ContextTags": [
             "color_sea_green",
             "sns_potion_item"
@@ -364,8 +364,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 64,
+          "Texture": "SnS_Gear/Potions",
+          "SpriteIndex": 10,
           "ContextTags": [
             "color_purple",
             "sns_potion_item"
