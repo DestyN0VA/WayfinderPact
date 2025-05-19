@@ -15,8 +15,8 @@
           "Edibility": -300,
           "IsDrink": false,
           "ExcludeFromShippingCollection": true,
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 6
+          "Texture": "SnS_Misc/Icons",
+          "SpriteIndex": 0
         },
         "{{ModID}}_pressedcrocus": {
           "Name": "{{ModID}}_pressedcrocus",
@@ -28,8 +28,8 @@
           "Edibility": -300,
           "IsDrink": false,
           "ExcludeFromShippingCollection": true,
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 133
+          "Texture": "SnS_Misc/Icons",
+          "SpriteIndex": 8
         },
       },
     },
@@ -50,11 +50,9 @@
       "Entries": {
         "{{ModID}}_DestysBuff": {
           "DisplayName": "{{i18n:buff.destybuff}}",
-          "IconTexture": "Textures/DN.SnS/SnSObjects",
-          "IconSpriteIndex": 102,
-          "Effects": {
-            "Attack": 20
-          }
+          "IconTexture": "SnS_Gear/Keychains",
+          "IconSpriteIndex": 12,
+          "Effects": { "Attack": 20 }
         }
       }
     }

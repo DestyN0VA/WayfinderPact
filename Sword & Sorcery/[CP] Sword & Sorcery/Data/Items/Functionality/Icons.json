@@ -112,6 +112,11 @@
 			"When": { "HasFlag": "MagicalGrimoirePower" }
 		},
 	//Move this later
+	    {
+      "Action": "Load",
+      "Target": "SnS_Harvestables/GiantCrops, SnS_Harvestables/Crops, SnS_Harvestables/Harvestables, SnS_Harvestables/HuckleberryVine, SnS_Harvestables/MushroomTree, SnS_Harvestables/Seeds, SnS_Gear/Armor, SnS_Gear/DraconiumTools, SnS_Gear/Keychains, SnS_Gear/Potions, SnS_Gear/Projectiles, SnS_Gear/Shields, SnS_Gear/Shirts, SnS_Gear/StygiumTools, SnS_Gear/Weapons, SnS_Misc/Icons, SnS_Misc/DDtreasure, SnS_Misc/VMShopBG, SnS_Misc/TeleportCircle",
+      "FromFile": "Assets/Items & Crops/Items/{{TargetPathOnly}}/{{TargetWithoutPath}}.png"
+    },
     {
       "Action": "Load",
       "Target": "Mods/DN.SnS/GiantCrops",
