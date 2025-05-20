@@ -14,9 +14,9 @@
           "Edibility": -300,
           "IsDrink": false,
           "ExcludeFromShippingCollection": true,
-          "Texture": "Textures/DN.SnS/SnSObjects",
+          "Texture": "SnS_Gear/Keychains",
           "ContextTags": [ "keychain_item" ],
-          "SpriteIndex": 101
+          "SpriteIndex": 12
         }
       }
     },
@@ -29,8 +29,8 @@
           "Id": "{{ModId}}_BookKeychain",
           "DisplayName": "{{i18n: magicitem.BookKeychain.name}}",
           "Description": "{{i18n: magicitem.BookKeychain.description}}",
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SheetIndex": 131,
+          "Texture": "SnS_Gear/Keychains",
+          "SheetIndex": 14,
           "DropsNaturally": false,
           "CanBeReforged": false,
           "CustomFields": { "Keychain_item": "true" }
@@ -39,8 +39,8 @@
           "Id": "{{ModId}}_EmeritusKeychain",
           "DisplayName": "{{i18n: magicitem.EmeritusKeychain.name}}",
           "Description": "{{i18n: magicitem.EmeritusKeychain.description}}",
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SheetIndex": 130,
+          "Texture": "SnS_Gear/Keychains",
+          "SheetIndex": 13,
           "DropsNaturally": false,
           "CanBeReforged": false,
           "CustomFields": { "Keychain_item": "true" }
@@ -49,8 +49,8 @@
           "Id": "{{ModId}}_HectorWolfKeychain",
           "DisplayName": "{{i18n: magicitem.HectorWolfKeychain.name |TrueName={{TrueName}}}}",
           "Description": "{{i18n: magicitem.HectorWolfKeychain.description |TrueName={{TrueName}}}}",
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SheetIndex": 132,
+          "Texture": "SnS_Gear/Keychains",
+          "SheetIndex": 15,
           "DropsNaturally": false,
           "CanBeReforged": false,
           "CustomFields": { "Keychain_item": "true" }
@@ -59,8 +59,8 @@
           "Id": "{{ModId}}_OwlBoyKeychain",
           "DisplayName": "{{i18n: magicitem.destykeychain.name}}",
           "Description": "{{i18n: magicitem.destykeychain.description.Trinket}}",
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SheetIndex": 101,
+          "Texture": "SnS_Gear/Keychains",
+          "SheetIndex": 12,
           "DropsNaturally": false,
           "CanBeReforged": false,
           "CustomFields": { "Keychain_item": "true" }
@@ -86,8 +86,8 @@
       "Entries": {
         "{{ModID}}_DestysBuff": {
           "DisplayName": "{{i18n:buff.destybuff}}",
-          "IconTexture": "Textures/DN.SnS/SnSObjects",
-          "IconSpriteIndex": 102,
+          "IconTexture": "SnS_Gear/Keychains",
+          "IconSpriteIndex": 12,
           "Effects": { "Attack": 20 }
         }
       }

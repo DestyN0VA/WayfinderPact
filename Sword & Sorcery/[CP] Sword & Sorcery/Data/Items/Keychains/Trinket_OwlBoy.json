@@ -16,8 +16,8 @@
               "ExcludeFromRandomSale": true,
               "ExcludeFromShippingCollection": true,
               "Buff": null,
-              "Texture": "Textures/DN.SnS/SnSObjects",
-              "SpriteIndex": 129
+              "Texture": "SnS_Misc/Icons",
+              "SpriteIndex": 11
           }
       }
   },
@@ -30,8 +30,8 @@
           "DisplayName": "{{i18n:buff.owlboybuff}}",
           "Duration": 20000,
           "MaxDuration": -1,
-          "IconTexture": "Textures/DN.SnS/SnSObjects",
-          "IconSpriteIndex": 129,
+          "IconTexture": "SnS_Misc/Icons",
+          "IconSpriteIndex": 11,
           "Effects": { "Attack": 20 }
         }
         }

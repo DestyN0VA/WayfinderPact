@@ -14,8 +14,8 @@
         "Edibility": -300,
         "IsDrink": false,
         "ExcludeFromShippingCollection": true,
-        "Texture": "Textures/DN.SnS/SnSBooks",
-        "SpriteIndex": "{{ArtificerBookSpriteIndex}}",
+        "Texture": "SnS_Objects/Books",
+        "SpriteIndex": "0",
         "ContextTags": [
           "book_item",
           "DestyNova.SwordAndSorcery.Rogue"
@@ -32,8 +32,8 @@
         "Edibility": -300,
         "IsDrink": false,
         "ExcludeFromShippingCollection": true,
-        "Texture": "Textures/DN.SnS/SnSBooks",
-        "SpriteIndex": "{{DruidBookSpriteIndex}}",
+        "Texture": "SnS_Objects/Books",
+        "SpriteIndex": "1",
         "ContextTags": [
           "book_item",
           "DestyNova.SwordAndSorcery.Druidics"
@@ -50,8 +50,8 @@
         "Edibility": -300,
         "IsDrink": false,
         "ExcludeFromShippingCollection": true,
-        "Texture": "Textures/DN.SnS/SnSBooks",
-        "SpriteIndex": "{{BardBookSpriteIndex}}",
+        "Texture": "SnS_Objects/Books",
+        "SpriteIndex": "2",
         "ContextTags": [
           "book_item",
           "DestyNova.SwordAndSorcery.Bardics"
@@ -68,8 +68,8 @@
         "Edibility": -300,
         "IsDrink": false,
         "ExcludeFromShippingCollection": true,
-        "Texture": "Textures/DN.SnS/SnSBooks",
-        "SpriteIndex": "{{SorcererBookSpriteIndex}}",
+        "Texture": "SnS_Objects/Books",
+        "SpriteIndex": "3",
         "ContextTags": [
           "book_item",
           "DestyNova.SwordAndSorcery.Witchcraft"
@@ -86,8 +86,8 @@
         "Edibility": -300,
         "IsDrink": false,
         "ExcludeFromShippingCollection": true,
-        "Texture": "Textures/DN.SnS/SnSBooks",
-        "SpriteIndex": "{{PaladinBookSpriteIndex}}",
+        "Texture": "SnS_Objects/Books",
+        "SpriteIndex": "4",
         "ContextTags": [
           "book_item",
           "DestyNova.SwordAndSorcery.Paladin"

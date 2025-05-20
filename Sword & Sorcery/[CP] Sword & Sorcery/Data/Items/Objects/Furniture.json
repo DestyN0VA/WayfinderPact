@@ -5,9 +5,9 @@
     "Action": "EditData",
     "Target": "Data/Furniture",
     "Entries": {
-      "{{ModID}}_ValPortrait": "{{ModID}}_ValPortrait/painting/2 2/2 2/1/999/-1/{{i18n:Furniture.SpousePortrait.Val}}/{{ValPortraitSpriteIndex}}/Mods\\DN.SnS\\SnSFurniture/true",
-      "{{ModID}}_HectorPortrait": "{{ModID}}_HectorPortrait/painting/2 2/2 2/1/999/-1/{{i18n:Furniture.SpousePortrait.Hector}}/{{HectorPortraitSpriteIndex}}/Mods\\DN.SnS\\SnSFurniture/true",
-      "{{ModID}}_CirrusPortrait": "{{ModID}}_CirrusPortrait/painting/2 2/2 2/1/999/-1/{{i18n:Furniture.SpousePortrait.Cirrus}}/4/Mods\\DN.SnS\\SnSFurniture/true",
+      "{{ModID}}_ValPortrait": "{{ModID}}_ValPortrait/painting/2 2/2 2/1/999/-1/{{i18n:Furniture.SpousePortrait.Val}}/{{ValPortraitSpriteIndex}}/SnS_Objects\\Furniture/true",
+      "{{ModID}}_HectorPortrait": "{{ModID}}_HectorPortrait/painting/2 2/2 2/1/999/-1/{{i18n:Furniture.SpousePortrait.Hector}}/{{HectorPortraitSpriteIndex}}/SnS_Objects\\Furniture/true",
+      "{{ModID}}_CirrusPortrait": "{{ModID}}_CirrusPortrait/painting/2 2/2 2/1/999/-1/{{i18n:Furniture.SpousePortrait.Cirrus}}/4/SnS_Objects\\Furniture/true"
     }
   }
 ]

@@ -43,8 +43,8 @@
           "DisplayName": "{{i18n: buff.emeritusbuff}}",
           "Duration": 20000,
           "MaxDuration": -1,
-          "IconTexture": "Textures/DN.SnS/SnSObjects",
-          "IconSpriteIndex": 130,
+          "IconTexture": "SnS_Gear/Keychains",
+          "IconSpriteIndex": 13,
           "Effects": {
             "MiningLevel": 3.0,
             "Defense": 3.0,

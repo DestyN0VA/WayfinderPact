@@ -10,7 +10,7 @@
 				"StygiumPendantPower": {
 					"DisplayName": "{{i18n: power.stygium-pendant.name}}",
 					"Description": "{{i18n: power.stygium-pendant.description}}",
-					"TexturePath": "Textures/DN.SnS/SnSObjects",
+					"TexturePath": "SnS_Objects/Curios",
 					"TexturePosition": { "X": 112, "Y": 0 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current StygiumPendantPower"
 				}
@@ -25,7 +25,7 @@
 				"BrokenCircletPower": {
 					"DisplayName": "{{i18n: power.broken-circlet.name}}",
 					"Description": "{{i18n: power.broken-circlet.description}}",
-					"TexturePath": "Textures/DN.SnS/SnSObjects",
+					"TexturePath": "SnS_Objects/Curios",
 					"TexturePosition": { "X": 128, "Y": 0 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current BrokenCircletPower"
 				}
@@ -40,7 +40,7 @@
 				"DrakeScalePower": {
 					"DisplayName": "{{i18n: power.drake-scale.name}}",
 					"Description": "{{i18n: power.drake-scale.description}}",
-					"TexturePath": "Textures/DN.SnS/SnSObjects",
+					"TexturePath": "SnS_Objects/Curios",
 					"TexturePosition": { "X": 32, "Y": 80 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current DrakeScalePower"
 				}
@@ -55,7 +55,7 @@
 				"ForgedD20Power": {
 					"DisplayName": "{{i18n: power.forgedd20.name}}",
 					"Description": "{{i18n: power.forgedd20.description}}",
-					"TexturePath": "Textures/DN.SnS/SnSObjects",
+					"TexturePath": "SnS_Objects/Curios",
 					"TexturePosition": { "X": 0, "Y": 80 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current ForgedD20Power"
 				}
@@ -70,7 +70,7 @@
 				"DandelionShieldPower": {
 					"DisplayName": "{{i18n: power.mythiciridiumshield.name}}",
 					"Description": "{{i18n: power.mythiciridiumshield.description}}",
-					"TexturePath": "Textures/DN.SnS/SnSObjects",
+					"TexturePath": "SnS_Objects/Curios",
 					"TexturePosition": { "X": 96, "Y": 16 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current DandelionShieldPower"
 				}
@@ -85,7 +85,7 @@
 				"DandelionShieldPower": {
 					"DisplayName": "{{i18n: power.mythicorichalcumshield.name}}",
 					"Description": "{{i18n: power.mythicorichalcumshield.description}}",
-					"TexturePath": "Textures/DN.SnS/SnSObjects",
+					"TexturePath": "SnS_Objects/Curios",
 					"TexturePosition": { "X": 96, "Y": 16 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current DandelionShieldPower"
 				}
@@ -104,7 +104,7 @@
 				"MagicalGrimoirePower": {
 					"DisplayName": "{{i18n: power.magicalgrimoire.name}}",
 					"Description": "{{i18n: power.magicalgrimoire.description}}",
-					"TexturePath": "Textures/DN.SnS/SnSObjects",
+					"TexturePath": "SnS_Objects/Curios",
 					"TexturePosition": { "X": 128, "Y": 144 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current MagicalGrimoirePower"
 				}
@@ -112,23 +112,15 @@
 			"When": { "HasFlag": "MagicalGrimoirePower" }
 		},
 	//Move this later
-    {
-      "Action": "Load",
-      "Target": "Mods/DN.SnS/GiantCrops",
-      "FromFile": "Assets/Items & Crops/SnSGiantCrops.png"
-    },
-	{
-		"LogName": "Load Furniture Image",
-		"Action": "Load",
-		"Priority": "Low",
-		"Target": "Mods/DN.SnS/SnSFurniture",
-		"FromFile": "Assets/Items & Crops/SnSFurniture.png"
-	},
-	{
-		"LogName": "Shirt Sprites",
-		"Action": "Load",
-		"Target": "Mods/DN.SnS/Shirts",
-		"FromFile": "Assets/Items & Crops/SnSShirts.png"
-	}
+		{
+			"Action": "Load",
+			"Target": "SnS_Harvestables/GiantCrops, SnS_Harvestables/Crops, SnS_Harvestables/Harvestables, SnS_Harvestables/HuckleberryVine, SnS_Harvestables/MushroomTree, SnS_Harvestables/Seeds, SnS_Gear/Armor, SnS_Gear/DraconiumTools, SnS_Gear/Keychains, SnS_Gear/Potions, SnS_Gear/Projectiles, SnS_Gear/Shields, SnS_Gear/Shirts, SnS_Gear/StygiumTools, SnS_Gear/Weapons, SnS_Misc/Icons, SnS_Misc/DDtreasure, SnS_Misc/VMShopBG, SnS_Objects/Machines, SnS_Objects/Curios, SnS_Objects/Books, SnS_Objects/Fish, SnS_Objects/Furniture, SnS_Objects/Artifacts, SnS_Objects/Food, SnS_Objects/Fish_Animations",
+			"FromFile": "Assets/Items/{{TargetPathOnly}}/{{TargetWithoutPath}}.png"
+		},
+		{
+			"Action": "Load", //These textures need to be moved out of the C#!
+			"Target": "Textures/DN.SnS/SnSObjects, Textures/DN.SnS/SnSArsenal",
+			"FromFile": "Assets/Items/Depreciated/{{TargetWithoutPath}}.png"
+		}
 ]
 }

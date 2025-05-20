@@ -13,7 +13,7 @@
 					"CanBePlacedOutdoors": true,
 					"CanBePlacedIndoors": true,
 					"IsLamp": false,
-					"Texture": "Textures/DN.SnS/SnSMachines",
+					"Texture": "SnS_Objects/Machines",
 					"SpriteIndex": 0,
 					"CustomFields": {}
 				}

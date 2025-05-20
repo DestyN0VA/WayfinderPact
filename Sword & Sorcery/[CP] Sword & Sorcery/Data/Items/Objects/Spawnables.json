@@ -14,7 +14,7 @@
                     "CanBePlacedOutdoors": true,
                     "CanBePlacedIndoors": true,
                     "IsLamp": false,
-                    "Texture": "Textures/DN.SnS/DeepDark_Treasure",
+                    "Texture": "SnS_Misc/DDTreasure",
                     "SpriteIndex": 0,
                     "ContextTags": null,
                     "CustomFields": null
