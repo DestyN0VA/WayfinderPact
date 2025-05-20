@@ -11,7 +11,7 @@
           "Type": "Crafting",
           "Category": -24,
           "Price": 0,
-          "Texture": "Textures/DN.SnS/TeleportCircle",
+          "Texture": "SnS_Objects/Machines",
           "SpriteIndex": 0,
           "Edibility": -300,
           "ExcludeFromShippingCollection": true,
@@ -26,15 +26,15 @@
         "{{ModId}}_TeleportCircleFloor": {
           "Id": "{{ModId}}_TeleportCircleFloor",
           "ItemId": "{{ModID}}_TeleportCircle",
-          "Texture": "Textures/DN.SnS/TeleportCircle",
+          "Texture": "SnS_Objects/Machines",
           "Corner": {
             "X": 0,
-            "Y": 0
+            "Y": 32
           },
-          "WinterTexture": "Textures/DN.SnS/TeleportCircle",
+          "WinterTexture": "SnS_Objects/Machines",
           "WinterCorner": {
             "X": 0,
-            "Y": 0
+            "Y": 32
           },
           "PlacementSound": "coldSpell",
           "RemovalSound": "coldSpell",

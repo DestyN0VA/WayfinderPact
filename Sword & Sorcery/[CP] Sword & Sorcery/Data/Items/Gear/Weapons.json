@@ -199,7 +199,7 @@
           "CritMultiplier": 3.0,
           "Type": 3,
           "Texture": "SnS_Gear/Weapons",
-          "SpriteIndex": 0,
+          "SpriteIndex": 1,
           "CanBeLostOnDeath": false
         },
         "{{ModID}}_longlivetheking_gun": {
@@ -207,7 +207,7 @@
           "DisplayName": "{{i18n: weapon.longlivetheking-gun.name}}",
           "Description": "{{i18n: weapon.longlivetheking-gun.description}}",
           "Texture": "SnS_Gear/Weapons",
-          "SpriteIndex": 1,
+          "SpriteIndex": 2,
           "Speed": 308, // All slingshots have this for some reason?,
           "CustomFields": {
             "Bow": true,

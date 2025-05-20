@@ -12,8 +12,8 @@
           "Type": "Basic",
           "Category": -28,
           "Price": 2500,
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 120,
+          "Texture": "SnS_Objects/Artifacts",
+          "SpriteIndex": 0,
           "ExcludeFromRandomSale": true
         }
       }

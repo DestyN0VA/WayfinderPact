@@ -32,8 +32,8 @@
           "DisplayName": "{{i18n: buff.hectorbuff}}",
           "Duration": 20000,
           "MaxDuration": -1,
-          "IconTexture": "Textures/DN.SnS/SnSObjects",
-          "IconSpriteIndex": 132,
+          "IconTexture": "SnS_Gear/Keychains",
+          "IconSpriteIndex": 15,
           "Effects": {
             "FarmingLevel": 3.0,
             "ForagingLevel": 3.0,

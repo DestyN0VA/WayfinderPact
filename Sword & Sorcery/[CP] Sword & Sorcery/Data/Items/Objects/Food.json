@@ -5,7 +5,7 @@
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "DN.SnS_ScotchEgg": {
+        "{{ModID}}_ScotchEgg": {
           "Name": "DN.SnS_ScotchEgg",
           "DisplayName": "{{i18n:DN.SnS.ScotchEgg}}",
           "Description": "{{i18n:DN.SnS.ScotchEgg.Description}}",
@@ -17,8 +17,8 @@
           "Edibility": 50,
           "IsDrink": false,
           "Buffs": null,
-          "Texture": "Textures/DN.SnS/VioletMoonFood",
-          "SpriteIndex": 1,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 24,
           "ContextTags": [
             "color_brown",
             "food_nonvegan",
@@ -28,7 +28,7 @@
             "allergen_meat"
           ]
         },
-        "DN.SnS_Steak_on_a_Stake": {
+        "{{ModID}}_Steak_on_a_Stake": {
           "Name": "DN.SnS_Steak_on_a_Stake",
           "DisplayName": "{{i18n:DN.SnS.Steak_on_a_Stake}}",
           "Description": "{{i18n:DN.SnS.Steak_on_a_Stake.Description}}",
@@ -40,8 +40,8 @@
           "Edibility": 50,
           "IsDrink": false,
           "Buffs": null,
-          "Texture": "Textures/DN.SnS/VioletMoonFood",
-          "SpriteIndex": 0,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 23,
           "ContextTags": [
             "color_brown",
             "food_nonvegan",
@@ -49,7 +49,7 @@
             "allergen_meat"
           ]
         },
-        "DN.SnS_Fruit_Hand_Pie": {
+        "{{ModID}}_Fruit_Hand_Pie": {
           "Name": "DN.SnS_Fruit_Hand_Pie",
           "DisplayName": "{{i18n:DN.SnS.Fruit_Hand_Pie}}",
           "Description": "{{i18n:DN.SnS.Fruit_Hand_Pie.Description}}",
@@ -61,8 +61,8 @@
           "Edibility": 50,
           "IsDrink": false,
           "Buffs": null,
-          "Texture": "Textures/DN.SnS/VioletMoonFood",
-          "SpriteIndex": 3,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 26,
           "ContextTags": [
             "color_brown",
             "food_nonvegan",
@@ -70,7 +70,7 @@
             "allergen_egg"
           ]
         },
-        "DN.SnS_Smoked_TurkeyLeg": {
+        "{{ModID}}_Smoked_TurkeyLeg": {
           "Name": "DN.SnS_Smoked_TurkeyLeg",
           "DisplayName": "{{i18n:DN.SnS.Smoked_TurkeyLeg}}",
           "Description": "{{i18n:DN.SnS.Smoked_TurkeyLeg.Description}}",
@@ -82,8 +82,8 @@
           "Edibility": 50,
           "IsDrink": false,
           "Buffs": null,
-          "Texture": "Textures/DN.SnS/VioletMoonFood",
-          "SpriteIndex": 4,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 27,
           "ContextTags": [
             "color_brown",
             "food_nonvegan",
@@ -91,7 +91,7 @@
             "allergen_meat"
           ]
         },
-        "DN.SnS_Hand_Pressed_Apple_Cider": {
+        "{{ModID}}_Hand_Pressed_Apple_Cider": {
           "Name": "DN.SnS_Hand_Pressed_Apple_Cider",
           "DisplayName": "{{i18n:DN.SnS.Hand_Pressed_Apple_Cider}}",
           "Description": "{{i18n:DN.SnS.Hand_Pressed_Apple_Cider.Description}}",
@@ -103,8 +103,8 @@
           "Edibility": 50,
           "IsDrink": true,
           "Buffs": null,
-          "Texture": "Textures/DN.SnS/VioletMoonFood",
-          "SpriteIndex": 2,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 25,
           "ContextTags": [
             "color_brown"
           ]
@@ -136,8 +136,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 17,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 7,
           "ContextTags": [
             "alcohol_item",
             "color_dark_orange"
@@ -171,8 +171,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 18,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 8,
           "ContextTags": [
             "allergen_dairy",
             "food_nonvegan",
@@ -207,8 +207,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 19,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 9,
           "ContextTags": [
             "allergen_dairy",
             "allergen_egg",
@@ -244,8 +244,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 20,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 10,
           "ContextTags": [
             "color_prismatic"
           ]
@@ -278,8 +278,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 27,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 11,
           "ContextTags": [
             "color_red",
             "sns_druidicfood_item"
@@ -313,8 +313,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 28,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 12,
           "ContextTags": [
             "food_sweet",
             "color_sand",
@@ -349,8 +349,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 29,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 13,
           "ContextTags": [
             "allergen_dairy",
             "food_sweet",
@@ -388,8 +388,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 30,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 14,
           "ContextTags": [
             "color_dark_red",
             "allergen_fish",
@@ -426,8 +426,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 46,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 15,
           "ContextTags": [
             "color_dark_yellow",
             "allergen_dairy",
@@ -465,8 +465,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 47,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 16,
           "ContextTags": [
             "color_dark_yellow",
             "allergen_fish",
@@ -505,8 +505,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 48,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 17,
           "ContextTags": [
             "color_sand",
             "food_nonvegan",
@@ -545,8 +545,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 49,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 18,
           "ContextTags": [
             "color_orange",
             "food_nonvegan",
@@ -584,8 +584,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 53,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 19,
           "ContextTags": [
            "color_cyan"
           ]
@@ -618,8 +618,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 54,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 20,
           "ContextTags": [
             "color_red",
             "food_party"
@@ -653,8 +653,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 84,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 21,
           "ContextTags": [
             "color_green",
             "food_sweet"
@@ -688,8 +688,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 118,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 22,
           "ContextTags": [
             "color_dark_cyan"
           ]
@@ -723,8 +723,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 76,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 0,
           "ContextTags": [
             "color_orange",
             "sns_ginger_beer_item",
@@ -759,8 +759,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 77,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 1,
           "ContextTags": [
             "color_blue",
             "sns_ginger_beer_item",
@@ -795,8 +795,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 78,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 2,
           "ContextTags": [
             "color_dark_yellow",
             "sns_ginger_beer_item",
@@ -831,8 +831,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 79,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 3,
           "ContextTags": [
             "color_dark_red",
             "sns_ginger_beer_item",
@@ -867,8 +867,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 80,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 4,
           "ContextTags": [
             "color_dark_red",
             "sns_ginger_beer_item",
@@ -903,8 +903,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 81,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 5,
           "ContextTags": [
             "color_pink",
             "sns_ginger_beer_item",
@@ -939,8 +939,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 82,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 6,
           "ContextTags": [
             "color_dark_cyan",
             "sns_ginger_beer_item",
@@ -975,8 +975,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 82,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 6,
           "ContextTags": [
             "color_dark_cyan",
             "sns_ginger_beer_item",
@@ -1011,8 +1011,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 82,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 6,
           "ContextTags": [
             "color_dark_cyan",
             "sns_ginger_beer_item",
@@ -1047,8 +1047,8 @@
               }
             }
           ],
-          "Texture": "Textures/DN.SnS/SnSObjects",
-          "SpriteIndex": 82,
+          "Texture": "SnS_Objects/Food",
+          "SpriteIndex": 6,
           "ContextTags": [
             "color_dark_cyan",
             "sns_ginger_beer_item",
