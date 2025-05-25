@@ -360,7 +360,7 @@
 
   "teleport-circle.error.unknown": "Invalid teleport circle setup.",
   "teleport-circle.error.no-match": "No matching teleport circle found.",
-  "teleport-circle.error.missing-essence": "3 essences not found in nearby chest.",
+  "teleport-circle.error.missing-essence": "Required essences not found nearby.",
   "teleport-circle.name": "Teleport Circle",
 
   "fake-npc.deepdark.mateo-mine": "I'm worried, but we've made it this far. Nothing can stop us as long as we stick together.$80",

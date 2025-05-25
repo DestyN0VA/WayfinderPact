@@ -635,7 +635,7 @@ namespace SwordAndSorcerySMAPI
                             {
                                 // TODO: Make this use the chest mutex right
                                 var inv = chest.GetItemsForPlayer(from);
-                                for (int i = 0; i < chest.GetActualCapacity(); i++)
+                                for (int i = 0; i < inv.Count; i++)
                                 {
                                     if (inv[i]?.HasContextTag("essence_item") ?? false)
                                     {
