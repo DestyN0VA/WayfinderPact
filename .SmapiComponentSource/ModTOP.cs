@@ -635,7 +635,7 @@ namespace SwordAndSorcerySMAPI
                             {
                                 // TODO: Make this use the chest mutex right
                                 var inv = chest.GetItemsForPlayer(from);
-                                for (int i = 0; i < chest.GetActualCapacity(); ++i)
+                                for (int i = 0; i < chest.GetActualCapacity(); i++)
                                 {
                                     if (inv[i]?.HasContextTag("essence_item") ?? false)
                                     {
@@ -645,6 +645,21 @@ namespace SwordAndSorcerySMAPI
                                             break;
                                     }
                                 }
+                            }
+                        }
+                    }
+
+                    if (totalFound < 3)
+                    {
+                        var pInv = Game1.player.Items;
+                        for (int i = 0; i < pInv.Count; i++)
+                        {
+                            if (pInv[i]?.HasContextTag("essence_item") ?? false)
+                            {
+                                essencesFound.Add(new(pInv, pInv[i]));
+                                totalFound += pInv[i].Stack;
+                                if (totalFound >= 3)
+                                    break;
                             }
                         }
                     }
@@ -1014,12 +1029,12 @@ namespace SwordAndSorcerySMAPI
 
                     if (Game1.IsMasterGame)
                     {
-                        var ret = ModTOP.ProcessTeleportRequest(req, Game1.player.UniqueMultiplayerID);
-                        ModTOP.ProcessTeleport(ret);
+                        var ret = ProcessTeleportRequest(req, Game1.player.UniqueMultiplayerID);
+                        ProcessTeleport(ret);
                     }
                     else
                     {
-                        ModTOP.Instance.Helper.Multiplayer.SendMessage(req, ModTOP.RequestTeleportInfoMessage);
+                        Instance.Helper.Multiplayer.SendMessage(req, RequestTeleportInfoMessage);
                     }
                 }
             }
