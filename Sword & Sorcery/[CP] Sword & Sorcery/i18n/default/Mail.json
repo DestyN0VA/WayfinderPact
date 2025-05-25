@@ -1,0 +1,8 @@
+{
+// FROM: VAL
+"Val.Mail.Letter1": "Hey, @.^^Thanks for turning up at the hospital when you did. Honestly, it would have been a lot scarier without you. They're holding me in ZuZu for a few days, but I'll be back soon. Be careful if you go exploring, okay? You're in my thoughts.^^Sincerely,^Val.",
+"Val.Mail.Letter2": "Good morning, Sunshine.^^I know you're busy, but if you've got the time to spare - meet me in the mines. I'll wait around by the elevator for you.^^You don't have to bring anything, just your swimsuit and an inclination for mischief.^^Sincerely,^Val.",
+"Val.Mail.Letter3": "Good morning, @!^^This is the recipe for my favorite stew. Figured you might like it as much as I do! I hope it brings you the joy and comfort that you bring me.^^Sincerely,^Val.%item cookingRecipe DN.SnS_autumnalstew%%[#]Autmnal Stew Recipe",
+"Val.Mail.Letter4": "Good morning, @!^^I had a friend who owned a brewery back in the Fern Islands. Best booze that side of the Salish Sea.^^Here's the recipe for their special Bourbon. It's a well-kept secret.^^Sincerely,^Val.%item cookingRecipe DN.SnS_salishbourbon%%[#]Salish Bourbon Recipe",
+"Val.Mail.Letter5": "Good morning, Sunshine.^^I had a great time last night - thank you for sharing it with me.^^I figure you'd like to borrow this...^^Sincerely,^Val.%item id DN.SnS_Val_Hoodie%%[#]Val's Hoodie",
+}
