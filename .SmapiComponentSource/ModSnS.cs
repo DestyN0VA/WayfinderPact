@@ -77,9 +77,9 @@ namespace SwordAndSorcerySMAPI
 
 #pragma warning disable IDE0060 // Remove unused parameter
         public static void SetHasTakenLoreWeapon(Farmer farmer, NetBool val)
+#pragma warning restore IDE0060 // Remove unused parameter
         {
         }
-#pragma warning restore IDE0060 // Remove unused parameter
         
         public static NetBool HasTakenLoreWeapon(Farmer farmer)
         {
@@ -124,9 +124,9 @@ namespace SwordAndSorcerySMAPI
 
 #pragma warning disable IDE0060 // Remove unused parameter
         public static void ExpRemainderRogueSetter(Farmer farmer, NetFloat val)
+#pragma warning restore IDE0060 // Remove unused parameter
         {
         }
-#pragma warning restore IDE0060 // Remove unused parameter
         
         public Dictionary<string, int> Cooldowns = [];
         public readonly NetInt armorUsed = new(0);
