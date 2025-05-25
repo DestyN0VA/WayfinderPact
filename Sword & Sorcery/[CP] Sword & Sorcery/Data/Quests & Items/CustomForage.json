@@ -273,7 +273,7 @@
           "Type": "Crafting",
           "Category": -74,
           "Price": 100,
-          "Edibility": -200,
+          "Edibility": -300,
           "IsDrink": false,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
           "Texture": "Textures/DN.SnS/SnSObjects",
