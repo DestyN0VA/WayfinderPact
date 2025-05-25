@@ -10,6 +10,7 @@ using StardewValley.Monsters;
 using StardewValley.Network;
 using StardewValley.Projectiles;
 using StardewValley.TerrainFeatures;
+using SwordAndSorcerySMAPI.ModSkills;
 using System;
 using System.Collections.Generic;
 using System.Linq;

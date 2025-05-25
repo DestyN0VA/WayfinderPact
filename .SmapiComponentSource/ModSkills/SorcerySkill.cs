@@ -3,7 +3,8 @@ using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using System;
 using System.Collections.Generic;
-using SpaceCore;
+using SwordAndSorcerySMAPI.ModSkills;
+using Skill = SpaceCore.Skills.Skill;
 
 namespace SwordAndSorcerySMAPI
 {
@@ -19,7 +20,7 @@ namespace SwordAndSorcerySMAPI
         }
     }
 
-    public class SorcerySkill : Skills.Skill
+    public class SorcerySkill : Skill
     {
         public static GenericProfession ProfessionEssenceDrops { get; set; }
         public static GenericProfession ProfessionSpellDamage { get; set; }
@@ -28,7 +29,7 @@ namespace SwordAndSorcerySMAPI
         public static GenericProfession ProfessionSpellDamage2 { get; set; }
         public static GenericProfession ProfessionAetherBuff { get; set; }
 
-        private class AetherBuffProfession(Skills.Skill skill, string id, Func<string> name, Func<string> description) : GenericProfession(skill, id, name, description)
+        private class AetherBuffProfession(Skill skill, string id, Func<string> name, Func<string> description) : GenericProfession(skill, id, name, description)
         {
             public override void DoImmediateProfessionPerk()
             {

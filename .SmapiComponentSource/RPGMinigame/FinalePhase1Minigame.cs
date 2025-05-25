@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SwordAndSorcerySMAPI
+namespace SwordAndSorcerySMAPI.RPGMinigame
 {
     [HarmonyPatch(typeof(GameLocation), "drawFarmers")]
     public class GameLocationDrawFarmerInFinalePatch
@@ -97,7 +97,7 @@ namespace SwordAndSorcerySMAPI
 
         private BattlerInfo ChooseNonFarmerAlly()
         {
-            List<BattlerInfo> choices = new(BattlerData.Where( kvp => kvp.Key != Game1.player.Name && kvp.Key != "Hector").Select( kvp => kvp.Value ) );
+            List<BattlerInfo> choices = new(BattlerData.Where(kvp => kvp.Key != Game1.player.Name && kvp.Key != "Hector").Select(kvp => kvp.Value));
             return choices[new Random((int)(Game1.player.UniqueMultiplayerID + TurnCounter + Game1.stats.DaysPlayed)).Next(choices.Count)];
 
         }
@@ -396,7 +396,7 @@ namespace SwordAndSorcerySMAPI
                         delay = 0.5f;
                         PendingAction = () =>
                         {
-                            if ( delay == 0.5f )
+                            if (delay == 0.5f)
                                 CurrentTurn.jumpWithoutSound();
 
                             float oldDelay = delay;
@@ -404,7 +404,7 @@ namespace SwordAndSorcerySMAPI
                             if (oldDelay > 0 && delay <= 0)
                             {
                                 DuskspireActor.shake(500);
-                                DuskspireHealth -= CurrentBattler.InShadowstep ? 50 : (CurrentBattler.TransformedCounter > 0 ? 30 : 10);
+                                DuskspireHealth -= CurrentBattler.InShadowstep ? 50 : CurrentBattler.TransformedCounter > 0 ? 30 : 10;
                                 DuskspireFrameOverride = 25;
                                 Game1.playSound("serpentHit");
                                 if (CurrentBattler.InShadowstep)
@@ -686,7 +686,7 @@ namespace SwordAndSorcerySMAPI
                 }
                 else
                 {
-                    var diff = (proj.Target - proj.Position);
+                    var diff = proj.Target - proj.Position;
                     diff.Normalize();
                     proj.Position += diff * proj.MovementSpeed;
                 }

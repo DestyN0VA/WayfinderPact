@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
+using SwordAndSorcerySMAPI.RPGMinigame;
 using System;
 using System.Collections.Generic;
 

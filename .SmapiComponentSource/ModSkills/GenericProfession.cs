@@ -1,14 +1,16 @@
 using SpaceCore;
+
+using Skill = SpaceCore.Skills.Skill;
 using System;
 
-namespace SwordAndSorcerySMAPI
+namespace SwordAndSorcerySMAPI.ModSkills
 {
     /// <summary>Construct an instance.</summary>
     /// <param name="skill">The parent skill.</param>
     /// <param name="id">The unique profession ID.</param>
     /// <param name="name">The translated profession name.</param>
     /// <param name="description">The translated profession description.</param>
-    public class GenericProfession(Skills.Skill skill, string id, Func<string> name, Func<string> description) : Skills.Skill.Profession(skill, id)
+    public class GenericProfession(Skill skill, string id, Func<string> name, Func<string> description) : Skill.Profession(skill, id)
     {
         /*********
         ** Fields

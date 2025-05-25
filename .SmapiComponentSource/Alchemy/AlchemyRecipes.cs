@@ -37,6 +37,7 @@ namespace SwordAndSorcerySMAPI.Alchemy
                     Ingredients = ingreds,
                     UnlockConditions = value.UnlockConditions
                 };
+
                 AdjustedRecipeData.Add(recipe.Key, data);
             }
 

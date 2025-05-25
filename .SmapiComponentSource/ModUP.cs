@@ -12,6 +12,7 @@ using StardewValley.Locations;
 using StardewValley.Monsters;
 using StardewValley.TerrainFeatures;
 using StardewValley.Tools;
+using SwordAndSorcerySMAPI.ModSkills;
 using System;
 using System.Collections.Generic;
 using System.Linq;

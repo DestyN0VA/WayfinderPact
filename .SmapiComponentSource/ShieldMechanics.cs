@@ -5,6 +5,7 @@ using StardewValley;
 using StardewValley.Enchantments;
 using StardewValley.Extensions;
 using StardewValley.Tools;
+using SwordAndSorcerySMAPI.ModSkills;
 using System.Linq;
 
 namespace SwordAndSorcerySMAPI
@@ -62,7 +63,7 @@ namespace SwordAndSorcerySMAPI
                 return true;
 
             if (ModSnS.Config.ShieldThrowMethod.ToLower() == "keybind")
-                return false;
+                return true;
 
             Vector2 diff = ModSnS.Instance.Helper.Input.GetCursorPosition().AbsolutePixels - Game1.player.StandingPixel.ToVector2();
             if (diff.Length() > 0 && diff.Length() > 8 * Game1.tileSize)
@@ -120,7 +121,7 @@ namespace SwordAndSorcerySMAPI
             }
 
             ModSnS.Instance.Helper.Reflection.GetMethod(__instance, "beginSpecialMove").Invoke(__instance.lastUser);
-
+            __instance.lastUser.canMove = true;
             return false;
         }
     }

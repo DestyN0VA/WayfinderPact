@@ -1,6 +1,8 @@
 using HarmonyLib;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Netcode;
+using NeverEndingAdventure.Utils;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
@@ -10,6 +12,7 @@ using StardewValley.ItemTypeDefinitions;
 using StardewValley.Menus;
 using StardewValley.Monsters;
 using StardewValley.Tools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -30,48 +33,52 @@ public static class DualWieldExtensions
 
 public static class DualWieldingEnchants
 {
-    public static void HandleEnchants(object sender, UpdateTickingEventArgs e)
+    public static void HandleEnchants(object sender, SaveLoadedEventArgs e)
     {
         if (!Context.IsWorldReady)
             return;
 
         var who = Game1.player;
-        var Offhand = who.GetOffhand();
         var OrigEnchs = who.GetFarmerExtData().OrigEnchs;
 
-        if (who.CurrentTool is MeleeWeapon Mainhand && Offhand != null)
+        if (OrigEnchs.Any())
         {
-            if (!OrigEnchs.ContainsKey(Mainhand))
-                OrigEnchs.Add(Mainhand, [.. Mainhand.enchantments]);
-            if (!OrigEnchs.ContainsKey(Offhand))
-                OrigEnchs.Add(Offhand, [.. Offhand.enchantments]);
-
-            List<MeleeWeapon> NoLongerHeld = OrigEnchs.Keys.Where(m => m != Mainhand && m != Offhand).ToList();
-
-            foreach (var m in NoLongerHeld)
+            foreach (var ench in OrigEnchs)
             {
-                m.enchantments.Set(OrigEnchs[m]);
-                OrigEnchs.Remove(m);
-            }
+                ench.Key.enchantments.Set(ench.Value);
 
-            List<BaseEnchantment> enchs = [];
-            foreach (var ench in OrigEnchs.Values)
-            {
-                ench.RemoveWhere(enchs.Contains);
-                enchs.AddRange(ench);
-            }
-
-            Mainhand.enchantments.Set(enchs);
-            Offhand.enchantments.Set(enchs);
-        }
-        else
-        {
-            foreach (var kvp in OrigEnchs)
-            {
-                kvp.Key.enchantments.Set(kvp.Value);
             }
             OrigEnchs.Clear();
         }
+
+        Utility.ForEachItem(item =>
+        {
+
+            if (item is MeleeWeapon or Slingshot)
+            {
+                Tool t = item as Tool;
+                t.enchantments.RemoveWhere(e => t.enchantments.Any(e2 => e != e2 && e.GetType() == e2.GetType()));
+                if (t?.ItemId?.ContainsIgnoreCase("DN.SnS_longlivetheking") ?? false && t.attachments.Count != 2)
+                {
+                    INetSerializable parent = t.attachments.Parent;
+                    try
+                    {
+                        t.attachments.Parent = null;
+                        t.AttachmentSlotsCount = 2;
+                    }
+                    catch (Exception e)
+                    {
+                        Log.Warn(e.ToString());
+                    }
+                    finally
+                    {
+                        if (parent != null)
+                            t.attachments.Parent = parent;
+                    }
+                }
+            }
+            return true;
+        });
     }
 }
 

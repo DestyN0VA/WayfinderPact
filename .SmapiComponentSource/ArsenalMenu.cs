@@ -5,12 +5,14 @@ using SpaceCore;
 using SpaceCore.UI;
 using StardewModdingAPI.Events;
 using StardewValley;
+using StardewValley.BellsAndWhistles;
 using StardewValley.Buffs;
 using StardewValley.Enchantments;
 using StardewValley.Extensions;
 using StardewValley.Menus;
 using StardewValley.Monsters;
 using StardewValley.Tools;
+using SwordAndSorcerySMAPI.ModSkills;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -612,7 +614,7 @@ public class ArsenalMenu : IClickableMenu
                 toRemove.Add(pixel);
             }
         }
-        pixels.RemoveAll((p) => toRemove.Contains(p));
+        pixels.RemoveAll(toRemove.Contains);
 
 
         static string GetDescription(Item item)
@@ -678,27 +680,25 @@ public class ArsenalMenu : IClickableMenu
     protected override void cleanupBeforeExit()
     {
         base.cleanupBeforeExit();
+        List<Item> items = [];
+        
         if (this.weaponSlot.Item != null)
-            Game1.player.addItemByMenuIfNecessary(this.weaponSlot.Item);
+            items.Add(this.weaponSlot.Item);
         if (this.alloyingSlot.Item != null)
-            Game1.player.addItemByMenuIfNecessary(this.alloyingSlot.Item);
+            items.Add(this.alloyingSlot.Item);
         if (this.coatingSlot.Item != null)
-            Game1.player.addItemByMenuIfNecessary(this.coatingSlot.Item);
+            items.Add(this.coatingSlot.Item);
         if (this.gemSlot.Item != null)
-            Game1.player.addItemByMenuIfNecessary(this.gemSlot.Item);
+            items.Add(this.gemSlot.Item);
+
+        if (items.Count > 0)
+            Game1.player.addItemsByMenuIfNecessary(items);
     }
 
     public override void emergencyShutDown()
     {
         base.emergencyShutDown();
-        if (this.weaponSlot.Item != null)
-            Game1.player.addItemByMenuIfNecessary(this.weaponSlot.Item);
-        if (this.alloyingSlot.Item != null)
-            Game1.player.addItemByMenuIfNecessary(this.alloyingSlot.Item);
-        if (this.coatingSlot.Item != null)
-            Game1.player.addItemByMenuIfNecessary(this.coatingSlot.Item);
-        if (this.gemSlot.Item != null)
-            Game1.player.addItemByMenuIfNecessary(this.gemSlot.Item);
+        this.cleanupBeforeExit();
     }
 
     private void ApplySlots()
@@ -723,7 +723,7 @@ public class ArsenalMenu : IClickableMenu
                 forged = true;
             }
             else
-                Game1.addHUDMessage(new HUDMessage(I18n.Anvil_NotEnough(ModSnS.CoatingQuantities[Game1.player.CursorSlotItem.QualifiedItemId], coatingSlot.Item.DisplayName)));
+                Game1.addHUDMessage(new HUDMessage(I18n.Anvil_NotEnough(ModSnS.CoatingQuantities[coatingSlot.Item.QualifiedItemId], Lexicon.makePlural(coatingSlot.Item.DisplayName))));
         }
         if (alloyingSlot.Item != null)
         {
@@ -736,7 +736,7 @@ public class ArsenalMenu : IClickableMenu
                 forged = true;
             }
             else
-                Game1.addHUDMessage(new HUDMessage(I18n.Anvil_NotEnough(25, alloyingSlot.Item.DisplayName)));
+                Game1.addHUDMessage(new HUDMessage(I18n.Anvil_NotEnough(25, Lexicon.makePlural(alloyingSlot.Item.DisplayName))));
         }
 
         if (forged)

@@ -7,11 +7,12 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
+using Skill = SpaceCore.Skills.Skill;
 
-namespace SwordAndSorcerySMAPI
+namespace SwordAndSorcerySMAPI.ModSkills
 {
 
-    public class RogueSkill : Skills.Skill
+    public class RogueSkill : Skill
     {
         public static GenericProfession ProfessionArmorRecovery { get; set; }
         public static GenericProfession ProfessionBowSecondShot { get; set; }
@@ -31,49 +32,49 @@ namespace SwordAndSorcerySMAPI
             this.ExperienceBarColor = new Microsoft.Xna.Framework.Color(252, 121, 27);
 
             // Level 5
-            RogueSkill.ProfessionArmorRecovery = new GenericProfession(skill: this, id: "ArmorRecovery", name: I18n.RogueSkill_Profession_ArmorRecovery_Name, description: I18n.RogueSkill_Profession_ArmorRecovery_Description)
+            ProfessionArmorRecovery = new GenericProfession(skill: this, id: "ArmorRecovery", name: I18n.RogueSkill_Profession_ArmorRecovery_Name, description: I18n.RogueSkill_Profession_ArmorRecovery_Description)
             {
                 Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/ArtificerSpecialist.png")
             };
-            this.Professions.Add(RogueSkill.ProfessionArmorRecovery);
+            this.Professions.Add(ProfessionArmorRecovery);
 
-            RogueSkill.ProfessionBowSecondShot = new GenericProfession(skill: this, id: "BowSecondShot", name: I18n.RogueSkill_Profession_RogueishArchetype_Name, description: I18n.RogueSkill_Profession_RogueishArchetype_Description)
+            ProfessionBowSecondShot = new GenericProfession(skill: this, id: "BowSecondShot", name: I18n.RogueSkill_Profession_RogueishArchetype_Name, description: I18n.RogueSkill_Profession_RogueishArchetype_Description)
             {
                 Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/RogueishArchetype.png")
             };
-            this.Professions.Add(RogueSkill.ProfessionBowSecondShot);
+            this.Professions.Add(ProfessionBowSecondShot);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(5, RogueSkill.ProfessionArmorRecovery, RogueSkill.ProfessionBowSecondShot));
+            this.ProfessionsForLevels.Add(new ProfessionPair(5, ProfessionArmorRecovery, ProfessionBowSecondShot));
 
             // Level 10 - track A
-            RogueSkill.ProfessionCrafting = new GenericProfession(skill: this, id: "Crafting", name: I18n.RogueSkill_Profession_FlashOfGenius_Name, description: I18n.RogueSkill_Profession_FlashOfGenius_Description)
+            ProfessionCrafting = new GenericProfession(skill: this, id: "Crafting", name: I18n.RogueSkill_Profession_FlashOfGenius_Name, description: I18n.RogueSkill_Profession_FlashOfGenius_Description)
             {
                 Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/FlashOfGenius.png")
             };
-            this.Professions.Add(RogueSkill.ProfessionCrafting);
+            this.Professions.Add(ProfessionCrafting);
 
-            RogueSkill.ProfessionArmorCap = new GenericProfession(skill: this, id: "ArmorCap", name: I18n.RogueSkill_Profession_ArmorProficiency_Name, description: I18n.RogueSkill_Profession_ArmorProficiency_Description)
+            ProfessionArmorCap = new GenericProfession(skill: this, id: "ArmorCap", name: I18n.RogueSkill_Profession_ArmorProficiency_Name, description: I18n.RogueSkill_Profession_ArmorProficiency_Description)
             {
                 Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/ArmorProficiency.png")
             };
-            this.Professions.Add(RogueSkill.ProfessionArmorCap);
+            this.Professions.Add(ProfessionArmorCap);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(10, RogueSkill.ProfessionCrafting, RogueSkill.ProfessionArmorCap, RogueSkill.ProfessionArmorRecovery));
+            this.ProfessionsForLevels.Add(new ProfessionPair(10, ProfessionCrafting, ProfessionArmorCap, ProfessionArmorRecovery));
 
             // Level 10 - track B
-            RogueSkill.ProfessionShadowStep = new GenericProfession(skill: this, id: "ShadowStep", name: I18n.Ability_Shadowstep_Name, description: I18n.Ability_Shadowstep_Description)
+            ProfessionShadowStep = new GenericProfession(skill: this, id: "ShadowStep", name: I18n.Ability_Shadowstep_Name, description: I18n.Ability_Shadowstep_Description)
             {
                 Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/Shadowstep.png")
             };
-            this.Professions.Add(RogueSkill.ProfessionShadowStep);
+            this.Professions.Add(ProfessionShadowStep);
 
-            RogueSkill.ProfessionHuntersMark = new GenericProfession(skill: this, id: "HuntersMark", name: I18n.RogueSkill_Profession_HuntersMark_Name, description: I18n.RogueSkill_Profession_HuntersMark_Description)
+            ProfessionHuntersMark = new GenericProfession(skill: this, id: "HuntersMark", name: I18n.RogueSkill_Profession_HuntersMark_Name, description: I18n.RogueSkill_Profession_HuntersMark_Description)
             {
                 Icon = ModSnS.Instance.Helper.ModContent.Load<Texture2D>("assets/rogue/HuntersMark.png")
             };
-            this.Professions.Add(RogueSkill.ProfessionHuntersMark);
+            this.Professions.Add(ProfessionHuntersMark);
 
-            this.ProfessionsForLevels.Add(new ProfessionPair(10, RogueSkill.ProfessionShadowStep, RogueSkill.ProfessionHuntersMark, RogueSkill.ProfessionBowSecondShot));
+            this.ProfessionsForLevels.Add(new ProfessionPair(10, ProfessionShadowStep, ProfessionHuntersMark, ProfessionBowSecondShot));
         }
 
         public override string GetName()
@@ -142,7 +143,7 @@ namespace SwordAndSorcerySMAPI
 
             foreach (var recipe in craftingRecipes[level])
             {
-                if ( !Game1.player.knowsRecipe(recipe))
+                if (!Game1.player.knowsRecipe(recipe))
                     Game1.player.craftingRecipes.Add(recipe, 0);
             }
         }
@@ -157,7 +158,7 @@ namespace SwordAndSorcerySMAPI
             if (level % 5 != 0)
                 ret.Add(I18n.Level_Health(3) + "\n");
 
-            switch ( level )
+            switch (level)
             {
                 case 1:
                     ret.Add(I18n.RogueSkill_Unlock_1());
@@ -166,7 +167,7 @@ namespace SwordAndSorcerySMAPI
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_Arrow", false).DisplayName));
                     break;
                 case 2:
-                    ret.Add(I18n.RogueSkill_Unlock_2().Replace('^','\n'));
+                    ret.Add(I18n.RogueSkill_Unlock_2().Replace('^', '\n'));
                     break;
                 case 3:
                     ret.Add(I18n.Recipe_Crafting(new CraftingRecipe("DN.SnS_CopperArmor", false).DisplayName));

@@ -29,6 +29,8 @@ using StardewValley.Triggers;
 using SwordAndSorcerySMAPI.Alchemy;
 using SwordAndSorcerySMAPI.IgnoreMarriageSchedule;
 using SwordAndSorcerySMAPI.Integrations;
+using SwordAndSorcerySMAPI.ModSkills;
+using SwordAndSorcerySMAPI.RPGMinigame;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -88,11 +90,12 @@ namespace SwordAndSorcerySMAPI
 
         public readonly NetArray<string, NetString> adventureBar = new(8 * 2);
 
+
 #pragma warning disable IDE0060 // Remove unused parameter
         public static void SetAdventureBar(Farmer farmer, NetArray<string, NetString> val)
+#pragma warning restore IDE0060 // Remove unused parameter
         {
         }
-#pragma warning restore IDE0060 // Remove unused parameter
         
         public static NetArray<string, NetString> GetAdventureBar(Farmer farmer)
         {
@@ -104,9 +107,9 @@ namespace SwordAndSorcerySMAPI
 
 #pragma warning disable IDE0060 // Remove unused parameter
         public static void SetMaxMana(Farmer farmer, NetInt val)
+#pragma warning restore IDE0060 // Remove unused parameter
         {
         }
-#pragma warning restore IDE0060 // Remove unused parameter
         
         public static NetInt GetMaxMana(Farmer farmer)
         {
@@ -453,7 +456,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.Content.AssetsInvalidated += IgnoreMarriageScheduleAssetManager.AssetInvalidated;
             Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
             Helper.Events.GameLoop.UpdateTicking += GameLoop_UpdateTicking;
-            Helper.Events.GameLoop.UpdateTicking += DualWieldingEnchants.HandleEnchants;
+            Helper.Events.GameLoop.SaveLoaded += DualWieldingEnchants.HandleEnchants;
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
             Helper.Events.GameLoop.DayStarted += KeychainsAndTrinkets.DayStarted;
             Helper.Events.GameLoop.DayStarted += IgnoreMarriageScheduleUtil.DayStarted;
@@ -671,7 +674,6 @@ namespace SwordAndSorcerySMAPI
                 {
                     if (i is not Tool) continue;
                     Tool LLTK = i as Tool;
-                    ToolSetAttachmentCountForLLTK.Postfix(LLTK);
                     if (LLTK.attachments?[1] is Trinket) KeychainsAndTrinkets.HandleTrinketEquipUnequip(Old: LLTK.attachments[1]);
                 }
 
@@ -680,7 +682,6 @@ namespace SwordAndSorcerySMAPI
                 {
                     if (i is not Tool) continue;
                     Tool LLTK = i as Tool;
-                    ToolSetAttachmentCountForLLTK.Postfix(LLTK);
                     if (LLTK.attachments?[1] is Trinket) KeychainsAndTrinkets.HandleTrinketEquipUnequip(New: LLTK.attachments[1]);
                 }
         }
@@ -950,10 +951,10 @@ namespace SwordAndSorcerySMAPI
             }
         }
 
-        private static void ThrowShield(MeleeWeapon __instance)
+        private static bool ThrowShield(MeleeWeapon __instance)
         {
             if (!__instance.IsShieldItem() || __instance.lastUser != Game1.player)
-                return;
+                return false;
 
             Vector2 diff = ModSnS.Instance.Helper.Input.GetCursorPosition().AbsolutePixels - Game1.player.StandingPixel.ToVector2();
             if (diff.Length() > 0 && diff.Length() > 8 * Game1.tileSize)
@@ -1011,6 +1012,8 @@ namespace SwordAndSorcerySMAPI
             }
 
             Instance.Helper.Reflection.GetMethod(__instance, "beginSpecialMove").Invoke(__instance.lastUser);
+
+            return true;
         }
 
         private static bool SwapLltk()
@@ -1072,6 +1075,9 @@ namespace SwordAndSorcerySMAPI
 
         private void Content_AssetRequested(object sender, AssetRequestedEventArgs e)
         {
+            if (e.NameWithoutLocale.IsEquivalentTo("DN.SnS/Duskspire"))
+                e.LoadFromModFile<Texture2D>("assets/duskspire-behemoth.png", AssetLoadPriority.High);
+
             if (e.NameWithoutLocale.IsEquivalentTo("DN.SnS/AlchemyRecipes"))
                 e.LoadFrom(() => new Dictionary<string, AlchemyData>(), AssetLoadPriority.Exclusive);
 

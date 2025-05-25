@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using System.Collections.Generic;
 
-namespace SwordAndSorcerySMAPI
+namespace SwordAndSorcerySMAPI.ModSkills
 {
     public class DruidicsSkill : SpaceCore.Skills.Skill
     {

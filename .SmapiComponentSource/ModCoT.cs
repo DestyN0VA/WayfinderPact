@@ -9,6 +9,7 @@ using StardewValley;
 using StardewValley.Characters;
 using StardewValley.TerrainFeatures;
 using StardewValley.Tools;
+using SwordAndSorcerySMAPI.ModSkills;
 using System;
 using System.Collections.Generic;
 using System.Linq;

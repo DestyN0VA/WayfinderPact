@@ -14,6 +14,7 @@ using StardewValley.Monsters;
 using StardewValley.Objects.Trinkets;
 using StardewValley.Projectiles;
 using StardewValley.Tools;
+using SwordAndSorcerySMAPI.ModSkills;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -384,28 +385,6 @@ namespace SwordAndSorcerySMAPI
         }
     }
 
-    [HarmonyPatch(typeof(Tool), nameof(Tool.drawTooltip))]
-    public static class ToolSetAttachmentCountForLLTK
-    {
-        public static void Postfix(Tool __instance)
-        {
-            if (__instance?.ItemId?.ContainsIgnoreCase("DN.SnS_longlivetheking") ?? false && __instance.AttachmentSlotsCount != 2)
-            {
-                INetSerializable parent = null;
-                if (__instance.attachments.Parent != null)
-                {
-                    parent = __instance.attachments.Parent;
-                    __instance.attachments.Parent = null;
-                }
-
-                __instance.AttachmentSlotsCount = 2;
-                
-                if (parent != null)
-                    __instance.attachments.Parent = parent;
-            }
-        }
-    }
-
     [HarmonyPatch(typeof(Tool), "GetAttachmentSlotSprite")]
     public static class LLTKSlotSprites
     {
@@ -418,11 +397,6 @@ namespace SwordAndSorcerySMAPI
                 sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, 10);
         }
     }
-    /*
-            if (base.attachments[0] == null)
-            {
-                sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, 43);
-            }*/
 
     [HarmonyPatch(typeof(Slingshot), "GetAttachmentSlotSprite")]
     public static class LLTKGunSlotSprites
