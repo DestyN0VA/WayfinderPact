@@ -39,7 +39,7 @@
 				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
 			}
 		},
-		{
+		/*{
 			"LogName": "Roslin's Schedule - Night Market & Squid Festival",
 			"Action": "EditData",
 			"Target": "Characters/Schedules/Roslin",
@@ -54,7 +54,7 @@
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
 			}
-		},
+		},*/
 		{
 			"LogName": "Roslin's Schedule - Trout Derby",
 			"Action": "EditData",

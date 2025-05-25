@@ -121,11 +121,11 @@
 				// Mateo will attend the Night Market & Squid Festival.
 				"rain": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
 				"spring": "0 Mine 16 4 2/610 Mine 16 4 2 Mateo_sword/1300 Beach 43 34 2/1310 Beach 43 34 2 Mateo_sit_stare/{{Random: 1800 EastScarp_CoastalGuild 8 5 2 Mateo_violin++1800 EastScarp_CoastalGuild 7 11 2 Mateo_book++1800 EastScarp_CoastalGuild 14 12 2 Mateo_drink++1800 EastScarp_CoastalGuild 24 15 2|InputSeparator=++}}",
-				"winter_12": "MAIL beachBridgeFixed/GOTO loiter/610 {{MateoSpawn}} 2/620 {{MateoSpawn}} 2 {{MateoAnimation}}/1300 Beach 67 25 2 {{MateoAnimation}}/2200 {{MateoSpawn}} 2 Mateo_book",
+				/*"winter_12": "MAIL beachBridgeFixed/GOTO loiter/610 {{MateoSpawn}} 2/620 {{MateoSpawn}} 2 {{MateoAnimation}}/1300 Beach 67 25 2 {{MateoAnimation}}/2200 {{MateoSpawn}} 2 Mateo_book",
 				"winter_13": "GOTO winter_12",
 				"winter_15": "GOTO winter_12",
 				"winter_16": "GOTO winter_12",
-				"winter_17": "GOTO winter_12"
+				"winter_17": "GOTO winter_12"*/
 			},
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch1.Mateo.3": true,

@@ -25,7 +25,7 @@
 				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
 			}
 		},
-		{
+		/*{
 			"LogName": "Dandelion's Schedule - Night Market & Squid Festival",
 			"Action": "EditData",
 			"Target": "Characters/Schedules/Dandelion",
@@ -40,7 +40,7 @@
 			"When": {
 				"HasSeenEvent |contains=SnS.Ch4.Roslin.6": true
 			}
-		},
+		},*/
 		{
 			"LogName": "Dandelion's Schedule - Trout Derby",
 			"Action": "EditData",
