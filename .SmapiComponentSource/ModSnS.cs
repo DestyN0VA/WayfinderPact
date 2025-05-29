@@ -320,7 +320,7 @@ namespace SwordAndSorcerySMAPI
         public static IRadialMenuApi Radial { get; set; }
         public static IStarControlApi StarControl { get; set; }
 
-        public static int AetherRestoreTimer { get; set; } = 0;
+        public static double AetherRestoreTimer { get; set; } = 0;
 
         private Harmony Harmony { get; set; }
 
@@ -766,11 +766,23 @@ namespace SwordAndSorcerySMAPI
             if (e.NewTime % 100 == 0)
             {
                 State.CanRepairArmor = true;
+
+                if (Game1.player.hasOrWillReceiveMail("MagicalGrimoirePower"))
+                {
+                    var ext = Game1.player.GetFarmerExtData();
+                    float perc = 0.05f
+                        + Game1.player.GetCustomSkillLevel(ModCoT.DruidSkill) / 5 * 0.02f
+                        + Game1.player.GetCustomSkillLevel(ModUP.BardSkill) / 5 * 0.02f
+                        + Game1.player.GetCustomSkillLevel(ModTOP.SorcerySkill) / 5 * 0.02f;
+
+                    ext.mana.Value = Math.Min(ext.maxMana.Value, ext.mana.Value + (int)(ext.maxMana.Value * perc));
+                }
             }
         }
 
         private static void RecalculateAether()
-        { var ext = Game1.player.GetFarmerExtData();
+        { 
+            var ext = Game1.player.GetFarmerExtData();
 
             int maxMana = 0;
 
@@ -1517,18 +1529,6 @@ namespace SwordAndSorcerySMAPI
                         State.MyThrown.Remove(thrown);
                 }
             }
-            else
-            {
-                /*
-                if (Game1.player.GetArmorItem()?.QualifiedItemId == "(O)DestyNova.SwordAndSorcery_LegendaryHeroRelic")
-                {
-                    if (Config.ThrowShieldKey.JustPressed())
-                    {
-                        State.MyThrown = new ThrownShield(Game1.player, 30, Helper.Input.GetCursorPosition().AbsolutePixels, 10);
-                        Game1.currentLocation.projectiles.Add(State.MyThrown);
-                    }
-                }*/
-            }
             
             if (State.ThrowCooldown > 0 && Game1.activeClickableMenu == null)
                 State.ThrowCooldown = MathF.Max(0, State.ThrowCooldown - (float)Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds);
@@ -1538,7 +1538,7 @@ namespace SwordAndSorcerySMAPI
 
             // ---
 
-            if (/*Game1.player.eventsSeen.Contains(ModSnS.ShadowstepEventReq) &&*/ Game1.player.GetFarmerExtData().inShadows.Value)
+            if (Game1.player.GetFarmerExtData().inShadows.Value)
             {
                 var b = Game1.player.buffs.AppliedBuffs.FirstOrDefault(pair => pair.Key == "shadowstep").Value;
                 if (b == null)
@@ -1605,7 +1605,6 @@ namespace SwordAndSorcerySMAPI
             {
                 SpaceCore.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Paladin", 100);
             }
-
 
             if (Config.LltkToggleKeybind.JustPressed())
             {
