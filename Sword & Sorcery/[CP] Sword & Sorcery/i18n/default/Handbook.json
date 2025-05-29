@@ -1684,8 +1684,7 @@ Like vanilla skills, the Sorcerer skill provides professions that change the gam
  
 Upon meeting with Roslin in first event of [if=PLAYER_HAS_SEEN_EVENT Current SnS.Ch3.Cirrus.14][link=Chapters/IntroTOP]Chapter 4[/link][/if][else]Chapter 4[/else], the Elemental Essences of[itemtooltip=(O)DN.SnS_EarthEssence][icon=Textures/DN.SnS/SnSObjects:96,128,16,16] [color=brown]Earth[/color][/itemtooltip],[itemtooltip=(O)DN.SnS_AirEssence][icon=Textures/DN.SnS/SnSObjects:112,128,16,16] [color=cornflowerblue]Air[/color][/itemtooltip],[itemtooltip=(O)DN.SnS_FireEssence][icon=Textures/DN.SnS/SnSObjects:144,128,16,16] [color=Red]Fire[/color][/itemtooltip] and[itemtooltip=(O)DN.SnS_WaterEssence][icon=Textures/DN.SnS/SnSObjects:128,128,16,16] [color=blue]Water[/color][/itemtooltip] will begin dropping around you.
  
-Essences are used in quests, learning spells, alchemical recipes and using the [texttooltip=Teleportation Circle:Allows you to set up warp between two in-game locations.
-Usage documented in the Magical Grimoire after learning.] [color=purple]Teleportation Circle[/color][/texttooltip].
+Essences are used in quests, learning spells, alchemical recipes and using the [texttooltip=Teleportation Circle:Allows you to set up warp between two in-game locations.] [color=purple]Teleportation Circle[/color][/texttooltip].
  
 Collection method:
 >[itemtooltip=(O)DN.SnS_EarthEssence][icon=Textures/DN.SnS/SnSObjects:96,128,16,16] [color=brown]Earth[/color][/itemtooltip] - Mining
@@ -1720,7 +1719,7 @@ All buff potions apply buffs that last for 11 minutes and 40 seconds.
 You can also create spare [link=Mechanics/Underforge]Exquisite Gems[/link] using 3 normal gemstones and 5 [link=Mechanics/ElementalEssences]Elemental Essences[/link].
  
 [font=dialogue]Transmutation[/font]
-If you find yourself in need of a specific [link=Mechanics/ElementalEssences]Elemental Essence[/link], you can transmutate one essence into another from the Transmutation menu in your Magical Grimoire.
+If you find yourself in need of a specific [link=Mechanics/ElementalEssences]Elemental Essence[/link], you can transmutate one essence into another via the Transmutation spell.
  
 The conversation ratio for essences is 4:1 (Default), 2:1 ([link=Skills/SorcererProfessions]Hedge Witch[/link]) or 1:1 ([link=Skills/SorcererProfessions]Master Alchemist[/link]) and will pull from the first available essence in your inventory.",
 
@@ -2377,7 +2376,7 @@ Sword & Sorcery introduces 5 new powers to the game. 2 can be aquired every play
 [texttooltip=Handmade D20:A gift from Mateo. Once a day, if you pass out with the D20 in your possession, you will revive with half of your max health.][icon=Textures/DN.SnS/SnSObjects:0,80,16,16] [color=blue]Handmade D20[/color][/texttooltip]
   = Gifted by Mateo
  
-[texttooltip=Magical Grimoire:Bound by hand for you by Solomon. Use it to research new spells.][icon=Textures/DN.SnS/SnSObjects:128,144,16,16] [color=blue]Magical Grimoire[/color][/texttooltip]
+[texttooltip=Magical Grimoire:Bound by hand for you by Solomon. Allows for Aether regeneration (in a future update).][icon=Textures/DN.SnS/SnSObjects:128,144,16,16] [color=blue]Magical Grimoire[/color][/texttooltip]
   = Gifted by Solomon
  
 [texttooltip=Stygium-Forged Mermaid's Pendant:Mateo made this for you with love. Adds +2 Magnetic Radius, +10% damage, +3 Defense, and +1 Luck.][icon=Textures/DN.SnS/SnSObjects:112,0,16,16] [color=blue]Stygium-Forged Mermaid's Pendant[/color][/texttooltip]
