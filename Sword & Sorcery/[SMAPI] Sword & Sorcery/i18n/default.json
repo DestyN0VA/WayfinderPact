@@ -298,7 +298,7 @@
   "witchcraft.spell.revive-plant.name": "Revive Plant",
   "witchcraft.spell.revive-plant.description": "Revive a 5x5 area of crops around you.\n\nAether cost: 10",
   "witchcraft.spell.mirror-image.name": "Mirror Image",
-  "witchcraft.spell.mirror-image.description": "Summon three illusory duplicates, which have a chance of taking a hit for you.\n\nAether cost: 15\nCooldown: 10 seconds",
+  "witchcraft.spell.mirror-image.description": "Summon three illusory duplicates, which have a chance of taking a hit for you and start decaying after 10 seconds.\n\nAether cost: 15\nCooldown: 30 seconds",
   "witchcraft.spell.find-familiar.name": "Find Familiar",
   "witchcraft.spell.find-familiar.description": "Summon a small pet to follow you for the day, increasing your luck.\n\nAether cost: 10",
   "witchcraft.spell.ghostly-projection.name": "Ghostly Projection",
