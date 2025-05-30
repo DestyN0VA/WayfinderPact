@@ -21,7 +21,8 @@
 				"BookKeychain": "{{i18n:Mail.BookKeychain}}",
 				"EmeritusKeychain": "{{i18n:Mail.EmeritusKeychain}}",
 			    "OwlBoyKeychain": "{{i18n:Mail.OwlBoyKeychain}}",
-				"DN.SnS_FaireFoodMail": "{{i18n:Mail.DN.SnS_FaireFoodMail}}%item cookingRecipe DN.SnS_ScotchEgg%% %item cookingRecipe DN.SnS_Steak_on_a_Stake%% %item cookingRecipe DN.SnS_Fruit_Hand_Pie%% %item cookingRecipe DN.SnS_Smoked_TurkeyLeg%% %item cookingRecipe DN.SnS_Hand_Pressed_Apple_Cider%%[letterbg 0][textcolor black][#]{{i18n:Mail.DN.SnS_FaireFoodMail.Title}}"
+				"DN.SnS_FaireFoodMail": "{{i18n:Mail.DN.SnS_FaireFoodMail}}%item cookingRecipe DN.SnS_ScotchEgg%% %item cookingRecipe DN.SnS_Steak_on_a_Stake%% %item cookingRecipe DN.SnS_Fruit_Hand_Pie%% %item cookingRecipe DN.SnS_Smoked_TurkeyLeg%% %item cookingRecipe DN.SnS_Hand_Pressed_Apple_Cider%%[letterbg 0][textcolor black][#]{{i18n:Mail.DN.SnS_FaireFoodMail.Title}}",
+				"DestyLetter": "{{i18n:Mail.PHB}}"
             }
         },
         // TRIGGER ACTIONS
@@ -108,7 +109,12 @@
 					"Location": "Farm",
 					"Condition": "PLAYER_STAT Current daysPlayed 3", 
 					"Actions": [ "AddMail Current DN.SnS_FaireFoodMail tomorrow" ]
-		}
+				},
+				"{{ModID}}_SendPlayersHandbook1": {
+					"Id": "{{ModID}}_SendPlayersHandbook1",
+					"Trigger": "DayStarted",
+					"Actions": [ "AddMail Current DestyLetter now" ]
+        		}
 	}
 }
 ]

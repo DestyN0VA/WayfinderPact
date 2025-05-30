@@ -5,181 +5,178 @@
       "Target": "spacechase0.SpaceCore/ObjectExtensionData",
       "Entries": {
 
+        "{{ModID}}_StandaloneGuidebook": {
+          "UseForTriggerAction": true,
+          "CategoryTextOverride": "{{i18n:category.book}}"
+        },
         //EXQUISITE GEMS
         "{{ModID}}_ExquisiteEmerald": {
-          "CategoryTextOverride": "{{i18n:catgeory.raremineral}}",
-          "CategoryColorOverride": {}
+          "CategoryTextOverride": "{{i18n:category.raremineral}}"
         },
         "{{ModID}}_ExquisiteRuby": {
-          "CategoryTextOverride": "{{i18n:catgeory.raremineral}}",
-          "CategoryColorOverride": {}
+          "CategoryTextOverride": "{{i18n:category.raremineral}}"
         },
         "{{ModID}}_ExquisiteTopaz": {
-          "CategoryTextOverride": "{{i18n:catgeory.raremineral}}",
-          "CategoryColorOverride": {}
+          "CategoryTextOverride": "{{i18n:category.raremineral}}"
         },
         "{{ModID}}_ExquisiteAquamarin": {
-          "CategoryTextOverride": "{{i18n:catgeory.raremineral}}",
-          "CategoryColorOverride": {}
+          "CategoryTextOverride": "{{i18n:category.raremineral}}"
         },
         "{{ModID}}_ExquisiteAmethyst": {
-          "CategoryTextOverride": "{{i18n:catgeory.raremineral}}",
-          "CategoryColorOverride": {}
+          "CategoryTextOverride": "{{i18n:category.raremineral}}" 
         },
         "{{ModID}}_ExquisiteJade": {
-          "CategoryTextOverride": "{{i18n:catgeory.raremineral}}",
-          "CategoryColorOverride": {}
+          "CategoryTextOverride": "{{i18n:category.raremineral}}"
         },
         "{{ModID}}_ExquisiteDiamond": {
-          "CategoryTextOverride": "{{i18n:catgeory.raremineral}}",
-          "CategoryColorOverride": {}
+          "CategoryTextOverride": "{{i18n:category.raremineral}}"
         },
 
         //POTIONS
          "{{ModID}}_verdantpotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": { "R": 188, "G": 13, "B": 3, "A": 255 }
         },
         "{{ModID}}_scarletpotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": { "R": 188, "G": 13, "B": 3, "A": 255 }
         },
         "{{ModID}}_heatherpotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": { "R": 188, "G": 13, "B": 3, "A": 255 }
         },
         "{{ModID}}_zydratepotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": { "R": 188, "G": 13, "B": 3, "A": 255 }
         },
         "{{ModID}}_pistachiopotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": { "R": 188, "G": 13, "B": 3, "A": 255 }
         },
         "{{ModID}}_dahliapotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": { "R": 188, "G": 13, "B": 3, "A": 255 }
         },
         "{{ModID}}_slushiepotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": { "R": 188, "G": 13, "B": 3, "A": 255 }
         },
         "{{ModID}}_matrixpotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": { "R": 188, "G": 13, "B": 3, "A": 255 }
         },
         "{{ModID}}_mcdougalpotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": { "R": 188, "G": 13, "B": 3, "A": 255 }
         },
         "{{ModID}}_toirneachpotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": { "R": 188, "G": 13, "B": 3, "A": 255 }
         },
         "{{ModID}}_ReturnPotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": { "R": 188, "G": 13, "B": 3, "A": 255 }
         },
 
         // CUSTOM SNACK CATEGORY 
         "{{ModID}}_fountainsoda": {
-          "CategoryTextOverride": "{{i18n:catgeory.snack}}",
+          "CategoryTextOverride": "{{i18n:category.snack}}",
           "CategoryColorOverride": { "R": 188, "G": 13, "B": 3, "A": 255 }
         },
         "{{ModID}}_freshpopcorn": {
-          "CategoryTextOverride": "{{i18n:catgeory.snack}}",
+          "CategoryTextOverride": "{{i18n:category.snack}}",
           "CategoryColorOverride": { "R": 188, "G": 13, "B": 3, "A": 255 }
         },
 
       //DRUIDIC CROPS
       "{{ModID}}_ancientamaranth": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientepiphyticfern": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_glowingpolyporemushrooms": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientwildfairyrose": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientglowinghuckleberry": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientamaranth.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientepiphyticfern.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_glowingpolyporemushrooms.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientwildfairyrose.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientglowinghuckleberry.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientelderberry": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientelderberry.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientbottlegourd": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientbottlegourd.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientgiantappleberry": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientgiantappleberry.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientazuredetura": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientazuredetura.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientsweettealeaves": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientsweettealeaves.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
         "{{ModID}}_ancientsweettea": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
 
       //Essences
         "{{ModID}}_druidicessence": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": { "R": 48, "G": 162, "B": 218, "A": 255 }
         },
 

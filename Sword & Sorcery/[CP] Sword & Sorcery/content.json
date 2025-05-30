@@ -50,7 +50,7 @@
     {
       "LogName": "Sword & Sorcery - Data Includes", //Data/Events/EventsData_Ch1.json, Data/Events/EventsData_Ch2.json, Data/Events/EventsData_Ch3.json, Data/Events/EventsData_Ch4.json, Data/Events/EventsData_Ch5.json
       "Action": "Include",
-      "FromFile": "Data/FinalePartners.json, Data/Items/Functionality/Alchemy_Recipes.json, Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Festival Data/FestivalData_Dialogue.json, Data/WitchcraftResearch.json, Data/Dungeon.json, Data/PlayersHandbook.json"
+      "FromFile": "Data/FinalePartners.json, Data/MEEP/Book.json, Data/MEEP/Emeritus.json, Data/Spouse Extras/Weddings.json, Data/MapData.json, Data/WorldMaps.json, Data/ShopData.json,Data/Mail.json, Data/NPCExclusions.json, Data/BlankLoads.json, Data/MapPatches.json, Data/TemporaryActors.json, Data/ScheduleAnimations.json, Data/S&SMiscellaneous.json, Data/NPCGiftTastes.json, Data/Music.json, Data/SoundEffects.json, Data/Festival Data/FestivalData_Dialogue.json, Data/WitchcraftResearch.json, Data/Dungeon.json, Data/Items/Functionality/Players_Handbook.json"
     }, // Data/MEEP/Wyatt.json - add back for 3.0
     {
       "LogName": "3.0 Includes",

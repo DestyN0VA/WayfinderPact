@@ -4,6 +4,20 @@
     "Action": "EditData",
     "Target": "Data/Objects",
     "Entries": {
+        "{{ModID}}_StandaloneGuidebook": {
+          "Name": "{{ModID}}_StandaloneGuidebook",
+          "DisplayName": "{{i18n: magicitem.standaloneguidebook.name}}",
+          "Description": "{{i18n: magicitem.standaloneguidebook.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 5,
+          "Edibility": -300,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
+          "Texture": "SnS_Objects/Books",
+          "SpriteIndex": "7",
+          "ContextTags": [ "book_item" ]
+        },
       "{{ModID}}_artificerbook": {
         "Name": "{{ModID}}_artificerbook",
         "DisplayName": "{{i18n: magicitem.artificerbook.name}}",

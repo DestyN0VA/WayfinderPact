@@ -6815,6 +6815,9 @@ ________      ________ _   _ _______ _____
   "power.magicalgrimoire.name": "Magical Grimoire",
   "power.magicalgrimoire.description": "Bound by hand for you by Solomon. Use it to research new spells.",
 
+  "magicitem.standaloneguidebook.name": "Player's Pocket Handbook",
+  "magicitem.standaloneguidebook.description": "A standalone edition of the S&S guidebook. Table not included.",
+
   "magicitem.artificerbook.name": "Tasha's Artificer Handbook",
   "magicitem.artificerbook.description": "A dusty tome with old blueprints.",
 
@@ -7213,12 +7216,13 @@ ________      ________ _   _ _______ _____
   "weapon.elysium-blade.name": "Elysium Blade",
   "weapon.elysium-blade.description": "A stygium blade, purified.",
 
-  "catgeory.raremineral": "Rare Mineral",
-  "catgeory.potion": "Potion",
-  "catgeory.druidic": "Druidic",
-  "catgeory.sheild": "Shield",
-  "catgeory.snack": "Snack",
-  "catgeory.corruptedobject": "Corrupted Object",
+  "category.raremineral": "Rare Mineral",
+  "category.book": "Book",
+  "category.potion": "Potion",
+  "category.druidic": "Druidic",
+  "category.sheild": "Shield",
+  "category.snack": "Snack",
+  "category.corruptedobject": "Corrupted Object",
 
   "witchcraft.earth-essence.name": "Earth Essence",
   "witchcraft.earth-essence.description": "Essence of the earth.",
