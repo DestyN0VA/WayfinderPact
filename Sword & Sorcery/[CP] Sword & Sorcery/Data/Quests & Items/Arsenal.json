@@ -706,31 +706,31 @@
       "Target": "spacechase0.SpaceCore/ObjectExtensionData",
       "Entries": {
         "{{ModID}}_ExquisiteEmerald": {
-          "CategoryTextOverride": "{{i18n:catgeory.raremineral}}",
+          "CategoryTextOverride": "{{i18n:category.raremineral}}",
           "CategoryColorOverride": {}
         },
         "{{ModID}}_ExquisiteRuby": {
-          "CategoryTextOverride": "{{i18n:catgeory.raremineral}}",
+          "CategoryTextOverride": "{{i18n:category.raremineral}}",
           "CategoryColorOverride": {}
         },
         "{{ModID}}_ExquisiteTopaz": {
-          "CategoryTextOverride": "{{i18n:catgeory.raremineral}}",
+          "CategoryTextOverride": "{{i18n:category.raremineral}}",
           "CategoryColorOverride": {}
         },
         "{{ModID}}_ExquisiteAquamarin": {
-          "CategoryTextOverride": "{{i18n:catgeory.raremineral}}",
+          "CategoryTextOverride": "{{i18n:category.raremineral}}",
           "CategoryColorOverride": {}
         },
         "{{ModID}}_ExquisiteAmethyst": {
-          "CategoryTextOverride": "{{i18n:catgeory.raremineral}}",
+          "CategoryTextOverride": "{{i18n:category.raremineral}}",
           "CategoryColorOverride": {}
         },
         "{{ModID}}_ExquisiteJade": {
-          "CategoryTextOverride": "{{i18n:catgeory.raremineral}}",
+          "CategoryTextOverride": "{{i18n:category.raremineral}}",
           "CategoryColorOverride": {}
         },
         "{{ModID}}_ExquisiteDiamond": {
-          "CategoryTextOverride": "{{i18n:catgeory.raremineral}}",
+          "CategoryTextOverride": "{{i18n:category.raremineral}}",
           "CategoryColorOverride": {}
         }
       }

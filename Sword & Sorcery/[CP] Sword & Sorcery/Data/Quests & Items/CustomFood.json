@@ -1349,7 +1349,7 @@
       "Target": "spacechase0.SpaceCore/ObjectExtensionData",
       "Entries": {
         "{{ModID}}_verdantpotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": {
             "R": 188,
             "G": 13,
@@ -1358,7 +1358,7 @@
           }
         },
         "{{ModID}}_scarletpotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": {
             "R": 188,
             "G": 13,
@@ -1367,7 +1367,7 @@
           }
         },
         "{{ModID}}_heatherpotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": {
             "R": 188,
             "G": 13,
@@ -1376,7 +1376,7 @@
           }
         },
         "{{ModID}}_zydratepotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": {
             "R": 188,
             "G": 13,
@@ -1385,7 +1385,7 @@
           }
         },
         "{{ModID}}_pistachiopotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": {
             "R": 188,
             "G": 13,
@@ -1394,7 +1394,7 @@
           }
         },
         "{{ModID}}_dahliapotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": {
             "R": 188,
             "G": 13,
@@ -1403,7 +1403,7 @@
           }
         },
         "{{ModID}}_slushiepotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": {
             "R": 188,
             "G": 13,
@@ -1412,7 +1412,7 @@
           }
         },
         "{{ModID}}_matrixpotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": {
             "R": 188,
             "G": 13,
@@ -1421,7 +1421,7 @@
           }
         },
         "{{ModID}}_mcdougalpotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": {
             "R": 188,
             "G": 13,
@@ -1430,7 +1430,7 @@
           }
         },
         "{{ModID}}_toirneachpotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": {
             "R": 188,
             "G": 13,
@@ -1439,7 +1439,7 @@
           }
         },
         "{{ModID}}_ReturnPotion": {
-          "CategoryTextOverride": "{{i18n:catgeory.potion}}",
+          "CategoryTextOverride": "{{i18n:category.potion}}",
           "CategoryColorOverride": {
             "R": 188,
             "G": 13,
@@ -1449,7 +1449,7 @@
         },
         // CUSTOM SNACK CATEGORY 
         "{{ModID}}_fountainsoda": {
-          "CategoryTextOverride": "{{i18n:catgeory.snack}}",
+          "CategoryTextOverride": "{{i18n:category.snack}}",
           "CategoryColorOverride": {
             "R": 188,
             "G": 13,
@@ -1458,7 +1458,7 @@
           }
         },
         "{{ModID}}_freshpopcorn": {
-          "CategoryTextOverride": "{{i18n:catgeory.snack}}",
+          "CategoryTextOverride": "{{i18n:category.snack}}",
           "CategoryColorOverride": {
             "R": 188,
             "G": 13,

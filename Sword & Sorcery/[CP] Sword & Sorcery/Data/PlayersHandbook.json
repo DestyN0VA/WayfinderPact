@@ -428,6 +428,53 @@
       }
     },
     {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_StandaloneGuidebook": {
+          "Name": "{{ModID}}_StandaloneGuidebook",
+          "DisplayName": "{{i18n: magicitem.standaloneguidebook.name}}",
+          "Description": "{{i18n: magicitem.standaloneguidebook.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 5,
+          "Edibility": -300,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
+          "Texture": "Textures/DN.SnS/SnSObjects",
+          "SpriteIndex": "134",
+          "ContextTags": [ "book_item" ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/ObjectExtensionData",
+      "Entries": {
+        "{{ModID}}_StandaloneGuidebook": { "UseForTriggerAction": true, "CategoryTextOverride": "{{i18n:category.book}}" }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "{{ModID}}_StandaloneGuidebook": "388 1 771 1 92 1/hoot/{{ModID}}_StandaloneGuidebook 1/false/default/{{i18n:magicitem.standaloneguidebook.name}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModID}}_OpenStandaloneGuidebook": {
+          "Id": "{{ModID}}_OpenStandaloneGuidebook",
+          "MarkActionApplied": false,
+          "Trigger": "spacechase0.SpaceCore_OnItemUsed",
+          "Condition": "ITEM_ID Input (O){{ModID}}_StandaloneGuidebook",
+          "Actions": [ "spacechase0.SpaceCore_OpenGuidebook {{ModId}}", "spacechase0.SpaceCore_PlaySound book_read true" ]
+        }
+      }
+    },  
+    {
       "LogName": "Letter from Desty",
       "Action": "EditData",
       "Target": "Data/Mail",

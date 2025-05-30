@@ -753,7 +753,7 @@
       "Target": "spacechase0.SpaceCore/ObjectExtensionData",
       "Entries": {
         "{{ModID}}_ancientamaranth": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -762,7 +762,7 @@
           }
         },
         "{{ModID}}_ancientepiphyticfern": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -771,7 +771,7 @@
           }
         },
         "{{ModID}}_glowingpolyporemushrooms": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -780,7 +780,7 @@
           }
         },
         "{{ModID}}_ancientwildfairyrose": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -789,7 +789,7 @@
           }
         },
         "{{ModID}}_ancientglowinghuckleberry": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -798,7 +798,7 @@
           }
         },
         "{{ModID}}_ancientamaranth.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -807,7 +807,7 @@
           }
         },
         "{{ModID}}_ancientepiphyticfern.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -816,7 +816,7 @@
           }
         },
         "{{ModID}}_glowingpolyporemushrooms.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -825,7 +825,7 @@
           }
         },
         "{{ModID}}_ancientwildfairyrose.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -834,7 +834,7 @@
           }
         },
         "{{ModID}}_ancientglowinghuckleberry.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -843,7 +843,7 @@
           }
         },
         "{{ModID}}_ancientelderberry": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -852,7 +852,7 @@
           }
         },
         "{{ModID}}_ancientelderberry.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -861,7 +861,7 @@
           }
         },
         "{{ModID}}_ancientbottlegourd": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -870,7 +870,7 @@
           }
         },
         "{{ModID}}_ancientbottlegourd.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -879,7 +879,7 @@
           }
         },
         "{{ModID}}_ancientgiantappleberry": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -888,7 +888,7 @@
           }
         },
         "{{ModID}}_ancientgiantappleberry.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -897,7 +897,7 @@
           }
         },
         "{{ModID}}_ancientazuredetura": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -906,7 +906,7 @@
           }
         },
         "{{ModID}}_ancientazuredetura.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -915,7 +915,7 @@
           }
         },
         "{{ModID}}_ancientsweettealeaves": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -924,7 +924,7 @@
           }
         },
         "{{ModID}}_ancientsweettealeaves.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -933,7 +933,7 @@
           }
         },
         "{{ModID}}_ancientsweettea": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,

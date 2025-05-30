@@ -182,7 +182,7 @@
       "Target": "spacechase0.SpaceCore/ObjectExtensionData",
       "Entries": {
         "{{ModID}}_ancientazuredetura.seed": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -191,7 +191,7 @@
           }
         },
         "{{ModID}}_druidicessence": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -200,7 +200,7 @@
           }
         },
         "{{ModID}}_druidictotemfetish": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -209,7 +209,7 @@
           }
         },
         "{{ModID}}_druidiceldermask": {
-          "CategoryTextOverride": "{{i18n:catgeory.druidic}}",
+          "CategoryTextOverride": "{{i18n:category.druidic}}",
           "CategoryColorOverride": {
             "R": 48,
             "G": 162,
@@ -218,28 +218,28 @@
           }
         },
         "{{ModID}}_brokenshield": {
-          "CategoryTextOverride": "{{i18n:catgeory.sheild}}",
+          "CategoryTextOverride": "{{i18n:category.sheild}}",
           "CanBeShipped": false,
           "CanBeTrashed": false,
           "HideFromShippingCollection": true,
           "MaxStackSizeOverride": 1
         },
         "{{ModID}}_repairedshield": {
-          "CategoryTextOverride": "{{i18n:catgeory.sheild}}",
+          "CategoryTextOverride": "{{i18n:category.sheild}}",
           "CanBeShipped": false,
           "CanBeTrashed": false,
           "HideFromShippingCollection": true,
           "MaxStackSizeOverride": 1
         },
         "{{ModID}}_argentisshield": {
-          "CategoryTextOverride": "{{i18n:catgeory.sheild}}",
+          "CategoryTextOverride": "{{i18n:category.sheild}}",
           "CanBeShipped": false,
           "CanBeTrashed": false,
           "HideFromShippingCollection": true,
           "MaxStackSizeOverride": 1
         },
         "{{ModID}}_stygiumstatuette": {
-          "CategoryTextOverride": "{{i18n:catgeory.corruptedobject}}"
+          "CategoryTextOverride": "{{i18n:category.corruptedobject}}"
         }
       }
     }
