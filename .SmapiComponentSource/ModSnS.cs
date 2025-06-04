@@ -134,11 +134,11 @@ namespace SwordAndSorcerySMAPI
         public readonly NetFloat stasisTimer = new(-1);
 
         public NetBool DoingFinale = new(false);
-        public bool StartingArtificer = false;
-        public bool StartingDruidics = false;
-        public bool StartingBardics = false;
-        public bool StartingSorcery = false;
-        public bool StartingPaladin = false;
+        public bool StartingArtificer { get => Game1.player.hasOrWillReceiveMail("StartingArtificerSkill"); }
+        public bool StartingDruidics { get => Game1.player.hasOrWillReceiveMail("StartingDruidicsSkill"); }
+        public bool StartingBardics { get => Game1.player.hasOrWillReceiveMail("StartingBardicsSkill"); }
+        public bool StartingSorcery { get => Game1.player.hasOrWillReceiveMail("StartingSorcerySkill"); }
+        public bool StartingPaladin { get => Game1.player.hasOrWillReceiveMail("StartingPaladinSkill"); }
         public readonly Dictionary<MeleeWeapon, List<BaseEnchantment>> OrigEnchs = [];
     }
 
@@ -1894,11 +1894,11 @@ namespace SwordAndSorcerySMAPI
             Point basePoint = new(28, 7);
             Dictionary<string, (string sprite, string portrait, string dialogue)> data = new()
             {
-                { "Val", new( "Armor_Mateo", "Armor_Mateo", I18n.FakeNpc_Deepdark_MateoMine() ) },
-                { "Hector", new( "Hector_HoodDown", "Hector_HoodDown", I18n.FakeNpc_Deepdark_HectorMine() ) },
-                { "Cirrus", new( "Cirrus_Glamrock", "Cirrus_Glamrock", I18n.FakeNpc_Deepdark_CirrusMine() ) },
-                { "Dandelion", new( "Dandelion_armored", "Dandelion_armored", I18n.FakeNpc_Deepdark_DandelionMine() ) },
-                { "Roslin", new( "Roslin_armored", "Roslin_armored", I18n.FakeNpc_Deepdark_RoslinMine() ) },
+                { "Val", new("Armor_Mateo", "Armor_Mateo", I18n.FakeNpc_Deepdark_ValMine()) },
+                { "Hector", new("Hector_HoodDown", "Hector_HoodDown", I18n.FakeNpc_Deepdark_HectorMine())  },
+                { "Cirrus", new("Cirrus_Glamrock", "Cirrus_Glamrock", I18n.FakeNpc_Deepdark_CirrusMine()) },
+                { "Dandelion", new("Dandelion_armored", "Dandelion_armored", I18n.FakeNpc_Deepdark_DandelionMine()) },
+                { "Roslin", new("Roslin_armored", "Roslin_armored", I18n.FakeNpc_Deepdark_RoslinMine()) },
             };
 
             foreach (var entry in data)
@@ -1908,16 +1908,6 @@ namespace SwordAndSorcerySMAPI
                     displayName = NPC.GetDisplayName(entry.Key)
                 };
                 npc.setNewDialogue(new Dialogue(npc, "deepdarkdialogue", entry.Value.dialogue));
-                if (entry.Key == "Val")
-                {
-                    /*
-                    npc.Sprite.setCurrentAnimation(
-                    [
-                        new(41, 750),
-                        new(42, 250),
-                    ]);
-                    */
-                }
                 __instance.characters.Add(npc);
                 basePoint.X++;
             }

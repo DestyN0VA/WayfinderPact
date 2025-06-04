@@ -6,11 +6,7 @@ using StardewValley;
 using StardewValley.Menus;
 using System.Collections.Generic;
 
-<<<<<<<< HEAD:.SmapiComponentSource/Menus/ShieldSigilMenu.cs
-namespace SwordAndSorcerySMAPI.Menus;
-========
 namespace SwordAndSorcerySMAPI.Framework.Menus;
->>>>>>>> main:.SmapiComponentSource/Framework/Menus/ShieldSigilMenu.cs
 
 public class ShieldSigilMenu : IClickableMenu
 {

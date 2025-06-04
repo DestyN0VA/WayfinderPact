@@ -7,22 +7,14 @@ using StardewValley.BellsAndWhistles;
 using StardewValley.Extensions;
 using StardewValley.Menus;
 using StardewValley.Objects;
-<<<<<<<< HEAD:.SmapiComponentSource/Menus/FancyAlchemyMenu.cs
-using SwordAndSorcerySMAPI.Alchemy;
-========
 using SwordAndSorcerySMAPI.Framework.Alchemy;
 using SwordAndSorcerySMAPI.Framework.NEA.Utils;
->>>>>>>> main:.SmapiComponentSource/Framework/Menus/FancyAlchemyMenu.cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using Object = StardewValley.Object;
 
-<<<<<<<< HEAD:.SmapiComponentSource/Menus/FancyAlchemyMenu.cs
-namespace SwordAndSorcerySMAPI.Menus
-========
 namespace SwordAndSorcerySMAPI.Framework.Menus
->>>>>>>> main:.SmapiComponentSource/Framework/Menus/FancyAlchemyMenu.cs
 {
     public class FancyAlchemyMenu : IClickableMenu
     {

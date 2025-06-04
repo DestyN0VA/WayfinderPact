@@ -9,9 +9,10 @@ using StardewValley.Network.NetEvents;
 using System.Collections.Generic;
 using System.Linq;
 using static StardewValley.Menus.CharacterCustomization;
-using static SwordAndSorcerySMAPI.Menus.SkillSelectMenu.CharacterCustomizationPatch1;
+using static SwordAndSorcerySMAPI.Framework.Menus.SkillSelectMenu.CharacterCustomizationPatch1;
+using static SpaceCore.Skills;
 
-namespace SwordAndSorcerySMAPI.Menus
+namespace SwordAndSorcerySMAPI.Framework.Menus
 {
     internal class SkillSelectMenu
     {
@@ -21,15 +22,15 @@ namespace SwordAndSorcerySMAPI.Menus
 
             public static List<ClickableComponent> Components = [];
 
-            public static List<SpaceCore.Skills.Skill> Skills2 = [ModSnS.RogueSkill, ModCoT.DruidSkill, ModUP.BardicsSkill, ModTOP.SorcerySkill, ModTOP.PaladinSkill];
+            public static List<Skill> Skills2 = [ModSnS.RogueSkill, ModCoT.DruidSkill, ModUP.BardSkill, ModTOP.SorcerySkill, ModTOP.PaladinSkill];
             public static Dictionary<string, bool> SkillsSelected = [];
 
-            public static void Postfix(CharacterCustomization __instance, CharacterCustomization.Source source)
+            public static void Postfix(CharacterCustomization __instance, Source source)
             {
-                if (source != CharacterCustomization.Source.NewGame &&
-                    source != CharacterCustomization.Source.HostNewFarm &&
-                    source != CharacterCustomization.Source.NewFarmhand &&
-                    source != CharacterCustomization.Source.Wizard)
+                if (source != Source.NewGame &&
+                    source != Source.HostNewFarm &&
+                    source != Source.NewFarmhand &&
+                    source != Source.Wizard)
                     return;
 
                 foreach (var s in SkillsSelected.Keys)
@@ -56,8 +57,8 @@ namespace SwordAndSorcerySMAPI.Menus
 
                 for (int i = 0; i < 5; i++)
                 {
-                    int x = __instance.xPositionOnScreen - 256 - 32 + 50 + 4 - ((LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.ko) ? 25 : 0) + 24 - (source == CharacterCustomization.Source.HostNewFarm ? 268 : 0);
-                    int y = __instance.yPositionOnScreen + IClickableMenu.borderWidth * 2 + 48 * (i + 1) + 4 * i + 24 + (__instance.source == CharacterCustomization.Source.HostNewFarm ? 68 : 0);
+                    int x = __instance.xPositionOnScreen - 256 - 32 + 50 + 4 - (LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.ko ? 25 : 0) + 24 - (source == Source.HostNewFarm ? 268 : 0);
+                    int y = __instance.yPositionOnScreen + IClickableMenu.borderWidth * 2 + 48 * (i + 1) + 4 * i + 24 + (__instance.source == Source.HostNewFarm ? 68 : 0);
 
                     ClickableComponent c = new(new(x, y, 36, 36), Skills[i])
                     {
@@ -78,8 +79,8 @@ namespace SwordAndSorcerySMAPI.Menus
         {
             public static void Postfix(CharacterCustomization __instance, SpriteBatch b)
             {
-                int x = __instance.xPositionOnScreen - 256 - 32 + 4 - ((LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.ko) ? 25 : 0) - (__instance.source == CharacterCustomization.Source.HostNewFarm ? 268 : 0);
-                int y = __instance.yPositionOnScreen + IClickableMenu.borderWidth * 2 + (__instance.source == CharacterCustomization.Source.HostNewFarm ? 68 : 0);
+                int x = __instance.xPositionOnScreen - 256 - 32 + 4 - (LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.ko ? 25 : 0) - (__instance.source == Source.HostNewFarm ? 268 : 0);
+                int y = __instance.yPositionOnScreen + IClickableMenu.borderWidth * 2 + (__instance.source == Source.HostNewFarm ? 68 : 0);
                 IClickableMenu.drawTextureBox(b,
                 x,
                 y,
@@ -87,7 +88,7 @@ namespace SwordAndSorcerySMAPI.Menus
                 Color.White);
 
                 Utility.drawTextWithShadow(b, I18n.SelectSkill(), Game1.dialogueFont,
-                    new(x + IClickableMenu.borderWidth + 288 / 2 - SpriteText.getWidthOfString(I18n.SelectSkill()) / 2 + 6, y + 20), 
+                    new(x + IClickableMenu.borderWidth + 288 / 2 - SpriteText.getWidthOfString(I18n.SelectSkill()) / 2 + 6, y + 20),
                     Game1.textColor);
                 for (int i = 0; i < Components.Count; i++)
                 {
@@ -98,7 +99,7 @@ namespace SwordAndSorcerySMAPI.Menus
                 }
             }
         }
-        
+
         [HarmonyPatch(typeof(CharacterCustomization), nameof(CharacterCustomization.receiveLeftClick))]
         static class CharacterCustomizationPatch3
         {
@@ -122,7 +123,7 @@ namespace SwordAndSorcerySMAPI.Menus
         [HarmonyPatch(typeof(CharacterCustomization), nameof(CharacterCustomization.gameWindowSizeChanged))]
         static class CharacterCustomization4
         {
-            public static void Postfix(CharacterCustomization __instance, Rectangle oldBounds, Rectangle newBounds)
+            public static void Postfix(CharacterCustomization __instance)
             {
                 Resize(__instance);
             }
@@ -133,8 +134,8 @@ namespace SwordAndSorcerySMAPI.Menus
                 {
                     ClickableComponent c = Components[i];
 
-                    c.bounds.X = cc.xPositionOnScreen - 256 - 32 + 50 + 4 - ((LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.ko) ? 25 : 0) + 24 - (cc.source == CharacterCustomization.Source.HostNewFarm ? 268 : 0);
-                    c.bounds.Y = cc.yPositionOnScreen + IClickableMenu.borderWidth * 2 + 48 * (i + 1) + 4 * i + 24 + (cc.source == CharacterCustomization.Source.HostNewFarm ? 68 : 0);
+                    c.bounds.X = cc.xPositionOnScreen - 256 - 32 + 50 + 4 - (LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.ko ? 25 : 0) + 24 - (cc.source == Source.HostNewFarm ? 268 : 0);
+                    c.bounds.Y = cc.yPositionOnScreen + IClickableMenu.borderWidth * 2 + 48 * (i + 1) + 4 * i + 24 + (cc.source == Source.HostNewFarm ? 68 : 0);
                 }
                 cc.populateClickableComponentList();
                 cc.allClickableComponents.AddRange(Components);
@@ -149,29 +150,8 @@ namespace SwordAndSorcerySMAPI.Menus
                 if (name != "OK")
                     return;
 
-                var ext = Game1.player.GetFarmerExtData();
                 foreach (var s in SkillsSelected)
-                {
-                    switch (s.Key)
-                    {
-                        case "Artificer":
-                            ext.StartingArtificer = s.Value;
-                            break;
-                        case "Druidics":
-                            ext.StartingDruidics = s.Value;
-                            break;
-                        case "Bardics":
-                            ext.StartingBardics = s.Value;
-                            break;
-                        case "Sorcery":
-                            ext.StartingSorcery = s.Value;
-                            break;
-                        case "Paladin":
-                            ext.StartingPaladin = s.Value;
-                            break;
-                    }
                     Game1.player.team.RequestSetMail(PlayerActionTarget.Current, $"Starting{s.Key}Skill", MailType.Received, s.Value);
-                }
             }
         }
     }
