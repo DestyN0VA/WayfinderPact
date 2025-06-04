@@ -9,6 +9,9 @@ using StardewValley;
 using StardewValley.Characters;
 using StardewValley.TerrainFeatures;
 using StardewValley.Tools;
+using SwordAndSorcerySMAPI.Framework.Abilities;
+using SwordAndSorcerySMAPI.Framework.DualWieldingAndWeapons;
+using SwordAndSorcerySMAPI.Framework.ModSkills;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -95,6 +98,8 @@ namespace SwordAndSorcerySMAPI
                 Function = () =>
                 {
                     var ext = Game1.player.GetFarmerExtData();
+                    if (!Game1.player.GetFarmerExtData().transformed.Value)
+                        ext.mana.Value -= 5;
                     ext.form.Value = 0;
                     ext.transformed.Value = !ext.transformed.Value;
                     PostTransform();
@@ -112,7 +117,10 @@ namespace SwordAndSorcerySMAPI
                 CanUse = () => !Game1.player.isRidingHorse(),
                 Function = () =>
                 {
+
                     var ext = Game1.player.GetFarmerExtData();
+                    if (!Game1.player.GetFarmerExtData().transformed.Value)
+                        ext.mana.Value -= 5;
                     ext.form.Value = 1;
                     ext.transformed.Value = !ext.transformed.Value;
                     PostTransform();
@@ -131,6 +139,8 @@ namespace SwordAndSorcerySMAPI
                 Function = () =>
                 {
                     var ext = Game1.player.GetFarmerExtData();
+                    if (!Game1.player.GetFarmerExtData().transformed.Value)
+                        ext.mana.Value -= 5;
                     ext.form.Value = 2;
                     ext.transformed.Value = !ext.transformed.Value;
                     PostTransform();

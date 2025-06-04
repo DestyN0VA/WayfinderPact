@@ -12,6 +12,9 @@ using StardewValley.Locations;
 using StardewValley.Monsters;
 using StardewValley.TerrainFeatures;
 using StardewValley.Tools;
+using SwordAndSorcerySMAPI.Framework.Abilities;
+using SwordAndSorcerySMAPI.Framework.DualWieldingAndWeapons;
+using SwordAndSorcerySMAPI.Framework.ModSkills;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -466,7 +469,7 @@ namespace SwordAndSorcerySMAPI
 
         public static List<List<SongEntry>> Songs { get; private set; }
 
-        internal static BardicsSkill BardicsSkill;
+        internal static BardicsSkill BardSkill;
 
         public IMonitor Monitor;
         public IManifest ModManifest;
@@ -489,8 +492,9 @@ namespace SwordAndSorcerySMAPI
             return amt;
         }
 
-        private static void SongPreamble(Action songStuff)
+        private static void SongPreamble(Action songStuff, int ManaCost)
         {
+            Game1.player.GetFarmerExtData().mana.Value -= ManaCost;
             Game1.player.faceDirection(Game1.down);
             Game1.player.performPlayerEmote("music");
             Game1.player.isEmoteAnimating = false;
@@ -505,7 +509,7 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.GameLoop.UpdateTicked += GameLoop_UpdateTicked;
             Helper.Events.Multiplayer.ModMessageReceived += Multiplayer_ModMessageReceived;
 
-            BardicsSkill = new BardicsSkill();
+            BardSkill = new BardicsSkill();
             Songs =
             [
                 [new SongEntry() { Name = I18n.Bardics_Song_Buff_Name, Function = SongEntry.BuffSong }],
@@ -514,7 +518,7 @@ namespace SwordAndSorcerySMAPI
                 [new SongEntry() { Name = I18n.Bardics_Song_Protection_Name, Function = SongEntry.ProtectionSong }],
                 [], // level 5
                 [new SongEntry() { Name = I18n.Bardics_Song_Time_Name, Function = SongEntry.TimeSong }],
-                [new SongEntry() { Name = () => I18n.Bardics_Song_Horse_Name( Game1.player.horseName.Value ?? I18n.Cptoken_Horse() ), Function = SongEntry.HorseSong }],
+                [new SongEntry() { Name = () => I18n.Bardics_Song_Horse_Name(Game1.player.horseName.Value ?? I18n.Cptoken_Horse()), Function = SongEntry.HorseSong }],
                 [new SongEntry() { Name = I18n.Bardics_Song_Crops_Name, Function = SongEntry.CropSong }],
                 [new SongEntry() { Name = I18n.Bardics_Song_Obelisk_Name, Function = SongEntry.ObeliskSong }],
                 [],
@@ -541,8 +545,8 @@ namespace SwordAndSorcerySMAPI
                 CanUse = () => SongEntry.usedBuffToday < ModUP.GetSongLimit(),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 50);
-                    SongPreamble(() => SongEntry.BuffSong());
+                    Game1.player.AddCustomSkillExperience(ModUP.BardSkill, 50);
+                    SongPreamble(() => SongEntry.BuffSong(), 20);
                 }
             });
             Ability.Abilities.Add("song_battle", new Ability("song_battle")
@@ -557,8 +561,8 @@ namespace SwordAndSorcerySMAPI
                 CanUse = () => SongEntry.usedBattleToday < ModUP.GetSongLimit(),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 50);
-                    SongPreamble(() => SongEntry.BattleSong());
+                    Game1.player.AddCustomSkillExperience(ModUP.BardSkill, 50);
+                    SongPreamble(() => SongEntry.BattleSong(), 20);
                 }
             });
             Ability.Abilities.Add("song_restoration", new Ability("song_restoration")
@@ -573,8 +577,8 @@ namespace SwordAndSorcerySMAPI
                 CanUse = () => SongEntry.usedRestorationToday < ModUP.GetSongLimit(),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 50);
-                    SongPreamble(() => SongEntry.RestorationSong());
+                    Game1.player.AddCustomSkillExperience(ModUP.BardSkill, 50);
+                    SongPreamble(() => SongEntry.RestorationSong(), 10);
                 }
             });
             Ability.Abilities.Add("song_protection", new Ability("song_protection")
@@ -588,8 +592,8 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Bardics_UnlockHint(4),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 25);
-                    SongPreamble(() => SongEntry.ProtectionSong());
+                    Game1.player.AddCustomSkillExperience(ModUP.BardSkill, 25);
+                    SongPreamble(() => SongEntry.ProtectionSong(), 10);
                 }
             });
             Ability.Abilities.Add("song_npcbuff", new Ability("song_npcbuff")
@@ -604,8 +608,8 @@ namespace SwordAndSorcerySMAPI
                 HiddenIfLocked = true,
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 50);
-                    SongPreamble(() => SongEntry.NpcSong());
+                    Game1.player.AddCustomSkillExperience(ModUP.BardSkill, 50);
+                    SongPreamble(() => SongEntry.NpcSong(), 25);
                 }
             });
             Ability.Abilities.Add("song_attack", new Ability("song_attack")
@@ -619,8 +623,8 @@ namespace SwordAndSorcerySMAPI
                 HiddenIfLocked = true,
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 25);
-                    SongPreamble(() => SongEntry.AttackSong());
+                    Game1.player.AddCustomSkillExperience(ModUP.BardSkill, 25);
+                    SongPreamble(() => SongEntry.AttackSong(), 20);
                 }
             });
             Ability.Abilities.Add("song_time", new Ability("song_time")
@@ -635,8 +639,8 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Bardics_UnlockHint(6),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 25);
-                    SongPreamble(() => SongEntry.TimeSong());
+                    Game1.player.AddCustomSkillExperience(ModUP.BardSkill, 25);
+                    SongPreamble(() => SongEntry.TimeSong(), 35);
                 }
             });
             Ability.Abilities.Add("song_horse", new Ability("song_horse")
@@ -650,8 +654,8 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Bardics_UnlockHint(7),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 25);
-                    SongPreamble(() => SongEntry.HorseSong());
+                    Game1.player.AddCustomSkillExperience(ModUP.BardSkill, 25);
+                    SongPreamble(() => SongEntry.HorseSong(), 10);
                 }
             });
             Ability.Abilities.Add("song_crop", new Ability("song_crop")
@@ -665,8 +669,8 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Bardics_UnlockHint(8),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 25);
-                    SongPreamble(() => SongEntry.CropSong());
+                    Game1.player.AddCustomSkillExperience(ModUP.BardSkill, 25);
+                    SongPreamble(() => SongEntry.CropSong(), 30);
                 }
             });
             Ability.Abilities.Add("song_obelisk", new Ability("song_obelisk")
@@ -680,8 +684,8 @@ namespace SwordAndSorcerySMAPI
                 UnlockHint = () => I18n.Ability_Bardics_UnlockHint(9),
                 Function = () =>
                 {
-                    Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, 25);
-                    SongPreamble(() => SongEntry.ObeliskSong());
+                    Game1.player.AddCustomSkillExperience(ModUP.BardSkill, 25);
+                    SongPreamble(() => SongEntry.ObeliskSong(), 15);
                 }
             });
 
@@ -759,19 +763,6 @@ namespace SwordAndSorcerySMAPI
 
                 @event.CurrentCommand++;
             });
-
-            Helper.ConsoleCommands.Add("sns_playsong", "...", (cmd, args) =>
-            {
-                var songlist = Songs[int.Parse(args[0])];
-                SongEntry toPlay = null;
-                if (songlist.Count > 1)
-                    toPlay = songlist[int.Parse(args[1])];
-                else if (songlist.Count == 1)
-                    toPlay = songlist[0];
-                else return;
-
-                toPlay.Function();
-            });
         }
 
         private void GameLoop_UpdateTicked(object sender, UpdateTickedEventArgs e)
@@ -839,7 +830,7 @@ namespace SwordAndSorcerySMAPI
         private void GameLoop_GameLaunched(object sender, GameLaunchedEventArgs e)
         {
             //var sc = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
-            Skills.RegisterSkill(BardicsSkill);
+            Skills.RegisterSkill(BardSkill);
         }
     }
 
@@ -851,7 +842,7 @@ namespace SwordAndSorcerySMAPI
             if (!Game1.player.eventsSeen.Contains(ModUP.BardicsEventId))
                 return;
 
-            Game1.player.AddCustomSkillExperience(ModUP.BardicsSkill, amount);
+            Game1.player.AddCustomSkillExperience(ModUP.BardSkill, amount);
         }
     }
 }

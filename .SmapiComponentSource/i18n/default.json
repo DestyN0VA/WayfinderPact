@@ -10,6 +10,7 @@
   "AdventureBar-Hide.description": "Hide or show the Adventure Bar on your screen. \nDoes nothing if the Adventure Bar hasn't been unlocked.",
   "AdventureBarConfigMenu.name": "Adventure Bar Config Menu",
   "AdventureBarConfigMenu.description": "Open the Adventure Bar Config Menu. \nDoes nothing if the Adventure Bar hasn't been unlocked.",
+  "Spells.Position-Mouse-Announcement": "Spell requires positioning. Cast another spell, recast or use the Action Button to cancel",
   "Iconic.UseAbility.name": "No Ability",
   "Iconic.UseAbility.description": "Ability in Row {{0}} Column {{1}}. \nDoes nothing if the Adventure Bar hasn't been unlocked.",
   "Iconic.UseAbility.NoAbilityInSlot": "There's no Ability assigned to that slot.",
@@ -298,7 +299,7 @@
   "witchcraft.spell.revive-plant.name": "Revive Plant",
   "witchcraft.spell.revive-plant.description": "Revive a 5x5 area of crops around you.\n\nAether cost: 10",
   "witchcraft.spell.mirror-image.name": "Mirror Image",
-  "witchcraft.spell.mirror-image.description": "Summon three illusory duplicates, which have a chance of taking a hit for you.\n\nAether cost: 15\nCooldown: 10 seconds",
+  "witchcraft.spell.mirror-image.description": "Summon three illusory duplicates, which have a chance of taking a hit for you and decay away after 20 seconds.\n\nAether cost: 15\nCooldown: 30 seconds",
   "witchcraft.spell.find-familiar.name": "Find Familiar",
   "witchcraft.spell.find-familiar.description": "Summon a small pet to follow you for the day, increasing your luck.\n\nAether cost: 10",
   "witchcraft.spell.ghostly-projection.name": "Ghostly Projection",
@@ -360,7 +361,7 @@
 
   "teleport-circle.error.unknown": "Invalid teleport circle setup.",
   "teleport-circle.error.no-match": "No matching teleport circle found.",
-  "teleport-circle.error.missing-essence": "3 essences not found in nearby chest.",
+  "teleport-circle.error.missing-essence": "Required essences not found nearby.",
   "teleport-circle.name": "Teleport Circle",
 
   "fake-npc.deepdark.Val-mine": "I'm worried, but we've made it this far. Nothing can stop us as long as we stick together.$80",

@@ -12,10 +12,11 @@ using StardewValley.Inventories;
 using StardewValley.Locations;
 using StardewValley.Monsters;
 using StardewValley.Objects;
-using StardewValley.Projectiles;
 using StardewValley.TerrainFeatures;
 using StardewValley.Tools;
-using SwordAndSorcerySMAPI.Menus;
+using SwordAndSorcerySMAPI.Framework.Abilities;
+using SwordAndSorcerySMAPI.Framework.Menus;
+using SwordAndSorcerySMAPI.Framework.ModSkills;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -269,7 +270,8 @@ namespace SwordAndSorcerySMAPI
             Helper.Events.Input.ButtonPressed += Input_ButtonPressed;
             Helper.Events.Display.RenderedStep += Display_RenderedStep;
             Helper.Events.Content.AssetRequested += Content_AssetRequested;
-            Helper.ConsoleCommands.Add("sns_shieldmenu", "Open the shield sigil menu", (cmd, args) =>
+
+            Helper.ConsoleCommands.Add("sns_shieldmenu", "Open the S&S Shield Sigil menu", (cmd, args) =>
             {
                 Game1.activeClickableMenu = new ShieldSigilMenu();
             });
@@ -617,7 +619,7 @@ namespace SwordAndSorcerySMAPI
                             {
                                 // TODO: Make this use the chest mutex right
                                 var inv = chest.GetItemsForPlayer(from);
-                                for (int i = 0; i < chest.GetActualCapacity(); ++i)
+                                for (int i = 0; i < inv.Count; i++)
                                 {
                                     if (inv[i]?.HasContextTag("essence_item") ?? false)
                                     {
@@ -627,6 +629,21 @@ namespace SwordAndSorcerySMAPI
                                             break;
                                     }
                                 }
+                            }
+                        }
+                    }
+
+                    if (totalFound < 3)
+                    {
+                        var pInv = Game1.player.Items;
+                        for (int i = 0; i < pInv.Count; i++)
+                        {
+                            if (pInv[i]?.HasContextTag("essence_item") ?? false)
+                            {
+                                essencesFound.Add(new(pInv, pInv[i]));
+                                totalFound += pInv[i].Stack;
+                                if (totalFound >= 3)
+                                    break;
                             }
                         }
                     }
@@ -996,12 +1013,12 @@ namespace SwordAndSorcerySMAPI
 
                     if (Game1.IsMasterGame)
                     {
-                        var ret = ModTOP.ProcessTeleportRequest(req, Game1.player.UniqueMultiplayerID);
-                        ModTOP.ProcessTeleport(ret);
+                        var ret = ProcessTeleportRequest(req, Game1.player.UniqueMultiplayerID);
+                        ProcessTeleport(ret);
                     }
                     else
                     {
-                        ModTOP.Instance.Helper.Multiplayer.SendMessage(req, ModTOP.RequestTeleportInfoMessage);
+                        Instance.Helper.Multiplayer.SendMessage(req, RequestTeleportInfoMessage);
                     }
                 }
             }

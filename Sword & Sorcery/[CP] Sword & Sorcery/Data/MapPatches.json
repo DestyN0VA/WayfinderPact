@@ -146,7 +146,37 @@
         }
       ]
     },
-    // PATCHES THE DEEP MOUNTAINS
+    // MATEO SPACECORE FIX 
+    {
+      "LogName": "Patches ES to Guild",
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_Village",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFlag |contains=Mateo_SpecialOrders_BuildGuildMail": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "MapProperties",
+            "NPCWarp"
+          ],
+          "Value": "93 93 EastScarp_CoastalGuild 10 19",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "MapProperties",
+            "NPCWarp"
+          ],
+          "Value": "94 93 EastScarp_CoastalGuild 10 19",
+          "Delimiter": " "
+        }
+      ]
+    },
+    // PATCHES THE DRUID'S TOWER
     {
       "LogName": "Deep Mountains Northwest",
       "Action": "EditMap",
