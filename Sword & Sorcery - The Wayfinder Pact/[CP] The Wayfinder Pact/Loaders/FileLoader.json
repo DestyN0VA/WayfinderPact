@@ -10,7 +10,7 @@
 		{
 			"LogName": "S&S WF: Data Includes",
 			"Action": "Include",
-			"FromFile": "Data/Graphics/Characters.json, Data/Dispositions/Val.json, Data/Dispositions/Coriander.json, Data/Dispositions/Hector.json, Data/Dispositions/Dandelion.json, Data/Dispositions/Roslin.json, Data/Dispositions/Lorin.json, Data/Dispositions/Arden.json"
+			"FromFile": "Data/Graphics/Characters.json, Data/Dispositions/Val.json, Data/Dispositions/Coriander.json, Data/Dispositions/Hector.json, Data/Dispositions/Dandelion.json, Data/Dispositions/Roslin.json, Data/Dispositions/Lorin.json, Data/Dispositions/Arden.json, Data/Dialogue/Global.json"
 		}
 	]
 }

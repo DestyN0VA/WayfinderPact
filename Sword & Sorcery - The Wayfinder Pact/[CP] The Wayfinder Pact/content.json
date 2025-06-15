@@ -9,6 +9,20 @@
     }
   ],
 
-  "DynamicTokens": [],
+  "DynamicTokens": [
+    //BASIC UTILITY TOKENS
+    { "Name": "TodaysDate", "Value": "{{Season}} {{Day}}" },
+    { "Name": "IsOddYear", "Value": "{{Query: {{Year}} % 2 = 1}}" },
+
+    { "Name": "WeekDayList", "Value": "Sun, Mon, Tue, Wed, Thu, Fri, Sat" },
+    { "Name": "WeekDay", "Value": "{{WeekDayList |valueAt={{Query: {{Day}}%7}}}}" },
+
+    { "Name": "YearCheck", "Value": 2 },
+    { "Name": "YearCheck", "Value": 1, "When": { "Year": 1 } },
+
+    { "Name": "FestivalYearCheck", "Value": "" },
+    { "Name": "FestivalYearCheck", "Value": "_y2",
+      "When": { "Query: {{Year}} % 2 = 1": false } }
+  ],
   "ConfigSchema": {}
 }

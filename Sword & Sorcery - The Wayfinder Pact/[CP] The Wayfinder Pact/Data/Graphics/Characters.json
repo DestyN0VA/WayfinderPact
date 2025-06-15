@@ -1,17 +1,30 @@
 {
     "Changes": [
+        //Default Patch
+        {
+            "LogName": "Load Main Character Art Default",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Characters/WF.Val, Characters/WF.Hector, Characters/WF.Lorin, Characters/WF.Coriander, Characters/WF.Roslin, Characters/WF.Dandelion, Characters/WF.Arden",
+            "FromFile": "Assets/Characters/Main/{{TargetWithoutPath}}/Other/Armor.png"
+        },
+        {
+            "LogName": "Load Main Portrait Art Default",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Portraits/WF.Val, Portraits/WF.Hector, Portraits/WF.Lorin, Portraits/WF.Coriander, Portraits/WF.Roslin, Portraits/WF.Dandelion, Portraits/WF.Arden",
+            "FromFile": "Assets/Portraits/Main/{{TargetWithoutPath}}/Other/Armor.png"
+        },
         //Main Cast
         {
             "LogName": "Load Main Character Art",
             "Action": "Load",
-            "Priority": "Low",
             "Target": "Characters/WF.Val, Characters/WF.Hector, Characters/WF.Lorin, Characters/WF.Coriander, Characters/WF.Roslin, Characters/WF.Dandelion, Characters/WF.Arden",
             "FromFile": "Assets/Characters/Main/{{TargetWithoutPath}}/Seasonals/{{Season}}.png"
         },
         {
             "LogName": "Load Main Portrait Art",
             "Action": "Load",
-            "Priority": "Low",
             "Target": "Portraits/WF.Val, Portraits/WF.Hector, Portraits/WF.Lorin, Portraits/WF.Coriander, Portraits/WF.Roslin, Portraits/WF.Dandelion, Portraits/WF.Arden",
             "FromFile": "Assets/Portraits/Main/{{TargetWithoutPath}}/Seasonals/{{Season}}.png"
         },
