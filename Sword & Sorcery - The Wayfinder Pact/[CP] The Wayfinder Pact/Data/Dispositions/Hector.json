@@ -1,0 +1,63 @@
+{
+    "Changes": [
+        {
+            "LogName": "NPC Dispositions - Hector",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "WF.Hector": {
+                    "DisplayName": "Hector",
+                    "Gender": "Female",
+                    "Age": "Adult",
+                    "Manner": "Neutral",
+                    "SocialAnxiety": "Outgoing",
+                    "Optimism": "Positive",
+                    "BirthSeason": "Summer",
+                    "BirthDay": 5,
+                    "HomeRegion": "Town",
+                    "CanBeRomanced": false,
+                    //"LoveInterest": "",
+                    "PerfectionScore": true,
+                    "EndSlideShow": "TrailingGroup",
+                    "SpawnIfMissing": true,
+                    "SocialTab": "UnknownUntilMet",
+                    "Calendar": "HiddenUntilMet",
+                    "IntroductionsQuest": false,
+                    "FlowerDanceCanDance": true,
+                    "CanVisitIsland": false,
+                    "WinterStarParticipant": false,
+                    "IsDarkSkinned": false,
+                    "ShakePortraits": [],
+                    "ItemDeliveryQuests": false,
+                    /*"SpouseRoom": {
+                        "MapAsset": "{{VB_ArdenSpouseRoomOnOff}}"
+                    },
+                    "SpousePatio": {
+                        "MapAsset": "{{VB_ArdenSpousePatioOnOff}}"
+                    */
+                    "Home": [
+                        {
+                            "ID": "Hector - Spawn",
+                            "Location": "EastScarp_Village",
+                            "Tile": {
+                                "X": 10,
+                                "Y": 13
+                            },
+                            "Direction": "Down"
+                        }
+                    ],
+                    "Appearance": [
+                        // SPRING
+                        {
+                            "ID": "Default",
+                            "Precedence": -10,
+                            "Weight": 1,
+                            "Portrait": "Portraits/VB.Hector",
+                            "Sprite": "Portraits/VB.Hector"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

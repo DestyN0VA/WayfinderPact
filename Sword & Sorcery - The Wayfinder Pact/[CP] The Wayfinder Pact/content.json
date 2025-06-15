@@ -1,9 +1,14 @@
 {
   "Format": "2.7.2",
   
-  "Changes": [],
+  "Changes": [
+    {
+      "LogName": "S&S WF: FileLoader",
+      "Action": "Include",
+      "FromFile": "Loaders/FileLoader.json"
+    }
+  ],
 
   "DynamicTokens": [],
-
   "ConfigSchema": {}
 }

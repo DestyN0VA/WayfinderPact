@@ -1,0 +1,34 @@
+{
+    "Changes": [
+        //Main Cast
+        {
+            "LogName": "Load Main Character Art",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Characters/WF.Val, Characters/WF.Hector, Characters/WF.Lorin, Characters/WF.Coriander, Characters/WF.Roslin, Characters/WF.Dandelion, Characters/WF.Arden",
+            "FromFile": "Assets/Characters/Main/{{TargetWithoutPath}}/Seasonal/{{Season}}.png"
+        },
+        {
+            "LogName": "Load Main Portrait Art",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Portraits/WF.Val, Portraits/WF.Hector, Portraits/WF.Lorin, Portraits/WF.Coriander, Portraits/WF.Roslin, Portraits/WF.Dandelion, Portraits/WF.Arden",
+            "FromFile": "Assets/Portraits/Main/{{TargetWithoutPath}}/Seasonal/{{Season}}.png"
+        },
+        //Companions
+        {
+            "LogName": "Load Companion Character Art",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Characters/WF.Emeritus, Characters/WF.Thackery, Characters/WF.Odelia, Characters/WF.Winston, Characters/WF.Nimfear, Characters/WF.Solomon",
+            "FromFile": "Assets/Characters/Companions/{{TargetWithoutPath}}/Default.png"
+        },
+        {
+            "LogName": "Load Companion Portrait Art",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Portraits/WF.Emeritus, Portraits/WF.Thackery, Portraits/WF.Odelia, Portraits/WF.Winston, Portraits/WF.Nimfear, Portraits/WF.Solomon",
+            "FromFile": "Assets/Portraits/Companions/{{TargetWithoutPath}}/Default.png"
+        }
+    ]
+}

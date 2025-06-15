@@ -1,0 +1,63 @@
+{
+    "Changes": [
+        {
+            "LogName": "NPC Dispositions - Arden",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "WF.Arden": {
+                    "DisplayName": "Arden",
+                    "Gender": "Female",
+                    "Age": "Adult",
+                    "Manner": "Neutral",
+                    "SocialAnxiety": "Outgoing",
+                    "Optimism": "Positive",
+                    "BirthSeason": "Summer",
+                    "BirthDay": 5,
+                    "HomeRegion": "Town",
+                    "CanBeRomanced": false,
+                    //"LoveInterest": "",
+                    "PerfectionScore": true,
+                    "EndSlideShow": "TrailingGroup",
+                    "SpawnIfMissing": true,
+                    "SocialTab": "UnknownUntilMet",
+                    "Calendar": "HiddenUntilMet",
+                    "IntroductionsQuest": false,
+                    "FlowerDanceCanDance": true,
+                    "CanVisitIsland": false,
+                    "WinterStarParticipant": false,
+                    "IsDarkSkinned": false,
+                    "ShakePortraits": [],
+                    "ItemDeliveryQuests": false,
+                    /*"SpouseRoom": {
+                        "MapAsset": "{{VB_ArdenSpouseRoomOnOff}}"
+                    },
+                    "SpousePatio": {
+                        "MapAsset": "{{VB_ArdenSpousePatioOnOff}}"
+                    */
+                    "Home": [
+                        {
+                            "ID": "Arden - Spawn",
+                            "Location": "EastScarp_Village",
+                            "Tile": {
+                                "X": 10,
+                                "Y": 10
+                            },
+                            "Direction": "Down"
+                        }
+                    ],
+                    "Appearance": [
+                        // SPRING
+                        {
+                            "ID": "Default",
+                            "Precedence": -10,
+                            "Weight": 1,
+                            "Portrait": "Portraits/VB.Arden",
+                            "Sprite": "Portraits/VB.Arden"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
