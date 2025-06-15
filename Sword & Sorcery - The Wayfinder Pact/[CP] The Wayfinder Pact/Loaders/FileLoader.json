@@ -10,7 +10,7 @@
 		{
 			"LogName": "S&S WF: Data Includes",
 			"Action": "Include",
-			"FromFile": "Data/Graphics/Characters.json, Data/Dispositions/Main/Val.json, Data/Dispositions/Main/Coriander.json, Data/Dispositions/Main/Hector.json, Data/Dispositions/Main/Dandelion.json, Data/Dispositions/Main/Roslin.json, Data/Dispositions/Main/Lorin.json, Data/Dispositions/Main/Arden.json, Data/Dispositions/Companions/Emeritus.json, Data/Dispositions/Companions/Odelia.json, Data/Dispositions/Companions/Thackery.json, Data/Dispositions/Companions/Winston.json, Data/Dispositions/Companions/Nimfear.json, Data/Dispositions/Companions/Solomon.json, Data/Dialogue/Global.json"
+			"FromFile": "Data/MapData.json, Data/Graphics/Characters.json, Data/Dispositions/Main/Val.json, Data/Dispositions/Main/Coriander.json, Data/Dispositions/Main/Hector.json, Data/Dispositions/Main/Dandelion.json, Data/Dispositions/Main/Roslin.json, Data/Dispositions/Main/Lorin.json, Data/Dispositions/Main/Arden.json, Data/Dispositions/Companions/Emeritus.json, Data/Dispositions/Companions/Odelia.json, Data/Dispositions/Companions/Thackery.json, Data/Dispositions/Companions/Winston.json, Data/Dispositions/Companions/Nimfear.json, Data/Dispositions/Companions/Solomon.json, Data/Dialogue/Global.json"
 		}
 	]
 }

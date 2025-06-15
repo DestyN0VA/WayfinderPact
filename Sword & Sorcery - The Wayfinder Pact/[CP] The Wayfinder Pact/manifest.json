@@ -12,10 +12,12 @@
 		"Nexus:12369"
 	],
 	"Dependencies": [
+		/*
 		{
 			"UniqueID": "ET.SnS",
 			"IsRequired": true
 		},
+		*/
 		{
 			"UniqueID": "LemurKat.EastScarpe.CP",
 			"IsRequired": true
