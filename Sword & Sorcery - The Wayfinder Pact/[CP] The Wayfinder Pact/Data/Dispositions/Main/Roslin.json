@@ -1,12 +1,12 @@
 {
     "Changes": [
         {
-            "LogName": "NPC Dispositions - Hector",
+            "LogName": "NPC Dispositions - Roslin",
             "Action": "EditData",
             "Target": "Data/Characters",
             "Entries": {
-                "WF.Hector": {
-                    "DisplayName": "Hector",
+                "WF.Roslin": {
+                    "DisplayName": "Roslin",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Neutral",
@@ -30,18 +30,18 @@
                     "ShakePortraits": [],
                     "ItemDeliveryQuests": false,
                     /*"SpouseRoom": {
-                        "MapAsset": "{{VB_ArdenSpouseRoomOnOff}}"
+                        "MapAsset": "{{WF_ArdenSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "{{VB_ArdenSpousePatioOnOff}}"
+                        "MapAsset": "{{WF_ArdenSpousePatioOnOff}}"
                     */
                     "Home": [
                         {
-                            "ID": "Hector - Spawn",
+                            "ID": "Roslin - Spawn",
                             "Location": "EastScarp_Village",
                             "Tile": {
                                 "X": 10,
-                                "Y": 13
+                                "Y": 15
                             },
                             "Direction": "Down"
                         }
@@ -52,8 +52,8 @@
                             "ID": "Default",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/VB.Hector",
-                            "Sprite": "Portraits/VB.Hector"
+                            "Portrait": "Portraits/WF.Roslin",
+                            "Sprite": "Portraits/WF.Roslin"
                         }
                     ]
                 }

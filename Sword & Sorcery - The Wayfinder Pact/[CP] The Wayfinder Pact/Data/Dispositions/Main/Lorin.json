@@ -1,12 +1,12 @@
 {
     "Changes": [
         {
-            "LogName": "NPC Dispositions - Dandelion",
+            "LogName": "NPC Dispositions - Lorin",
             "Action": "EditData",
             "Target": "Data/Characters",
             "Entries": {
-                "WF.Dandelion": {
-                    "DisplayName": "Dandelion",
+                "WF.Lorin": {
+                    "DisplayName": "Lorin",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Neutral",
@@ -30,18 +30,18 @@
                     "ShakePortraits": [],
                     "ItemDeliveryQuests": false,
                     /*"SpouseRoom": {
-                        "MapAsset": "{{VB_ArdenSpouseRoomOnOff}}"
+                        "MapAsset": "{{WF_ArdenSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "{{VB_ArdenSpousePatioOnOff}}"
+                        "MapAsset": "{{WF_ArdenSpousePatioOnOff}}"
                     */
                     "Home": [
                         {
-                            "ID": "Dandelion - Spawn",
+                            "ID": "Lorin - Spawn",
                             "Location": "EastScarp_Village",
                             "Tile": {
                                 "X": 10,
-                                "Y": 12
+                                "Y": 14
                             },
                             "Direction": "Down"
                         }
@@ -52,8 +52,8 @@
                             "ID": "Default",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/VB.Dandelion",
-                            "Sprite": "Portraits/VB.Dandelion"
+                            "Portrait": "Portraits/WF.Lorin",
+                            "Sprite": "Portraits/WF.Lorin"
                         }
                     ]
                 }

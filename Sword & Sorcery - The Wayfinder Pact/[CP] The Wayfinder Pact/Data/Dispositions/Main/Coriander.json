@@ -1,12 +1,12 @@
 {
     "Changes": [
         {
-            "LogName": "NPC Dispositions - Arden",
+            "LogName": "NPC Dispositions - Coriander",
             "Action": "EditData",
             "Target": "Data/Characters",
             "Entries": {
-                "WF.Arden": {
-                    "DisplayName": "Arden",
+                "WF.Coriander": {
+                    "DisplayName": "Coriander",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Neutral",
@@ -30,18 +30,18 @@
                     "ShakePortraits": [],
                     "ItemDeliveryQuests": false,
                     /*"SpouseRoom": {
-                        "MapAsset": "{{VB_ArdenSpouseRoomOnOff}}"
+                        "MapAsset": "{{WF_ArdenSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "{{VB_ArdenSpousePatioOnOff}}"
+                        "MapAsset": "{{WF_ArdenSpousePatioOnOff}}"
                     */
                     "Home": [
                         {
-                            "ID": "Arden - Spawn",
+                            "ID": "Coriander - Spawn",
                             "Location": "EastScarp_Village",
                             "Tile": {
                                 "X": 10,
-                                "Y": 10
+                                "Y": 11
                             },
                             "Direction": "Down"
                         }
@@ -52,8 +52,8 @@
                             "ID": "Default",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/VB.Arden",
-                            "Sprite": "Portraits/VB.Arden"
+                            "Portrait": "Portraits/WF.Coriander",
+                            "Sprite": "Portraits/WF.Coriander"
                         }
                     ]
                 }

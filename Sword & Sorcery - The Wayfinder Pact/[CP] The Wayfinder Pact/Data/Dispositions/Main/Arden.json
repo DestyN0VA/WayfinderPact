@@ -1,12 +1,12 @@
 {
     "Changes": [
         {
-            "LogName": "NPC Dispositions - Lorin",
+            "LogName": "NPC Dispositions - Arden",
             "Action": "EditData",
             "Target": "Data/Characters",
             "Entries": {
-                "WF.Lorin": {
-                    "DisplayName": "Lorin",
+                "WF.Arden": {
+                    "DisplayName": "Arden",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Neutral",
@@ -30,18 +30,18 @@
                     "ShakePortraits": [],
                     "ItemDeliveryQuests": false,
                     /*"SpouseRoom": {
-                        "MapAsset": "{{VB_ArdenSpouseRoomOnOff}}"
+                        "MapAsset": "{{WF_ArdenSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "{{VB_ArdenSpousePatioOnOff}}"
+                        "MapAsset": "{{WF_ArdenSpousePatioOnOff}}"
                     */
                     "Home": [
                         {
-                            "ID": "Lorin - Spawn",
+                            "ID": "Arden - Spawn",
                             "Location": "EastScarp_Village",
                             "Tile": {
                                 "X": 10,
-                                "Y": 14
+                                "Y": 10
                             },
                             "Direction": "Down"
                         }
@@ -52,8 +52,8 @@
                             "ID": "Default",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/VB.Lorin",
-                            "Sprite": "Portraits/VB.Lorin"
+                            "Portrait": "Portraits/WF.Arden",
+                            "Sprite": "Portraits/WF.Arden"
                         }
                     ]
                 }

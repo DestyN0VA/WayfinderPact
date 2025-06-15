@@ -1,12 +1,12 @@
 {
     "Changes": [
         {
-            "LogName": "NPC Dispositions - Coriander",
+            "LogName": "NPC Dispositions - Hector",
             "Action": "EditData",
             "Target": "Data/Characters",
             "Entries": {
-                "WF.Coriander": {
-                    "DisplayName": "Coriander",
+                "WF.Hector": {
+                    "DisplayName": "Hector",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Neutral",
@@ -30,18 +30,18 @@
                     "ShakePortraits": [],
                     "ItemDeliveryQuests": false,
                     /*"SpouseRoom": {
-                        "MapAsset": "{{VB_ArdenSpouseRoomOnOff}}"
+                        "MapAsset": "{{WF_ArdenSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "{{VB_ArdenSpousePatioOnOff}}"
+                        "MapAsset": "{{WF_ArdenSpousePatioOnOff}}"
                     */
                     "Home": [
                         {
-                            "ID": "Coriander - Spawn",
+                            "ID": "Hector - Spawn",
                             "Location": "EastScarp_Village",
                             "Tile": {
                                 "X": 10,
-                                "Y": 11
+                                "Y": 13
                             },
                             "Direction": "Down"
                         }
@@ -52,8 +52,8 @@
                             "ID": "Default",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/VB.Coriander",
-                            "Sprite": "Portraits/VB.Coriander"
+                            "Portrait": "Portraits/WF.Hector",
+                            "Sprite": "Portraits/WF.Hector"
                         }
                     ]
                 }
