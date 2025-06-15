@@ -1,0 +1,44 @@
+{
+  /*
+   | This file is automatically updated by ModManifestBuilder
+   | when the project is compiled.
+   | 
+   | Changes made to this file may be overwritten.
+   | 
+   
+  "$schema": "https://smapi.io/schemas/manifest.json",
+  "UniqueID": "ET.SnS",
+  "Name": "Sword and Sorcery - The Wayfinder Pact [SMAPI]",
+  "Author": "EnderTedi, 7thAxis, KittyCatCasey",
+  "Version": "3.0.0",
+  "Description": "C# component for Sword and Sorcery.",
+  "MinimumApiVersion": "4.1.0",
+  "MinimumGameVersion": "1.6.9",
+  "EntryDll": "SwordAndSorcerySMAPI.dll",
+  "Dependencies": [
+    {
+      "UniqueID": "Pathoschild.ContentPatcher",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "spacechase0.SpaceCore",
+      "MinimumVersion": "1.27.0"
+    }
+  ],
+  "UpdateKeys": [
+    "Nexus:0"
+  ]
+  */
+  "Name": "Sword and Sorcery - The Wayfinder Pact [SMAPI]",
+  "Author": "EnderTedi, 7thAxis, KittyCatCasey",
+	"Version": "3.0.0",
+  "Description": "C# component for Sword and Sorcery.",
+  "UniqueID": "ET.SnS",
+	"MinimumApiVersion": "3.15.0",
+	"ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher"
+	},
+	"UpdateKeys": [
+		"Nexus:12369"
+	],
+}
