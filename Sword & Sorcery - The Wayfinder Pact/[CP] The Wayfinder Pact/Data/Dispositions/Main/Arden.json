@@ -6,7 +6,7 @@
             "Target": "Data/Characters",
             "Entries": {
                 "WF.Arden": {
-                    "DisplayName": "Arden",
+                    "DisplayName": "{{i18n:Core.Arden.Name}}",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Neutral",
@@ -27,24 +27,27 @@
                     "CanVisitIsland": false,
                     "WinterStarParticipant": false,
                     "IsDarkSkinned": false,
-                    "ShakePortraits": [],
+                    "ShakePortraits": [
+                        99,
+                        98
+                    ],
                     "ItemDeliveryQuests": false,
                     /*"SpouseRoom": {
-                        "MapAsset": "{{WF_ArdenSpouseRoomOnOff}}"
+                        "MapAsset": "{{WF.ArdenSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "{{WF_ArdenSpousePatioOnOff}}"
+                        "MapAsset": "{{WF.ArdenSpousePatioOnOff}}"
                     */
                     "Home": [
                         {
                             "ID": "Arden - Spawn",
-                            "Location": "EastScarp_Village",
+                            "Location": "EastScarp_TNPCWaitingWarpRoom",
                             "Tile": {
-                                "X": 10,
-                                "Y": 10
+                                "X": 11,
+                                "Y": 5
                             },
-                            "Direction": "Down"
-                        }
+                            "Direction": "Down",
+                        },
                     ],
                     "Appearance": [
                         // SPRING
@@ -53,7 +56,7 @@
                             "Precedence": -10,
                             "Weight": 1,
                             "Portrait": "Portraits/WF.Arden",
-                            "Sprite": "Portraits/WF.Arden"
+                            "Sprite": "Characters/WF.Arden"
                         }
                     ]
                 }

@@ -6,14 +6,14 @@
             "Target": "Data/Characters",
             "Entries": {
                 "WF.Lorin": {
-                    "DisplayName": "Lorin",
+                    "DisplayName": "{{i18n:Core.Lorin.Name}}",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Neutral",
-                    "SocialAnxiety": "Outgoing",
-                    "Optimism": "Positive",
-                    "BirthSeason": "Summer",
-                    "BirthDay": 5,
+                    "SocialAnxiety": "Shy",
+                    "Optimism": "Neutral",
+                    "BirthSeason": "Winter",
+                    "BirthDay": 13,
                     "HomeRegion": "Town",
                     "CanBeRomanced": false,
                     //"LoveInterest": "",
@@ -27,21 +27,24 @@
                     "CanVisitIsland": false,
                     "WinterStarParticipant": false,
                     "IsDarkSkinned": false,
-                    "ShakePortraits": [],
+                    "ShakePortraits": [
+                        99,
+                        98
+                    ],
                     "ItemDeliveryQuests": false,
                     /*"SpouseRoom": {
-                        "MapAsset": "{{WF_ArdenSpouseRoomOnOff}}"
+                        "MapAsset": "{{WF_LorinSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "{{WF_ArdenSpousePatioOnOff}}"
+                        "MapAsset": "{{WF_LorinSpousePatioOnOff}}"
                     */
                     "Home": [
                         {
                             "ID": "Lorin - Spawn",
-                            "Location": "EastScarp_Village",
+                            "Location": "EastScarp_RangerTower",
                             "Tile": {
-                                "X": 10,
-                                "Y": 14
+                                "X": 4,
+                                "Y": 6
                             },
                             "Direction": "Down"
                         }
@@ -53,7 +56,7 @@
                             "Precedence": -10,
                             "Weight": 1,
                             "Portrait": "Portraits/WF.Lorin",
-                            "Sprite": "Portraits/WF.Lorin"
+                            "Sprite": "Characters/WF.Lorin"
                         }
                     ]
                 }

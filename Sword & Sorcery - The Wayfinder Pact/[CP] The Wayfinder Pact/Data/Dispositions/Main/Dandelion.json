@@ -6,45 +6,42 @@
             "Target": "Data/Characters",
             "Entries": {
                 "WF.Dandelion": {
-                    "DisplayName": "Dandelion",
+                    "DisplayName": "{{i18n:Core.Dandelion.Name}}",
                     "Gender": "Female",
                     "Age": "Adult",
-                    "Manner": "Neutral",
-                    "SocialAnxiety": "Outgoing",
+                    "Manner": "Polite",
+                    "SocialAnxiety": "Shy",
                     "Optimism": "Positive",
                     "BirthSeason": "Summer",
-                    "BirthDay": 5,
+                    "BirthDay": 16,
                     "HomeRegion": "Town",
                     "CanBeRomanced": false,
-                    //"LoveInterest": "",
+                    "LoveInterest": "WF.Roslin",
                     "PerfectionScore": true,
                     "EndSlideShow": "TrailingGroup",
                     "SpawnIfMissing": true,
-                    "SocialTab": "UnknownUntilMet",
+                    "SocialTab": "HiddenUntilMet",
                     "Calendar": "HiddenUntilMet",
                     "IntroductionsQuest": false,
                     "FlowerDanceCanDance": true,
                     "CanVisitIsland": false,
                     "WinterStarParticipant": false,
                     "IsDarkSkinned": false,
-                    "ShakePortraits": [],
+                    "ShakePortraits": [
+                        99,
+                        98
+                    ],
                     "ItemDeliveryQuests": false,
-                    /*"SpouseRoom": {
-                        "MapAsset": "{{WF_ArdenSpouseRoomOnOff}}"
-                    },
-                    "SpousePatio": {
-                        "MapAsset": "{{WF_ArdenSpousePatioOnOff}}"
-                    */
                     "Home": [
                         {
                             "ID": "Dandelion - Spawn",
-                            "Location": "EastScarp_Village",
+                            "Location": "EastScarp_SorcererHouse",
                             "Tile": {
-                                "X": 10,
-                                "Y": 12
+                                "X": 5,
+                                "Y": 5
                             },
-                            "Direction": "Down"
-                        }
+                            "Direction": "Right",
+                        },
                     ],
                     "Appearance": [
                         // SPRING
@@ -53,7 +50,7 @@
                             "Precedence": -10,
                             "Weight": 1,
                             "Portrait": "Portraits/WF.Dandelion",
-                            "Sprite": "Portraits/WF.Dandelion"
+                            "Sprite": "Characters/WF.Dandelion"
                         }
                     ]
                 }

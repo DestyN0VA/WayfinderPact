@@ -6,14 +6,14 @@
             "Target": "Data/Characters",
             "Entries": {
                 "WF.Coriander": {
-                    "DisplayName": "Coriander",
+                    "DisplayName": "{{i18n:Core.Coriander.Name}}",
                     "Gender": "Female",
                     "Age": "Adult",
-                    "Manner": "Neutral",
+                    "Manner": "Polite",
                     "SocialAnxiety": "Outgoing",
                     "Optimism": "Positive",
                     "BirthSeason": "Summer",
-                    "BirthDay": 5,
+                    "BirthDay": 18,
                     "HomeRegion": "Town",
                     "CanBeRomanced": false,
                     //"LoveInterest": "",
@@ -27,21 +27,23 @@
                     "CanVisitIsland": false,
                     "WinterStarParticipant": false,
                     "IsDarkSkinned": false,
-                    "ShakePortraits": [],
-                    "ItemDeliveryQuests": false,
+                    "ShakePortraits": [
+                        99,
+                        98
+                    ],
                     /*"SpouseRoom": {
-                        "MapAsset": "{{WF_ArdenSpouseRoomOnOff}}"
+                        "MapAsset": "{{WF.CorianderSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "{{WF_ArdenSpousePatioOnOff}}"
+                        "MapAsset": "{{WF.CorianderSpousePatioOnOff}}"
                     */
                     "Home": [
                         {
                             "ID": "Coriander - Spawn",
-                            "Location": "EastScarp_Village",
+                            "Location": "EastScarp_BardHouse",
                             "Tile": {
-                                "X": 10,
-                                "Y": 11
+                                "X": 24,
+                                "Y": 5
                             },
                             "Direction": "Down"
                         }
@@ -53,7 +55,7 @@
                             "Precedence": -10,
                             "Weight": 1,
                             "Portrait": "Portraits/WF.Coriander",
-                            "Sprite": "Portraits/WF.Coriander"
+                            "Sprite": "Characters/WF.Coriander"
                         }
                     ]
                 }

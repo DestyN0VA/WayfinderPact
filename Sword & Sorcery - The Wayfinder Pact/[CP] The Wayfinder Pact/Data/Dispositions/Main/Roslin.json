@@ -6,45 +6,42 @@
             "Target": "Data/Characters",
             "Entries": {
                 "WF.Roslin": {
-                    "DisplayName": "Roslin",
+                    "DisplayName": "{{i18n:Core.Rosalind.Name}}",
                     "Gender": "Female",
                     "Age": "Adult",
-                    "Manner": "Neutral",
-                    "SocialAnxiety": "Outgoing",
-                    "Optimism": "Positive",
-                    "BirthSeason": "Summer",
-                    "BirthDay": 5,
+                    "Manner": "Rude",
+                    "SocialAnxiety": "Neutral",
+                    "Optimism": "Negative",
+                    "BirthSeason": "Spring",
+                    "BirthDay": 26,
                     "HomeRegion": "Town",
                     "CanBeRomanced": false,
-                    //"LoveInterest": "",
+                    "LoveInterest": "VB_Dandelion",
                     "PerfectionScore": true,
                     "EndSlideShow": "TrailingGroup",
                     "SpawnIfMissing": true,
-                    "SocialTab": "UnknownUntilMet",
+                    "SocialTab": "HiddenUntilMet",
                     "Calendar": "HiddenUntilMet",
                     "IntroductionsQuest": false,
                     "FlowerDanceCanDance": true,
                     "CanVisitIsland": false,
                     "WinterStarParticipant": false,
                     "IsDarkSkinned": false,
-                    "ShakePortraits": [],
+                    "ShakePortraits": [
+                        99,
+                        98
+                    ],
                     "ItemDeliveryQuests": false,
-                    /*"SpouseRoom": {
-                        "MapAsset": "{{WF_ArdenSpouseRoomOnOff}}"
-                    },
-                    "SpousePatio": {
-                        "MapAsset": "{{WF_ArdenSpousePatioOnOff}}"
-                    */
                     "Home": [
                         {
                             "ID": "Roslin - Spawn",
-                            "Location": "EastScarp_Village",
+                            "Location": "EastScarp_SorcererHouse",
                             "Tile": {
-                                "X": 10,
-                                "Y": 15
+                                "X": 7,
+                                "Y": 5
                             },
-                            "Direction": "Down"
-                        }
+                            "Direction": "Left",
+                        },
                     ],
                     "Appearance": [
                         // SPRING
@@ -53,7 +50,7 @@
                             "Precedence": -10,
                             "Weight": 1,
                             "Portrait": "Portraits/WF.Roslin",
-                            "Sprite": "Portraits/WF.Roslin"
+                            "Sprite": "Characters/WF.Roslin"
                         }
                     ]
                 }

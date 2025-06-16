@@ -6,14 +6,14 @@
             "Target": "Data/Characters",
             "Entries": {
                 "WF.Hector": {
-                    "DisplayName": "Hector",
-                    "Gender": "Female",
+                    "DisplayName": "{{i18n:Core.Hector.Name}}",
+                    "Gender": "Male",
                     "Age": "Adult",
-                    "Manner": "Neutral",
-                    "SocialAnxiety": "Outgoing",
-                    "Optimism": "Positive",
-                    "BirthSeason": "Summer",
-                    "BirthDay": 5,
+                    "Manner": "Rude",
+                    "SocialAnxiety": "Shy",
+                    "Optimism": "Negative",
+                    "BirthSeason": "Winter",
+                    "BirthDay": 21,
                     "HomeRegion": "Town",
                     "CanBeRomanced": false,
                     //"LoveInterest": "",
@@ -27,21 +27,24 @@
                     "CanVisitIsland": false,
                     "WinterStarParticipant": false,
                     "IsDarkSkinned": false,
-                    "ShakePortraits": [],
-                    "ItemDeliveryQuests": false,
+                    "ShakePortraits": [
+                        99,
+                        98
+                    ],
                     /*"SpouseRoom": {
-                        "MapAsset": "{{WF_ArdenSpouseRoomOnOff}}"
+                        "MapAsset": "{{WF.HectorSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "{{WF_ArdenSpousePatioOnOff}}"
+                        "MapAsset": "{{WF.HectorSpousePatioOnOff}}"
                     */
+                    "ItemDeliveryQuests": false,
                     "Home": [
                         {
                             "ID": "Hector - Spawn",
-                            "Location": "EastScarp_Village",
+                            "Location": "EastScarp_DruidTower",
                             "Tile": {
-                                "X": 10,
-                                "Y": 13
+                                "X": 19,
+                                "Y": 7
                             },
                             "Direction": "Down"
                         }
@@ -53,7 +56,7 @@
                             "Precedence": -10,
                             "Weight": 1,
                             "Portrait": "Portraits/WF.Hector",
-                            "Sprite": "Portraits/WF.Hector"
+                            "Sprite": "Characters/WF.Hector"
                         }
                     ]
                 }

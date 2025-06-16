@@ -6,14 +6,14 @@
             "Target": "Data/Characters",
             "Entries": {
                 "WF.Val": {
-                    "DisplayName": "Val",
+                    "DisplayName": "{{i18n:Core.Val.Name}}",
                     "Gender": "Female",
                     "Age": "Adult",
-                    "Manner": "Neutral",
+                    "Manner": "Polite",
                     "SocialAnxiety": "Outgoing",
                     "Optimism": "Positive",
-                    "BirthSeason": "Summer",
-                    "BirthDay": 5,
+                    "BirthSeason": "Fall",
+                    "BirthDay": 25,
                     "HomeRegion": "Town",
                     "CanBeRomanced": false,
                     //"LoveInterest": "",
@@ -26,22 +26,24 @@
                     "FlowerDanceCanDance": true,
                     "CanVisitIsland": false,
                     "WinterStarParticipant": false,
-                    "IsDarkSkinned": false,
-                    "ShakePortraits": [],
-                    "ItemDeliveryQuests": false,
+                    "IsDarkSkinned": true,
+                    "ShakePortraits": [
+                        99,
+                        98
+                    ],
                     /*"SpouseRoom": {
-                        "MapAsset": "{{WF_ArdenSpouseRoomOnOff}}"
+                        "MapAsset": "{{WF.ValSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "{{WF_ArdenSpousePatioOnOff}}"
+                        "MapAsset": "{{WF.ValSpousePatioOnOff}}"
                     */
                     "Home": [
                         {
                             "ID": "Val - Spawn",
-                            "Location": "EastScarp_Village",
+                            "Location": "EastScarp_ArtificerHouse",
                             "Tile": {
-                                "X": 10,
-                                "Y": 17
+                                "X": 14,
+                                "Y": 9
                             },
                             "Direction": "Down"
                         }
@@ -53,7 +55,7 @@
                             "Precedence": -10,
                             "Weight": 1,
                             "Portrait": "Portraits/WF.Val",
-                            "Sprite": "Portraits/WF.Val"
+                            "Sprite": "Characters/WF.Val"
                         }
                     ]
                 }
