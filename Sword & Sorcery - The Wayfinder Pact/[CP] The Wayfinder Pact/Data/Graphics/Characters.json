@@ -37,6 +37,14 @@
             "FromFile": "Assets/Characters/Companions/{{TargetWithoutPath}}/Default.png"
         },
         {
+            "LogName": "Load Nimfear Flight Art",
+            "Action": "EditImage",
+            "Update": "OnLocationChange",
+            "Target": "Characters/WF.Nimfear",
+            "FromFile": "Assets/Characters/Companions/{{TargetWithoutPath}}/Flight.png",
+            "When": { "IsOutdoors": true }
+        },
+        {
             "LogName": "Load Companion Portrait Art",
             "Action": "Load",
             "Priority": "Low",

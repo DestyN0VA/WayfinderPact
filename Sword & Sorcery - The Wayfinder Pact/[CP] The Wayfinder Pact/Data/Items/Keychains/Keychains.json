@@ -47,8 +47,8 @@
         },
         "{{ModId}}_HectorWolfKeychain": {
           "Id": "{{ModId}}_HectorWolfKeychain",
-          "DisplayName": "{{i18n: magicitem.HectorWolfKeychain.name |TrueName={{TrueName}}}}",
-          "Description": "{{i18n: magicitem.HectorWolfKeychain.description |TrueName={{TrueName}}}}",
+          "DisplayName": "reeee",
+          "Description": "reee",
           "Texture": "WF.Gear/Keychains",
           "SheetIndex": 15,
           "DropsNaturally": false,
@@ -64,6 +64,16 @@
           "DropsNaturally": false,
           "CanBeReforged": false,
           "CustomFields": { "Keychain_item": "true" }
+        },
+        "{{ModId}}_NimfearKeychain": {
+          "Id": "{{ModId}}_Nimfear",
+          "DisplayName": "{{i18n: magicitem.destykeychain.name}}",
+          "Description": "{{i18n: magicitem.destykeychain.description.Trinket}}",
+          "Texture": "WF.Gear/Keychains",
+          "SheetIndex": 12,
+          "DropsNaturally": false,
+          "CanBeReforged": false,
+          //"CustomFields": { "Keychain_item": "true" }
         }
       }
     },
