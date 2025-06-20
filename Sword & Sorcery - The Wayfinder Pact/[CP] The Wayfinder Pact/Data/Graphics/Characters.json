@@ -33,7 +33,7 @@
             "LogName": "Load Companion Character Art",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Characters/WF.Emeritus, Characters/WF.Thackery, Characters/WF.Odelia, Characters/WF.Winston, Characters/WF.Nimfear, Characters/WF.Solomon",
+            "Target": "Characters/WF.Emeritus, Characters/WF.Tom, Characters/WF.Odelia, Characters/WF.Winston, Characters/WF.Nimfear, Characters/WF.Solomon",
             "FromFile": "Assets/Characters/Companions/{{TargetWithoutPath}}/Default.png"
         },
         {
@@ -48,7 +48,7 @@
             "LogName": "Load Companion Portrait Art",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Portraits/WF.Emeritus, Portraits/WF.Thackery, Portraits/WF.Odelia, Portraits/WF.Winston, Portraits/WF.Nimfear, Portraits/WF.Solomon",
+            "Target": "Portraits/WF.Emeritus, Portraits/WF.Tom, Portraits/WF.Odelia, Portraits/WF.Winston, Portraits/WF.Nimfear, Portraits/WF.Solomon",
             "FromFile": "Assets/Portraits/Companions/{{TargetWithoutPath}}/Default.png"
         }
     ]
