@@ -288,6 +288,12 @@ public static class DrawShieldCooldownPatch
             __instance.DrawMenuIcons(spriteBatch, location, scaleSize, transparency, layerDepth, drawStackNumber, color);
             return false;
         }
+        if (ModSnS.State.LltkAnim.ShouldDraw(__instance.QualifiedItemId))
+        {
+            spriteBatch.Draw(ModSnS.State.LltkAnim.Texture, location + ((__instance.type.Value == 1) ? new Vector2(38f, 25f) : new Vector2(32f, 32f)), ModSnS.State.LltkAnim.SourceRect, color * transparency, 0f, new Vector2(24, 24), 4f * scaleSize, SpriteEffects.None, layerDepth);
+            // draw shadow?
+            return false;
+        }
         return true;
     }
 

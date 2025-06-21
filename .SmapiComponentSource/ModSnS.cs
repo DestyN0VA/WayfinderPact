@@ -86,7 +86,7 @@ namespace SwordAndSorcerySMAPI
 
         public static void SetHasTakenLoreWeapon(Farmer farmer, NetBool val)
         { }
-        
+
         public static NetBool HasTakenLoreWeapon(Farmer farmer)
         {
             return farmer.GetFarmerExtData().hasTakenLoreWeapon;
@@ -98,7 +98,7 @@ namespace SwordAndSorcerySMAPI
 
         public static void SetAdventureBar(Farmer farmer, NetArray<string, NetString> val)
         { }
-        
+
         public static NetArray<string, NetString> GetAdventureBar(Farmer farmer)
         {
             return farmer.GetFarmerExtData().adventureBar;
@@ -109,7 +109,7 @@ namespace SwordAndSorcerySMAPI
 
         public static void SetMaxMana(Farmer farmer, NetInt val)
         { }
-        
+
         public static NetInt GetMaxMana(Farmer farmer)
         {
             return farmer.GetFarmerExtData().maxMana;
@@ -123,7 +123,7 @@ namespace SwordAndSorcerySMAPI
 
         public static void ExpRemainderRogueSetter(Farmer farmer, NetFloat val)
         { }
-        
+
         public Dictionary<string, int> Cooldowns = [];
         public readonly NetInt armorUsed = new(0);
         public readonly NetInt mirrorImages = new(0);
@@ -193,7 +193,7 @@ namespace SwordAndSorcerySMAPI
             ArmorAmount = (int)(GetAmount(item) * (Game1.player.HasCustomProfession(RogueSkill.ProfessionArmorCap) ? 1.5f : 1));
 
             int FinalAmount = ArmorAmount + (includeArmor ? ShieldAmount : 0) + (includeMageArmor ? MageArmor : 0);
-            
+
             return FinalAmount == 0 ? null : FinalAmount;
         }
 
@@ -210,7 +210,7 @@ namespace SwordAndSorcerySMAPI
             else if (item != null && ItemRegistry.GetDataOrErrorItem(item.QualifiedItemId).RawData is ObjectData data &&
                 (data?.CustomFields?.TryGetValue("ArmorValue", out string valStr) ?? false) && int.TryParse(valStr, out int val))
                 return val;
-            
+
             return 0;
         }
     }
@@ -254,6 +254,72 @@ namespace SwordAndSorcerySMAPI
 
         public Dictionary<GreenSlime, PolymorphData> Polymorphed { get; set; } = [];
         public Dictionary<Monster, BanishData> Banished { get; set; } = [];
+        public LltkSwapAnimManager LltkAnim { get; private set; } = new();
+
+        /// <summary>
+        // Tracks the animation state of Lltk swap.
+        // It would be fun to do this for other items...
+        // </summary>
+        public class LltkSwapAnimManager
+        {
+#nullable enable
+            public Texture2D? Texture = null;
+            public Rectangle SourceRect => Game1.getSourceRectForStandardTileSheet(Texture, Frame, 48, 48);
+
+            private string? qId = null;
+            private int Frame = -1;
+            private int EndFrame = 0;
+            private TimeSpan Interval = TimeSpan.Zero;
+
+            public void BeginSwapAnim(bool toGun, string qId)
+            {
+                if (Game1.content.DoesAssetExist<Texture2D>("Textures/DN.SnS/lltkSwap"))
+                {
+                    this.qId = qId;
+                    if (toGun)
+                    {
+                        Frame = 8;
+                        EndFrame = 16;
+                    }
+                    else
+                    {
+                        Frame = 0;
+                        EndFrame = 8;
+                    }
+
+                    Interval = TimeSpan.FromMilliseconds(100);
+                    Texture = Game1.content.Load<Texture2D>("Textures/DN.SnS/lltkSwap");
+                }
+            }
+            public void Update(GameTime time)
+            {
+                if (Frame == -1)
+                    return;
+                Interval -= time.ElapsedGameTime;
+                if (Interval <= TimeSpan.Zero)
+                {
+                    Frame++;
+                    if (Frame >= EndFrame)
+                    {
+                        Frame = -1;
+                        Texture = null;
+                    }
+                    else
+                    {
+                        Interval = TimeSpan.FromMilliseconds(100);
+                    }
+                }
+            }
+
+            public bool ShouldDraw(string qId)
+            {
+                if (Texture == null || Frame == -1)
+                    return false;
+                return this.qId == qId;
+            }
+
+#nullable disable
+        }
     }
 
     public class Configuration
@@ -486,7 +552,7 @@ namespace SwordAndSorcerySMAPI
                     Game1.activeClickableMenu = new ShieldSigilMenu();
                 return true;
             });
-            
+
             GameLocation.RegisterTileAction("DN.SnS_DuskspireWarp", (loc, args, f, p) =>
             {
                 if (Game1.getAllFarmers().Any(f => f.GetFarmerExtData().DoingFinale.Value))
@@ -781,7 +847,7 @@ namespace SwordAndSorcerySMAPI
         }
 
         private static void RecalculateAether()
-        { 
+        {
             var ext = Game1.player.GetFarmerExtData();
 
             int maxMana = 0;
@@ -945,7 +1011,7 @@ namespace SwordAndSorcerySMAPI
                 for (int islot = 0; islot < 8; ++islot)
                 {
                     if (abilId != null) break;
-                    
+
                     for (int i = 0; i < 2; i++)
                     {
                         if (abilId != null) break;
@@ -1053,6 +1119,7 @@ namespace SwordAndSorcerySMAPI
                     }
                 }
                 Game1.player.Items[Game1.player.CurrentToolIndex] = w;
+                State.LltkAnim.BeginSwapAnim(true, w.QualifiedItemId);
                 return true;
             }
             else if (Game1.player.ActiveItem.QualifiedItemId.EqualsIgnoreCase("(W)DN.SnS_longlivetheking_gun"))
@@ -1069,6 +1136,7 @@ namespace SwordAndSorcerySMAPI
                     }
                 }
                 Game1.player.Items[Game1.player.CurrentToolIndex] = w;
+                State.LltkAnim.BeginSwapAnim(false, w.QualifiedItemId);
                 return true;
             }
             return false;
@@ -1155,6 +1223,11 @@ namespace SwordAndSorcerySMAPI
                     }
                 }
                 e.LoadFromModFile<Texture2D>(ForgeButton, AssetLoadPriority.Exclusive);
+            }
+
+            if (e.NameWithoutLocale.IsEquivalentTo("Textures/DN.SnS/lltkSwap"))
+            {
+                e.LoadFromModFile<Texture2D>("assets/lltk-swap.png", AssetLoadPriority.High);
             }
         }
 
@@ -1529,7 +1602,7 @@ namespace SwordAndSorcerySMAPI
                         State.MyThrown.Remove(thrown);
                 }
             }
-            
+
             if (State.ThrowCooldown > 0 && Game1.activeClickableMenu == null)
                 State.ThrowCooldown = MathF.Max(0, State.ThrowCooldown - (float)Game1.currentGameTime.ElapsedGameTime.TotalMilliseconds);
 
@@ -1606,6 +1679,7 @@ namespace SwordAndSorcerySMAPI
                 SpaceCore.AddExperienceForCustomSkill(Game1.player, "DestyNova.SwordAndSorcery.Paladin", 100);
             }
 
+            State.LltkAnim.Update(Game1.currentGameTime);
             if (Config.LltkToggleKeybind.JustPressed())
             {
                 SwapLltk();

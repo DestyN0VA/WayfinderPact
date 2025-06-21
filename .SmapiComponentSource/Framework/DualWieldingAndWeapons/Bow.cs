@@ -106,7 +106,7 @@ namespace SwordAndSorcerySMAPI
         private static void Projectiles_OnValueAdded(Projectile value)
         {
             value.boundingBoxWidth.Value = 48 - 8;
-            if (value is BasicProjectile basic && (basic.itemId?.Value?.ToLower().Contains("stygium") ?? false)) 
+            if (value is BasicProjectile basic && (basic.itemId?.Value?.ToLower().Contains("stygium") ?? false))
                 basic.damageToFarmer.Value = (int)(basic.damageToFarmer.Value * 1.5);
             if (value.itemId?.Value?.Contains("Bullet") ?? false) // Hack
             {
@@ -350,6 +350,13 @@ namespace SwordAndSorcerySMAPI
     {
         public static bool Prefix(Slingshot __instance, SpriteBatch spriteBatch, Vector2 location, float scaleSize, float transparency, float layerDepth, StackDrawType drawStackNumber, Color color)
         {
+            if (ModSnS.State.LltkAnim.ShouldDraw(__instance.QualifiedItemId))
+            {
+                spriteBatch.Draw(ModSnS.State.LltkAnim.Texture, location + new Vector2(32f, 29f), ModSnS.State.LltkAnim.SourceRect, color * transparency, 0f, new Vector2(24, 24), 4f * scaleSize, SpriteEffects.None, layerDepth);
+                // draw shadow?
+                return false;
+            }
+
             if (!__instance.IsBow())
                 return true;
 
@@ -407,7 +414,7 @@ namespace SwordAndSorcerySMAPI
             texture = Game1.menuTexture;
             if (__instance.QualifiedItemId == "(W)DN.SnS_longlivetheking_gun")
                 sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, __instance.attachments[slot] != null ? 10 : (slot != 0 ? 70 : 43));
-            else 
+            else
                 sourceRect = Game1.getSourceRectForStandardTileSheet(Game1.menuTexture, __instance.attachments[0] == null ? 43 : 10);
         }
     }
@@ -473,7 +480,7 @@ namespace SwordAndSorcerySMAPI
                     }
                 }
                 var tex = ItemRegistry.GetDataOrErrorItem(slingshot.QualifiedItemId).GetTexture();
-                Rectangle rect = ItemRegistry.GetDataOrErrorItem(slingshot.QualifiedItemId.Replace("_gun", "")).GetSourceRect();
+                Rectangle rect = ItemRegistry.GetDataOrErrorItem(slingshot.QualifiedItemId).GetSourceRect();
                 switch (facingDirection)
                 {
                     case 0:
@@ -533,7 +540,7 @@ namespace SwordAndSorcerySMAPI
                             b.Draw(baseTexture, position + new Vector2(52 - backArmDistance, -32f), new Rectangle(147, 237, 10, 4), Color.White, 0f, new Vector2(8f, 3f), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.Slingshot));
                             b.Draw(baseTexture, position + new Vector2(36f, -44f), new Rectangle(156, 244, 9, 10), Color.White, frontArmRotation, new Vector2(0f, 3f), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.SlingshotUp));
                             b.Draw(tex, position + new Vector2(36f, -44f) - new Vector2(16, -8), null, Color.White, frontArmRotation - 45 * MathF.PI / 180, new Vector2(0, 0), 4f * scale, SpriteEffects.None, FarmerRenderer.GetLayerDepth(layerDepth + 0.00002f, FarmerSpriteLayers.SlingshotUp));
-                            
+
                             int slingshotAttachX = (int)(Math.Cos(frontArmRotation + (float)Math.PI / 2f - 30 * MathF.PI / 180) * (double)(20 - backArmDistance - 8) - Math.Sin(frontArmRotation + (float)Math.PI / 2f - 30 * MathF.PI / 180) * -68.0);
                             int slingshotAttachY = (int)(Math.Sin(frontArmRotation + (float)Math.PI / 2f - 30 * MathF.PI / 180) * (double)(20 - backArmDistance - 8) + Math.Cos(frontArmRotation + (float)Math.PI / 2f - 30 * MathF.PI / 180) * -68.0);
                             Utility.drawLineWithScreenCoordinates((int)(position.X + 52f - (float)backArmDistance), (int)(position.Y - 32f - 4f), (int)(position.X + 32f + (float)(slingshotAttachX / 2)), (int)(position.Y - 32f - 12f + (float)(slingshotAttachY / 2)), b, Color.White, FarmerRenderer.GetLayerDepth(layerDepth + 0.00001f, FarmerSpriteLayers.SlingshotUp));
@@ -547,7 +554,7 @@ namespace SwordAndSorcerySMAPI
                             b.Draw(baseTexture, position + new Vector2(40 + backArmDistance, -32f), new Rectangle(147, 237, 10, 4), Color.White, 0f, new Vector2(9f, 4f), 4f * scale, SpriteEffects.FlipHorizontally, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.Slingshot));
                             b.Draw(baseTexture, position + new Vector2(24f, -40f), new Rectangle(156, 244, 9, 10), Color.White, frontArmRotation + (float)Math.PI, new Vector2(8f, 3f), 4f * scale, SpriteEffects.FlipHorizontally, FarmerRenderer.GetLayerDepth(layerDepth, FarmerSpriteLayers.SlingshotUp));
                             b.Draw(tex, position + new Vector2(24f, -40f) - new Vector2(4, -12), null, Color.White, frontArmRotation + (float)Math.PI + 45 * MathF.PI / 180, new Vector2(13, 5), 4f * scale, SpriteEffects.FlipHorizontally, FarmerRenderer.GetLayerDepth(layerDepth + 0.00002f, FarmerSpriteLayers.SlingshotUp));
-                            
+
                             int slingshotAttachX = (int)(Math.Cos(frontArmRotation + (float)Math.PI * 2f / 5f + 30 * MathF.PI / 180) * (double)(20 + backArmDistance - 8) - Math.Sin(frontArmRotation + (float)Math.PI * 2f / 5f + 30 * MathF.PI / 180) * -68.0);
                             int slingshotAttachY = (int)(Math.Sin(frontArmRotation + (float)Math.PI * 2f / 5f + 30 * MathF.PI / 180) * (double)(20 + backArmDistance - 8) + Math.Cos(frontArmRotation + (float)Math.PI * 2f / 5f + 30 * MathF.PI / 180) * -68.0);
                             Utility.drawLineWithScreenCoordinates((int)(position.X + 4f + (float)backArmDistance), (int)(position.Y - 32f - 8f), (int)(position.X + 26f + (float)slingshotAttachX * 4f / 10f), (int)(position.Y - 32f - 8f + (float)slingshotAttachY * 4f / 10f), b, Color.White, FarmerRenderer.GetLayerDepth(layerDepth + 0.00001f, FarmerSpriteLayers.SlingshotUp));
