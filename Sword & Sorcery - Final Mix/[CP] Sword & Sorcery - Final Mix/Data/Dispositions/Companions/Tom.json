@@ -7,7 +7,7 @@
                 "{{ModId}}.Tom": {
                     "DisplayName": "Tom",
                     "House": "Barn",
-                    "Texture": "Characters/WF.Tom",
+                    "Texture": "Characters/DN.Tom",
                     "SpriteWidth": 16,
                     "SpriteHeight": 32,
                     "SleepFrame": 24,
@@ -27,7 +27,7 @@
                     "Age": 1,
                     "LocationId": "EastScarp_Village",
                     "DisplayName": "Tom",
-                    "PortraitTexture": "Portraits/WF.Tom",
+                    "PortraitTexture": "Portraits/DN.Tom",
                     "PetMessage": [ "Meep" ],
                     "HomeTileX": 96,
                     "HomeTileY": 100

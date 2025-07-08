@@ -11,7 +11,7 @@
           "Type": "Crafting",
           "Category": -24,
           "Price": 0,
-          "Texture": "WF.Objects/Machines",
+          "Texture": "DN.Objects/Machines",
           "SpriteIndex": 0,
           "Edibility": -300,
           "ExcludeFromShippingCollection": true,
@@ -26,12 +26,12 @@
         "{{ModId}}_TeleportCircleFloor": {
           "Id": "{{ModId}}_TeleportCircleFloor",
           "ItemId": "{{ModID}}_TeleportCircle",
-          "Texture": "WF.Objects/Machines",
+          "Texture": "DN.Objects/Machines",
           "Corner": {
             "X": 0,
             "Y": 32
           },
-          "WinterTexture": "WF.Objects/Machines",
+          "WinterTexture": "DN.Objects/Machines",
           "WinterCorner": {
             "X": 0,
             "Y": 32

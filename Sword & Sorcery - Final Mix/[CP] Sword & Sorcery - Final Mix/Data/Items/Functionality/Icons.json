@@ -10,7 +10,7 @@
 				"StygiumPendantPower": {
 					"DisplayName": "{{i18n: power.stygium-pendant.name}}",
 					"Description": "{{i18n: power.stygium-pendant.description}}",
-					"TexturePath": "WF.Objects/Curios",
+					"TexturePath": "DN.Objects/Curios",
 					"TexturePosition": { "X": 112, "Y": 0 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current StygiumPendantPower"
 				}
@@ -25,7 +25,7 @@
 				"BrokenCircletPower": {
 					"DisplayName": "{{i18n: power.broken-circlet.name}}",
 					"Description": "{{i18n: power.broken-circlet.description}}",
-					"TexturePath": "WF.Objects/Curios",
+					"TexturePath": "DN.Objects/Curios",
 					"TexturePosition": { "X": 128, "Y": 0 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current BrokenCircletPower"
 				}
@@ -40,7 +40,7 @@
 				"DrakeScalePower": {
 					"DisplayName": "{{i18n: power.drake-scale.name}}",
 					"Description": "{{i18n: power.drake-scale.description}}",
-					"TexturePath": "WF.Objects/Curios",
+					"TexturePath": "DN.Objects/Curios",
 					"TexturePosition": { "X": 32, "Y": 80 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current DrakeScalePower"
 				}
@@ -55,7 +55,7 @@
 				"ForgedD20Power": {
 					"DisplayName": "{{i18n: power.forgedd20.name}}",
 					"Description": "{{i18n: power.forgedd20.description}}",
-					"TexturePath": "WF.Objects/Curios",
+					"TexturePath": "DN.Objects/Curios",
 					"TexturePosition": { "X": 0, "Y": 80 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current ForgedD20Power"
 				}
@@ -70,7 +70,7 @@
 				"DandelionShieldPower": {
 					"DisplayName": "{{i18n: power.mythiciridiumshield.name}}",
 					"Description": "{{i18n: power.mythiciridiumshield.description}}",
-					"TexturePath": "WF.Objects/Curios",
+					"TexturePath": "DN.Objects/Curios",
 					"TexturePosition": { "X": 96, "Y": 16 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current DandelionShieldPower"
 				}
@@ -85,7 +85,7 @@
 				"DandelionShieldPower": {
 					"DisplayName": "{{i18n: power.mythicorichalcumshield.name}}",
 					"Description": "{{i18n: power.mythicorichalcumshield.description}}",
-					"TexturePath": "WF.Objects/Curios",
+					"TexturePath": "DN.Objects/Curios",
 					"TexturePosition": { "X": 96, "Y": 16 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current DandelionShieldPower"
 				}
@@ -104,7 +104,7 @@
 				"MagicalGrimoirePower": {
 					"DisplayName": "{{i18n: power.magicalgrimoire.name}}",
 					"Description": "{{i18n: power.magicalgrimoire.description}}",
-					"TexturePath": "WF.Objects/Curios",
+					"TexturePath": "DN.Objects/Curios",
 					"TexturePosition": { "X": 128, "Y": 144 },
 					"UnlockedCondition": "PLAYER_HAS_MAIL Current MagicalGrimoirePower"
 				}
@@ -114,7 +114,7 @@
 	//Move this later
 		{
 			"Action": "Load",
-			"Target": "WF.Harvestables/GiantCrops, WF.Harvestables/Crops, WF.Harvestables/Harvestables, WF.Harvestables/HuckleberryVine, WF.Harvestables/MushroomTree, WF.Harvestables/Seeds, WF.Gear/Armor, WF.Gear/DraconiumTools, WF.Gear/Keychains, WF.Gear/Potions, WF.Gear/Projectiles, WF.Gear/Shields, WF.Gear/Shirts, WF.Gear/StygiumTools, WF.Gear/Weapons, WF.Misc/Icons, WF.Misc/DDtreasure, WF.Misc/VMShopBG, WF.Objects/Machines, WF.Objects/Curios, WF.Objects/Books, WF.Objects/Fish, WF.Objects/Furniture, WF.Objects/Artifacts, WF.Objects/Food, WF.Objects/Fish_Animations",
+			"Target": "DN.Harvestables/GiantCrops, DN.Harvestables/Crops, DN.Harvestables/Harvestables, DN.Harvestables/HuckleberryVine, DN.Harvestables/MushroomTree, DN.Harvestables/Seeds, DN.Gear/Armor, DN.Gear/DraconiumTools, DN.Gear/Keychains, DN.Gear/Potions, DN.Gear/Projectiles, DN.Gear/Shields, DN.Gear/Shirts, DN.Gear/StygiumTools, DN.Gear/Weapons, DN.Misc/Icons, DN.Misc/DDtreasure, DN.Misc/VMShopBG, DN.Objects/Machines, DN.Objects/Curios, DN.Objects/Books, DN.Objects/Fish, DN.Objects/Furniture, DN.Objects/Artifacts, DN.Objects/Food, DN.Objects/Fish_Animations",
 			"FromFile": "Assets/Items/{{TargetPathOnly}}/{{TargetWithoutPath}}.png"
 		}
 ]

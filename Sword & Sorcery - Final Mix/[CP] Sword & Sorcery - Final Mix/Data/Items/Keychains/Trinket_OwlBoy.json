@@ -16,7 +16,7 @@
               "ExcludeFromRandomSale": true,
               "ExcludeFromShippingCollection": true,
               "Buff": null,
-              "Texture": "WF.Misc/Icons",
+              "Texture": "DN.Misc/Icons",
               "SpriteIndex": 11
           }
       }
@@ -30,7 +30,7 @@
           "DisplayName": "{{i18n:buff.owlboybuff}}",
           "Duration": 20000,
           "MaxDuration": -1,
-          "IconTexture": "WF.Misc/Icons",
+          "IconTexture": "DN.Misc/Icons",
           "IconSpriteIndex": 11,
           "Effects": { "Attack": 20 }
         }
@@ -156,7 +156,7 @@
                 "Args": {
                   "StunTime": 150,
                   "Range": 1500,
-                  "Texture": "WF.Objects/Curios",
+                  "Texture": "DN.Objects/Curios",
                   "SpriteIndex": 51,
                   "Acceleration": 2,
                   "MinVelocity": 2,

@@ -14,7 +14,7 @@
           "Edibility": -300,
           "IsDrink": false,
           "ExcludeFromShippingCollection": true,
-          "Texture": "WF.Objects/Books",
+          "Texture": "DN.Objects/Books",
           "SpriteIndex": "7",
           "ContextTags": [ "book_item" ]
         },
@@ -28,7 +28,7 @@
         "Edibility": -300,
         "IsDrink": false,
         "ExcludeFromShippingCollection": true,
-        "Texture": "WF.Objects/Books",
+        "Texture": "DN.Objects/Books",
         "SpriteIndex": "0",
         "ContextTags": [
           "book_item",
@@ -46,7 +46,7 @@
         "Edibility": -300,
         "IsDrink": false,
         "ExcludeFromShippingCollection": true,
-        "Texture": "WF.Objects/Books",
+        "Texture": "DN.Objects/Books",
         "SpriteIndex": "1",
         "ContextTags": [
           "book_item",
@@ -64,7 +64,7 @@
         "Edibility": -300,
         "IsDrink": false,
         "ExcludeFromShippingCollection": true,
-        "Texture": "WF.Objects/Books",
+        "Texture": "DN.Objects/Books",
         "SpriteIndex": "2",
         "ContextTags": [
           "book_item",
@@ -82,7 +82,7 @@
         "Edibility": -300,
         "IsDrink": false,
         "ExcludeFromShippingCollection": true,
-        "Texture": "WF.Objects/Books",
+        "Texture": "DN.Objects/Books",
         "SpriteIndex": "3",
         "ContextTags": [
           "book_item",
@@ -100,7 +100,7 @@
         "Edibility": -300,
         "IsDrink": false,
         "ExcludeFromShippingCollection": true,
-        "Texture": "WF.Objects/Books",
+        "Texture": "DN.Objects/Books",
         "SpriteIndex": "4",
         "ContextTags": [
           "book_item",

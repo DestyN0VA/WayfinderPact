@@ -32,7 +32,7 @@
           "DisplayName": "{{i18n: buff.hectorbuff}}",
           "Duration": 20000,
           "MaxDuration": -1,
-          "IconTexture": "WF.Gear/Keychains",
+          "IconTexture": "DN.Gear/Keychains",
           "IconSpriteIndex": 15,
           "Effects": {
             "FarmingLevel": 3.0,

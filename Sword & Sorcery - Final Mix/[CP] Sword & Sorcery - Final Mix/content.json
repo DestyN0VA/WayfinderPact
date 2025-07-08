@@ -3,7 +3,7 @@
   
   "Changes": [
     {
-      "LogName": "S&S WF: FileLoader",
+      "LogName": "S&S: FileLoader",
       "Action": "Include",
       "FromFile": "Loaders/FileLoader.json"
     }

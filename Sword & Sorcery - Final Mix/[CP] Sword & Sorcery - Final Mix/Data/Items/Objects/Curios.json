@@ -12,7 +12,7 @@
           "Type": "Basic",
           "Category": -15,
           "Price": 500,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 18,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -28,7 +28,7 @@
           "Type": "Basic",
           "Category": -15,
           "Price": 5000,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 19,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -48,7 +48,7 @@
           "Edibility": -300,
           "IsDrink": false,
           "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 16,
           "ContextTags": [
             "essence_item",
@@ -64,7 +64,7 @@
           "Type": "Basic",
           "Category": -28,
           "Price": 15,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 12,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -81,7 +81,7 @@
           "Type": "Basic",
           "Category": -28,
           "Price": 15,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 13,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -98,7 +98,7 @@
           "Type": "Basic",
           "Category": -28,
           "Price": 15,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 14,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -115,7 +115,7 @@
           "Type": "Basic",
           "Category": -28,
           "Price": 15,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 15,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -133,7 +133,7 @@
           "Type": "Basic",
           "Category": 0,
           "Price": 2500,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 0,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -150,7 +150,7 @@
           "Type": "Basic",
           "Category": 0,
           "Price": 2500,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 2,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -167,7 +167,7 @@
           "Type": "Basic",
           "Category": 0,
           "Price": 800,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 1,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -184,7 +184,7 @@
           "Type": "Basic",
           "Category": 0,
           "Price": 2000,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 3,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -201,7 +201,7 @@
           "Type": "Basic",
           "Category": 0,
           "Price": 1800,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 6,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -218,7 +218,7 @@
           "Type": "Basic",
           "Category": 0,
           "Price": 1000,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 4,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -235,7 +235,7 @@
           "Type": "Basic",
           "Category": 0,
           "Price": 7500,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 5,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -253,7 +253,7 @@
           "Type": "Basic",
           "Category": -15,
           "Price": 50,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 7,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -269,7 +269,7 @@
           "Type": "Basic",
           "Category": -15,
           "Price": 75,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 8,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -285,7 +285,7 @@
           "Type": "Basic",
           "Category": -15,
           "Price": 125,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 9,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -301,7 +301,7 @@
           "Type": "Basic",
           "Category": -15,
           "Price": 500,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 10,
           "ExcludeFromRandomSale": true,
           "ContextTags": [
@@ -317,7 +317,7 @@
           "Type": "Basic",
           "Category": -15,
           "Price": 1500,
-          "Texture": "WF.Objects/Curios",
+          "Texture": "DN.Objects/Curios",
           "SpriteIndex": 11,
           "ExcludeFromRandomSale": true,
           "ContextTags": [

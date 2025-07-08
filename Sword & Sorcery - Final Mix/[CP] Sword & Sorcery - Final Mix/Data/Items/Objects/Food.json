@@ -17,7 +17,7 @@
           "Edibility": 50,
           "IsDrink": false,
           "Buffs": null,
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 24,
           "ContextTags": [
             "color_brown",
@@ -40,7 +40,7 @@
           "Edibility": 50,
           "IsDrink": false,
           "Buffs": null,
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 23,
           "ContextTags": [
             "color_brown",
@@ -61,7 +61,7 @@
           "Edibility": 50,
           "IsDrink": false,
           "Buffs": null,
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 26,
           "ContextTags": [
             "color_brown",
@@ -82,7 +82,7 @@
           "Edibility": 50,
           "IsDrink": false,
           "Buffs": null,
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 27,
           "ContextTags": [
             "color_brown",
@@ -103,7 +103,7 @@
           "Edibility": 50,
           "IsDrink": true,
           "Buffs": null,
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 25,
           "ContextTags": [
             "color_brown"
@@ -136,7 +136,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 7,
           "ContextTags": [
             "alcohol_item",
@@ -171,7 +171,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 8,
           "ContextTags": [
             "allergen_dairy",
@@ -207,7 +207,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 9,
           "ContextTags": [
             "allergen_dairy",
@@ -244,7 +244,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 10,
           "ContextTags": [
             "color_prismatic"
@@ -278,7 +278,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 11,
           "ContextTags": [
             "color_red",
@@ -313,7 +313,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 12,
           "ContextTags": [
             "food_sweet",
@@ -349,7 +349,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 13,
           "ContextTags": [
             "allergen_dairy",
@@ -388,7 +388,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 14,
           "ContextTags": [
             "color_dark_red",
@@ -426,7 +426,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 15,
           "ContextTags": [
             "color_dark_yellow",
@@ -465,7 +465,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 16,
           "ContextTags": [
             "color_dark_yellow",
@@ -505,7 +505,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 17,
           "ContextTags": [
             "color_sand",
@@ -545,7 +545,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 18,
           "ContextTags": [
             "color_orange",
@@ -584,7 +584,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 19,
           "ContextTags": [
            "color_cyan"
@@ -618,7 +618,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 20,
           "ContextTags": [
             "color_red",
@@ -653,7 +653,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 21,
           "ContextTags": [
             "color_green",
@@ -688,7 +688,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 22,
           "ContextTags": [
             "color_dark_cyan"
@@ -723,7 +723,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 0,
           "ContextTags": [
             "color_orange",
@@ -759,7 +759,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 1,
           "ContextTags": [
             "color_blue",
@@ -795,7 +795,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 2,
           "ContextTags": [
             "color_dark_yellow",
@@ -831,7 +831,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 3,
           "ContextTags": [
             "color_dark_red",
@@ -867,7 +867,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 4,
           "ContextTags": [
             "color_dark_red",
@@ -903,7 +903,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 5,
           "ContextTags": [
             "color_pink",
@@ -939,7 +939,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 6,
           "ContextTags": [
             "color_dark_cyan",
@@ -975,7 +975,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 6,
           "ContextTags": [
             "color_dark_cyan",
@@ -1011,7 +1011,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 6,
           "ContextTags": [
             "color_dark_cyan",
@@ -1047,7 +1047,7 @@
               }
             }
           ],
-          "Texture": "WF.Objects/Food",
+          "Texture": "DN.Objects/Food",
           "SpriteIndex": 6,
           "ContextTags": [
             "color_dark_cyan",

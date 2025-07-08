@@ -9,7 +9,7 @@
         "DisplayName": "{{i18n: buff.bookbuff}}",
         "Duration": 20000,
         "MaxDuration": -1,
-        "IconTexture": "WF.Gear/Keychains",
+        "IconTexture": "DN.Gear/Keychains",
         "IconSpriteIndex": 14,
         "Effects": { "MaxStamina": 75, "Immunity": 2.0, "LuckLevel": 1 }
       }

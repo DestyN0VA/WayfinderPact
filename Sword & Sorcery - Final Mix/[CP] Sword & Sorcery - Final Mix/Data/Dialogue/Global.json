@@ -4,7 +4,7 @@
         {
             "LogName": "Load Main Character Art Default",
             "Action": "EditData",
-            "Target": "Characters/Dialogue/WF.Val, Characters/Dialogue/WF.Hector, Characters/Dialogue/WF.Lorin, Characters/Dialogue/WF.Coriander, Characters/Dialogue/WF.Roslin, Characters/Dialogue/WF.Dandelion, Characters/Dialogue/WF.Arden",
+            "Target": "Characters/Dialogue/DN.Val, Characters/Dialogue/DN.Hector, Characters/Dialogue/DN.Lorin, Characters/Dialogue/DN.Coriander, Characters/Dialogue/DN.Roslin, Characters/Dialogue/DN.Dandelion, Characters/Dialogue/DN.Arden",
             "Entries":  {
                 "{{WeekDay}}": "Hello I am test dialogue"
             }

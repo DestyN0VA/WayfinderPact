@@ -5,7 +5,7 @@
             "Action": "EditData",
             "Target": "Data/Characters",
             "Entries": {
-                "WF.Dandelion": {
+                "DN.Dandelion": {
                     "DisplayName": "{{i18n:Core.Dandelion.Name}}",
                     "Gender": "Female",
                     "Age": "Adult",
@@ -16,7 +16,7 @@
                     "BirthDay": 16,
                     "HomeRegion": "Town",
                     "CanBeRomanced": false,
-                    "LoveInterest": "WF.Roslin",
+                    "LoveInterest": "DN.Roslin",
                     "PerfectionScore": true,
                     "EndSlideShow": "TrailingGroup",
                     "SpawnIfMissing": true,
@@ -49,8 +49,8 @@
                             "ID": "Default",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/WF.Dandelion",
-                            "Sprite": "Characters/WF.Dandelion"
+                            "Portrait": "Portraits/DN.Dandelion",
+                            "Sprite": "Characters/DN.Dandelion"
                         }
                     ]
                 }

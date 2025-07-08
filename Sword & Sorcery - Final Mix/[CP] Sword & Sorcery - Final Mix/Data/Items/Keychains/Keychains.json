@@ -14,7 +14,7 @@
           "Edibility": -300,
           "IsDrink": false,
           "ExcludeFromShippingCollection": true,
-          "Texture": "WF.Gear/Keychains",
+          "Texture": "DN.Gear/Keychains",
           "ContextTags": [ "keychain_item" ],
           "SpriteIndex": 12
         }
@@ -29,7 +29,7 @@
           "Id": "{{ModId}}_BookKeychain",
           "DisplayName": "{{i18n: magicitem.BookKeychain.name}}",
           "Description": "{{i18n: magicitem.BookKeychain.description}}",
-          "Texture": "WF.Gear/Keychains",
+          "Texture": "DN.Gear/Keychains",
           "SheetIndex": 14,
           "DropsNaturally": false,
           "CanBeReforged": false,
@@ -39,7 +39,7 @@
           "Id": "{{ModId}}_EmeritusKeychain",
           "DisplayName": "{{i18n: magicitem.EmeritusKeychain.name}}",
           "Description": "{{i18n: magicitem.EmeritusKeychain.description}}",
-          "Texture": "WF.Gear/Keychains",
+          "Texture": "DN.Gear/Keychains",
           "SheetIndex": 13,
           "DropsNaturally": false,
           "CanBeReforged": false,
@@ -49,7 +49,7 @@
           "Id": "{{ModId}}_HectorWolfKeychain",
           "DisplayName": "reeee",
           "Description": "reee",
-          "Texture": "WF.Gear/Keychains",
+          "Texture": "DN.Gear/Keychains",
           "SheetIndex": 15,
           "DropsNaturally": false,
           "CanBeReforged": false,
@@ -59,7 +59,7 @@
           "Id": "{{ModId}}_OwlBoyKeychain",
           "DisplayName": "{{i18n: magicitem.destykeychain.name}}",
           "Description": "{{i18n: magicitem.destykeychain.description.Trinket}}",
-          "Texture": "WF.Gear/Keychains",
+          "Texture": "DN.Gear/Keychains",
           "SheetIndex": 12,
           "DropsNaturally": false,
           "CanBeReforged": false,
@@ -69,7 +69,7 @@
           "Id": "{{ModId}}_Nimfear",
           "DisplayName": "{{i18n: magicitem.destykeychain.name}}",
           "Description": "{{i18n: magicitem.destykeychain.description.Trinket}}",
-          "Texture": "WF.Gear/Keychains",
+          "Texture": "DN.Gear/Keychains",
           "SheetIndex": 12,
           "DropsNaturally": false,
           "CanBeReforged": false,
@@ -96,7 +96,7 @@
       "Entries": {
         "{{ModID}}_DestysBuff": {
           "DisplayName": "{{i18n:buff.destybuff}}",
-          "IconTexture": "WF.Gear/Keychains",
+          "IconTexture": "DN.Gear/Keychains",
           "IconSpriteIndex": 12,
           "Effects": { "Attack": 20 }
         }

@@ -13,7 +13,7 @@
 					"CanBePlacedOutdoors": true,
 					"CanBePlacedIndoors": true,
 					"IsLamp": false,
-					"Texture": "WF.Objects/Machines",
+					"Texture": "DN.Objects/Machines",
 					"SpriteIndex": 0,
 					"CustomFields": {}
 				}

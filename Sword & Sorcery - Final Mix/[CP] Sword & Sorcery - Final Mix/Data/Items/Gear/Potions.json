@@ -14,7 +14,7 @@
           "Price": 250,
           "Edibility": 0,
           "IsDrink": true,
-          "Texture": "WF.Gear/Potions",
+          "Texture": "DN.Gear/Potions",
           "SpriteIndex": 0,
           "ExcludeFromShippingCollection": true,
           "ContextTags": [
@@ -49,7 +49,7 @@
               }
             }
           ],
-          "Texture": "WF.Gear/Potions",
+          "Texture": "DN.Gear/Potions",
           "SpriteIndex": 1,
           "ContextTags": [
             "color_lime",
@@ -84,7 +84,7 @@
               }
             }
           ],
-          "Texture": "WF.Gear/Potions",
+          "Texture": "DN.Gear/Potions",
           "SpriteIndex": 2,
           "ContextTags": [
             "color_red",
@@ -119,7 +119,7 @@
               }
             }
           ],
-          "Texture": "WF.Gear/Potions",
+          "Texture": "DN.Gear/Potions",
           "SpriteIndex": 3,
           "ContextTags": [
             "color_dark_pink",
@@ -154,7 +154,7 @@
               }
             }
           ],
-          "Texture": "WF.Gear/Potions",
+          "Texture": "DN.Gear/Potions",
           "SpriteIndex": 4,
           "ContextTags": [
             "color_dark_cyan",
@@ -189,7 +189,7 @@
               }
             }
           ],
-          "Texture": "WF.Gear/Potions",
+          "Texture": "DN.Gear/Potions",
           "SpriteIndex": 5,
           "ContextTags": [
             "color_yellow_green",
@@ -224,7 +224,7 @@
               }
             }
           ],
-          "Texture": "WF.Gear/Potions",
+          "Texture": "DN.Gear/Potions",
           "SpriteIndex": 6,
           "ContextTags": [
             "color_pale_violet_red",
@@ -259,7 +259,7 @@
               }
             }
           ],
-          "Texture": "WF.Gear/Potions",
+          "Texture": "DN.Gear/Potions",
           "SpriteIndex": 7,
           "ContextTags": [
             "color_salmon",
@@ -294,7 +294,7 @@
               }
             }
           ],
-          "Texture": "WF.Gear/Potions",
+          "Texture": "DN.Gear/Potions",
           "SpriteIndex": 8,
           "ContextTags": [
             "color_dark_red",
@@ -329,7 +329,7 @@
               }
             }
           ],
-          "Texture": "WF.Gear/Potions",
+          "Texture": "DN.Gear/Potions",
           "SpriteIndex": 9,
           "ContextTags": [
             "color_sea_green",
@@ -364,7 +364,7 @@
               }
             }
           ],
-          "Texture": "WF.Gear/Potions",
+          "Texture": "DN.Gear/Potions",
           "SpriteIndex": 10,
           "ContextTags": [
             "color_purple",

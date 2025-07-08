@@ -16,7 +16,7 @@
           "Price": 125,
           "Edibility": 15,
           "IsDrink": false,
-          "Texture": "WF.Objects/Fish",
+          "Texture": "DN.Objects/Fish",
           "SpriteIndex": 0,
           "ContextTags": [
             "color_red",
@@ -37,7 +37,7 @@
           "Price": 300,
           "Edibility": 15,
           "IsDrink": false,
-          "Texture": "WF.Objects/Fish",
+          "Texture": "DN.Objects/Fish",
           "SpriteIndex": 1,
           "ContextTags": [
             "color_green",
@@ -58,7 +58,7 @@
           "Price": 225,
           "Edibility": 15,
           "IsDrink": false,
-          "Texture": "WF.Objects/Fish",
+          "Texture": "DN.Objects/Fish",
           "SpriteIndex": 2,
           "ContextTags": [
             "color_brown",
@@ -79,7 +79,7 @@
           "Price": 175,
           "Edibility": 15,
           "IsDrink": false,
-          "Texture": "WF.Objects/Fish",
+          "Texture": "DN.Objects/Fish",
           "SpriteIndex": 3,
           "ContextTags": [
             "color_blue",
@@ -100,7 +100,7 @@
           "Price": 215,
           "Edibility": 15,
           "IsDrink": false,
-          "Texture": "WF.Objects/Fish",
+          "Texture": "DN.Objects/Fish",
           "SpriteIndex": 4,
           "ContextTags": [
             "color_blue",
@@ -121,7 +121,7 @@
           "Price": 2000,
           "Edibility": 15,
           "IsDrink": false,
-          "Texture": "WF.Objects/Fish",
+          "Texture": "DN.Objects/Fish",
           "SpriteIndex": 5,
           "ContextTags": [
             "color_blue",
@@ -149,12 +149,12 @@
       "Action": "EditData",
       "Target": "Data/AquariumFish",
       "Entries": {
-        "{{ModID}}_SalmonOfKnowledge": "1/fish/1////WF.Objects\\Fish_Animations",
-        "{{ModID}}_FiveLinedConstellationFish": "0/fish/0////WF.Objects\\Fish_Animations",
-        "{{ModID}}_PallidSailfin": "2/fish/2////WF.Objects\\Fish_Animations",
-        "{{ModID}}_GiantDragonfish": "3/eel/3////WF.Objects\\Fish_Animations",
-        "{{ModID}}_GoldieTheBatteryPoweredFish": "4/fish/4////WF.Objects\\Fish_Animations",
-        "{{ModID}}_Fastitocalon": "5/cephalopod/5/5/6 7 8 9 9 8 7 6/5/WF.Objects\\Fish_Animations"
+        "{{ModID}}_SalmonOfKnowledge": "1/fish/1////DN.Objects\\Fish_Animations",
+        "{{ModID}}_FiveLinedConstellationFish": "0/fish/0////DN.Objects\\Fish_Animations",
+        "{{ModID}}_PallidSailfin": "2/fish/2////DN.Objects\\Fish_Animations",
+        "{{ModID}}_GiantDragonfish": "3/eel/3////DN.Objects\\Fish_Animations",
+        "{{ModID}}_GoldieTheBatteryPoweredFish": "4/fish/4////DN.Objects\\Fish_Animations",
+        "{{ModID}}_Fastitocalon": "5/cephalopod/5/5/6 7 8 9 9 8 7 6/5/DN.Objects\\Fish_Animations"
       }
     },
     {

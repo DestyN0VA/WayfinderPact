@@ -5,7 +5,7 @@
             "Action": "EditData",
             "Target": "Data/Characters",
             "Entries": {
-                "WF.Lorin": {
+                "DN.Lorin": {
                     "DisplayName": "{{i18n:Core.Lorin.Name}}",
                     "Gender": "Female",
                     "Age": "Adult",
@@ -33,10 +33,10 @@
                     ],
                     "ItemDeliveryQuests": false,
                     /*"SpouseRoom": {
-                        "MapAsset": "{{WF_LorinSpouseRoomOnOff}}"
+                        "MapAsset": "{{DN.LorinSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "{{WF_LorinSpousePatioOnOff}}"
+                        "MapAsset": "{{DN.LorinSpousePatioOnOff}}"
                     */
                     "Home": [
                         {
@@ -55,8 +55,8 @@
                             "ID": "Default",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/WF.Lorin",
-                            "Sprite": "Characters/WF.Lorin"
+                            "Portrait": "Portraits/DN.Lorin",
+                            "Sprite": "Characters/DN.Lorin"
                         }
                     ]
                 }

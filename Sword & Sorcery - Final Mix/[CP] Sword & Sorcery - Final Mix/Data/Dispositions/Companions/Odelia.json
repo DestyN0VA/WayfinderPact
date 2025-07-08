@@ -7,7 +7,7 @@
                 "{{ModId}}.Odelia": {
                     "DisplayName": "Odelia",
                     "House": "Barn",
-                    "Texture": "Characters/WF.Odelia",
+                    "Texture": "Characters/DN.Odelia",
                     "SpriteWidth": 32,
                     "SpriteHeight": 32,
                     "SleepFrame": 24,
@@ -27,7 +27,7 @@
                     "Age": 1,
                     "LocationId": "EastScarp_Village",
                     "DisplayName": "Odelia",
-                    "PortraitTexture": "Portraits/WF.Odelia",
+                    "PortraitTexture": "Portraits/DN.Odelia",
                     "PetMessage": [ "Meep" ],
                     "HomeTileX": 91,
                     "HomeTileY": 100

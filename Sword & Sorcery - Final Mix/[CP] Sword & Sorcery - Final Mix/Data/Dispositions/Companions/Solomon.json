@@ -7,7 +7,7 @@
                 "{{ModId}}.Solomon": {
                     "DisplayName": "Solomon",
                     "House": "Barn",
-                    "Texture": "Characters/WF.Solomon",
+                    "Texture": "Characters/DN.Solomon",
                     "SpriteWidth": 16,
                     "SpriteHeight": 32,
                     "SleepFrame": 24,
@@ -27,7 +27,7 @@
                     "Age": 1,
                     "LocationId": "EastScarp_Village",
                     "DisplayName": "Solomon",
-                    "PortraitTexture": "Portraits/WF.Solomon",
+                    "PortraitTexture": "Portraits/DN.Solomon",
                     "PetMessage": [ "Meep" ],
                     "HomeTileX": 89,
                     "HomeTileY": 100

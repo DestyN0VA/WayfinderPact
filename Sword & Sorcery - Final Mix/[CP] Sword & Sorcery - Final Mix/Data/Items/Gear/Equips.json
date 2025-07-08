@@ -15,7 +15,7 @@
           "Edibility": -300,
           "IsDrink": false,
           "ExcludeFromShippingCollection": true,
-          "Texture": "WF.Misc/Icons",
+          "Texture": "DN.Misc/Icons",
           "SpriteIndex": 0
         },
         "{{ModID}}_pressedcrocus": {
@@ -28,7 +28,7 @@
           "Edibility": -300,
           "IsDrink": false,
           "ExcludeFromShippingCollection": true,
-          "Texture": "WF.Misc/Icons",
+          "Texture": "DN.Misc/Icons",
           "SpriteIndex": 8
         },
       },
@@ -50,7 +50,7 @@
       "Entries": {
         "{{ModID}}_DestysBuff": {
           "DisplayName": "{{i18n:buff.destybuff}}",
-          "IconTexture": "WF.Gear/Keychains",
+          "IconTexture": "DN.Gear/Keychains",
           "IconSpriteIndex": 12,
           "Effects": { "Attack": 20 }
         }

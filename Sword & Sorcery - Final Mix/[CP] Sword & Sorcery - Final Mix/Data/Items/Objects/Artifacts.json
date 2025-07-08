@@ -12,7 +12,7 @@
           "Type": "Basic",
           "Category": -28,
           "Price": 2500,
-          "Texture": "WF.Objects/Artifacts",
+          "Texture": "DN.Objects/Artifacts",
           "SpriteIndex": 0,
           "ExcludeFromRandomSale": true
         }

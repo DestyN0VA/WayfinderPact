@@ -5,7 +5,7 @@
             "Action": "EditData",
             "Target": "Data/Characters",
             "Entries": {
-                "WF.Val": {
+                "DN.Val": {
                     "DisplayName": "{{i18n:Core.Val.Name}}",
                     "Gender": "Female",
                     "Age": "Adult",
@@ -32,10 +32,10 @@
                         98
                     ],
                     /*"SpouseRoom": {
-                        "MapAsset": "{{WF.ValSpouseRoomOnOff}}"
+                        "MapAsset": "{{DN.ValSpouseRoomOnOff}}"
                     },
                     "SpousePatio": {
-                        "MapAsset": "{{WF.ValSpousePatioOnOff}}"
+                        "MapAsset": "{{DN.ValSpousePatioOnOff}}"
                     */
                     "Home": [
                         {
@@ -54,8 +54,8 @@
                             "ID": "Default",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/WF.Val",
-                            "Sprite": "Characters/WF.Val"
+                            "Portrait": "Portraits/DN.Val",
+                            "Sprite": "Characters/DN.Val"
                         }
                     ]
                 }

@@ -8,7 +8,7 @@
         "{{ModId}}_NimfearKeychain": {
           "Variants": [
             {
-              "Texture": "Characters/WF.Nimfear",
+              "Texture": "Characters/DN.Nimfear",
               "Width": 16,
               "Height": 32,
               "ShadowScale": 3

@@ -7,7 +7,7 @@
                 "{{ModId}}.Emeritus": {
                     "DisplayName": "Emeritus",
                     "House": "Barn",
-                    "Texture": "Characters/WF.Emeritus",
+                    "Texture": "Characters/DN.Emeritus",
                     "SpriteWidth": 32,
                     "SpriteHeight": 32,
                     "SleepFrame": 24,
@@ -27,7 +27,7 @@
                     "Age": 1,
                     "LocationId": "EastScarp_Village",
                     "DisplayName": "Emeritus",
-                    "PortraitTexture": "Portraits/WF.Emeritus",
+                    "PortraitTexture": "Portraits/DN.Emeritus",
                     "PetMessage": [ "Meep" ],
                     "HomeTileX": 90,
                     "HomeTileY": 100

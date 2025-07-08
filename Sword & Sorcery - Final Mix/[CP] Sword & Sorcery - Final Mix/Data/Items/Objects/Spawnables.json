@@ -14,7 +14,7 @@
                     "CanBePlacedOutdoors": true,
                     "CanBePlacedIndoors": true,
                     "IsLamp": false,
-                    "Texture": "WF.Misc/DDTreasure",
+                    "Texture": "DN.Misc/DDTreasure",
                     "SpriteIndex": 0,
                     "ContextTags": null,
                     "CustomFields": null
