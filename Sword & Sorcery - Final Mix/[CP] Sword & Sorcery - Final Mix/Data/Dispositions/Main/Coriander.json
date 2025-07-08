@@ -1,0 +1,65 @@
+{
+    "Changes": [
+        {
+            "LogName": "NPC Dispositions - Coriander",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "WF.Coriander": {
+                    "DisplayName": "{{i18n:Core.Coriander.Name}}",
+                    "Gender": "Female",
+                    "Age": "Adult",
+                    "Manner": "Polite",
+                    "SocialAnxiety": "Outgoing",
+                    "Optimism": "Positive",
+                    "BirthSeason": "Summer",
+                    "BirthDay": 18,
+                    "HomeRegion": "Town",
+                    "CanBeRomanced": false,
+                    //"LoveInterest": "",
+                    "PerfectionScore": true,
+                    "EndSlideShow": "TrailingGroup",
+                    "SpawnIfMissing": true,
+                    "SocialTab": "UnknownUntilMet",
+                    "Calendar": "HiddenUntilMet",
+                    "IntroductionsQuest": false,
+                    "FlowerDanceCanDance": true,
+                    "CanVisitIsland": false,
+                    "WinterStarParticipant": false,
+                    "IsDarkSkinned": false,
+                    "ShakePortraits": [
+                        99,
+                        98
+                    ],
+                    /*"SpouseRoom": {
+                        "MapAsset": "{{WF.CorianderSpouseRoomOnOff}}"
+                    },
+                    "SpousePatio": {
+                        "MapAsset": "{{WF.CorianderSpousePatioOnOff}}"
+                    */
+                    "Home": [
+                        {
+                            "ID": "Coriander - Spawn",
+                            "Location": "EastScarp_BardHouse",
+                            "Tile": {
+                                "X": 24,
+                                "Y": 5
+                            },
+                            "Direction": "Down"
+                        }
+                    ],
+                    "Appearance": [
+                        // SPRING
+                        {
+                            "ID": "Default",
+                            "Precedence": -10,
+                            "Weight": 1,
+                            "Portrait": "Portraits/WF.Coriander",
+                            "Sprite": "Characters/WF.Coriander"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

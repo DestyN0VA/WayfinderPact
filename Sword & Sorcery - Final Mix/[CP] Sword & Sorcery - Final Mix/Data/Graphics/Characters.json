@@ -1,0 +1,55 @@
+{
+    "Changes": [
+        //Default Patch
+        {
+            "LogName": "Load Main Character Art Default",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Characters/WF.Val, Characters/WF.Hector, Characters/WF.Lorin, Characters/WF.Coriander, Characters/WF.Roslin, Characters/WF.Dandelion, Characters/WF.Arden",
+            "FromFile": "Assets/Characters/Main/{{TargetWithoutPath}}/Other/Armor.png"
+        },
+        {
+            "LogName": "Load Main Portrait Art Default",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Portraits/WF.Val, Portraits/WF.Hector, Portraits/WF.Lorin, Portraits/WF.Coriander, Portraits/WF.Roslin, Portraits/WF.Dandelion, Portraits/WF.Arden",
+            "FromFile": "Assets/Portraits/Main/{{TargetWithoutPath}}/Other/Armor.png"
+        },
+        //Main Cast
+        {
+            "LogName": "Load Main Character Art",
+            "Action": "Load",
+            "Target": "Characters/WF.Val, Characters/WF.Hector, Characters/WF.Lorin, Characters/WF.Coriander, Characters/WF.Roslin, Characters/WF.Dandelion, Characters/WF.Arden",
+            "FromFile": "Assets/Characters/Main/{{TargetWithoutPath}}/Seasonals/{{Season}}.png"
+        },
+        {
+            "LogName": "Load Main Portrait Art",
+            "Action": "Load",
+            "Target": "Portraits/WF.Val, Portraits/WF.Hector, Portraits/WF.Lorin, Portraits/WF.Coriander, Portraits/WF.Roslin, Portraits/WF.Dandelion, Portraits/WF.Arden",
+            "FromFile": "Assets/Portraits/Main/{{TargetWithoutPath}}/Seasonals/{{Season}}.png"
+        },
+        //Companions
+        {
+            "LogName": "Load Companion Character Art",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Characters/WF.Emeritus, Characters/WF.Tom, Characters/WF.Odelia, Characters/WF.Winston, Characters/WF.Nimfear, Characters/WF.Solomon",
+            "FromFile": "Assets/Characters/Companions/{{TargetWithoutPath}}/Default.png"
+        },
+        {
+            "LogName": "Load Nimfear Flight Art",
+            "Action": "EditImage",
+            "Update": "OnLocationChange",
+            "Target": "Characters/WF.Nimfear",
+            "FromFile": "Assets/Characters/Companions/{{TargetWithoutPath}}/Flight.png",
+            "When": { "IsOutdoors": true }
+        },
+        {
+            "LogName": "Load Companion Portrait Art",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Portraits/WF.Emeritus, Portraits/WF.Tom, Portraits/WF.Odelia, Portraits/WF.Winston, Portraits/WF.Nimfear, Portraits/WF.Solomon",
+            "FromFile": "Assets/Portraits/Companions/{{TargetWithoutPath}}/Default.png"
+        }
+    ]
+}
