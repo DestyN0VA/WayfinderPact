@@ -1,0 +1,59 @@
+{
+  "Changes": [
+    {
+      "LogName": "Example's 0 Heart Event", 
+      "Action": "EditData",
+      "Target": "Data/Events/Saloon",
+      "Entries": {
+        "EVENT ID/e PRIOR EVENT IDEA/f Hector 2500/t 1200 2200/w sunny/F": "Saloon1/-100 -100/farmer 23 18 2/end",
+      },
+    },
+  ]
+}
+/* 
+
+(0 = up, 1 = right, 2 = down, 3 = left)
+
+patch reload DN.SnS Data/Events/BLANK.json 
+
+quickQuestion #That girl sounds overwhelmed. #That voice is familiar.(break)speak Val \"Let's check in on things, just in case.$32\"(break)speak Hector \"Right? Reminds me of something I was watching with Eloise...$7\"
+
+advancedMove true/false (loop) parameters
+
+parameters:
+x y x y x y = move without pause
+
+x y z t x y z t = move with pauses
+
+x y x y z t x y = move with mix of mentioned above
+
+x = how many tiles move in x axis (+ = right, - = left)
+y = how many tiles move in y axis (+ = down, - = up)
+z = direction face upon reaching destination (1=right, 2=down, 3=left, 4=up)
+t = duration in milliseconds how long to stay in that spot (must be >= 10000ms)
+
+4- empty can
+8- question mark
+12- angry
+16- exclamation
+20- heart
+24- sleep
+28- sad
+32- happy
+36- x
+40- pause
+52- video game
+56- music note
+60- blush 
+
+/--can comment with a double dash/
+stopAdvancedMoves - will prevent clipping issues at the end of an event when characters advMove off screen
+waitForAllStationary - waits until all advMoves are complete for next action 
+proceedPosition NPC - waits for specified advMove are complete for next action 
+beginSimultaneousCommand / endSimultaneousCommand
+doAction x y 
+cutscene clearTempSprites
+animate <actor> <flip> <loop> <frame duration> <frames...>
+addTemporaryActor <spriteAssetName> <sprite width> <sprite height> <tile x> <tile y> <direction> [breather] [Character|Animal|Monster] [override name]
+
+*/
