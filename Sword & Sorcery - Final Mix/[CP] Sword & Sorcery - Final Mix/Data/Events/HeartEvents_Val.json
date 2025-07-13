@@ -3,7 +3,7 @@
     {
       "LogName": "Example's 0 Heart Event", 
       "Action": "EditData",
-      "Target": "Data/Events/Saloon",
+      "Target": "Data/Events/EastScarp_Village",
       "Entries": {
         "EVENT ID/e PRIOR EVENT IDEA/f Hector 2500/t 1200 2200/w sunny/F": "Saloon1/-100 -100/farmer 23 18 2/end",
       },

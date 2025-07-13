@@ -1,0 +1,25 @@
+{
+    "Changes": [
+        // VAL
+        {
+            "Action": "Load",
+            "Target": "Characters/ValInjury",
+            "FromFile": "assets/Characters/Main/DN.Val/Actors/Injury.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/ValSmithing",
+            "FromFile": "assets/Characters/Main/DN.Val/Actors/Smithing.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/ValSwordSwing",
+            "FromFile": "assets/Characters/Main/DN.Val/Actors/Sword_Swing.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/ValCrab",
+            "FromFile": "assets/Characters/Temporary/ValCrab.png"
+        },
+    ]
+}
