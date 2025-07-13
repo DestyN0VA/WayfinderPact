@@ -1,0 +1,38 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "Entries": {
+                "{{ModId}}.Winston": {
+                    "DisplayName": "Winston",
+                    "House": "Barn",
+                    "Texture": "Characters/DN.Winston",
+                    "SpriteWidth": 19,
+                    "SpriteHeight": 15,
+                    "SleepFrame": 24,
+                    "UseFlippedRightForLeft": false,
+                    "UseDoubleUniqueAnimationFrames": true,
+                    "ShadowWhenBaby": { "Visible": false },
+                    "ShadowWhenAdult": { "Visible": false }
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "MEEP/FarmAnimals/SpawnData",
+            "Entries": {
+                "{{ModId}}.Winston_Spawn": {
+                    "AnimalId": "{{ModId}}.Winston",
+                    "Age": 1,
+                    "LocationId": "EastScarp_Village",
+                    "DisplayName": "Winston",
+                    "PortraitTexture": "Portraits/DN.Winston",
+                    "PetMessage": [ "Meep" ],
+                    "HomeTileX": 95,
+                    "HomeTileY": 100
+                }
+            }
+        }
+    ]
+}

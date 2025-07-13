@@ -1,0 +1,13 @@
+{
+    "Changes": [
+        //Default Patch
+        {
+            "LogName": "Load Main Character Art Default",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/DN.Val, Characters/Dialogue/DN.Hector, Characters/Dialogue/DN.Lorin, Characters/Dialogue/DN.Coriander, Characters/Dialogue/DN.Roslin, Characters/Dialogue/DN.Dandelion, Characters/Dialogue/DN.Arden",
+            "Entries":  {
+                "{{WeekDay}}": "Hello I am test dialogue"
+            }
+        }
+    ]
+}

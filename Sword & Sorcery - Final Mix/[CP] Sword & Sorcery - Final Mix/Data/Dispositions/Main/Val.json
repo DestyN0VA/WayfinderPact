@@ -1,0 +1,65 @@
+{
+    "Changes": [
+        {
+            "LogName": "NPC Dispositions - Val",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "DN.Val": {
+                    "DisplayName": "{{i18n:Core.Val.Name}}",
+                    "Gender": "Female",
+                    "Age": "Adult",
+                    "Manner": "Polite",
+                    "SocialAnxiety": "Outgoing",
+                    "Optimism": "Positive",
+                    "BirthSeason": "Fall",
+                    "BirthDay": 25,
+                    "HomeRegion": "Town",
+                    "CanBeRomanced": false,
+                    //"LoveInterest": "",
+                    "PerfectionScore": true,
+                    "EndSlideShow": "TrailingGroup",
+                    "SpawnIfMissing": true,
+                    "SocialTab": "UnknownUntilMet",
+                    "Calendar": "HiddenUntilMet",
+                    "IntroductionsQuest": false,
+                    "FlowerDanceCanDance": true,
+                    "CanVisitIsland": false,
+                    "WinterStarParticipant": false,
+                    "IsDarkSkinned": true,
+                    "ShakePortraits": [
+                        99,
+                        98
+                    ],
+                    /*"SpouseRoom": {
+                        "MapAsset": "{{DN.ValSpouseRoomOnOff}}"
+                    },
+                    "SpousePatio": {
+                        "MapAsset": "{{DN.ValSpousePatioOnOff}}"
+                    */
+                    "Home": [
+                        {
+                            "ID": "Val - Spawn",
+                            "Location": "EastScarp_ArtificerHouse",
+                            "Tile": {
+                                "X": 14,
+                                "Y": 9
+                            },
+                            "Direction": "Down"
+                        }
+                    ],
+                    "Appearance": [
+                        // SPRING
+                        {
+                            "ID": "Default",
+                            "Precedence": -10,
+                            "Weight": 1,
+                            "Portrait": "Portraits/DN.Val",
+                            "Sprite": "Characters/DN.Val"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

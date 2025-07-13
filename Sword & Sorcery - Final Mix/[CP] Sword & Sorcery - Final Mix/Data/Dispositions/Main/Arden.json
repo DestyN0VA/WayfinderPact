@@ -1,0 +1,66 @@
+{
+    "Changes": [
+        {
+            "LogName": "NPC Dispositions - Arden",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "DN.Arden": {
+                    "DisplayName": "{{i18n:Core.Arden.Name}}",
+                    "Gender": "Female",
+                    "Age": "Adult",
+                    "Manner": "Neutral",
+                    "SocialAnxiety": "Outgoing",
+                    "Optimism": "Positive",
+                    "BirthSeason": "Summer",
+                    "BirthDay": 5,
+                    "HomeRegion": "Town",
+                    "CanBeRomanced": false,
+                    //"LoveInterest": "",
+                    "PerfectionScore": true,
+                    "EndSlideShow": "TrailingGroup",
+                    "SpawnIfMissing": true,
+                    "SocialTab": "UnknownUntilMet",
+                    "Calendar": "HiddenUntilMet",
+                    "IntroductionsQuest": false,
+                    "FlowerDanceCanDance": true,
+                    "CanVisitIsland": false,
+                    "WinterStarParticipant": false,
+                    "IsDarkSkinned": false,
+                    "ShakePortraits": [
+                        99,
+                        98
+                    ],
+                    "ItemDeliveryQuests": false,
+                    /*"SpouseRoom": {
+                        "MapAsset": "{{DN.ArdenSpouseRoomOnOff}}"
+                    },
+                    "SpousePatio": {
+                        "MapAsset": "{{DN.ArdenSpousePatioOnOff}}"
+                    */
+                    "Home": [
+                        {
+                            "ID": "Arden - Spawn",
+                            "Location": "EastScarp_TNPCWaitingWarpRoom",
+                            "Tile": {
+                                "X": 11,
+                                "Y": 5
+                            },
+                            "Direction": "Down",
+                        },
+                    ],
+                    "Appearance": [
+                        // SPRING
+                        {
+                            "ID": "Default",
+                            "Precedence": -10,
+                            "Weight": 1,
+                            "Portrait": "Portraits/DN.Arden",
+                            "Sprite": "Characters/DN.Arden"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

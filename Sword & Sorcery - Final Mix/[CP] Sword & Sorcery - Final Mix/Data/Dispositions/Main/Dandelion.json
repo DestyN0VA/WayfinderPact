@@ -1,0 +1,60 @@
+{
+    "Changes": [
+        {
+            "LogName": "NPC Dispositions - Dandelion",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "DN.Dandelion": {
+                    "DisplayName": "{{i18n:Core.Dandelion.Name}}",
+                    "Gender": "Female",
+                    "Age": "Adult",
+                    "Manner": "Polite",
+                    "SocialAnxiety": "Shy",
+                    "Optimism": "Positive",
+                    "BirthSeason": "Summer",
+                    "BirthDay": 16,
+                    "HomeRegion": "Town",
+                    "CanBeRomanced": false,
+                    "LoveInterest": "DN.Roslin",
+                    "PerfectionScore": true,
+                    "EndSlideShow": "TrailingGroup",
+                    "SpawnIfMissing": true,
+                    "SocialTab": "HiddenUntilMet",
+                    "Calendar": "HiddenUntilMet",
+                    "IntroductionsQuest": false,
+                    "FlowerDanceCanDance": true,
+                    "CanVisitIsland": false,
+                    "WinterStarParticipant": false,
+                    "IsDarkSkinned": false,
+                    "ShakePortraits": [
+                        99,
+                        98
+                    ],
+                    "ItemDeliveryQuests": false,
+                    "Home": [
+                        {
+                            "ID": "Dandelion - Spawn",
+                            "Location": "EastScarp_SorcererHouse",
+                            "Tile": {
+                                "X": 5,
+                                "Y": 5
+                            },
+                            "Direction": "Right",
+                        },
+                    ],
+                    "Appearance": [
+                        // SPRING
+                        {
+                            "ID": "Default",
+                            "Precedence": -10,
+                            "Weight": 1,
+                            "Portrait": "Portraits/DN.Dandelion",
+                            "Sprite": "Characters/DN.Dandelion"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

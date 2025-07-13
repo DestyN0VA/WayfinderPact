@@ -1,0 +1,93 @@
+{
+  "Format": "2.7.2",
+  
+  "Changes": [
+    {
+      "LogName": "S&S: FileLoader",
+      "Action": "Include",
+      "FromFile": "Loaders/FileLoader.json"
+    }
+  ],
+
+  "DynamicTokens": [
+    //BASIC UTILITY TOKENS
+    { "Name": "TodaysDate", "Value": "{{Season}} {{Day}}" },
+    { "Name": "IsOddYear", "Value": "{{Query: {{Year}} % 2 = 1}}" },
+
+    { "Name": "WeekDayList", "Value": "Sun, Mon, Tue, Wed, Thu, Fri, Sat" },
+    { "Name": "WeekDay", "Value": "{{WeekDayList |valueAt={{Query: {{Day}}%7}}}}" },
+
+    { "Name": "YearCheck", "Value": 2 },
+    { "Name": "YearCheck", "Value": 1, "When": { "Year": 1 } },
+
+    { "Name": "FestivalYearCheck", "Value": "" },
+    { "Name": "FestivalYearCheck", "Value": "_y2",
+        "When": { "Query: {{Year}} % 2 = 1": false } },
+
+    //GAMEPLAY
+    { "Name": "CountForFarmingAchievements", "Value": "true" },
+    { "Name": "CountForFarmingAchievements", "Value": "false",
+        "When": { "ExcludeFromPerfection": true } },
+
+    //CONDITIONAL SWITCHES
+    { "Name": "StygiumArmorIngredient", "Value": "{{ModID}}_IridiumArmor" },
+    { "Name": "StygiumArmorIngredient", "Value": "{{ModID}}_RadioactiveArmor",
+        "When": { "HasFlag": "reachedBottomOfHardMines" } },
+
+    { "Name": "StygiumShieldIngredient", "Value": "(W){{ModID}}_IridiumShield" },
+    { "Name": "StygiumShieldIngredient", "Value": "(W){{ModID}}_RadioactiveShield",
+        "When": { "HasFlag": "reachedBottomOfHardMines" } },
+    
+    { "Name": "ArtificerBookCat", "Value": "0"},
+    { "Name": "ArtificerBookCat", "Value": "-103",
+        "When": { "HasSeenEvent": "TBA" } },
+
+    { "Name": "DruidBookCat", "Value": "0"},
+    { "Name": "DruidBookCat", "Value": "-103",
+        "When": { "HasSeenEvent": "TBA" } },
+
+
+    { "Name": "BardBookCat", "Value": "0"},
+    { "Name": "BardBookCat", "Value": "-103",
+        "When": { "HasSeenEvent": "TBA" } },
+
+    { "Name": "SorceryBookCat", "Value": "0"},
+    { "Name": "SorceryBookCat", "Value": "-103",
+        "When": { "HasSeenEvent": "SnS.Ch4.Dandelion.6" } },
+
+    { "Name": "PaladinBookCat", "Value": "0"},
+    { "Name": "PaladinBookCat", "Value": "-103",
+        "When": { "HasSeenEvent": "TBA" } },
+
+    { "Name": "DruidicsCost4", "Value": "4" },
+
+    { "Name": "DruidicsCost4", "Value": "3",
+        "When": {  "HasProfession": "-197421760" } }, //Ancient Agronomist (Druidics level 5 profession)
+
+    { "Name": "DruidicsCost6", "Value": "6" },
+    { "Name": "DruidicsCost6", "Value": "5",
+        "When": { "HasProfession": "-197421760" } },
+        
+    { "Name": "DruidicsCost10", "Value": "10" },
+    { "Name": "DruidicsCost10", "Value": "9",
+        "When": { "HasProfession": "-197421760" } }
+  ],
+
+  "ConfigSchema": {
+    "ExcludeFromPerfection": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "Description": "Excludes S&S items from Perfection tracking.",
+      "Section": "Gameplay"
+    },
+
+      "AncientSweetTeaDifficulty": {
+      "AllowValues": "3, 7, 14, 21,",
+      "Default": "7",
+      "AllowBlank": false,
+      "Description": "Set how many Ancient Sweet Tea Leaves are required to craft the universally loved Ancient Sweet Tea recipe.",
+      "Section": "Gameplay"
+    }
+  }
+}

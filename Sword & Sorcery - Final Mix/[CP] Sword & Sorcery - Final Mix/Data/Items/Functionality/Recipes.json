@@ -1,0 +1,435 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        //Armor
+        "{{ModID}}_ClothArmor": "428 10/hoot/{{ModID}}_ClothArmor 1/false/null/{{i18n:arsenal.cloth-armor.name}}",
+        "{{ModID}}_CopperArmor": "{{ModID}}_PureCopperOre 10 {{ModID}}_ClothArmor 1/hoot/{{ModID}}_CopperArmor 1/false/null/{{i18n:arsenal.copper-armor.name}}",
+        "{{ModID}}_IronArmor": "{{ModID}}_PureIronOre 10 {{ModID}}_CopperArmor 1/hoot/{{ModID}}_IronArmor 1/false/null/{{i18n:arsenal.iron-armor.name}}",
+        "{{ModID}}_GoldArmor": "{{ModID}}_PureGoldOre 10 {{ModID}}_IronArmor 1/hoot/{{ModID}}_GoldArmor 1/false/null/{{i18n:arsenal.gold-armor.name}}",
+        "{{ModID}}_IridiumArmor": "{{ModID}}_PureIridiumOre 10 {{ModID}}_GoldArmor 1/hoot/{{ModID}}_IridiumArmor 1/false/null/{{i18n:arsenal.iridium-armor.name}}",
+        "{{ModID}}_RadioactiveArmor": "{{ModID}}_PureRadioactiveOre 10 {{ModID}}_IridiumArmor 1/hoot/{{ModID}}_RadioactiveArmor 1/false/null/{{i18n:arsenal.radioactive-armor.name}}",
+        "{{ModID}}_StygiumArmor": "{{ModID}}_StygiumBar 10 {{StygiumArmorIngredient}} 1/hoot/{{ModID}}_StygiumArmor 1/false/null/{{i18n:arsenal.stygium-armor.name}}",
+        "{{ModID}}_ElysiumArmor": "{{ModID}}_DuskspireHeart 1 {{ModID}}_StygiumArmor 1/hoot/{{ModID}}_ElysiumArmor 1/false/null/{{i18n:arsenal.elysium-armor.name}}",
+
+        //Projectiles
+        "{{ModID}}_Bow": "709 10/hoot/0 1/false/{{i18n: arsenal.bow.name}}",
+        "{{ModID}}_Arrow": "388 1 390 1/hoot/{{ModID}}_Arrow 1/false/null",
+        "{{ModID}}_FirestormArrow": "{{ModID}}_Arrow 1 93 10/hoot/{{ModID}}_FirestormArrow 1/false/null",
+        "{{ModID}}_IcicleArrow": "{{ModID}}_Arrow 1 84 1/hoot/{{ModID}}_IcicleArrow 1/false/null",
+        "{{ModID}}_RicochetArrow": "{{ModID}}_Arrow 1 330 1/hoot/{{ModID}}_RicochetArrow 1/false/null",
+        "{{ModID}}_WindwakerArrow": "{{ModID}}_Arrow 1 444 1/hoot/{{ModID}}_WindwakerArrow 1/false/null",
+        "{{ModID}}_LightbringerArrow": "{{ModID}}_Arrow 1 768 30/hoot/{{ModID}}_LightbringerArrow 1/false/null",
+        "{{ModID}}_Bullet": "335 1/hoot/{{ModID}}_Bullet 3/false/null",
+        "{{ModID}}_FirestormBullet": "{{ModID}}_Bullet 1 93 10/hoot/{{ModID}}_FirestormBullet 1/false/null",
+        "{{ModID}}_IcicleBullet": "{{ModID}}_Bullet 1 84 1/hoot/{{ModID}}_IcicleBullet 1/false/null",
+        "{{ModID}}_RicochetBullet": "{{ModID}}_Bullet 1 330 1/hoot/{{ModID}}_RicochetBullet 1/false/null/{{i18n:arsenal.ricochet-bullet.name}}",
+        "{{ModID}}_WindwakerBullet": "{{ModID}}_Bullet 1 444 1/hoot/{{ModID}}_WindwakerBullet 1/false/null/{{i18n:arsenal.windwaker-bullet.name}}",
+        "{{ModID}}_LightbringerBullet": "{{ModID}}_Bullet 1 768 30/hoot/{{ModID}}_LightbringerBullet 1/false/null/{{i18n:arsenal.lightbringer-bullet.name}}",
+
+        //Seeds
+        "{{ModID}}_mushroomtreeseed": "{{ModID}}_mushroom1 3 {{ModID}}_mushroom2 3 {{ModID}}_mushroom3 3 {{ModID}}_mushroom4 3/what is this for?/{{ModID}}_mushroomtreeseed 1/false/{{i18n:food.mushroomtreeseed.name}}",
+        "{{ModID}}_ancientamaranth.seed": "{{ModID}}_druidicessence {{DruidicsCost4}}/what is this for?/{{ModID}}_ancientamaranth.seed 1/false/null/{{i18n:AncientSeed.Hector.Amaranth}}",
+        "{{ModID}}_ancientepiphyticfern.seed": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_ancientepiphyticfern.seed 1/false/null/{{i18n:AncientSeed.Hector.Fern}}",
+        "{{ModID}}_ancientglowinghuckleberry.seed": "{{ModID}}_druidicessence {{DruidicsCost10}}/what is this for?/{{ModID}}_ancientglowinghuckleberry.seed 1/false/null/{{i18n:AncientSeed.Hector.Huckleberry}}",
+        "{{ModID}}_glowingpolyporemushrooms.seed": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_glowingpolyporemushrooms.seed 1/false/null/{{i18n:AncientSeed.Hector.Mushroom}}",
+        "{{ModID}}_ancientwildfairyrose.seed": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_ancientwildfairyrose.seed 1/false/null/{{i18n:AncientSeed.Hector.FairyRose}}",
+        "{{ModID}}_ancientelderberry.seed": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_ancientelderberry.seed 1/false/null/{{i18n:AncientSeed.Hector.Elderberry}}",
+        "{{ModID}}_ancientbottlegourd.seed": "{{ModID}}_druidicessence {{DruidicsCost4}}/what is this for?/{{ModID}}_ancientbottlegourd.seed 1/false/null/{{i18n:AncientSeed.Hector.BottleGourd}}",
+        "{{ModID}}_ancientgiantappleberry.seed": "{{ModID}}_druidicessence {{DruidicsCost6}}/what is this for?/{{ModID}}_ancientgiantappleberry.seed 1/false/null/{{i18n:AncientSeed.Hector.AppleBerry}}",
+        "{{ModID}}_ancientazuredetura.seed": "{{ModID}}_druidicessence {{DruidicsCost4}}/what is this for?/{{ModID}}_ancientazuredetura.seed 1/false/null/{{i18n:AncientSeed.Hector.Detura}}",
+        "{{ModID}}_ancientsweettealeaves.seed": "{{ModID}}_druidicessence {{DruidicsCost10}}/what is this for?/{{ModID}}_ancientsweettealeaves.seed 1/false/e SnS.Ch3.Dandelion.3/{{i18n:AncientSeed.Hector.SweetTea}}",
+
+        //Gear
+        "{{ModID}}_ElysiumBlade": "{{ModID}}_StygiumBlade 1 {{ModID}}_DuskspireHeart 1/hoot/{{ModID}}_ElysiumBlade 1/false/none/{{i18n: weapon.elysium-blade.name}}",
+        "{{ModID}}_WoodenShield": "388 10/hoot/{{ModID}}_WoodenShield 1/false/default/{{i18n: weapon.wooden-shield.name}}",
+        "{{ModID}}_CopperShield": "334 10 {{ModID}}_WoodenShield/hoot/{{ModID}}_CopperShield 1/false/default/{{i18n: weapon.copper-shield.name}}",
+        "{{ModID}}_IronShield": "{{ModID}}_CopperShield 1 335 10/hoot/{{ModID}}_IronShield 1/false/default/{{i18n: weapon.steel-shield.name}}",
+        "{{ModID}}_GoldShield": "{{ModID}}_IronShield 1 336 10/hoot/{{ModID}}_GoldShield 1/false/default/{{i18n: weapon.gold-shield.name}}",
+        "{{ModID}}_IridiumShield": "{{ModID}}_GoldShield 1 337 10/hoot/{{ModID}}_IridiumShield 1/false/default/{{i18n: weapon.iridium-shield.name}}",
+        "{{ModID}}_RadioactiveShield": "{{ModID}}_IridiumShield 1 910 10/hoot/{{ModID}}_RadioactiveShield 1/false/default/{{i18n: weapon.radioactive-shield.name}}",
+        "{{ModID}}_StygiumShield": "{{ModID}}_RadioactiveShield 1 {{ModID}}_StygiumBar 10/hoot/{{ModID}}_StygiumShield 1/false/default/{{i18n: weapon.stygium-shield.name}}",
+
+        //Other
+        "{{ModID}}_farafieldsnack": "{{ModID}}_taintedcrocus 1 {{ModID}}_taintedcorn 1 {{ModID}}_taintedgrasses 1/what is this for?/{{ModID}}_farafieldsnack 1/false/{{i18n:food.farafieldsnack.name}}",
+        "{{ModID}}_TeleportCircle": "{{ModID}}_WaterEssence 10 {{ModID}}_AirEssence 10 {{ModID}}_EarthEssence 10 {{ModID}}_FireEssence 10 769 25/hoot/{{ModID}}_TeleportCircle 1/false/null",
+         "{{ModID}}_StandaloneGuidebook": "388 1 771 1 92 1/hoot/{{ModID}}_StandaloneGuidebook 1/false/default/{{i18n:magicitem.standaloneguidebook.name}}"
+      }
+    },
+        {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+
+        //Skills or Events
+        "{{ModID}}_salishbourbon": "638 1 262 1 635 1/what is this for?/{{ModID}}_salishbourbon 1/false/{{i18n:food.crafting.salishbourbon}}",
+        "{{ModID}}_autumnalstew": "276 1 -6 1 272 1 281 1/what is this for?/{{ModID}}_autumnalstew 1/false/{{i18n:food.crafting.autumnalstew}}",
+        "{{ModID}}_dandeliongreens": "22 1 -5 1 424 1/what is this for?/{{ModID}}_dandeliongreens 1/false/{{i18n:food.crafting.dandeliongreens}}",
+        "{{ModID}}_portfiredrakesparkler": "167 1 88 1 635 1/what is this for?/{{ModID}}_portfiredrakesparkler 1/false/{{i18n:food.crafting.portfiredrakesparkler}}",
+        "{{ModID}}_mushroomsredsauce": "{{ModID}}_glowingpolyporemushrooms 1 256 1 272 1/what is this for?/{{ModID}}_mushroomsredsauce 1/false/{{i18n:food.crafting.mushroomsredsauce}}",
+        "{{ModID}}_ferngreensandpineapple": "{{ModID}}_ancientepiphyticfern 1 832 1 259 1/what is this for?/{{ModID}}_ferngreensandpineapple 1/false/{{i18n:food.crafting.ferngreensandpineapple}}",
+        "{{ModID}}_ancienthuckleberryicecream": "{{ModID}}_ancientglowinghuckleberry 1 -6 2/what is this for?/{{ModID}}_ancienthuckleberryicecream 1/false/{{i18n:food.crafting.ancienthuckleberryicecream}}",
+        "{{ModID}}_lavaeelandstirfriedancientbottlegourd": "{{ModID}}_ancientbottlegourd 1 162 1/what is this for?/{{ModID}}_lavaeelandstirfriedancientbottlegourd 1/false/{{i18n:food.crafting.lavaeelandstirfriedancientbottlegourd}}",
+
+        //Coriander cookbook
+        "{{ModID}}_zuzustylepizza": "216 1 256 1 424 1/what is this for?/{{ModID}}_zuzustylepizza 1/e SnS.Ch3.Cirrus.4/{{i18n:food.crafting.zuzustylepizza}}",
+        "{{ModID}}_zuzustylebagelwithlox": "216 1 139 1 424 1/what is this for?/{{ModID}}_zuzustylebagelwithlox 1/e SnS.Ch3.Cirrus.6/{{i18n:food.crafting.zuzustylebagelwithlox}}",
+        "{{ModID}}_zuzustylecheesecake": "245 1 -6 1 -5 1 400 1/what is this for?/{{ModID}}_zuzustylecheesecake 1/e SnS.Ch3.Cirrus.9/{{i18n:food.crafting.zuzustylecheesecake}}",
+        "{{ModID}}_zuzustyleclamchowder": "372 1 256 1 192 1/what is this for?/{{ModID}}_zuzustyleclamchowder 1/e SnS.Ch3.Cirrus.5/{{i18n:food.crafting.zuzustyleclamchowder}}",
+        "{{ModID}}_ancientsweettea": "{{ModID}}_ancientsweettealeaves {{AncientSweetTeaDifficulty}}/what is this for?/{{ModID}}_ancientsweettea 1/e SnS.Ch3.Dandelion.3/{{i18n:food.crafting.ancientsweettea}}",
+
+        //VM
+        "DN.SnS_ScotchEgg": "246 1 684 1 -5 1/1 10/DN.SnS_ScotchEgg/null/{{i18n:DN.SnS.ScotchEgg}}", //flour bug meat any egg
+        "DN.SnS_Steak_on_a_Stake": "874 1 169 1/1 10/DN.SnS_Steak_on_a_Stake/null/{{i18n:DN.SnS.Steak_on_a_Stake}}", //bug meat driftwood
+        "DN.SnS_Fruit_Hand_Pie": "-79 1 246 1 -5 1/1 10/DN.SnS_Fruit_Hand_Pie/null/{{i18n:DN.SnS.Fruit_Hand_Pie}}", //any fruit flour
+        "DN.SnS_Smoked_TurkeyLeg": "382 1 874 1/1 10/DN.SnS_Smoked_TurkeyLeg/null/{{i18n:DN.SnS.Smoked_TurkeyLeg}}", //coal bug meat
+        "DN.SnS_Hand_Pressed_Apple_Cider": "613 3/1 10/DN.SnS_Hand_Pressed_Apple_Cider/null/{{i18n:DN.SnS.Hand_Pressed_Apple_Cider}}" //apple 3
+      }
+    },
+    //ALCHEMY RECIPES
+    {
+      "Action": "EditData",
+      "Target": "DN.SnS/AlchemyRecipes",
+      "Entries": {
+        "ScarletPotion": {
+          "OutputItem": "(O){{ModID}}_scarletpotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_EarthEssence": 3,
+            "(O){{ModID}}_FireEssence": 3,
+            "(O)768": 1,
+            "(O)769": 1
+          }
+        },
+        "HeatherPotion": {
+          "OutputItem": "(O){{ModID}}_heatherpotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_AirEssence": 3,
+            "(O){{ModID}}_WaterEssence": 3,
+            "(O)768": 1,
+            "(O)769": 1
+          }
+        },
+        "ZydratePotion": {
+          "OutputItem": "(O){{ModID}}_zydratepotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_EarthEssence": 3,
+            "(O){{ModID}}_AirEssence": 5,
+            "(O){{ModID}}_WaterEssence": 5,
+            "(O){{ModID}}_FireEssence": 3,
+            "(O)768": 1,
+            "(O)769": 1
+          }
+        },
+        "PistachioPotion": {
+          "OutputItem": "(O){{ModID}}_pistachiopotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_EarthEssence": 5,
+            "(O){{ModID}}_AirEssence": 3,
+            "(O){{ModID}}_WaterEssence": 3,
+            "(O){{ModID}}_FireEssence": 5,
+            "(O)768": 1,
+            "(O)769": 1
+          }
+        },
+        "DahliaPotion": {
+          "OutputItem": "(O){{ModID}}_dahliapotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_EarthEssence": 5,
+            "(O){{ModID}}_AirEssence": 5,
+            "(O)768": 5
+          }
+        },
+        "SlushiePotion": {
+          "OutputItem": "(O){{ModID}}_slushiepotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_AirEssence": 7,
+            "(O){{ModID}}_WaterEssence": 7,
+            "(O)768": 7
+          }
+        },
+        "MatrixPotion": {
+          "OutputItem": "(O){{ModID}}_matrixpotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_EarthEssence": 7,
+            "(O){{ModID}}_AirEssence": 7,
+            "(O){{ModID}}_WaterEssence": 3,
+            "(O){{ModID}}_FireEssence": 3,
+            "(O)768": 3,
+            "(O)769": 3
+          }
+        },
+        "McDougalPotion": {
+          "OutputItem": "(O){{ModID}}_mcdougalpotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_EarthEssence": 10,
+            "(O){{ModID}}_FireEssence": 10,
+            "(O)768": 3,
+            "(O)769": 3
+          }
+        },
+        "VerdantPotion": {
+          "OutputItem": "(O){{ModID}}_verdantpotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_AirEssence": 10,
+            "(O){{ModID}}_WaterEssence": 10,
+            "(O)768": 10,
+            "(O)769": 10
+          }
+        },
+        "ToirneachPotion": {
+          "OutputItem": "(O){{ModID}}_toirneachpotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_AirEssence": 10,
+            "(O)768": 3,
+            "(O)769": 3
+          }
+        },
+        "ReturnPotion": {
+          "OutputItem": "(O){{ModID}}_ReturnPotion",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O){{ModID}}_AirEssence": 5,
+            "(O){{ModID}}_WaterEssence": 5,
+            "(O){{ModID}}_EarthEssence": 5,
+            "(O){{ModID}}_FireEssence": 5,
+            "(O)769": 10
+          }
+        },
+        //Exquisite Gems
+        "ExquisiteEmerald": {
+          "OutputItem": "(O){{ModID}}_ExquisiteEmerald",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O)60": 3,
+            "(O){{ModID}}_druidicessence": 5
+          }
+        },
+        "ExquisiteAquamarine": {
+          "OutputItem": "(O){{ModID}}_ExquisiteAquamarine",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O)62": 3,
+            "(O){{ModID}}_WaterEssence": 5
+          }
+        },
+        "ExquisiteRuby": {
+          "OutputItem": "(O){{ModID}}_ExquisiteRuby",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O)64": 3,
+            "(O){{ModID}}_FireEssence": 5
+          }
+        },
+        "ExquisiteAmethyst": {
+          "OutputItem": "(O){{ModID}}_ExquisiteAmethyst",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O)66": 3,
+            "(O)769": 5
+          }
+        },
+        "ExquisiteTopaz": {
+          "OutputItem": "(O){{ModID}}_ExquisiteTopaz",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O)68": 3,
+            "(O)768": 5
+          }
+        },
+        "ExquisiteJade": {
+          "OutputItem": "(O){{ModID}}_ExquisiteJade",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O)70": 3,
+            "(O){{ModID}}_EarthEssence": 5
+          }
+        },
+        "ExquisiteDiamond": {
+          "OutputItem": "(O){{ModID}}_ExquisiteDiamond",
+          "OutPutQuantity": 1,
+          "Ingredients": {
+            "(O)72": 3,
+            "(O){{ModID}}_AirEssence": 5
+          }
+        }
+      }
+    },
+
+    //CRAFTING RECIPE OVERRIDES
+    {
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/CraftingRecipeOverrides",
+      "Entries": {
+        "{{ModID}}_ElysiumBlade": {
+          "ProductQualifiedId": "(W){{ModID}}_ElysiumBlade",
+          "ProductAmount": 1,
+          "Ingredients": [
+            {
+              "Type": "Item",
+              "Value": "(W){{ModID}}_StygiumBlade",
+              "Amount": 1
+            },
+            {
+              "Type": "Item",
+              "Value": "(O){{ModID}}_DuskspireHeart",
+              "Amount": 1
+            }
+          ]
+        },
+        "{{ModID}}_CopperShield": {
+          "ProductQualifiedId": "(W){{ModID}}_CopperShield",
+          "ProductAmount": 1,
+          "Ingredients": [
+            {
+              "Type": "Item",
+              "Value": "(W){{ModID}}_WoodenShield",
+              "Amount": 1
+            },
+            {
+              "Type": "Item",
+              "Value": "(O)334",
+              "Amount": 10
+            }
+          ]
+        },
+        "{{ModID}}_IronShield": {
+          "ProductQualifiedId": "(W){{ModID}}_IronShield",
+          "ProductAmount": 1,
+          "Ingredients": [
+            {
+              "Type": "Item",
+              "Value": "(W){{ModID}}_CopperShield",
+              "Amount": 1
+            },
+            {
+              "Type": "Item",
+              "Value": "(O)335",
+              "Amount": 10
+            }
+          ]
+        },
+        "{{ModID}}_GoldShield": {
+          "ProductQualifiedId": "(W){{ModID}}_GoldShield",
+          "ProductAmount": 1,
+          "Ingredients": [
+            {
+              "Type": "Item",
+              "Value": "(W){{ModID}}_IronShield",
+              "Amount": 1
+            },
+            {
+              "Type": "Item",
+              "Value": "(O)336",
+              "Amount": 10
+            }
+          ]
+        },
+        "{{ModID}}_IridiumShield": {
+          "ProductQualifiedId": "(W){{ModID}}_IridiumShield",
+          "ProductAmount": 1,
+          "Ingredients": [
+            {
+              "Type": "Item",
+              "Value": "(W){{ModID}}_GoldShield",
+              "Amount": 1
+            },
+            {
+              "Type": "Item",
+              "Value": "(O)337",
+              "Amount": 10
+            }
+          ]
+        },
+        "{{ModID}}_RadioactiveShield": {
+          "ProductQualifiedId": "(W){{ModID}}_RadioactiveShield",
+          "ProductAmount": 1,
+          "Ingredients": [
+            {
+              "Type": "Item",
+              "Value": "(W){{ModID}}_IridiumShield",
+              "Amount": 1
+            },
+            {
+              "Type": "Item",
+              "Value": "(O)910",
+              "Amount": 10
+            }
+          ]
+        },
+        "{{ModID}}_StygiumShield": {
+          "ProductQualifiedId": "(W){{ModID}}_StygiumShield",
+          "ProductAmount": 1,
+          "Ingredients": [
+            {
+              "Type": "Item",
+              "Value": "{{StygiumShieldIngredient}}",
+              "Amount": 1
+            },
+            {
+              "Type": "Item",
+              "Value": "(O){{ModID}}_StygiumBar",
+              "Amount": 10
+            }
+          ]
+        },
+        "{{ModID}}_Bow": {
+          "ProductQualifiedId": "(W){{ModId}}_Bow",
+          "ProductAmount": 1,
+          "Ingredients": [
+            {
+              "Type": "Item",
+              "Value": "(O)709",
+              "Amount": 10
+            }
+          ]
+        }
+      }
+    },
+  //COOKIE RECIPE OVERRIDES
+  {
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/CookingRecipeOverrides",
+      "Entries": {
+        "DN.SnS_Fruit_Hand_Pie": {
+          "ProductQualifiedId": "(O)DN.SnS_Fruit_Hand_Pie",
+          "ProductAmount": 1,
+          "Ingredients": [
+            {
+              "Type": "ContextTag",
+              "Value": "category_fruits",
+              "Amount": 1,
+              "OverrideText": "{{i18n:DN.SnS.AnyFruit}}",
+              "OverrideTexturePath": "Maps/springobjects",
+              "OverrideTextureRect": { "X": 352, "Y": 256, "Width": 16, "Height": 16 }
+            },
+            {
+              "Type": "Item",
+              "Value": "(O)246",
+              "Amount": 1
+            },
+            {
+              "Type": "ContextTag",
+              "Value": "category_egg",
+              "Amount": 1,
+              "OverrideText": "{{i18n:DN.SnS.AnyEgg}}",
+              "OverrideTexturePath": "Maps/springobjects",
+              "OverrideTextureRect": { "X": 128, "Y": 112, "Width": 16, "Height": 16 }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

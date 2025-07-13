@@ -1,0 +1,38 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "Entries": {
+                "{{ModId}}.Tom": {
+                    "DisplayName": "Tom",
+                    "House": "Barn",
+                    "Texture": "Characters/DN.Tom",
+                    "SpriteWidth": 16,
+                    "SpriteHeight": 32,
+                    "SleepFrame": 24,
+                    "UseFlippedRightForLeft": false,
+                    "UseDoubleUniqueAnimationFrames": true,
+                    "ShadowWhenBaby": { "Visible": false },
+                    "ShadowWhenAdult": { "Visible": false }
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "MEEP/FarmAnimals/SpawnData",
+            "Entries": {
+                "{{ModId}}.Tom_Spawn": {
+                    "AnimalId": "{{ModId}}.Tom",
+                    "Age": 1,
+                    "LocationId": "EastScarp_Village",
+                    "DisplayName": "Tom",
+                    "PortraitTexture": "Portraits/DN.Tom",
+                    "PetMessage": [ "Meep" ],
+                    "HomeTileX": 96,
+                    "HomeTileY": 100
+                }
+            }
+        }
+    ]
+}

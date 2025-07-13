@@ -1,0 +1,70 @@
+{
+  "Changes": [
+ {
+      "LogName": "Add Shirts",
+      "Action": "EditData",
+      "Target": "Data/Shirts",
+      "Entries": {
+        "DN.SnS_Val_Hoodie": {
+          "Name": "DN.SnS_Val_Hoodie",
+          "DisplayName": "{{i18n:DN.SnS_Val_Hoodie.Name}}",
+          "Description": "{{i18n:DN.SnS_Val_Hoodie.Description}}",
+          "Price": 2500,
+          "Texture": "DN.Gear/Shirts",
+          "SpriteIndex": 0,
+          "DefaultColor": null,
+          "CanBeDyed": false,
+          "IsPrismatic": false,
+          "HasSleeves": true,
+          "CanChooseDuringCharacterCustomization": false,
+          "CustomFields": {}
+        },
+
+        "DN.SnS_Hector_Hoodie": {
+          "Name": "DN.SnS_Hector_Hoodie",
+          "DisplayName": "{{i18n:DN.SnS_Hector_Hoodie.Name}}",
+          "Description": "{{i18n:DN.SnS_Hector_Hoodie.Description}}",
+          "Price": 2500,
+          "Texture": "DN.Gear/Shirts",
+          "SpriteIndex": 1,
+          "DefaultColor": null,
+          "CanBeDyed": false,
+          "IsPrismatic": false,
+          "HasSleeves": true,
+          "CanChooseDuringCharacterCustomization": false,
+          "CustomFields": {}
+        },
+
+        "DN.SnS_Cirrus_Hoodie": {
+          "Name": "DN.SnS_Cirrus_Hoodie",
+          "DisplayName": "{{i18n:DN.SnS_Cirrus_Hoodie.Name}}",
+          "Description": "{{i18n:DN.SnS_Cirrus_Hoodie.Description}}",
+          "Price": 2500,
+          "Texture": "DN.Gear/Shirts",
+          "SpriteIndex": 2,
+          "DefaultColor": null,
+          "CanBeDyed": false,
+          "IsPrismatic": false,
+          "HasSleeves": true,
+          "CanChooseDuringCharacterCustomization": false,
+          "CustomFields": {},
+
+        "DN.SnS_Hector_Hoodie_Unzipped": {
+          "Name": "DN.SnS_Hector_Hoodie_Unzipped",
+          "DisplayName": "{{i18n:DN.SnS_Hector_Hoodie.Name}}",
+          "Description": "{{i18n:DN.SnS_Hector_Hoodie.Description}}",
+          "Price": 2500,
+          "Texture": "DN.Gear/Shirts",
+          "SpriteIndex": 3,
+          "DefaultColor": "39 184 13",
+          "CanBeDyed": true,
+          "IsPrismatic": false,
+          "HasSleeves": true,
+          "CanChooseDuringCharacterCustomization": false,
+          "CustomFields": {}
+          }
+        }
+      }
+    }
+  ]
+}

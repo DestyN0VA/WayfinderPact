@@ -1,0 +1,1186 @@
+{
+  "Changes": [
+ {
+  // FOOD 
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModID}}_ScotchEgg": {
+          "Name": "DN.SnS_ScotchEgg",
+          "DisplayName": "{{i18n:DN.SnS.ScotchEgg}}",
+          "Description": "{{i18n:DN.SnS.ScotchEgg.Description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "ExcludeFromRandomSale": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Price": 550, //
+          "Edibility": 50,
+          "IsDrink": false,
+          "Buffs": null,
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 24,
+          "ContextTags": [
+            "color_brown",
+            "food_nonvegan",
+            "allergen_egg",
+            "allergen_gluten",
+            "food_nonvegetarian",
+            "allergen_meat"
+          ]
+        },
+        "{{ModID}}_Steak_on_a_Stake": {
+          "Name": "DN.SnS_Steak_on_a_Stake",
+          "DisplayName": "{{i18n:DN.SnS.Steak_on_a_Stake}}",
+          "Description": "{{i18n:DN.SnS.Steak_on_a_Stake.Description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "ExcludeFromRandomSale": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Price": 550, //
+          "Edibility": 50,
+          "IsDrink": false,
+          "Buffs": null,
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 23,
+          "ContextTags": [
+            "color_brown",
+            "food_nonvegan",
+            "food_nonvegetarian",
+            "allergen_meat"
+          ]
+        },
+        "{{ModID}}_Fruit_Hand_Pie": {
+          "Name": "DN.SnS_Fruit_Hand_Pie",
+          "DisplayName": "{{i18n:DN.SnS.Fruit_Hand_Pie}}",
+          "Description": "{{i18n:DN.SnS.Fruit_Hand_Pie.Description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "ExcludeFromRandomSale": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Price": 500, //
+          "Edibility": 50,
+          "IsDrink": false,
+          "Buffs": null,
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 26,
+          "ContextTags": [
+            "color_brown",
+            "food_nonvegan",
+            "allergen_gluten",
+            "allergen_egg"
+          ]
+        },
+        "{{ModID}}_Smoked_TurkeyLeg": {
+          "Name": "DN.SnS_Smoked_TurkeyLeg",
+          "DisplayName": "{{i18n:DN.SnS.Smoked_TurkeyLeg}}",
+          "Description": "{{i18n:DN.SnS.Smoked_TurkeyLeg.Description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "ExcludeFromRandomSale": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Price": 550, //
+          "Edibility": 50,
+          "IsDrink": false,
+          "Buffs": null,
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 27,
+          "ContextTags": [
+            "color_brown",
+            "food_nonvegan",
+            "food_nonvegetarian",
+            "allergen_meat"
+          ]
+        },
+        "{{ModID}}_Hand_Pressed_Apple_Cider": {
+          "Name": "DN.SnS_Hand_Pressed_Apple_Cider",
+          "DisplayName": "{{i18n:DN.SnS.Hand_Pressed_Apple_Cider}}",
+          "Description": "{{i18n:DN.SnS.Hand_Pressed_Apple_Cider.Description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "ExcludeFromRandomSale": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Price": 500, //
+          "Edibility": 50,
+          "IsDrink": true,
+          "Buffs": null,
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 25,
+          "ContextTags": [
+            "color_brown"
+          ]
+        },
+        "{{ModID}}_salishbourbon": {
+          "Name": "{{ModID}}_salishbourbon",
+          "DisplayName": "{{i18n: food.salishbourbon.name}}",
+          "Description": "{{i18n: food.salishbourbon.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 2,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 2,
+                "Speed": 2,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 7,
+          "ContextTags": [
+            "alcohol_item",
+            "color_dark_orange"
+          ]
+        },
+
+        "{{ModID}}_autumnalstew": {
+          "Name": "{{ModID}}_autumnalstew",
+          "DisplayName": "{{i18n: food.autumnalstew.name}}",
+          "Description": "{{i18n: food.autumnalstew.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 3,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 2,
+                "MaxStamina": 0,
+                "MagneticRadius": 1,
+                "Speed": 0,
+                "Defense": 2,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 8,
+          "ContextTags": [
+            "allergen_dairy",
+            "food_nonvegan",
+            "color_dark_orange"
+          ]
+        },
+
+        "{{ModID}}_dandeliongreens": {
+          "Name": "{{ModID}}_dandeliongreens",
+          "DisplayName": "{{i18n: food.dandeliongreens.name}}",
+          "Description": "{{i18n: food.dandeliongreens.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 1,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 1,
+                "ForagingLevel": 1,
+                "MaxStamina": 1,
+                "MagneticRadius": 1,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 9,
+          "ContextTags": [
+            "allergen_dairy",
+            "allergen_egg",
+            "food_nonvegan",
+            "color_sand"
+          ]
+        },
+
+        "{{ModID}}_portfiredrakesparkler": {
+          "Name": "{{ModID}}_portfiredrakesparkler",
+          "DisplayName": "{{i18n: food.portfiredrakesparkler.name}}",
+          "Description": "{{i18n: food.portfiredrakesparkler.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 3,
+                "MiningLevel": 0,
+                "LuckLevel": 3,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 10,
+          "ContextTags": [
+            "color_prismatic"
+          ]
+        },
+
+        "{{ModID}}_mushroomsredsauce": {
+          "Name": "{{ModID}}_mushroomsredsauce",
+          "DisplayName": "{{i18n: food.mushroomsredsauce.name}}",
+          "Description": "{{i18n: food.mushroomsredsauce.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 2,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 3,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 11,
+          "ContextTags": [
+            "color_red",
+            "sns_druidicfood_item"
+          ]
+        },
+
+        "{{ModID}}_ferngreensandpineapple": {
+          "Name": "{{ModID}}_ferngreensandpineapple",
+          "DisplayName": "{{i18n: food.ferngreensandpineapple.name}}",
+          "Description": "{{i18n: food.ferngreensandpineapple.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 3,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 1,
+                "ForagingLevel": 4,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 12,
+          "ContextTags": [
+            "food_sweet",
+            "color_sand",
+            "sns_druidicfood_item"
+          ]
+        },
+
+        "{{ModID}}_ancienthuckleberryicecream": {
+          "Name": "{{ModID}}_ancienthuckleberryicecream",
+          "DisplayName": "{{i18n: food.ancienthuckleberryicecream.name}}",
+          "Description": "{{i18n: food.ancienthuckleberryicecream.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 3,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 3,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 13,
+          "ContextTags": [
+            "allergen_dairy",
+            "food_sweet",
+            "food_nonvegan",
+            "food_ice_cream",
+            "color_sand",
+            "sns_druidicfood_item"
+          ]
+        },
+
+        "{{ModID}}_lavaeelandstirfriedancientbottlegourd": {
+          "Name": "{{ModID}}_lavaeelandstirfriedancientbottlegourd",
+          "DisplayName": "{{i18n: food.lavaeelandstirfriedancientbottlegourd.name}}",
+          "Description": "{{i18n: food.lavaeelandstirfriedancientbottlegourd.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 5,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 14,
+          "ContextTags": [
+            "color_dark_red",
+            "allergen_fish",
+            "food_seafood",
+            "food_nonvegan",
+            "sns_druidicfood_item"
+          ]
+        },
+
+        "{{ModID}}_zuzustylepizza": {
+          "Name": "{{ModID}}_zuzustylepizza",
+          "DisplayName": "{{i18n: food.zuzustylepizza.name}}",
+          "Description": "{{i18n: food.zuzustylepizza.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 3,
+                "Attack": 5
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 15,
+          "ContextTags": [
+            "color_dark_yellow",
+            "allergen_dairy",
+            "food_nonvegan",
+            "allergen_gluten",
+            "food_party",
+            "sns_zuzufood_item"
+          ]
+        },
+
+        "{{ModID}}_zuzustylebagelwithlox": {
+          "Name": "{{ModID}}_zuzustylebagelwithlox",
+          "DisplayName": "{{i18n: food.zuzustylebagelwithlox.name}}",
+          "Description": "{{i18n: food.zuzustylebagelwithlox.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 3,
+                "ForagingLevel": 0,
+                "MaxStamina": 3,
+                "MagneticRadius": 0,
+                "Speed": 3,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 16,
+          "ContextTags": [
+            "color_dark_yellow",
+            "allergen_fish",
+            "food_seafood",
+            "food_nonvegan",
+            "allergen_dairy",
+            "allergen_gluten",
+            "sns_zuzufood_item"
+          ]
+        },
+
+        "{{ModID}}_zuzustylecheesecake": {
+          "Name": "{{ModID}}_zuzustylecheesecake",
+          "DisplayName": "{{i18n: food.zuzustylecheesecake.name}}",
+          "Description": "{{i18n: food.zuzustylecheesecake.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 3,
+                "MagneticRadius": 0,
+                "Speed": 1,
+                "Defense": 1,
+                "Attack": 1
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 17,
+          "ContextTags": [
+            "color_sand",
+            "food_nonvegan",
+            "allergen_dairy",
+            "allergen_egg",
+            "food_sweet",
+            "food_bakery",
+            "sns_zuzufood_item"
+          ]
+        },
+
+        "{{ModID}}_zuzustyleclamchowder": {
+          "Name": "{{ModID}}_zuzustyleclamchowder",
+          "DisplayName": "{{i18n: food.zuzustyleclamchowder.name}}",
+          "Description": "{{i18n: food.zuzustyleclamchowder.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 3,
+                "FishingLevel": 3,
+                "MiningLevel": 3,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 18,
+          "ContextTags": [
+            "color_orange",
+            "food_nonvegan",
+            "allergen_shellfish",
+            "food_soup",
+            "food_seafood",
+            "sns_zuzufood_item"
+          ]
+        },
+
+        "{{ModID}}_fountainsoda": {
+          "Name": "{{ModID}}_fountainsoda",
+          "DisplayName": "{{i18n: food.fountainsoda.name}}",
+          "Description": "{{i18n: food.fountainsoda.description}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": true,
+          "ExcludeFromShippingCollection": true,
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 3,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 19,
+          "ContextTags": [
+           "color_cyan"
+          ]
+        },
+
+        "{{ModID}}_freshpopcorn": {
+          "Name": "{{ModID}}_freshpopcorn",
+          "DisplayName": "{{i18n: food.freshpopcorn.name}}",
+          "Description": "{{i18n: food.freshpopcorn.description}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 100,
+          "Edibility": 10,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": true,
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 1,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 20,
+          "ContextTags": [
+            "color_red",
+            "food_party"
+          ]
+        },
+
+        "{{ModID}}_ancientsweettea": {
+          "Name": "{{ModID}}_ancientsweettea",
+          "DisplayName": "{{i18n: food.ancientsweettea.name}}",
+          "Description": "{{i18n: food.ancientsweettea.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Edibility": 10,
+          "IsDrink": true,
+          "Price": 1250,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 400,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 21,
+          "ContextTags": [
+            "color_green",
+            "food_sweet"
+          ]
+        },
+
+        "{{ModID}}_farafieldsnack": {
+          "Name": "{{ModID}}_farafieldsnack",
+          "DisplayName": "{{i18n: food.farafieldsnack.name}}",
+          "Description": "{{i18n: food.farafieldsnack.description}}",
+          "Type": "Crafting",
+          "Category": 0,
+          "Price": 100,
+          "Edibility": 150,
+          "IsDrink": false,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 1,
+                "MagneticRadius": 0,
+                "Speed": 1,
+                "Defense": 1,
+                "Attack": 1
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 22,
+          "ContextTags": [
+            "color_dark_cyan"
+          ]
+        },
+
+        //GINGER BEERS
+         "{{ModID}}_orangegingerbeer": {
+          "Name": "{{ModID}}_orangegingerbeer",
+          "DisplayName": "{{i18n: food.orangegingerbeer.name}}",
+          "Description": "{{i18n: food.orangegingerbeer.description}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Edibility": 10,
+          "IsDrink": true,
+          "Price": 420,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 1,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 0,
+          "ContextTags": [
+            "color_orange",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
+        },
+
+        "{{ModID}}_blueberrygingerbeer": {
+          "Name": "{{ModID}}_blueberrygingerbeer",
+          "DisplayName": "{{i18n: food.blueberrygingerbeer.name}}",
+          "Description": "{{i18n: food.blueberrygingerbeer.description}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Edibility": 10,
+          "IsDrink": true,
+          "Price": 210,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 1,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 1,
+          "ContextTags": [
+            "color_blue",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
+        },
+
+        "{{ModID}}_pineapplegingerbeer": {
+          "Name": "{{ModID}}_pineapplegingerbeer",
+          "DisplayName": "{{i18n: food.pineapplegingerbeer.name}}",
+          "Description": "{{i18n: food.pineapplegingerbeer.description}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Edibility": 10,
+          "IsDrink": true,
+          "Price": 1260,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 1,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 2,
+          "ContextTags": [
+            "color_dark_yellow",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
+        },
+
+        "{{ModID}}_rhubarbgingerbeer": {
+          "Name": "{{ModID}}_rhubarbgingerbeer",
+          "DisplayName": "{{i18n: food.rhubarbgingerbeer.name}}",
+          "Description": "{{i18n: food.rhubarbgingerbeer.description}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Edibility": 10,
+          "IsDrink": true,
+          "Price": 924,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 1
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 3,
+          "ContextTags": [
+            "color_dark_red",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
+        },
+
+        "{{ModID}}_strawberrygingerbeer": {
+          "Name": "{{ModID}}_strawberrygingerbeer",
+          "DisplayName": "{{i18n: food.strawberrygingerbeer.name}}",
+          "Description": "{{i18n: food.strawberrygingerbeer.description}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Edibility": 10,
+          "IsDrink": true,
+          "Price": 504,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 1,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 4,
+          "ContextTags": [
+            "color_dark_red",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
+        },
+
+        "{{ModID}}_peachgingerbeer": {
+          "Name": "{{ModID}}_peachgingerbeer",
+          "DisplayName": "{{i18n: food.peachgingerbeer.name}}",
+          "Description": "{{i18n: food.peachgingerbeer.description}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Edibility": 10,
+          "IsDrink": true,
+          "Price": 588,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 300,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 1,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 5,
+          "ContextTags": [
+            "color_pink",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
+        },
+
+        "{{ModID}}_ancientelderberrygingerbeer": {
+          "Name": "{{ModID}}_ancientelderberrygingerbeer",
+          "DisplayName": "{{i18n: food.ancientelderberrygingerbeer.name}}",
+          "Description": "{{i18n: food.ancientelderberrygingerbeer.description}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Edibility": 10,
+          "IsDrink": true,
+          "Price": 630,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 500,
+              "CustomAttributes": {
+                "FarmingLevel": 1,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 1,
+                "ForagingLevel": 1,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 6,
+          "ContextTags": [
+            "color_dark_cyan",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
+        },
+
+        "{{ModID}}_ancientappleberrygingerbeer": {
+          "Name": "{{ModID}}_ancientappleberrygingerbeer",
+          "DisplayName": "{{i18n: food.ancientappleberrygingerbeer.name}}",
+          "Description": "{{i18n: food.ancientappleberrygingerbeer.description}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 1575,
+          "Edibility": 10,
+          "IsDrink": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 500,
+              "CustomAttributes": {
+                "FarmingLevel": 1,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 1,
+                "ForagingLevel": 1,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 6,
+          "ContextTags": [
+            "color_dark_cyan",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
+        },
+
+        "{{ModID}}_ancienthuckleberrygingerbeer": {
+          "Name": "{{ModID}}_ancienthuckleberrygingerbeer",
+          "DisplayName": "{{i18n: food.ancienthuckleberrygingerbeer.name}}",
+          "Description": "{{i18n: food.ancienthuckleberrygingerbeer.description}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 2150,
+          "Edibility": 10,
+          "IsDrink": true,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 500,
+              "CustomAttributes": {
+                "FarmingLevel": 1,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 1,
+                "ForagingLevel": 1,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 6,
+          "ContextTags": [
+            "color_dark_cyan",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
+        },
+
+        "{{ModID}}_ancientfruitgingerbeer": {
+          "Name": "{{ModID}}_ancientfruitgingerbeer",
+          "DisplayName": "{{i18n: food.ancientfruitgingerbeer.name}}",
+          "Description": "{{i18n: food.ancientfruitgingerbeer.description}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Edibility": 10,
+          "IsDrink": true,
+          "Price": 1575,
+          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "Buffs": [
+            {
+              "Duration": 400,
+              "CustomAttributes": {
+                "FarmingLevel": 1,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 1,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "Texture": "DN.Objects/Food",
+          "SpriteIndex": 6,
+          "ContextTags": [
+            "color_dark_cyan",
+            "sns_ginger_beer_item",
+            "ginger_beer"
+          ]
+        }
+      }
+    },
+    // CUSTOM POTION CATEGORY
+    {
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/ObjectExtensionData",
+      "Entries": {
+        "{{ModID}}_verdantpotion": {
+          "CategoryTextOverride": "{{i18n:category.potion}}",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_scarletpotion": {
+          "CategoryTextOverride": "{{i18n:category.potion}}",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_heatherpotion": {
+          "CategoryTextOverride": "{{i18n:category.potion}}",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_zydratepotion": {
+          "CategoryTextOverride": "{{i18n:category.potion}}",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_pistachiopotion": {
+          "CategoryTextOverride": "{{i18n:category.potion}}",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_dahliapotion": {
+          "CategoryTextOverride": "{{i18n:category.potion}}",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_slushiepotion": {
+          "CategoryTextOverride": "{{i18n:category.potion}}",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_matrixpotion": {
+          "CategoryTextOverride": "{{i18n:category.potion}}",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_mcdougalpotion": {
+          "CategoryTextOverride": "{{i18n:category.potion}}",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_toirneachpotion": {
+          "CategoryTextOverride": "{{i18n:category.potion}}",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_ReturnPotion": {
+          "CategoryTextOverride": "{{i18n:category.potion}}",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        // CUSTOM SNACK CATEGORY 
+        "{{ModID}}_fountainsoda": {
+          "CategoryTextOverride": "{{i18n:category.snack}}",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        },
+        "{{ModID}}_freshpopcorn": {
+          "CategoryTextOverride": "{{i18n:category.snack}}",
+          "CategoryColorOverride": {
+            "R": 188,
+            "G": 13,
+            "B": 3,
+            "A": 255
+          }
+        }
+      }
+    }
+  ]
+}
