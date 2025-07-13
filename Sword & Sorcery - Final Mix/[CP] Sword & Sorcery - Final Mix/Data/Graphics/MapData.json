@@ -149,12 +149,22 @@
       "MapTiles": [
         { // Druid Tower
           "Position": {
-            "X": 9,
-            "Y": 16
+            "X": 8,
+            "Y": 15
           },
           "Layer": "Buildings",
           "SetProperties": {
             "Action": "LockedDoorWarp 14 30 EastScarp_DruidTower 800 2400"
+          }
+        },
+        { // Druid Greenhouse
+          "Position": {
+            "X": 11,
+            "Y": 15
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "LockedDoorWarp 27 30 EastScarp_DruidTower 800 2400"
           }
         },
         { // Thief Treehouse

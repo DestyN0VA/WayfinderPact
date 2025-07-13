@@ -2,7 +2,7 @@
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="42" height="42" tilewidth="16" tileheight="16" infinite="0" nextlayerid="21" nextobjectid="42">
  <properties>
   <property name="Music" value="SnS.HectorTheme"/>
-  <property name="Warp" value="14 32 EastScarp_DeepMountains 9 17"/>
+  <property name="Warp" value="14 32 EastScarp_DeepMountains 8 16"/>
  </properties>
  <tileset firstgid="1" name="paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
   <image source="paths.png" width="64" height="144"/>
