@@ -6,7 +6,7 @@
             "Target": "Data/Characters",
             "Entries": {
                 "DN.Hector": {
-                    "DisplayName": "{{i18n:Core.Hector.Name}}",
+                    "DisplayName": "{{i18n:Hector.Name}}",
                     "Gender": "Male",
                     "Age": "Adult",
                     "Manner": "Rude",

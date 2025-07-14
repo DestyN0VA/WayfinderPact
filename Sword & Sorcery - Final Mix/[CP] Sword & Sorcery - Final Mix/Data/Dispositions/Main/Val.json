@@ -6,7 +6,7 @@
             "Target": "Data/Characters",
             "Entries": {
                 "DN.Val": {
-                    "DisplayName": "{{i18n:Core.Val.Name}}",
+                    "DisplayName": "{{i18n:Val.Name}}",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Polite",

@@ -6,7 +6,7 @@
             "Target": "Data/Characters",
             "Entries": {
                 "DN.Dandelion": {
-                    "DisplayName": "{{i18n:Core.Dandelion.Name}}",
+                    "DisplayName": "{{i18n:Dandelion.Name}}",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Polite",

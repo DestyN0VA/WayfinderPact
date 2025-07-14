@@ -6,7 +6,7 @@
             "Target": "Data/Characters",
             "Entries": {
                 "DN.Lorin": {
-                    "DisplayName": "{{i18n:Core.Lorin.Name}}",
+                    "DisplayName": "{{i18n:Lorin.Name}}",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Neutral",

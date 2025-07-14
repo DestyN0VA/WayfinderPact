@@ -6,7 +6,7 @@
             "Target": "Data/Characters",
             "Entries": {
                 "DN.Arden": {
-                    "DisplayName": "{{i18n:Core.Arden.Name}}",
+                    "DisplayName": "{{i18n:Arden.Name}}",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Neutral",

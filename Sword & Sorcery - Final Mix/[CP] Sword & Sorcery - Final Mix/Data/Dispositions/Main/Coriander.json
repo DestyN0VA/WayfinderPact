@@ -6,7 +6,7 @@
             "Target": "Data/Characters",
             "Entries": {
                 "DN.Coriander": {
-                    "DisplayName": "{{i18n:Core.Coriander.Name}}",
+                    "DisplayName": "{{i18n:Coriander.Name}}",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Polite",
