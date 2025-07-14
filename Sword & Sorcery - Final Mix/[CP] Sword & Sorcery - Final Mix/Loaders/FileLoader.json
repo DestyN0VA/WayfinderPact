@@ -4,7 +4,7 @@
 		{
 			"LogName": "S&S Final Mix: Blank Loads",
 			"Action": "Load",
-			"Target": "Characters/Dialogue/DN.Val, Characters/schedules/DN.Val, Characters/Dialogue/DN.Hector, Characters/schedules/DN.Hector, Characters/Dialogue/DN.Coriander, Characters/schedules/DN.Coriander, Characters/Dialogue/DN.Lorin, Characters/schedules/DN.Lorin, Characters/Dialogue/DN.Dandelion, Characters/schedules/DN.Dandelion, Characters/Dialogue/DN.Roslin, Characters/schedules/DN.Roslin, Characters/Dialogue/DN.Arden, Characters/schedules/DN.Arden",
+			"Target": "Characters/Dialogue/DN.Val, Characters/schedules/DN.Val, Characters/Dialogue/DN.Hector, Characters/schedules/DN.Hector, Characters/Dialogue/DN.Coriander, Characters/schedules/DN.Coriander, Characters/Dialogue/DN.Lorin, Characters/schedules/DN.Lorin, Characters/Dialogue/DN.Dandelion, Characters/schedules/DN.Dandelion, Characters/Dialogue/DN.Roslin, Characters/schedules/DN.Roslin, Characters/Dialogue/DN.Arden, Characters/schedules/DN.Arden, data/events/EastScarp_ArtificerHouse, data/events/EastScarp_BardHouse, data/events/EastScarp_DruidTower, data/events/EastScarp_ThiefTreehouse, data/events/EastScarp_SorcererHouse, data/events/EastScarp_RangerTower, data/events/EastScarp_CoastBeyond, data/events/EastScarp_DragoonCabin",
 			"FromFile": "Loaders/Blank.json"
 		},
 		{

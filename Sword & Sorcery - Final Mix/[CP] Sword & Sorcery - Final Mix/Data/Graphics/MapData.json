@@ -22,13 +22,13 @@
       "Target": "Maps/spring_DN.SnS_FinalMixExteriors, Maps/summer_DN.SnS_FinalMixExteriors, Maps/fall_DN.SnS_FinalMixExteriors, Maps/winter_DN.SnS_FinalMixExteriors, Maps/DN.SnS_SideWaterfall, Maps/DN.SnS_CloudyOceanBG, Maps/spring_directwaterfalls_stoutgoi, Maps/summer_directwaterfalls_stoutgoi, Maps/fall_directwaterfalls_stoutgoi, Maps/winter_directwaterfalls_stoutgoi,",
       "FromFile": "Assets/Tilesheets/Exteriors/{{TargetWithoutPath}}.png"
     },
-    //INTERIOR MAP LOADS
+    //MAP LOADS
     {
       "Action": "Load",
-      "Target": "Maps/EastScarp_ArtificerHouse, Maps/EastScarp_BardHouse, Maps/EastScarp_DruidTower, Maps/EastScarp_ThiefTreehouse, Maps/EastScarp_SorcererHouse, Maps/EastScarp_RangerTower",
+      "Target": "Maps/EastScarp_CoastBeyond, Maps/EastScarp_ArtificerHouse, Maps/EastScarp_BardHouse, Maps/EastScarp_DruidTower, Maps/EastScarp_ThiefTreehouse, Maps/EastScarp_SorcererHouse, Maps/EastScarp_RangerTower",
       "FromFile": "Assets/Maps/{{TargetWithoutPath}}.tmx"
     },
-    //EXTERIOR PATCH LOADS
+    //PATCH LOADS
     {
       "Action": "Load",
       "Target": "Patches/DN.SnS_ArtificerHouseExterior, Patches/DN.SnS_BardHouseExterior, Patches/DN.SnS_DeepMountainsNorthwest",
@@ -88,6 +88,32 @@
         }
       }
     },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_ArtificerHouse",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 19,
+            "Y": 19
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 24 49 EastScarp_ArtificerHouse"
+          }
+        },
+        {
+          "Position": {
+            "X": 24,
+            "Y": 48
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 19 20 EastScarp_ArtificerHouse"
+          }
+        },
+      ],
+    },
     //EAST SCARP: BARD HOUSE
     //Exterior
     {
@@ -146,6 +172,10 @@
         "Width": 50,
         "Height": 29
       },
+      "AddWarps": [
+        "20 0 EastScarp_CoastBeyond 6 49",
+        "21 0 EastScarp_CoastBeyond 6 49",
+      ],
       "MapTiles": [
         { // Druid Tower
           "Position": {
@@ -248,20 +278,24 @@
     },
     //COAST BEYOND: RANGER TOWER, DRAGOON CABIN 
     //Exterior: Ranger Tower, Dragoon Cabin
-    /*
     {
-      "LogName": "Ranger Tower, Dragoon Cabin - Exteriors",
-      "Action": "EditMap",
-      "Target": "Maps/EastScarp_CoastBeyond",
-      "FromFile": "Assets/Patches/DN.SnS_CoastBeyond.tmx",
-      "ToArea": {
-        "X": 0,
-        "Y": 0,
-        "Width": 0,
-        "Height": 0
-      },
+      "LogName": "Coast Beyond (Ranger Tower, Dragoon Cabin)",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_CoastBeyond": {
+          "DisplayName": "{{i18n:miscellaneous.mapname.CoastBeyond}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_CoastBeyond"
+          },
+          "DefaultArrivalTile": {
+            "X": 6,
+            "Y": 49
+          },
+          "ExcludeFromNpcPathfinding": false,
+        }
+      }
     },
-    */
     //Interior: Ranger Tower  
     {
       "LogName": "Ranger Tower - Interior",
@@ -284,7 +318,7 @@
     //Interior: Dragoon Cabin
     /*
     {
-      "LogName": "Ranger Tower - Interior",
+      "LogName": "Pirate Shi[] - Interior",
       "Action": "EditData",
       "Target": "Data/Locations",
       "Entries": {
