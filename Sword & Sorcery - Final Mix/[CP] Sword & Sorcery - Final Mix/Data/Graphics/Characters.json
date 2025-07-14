@@ -16,17 +16,35 @@
             "FromFile": "Assets/Portraits/Main/{{TargetWithoutPath}}/Other/Armor.png"
         },
         //Main Cast
+            //Seasonals
         {
             "LogName": "Load Main Character Art",
             "Action": "Load",
+            "Priority": "Low",
             "Target": "Characters/DN.Val, Characters/DN.Hector, Characters/DN.Lorin, Characters/DN.Coriander, Characters/DN.Roslin, Characters/DN.Dandelion, Characters/DN.Arden",
             "FromFile": "Assets/Characters/Main/{{TargetWithoutPath}}/Seasonals/{{Season}}.png"
         },
         {
             "LogName": "Load Main Portrait Art",
             "Action": "Load",
+            "Priority": "Low",
             "Target": "Portraits/DN.Val, Portraits/DN.Hector, Portraits/DN.Lorin, Portraits/DN.Coriander, Portraits/DN.Roslin, Portraits/DN.Dandelion, Portraits/DN.Arden",
             "FromFile": "Assets/Portraits/Main/{{TargetWithoutPath}}/Seasonals/{{Season}}.png"
+        },
+            //Armor
+        {
+            "LogName": "Load Main Character Art Armor",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Characters/Main/DN.Val/Armor, Characters/Main/DN.Hector/Armor, Characters/Main/DN.Lorin/Armor, Characters/Main/DN.Coriander/Armor, Characters/Main/DN.Roslin/Armor, Characters/Main/DN.Dandelion/Armor, Characters/Main/DN.Arden/Armor",
+            "FromFile": "Assets/{{TargetPathOnly}}/Other/{{TargetWithoutPath}}.png"
+        },
+        {
+            "LogName": "Load Main Portrait Art Armor",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Portraits/Main/DN.Val/Armor, Portraits/Main/DN.Hector/Armor, Portraits/Main/DN.Lorin/Armor, Portraits/Main/DN.Coriander/Armor, Portraits/Main/DN.Roslin/Armor, Portraits/Main/DN.Dandelion/Armor, Portraits/Main/DN.Arden/Armor",
+            "FromFile": "Assets/{{TargetPathOnly}}/Other/{{TargetWithoutPath}}.png"
         },
         //Companions
         {

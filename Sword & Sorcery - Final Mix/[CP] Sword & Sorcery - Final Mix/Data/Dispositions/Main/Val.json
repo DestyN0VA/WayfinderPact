@@ -49,13 +49,23 @@
                         }
                     ],
                     "Appearance": [
-                        // SPRING
+                        // Default, regular seasonals directly loaded to Val's game assets, do not need to be listed here.
                         {
                             "ID": "Default",
                             "Precedence": -10,
                             "Weight": 1,
                             "Portrait": "Portraits/DN.Val",
                             "Sprite": "Characters/DN.Val"
+                        },
+                        //Armor
+                        {
+                            "ID": "Armor",
+                            "Precedence": -20,
+                            "Weight": 1,
+                            "Portrait": "Portraits/Main/DN.Val/Armor",
+                            "Sprite": "Characters/Main/DN.Val/Armor",
+                            "Condition": "ANY \"IS_EVENT DN.Val.0H\""
+                            
                         }
                     ]
                 }
