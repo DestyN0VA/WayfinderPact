@@ -325,6 +325,16 @@
             "Action": "LockedDoorWarp 6 22 EastScarp_RangerTower 800 2400"
           }
         },
+        { // Ranger Trap Door
+          "Position": {
+            "X": 9,
+            "Y": 27
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 8 5 EastScarp_RangerTower"
+          }
+        },
         { // Dragoon Cabin
           "Position": {
             "X": 43,
@@ -353,8 +363,26 @@
             "Y": 22
           },
           "ExcludeFromNpcPathfinding": false,
-        }
+        },
       }
+    },
+    {
+      "LogName": "Ranger House - Ladder",
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_RangerTower",
+      "Entries": {},
+      "MapTiles": [
+        { // Ranger Ladder
+          "Position": {
+            "X": 8,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 9 28 EastScarp_CoastBeyond"
+          }
+        },
+      ]
     },
     //Interior: Dragoon Cabin
     /*
@@ -396,5 +424,15 @@
         }
       }
     },
+    {
+      "LogName": "Twilight Overlook Warps",
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_TwilightOverlook",
+      "Entries": {},
+      "AddWarps": [
+        "37 87 EastScarp_CoastBeyond 30 66",
+        "38 87 EastScarp_CoastBeyond 30 66",
+      ],
+    }
   ]
 }
