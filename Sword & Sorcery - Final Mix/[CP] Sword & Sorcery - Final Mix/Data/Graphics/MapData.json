@@ -19,7 +19,7 @@
     {
       "LogName": "Loads Exterior Tilesheets",
       "Action": "Load",
-      "Target": "Maps/spring_DN.SnS_FinalMixExteriors, Maps/summer_DN.SnS_FinalMixExteriors, Maps/fall_DN.SnS_FinalMixExteriors, Maps/winter_DN.SnS_FinalMixExteriors, Maps/DN.SnS_SideWaterfall, Maps/DN.SnS_CloudyOceanBG, Maps/spring_directwaterfalls_stoutgoi, Maps/summer_directwaterfalls_stoutgoi, Maps/fall_directwaterfalls_stoutgoi, Maps/winter_directwaterfalls_stoutgoi, Maps/DN.SnS_NightSky",
+      "Target": "Maps/spring_DN.SnS_FinalMixExteriors, Maps/summer_DN.SnS_FinalMixExteriors, Maps/fall_DN.SnS_FinalMixExteriors, Maps/winter_DN.SnS_FinalMixExteriors, Maps/DN.SnS_SideWaterfall, Maps/DN.SnS_CloudyOceanBG, Maps/spring_directwaterfalls_stoutgoi, Maps/summer_directwaterfalls_stoutgoi, Maps/fall_directwaterfalls_stoutgoi, Maps/winter_directwaterfalls_stoutgoi, Maps/DN.SnS_NightSky, Maps/DN.SnS_PurpleOverlay",
       "FromFile": "Assets/Tilesheets/Exteriors/{{TargetWithoutPath}}.png"
     },
     // Violet Moon
