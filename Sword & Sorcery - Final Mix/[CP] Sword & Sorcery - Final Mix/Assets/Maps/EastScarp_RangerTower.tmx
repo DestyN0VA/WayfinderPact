@@ -2,7 +2,7 @@
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="20" nextobjectid="34">
  <properties>
   <property name="Music" value="SnS.HectorTheme"/>
-  <property name="Warp" value="6 29 EastScarp_DeepMountains 11 17"/>
+  <property name="Warp" value="6 23 EastScarp_CoastBeyond 9 38"/>
  </properties>
  <tileset firstgid="1" name="indoor" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
   <image source="townInterior.png" width="512" height="1088"/>

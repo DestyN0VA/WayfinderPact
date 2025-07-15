@@ -22,10 +22,17 @@
       "Target": "Maps/spring_DN.SnS_FinalMixExteriors, Maps/summer_DN.SnS_FinalMixExteriors, Maps/fall_DN.SnS_FinalMixExteriors, Maps/winter_DN.SnS_FinalMixExteriors, Maps/DN.SnS_SideWaterfall, Maps/DN.SnS_CloudyOceanBG, Maps/spring_directwaterfalls_stoutgoi, Maps/summer_directwaterfalls_stoutgoi, Maps/fall_directwaterfalls_stoutgoi, Maps/winter_directwaterfalls_stoutgoi,",
       "FromFile": "Assets/Tilesheets/Exteriors/{{TargetWithoutPath}}.png"
     },
+    // Violet Moon
+    {
+      "LogName": "Loads Violet Moon Tilesheets",
+      "Action": "Load",
+      "Target": "Maps/DN.SnS_ESBoat, Maps/DN.SnS_Festivals, Maps/DN.SNS_MountainBackground, Maps/DN.SnS_VioletMoon_Booths",
+      "FromFile": "Assets/Tilesheets/Violet Moon/{{TargetWithoutPath}}.png"
+    },
     //MAP LOADS
     {
       "Action": "Load",
-      "Target": "Maps/EastScarp_CoastBeyond, Maps/EastScarp_ArtificerHouse, Maps/EastScarp_BardHouse, Maps/EastScarp_DruidTower, Maps/EastScarp_ThiefTreehouse, Maps/EastScarp_SorcererHouse, Maps/EastScarp_RangerTower",
+      "Target": "Maps/EastScarp_CoastBeyond, Maps/EastScarp_TwilightOverlook, Maps/EastScarp_ArtificerHouse, Maps/EastScarp_BardHouse, Maps/EastScarp_DruidTower, Maps/EastScarp_ThiefTreehouse, Maps/EastScarp_SorcererHouse, Maps/EastScarp_RangerTower",
       "FromFile": "Assets/Maps/{{TargetWithoutPath}}.tmx"
     },
     //PATCH LOADS
@@ -296,6 +303,40 @@
         }
       }
     },
+    {
+      "LogName": "Ranger House, Dragoon Cabin",
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_CoastBeyond",
+      "Entries": {},
+      "AddWarps": [
+        "3 49 EastScarp_DeepMountains 21 3",
+        "3 50 EastScarp_DeepMountains 21 3",
+        "30 68 EastScarp_TwilightOverlook 38 85",
+        "31 68 EastScarp_TwilightOverlook 38 85",
+      ],
+      "MapTiles": [
+        { // Ranger House
+          "Position": {
+            "X": 9,
+            "Y": 37
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "LockedDoorWarp 6 22 EastScarp_RangerTower 800 2400"
+          }
+        },
+        { // Dragoon Cabin
+          "Position": {
+            "X": 43,
+            "Y": 33
+          },
+          "Layer": "Back",
+          "SetProperties": {
+            "TouchAction": "MagicWarp EastScarp_CoastBeyond 55 44"
+          }
+        },
+      ]
+    },
     //Interior: Ranger Tower  
     {
       "LogName": "Ranger Tower - Interior",
@@ -318,7 +359,7 @@
     //Interior: Dragoon Cabin
     /*
     {
-      "LogName": "Pirate Shi[] - Interior",
+      "LogName": "Pirate Ship - Interior",
       "Action": "EditData",
       "Target": "Data/Locations",
       "Entries": {
@@ -336,5 +377,24 @@
       }
     },
   */
+    // TWILIGHT OVERLOOK
+    {
+      "LogName": "Twilight Overlook (Violet Moon)",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "EastScarp_TwilightOverlook": {
+          "DisplayName": "{{i18n:miscellaneous.mapname.TwilightOverlook}}",
+          "CreateOnLoad": {
+            "MapPath": "Maps/EastScarp_TwilightOverlook"
+          },
+          "DefaultArrivalTile": {
+            "X": 38,
+            "Y": 85
+          },
+          "ExcludeFromNpcPathfinding": false,
+        }
+      }
+    },
   ]
 }
