@@ -19,15 +19,8 @@
     {
       "LogName": "Loads Exterior Tilesheets",
       "Action": "Load",
-      "Target": "Maps/spring_DN.SnS_FinalMixExteriors, Maps/summer_DN.SnS_FinalMixExteriors, Maps/fall_DN.SnS_FinalMixExteriors, Maps/winter_DN.SnS_FinalMixExteriors, Maps/spring_DN.SnS_BigFern, Maps/summer_DN.SnS_BigFern, Maps/fall_DN.SnS_BigFern, Maps/winter_DN.SnS_BigFern, Maps/DN.SnS_SideWaterfall, Maps/DN.SnS_CloudyOceanBG, Maps/spring_directwaterfalls_stoutgoi, Maps/summer_directwaterfalls_stoutgoi, Maps/fall_directwaterfalls_stoutgoi, Maps/winter_directwaterfalls_stoutgoi, Maps/DN.SnS_NightSky, Maps/DN.SnS_PurpleOverlay",
+      "Target": "Maps/spring_DN.SnS_FinalMixExteriors, Maps/summer_DN.SnS_FinalMixExteriors, Maps/fall_DN.SnS_FinalMixExteriors, Maps/winter_DN.SnS_FinalMixExteriors, Maps/spring_DN.SnS_BigFern, Maps/summer_DN.SnS_BigFern, Maps/fall_DN.SnS_BigFern, Maps/winter_DN.SnS_BigFern, Maps/DN.SnS_SideWaterfall, Maps/DN.SnS_CloudyOceanBG, Maps/spring_directwaterfalls_stoutgoi, Maps/summer_directwaterfalls_stoutgoi, Maps/fall_directwaterfalls_stoutgoi, Maps/winter_directwaterfalls_stoutgoi, Maps/DN.SnS_NightSky, Maps/DN.SnS_PurpleOverlay, Maps/DN.SnS_Crops",
       "FromFile": "Assets/Tilesheets/Exteriors/{{TargetWithoutPath}}.png"
-    },
-    //Druid Crops Tilesheet for Druid Grove
-    {
-      "LogName": "Druid Crops Tilesheet",
-      "Action": "Load",
-      "Target": "Maps/Crops", // Should change later to be more unique, was too lazy to change map tilesheet path for loading
-      "FromFile": "Assets/Items/DN.Harvestables/Crops.png"
     },
     // Violet Moon
     {
@@ -39,7 +32,7 @@
     //MAP LOADS
     {
       "Action": "Load",
-      "Target": "Maps/EastScarp_CoastBeyond, Maps/EastScarp_TwilightOverlook, Maps/EastScarp_ArtificerHouse, Maps/EastScarp_BardHouse, Maps/EastScarp_DruidTower, Maps/EastScarp_ThiefTreehouse, Maps/EastScarp_SorcererHouse, Maps/EastScarp_RangerTower, Maps/EastScarp_DruidGrove",
+      "Target": "Maps/EastScarp_CoastBeyond, Maps/EastScarp_TwilightOverlook, Maps/EastScarp_ArtificerHouse, Maps/EastScarp_BardHouse, Maps/EastScarp_DruidTower, Maps/EastScarp_ThiefTreehouse, Maps/EastScarp_SorcererHouse, Maps/EastScarp_RangerTower, Maps/EastScarp_YggdrasilGrove",
       "FromFile": "Assets/Maps/{{TargetWithoutPath}}.tmx"
     },
     //PATCH LOADS
@@ -188,7 +181,9 @@
       },
       "AddWarps": [
         "20 0 EastScarp_CoastBeyond 6 49",
-        "21 0 EastScarp_CoastBeyond 6 49"
+        "21 0 EastScarp_CoastBeyond 6 49",
+        "32 8 EastScarp_YggdrasilGrove 21 68",
+        "31 8 EastScarp_YggdrasilGrove 21 68"
       ],
       "MapTiles": [
         { // Druid Tower
@@ -440,24 +435,34 @@
         "38 87 EastScarp_CoastBeyond 30 66"
       ]
     },
-    // DRUID GROVE
+    // YGGDRASIL GROVE
     {
-      "LogName": "Druid Grove",
+      "LogName": "Yggdrasil Grove",
       "Action": "EditData",
       "Target": "Data/Locations",
       "Entries": {
-        "EastScarp_DruidGrove": {
-          "DisplayName": "{{i18n:miscellaneous.mapname.DruidGrove}}",
+        "EastScarp_YggdrasilGrove": {
+          "DisplayName": "{{i18n:miscellaneous.mapname.YggdrasilGrove}}",
           "CreateOnLoad": {
-            "MapPath": "Maps/EastScarp_DruidGrove"
+            "MapPath": "Maps/EastScarp_YggdrasilGrove"
           },
           "DefaultArrivalTile": {
-            "X": 20,// Will Need Updating
-            "Y": 20 // Just Put Random Nums For Now 
+            "X": 21,
+            "Y": 68
           },
           "ExcludeFromNpcPathfinding": false
         }
       }
-    }
+    },
+    {
+      "LogName": "Yggdrasil Grove Warps",
+      "Action": "EditMap",
+      "Target": "Maps/EastScarp_YggdrasilGrove",
+      "AddWarps": [
+        "21 69 EastScarp_DeepMountains 31 9",
+        "22 69 EastScarp_DeepMountains 31 9",
+        "23 69 EastScarp_DeepMountains 31 9",
+      ]
+    },
   ]
 }

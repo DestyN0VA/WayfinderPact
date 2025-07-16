@@ -1,0 +1,25 @@
+{
+    "Changes": [
+
+        // AUDIO DATA
+        {
+            "LogName": "S&S Music",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "DN.DeepDarkIntrigue": {
+                    "ID": "DN.DeepDarkIntrigue",
+                    "Category": "Music",
+                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DeepDark_Intrigue.ogg}}" ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+            }
+        },
+
+        // SOUNDS
+
+        // JUKEBOX DATA 
+
+     ]
+}

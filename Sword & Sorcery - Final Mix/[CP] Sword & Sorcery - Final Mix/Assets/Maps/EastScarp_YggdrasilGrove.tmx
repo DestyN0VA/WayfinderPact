@@ -1557,8 +1557,8 @@
  <tileset firstgid="8278" name="hime_outdoorplants" tilewidth="16" tileheight="16" tilecount="416" columns="32">
   <image source="hime_outdoorplants.png" width="512" height="208"/>
  </tileset>
- <tileset firstgid="8694" name="Crops" tilewidth="16" tileheight="16" tilecount="144" columns="8">
-  <image source="Crops.png" width="128" height="288"/>
+ <tileset firstgid="8694" name="DN.SnS_Crops" tilewidth="16" tileheight="16" tilecount="144" columns="8">
+  <image source="DN.SnS_Crops.png" width="128" height="288"/>
  </tileset>
  <tileset firstgid="8838" name="BigFern" tilewidth="16" tileheight="16" tilecount="30" columns="3">
   <image source="spring_DN.SnS_BigFern.png" width="48" height="160"/>
