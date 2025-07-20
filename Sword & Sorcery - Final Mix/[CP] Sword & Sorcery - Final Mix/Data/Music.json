@@ -1,7 +1,7 @@
 {
     "Changes": [
-
         // AUDIO DATA
+        // Deep Dark
         {
             "LogName": "S&S Music",
             "Action": "EditData",
@@ -10,16 +10,177 @@
                 "DN.DeepDarkIntrigue": {
                     "ID": "DN.DeepDarkIntrigue",
                     "Category": "Music",
-                    "FilePaths": [ "{{AbsoluteFilePath: Assets/Music/DeepDark_Intrigue.ogg}}" ],
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: Assets/Music/DeepDark_Intrigue.ogg}}"
+                    ],
                     "StreamedVorbis": true,
                     "Looped": true
                 },
             }
         },
-
+        // Outdoor Locations
+        {
+            "LogName": "S&S Music",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "DN.YggdrasilTheme": {
+                    "ID": "DN.YggdrasilTheme",
+                    "Category": "Music",
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: Assets/Music/YggdrasilTheme.ogg}}"
+                    ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+            }
+        },
+        {
+            "LogName": "S&S Music",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "DN.CoastBeyondTheme": {
+                    "ID": "DN.CoastBeyondTheme",
+                    "Category": "Music",
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: Assets/Music/CoastBeyondTheme.ogg}}"
+                    ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+            }
+        },
+        // NPC Themes
+        {
+            "LogName": "S&S Music",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "DN.ValTheme": {
+                    "ID": "DN.ValTheme",
+                    "Category": "Music",
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: Assets/Music/ValTheme.ogg}}"
+                    ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+            }
+        },
+        {
+            "LogName": "S&S Music",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "DN.HectorTheme": {
+                    "ID": "DN.HectorTheme",
+                    "Category": "Music",
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: Assets/Music/HectorTheme.ogg}}"
+                    ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+            }
+        },
+        {
+            "LogName": "S&S Music",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "DN.CorianderTheme": {
+                    "ID": "DN.CorianderTheme",
+                    "Category": "Music",
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: Assets/Music/CorianderTheme.ogg}}"
+                    ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+            }
+        },
+        {
+            "LogName": "S&S Music",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "DN.LorinTheme": {
+                    "ID": "DN.LorinTheme",
+                    "Category": "Music",
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: Assets/Music/LorinTheme.ogg}}"
+                    ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+            }
+        },
+        {
+            "LogName": "S&S Music",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "DN.RoslinTheme": {
+                    "ID": "DN.RoslinTheme",
+                    "Category": "Music",
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: Assets/Music/RoslinTheme.ogg}}"
+                    ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+            }
+        },
+        {
+            "LogName": "S&S Music",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "DN.DandelionTheme": {
+                    "ID": "DN.DandelionTheme",
+                    "Category": "Music",
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: Assets/Music/DandelionTheme.ogg}}"
+                    ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+            }
+        },
+        {
+            "LogName": "S&S Music",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "DN.SolomonTheme": {
+                    "ID": "DN.SolomonTheme",
+                    "Category": "Music",
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: Assets/Music/SolomonTheme.ogg}}"
+                    ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+            }
+        },
+        {
+            "LogName": "S&S Music",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "DN.DandelionTheme": {
+                    "ID": "DN.DandelionTheme",
+                    "Category": "Music",
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: Assets/Music/DandelionTheme.ogg}}"
+                    ],
+                    "StreamedVorbis": true,
+                    "Looped": true
+                },
+            }
+        },
         // SOUNDS
-
         // JUKEBOX DATA 
-
-     ]
+    ]
 }

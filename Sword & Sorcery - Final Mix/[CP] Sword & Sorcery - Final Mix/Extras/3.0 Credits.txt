@@ -1,0 +1,17 @@
+CREDITS: 
+
+DUNGEON MASTER (PROJECT LEAD):
+➜ DestyNOVA: Content Patcher component, narrative design, mechanical design, character design, assets, maps, events, dialogue, etc
+
+ADVENTURING PARTY (3.0 CONTRIBUTORS): 
+➜ 7thAxis: Art lead, dialogue code overhaul/additional optimization code (C# and CP), Deep Dark code, pronoun code, NPC portraits and sprites, majority of Deep Dark assets, misc. additional assets including item/aquarium fish sprite refreshes, map edits, trinkets, guidebook, bugfxing
+➜ EnderTedi: C# code lead, wedding events, guidebook, bugfixing 
+➜ TheFrenchDodo: Emeritus' sprite, Deep Dark monsters
+➜ TenebrousNova: Help w/ event code, i18n, and the majority of maps incl. Deep Dark, playtesting 
+➜ TheLoreSeeker: Emeritus' and Book's portraits, scope creep
+
+BARDS (MUSIC): 
+➜ Dan Lunn: Val/Hector/Coriander/Lorin/Dandelion/Roslin/Yggdrasil/Coast Beyond Themes - https://soundcloud.com/cutts-kevorkian (Used w/ explicit permission) 
+➜ Beardalaxy: Deep Dark intrigue Theme - https://opengameart.org/content/mysterious-cave-theme-loop
+➜ Brainiac256: Arden Theme - https://opengameart.org/content/high-seas
+➜ AtlanticLights: Caramel - https://www.patreon.com/c/atlanticlights/posts (Used w/ explicit permission) 

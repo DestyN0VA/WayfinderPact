@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="20" nextobjectid="34">
  <properties>
-  <property name="Music" value="SnS.HectorTheme"/>
+  <property name="Music" value="DN.LorinTheme"/>
   <property name="Warp" value="6 23 EastScarp_CoastBeyond 9 38"/>
  </properties>
  <tileset firstgid="1" name="indoor" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
