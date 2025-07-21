@@ -2,7 +2,7 @@
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="50" height="80" tilewidth="16" tileheight="16" infinite="0" nextlayerid="24" nextobjectid="54">
  <properties>
   <property name="AmbientLight" value="120 140 30"/>
-  <property name="Music" value="SnS.ValTheme"/>
+  <property name="Music" value="DN.ValTheme"/>
   <property name="TreatAsOutdoors" value="T"/>
   <property name="Warp" value="11 23 EastScarp_Village 93 93"/>
   <property name="indoorWater" value="T"/>

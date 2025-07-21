@@ -5,6 +5,7 @@
   <property name="Doors" value="12 14 1 120 17 6 1 120 11 18 1 120"/>
   <property name="NightTiles" value="Front 19 1 1253 Front 19 2 1285 Front 2 1 1222 Front 2 2 1254 Front 5 1 1222 Front 5 2 1254"/>
   <property name="Warp" value="8 18 EastScarp_Village 54 8"/>
+    <property name="Music" value="DN.CorianderTheme"/>
  </properties>
  <tileset firstgid="1" name="1" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
   <image source="townInterior.png" width="512" height="1088"/>

@@ -2,6 +2,7 @@
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="7" height="9" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="1">
  <properties>
   <property name="Warp" value="3 9 EastScarp_DeepMountains 23 14"/>
+    <property name="Music" value="DN.CorianderTheme"/>
  </properties>
  <tileset firstgid="1" name="DN.SnS_DamoclesTreehouse" tilewidth="16" tileheight="16" tilecount="56" columns="7">
   <image source="DN.SnS_TreehouseInterior.png" width="112" height="128"/>

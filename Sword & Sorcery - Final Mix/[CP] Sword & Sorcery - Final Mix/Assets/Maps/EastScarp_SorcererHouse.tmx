@@ -2,6 +2,7 @@
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="35" tilewidth="16" tileheight="16" infinite="0" nextlayerid="21" nextobjectid="1">
  <properties>
   <property name="Warp" value="5 28 EastScarp_DeepMountains 40 15"/>
+    <property name="Music" value="DN.RoslinTheme"/>
  </properties>
  <tileset firstgid="1" name="DN.SnS_FinalMixInteriors" tilewidth="16" tileheight="16" tilecount="3150" columns="18">
   <image source="DN.SnS_FinalMixInteriors.png" width="288" height="2800"/>
