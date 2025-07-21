@@ -6,4 +6,10 @@
 "Roslin.Name": "Roslin",
 "Dandelion.Name": "Dandelion",
 "Arden.Name": "Arden",
+
+// Event Variations 
+
+"Val.2H.1.true": "I've been neglecting Gunther and Marlon, but I didn't realize that... hm.$2#$b#Well, for right now, you're my priority. First round's on me... aye?$4#$b#Oh! And I've got to go check up on my Pepper Rex egg after this, if you'd like to join...$16", 
+"Val.2H.1.false": "I've been neglecting Gunther and Marlon, but I didn't realize that... hm.$2#$b#Well, for right now, the coffee you promised is my priority.$17#$b#Oh! And I've got to go check up on my Pepper Rex egg after this, if you'd like to come with.$1", 
+
 }

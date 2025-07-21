@@ -6,7 +6,33 @@
             "Target": "Characters/ValInjury, Characters/ValSmithing, Characters/ValSwordSwing",
             "FromFile": "assets/Characters/Main/DN.Val/Actors/{{TargetWithoutPath}}.png"
         },
-
+        // SEN
+        {
+            "Action": "Load",
+            "Target": "Characters/7A.FallenSen, Characters/7A.TrashcanSen, Characters/7A.UmbrellaSen",
+            "FromFile": "assets/Characters/Temporary/Sen/{{TargetWithoutPath}}.png"
+        },
+        // GUNTHER & MARLON
+        {
+            "Action": "Load",
+            "Target": "Characters/DN.Gunther",
+            "FromFile": "assets/Characters/Temporary/Gunther/{{season}}.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Portraits/DN.Gunther",
+            "FromFile": "assets/Portraits/Temporary/Gunther/{{season}}.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/DN.Marlon",
+            "FromFile": "assets/Characters/Temporary/Marlon/{{season}}.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Portraits/DN.Marlon",
+            "FromFile": "assets/Portraits/Temporary/Marlon/{{season}}.png"
+        },
         //TEMP
         {
             "Action": "Load",

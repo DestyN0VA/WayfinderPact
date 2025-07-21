@@ -4,14 +4,29 @@ DUNGEON MASTER (PROJECT LEAD):
 ➜ DestyNOVA: Content Patcher component, narrative design, mechanical design, character design, assets, maps, events, dialogue, etc
 
 ADVENTURING PARTY (3.0 CONTRIBUTORS): 
-➜ 7thAxis: Art lead, dialogue code overhaul/additional optimization code (C# and CP), Deep Dark code, pronoun code, NPC portraits and sprites, majority of Deep Dark assets, misc. additional assets including item/aquarium fish sprite refreshes, map edits, trinkets, guidebook, bugfxing
-➜ EnderTedi: C# code lead, wedding events, guidebook, bugfixing 
+➜ 7thAxis: Dialogue pool code, additional optimization code (C# and CP), Deep Dark code, pronoun code, majority of NPC portraits and sprites, majority of Deep Dark assets, misc. additional assets including items, furniture, fish and crops, map edits, trinkets, guidebook, bugfixing
+➜ EnderTedi: C# code, wedding events, guidebook, bugfixing 
 ➜ TheFrenchDodo: Emeritus' sprite, Deep Dark monsters
 ➜ TenebrousNova: Help w/ event code, i18n, and the majority of maps incl. Deep Dark, playtesting 
 ➜ TheLoreSeeker: Emeritus' and Book's portraits, scope creep
+➜ Medicsun: All exterior buildings, 2.0 refreshed portrait bases 
+➜ MADDOGOFBLANK: Additional assets throughout the mod, Violet Moon Festival primary contributor, extensive help w/ code, bugfixing
 
 BARDS (MUSIC): 
 ➜ Dan Lunn: Val/Hector/Coriander/Lorin/Dandelion/Roslin/Yggdrasil/Coast Beyond Themes - https://soundcloud.com/cutts-kevorkian (Used w/ explicit permission) 
 ➜ Beardalaxy: Deep Dark intrigue Theme - https://opengameart.org/content/mysterious-cave-theme-loop
 ➜ Brainiac256: Arden Theme - https://opengameart.org/content/high-seas
 ➜ AtlanticLights: Caramel - https://www.patreon.com/c/atlanticlights/posts (Used w/ explicit permission) 
+
+OTHER CONTRIBUTIONS: 
+➜ Poltergeister: Gunther and Marlon portraits/sprites
+➜ PlatinumCats: Interior furniture 
+➜ Orcabaryonyx: Keyblades, keychains & Long Live the King shapechanges  
+➜ KittyCatCasey: Original 2.0 codebase 
+➜ FellowClown: 2.0 misc art that was later refreshed 
+➜ 6480: Refreshed huckleberry vine, refreshed Long Live the King 
+➜ MizuJakkaru: Yogurt jar base 
+➜ Arknir27: 2.0 sprite art that was later refreshed 
+➜ HimeTarts: 1.0 portrait art that was later refreshed, Sam portrait 
+➜ SmolHuman: Misc animal sprites 
+➜ YriKururu: Book's sprites, Yggdrasil tree 

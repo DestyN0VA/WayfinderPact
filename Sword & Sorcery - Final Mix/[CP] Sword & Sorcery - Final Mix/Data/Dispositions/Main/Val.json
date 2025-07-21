@@ -64,7 +64,7 @@
                             "Weight": 1,
                             "Portrait": "Portraits/Main/DN.Val/Armor",
                             "Sprite": "Characters/Main/DN.Val/Armor",
-                            "Condition": "ANY \"IS_EVENT DN.Val.0H\""
+                            "Condition": "ANY \"IS_EVENT DN.Val.0H\" \"IS_EVENT DN.Val.3H\", "
                             
                         }
                     ]
