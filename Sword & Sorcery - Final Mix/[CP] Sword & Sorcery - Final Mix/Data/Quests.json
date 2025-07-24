@@ -1,0 +1,11 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Quests",
+            "Entries": {
+                "{{ModID}}_MoltenEssenceQuest": "ItemDelivery/Molten Essences for Val/Acquire Molten Essences to help Val in their Stygium Purification experiment!/Deliver 50 Molten Essences to Val./DN.Val (O){{ModID}}_FireEssence 50/-1/0/-1/false/Thank you, @! I'll run some tests and follow up with you real soon.$1 #$action AddMail Current DN.MoltenEssenceQuest received"
+            }
+        }
+    ]
+}
