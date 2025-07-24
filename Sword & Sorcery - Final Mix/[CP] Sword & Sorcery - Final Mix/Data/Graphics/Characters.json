@@ -1,19 +1,77 @@
 {
     "Changes": [
+    // BASE LOADS
+        {
+            "LogName": "Load Default Base",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Characters/DN.Val, Portraits/DN.Val",
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/{{TargetWithoutPath}}/SocialMenu.png"
+        },
+        {
+            "LogName": "Load Default Base",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Characters/DN.Val/Seasonal, Portraits/DN.Val/Seasonal, Characters/DN.Val/Armor, Portraits/DN.Val/Armor, Characters/DN.Val/Bonus, Portraits/DN.Val/Bonus",
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Base.png"
+        },
+    // OUTFIT PATCHES
+        {
+            "LogName": "Load Seasonal Sprites",
+            "Action": "EditImage",
+            "PatchMode": "Overlay",
+            "Target": "Characters/DN.Val/Seasonal, Portraits/DN.Val/Seasonal",
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Outfits/Season_{{Season}}.png"
+        },
+        {
+            "LogName": "Load Special Outfits",
+            "Action": "EditImage",
+            "PatchMode": "Overlay",
+            "Target": "Characters/DN.Val/Armor, Portraits/DN.Val/Armor, Characters/DN.Val/Bonus, Portraits/DN.Val/Bonus",
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Outfits/{{TargetWithoutPath}}.png"
+        },
+    // FEATURE LOADS
+        {
+            "LogName": "Load Hair",
+            "Action": "EditImage",
+            "PatchMode": "Overlay",
+            "Target": "Characters/DN.Val/Seasonal, Portraits/DN.Val/Seasonal, Characters/DN.Val/Bonus, Portraits/DN.Val/Bonus, Characters/DN.Val/Armor, Portraits/DN.Val/Armor",
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Features/Hair_Brown.png"
+        },
+        {
+            "LogName": "Load Val Scars",
+            "Action": "EditImage",
+            "PatchMode": "Overlay",
+            "Target": "Characters/DN.Val/Seasonal, Portraits/DN.Val/Seasonal, Characters/DN.Val/Bonus, Portraits/DN.Val/Bonus, Characters/DN.Val/Armor, Portraits/DN.Val/Armor",
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Features/Scars.png"
+            //"When": { "HasSeenEvent": "DN.Val.?" }
+        },
+        {
+            "LogName": "Load Val Under Outfit Scars",
+            "Action": "EditImage",
+            "Priority": "Early",
+            "PatchMode": "Overlay",
+            "Target": "Portraits/DN.Val/Seasonal, Portraits/DN.Val/Bonus, Portraits/DN.Val/Armor",
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Features/Underscars.png",
+            //"When": { "HasSeenEvent": "DN.Val.?" }
+        },
+
+
+
         //Default Patch
         {
             "LogName": "Load Main Character Art Default",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Characters/DN.Val, Characters/DN.Hector, Characters/DN.Lorin, Characters/DN.Coriander, Characters/DN.Roslin, Characters/DN.Dandelion, Characters/DN.Arden",
-            "FromFile": "Assets/Characters/Main/{{TargetWithoutPath}}/Other/Armor.png"
+            "Target": "Characters/DN.Hector, Characters/DN.Lorin, Characters/DN.Coriander, Characters/DN.Roslin, Characters/DN.Dandelion, Characters/DN.Arden",
+            "FromFile": "Assets/Models/Main/Characters/{{TargetWithoutPath}}/Other/Armor.png"
         },
         {
             "LogName": "Load Main Portrait Art Default",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Portraits/DN.Val, Portraits/DN.Hector, Portraits/DN.Lorin, Portraits/DN.Coriander, Portraits/DN.Roslin, Portraits/DN.Dandelion, Portraits/DN.Arden",
-            "FromFile": "Assets/Portraits/Main/{{TargetWithoutPath}}/Other/Armor.png"
+            "Target": "Portraits/DN.Hector, Portraits/DN.Lorin, Portraits/DN.Coriander, Portraits/DN.Roslin, Portraits/DN.Dandelion, Portraits/DN.Arden",
+            "FromFile": "Assets/Models/Main/Portraits/{{TargetWithoutPath}}/Other/Armor.png"
         },
         //Main Cast
             //Seasonals
@@ -21,30 +79,30 @@
             "LogName": "Load Main Character Art",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Characters/DN.Val, Characters/DN.Hector, Characters/DN.Lorin, Characters/DN.Coriander, Characters/DN.Roslin, Characters/DN.Dandelion, Characters/DN.Arden",
-            "FromFile": "Assets/Characters/Main/{{TargetWithoutPath}}/Seasonals/{{Season}}.png"
+            "Target": "Characters/DN.Hector, Characters/DN.Lorin, Characters/DN.Coriander, Characters/DN.Roslin, Characters/DN.Dandelion, Characters/DN.Arden",
+            "FromFile": "Assets/Models/Main/Characters/{{TargetWithoutPath}}/Seasonals/{{Season}}.png"
         },
         {
             "LogName": "Load Main Portrait Art",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Portraits/DN.Val, Portraits/DN.Hector, Portraits/DN.Lorin, Portraits/DN.Coriander, Portraits/DN.Roslin, Portraits/DN.Dandelion, Portraits/DN.Arden",
-            "FromFile": "Assets/Portraits/Main/{{TargetWithoutPath}}/Seasonals/{{Season}}.png"
+            "Target": "Portraits/DN.Hector, Portraits/DN.Lorin, Portraits/DN.Coriander, Portraits/DN.Roslin, Portraits/DN.Dandelion, Portraits/DN.Arden",
+            "FromFile": "Assets/Models/Main/Portraits/{{TargetWithoutPath}}/Seasonals/{{Season}}.png"
         },
             //Armor
         {
             "LogName": "Load Main Character Art Armor",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Characters/Main/DN.Val/Armor, Characters/Main/DN.Hector/Armor, Characters/Main/DN.Lorin/Armor, Characters/Main/DN.Coriander/Armor, Characters/Main/DN.Roslin/Armor, Characters/Main/DN.Dandelion/Armor, Characters/Main/DN.Arden/Armor",
-            "FromFile": "Assets/{{TargetPathOnly}}/Other/{{TargetWithoutPath}}.png"
+            "Target": "Characters/DN.Hector/Armor, Characters/DN.Lorin/Armor, Characters/DN.Coriander/Armor, Characters/DN.Roslin/Armor, Characters/DN.Dandelion/Armor, Characters/DN.Arden/Armor",
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Other/{{TargetWithoutPath}}.png"
         },
         {
             "LogName": "Load Main Portrait Art Armor",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Portraits/Main/DN.Val/Armor, Portraits/Main/DN.Hector/Armor, Portraits/Main/DN.Lorin/Armor, Portraits/Main/DN.Coriander/Armor, Portraits/Main/DN.Roslin/Armor, Portraits/Main/DN.Dandelion/Armor, Portraits/Main/DN.Arden/Armor",
-            "FromFile": "Assets/{{TargetPathOnly}}/Other/{{TargetWithoutPath}}.png"
+            "Target": "Portraits/DN.Hector/Armor, Portraits/DN.Lorin/Armor, Portraits/DN.Coriander/Armor, Portraits/DN.Roslin/Armor, Portraits/DN.Dandelion/Armor, Portraits/DN.Arden/Armor",
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Other/{{TargetWithoutPath}}.png"
         },
         //Companions
         {
@@ -52,14 +110,14 @@
             "Action": "Load",
             "Priority": "Low",
             "Target": "Characters/DN.Emeritus, Characters/DN.Tom, Characters/DN.Odelia, Characters/DN.Winston, Characters/DN.Nimfear, Characters/DN.Solomon",
-            "FromFile": "Assets/Characters/Companions/{{TargetWithoutPath}}/Default.png"
+            "FromFile": "Assets/Models/Companions/Characters/{{TargetWithoutPath}}/Default.png"
         },
         {
             "LogName": "Load Nimfear Flight Art",
             "Action": "EditImage",
             "Update": "OnLocationChange",
             "Target": "Characters/DN.Nimfear",
-            "FromFile": "Assets/Characters/Companions/{{TargetWithoutPath}}/Flight.png",
+            "FromFile": "Assets/Models/Companions/Characters/{{TargetWithoutPath}}/Flight.png",
             "When": {
                 "IsOutdoors": true
             }
@@ -69,7 +127,7 @@
             "Action": "Load",
             "Priority": "Low",
             "Target": "Portraits/DN.Emeritus, Portraits/DN.Tom, Portraits/DN.Odelia, Portraits/DN.Winston, Portraits/DN.Nimfear, Portraits/DN.Solomon",
-            "FromFile": "Assets/Portraits/Companions/{{TargetWithoutPath}}/Default.png"
+            "FromFile": "Assets/Models/Companions/Portraits/{{TargetWithoutPath}}/Default.png"
         }
     ]
 }

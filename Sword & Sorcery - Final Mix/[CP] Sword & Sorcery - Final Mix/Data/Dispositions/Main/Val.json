@@ -54,17 +54,24 @@
                             "ID": "Default",
                             "Precedence": -10,
                             "Weight": 1,
-                            "Portrait": "Portraits/DN.Val",
-                            "Sprite": "Characters/DN.Val"
+                            "Portrait": "Portraits/DN.Val/Seasonal",
+                            "Sprite": "Characters/DN.Val/Seasonal"
+                        },
+                        {
+                            "ID": "Bonus",
+                            "Precedence": -10,
+                            "Weight": 1,
+                            "Portrait": "Portraits/DN.Val/Bonus",
+                            "Sprite": "Characters/DN.Val/Bonus"
                         },
                         //Armor
                         {
                             "ID": "Armor",
                             "Precedence": -20,
                             "Weight": 1,
-                            "Portrait": "Portraits/Main/DN.Val/Armor",
-                            "Sprite": "Characters/Main/DN.Val/Armor",
-                            "Condition": "ANY \"IS_EVENT DN.Val.0H\" \"IS_EVENT DN.Val.3H\", "
+                            "Portrait": "Portraits/DN.Val/Armor",
+                            "Sprite": "Characters/DN.Val/Armor",
+                            "Condition": "ANY \"IS_EVENT DN.Val.0H\" \"IS_EVENT DN.Val.3H\" "
                             
                         }
                     ]
