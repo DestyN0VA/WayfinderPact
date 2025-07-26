@@ -47,7 +47,7 @@
           "Price": 0,
           "Edibility": -300,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Texture": "DN.Objects/Curios",
           "SpriteIndex": 16,
           "ContextTags": [

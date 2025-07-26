@@ -1,4 +1,5 @@
 {
+    //Note to self: At end, split these code blocks into characters and portraits for the config (cries)
     "Changes": [
     // BASE LOADS
         {
@@ -12,48 +13,67 @@
             "LogName": "Load Default Base",
             "Action": "Load",
             "Priority": "Low",
-            "Target": "Characters/DN.Val/Seasonal, Portraits/DN.Val/Seasonal, Characters/DN.Val/Armor, Portraits/DN.Val/Armor, Characters/DN.Val/Bonus, Portraits/DN.Val/Bonus",
+            "Target": "Characters/DN.Val/Seasonal, Portraits/DN.Val/Seasonal, Characters/DN.Val/Armor, Portraits/DN.Val/Armor, Characters/DN.Val/Bonus, Portraits/DN.Val/Bonus, Characters/DN.Val/Festival, Portraits/DN.Val/Festival, Portraits/DN.Val/Shirtless, Characters/DN.Val/Beach, Characters/DN.Val/Shirtless",
             "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Base.png"
         },
-    // OUTFIT PATCHES
+    // OUTFIT OVERLAYS
         {
-            "LogName": "Load Seasonal Sprites",
+            "LogName": "Overlay Seasonal Outfits",
             "Action": "EditImage",
             "PatchMode": "Overlay",
             "Target": "Characters/DN.Val/Seasonal, Portraits/DN.Val/Seasonal",
-            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Outfits/Season_{{Season}}.png"
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Outfits/Season_{{Season}}.png",
+            "When": { "Disable Portrait Assets": false }
         },
         {
-            "LogName": "Load Special Outfits",
+            "LogName": "Overlay Festival Outfits - Seasonal",
             "Action": "EditImage",
             "PatchMode": "Overlay",
-            "Target": "Characters/DN.Val/Armor, Portraits/DN.Val/Armor, Characters/DN.Val/Bonus, Portraits/DN.Val/Bonus",
-            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Outfits/{{TargetWithoutPath}}.png"
+            "Target": "Characters/DN.Val/Festival, Portraits/DN.Val/Festival",
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Outfits/Festival_{{Season}}.png",
+            "When": { "Disable Portrait Assets": false }
+        },
+        {
+            "LogName": "Overlay Special Outfits",
+            "Action": "EditImage",
+            "PatchMode": "Overlay",
+            "Target": "Characters/DN.Val/Armor, Portraits/DN.Val/Armor, Characters/DN.Val/Bonus, Portraits/DN.Val/Bonus, Characters/DN.Val/Beach, Portraits/DN.Val/Shirtless, Characters/DN.Val/Shirtless, Characters/DN.Val/Festival_Spirit, Portraits/DN.Val/Festival_Flower, Characters/DN.Val/Festival_Flower",
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Outfits/{{TargetWithoutPath}}.png",
+            "When": { "Disable Portrait Assets": false }
         },
     // FEATURE LOADS
         {
-            "LogName": "Load Hair",
+            "LogName": "Overlay Hair",
             "Action": "EditImage",
             "PatchMode": "Overlay",
-            "Target": "Characters/DN.Val/Seasonal, Portraits/DN.Val/Seasonal, Characters/DN.Val/Bonus, Portraits/DN.Val/Bonus, Characters/DN.Val/Armor, Portraits/DN.Val/Armor",
-            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Features/Hair_Brown.png"
+            "Target": "Characters/DN.Val/Seasonal, Portraits/DN.Val/Seasonal, Characters/DN.Val/Bonus, Portraits/DN.Val/Bonus, Characters/DN.Val/Armor, Portraits/DN.Val/Armor, Characters/DN.Val/Festival, Portraits/DN.Val/Festival, Characters/DN.Val/Beach, Portraits/DN.Val/Shirtless, Characters/DN.Val/Shirtless",
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Features/Hair_Brown.png", // "Weather|Contains=Rain, Storm, GreenRain": false
+            "When": { "Disable Portrait Assets": false }
         },
-        {
-            "LogName": "Load Val Scars",
+        /*{
+            "LogName": "Overlay Hair",
             "Action": "EditImage",
             "PatchMode": "Overlay",
-            "Target": "Characters/DN.Val/Seasonal, Portraits/DN.Val/Seasonal, Characters/DN.Val/Bonus, Portraits/DN.Val/Bonus, Characters/DN.Val/Armor, Portraits/DN.Val/Armor",
-            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Features/Scars.png"
-            //"When": { "HasSeenEvent": "DN.Val.?" }
+            "Target": "Characters/DN.Val/Seasonal, Portraits/DN.Val/Seasonal, Characters/DN.Val/Bonus, Portraits/DN.Val/Bonus, Characters/DN.Val/Armor, Portraits/DN.Val/Armor, Characters/DN.Val/Festival, Portraits/DN.Val/Festival, Characters/DN.Val/Beach, Portraits/DN.Val/Shirtless, Characters/DN.Val/Shirtless",
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Features/Hair_Wet.png",
+            "When": { "Disable Portrait Assets": false, "Weather": "Rain, Storm, GreenRain" }
+        },*/
+        {
+            "LogName": "Overlay Val Scars",
+            "Action": "EditImage",
+            "PatchMode": "Overlay",
+            "Target": "Characters/DN.Val/Seasonal, Portraits/DN.Val/Seasonal, Characters/DN.Val/Bonus, Portraits/DN.Val/Bonus, Characters/DN.Val/Armor, Portraits/DN.Val/Armor, Characters/DN.Val/Festival, Portraits/DN.Val/Festival, Characters/DN.Val/Beach, Portraits/DN.Val/Shirtless, Characters/DN.Val/Shirtless",
+            "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Features/Scars.png",
+            "When": { "HasSeenEvent": "DN.Val.?", "Disable Portrait Assets": false }
         },
         {
-            "LogName": "Load Val Under Outfit Scars",
+            "LogName": "Overlay Val Under Outfit Scars",
             "Action": "EditImage",
             "Priority": "Early",
             "PatchMode": "Overlay",
-            "Target": "Portraits/DN.Val/Seasonal, Portraits/DN.Val/Bonus, Portraits/DN.Val/Armor",
+            "Target": "Portraits/DN.Val/Seasonal, Portraits/DN.Val/Bonus, Portraits/DN.Val/Armor, Characters/DN.Val/Festival, Portraits/DN.Val/Festival, Characters/DN.Val/Beach, Portraits/DN.Val/Shirtless, Characters/DN.Val/Shirtless",
             "FromFile": "Assets/Models/Main/{{TargetPathOnly}}/Features/Underscars.png",
-            //"When": { "HasSeenEvent": "DN.Val.?" }
+            "When": { "HasSeenEvent": "DN.Val.?", "Disable Portrait Assets": false }
         },
 
 

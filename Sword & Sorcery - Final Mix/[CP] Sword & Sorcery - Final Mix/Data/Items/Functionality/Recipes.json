@@ -78,7 +78,7 @@
         "{{ModID}}_zuzustylebagelwithlox": "216 1 139 1 424 1/what is this for?/{{ModID}}_zuzustylebagelwithlox 1/e SnS.Ch3.Cirrus.6/{{i18n:food.crafting.zuzustylebagelwithlox}}",
         "{{ModID}}_zuzustylecheesecake": "245 1 -6 1 -5 1 400 1/what is this for?/{{ModID}}_zuzustylecheesecake 1/e SnS.Ch3.Cirrus.9/{{i18n:food.crafting.zuzustylecheesecake}}",
         "{{ModID}}_zuzustyleclamchowder": "372 1 256 1 192 1/what is this for?/{{ModID}}_zuzustyleclamchowder 1/e SnS.Ch3.Cirrus.5/{{i18n:food.crafting.zuzustyleclamchowder}}",
-        "{{ModID}}_ancientsweettea": "{{ModID}}_ancientsweettealeaves {{AncientSweetTeaDifficulty}}/what is this for?/{{ModID}}_ancientsweettea 1/e SnS.Ch3.Dandelion.3/{{i18n:food.crafting.ancientsweettea}}",
+        "{{ModID}}_ancientsweettea": "{{ModID}}_ancientsweettealeaves {{Ancient Sweet Tea Difficulty}}/what is this for?/{{ModID}}_ancientsweettea 1/e SnS.Ch3.Dandelion.3/{{i18n:food.crafting.ancientsweettea}}",
 
         //VM
         "DN.SnS_ScotchEgg": "246 1 684 1 -5 1/1 10/DN.SnS_ScotchEgg/null/{{i18n:DN.SnS.ScotchEgg}}", //flour bug meat any egg
