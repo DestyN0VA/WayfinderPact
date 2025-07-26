@@ -4,40 +4,30 @@
         {
             "Action": "Load",
             "Target": "Characters/ValInjury, Characters/ValSmithing, Characters/ValSwordSwing",
-            "FromFile": "assets/Characters/Main/DN.Val/Actors/{{TargetWithoutPath}}.png"
+            "FromFile": "Assets/Models/Main/Characters/DN.Val/Actors/{{TargetWithoutPath}}.png"
         },
         // SEN
         {
             "Action": "Load",
             "Target": "Characters/7A.FallenSen, Characters/7A.TrashcanSen, Characters/7A.UmbrellaSen",
-            "FromFile": "assets/Characters/Temporary/Sen/{{TargetWithoutPath}}.png"
+            "FromFile": "Assets/Models/Temporary/Characters/Sen/{{TargetWithoutPath}}.png"
         },
         // GUNTHER & MARLON
         {
             "Action": "Load",
-            "Target": "Characters/DN.Gunther",
-            "FromFile": "assets/Characters/Temporary/Gunther/{{season}}.png"
+            "Target": "Characters/DN.Gunther, Characters/DN.Marlon",
+            "FromFile": "Assets/Models/Temporary/Characters/{{TargetWithoutPath}}/{{season}}.png"
         },
         {
             "Action": "Load",
-            "Target": "Portraits/DN.Gunther",
-            "FromFile": "assets/Portraits/Temporary/Gunther/{{season}}.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/DN.Marlon",
-            "FromFile": "assets/Characters/Temporary/Marlon/{{season}}.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Portraits/DN.Marlon",
-            "FromFile": "assets/Portraits/Temporary/Marlon/{{season}}.png"
+            "Target": "Portraits/DN.Gunther, Portraits/DN.Marlon",
+            "FromFile": "Assets/Models/Temporary/Portraits/{{TargetWithoutPath}}/{{season}}.png"
         },
         //TEMP
         {
             "Action": "Load",
             "Target": "Characters/ValCrab",
-            "FromFile": "assets/Characters/Temporary/{{TargetWithoutPath}}.png"
+            "FromFile": "Assets/Models/Temporary/Characters/{{TargetWithoutPath}}.png"
         }
     ]
 }

@@ -12,7 +12,7 @@
           "Type": "Cooking",
           "Category": -7,
           "ExcludeFromRandomSale": true,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Price": 550, //
           "Edibility": 50,
           "IsDrink": false,
@@ -35,7 +35,7 @@
           "Type": "Cooking",
           "Category": -7,
           "ExcludeFromRandomSale": true,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Price": 550, //
           "Edibility": 50,
           "IsDrink": false,
@@ -56,7 +56,7 @@
           "Type": "Cooking",
           "Category": -7,
           "ExcludeFromRandomSale": true,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Price": 500, //
           "Edibility": 50,
           "IsDrink": false,
@@ -77,7 +77,7 @@
           "Type": "Cooking",
           "Category": -7,
           "ExcludeFromRandomSale": true,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Price": 550, //
           "Edibility": 50,
           "IsDrink": false,
@@ -98,7 +98,7 @@
           "Type": "Cooking",
           "Category": -7,
           "ExcludeFromRandomSale": true,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Price": 500, //
           "Edibility": 50,
           "IsDrink": true,
@@ -118,7 +118,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": true,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -153,7 +153,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -189,7 +189,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -226,7 +226,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": true,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -260,7 +260,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -295,7 +295,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -331,7 +331,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -370,7 +370,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -408,7 +408,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -447,7 +447,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -487,7 +487,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -527,7 +527,7 @@
           "Price": 100,
           "Edibility": 10,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -635,7 +635,7 @@
           "Edibility": 10,
           "IsDrink": true,
           "Price": 1250,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 400,
@@ -670,7 +670,7 @@
           "Price": 100,
           "Edibility": 150,
           "IsDrink": false,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -705,7 +705,7 @@
           "Edibility": 10,
           "IsDrink": true,
           "Price": 420,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -741,7 +741,7 @@
           "Edibility": 10,
           "IsDrink": true,
           "Price": 210,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -777,7 +777,7 @@
           "Edibility": 10,
           "IsDrink": true,
           "Price": 1260,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -813,7 +813,7 @@
           "Edibility": 10,
           "IsDrink": true,
           "Price": 924,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -849,7 +849,7 @@
           "Edibility": 10,
           "IsDrink": true,
           "Price": 504,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -885,7 +885,7 @@
           "Edibility": 10,
           "IsDrink": true,
           "Price": 588,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 300,
@@ -921,7 +921,7 @@
           "Edibility": 10,
           "IsDrink": true,
           "Price": 630,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 500,
@@ -957,7 +957,7 @@
           "Price": 1575,
           "Edibility": 10,
           "IsDrink": true,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 500,
@@ -993,7 +993,7 @@
           "Price": 2150,
           "Edibility": 10,
           "IsDrink": true,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 500,
@@ -1029,7 +1029,7 @@
           "Edibility": 10,
           "IsDrink": true,
           "Price": 1575,
-          "ExcludeFromShippingCollection": "{{ExcludeFromPerfection}}",
+          "ExcludeFromShippingCollection": "{{Exclude From Perfection}}",
           "Buffs": [
             {
               "Duration": 400,

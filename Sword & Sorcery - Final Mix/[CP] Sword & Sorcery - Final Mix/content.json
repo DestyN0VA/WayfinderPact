@@ -27,7 +27,7 @@
     //GAMEPLAY
     { "Name": "CountForFarmingAchievements", "Value": "true" },
     { "Name": "CountForFarmingAchievements", "Value": "false",
-        "When": { "ExcludeFromPerfection": true } },
+        "When": { "Exclude From Perfection": true } },
 
     //CONDITIONAL SWITCHES
     { "Name": "StygiumArmorIngredient", "Value": "{{ModID}}_IridiumArmor" },
@@ -74,7 +74,7 @@
   ],
 
   "ConfigSchema": {
-    "ExcludeFromPerfection": {
+    "Exclude From Perfection": {
       "AllowValues": "true, false",
       "Default": "false",
       "AllowBlank": false,
@@ -82,12 +82,20 @@
       "Section": "Gameplay"
     },
 
-      "AncientSweetTeaDifficulty": {
+    "Ancient Sweet Tea Difficulty": {
       "AllowValues": "3, 7, 14, 21,",
       "Default": "7",
       "AllowBlank": false,
       "Description": "Set how many Ancient Sweet Tea Leaves are required to craft the universally loved Ancient Sweet Tea recipe.",
       "Section": "Gameplay"
+    },
+
+    "Disable Portrait Assets": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "AllowBlank": false,
+      "Description": "For custom portraits. Allows player to disable the overlay system so they can patch their own assets.",
+      "Section": "Graphics"
     }
   }
 }

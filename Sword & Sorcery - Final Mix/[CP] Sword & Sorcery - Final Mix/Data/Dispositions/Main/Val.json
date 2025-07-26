@@ -52,19 +52,58 @@
                         // Default, regular seasonals directly loaded to Val's game assets, do not need to be listed here.
                         {
                             "ID": "Default",
-                            "Precedence": -10,
-                            "Weight": 1,
-                            "Portrait": "Portraits/DN.Val",
-                            "Sprite": "Characters/DN.Val"
+                            "Precedence": -10, "Weight": 1,
+                            "Portrait": "Portraits/DN.Val/Seasonal",
+                            "Sprite": "Characters/DN.Val/Seasonal"
+                        },
+                        {
+                            "ID": "Bonus",
+                            "Precedence": -10, "Weight": 1,
+                            "Portrait": "Portraits/DN.Val/Bonus",
+                            "Sprite": "Characters/DN.Val/Bonus"
+                        },
+                        // Festivals
+                        {
+                            "ID": "Festival Seasonal",
+                            "Precedence": -20, "Weight": 1,
+                            "Portrait": "Portraits/DN.Val/Festival",
+                            "Sprite": "Characters/DN.Val/Festival",
+                            "Condition": "ANY \"EVENT_ID festival_spring13\" \"EVENT_ID festival_summer28\" \"EVENT_ID festival_fall16\" \"EVENT_ID festival_winter8\" \"EVENT_ID festival_winter25\""
+                            
+                        },
+                        {
+                            "ID": "Festival Flower", "Precedence": -20, "Weight": 1,
+                            "Portrait": "Portraits/DN.Val/Festival_Flower",
+                            "Sprite": "Characters/DN.Val/Festival_Flower",
+                            "Condition": "EVENT_ID festival_spring24"
+                            
+                        },
+                        {
+                            "ID": "Festival Spirit", "Precedence": -20, "Weight": 1,
+                            "Sprite": "Characters/DN.Val/Festival_Spirit",
+                            "Condition": "EVENT_ID festival_fall27"
+                            
+                        },
+                        {
+                            "ID": "Beach", "Precedence": -20, "Weight": 1,
+                            "Portrait": "Portraits/DN.Val/Shirtless",
+                            "Sprite": "Characters/DN.Val/Beach",
+                            "Condition": "EVENT_ID festival_summer11"
+                            
+                        },
+                        {
+                            "ID": "Beach", "Precedence": -20, "Weight": 1,
+                            "Portrait": "Portraits/DN.Val/Shirtless",
+                            "Sprite": "Characters/DN.Val/Shirtless",
+                            "Condition": "EVENT_ID festival_summer11"
+                            
                         },
                         //Armor
                         {
-                            "ID": "Armor",
-                            "Precedence": -20,
-                            "Weight": 1,
-                            "Portrait": "Portraits/Main/DN.Val/Armor",
-                            "Sprite": "Characters/Main/DN.Val/Armor",
-                            "Condition": "ANY \"IS_EVENT DN.Val.0H\" \"IS_EVENT DN.Val.3H\", "
+                            "ID": "Armor", "Precedence": -20, "Weight": 1,
+                            "Portrait": "Portraits/DN.Val/Armor",
+                            "Sprite": "Characters/DN.Val/Armor",
+                            "Condition": "ANY \"IS_EVENT DN.Val.0H\" \"IS_EVENT DN.Val.3H\" "
                             
                         }
                     ]
