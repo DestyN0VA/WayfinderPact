@@ -103,7 +103,7 @@
                             "ID": "Armor", "Precedence": -20, "Weight": 1,
                             "Portrait": "Portraits/DN.Val/Armor",
                             "Sprite": "Characters/DN.Val/Armor",
-                            "Condition": "ANY \"IS_EVENT DN.Val.0H\" \"IS_EVENT DN.Val.3H\" "
+                            "Condition": "ANY \"IS_EVENT DN.Val.0H\" \"IS_EVENT DN.Val.4H\" \"IS_EVENT DN.Val.5H\""
                             
                         }
                     ]

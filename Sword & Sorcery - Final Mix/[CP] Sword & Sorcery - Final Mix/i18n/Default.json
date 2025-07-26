@@ -15,4 +15,5 @@
 
     // PlayerName
     "Playername.1": "{{Name}}, wait!",
+    "Playername.2": "Excellent timing as always, {{Name}}!",
 }
